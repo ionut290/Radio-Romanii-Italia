@@ -3,6 +3,8 @@
 import datetime as dt
 import email.utils
 import json
+import html
+import re
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -42,9 +44,14 @@ for category, query, lang, country in QUERIES:
             if date > now + dt.timedelta(hours=1) or now - date > dt.timedelta(days=7):
                 continue
             seen.add(link)
+            description = re.sub(r"<[^>]+>", " ", entry.findtext("description") or "")
+            description = html.unescape(re.sub(r"\\s+", " ", description)).strip()
+            if description.lower().startswith(title.lower()[:35]):
+                description = ""
             items.append({
                 "category": category, "title": title[:240], "url": link,
-                "source": source[:90], "published": date.isoformat()
+                "source": source[:90], "published": date.isoformat(),
+                "summary": description[:350], "image": ""
             })
             count += 1
             if count >= LIMIT:
