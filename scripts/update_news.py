@@ -13,6 +13,7 @@ from pathlib import Path
 DIRECT_FEEDS = [
     ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24"),
     ("Italia", "https://www.ansa.it/sito/ansait_rss.xml", "ANSA"),
+    ("Diaspora", "https://rotalianul.com/feed/", "Rotalianul"),
 ]
 
 QUERIES = [
