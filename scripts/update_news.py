@@ -10,6 +10,11 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+DIRECT_FEEDS = [
+    ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24"),
+    ("Italia", "https://www.ansa.it/sito/ansait_rss.xml", "ANSA"),
+]
+
 QUERIES = [
     ("România", "România știri actualitate politică economie sănătate when:2d", "ro", "RO"),
     ("Italia", "Italia notizie cronaca economia lavoro attualità when:2d", "it", "IT"),
@@ -59,6 +64,53 @@ for category, query, lang, country in QUERIES:
         print(f"{category}: {count} articole")
     except Exception as exc:
         print(f"Nu s-au putut prelua știrile {category}: {exc}")
+
+# Direct publisher feeds may provide genuine summaries and image metadata.
+# Only RSS excerpts are displayed; full articles remain at the publisher.
+for category, feed_url, publisher in DIRECT_FEEDS:
+    try:
+        request = urllib.request.Request(feed_url, headers=HEADERS)
+        with urllib.request.urlopen(request, timeout=20) as response:
+            root = ET.fromstring(response.read(2_000_000))
+        fresh = []
+        for entry in root.findall("./channel/item")[:25]:
+            title = (entry.findtext("title") or "").strip()
+            link = (entry.findtext("link") or "").strip()
+            if not title or not link.startswith("https://") or link in seen:
+                continue
+            try:
+                published = email.utils.parsedate_to_datetime(entry.findtext("pubDate") or "").astimezone(dt.timezone.utc)
+            except (ValueError, TypeError, OverflowError):
+                continue
+            if published > now + dt.timedelta(hours=1) or now - published > dt.timedelta(days=7):
+                continue
+            raw = entry.findtext("description") or ""
+            summary = html.unescape(re.sub(r"<[^>]+>", " ", raw))
+            summary = re.sub(r"\\s+", " ", summary).strip()[:350]
+            image = ""
+            for child in entry.iter():
+                local = child.tag.split("}")[-1].lower()
+                candidate = child.attrib.get("url", "")
+                if local in ("thumbnail", "content", "enclosure") and candidate.startswith("https://"):
+                    mime = child.attrib.get("type", "")
+                    if mime.startswith("image/") or local == "thumbnail" or re.search(r"\\.(jpg|jpeg|png|webp)(\\?|$)", candidate, re.I):
+                        image = candidate
+                        break
+            if not image:
+                match = re.search(r'<img[^>]+src=["\\\'](https://[^"\\\']+)', raw, re.I)
+                if match:
+                    image = html.unescape(match.group(1))
+            fresh.append({"category": category, "title": title[:240], "url": link,
+                          "source": publisher, "published": published.isoformat(),
+                          "summary": summary, "image": image})
+            seen.add(link)
+        # Prefer the direct publisher's RSS when it is available.
+        if fresh:
+            items = [item for item in items if item["category"] != category]
+            items.extend(fresh[:LIMIT])
+        print(f"{publisher}: {len(fresh)} știri RSS")
+    except Exception as exc:
+        print(f"{publisher} RSS indisponibil: {exc}")
 
 output = Path("news.json")
 if not items:
