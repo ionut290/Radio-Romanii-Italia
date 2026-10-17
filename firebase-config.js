@@ -1,4 +1,3 @@
-// Completează cu datele aplicației Web din Firebase Console (Project settings).
-// Cheia API web Firebase este un identificator public, nu o parolă.
-// Nu adăuga aici chei de service account sau alte secrete.
-export const firebaseConfig={apiKey:"",authDomain:"",projectId:"",appId:""};
+// Configurația aplicației Web Firebase. Completează apiKey și appId din Firebase Console.
+// Aceste valori de configurare Web sunt publice; nu introduce chei private.
+export const firebaseConfig={apiKey:"",authDomain:"cantiereapp-976cc.firebaseapp.com",projectId:"cantiereapp-976cc",appId:""};
