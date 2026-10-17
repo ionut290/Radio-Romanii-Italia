@@ -1,7 +1,12 @@
 name: Actualizare știri radio
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_news.py'
+      - '.github/workflows/news.yml'
   schedule:
-    - cron: '17,47 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
