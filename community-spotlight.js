@@ -1,0 +1,11 @@
+import {initializeApp,getApps} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getFirestore,collection,query,where,limit,onSnapshot} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import {firebaseConfig} from "./firebase-config.js";
+const $=id=>document.getElementById(id),panel=$("community-spotlight");
+const pages={"Povești din Italia":"povesti.html","Reflecții despre diaspora":"reflectii.html","Locuri de muncă":"munca.html","Evenimente":"evenimente.html","Orașul meu":"oras.html","Publicitate gratuită":"publicitate.html"};
+let posts=[],index=0,seconds=30;
+function eventDate(post){if(post.category!=="Evenimente")return null;const text=String(post.body||"");const match=text.match(/(?:^|\n)Data evenimentului:\s*(\d{4}-\d{2}-\d{2})/i);if(!match)return null;const time=text.match(/(?:^|\n)Ora:\s*(\d{2}:\d{2})/i);const d=new Date(match[1]+"T"+(time?time[1]:"23:59")+":59");return Number.isFinite(d.getTime())?d:null}
+function activeItems(){return posts.filter(p=>{const d=eventDate(p);return !d||d.getTime()>=Date.now()})}
+function show(){const items=activeItems();if(!items.length){panel.hidden=true;return}index=index%items.length;const p=items[index];panel.hidden=false;$("spotlight-category").textContent=p.category||"Comunitate";$("spotlight-title").textContent=p.title||"Postare din Comunitate";$("spotlight-body").textContent=(p.body||"").slice(0,330);$("spotlight-meta").textContent=[p.author,p.city].filter(Boolean).join(" · ");$("spotlight-link").href="./"+(pages[p.category]||"comunitate.html");seconds=30;$("spotlight-countdown").textContent="· Următoarea în 30 s"}
+try{const app=getApps().find(x=>x.options.projectId===firebaseConfig.projectId)||initializeApp(firebaseConfig);const db=getFirestore(app);onSnapshot(query(collection(db,"posts"),where("status","==","published"),limit(100)),snapshot=>{posts=snapshot.docs.map(d=>d.data()).sort((a,b)=>(b.createdAt?.toMillis?.()||0)-(a.createdAt?.toMillis?.()||0));index=0;show()},error=>{console.warn("Banner comunitate indisponibil",error);panel.hidden=true})}catch(error){console.warn("Banner comunitate indisponibil",error);panel.hidden=true}
+setInterval(()=>{if(!posts.length)return;seconds--;if(seconds<=0){index++;show()}else $("spotlight-countdown").textContent="· Următoarea în "+seconds+" s"},1000);
