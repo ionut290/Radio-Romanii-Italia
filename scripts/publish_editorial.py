@@ -54,6 +54,20 @@ for publisher, feed, category in feeds:
                 continue
             if category == "Diaspora" and not any(k in (title + " " + summary).lower() for k in keywords):
                 continue
+            image = ""
+            # Use only image URLs explicitly supplied by the publisher RSS feed.
+            for media in entry.iter():
+                local = media.tag.split("}")[-1].lower()
+                candidate = media.attrib.get("url", "")
+                media_type = media.attrib.get("type", "")
+                if local in ("thumbnail", "content", "enclosure") and candidate.startswith("https://"):
+                    if local == "thumbnail" or media_type.startswith("image/") or re.search(r"\\.(?:jpe?g|png|webp)(?:[?#]|$)", candidate, re.I):
+                        image = candidate
+                        break
+            if not image:
+                image_match = re.search(r'<img[^>]+src=["\\\'](https://[^"\\\']+)["\\\']', description, re.I)
+                if image_match:
+                    image = html.unescape(image_match.group(1))
             # Only source-grounded short news briefs: no invented facts, quotes or details.
             clean_summary = summary[:380].rsplit(" ", 1)[0].rstrip(" ,;:-") + ("…" if len(summary) > 380 else "")
             if len(clean_summary) < 45:
@@ -66,6 +80,7 @@ for publisher, feed, category in feeds:
                 "editorial": True,
                 "category": category,
                 "title": title[:240],
+                "image": image,
                 "summary": clean_summary,
                 "body": body,
                 "published": published.isoformat(),
