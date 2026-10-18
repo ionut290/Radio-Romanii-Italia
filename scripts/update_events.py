@@ -72,7 +72,7 @@ old=[]
 if OUT.exists():
     try:old=json.loads(OUT.read_text(encoding="utf-8")).get("events",[])
     except (ValueError,OSError):pass
-items={x["url"]:x for x in old if x.get("date","")>=TODAY.isoformat() and x.get("url")}
+items={x["url"]:x for x in old if x.get("endDate",x.get("date",""))>=TODAY.isoformat() and x.get("url")}
 seen_count=0
 for query in SEARCHES:
     url="https://news.google.com/rss/search?"+urllib.parse.urlencode({"q":query,"hl":"it","gl":"IT","ceid":"IT:it"})
@@ -182,6 +182,8 @@ def official_events():
     print("Official structured events:",count)
 
 official_events()
-events=sorted(items.values(),key=lambda x:(x["date"],x["city"],x["title"]))[:80]
+events=sorted(items.values(),key=lambda x:(x["date"],x["city"],x["title"]))
+verified=[x for x in events if x.get("verified")]
+events=verified+ [x for x in events if not x.get("verified")][:max(0,80-len(verified))]
 OUT.write_text(json.dumps({"updated":TODAY.isoformat(),"events":events},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print("Eligible RSS entries:",seen_count,"Upcoming event leads:",len(events))
