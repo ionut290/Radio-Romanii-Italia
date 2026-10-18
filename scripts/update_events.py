@@ -97,6 +97,44 @@ def page_details(url):
         print("Page unavailable:",parsed.hostname,str(exc)[:70])
         return ""
 
+class PreviewImage(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.image=""
+    def handle_starttag(self,tag,attrs):
+        if tag!="meta" or self.image:return
+        a=dict(attrs)
+        if a.get("property","").lower() in ("og:image","og:image:url") or a.get("name","").lower()=="twitter:image":
+            u=html.unescape(a.get("content",""))
+            if u.startswith("https://"):self.image=u
+
+def image_from_rss(item):
+    for node in item.iter():
+        local=node.tag.split("}")[-1].lower()
+        url=node.attrib.get("url","")
+        kind=node.attrib.get("type","")
+        if local in ("thumbnail","content","enclosure") and url.startswith("https://"):
+            if local=="thumbnail" or kind.startswith("image/") or re.search(r"\\.(?:jpg|jpeg|png|webp)(?:[?#]|$)",url,re.I):
+                return url
+    raw=item.findtext("description") or ""
+    match=re.search(r'<img[^>]+src=["\\\'](https://[^"\\\']+)',raw,re.I)
+    return html.unescape(match.group(1)) if match else ""
+
+def image_from_page(url):
+    parsed=urllib.parse.urlparse(url)
+    if parsed.scheme!="https" or parsed.hostname in ("news.google.com","www.google.com","google.com"):
+        return ""
+    try:
+        req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; RadioRomaniiEvents/1.0)"})
+        with urllib.request.urlopen(req,timeout=7) as resp:
+            if "text/html" not in resp.headers.get("Content-Type",""):return ""
+            page=resp.read(180_000).decode("utf-8","replace")
+        parser=PreviewImage();parser.feed(page)
+        return parser.image
+    except Exception as exc:
+        print("Event preview unavailable:",parsed.hostname,str(exc)[:70])
+        return ""
+
 old=[]
 if OUT.exists():
     try:old=json.loads(OUT.read_text(encoding="utf-8")).get("events",[])
@@ -130,7 +168,7 @@ for query in SEARCHES:
         if (dt.datetime.now(dt.timezone.utc)-published.astimezone(dt.timezone.utc)).days>120:continue
         source=clean(item.findtext("source")) or "Sursă publică"
         seen_count+=1
-        items[link]={"title":title[:160],"date":date,"city":city,"region":CITIES[city.lower()],"source":source[:90],"url":link,"description":description[:450],"published":published.date().isoformat()}
+        items[link]={"image":image_from_rss(item) or items.get(link,{}).get("image",""),"title":title[:160],"date":date,"city":city,"region":CITIES[city.lower()],"source":source[:90],"url":link,"description":description[:450],"published":published.date().isoformat()}
 
 # Official cultural institution calendars. Only structured Event entries with explicit
 # dates and an Italian city are accepted; an inaccessible site is simply skipped.
@@ -209,7 +247,7 @@ def official_events():
                         if not isinstance(link,str) or not link.startswith("https://"):link=page_url
                         description=clean(str(event.get("description","")))[:450]
                         if not DIASPORA.search(name+" "+description+" "+source):continue
-                        items[link]={"title":name[:160],"date":start,"city":city,"region":CITIES[city.lower()],"source":source,"url":link,"description":description,"published":TODAY.isoformat()}
+                        items[link]={"image":event.get("image") if isinstance(event.get("image"),str) and event["image"].startswith("https://") else items.get(link,{}).get("image",""),"title":name[:160],"date":start,"city":city,"region":CITIES[city.lower()],"source":source,"url":link,"description":description,"published":TODAY.isoformat()}
                         count+=1
         except Exception as exc:print("Official source unavailable:",source,str(exc)[:130])
     print("Official structured events:",count)
@@ -218,5 +256,15 @@ official_events()
 events=sorted(items.values(),key=lambda x:(x["date"],x["city"],x["title"]))
 verified=[x for x in events if x.get("verified")]
 events=verified+ [x for x in events if not x.get("verified")][:max(0,80-len(verified))]
+# Complete missing pictures from the publisher's Open Graph preview, with a
+# bounded number of requests so the hourly workflow remains manageable.
+image_checks=0
+for event in events:
+    if event.get("image") or image_checks>=12:continue
+    url=event.get("url","")
+    if not url.startswith("https://") or "news.google.com/" in url:continue
+    image_checks+=1
+    event["image"]=image_from_page(url)
+print("Event image preview checks:",image_checks,"events with images:",sum(bool(e.get("image")) for e in events))
 OUT.write_text(json.dumps({"updated":TODAY.isoformat(),"events":events},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print("Eligible RSS entries:",seen_count,"Upcoming event leads:",len(events))
