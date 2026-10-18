@@ -57,7 +57,7 @@ SEARCHES += [
 CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcamo":"Sicilia"}
 MONTHS={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12,"ianuarie":1,"februarie":2,"martie":3,"aprilie":4,"mai":5,"iunie":6,"iulie":7,"august":8,"septembrie":9,"octombrie":10,"noiembrie":11,"decembrie":12}
 EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâlnir|sărbăto|târg|conferin|manifestazion|spettacol|incontro|mostra|evento",re.I)
-DIASPORA=re.compile(r"rom[aâ]n|romeni|romania|diaspora|intercultural|multicultural|balcan|moldov",re.I)
+DIASPORA=re.compile(r"rom[aâ]n|romeni|romania|române|români|romanesc|românesc|romeno|romena|romeni|moldov",re.I)
 def event_date(text):
     candidates=[]
     for m in re.finditer(r"(?<!\d)([0-3]?\d)[ /.-]([01]?\d)[ /.-](20\d{2})(?!\d)",text):
@@ -115,6 +115,7 @@ for query in SEARCHES:
         text=title+" "+description
         link=(item.findtext("link") or "").strip()
         if not link.startswith("https://") or not EVENT_WORDS.search(text) or not DIASPORA.search(text):continue
+        details=""
         date=event_date(text)
         city=next((name.title() for name in CITIES if re.search(r"\b"+re.escape(name)+r"\b",text,re.I)),None)
         if not date or not city:
@@ -123,6 +124,7 @@ for query in SEARCHES:
                 date=date or event_date(details)
                 city=city or next((name.title() for name in CITIES if re.search(r"\b"+re.escape(name)+r"\b",details,re.I)),None)
         if not date or not city:continue
+        if not DIASPORA.search(text+" "+(details if "details" in locals() else "")):continue
         try:published=email.utils.parsedate_to_datetime(item.findtext("pubDate"))
         except (TypeError,ValueError):continue
         if (dt.datetime.now(dt.timezone.utc)-published.astimezone(dt.timezone.utc)).days>120:continue
@@ -206,7 +208,7 @@ def official_events():
                         link=event.get("url") or page_url
                         if not isinstance(link,str) or not link.startswith("https://"):link=page_url
                         description=clean(str(event.get("description","")))[:450]
-                        if not (DIASPORA.search(name+" "+description+" "+source) or "Român" in source):continue
+                        if not DIASPORA.search(name+" "+description+" "+source):continue
                         items[link]={"title":name[:160],"date":start,"city":city,"region":CITIES[city.lower()],"source":source,"url":link,"description":description,"published":TODAY.isoformat()}
                         count+=1
         except Exception as exc:print("Official source unavailable:",source,str(exc)[:130])
