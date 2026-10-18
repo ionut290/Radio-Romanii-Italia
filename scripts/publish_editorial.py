@@ -1,98 +1,83 @@
 #!/usr/bin/env python3
-"""Publish two source-grounded original editorial briefs per Italian time slot."""
+"""Hourly source-grounded diaspora briefs, without external AI services."""
 import datetime as dt
 import email.utils
 import hashlib
 import html
 import json
-import os
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-now = dt.datetime.now(ZoneInfo("Europe/Rome"))
-key = os.getenv("OPENAI_API_KEY")
-if not key:
-    raise SystemExit("ERROR: OPENAI_API_KEY missing; configure GitHub Actions secret")
-path = Path("editorial.json")
-data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"items": []}
+NOW = dt.datetime.now(ZoneInfo("Europe/Rome"))
+ARCHIVE = Path("editorial.json")
+data = json.loads(ARCHIVE.read_text(encoding="utf-8")) if ARCHIVE.exists() else {"items": []}
 items = data.get("items", [])
-slot = now.strftime("%Y-%m-%d-%H-") + f"{now.minute // 10:01d}"
-if sum(x.get("slot") == slot for x in items) >= 1:
-    print("Slot already published")
-    raise SystemExit(0)
+if not isinstance(items, list):
+    raise SystemExit("Invalid editorial.json: items must be a list")
+known_urls = {str(x.get("url", "")).rstrip("/") for x in items}
+slot = NOW.strftime("%Y-%m-%d-%H")
 feeds = [
-    ("Diaspora", "https://rotalianul.com/feed/", "Rotalianul"),
-    ("Italia", "https://www.ansa.it/sito/ansait_rss.xml", "ANSA"),
-    ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24"),
+    ("Rotalianul", "https://rotalianul.com/feed/"),
 ]
-candidates = []
-for category, url, publisher in feeds:
+keywords = ("român", "romani", "români", "romanca", "româncă", "române", "romania",
+            "diaspora", "moldove", "moldova", "cetățean român", "roman")
+new_items = []
+for publisher, feed in feeds:
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "RadioRomaniiItalia/1.0"})
-        with urllib.request.urlopen(req, timeout=20) as res:
-            root = ET.fromstring(res.read(1_500_000))
-        for e in root.findall("./channel/item")[:25]:
-            title = (e.findtext("title") or "").strip()
-            link = (e.findtext("link") or "").strip()
-            raw = e.findtext("description") or ""
-            summary = re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]*>", " ", raw))).strip()
+        request = urllib.request.Request(feed, headers={"User-Agent": "RadioRomaniiItalia/1.0 (editorial RSS)"})
+        with urllib.request.urlopen(request, timeout=25) as response:
+            root = ET.fromstring(response.read(2_000_000))
+        for entry in root.findall("./channel/item")[:40]:
+            title = html.unescape((entry.findtext("title") or "").strip())
+            url = (entry.findtext("link") or "").strip()
+            description = entry.findtext("description") or ""
+            summary = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", description)).split())
+            if not title or not url.startswith("https://") or not summary:
+                continue
+            if url.rstrip("/") in known_urls:
+                continue
             try:
-                pub = email.utils.parsedate_to_datetime(e.findtext("pubDate") or "")
-                pub = pub.astimezone(dt.timezone.utc)
-            except (ValueError, TypeError):
+                published = email.utils.parsedate_to_datetime(entry.findtext("pubDate") or "").astimezone(dt.timezone.utc)
+            except (ValueError, TypeError, OverflowError):
                 continue
-            if not title or not link.startswith("https://") or not summary or not (dt.datetime.now(dt.timezone.utc) - pub < dt.timedelta(hours=72)):
+            age = dt.datetime.now(dt.timezone.utc) - published
+            if not (dt.timedelta(0) <= age <= dt.timedelta(hours=96)):
                 continue
-            identity = hashlib.sha256(link.encode()).hexdigest()[:16]
-            if any(x.get("source_id") == identity for x in items):
+            if not any(k in (title + " " + summary).lower() for k in keywords):
                 continue
-            candidates.append(dict(category=category, title=title, summary=summary[:700], url=link, source=publisher, source_id=identity, published=pub.isoformat()))
+            # Only source-grounded short news briefs: no invented facts, quotes or details.
+            clean_summary = summary[:380].rsplit(" ", 1)[0].rstrip(" ,;:-") + ("…" if len(summary) > 380 else "")
+            if len(clean_summary) < 45:
+                continue
+            body = (clean_summary + "\n\n" +
+                    "Informațiile sunt prezentate pe baza relatării publicate de " + publisher +
+                    ". Pentru contextul complet și eventualele actualizări, consultați articolul original.")
+            new_items.append({
+                "id": "rss-" + hashlib.sha256(url.encode()).hexdigest()[:20],
+                "editorial": True,
+                "category": "Diaspora",
+                "title": title[:240],
+                "summary": clean_summary,
+                "body": body,
+                "published": published.isoformat(),
+                "source": publisher,
+                "url": url,
+                "byline": "Redacția Radio Românii din Italia",
+                "source_id": hashlib.sha256(url.encode()).hexdigest()[:16],
+                "slot": slot,
+            })
+            known_urls.add(url.rstrip("/"))
+            if len(new_items) >= 3:
+                break
     except Exception as exc:
-        print(f"{publisher}: {exc}")
-if not candidates:
-    print("No eligible sourced news; no article published")
-    raise SystemExit(0)
-# Prioritize the diaspora, then the newest news, and publish at most one per ten-minute run.
-candidates.sort(key=lambda x: (x["category"] == "Diaspora", x["published"]), reverse=True)
-for candidate in candidates[:8]:
-    if sum(x.get("slot") == slot for x in items) >= 1:
+        print(f"RSS unavailable ({publisher}): {exc}")
+    if len(new_items) >= 3:
         break
-    prompt = (
-        "Scrie în limba română un articol ORIGINAL pentru diaspora românească din Italia. "
-        "Folosește NUMAI informațiile confirmate în titlul și rezumatul RSS de mai jos. "
-        "Nu inventa detalii, citate, cifre, date, declarații sau consecințe juridice. "
-        "Dacă informațiile sunt insuficiente, răspunde cu {}. "
-        "Răspunde EXCLUSIV în JSON cu title, summary, body; body 120-230 de cuvinte "
-        "doar dacă sunt susținute de sursă, altfel mai scurt. Nu copia textul original. "
-        "Menționează publicația-sursă și invită cititorul să consulte sursa pentru detalii.\n"
-        + json.dumps(candidate, ensure_ascii=False)
-    )
-    payload = json.dumps({"model": os.getenv("EDITORIAL_MODEL", "gpt-4.1-mini"), "input": prompt, "max_output_tokens": 900}).encode()
-    req = urllib.request.Request("https://api.openai.com/v1/responses", data=payload,
-                                 headers={"Authorization": "Bearer " + key, "Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=70) as response:
-            result = json.load(response)
-        answer = "".join(c.get("text", "") for o in result.get("output", []) for c in o.get("content", []) if c.get("type") == "output_text")
-        article = json.loads(answer.strip().removeprefix("```json").removesuffix("```").strip())
-        if not all(isinstance(article.get(k), str) and article[k].strip() for k in ("title", "summary", "body")):
-            continue
-        items.append({
-            "editorial": True, "slot": slot, "source_id": candidate["source_id"],
-            "category": candidate["category"], "title": article["title"][:240],
-            "summary": article["summary"][:350], "body": article["body"][:3000],
-            "url": candidate["url"], "source": "Radio Românii din Italia · " + candidate["source"],
-            "published": now.isoformat(), "image": ""
-        })
-    except Exception as exc:
-        print(f"Generation failed for {candidate['source']}: {exc}")
-# Retain older items in the editorial archive; only the frontend hides after 24h.
-if any(x.get("slot") == slot for x in items):
-    path.write_text(json.dumps({"updated_at": now.isoformat(), "items": items}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Editorial articles in slot: {sum(x.get('slot') == slot for x in items)}")
-
-if not any(x.get("slot") == slot for x in items):
-    raise SystemExit("ERROR: No editorial article generated; inspect feed/API errors above")
+if new_items:
+    data["items"] = new_items + items
+    data["updated_at"] = NOW.isoformat()
+    ARCHIVE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+print(f"New verified-source RSS briefs: {len(new_items)}; archived articles: {len(items)}")
