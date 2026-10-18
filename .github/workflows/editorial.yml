@@ -1,4 +1,4 @@
-name: Articoli editoriali automatici
+name: Actualizare diaspora fara API
 on:
   schedule:
     - cron: '0 * * * *'
@@ -12,13 +12,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - name: Redactează articole originale din știri noi
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Verifică și pregătește știri diaspora din RSS
         run: python scripts/publish_editorial.py
       - name: Pubblica archivio
         run: |
