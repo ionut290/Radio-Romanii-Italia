@@ -3,7 +3,7 @@ async function refreshStats(){
  try{const [visitors,members]=await Promise.all([getCountFromServer(collection(db,"communityVisitors")),getCountFromServer(collection(db,"profiles"))]);$("visitor-count").textContent=visitors.data().count.toLocaleString("ro-RO");$("member-count").textContent=members.data().count.toLocaleString("ro-RO")}catch(e){$("stats-note").textContent="Statisticile nu sunt disponibile momentan ("+e.code+")."}}
 async function registerVisit(){
  try{let id=localStorage.getItem("radio-community-visitor");if(!id){id=crypto.randomUUID();localStorage.setItem("radio-community-visitor",id)}
- await setDoc(doc(db,"communityVisitors",id),{firstSeen:serverTimestamp()}).catch(e=>{if(e.code!=="permission-denied")throw e});}catch(e){console.warn("Vizita nu a fost înregistrată",e)}finally{refreshStats()}}
+ const visitRef=doc(db,"communityVisitors",id);const existing=await getDoc(visitRef);if(!existing.exists()){try{await setDoc(visitRef,{firstSeen:serverTimestamp()})}catch(e){if(e.code==="permission-denied"){const check=await getDoc(visitRef);if(!check.exists())throw e}else throw e}}}catch(e){console.warn("Vizita nu a fost înregistrată",e);$("stats-note").textContent="Nu am putut înregistra vizita ("+(e.code||e.message)+"). Statisticile existente rămân salvate."}finally{refreshStats()}}
 registerVisit();
 let presenceId;
 try{presenceId=sessionStorage.getItem("radio-presence-id");if(!presenceId){presenceId=crypto.randomUUID();sessionStorage.setItem("radio-presence-id",presenceId)}}catch(e){presenceId=crypto.randomUUID()}
