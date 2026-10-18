@@ -1,0 +1,59 @@
+name: Publicare Radio Românii din Italia
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publicare:
+    if: ${{ vars.SITE_HOST != '' && vars.SITE_USER != '' && vars.SITE_PATH != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Preia codul site-ului
+        uses: actions/checkout@v4
+
+      - name: Verifică destinația
+        env:
+          SITE_HOST: ${{ vars.SITE_HOST }}
+          SITE_USER: ${{ vars.SITE_USER }}
+          SITE_PATH: ${{ vars.SITE_PATH }}
+          SSH_KEY: ${{ secrets.SITE_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.SITE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SITE_HOST" && test -n "$SITE_USER" && test -n "$SSH_KEY" && test -n "$KNOWN_HOSTS"
+          case "$SITE_PATH" in
+            /|/home|/root|/etc|/var|/var/www|/usr|/opt|/srv|"") echo "Cale nesigură: $SITE_PATH"; exit 1 ;;
+            /*) ;;
+            *) echo "SITE_PATH trebuie să fie o cale absolută"; exit 1 ;;
+          esac
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_ed25519 ~/.ssh/known_hosts
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=yes "$SITE_USER@$SITE_HOST" "test -d '$SITE_PATH' && test -w '$SITE_PATH'"
+
+      - name: Sincronizează doar fișierele web
+        env:
+          SITE_HOST: ${{ vars.SITE_HOST }}
+          SITE_USER: ${{ vars.SITE_USER }}
+          SITE_PATH: ${{ vars.SITE_PATH }}
+        run: |
+          set -euo pipefail
+          rsync -az --no-perms --no-owner --no-group \
+            --exclude='.git/' --exclude='.github/' \
+            --include='*/' \
+            --include='*.html' --include='*.css' --include='*.js' \
+            --include='*.json' --include='*.svg' --include='*.png' \
+            --include='*.jpg' --include='*.jpeg' --include='*.webp' \
+            --include='*.ico' --include='*.txt' \
+            --exclude='*' \
+            -e 'ssh -o BatchMode=yes -o StrictHostKeyChecking=yes' \
+            ./ "$SITE_USER@$SITE_HOST:$SITE_PATH/"
+          echo "Fișierele site-ului au fost sincronizate. AzuraCast nu a fost modificat."
