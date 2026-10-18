@@ -21,14 +21,17 @@ if not isinstance(items, list):
 known_urls = {str(x.get("url", "")).rstrip("/") for x in items}
 slot = NOW.strftime("%Y-%m-%d-%H")
 feeds = [
-    ("Google News · diaspora Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "români Italia diaspora when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"})),
-    ("Google News · români Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "\"român\" Italia when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"})),
-    ("Știri Diaspora via FreeNewsAPI", "https://freenewsapi.ai/v1/rss?host=www.stiridiaspora.ro&size=50"),
+    ("Google News · diaspora Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "români Italia diaspora when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "Diaspora"),
+    ("Google News · români Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "\"român\" Italia when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "Diaspora"),
+    ("ANSA", "https://www.ansa.it/sito/ansait_rss.xml", "Italia"),
+    ("ANSA Ultima Ora", "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "Italia"),
+    ("AGERPRES via Google News", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "site:agerpres.ro when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "România"),
+    ("Guvernul României via Google News", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "site:gov.ro when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "România"),
 ]
 keywords = ("român", "romani", "români", "romanca", "româncă", "române", "romania",
             "diaspora", "moldove", "moldova", "cetățean român", "roman")
 new_items = []
-for publisher, feed in feeds:
+for publisher, feed, category in feeds:
     try:
         request = urllib.request.Request(feed, headers={"User-Agent": "RadioRomaniiItalia/1.0 (editorial RSS)"})
         with urllib.request.urlopen(request, timeout=25) as response:
@@ -49,7 +52,7 @@ for publisher, feed in feeds:
             age = dt.datetime.now(dt.timezone.utc) - published
             if not (dt.timedelta(0) <= age <= dt.timedelta(hours=96)):
                 continue
-            if not any(k in (title + " " + summary).lower() for k in keywords):
+            if category == "Diaspora" and not any(k in (title + " " + summary).lower() for k in keywords):
                 continue
             # Only source-grounded short news briefs: no invented facts, quotes or details.
             clean_summary = summary[:380].rsplit(" ", 1)[0].rstrip(" ,;:-") + ("…" if len(summary) > 380 else "")
@@ -61,7 +64,7 @@ for publisher, feed in feeds:
             new_items.append({
                 "id": "rss-" + hashlib.sha256(url.encode()).hexdigest()[:20],
                 "editorial": True,
-                "category": "Diaspora",
+                "category": category,
                 "title": title[:240],
                 "summary": clean_summary,
                 "body": body,
@@ -73,11 +76,11 @@ for publisher, feed in feeds:
                 "slot": slot,
             })
             known_urls.add(url.rstrip("/"))
-            if len(new_items) >= 3:
+            if len([x for x in new_items if x["category"] == category]) >= 2:
                 break
     except Exception as exc:
         print(f"RSS unavailable ({publisher}): {exc}")
-    if len(new_items) >= 3:
+    if len(new_items) >= 9:
         break
 if new_items:
     data["items"] = new_items + items
