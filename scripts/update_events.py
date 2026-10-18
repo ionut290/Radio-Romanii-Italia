@@ -5,13 +5,26 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/"events-auto.json"
 TODAY=dt.datetime.now(dt.timezone.utc).date()
 SEARCHES=[
- '"eveniment" "români" "Italia" concert festival',
+ '"români" "Italia" "festival" "2026"',
+ '"romeni" "Italia" "evento" "2026"',
  '"comunitatea românească" "Italia" eveniment',
  '"diaspora românească" "Italia" festival',
  '"Romania" "festival" "Italia" comunità',
  '"interculturale" "romeni" "Italia" evento',
+ 'site:icr.ro Italia evenimente 2026',
+ 'site:accademiadiromania.it eventi 2026',
+ 'site:ro.wikipedia.org festival românesc Italia 2026',
+ 'site:romania-actualitati.ro Italia diaspora eveniment 2026',
+ 'site:ambasada-romaniei.it evenimente culturale',
+ '"romeni" "festa" "Roma" 2026',
+ '"romeni" "festival" "Torino" 2026',
+ '"români" "eveniment" "Milano" 2026',
+ '"români" "eveniment" "Bologna" 2026',
+ '"cultura romena" "Italia" "ottobre" 2026',
+ '"cultura romena" "Italia" "novembre" 2026',
+ '"Balkanika" festival 2026 Italia',
 ]
-CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcomo":"Sicilia","alcamo":"Sicilia"}
+CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcamo":"Sicilia"}
 MONTHS={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12,"ianuarie":1,"februarie":2,"martie":3,"aprilie":4,"mai":5,"iunie":6,"iulie":7,"august":8,"septembrie":9,"octombrie":10,"noiembrie":11,"decembrie":12}
 EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâlnir|sărbăto|târg|conferin|manifestazion|spettacol|incontro|mostra|evento",re.I)
 DIASPORA=re.compile(r"rom[aâ]n|romeni|romania|diaspora|intercultural|multicultural|balcan|moldov",re.I)
@@ -32,6 +45,7 @@ if OUT.exists():
     try:old=json.loads(OUT.read_text(encoding="utf-8")).get("events",[])
     except (ValueError,OSError):pass
 items={x["url"]:x for x in old if x.get("date","")>=TODAY.isoformat() and x.get("url")}
+seen_count=0
 for query in SEARCHES:
     url="https://news.google.com/rss/search?"+urllib.parse.urlencode({"q":query,"hl":"it","gl":"IT","ceid":"IT:it"})
     try:
@@ -52,7 +66,8 @@ for query in SEARCHES:
         except (TypeError,ValueError):continue
         if (dt.datetime.now(dt.timezone.utc)-published.astimezone(dt.timezone.utc)).days>45:continue
         source=clean(item.findtext("source")) or "Sursă publică"
+        seen_count+=1
         items[link]={"title":title[:160],"date":date,"city":city,"region":CITIES[city.lower()],"source":source[:90],"url":link,"description":description[:450],"published":published.date().isoformat()}
 events=sorted(items.values(),key=lambda x:(x["date"],x["city"],x["title"]))[:80]
 OUT.write_text(json.dumps({"updated":TODAY.isoformat(),"events":events},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-print("Upcoming event leads:",len(events))
+print("Eligible RSS entries:",seen_count,"Upcoming event leads:",len(events))
