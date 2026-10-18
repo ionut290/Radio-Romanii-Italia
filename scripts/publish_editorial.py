@@ -7,6 +7,7 @@ import html
 import json
 import re
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -20,7 +21,9 @@ if not isinstance(items, list):
 known_urls = {str(x.get("url", "")).rstrip("/") for x in items}
 slot = NOW.strftime("%Y-%m-%d-%H")
 feeds = [
-    ("Rotalianul", "https://rotalianul.com/feed/"),
+    ("Google News · diaspora Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "români Italia diaspora when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"})),
+    ("Google News · români Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "\"român\" Italia when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"})),
+    ("Știri Diaspora via FreeNewsAPI", "https://freenewsapi.ai/v1/rss?host=www.stiridiaspora.ro&size=50"),
 ]
 keywords = ("român", "romani", "români", "romanca", "româncă", "române", "romania",
             "diaspora", "moldove", "moldova", "cetățean român", "roman")
@@ -63,9 +66,9 @@ for publisher, feed in feeds:
                 "summary": clean_summary,
                 "body": body,
                 "published": published.isoformat(),
-                "source": publisher,
+                "source": (entry.findtext("source") or publisher),
                 "url": url,
-                "byline": "Redacția Radio Românii din Italia",
+                "byline": "Selecție știri · Radio Românii din Italia",
                 "source_id": hashlib.sha256(url.encode()).hexdigest()[:16],
                 "slot": slot,
             })
