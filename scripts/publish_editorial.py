@@ -4,6 +4,7 @@ import datetime as dt
 import email.utils
 import hashlib
 import html
+from html.parser import HTMLParser
 import json
 import re
 import urllib.request
@@ -30,6 +31,36 @@ feeds = [
 ]
 keywords = ("român", "romani", "români", "romanca", "româncă", "române", "romania",
             "diaspora", "moldove", "moldova", "cetățean român", "roman")
+class ArticleImageParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.image = ""
+    def handle_starttag(self, tag, attrs):
+        if tag.lower() != "meta" or self.image:
+            return
+        a = dict(attrs)
+        if a.get("property", "").lower() in ("og:image", "og:image:url") or a.get("name", "").lower() == "twitter:image":
+            candidate = html.unescape(a.get("content", ""))
+            if candidate.startswith("https://"):
+                self.image = candidate
+
+def article_image(url):
+    # Only publisher-supplied public preview images; do not scrape article galleries.
+    if not url.startswith("https://") or "news.google.com/" in url:
+        return ""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.0)"})
+        with urllib.request.urlopen(req, timeout=7) as response:
+            if "text/html" not in response.headers.get("Content-Type", ""):
+                return ""
+            page = response.read(180_000).decode("utf-8", errors="ignore")
+        parser = ArticleImageParser()
+        parser.feed(page)
+        return parser.image
+    except Exception as exc:
+        print(f"Preview image unavailable: {url[:90]} ({exc})")
+        return ""
+
 new_items = []
 for publisher, feed, category in feeds:
     try:
@@ -68,6 +99,8 @@ for publisher, feed, category in feeds:
                 image_match = re.search(r'<img[^>]+src=["\\\'](https://[^"\\\']+)["\\\']', description, re.I)
                 if image_match:
                     image = html.unescape(image_match.group(1))
+            if not image:
+                image = article_image(url)
             # Only source-grounded short news briefs: no invented facts, quotes or details.
             clean_summary = summary[:380].rsplit(" ", 1)[0].rstrip(" ,;:-") + ("…" if len(summary) > 380 else "")
             if len(clean_summary) < 45:
@@ -97,7 +130,20 @@ for publisher, feed, category in feeds:
         print(f"RSS unavailable ({publisher}): {exc}")
     if len(new_items) >= 9:
         break
-if new_items:
+# Backfill a limited number of older entries with source-provided preview images.
+backfilled = 0
+for older in items:
+    if backfilled >= 8:
+        break
+    if older.get("image") or not older.get("url"):
+        continue
+    candidate = article_image(older["url"])
+    if candidate:
+        older["image"] = candidate
+        backfilled += 1
+if backfilled:
+    print(f"Backfilled article preview images: {backfilled}")
+if new_items or backfilled:
     data["items"] = new_items + items
     data["updated_at"] = NOW.isoformat()
     ARCHIVE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
