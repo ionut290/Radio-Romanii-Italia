@@ -15,8 +15,7 @@ from zoneinfo import ZoneInfo
 now = dt.datetime.now(ZoneInfo("Europe/Rome"))
 key = os.getenv("OPENAI_API_KEY")
 if not key:
-    print("OPENAI_API_KEY missing; skip without publishing")
-    raise SystemExit(0)
+    raise SystemExit("ERROR: OPENAI_API_KEY missing; configure GitHub Actions secret")
 path = Path("editorial.json")
 data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"items": []}
 items = data.get("items", [])
@@ -54,7 +53,7 @@ for category, url, publisher in feeds:
     except Exception as exc:
         print(f"{publisher}: {exc}")
 if not candidates:
-    print("No eligible sourced news")
+    print("No eligible sourced news; no article published")
     raise SystemExit(0)
 # Prioritize the diaspora, then the newest news, and publish at most one per ten-minute run.
 candidates.sort(key=lambda x: (x["category"] == "Diaspora", x["published"]), reverse=True)
@@ -89,8 +88,11 @@ for candidate in candidates[:8]:
             "published": now.isoformat(), "image": ""
         })
     except Exception as exc:
-        print(f"Generation skipped for {candidate['source']}: {exc}")
+        print(f"Generation failed for {candidate['source']}: {exc}")
 # Retain older items in the editorial archive; only the frontend hides after 24h.
 if any(x.get("slot") == slot for x in items):
     path.write_text(json.dumps({"updated_at": now.isoformat(), "items": items}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Editorial articles in slot: {sum(x.get('slot') == slot for x in items)}")
+
+if not any(x.get("slot") == slot for x in items):
+    raise SystemExit("ERROR: No editorial article generated; inspect feed/API errors above")
