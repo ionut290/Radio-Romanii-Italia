@@ -25,6 +25,35 @@ SEARCHES=[
  '"cultura romena" "Italia" "novembre" 2026',
  '"Balkanika" festival 2026 Italia',
 ]
+
+# Broad coverage by locality and event type, including multilingual searches.
+SEARCHES += [
+    f'"cultura romena" "{city}" eventi 2026'
+    for city in ("Roma","Milano","Torino","Bologna","Firenze","Venezia","Napoli","Verona","Padova","Bari","Genova","Palermo","Brescia","Perugia")
+]
+SEARCHES += [
+    f'"comunitatea romaneasca" "{city}" evenimente 2026'
+    for city in ("Roma","Milano","Torino","Bologna","Firenze","Venezia","Napoli","Verona","Padova","Bari")
+]
+SEARCHES += [
+    '"festival românesc" Italia 2026',
+    '"festival romeno" Italia ottobre novembre dicembre 2026',
+    '"concerto romeno" Italia 2026',
+    '"teatro romeno" Italia 2026',
+    '"cinema romeno" Italia 2026',
+    '"mostra artisti romeni" Italia 2026',
+    '"Ziua Nationala a Romaniei" Italia 2026 eveniment',
+    '"1 decembrie" "români" "Italia" 2026',
+    '"festival Propatria" Roma 2026 programma',
+    '"Accademia di Romania" Roma eventi ottobre 2026',
+    '"Istituto Romeno di Cultura" Venezia mostra 2026',
+    'site:icr.ro/venetia/evenimente/ 2026',
+    'site:icr.ro/roma/evenimente/ 2026',
+    'site:accademiadiromania.it/ 2026 eventi',
+    '"associazione romeni" "Italia" evento 2026',
+    '"comunità moldava" Italia evento 2026',
+    '"festival interculturale" "romena" Italia 2026',
+]
 CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcamo":"Sicilia"}
 MONTHS={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12,"ianuarie":1,"februarie":2,"martie":3,"aprilie":4,"mai":5,"iunie":6,"iulie":7,"august":8,"septembrie":9,"octombrie":10,"noiembrie":11,"decembrie":12}
 EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâlnir|sărbăto|târg|conferin|manifestazion|spettacol|incontro|mostra|evento",re.I)
@@ -104,6 +133,8 @@ for query in SEARCHES:
 # Official cultural institution calendars. Only structured Event entries with explicit
 # dates and an Italian city are accepted; an inaccessible site is simply skipped.
 OFFICIAL_PAGES=[
+    ("ICR Veneția – evenimente","https://www.icr.ro/venetia/evenimente"),
+    ("ICR Roma – evenimente","https://www.icr.ro/roma/evenimente"),
     ("Institutul Cultural Român – Roma","https://www.icr.ro/roma"),
     ("Institutul Cultural Român – Veneția","https://www.icr.ro/venetia"),
     ("Accademia di Romania in Roma","https://www.accademiadiromania.it/"),
