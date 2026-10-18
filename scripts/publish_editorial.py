@@ -12,11 +12,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-SLOTS = {7, 10, 13, 16, 19}
 now = dt.datetime.now(ZoneInfo("Europe/Rome"))
-if now.hour not in SLOTS:
-    print("Outside Italian editorial slots")
-    raise SystemExit(0)
 key = os.getenv("OPENAI_API_KEY")
 if not key:
     print("OPENAI_API_KEY missing; skip without publishing")
@@ -24,8 +20,8 @@ if not key:
 path = Path("editorial.json")
 data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"items": []}
 items = data.get("items", [])
-slot = now.strftime("%Y-%m-%d") + f"-{now.hour:02d}"
-if sum(x.get("slot") == slot for x in items) >= 2:
+slot = now.strftime("%Y-%m-%d-%H-") + f"{now.minute // 10:01d}"
+if sum(x.get("slot") == slot for x in items) >= 1:
     print("Slot already published")
     raise SystemExit(0)
 feeds = [
@@ -60,19 +56,19 @@ for category, url, publisher in feeds:
 if not candidates:
     print("No eligible sourced news")
     raise SystemExit(0)
-# Prioritize the diaspora, then the newest news, and publish at most two.
+# Prioritize the diaspora, then the newest news, and publish at most one per ten-minute run.
 candidates.sort(key=lambda x: (x["category"] == "Diaspora", x["published"]), reverse=True)
 for candidate in candidates[:8]:
-    if sum(x.get("slot") == slot for x in items) >= 2:
+    if sum(x.get("slot") == slot for x in items) >= 1:
         break
     prompt = (
-        "Scrivi in italiano un breve articolo ORIGINALE per la diaspora romena in Italia. "
-        "Usa SOLO le informazioni confermate nel titolo e nel riassunto RSS qui sotto. "
-        "Non inventare dettagli, citazioni, cifre, date, dichiarazioni o implicazioni legali. "
-        "Se le informazioni sono insufficienti, rispondi con {}. "
-        "Rispondi ESCLUSIVAMENTE con JSON avente title, summary, body; body 120-230 parole "
-        "solo se supportate dalla fonte, altrimenti più corto. Non copiare il testo originale. "
-        "Scrivi che la fonte è il giornale citato e invita a leggere la fonte per approfondire.\n"
+        "Scrie în limba română un articol ORIGINAL pentru diaspora românească din Italia. "
+        "Folosește NUMAI informațiile confirmate în titlul și rezumatul RSS de mai jos. "
+        "Nu inventa detalii, citate, cifre, date, declarații sau consecințe juridice. "
+        "Dacă informațiile sunt insuficiente, răspunde cu {}. "
+        "Răspunde EXCLUSIV în JSON cu title, summary, body; body 120-230 de cuvinte "
+        "doar dacă sunt susținute de sursă, altfel mai scurt. Nu copia textul original. "
+        "Menționează publicația-sursă și invită cititorul să consulte sursa pentru detalii.\n"
         + json.dumps(candidate, ensure_ascii=False)
     )
     payload = json.dumps({"model": os.getenv("EDITORIAL_MODEL", "gpt-4.1-mini"), "input": prompt, "max_output_tokens": 900}).encode()
