@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "Radio Românii din Italia",
+  "short_name": "Radio Românii",
+  "description": "Muzică, știri și comunitate pentru românii din Italia. Acasă, oriunde ai fi!",
+  "lang": "ro",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0b1323",
+  "theme_color": "#101827",
+  "icons": [
+    {
+      "src": "/RADIO-LOGO.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": [
+    "music",
+    "news",
+    "social"
+  ]
+}
