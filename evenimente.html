@@ -19,7 +19,7 @@ document.getElementById("publish").addEventListener("click",e=>{if(!pc.value){e.
 const list=document.getElementById("events-auto-list"),updated=document.getElementById("events-auto-updated");
 const now=new Date();const today=[now.getFullYear(),String(now.getMonth()+1).padStart(2,"0"),String(now.getDate()).padStart(2,"0")].join("-");
 fetch("./events-auto.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(data=>{
-  const events=(Array.isArray(data.events)?data.events:[]).filter(e=>e.date>=today&&e.url?.startsWith("https://")).sort((a,b)=>a.date.localeCompare(b.date));
+  const events=(Array.isArray(data.events)?data.events:[]).filter(e=>(e.endDate||e.date)>=today&&e.url?.startsWith("https://")).sort((a,b)=>a.date.localeCompare(b.date));
   list.replaceChildren();
   if(!events.length){list.textContent="Nu sunt încă evenimente viitoare confirmate automat. Poți adăuga un eveniment folosind «Creează o postare».";return}
   for(const e of events){const article=document.createElement("article");article.className="post";const heading=document.createElement("h3");heading.textContent=e.title;const meta=document.createElement("small");meta.textContent=[e.date,e.city,e.region].filter(Boolean).join(" · ");const description=document.createElement("p");description.textContent=e.description||"Consultă sursa pentru program și detalii.";const link=document.createElement("a");link.href=e.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Sursă: "+(e.source||"Anunț original")+" ↗";article.append(heading,meta,description,link);list.append(article)}
