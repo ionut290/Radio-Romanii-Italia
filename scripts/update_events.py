@@ -100,6 +100,88 @@ for query in SEARCHES:
         source=clean(item.findtext("source")) or "Sursă publică"
         seen_count+=1
         items[link]={"title":title[:160],"date":date,"city":city,"region":CITIES[city.lower()],"source":source[:90],"url":link,"description":description[:450],"published":published.date().isoformat()}
+
+# Official cultural institution calendars. Only structured Event entries with explicit
+# dates and an Italian city are accepted; an inaccessible site is simply skipped.
+OFFICIAL_PAGES=[
+    ("Institutul Cultural Român – Roma","https://www.icr.ro/roma"),
+    ("Institutul Cultural Român – Veneția","https://www.icr.ro/venetia"),
+    ("Accademia di Romania in Roma","https://www.accademiadiromania.it/"),
+]
+class EventHTML(HTMLParser):
+    def __init__(self):
+        super().__init__();self.scripts=[];self.links=[];self.in_json=False;self.buffer=[]
+    def handle_starttag(self,tag,attrs):
+        attrs=dict(attrs)
+        if tag=="script" and "ld+json" in attrs.get("type","").lower():
+            self.in_json=True;self.buffer=[]
+        if tag=="a" and attrs.get("href"):self.links.append(attrs["href"])
+    def handle_data(self,data):
+        if self.in_json:self.buffer.append(data)
+    def handle_endtag(self,tag):
+        if tag=="script" and self.in_json:
+            self.scripts.append("".join(self.buffer));self.in_json=False
+def download_html(url):
+    req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; RadioRomaniiEvents/1.0)"})
+    with urllib.request.urlopen(req,timeout=10) as response:
+        if "text/html" not in response.headers.get("Content-Type",""):return ""
+        return response.read(600_000).decode("utf-8","replace")
+def json_events(value):
+    if isinstance(value,list):
+        for item in value:yield from json_events(item)
+    elif isinstance(value,dict):
+        typ=value.get("@type",[])
+        if isinstance(typ,str):typ=[typ]
+        if any(str(t).lower().endswith("event") for t in typ):yield value
+        for key in ("@graph","mainEntity","itemListElement"):
+            if key in value:yield from json_events(value[key])
+def official_events():
+    count=0
+    for source,homepage in OFFICIAL_PAGES:
+        try:
+            page=download_html(homepage)
+            parser=EventHTML();parser.feed(page)
+            base=urllib.parse.urlparse(homepage)
+            candidates=[(homepage,parser)]
+            # Inspect a small number of same-host event links, without spidering entire sites.
+            urls=[]
+            for href in parser.links:
+                u=urllib.parse.urljoin(homepage,href);p=urllib.parse.urlparse(u)
+                if p.scheme=="https" and p.hostname==base.hostname and re.search(r"eveniment|event|calendar|program|festival|concert|spectacol|manifestazion",p.path,re.I) and u not in urls:urls.append(u)
+            for url in urls[:8]:
+                try:
+                    sub=EventHTML();sub.feed(download_html(url));candidates.append((url,sub))
+                except Exception as exc:print("Official subpage unavailable:",str(exc)[:80])
+            for page_url,parsed in candidates:
+                for raw in parsed.scripts:
+                    try:objects=list(json_events(json.loads(raw)))
+                    except (ValueError,TypeError):continue
+                    for event in objects:
+                        name=clean(str(event.get("name","")))
+                        start=str(event.get("startDate",""))[:10]
+                        try:event_day=dt.date.fromisoformat(start)
+                        except ValueError:continue
+                        if not TODAY<=event_day<=TODAY+dt.timedelta(days=180):continue
+                        location=event.get("location",{})
+                        if isinstance(location,list):location=location[0] if location else {}
+                        if isinstance(location,str):location={"name":location}
+                        if not isinstance(location,dict):continue
+                        address=location.get("address",{})
+                        if isinstance(address,str):address={"streetAddress":address}
+                        if not isinstance(address,dict):address={}
+                        place=" ".join(str(x or "") for x in (location.get("name"),address.get("addressLocality"),address.get("streetAddress")))
+                        city=next((c.title() for c in CITIES if re.search(r"\\b"+re.escape(c)+r"\\b",place,re.I)),None)
+                        if not city or not name:continue
+                        link=event.get("url") or page_url
+                        if not isinstance(link,str) or not link.startswith("https://"):link=page_url
+                        description=clean(str(event.get("description","")))[:450]
+                        if not (DIASPORA.search(name+" "+description+" "+source) or "Român" in source):continue
+                        items[link]={"title":name[:160],"date":start,"city":city,"region":CITIES[city.lower()],"source":source,"url":link,"description":description,"published":TODAY.isoformat()}
+                        count+=1
+        except Exception as exc:print("Official source unavailable:",source,str(exc)[:130])
+    print("Official structured events:",count)
+
+official_events()
 events=sorted(items.values(),key=lambda x:(x["date"],x["city"],x["title"]))[:80]
 OUT.write_text(json.dumps({"updated":TODAY.isoformat(),"events":events},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print("Eligible RSS entries:",seen_count,"Upcoming event leads:",len(events))
