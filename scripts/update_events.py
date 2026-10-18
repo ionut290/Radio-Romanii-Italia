@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Discover upcoming diaspora-related events from public news RSS; publish only dated leads."""
 import datetime as dt, email.utils, html, json, pathlib, re, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+from html.parser import HTMLParser
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/"events-auto.json"
 TODAY=dt.datetime.now(dt.timezone.utc).date()
@@ -40,6 +41,33 @@ def event_date(text):
     valid=sorted(d for d in candidates if TODAY<=d<=TODAY+dt.timedelta(days=180))
     return valid[0].isoformat() if valid else None
 def clean(s):return re.sub(r"\s+"," ",html.unescape(re.sub("<[^>]+>"," ",s or ""))).strip()
+
+class PageText(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.parts=[]
+        self.skip=0
+    def handle_starttag(self,tag,attrs):
+        if tag in ("script","style"):self.skip+=1
+        if tag in ("p","h1","h2","h3","li","time","br"):self.parts.append(" ")
+    def handle_endtag(self,tag):
+        if tag in ("script","style") and self.skip:self.skip-=1
+    def handle_data(self,data):
+        if not self.skip:self.parts.append(data)
+def page_details(url):
+    parsed=urllib.parse.urlparse(url)
+    if parsed.scheme!="https" or not parsed.hostname or parsed.hostname in ("news.google.com","www.google.com","google.com"):return ""
+    try:
+        req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; DiasporaEvents/1.1)"})
+        with urllib.request.urlopen(req,timeout=8) as resp:
+            if "text/html" not in resp.headers.get("Content-Type",""):return ""
+            body=resp.read(350_000).decode("utf-8","replace")
+        parser=PageText();parser.feed(body)
+        return clean(" ".join(parser.parts))[:18000]
+    except Exception as exc:
+        print("Page unavailable:",parsed.hostname,str(exc)[:70])
+        return ""
+
 old=[]
 if OUT.exists():
     try:old=json.loads(OUT.read_text(encoding="utf-8")).get("events",[])
@@ -59,12 +87,16 @@ for query in SEARCHES:
         link=(item.findtext("link") or "").strip()
         if not link.startswith("https://") or not EVENT_WORDS.search(text) or not DIASPORA.search(text):continue
         date=event_date(text)
-        if not date:continue
         city=next((name.title() for name in CITIES if re.search(r"\b"+re.escape(name)+r"\b",text,re.I)),None)
-        if not city:continue
+        if not date or not city:
+            details=page_details(link)
+            if details and EVENT_WORDS.search(details) and DIASPORA.search(details):
+                date=date or event_date(details)
+                city=city or next((name.title() for name in CITIES if re.search(r"\b"+re.escape(name)+r"\b",details,re.I)),None)
+        if not date or not city:continue
         try:published=email.utils.parsedate_to_datetime(item.findtext("pubDate"))
         except (TypeError,ValueError):continue
-        if (dt.datetime.now(dt.timezone.utc)-published.astimezone(dt.timezone.utc)).days>45:continue
+        if (dt.datetime.now(dt.timezone.utc)-published.astimezone(dt.timezone.utc)).days>120:continue
         source=clean(item.findtext("source")) or "Sursă publică"
         seen_count+=1
         items[link]={"title":title[:160],"date":date,"city":city,"region":CITIES[city.lower()],"source":source[:90],"url":link,"description":description[:450],"published":published.date().isoformat()}
