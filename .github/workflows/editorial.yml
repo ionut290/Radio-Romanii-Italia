@@ -1,7 +1,7 @@
 name: Articoli editoriali automatici
 on:
   schedule:
-    - cron: '*/15 5-19 * * *'
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Scrivi due articoli nella fascia oraria italiana
+      - name: Redactează articole originale din știri noi
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/publish_editorial.py
