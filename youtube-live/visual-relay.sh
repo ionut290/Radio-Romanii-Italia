@@ -29,6 +29,15 @@ sleep 10
     xdotool key --clearmodifiers Home
     sleep 30
     xdotool key --clearmodifiers F5
+    sleep 35
+    # Show public community page, then return to the homepage.
+    xdotool key --clearmodifiers ctrl+l
+    xdotool type --clearmodifiers --delay 2 "${SITE_URL%/}/comunitate.html"
+    xdotool key Return
+    sleep 55
+    xdotool key --clearmodifiers ctrl+l
+    xdotool type --clearmodifiers --delay 2 "$SITE_URL"
+    xdotool key Return
   done
 ) &
 SCROLL_PID=$!
