@@ -4,7 +4,7 @@ set -Eeuo pipefail
 source /etc/radio-youtube/relay.env
 DISPLAY_NUM=":92"
 export DISPLAY="$DISPLAY_NUM"
-SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/}"
+SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/?youtube=1}"
 # Browser image is decorative; audio comes only from the AzuraCast MP3 source.
 Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
@@ -15,7 +15,7 @@ sleep 2
 runuser -u ubuntu -- /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
   --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble \
   --autoplay-policy=user-gesture-required --window-size=1280,720 \
-  --window-position=0,0 --kiosk "$SITE_URL" "${SITE_URL%/}/comunitate.html" >/tmp/radio-youtube-chromium.log 2>&1 &
+  --window-position=0,0 --kiosk "$SITE_URL" >/tmp/radio-youtube-chromium.log 2>&1 &
 BROWSER_PID=$!
 sleep 10
 if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; then
@@ -23,26 +23,8 @@ if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; th
   tail -n 15 /tmp/radio-youtube-chromium.log >&2 || true
   exit 1
 fi
-# Open public homepage and community in separate tabs. Never type URLs into webpage forms.
-# All interactions are keyboard shortcuts only; Chromium's kiosk view stays fullscreen.
-(
-  while true; do
-    sleep 25
-    xdotool key --clearmodifiers Page_Down
-    sleep 25
-    xdotool key --clearmodifiers Page_Down
-    sleep 25
-    xdotool key --clearmodifiers ctrl+Home
-    sleep 30
-    xdotool key --clearmodifiers ctrl+r
-    sleep 35
-    # Switch to preloaded public community tab without address-bar typing.
-    xdotool key --clearmodifiers ctrl+Tab
-    sleep 55
-    xdotool key --clearmodifiers ctrl+Tab
-  done
-) &
-SCROLL_PID=$!
+# The ?youtube=1 public homepage scrolls news itself in the browser.
+# Do not inject keyboard commands or navigate to login/community pages.
 
 # Never echo the RTMP destination (contains stream key).
 # Use short reconnect cycle if YouTube or AzuraCast interrupts.
