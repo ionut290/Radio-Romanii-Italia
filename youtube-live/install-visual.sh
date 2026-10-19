@@ -22,7 +22,6 @@ Type=simple
 ExecStart=/usr/local/sbin/radio-youtube-visual
 Restart=always
 RestartSec=10
-NoNewPrivileges=true
 [Install]
 WantedBy=multi-user.target
 SERVICE
