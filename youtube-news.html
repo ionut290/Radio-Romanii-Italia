@@ -13,19 +13,82 @@
 #source{margin-top:25px;font-size:17px;color:#a6bcd2}
 #ticker{position:absolute;bottom:0;left:0;right:0;height:83px;background:#e7eef7;color:#102642;display:flex;align-items:center;overflow:hidden}
 #tickerLabel{height:100%;background:#cf242e;color:white;display:flex;align-items:center;padding:0 30px;font-weight:900;letter-spacing:1px;font-size:21px;flex:none}
-#tickerText{font-size:25px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0 25px;flex:1;max-width:100%;animation:none;transition:opacity .5s ease}
+#tickerText{position:absolute;left:0;top:50%;font-size:24px;font-weight:700;white-space:nowrap;width:max-content;max-width:none;overflow:visible;margin:0;line-height:1.2;transform:translate(100vw,-50%);will-change:transform}#tickerLabel{position:relative;z-index:2}
 #progress{height:5px;position:absolute;bottom:83px;left:0;background:#f0c05b;width:0;z-index:10}
 @media(max-width:800px){#panel{grid-template-columns:45% 55%;left:18px;right:18px}#copy{padding:16px}#headline{font-size:25px}#summary{font-size:16px}#logo{font-size:20px;left:18px}}
 </style></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div>
 <div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div></div><div id="copy"><div id="category">ȘTIRI</div><h1 id="headline">Se încarcă știrile...</h1><p id="summary">Actualizări din România, Italia și diaspora românească.</p><div id="source">Radio Românii din Italia</div></div></div>
 <div id="progress"></div><div id="ticker"><div id="tickerLabel">ACTUALITATE</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • Acasă, oriunde ai fi! • Știri, muzică și comunitate</div></div></div>
 <script>
-const $=id=>document.getElementById(id);const PERIOD=20000;let stories=[],index=0,timer=null;
+const $=id=>document.getElementById(id);
+let stories=[],index=0,started=false,tickerAnimation=null,nextTimer=null,sequence=0;
 function valid(x){return x&&typeof x.title==='string'&&x.title.trim().length>8}
-async function load(){try{const [news,editorial]=await Promise.all([fetch('./news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),fetch('./editorial.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))]);const items=[...(editorial.items||[]),...(news.items||[])].filter(valid);const seen=new Set;stories=items.filter(x=>{const k=x.title.trim().toLocaleLowerCase('ro');if(seen.has(k))return false;seen.add(k);return true}).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,40);if(index>=stories.length)index=0;if(stories.length)show();else $('headline').textContent='Radio Românii din Italia — Știri';}catch(e){console.warn('news load failed',e)}}
-function show(){if(!stories.length)return;const x=stories[index%stories.length];$('category').textContent=x.category||'Actualitate';$('headline').textContent=x.title;$('summary').textContent=x.summary||'Citește mai multe pe site-ul Radio Românii din Italia.';$('source').textContent=[x.source||'Radio Românii din Italia',x.published?new Date(x.published).toLocaleDateString('ro-RO'):null].filter(Boolean).join(' • ');
-const img=$('photo'),fb=$('fallback');img.style.display='none';fb.style.display='flex';fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':'📰';
-if(x.image&&/^https:\/\//.test(x.image)){const url=x.image;img.onload=()=>{if(img.src===url){img.style.display='block';fb.style.display='none'}};img.onerror=()=>{img.style.display='none';fb.style.display='flex'};img.src=url;}
-$('tickerText').textContent=x.title;$('progress').style.transition='none';$('progress').style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{$('progress').style.transition='width '+PERIOD+'ms linear';$('progress').style.width='100%'}))}
-load();setInterval(()=>{if(stories.length){index=(index+1)%stories.length;show()}},PERIOD);setInterval(load,300000);
+async function load(){
+ try{
+  const [news,editorial]=await Promise.all([
+   fetch('./news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
+   fetch('./editorial.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
+  ]);
+  const seen=new Set;
+  const updated=[...(editorial.items||[]),...(news.items||[])].filter(valid).filter(x=>{
+   const key=x.title.trim().toLocaleLowerCase('ro');if(seen.has(key))return false;seen.add(key);return true;
+  }).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,40);
+  if(updated.length){
+   const current=stories[index]?.title;
+   stories=updated;
+   if(current){const position=stories.findIndex(x=>x.title===current);index=position>=0?position:0;}
+   if(!started){started=true;show();}
+  }else if(!started){$('headline').textContent='Radio Românii din Italia — Știri';}
+ }catch(e){console.warn('News update failed',e)}
+}
+function show(){
+ if(!stories.length)return;
+ const x=stories[index%stories.length];
+ $('category').textContent=x.category||'Actualitate';
+ $('headline').textContent=x.title;
+ $('summary').textContent=x.summary||'Citește mai multe pe site-ul Radio Românii din Italia.';
+ $('source').textContent=[x.source||'Radio Românii din Italia',x.published?new Date(x.published).toLocaleDateString('ro-RO'):null].filter(Boolean).join(' • ');
+ const img=$('photo'),fb=$('fallback');
+ img.onload=null;img.onerror=null;img.removeAttribute('src');
+ img.style.display='none';fb.style.display='flex';
+ fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':'📰';
+ if(x.image&&/^https:\/\//.test(x.image)){
+  const url=x.image;
+  img.onload=()=>{if(img.getAttribute('src')===url){img.style.display='block';fb.style.display='none'}};
+  img.onerror=()=>{img.style.display='none';fb.style.display='flex'};
+  img.src=url;
+ }
+ // Scroll the current article summary gently, then change the entire news card.
+ const ticker=$('tickerText');
+ ticker.textContent=[x.title,x.summary].filter(Boolean).join(' — ');
+ startTicker();
+}
+function startTicker(){
+ if(tickerAnimation){tickerAnimation.cancel();tickerAnimation=null}
+ if(nextTimer){clearTimeout(nextTimer);nextTimer=null}
+ const ticket=++sequence;
+ const ticker=$('tickerText'),area=$('ticker'),label=$('tickerLabel');
+ const start=area.clientWidth+30,end=-ticker.scrollWidth-30;
+ const distance=start-end;
+ const duration=Math.max(22000,Math.round(distance/48*1000)); // comfortable 48 px/second
+ const progress=$('progress');
+ progress.style.transition='none';progress.style.width='0%';
+ ticker.style.transform='translate('+start+'px,-50%)';
+ tickerAnimation=ticker.animate([
+  {transform:'translate('+start+'px,-50%)'},
+  {transform:'translate('+end+'px,-50%)'}
+ ],{duration,easing:'linear',fill:'forwards'});
+ requestAnimationFrame(()=>requestAnimationFrame(()=>{
+  progress.style.transition='width '+duration+'ms linear';progress.style.width='100%';
+ }));
+ tickerAnimation.onfinish=()=>{
+  if(ticket!==sequence)return;
+  nextTimer=setTimeout(()=>{
+   if(ticket!==sequence)return;
+   index=(index+1)%stories.length;
+   show();
+  },1300);
+ };
+}
+load();setInterval(load,300000);
 </script></body></html>
