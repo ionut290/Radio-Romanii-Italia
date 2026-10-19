@@ -4,7 +4,7 @@ set -Eeuo pipefail
 source /etc/radio-youtube/relay.env
 DISPLAY_NUM=":92"
 export DISPLAY="$DISPLAY_NUM"
-SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/?youtube=1}"
+SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/youtube-news.html}"
 # Browser image is decorative; audio comes only from the AzuraCast MP3 source.
 Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
@@ -23,7 +23,7 @@ if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; th
   tail -n 15 /tmp/radio-youtube-chromium.log >&2 || true
   exit 1
 fi
-# The ?youtube=1 public homepage scrolls news itself in the browser.
+# The dedicated youtube-news.html cycles through news cards automatically.
 # Do not inject keyboard commands or navigate to login/community pages.
 
 # Never echo the RTMP destination (contains stream key).
