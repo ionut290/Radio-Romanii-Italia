@@ -13,8 +13,7 @@
 #source{margin-top:25px;font-size:17px;color:#a6bcd2}
 #ticker{position:absolute;bottom:0;left:0;right:0;height:83px;background:#e7eef7;color:#102642;display:flex;align-items:center;overflow:hidden}
 #tickerLabel{height:100%;background:#cf242e;color:white;display:flex;align-items:center;padding:0 30px;font-weight:900;letter-spacing:1px;font-size:21px;flex:none}
-#tickerText{font-size:25px;font-weight:750;white-space:nowrap;margin-left:25px;animation:marquee 32s linear infinite}
-@keyframes marquee{from{transform:translateX(90vw)}to{transform:translateX(-110%)}}
+#tickerText{font-size:25px;font-weight:750;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:0 25px;flex:1;max-width:100%;animation:none;transition:opacity .5s ease}
 #progress{height:5px;position:absolute;bottom:83px;left:0;background:#f0c05b;width:0;z-index:10}
 @media(max-width:800px){#panel{grid-template-columns:45% 55%;left:18px;right:18px}#copy{padding:16px}#headline{font-size:25px}#summary{font-size:16px}#logo{font-size:20px;left:18px}}
 </style></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div>
@@ -27,6 +26,6 @@ async function load(){try{const [news,editorial]=await Promise.all([fetch('./new
 function show(){if(!stories.length)return;const x=stories[index%stories.length];$('category').textContent=x.category||'Actualitate';$('headline').textContent=x.title;$('summary').textContent=x.summary||'Citește mai multe pe site-ul Radio Românii din Italia.';$('source').textContent=[x.source||'Radio Românii din Italia',x.published?new Date(x.published).toLocaleDateString('ro-RO'):null].filter(Boolean).join(' • ');
 const img=$('photo'),fb=$('fallback');img.style.display='none';fb.style.display='flex';fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':'📰';
 if(x.image&&/^https:\/\//.test(x.image)){const url=x.image;img.onload=()=>{if(img.src===url){img.style.display='block';fb.style.display='none'}};img.onerror=()=>{img.style.display='none';fb.style.display='flex'};img.src=url;}
-$('tickerText').textContent=stories.slice(0,12).map(s=>s.title).join('   •   ');$('progress').style.transition='none';$('progress').style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{$('progress').style.transition='width '+PERIOD+'ms linear';$('progress').style.width='100%'}))}
+$('tickerText').textContent=x.title;$('progress').style.transition='none';$('progress').style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{$('progress').style.transition='width '+PERIOD+'ms linear';$('progress').style.width='100%'}))}
 load();setInterval(()=>{if(stories.length){index=(index+1)%stories.length;show()}},PERIOD);setInterval(load,300000);
 </script></body></html>
