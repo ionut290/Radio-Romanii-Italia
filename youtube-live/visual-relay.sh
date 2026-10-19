@@ -15,7 +15,7 @@ sleep 2
 runuser -u ubuntu -- /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
   --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble \
   --autoplay-policy=user-gesture-required --window-size=1280,720 \
-  --window-position=0,0 --kiosk "$SITE_URL" >/tmp/radio-youtube-chromium.log 2>&1 &
+  --window-position=0,0 --kiosk "$SITE_URL" "${SITE_URL%/}/comunitate.html" >/tmp/radio-youtube-chromium.log 2>&1 &
 BROWSER_PID=$!
 sleep 10
 if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; then
@@ -23,7 +23,8 @@ if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; th
   tail -n 15 /tmp/radio-youtube-chromium.log >&2 || true
   exit 1
 fi
-# Rotate through homepage sections, then community. xdotool F5 refreshes news regularly.
+# Open public homepage and community in separate tabs. Never type URLs into webpage forms.
+# All interactions are keyboard shortcuts only; Chromium's kiosk view stays fullscreen.
 (
   while true; do
     sleep 25
@@ -31,18 +32,14 @@ fi
     sleep 25
     xdotool key --clearmodifiers Page_Down
     sleep 25
-    xdotool key --clearmodifiers Home
+    xdotool key --clearmodifiers ctrl+Home
     sleep 30
-    xdotool key --clearmodifiers F5
+    xdotool key --clearmodifiers ctrl+r
     sleep 35
-    # Show public community page, then return to the homepage.
-    xdotool key --clearmodifiers alt+Home
-    sleep 2
-    xdotool key --clearmodifiers ctrl+l
-    xdotool type --clearmodifiers --delay 20 "${SITE_URL%/}/comunitate.html"
-    xdotool key Return
+    # Switch to preloaded public community tab without address-bar typing.
+    xdotool key --clearmodifiers ctrl+Tab
     sleep 55
-    xdotool key --clearmodifiers alt+Left
+    xdotool key --clearmodifiers ctrl+Tab
   done
 ) &
 SCROLL_PID=$!
