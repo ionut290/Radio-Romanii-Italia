@@ -2,7 +2,7 @@
 
 Experimental visual broadcasting mode. **Not enabled by default.** The current working blue-background relay keeps running.
 
-This uses Xvfb + Chromium to show the actual public homepage, FFmpeg to capture the visible viewport, and AzuraCast as the sole audio source. It scrolls the homepage and refreshes news; community public highlights embedded on the homepage also appear. **Community's separate page is not automatically navigated**, and a video of a website is not an interactive website; viewers must visit the website to post or comment.
+This uses Xvfb + Chromium to show the actual public homepage, FFmpeg to capture the visible viewport, and AzuraCast as the sole audio source. It scrolls the homepage, refreshes news and rotates to the public /comunitate.html page before returning to the homepage. A video of a website is not interactive: viewers must visit the website to post or comment.
 
 ## Install on the Oracle host
 
