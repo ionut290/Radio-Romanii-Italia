@@ -36,7 +36,8 @@ while true; do
     -thread_queue_size 1024 -i "$SOURCE_URL" \
     -map 0:v:0 -map 1:a:0 \
     -c:v libx264 -preset ultrafast -pix_fmt yuv420p -r 15 -g 30 \
-    -b:v 1000k -maxrate 1300k -bufsize 2600k \
+    -b:v 2500k -minrate 2500k -maxrate 2500k -bufsize 5000k \
+    -x264-params "nal-hrd=cbr:force-cfr=1" \
     -c:a aac -b:a 128k -ar 44100 -ac 2 \
     -af "aresample=async=1:first_pts=0" \
     -f flv "rtmp://a.rtmp.youtube.com/live2/$YOUTUBE_KEY" 2>&1 \
