@@ -70,7 +70,7 @@ function startTicker(){
  const ticker=$('tickerText'),area=$('ticker'),label=$('tickerLabel');
  const start=area.clientWidth+30,end=-ticker.scrollWidth-30;
  const distance=start-end;
- const duration=Math.max(22000,Math.round(distance/48*1000)); // comfortable 48 px/second
+ const duration=Math.max(22000,Math.round(distance/60*1000)); // comfortable 60 px/second
  const progress=$('progress');
  progress.style.transition='none';progress.style.width='0%';
  ticker.style.transform='translate('+start+'px,-50%)';
