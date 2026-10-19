@@ -8,16 +8,21 @@ SITE_URL="${SITE_URL:-https://radio-romanii-italia.duckdns.org/}"
 # Browser image is decorative; audio comes only from the AzuraCast MP3 source.
 Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
-PROFILE=$(mktemp -d /tmp/radio-youtube-browser.XXXXXXXX)
+PROFILE=$(runuser -u ubuntu -- mktemp -d /home/ubuntu/radio-youtube-browser.XXXXXXXX)
 cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || true; rm -rf "$PROFILE"; }
 trap cleanup EXIT INT TERM
 sleep 2
-chromium --no-sandbox --disable-gpu --disable-dev-shm-usage --disable-background-networking \
+runuser -u ubuntu -- /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
   --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble \
   --autoplay-policy=user-gesture-required --window-size=1280,720 \
-  --window-position=0,0 --kiosk "$SITE_URL" >/dev/null 2>&1 &
+  --window-position=0,0 --kiosk "$SITE_URL" >/tmp/radio-youtube-chromium.log 2>&1 &
 BROWSER_PID=$!
 sleep 10
+if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; then
+  echo "Chromium not running: stopping visual relay so operator can restore blue relay" >&2
+  tail -n 15 /tmp/radio-youtube-chromium.log >&2 || true
+  exit 1
+fi
 # Rotate through homepage sections, then community. xdotool F5 refreshes news regularly.
 (
   while true; do
