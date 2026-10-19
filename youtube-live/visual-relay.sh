@@ -13,6 +13,7 @@ cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || tru
 trap cleanup EXIT INT TERM
 sleep 2
 runuser -u ubuntu -- /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
+  --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO \
   --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble \
   --autoplay-policy=user-gesture-required --window-size=1280,720 \
   --window-position=0,0 --kiosk "$SITE_URL" >/tmp/radio-youtube-chromium.log 2>&1 &
