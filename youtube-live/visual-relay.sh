@@ -4,7 +4,7 @@ set -Eeuo pipefail
 source /etc/radio-youtube/relay.env
 DISPLAY_NUM=":92"
 export DISPLAY="$DISPLAY_NUM"
-SITE_URL="${SITE_URL:-https://radio-romanii-italia.duckdns.org/}"
+SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/}"
 # Browser image is decorative; audio comes only from the AzuraCast MP3 source.
 Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
@@ -36,13 +36,13 @@ fi
     xdotool key --clearmodifiers F5
     sleep 35
     # Show public community page, then return to the homepage.
+    xdotool key --clearmodifiers alt+Home
+    sleep 2
     xdotool key --clearmodifiers ctrl+l
-    xdotool type --clearmodifiers --delay 2 "${SITE_URL%/}/comunitate.html"
+    xdotool type --clearmodifiers --delay 20 "${SITE_URL%/}/comunitate.html"
     xdotool key Return
     sleep 55
-    xdotool key --clearmodifiers ctrl+l
-    xdotool type --clearmodifiers --delay 2 "$SITE_URL"
-    xdotool key Return
+    xdotool key --clearmodifiers alt+Left
   done
 ) &
 SCROLL_PID=$!
