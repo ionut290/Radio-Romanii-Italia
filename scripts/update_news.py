@@ -20,9 +20,11 @@ QUERIES = [
     ("România", "România știri actualitate politică economie sănătate when:2d", "ro", "RO"),
     ("Italia", "Italia notizie cronaca economia lavoro attualità when:2d", "it", "IT"),
     ("Diaspora", "români în Italia diaspora comunitate muncă consulat when:7d", "ro", "RO"),
-    ("Drepturile muncitorilor", "site:inca.it OR site:cgil.it OR site:inps.it diritti lavoratori pensioni contratti NASpI sicurezza lavoro when:7d", "it", "IT"),
+    ("Drepturile muncitorilor", "\"romeni in Italia\" drepturi munca pensii patronato sindicat when:7d", "ro", "RO"),
     ("Știri consulare", "((site:roma.mae.ro OR site:bologna.mae.ro OR site:milano.mae.ro OR site:torino.mae.ro OR site:trieste.mae.ro) consulat România Italia OR site:agerpres.ro/comunicate/ Ambasada României în Italia) when:14d", "ro", "RO"),
 ]
+WORKER_TERMS = ("român", "români", "românilor", "romania", "romania", "romeno", "romeni", "rumeno", "rumeni", "rumeni", "române", "romane", "moldoven", "diaspora")
+WORKER_ITALY_TERMS = ("italia", "italy", "italian", "italien", "inps", "patronato", "cgil", "naspi", "permesso di soggiorno", "contract de muncă", "contracte de muncă", "lavoro")
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
 LIMIT = 18
 items = []
@@ -51,6 +53,10 @@ for category, query, lang, country in QUERIES:
                 continue
             if date > now + dt.timedelta(hours=1) or now - date > dt.timedelta(days=14 if category == "Știri consulare" else 7):
                 continue
+            if category == "Drepturile muncitorilor":
+                context = (title + " " + (entry.findtext("description") or "")).casefold()
+                if not any(term in context for term in WORKER_TERMS) or not any(term in context for term in WORKER_ITALY_TERMS):
+                    continue
             seen.add(link)
             description = re.sub(r"<[^>]+>", " ", entry.findtext("description") or "")
             description = html.unescape(re.sub(r"\\s+", " ", description)).strip()
