@@ -67,6 +67,43 @@ for category, query, lang, country in QUERIES:
     except Exception as exc:
         print(f"Nu s-au putut prelua știrile {category}: {exc}")
 
+# Dedicated consular queries: Google News indexes institutional releases inconsistently.
+# Keep only official Romanian diplomatic pages or AGERPRES embassy communiques.
+CONSULAR_QUERIES = [
+    '"Ambasada României în Italia" site:agerpres.ro/comunicate/ when:30d',
+    'site:roma.mae.ro "comunicat" when:30d',
+    'site:bologna.mae.ro "consulat" when:30d',
+    '"Consulatul General al României" Italia site:agerpres.ro/comunicate/ when:30d',
+]
+for query in CONSULAR_QUERIES:
+    params = urllib.parse.urlencode({"q": query, "hl": "ro-RO", "gl": "RO", "ceid": "RO:ro"})
+    try:
+        request = urllib.request.Request("https://news.google.com/rss/search?" + params, headers=HEADERS)
+        with urllib.request.urlopen(request, timeout=25) as response:
+            root = ET.fromstring(response.read(2_000_000))
+        for entry in root.findall("./channel/item")[:15]:
+            title = (entry.findtext("title") or "").strip()
+            link = (entry.findtext("link") or "").strip()
+            source = (entry.findtext("source") or "").strip()
+            try:
+                date = email.utils.parsedate_to_datetime(entry.findtext("pubDate") or "").astimezone(dt.timezone.utc)
+            except (ValueError, TypeError, OverflowError):
+                continue
+            if not title or not link.startswith("https://") or link in seen or date > now + dt.timedelta(hours=1) or now - date > dt.timedelta(days=30):
+                continue
+            # Do not mislabel unrelated general news as official consular announcements.
+            if not (("mae.ro" in link and ("consulat" in title.lower() or "ambasad" in title.lower() or "român" in title.lower())) or
+                    ("agerpres.ro" in link and ("ambasada româniei" in title.lower() or "consulatul" in title.lower()))):
+                continue
+            seen.add(link)
+            raw = entry.findtext("description") or ""
+            summary = re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", raw))).strip()
+            items.append({"category": "Știri consulare", "title": title[:240], "url": link,
+                          "source": source[:90] or "Comunicat oficial", "published": date.isoformat(),
+                          "summary": summary[:350], "image": ""})
+    except Exception as exc:
+        print(f"Sursa consulară indisponibilă ({query}): {exc}")
+
 # Direct publisher feeds may provide genuine summaries and image metadata.
 # Only RSS excerpts are displayed; full articles remain at the publisher.
 for category, feed_url, publisher in DIRECT_FEEDS:
