@@ -20,7 +20,7 @@ QUERIES = [
     ("România", "România știri actualitate politică economie sănătate when:2d", "ro", "RO"),
     ("Italia", "Italia notizie cronaca economia lavoro attualità when:2d", "it", "IT"),
     ("Diaspora", "români în Italia diaspora comunitate muncă consulat when:7d", "ro", "RO"),
-    ("Știri consulare", "(site:roma.mae.ro OR site:bologna.mae.ro OR site:milano.mae.ro OR site:torino.mae.ro OR site:trieste.mae.ro) consulat ambasada Romania Italia when:7d", "ro", "RO"),
+    ("Știri consulare", "((site:roma.mae.ro OR site:bologna.mae.ro OR site:milano.mae.ro OR site:torino.mae.ro OR site:trieste.mae.ro) consulat România Italia OR site:agerpres.ro/comunicate/ "Ambasada României în Italia") when:14d", "ro", "RO"),
 ]
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
 LIMIT = 18
@@ -48,7 +48,7 @@ for category, query, lang, country in QUERIES:
                 date = email.utils.parsedate_to_datetime(raw_date).astimezone(dt.timezone.utc)
             except (ValueError, TypeError, OverflowError):
                 continue
-            if date > now + dt.timedelta(hours=1) or now - date > dt.timedelta(days=7):
+            if date > now + dt.timedelta(hours=1) or now - date > dt.timedelta(days=14 if category == "Știri consulare" else 7):
                 continue
             seen.add(link)
             description = re.sub(r"<[^>]+>", " ", entry.findtext("description") or "")
