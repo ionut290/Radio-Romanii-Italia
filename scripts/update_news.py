@@ -20,6 +20,7 @@ QUERIES = [
     ("România", "România știri actualitate politică economie sănătate when:2d", "ro", "RO"),
     ("Italia", "Italia notizie cronaca economia lavoro attualità when:2d", "it", "IT"),
     ("Diaspora", "români în Italia diaspora comunitate muncă consulat when:7d", "ro", "RO"),
+    ("Știri consulare", "(site:roma.mae.ro OR site:bologna.mae.ro OR site:milano.mae.ro OR site:torino.mae.ro OR site:trieste.mae.ro) consulat ambasada Romania Italia when:7d", "ro", "RO"),
 ]
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
 LIMIT = 18
