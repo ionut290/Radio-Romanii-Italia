@@ -91,9 +91,19 @@ for query in CONSULAR_QUERIES:
                 continue
             if not title or not link.startswith("https://") or link in seen or date > now + dt.timedelta(hours=1) or now - date > dt.timedelta(days=30):
                 continue
-            # Do not mislabel unrelated general news as official consular announcements.
-            if not (("mae.ro" in link and ("consulat" in title.lower() or "ambasad" in title.lower() or "român" in title.lower())) or
-                    ("agerpres.ro" in link and ("ambasada româniei" in title.lower() or "consulatul" in title.lower()))):
+            # Google News RSS links point to news.google.com, not to the publisher.
+            # Validate the publisher field and title instead of testing the redirect URL.
+            publisher = source.casefold()
+            headline = title.casefold()
+            official = any(host in publisher for host in ("mae.ro", "agerpres"))
+            diplomatic = any(word in headline for word in (
+                "ambasada româniei", "ambasadei româniei",
+                "consulatul româniei", "consulatului româniei",
+                "consulatul general", "consulatului general",
+                "ambasadorul româniei", "ambasadoarea româniei",
+                "gabriela dancău", "servicii consulare", "misiunea diplomatică"
+            ))
+            if not (official and diplomatic):
                 continue
             seen.add(link)
             raw = entry.findtext("description") or ""
