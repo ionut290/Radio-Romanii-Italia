@@ -167,6 +167,24 @@ if not items:
         print("Sursele indisponibile; păstrez ultima versiune.")
         raise SystemExit(0)
     raise SystemExit("Nu există știri și nici versiune anterioară.")
+# Preserve verified, editorially written consular stories across automatic refreshes.
+# Keep source URLs as stable IDs and retain only the last 45 days.
+if output.exists():
+    try:
+        previous = json.loads(output.read_text(encoding="utf-8")).get("items", [])
+        current_urls = {item["url"] for item in items}
+        for item in previous:
+            if item.get("category") != "Știri consulare" or not item.get("editorial_verified"):
+                continue
+            try:
+                published = dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00"))
+            except (KeyError, TypeError, ValueError):
+                continue
+            if item.get("url") not in current_urls and now - published <= dt.timedelta(days=45):
+                items.append(item)
+                current_urls.add(item["url"])
+    except (OSError, ValueError, TypeError) as exc:
+        print(f"Arhiva consulară nu poate fi citită: {exc}")
 items.sort(key=lambda x: x["published"], reverse=True)
 output.write_text(json.dumps({
     "updated_at": now.isoformat(), "items": items
