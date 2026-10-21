@@ -31,8 +31,8 @@ function directoryAdmin(){return signed() && request.auth.token.email == 'ionut2
 match /directoryBusinesses/{businessId} {
   allow read: if resource.data.status == 'approved' || (signed() && (resource.data.uid == request.auth.uid || directoryAdmin()));
   allow create: if signed()
-    && request.resource.data.keys().hasOnly(['uid','name','category','region','province','city','address','phone','website','hours','description','imageUrls','status','createdAt'])
-    && request.resource.data.keys().hasAll(['uid','name','category','region','province','city','address','phone','website','hours','description','imageUrls','status','createdAt'])
+    && request.resource.data.keys().hasOnly(['uid','name','category','region','province','city','address','phone','whatsapp','website','hours','description','imageUrls','status','createdAt'])
+    && request.resource.data.keys().hasAll(['uid','name','category','region','province','city','address','phone','whatsapp','website','hours','description','imageUrls','status','createdAt'])
     && request.resource.data.uid == request.auth.uid
     && (request.resource.data.status == 'pending' || (directoryAdmin() && request.resource.data.status == 'approved'))
     && request.resource.data.createdAt == request.time
@@ -44,6 +44,7 @@ match /directoryBusinesses/{businessId} {
     && shortText(request.resource.data.city,2,70)
     && shortText(request.resource.data.address,3,180)
     && shortText(request.resource.data.phone,0,40)
+    && shortText(request.resource.data.whatsapp,0,40)
     && shortText(request.resource.data.website,0,250)
     && shortText(request.resource.data.hours,0,150)
     && shortText(request.resource.data.description,25,1200);
