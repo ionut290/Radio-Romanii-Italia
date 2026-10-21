@@ -23,7 +23,13 @@ async function loadNowPlaying(){
   const res=await fetch("https://radio-romanii-italia.duckdns.org/api/nowplaying/radio-romanii-italia",{cache:"no-store",signal:AbortSignal.timeout(8000)});
   if(!res.ok)throw Error("AzuraCast HTTP "+res.status);
   const data=await res.json();const info=data.now_playing?.song;
-  song=limitText(info?.text||[info?.artist,info?.title].filter(Boolean).join(" — "),90);
+  // Prefer structured metadata. Strip long numeric upload/file IDs from titles.
+  const clean=v=>String(v||"").replace(/(?:[\\s_(-]*\\d{9,}[\\s_)-]*)+/g," ").replace(/[_]+/g," ").replace(/\\s{2,}/g," ").trim();
+  const artist=clean(info?.artist),title=clean(info?.title);
+  let current=[artist,title].filter(Boolean).join(" — ");
+  if(!current)current=clean(info?.text);
+  // Avoid showing identifiers or a generic placeholder as a track.
+  song=/[A-Za-zÀ-ÿ]{2,}/.test(current)?limitText(current,90):"";
  }catch{song=""}
 }
 loadNowPlaying();setInterval(loadNowPlaying,30000);
