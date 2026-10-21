@@ -9,6 +9,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 DIRECT_FEEDS = [
     ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24"),
@@ -206,6 +207,7 @@ if output.exists():
 # Keep the public feed strictly limited to the last 72 hours, including
 # previously verified consular stories. Invalid timestamps are discarded.
 cutoff = now - dt.timedelta(days=3)
+today_italy = now.astimezone(ZoneInfo("Europe/Rome")).date()
 def is_recent(item):
     try:
         date = dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00"))
@@ -213,7 +215,19 @@ def is_recent(item):
     except (KeyError, TypeError, ValueError, AttributeError):
         return False
 
-items = [item for item in items if is_recent(item)]
+items = [item for item in items if is_recent(item) or item.get("editorial_verified")]
+# Dacă există știri automate de astăzi (ora Italiei), eliminăm
+# știrile automate din zilele anterioare. Publicațiile verificate
+# ale redacției sunt exceptate.
+def italian_day(item):
+    try:
+        return dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00")).astimezone(ZoneInfo("Europe/Rome")).date()
+    except (KeyError, TypeError, ValueError, AttributeError):
+        return None
+
+has_today = any(italian_day(item) == today_italy and not item.get("editorial_verified") for item in items)
+if has_today:
+    items = [item for item in items if item.get("editorial_verified") or italian_day(item) == today_italy]
 items.sort(key=lambda x: x["published"], reverse=True)
 per_category = {}
 balanced = []
