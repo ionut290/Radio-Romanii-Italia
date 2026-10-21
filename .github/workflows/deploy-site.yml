@@ -1,4 +1,4 @@
-name: Publicare Radio Românii din Italia
+name: Verificare sito RDI (GitHub Pages)
 
 on:
   push:
@@ -9,55 +9,16 @@ permissions:
   contents: read
 
 jobs:
-  publicare:
+  verifica:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
     steps:
-      - name: Preia codul site-ului
+      - name: Preia codul
         uses: actions/checkout@v4
-
-      - name: Verifică destinația
-        env:
-          SITE_HOST: ${{ vars.SITE_HOST }}
-          SITE_USER: ${{ vars.SITE_USER }}
-          SITE_PATH: ${{ vars.SITE_PATH }}
-          SSH_KEY: ${{ secrets.SITE_SSH_KEY }}
-          KNOWN_HOSTS: ${{ secrets.SITE_KNOWN_HOSTS }}
+      - name: Verifica file fondamentali
         run: |
           set -euo pipefail
-          for variable in SITE_HOST SITE_USER SITE_PATH SSH_KEY KNOWN_HOSTS; do
-            if [ -z "${!variable:-}" ]; then
-              echo "::error::Lipsește configurarea $variable; publicarea site-ului nu poate continua."
-              exit 1
-            fi
-          done
-          case "$SITE_PATH" in
-            /|/home|/root|/etc|/var|/var/www|/usr|/opt|/srv|"") echo "Cale nesigură: $SITE_PATH"; exit 1 ;;
-            /*) ;;
-            *) echo "SITE_PATH trebuie să fie o cale absolută"; exit 1 ;;
-          esac
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
-          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
-          chmod 600 ~/.ssh/id_ed25519 ~/.ssh/known_hosts
-          ssh -o BatchMode=yes -o StrictHostKeyChecking=yes "$SITE_USER@$SITE_HOST" "test -d '$SITE_PATH' && test -w '$SITE_PATH'"
-
-      - name: Sincronizează doar fișierele web
-        env:
-          SITE_HOST: ${{ vars.SITE_HOST }}
-          SITE_USER: ${{ vars.SITE_USER }}
-          SITE_PATH: ${{ vars.SITE_PATH }}
-        run: |
-          set -euo pipefail
-          rsync -az --no-perms --no-owner --no-group \
-            --exclude='.git/' --exclude='.github/' \
-            --include='*/' \
-            --include='*.html' --include='*.css' --include='*.js' \
-            --include='*.json' --include='*.svg' --include='*.png' \
-            --include='*.jpg' --include='*.jpeg' --include='*.webp' \
-            --include='*.ico' --include='*.txt' \
-            --exclude='*' \
-            -e 'ssh -o BatchMode=yes -o StrictHostKeyChecking=yes' \
-            ./ "$SITE_USER@$SITE_HOST:$SITE_PATH/"
-          echo "Fișierele site-ului au fost sincronizate. AzuraCast nu a fost modificat."
+          test -s index.html
+          test -s ghid.html
+          test -s directory-manage.js
+          test -s directory-feed.js
+          echo "File RDI presenti. La pubblicazione è gestita da GitHub Pages (main / root)."
