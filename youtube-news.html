@@ -20,11 +20,12 @@
 #ticker{position:absolute;bottom:0;left:0;right:0;height:83px;background:#e7eef7;color:#102642;display:flex;align-items:center;overflow:hidden}
 #tickerLabel{height:100%;background:#cf242e;color:white;display:flex;align-items:center;padding:0 30px;font-weight:900;letter-spacing:1px;font-size:21px;flex:none}
 #tickerText{position:absolute;left:0;top:50%;font-size:24px;font-weight:700;white-space:nowrap;width:max-content;max-width:none;overflow:visible;margin:0;line-height:1.2;transform:translate(100vw,-50%);will-change:transform}#tickerLabel{position:relative;z-index:2}
+#rdiExtras{position:absolute;z-index:8;left:175px;bottom:106px;max-width:calc(48% - 145px);min-width:280px;min-height:52px;padding:8px 13px;background:rgba(7,23,43,.93);border:1px solid #6b8aaa;border-radius:9px;box-shadow:0 4px 14px #0008;pointer-events:none;overflow:hidden}#rdiExtras[hidden]{display:none}#rdiExtraLabel{display:block;color:#ffdf87;font-size:12px;font-weight:900;letter-spacing:1px}#rdiExtraValue{display:block;color:white;font-size:15px;font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;margin-top:3px}
 #progress{height:5px;position:absolute;bottom:83px;left:0;background:#f0c05b;width:0;z-index:10}
 @media(max-width:800px){#panel{grid-template-columns:45% 55%;left:18px;right:18px}#copy{padding:16px}#headline{font-size:25px}#summary{font-size:16px}#logo{font-size:20px;left:18px}}
 </style></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div><div id="rdiClock" aria-label="Ora Italiei"><span id="rdiClockTime">--:--</span><span id="rdiClockDate">ITALIA</span></div>
 <div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div><div id="appQr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;margin=6&amp;data=https%3A%2F%2Fradioromanii.duckdns.org%2F" alt="Cod QR aplicație RDI" onerror="this.style.display='none'"><span>APLICAȚIA RDI</span></div></div><div id="copy"><div id="category">ȘTIRI</div><h1 id="headline">Se încarcă știrile...</h1><p id="summary">Actualizări din România, Italia și diaspora românească.</p><div id="source">Radio Românii din Italia</div></div></div>
-<div id="progress"></div><div id="ticker"><div id="tickerLabel">ACTUALITATE</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • Acasă, oriunde ai fi! • Știri, muzică și comunitate</div></div></div>
+<div id="rdiExtras" hidden><span id="rdiExtraLabel"></span><span id="rdiExtraValue"></span></div><div id="progress"></div><div id="ticker"><div id="tickerLabel">ACTUALITATE</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • Acasă, oriunde ai fi! • Știri, muzică și comunitate</div></div></div>
 <script>
 const $=id=>document.getElementById(id);
 const clockTimeFmt=new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
@@ -101,4 +102,4 @@ function startTicker(){
  };
 }
 load();setInterval(load,300000);
-</script></body></html>
+</script><script type="module" src="./youtube-extras.js?v=20261022-all-six"></script></body></html>
