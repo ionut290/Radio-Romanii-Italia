@@ -34,7 +34,7 @@ original_count = len(items)
 items = [article for article in items if is_recent(article)]
 expired_count = original_count - len(items)
 known_urls = {str(x.get("url", "")).rstrip("/") for x in items}
-known_titles = {re.sub(r"\\W+", " ", str(x.get("title", "")).casefold()).strip() for x in items}
+known_titles = {re.sub(r"\W+", " ", str(x.get("title", "")).casefold()).strip() for x in items}
 slot = NOW.strftime("%Y-%m-%d-%H")
 feeds = [
     ("Google News · diaspora Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "români Italia diaspora when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "Diaspora"),
@@ -74,11 +74,13 @@ def article_image(url):
         return ""
 
 new_items = []
+feed_successes = 0
 for publisher, feed, category in feeds:
     try:
         request = urllib.request.Request(feed, headers={"User-Agent": "RadioRomaniiItalia/1.0 (editorial RSS)"})
         with urllib.request.urlopen(request, timeout=25) as response:
             root = ET.fromstring(response.read(2_000_000))
+        feed_successes += 1
         for entry in root.findall("./channel/item")[:40]:
             title = html.unescape((entry.findtext("title") or "").strip())
             url = (entry.findtext("link") or "").strip()
@@ -86,7 +88,7 @@ for publisher, feed, category in feeds:
             summary = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", description)).split())
             if not title or not url.startswith("https://") or not summary:
                 continue
-            normalized_title = re.sub(r"\\W+", " ", title.casefold()).strip()
+            normalized_title = re.sub(r"\W+", " ", title.casefold()).strip()
             if url.rstrip("/") in known_urls or normalized_title in known_titles:
                 continue
             try:
@@ -132,6 +134,9 @@ for publisher, feed, category in feeds:
         print(f"RSS unavailable ({publisher}): {exc}")
     if len(new_items) >= 3:
         break
+# If both RSS sources fail, make the workflow fail visibly rather than reporting success.
+if feed_successes == 0:
+    raise SystemExit("All editorial RSS feeds failed; retry at the next scheduled run")
 # Do not attach external publisher preview images to existing entries.
 backfilled = 0
 if new_items or backfilled or expired_count:
