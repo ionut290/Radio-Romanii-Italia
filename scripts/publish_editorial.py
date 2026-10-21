@@ -34,6 +34,7 @@ original_count = len(items)
 items = [article for article in items if is_recent(article)]
 expired_count = original_count - len(items)
 known_urls = {str(x.get("url", "")).rstrip("/") for x in items}
+known_titles = {re.sub(r"\\W+", " ", str(x.get("title", "")).casefold()).strip() for x in items}
 slot = NOW.strftime("%Y-%m-%d-%H")
 feeds = [
     ("Google News · diaspora Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "români Italia diaspora when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "Diaspora"),
@@ -85,7 +86,8 @@ for publisher, feed, category in feeds:
             summary = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", description)).split())
             if not title or not url.startswith("https://") or not summary:
                 continue
-            if url.rstrip("/") in known_urls:
+            normalized_title = re.sub(r"\\W+", " ", title.casefold()).strip()
+            if url.rstrip("/") in known_urls or normalized_title in known_titles:
                 continue
             try:
                 published = email.utils.parsedate_to_datetime(entry.findtext("pubDate") or "").astimezone(dt.timezone.utc)
@@ -99,7 +101,8 @@ for publisher, feed, category in feeds:
                 continue
             image = ""
             # Avoid publisher photographs and previews: only original RDI artwork may be attached.
-            # RSS briefs intentionally have no image unless original RDI artwork is created separately.\n            # Only source-grounded short news briefs: no invented facts, quotes or details.
+            # RSS briefs intentionally have no image unless original RDI artwork is created separately.
+            # Only source-grounded short news briefs: no invented facts, quotes or details.
             clean_summary = summary[:380].rsplit(" ", 1)[0].rstrip(" ,;:-") + ("…" if len(summary) > 380 else "")
             if len(clean_summary) < 45:
                 continue
@@ -122,13 +125,16 @@ for publisher, feed, category in feeds:
                 "slot": slot,
             })
             known_urls.add(url.rstrip("/"))
+            known_titles.add(normalized_title)
             if len(new_items) >= 3:
                 break
     except Exception as exc:
         print(f"RSS unavailable ({publisher}): {exc}")
     if len(new_items) >= 3:
         break
-# Do not attach external publisher preview images to existing entries.\nbackfilled = 0\nif new_items or backfilled or expired_count:
+# Do not attach external publisher preview images to existing entries.
+backfilled = 0
+if new_items or backfilled or expired_count:
     data["items"] = new_items + items
     data["updated_at"] = NOW.isoformat()
     ARCHIVE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
