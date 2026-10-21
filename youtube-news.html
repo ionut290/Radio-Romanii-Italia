@@ -4,6 +4,12 @@
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#081526;color:white;font-family:Arial,Helvetica,sans-serif}
 #stage{width:100vw;height:100vh;position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 10%,#214b7e,#0b1930 66%)}
 #logo{position:absolute;top:18px;left:44px;font-weight:900;font-size:27px;letter-spacing:.5px;z-index:5}#badge{position:absolute;right:44px;top:22px;padding:10px 20px;background:#e53439;border-radius:6px;font-size:18px;font-weight:800;z-index:5}
+#rdiClock{position:absolute;top:22px;left:50%;transform:translateX(-50%);z-index:6;text-align:center;padding:5px 14px;background:#102946d9;border:1px solid #6282a0;border-radius:9px;min-width:194px;white-space:nowrap}
+#rdiClockTime{display:block;font-size:24px;font-weight:900;letter-spacing:1px;font-variant-numeric:tabular-nums}
+#rdiClockDate{display:block;font-size:12px;color:#d3e5ff;margin-top:1px}
+#appQr{position:absolute;bottom:16px;left:16px;z-index:7;background:#fff;color:#13223b;padding:7px;border-radius:10px;text-align:center;width:108px;box-shadow:0 4px 14px #0008}
+#appQr img{display:block;width:94px;height:94px;object-fit:contain}
+#appQr span{display:block;font-size:11px;font-weight:900;margin-top:4px}
 #panel{position:absolute;top:92px;bottom:105px;left:44px;right:44px;display:grid;grid-template-columns:48% 52%;background:#112743;border:1px solid #40658d;border-radius:20px;overflow:hidden;box-shadow:0 16px 52px #0008}
 #photo{width:100%;height:100%;object-fit:cover;background:linear-gradient(140deg,#1a4c7e,#0a1935)}#photoBox{height:100%;position:relative;overflow:hidden}#fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:130px;background:linear-gradient(135deg,#19365b,#09192d)}
 #copy{padding:34px 36px;display:flex;flex-direction:column;justify-content:center;min-width:0}
@@ -16,11 +22,15 @@
 #tickerText{position:absolute;left:0;top:50%;font-size:24px;font-weight:700;white-space:nowrap;width:max-content;max-width:none;overflow:visible;margin:0;line-height:1.2;transform:translate(100vw,-50%);will-change:transform}#tickerLabel{position:relative;z-index:2}
 #progress{height:5px;position:absolute;bottom:83px;left:0;background:#f0c05b;width:0;z-index:10}
 @media(max-width:800px){#panel{grid-template-columns:45% 55%;left:18px;right:18px}#copy{padding:16px}#headline{font-size:25px}#summary{font-size:16px}#logo{font-size:20px;left:18px}}
-</style></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div>
-<div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div></div><div id="copy"><div id="category">ȘTIRI</div><h1 id="headline">Se încarcă știrile...</h1><p id="summary">Actualizări din România, Italia și diaspora românească.</p><div id="source">Radio Românii din Italia</div></div></div>
+</style></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div><div id="rdiClock" aria-label="Ora Italiei"><span id="rdiClockTime">--:--</span><span id="rdiClockDate">ITALIA</span></div>
+<div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div><div id="appQr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;margin=6&amp;data=https%3A%2F%2Fradioromanii.duckdns.org%2F" alt="Cod QR aplicație RDI" onerror="this.style.display='none'"><span>APLICAȚIA RDI</span></div></div><div id="copy"><div id="category">ȘTIRI</div><h1 id="headline">Se încarcă știrile...</h1><p id="summary">Actualizări din România, Italia și diaspora românească.</p><div id="source">Radio Românii din Italia</div></div></div>
 <div id="progress"></div><div id="ticker"><div id="tickerLabel">ACTUALITATE</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • Acasă, oriunde ai fi! • Știri, muzică și comunitate</div></div></div>
 <script>
 const $=id=>document.getElementById(id);
+const clockTimeFmt=new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+const clockDateFmt=new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',year:'numeric'});
+function updateRdiClock(){const now=new Date();$('rdiClockTime').textContent=clockTimeFmt.format(now);$('rdiClockDate').textContent=clockDateFmt.format(now)+' · ORA ITALIEI'}
+updateRdiClock();setInterval(updateRdiClock,1000);
 let stories=[],index=0,started=false,tickerAnimation=null,nextTimer=null,sequence=0;
 function valid(x){return x&&typeof x.title==='string'&&x.title.trim().length>8}
 async function load(){
