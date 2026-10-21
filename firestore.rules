@@ -49,10 +49,66 @@ match /directoryBusinesses/{businessId} {
     && shortText(request.resource.data.hours,0,150)
     && shortText(request.resource.data.description,25,1200);
   allow update: if directoryAdmin()
-    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt'])
-    && resource.data.status == 'pending'
-    && request.resource.data.status in ['approved','rejected']
+    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt','name','description','phone','whatsapp','website','address','hours'])
+    && resource.data.status in ['pending','approved']
+    && request.resource.data.status in ['approved','rejected','revoked']
     && request.resource.data.reviewedAt == request.time;
   allow delete: if false;
+}
+
+match /directoryAds/{id} {
+ allow read: if resource.data.status == 'approved' || (signed() && (resource.data.uid == request.auth.uid || directoryAdmin()));
+ allow create: if signed()
+  && request.resource.data.keys().hasOnly(['uid','businessId','title','body','imageUrl','linkUrl','status','createdAt'])
+  && request.resource.data.keys().hasAll(['uid','businessId','title','body','imageUrl','linkUrl','status','createdAt'])
+  && request.resource.data.uid == request.auth.uid
+  && request.resource.data.status == 'pending'
+  && request.resource.data.createdAt == request.time
+  && exists(/databases/$(database)/documents/directoryBusinesses/$(request.resource.data.businessId))
+  && get(/databases/$(database)/documents/directoryBusinesses/$(request.resource.data.businessId)).data.uid == request.auth.uid
+  && get(/databases/$(database)/documents/directoryBusinesses/$(request.resource.data.businessId)).data.status == 'approved'
+  && shortText(request.resource.data.title,3,250)
+  && shortText(request.resource.data.body,10,500)
+  && shortText(request.resource.data.imageUrl,0,250)
+  && shortText(request.resource.data.linkUrl,0,250);
+ allow update: if directoryAdmin()
+  && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt','startsAt','expiresAt'])
+  && request.resource.data.status in ['approved','rejected']
+  && (resource.data.status == 'pending' || resource.data.status == 'approved')
+  && request.resource.data.reviewedAt == request.time;
+ allow delete: if false;
+}
+match /directoryBusinessEdits/{id} {
+ allow read: if directoryAdmin() || (signed() && resource.data.uid == request.auth.uid);
+ allow create: if signed()
+  && request.resource.data.keys().hasOnly(['uid','businessId','changes','status','createdAt'])
+  && request.resource.data.uid == request.auth.uid
+  && request.resource.data.status == 'pending'
+  && request.resource.data.createdAt == request.time
+  && request.resource.data.changes is map
+  && request.resource.data.changes.keys().hasOnly(['name','description','phone','whatsapp','website','address','hours'])
+  && exists(/databases/$(database)/documents/directoryBusinesses/$(request.resource.data.businessId))
+  && get(/databases/$(database)/documents/directoryBusinesses/$(request.resource.data.businessId)).data.uid == request.auth.uid;
+ allow update: if directoryAdmin()
+  && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt'])
+  && request.resource.data.status in ['approved','rejected']
+  && request.resource.data.reviewedAt == request.time;
+ allow delete: if false;
+}
+match /directoryExtensionRequests/{id} {
+ allow read: if directoryAdmin() || (signed() && resource.data.uid == request.auth.uid);
+ allow create: if signed()
+  && request.resource.data.keys().hasOnly(['uid','adId','businessId','reason','status','createdAt'])
+  && request.resource.data.uid == request.auth.uid
+  && request.resource.data.status == 'pending'
+  && request.resource.data.createdAt == request.time
+  && shortText(request.resource.data.reason,1,300)
+  && exists(/databases/$(database)/documents/directoryAds/$(request.resource.data.adId))
+  && get(/databases/$(database)/documents/directoryAds/$(request.resource.data.adId)).data.uid == request.auth.uid;
+ allow update: if directoryAdmin()
+  && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt'])
+  && request.resource.data.status in ['approved','rejected']
+  && request.resource.data.reviewedAt == request.time;
+ allow delete: if false;
 }
 }}
