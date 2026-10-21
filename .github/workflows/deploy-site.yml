@@ -10,7 +10,6 @@ permissions:
 
 jobs:
   publicare:
-    if: ${{ vars.SITE_HOST != '' && vars.SITE_USER != '' && vars.SITE_PATH != '' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -26,7 +25,12 @@ jobs:
           KNOWN_HOSTS: ${{ secrets.SITE_KNOWN_HOSTS }}
         run: |
           set -euo pipefail
-          test -n "$SITE_HOST" && test -n "$SITE_USER" && test -n "$SSH_KEY" && test -n "$KNOWN_HOSTS"
+          for variable in SITE_HOST SITE_USER SITE_PATH SSH_KEY KNOWN_HOSTS; do
+            if [ -z "${!variable:-}" ]; then
+              echo "::error::Lipsește configurarea $variable; publicarea site-ului nu poate continua."
+              exit 1
+            fi
+          done
           case "$SITE_PATH" in
             /|/home|/root|/etc|/var|/var/www|/usr|/opt|/srv|"") echo "Cale nesigură: $SITE_PATH"; exit 1 ;;
             /*) ;;
