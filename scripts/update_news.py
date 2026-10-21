@@ -22,11 +22,23 @@ QUERIES = [
     ("Diaspora", "români în Italia diaspora comunitate muncă consulat when:7d", "ro", "RO"),
     ("Drepturile muncitorilor", "\"romeni in Italia\" drepturi munca pensii patronato sindicat when:7d", "ro", "RO"),
     ("Știri consulare", "((site:roma.mae.ro OR site:bologna.mae.ro OR site:milano.mae.ro OR site:torino.mae.ro OR site:trieste.mae.ro) consulat România Italia OR site:agerpres.ro/comunicate/ Ambasada României în Italia) when:14d", "ro", "RO"),
+    ("Drepturile muncitorilor", "site:inps.it lavoratori stranieri pensione assegno unico NASpI when:7d", "it", "IT"),
+    ("Drepturile muncitorilor", "site:lavoro.gov.it OR site:ispettorato.gov.it diritti lavoratori stranieri when:7d", "it", "IT"),
+    ("Drepturile muncitorilor", "site:inail.it sicurezza lavoro stranieri infortuni when:7d", "it", "IT"),
+    ("Diaspora", "site:agenziaentrate.gov.it cittadini UE residenza fiscale tasse when:7d", "it", "IT"),
+    ("Diaspora", "romeni Italia scuola figli sanità pensioni cittadinanza when:5d", "it", "IT"),
+    ("Diaspora", "comunitatea românească Italia asociație festival eveniment when:5d", "ro", "RO"),
+    ("Diaspora", "romeni Bologna Milano Torino Roma Napoli Firenze Padova Verona evenimente when:5d", "ro", "RO"),
+    ("Știri consulare", "site:mae.ro Italia consulat români documente programări when:7d", "ro", "RO"),
+    ("Știri consulare", "site:econsulat.ro servicii consulare Italia when:14d", "ro", "RO"),
+    ("Diaspora", "site:rotalianul.com OR site:gazetaromaneasca.com români Italia when:4d", "ro", "RO"),
 ]
 WORKER_TERMS = ("român", "români", "românilor", "romania", "romania", "romeno", "romeni", "rumeno", "rumeni", "rumeni", "române", "romane", "moldoven", "diaspora")
 WORKER_ITALY_TERMS = ("italia", "italy", "italian", "italien", "inps", "patronato", "cgil", "naspi", "permesso di soggiorno", "contract de muncă", "contracte de muncă", "lavoro")
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
 LIMIT = 18
+MAX_PER_CATEGORY = 35
+MAX_TOTAL = 120
 items = []
 seen = set()
 now = dt.datetime.now(dt.timezone.utc)
@@ -55,7 +67,7 @@ for category, query, lang, country in QUERIES:
                 continue
             if category == "Drepturile muncitorilor":
                 context = (title + " " + (entry.findtext("description") or "")).casefold()
-                if not any(term in context for term in WORKER_TERMS) or not any(term in context for term in WORKER_ITALY_TERMS):
+                if "site:" not in query and (not any(term in context for term in WORKER_TERMS) or not any(term in context for term in WORKER_ITALY_TERMS)):
                     continue
             seen.add(link)
             description = re.sub(r"<[^>]+>", " ", entry.findtext("description") or "")
@@ -160,9 +172,8 @@ for category, feed_url, publisher in DIRECT_FEEDS:
                           "source": publisher, "published": published.isoformat(),
                           "summary": summary, "image": image})
             seen.add(link)
-        # Prefer the direct publisher's RSS when it is available.
+        # Add direct RSS without removing other publishers in the category.
         if fresh:
-            items = [item for item in items if item["category"] != category]
             items.extend(fresh[:LIMIT])
         print(f"{publisher}: {len(fresh)} știri RSS")
     except Exception as exc:
@@ -204,6 +215,17 @@ def is_recent(item):
 
 items = [item for item in items if is_recent(item)]
 items.sort(key=lambda x: x["published"], reverse=True)
+per_category = {}
+balanced = []
+for item in items:
+    category = item["category"]
+    if per_category.get(category, 0) >= MAX_PER_CATEGORY:
+        continue
+    balanced.append(item)
+    per_category[category] = per_category.get(category, 0) + 1
+    if len(balanced) >= MAX_TOTAL:
+        break
+items = balanced
 output.write_text(json.dumps({
     "updated_at": now.isoformat(), "items": items
 }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
