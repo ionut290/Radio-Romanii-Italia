@@ -1,7 +1,4 @@
 // RDI YouTube information strip. All widgets are optional and never interrupt news.
-import {initializeApp,getApps} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import {getFirestore,collection,query,where,onSnapshot} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-import {firebaseConfig} from "./firebase-config.js";
 const box=document.getElementById("rdiExtras");
 const label=document.getElementById("rdiExtraLabel");
 const value=document.getElementById("rdiExtraValue");
@@ -54,7 +51,12 @@ async function loadPublic(){
  }catch{breaking="";events=[]}
 }
 loadPublic();setInterval(loadPublic,300000);
-try{
+async function loadFirebaseWidgets(){try{
+ const [{initializeApp,getApps},{getFirestore,collection,query,where,onSnapshot},{firebaseConfig}]=await Promise.all([
+  import("https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js"),
+  import("https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js"),
+  import("./firebase-config.js")
+ ]);
  const app=getApps().find(a=>a.options.projectId===firebaseConfig.projectId)||initializeApp(firebaseConfig);
  const db=getFirestore(app);
  onSnapshot(query(collection(db,"posts"),where("status","==","published")),snap=>{
@@ -63,4 +65,5 @@ try{
  onSnapshot(query(collection(db,"directoryAds"),where("status","==","approved")),snap=>{
   ads=snap.docs.map(d=>d.data()).filter(x=>x.title&&x.expiresAt?.toMillis?.()>Date.now()).map(x=>limitText(x.title+" · "+(x.body||""))).slice(0,12);
  },()=>{ads=[]});
-}catch(e){console.warn("RDI overlay sources unavailable",e)}
+}catch(e){console.warn("RDI overlay sources unavailable",e)}}
+loadFirebaseWidgets();
