@@ -192,6 +192,17 @@ if output.exists():
                 current_urls.add(item["url"])
     except (OSError, ValueError, TypeError) as exc:
         print(f"Arhiva consulară nu poate fi citită: {exc}")
+# Keep the public feed strictly limited to the last 72 hours, including
+# previously verified consular stories. Invalid timestamps are discarded.
+cutoff = now - dt.timedelta(days=3)
+def is_recent(item):
+    try:
+        date = dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00"))
+        return cutoff <= date.astimezone(dt.timezone.utc) <= now + dt.timedelta(hours=1)
+    except (KeyError, TypeError, ValueError, AttributeError):
+        return False
+
+items = [item for item in items if is_recent(item)]
 items.sort(key=lambda x: x["published"], reverse=True)
 output.write_text(json.dumps({
     "updated_at": now.isoformat(), "items": items
