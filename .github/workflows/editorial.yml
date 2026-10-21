@@ -3,28 +3,62 @@ on:
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
+
 permissions:
   contents: write
+  actions: write
+
 concurrency:
   group: radio-editorial-publish
   cancel-in-progress: false
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - name: Preia proiectul
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Instalează Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Verifică și pregătește știri diaspora din RSS
+      - name: Verifică sintaxa editorului
+        run: python -m py_compile scripts/publish_editorial.py
+      - name: Actualizează știrile din surse RSS
         run: python scripts/publish_editorial.py
-      - name: Pubblica archivio
+      - name: Verifică arhiva JSON
         run: |
-          if [ -n "$(git status --porcelain -- editorial.json)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add editorial.json
-            git commit -m "Pubblica articoli editoriali"
-            git pull --rebase
-            git push
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          archive = json.loads(Path("editorial.json").read_text(encoding="utf-8"))
+          assert isinstance(archive.get("items"), list)
+          print(f"Arhiva validă: {len(archive['items'])} articole")
+          PY
+      - name: Salvează actualizările pe GitHub
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- editorial.json)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Nicio știre nouă sau expirată."
+            exit 0
           fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editorial.json
+          git commit -m "Actualizează știrile despre diaspora"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Pornește publicarea site-ului
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST "repos/${{ github.repository }}/actions/workflows/deploy-site.yml/dispatches" -f ref=main
+          echo "Actualizarea site-ului a fost solicitată."
