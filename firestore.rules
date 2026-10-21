@@ -26,4 +26,31 @@ match /profiles/{uid}{allow read:if true;allow create,update:if signed()&&reques
    && request.resource.data.updatedAt == request.time;
  allow delete: if false;
 }
-match /comments/{commentId}{allow read:if get(/databases/$(database)/documents/posts/$(postId)).data.status=='published';allow create:if signed()&&get(/databases/$(database)/documents/posts/$(postId)).data.status=='published'&&request.resource.data.keys().hasOnly(['uid','author','body','createdAt'])&&request.resource.data.uid==request.auth.uid&&request.resource.data.createdAt==request.time&&shortText(request.resource.data.author,1,100)&&shortText(request.resource.data.body,2,500);allow update,delete:if false;}}match /reports/{id}{allow create:if signed()&&request.resource.data.keys().hasOnly(['postId','reporterUid','reason','createdAt'])&&request.resource.data.reporterUid==request.auth.uid&&request.resource.data.createdAt==request.time&&shortText(request.resource.data.postId,1,150)&&shortText(request.resource.data.reason,5,500);allow read,update,delete:if false;}}}
+match /comments/{commentId}{allow read:if get(/databases/$(database)/documents/posts/$(postId)).data.status=='published';allow create:if signed()&&get(/databases/$(database)/documents/posts/$(postId)).data.status=='published'&&request.resource.data.keys().hasOnly(['uid','author','body','createdAt'])&&request.resource.data.uid==request.auth.uid&&request.resource.data.createdAt==request.time&&shortText(request.resource.data.author,1,100)&&shortText(request.resource.data.body,2,500);allow update,delete:if false;}}match /reports/{id}{allow create:if signed()&&request.resource.data.keys().hasOnly(['postId','reporterUid','reason','createdAt'])&&request.resource.data.reporterUid==request.auth.uid&&request.resource.data.createdAt==request.time&&shortText(request.resource.data.postId,1,150)&&shortText(request.resource.data.reason,5,500);allow read,update,delete:if false;}
+function directoryAdmin(){return signed() && request.auth.token.email == 'ionut29019@gmail.com' && request.auth.token.email_verified == true;}
+match /directoryBusinesses/{businessId} {
+  allow read: if resource.data.status == 'approved' || (signed() && (resource.data.uid == request.auth.uid || directoryAdmin()));
+  allow create: if signed()
+    && request.resource.data.keys().hasOnly(['uid','name','category','region','province','city','address','phone','website','hours','description','status','createdAt'])
+    && request.resource.data.keys().hasAll(['uid','name','category','region','province','city','address','phone','website','hours','description','status','createdAt'])
+    && request.resource.data.uid == request.auth.uid
+    && request.resource.data.status == 'pending'
+    && request.resource.data.createdAt == request.time
+    && shortText(request.resource.data.name,2,110)
+    && shortText(request.resource.data.category,3,80)
+    && shortText(request.resource.data.region,2,70)
+    && shortText(request.resource.data.province,2,70)
+    && shortText(request.resource.data.city,2,70)
+    && shortText(request.resource.data.address,3,180)
+    && shortText(request.resource.data.phone,0,40)
+    && shortText(request.resource.data.website,0,250)
+    && shortText(request.resource.data.hours,0,150)
+    && shortText(request.resource.data.description,25,1200);
+  allow update: if directoryAdmin()
+    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt'])
+    && resource.data.status == 'pending'
+    && request.resource.data.status in ['approved','rejected']
+    && request.resource.data.reviewedAt == request.time;
+  allow delete: if false;
+}
+}}
