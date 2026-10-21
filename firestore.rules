@@ -31,11 +31,12 @@ function directoryAdmin(){return signed() && request.auth.token.email == 'ionut2
 match /directoryBusinesses/{businessId} {
   allow read: if resource.data.status == 'approved' || (signed() && (resource.data.uid == request.auth.uid || directoryAdmin()));
   allow create: if signed()
-    && request.resource.data.keys().hasOnly(['uid','name','category','region','province','city','address','phone','website','hours','description','status','createdAt'])
-    && request.resource.data.keys().hasAll(['uid','name','category','region','province','city','address','phone','website','hours','description','status','createdAt'])
+    && request.resource.data.keys().hasOnly(['uid','name','category','region','province','city','address','phone','website','hours','description','imageUrls','status','createdAt'])
+    && request.resource.data.keys().hasAll(['uid','name','category','region','province','city','address','phone','website','hours','description','imageUrls','status','createdAt'])
     && request.resource.data.uid == request.auth.uid
     && (request.resource.data.status == 'pending' || (directoryAdmin() && request.resource.data.status == 'approved'))
     && request.resource.data.createdAt == request.time
+    && request.resource.data.imageUrls is list && request.resource.data.imageUrls.size()<=10
     && shortText(request.resource.data.name,2,110)
     && shortText(request.resource.data.category,3,80)
     && shortText(request.resource.data.region,2,70)
