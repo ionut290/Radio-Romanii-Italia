@@ -19,6 +19,20 @@ data = json.loads(ARCHIVE.read_text(encoding="utf-8")) if ARCHIVE.exists() else 
 items = data.get("items", [])
 if not isinstance(items, list):
     raise SystemExit("Invalid editorial.json: items must be a list")
+# Retain only articles published within the preceding 72 hours.
+# Missing or invalid dates are discarded rather than retained indefinitely.
+def is_recent(article):
+    try:
+        published = dt.datetime.fromisoformat(str(article.get("published", "")).replace("Z", "+00:00"))
+        if published.tzinfo is None:
+            published = published.replace(tzinfo=ZoneInfo("Europe/Rome"))
+        return NOW - dt.timedelta(days=3) <= published.astimezone(NOW.tzinfo) <= NOW
+    except (ValueError, TypeError, OverflowError):
+        return False
+
+original_count = len(items)
+items = [article for article in items if is_recent(article)]
+expired_count = original_count - len(items)
 known_urls = {str(x.get("url", "")).rstrip("/") for x in items}
 slot = NOW.strftime("%Y-%m-%d-%H")
 feeds = [
@@ -141,8 +155,8 @@ for older in items:
         backfilled += 1
 if backfilled:
     print(f"Backfilled article preview images: {backfilled}")
-if new_items or backfilled:
+if new_items or backfilled or expired_count:
     data["items"] = new_items + items
     data["updated_at"] = NOW.isoformat()
     ARCHIVE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"New verified-source RSS briefs: {len(new_items)}; archived articles: {len(items)}")
+print(f"New verified-source RSS briefs: {len(new_items)}; expired articles removed: {expired_count}; archived articles: {len(items)}")
