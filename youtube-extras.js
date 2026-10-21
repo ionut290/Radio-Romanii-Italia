@@ -24,7 +24,7 @@ async function loadNowPlaying(){
   if(!res.ok)throw Error("AzuraCast HTTP "+res.status);
   const data=await res.json();const info=data.now_playing?.song;
   // Prefer structured metadata. Strip long numeric upload/file IDs from titles.
-  const clean=v=>String(v||"").replace(/(?:[\\s_(-]*\\d{9,}[\\s_)-]*)+/g," ").replace(/[_]+/g," ").replace(/\\s{2,}/g," ").trim();
+  const clean=v=>String(v||"").replace(/\d{9,}/g," ").replace(/[_]+/g," ").replace(/\s{2,}/g," ").trim();
   const artist=clean(info?.artist),title=clean(info?.title);
   let current=[artist,title].filter(Boolean).join(" — ");
   if(!current)current=clean(info?.text);
