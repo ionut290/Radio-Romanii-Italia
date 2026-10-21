@@ -52,13 +52,33 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add editorial.json
           git commit -m "Actualizează știrile despre diaspora"
-          git pull --rebase origin main
-          git push origin HEAD:main
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          for attempt in 1 2 3; do
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              echo "::error::Conflict cu alte modificări editoriale. Publicarea va fi reîncercată la următoarea execuție."
+              exit 1
+            fi
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Push concurent ($attempt/3); reîncerc în 5 secunde."
+            sleep 5
+          done
+          echo "::error::Nu s-a putut publica editorial.json după trei încercări."
+          exit 1
       - name: Pornește publicarea site-ului
         if: steps.commit.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api --method POST "repos/${{ github.repository }}/actions/workflows/deploy-site.yml/dispatches" -f ref=main
-          echo "Actualizarea site-ului a fost solicitată."
+          for attempt in 1 2 3; do
+            if gh api --method POST "repos/${{ github.repository }}/actions/workflows/deploy-site.yml/dispatches" -f ref=main; then
+              echo "Publicarea site-ului a fost solicitată."
+              exit 0
+            fi
+            echo "Solicitarea publicării a eșuat ($attempt/3); reîncerc în 10 secunde."
+            sleep 10
+          done
+          echo "::error::Articolele au fost salvate în GitHub, dar publicarea site-ului nu a putut fi declanșată."
+          exit 1
