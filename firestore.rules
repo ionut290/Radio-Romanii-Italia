@@ -34,7 +34,7 @@ match /directoryBusinesses/{businessId} {
     && request.resource.data.keys().hasOnly(['uid','name','category','region','province','city','address','phone','website','hours','description','status','createdAt'])
     && request.resource.data.keys().hasAll(['uid','name','category','region','province','city','address','phone','website','hours','description','status','createdAt'])
     && request.resource.data.uid == request.auth.uid
-    && request.resource.data.status == 'pending'
+    && (request.resource.data.status == 'pending' || (directoryAdmin() && request.resource.data.status == 'approved'))
     && request.resource.data.createdAt == request.time
     && shortText(request.resource.data.name,2,110)
     && shortText(request.resource.data.category,3,80)
