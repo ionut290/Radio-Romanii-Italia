@@ -24,13 +24,10 @@ slot = NOW.strftime("%Y-%m-%d-%H")
 feeds = [
     ("Google News · diaspora Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "români Italia diaspora when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "Diaspora"),
     ("Google News · români Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "\"român\" Italia when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "Diaspora"),
-    ("ANSA", "https://www.ansa.it/sito/ansait_rss.xml", "Italia"),
-    ("ANSA Ultima Ora", "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "Italia"),
-    ("AGERPRES via Google News", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "site:agerpres.ro when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "România"),
-    ("Guvernul României via Google News", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "site:gov.ro when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "România"),
+
 ]
-keywords = ("român", "romani", "români", "romanca", "româncă", "române", "romania",
-            "diaspora", "moldove", "moldova", "cetățean român", "roman")
+keywords = ("român", "romani", "români", "romanca", "româncă", "române", "romania", "diaspora", "cetățean român")
+italy_terms = ("italia", "italie", "italian", "roma ", "milano", "torino", "bologna", "napoli", "firenze", "venezia", "palermo", "genova", "perugia", "cesena", "re modena")
 class ArticleImageParser(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -83,7 +80,8 @@ for publisher, feed, category in feeds:
             age = dt.datetime.now(dt.timezone.utc) - published
             if not (dt.timedelta(0) <= age <= dt.timedelta(hours=96)):
                 continue
-            if category == "Diaspora" and not any(k in (title + " " + summary).lower() for k in keywords):
+            context = (title + " " + summary).lower()
+            if not (any(k in context for k in keywords) and any(k in context for k in italy_terms)):
                 continue
             image = ""
             # Use only image URLs explicitly supplied by the publisher RSS feed.
@@ -124,11 +122,11 @@ for publisher, feed, category in feeds:
                 "slot": slot,
             })
             known_urls.add(url.rstrip("/"))
-            if len([x for x in new_items if x["category"] == category]) >= 2:
+            if len(new_items) >= 3:
                 break
     except Exception as exc:
         print(f"RSS unavailable ({publisher}): {exc}")
-    if len(new_items) >= 9:
+    if len(new_items) >= 3:
         break
 # Backfill a limited number of older entries with source-provided preview images.
 backfilled = 0
