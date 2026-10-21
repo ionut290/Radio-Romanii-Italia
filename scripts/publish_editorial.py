@@ -92,28 +92,14 @@ for publisher, feed, category in feeds:
             except (ValueError, TypeError, OverflowError):
                 continue
             age = dt.datetime.now(dt.timezone.utc) - published
-            if not (dt.timedelta(0) <= age <= dt.timedelta(hours=96)):
+            if not (dt.timedelta(0) <= age <= dt.timedelta(hours=72)):
                 continue
             context = (title + " " + summary).lower()
             if not (any(k in context for k in keywords) and any(k in context for k in italy_terms)):
                 continue
             image = ""
-            # Use only image URLs explicitly supplied by the publisher RSS feed.
-            for media in entry.iter():
-                local = media.tag.split("}")[-1].lower()
-                candidate = media.attrib.get("url", "")
-                media_type = media.attrib.get("type", "")
-                if local in ("thumbnail", "content", "enclosure") and candidate.startswith("https://"):
-                    if local == "thumbnail" or media_type.startswith("image/") or re.search(r"\\.(?:jpe?g|png|webp)(?:[?#]|$)", candidate, re.I):
-                        image = candidate
-                        break
-            if not image:
-                image_match = re.search(r'<img[^>]+src=["\\\'](https://[^"\\\']+)["\\\']', description, re.I)
-                if image_match:
-                    image = html.unescape(image_match.group(1))
-            if not image:
-                image = article_image(url)
-            # Only source-grounded short news briefs: no invented facts, quotes or details.
+            # Avoid publisher photographs and previews: only original RDI artwork may be attached.
+            # RSS briefs intentionally have no image unless original RDI artwork is created separately.\n            # Only source-grounded short news briefs: no invented facts, quotes or details.
             clean_summary = summary[:380].rsplit(" ", 1)[0].rstrip(" ,;:-") + ("…" if len(summary) > 380 else "")
             if len(clean_summary) < 45:
                 continue
@@ -142,20 +128,7 @@ for publisher, feed, category in feeds:
         print(f"RSS unavailable ({publisher}): {exc}")
     if len(new_items) >= 3:
         break
-# Backfill a limited number of older entries with source-provided preview images.
-backfilled = 0
-for older in items:
-    if backfilled >= 8:
-        break
-    if older.get("image") or not older.get("url"):
-        continue
-    candidate = article_image(older["url"])
-    if candidate:
-        older["image"] = candidate
-        backfilled += 1
-if backfilled:
-    print(f"Backfilled article preview images: {backfilled}")
-if new_items or backfilled or expired_count:
+# Do not attach external publisher preview images to existing entries.\nbackfilled = 0\nif new_items or backfilled or expired_count:
     data["items"] = new_items + items
     data["updated_at"] = NOW.isoformat()
     ARCHIVE.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
