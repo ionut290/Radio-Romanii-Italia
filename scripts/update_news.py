@@ -14,7 +14,7 @@ from zoneinfo import ZoneInfo
 DIRECT_FEEDS = [
     ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24"),
     ("Italia", "https://www.ansa.it/sito/ansait_rss.xml", "ANSA"),
-    ("Diaspora", "https://rotalianul.com/feed/", "Rotalianul"),
+    ("Diaspora", "https://news.google.com/rss/search?q=site%3Arotalianul.com%20when%3A3d&hl=ro-RO&gl=RO&ceid=RO%3Aro", "Rotalianul via Google News"),
 ]
 
 QUERIES = [
@@ -216,18 +216,7 @@ def is_recent(item):
         return False
 
 items = [item for item in items if is_recent(item) or item.get("editorial_verified")]
-# Dacă există știri automate de astăzi (ora Italiei), eliminăm
-# știrile automate din zilele anterioare. Publicațiile verificate
-# ale redacției sunt exceptate.
-def italian_day(item):
-    try:
-        return dt.datetime.fromisoformat(item["published"].replace("Z", "+00:00")).astimezone(ZoneInfo("Europe/Rome")).date()
-    except (KeyError, TypeError, ValueError, AttributeError):
-        return None
-
-has_today = any(italian_day(item) == today_italy and not item.get("editorial_verified") for item in items)
-if has_today:
-    items = [item for item in items if item.get("editorial_verified") or italian_day(item) == today_italy]
+# Păstrăm toate știrile din ultimele 72 de ore, fără eliminare pe baza zilei calendaristice.
 items.sort(key=lambda x: x["published"], reverse=True)
 per_category = {}
 balanced = []
