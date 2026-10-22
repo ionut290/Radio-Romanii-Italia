@@ -223,7 +223,7 @@ def is_recent(item):
     except (KeyError, TypeError, ValueError, AttributeError):
         return False
 
-items = [item for item in items if is_recent(item) or item.get("editorial_verified")]
+items = [item for item in items if is_recent(item)]
 # Păstrăm toate știrile din ultimele 72 de ore, fără eliminare pe baza zilei calendaristice.
 items.sort(key=lambda x: x["published"], reverse=True)
 # Consular stories must concern Romania's missions or travel guidance for Italy.
