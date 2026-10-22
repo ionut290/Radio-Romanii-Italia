@@ -34,8 +34,10 @@ photo.onchange=()=>{
 };
 const urlFallback=field("imageUrl","Sau URL imagine (opțional)","url","",500);
 const linkLabel=el("label","Unde duce anunțul?");const linkChoice=el("select");
-const waDigits=String(b.whatsapp||"").replace(/\D/g,"");
-const waLink=waDigits.length>=8?"https://wa.me/"+waDigits:"";
+let waDigits=String(b.whatsapp||"").trim().replace(/^@/,"").replace(/\D/g,"");
+if(waDigits.startsWith("00"))waDigits=waDigits.slice(2);
+if(/^3\d{8,10}$/.test(waDigits))waDigits="39"+waDigits;
+const waLink=/^\d{8,15}$/.test(waDigits)?"https://wa.me/"+waDigits:"";
 const destinations=[["site","🌐 Site-ul afacerii"],["whatsapp","💬 WhatsApp"],["guide","📍 Pagina din Ghid"],["custom","🔗 Alt link"]];
 for(const [value,label]of destinations){if(value==="whatsapp"&&!waLink)continue;if(value==="site"&&!/^https:\/\//.test(b.website||""))continue;const o=el("option",label);o.value=value;linkChoice.append(o)}
 linkLabel.append(linkChoice);form.append(linkLabel);
