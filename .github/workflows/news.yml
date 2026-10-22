@@ -24,7 +24,28 @@ jobs:
         with:
           python-version: '3.12'
       - name: Preia știrile
-        run: python scripts/update_news.py
+        timeout-minutes: 8
+        run: |
+          for attempt in 1 2 3; do
+            if python scripts/update_news.py; then
+              exit 0
+            fi
+            echo "Încercarea $attempt de preluare a știrilor a eșuat."
+            sleep $((attempt * 10))
+          done
+          exit 1
+      - name: Verifică prospețimea fișierului
+        run: |
+          python - <<'PY'
+          import datetime as dt, json
+          from pathlib import Path
+          data=json.loads(Path('news.json').read_text(encoding='utf-8'))
+          updated=dt.datetime.fromisoformat(data['updated_at'].replace('Z','+00:00'))
+          age=(dt.datetime.now(dt.timezone.utc)-updated).total_seconds()/60
+          print(f'Ultima actualizare news.json: {age:.0f} minute în urmă')
+          if age>90:
+              raise SystemExit('Actualizarea știrilor este prea veche; verifică sursele RSS și execuția automată.')
+          PY
       - name: Publică actualizarea
         run: |
           if [ -n "$(git status --porcelain -- news.json)" ]; then
