@@ -53,7 +53,7 @@ for category, query, lang, country in QUERIES:
     })
     try:
         request = urllib.request.Request("https://news.google.com/rss/search?" + params, headers=HEADERS)
-        with urllib.request.urlopen(request, timeout=25) as response:
+        with urllib.request.urlopen(request, timeout=6) as response:
             root = ET.fromstring(response.read(2_000_000))
         count = 0
         for entry in root.findall("./channel/item"):
@@ -107,7 +107,7 @@ for query in CONSULAR_QUERIES:
     params = urllib.parse.urlencode({"q": query, "hl": "ro-RO", "gl": "RO", "ceid": "RO:ro"})
     try:
         request = urllib.request.Request("https://news.google.com/rss/search?" + params, headers=HEADERS)
-        with urllib.request.urlopen(request, timeout=25) as response:
+        with urllib.request.urlopen(request, timeout=6) as response:
             root = ET.fromstring(response.read(2_000_000))
         for entry in root.findall("./channel/item")[:15]:
             title = (entry.findtext("title") or "").strip()
@@ -147,7 +147,7 @@ for query in CONSULAR_QUERIES:
 for category, feed_url, publisher in DIRECT_FEEDS:
     try:
         request = urllib.request.Request(feed_url, headers=HEADERS)
-        with urllib.request.urlopen(request, timeout=20) as response:
+        with urllib.request.urlopen(request, timeout=6) as response:
             root = ET.fromstring(response.read(2_000_000))
         fresh = []
         for entry in root.findall("./channel/item")[:25]:
