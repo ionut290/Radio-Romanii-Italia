@@ -22,6 +22,7 @@ function field(key,label,type,initial="",max=250){
 }
 field("title","Titlu *","text","",250);
 field("body","Mesaj * (maximum 500 caractere)","textarea","",500);
+const tierLabel=el("label","Tipul publicității");const tier=el("select");for(const [value,label] of [["standard","Standard · afișare obișnuită"],["gold","GOLD · banner principal RDI (după aprobare)"]]){const option=el("option",label);option.value=value;tier.append(option)}tierLabel.append(tier);form.append(tierLabel);form.append(el("p","GOLD necesită imagine de copertă orizontală și aprobarea administratorului. Disponibilitatea și eventualele costuri sunt comunicate separat."));
 const photoLabel=el("label","📷 Adaugă o fotografie din telefon (JPG, PNG sau WebP, max. 5 MB)");
 const photo=el("input");photo.type="file";photo.accept="image/jpeg,image/png,image/webp";photoLabel.append(photo);form.append(photoLabel);
 const preview=el("img");preview.style.cssText="display:none;max-width:100%;max-height:220px;object-fit:contain;border-radius:10px;margin:8px 0";form.append(preview);
@@ -58,12 +59,13 @@ form.onsubmit=async e=>{
    await uploadBytes(item,file,{contentType:file.type});
    imageUrl=await getDownloadURL(item);
  }
+ if(tier.value==="gold"&&!imageUrl)throw Error("Pentru GOLD trebuie adăugată o fotografie.");
  const choice=linkChoice.value;
  const linkUrl=choice==="whatsapp"?waLink:choice==="site"?b.website:choice==="guide"?"https://radioromanii.duckdns.org/ghid.html":custom.value.trim();
  if(!/^https:\/\//.test(linkUrl))throw Error("Link invalid. Folosește https://");
  status.textContent="Se trimite publicitatea...";
  await addDoc(collection(db,"directoryAds"),{
-  title:fields.title.value.trim(),body:fields.body.value.trim(),imageUrl,
+  title:fields.title.value.trim(),body:fields.body.value.trim(),imageUrl,tier:tier.value,
   linkUrl,businessId:b.id,uid:user.uid,status:"pending",createdAt:serverTimestamp()
  });
  alert("Publicitatea a fost trimisă spre aprobare.");if(objectUrl)URL.revokeObjectURL(objectUrl);overlay.remove();
@@ -71,7 +73,7 @@ form.onsubmit=async e=>{
 };
 overlay.append(form);$("my-businesses").prepend(overlay);overlay.scrollIntoView({behavior:"smooth"});
 }
-function adminPanel(){if(!admin())return;let box=$("directory-admin-workflow");if(!box){box=el("section");box.id="directory-admin-workflow";box.className="panel";$("admin-panel").prepend(box)}box.replaceChildren(el("h2","🔔 Richieste pubblicità e modifiche"));const waiting=allAds.filter(a=>a.status==="pending");box.append(el("p",waiting.length+" pubblicità in attesa · "+requests.filter(r=>r.status==="pending").length+" proroghe/modifiche in attesa"));for(const a of waiting){const line=el("div");line.className="panel";line.append(el("strong",a.title),el("p",a.body),button("Approva per 30 giorni",()=>setAd(a,"approved")),button("Rifiuta",()=>setAd(a,"rejected")));box.append(line)}for(const r of requests.filter(x=>x.status==="pending")){const line=el("div");line.className="panel";line.append(el("p",r.type==="edit"?"Modifica attività: "+r.businessId:"Proroga pubblicità: "+r.adId),button("Approva",()=>handleRequest(r,true)),button("Rifiuta",()=>handleRequest(r,false)));box.append(line)}}
+function adminPanel(){if(!admin())return;let box=$("directory-admin-workflow");if(!box){box=el("section");box.id="directory-admin-workflow";box.className="panel";$("admin-panel").prepend(box)}box.replaceChildren(el("h2","🔔 Richieste pubblicità e modifiche"));const waiting=allAds.filter(a=>a.status==="pending");box.append(el("p",waiting.length+" pubblicità in attesa · "+requests.filter(r=>r.status==="pending").length+" proroghe/modifiche in attesa"));for(const a of waiting){const line=el("div");line.className="panel";line.append(el("strong",a.title+" · "+(a.tier==="gold"?"GOLD":"Standard")),el("p",a.body),button("Approva per 30 giorni",()=>setAd(a,"approved")),button("Rifiuta",()=>setAd(a,"rejected")));box.append(line)}for(const r of requests.filter(x=>x.status==="pending")){const line=el("div");line.className="panel";line.append(el("p",r.type==="edit"?"Modifica attività: "+r.businessId:"Proroga pubblicità: "+r.adId),button("Approva",()=>handleRequest(r,true)),button("Rifiuta",()=>handleRequest(r,false)));box.append(line)}}
 async function setAd(a,status){try{const data={status,reviewedAt:serverTimestamp()};if(status==="approved"){data.startsAt=serverTimestamp();data.expiresAt=Timestamp.fromMillis(Date.now()+30*86400000)}await updateDoc(doc(db,"directoryAds",a.id),data)}catch(e){alert(e.message)}}
 async function handleRequest(r,approve){try{if(approve&&r.type==="extension"){const ad=allAds.find(a=>a.id===r.adId);if(ad)await updateDoc(doc(db,"directoryAds",ad.id),{expiresAt:Timestamp.fromMillis(Math.max(Date.now(),ad.expiresAt?.toMillis?.()||0)+30*86400000)})}if(approve&&r.type==="edit")await updateDoc(doc(db,"directoryBusinesses",r.businessId),{...r.changes,reviewedAt:serverTimestamp()});await updateDoc(doc(db,r.type==="edit"?"directoryBusinessEdits":"directoryExtensionRequests",r.id),{status:approve?"approved":"rejected",reviewedAt:serverTimestamp()})}catch(e){alert(e.message)}}
 onAuthStateChanged(auth,u=>{user=u;for(const fn of [ownedUnsub,adsUnsub,pendingUnsub])fn?.();ownedUnsub=adsUnsub=pendingUnsub=null;my=[];ads=[];allAds=[];requests=[];renderOwner();if(!u)return;ownedUnsub=onSnapshot(query(collection(db,"directoryBusinesses"),where("uid","==",u.uid)),s=>{my=s.docs.map(x=>({id:x.id,...x.data()}));renderOwner()},console.warn);adsUnsub=onSnapshot(query(collection(db,"directoryAds"),where("uid","==",u.uid)),s=>{ads=s.docs.map(x=>({id:x.id,...x.data()}));renderOwner()},console.warn);if(admin()){pendingUnsub=onSnapshot(collection(db,"directoryAds"),s=>{allAds=s.docs.map(x=>({id:x.id,...x.data()}));adminPanel()},console.warn);for(const [path,type]of [["directoryExtensionRequests","extension"],["directoryBusinessEdits","edit"]])onSnapshot(query(collection(db,path),where("status","==","pending")),s=>{requests=requests.filter(x=>x.type!==type).concat(s.docs.map(x=>({id:x.id,...x.data(),type})));adminPanel()},console.warn)}});
