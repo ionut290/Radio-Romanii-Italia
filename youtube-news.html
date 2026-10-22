@@ -90,7 +90,7 @@ function show(){
  fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':x.category==='Evenimente'?'📅':'📰';
  if(x.image&&/^(https:\/\/|\/(?!\/)|\.\/(?!\/))/.test(x.image)){
   const url=x.image;
-  img.onload=()=>{if(img.getAttribute('src')===url){img.style.display='block';fb.style.display='none'}};
+  img.onload=()=>{img.style.display='block';fb.style.display='none'};
   img.onerror=()=>{img.style.display='none';fb.style.display='flex'};
   img.src=url;
  }
