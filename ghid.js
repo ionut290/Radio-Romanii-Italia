@@ -10,7 +10,14 @@ const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),s
 const adminEmail="ionut29019@gmail.com";let user=null,records=[],pending=[],stopPending=null;
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
 const safeLink=(value)=>{try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:null}catch{return null}};
-const whatsappNumber=value=>{let raw=String(value||"").trim();if(!raw)return "";raw=raw.replace(/^@/,"").trim();if(!/^\+?[0-9\s().-]+$/.test(raw))return null;let digits=raw.replace(/\D/g,"");if(digits.startsWith("00"))digits=digits.slice(2);if(/^3\d{8,10}$/.test(digits))digits="39"+digits;return /^\d{8,15}$/.test(digits)?digits:null};
+const whatsappNumber=value=>{
+ const raw=String(value||"").trim();if(!raw)return "";
+ // Accept international prefixes, pasted wa.me links and old @00... values.
+ let digits=raw.replace(/[^0-9]/g,"");
+ if(digits.startsWith("00"))digits=digits.slice(2);
+ if(/^3[0-9]{8,10}$/.test(digits))digits="39"+digits;
+ return /^[1-9][0-9]{7,14}$/.test(digits)?digits:null;
+};
 const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n};
 const allowedImages=new Set(["image/jpeg","image/png","image/webp"]);
 function validImages(files){const a=Array.from(files||[]);if(a.length>10)throw Error("Poți încărca maximum 10 fotografii.");for(const f of a)if(!allowedImages.has(f.type)||f.size>5*1024*1024)throw Error("Fotografiile trebuie să fie JPG, PNG sau WebP și maximum 5 MB fiecare.");return a}
