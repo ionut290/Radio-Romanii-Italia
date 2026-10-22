@@ -1,0 +1,25 @@
+name: RDI - Avvisi guasti delle notizie
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17,47 * * * *'
+permissions:
+  actions: read
+  issues: write
+  contents: read
+concurrency:
+  group: rdi-health-alerts
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controlla errori persistenti e segnala con GitHub Issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/rdi_health_alerts.py
