@@ -226,6 +226,27 @@ def is_recent(item):
 items = [item for item in items if is_recent(item) or item.get("editorial_verified")]
 # Păstrăm toate știrile din ultimele 72 de ore, fără eliminare pe baza zilei calendaristice.
 items.sort(key=lambda x: x["published"], reverse=True)
+# Consular stories must concern Romania's missions or travel guidance for Italy.
+# Also avoid repeated reports of the same Italy transport protests under different headlines.
+filtered = []
+seen_consular_events = set()
+for item in items:
+    if item.get("category") == "Știri consulare" and not item.get("editorial_verified"):
+        headline = item.get("title", "").casefold()
+        italian_relevance = any(term in headline for term in ("italia", "italiei", "italy", "italiano", "roma", "milano", "torino", "bologna", "napoli", "sicilia", "consulatul româniei", "consulatul general al româniei", "ambasada româniei în italia"))
+        consular_relevance = any(term in headline for term in ("mae", "consulat", "ambasad", "atenționare de călătorie", "avertisment pentru români", "servicii consulare"))
+        if not italian_relevance or not consular_relevance:
+            continue
+        event_key = None
+        if any(term in headline for term in ("transportator", "camion", "tir-uri")) and any(term in headline for term in ("protest", "blocaj", "blocat", "trafic")):
+            event_key = "italia-proteste-transportatori"
+        if event_key and event_key in seen_consular_events:
+            continue
+        if event_key:
+            seen_consular_events.add(event_key)
+    filtered.append(item)
+items = filtered
+
 # Remove repeat headlines carried by different syndication links.
 deduped = []
 seen_titles = set()
