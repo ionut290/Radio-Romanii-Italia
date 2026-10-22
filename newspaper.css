@@ -7,3 +7,21 @@ main{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))}
 .bottom-nav button,.bottom-nav a{flex:1 1 0;min-width:0!important;touch-action:manipulation}
 .reader{z-index:1100}
 @supports(height:100dvh){.reader{height:100dvh}}
+
+/* RDI editorial cards — 22 Oct 2026 */
+.news-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.news-item,.news-item:first-child{grid-column:auto;display:flex;flex-direction:column;background:#fff;border:1px solid #dfe4eb;border-radius:22px;padding:0 0 19px;margin:0;overflow:hidden;box-shadow:0 9px 26px rgba(27,42,62,.09)}
+.news-item:first-child{grid-column:1/-1}
+.news-image,.news-placeholder{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0}
+.news-placeholder{display:flex}
+.news-item .news-label{align-self:flex-start;margin:20px 22px 2px;padding:7px 13px;background:#edf1f6;color:#263c56;border-radius:999px;letter-spacing:0;text-transform:none;font-size:13px}
+.news-item .news-label:before{display:none}
+.news-item h3,.news-item:first-child h3{font:800 clamp(21px,2.7vw,29px)/1.24 system-ui,-apple-system,sans-serif;letter-spacing:-.025em;margin:12px 22px 7px;overflow-wrap:anywhere}
+.news-item:first-child h3{font-size:clamp(25px,3vw,35px)}
+.news-item h3 a{color:#1c293b}
+.news-item .news-summary{margin:10px 22px;color:#526075;font-size:15px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.news-item .news-meta{margin:14px 22px;color:#6b7787;font-size:13px}
+.news-item .news-read{display:block;margin:auto 22px 0;padding:13px 15px;text-align:center;background:#bd3545;color:white!important;border-radius:11px;font-size:16px;font-weight:800;text-decoration:none}
+.news-item .news-read:hover{background:#9f2735;text-decoration:none}
+.news-item .ai-image-caption{margin:5px 22px}
+@media(max-width:680px){.news-list{grid-template-columns:1fr;gap:18px}.news-item:first-child{grid-column:auto}.news-item h3,.news-item:first-child h3{font-size:clamp(23px,5.5vw,30px)}}
