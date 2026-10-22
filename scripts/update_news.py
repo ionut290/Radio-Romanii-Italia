@@ -14,7 +14,6 @@ from zoneinfo import ZoneInfo
 DIRECT_FEEDS = [
     ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24"),
     ("Italia", "https://www.ansa.it/sito/ansait_rss.xml", "ANSA"),
-    ("Diaspora", "https://news.google.com/rss/search?q=site%3Arotalianul.com%20when%3A3d&hl=ro-RO&gl=RO&ceid=RO%3Aro", "Rotalianul via Google News"),
 ]
 
 QUERIES = [
@@ -22,7 +21,8 @@ QUERIES = [
     ("Italia", "Italia notizie cronaca economia lavoro attualità when:2d", "it", "IT"),
     ("Diaspora", "români în Italia diaspora comunitate muncă consulat when:7d", "ro", "RO"),
     ("Drepturile muncitorilor", "\"romeni in Italia\" drepturi munca pensii patronato sindicat when:7d", "ro", "RO"),
-    ("Știri consulare", "((site:roma.mae.ro OR site:bologna.mae.ro OR site:milano.mae.ro OR site:torino.mae.ro OR site:trieste.mae.ro) consulat România Italia OR site:agerpres.ro/comunicate/ Ambasada României în Italia) when:14d", "ro", "RO"),
+    ("Știri consulare", '"Ambasada României" Italia consulat when:3d', "ro", "RO"),
+    ("Știri consulare", '"Consulatul General al României" Italia when:3d', "ro", "RO"),
     ("Drepturile muncitorilor", "site:inps.it lavoratori stranieri pensione assegno unico NASpI when:7d", "it", "IT"),
     ("Drepturile muncitorilor", "site:lavoro.gov.it OR site:ispettorato.gov.it diritti lavoratori stranieri when:7d", "it", "IT"),
     ("Drepturile muncitorilor", "site:inail.it sicurezza lavoro stranieri infortuni when:7d", "it", "IT"),
@@ -32,7 +32,8 @@ QUERIES = [
     ("Diaspora", "romeni Bologna Milano Torino Roma Napoli Firenze Padova Verona evenimente when:5d", "ro", "RO"),
     ("Știri consulare", "site:mae.ro Italia consulat români documente programări when:7d", "ro", "RO"),
     ("Știri consulare", "site:econsulat.ro servicii consulare Italia when:14d", "ro", "RO"),
-    ("Diaspora", "site:rotalianul.com OR site:gazetaromaneasca.com români Italia when:4d", "ro", "RO"),
+    ("Diaspora", "site:rotalianul.com români Italia when:3d", "ro", "RO"),
+    ("Diaspora", "site:gazetaromaneasca.com români Italia when:3d", "ro", "RO"),
 ]
 WORKER_TERMS = ("român", "români", "românilor", "romania", "romania", "romeno", "romeni", "rumeno", "rumeni", "rumeni", "române", "romane", "moldoven", "diaspora")
 WORKER_ITALY_TERMS = ("italia", "italy", "italian", "italien", "inps", "patronato", "cgil", "naspi", "permesso di soggiorno", "contract de muncă", "contracte de muncă", "lavoro")
@@ -40,6 +41,8 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
 LIMIT = 18
 MAX_PER_CATEGORY = 35
 MAX_TOTAL = 120
+ITALY_CONTEXT = ("italia", "italy", "italian", "romeni", "români", "diaspora", "roma", "milano", "torino", "bologna", "napoli", "sicilia", "trentino", "veneto", "inps", "consulat", "ambasada", "patronato", "permesso", "lavoro")
+CONSULAR_CONTEXT = ("românia", "româniei", "român", "romeni", "romeno", "rumeno", "ambasada", "consulat", "econsulat")
 items = []
 seen = set()
 now = dt.datetime.now(dt.timezone.utc)
@@ -66,6 +69,11 @@ for category, query, lang, country in QUERIES:
                 continue
             if date > now + dt.timedelta(hours=1) or now - date > dt.timedelta(days=14 if category == "Știri consulare" else 7):
                 continue
+            if category in ("Diaspora", "Știri consulare"):
+                context = html.unescape(title + " " + (entry.findtext("description") or "")).casefold()
+                terms = CONSULAR_CONTEXT if category == "Știri consulare" else ITALY_CONTEXT
+                if not any(term in context for term in terms):
+                    continue
             if category == "Drepturile muncitorilor":
                 context = (title + " " + (entry.findtext("description") or "")).casefold()
                 if "site:" not in query and (not any(term in context for term in WORKER_TERMS) or not any(term in context for term in WORKER_ITALY_TERMS)):
@@ -90,10 +98,10 @@ for category, query, lang, country in QUERIES:
 # Dedicated consular queries: Google News indexes institutional releases inconsistently.
 # Keep only official Romanian diplomatic pages or AGERPRES embassy communiques.
 CONSULAR_QUERIES = [
-    '"Ambasada României în Italia" site:agerpres.ro/comunicate/ when:30d',
-    'site:roma.mae.ro "comunicat" when:30d',
-    'site:bologna.mae.ro "consulat" when:30d',
-    '"Consulatul General al României" Italia site:agerpres.ro/comunicate/ when:30d',
+    '"Ambasada României în Italia" site:agerpres.ro/comunicate/ when:3d',
+    'site:roma.mae.ro "comunicat" when:3d',
+    'site:bologna.mae.ro "consulat" when:3d',
+    '"Consulatul General al României" Italia site:agerpres.ro/comunicate/ when:3d',
 ]
 for query in CONSULAR_QUERIES:
     params = urllib.parse.urlencode({"q": query, "hl": "ro-RO", "gl": "RO", "ceid": "RO:ro"})
@@ -218,6 +226,17 @@ def is_recent(item):
 items = [item for item in items if is_recent(item) or item.get("editorial_verified")]
 # Păstrăm toate știrile din ultimele 72 de ore, fără eliminare pe baza zilei calendaristice.
 items.sort(key=lambda x: x["published"], reverse=True)
+# Remove repeat headlines carried by different syndication links.
+deduped = []
+seen_titles = set()
+for item in items:
+    title_key = re.sub(r"[^\\w]+", " ", item.get("title", "").rsplit(" - ", 1)[0].casefold()).strip()
+    if title_key and title_key in seen_titles:
+        continue
+    if title_key:
+        seen_titles.add(title_key)
+    deduped.append(item)
+items = deduped
 per_category = {}
 balanced = []
 for item in items:
