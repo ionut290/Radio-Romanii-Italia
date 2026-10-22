@@ -22,7 +22,44 @@ const node=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefi
 const allowedImages=new Set(["image/jpeg","image/png","image/webp"]);
 function validImages(files){const a=Array.from(files||[]);if(a.length>10)throw Error("Poți încărca maximum 10 fotografii.");for(const f of a)if(!allowedImages.has(f.type)||f.size>5*1024*1024)throw Error("Fotografiile trebuie să fie JPG, PNG sau WebP și maximum 5 MB fiecare.");return a}
 $("photos").addEventListener("change",()=>{const dest=$("photo-preview");dest.replaceChildren();try{const a=validImages($("photos").files);for(const f of a){const img=node("img");img.src=URL.createObjectURL(f);img.alt=f.name;img.onload=()=>URL.revokeObjectURL(img.src);dest.append(img)}}catch(e){$("photos").value="";alert(e.message)}});
-function drawCard(b,admin=false){const el=node("article",undefined,"panel business"+(admin?" pending":""));if(Array.isArray(b.imageUrls)&&b.imageUrls.length){const urls=b.imageUrls.filter(u=>typeof u==="string"&&safeLink(u)).slice(0,10);if(urls.length){const cover=node("img");cover.className="business-cover";cover.src=urls[0];cover.alt="Fotografie: "+b.name;cover.loading="lazy";el.append(cover);if(urls.length>1){const gallery=node("div",undefined,"photo-gallery");for(const url of urls.slice(1)){const a=node("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";const img=node("img");img.src=url;img.loading="lazy";img.alt="Fotografie: "+b.name;a.append(img);gallery.append(a)}el.append(gallery)}}}el.append(node("span",b.category,"pill"),node("h3",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"),node("p",b.description));if(b.address)el.append(node("p","📍 "+b.address));if(b.hours)el.append(node("p","🕒 "+b.hours));const links=node("div",undefined,"actions");if(b.phone){const phone=String(b.phone).replace(/[^+0-9]/g,"");if(phone){const a=node("a","📞 Sună");a.href="tel:"+phone;a.className="action secondary";links.append(a)}}const isRdiVolunteer=b.category==="Voluntariat și colaborări"&&/radio românii din italia|radio romanii din italia|\brdi\b/i.test([b.name,b.description].join(" "));const number=whatsappNumber(b.whatsapp)||(isRdiVolunteer?whatsappNumber(b.phone)||"393892352575":null);if(number){const a=node("a",b.category==="Voluntariat și colaborări"?"🤝 Vreau să devin voluntar":"💬 WhatsApp");a.href="https://wa.me/"+number;a.target="_blank";a.rel="noopener noreferrer";a.className="action";links.append(a)}if(b.website){const href=safeLink(b.website);if(href){const a=node("a","🌐 Site web");a.href=href;a.target="_blank";a.rel="noopener noreferrer";a.className="action secondary";links.append(a)}}if(b.address && !/^(online|activitate online)/i.test(b.address)){const a=node("a","📍 Google Maps");a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent([b.address,b.city,b.province,"Italia"].filter(Boolean).join(", "));a.target="_blank";a.rel="noopener noreferrer";a.className="action secondary";links.append(a)}el.append(links);if(admin){const controls=node("div",undefined,"actions");for(const [status,label] of [["approved","Aprobă"],["rejected","Respinge"]]){const btn=node("button",label,status==="rejected"?"secondary":"");btn.onclick=async()=>{btn.disabled=true;try{await updateDoc(doc(db,"directoryBusinesses",b.id),{status,reviewedAt:serverTimestamp()})}catch(e){alert("Nu s-a putut actualiza: "+e.message)}finally{btn.disabled=false}};controls.append(btn)}el.append(controls)}return el}
+function businessImages(b){return Array.isArray(b.imageUrls)?b.imageUrls.filter(u=>typeof u==="string"&&safeLink(u)).slice(0,10):[]}
+function contactLinks(b,container){
+ const links=node("div",undefined,"actions");
+ if(b.phone){const phone=String(b.phone).replace(/[^+0-9]/g,"");if(phone){const a=node("a","📞 Sună","action secondary");a.href="tel:"+phone;links.append(a)}}
+ const isRdiVolunteer=b.category==="Voluntariat și colaborări"&&/radio românii din italia|radio romanii din italia|\\brdi\\b/i.test([b.name,b.description].join(" "));
+ const number=whatsappNumber(b.whatsapp)||(isRdiVolunteer?whatsappNumber(b.phone)||"393892352575":null);
+ if(number){const a=node("a",isRdiVolunteer?"🤝 Vreau să devin voluntar":"💬 WhatsApp","action");a.href="https://wa.me/"+number;a.target="_blank";a.rel="noopener noreferrer";links.append(a)}
+ if(b.website){const href=safeLink(b.website);if(href){const a=node("a","🌐 Site web","action secondary");a.href=href;a.target="_blank";a.rel="noopener noreferrer";links.append(a)}}
+ if(b.address&&!/^(online|activitate online)/i.test(b.address)){const a=node("a","📍 Google Maps","action secondary");a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent([b.address,b.city,b.province,"Italia"].filter(Boolean).join(", "));a.target="_blank";a.rel="noopener noreferrer";links.append(a)}
+ container.append(links);
+}
+function openBusiness(b){
+ const dialog=node("dialog",undefined,"business-dialog");
+ const inner=node("div",undefined,"business-detail");
+ const close=node("button","✕ Închide","detail-close secondary");close.type="button";close.onclick=()=>dialog.close();inner.append(close);
+ const images=businessImages(b);
+ if(images.length){const cover=node("img",undefined,"detail-hero");cover.src=images[0];cover.alt="Fotografie: "+b.name;inner.append(cover)}
+ inner.append(node("span",b.category||"Activitate","pill"),node("h2",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
+ inner.append(node("h3","Despre activitate"),node("p",b.description||""));
+ if(images.length>1){const gallery=node("div",undefined,"photo-gallery");for(const url of images.slice(1)){const a=node("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";const img=node("img");img.src=url;img.loading="lazy";img.alt="Fotografie: "+b.name;a.append(img);gallery.append(a)}inner.append(gallery)}
+ if(b.address)inner.append(node("p","📍 "+b.address));
+ if(b.hours)inner.append(node("p","🕒 "+b.hours));
+ contactLinks(b,inner);dialog.append(inner);document.body.append(dialog);
+ dialog.addEventListener("close",()=>dialog.remove(),{once:true});dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
+ dialog.showModal();
+}
+function drawCard(b,admin=false){
+ const el=node("article",undefined,"panel business business-teaser"+(admin?" pending":""));
+ const images=businessImages(b);
+ if(images.length){const cover=node("img",undefined,"business-cover");cover.src=images[0];cover.alt="Fotografie: "+b.name;cover.loading="lazy";el.append(cover)}
+ else{el.append(node("div","🏪","business-placeholder"))}
+ const content=node("div",undefined,"business-teaser-content");
+ content.append(node("span",b.category||"Activitate","pill"),node("h3",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
+ const preview=node("p",b.description||"","business-preview");content.append(preview);
+ const open=node("button","Deschide detaliile →","action detail-open");open.type="button";open.onclick=()=>openBusiness(b);content.append(open);el.append(content);
+ if(admin){const controls=node("div",undefined,"actions");for(const [status,label] of [["approved","Aprobă"],["rejected","Respinge"]]){const btn=node("button",label,status==="rejected"?"secondary":"");btn.onclick=async()=>{btn.disabled=true;try{await updateDoc(doc(db,"directoryBusinesses",b.id),{status,reviewedAt:serverTimestamp()})}catch(e){alert("Nu s-a putut actualiza: "+e.message)}finally{btn.disabled=false}};controls.append(btn)}el.append(controls)}
+ return el;
+}
 function render(){const q=$("search").value.trim().toLocaleLowerCase("ro"),cat=$("category").value,region=$("region").value.trim().toLowerCase(),province=$("province").value.trim().toLowerCase(),city=$("city").value.trim().toLowerCase();const found=records.filter(b=>(!cat||b.category===cat)&&(!region||(b.region||"").toLowerCase().includes(region))&&(!province||(b.province||"").toLowerCase().includes(province))&&(!city||(b.city||"").toLowerCase().includes(city))&&(!q||[b.name,b.category,b.description,b.city,b.province].join(" ").toLocaleLowerCase("ro").includes(q)));$("count").textContent=found.length+" afaceri și servicii";$("businesses").replaceChildren(...(found.length?found.map(b=>drawCard(b)):[node("p","Nu există încă afaceri pentru filtrele selectate. Poți înscrie prima afacere.")]))}
 for(const id of ["search","category","region","province","city"])$(id).addEventListener("input",render);
 onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{records=snapshot.docs.map(d=>({id:d.id,...d.data()}));render()},error=>{$("count").textContent="Nu s-a putut încărca ghidul: "+error.message});
