@@ -38,7 +38,7 @@ function openBusiness(b){
  const inner=node("div",undefined,"business-detail");
  const close=node("button","✕ Închide","detail-close secondary");close.type="button";close.onclick=()=>dialog.close();inner.append(close);
  const images=businessImages(b);
- if(images.length){const cover=node("img",undefined,"detail-hero");cover.src=images[0];cover.alt="Fotografie: "+b.name;inner.append(cover)}
+ if(images.length){const cover=node("img",undefined,"detail-hero");cover.src=images[0];cover.alt="Fotografie: "+b.name;inner.append(cover);if(images.length>1){let i=0;const timer=setInterval(()=>{if(!dialog.isConnected){clearInterval(timer);return}i=(i+1)%images.length;cover.src=images[i]},5000);dialog.addEventListener("close",()=>clearInterval(timer),{once:true})}}
  inner.append(node("span",b.category||"Activitate","pill"),node("h2",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
  inner.append(node("h3","Despre activitate"),node("p",b.description||""));
  if(images.length>1){const gallery=node("div",undefined,"photo-gallery");for(const url of images.slice(1)){const a=node("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";const img=node("img");img.src=url;img.loading="lazy";img.alt="Fotografie: "+b.name;a.append(img);gallery.append(a)}inner.append(gallery)}
@@ -51,11 +51,11 @@ function openBusiness(b){
 function drawCard(b,admin=false){
  const el=node("article",undefined,"panel business business-teaser"+(admin?" pending":""));
  const images=businessImages(b);
- if(images.length){const cover=node("img",undefined,"business-cover");cover.src=images[0];cover.alt="Fotografie: "+b.name;cover.loading="lazy";el.append(cover)}
+ if(images.length){const cover=node("img",undefined,"business-cover");cover.src=images[0];cover.alt="Fotografie: "+b.name;cover.loading="lazy";el.append(cover);if(images.length>1){let i=0;const timer=setInterval(()=>{if(!el.isConnected){clearInterval(timer);return}i=(i+1)%images.length;cover.src=images[i]},5000)}}
  else{el.append(node("div","🏪","business-placeholder"))}
  const content=node("div",undefined,"business-teaser-content");
  content.append(node("span",b.category||"Activitate","pill"),node("h3",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
- const preview=node("p",b.description||"","business-preview");content.append(preview);
+ const preview=node("p",b.description||"","business-preview");content.append(preview);contactLinks(b,content);
  const open=node("button","Deschide detaliile →","action detail-open");open.type="button";open.onclick=()=>openBusiness(b);content.append(open);el.append(content);
  if(admin){const controls=node("div",undefined,"actions");for(const [status,label] of [["approved","Aprobă"],["rejected","Respinge"]]){const btn=node("button",label,status==="rejected"?"secondary":"");btn.onclick=async()=>{btn.disabled=true;try{await updateDoc(doc(db,"directoryBusinesses",b.id),{status,reviewedAt:serverTimestamp()})}catch(e){alert("Nu s-a putut actualiza: "+e.message)}finally{btn.disabled=false}};controls.append(btn)}el.append(controls)}
  return el;
