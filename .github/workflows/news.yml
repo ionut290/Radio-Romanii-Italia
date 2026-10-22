@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Preia știrile
-        timeout-minutes: 8
+        timeout-minutes: 9
         run: |
           for attempt in 1 2 3; do
             if python scripts/update_news.py; then
