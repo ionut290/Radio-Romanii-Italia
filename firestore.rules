@@ -72,8 +72,8 @@ match /directoryAds/{id} {
   && get(/databases/$(database)/documents/directoryBusinesses/$(request.resource.data.businessId)).data.status == 'approved'
   && shortText(request.resource.data.title,3,250)
   && shortText(request.resource.data.body,10,500)
-  && shortText(request.resource.data.imageUrl,0,250)
-  && shortText(request.resource.data.linkUrl,0,250);
+  && shortText(request.resource.data.imageUrl,0,2048)
+  && shortText(request.resource.data.linkUrl,0,2048);
  allow update: if directoryAdmin()
   && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt','startsAt','expiresAt'])
   && request.resource.data.status in ['approved','rejected']
