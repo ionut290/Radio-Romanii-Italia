@@ -45,6 +45,7 @@ linkLabel.append(linkChoice);form.append(linkLabel);
 const custom=field("linkUrl","Link personalizat (doar dacă alegi Alt link)","url","",500);
 function refreshLink(){custom.parentElement.hidden=linkChoice.value!=="custom";}linkChoice.onchange=refreshLink;refreshLink();
 const status=el("p");status.className="status";form.append(status);
+const legalWrap=el("label");legalWrap.style.cssText="display:flex;align-items:flex-start;gap:9px;margin:12px 0;font-size:13px";const legalAccept=el("input");legalAccept.type="checkbox";legalAccept.required=true;legalAccept.style.cssText="width:18px;height:18px;flex-shrink:0";legalWrap.append(legalAccept,el("span","Confirm că am dreptul să folosesc textele, fotografiile și logo-urile încărcate și accept condițiile publicității gratuite RDI, inclusiv GOLD. Detalii: Conformitate și transparență RDI."));form.append(legalWrap);const legalLink=el("a","Citește condițiile complete →");legalLink.href="./conformita.html#section6";legalLink.target="_blank";legalLink.rel="noopener noreferrer";form.append(legalLink);
 const send=el("button","Trimite publicitatea");send.type="submit";
 form.append(send,button("Anulează",()=>{if(objectUrl)URL.revokeObjectURL(objectUrl);overlay.remove()}));
 form.onsubmit=async e=>{
@@ -66,7 +67,7 @@ form.onsubmit=async e=>{
  status.textContent="Se trimite publicitatea...";
  await addDoc(collection(db,"directoryAds"),{
   title:fields.title.value.trim(),body:fields.body.value.trim(),imageUrl,tier:tier.value,
-  linkUrl,businessId:b.id,uid:user.uid,status:"pending",createdAt:serverTimestamp()
+  linkUrl,businessId:b.id,uid:user.uid,legalAccepted:true,legalVersion:"2026-10-22",status:"pending",createdAt:serverTimestamp()
  });
  alert("Publicitatea a fost trimisă spre aprobare.");if(objectUrl)URL.revokeObjectURL(objectUrl);overlay.remove();
  }catch(err){status.textContent="Eroare: "+err.message}finally{send.disabled=false}
