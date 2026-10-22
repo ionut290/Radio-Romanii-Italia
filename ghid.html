@@ -73,6 +73,65 @@ body:not(.view-home) .rdi-header{display:none}body.view-home .rdi-header{display
 footer{padding-bottom:70px}
 @media(max-width:650px){main{padding:0 13px 42px}.rdi-header{padding:11px}.rdi-brand img{width:54px;height:54px}.rdi-brand strong{font-size:16px}.rdi-language select{max-width:72px}.rdi-hero{padding:20px 18px 36px;min-height:240px}.rdi-hero p{max-width:78%;font-size:14px}.directory-menu .rdi-tile{padding:17px 13px;min-height:113px;gap:13px}.rdi-icon{width:66px;height:66px;font-size:42px}.rdi-tile-copy{max-width:67%}.rdi-tile-copy strong{font-size:18px}.rdi-tile-copy small{font-size:12px}.rdi-tile-symbol{font-size:25px}.rdi-chevron{font-size:23px}#find-panel .filters{grid-template-columns:repeat(2,minmax(0,1fr))}.business-teaser{grid-template-columns:43% 57%;min-height:205px}.business-teaser .business-cover,.business-placeholder{min-height:205px!important}.business-teaser-content{padding:11px;gap:5px}.business-teaser h3{font-size:17px}.business-teaser .business-preview{font-size:12px;-webkit-line-clamp:2}.business-teaser .detail-open{font-size:12px;padding:10px 5px}.business-detail .actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:365px){.rdi-tile-symbol{display:none}.rdi-brand small{display:none}.business-teaser{grid-template-columns:1fr}.business-teaser .business-cover,.business-placeholder{height:185px!important;min-height:185px!important}}
+
+/* Compact mobile refinement: proportional typography, cards, photos and contact bar */
+@media(max-width:650px){
+ body{font-size:14px;padding-bottom:66px}
+ main{padding:0 12px 26px}
+ .rdi-header{padding:9px 12px}
+ .rdi-brand img{width:42px;height:42px}
+ .rdi-brand strong{font-size:14px}.rdi-brand small{font-size:10px}
+ .rdi-hero{min-height:177px;padding:16px 17px 28px;border-radius:0 0 16px 16px;background-position:center,right center}
+ .rdi-hero h1{font-size:29px;margin:2px 0 8px}
+ .rdi-hero p{font-size:12px;line-height:1.4;max-width:70%;margin:0}
+ .rdi-flags{font-size:15px;padding:0 12px 5px}
+ .directory-menu{gap:10px;margin:14px 0}
+ .directory-menu .rdi-tile{min-height:79px;padding:11px 12px;gap:11px;border-radius:15px}
+ .rdi-icon{width:48px;height:48px;border-radius:13px;font-size:30px}
+ .rdi-manage .rdi-icon,.rdi-volunteer .rdi-icon{font-size:29px}
+ .rdi-tile-copy{gap:4px;max-width:none;flex:1}
+ .rdi-tile-copy strong{font-size:16px;line-height:1.2}
+ .rdi-tile-copy small{font-size:11px;line-height:1.32}
+ .rdi-tile-symbol{font-size:20px;opacity:.4}
+ .rdi-chevron{font-size:19px}
+ .rdi-bottom-nav{padding:5px 9px;min-height:57px}
+ .rdi-bottom-nav button{font-size:10px;min-width:52px;padding:1px 7px}
+ .rdi-bottom-nav button span{font-size:22px}
+ .rdi-bottom-nav .rdi-plus{width:42px;height:42px;font-size:28px;margin-top:-17px}
+ .rdi-section-title{margin:6px 0 12px}
+ .rdi-section-title h2{font-size:22px}
+ #find-panel,#add-panel,#manage-panel,#volunteer-info{padding:9px 0;margin:4px auto}
+ #find-panel #search{font-size:15px;padding:12px}
+ #find-panel .filters{gap:7px;margin-bottom:8px}
+ #find-panel select,#find-panel .filters input:not(#search){font-size:12px;padding:9px 7px}
+ #count{font-size:13px;margin:10px 0 12px}
+ #businesses.cards{gap:11px}
+ .business-teaser{grid-template-columns:38% minmax(0,1fr);min-height:185px;border-radius:15px;box-shadow:0 3px 12px #08255412}
+ .business-teaser .business-cover{width:100%;height:100%!important;min-height:185px!important;object-fit:contain!important;object-position:center center;background:#eaf0f7}
+ .business-placeholder{min-height:185px!important}
+ .business-teaser-content{padding:11px 10px;gap:4px;min-width:0;justify-content:flex-start}
+ .business-teaser .pill{font-size:10px;padding:3px 7px}
+ .business-teaser h3{font-size:16px;line-height:1.2;margin:3px 0}
+ .business-teaser p.muted{font-size:11px;line-height:1.3;margin:2px 0}
+ .business-teaser .business-preview{font-size:11px;line-height:1.32;-webkit-line-clamp:2;margin:3px 0}
+ .business-teaser .detail-open{order:2;margin:6px 0 0;font-size:12px;padding:9px 6px;width:100%;border-radius:10px}
+ .business-teaser-content>.actions{order:3;margin:5px 0 0;gap:4px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+ .business-teaser-content>.actions .action{font-size:10px;padding:7px 4px;white-space:nowrap;border-radius:8px;min-width:0}
+ .business-detail .detail-hero{max-height:230px;object-fit:contain}
+ .business-dialog{width:calc(100% - 18px);max-height:93dvh}
+ .business-detail{padding:13px}
+ .business-detail h2{font-size:23px}
+ .business-detail p{font-size:13px}
+ .business-detail .actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .business-detail .actions .action{font-size:12px;padding:11px 6px}
+ #business-form{padding:13px}
+ #business-form label{font-size:12px}
+ #business-form input,#business-form textarea,#business-form select{padding:10px;font-size:14px}
+ .rdi-info-banner{padding:12px;font-size:25px}
+}
+@media(min-width:651px) and (max-width:1000px){
+ .business-teaser .business-cover{object-fit:contain!important;background:#eef3fa}
+}
 </style></head><body><header class="rdi-header"><a class="rdi-brand" href="./" aria-label="Radio Românii din Italia"><img src="./RADIO-LOGO.png" alt="RDI"><span><strong>Ghidul Românilor din Italia</strong><small>Restaurante, magazine, transport și servicii pentru comunitate</small></span></a><div class="rdi-language"><label for="language">🌐</label><select id="language" aria-label="Limba"><option value="ro">Română</option><option value="it">Italiano</option><option value="en">English</option></select></div></header><main>
 <section id="home-panel" class="directory-panel rdi-home">
 <div class="rdi-hero"><h1>Bine ai venit!</h1><p>Comunitatea noastră este mai puternică împreună. Descoperă afaceri, servicii și oameni din comunitatea românilor din Italia.</p><div class="rdi-flags">🇷🇴 <span>🇮🇹</span></div></div>
