@@ -36,14 +36,34 @@ let stories=[],index=0,started=false,tickerAnimation=null,nextTimer=null,sequenc
 function valid(x){return x&&typeof x.title==='string'&&x.title.trim().length>8}
 async function load(){
  try{
-  const [news,editorial]=await Promise.all([
+  const [news,editorial,eventData]=await Promise.all([
    fetch('./news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
-   fetch('./editorial.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
+   fetch('./editorial.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
+   fetch('./events-auto.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
   ]);
-  const seen=new Set;
-  const updated=[...(editorial.items||[]),...(news.items||[])].filter(valid).filter(x=>{
-   const key=x.title.trim().toLocaleLowerCase('ro');if(seen.has(key))return false;seen.add(key);return true;
-  }).sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0)).slice(0,40);
+  const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const events=(eventData.events||[]).filter(x=>valid(x)&&(x.endDate||x.date||'')>=today).map(x=>({
+   category:'Evenimente',title:x.title,summary:x.description||[x.city,x.region].filter(Boolean).join(' · '),
+   source:x.source||'Evenimente RDI',published:x.published||x.date||today,
+   image:x.image||'',url:x.url||'',city:x.city||''
+  }));
+  const seen=new Set();
+  const incoming=[...(editorial.items||[]),...(news.items||[]),...events].filter(valid).filter(x=>{
+   const key=x.category+'|'+x.title.trim().toLocaleLowerCase('ro');
+   if(seen.has(key))return false;seen.add(key);return true;
+  });
+  // Round-robin among categories so no category or event gets buried behind dozens of headlines.
+  const buckets=new Map();
+  for(const x of incoming){
+   const category=x.category||'Actualitate';
+   if(!buckets.has(category))buckets.set(category,[]);
+   buckets.get(category).push(x);
+  }
+  for(const group of buckets.values())group.sort((a,b)=>Date.parse(b.published||0)-Date.parse(a.published||0));
+  const updated=[];
+  while([...buckets.values()].some(group=>group.length)){
+   for(const group of buckets.values()){if(group.length)updated.push(group.shift())}
+  }
   if(updated.length){
    const current=stories[index]?.title;
    stories=updated;
@@ -62,7 +82,7 @@ function show(){
  const img=$('photo'),fb=$('fallback');
  img.onload=null;img.onerror=null;img.removeAttribute('src');
  img.style.display='none';fb.style.display='flex';
- fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':'📰';
+ fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':x.category==='Evenimente'?'📅':'📰';
  if(x.image&&/^https:\/\//.test(x.image)){
   const url=x.image;
   img.onload=()=>{if(img.getAttribute('src')===url){img.style.display='block';fb.style.display='none'}};
