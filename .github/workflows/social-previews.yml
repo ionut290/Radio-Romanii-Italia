@@ -6,6 +6,7 @@ on:
       - 'news.json'
       - 'editorial.json'
       - 'scripts/build_social_previews.py'
+      - 'news-translations.json'
       - '.github/workflows/social-previews.yml'
   schedule:
     - cron: '*/15 * * * *'
