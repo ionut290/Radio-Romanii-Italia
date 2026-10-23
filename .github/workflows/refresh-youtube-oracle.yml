@@ -40,19 +40,19 @@ jobs:
           exit 1
       - name: Verifica configurazione SSH
         env:
-          SSH_KEY: ${{ secrets.RDI_ORACLE_SSH_KEY }}
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
           SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
         run: |
-          test -n "$SSH_KEY" || { echo "::error::Manca RDI_ORACLE_SSH_KEY"; exit 1; }
+          test -n "$SSH_KEY_B64" || { echo "::error::Manca RDI_ORACLE_SSH_KEY_B64"; exit 1; }
           test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Manca RDI_ORACLE_KNOWN_HOSTS"; exit 1; }
           install -d -m 700 "$HOME/.ssh"
           # Normalizza i ritorni a capo CRLF copiati da Windows.
-          printf '%s\n' "$SSH_KEY" | tr -d '\r' > "$HOME/.ssh/id_rdi"
+          printf '%s' "$SSH_KEY_B64" | base64 --decode > "$HOME/.ssh/id_rdi"
           printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
           # Verifica la sintassi della chiave senza stampare il contenuto nei log.
           if ! ssh-keygen -y -P '' -f "$HOME/.ssh/id_rdi" >/dev/null 2>&1; then
-            echo '::error::RDI_ORACLE_SSH_KEY non è una chiave privata SSH valida, è incompleta oppure richiede una passphrase. Reinserisci il testo originale della chiave, mantenendo ogni riga.'
+            echo '::error::RDI_ORACLE_SSH_KEY_B64 non produce una chiave privata SSH valida, è incompleta oppure richiede una passphrase. Reinserisci il testo originale della chiave, mantenendo ogni riga.'
             exit 1
           fi
       - name: Ricarica Chromium senza riavviare la diretta
