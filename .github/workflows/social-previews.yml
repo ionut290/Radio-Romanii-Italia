@@ -1,0 +1,52 @@
+name: Anteprime social RDI
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'news.json'
+      - 'editorial.json'
+      - 'scripts/build_social_previews.py'
+      - '.github/workflows/social-previews.yml'
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: rdi-social-previews
+  cancel-in-progress: false
+jobs:
+  build-previews:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image tools
+        run: python -m pip install Pillow
+      - name: Create expiring article pages
+        run: python scripts/build_social_previews.py
+      - name: Publish previews
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- articole/ share-images/)" ]; then
+            echo "Anteprime già aggiornate."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A articole/ share-images/
+          git commit -m "Aggiorna anteprime social RDI"
+          for attempt in 1 2 3 4; do
+            if git pull --rebase -X ours origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 3))
+          done
+          exit 1
