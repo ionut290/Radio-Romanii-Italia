@@ -269,6 +269,9 @@ for item in items:
     if len(balanced) >= MAX_TOTAL:
         break
 items = balanced
+from news_illustrations import fill_missing_images
+# Existing source imagery has priority; generate branded vector illustrations only when missing.
+fill_missing_images(items)
 output.write_text(json.dumps({
     "updated_at": now.isoformat(), "items": items
 }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
