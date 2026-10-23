@@ -114,7 +114,7 @@ def image_from_rss(item):
         url=node.attrib.get("url","")
         kind=node.attrib.get("type","")
         if local in ("thumbnail","content","enclosure") and url.startswith("https://"):
-            if local=="thumbnail" or kind.startswith("image/") or re.search(r"\\.(?:jpg|jpeg|png|webp)(?:[?#]|$)",url,re.I):
+            if local=="thumbnail" or kind.startswith("image/") or re.search(r"\.(?:jpg|jpeg|png|webp)(?:[?#]|$)",url,re.I):
                 return url
     raw=item.findtext("description") or ""
     match=re.search(r'<img[^>]+src=["\\\'](https://[^"\\\']+)',raw,re.I)
@@ -241,7 +241,7 @@ def official_events():
                         if isinstance(address,str):address={"streetAddress":address}
                         if not isinstance(address,dict):address={}
                         place=" ".join(str(x or "") for x in (location.get("name"),address.get("addressLocality"),address.get("streetAddress")))
-                        city=next((c.title() for c in CITIES if re.search(r"\\b"+re.escape(c)+r"\\b",place,re.I)),None)
+                        city=next((c.title() for c in CITIES if re.search(r"\b"+re.escape(c)+r"\b",place,re.I)),None)
                         if not city or not name:continue
                         link=event.get("url") or page_url
                         if not isinstance(link,str) or not link.startswith("https://"):link=page_url
