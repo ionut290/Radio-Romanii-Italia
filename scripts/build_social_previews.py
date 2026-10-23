@@ -116,7 +116,9 @@ for ident, item in articles.items():
         local_summary = " ".join(str(localized.get("summary") or localized.get("body") or "").split())[:190]
         localized_url = BASE + "/articole/" + ident + "-" + language + ".html"
         localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
-        page = html_page.replace(escape(title), escape(local_title)).replace(escape(summary), escape(local_summary)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace('<html lang="ro">', '<html lang="' + language + '">')
+        page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace('<html lang="ro">', '<html lang="' + language + '">')
+        if summary:
+            page = page.replace(escape(summary), escape(local_summary))
         (OUT / (ident + "-" + language + ".html")).write_text(page, encoding="utf-8")
 for folder, suffix in ((OUT, ".html"), (IMAGES, ".jpg")):
     for existing in folder.glob("*" + suffix):
