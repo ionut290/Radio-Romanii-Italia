@@ -104,6 +104,23 @@ COMMUNITY_SOURCE_SEARCHES = [
 ]
 SEARCHES += COMMUNITY_SOURCE_SEARCHES
 
+# Asociații și proiecte românești: căutări dedicate pentru Ziua Națională.
+ASSOCIATION_SEARCHES = [
+    '"Rădăcini" "Italia" "Ziua Națională" 2026',
+    '"Radacini" "1 Decembrie" "Italia" 2026',
+    '"Rădăcini Acasă e România" eveniment Italia 2026',
+    'site:asociatiavaleabistritei.ro "Italia" "2026"',
+    'site:cncri.org "Festa Nazionale della Romania" 2026',
+    'site:romenimilano.com "1 Decembrie" 2026',
+    'site:rotalianul.com "Ziua Națională" "Italia" 2026',
+    'site:gazetaromaneasca.com "1 Decembrie" "2026"',
+    '"asociația românilor" "Italia" "29 noiembrie 2026"',
+    '"associazione romeni" "festa nazionale" "dicembre 2026"',
+    '"Marea Unire" "Italia" "2026" spectacol',
+    '"Ziua României" "Italia" "decembrie 2026"',
+]
+SEARCHES += ASSOCIATION_SEARCHES
+
 CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcamo":"Sicilia"}
 MONTHS={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12,"ianuarie":1,"februarie":2,"martie":3,"aprilie":4,"mai":5,"iunie":6,"iulie":7,"august":8,"septembrie":9,"octombrie":10,"noiembrie":11,"decembrie":12}
 EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâlnir|sărbăto|târg|conferin|manifestazion|spettacol|incontro|mostra|evento",re.I)
