@@ -51,8 +51,18 @@ async function load(){
    source:x.source||'Evenimente RDI',published:x.published||x.date||today,
    image:x.image||'',url:x.url||'',city:x.city||''
   }));
+  // Only today's publications in the Italian timezone enter the YouTube news rotation.
+  // Events are included only when announced today; paid/promotional cards are separate.
+  const romeDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'});
+  function publishedToday(x){
+    const raw=x&&x.published;
+    if(typeof raw!=='string'||!raw.trim())return false;
+    if(/^\\d{4}-\\d{2}-\\d{2}$/.test(raw.trim()))return raw.trim()===today;
+    const stamp=new Date(raw);
+    return !Number.isNaN(stamp.getTime())&&romeDay.format(stamp)===today;
+  }
   const seen=new Set();
-  const incoming=[...(window.rdiPromotions||[]),...(editorial.items||[]),...(news.items||[]),...events].filter(valid).filter(x=>{
+  const incoming=[...(window.rdiPromotions||[]),...(editorial.items||[]).filter(publishedToday),...(news.items||[]).filter(publishedToday),...events.filter(publishedToday)].filter(valid).filter(x=>{
    const key=x.category+'|'+x.title.trim().toLocaleLowerCase('ro');
    if(seen.has(key))return false;seen.add(key);return true;
   });
@@ -73,7 +83,7 @@ async function load(){
    stories=updated;
    if(current){const position=stories.findIndex(x=>x.title===current);index=position>=0?position:0;}
    if(!started){started=true;show();}
-  }else if(!started){$('headline').textContent='Radio Românii din Italia — Știri';}
+  }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Nu sunt știri publicate astăzi';$('summary').textContent='Revenim cu actualizări din România, Italia și diaspora.';$('category').textContent='ȘTIRI';$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
  }catch(e){console.warn('News update failed',e)}
 }
 function show(){
