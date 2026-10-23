@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""Build expiring, crawler-readable share previews for public RDI news."""
+"""Build crawler-readable share previews for current RDI news and events."""
 import datetime as dt
 import hashlib
 import html
 import io
 import json
 import os
+import re
+import unicodedata
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 from PIL import Image, ImageDraw, ImageFont, ImageOps
@@ -15,11 +18,13 @@ import cairosvg
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "articole"
 IMAGES = ROOT / "share-images"
+EVENTS = ROOT / "eventi"
 BASE = "https://radioromanii.duckdns.org"
 NOW = dt.datetime.now(dt.timezone.utc)
 CUTOFF = NOW - dt.timedelta(hours=48)
 OUT.mkdir(exist_ok=True)
 IMAGES.mkdir(exist_ok=True)
+EVENTS.mkdir(exist_ok=True)
 logo_path = ROOT / "RADIO-LOGO.png"
 logo = Image.open(logo_path).convert("RGBA") if logo_path.exists() else None
 
@@ -43,11 +48,11 @@ def readable_content(item):
     text = body if body and (item.get("extended_summary") or body.startswith(summary)) else "\n\n".join(x for x in (summary, body) if x)
     return "".join("<p>" + escape(part) + "</p>" for part in text.split("\n\n") if part.strip())
 
-def make_image(item, ident):
+def make_image(item, ident, refresh=False):
     dest = IMAGES / (ident + ".jpg")
     source = str(item.get("image") or "")
     # SVG editoriali: rigenera il JPEG anche se esiste, per evitare anteprime obsolete.
-    if dest.exists() and not source.lower().split("?")[0].endswith(".svg"):
+    if dest.exists() and not refresh and not source.lower().split("?")[0].endswith(".svg"):
         return dest
     background = Image.new("RGB", (1200, 630), "#19314b")
     try:
@@ -64,7 +69,7 @@ def make_image(item, ident):
             if host.endswith((".jpg", ".jpeg", ".png", ".webp")):
                 pass
             req = Request(source, headers={"User-Agent": "Mozilla/5.0"})
-            with urlopen(req, timeout=3) as response:
+            with urlopen(req, timeout=10 if refresh else 3) as response:
                 payload = response.read(4_000_000)
             img = Image.open(io.BytesIO(payload)).convert("RGB")
         else:
@@ -141,8 +146,60 @@ for ident, item in articles.items():
         for name in (ident + "-" + language + ".html", ident + "-" + language + "-social.html"):
             (OUT / name).write_text(page, encoding="utf-8")
             valid_pages.add(name)
+def event_legacy_id(item):
+    city = str(item.get("city") or "italia")
+    if city.startswith("Altedo") and item.get("date") == "2026-11-28":
+        return "altedo-2026-11-28"
+    slug = unicodedata.normalize("NFD", city.lower())
+    slug = re.sub(r"[\u0300-\u036f]", "", slug)
+    return str(item["date"]) + "-" + re.sub(r"[^a-z0-9]+", "-", slug)
+
+
+valid_event_pages = set()
+valid_images = set(articles)
+events_path = ROOT / "events-auto.json"
+today = NOW.astimezone(ZoneInfo("Europe/Rome")).date()
+events = json.loads(events_path.read_text(encoding="utf-8")).get("events", []) if events_path.exists() else []
+for event in events:
+    try:
+        start = dt.date.fromisoformat(event["date"])
+        end = dt.date.fromisoformat(event.get("endDate") or event["date"])
+    except (KeyError, TypeError, ValueError):
+        continue
+    if end < today or not event.get("title"):
+        continue
+    legacy = event_legacy_id(event)
+    ident = legacy + "-" + article_id({"id": event.get("url") or str(event["title"]) + "|" + event["date"]})
+    image_id = "event-" + ident
+    valid_images.add(image_id)
+    make_image(event, image_id, refresh=True)
+    title = str(event["title"])
+    description = str(event.get("description") or title)
+    dates = event["date"] + (" → " + end.isoformat() if end != start else "")
+    meta = " · ".join(str(x) for x in (dates, event.get("city"), event.get("region")) if x)
+    summary = " ".join((meta + " — " + description).split())[:190]
+    url = BASE + "/eventi/" + ident + "-social.html"
+    image_url = BASE + "/share-images/" + image_id + ".jpg"
+    target = BASE + "/evenimente.html?event=" + ident + "#event-" + ident
+    body = readable_content({"body": description})
+    source = ""
+    if str(event.get("url") or "").startswith("https://"):
+        source = '<p><a href="' + escape(event["url"]) + '" target="_blank" rel="noopener noreferrer">' + escape(event.get("source") or "Organizator") + ' ↗</a></p>'
+    page = f'''<!doctype html><!-- rdi-event-preview --><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image_url)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(image_url)}"><link rel="stylesheet" href="../rdi-sharing.css?v=20261023-events"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}p{{line-height:1.6}}</style><script src="../rdi-sharing.js?v=20261023-events"></script></head><body><img src="{escape(image_url)}" alt="{escape(title)}"><h1>{escape(title)}</h1><p>{escape(meta)}</p><div id="event-share"></div><section id="event-description">{body}</section>{source}<p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p><script>const eventData={json.dumps({**event, "eventId": ident, "summary": meta, "body": description}, ensure_ascii=True).replace('<', chr(92) + 'u003c')};document.getElementById("event-share").append(rdiShareButton(eventData));</script></body></html>'''
+    # Preserve existing shared event URLs, while distinct same-city events get
+    # their own stable canonical address. No redirect: crawlers read this page.
+    for name in (ident + ".html", ident + "-social.html", legacy + ".html"):
+        if name == legacy + ".html" and name in valid_event_pages:
+            continue
+        (EVENTS / name).write_text(page, encoding="utf-8")
+        valid_event_pages.add(name)
+
+for existing in EVENTS.glob("*.html"):
+    if existing.name not in valid_event_pages and "<!-- rdi-event-preview -->" in existing.read_text(encoding="utf-8"):
+        existing.unlink()
 for folder, suffix in ((OUT, ".html"), (IMAGES, ".jpg")):
     for existing in folder.glob("*" + suffix):
-        if (folder == OUT and existing.name not in valid_pages) or (folder == IMAGES and existing.stem not in articles):
+        if (folder == OUT and existing.name not in valid_pages) or (folder == IMAGES and existing.stem not in valid_images):
             existing.unlink()
 print(f"Generated {len(articles)} current article previews; expired files removed.")
+print(f"Generated {len(valid_event_pages)} event pages; events remain shareable through their end date.")
