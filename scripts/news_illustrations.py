@@ -57,11 +57,8 @@ def make_svg(item):
     title = re.sub(r"\\s+", " ", str(item.get("title") or "")).strip()
     theme = COLORS.get(category.casefold(), ("#183b64", "#476aa3", "#f0c06b"))
     topic = topic_for(item)
-    # Short overlay headline remains separate from the full headline on the website.
-    lines = textwrap.wrap(title, width=39, break_long_words=False, break_on_hyphens=False)[:3]
-    if len(title) > len(" ".join(lines)) and lines:
-        lines[-1] = lines[-1].rstrip(" .") + "…"
-    headline = "".join(f'<text x="65" y="{338+i*61}" font-family="Arial,sans-serif" font-size="43" font-weight="800" fill="white">{html.escape(line)}</text>' for i, line in enumerate(lines))
+    # Headlines are displayed separately in the HTML news panel.
+    headline = ""
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Illustrazione editoriale RDI">
 <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="{theme[0]}"/><stop offset="1" stop-color="{theme[1]}"/></linearGradient><linearGradient id="shade"><stop stop-color="#0b223a" stop-opacity=".65"/><stop offset="1" stop-color="#0b223a" stop-opacity="0"/></linearGradient></defs>
 <rect width="1200" height="675" fill="url(#bg)"/><circle cx="940" cy="320" r="295" fill="#fff" opacity=".065"/><circle cx="1130" cy="80" r="170" fill="{theme[2]}" opacity=".13"/>
@@ -71,7 +68,6 @@ def make_svg(item):
 <text x="177" y="83" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="white">RADIO ROMÂNII</text><text x="177" y="105" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="white">DIN ITALIA</text>
 <rect x="292" y="43" width="6" height="29" fill="#009246"/><rect x="298" y="43" width="6" height="29" fill="#fff"/><rect x="304" y="43" width="6" height="29" fill="#ce2b37"/>
 <rect x="65" y="234" width="260" height="36" rx="8" fill="{theme[2]}"/><text x="80" y="259" font-family="Arial,sans-serif" font-size="17" font-weight="800" fill="#16233b">{html.escape(category.upper())}</text>
-{headline}
 <rect y="610" width="1200" height="65" fill="#0b1b32" opacity=".88"/><text x="65" y="649" font-family="Arial,sans-serif" font-size="20" fill="#d6e5f7">RADIO ROMÂNII DIN ITALIA · ILUSTRAȚIE EDITORIALĂ</text>
 </svg>'''
 
@@ -85,8 +81,9 @@ def fill_missing_images(items):
         identity = str(item.get("url") or item.get("title") or "")
         digest = hashlib.sha256(identity.encode("utf-8")).hexdigest()[:20]
         path = OUT / f"rdi-auto-{digest}.svg"
-        if not path.exists():
-            path.write_text(make_svg(item), encoding="utf-8")
+        rendered = make_svg(item)
+        if not path.exists() or path.read_text(encoding="utf-8") != rendered:
+            path.write_text(rendered, encoding="utf-8")
             count += 1
         used.add(path.name)
         item["image"] = "./" + path.as_posix()
