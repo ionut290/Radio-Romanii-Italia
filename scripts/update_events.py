@@ -228,6 +228,7 @@ OFFICIAL_PAGES=[
     ("Institutul Cultural Român – Roma","https://www.icr.ro/roma"),
     ("Institutul Cultural Român – Veneția","https://www.icr.ro/venetia"),
     ("Accademia di Romania in Roma","https://www.accademiadiromania.it/"),
+    ("Romeni in Italia – evenimente","https://www.romenimilano.com/it/eventi"),
 ]
 class EventHTML(HTMLParser):
     def __init__(self):
@@ -254,7 +255,7 @@ def json_events(value):
         typ=value.get("@type",[])
         if isinstance(typ,str):typ=[typ]
         if any(str(t).lower().endswith("event") for t in typ):yield value
-        for key in ("@graph","mainEntity","itemListElement"):
+        for key in ("@graph","mainEntity","itemListElement","event","events"):
             if key in value:yield from json_events(value[key])
 def official_events():
     count=0
@@ -269,7 +270,7 @@ def official_events():
             for href in parser.links:
                 u=urllib.parse.urljoin(homepage,href);p=urllib.parse.urlparse(u)
                 if p.scheme=="https" and p.hostname==base.hostname and re.search(r"eveniment|event|calendar|program|festival|concert|spectacol|manifestazion",p.path,re.I) and u not in urls:urls.append(u)
-            for url in urls[:8]:
+            for url in urls[:12]:
                 try:
                     sub=EventHTML();sub.feed(download_html(url));candidates.append((url,sub))
                 except Exception as exc:print("Official subpage unavailable:",str(exc)[:80])
@@ -297,13 +298,22 @@ def official_events():
                         if not isinstance(link,str) or not link.startswith("https://"):link=page_url
                         description=clean(str(event.get("description","")))[:450]
                         if not DIASPORA.search(name+" "+description+" "+source):continue
+                        if link in items and items[link].get("verified"):continue
                         items[link]={"image":event.get("image") if isinstance(event.get("image"),str) and event["image"].startswith("https://") else items.get(link,{}).get("image",""),"title":name[:160],"date":start,"city":city,"region":CITIES[city.lower()],"source":source,"url":link,"description":description,"published":TODAY.isoformat()}
                         count+=1
         except Exception as exc:print("Official source unavailable:",source,str(exc)[:130])
     print("Official structured events:",count)
 
 official_events()
-events=sorted(items.values(),key=lambda x:(x["date"],x["city"],x["title"]))
+# Dedupe repeat syndicated announcements while preserving editorially verified items.
+deduplicated={}
+for entry in items.values():
+    key=(entry.get("date",""),entry.get("city","").casefold(),
+         re.sub(r"[^a-z0-9]+","",entry.get("title","").casefold())[:85])
+    previous=deduplicated.get(key)
+    if previous is None or (entry.get("verified") and not previous.get("verified")):
+        deduplicated[key]=entry
+events=sorted(deduplicated.values(),key=lambda x:(x["date"],x["city"],x["title"]))
 verified=[x for x in events if x.get("verified")]
 events=verified+ [x for x in events if not x.get("verified")][:max(0,80-len(verified))]
 # Complete missing pictures from the publisher's Open Graph preview, with a
