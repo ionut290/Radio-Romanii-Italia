@@ -43,16 +43,20 @@ jobs:
           SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
           SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
         run: |
+          set -euo pipefail
           test -n "$SSH_KEY_B64" || { echo "::error::Manca RDI_ORACLE_SSH_KEY_B64"; exit 1; }
           test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Manca RDI_ORACLE_KNOWN_HOSTS"; exit 1; }
           install -d -m 700 "$HOME/.ssh"
-          # Normalizza i ritorni a capo CRLF copiati da Windows.
-          printf '%s' "$SSH_KEY_B64" | base64 --decode > "$HOME/.ssh/id_rdi"
+          # Rimuove solo gli spazi e gli a capo estranei, non modifica i byte decodificati.
+          if ! printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"; then
+            echo '::error::RDI_ORACLE_SSH_KEY_B64 non contiene Base64 valido. Ricrea il secret dal file originale usando PowerShell.'
+            exit 1
+          fi
           printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
           chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
-          # Verifica la sintassi della chiave senza stampare il contenuto nei log.
-          if ! ssh-keygen -y -P '' -f "$HOME/.ssh/id_rdi" >/dev/null 2>&1; then
-            echo '::error::RDI_ORACLE_SSH_KEY_B64 non produce una chiave privata SSH valida, è incompleta oppure richiede una passphrase. Reinserisci il testo originale della chiave, mantenendo ogni riga.'
+          # Non stampa mai il contenuto della chiave e non richiede input interattivo.
+          if ! timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1; then
+            echo '::error::La chiave privata decodificata non è leggibile da OpenSSH Linux o è protetta da passphrase.'
             exit 1
           fi
       - name: Ricarica Chromium senza riavviare la diretta
