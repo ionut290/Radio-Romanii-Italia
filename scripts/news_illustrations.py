@@ -80,7 +80,7 @@ def fill_missing_images(items):
             continue
         identity = str(item.get("url") or item.get("title") or "")
         digest = hashlib.sha256(identity.encode("utf-8")).hexdigest()[:20]
-        path = OUT / f"rdi-auto-{digest}.svg"
+        path = OUT / f"rdi-auto-v2-{digest}.svg"
         rendered = make_svg(item)
         if not path.exists() or path.read_text(encoding="utf-8") != rendered:
             path.write_text(rendered, encoding="utf-8")
