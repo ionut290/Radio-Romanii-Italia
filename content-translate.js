@@ -13,7 +13,7 @@ function add(buttonHost,source,extract){
 function refresh(){
  const page=location.pathname;
  if(page.endsWith("ghid.html"))for(const card of document.querySelectorAll(".business")){const p=card.querySelector("p:not(.muted)");if(p)add(card,p,()=>[card.querySelector("h3")?.textContent,p.textContent].filter(Boolean).join("\n\n"))}
- if(page.endsWith("index.html")||page==="/")for(const card of document.querySelectorAll(".news-item")){const title=card.querySelector("h3"),summary=card.querySelector(".news-summary");if(title||summary)add(card,title||summary,()=>[title?.textContent,summary?.textContent].filter(Boolean).join("\n\n"))}
+ // News articles use the built-in RO/IT selector and saved translations, not external Google Translate.
  for(const article of document.querySelectorAll(".post")){const title=article.querySelector("h3"),body=article.querySelector(".post-full-body")||article.querySelector("p");if(title||body)add(article,title||body,()=>[title?.textContent,body?.textContent].filter(Boolean).join("\n\n"))}
 }
 let scheduled=false;function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;refresh()})}
