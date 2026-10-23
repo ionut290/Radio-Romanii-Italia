@@ -98,7 +98,7 @@ for filename in ("news.json", "editorial.json"):
 
 for ident, item in articles.items():
     title = str(item.get("title", ""))
-    summary = " ".join(str(item.get("summary") or item.get("body") or "").split())[:190]
+    summary = " ".join(str(item.get("summary") or item.get("description") or item.get("body") or item.get("title") or "").split())[:190]
     image_url = BASE + "/share-images/" + ident + ".jpg"
     url = BASE + "/articole/" + ident + ".html"
     make_image(item, ident)
@@ -113,7 +113,7 @@ for ident, item in articles.items():
         if not localized.get("title"):
             continue
         local_title = str(localized["title"])
-        local_summary = " ".join(str(localized.get("summary") or localized.get("body") or "").split())[:190]
+        local_summary = " ".join(str(localized.get("summary") or localized.get("body") or localized.get("title") or summary).split())[:190]
         localized_url = BASE + "/articole/" + ident + "-" + language + ".html"
         localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
         page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace('<html lang="ro">', '<html lang="' + language + '">')
