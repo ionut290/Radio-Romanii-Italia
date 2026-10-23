@@ -212,9 +212,9 @@ if output.exists():
                 current_urls.add(item["url"])
     except (OSError, ValueError, TypeError) as exc:
         print(f"Arhiva consulară nu poate fi citită: {exc}")
-# Keep the public feed strictly limited to the last 72 hours, including
+# Keep the public feed strictly limited to the last 48 hours, including
 # previously verified consular stories. Invalid timestamps are discarded.
-cutoff = now - dt.timedelta(days=3)
+cutoff = now - dt.timedelta(hours=48)
 today_italy = now.astimezone(ZoneInfo("Europe/Rome")).date()
 def is_recent(item):
     try:
@@ -224,7 +224,7 @@ def is_recent(item):
         return False
 
 items = [item for item in items if is_recent(item)]
-# Păstrăm toate știrile din ultimele 72 de ore, fără eliminare pe baza zilei calendaristice.
+# Păstrăm doar știrile din ultimele 48 de ore, fără eliminare pe baza zilei calendaristice.
 items.sort(key=lambda x: x["published"], reverse=True)
 # Consular stories must concern Romania's missions or travel guidance for Italy.
 # Also avoid repeated reports of the same Italy transport protests under different headlines.
