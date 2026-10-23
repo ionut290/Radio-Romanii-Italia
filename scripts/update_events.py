@@ -234,6 +234,13 @@ OFFICIAL_PAGES=[
     ("Institutul Cultural Român – Veneția","https://www.icr.ro/venetia"),
     ("Accademia di Romania in Roma","https://www.accademiadiromania.it/"),
     ("Romeni in Italia – evenimente","https://www.romenimilano.com/it/eventi"),
+    ("Comune di Reggio Emilia – eventi","https://www.comune.reggioemilia.it/vivere-reggio-emilia/eventi"),
+    ("Matera Welcome – eventi","https://events.materawelcome.it/"),
+    ("Cuneo Cultura – eventi","https://www.cuneocultura.it/"),
+    ("La Piccionaia – spettacoli","https://www.piccionaia.org/"),
+    ("Radio România Internațional","https://www.rri.ro/"),
+    ("Gotobeat – concerti","https://gotobeat.com/"),
+
 ]
 class EventHTML(HTMLParser):
     def __init__(self):
