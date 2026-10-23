@@ -96,16 +96,19 @@ for filename in ("news.json", "editorial.json"):
         except (ValueError, TypeError, KeyError):
             continue
 
+valid_pages = set()
 for ident, item in articles.items():
     title = str(item.get("title", ""))
     summary = " ".join(str(item.get("summary") or item.get("description") or item.get("body") or item.get("title") or "").split())[:190]
     image_url = BASE + "/share-images/" + ident + ".jpg"
-    url = BASE + "/articole/" + ident + ".html"
+    url = BASE + "/articole/" + ident + "-social.html"
     make_image(item, ident)
     intro = escape(summary or title)
     target = BASE + "/?articolo=" + ident
     html_page = f"""<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image_url)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(image_url)}"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}</style></head><body><img src="{escape(image_url)}" alt="RDI"><h1>{escape(title)}</h1><p>{intro}</p><p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p></body></html>"""
-    (OUT / (ident + ".html")).write_text(html_page, encoding="utf-8")
+    for name in (ident + ".html", ident + "-social.html"):
+        (OUT / name).write_text(html_page, encoding="utf-8")
+        valid_pages.add(name)
     key = str(item.get("id") or item.get("url") or (str(item.get("title", "")) + "|" + str(item.get("published", ""))))
     record = translations.get(key, {})
     for language in ("ro", "it"):
@@ -114,14 +117,16 @@ for ident, item in articles.items():
             continue
         local_title = str(localized["title"])
         local_summary = " ".join(str(localized.get("summary") or localized.get("body") or localized.get("title") or summary).split())[:190]
-        localized_url = BASE + "/articole/" + ident + "-" + language + ".html"
+        localized_url = BASE + "/articole/" + ident + "-" + language + "-social.html"
         localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
         page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace('<html lang="ro">', '<html lang="' + language + '">')
         if summary:
             page = page.replace(escape(summary), escape(local_summary))
-        (OUT / (ident + "-" + language + ".html")).write_text(page, encoding="utf-8")
+        for name in (ident + "-" + language + ".html", ident + "-" + language + "-social.html"):
+            (OUT / name).write_text(page, encoding="utf-8")
+            valid_pages.add(name)
 for folder, suffix in ((OUT, ".html"), (IMAGES, ".jpg")):
     for existing in folder.glob("*" + suffix):
-        if existing.stem not in articles and not (folder == OUT and any(existing.stem == ident + "-" + lang for ident in articles for lang in ("ro", "it"))):
+        if (folder == OUT and existing.name not in valid_pages) or (folder == IMAGES and existing.stem not in articles):
             existing.unlink()
 print(f"Generated {len(articles)} current article previews; expired files removed.")
