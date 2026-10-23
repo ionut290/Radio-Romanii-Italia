@@ -54,6 +54,30 @@ SEARCHES += [
     '"comunità moldava" Italia evento 2026',
     '"festival interculturale" "romena" Italia 2026',
 ]
+# Descoperire de evenimente anunțate public pe Facebook și în comunitățile diaspora.
+# Google News poate indexa numai postări publice; grupurile private nu sunt accesibile.
+FACEBOOK_SEARCHES = [
+    'site:facebook.com/events/ "romani" "Italia" "2026"',
+    'site:facebook.com/events/ "români" "Italia" "noiembrie 2026"',
+    'site:facebook.com/events/ "cultura romena" "Italia" 2026',
+    'site:facebook.com/groups/ "romani" "festival" "Italia" 2026',
+    'site:facebook.com/groups/ "români" "concert" "Italia" 2026',
+    'site:facebook.com "Grupul Vatra" "Italia" "2026" concert',
+    'site:facebook.com "românii din Italia" "eveniment" 2026',
+    'site:facebook.com "diaspora românească" "Italia" "spectacol" 2026',
+    'site:facebook.com "Ziua Națională a României" "Italia" "2026"',
+    'site:facebook.com "Associazione Donne Romene in Italia" evento 2026',
+    'site:facebook.com "Romeni in Italia" "eventi" 2026',
+]
+FACEBOOK_SEARCHES += [
+    f'site:facebook.com "romeni" "{city}" "evento" "2026"'
+    for city in ("Roma", "Milano", "Torino", "Bologna", "Firenze", "Venezia", "Padova", "Verona", "Napoli", "Genova", "Brescia", "Trento")
+]
+SEARCHES += FACEBOOK_SEARCHES + [
+    'site:romenimilano.com/it/eventi romeni',
+    'site:govserv.org/IT/ "Consulatul General al României" evenimente',
+]
+
 CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcamo":"Sicilia"}
 MONTHS={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12,"ianuarie":1,"februarie":2,"martie":3,"aprilie":4,"mai":5,"iunie":6,"iulie":7,"august":8,"septembrie":9,"octombrie":10,"noiembrie":11,"decembrie":12}
 EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâlnir|sărbăto|târg|conferin|manifestazion|spettacol|incontro|mostra|evento",re.I)
