@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""Build expiring, crawler-readable share previews for public RDI news."""
+import datetime as dt
+import hashlib
+import html
+import io
+import json
+import os
+from pathlib import Path
+from urllib.parse import urlsplit
+from urllib.request import Request, urlopen
+from PIL import Image, ImageDraw, ImageFont, ImageOps
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = ROOT / "articole"
+IMAGES = ROOT / "share-images"
+BASE = "https://radioromanii.duckdns.org"
+NOW = dt.datetime.now(dt.timezone.utc)
+CUTOFF = NOW - dt.timedelta(hours=48)
+OUT.mkdir(exist_ok=True)
+IMAGES.mkdir(exist_ok=True)
+logo_path = ROOT / "RADIO-LOGO.png"
+logo = Image.open(logo_path).convert("RGBA") if logo_path.exists() else None
+
+def article_id(item):
+    raw = str(item.get("id") or item.get("url") or (str(item.get("title", "")) + "|" + str(item.get("published", ""))))
+    h = 2166136261
+    for unit in raw.encode("utf-16-le"):
+        pass
+    data = raw.encode("utf-16-le")
+    for i in range(0, len(data), 2):
+        code = data[i] | (data[i + 1] << 8)
+        h = ((h ^ code) * 16777619) & 0xffffffff
+    return format(h, "x")
+
+def escape(s):
+    return html.escape(str(s or ""), quote=True)
+
+def make_image(item, ident):
+    dest = IMAGES / (ident + ".jpg")
+    if dest.exists():
+        return dest
+    background = Image.new("RGB", (1200, 630), "#19314b")
+    source = str(item.get("image") or "")
+    try:
+        if source.startswith("./") or source.startswith("/"):
+            path = ROOT / source.lstrip("./")
+            if path.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
+                img = Image.open(path).convert("RGB")
+            else:
+                img = None
+        elif source.startswith("https://"):
+            host = urlsplit(source).hostname or ""
+            if host.endswith((".jpg", ".jpeg", ".png", ".webp")):
+                pass
+            req = Request(source, headers={"User-Agent": "Mozilla/5.0"})
+            with urlopen(req, timeout=3) as response:
+                payload = response.read(4_000_000)
+            img = Image.open(io.BytesIO(payload)).convert("RGB")
+        else:
+            img = None
+        if img is not None:
+            background = ImageOps.fit(img, (1200, 630))
+    except Exception as e:
+        print("Image fallback:", ident, str(e)[:80])
+    overlay = Image.new("RGBA", (1200, 630), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+    draw.rectangle((0, 495, 1200, 630), fill=(10, 25, 43, 185))
+    draw.text((42, 560), "RDI  |  Radio Romanii din Italia", fill=(255, 255, 255, 245))
+    if logo:
+        brand = logo.copy()
+        brand.thumbnail((270, 270))
+        brand.putalpha(brand.getchannel("A").point(lambda v: int(v * .22)))
+        overlay.alpha_composite(brand, (1200 - brand.width - 35, 630 - brand.height - 35))
+    Image.alpha_composite(background.convert("RGBA"), overlay).convert("RGB").save(dest, quality=83, optimize=True)
+    return dest
+
+articles = {}
+for filename in ("news.json", "editorial.json"):
+    path = ROOT / filename
+    if not path.exists():
+        continue
+    items = json.loads(path.read_text(encoding="utf-8")).get("items", [])
+    for item in items:
+        try:
+            stamp = dt.datetime.fromisoformat(str(item["published"]).replace("Z", "+00:00"))
+            if stamp.tzinfo is None:
+                continue
+            if not (CUTOFF <= stamp.astimezone(dt.timezone.utc) <= NOW):
+                continue
+            if not item.get("title"):
+                continue
+            articles[article_id(item)] = item
+        except (ValueError, TypeError, KeyError):
+            continue
+
+for ident, item in articles.items():
+    title = str(item.get("title", ""))
+    summary = " ".join(str(item.get("summary") or item.get("body") or "").split())[:190]
+    image_url = BASE + "/share-images/" + ident + ".jpg"
+    url = BASE + "/articole/" + ident + ".html"
+    make_image(item, ident)
+    intro = escape(summary or title)
+    target = BASE + "/?articolo=" + ident
+    html_page = f"""<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image_url)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(image_url)}"><meta http-equiv="refresh" content="1;url={escape(target)}"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}</style></head><body><img src="{escape(image_url)}" alt="RDI"><h1>{escape(title)}</h1><p>{intro}</p><p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p></body></html>"""
+    (OUT / (ident + ".html")).write_text(html_page, encoding="utf-8")
+for folder, suffix in ((OUT, ".html"), (IMAGES, ".jpg")):
+    for existing in folder.glob("*" + suffix):
+        if existing.stem not in articles:
+            existing.unlink()
+print(f"Generated {len(articles)} current article previews; expired files removed.")
