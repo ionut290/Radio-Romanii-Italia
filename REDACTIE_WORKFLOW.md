@@ -34,4 +34,8 @@ Formatul cerut de utilizator se aplică tuturor știrilor noi redactate pentru R
 
 ### Starea automatizării
 
-Această regulă este o instrucțiune editorială, nu un generator de texte. Scripturile RSS actuale preiau rezumatele furnizorilor și atașează aprofundările deja cercetate și salvate. Ele nu cercetează și nu redactează automat articole originale de 400–600 de cuvinte pentru fiecare știre nouă. Nu raporta această funcție ca activă până când nu este implementată și verificată efectiv.
+La 23 octombrie 2026 a fost actualizată și reactivată automatizarea ChatGPT **Articoli RDI completi** (ID `6ad3b7b892fc8191ae1a051c6216cbd8`), cu recurența existentă de o oră. Promptul ei cere cercetare, redactare și publicare efectivă în `data/news-summaries.json` pentru știrile importate din toate categoriile, cu obiectiv de 400–600 de cuvinte și coadă `pending` pentru subiectele rămase. Păstrează și sarcina de știri originale din diaspora, evitând duplicatele. A fost solicitată o primă executare imediată; solicitarea nu dovedește finalizarea.
+
+Scripturile RSS continuă să importe știri la frecvența lor existentă și să atașeze aprofundările deja salvate. Redactarea se execută separat prin automatizarea ChatGPT, nu în fiecare execuție RSS. O știre poate apărea inițial ca rezumat până la prelucrare. Frecvența maximă disponibilă pentru această automatizare este o oră; nu promite extindere la fiecare zece minute, finalizare instantanee ori acoperirea întregului flux într-o singură executare. Verifică rezultatele și restanțele înainte să declari toate știrile completate.
+
+Nu este necesară o nouă cheie API pentru această cale. Dacă automatizarea este oprită sau eșuează, raportează situația; nu prezenta simpla existență a regulii în acest document ca dovadă de funcționare.
