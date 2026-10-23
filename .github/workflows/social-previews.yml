@@ -8,22 +8,28 @@ on:
       - 'scripts/build_social_previews.py'
       - 'news-translations.json'
       - '.github/workflows/social-previews.yml'
+  workflow_run:
+    workflows: ["Actualizare știri radio", "Actualizare diaspora fara API", "Traduzioni notizie RDI"]
+    types: [completed]
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
 concurrency:
   group: rdi-social-previews
   cancel-in-progress: false
 jobs:
   build-previews:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -51,3 +57,7 @@ jobs:
             sleep $((attempt * 3))
           done
           exit 1
+      - name: Request GitHub Pages build after automated content publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
