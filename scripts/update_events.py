@@ -78,6 +78,32 @@ SEARCHES += FACEBOOK_SEARCHES + [
     'site:govserv.org/IT/ "Consulatul General al României" evenimente',
 ]
 
+# Surse publice suplimentare: calendare culturale, presa diaspora si bilete.
+# RSS Google News descopera numai articole indexate, nu postari private.
+COMMUNITY_SOURCE_SEARCHES = [
+    'site:rri.ro/it "Romeni in Italia" concerto 2026',
+    'site:rri.ro/ro "Italia" "eveniment" "2026"',
+    'site:rotalianul.com "eveniment" "români" 2026',
+    'site:gazetaromaneasca.com "eveniment" "Italia" 2026',
+    'site:romenimilano.com/it/eventi 2026',
+    'site:romaniidinroma.com "evenimente" 2026',
+    'site:icr.ro/pagini "Italia" "octombrie" 2026',
+    'site:icr.ro/pagini "Italia" "noiembrie" 2026',
+    'site:accadromania.it "eventi" "2026"',
+    'site:propatriafestival.com 2026 Roma',
+    'site:agerpres.ro "Italia" "diaspora" "eveniment" 2026',
+    'site:eventbrite.it "romeni" "2026"',
+    'site:eventbrite.it "români" "Italia" 2026',
+    'site:ticketone.it "romeno" 2026',
+    'site:liveticket.it "romeni" "2026"',
+    'site:gotobeat.com "Romania" "Italy" 2026',
+    'site:facebook.com/events "români" "Italia" 2026',
+    'site:facebook.com "Propatria" "Roma" 2026',
+    '"Romanian" "Italy" "2026" "Eventbrite"',
+    '"Moldova" "Italia" "festival" "2026"',
+]
+SEARCHES += COMMUNITY_SOURCE_SEARCHES
+
 CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcamo":"Sicilia"}
 MONTHS={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12,"ianuarie":1,"februarie":2,"martie":3,"aprilie":4,"mai":5,"iunie":6,"iulie":7,"august":8,"septembrie":9,"octombrie":10,"noiembrie":11,"decembrie":12}
 EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâlnir|sărbăto|târg|conferin|manifestazion|spettacol|incontro|mostra|evento",re.I)
