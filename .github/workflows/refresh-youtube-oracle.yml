@@ -2,6 +2,9 @@ name: RDI - Ricarica pagina YouTube su Oracle
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['youtube-news.html']
 
 permissions:
   contents: read
@@ -13,8 +16,28 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 5
     steps:
+      - name: Preia pagina aggiornata
+        if: github.event_name == 'push'
+        uses: actions/checkout@v4
+      - name: Attendi la pubblicazione prima di ricaricare YouTube
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected=$(sha256sum youtube-news.html | cut -d ' ' -f 1)
+          for attempt in {1..24}; do
+            if curl --fail --silent --show-error --max-time 5 \
+              "https://radioromanii.duckdns.org/youtube-news.html?v=${GITHUB_SHA}" \
+              -o /tmp/rdi-youtube-published.html; then
+              actual=$(sha256sum /tmp/rdi-youtube-published.html | cut -d ' ' -f 1)
+              if [ "$actual" = "$expected" ]; then exit 0; fi
+            fi
+            sleep 5
+          done
+          echo '::error::La nuova pagina YouTube non è ancora pubblicata; ricarica annullata.'
+          exit 1
       - name: Verifica configurazione SSH
         env:
           SSH_KEY: ${{ secrets.RDI_ORACLE_SSH_KEY }}
@@ -35,6 +58,6 @@ jobs:
             -o ServerAliveInterval=5 \
             -o ServerAliveCountMax=2 \
             ubuntu@129.151.255.41 \
-            'env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority bash -c '\''command -v xdotool >/dev/null && xdotool key --clearmodifiers ctrl+r'\'''
+            'env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority bash -c '\''set -e; before=$(pgrep -x ffmpeg | sort); test -n "$before"; command -v xdotool >/dev/null; xdotool key --clearmodifiers ctrl+r; sleep 2; after=$(pgrep -x ffmpeg | sort); test "$before" = "$after"; echo "Pagina ricaricata; processi FFmpeg invariati."'\'''
       - name: Conferma
         run: echo "Comando di ricarica inviato. Controllare la diretta YouTube per verificare il risultato."
