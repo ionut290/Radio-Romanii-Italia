@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 from PIL import Image, ImageDraw, ImageFont, ImageOps
+import cairosvg
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "articole"
@@ -44,14 +45,17 @@ def readable_content(item):
 
 def make_image(item, ident):
     dest = IMAGES / (ident + ".jpg")
-    if dest.exists():
+    source = str(item.get("image") or "")
+    # SVG editoriali: rigenera il JPEG anche se esiste, per evitare anteprime obsolete.
+    if dest.exists() and not source.lower().split("?")[0].endswith(".svg"):
         return dest
     background = Image.new("RGB", (1200, 630), "#19314b")
-    source = str(item.get("image") or "")
     try:
         if source.startswith("./") or source.startswith("/"):
             path = ROOT / source.lstrip("./")
-            if path.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
+            if path.suffix.lower() == ".svg":
+                img = Image.open(io.BytesIO(cairosvg.svg2png(url=str(path)))).convert("RGB")
+            elif path.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
                 img = Image.open(path).convert("RGB")
             else:
                 img = None
