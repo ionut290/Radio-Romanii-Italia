@@ -121,6 +121,38 @@ ASSOCIATION_SEARCHES = [
 ]
 SEARCHES += ASSOCIATION_SEARCHES
 
+# RDI association directory: rotate search coverage to stay inside the workflow budget.
+# All listed organisations are eventually searched; no membership implies an event exists.
+def association_queries():
+    directory=ROOT/"data"/"associazioni-diaspora-italia.json"
+    try:
+        associations=json.loads(directory.read_text(encoding="utf-8")).get("associations",[])
+    except (OSError,ValueError,TypeError) as exc:
+        print("Association directory unavailable:",exc)
+        return []
+    valid=[]
+    for record in associations:
+        name=str(record.get("name","")).strip()
+        city=str(record.get("city","")).strip()
+        if not (3<=len(name)<=100 and 2<=len(city)<=70):
+            continue
+        valid.append((name,city))
+    # Search six associations per 10-minute interval, rotating hourly to cover
+    # all names within an hour. Dedupe aliases and names found in two registries.
+    slot=(dt.datetime.now(dt.timezone.utc).hour*6+
+          dt.datetime.now(dt.timezone.utc).minute//10*6)%max(1,len(valid))
+    batch=(valid+valid)[slot:slot+6]
+    queries=[]
+    for name,city in batch:
+        clean_name=name.replace('"',"")
+        queries.append(f'"{clean_name}" "{city}" eveniment OR evento OR concert 2026')
+        if TODAY.month in (10,11,12):
+            queries.append(f'"{clean_name}" "{city}" "1 Decembrie" OR "Ziua Națională" 2026')
+    print("Association directory:",len(valid),"records; targeted queries:",len(queries))
+    return queries
+
+SEARCHES += association_queries()
+
 CITIES={"roma":"Lazio","milano":"Lombardia","torino":"Piemonte","bologna":"Emilia-Romagna","firenze":"Toscana","napoli":"Campania","palermo":"Sicilia","catania":"Sicilia","verona":"Veneto","padova":"Veneto","venezia":"Veneto","brescia":"Lombardia","bergamo":"Lombardia","genova":"Liguria","parma":"Emilia-Romagna","modena":"Emilia-Romagna","rimini":"Emilia-Romagna","ravenna":"Emilia-Romagna","perugia":"Umbria","pisa":"Toscana","trento":"Trentino-Alto Adige","bolzano":"Trentino-Alto Adige","udine":"Friuli-Venezia Giulia","trieste":"Friuli-Venezia Giulia","bari":"Puglia","lecce":"Puglia","ancona":"Marche","pescara":"Abruzzo","alcamo":"Sicilia"}
 MONTHS={"gennaio":1,"febbraio":2,"marzo":3,"aprile":4,"maggio":5,"giugno":6,"luglio":7,"agosto":8,"settembre":9,"ottobre":10,"novembre":11,"dicembre":12,"ianuarie":1,"februarie":2,"martie":3,"aprilie":4,"mai":5,"iunie":6,"iulie":7,"august":8,"septembrie":9,"octombrie":10,"noiembrie":11,"decembrie":12}
 EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâlnir|sărbăto|târg|conferin|manifestazion|spettacol|incontro|mostra|evento",re.I)
