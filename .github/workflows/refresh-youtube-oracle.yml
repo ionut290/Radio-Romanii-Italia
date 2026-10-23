@@ -1,0 +1,40 @@
+name: RDI - Ricarica pagina YouTube su Oracle
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-youtube-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verifica configurazione SSH
+        env:
+          SSH_KEY: ${{ secrets.RDI_ORACLE_SSH_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          test -n "$SSH_KEY" || { echo "::error::Manca RDI_ORACLE_SSH_KEY"; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Manca RDI_ORACLE_KNOWN_HOSTS"; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s\n' "$SSH_KEY" > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+      - name: Ricarica Chromium senza riavviare la diretta
+        run: |
+          ssh -i "$HOME/.ssh/id_rdi" \
+            -o StrictHostKeyChecking=yes \
+            -o BatchMode=yes \
+            -o ConnectTimeout=12 \
+            -o ServerAliveInterval=5 \
+            -o ServerAliveCountMax=2 \
+            ubuntu@129.151.255.41 \
+            'env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority bash -c '\''command -v xdotool >/dev/null && xdotool key --clearmodifiers ctrl+r'\'''
+      - name: Conferma
+        run: echo "Comando di ricarica inviato. Controllare la diretta YouTube per verificare il risultato."
