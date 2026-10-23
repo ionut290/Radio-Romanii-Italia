@@ -110,6 +110,10 @@ EVENT_WORDS=re.compile(r"festival|concert|spectacol|eveniment|expoziți|întâln
 DIASPORA=re.compile(r"rom[aâ]n|romeni|romania|române|români|romanesc|românesc|romeno|romena|romeni|moldov",re.I)
 def event_date(text):
     candidates=[]
+    # Structured dates in indexed event snippets (ISO 8601).
+    for m in re.finditer(r"(?<!\\d)(20\\d{2})-([01]\\d)-([0-3]\\d)(?!\\d)",text):
+        try:candidates.append(dt.date(int(m[1]),int(m[2]),int(m[3])))
+        except ValueError:pass
     for m in re.finditer(r"(?<!\d)([0-3]?\d)[ /.-]([01]?\d)[ /.-](20\d{2})(?!\d)",text):
         try:candidates.append(dt.date(int(m[3]),int(m[2]),int(m[1])))
         except ValueError:pass
@@ -190,6 +194,7 @@ if OUT.exists():
     try:old=json.loads(OUT.read_text(encoding="utf-8")).get("events",[])
     except (ValueError,OSError):pass
 items={x["url"]:x for x in old if x.get("endDate",x.get("date",""))>=TODAY.isoformat() and x.get("url")}
+existing_urls=set(items)
 seen_count=0
 for query in SEARCHES:
     url="https://news.google.com/rss/search?"+urllib.parse.urlencode({"q":query,"hl":"it","gl":"IT","ceid":"IT:it"})
@@ -327,4 +332,4 @@ for event in events:
     event["image"]=image_from_page(url)
 print("Event image preview checks:",image_checks,"events with images:",sum(bool(e.get("image")) for e in events))
 OUT.write_text(json.dumps({"updated":TODAY.isoformat(),"events":events},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-print("Eligible RSS entries:",seen_count,"Upcoming event leads:",len(events))
+print("Eligible RSS entries:",seen_count,"New event URLs:",len(set(items)-existing_urls),"Upcoming event leads:",len(events))
