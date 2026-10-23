@@ -36,6 +36,12 @@ def article_id(item):
 def escape(s):
     return html.escape(str(s or ""), quote=True)
 
+def readable_content(item):
+    summary = str(item.get("summary") or "").strip()
+    body = str(item.get("body") or "").strip()
+    text = body if body and body.startswith(summary) else "\n\n".join(x for x in (summary, body) if x)
+    return "".join("<p>" + escape(part) + "</p>" for part in text.split("\n\n") if part.strip())
+
 def make_image(item, ident):
     dest = IMAGES / (ident + ".jpg")
     if dest.exists():
@@ -103,9 +109,9 @@ for ident, item in articles.items():
     image_url = BASE + "/share-images/" + ident + ".jpg"
     url = BASE + "/articole/" + ident + "-social.html"
     make_image(item, ident)
-    intro = escape(summary or title)
+    intro = readable_content(item) or "<p>" + escape(title) + "</p>"
     target = BASE + "/?articolo=" + ident
-    html_page = f"""<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image_url)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(image_url)}"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}</style></head><body><img src="{escape(image_url)}" alt="RDI"><h1>{escape(title)}</h1><p>{intro}</p><p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p></body></html>"""
+    html_page = f"""<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image_url)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(image_url)}"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}</style></head><body><img src="{escape(image_url)}" alt="RDI"><h1>{escape(title)}</h1><section id="article-summary">{intro}</section><p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p></body></html>"""
     for name in (ident + ".html", ident + "-social.html"):
         (OUT / name).write_text(html_page, encoding="utf-8")
         valid_pages.add(name)
@@ -120,6 +126,7 @@ for ident, item in articles.items():
         localized_url = BASE + "/articole/" + ident + "-" + language + "-social.html"
         localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
         page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace('<html lang="ro">', '<html lang="' + language + '">')
+        page = page.replace('<section id="article-summary">' + intro + '</section>', '<section id="article-summary">' + (readable_content(localized) or intro) + '</section>')
         if summary:
             page = page.replace(escape(summary), escape(local_summary))
         for name in (ident + "-" + language + ".html", ident + "-" + language + "-social.html"):

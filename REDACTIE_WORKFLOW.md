@@ -16,3 +16,7 @@ Pentru materiale obișnuite destinate publicării, cererea utilizatorului de a p
 
 ## Exemplu
 Articolul INCA România despre pensii și drepturile lucrătorilor, publicat în `editorial.json`, cu imaginea `images/redactie-inca-romania-pensii.svg`.
+
+## Rezumat pentru distribuirea pe Facebook
+Pentru fiecare articol redactat original, scrie în `summary` un rezumat substanțial, de regulă 250–450 de cuvinte în 3–5 paragrafe, dacă materialul verificat permite. Include ce s-a întâmplat, unde și când, persoanele implicate, contextul și implicațiile confirmate. Păstrează limba originală. Nu inventa detalii și nu copia integral textul unei alte publicații. Dacă sursa oferă puține informații, păstrează un rezumat mai scurt și semnalează limita; nu umple textul cu repetiții.
+Comanda «Copia post Facebook» copiază titlul, textul disponibil și linkul. Utilizatorul lipește textul în postarea Facebook și publică din Facebook.

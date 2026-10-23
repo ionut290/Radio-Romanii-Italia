@@ -105,7 +105,7 @@ for publisher, feed, category in feeds:
             # Avoid publisher photographs and previews: only original RDI artwork may be attached.
             # RSS briefs intentionally have no image unless original RDI artwork is created separately.
             # Only source-grounded short news briefs: no invented facts, quotes or details.
-            clean_summary = summary[:380].rsplit(" ", 1)[0].rstrip(" ,;:-") + ("…" if len(summary) > 380 else "")
+            clean_summary = summary  # Preserve the complete source-provided brief; never expand with invented facts.
             if len(clean_summary) < 45:
                 continue
             body = (clean_summary + "\n\n" +

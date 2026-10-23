@@ -86,7 +86,7 @@ for category, query, lang, country in QUERIES:
             items.append({
                 "category": category, "title": title[:240], "url": link,
                 "source": source[:90], "published": date.isoformat(),
-                "summary": description[:350], "image": ""
+                "summary": description, "image": ""
             })
             count += 1
             if count >= LIMIT:
@@ -138,7 +138,7 @@ for query in CONSULAR_QUERIES:
             summary = re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", raw))).strip()
             items.append({"category": "Știri consulare", "title": title[:240], "url": link,
                           "source": source[:90] or "Comunicat oficial", "published": date.isoformat(),
-                          "summary": summary[:350], "image": ""})
+                          "summary": summary, "image": ""})
     except Exception as exc:
         print(f"Sursa consulară indisponibilă ({query}): {exc}")
 
@@ -163,7 +163,7 @@ for category, feed_url, publisher in DIRECT_FEEDS:
                 continue
             raw = entry.findtext("description") or ""
             summary = html.unescape(re.sub(r"<[^>]+>", " ", raw))
-            summary = re.sub(r"\\s+", " ", summary).strip()[:350]
+            summary = re.sub(r"\\s+", " ", summary).strip()
             image = ""
             for child in entry.iter():
                 local = child.tag.split("}")[-1].lower()
