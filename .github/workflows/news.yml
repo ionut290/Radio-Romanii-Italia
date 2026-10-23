@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/update_news.py'
       - 'scripts/news_illustrations.py'
+      - 'scripts/news_details.py'
+      - 'data/news-summaries.json'
       - '.github/workflows/news.yml'
   schedule:
     - cron: '3,13,23,33,43,53 * * * *'

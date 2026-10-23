@@ -33,7 +33,12 @@ for name in ("news.json", "editorial.json"):
         except (KeyError, ValueError, TypeError):
             pass
 
+from news_details import enrich_items
+enrich_items(list(items.values()), ROOT / "data/news-summaries.json")
+
 def source_lang(x):
+    if x.get("content_language") in ("it", "ro"):
+        return x["content_language"]
     url = str(x.get("url", "")).lower()
     source = str(x.get("source", "")).lower()
     if any(z in url for z in ("ansa.it", "inps.it", "lavoro.gov.it")) or "ansa" in source:

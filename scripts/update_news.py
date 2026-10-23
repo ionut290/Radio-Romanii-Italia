@@ -269,6 +269,8 @@ for item in items:
     if len(balanced) >= MAX_TOTAL:
         break
 items = balanced
+from news_details import enrich_items
+enrich_items(items)
 from news_illustrations import fill_missing_images
 # Existing source imagery has priority; generate branded vector illustrations only when missing.
 fill_missing_images(items)
