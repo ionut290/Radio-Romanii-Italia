@@ -39,7 +39,7 @@ def escape(s):
 def readable_content(item):
     summary = str(item.get("summary") or "").strip()
     body = str(item.get("body") or "").strip()
-    text = body if body and body.startswith(summary) else "\n\n".join(x for x in (summary, body) if x)
+    text = body if body and (item.get("extended_summary") or body.startswith(summary)) else "\n\n".join(x for x in (summary, body) if x)
     return "".join("<p>" + escape(part) + "</p>" for part in text.split("\n\n") if part.strip())
 
 def make_image(item, ident):
@@ -83,6 +83,8 @@ def make_image(item, ident):
 
 translations_file = ROOT / "news-translations.json"
 translations = json.loads(translations_file.read_text(encoding="utf-8")).get("items", {}) if translations_file.exists() else {}
+details_path = ROOT / "data" / "news-summaries.json"
+expanded = json.loads(details_path.read_text(encoding="utf-8")).get("items", {}) if details_path.exists() else {}
 articles = {}
 for filename in ("news.json", "editorial.json"):
     path = ROOT / filename
@@ -90,6 +92,9 @@ for filename in ("news.json", "editorial.json"):
         continue
     items = json.loads(path.read_text(encoding="utf-8")).get("items", [])
     for item in items:
+        detail = expanded.get(str(item.get("id") or item.get("url")), expanded.get(item.get("url"), {}))
+        if detail.get("body"):
+            item = {**item, "body": detail["body"], "extended_summary": True}
         try:
             stamp = dt.datetime.fromisoformat(str(item["published"]).replace("Z", "+00:00"))
             if stamp.tzinfo is None:

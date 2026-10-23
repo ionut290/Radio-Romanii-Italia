@@ -3,6 +3,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/news-summaries.json'
       - 'news.json'
       - 'editorial.json'
       - 'scripts/build_social_previews.py'
