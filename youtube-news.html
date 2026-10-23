@@ -86,12 +86,20 @@ async function load(){
   }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Nu sunt știri publicate astăzi';$('summary').textContent='Revenim cu actualizări din România, Italia și diaspora.';$('category').textContent='ȘTIRI';$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
  }catch(e){console.warn('News update failed',e)}
 }
+// YouTube uses a short display excerpt; stored articles and Facebook copies stay complete.
+function tvExcerpt(value,limit=160){
+ const text=String(value||'').replace(/\s+/g,' ').trim();
+ if(text.length<=limit)return text;
+ const cut=text.slice(0,limit-1),space=cut.lastIndexOf(' ');
+ return cut.slice(0,space>limit*.6?space:cut.length).trimEnd()+'…';
+}
 function show(){
  if(!stories.length)return;
  const x=stories[index%stories.length];
  $('category').textContent=x.category||'Actualitate';
  $('headline').textContent=x.title;
- $('summary').textContent=x.summary||'Citește mai multe pe site-ul Radio Românii din Italia.';
+ const displaySummary=x.promotion?x.summary:tvExcerpt(x.summary);
+ $('summary').textContent=displaySummary||'Citește mai multe pe site-ul Radio Românii din Italia.';
  $('source').textContent=[x.source||'Radio Românii din Italia',x.published?new Date(x.published).toLocaleDateString('ro-RO'):null].filter(Boolean).join(' • ');
  const contact=$('businessContacts');contact.replaceChildren();
  if(x.promotion){for(const [caption,value] of [['📞',x.phone],['💬 WhatsApp',x.whatsapp],['🌐',x.website],['📍',x.address]]){if(value){const tag=document.createElement('span');tag.textContent=caption+' '+value;contact.append(tag)}}}
@@ -105,19 +113,20 @@ function show(){
   img.onerror=()=>{img.style.display='none';fb.style.display='flex'};
   img.src=url;
  }
- // Scroll the current article summary gently, then change the entire news card.
+ // Keep news moving even when the original article has a long summary.
  const ticker=$('tickerText');
- ticker.textContent=[x.title,x.summary].filter(Boolean).join(' — ');
- startTicker();
+ ticker.textContent=[x.promotion?x.title:tvExcerpt(x.title,100),displaySummary].filter(Boolean).join(' — ');
+ startTicker(!x.promotion);
 }
-function startTicker(){
+function startTicker(brief=false){
  if(tickerAnimation){tickerAnimation.cancel();tickerAnimation=null}
  if(nextTimer){clearTimeout(nextTimer);nextTimer=null}
  const ticket=++sequence;
  const ticker=$('tickerText'),area=$('ticker'),label=$('tickerLabel');
- const start=area.clientWidth+30,end=-ticker.scrollWidth-30;
+ const start=brief?label.offsetWidth+24:area.clientWidth+30,end=-ticker.scrollWidth-30;
  const distance=start-end;
- const duration=Math.max(22000,Math.round(distance/60*1000)); // comfortable 60 px/second
+ const naturalDuration=Math.max(22000,Math.round(distance/60*1000));
+ const duration=brief?Math.min(38700,naturalDuration):naturalDuration; // next news card within 40s, including pause
  const progress=$('progress');
  progress.style.transition='none';progress.style.width='0%';
  ticker.style.transform='translate('+start+'px,-50%)';
