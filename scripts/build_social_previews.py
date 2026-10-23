@@ -75,6 +75,8 @@ def make_image(item, ident):
     Image.alpha_composite(background.convert("RGBA"), overlay).convert("RGB").save(dest, quality=83, optimize=True)
     return dest
 
+translations_file = ROOT / "news-translations.json"
+translations = json.loads(translations_file.read_text(encoding="utf-8")).get("items", {}) if translations_file.exists() else {}
 articles = {}
 for filename in ("news.json", "editorial.json"):
     path = ROOT / filename
@@ -104,8 +106,20 @@ for ident, item in articles.items():
     target = BASE + "/?articolo=" + ident
     html_page = f"""<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image_url)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(image_url)}"><meta http-equiv="refresh" content="1;url={escape(target)}"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}</style></head><body><img src="{escape(image_url)}" alt="RDI"><h1>{escape(title)}</h1><p>{intro}</p><p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p></body></html>"""
     (OUT / (ident + ".html")).write_text(html_page, encoding="utf-8")
+    key = str(item.get("id") or item.get("url") or (str(item.get("title", "")) + "|" + str(item.get("published", ""))))
+    record = translations.get(key, {})
+    for language in ("ro", "it"):
+        localized = record.get(language, {})
+        if not localized.get("title"):
+            continue
+        local_title = str(localized["title"])
+        local_summary = " ".join(str(localized.get("summary") or localized.get("body") or "").split())[:190]
+        localized_url = BASE + "/articole/" + ident + "-" + language + ".html"
+        localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
+        page = html_page.replace(escape(title), escape(local_title)).replace(escape(summary), escape(local_summary)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace('<html lang="ro">', '<html lang="' + language + '">')
+        (OUT / (ident + "-" + language + ".html")).write_text(page, encoding="utf-8")
 for folder, suffix in ((OUT, ".html"), (IMAGES, ".jpg")):
     for existing in folder.glob("*" + suffix):
-        if existing.stem not in articles:
+        if existing.stem not in articles and not (folder == OUT and any(existing.stem == ident + "-" + lang for ident in articles for lang in ("ro", "it"))):
             existing.unlink()
 print(f"Generated {len(articles)} current article previews; expired files removed.")
