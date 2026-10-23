@@ -60,12 +60,14 @@ def source_grounded_body(url, summary):
     return summary, False
 
 # Enrich existing briefs, too; do not overwrite already longer editorial texts.
+backfilled = 0
 for existing in items:
     url = str(existing.get("url") or "")
     draft, researched_flag = source_grounded_body(url, str(existing.get("summary") or ""))
     if researched_flag and len(draft) > len(str(existing.get("body") or "")):
         existing["body"] = draft
         existing["extended_summary"] = True
+        backfilled += 1
 
 feeds = [
     ("Google News · diaspora Italia", "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": "români Italia diaspora when:4d", "hl": "ro", "gl": "RO", "ceid": "RO:ro"}), "Diaspora"),
@@ -170,7 +172,6 @@ for publisher, feed, category in feeds:
 if feed_successes == 0:
     raise SystemExit("All editorial RSS feeds failed; retry at the next scheduled run")
 # Do not attach external publisher preview images to existing entries.
-backfilled = sum(1 for x in items if x.get("extended_summary"))
 if new_items or expired_count or backfilled:
     data["items"] = new_items + items
     data["updated_at"] = NOW.isoformat()
