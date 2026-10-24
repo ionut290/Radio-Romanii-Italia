@@ -140,16 +140,56 @@ def logo_asset():
 LOGO = logo_asset()
 
 
+# A cached fallback can survive long after the source article has
+# acquired a working photograph. Recognize our own deterministic blue
+# background by comparing unobstructed pixels (not titles or logos).
+_FALLBACK_PROBES = {}
+
+def _is_fallback_card(path, size):
+    try:
+        if size not in _FALLBACK_PROBES:
+            backdrop = background_image(None, size)
+            w, h = size
+            portrait = h > w
+            points = [(7, 7), (w - 8, 7), (w - 8, h // 6)]
+            probes = []
+            for x, y in points:
+                ratio = y / h
+                opacity = int(10 + 235 * min(1, max(0, (ratio - .37) / .60))) if portrait else int(15 + 230 * min(1, max(0, (ratio - .20) / .75)))
+                rgb = backdrop.getpixel((x, y))
+                probes.append(tuple(round(v * (255 - opacity) / 255 + overlay * opacity / 255) for v, overlay in zip(rgb, (4, 14, 33))))
+            _FALLBACK_PROBES[size] = (points, probes)
+        with Image.open(path) as existing:
+            if existing.size != size:
+                return False
+            existing = existing.convert("RGB")
+            points, probes = _FALLBACK_PROBES[size]
+            return all(max(abs(a - b) for a, b in zip(existing.getpixel(point), expected)) < 16
+                       for point, expected in zip(points, probes))
+    except (OSError, ValueError):
+        return False
+
+
 def generate_card(item, ident, portrait=False, title=None, refresh=False):
     """Generate both share formats without changing the radio or news-update schedule."""
     suffix = "-facebook.jpg" if portrait else "-social.jpg"
     dest = OUT / (ident + suffix)
     src = str(item.get("image") or "")
-    if dest.exists() and not refresh and not src.lower().split("?")[0].endswith(".svg"):
-        return dest
     size = (1080, 1350) if portrait else (1200, 630)
     width, height = size
-    photo = source_image(src)
+    # Older cards may have been created while the publisher image was
+    # temporarily unavailable. Never permanently freeze a blue fallback.
+    # Try the remote photo again, but leave the existing card unchanged
+    # until a real photo has been downloaded successfully.
+    if dest.exists() and not refresh and not src.lower().split("?")[0].endswith(".svg"):
+        if not src.startswith("https://") or not _is_fallback_card(dest, size):
+            return dest
+        photo = source_image(src)
+        if photo is None:
+            return dest
+        print("Recovered article photograph for social preview:", ident)
+    else:
+        photo = source_image(src)
     card = background_image(photo, size).convert("RGBA")
     tint = Image.new("RGBA", size)
     tint_pixels = ImageDraw.Draw(tint, "RGBA")
