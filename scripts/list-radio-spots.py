@@ -7,9 +7,22 @@ from pathlib import Path
 import subprocess
 import sys
 
-root = Path('/var/azuracast/stations/radio-romanii-italia/media/spot')
-if not root.is_dir():
-    sys.exit('Spot directory is unavailable; existing catalog must be preserved.')
+roots = [Path('/var/azuracast/stations')]
+# Docker normally keeps station files in a named volume on the host.
+# Inspect only mounts, never container environment variables or credentials.
+containers = subprocess.run(['docker','ps','--format','{{.ID}}'],capture_output=True,text=True,check=True).stdout.split()
+for container in containers:
+    mounts = subprocess.run(['docker','inspect','--format','{{json .Mounts}}',container],capture_output=True,text=True,check=True)
+    for mount in json.loads(mounts.stdout) or []:
+        destination = mount.get('Destination','').rstrip('/')
+        if destination == '/var/azuracast/stations':
+            roots.append(Path(mount['Source']))
+        elif destination == '/var/azuracast/stations/radio-romanii-italia':
+            roots.append(Path(mount['Source']).parent)
+candidates = [base/'radio-romanii-italia'/'media'/'spot' for base in roots]
+root = next((candidate for candidate in candidates if candidate.is_dir()),None)
+if root is None:
+    sys.exit('Spot directory is unavailable in station mounts; existing catalog must be preserved.')
 items = []
 for path in sorted(root.rglob('*')):
     if not path.is_file() or path.suffix.lower() not in {'.wav','.mp3','.m4a','.flac','.ogg','.aac','.opus'}:
