@@ -4,18 +4,18 @@
 
 - **497** fișe din catalogul public inițial.
 - **492** fișe publice păstrate pentru afișare, fără a include înscrierile RDI din Firestore.
-- **70** fișe îmbogățite cu informații suplimentare și legături către surse:
+- **71** fișe îmbogățite cu informații suplimentare și legături către surse:
   - **55** pe baza site-urilor oficiale, paginilor instituționale ori profilurilor oficiale ale firmelor;
-  - **15** din directoare publice terțe — informații de reconfirmat.
+  - **16** din directoare publice terțe — informații de reconfirmat.
 - **5** fișe temporar ascunse din cauza contradicțiilor sau a statutului neclar.
-- **422** fișe încă fără cercetare suficientă a detaliilor.
+- **421** fișe încă fără cercetare suficientă a detaliilor.
 - **1** dintre cele rămase au un URL de site/profil în catalogul inițial.
 
 ## Categorii cu detalii suplimentare
 
 - Transport România–Italia: 25
+- Magazine românești: 16
 - Sănătate și servicii profesionale: 16
-- Magazine românești: 15
 - Transport și logistică: 6
 - Auto și mecanică: 3
 - Curățenie: 2
@@ -24,7 +24,7 @@
 
 ## Integritate și transparență
 
-Toate cele 422 de fișe cu informații lipsă sunt în `data/DIRECTORY-RESEARCH-BACKLOG.json`, cu nume, localitate, categorie, sursa inițială, câmpurile de verificat și o legătură de **căutare**, care nu constituie dovadă. Statusul apare diferit pe carduri și pe hartă: surse oficiale, directoare terțe și fișe de bază. Recenziile de pe alte platforme rămân accesibile prin linkuri, fără copierea de scoruri sau texte.
+Toate cele 421 de fișe cu informații lipsă sunt în `data/DIRECTORY-RESEARCH-BACKLOG.json`, cu nume, localitate, categorie, sursa inițială, câmpurile de verificat și o legătură de **căutare**, care nu constituie dovadă. Statusul apare diferit pe carduri și pe hartă: surse oficiale, directoare terțe și fișe de bază. Recenziile de pe alte platforme rămân accesibile prin linkuri, fără copierea de scoruri sau texte.
 
 ## Fișe reținute pentru clarificări
 
@@ -49,6 +49,8 @@ Toate cele 422 de fișe cu informații lipsă sunt în `data/DIRECTORY-RESEARCH-
 - Transilvania din Lugo și Faenza: adrese din locatorul oficial Digi, pin de oraș până la verificarea coordonatelor.
 - Bucovina, Sant’Angelo Lodigiano: înregistrare alimentară din repertoriu public.
 - Studio Suciu Maria, Roma: program dintr-o pagină profesională externă, de confirmat.
+
+- Romag-Prodotti Rumeni (Fiano Romano): contatti e orari da Waze legati allo stesso sito e indirizzo, denominazione legale da confermare.
 
 ## Reguli editoriale
 
