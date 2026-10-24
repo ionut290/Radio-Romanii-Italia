@@ -2,23 +2,25 @@
 
 ## Situația catalogului
 
-- **497** fișe importate din surse publice.
-- **495** fișe publice afișate; activitățile RDI aprobate prin Firestore se adaugă separat.
-- **48** fișe completate manual cu descrieri, servicii, contacte sau orare și surse citate.
-  - **40** fișe îmbogățite din surse oficiale.
-  - **8** fișe îmbogățite din directoare publice terțe; datele trebuie reconfirmate.
-- **2** fișe ascunse temporar din cauza unor discrepanțe serioase.
-- **447** fișe rămase de verificat individual.
-- **23** fișe din cele rămase au deja un link de site / profil care poate fi consultat.
+- **497** fișe publice de bază.
+- **494** fișe publice afișabile; anunțurile RDI aprobate în Firestore se adaugă separat.
+- **57** fișe completate manual, cu link către dovadă:
+  - **49** din surse oficiale.
+  - **8** din directoare publice terțe (date de reconfirmat).
+- **3** fișe ascunse temporar pentru neconcordanțe de identitate ori adresă.
+- **437** fișe publice rămase de verificat individual.
+- **13** dintre cele neverificate au deja site/profil public.
 
 ## Categorii cu detalii suplimentare
 
 - Transport România–Italia: **25**
+- Sănătate și servicii profesionale: **12**
 - Magazine românești: **11**
-- Sănătate și servicii profesionale: **8**
-- Transport și logistică: **2**
+- Transport și logistică: **4**
+- Auto și mecanică: **2**
 - Restaurante românești: **1**
 - Curățenie: **1**
+- Asociații și comunitate: **1**
 
 ## Modificările din această sesiune
 
@@ -46,3 +48,17 @@
 - Danubiana Group (Ravenna): catalog, furnizare pentru revânzători și telefon din site-ul oficial.
 - Studio Ciobanu (Milano): proceduri din pagina profesională a companiei și contact din director local.
 - Autotrasporti Gabriela (Cambiano): număr publicat într-un director; servicii specifice rămân de confirmat.
+
+## Noua rundă de verificări · 24 octombrie 2026
+
+- **Bt Auto 2** (Torino): tagliandi, centraline, diagnostica, orari e recapiti — https://www.btauto2.it/contatti/ (civico corretto; segnaposto temporaneo a livello di città)
+- **AG Dentista** (Baranzate): terapie, telefono, WhatsApp e email — https://agdentista.it/
+- **Rosca–Gallarato** (Torino e Carmagnola): sede, prevenzione e prestazioni — https://www.studioroscagallarato.it/
+- **Filip Spedition** (Verona): trasporti e logistica, contatti della filiale italiana — https://filipspedition.ro/contact/
+- **M.C. Trasmissioni** (Guidonia Montecelio): revisione cambi, diagnosi, pezzi e telefono — https://www.mctrasmissioni.it/
+- **Associazione Romeni in Italia** (Milano): iniziative culturali, biblioteca, progetto di sostegno alle donne e recapiti — https://www.romenimilano.com/it/progetti
+- **Studio Ciuperca** (Firenze): cure dentali e telefono — https://studiodentisticociuperca.it/terapie/
+- **Delta Express** (Porto Viro): trasporti, traslochi e recapiti — https://www.servizideltaexpress.com/index.html
+- **Rotari Trasporti SRL** (Imola): sospesa la scheda perché il sito collegato descrive **Imola Trasporti** con identità e indirizzo non coincidenti; non è corretto assegnare servizi di una società all'altra.
+
+Gli indirizzi aggiornati che non dispongono di coordinate certificate utilizzano temporaneamente il centro della città, con indicazione esplicita che la posizione non è esatta. Le recensioni esterne non vengono copiate o sintetizzate come giudizi editoriali RDI.
