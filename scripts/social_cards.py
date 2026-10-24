@@ -4,11 +4,13 @@ Generated previews are editorial artwork, not evidence of an event.
 """
 import io
 import re
+import hashlib
 from pathlib import Path
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 import cairosvg
+from social_subjects import identify_subject, normalized
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "share-images"
@@ -192,24 +194,38 @@ def _is_fallback_card(path, size):
         return False
 
 
-def generate_card(item, ident, portrait=False, title=None, refresh=False):
-    """Generate both share formats without changing the radio or news-update schedule."""
+def generate_card(item, ident, portrait=False, title=None, refresh=False, lang=None):
+    """Social previews describe the news subject, not the publisher section."""
     suffix = "-facebook.jpg" if portrait else "-social.jpg"
     dest = OUT / (ident + suffix)
     src = str(item.get("image") or "")
     size = (1080, 1350) if portrait else (1200, 630)
     width, height = size
-    # Older cards may have been created while the publisher image was
-    # temporarily unavailable. Never permanently freeze a blue fallback.
-    # Try the remote photo again, but leave the existing card unchanged
-    # until a real photo has been downloaded successfully.
+    headline = str(title or item.get("title") or "")
+    subject = identify_subject(item, headline, lang)
+    fingerprint = "rdi-subject-v1:" + hashlib.sha256(
+        (headline + "\\n" + subject + "\\n" + src).encode("utf-8")
+    ).hexdigest()[:20]
+    # Every JPEG remembers the subject/headline used to render it. Regenerate
+    # previously published cards if their old category was too generic, but
+    # don't re-download hundreds of unchanged images on every scheduled run.
     if dest.exists() and not refresh and not src.lower().split("?")[0].endswith(".svg"):
-        if not src.startswith("https://") or not _is_fallback_card(dest, size):
-            return dest
-        photo = source_image(src)
-        if photo is None:
-            return dest
-        print("Recovered article photograph for social preview:", ident)
+        try:
+            with Image.open(dest) as saved:
+                previous = saved.getexif().get(270, "")
+        except (OSError, ValueError):
+            previous = ""
+        legacy_unchanged = not previous and normalized(subject) == normalized(item.get("category") or "ȘTIRI")
+        if previous == fingerprint or legacy_unchanged:
+            if not src.startswith("https://") or not _is_fallback_card(dest, size):
+                return dest
+            photo = source_image(src)
+            if photo is None:
+                return dest
+            print("Recovered article photograph for social preview:", ident)
+        else:
+            photo = source_image(src)
+            print("Updated contextual social label:", ident, "=>", subject)
     else:
         photo = source_image(src)
     card = background_image(photo, size).convert("RGBA")
@@ -237,7 +253,6 @@ def generate_card(item, ident, portrait=False, title=None, refresh=False):
               "RADIO ROMÂNII DIN ITALIA", font=font(30 if portrait else 27),
               fill=(255, 255, 255, 255), stroke_width=1, stroke_fill=(8, 22, 43, 255))
 
-    headline = str(title or item.get("title") or "")
     max_width = width - 2 * margin
     available_height = 615 if portrait else 303
     face, lines, line_height = title_lines(
@@ -247,7 +262,7 @@ def generate_card(item, ident, portrait=False, title=None, refresh=False):
     text_height = len(lines) * line_height
     bottom = height - (105 if portrait else 65)
     top = max(int(height * (.43 if portrait else .38)), bottom - text_height)
-    category = str(item.get("category") or "ȘTIRI").upper().strip()
+    category = subject
     if len(category) > 34:
         category = category[:31] + "…"
     tag_font = font(23 if portrait else 17)
@@ -260,5 +275,7 @@ def generate_card(item, ident, portrait=False, title=None, refresh=False):
     line_y = height - (62 if portrait else 36)
     draw.rounded_rectangle((margin, line_y, width - margin, line_y + 5),
                            radius=2, fill=(241, 198, 107, 255))
-    card.convert("RGB").save(dest, "JPEG", quality=86, optimize=True, subsampling=0)
+    metadata = Image.Exif()
+    metadata[270] = fingerprint
+    card.convert("RGB").save(dest, "JPEG", quality=86, optimize=True, subsampling=0, exif=metadata)
     return dest
