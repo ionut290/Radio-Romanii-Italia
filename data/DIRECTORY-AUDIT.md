@@ -9,14 +9,15 @@
   - **8** fișe îmbogățite din directoare publice terțe; datele trebuie reconfirmate.
 - **2** fișe ascunse temporar din cauza unor discrepanțe serioase.
 - **447** fișe rămase de verificat individual.
-- **27** fișe din cele rămase au deja un link de site / profil care poate fi consultat.
+- **23** fișe din cele rămase au deja un link de site / profil care poate fi consultat.
 
 ## Categorii cu detalii suplimentare
 
 - Transport România–Italia: **25**
-- Magazine românești: **10**
+- Magazine românești: **11**
 - Sănătate și servicii profesionale: **8**
-- Transport și logistică: **1**
+- Transport și logistică: **2**
+- Restaurante românești: **1**
 - Curățenie: **1**
 
 ## Modificările din această sesiune
