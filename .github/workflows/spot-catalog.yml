@@ -1,11 +1,8 @@
 name: RDI - Catalogo spot audio
+# Visual spot scene generation is retired from the YouTube broadcast.
+# Keep only manual dispatch for archival maintenance, never periodic runs.
 on:
-  schedule:
-    - cron: '11 * * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['scripts/list-radio-spots.py', 'scripts/build-spot-scenes.py', '.github/workflows/spot-catalog.yml']
 permissions:
   contents: write
 concurrency:
