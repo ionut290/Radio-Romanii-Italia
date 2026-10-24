@@ -1778,6 +1778,62 @@
       "detailsSourceName": "Ufficio Camerale, repertorio informativo della società",
       "verificationDetail": "location-conflict",
       "detailsCheckedAt": "2026-10-24"
+    },
+    "public-ebb220c30e57d77c": {
+      "description": "Pizzeria Mamma Mia in Via Cussignacco 1 a Udine. Il servizio di ordinazioni propone pizza italiana, con consegna e ritiro al locale; la vecchia categoria non indica cucina romena.",
+      "services": "Preparazione di pizze e servizio d'asporto, consegna a domicilio, ordini via piattaforma online.",
+      "products": "Pizze classiche e speciali in vari formati, inclusi condimenti vegetariani; consultare menu e prezzi correnti.",
+      "hours": "Lun–sab 11:45–14:00 e 17:45–22:15; domenica 17:45–22:15 (orari della piattaforma, possono variare per servizio).",
+      "website": "https://mammamia-udine.it/",
+      "menuUrl": "https://mammamia-udine.it/",
+      "detailsSourceUrl": "https://mammamia-udine.it/",
+      "detailsSourceName": "Piattaforma ordinazioni Mamma Mia Udine; denominazione societaria incrociata con Ufficio Camerale",
+      "verificationDetail": "public-directory",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-b69fae0bff549ed5": {
+      "description": "Piadineria Picasso, bar e piadineria in Via Fabio Filzi 23 a Cles (TN), con cucina italiana e opzioni vegetariane; non è indicato un menu romeno.",
+      "services": "Preparazione piadine, bar e caffetteria, consumazione sul posto e asporto.",
+      "phone": "+39 0463 428001",
+      "email": "piadineriapicasso@gmail.com",
+      "hours": "Lun–ven 10:00–23:00; sab 17:00–23:00; dom chiuso (sito del locale; controllare i cambi stagionali).",
+      "website": "https://piadineriapicassoc.wixsite.com/piadineriapicasso",
+      "tripadvisorUrl": "https://www.tripadvisor.it/Restaurant_Review-g1514131-d7732138-Reviews-Piadineria_picasso-Cles_Province_of_Trento_Trentino_Alto_Adige.html",
+      "detailsSourceUrl": "https://piadineriapicassoc.wixsite.com/piadineriapicasso",
+      "detailsSourceName": "Sito del locale Piadineria Picasso; Tripadvisor conferma indirizzo e recapiti",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-018d4363b5687408": {
+      "description": "Hotel Mia Cara & SPA a Firenze, Via Faenza 90R, vicino alla stazione Santa Maria Novella. Non è un ristorante romeno: è un hotel con servizi di ospitalità e benessere.",
+      "services": "Alloggio alberghiero, colazione a buffet, zona wellness con bagno turco, sauna del sale, idromassaggio, parcheggio privato su richiesta.",
+      "products": "Camere singole, doppie, triple e familiari; servizi spa su prenotazione.",
+      "phone": "+39 055 2399088",
+      "email": "hotelmiacara@hotmail.it",
+      "hours": "Check-in 14:00; check-out 11:00. Colazione buffet 07:00–10:00 (consultare condizioni al momento della prenotazione).",
+      "website": "https://www.miacaraspa.it/it",
+      "detailsSourceUrl": "https://www.miacaraspa.it/it",
+      "detailsSourceName": "Sito ufficiale Hotel MiaCara & SPA",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-8e3443c24c32e13c": {
+      "description": "Ristorantino da Pep 'Cum Una Volta' a Fano, Via Giuseppe Garibaldi 19. La scheda gestita dal ristorante lo presenta come cucina italiana e di pesce, non necessariamente romena.",
+      "services": "Ristorazione per pranzo e cena, cucina italiana di territorio e proposte di pesce.",
+      "phone": "+39 0721 826458",
+      "tripadvisorUrl": "https://www.tripadvisor.it/Restaurant_Review-g194759-d33411366-Reviews-Ristorantino_Da_Pep_Cum_Una_Volta-Fano_Province_of_Pesaro_and_Urbino_Marche.html",
+      "detailsSourceUrl": "https://www.tripadvisor.it/Restaurant_Review-g194759-d33411366-Reviews-Ristorantino_Da_Pep_Cum_Una_Volta-Fano_Province_of_Pesaro_and_Urbino_Marche.html",
+      "detailsSourceName": "Tripadvisor, profilo rivendicato del ristorante; Visit Fano lo elenca fra aderenti",
+      "verificationDetail": "public-directory",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-08bd44da00279e47": {
+      "reviewHold": true,
+      "reviewReason": "La vecchia scheda del Ghid indica Osteria Demetra a Capaccio Paestum come attività legata alla diaspora; un repertorio di impresa per il medesimo indirizzo e denominazione riporta il titolare Mariano Torrusio. Non è accertata la continuità di gestione né un legame attuale con la diaspora: sospendere sino al chiarimento dell'identità.",
+      "detailsSourceUrl": "https://www.ufficiocamerale.it/5590/osteria-demetra-di-mariano-torrusio",
+      "detailsSourceName": "Ufficio Camerale, repertorio dati di impresa (non visura ufficiale)",
+      "verificationDetail": "identity-conflict",
+      "detailsCheckedAt": "2026-10-24"
     }
   }
 }
