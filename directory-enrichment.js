@@ -69,10 +69,10 @@ export function buildDirectoryExtras(b,language="ro"){
   const pText={ro:"Detalii din sursa oficială",it:"Dettagli dalla fonte ufficiale",en:"Details from the official source"};
   const link=text("a",(pText[language]||pText.ro)+" ↗");
   link.href=httpUrl(b.detailsSourceUrl);link.target="_blank";link.rel="noopener noreferrer";proof.append(link);
-  if(/^\\d{4}-\\d{2}-\\d{2}$/.test(b.detailsCheckedAt||""))proof.append(text("span"," · "+t.consulted+" "+b.detailsCheckedAt));
+  if(/^\d{4}-\d{2}-\d{2}$/.test(b.detailsCheckedAt||""))proof.append(text("span"," · "+t.consulted+" "+b.detailsCheckedAt));
   frag.append(proof);
  }
- if(/^\\d{4}-\\d{2}-\\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
+ if(/^\d{4}-\d{2}-\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
  return frag;
 }
 export function composeDirectoryDescription(description, fields){
