@@ -4,18 +4,18 @@
 
 - **497** fișe importate din surse publice.
 - **495** fișe publice afișate; activitățile RDI aprobate prin Firestore se adaugă separat.
-- **44** fișe completate manual cu descrieri, servicii, contacte sau orare și surse citate.
-  - **37** fișe îmbogățite din surse oficiale.
-  - **7** fișe îmbogățite din directoare publice terțe; datele trebuie reconfirmate.
+- **48** fișe completate manual cu descrieri, servicii, contacte sau orare și surse citate.
+  - **40** fișe îmbogățite din surse oficiale.
+  - **8** fișe îmbogățite din directoare publice terțe; datele trebuie reconfirmate.
 - **2** fișe ascunse temporar din cauza unor discrepanțe serioase.
-- **451** fișe rămase de verificat individual.
+- **447** fișe rămase de verificat individual.
 - **27** fișe din cele rămase au deja un link de site / profil care poate fi consultat.
 
 ## Categorii cu detalii suplimentare
 
 - Transport România–Italia: **25**
 - Magazine românești: **10**
-- Sănătate și servicii profesionale: **7**
+- Sănătate și servicii profesionale: **8**
 - Transport și logistică: **1**
 - Curățenie: **1**
 
@@ -39,3 +39,9 @@
 - Fiecare completare păstrează `detailsSourceUrl`, `detailsCheckedAt`, `verificationDetail`.
 - Pentru datele contradictorii, păstrăm un avertisment și nu ascundem existența discrepanțelor.
 - Verificările automate rulează la actualizările GitHub Pages.
+
+## Verificări suplimentare din aceeași sesiune
+- Bucătăria de acasă (San Donato Milanese): meniu, program, WhatsApp din site-ul oficial.
+- Danubiana Group (Ravenna): catalog, furnizare pentru revânzători și telefon din site-ul oficial.
+- Studio Ciobanu (Milano): proceduri din pagina profesională a companiei și contact din director local.
+- Autotrasporti Gabriela (Cambiano): număr publicat într-un director; servicii specifice rămân de confirmat.
