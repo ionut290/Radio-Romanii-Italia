@@ -68,6 +68,6 @@ jobs:
             -o ServerAliveInterval=5 \
             -o ServerAliveCountMax=2 \
             ubuntu@129.151.255.41 \
-            'env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority bash -c '\''set -e; before=$(pgrep -x ffmpeg | sort); test -n "$before"; command -v xdotool >/dev/null; xdotool key --clearmodifiers ctrl+r; sleep 2; after=$(pgrep -x ffmpeg | sort); test "$before" = "$after"; echo "Pagina ricaricata; processi FFmpeg invariati."'\'''
+            'env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority bash -c '\''set -e; before=$(pgrep -x ffmpeg | sort); test -n "$before"; command -v xdotool >/dev/null; xdotool key --clearmodifiers ctrl+r; sleep 2; xdotool mousemove --sync 1 1; after=$(pgrep -x ffmpeg | sort); test "$before" = "$after"; echo "Pagina ricaricata; processi FFmpeg invariati."'\'''
       - name: Conferma
         run: echo "Comando di ricarica inviato. Controllare la diretta YouTube per verificare il risultato."
