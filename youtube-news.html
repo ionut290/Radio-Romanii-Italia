@@ -124,11 +124,11 @@ function startTicker(brief=false){
  if(tickerAnimation){tickerAnimation.cancel();tickerAnimation=null}
  if(nextTimer){clearTimeout(nextTimer);nextTimer=null}
  const ticket=++sequence;
+ const cardDuration=30000; // Card timing is independent of ticker length.
  const ticker=$('tickerText'),area=$('ticker'),label=$('tickerLabel');
  const start=brief?label.offsetWidth+24:area.clientWidth+30,end=-ticker.scrollWidth-30;
  const distance=start-end;
- const naturalDuration=Math.max(22000,Math.round(distance/60*1000));
- const duration=brief?Math.min(38700,naturalDuration):naturalDuration; // next news card within 40s, including pause
+ const duration=distance/60*1000; // Constant 60 pixels per second, even for long articles.
  const progress=$('progress');
  progress.style.transition='none';progress.style.width='0%';
  ticker.style.transform='translate('+start+'px,-50%)';
@@ -137,16 +137,14 @@ function startTicker(brief=false){
   {transform:'translate('+end+'px,-50%)'}
  ],{duration,easing:'linear',fill:'forwards'});
  requestAnimationFrame(()=>requestAnimationFrame(()=>{
-  progress.style.transition='width '+duration+'ms linear';progress.style.width='100%';
- }));
- tickerAnimation.onfinish=()=>{
   if(ticket!==sequence)return;
-  nextTimer=setTimeout(()=>{
-   if(ticket!==sequence)return;
-   index=(index+1)%stories.length;
-   show();
-  },1300);
- };
+  progress.style.transition='width '+cardDuration+'ms linear';progress.style.width='100%';
+ }));
+ nextTimer=setTimeout(()=>{
+  if(ticket!==sequence||!stories.length)return;
+  index=(index+1)%stories.length;
+  show();
+ },cardDuration);
 }
 load();setInterval(load,300000);
 </script><script type="module" src="./youtube-promotions.js?v=20261022-1"></script><script type="module" src="./youtube-extras.js?v=20261022-numeric-fix-3"></script></body></html>
