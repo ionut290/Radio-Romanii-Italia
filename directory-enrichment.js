@@ -66,13 +66,20 @@ export function buildDirectoryExtras(b,language="ro"){
  review.append(links,text("p",t.disclaimer,"rdi-review-disclaimer"));frag.append(review);
  if(b.detailsSourceUrl&&httpUrl(b.detailsSourceUrl)){
   const proof=text("p",undefined,"rdi-source-proof");
-  const pText={ro:"Detalii din sursa oficială",it:"Dettagli dalla fonte ufficiale",en:"Details from the official source"};
+  const pText=b.verificationDetail==="public-directory"
+  ?{ro:"Detalii dintr-un director public · de confirmat",it:"Informazioni da elenco pubblico · da confermare",en:"Public-directory details · please confirm"}
+  :{ro:"Detalii din sursa oficială",it:"Dettagli dalla fonte ufficiale",en:"Details from the official source"};
   const link=text("a",(pText[language]||pText.ro)+" ↗");
   link.href=httpUrl(b.detailsSourceUrl);link.target="_blank";link.rel="noopener noreferrer";proof.append(link);
   if(/^\d{4}-\d{2}-\d{2}$/.test(b.detailsCheckedAt||""))proof.append(text("span"," · "+t.consulted+" "+b.detailsCheckedAt));
   frag.append(proof);
+  if(b.locationSourceUrl && httpUrl(b.locationSourceUrl)){
+    const c=text("p",undefined,"rdi-source-date");
+    const source=text("a",({ro:"Coordonate dintr-o sursă externă · verificați adresa",it:"Coordinate da fonte esterna · verifica l'indirizzo",en:"Coordinates from external source · verify address"}[language]||"Coordinate da fonte esterna")+" ↗");
+    source.href=httpUrl(b.locationSourceUrl);source.target="_blank";source.rel="noopener noreferrer";c.append(source);frag.append(c);
+  }
  }
- if(/^\d{4}-\d{2}-\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
+ if(/^\\d{4}-\\d{2}-\\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
  return frag;
 }
 export function composeDirectoryDescription(description, fields){
