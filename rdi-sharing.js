@@ -30,4 +30,62 @@ function rdiFacebookPhotoLink(x){
   a.setAttribute("aria-label",it?"Apri la foto con il titolo, salvala e pubblicala come immagine su Facebook":"Deschide imaginea cu titlul, salveaz-o și public-o ca fotografie pe Facebook");
   return a;
 }
-function rdiShareButton(x){const details=document.createElement("details");details.className="rdi-share-menu";const toggle=document.createElement("summary");toggle.className="rdi-share-toggle";toggle.textContent=rdiLanguage()==="it"?"↗ Condividi":"↗ Distribuie";toggle.setAttribute("aria-label",rdiLanguage()==="it"?"Mostra le opzioni di condivisione":"Arată opțiunile de distribuire");const b=document.createElement("button");b.type="button";b.className="rdi-share-button";b.onclick=()=>{if(b.rdiReadyUrl!==rdiShareUrl(x))return rdiPrepareShareButton(x,b);return rdiShareArticle(x,b)};rdiPrepareShareButton(x,b);const actions=document.createElement("div");actions.className="rdi-share-actions";actions.append(b,rdiCopyPostButton(x),rdiFacebookPhotoLink(x));details.append(toggle,actions);return details}
+function rdiShareButton(x){
+  // Open a lightweight menu only on request; never block Facebook behind a
+  // preflight fetch, which can fail or be delayed on iOS even for a valid URL.
+  const it=rdiLanguage()==="it",url=rdiShareUrl(x);
+  const details=document.createElement("details");
+  details.className="rdi-share-menu";
+  const toggle=document.createElement("summary");
+  toggle.className="rdi-share-toggle";
+  toggle.textContent=it?"↗ Condividi":"↗ Distribuie";
+  toggle.setAttribute("aria-label",it?"Apri le opzioni di condivisione":"Deschide opțiunile de distribuire");
+  const actions=document.createElement("div");
+  actions.className="rdi-share-actions";
+  const facebook=document.createElement("a");
+  facebook.className="rdi-share-facebook";
+  facebook.href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url);
+  facebook.target="_blank";
+  facebook.rel="noopener noreferrer";
+  facebook.textContent="Facebook ↗";
+  actions.append(facebook);
+  const status=document.createElement("span");
+  status.className="rdi-share-feedback";
+  status.setAttribute("role","status");
+  status.setAttribute("aria-live","polite");
+  const makeCopy=(label,value,message)=>{
+    const button=document.createElement("button");
+    button.type="button";
+    button.className="rdi-share-small";
+    button.textContent=label;
+    button.onclick=async()=>{
+      try{
+        await navigator.clipboard.writeText(value());
+        status.textContent=message;
+      }catch(error){
+        // Explicit manual copy path for Safari/PWA restrictions.
+        window.prompt(it?"Copia e incolla su Facebook":"Copiază și lipește pe Facebook",value());
+        status.textContent=it?"Seleziona il contenuto e copialo.":"Selectează conținutul și copiază-l.";
+      }
+    };
+    return button;
+  };
+  actions.append(makeCopy(it?"Copia link":"Copiază link",()=>url,it?"Link copiato: incollalo nel post Facebook.":"Link copiat: lipește-l într-o postare Facebook."));
+  actions.append(makeCopy(it?"Copia testo":"Copiază textul",()=>rdiPostText(x),it?"Testo copiato: incollalo nel post Facebook.":"Text copiat: lipește-l în postarea Facebook."));
+  if(typeof navigator.share==="function"){
+    const native=document.createElement("button");
+    native.type="button";
+    native.className="rdi-share-small";
+    native.textContent=it?"Altre app…":"Alte aplicații…";
+    native.onclick=async()=>{
+      try{await navigator.share({url})}
+      catch(error){if(error?.name!=="AbortError")status.textContent=it?"Usa Facebook o Copia link.":"Folosește Facebook sau Copiază link."}
+    };
+    actions.append(native);
+  }
+  const photo=rdiFacebookPhotoLink(x);
+  photo.textContent=it?"Foto per Facebook ↗":"Imagine pentru Facebook ↗";
+  actions.append(photo,status);
+  details.append(toggle,actions);
+  return details;
+}
