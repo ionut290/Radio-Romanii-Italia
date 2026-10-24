@@ -105,7 +105,7 @@ export function createDirectoryMap({onOpen}) {
     loading=true;report(mapText('loading'));
     try{
       const L=await libraries();
-      map=L.map(host,{scrollWheelZoom:false,zoomControl:false}).setView([42.2,12.4],5);
+      map=L.map(host,{scrollWheelZoom:true,zoomControl:false}).setView([42.2,12.4],5);
       L.control.zoom({position:'bottomright'}).addTo(map);
       const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'}).addTo(map);
       let failures=0;tiles.on('tileerror',()=>{if(++failures>=3)report(mapText('tiles'));});tiles.on('load',()=>{if(!failures)report('');});
