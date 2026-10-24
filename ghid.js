@@ -1,5 +1,5 @@
 import {createDirectoryMap, mergeBusinesses, filterBusinesses, categoryTheme, sourceNote, safeUrl} from "./directory-map.js?v=20261024-wheel-1";
-import {buildDirectoryExtras,directoryIntro,composeDirectoryDescription,profileUrlAllowed} from "./directory-enrichment.js?v=20261024-verified-2";
+import {buildDirectoryExtras,directoryIntro,composeDirectoryDescription,profileUrlAllowed} from "./directory-enrichment.js?v=20261024-verified-3";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {getFirestore,collection,addDoc,query,where,onSnapshot,serverTimestamp,doc,updateDoc} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
@@ -86,7 +86,7 @@ function render(){
  else{const empty=node("div",undefined,"directory-empty");empty.append(node("strong",atlasText("empty")),node("span",atlasText("emptyHelp")));$("businesses").replaceChildren(empty)}
  $("directory-more").hidden=found.length<=pageLimit || $("find-panel").hidden;$("directory-more").textContent=atlasText("more")+" ("+Math.min(24,Math.max(0,found.length-pageLimit))+")";
  directoryMap.update(found,cityIndex);renderChips();
- $("directory-coverage").textContent=publicRecords.length+" "+atlasText("public")+" · "+approvedRecords.length+" "+atlasText("managed")+". "+atlasText("coverage")+(verifiedDetailCount?" · "+verifiedDetailCount+" fișe cu informații suplimentare din surse oficiale.":"")+(heldPublicRecords?" · "+heldPublicRecords+" fișe retrase temporar pentru neconcordanțe.":"")+(sourceError?" "+atlasText("loadError"):"");
+ $("directory-coverage").textContent=publicRecords.length+" "+atlasText("public")+" · "+approvedRecords.length+" "+atlasText("managed")+". "+atlasText("coverage")+(verifiedDetailCount?" · "+verifiedDetailCount+" fișe cu detalii din surse online citate (oficiale și terțe).":"")+(heldPublicRecords?" · "+heldPublicRecords+" fișe retrase temporar pentru neconcordanțe.":"")+(sourceError?" "+atlasText("loadError"):"");
  window.rdiTranslate?.();
 }
 for(const id of ["search","category","region","province","city"])$(id).addEventListener("input",()=>{pageLimit=24;render()});
