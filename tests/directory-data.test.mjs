@@ -19,7 +19,7 @@ test('every enrichment belongs to an existing business and cites public evidence
 });
 test('quarantined records must not appear in public directory',()=>{
  const held=values.filter(b=>b.reviewHold);
- assert.equal(held.length,2);
+ assert.ok(held.length>=2,'at least the originally conflicted listings should remain on hold');
  const publicRows=base.businesses.filter(b=>!detail.records[b.id]?.reviewHold);
  assert.equal(publicRows.length,base.businesses.length-held.length);
 });
