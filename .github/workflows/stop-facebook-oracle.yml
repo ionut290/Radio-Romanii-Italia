@@ -1,0 +1,77 @@
+name: RDI - Ferma solo Facebook Live su Oracle
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/stop-facebook-oracle.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-facebook-shutdown
+  cancel-in-progress: false
+
+jobs:
+  disable-facebook-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Prepara autenticazione Oracle
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Disabilita Facebook Live solo se isolato da YouTube
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout 45 ssh -i "$HOME/.ssh/id_rdi" \
+            -o BatchMode=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=12 \
+            -o ServerAliveInterval=5 \
+            -o ServerAliveCountMax=2 \
+            ubuntu@129.151.255.41 'sudo -n bash -s' <<'REMOTE'
+          set -euo pipefail
+          facebook=rdi-facebook.service
+          echo "=== Oracle guest status ==="
+          uptime
+          echo "=== Facebook unit check ==="
+          if ! systemctl cat "$facebook" > /tmp/rdi-facebook-unit-check 2>/dev/null; then
+            echo "Facebook unit not found: no changes made."
+            exit 0
+          fi
+          systemctl show "$facebook" -p ActiveState -p SubState -p Requires -p PartOf -p BindsTo -p PropagatesStopTo -p ExecStop
+          # Never stop a unit that can affect radio/YouTube or kills shared encoders.
+          if grep -Eiq 'youtube|icecast|liquidsoap|rdi-radio|killall|pkill' /tmp/rdi-facebook-unit-check; then
+            echo "SAFETY STOP: possible shared services or broad process termination. No changes made."
+            exit 1
+          fi
+          reverse_deps=$(systemctl list-dependencies --reverse --all --plain --no-pager "$facebook" 2>/dev/null || true)
+          if printf '%s\n' "$reverse_deps" | grep -Eiq 'youtube|icecast|liquidsoap|rdi-radio'; then
+            echo "SAFETY STOP: other radio or YouTube services depend on Facebook. No changes made."
+            exit 1
+          fi
+          ffmpeg_count=$(pgrep -cx ffmpeg || true)
+          echo "FFmpeg count before: $ffmpeg_count"
+          if systemctl is-active --quiet "$facebook" && [ "${ffmpeg_count:-0}" -lt 2 ]; then
+            echo "SAFETY STOP: fewer than 2 FFmpeg processes; separation is not established."
+            exit 1
+          fi
+          echo "=== Stopping only Facebook Live service ==="
+          systemctl disable --now "$facebook"
+          echo "Facebook active: $(systemctl is-active "$facebook" || true)"
+          echo "Facebook enabled: $(systemctl is-enabled "$facebook" || true)"
+          echo "FFmpeg count after: $(pgrep -cx ffmpeg || true)"
+          echo "Finished without intentionally stopping any other service."
+          REMOTE
