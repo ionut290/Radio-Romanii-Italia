@@ -122,6 +122,66 @@
           "text": "Ascolta il podcast di RDI."
         }
       ]
+    },
+    {
+      "id": "radio",
+      "title": "Radio Românii din Italia",
+      "matchAny": [
+        "erre di i"
+      ],
+      "songIds": [
+        "c780bef406892e2fd6ceb462b7867430"
+      ],
+      "sceneSeconds": 5,
+      "footer": "Radio Românii din Italia",
+      "website": "radioromanii.duckdns.org",
+      "scenes": [
+        {
+          "image": "./spot-images/podcast-studio.webp",
+          "title": "Radio Românii din Italia",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/ghid-community.webp",
+          "title": "Acasă, oriunde ai fi!",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/podcast-listen.webp",
+          "title": "O voce aproape de tine",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/podcast-family.webp",
+          "title": "La comunità si incontra",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/podcast-journey.webp",
+          "title": "Tra România e Italia",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/podcast-work.webp",
+          "title": "Alături de tine, zi de zi",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/podcast-call.webp",
+          "title": "Vicini, anche da lontano",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/podcast-memories.webp",
+          "title": "Le nostre storie, le nostre radici",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        },
+        {
+          "image": "./spot-images/podcast-bridge.webp",
+          "title": "RDI · La radio della comunità",
+          "text": "Muzică, povești și comunitate · Musica, storie e comunità"
+        }
+      ]
     }
   ]
 }
