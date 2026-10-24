@@ -1,0 +1,61 @@
+name: RDI - Catalogo spot audio
+on:
+  schedule:
+    - cron: '11 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/list-radio-spots.py', '.github/workflows/spot-catalog.yml']
+permissions:
+  contents: write
+concurrency:
+  group: rdi-spot-catalog
+  cancel-in-progress: false
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configura accesso Oracle esistente
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Leggi titoli e durate senza modificare la radio
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 \
+            -o ServerAliveInterval=5 -o ServerAliveCountMax=2 ubuntu@129.151.255.41 \
+            'sudo -n python3 -' < scripts/list-radio-spots.py > /tmp/rdi-spot-catalog.json
+          python3 - <<'PY'
+          import json, pathlib
+          target=pathlib.Path('data/spot-audio-catalog.json')
+          incoming=json.load(open('/tmp/rdi-spot-catalog.json'))
+          assert incoming.get('items'), 'Empty catalog'
+          previous=json.loads(target.read_text()) if target.exists() else {}
+          if previous.get('items') != incoming['items']:
+              target.write_text(json.dumps(incoming,ensure_ascii=False,indent=2)+'\n')
+          print('Spot audio trovati:',len(incoming['items']))
+          PY
+      - name: Salva solo le modifiche del catalogo
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/spot-audio-catalog.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Aggiorna catalogo spot RDI'
+          for attempt in {1..3}; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
