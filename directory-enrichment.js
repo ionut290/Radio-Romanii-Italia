@@ -64,7 +64,15 @@ export function buildDirectoryExtras(b,language="ro"){
  const links=text("div",undefined,"rdi-external-links");
  for(const link of businessReviewLinks(b)){const a=text("a",(link.direct?t.direct:t.search)+" "+link.name+" ↗","rdi-external-link");a.href=link.url;a.target="_blank";a.rel="noopener noreferrer";links.append(a)}
  review.append(links,text("p",t.disclaimer,"rdi-review-disclaimer"));frag.append(review);
- if(/^\d{4}-\d{2}-\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
+ if(b.detailsSourceUrl&&httpUrl(b.detailsSourceUrl)){
+  const proof=text("p",undefined,"rdi-source-proof");
+  const pText={ro:"Detalii din sursa oficială",it:"Dettagli dalla fonte ufficiale",en:"Details from the official source"};
+  const link=text("a",(pText[language]||pText.ro)+" ↗");
+  link.href=httpUrl(b.detailsSourceUrl);link.target="_blank";link.rel="noopener noreferrer";proof.append(link);
+  if(/^\\d{4}-\\d{2}-\\d{2}$/.test(b.detailsCheckedAt||""))proof.append(text("span"," · "+t.consulted+" "+b.detailsCheckedAt));
+  frag.append(proof);
+ }
+ if(/^\\d{4}-\\d{2}-\\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
  return frag;
 }
 export function composeDirectoryDescription(description, fields){
