@@ -10,6 +10,7 @@ on:
       - 'rdi-sharing.js'
       - 'rdi-sharing.css'
       - 'scripts/build_social_previews.py'
+      - 'scripts/social_cards.py'
       - 'news-translations.json'
       - '.github/workflows/social-previews.yml'
   workflow_run:

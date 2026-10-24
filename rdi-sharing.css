@@ -8,3 +8,5 @@
 .rdi-share-menu .rdi-share-actions button:disabled{opacity:.65}
 
 .rdi-share-actions a{display:block;padding:9px 10px;border:1px solid #d8e3f0;border-radius:9px;background:#eaf1f9;color:#25517e;text-decoration:none;font-size:12px;font-weight:650}.rdi-share-menu{margin:12px 0;width:100%}.rdi-share-actions p{font-size:14px}.rdi-share-actions textarea,.rdi-share-actions input{width:100%}
+
+.rdi-share-menu .rdi-facebook-photo{display:block;text-align:center;padding:9px 10px;border:1px solid #d8e3f0;border-radius:9px;background:#f7f9fc;color:#25517e!important;font-weight:650;font-size:12px;text-decoration:none;white-space:normal}

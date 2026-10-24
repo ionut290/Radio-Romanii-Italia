@@ -12,4 +12,22 @@ async function rdiShareArticle(x,anchor){document.getElementById("rdi-social-sha
 function rdiReadableText(x){const summary=String(x.summary||"").trim(),body=String(x.body||"").trim();if(x.extended_summary&&body)return body;return body?(body.startsWith(summary)?body:[summary,body].filter(Boolean).join("\n\n")):summary}
 function rdiPostText(x){x=x.eventId?x:rdiTranslated(x);return [x.title,rdiReadableText(x),x.source?"Fonte / Sursa: "+x.source:"",rdiShareUrl(x)].filter(Boolean).join("\n\n")}
 function rdiCopyPostButton(x){const b=document.createElement("button");b.type="button";b.className="rdi-share-button";const it=rdiLanguage()==="it";b.textContent=it?"📋 Copia post Facebook":"📋 Copiază postarea Facebook";b.onclick=async()=>{const text=rdiPostText(x);try{await navigator.clipboard.writeText(text);b.textContent=it?"✓ Copiato: incolla nel post Facebook":"✓ Copiat: lipește în postarea Facebook"}catch(error){const area=document.createElement("textarea");area.value=text;area.setAttribute("aria-label",it?"Testo del post da copiare":"Textul postării de copiat");area.style.cssText="display:block;width:100%;min-height:220px;margin:12px 0";const old=b.parentNode.querySelector("textarea");if(old)old.remove();b.after(area);area.focus();area.select();b.textContent=it?"Seleziona e copia il testo qui sotto":"Selectează și copiază textul de mai jos"}};return b}
-function rdiShareButton(x){const details=document.createElement("details");details.className="rdi-share-menu";const toggle=document.createElement("summary");toggle.className="rdi-share-toggle";toggle.textContent=rdiLanguage()==="it"?"↗ Condividi":"↗ Distribuie";toggle.setAttribute("aria-label",rdiLanguage()==="it"?"Mostra le opzioni di condivisione":"Arată opțiunile de distribuire");const b=document.createElement("button");b.type="button";b.className="rdi-share-button";b.onclick=()=>{if(b.rdiReadyUrl!==rdiShareUrl(x))return rdiPrepareShareButton(x,b);return rdiShareArticle(x,b)};rdiPrepareShareButton(x,b);const actions=document.createElement("div");actions.className="rdi-share-actions";actions.append(b,rdiCopyPostButton(x));details.append(toggle,actions);return details}
+
+function rdiFacebookPhotoUrl(x){
+  const lang=rdiLanguage();
+  const key=String(x.id||x.url||x.title+"|"+x.published);
+  const localized=!x.eventId&&typeof rdiTranslations!=="undefined"&&rdiTranslations[key]?.[lang]?.title?"-"+lang:"";
+  const ident=x.eventId?"event-"+x.eventId:rdiArticleId(x)+localized;
+  return new URL("/share-images/"+ident+"-facebook.jpg",location.href).href;
+}
+function rdiFacebookPhotoLink(x){
+  const it=rdiLanguage()==="it",a=document.createElement("a");
+  a.className="rdi-facebook-photo";
+  a.textContent=it?"▣ Foto Facebook (1080 × 1350)":"▣ Imagine Facebook (1080 × 1350)";
+  a.href=rdiFacebookPhotoUrl(x);
+  a.target="_blank";
+  a.rel="noopener noreferrer";
+  a.setAttribute("aria-label",it?"Apri la foto con il titolo, salvala e pubblicala come immagine su Facebook":"Deschide imaginea cu titlul, salveaz-o și public-o ca fotografie pe Facebook");
+  return a;
+}
+function rdiShareButton(x){const details=document.createElement("details");details.className="rdi-share-menu";const toggle=document.createElement("summary");toggle.className="rdi-share-toggle";toggle.textContent=rdiLanguage()==="it"?"↗ Condividi":"↗ Distribuie";toggle.setAttribute("aria-label",rdiLanguage()==="it"?"Mostra le opzioni di condivisione":"Arată opțiunile de distribuire");const b=document.createElement("button");b.type="button";b.className="rdi-share-button";b.onclick=()=>{if(b.rdiReadyUrl!==rdiShareUrl(x))return rdiPrepareShareButton(x,b);return rdiShareArticle(x,b)};rdiPrepareShareButton(x,b);const actions=document.createElement("div");actions.className="rdi-share-actions";actions.append(b,rdiCopyPostButton(x),rdiFacebookPhotoLink(x));details.append(toggle,actions);return details}

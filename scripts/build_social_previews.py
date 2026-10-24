@@ -48,47 +48,10 @@ def readable_content(item):
     text = body if body and (item.get("extended_summary") or body.startswith(summary)) else "\n\n".join(x for x in (summary, body) if x)
     return "".join("<p>" + escape(part) + "</p>" for part in text.split("\n\n") if part.strip())
 
-def make_image(item, ident, refresh=False):
-    dest = IMAGES / (ident + ".jpg")
-    source = str(item.get("image") or "")
-    # SVG editoriali: rigenera il JPEG anche se esiste, per evitare anteprime obsolete.
-    if dest.exists() and not refresh and not source.lower().split("?")[0].endswith(".svg"):
-        return dest
-    background = Image.new("RGB", (1200, 630), "#19314b")
-    try:
-        if source.startswith("./") or source.startswith("/"):
-            path = ROOT / source.lstrip("./")
-            if path.suffix.lower() == ".svg":
-                img = Image.open(io.BytesIO(cairosvg.svg2png(url=str(path)))).convert("RGB")
-            elif path.suffix.lower() in (".png", ".jpg", ".jpeg", ".webp"):
-                img = Image.open(path).convert("RGB")
-            else:
-                img = None
-        elif source.startswith("https://"):
-            host = urlsplit(source).hostname or ""
-            if host.endswith((".jpg", ".jpeg", ".png", ".webp")):
-                pass
-            req = Request(source, headers={"User-Agent": "Mozilla/5.0"})
-            with urlopen(req, timeout=10 if refresh else 3) as response:
-                payload = response.read(4_000_000)
-            img = Image.open(io.BytesIO(payload)).convert("RGB")
-        else:
-            img = None
-        if img is not None:
-            background = ImageOps.fit(img, (1200, 630))
-    except Exception as e:
-        print("Image fallback:", ident, str(e)[:80])
-    overlay = Image.new("RGBA", (1200, 630), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(overlay)
-    draw.rectangle((0, 495, 1200, 630), fill=(10, 25, 43, 185))
-    draw.text((42, 560), "RDI  |  Radio Romanii din Italia", fill=(255, 255, 255, 245))
-    if logo:
-        brand = logo.copy()
-        brand.thumbnail((270, 270))
-        brand.putalpha(brand.getchannel("A").point(lambda v: int(v * .22)))
-        overlay.alpha_composite(brand, (1200 - brand.width - 35, 630 - brand.height - 35))
-    Image.alpha_composite(background.convert("RGBA"), overlay).convert("RGB").save(dest, quality=83, optimize=True)
-    return dest
+from social_cards import generate_card
+
+def make_image(item, ident, refresh=False, portrait=False, title=None):
+    return generate_card(item, ident, portrait=portrait, title=title, refresh=refresh)
 
 translations_file = ROOT / "news-translations.json"
 translations = json.loads(translations_file.read_text(encoding="utf-8")).get("items", {}) if translations_file.exists() else {}
@@ -120,9 +83,10 @@ valid_pages = set()
 for ident, item in articles.items():
     title = str(item.get("title", ""))
     summary = " ".join(str(item.get("summary") or item.get("description") or item.get("body") or item.get("title") or "").split())[:190]
-    image_url = BASE + "/share-images/" + ident + ".jpg"
+    image_url = BASE + "/share-images/" + ident + "-social.jpg"
     url = BASE + "/articole/" + ident + "-social.html"
     make_image(item, ident)
+    make_image(item, ident, portrait=True)
     intro = readable_content(item) or "<p>" + escape(title) + "</p>"
     target = BASE + "/?articolo=" + ident
     html_page = f"""<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(image_url)}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(image_url)}"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}</style></head><body><img src="{escape(image_url)}" alt="RDI"><h1>{escape(title)}</h1><section id="article-summary">{intro}</section><p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p></body></html>"""
@@ -138,8 +102,11 @@ for ident, item in articles.items():
         local_title = str(localized["title"])
         local_summary = " ".join(str(localized.get("summary") or localized.get("body") or localized.get("title") or summary).split())[:190]
         localized_url = BASE + "/articole/" + ident + "-" + language + "-social.html"
+        make_image(item, ident + "-" + language, title=local_title)
+        make_image(item, ident + "-" + language, portrait=True, title=local_title)
+        local_image_url = BASE + "/share-images/" + ident + "-" + language + "-social.jpg"
         localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
-        page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace('<html lang="ro">', '<html lang="' + language + '">')
+        page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace(escape(image_url), escape(local_image_url)).replace('<html lang="ro">', '<html lang="' + language + '">')
         page = page.replace('<section id="article-summary">' + intro + '</section>', '<section id="article-summary">' + (readable_content(localized) or intro) + '</section>')
         if summary:
             page = page.replace(escape(summary), escape(local_summary))
@@ -156,7 +123,14 @@ def event_legacy_id(item):
 
 
 valid_event_pages = set()
-valid_images = set(articles)
+valid_images = {variant for ident in articles for variant in (ident + '-social', ident + '-facebook')}
+for ident, item in articles.items():
+    key = str(item.get('id') or item.get('url') or (str(item.get('title', '')) + '|' + str(item.get('published', ''))))
+    record = translations.get(key, {})
+    for language in ('ro', 'it'):
+        if record.get(language, {}).get('title'):
+            valid_images.add(ident + '-' + language + '-social')
+            valid_images.add(ident + '-' + language + '-facebook')
 events_path = ROOT / "events-auto.json"
 today = NOW.astimezone(ZoneInfo("Europe/Rome")).date()
 events = json.loads(events_path.read_text(encoding="utf-8")).get("events", []) if events_path.exists() else []
@@ -171,15 +145,16 @@ for event in events:
     legacy = event_legacy_id(event)
     ident = legacy + "-" + article_id({"id": event.get("url") or str(event["title"]) + "|" + event["date"]})
     image_id = "event-" + ident
-    valid_images.add(image_id)
+    valid_images.update((image_id + '-social', image_id + '-facebook'))
     make_image(event, image_id, refresh=True)
+    make_image(event, image_id, refresh=True, portrait=True)
     title = str(event["title"])
     description = str(event.get("description") or title)
     dates = event["date"] + (" → " + end.isoformat() if end != start else "")
     meta = " · ".join(str(x) for x in (dates, event.get("city"), event.get("region")) if x)
     summary = " ".join((meta + " — " + description).split())[:190]
     url = BASE + "/eventi/" + ident + "-social.html"
-    image_url = BASE + "/share-images/" + image_id + ".jpg"
+    image_url = BASE + "/share-images/" + image_id + "-social.jpg"
     target = BASE + "/evenimente.html?event=" + ident + "#event-" + ident
     body = readable_content({"body": description})
     source = ""
