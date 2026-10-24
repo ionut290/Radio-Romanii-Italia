@@ -50,8 +50,8 @@ def readable_content(item):
 
 from social_cards import generate_card, _is_fallback_card
 
-def make_image(item, ident, refresh=False, portrait=False, title=None):
-    return generate_card(item, ident, portrait=portrait, title=title, refresh=refresh)
+def make_image(item, ident, refresh=False, portrait=False, title=None, lang=None):
+    return generate_card(item, ident, portrait=portrait, title=title, refresh=refresh, lang=lang)
 
 translations_file = ROOT / "news-translations.json"
 translations = json.loads(translations_file.read_text(encoding="utf-8")).get("items", {}) if translations_file.exists() else {}
@@ -108,8 +108,8 @@ for ident, item in articles.items():
         local_title = str(localized["title"])
         local_summary = " ".join(str(localized.get("summary") or localized.get("body") or localized.get("title") or summary).split())[:190]
         localized_url = BASE + "/articole/" + ident + "-" + language + "-social.html"
-        make_image(item, ident + "-" + language, title=local_title)
-        make_image(item, ident + "-" + language, portrait=True, title=local_title)
+        make_image(item, ident + "-" + language, title=local_title, lang=language)
+        make_image(item, ident + "-" + language, portrait=True, title=local_title, lang=language)
         local_image_url = BASE + "/share-images/" + ident + "-" + language + "-social.jpg"
         localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
         page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace(escape(image_url), escape(local_image_url)).replace('<html lang="ro">', '<html lang="' + language + '">')
