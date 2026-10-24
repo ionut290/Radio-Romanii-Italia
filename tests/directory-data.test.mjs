@@ -27,3 +27,17 @@ test('approved own business listings remain independent of imported enrichment m
  assert.equal(base.businesses.length,new Set(base.businesses.map(x=>x.id)).size);
  assert.ok(!values.some(x=>Object.hasOwn(x,'uid')||Object.hasOwn(x,'status')));
 });
+
+test('research backlog covers exactly all remaining public listings without inventing data',async()=>{
+ const backlog=JSON.parse(await readFile(new URL('../data/DIRECTORY-RESEARCH-BACKLOG.json',import.meta.url),'utf8'));
+ const expected=base.businesses.filter(b=>!Object.hasOwn(detail.records,b.id));
+ assert.equal(backlog.total,expected.length);
+ assert.equal(backlog.items.length,expected.length);
+ assert.equal(new Set(backlog.items.map(x=>x.id)).size,backlog.items.length);
+ assert.deepEqual(new Set(backlog.items.map(x=>x.id)),new Set(expected.map(x=>x.id)));
+ for(const entry of backlog.items){
+   assert.equal(entry.status,'da_ricercare');
+   assert.match(entry.sourceUrl,/^https:\/\//);
+   assert.ok(entry.missing.includes('description'));
+ }
+});
