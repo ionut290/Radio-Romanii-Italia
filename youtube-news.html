@@ -28,6 +28,12 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 #rdiExtras{position:absolute;z-index:8;left:44px;bottom:106px;width:calc((100% - 88px) * .56);max-width:none;min-width:0;min-height:52px;padding:8px 13px;background:rgba(7,23,43,.93);border:1px solid #6b8aaa;border-radius:9px;box-shadow:0 4px 14px #0008;pointer-events:none;overflow:hidden}#rdiExtras[hidden]{display:none}#rdiExtraLabel{display:block;color:#ffdf87;font-size:12px;font-weight:900;letter-spacing:1px}#rdiExtraValue{display:block;color:white;font-size:15px;font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;margin-top:3px}
 #progress{height:5px;position:absolute;bottom:83px;left:0;background:#f0c05b;width:0;z-index:10}
 @media(max-width:800px){#panel{grid-template-columns:45% 55%;left:18px;right:18px}#copy{padding:16px}#headline{font-size:25px}#summary{font-size:16px}#logo{font-size:20px;left:18px}}
+/* Live indicator pulses while its label remains readable. */
+#badge{animation:rdiLivePulse 1.6s ease-in-out infinite}
+@keyframes rdiLivePulse{
+ 0%,100%{background:#80242b;box-shadow:0 0 0 rgba(229,52,57,0)}
+ 50%{background:#f13b40;box-shadow:0 0 18px rgba(229,52,57,.65)}
+}
 </style></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div><div id="rdiClock" aria-label="Ora Italiei"><span id="rdiClockTime">--:--</span><span id="rdiClockDate">ITALIA</span></div>
 <div id="appQr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;margin=6&amp;data=https%3A%2F%2Fradioromanii.duckdns.org%2F" alt="Cod QR aplicație RDI" onerror="this.style.display='none'"><span>APLICAȚIA RDI</span></div>
 <div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div></div><div id="copy"><div id="category">ȘTIRI</div><h1 id="headline">Se încarcă știrile...</h1><p id="summary">Actualizări din România, Italia și diaspora românească.</p><div id="source">Radio Românii din Italia</div><div id="businessContacts"></div></div></div>
