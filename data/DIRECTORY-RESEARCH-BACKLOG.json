@@ -1,7 +1,7 @@
 {
   "updatedAt": "2026-10-24",
   "purpose": "Elenco delle schede che non hanno ancora dettagli fattuali verificati oltre alla prima fonte. Gli URL di Google sono suggerimenti di ricerca, non evidenze.",
-  "total": 320,
+  "total": 303,
   "items": [
     {
       "id": "public-6b46f4ddaf918642",
@@ -65,27 +65,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Maria%20T%C4%83nase%20APS%20ETS%20Torino%20TO%20Italia"
-    },
-    {
-      "id": "public-b1c1398e6bb04d0d",
-      "name": "CCTIR Centro di Cultura e Tradizione Italo-Romena",
-      "category": "Asociații și comunitate",
-      "city": "Torino",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://associazioni.net/enti/tag/romena",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=CCTIR%20Centro%20di%20Cultura%20e%20Tradizione%20Italo-Romena%20Torino%20TO%20Italia"
     },
     {
       "id": "public-3584865c2d1c8b30",
@@ -4393,48 +4372,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=La%20Speranza%20S.n.c.%20di%20Zaharia%20Florintina%20e%20C.%20Castelfranco%20Emilia%20MO%20Italia"
     },
     {
-      "id": "public-5f0c9b983ca78271",
-      "name": "L'Arpione",
-      "category": "Restaurante românești",
-      "city": "Castiglione della Pescaia",
-      "province": "GR",
-      "region": "Toscana",
-      "sourceUrl": "https://deafara.com/firme/ro-it-l-arpione",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=L'Arpione%20Castiglione%20della%20Pescaia%20GR%20Italia"
-    },
-    {
-      "id": "public-a7c289b4eab3ff63",
-      "name": "Idea Pizza 2 di Georgescu Florin",
-      "category": "Restaurante românești",
-      "city": "Cavour",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-idea-pizza-2-di-georgescu-florin",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Idea%20Pizza%202%20di%20Georgescu%20Florin%20Cavour%20TO%20Italia"
-    },
-    {
       "id": "public-b9597e7dd0d068fb",
       "name": "Badea Paula",
       "category": "Restaurante românești",
@@ -4475,27 +4412,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=L.T.R.%20S.a.s.%20di%20Badea%20Paula%20%26%20C.%20Como%20CO%20Italia"
-    },
-    {
-      "id": "public-5e254cb12d1b3f1e",
-      "name": "Sapori di Pizza",
-      "category": "Restaurante românești",
-      "city": "Cortemaggiore",
-      "province": "PC",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-sapori-di-pizza",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Sapori%20di%20Pizza%20Cortemaggiore%20PC%20Italia"
     },
     {
       "id": "public-e1919af807e24ae6",
@@ -4603,27 +4519,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Il%20Covo%20delle%20Civette%20Massa%20Marittima%20GR%20Italia"
     },
     {
-      "id": "public-bed683412c36c402",
-      "name": "La Grande Gioia",
-      "category": "Restaurante românești",
-      "city": "Mondaino",
-      "province": "RN",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-la-grande-gioia",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=La%20Grande%20Gioia%20Mondaino%20RN%20Italia"
-    },
-    {
       "id": "public-7e1183f48448583f",
       "name": "Cristea Eugenia",
       "category": "Restaurante românești",
@@ -4643,27 +4538,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Cristea%20Eugenia%20Monticello%20Conte%20Otto%20VI%20Italia"
-    },
-    {
-      "id": "public-ae8d5b6b450debaa",
-      "name": "Threee Stars",
-      "category": "Restaurante românești",
-      "city": "Orbetello",
-      "province": "GR",
-      "region": "Toscana",
-      "sourceUrl": "https://deafara.com/firme/ro-it-threee-stars",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Threee%20Stars%20Orbetello%20GR%20Italia"
     },
     {
       "id": "public-ec5995ccdfd6a7e5",
@@ -4729,90 +4603,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Neagu%20Cameluta%20Poirino%20TO%20Italia"
     },
     {
-      "id": "public-b01d7d4f25854c25",
-      "name": "Trattoria Mariano",
-      "category": "Restaurante românești",
-      "city": "Porcari",
-      "province": "LU",
-      "region": "Toscana",
-      "sourceUrl": "https://deafara.com/firme/ro-it-trattoria-mariano",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Trattoria%20Mariano%20Porcari%20LU%20Italia"
-    },
-    {
-      "id": "public-2b51fefe9c665635",
-      "name": "Pizzeria Amici Miei",
-      "category": "Restaurante românești",
-      "city": "Roccastrada",
-      "province": "GR",
-      "region": "Toscana",
-      "sourceUrl": "https://deafara.com/firme/ro-it-pizzeria-amici-miei",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Pizzeria%20Amici%20Miei%20Roccastrada%20GR%20Italia"
-    },
-    {
-      "id": "public-1d2259e811e5292a",
-      "name": "Ristorante Pizzeria Alexander",
-      "category": "Restaurante românești",
-      "city": "Rosolina",
-      "province": "RO",
-      "region": "Veneto",
-      "sourceUrl": "https://deafara.com/firme/ro-it-ristorante-pizzeria-alexander",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Ristorante%20Pizzeria%20Alexander%20Rosolina%20RO%20Italia"
-    },
-    {
-      "id": "public-aaa96fe0140f70c1",
-      "name": "Ristorante La Palombara",
-      "category": "Restaurante românești",
-      "city": "San Gemini",
-      "province": "TR",
-      "region": "Umbria",
-      "sourceUrl": "https://deafara.com/firme/ro-it-ristorante-la-palombara",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Ristorante%20La%20Palombara%20San%20Gemini%20TR%20Italia"
-    },
-    {
       "id": "public-99eeab7b0bc3e16e",
       "name": "Sapor di Pizza di Serban Simona",
       "category": "Restaurante românești",
@@ -4853,27 +4643,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Matei%20Daniel%20San%20Stino%20di%20Livenza%20VE%20Italia"
-    },
-    {
-      "id": "public-cd39b1460c516337",
-      "name": "Ristorante Otto",
-      "category": "Restaurante românești",
-      "city": "Sciacca",
-      "province": "AG",
-      "region": "Sicilia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-ristorante-otto",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Ristorante%20Otto%20Sciacca%20AG%20Italia"
     },
     {
       "id": "public-b97a96f830031539",
@@ -4979,27 +4748,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Gastronomia%20Plai%20Natal%20Vicenza%20VI%20Italia"
-    },
-    {
-      "id": "public-d5638bd70fd4c63e",
-      "name": "Pizzeria Grande Fratello",
-      "category": "Restaurante românești",
-      "city": "Zola Predosa",
-      "province": "BO",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-pizzeria-grande-fratello",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Pizzeria%20Grande%20Fratello%20Zola%20Predosa%20BO%20Italia"
     },
     {
       "id": "public-dd28a52644bfc4d9",
@@ -5128,27 +4876,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Dr.%20Andrei%20Lucian%20Stefanescu%2C%20Dentista%20Cassino%20FR%20Italia"
     },
     {
-      "id": "public-6f24641d7d60b730",
-      "name": "Studio Dentistico Dott. Marius Panaite",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Cuneo",
-      "province": "CN",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-studio-dentistico-dott-marius-panaite",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Dott.%20Marius%20Panaite%20Cuneo%20CN%20Italia"
-    },
-    {
       "id": "public-7261263ea721a88b",
       "name": "Studio Dentistico Dott.ssa Mihaela Variaghin",
       "category": "Sănătate și servicii profesionale",
@@ -5252,27 +4979,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Dott.%20Sergiu%20Mocanu%20Firenze%20FI%20Italia"
-    },
-    {
-      "id": "public-2658d670fb921cc3",
-      "name": "Studio Dentistico Zaharia",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Forlì",
-      "province": "FC",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-studio-dentistico-zaharia",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Zaharia%20Forl%C3%AC%20FC%20Italia"
     },
     {
       "id": "public-cc1687223d6934c7",
@@ -5420,27 +5126,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Dobrescu%20Silvia%20Aurelia%20Roma%20RM%20Italia"
-    },
-    {
-      "id": "public-29a781fc386bf18c",
-      "name": "Studio Dentistico Sirghi",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Roma",
-      "province": "RM",
-      "region": "Lazio",
-      "sourceUrl": "https://deafara.com/firme/ro-it-studio-dentistico-sirghi",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Sirghi%20Roma%20RM%20Italia"
     },
     {
       "id": "public-667996be7daeb70e",
@@ -5695,27 +5380,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Bucur%20Dr.%20Florica%20Tirano%20SO%20Italia"
     },
     {
-      "id": "public-8459f1884ffb71db",
-      "name": "Studio Dentistico Chindris Mihaela",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Tortona",
-      "province": "AL",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-studio-dentistico-chindris-mihaela",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Chindris%20Mihaela%20Tortona%20AL%20Italia"
-    },
-    {
       "id": "public-89229ee05488649a",
       "name": "Voiculescu Ioan",
       "category": "Sănătate și servicii profesionale",
@@ -5735,27 +5399,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Voiculescu%20Ioan%20Udine%20UD%20Italia"
-    },
-    {
-      "id": "public-426db288a0c832f0",
-      "name": "Studio Dentistico Dr Lupu Carmen",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Varedo",
-      "province": "MB",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-studio-dentistico-dr-lupu-carmen",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Dr%20Lupu%20Carmen%20Varedo%20MB%20Italia"
     },
     {
       "id": "public-1eb16820811444b7",
