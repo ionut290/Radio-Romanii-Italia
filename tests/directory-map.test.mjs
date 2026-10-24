@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const source = await readFile(new URL('../directory-map.js',import.meta.url),'utf8');
-const {normalize,validPoint,mergeBusinesses,filterBusinesses,locateBusiness,safeUrl} = await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const {normalize,validPoint,mergeBusinesses,filterBusinesses,locateBusiness,safeUrl,evidenceLevel} = await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
 test('search ignores Romanian accents and matches addresses and regions',()=>{
   const records=[{name:'Îngrijire acasă',city:'Forlì',region:'Emilia-Romagna',address:'Via Unirii 3',category:'Servicii'}];
   assert.equal(normalize('ȘȚĂ ÎÂ'),'sta ia');
@@ -45,4 +45,11 @@ test('an updated official address must use an approximate town marker instead of
   const business={name:'Officina',city:'Torino',address:'Strada nuova 139/32',lat:45.11,lng:7.75,locationPrecision:'city'};
   assert.deepEqual(locateBusiness(business,cities),{lat:45.07,lng:7.68,precision:'city'});
   assert.equal(locateBusiness(business,{}),null);
+});
+
+test('every directory listing exposes honest evidence level without representing research leads as official facts',()=>{
+ assert.equal(evidenceLevel({sourceUrl:'https://example.com/listing'}),'basic');
+ assert.equal(evidenceLevel({sourceUrl:'https://example.com/listing',verificationDetail:'public-directory'}),'third-party');
+ assert.equal(evidenceLevel({sourceUrl:'https://example.com/listing',verificationDetail:'official-source'}),'official');
+ assert.equal(evidenceLevel({name:'Published by RDI'}),'rdi');
 });
