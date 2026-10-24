@@ -39,3 +39,10 @@ test('mouse wheel zoom is enabled on the map',()=>{
  assert.ok(source.includes('scrollWheelZoom:true'));
  assert.ok(!source.includes('scrollWheelZoom:false'));
 });
+
+test('an updated official address must use an approximate town marker instead of stale street coordinates',()=>{
+  const cities={torino:[45.07,7.68]};
+  const business={name:'Officina',city:'Torino',address:'Strada nuova 139/32',lat:45.11,lng:7.75,locationPrecision:'city'};
+  assert.deepEqual(locateBusiness(business,cities),{lat:45.07,lng:7.68,precision:'city'});
+  assert.equal(locateBusiness(business,{}),null);
+});
