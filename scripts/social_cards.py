@@ -52,10 +52,10 @@ def source_image(source):
                  "Accept": "image/jpeg,image/png,image/webp,image/*;q=0.8"},
             )
             last_error = None
-            for headers in attempts:
+            for attempt_number, headers in enumerate(attempts):
                 try:
                     req = Request(source, headers=headers)
-                    with urlopen(req, timeout=12) as response:
+                    with urlopen(req, timeout=5 if attempt_number == 0 else 3) as response:
                         if not response.headers.get("Content-Type", "").lower().startswith("image/"):
                             raise ValueError("not an image")
                         payload = response.read(8_000_001)
