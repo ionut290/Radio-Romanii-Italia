@@ -1876,14 +1876,12 @@
       "detailsCheckedAt": "2026-10-24"
     },
     "public-2b51fefe9c665635": {
-      "description": "Pizzeria Amici Miei si trova in Via Montemassi 17, località Ribolla nel comune di Roccastrada. Il Comune stesso la inserisce nell'elenco delle pizzerie.",
-      "services": "Pizzeria, con possibilità di contatto diretto per menù e disponibilità; non sono pubblicate prestazioni più dettagliate nella fonte istituzionale.",
-      "phone": "+39 0564 570023",
-      "facebookUrl": "https://www.facebook.com/PIZZERIA.MICI.MIEI.35/",
-      "detailsSourceUrl": "https://www.comune.roccastrada.gr.it/it-it/vivere-il-comune/dove-mangiare",
-      "detailsSourceName": "Comune di Roccastrada, guida ufficiale Dove mangiare",
-      "verificationDetail": "official-source",
-      "detailsCheckedAt": "2026-10-24"
+      "reviewHold": true,
+      "reviewReason": "La Pizzeria Amici Miei risulta ancora nell'elenco 'Dove mangiare' del Comune di Roccastrada, ma Restaurant Guru la indica come definitivamente chiusa e TuttiAffari la segnala chiusa. Impossibile confermare l'apertura attuale: scheda sospesa fino a riscontro diretto.",
+      "detailsSourceUrl": "https://restaurantguru.it/Pizzeria-AMICI-MIEI-Ribolla",
+      "detailsSourceName": "Restaurant Guru (segnalata definitivamente chiusa); elenco Comune di Roccastrada e TuttiAffari discordanti",
+      "detailsCheckedAt": "2026-10-24",
+      "verificationDetail": "identity-conflict"
     },
     "public-cd39b1460c516337": {
       "description": "Ristorante Otto, Corso Vittorio Emanuele 107 nel centro di Sciacca. Le schede pubbliche lo descrivono come cucina siciliana e di pesce, non come ristorante specializzato in cucina romena.",
@@ -1922,6 +1920,54 @@
       "tripadvisorUrl": "https://www.tripadvisor.it/Restaurant_Review-g194839-d16695721-Reviews-Three_Stars_Trattoria_Pizzeria-Orbetello_Province_of_Grosseto_Tuscany.html",
       "detailsSourceUrl": "https://www.tripadvisor.it/Restaurant_Review-g194839-d16695721-Reviews-Three_Stars_Trattoria_Pizzeria-Orbetello_Province_of_Grosseto_Tuscany.html",
       "detailsSourceName": "Tripadvisor, profilo pubblico; Restaurant Guru conferma indirizzo",
+      "verificationDetail": "public-directory",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-5f0c9b983ca78271": {
+      "description": "Ristorante L'Arpione, Via Vittorio Veneto 68 a Castiglione della Pescaia. Il locale è guidato dallo chef Jenel Grigore e offre cucina toscana contemporanea incentrata sul pesce; non è documentato un menù romeno.",
+      "services": "Ristorante di pesce, servizio al tavolo, richiesta di prenotazione dal sito ufficiale, menù consultabile online.",
+      "products": "Ricette di mare, crostacei, primi creativi e pescato del giorno; disponibilità e prezzi possono variare.",
+      "phone": "+39 345 4109673",
+      "email": "ristorantelarpione@gmail.com",
+      "website": "https://www.ristorantecastiglionedellapescaia.it/",
+      "bookingUrl": "https://www.ristorantecastiglionedellapescaia.it/migliori-ristoranti-castiglione-della-pescaia-prenota-ora/",
+      "menuUrl": "https://www.ristorantecastiglionedellapescaia.it/castiglione-della-pescaia-ristoranti-il-menu/",
+      "tripadvisorUrl": "https://www.tripadvisor.it/Restaurant_Review-g194733-d6865401-Reviews-Ristorante_Larpione-Castiglione_della_Pescaia_Province_of_Grosseto_Tuscany.html",
+      "detailsSourceUrl": "https://www.ristorantecastiglionedellapescaia.it/dove-mangiare-a-castiglione-della-pescaia-contatti/",
+      "detailsSourceName": "Sito ufficiale L'Arpione: chef, menù, prenotazioni, recapiti",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-a7c289b4eab3ff63": {
+      "description": "Idea Pizza 2 è una pizzeria in Via Dante Alighieri 8 a Cavour (TO). Il nome della scheda iniziale comprendeva Georgescu Florin; un repertorio recente conferma il nome commerciale ma non la gestione attuale.",
+      "services": "Pizzeria e preparazione di pizza; servizi di consegna e prenotazione da verificare direttamente.",
+      "phone": "+39 349 6894701",
+      "access": "Il portale Restaurant Guru segnala accessibilità per sedie a rotelle, da confermare.",
+      "hours": "Mar–dom 17:30–22:00; lun chiuso (orari da repertorio Restaurant Guru, da riconfermare).",
+      "detailsSourceUrl": "https://restaurantguru.it/Idea-Pizza-2-Cavour",
+      "detailsSourceName": "Restaurant Guru, profilo pubblico di Idea Pizza 2 con indirizzo e orari",
+      "verificationDetail": "public-directory",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-b01d7d4f25854c25": {
+      "description": "Da Mariano Pizzeria Ristorante, Via Roma 45/47 a Porcari. Le fonti lo descrivono come pizzeria e ristorante di cucina italiana, non specificamente romena.",
+      "services": "Pizza, ristorazione per pranzo e cena, servizio al tavolo, prenotazioni e asporto secondo i repertori.",
+      "products": "Pizza, primi piatti e secondi della cucina italiana; la disponibilità del menù va confermata.",
+      "phone": "+39 0583 211345",
+      "access": "Accessibilità per persone in sedia a rotelle indicata su Tripadvisor, da confermare.",
+      "tripadvisorUrl": "https://www.tripadvisor.it/Restaurant_Review-g1057993-d8045243-Reviews-Da_Mariano_Pizzeria_Ristorante-Porcari_Province_of_Lucca_Tuscany.html",
+      "detailsSourceUrl": "https://www.tripadvisor.it/Restaurant_Review-g1057993-d8045243-Reviews-Da_Mariano_Pizzeria_Ristorante-Porcari_Province_of_Lucca_Tuscany.html",
+      "detailsSourceName": "Tripadvisor e Restaurant Guru; indirizzo e telefono concordanti",
+      "verificationDetail": "public-directory",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-bed683412c36c402": {
+      "description": "Pizzeria La Grande Gioia di Antonioli Graziano e Rosu Georgeta SNC, in Via Borgo 3 a Mondaino (RN). Attività di pizza e gastronomia italiana presente anche sul portale turistico locale.",
+      "services": "Pizzeria, consumazione e asporto; orari e servizi precisi vanno confermati con l'esercente.",
+      "products": "Pizza italiana e prodotti di pizzeria secondo le schede del locale.",
+      "phone": "+39 0541 981206",
+      "detailsSourceUrl": "https://www.mondainoeventi.it/it/ospitalita-di-mondaino.php",
+      "detailsSourceName": "Mondaino Eventi, elenco ospitalità; ReteImprese e Restaurant Guru concordano su denominazione e telefono",
       "verificationDetail": "public-directory",
       "detailsCheckedAt": "2026-10-24"
     }
