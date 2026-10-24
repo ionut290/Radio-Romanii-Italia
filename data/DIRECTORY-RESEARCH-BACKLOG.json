@@ -1,29 +1,8 @@
 {
   "updatedAt": "2026-10-24",
   "purpose": "Elenco delle schede che non hanno ancora dettagli fattuali verificati oltre alla prima fonte. Gli URL di Google sono suggerimenti di ricerca, non evidenze.",
-  "total": 391,
+  "total": 344,
   "items": [
-    {
-      "id": "public-ab4198e76087f459",
-      "name": "Decebal & Traian",
-      "category": "Asociații și comunitate",
-      "city": "Alcamo",
-      "province": "TP",
-      "region": "Sicilia",
-      "sourceUrl": "https://associazioni.net/enti/tag/romena",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Decebal%20%26%20Traian%20Alcamo%20TP%20Italia"
-    },
     {
       "id": "public-6b46f4ddaf918642",
       "name": "Concordia Populorum",
@@ -44,27 +23,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Concordia%20Populorum%20Bari%20BA%20Italia"
-    },
-    {
-      "id": "public-541a8833198964f1",
-      "name": "Ovidio",
-      "category": "Asociații și comunitate",
-      "city": "Chieri",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://www.ovidio-torino.com/chi-siamo/",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Ovidio%20Chieri%20TO%20Italia"
     },
     {
       "id": "public-2cb2edb46e422882",
@@ -88,111 +46,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Hora%20Unirii%20Grosseto%20GR%20Italia"
     },
     {
-      "id": "public-133c8f1849215dac",
-      "name": "Rădăcini Latine (ARL)",
-      "category": "Asociații și comunitate",
-      "city": "Orbassano",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://www.piemonteimmigrazione.it/component/sobipro/?sid=1%3Abancadatiassociazionimigranti&site=2",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=R%C4%83d%C4%83cini%20Latine%20(ARL)%20Orbassano%20TO%20Italia"
-    },
-    {
-      "id": "public-2925c60a1312bd89",
-      "name": "Cuore Romeno",
-      "category": "Asociații și comunitate",
-      "city": "Oristano",
-      "province": "OR",
-      "region": "Sardegna",
-      "sourceUrl": "https://rotalianul.com/lista-actualizata-asociatiilor-romanesti-din-italia-adrese-si-numere-de-contact/",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Cuore%20Romeno%20Oristano%20OR%20Italia"
-    },
-    {
-      "id": "public-f4f96c1c20812c2c",
-      "name": "CNCRI",
-      "category": "Asociații și comunitate",
-      "city": "Prato",
-      "province": "PO",
-      "region": "Toscana",
-      "sourceUrl": "https://associazioni.net/enti/tag/romena",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=CNCRI%20Prato%20PO%20Italia"
-    },
-    {
-      "id": "public-28cb9b69279cec8e",
-      "name": "FARMP – Federația Asociațiilor Române și Moldave din Piemonte",
-      "category": "Asociații și comunitate",
-      "city": "Rivoli",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://www.piemonteimmigrazione.it/component/sobipro/?sid=1%3Abancadatiassociazionimigranti&site=2",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=FARMP%20%E2%80%93%20Federa%C8%9Bia%20Asocia%C8%9Biilor%20Rom%C3%A2ne%20%C8%99i%20Moldave%20din%20Piemonte%20Rivoli%20TO%20Italia"
-    },
-    {
-      "id": "public-3c821bb5c31a392a",
-      "name": "FORI – Federația Organizațiilor Românești din Italia",
-      "category": "Asociații și comunitate",
-      "city": "Roma",
-      "province": "RM",
-      "region": "Lazio",
-      "sourceUrl": "https://www.stiridiaspora.ro/romanii-din-italia-statistici-asociatii-si-informatii-oficiale_498666.html",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=FORI%20%E2%80%93%20Federa%C8%9Bia%20Organiza%C8%9Biilor%20Rom%C3%A2ne%C8%99ti%20din%20Italia%20Roma%20RM%20Italia"
-    },
-    {
       "id": "public-4cbfb4386cbcae5b",
       "name": "Asociația Românilor în Italia",
       "category": "Asociații și comunitate",
@@ -212,69 +65,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Asocia%C8%9Bia%20Rom%C3%A2nilor%20%C3%AEn%20Italia%20Roma%20RM%20Italia"
-    },
-    {
-      "id": "public-b495c445c9645a87",
-      "name": "ProCultura – RoArte",
-      "category": "Asociații și comunitate",
-      "city": "Roma",
-      "province": "RM",
-      "region": "Lazio",
-      "sourceUrl": "https://rotalianul.com/lista-asociatiilor-romanesti-din-italia-adrese-si-detalii-de-contact-ale-acestora/",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=ProCultura%20%E2%80%93%20RoArte%20Roma%20RM%20Italia"
-    },
-    {
-      "id": "public-405aae94ed244806",
-      "name": "Român-ia ETS",
-      "category": "Asociații și comunitate",
-      "city": "San Cono",
-      "province": "CT",
-      "region": "Sicilia",
-      "sourceUrl": "https://associazioni.net/enti/tag/romena",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Rom%C3%A2n-ia%20ETS%20San%20Cono%20CT%20Italia"
-    },
-    {
-      "id": "public-8e717c4ee128795a",
-      "name": "Ziua Unirii APS",
-      "category": "Asociații și comunitate",
-      "city": "Spoleto",
-      "province": "PG",
-      "region": "Umbria",
-      "sourceUrl": "https://associazioni.net/enti/tag/romena",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Ziua%20Unirii%20APS%20Spoleto%20PG%20Italia"
     },
     {
       "id": "public-4c769f4a987ff958",
@@ -317,48 +107,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=CCTIR%20Centro%20di%20Cultura%20e%20Tradizione%20Italo-Romena%20Torino%20TO%20Italia"
-    },
-    {
-      "id": "public-829f45542f2345bc",
-      "name": "Dor de Plai",
-      "category": "Asociații și comunitate",
-      "city": "Tortona",
-      "province": "AL",
-      "region": "Piemonte",
-      "sourceUrl": "https://associazioni.net/enti/tag/romena",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Dor%20de%20Plai%20Tortona%20AL%20Italia"
-    },
-    {
-      "id": "public-4dfc39f114fc03cd",
-      "name": "Df Motors",
-      "category": "Auto și mecanică",
-      "city": "Alba",
-      "province": "CN",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-df-motors",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Df%20Motors%20Alba%20CN%20Italia"
     },
     {
       "id": "public-3584865c2d1c8b30",
@@ -445,27 +193,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=B%20%26%20Z%20Cars%20di%20Batiru%20Victor%2C%20Zorila%20Grigore%20e%20C.%20Argelato%20BO%20Italia"
     },
     {
-      "id": "public-41a193d75626baf2",
-      "name": "Dg Autoservice di Iordache Nicoleta Cateluta",
-      "category": "Auto și mecanică",
-      "city": "Bologna",
-      "province": "BO",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-dg-autoservice-di-iordache-nicoleta-cateluta",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Dg%20Autoservice%20di%20Iordache%20Nicoleta%20Cateluta%20Bologna%20BO%20Italia"
-    },
-    {
       "id": "public-53dee4a01a835e38",
       "name": "V.G.Auto Officina S.n.c. di Chelaru Viorel Gelu e Cozer Vasile",
       "category": "Auto și mecanică",
@@ -485,27 +212,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=V.G.Auto%20Officina%20S.n.c.%20di%20Chelaru%20Viorel%20Gelu%20e%20Cozer%20Vasile%20Bologna%20BO%20Italia"
-    },
-    {
-      "id": "public-009f6e648b612280",
-      "name": "Officina Andreino Camper S.n.c. di Blaj Florin Andrei & C.",
-      "category": "Auto și mecanică",
-      "city": "Borgaro Torinese",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-officina-andreino-camper-s-n-c-di-blaj-florin-andrei-c",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Officina%20Andreino%20Camper%20S.n.c.%20di%20Blaj%20Florin%20Andrei%20%26%20C.%20Borgaro%20Torinese%20TO%20Italia"
     },
     {
       "id": "public-bce33bf6c54c769c",
@@ -571,48 +277,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Center%20Auto%20By%20New%20Car%20Vercelli%20Unit%C3%A0%20Locale%20Caresanablot%20VC%20Italia"
     },
     {
-      "id": "public-dde1e9727dd3da28",
-      "name": "Autoriparazioni Pulbere Sergiu",
-      "category": "Auto și mecanică",
-      "city": "Castel Mella",
-      "province": "BS",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-autoriparazioni-pulbere-sergiu",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Autoriparazioni%20Pulbere%20Sergiu%20Castel%20Mella%20BS%20Italia"
-    },
-    {
-      "id": "public-7b0c322621f7fbd9",
-      "name": "Gabura Auto Service",
-      "category": "Auto și mecanică",
-      "city": "Cernusco sul Naviglio",
-      "province": "MI",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-gabura-auto-service",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Gabura%20Auto%20Service%20Cernusco%20sul%20Naviglio%20MI%20Italia"
-    },
-    {
       "id": "public-b62805c4a486b8cd",
       "name": "S.T.R. Officina Meccanica Auto S.n.c. di Bararu Costel e Saxon Em",
       "category": "Auto și mecanică",
@@ -655,69 +319,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Cretu%20Teodor%20Lucian%20Chivasso%20TO%20Italia"
     },
     {
-      "id": "public-e72377a2ac7856bd",
-      "name": "Bulai Service Auto Moto",
-      "category": "Auto și mecanică",
-      "city": "Cortona",
-      "province": "AR",
-      "region": "Toscana",
-      "sourceUrl": "https://deafara.com/firme/ro-it-bulai-service-auto-moto",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Bulai%20Service%20Auto%20Moto%20Cortona%20AR%20Italia"
-    },
-    {
-      "id": "public-e59e691000daed8e",
-      "name": "Gt Service di Tomescu Gheorghe",
-      "category": "Auto și mecanică",
-      "city": "Fiorenzuola d'Arda",
-      "province": "PC",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-gt-service-di-tomescu-gheorghe",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Gt%20Service%20di%20Tomescu%20Gheorghe%20Fiorenzuola%20d'Arda%20PC%20Italia"
-    },
-    {
-      "id": "public-6f254d946af53751",
-      "name": "Garge Moderno Di Racu Mugurel Dragos S.n.c",
-      "category": "Auto și mecanică",
-      "city": "Firenze",
-      "province": "FI",
-      "region": "Toscana",
-      "sourceUrl": "https://deafara.com/firme/ro-it-garge-moderno-di-racu-mugurel-dragos-s-n-c",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Garge%20Moderno%20Di%20Racu%20Mugurel%20Dragos%20S.n.c%20Firenze%20FI%20Italia"
-    },
-    {
       "id": "public-ea4358c8d20a2b57",
       "name": "Carpenteria Meccanica Trevigiana",
       "category": "Auto și mecanică",
@@ -737,48 +338,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Carpenteria%20Meccanica%20Trevigiana%20Gorgo%20al%20Monticano%20TV%20Italia"
-    },
-    {
-      "id": "public-c27a7e14312ee99c",
-      "name": "Autofficina Class S.n.c. di Mainescu Iulian",
-      "category": "Auto și mecanică",
-      "city": "Ladispoli",
-      "province": "RM",
-      "region": "Lazio",
-      "sourceUrl": "https://deafara.com/firme/ro-it-autofficina-class-s-n-c-di-mainescu-iulian",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Autofficina%20Class%20S.n.c.%20di%20Mainescu%20Iulian%20Ladispoli%20RM%20Italia"
-    },
-    {
-      "id": "public-9f81001db9751cc6",
-      "name": "Autofficina Elettrauto Mitrea",
-      "category": "Auto și mecanică",
-      "city": "Luni",
-      "province": "SP",
-      "region": "Liguria",
-      "sourceUrl": "https://deafara.com/firme/ro-it-autofficina-elettrauto-mitrea",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Autofficina%20Elettrauto%20Mitrea%20Luni%20SP%20Italia"
     },
     {
       "id": "public-3f4f3ffb5885c0f0",
@@ -823,27 +382,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Autofficina%20Ifrim%20Spiridon%20Olbia%20OT%20Italia"
     },
     {
-      "id": "public-4d22b7efa91259cc",
-      "name": "Soccorso Stradale Nastor Gheorghe",
-      "category": "Auto și mecanică",
-      "city": "Parma",
-      "province": "PR",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-soccorso-stradale-nastor-gheorghe",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Soccorso%20Stradale%20Nastor%20Gheorghe%20Parma%20PR%20Italia"
-    },
-    {
       "id": "public-958a3cda94710a47",
       "name": "Officina Popa",
       "category": "Auto și mecanică",
@@ -863,27 +401,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Officina%20Popa%20Parma%20PR%20Italia"
-    },
-    {
-      "id": "public-166b920be03fbff6",
-      "name": "Carrozzeria Ginevra Di Palanita Mihaela Irina",
-      "category": "Auto și mecanică",
-      "city": "Poggio a Caiano",
-      "province": "PO",
-      "region": "Toscana",
-      "sourceUrl": "https://deafara.com/firme/ro-it-carrozzeria-ginevra-di-palanita-mihaela-irina",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Carrozzeria%20Ginevra%20Di%20Palanita%20Mihaela%20Irina%20Poggio%20a%20Caiano%20PO%20Italia"
     },
     {
       "id": "public-814a131ca020382e",
@@ -907,27 +424,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Cristea%20Voicu%20Autoriparazioni%20Ticino%20Pombia%20NO%20Italia"
     },
     {
-      "id": "public-716125d0eabe13f4",
-      "name": "Officine Lacvir di Ionascu Vlad George",
-      "category": "Auto și mecanică",
-      "city": "Preganziol",
-      "province": "TV",
-      "region": "Veneto",
-      "sourceUrl": "https://deafara.com/firme/ro-it-officine-lacvir-di-ionascu-vlad-george",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Officine%20Lacvir%20di%20Ionascu%20Vlad%20George%20Preganziol%20TV%20Italia"
-    },
-    {
       "id": "public-69917228c599fdaf",
       "name": "Rosetti Romano S.n.c. di Nastasa Zaharia e C.",
       "category": "Auto și mecanică",
@@ -947,27 +443,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Rosetti%20Romano%20S.n.c.%20di%20Nastasa%20Zaharia%20e%20C.%20Ravenna%20RA%20Italia"
-    },
-    {
-      "id": "public-1af9be5ae84c2ac8",
-      "name": "Torino Auto Gpl",
-      "category": "Auto și mecanică",
-      "city": "Rivoli",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-torino-auto-gpl",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Torino%20Auto%20Gpl%20Rivoli%20TO%20Italia"
     },
     {
       "id": "public-ad92d28a526386c6",
@@ -1327,69 +802,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Officina%20Leonte%20di%20Leonte%20Mihai%20Zevio%20VR%20Italia"
     },
     {
-      "id": "public-cc79b725ad7c1c51",
-      "name": "Costruzioni Edili Avianesi",
-      "category": "Construcții și renovări",
-      "city": "Aviano",
-      "province": "PN",
-      "region": "Friuli-Venezia Giulia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-costruzioni-edili-avianesi",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Costruzioni%20Edili%20Avianesi%20Aviano%20PN%20Italia"
-    },
-    {
-      "id": "public-44999e2465aca4bc",
-      "name": "Rotari Costruzioni",
-      "category": "Construcții și renovări",
-      "city": "Bologna",
-      "province": "BO",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-rotari-costruzioni",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Rotari%20Costruzioni%20Bologna%20BO%20Italia"
-    },
-    {
-      "id": "public-2a409f374da755e3",
-      "name": "Cojocaru Impresa Edile",
-      "category": "Construcții și renovări",
-      "city": "Bordighera",
-      "province": "IM",
-      "region": "Liguria",
-      "sourceUrl": "https://deafara.com/firme/ro-it-cojocaru-impresa-edile",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Cojocaru%20Impresa%20Edile%20Bordighera%20IM%20Italia"
-    },
-    {
       "id": "public-503f7bf88022eed1",
       "name": "Danci Catalin",
       "category": "Construcții și renovări",
@@ -1409,27 +821,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Danci%20Catalin%20Borghetto%20Lodigiano%20LO%20Italia"
-    },
-    {
-      "id": "public-6af49923a853b0fa",
-      "name": "Vicenza Segnaletica",
-      "category": "Construcții și renovări",
-      "city": "Caldogno",
-      "province": "VI",
-      "region": "Veneto",
-      "sourceUrl": "https://deafara.com/firme/ro-it-vicenza-segnaletica",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Vicenza%20Segnaletica%20Caldogno%20VI%20Italia"
     },
     {
       "id": "public-dcc41b846564dc1a",
@@ -2125,27 +1516,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Edil%20Leo%20di%20Bujor%20Leonard%20Rivoli%20TO%20Italia"
     },
     {
-      "id": "public-778cf5ddc3f5ddf8",
-      "name": "Olteanu Dumitru Edilizie e Impianti",
-      "category": "Construcții și renovări",
-      "city": "Roma",
-      "province": "RM",
-      "region": "Lazio",
-      "sourceUrl": "https://deafara.com/firme/ro-it-olteanu-dumitru-edilizie-e-impianti",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Olteanu%20Dumitru%20Edilizie%20e%20Impianti%20Roma%20RM%20Italia"
-    },
-    {
       "id": "public-23f04f99b76549c5",
       "name": "Impresa Edile Hateganu Adrian Gheorghe",
       "category": "Construcții și renovări",
@@ -2165,27 +1535,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Impresa%20Edile%20Hateganu%20Adrian%20Gheorghe%20Roma%20RM%20Italia"
-    },
-    {
-      "id": "public-d2ba1d2a9ab0ddab",
-      "name": "lungu marius s.r.l",
-      "category": "Construcții și renovări",
-      "city": "Roma",
-      "province": "RM",
-      "region": "Lazio",
-      "sourceUrl": "https://deafara.com/firme/ro-it-lungu-marius-s-r-l",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=lungu%20marius%20s.r.l%20Roma%20RM%20Italia"
     },
     {
       "id": "public-1dacb6d48ca0cd9e",
@@ -2293,27 +1642,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Edilizie%20di%20Popa%20Ilie%20San%20Giovanni%20in%20Persiceto%20BO%20Italia"
     },
     {
-      "id": "public-78ccf41a3b25991d",
-      "name": "Ceban Costruzioni",
-      "category": "Construcții și renovări",
-      "city": "San Lazzaro di Savena",
-      "province": "BO",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-ceban-costruzioni",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Ceban%20Costruzioni%20San%20Lazzaro%20di%20Savena%20BO%20Italia"
-    },
-    {
       "id": "public-4c6ae94869a088fe",
       "name": "Sprint Construt Andrido",
       "category": "Construcții și renovări",
@@ -2354,27 +1682,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Edil%20Radu%20Tivoli%20RM%20Italia"
-    },
-    {
-      "id": "public-92caf44bda399c4a",
-      "name": "Edil-Global Service di Rotaru Valentin",
-      "category": "Construcții și renovări",
-      "city": "Torino",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-edil-global-service-di-rotaru-valentin",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Edil-Global%20Service%20di%20Rotaru%20Valentin%20Torino%20TO%20Italia"
     },
     {
       "id": "public-672653b44de007ba",
@@ -3133,27 +2440,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Matros%20Valentina%20Moldova%20Tours%20Music%20Live%20Parma%20PR%20Italia"
     },
     {
-      "id": "public-4954996f543bb347",
-      "name": "Magic Brill Service di Musat Costin",
-      "category": "Curățenie",
-      "city": "Pescara",
-      "province": "PE",
-      "region": "Abruzzo",
-      "sourceUrl": "https://deafara.com/firme/ro-it-magic-brill-service-di-musat-costin",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Magic%20Brill%20Service%20di%20Musat%20Costin%20Pescara%20PE%20Italia"
-    },
-    {
       "id": "public-bb3d43012625f6c4",
       "name": "Impresa Pisapulizie di Giurescu Aniela Ramona",
       "category": "Curățenie",
@@ -3679,27 +2965,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Esteticamente%20Arquata%20Scrivia%20AL%20Italia"
     },
     {
-      "id": "public-fefac6aa7dc73c05",
-      "name": "Dibi Center Estetista Margareta di Cristescu Margareta",
-      "category": "Îngrijire și frumusețe",
-      "city": "Assemini",
-      "province": "CA",
-      "region": "Sardegna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-dibi-center-estetista-margareta-di-cristescu-margareta",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Dibi%20Center%20Estetista%20Margareta%20di%20Cristescu%20Margareta%20Assemini%20CA%20Italia"
-    },
-    {
       "id": "public-12c6e9da6f202a0b",
       "name": "Tres Chic",
       "category": "Îngrijire și frumusețe",
@@ -3824,48 +3089,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Stefanescu%20Anca%20Chiari%20BS%20Italia"
-    },
-    {
-      "id": "public-82d2bf2cc7655f5c",
-      "name": "Elite Brows and Beauty di Maria Rotaru",
-      "category": "Îngrijire și frumusețe",
-      "city": "Cinisello Balsamo",
-      "province": "MI",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-elite-brows-and-beauty-di-maria-rotaru",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Elite%20Brows%20and%20Beauty%20di%20Maria%20Rotaru%20Cinisello%20Balsamo%20MI%20Italia"
-    },
-    {
-      "id": "public-9dcacd678ab959e4",
-      "name": "Dimensione Benessere Estetica",
-      "category": "Îngrijire și frumusețe",
-      "city": "Conegliano",
-      "province": "TV",
-      "region": "Veneto",
-      "sourceUrl": "https://deafara.com/firme/ro-it-dimensione-benessere-estetica",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Dimensione%20Benessere%20Estetica%20Conegliano%20TV%20Italia"
     },
     {
       "id": "public-d705d688abfcc56d",
@@ -4078,48 +3301,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Daniela%20Benessere%20%26%20Beauty%20di%20Zangani%20Rosca%20Daniela%20Mazzano%20BS%20Italia"
     },
     {
-      "id": "public-2dc6fabdfad973d9",
-      "name": "Bi Estetica S.n.c. di Mihaela Popescu",
-      "category": "Îngrijire și frumusețe",
-      "city": "Milano",
-      "province": "MI",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-bi-estetica-s-n-c-di-mihaela-popescu",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Bi%20Estetica%20S.n.c.%20di%20Mihaela%20Popescu%20Milano%20MI%20Italia"
-    },
-    {
-      "id": "public-1999726d52a8bb0b",
-      "name": "Constantinescu Elena Georgeta",
-      "category": "Îngrijire și frumusețe",
-      "city": "Milano",
-      "province": "MI",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-constantinescu-elena-georgeta",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Constantinescu%20Elena%20Georgeta%20Milano%20MI%20Italia"
-    },
-    {
       "id": "public-8dab4afe5485c23a",
       "name": "Rêves De Beauté",
       "category": "Îngrijire și frumusețe",
@@ -4246,27 +3427,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Estetica%20Maryele%20S.n.c.%20di%20Boboc%20Marinela%20e%20Bureanu%20Eleonora%20Padova%20PD%20Italia"
     },
     {
-      "id": "public-9b8db0c4eb08557a",
-      "name": "Redsun di Barbulescu Iulia Mariana e C. S.a.s.",
-      "category": "Îngrijire și frumusețe",
-      "city": "Parma",
-      "province": "PR",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-redsun-di-barbulescu-iulia-mariana-e-c-s-a-s",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Redsun%20di%20Barbulescu%20Iulia%20Mariana%20e%20C.%20S.a.s.%20Parma%20PR%20Italia"
-    },
-    {
       "id": "public-b7757290963fe1d4",
       "name": "Nicuriuc Nicoleta Beauty salone Ale&Cataleya",
       "category": "Îngrijire și frumusețe",
@@ -4370,27 +3530,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Quintessenza%20di%20Puscasu%20Madalina%20Piacenza%20PC%20Italia"
-    },
-    {
-      "id": "public-08fc3064e40ae0b7",
-      "name": "Sole S.a.s. di Simona Ungureanu & C.",
-      "category": "Îngrijire și frumusețe",
-      "city": "Portogruaro",
-      "province": "VE",
-      "region": "Veneto",
-      "sourceUrl": "https://deafara.com/firme/ro-it-sole-s-a-s-di-simona-ungureanu-c",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Sole%20S.a.s.%20di%20Simona%20Ungureanu%20%26%20C.%20Portogruaro%20VE%20Italia"
     },
     {
       "id": "public-45d895edf1742e3d",
@@ -4519,27 +3658,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Jardin%20De%20Beaute'%20di%20Anca%20Mihaela%20Dumitru%20Roma%20RM%20Italia"
     },
     {
-      "id": "public-5cd837313807dbee",
-      "name": "Clinic Beauty di Iordache Nina Alina",
-      "category": "Îngrijire și frumusețe",
-      "city": "Sassuolo",
-      "province": "MO",
-      "region": "Emilia-Romagna",
-      "sourceUrl": "https://deafara.com/firme/ro-it-clinic-beauty-di-iordache-nina-alina",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Clinic%20Beauty%20di%20Iordache%20Nina%20Alina%20Sassuolo%20MO%20Italia"
-    },
-    {
       "id": "public-b02e59dd568d6178",
       "name": "Adibel",
       "category": "Îngrijire și frumusețe",
@@ -4601,27 +3719,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Estetica%20Amy%20di%20Amelia%20Nicoleta%20Din%20%26%20C.%20S.a.s.%20Sirmione%20BS%20Italia"
-    },
-    {
-      "id": "public-4bdb325e6f60e119",
-      "name": "Top Nails Societa' in Nome Collettivo di Ricca Rita Ciobanu Monica e Butacu Cristina & C.",
-      "category": "Îngrijire și frumusețe",
-      "city": "Torino",
-      "province": "TO",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-top-nails-societa-in-nome-collettivo-di-ricca-rita-ciobanu-m",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Top%20Nails%20Societa'%20in%20Nome%20Collettivo%20di%20Ricca%20Rita%20Ciobanu%20Monica%20e%20Butacu%20Cristina%20%26%20C.%20Torino%20TO%20Italia"
     },
     {
       "id": "public-c02ac12d3728e1b8",
@@ -6409,27 +5506,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Pizzeria%20Grande%20Fratello%20Zola%20Predosa%20BO%20Italia"
     },
     {
-      "id": "public-4690e6aa0016842a",
-      "name": "Vident Studio Dentistico di Neagu George Vicentiu",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Arconate",
-      "province": "MI",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-vident-studio-dentistico-di-neagu-george-vicentiu",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Vident%20Studio%20Dentistico%20di%20Neagu%20George%20Vicentiu%20Arconate%20MI%20Italia"
-    },
-    {
       "id": "public-dd28a52644bfc4d9",
       "name": "Coroama Cornelia Nectara",
       "category": "Sănătate și servicii profesionale",
@@ -6533,27 +5609,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Dinu%20Di%20Nicoleta%20Dinu%20Campobasso%20CB%20Italia"
-    },
-    {
-      "id": "public-a055e77086c7ca0e",
-      "name": "Studio Dentistico Dott. Ionescu Dorin Adrian",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Carate Brianza",
-      "province": "MB",
-      "region": "Lombardia",
-      "sourceUrl": "https://deafara.com/firme/ro-it-studio-dentistico-dott-ionescu-dorin-adrian",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Dott.%20Ionescu%20Dorin%20Adrian%20Carate%20Brianza%20MB%20Italia"
     },
     {
       "id": "public-289c1a3d1f07c637",
@@ -7039,27 +6094,6 @@
       "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Dott.ssa%20Oana%20Maria%20Tautu%20Roma%20RM%20Italia"
     },
     {
-      "id": "public-bf15a50a0f67dcc5",
-      "name": "Studio Dentistico Associato Teodorescu",
-      "category": "Sănătate și servicii profesionale",
-      "city": "San Donà di Piave",
-      "province": "VE",
-      "region": "Veneto",
-      "sourceUrl": "https://deafara.com/firme/ro-it-studio-dentistico-associato-teodorescu",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Studio%20Dentistico%20Associato%20Teodorescu%20San%20Don%C3%A0%20di%20Piave%20VE%20Italia"
-    },
-    {
       "id": "public-2c8c7d06ae158d68",
       "name": "Teodorescu Dumitru Lucian",
       "category": "Sănătate și servicii profesionale",
@@ -7079,27 +6113,6 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Teodorescu%20Dumitru%20Lucian%20San%20Don%C3%A0%20di%20Piave%20VE%20Italia"
-    },
-    {
-      "id": "public-1a93ca6e3235267b",
-      "name": "Dr. Nicolae Voiculescu Studio Dentistico",
-      "category": "Sănătate și servicii profesionale",
-      "city": "Savigliano",
-      "province": "CN",
-      "region": "Piemonte",
-      "sourceUrl": "https://deafara.com/firme/ro-it-dr-nicolae-voiculescu-studio-dentistico",
-      "website": null,
-      "phone": null,
-      "priority": "ricerca_pubblica_necessaria",
-      "status": "da_ricercare",
-      "missing": [
-        "description",
-        "services",
-        "hours",
-        "phone",
-        "website"
-      ],
-      "googleSearchUrl": "https://www.google.com/search?q=Dr.%20Nicolae%20Voiculescu%20Studio%20Dentistico%20Savigliano%20CN%20Italia"
     },
     {
       "id": "public-5aed2a2e72c63b80",
