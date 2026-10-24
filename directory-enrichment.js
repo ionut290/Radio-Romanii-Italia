@@ -79,7 +79,7 @@ export function buildDirectoryExtras(b,language="ro"){
     source.href=httpUrl(b.locationSourceUrl);source.target="_blank";source.rel="noopener noreferrer";c.append(source);frag.append(c);
   }
  }
- if(/^\\d{4}-\\d{2}-\\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
+ if(/^\d{4}-\d{2}-\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
  return frag;
 }
 export function composeDirectoryDescription(description, fields){
