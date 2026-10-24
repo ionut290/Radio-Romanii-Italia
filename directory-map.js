@@ -18,7 +18,7 @@ export function filterBusinesses(records, filters) {
     && (!region || normalize(b.region).includes(region))
     && (!province || normalize([b.province,b.provinceName].filter(Boolean).join(" ")).includes(province))
     && (!city || normalize(b.city).includes(city))
-    && (!q || normalize([b.name, b.category, b.description, b.address, b.city, b.province, b.region].join(' ')).includes(q)));
+    && (!q || normalize([b.name,b.category,b.description,b.services,b.products,b.prices,b.languages,b.address,b.city,b.province,b.region].flat().join(' ')).includes(q)));
 }
 export function locateBusiness(b, cities = {}) {
   // Online-only listings must not be presented as physical premises.
