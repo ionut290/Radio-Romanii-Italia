@@ -23,6 +23,11 @@ export function filterBusinesses(records, filters) {
 export function locateBusiness(b, cities = {}) {
   // Online-only listings must not be presented as physical premises.
   if (/^(online|activitate online|attivit[aà] online)/i.test(b.address || '')) return null;
+  // If the official address changed, older street-level coordinates must not masquerade as exact.
+  if (b.locationPrecision === 'city') {
+    const town = cities[normalize(b.city)];
+    return town && validPoint(town[0], town[1]) ? {lat:town[0], lng:town[1], precision:'city'} : null;
+  }
   if (validPoint(b.lat, b.lng)) return {lat:b.lat, lng:b.lng, precision:b.locationPrecision || 'source'};
   if (validPoint(b.latitude, b.longitude)) return {lat:b.latitude, lng:b.longitude, precision:'source'};
   const city = cities[normalize(b.city)];
