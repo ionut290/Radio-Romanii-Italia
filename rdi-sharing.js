@@ -53,6 +53,35 @@ function rdiShareButton(x){
   status.className="rdi-share-feedback";
   status.setAttribute("role","status");
   status.setAttribute("aria-live","polite");
+  // facebook.com/sharer opens only Facebook's home screen on some iPhones.
+  // Use the native iOS share sheet instead: the user then selects Facebook.
+  // navigator.share MUST be invoked directly from this tap (user activation).
+  const ios=/iPad|iPhone|iPod/.test(navigator.userAgent||"")||
+    ((navigator.platform||"")==="MacIntel"&&navigator.maxTouchPoints>1);
+  if(ios){
+    facebook.textContent=it?"Facebook · scegli nel menu":"Facebook · alege din meniu";
+    facebook.setAttribute("role","button");
+    facebook.addEventListener("click",async event=>{
+      event.preventDefault();
+      if(typeof navigator.share==="function"){
+        status.textContent=it?"Seleziona Facebook dal menu di condivisione dell’iPhone.":"Selectează Facebook din meniul de partajare iPhone.";
+        try{
+          await navigator.share({url});
+        }catch(error){
+          if(error?.name==="AbortError")return;
+          status.textContent=it?"Condivisione non disponibile. Usa Copia link.":"Partajarea nu este disponibilă. Folosește Copiază link.";
+        }
+      }else{
+        // Avoid opening Facebook with a broken composer on older iOS PWAs.
+        try{
+          await navigator.clipboard.writeText(url);
+          status.textContent=it?"Link copiato. Apri Facebook e incollalo in un nuovo post.":"Link copiat. Deschide Facebook și lipește-l într-o postare nouă.";
+        }catch(error){
+          window.prompt(it?"Copia il link della notizia":"Copiază linkul știrii",url);
+        }
+      }
+    });
+  }
   const makeCopy=(label,value,message)=>{
     const button=document.createElement("button");
     button.type="button";
