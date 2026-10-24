@@ -1,5 +1,5 @@
 import {createDirectoryMap, mergeBusinesses, filterBusinesses, categoryTheme, sourceNote, safeUrl} from "./directory-map.js?v=20261024-atlas-4";
-import {buildDirectoryExtras,directoryIntro,composeDirectoryDescription,profileUrlAllowed} from "./directory-enrichment.js?v=20261024-details-1";
+import {buildDirectoryExtras,directoryIntro,composeDirectoryDescription,profileUrlAllowed} from "./directory-enrichment.js?v=20261024-details-2";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {getFirestore,collection,addDoc,query,where,onSnapshot,serverTimestamp,doc,updateDoc} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
@@ -45,13 +45,13 @@ function openBusiness(b){
  inner.append(node("span",b.category||"Activitate","pill"),node("h2",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
  const intro=directoryIntro(b);const about={ro:"Despre activitate",it:"Informazioni sull’attività",en:"About the business"};const lang=window.rdiLanguage?.()||"ro";
  inner.append(node("h3",about[lang]||about.ro),node("p",intro||({ro:"Descrierea detaliată nu este încă disponibilă.",it:"La descrizione dettagliata non è ancora disponibile.",en:"A detailed description is not available yet."}[lang]||"Descrierea detaliată nu este încă disponibilă.")));
- inner.append(buildDirectoryExtras(b,lang));
+
  inner.append(sourceNote(b,directoryMap.locate(b)));
  if(directoryMap.locate(b)){const focus=node("button","⌖ "+atlasText("showMap"),"action secondary");focus.type="button";focus.onclick=()=>{dialog.close();directoryMap.focus(b)};inner.append(focus)}
  if(images.length>1){const gallery=node("div",undefined,"photo-gallery");for(const url of images.slice(1)){const a=node("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";const img=node("img");img.src=url;img.loading="lazy";img.alt="Fotografie: "+b.name;a.append(img);gallery.append(a)}inner.append(gallery)}
  if(b.address)inner.append(node("p","📍 "+b.address));
  if(b.hours)inner.append(node("p","🕒 "+b.hours));
- contactLinks(b,inner);dialog.append(inner);document.body.append(dialog);
+ contactLinks(b,inner);inner.append(buildDirectoryExtras(b,lang));dialog.append(inner);document.body.append(dialog);
  dialog.addEventListener("close",()=>dialog.remove(),{once:true});dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
  dialog.showModal();window.rdiTranslate?.();
 }
