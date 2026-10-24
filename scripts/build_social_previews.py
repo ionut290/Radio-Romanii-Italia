@@ -53,6 +53,16 @@ from social_cards import generate_card, _is_fallback_card
 def make_image(item, ident, refresh=False, portrait=False, title=None, lang=None):
     return generate_card(item, ident, portrait=portrait, title=title, refresh=refresh, lang=lang)
 
+def share_image_url(ident):
+    """Change OG image URL whenever its pixels or contextual label change.
+
+    Facebook may cache the old JPEG even after Scrape Again if og:image URL
+    stays identical. The version query makes the newly rendered preview fresh.
+    """
+    asset = IMAGES / (ident + "-social.jpg")
+    version = hashlib.sha256(asset.read_bytes()).hexdigest()[:12] if asset.exists() else "0"
+    return BASE + "/share-images/" + ident + "-social.jpg?v=" + version
+
 translations_file = ROOT / "news-translations.json"
 translations = json.loads(translations_file.read_text(encoding="utf-8")).get("items", {}) if translations_file.exists() else {}
 details_path = ROOT / "data" / "news-summaries.json"
@@ -83,10 +93,10 @@ valid_pages = set()
 for ident, item in articles.items():
     title = str(item.get("title", ""))
     summary = " ".join(str(item.get("summary") or item.get("description") or item.get("body") or item.get("title") or "").split())[:190]
-    image_url = BASE + "/share-images/" + ident + "-social.jpg"
     url = BASE + "/articole/" + ident + "-social.html"
     make_image(item, ident)
     make_image(item, ident, portrait=True)
+    image_url = share_image_url(ident)
     # The image Meta fetches must live on RDI. Hotlinking publisher CDNs
     # (e.g. s.iw.ro) caused a blank Facebook preview even when the image
     # loaded normally in the news card. generate_card() retries photo fetch,
@@ -110,7 +120,7 @@ for ident, item in articles.items():
         localized_url = BASE + "/articole/" + ident + "-" + language + "-social.html"
         make_image(item, ident + "-" + language, title=local_title, lang=language)
         make_image(item, ident + "-" + language, portrait=True, title=local_title, lang=language)
-        local_image_url = BASE + "/share-images/" + ident + "-" + language + "-social.jpg"
+        local_image_url = share_image_url(ident + "-" + language)
         localized_target = BASE + "/?articolo=" + ident + "&lang=" + language
         page = html_page.replace(escape(title), escape(local_title)).replace(escape(url), escape(localized_url)).replace(escape(target), escape(localized_target)).replace(escape(image_url), escape(local_image_url)).replace('<html lang="ro">', '<html lang="' + language + '">')
         page = page.replace('<section id="article-summary">' + intro + '</section>', '<section id="article-summary">' + (readable_content(localized) or intro) + '</section>')
@@ -160,7 +170,7 @@ for event in events:
     meta = " · ".join(str(x) for x in (dates, event.get("city"), event.get("region")) if x)
     summary = " ".join((meta + " — " + description).split())[:190]
     url = BASE + "/eventi/" + ident + "-social.html"
-    image_url = BASE + "/share-images/" + image_id + "-social.jpg"
+    image_url = share_image_url(image_id)
     target = BASE + "/evenimente.html?event=" + ident + "#event-" + ident
     body = readable_content({"body": description})
     source = ""
