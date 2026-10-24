@@ -27,7 +27,7 @@ export function businessReviewLinks(b){
  const google=reviewUrl(details.google||b.googleMapsUrl,["google.com","google.it","maps.google.com"]);
  const placeId=/^[A-Za-z0-9_-]{8,255}$/.test(b.googlePlaceId||"")?b.googlePlaceId:null;
  const mapsSearch="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q)+(placeId?"&query_place_id="+encodeURIComponent(placeId):"");
- const facebook=reviewUrl(details.facebook||b.facebookUrl,["facebook.com","fb.com"]);
+ const facebook=reviewUrl(details.facebook||b.facebookUrl||b.website,["facebook.com","fb.com"]);
  const tripadvisor=reviewUrl(details.tripadvisor||b.tripadvisorUrl,["tripadvisor.it","tripadvisor.com"]);
  const trustpilot=reviewUrl(details.trustpilot||b.trustpilotUrl,["trustpilot.com"]);
  const out=[
@@ -55,7 +55,7 @@ export function buildDirectoryExtras(b,language="ro"){
  }
  const profiles=[];
  for(const [key,domains,name] of [["facebookUrl",["facebook.com","fb.com"],"Facebook"],["instagramUrl",["instagram.com"],"Instagram"]]){
-  const href=reviewUrl(b[key]||part.fields[key],domains);if(href)profiles.push({name,url:href});
+  const href=reviewUrl(b[key]||part.fields[key]||b.website,domains);if(href)profiles.push({name,url:href});
  }
  const menu=httpUrl(b.menuUrl);if(menu)profiles.push({name:language==="ro"?"Meniu":"Menu",url:menu});
  const booking=httpUrl(b.bookingUrl);if(booking)profiles.push({name:language==="ro"?"Rezervări":language==="it"?"Prenotazioni":"Bookings",url:booking});
