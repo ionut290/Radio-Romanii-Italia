@@ -132,8 +132,10 @@ function accept(data){
  armed=null;nowPlaying=np;received=performance.now();render();
 }
 function handlePublication(pub){
- const payload=pub?.data;
+ let payload=pub?.data;
+ if(typeof payload==='string'){try{payload=JSON.parse(payload);}catch(e){return;}}
  if(payload?.np)accept(payload.np);
+ else if(payload?.now_playing)accept(payload);
 }
 function connectRealtime(){
  if(typeof WebSocket==='undefined')return;
@@ -173,7 +175,7 @@ async function poll(){
   if(!response.ok)throw Error('nowplaying '+response.status);
   accept(await response.json());
  }catch(e){console.warn('RDI spot backup metadata unavailable',e.message);}
- finally{setTimeout(poll,socket?.readyState===WebSocket.OPEN?5000:1500);}
+ finally{setTimeout(poll,1500);}
 }
 async function init(){
  try{
