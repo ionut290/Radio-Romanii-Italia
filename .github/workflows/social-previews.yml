@@ -11,6 +11,7 @@ on:
       - 'rdi-sharing.css'
       - 'scripts/build_social_previews.py'
       - 'scripts/social_cards.py'
+      - 'scripts/social_subjects.py'
       - 'news-translations.json'
       - '.github/workflows/social-previews.yml'
   workflow_run:
