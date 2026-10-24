@@ -22,3 +22,7 @@ jobs:
           test -s directory-manage.js
           test -s directory-feed.js
           echo "File RDI presenti. La pubblicazione è gestita da GitHub Pages (main / root)."
+      - name: Verifica dati e schede del Ghid
+        run: |
+          set -euo pipefail
+          node --test tests/directory-map.test.mjs tests/directory-enrichment.test.mjs tests/directory-data.test.mjs
