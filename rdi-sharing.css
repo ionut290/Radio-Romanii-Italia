@@ -1,12 +1,18 @@
-.rdi-share-menu{margin:10px 11px 12px;width:calc(100% - 22px);align-self:flex-start}
-.rdi-share-toggle{display:inline-flex;align-items:center;gap:5px;cursor:pointer;list-style:none;font-weight:650;font-size:13px;line-height:1.4;color:#1b64b2;background:#edf4fc;border:1px solid #dbe7f5;border-radius:9px;padding:7px 11px;user-select:none}
+/* Single unobtrusive share control on news and event cards. */
+.rdi-share-menu{width:auto;max-width:100%;margin:9px 11px 12px;align-self:flex-start}
+.rdi-share-toggle{display:inline-flex;align-items:center;gap:5px;cursor:pointer;list-style:none;background:#eef4fb;color:#2260a0;border:1px solid #dce6f2;border-radius:9px;padding:7px 11px;font-size:12px;font-weight:650;line-height:1.3;user-select:none}
 .rdi-share-toggle::-webkit-details-marker{display:none}
-.rdi-share-toggle::after{content:"⌄";font-size:15px;margin-left:4px}
+.rdi-share-toggle::after{content:"⌄";font-size:14px;margin-left:5px}
 .rdi-share-menu[open]>.rdi-share-toggle::after{content:"⌃"}
-.rdi-share-menu .rdi-share-actions{display:flex;flex-direction:column;align-items:stretch;gap:7px;margin:8px 0 0}
-.rdi-share-menu .rdi-share-actions button{display:block;max-width:100%;width:100%;margin:0!important;padding:9px 10px!important;border-radius:9px!important;font-size:12px!important;line-height:1.3!important;font-weight:650!important;background:#eaf1f9!important;color:#25517e!important;border:1px solid #d8e3f0!important;box-shadow:none!important;white-space:normal}
-.rdi-share-menu .rdi-share-actions button:disabled{opacity:.65}
-
-.rdi-share-actions a{display:block;padding:9px 10px;border:1px solid #d8e3f0;border-radius:9px;background:#eaf1f9;color:#25517e;text-decoration:none;font-size:12px;font-weight:650}.rdi-share-menu{margin:12px 0;width:100%}.rdi-share-actions p{font-size:14px}.rdi-share-actions textarea,.rdi-share-actions input{width:100%}
-
-.rdi-share-menu .rdi-facebook-photo{display:block;text-align:center;padding:9px 10px;border:1px solid #d8e3f0;border-radius:9px;background:#f7f9fc;color:#25517e!important;font-weight:650;font-size:12px;text-decoration:none;white-space:normal}
+.rdi-share-menu[open]{width:calc(100% - 22px)}
+.rdi-share-menu .rdi-share-actions{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:7px;margin:9px 0 0;max-width:100%}
+.rdi-share-menu .rdi-share-actions button,
+.rdi-share-menu .rdi-share-actions a,
+.rdi-share-menu .rdi-share-actions .rdi-facebook-photo{display:inline-flex!important;align-items:center;justify-content:center;flex:none;width:auto!important;max-width:100%;margin:0!important;padding:7px 10px!important;background:#f4f7fb!important;color:#25517e!important;border:1px solid #e0e7f0!important;border-radius:8px!important;box-shadow:none!important;text-decoration:none!important;font-size:11px!important;line-height:1.3!important;font-weight:600!important;white-space:normal;text-align:center}
+.rdi-share-menu .rdi-share-actions .rdi-share-facebook{color:#185da9!important;background:#edf4fb!important;font-weight:700!important}
+.rdi-share-menu .rdi-share-feedback{display:block;flex-basis:100%;font-size:11px;color:#55738f;line-height:1.35}
+.rdi-share-menu .rdi-share-feedback:empty{display:none}
+.rdi-share-menu .rdi-share-actions button:focus-visible,
+.rdi-share-menu .rdi-share-actions a:focus-visible,
+.rdi-share-toggle:focus-visible{outline:2px solid #3b82c4;outline-offset:2px}
+@media(max-width:360px){.rdi-share-menu[open]{width:calc(100% - 16px)}.rdi-share-menu{margin-left:8px;margin-right:8px}}
