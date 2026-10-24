@@ -743,6 +743,43 @@
       "detailsSourceName": "Ufficio Camerale (segnalazione cessazione da verificare con visura ufficiale)",
       "verificationDetail": "identity-conflict",
       "detailsCheckedAt": "2026-10-24"
+    },
+    "public-529ab651fcfa7bcb": {
+      "description": "Transilvania SNC di Toma Valentin & C. è un negozio di generi alimentari a Lugo, indicato anche tra i punti vendita partner Digi; la via mostrata dal locator Digi differisce dal vecchio indirizzo.",
+      "services": "Commercio alimentare al dettaglio; attività indicata nel catalogo dei negozi Digi. Servizi precisi e orari da confermare.",
+      "address": "Via Piratello 68 - 48022 Lugo (RA)",
+      "locationPrecision": "city",
+      "detailsSourceUrl": "https://www.digi.it/it/negozi-digi",
+      "detailsSourceName": "Elenco ufficiale negozi Digi Italia, riscontro indipendente indirizzo",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-3d6d29c86808a5d5": {
+      "description": "Transilvania SNC di Toma Valentin & C. è indicata come attività di vendita alimentare a Faenza e compare nell'elenco ufficiale dei negozi Digi; l'indirizzo è differente dalla vecchia scheda.",
+      "services": "Commercio alimentare al dettaglio; attività elencata tra i partner Digi. Verificare disponibilità e orari.",
+      "address": "Via Fornace 5A - 48018 Faenza (RA)",
+      "locationPrecision": "city",
+      "detailsSourceUrl": "https://www.digi.it/it/negozi-digi",
+      "detailsSourceName": "Elenco ufficiale negozi Digi Italia",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-d42ad78238821ba7": {
+      "description": "Bucovina di Solcan Domnica, punto vendita alimentare a Sant'Angelo Lodigiano, Piazza della Libertà 17.",
+      "services": "Commercio alimentare al dettaglio; il catalogo non conferma l'assortimento dei singoli prodotti.",
+      "detailsSourceUrl": "https://www.virgilio.it/italia/sant-angelo-lodigiano/via/ss/alimentari-vendita-al-dettaglio",
+      "detailsSourceName": "Virgilio Aziende · elenco esercizi alimentari",
+      "verificationDetail": "public-directory",
+      "detailsCheckedAt": "2026-10-24"
+    },
+    "public-e044e0ecbf9983b4": {
+      "description": "Studio odontoiatrico della Dott.ssa Maria Suciu a Roma, in Via Sestio Menas, menzionato dal sito di una professionista del settore odontoiatrico.",
+      "services": "Studio dentistico; verificare direttamente le prestazioni e la possibilità di prenotazione.",
+      "hours": "Lunedì–venerdì 11:30–18:30; sabato e domenica chiuso (orario indicato da fonte professionale terza, da confermare).",
+      "detailsSourceUrl": "https://www.brunamastronicola.it/contact-3/",
+      "detailsSourceName": "Sito professionale Bruna Mastronicola · riferimento allo Studio Suciu Maria",
+      "verificationDetail": "public-directory",
+      "detailsCheckedAt": "2026-10-24"
     }
   }
 }
