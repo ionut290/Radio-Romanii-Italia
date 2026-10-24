@@ -34,3 +34,8 @@ test('import contains source references, unique IDs and only valid or absent coo
   assert.ok(data.businesses.length>0);assert.equal(new Set(data.businesses.map(b=>b.id)).size,data.businesses.length);
   for(const b of data.businesses){assert.ok(b.name);assert.ok(b.city||b.address);assert.ok(safeUrl(b.sourceUrl));assert.equal(b.verification,'public-source');if(b.lat!==null&&b.lat!==undefined)assert.ok(validPoint(b.lat,b.lng));}
 });
+
+test('mouse wheel zoom is enabled on the map',()=>{
+ assert.ok(source.includes('scrollWheelZoom:true'));
+ assert.ok(!source.includes('scrollWheelZoom:false'));
+});
