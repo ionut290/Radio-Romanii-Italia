@@ -12,7 +12,7 @@ test('every enrichment belongs to an existing business and cites public evidence
   assert.match(b.detailsCheckedAt,/^\d{4}-\d{2}-\d{2}$/);
   assert.match(b.detailsSourceUrl,/^https:\/\//);
   assert.ok(b.detailsSourceName);
-  assert.ok(['official-source','location-conflict','identity-conflict'].includes(b.verificationDetail));
+  assert.ok(['official-source','public-directory','location-conflict','identity-conflict'].includes(b.verificationDetail));
   if(b.reviewHold)assert.ok(b.reviewReason);
   else assert.ok(b.description&&b.services);
  }
