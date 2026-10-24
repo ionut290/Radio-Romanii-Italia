@@ -2,7 +2,7 @@
 const box=document.getElementById("rdiExtras");
 const label=document.getElementById("rdiExtraLabel");
 const value=document.getElementById("rdiExtraValue");
-let song="",weather="",events=[],community=[],ads=[],breaking="",pointer=0;
+let song="",weather="",events=[],community=[],breaking="",pointer=0;
 const limitText=(s,n=115)=>String(s||"").trim().slice(0,n);
 const italyDay=x=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).format(x);
 function options(){
@@ -13,7 +13,6 @@ function options(){
  out.push(["PODCAST RDI","Riflessioni sulla Diaspora · Ascultă podcastul și pe Spotify"]);
  if(events.length)out.push(["EVENIMENTE",events[pointer%events.length]]);
  if(community.length)out.push(["COMUNITATE",community[pointer%community.length]]);
- if(ads.length)out.push(["PUBLICITATE",ads[pointer%ads.length]]);
  return out;
 }
 function render(){const all=options();if(!all.length){box.hidden=true;return}const current=all[pointer%all.length];label.textContent=current[0];value.textContent=current[1];box.hidden=false;pointer++}
@@ -68,8 +67,5 @@ async function loadFirebaseWidgets(){try{
  onSnapshot(query(collection(db,"posts"),where("status","==","published")),snap=>{
   community=snap.docs.map(d=>d.data()).filter(x=>x.title&&x.category!=="Publicitate gratuită").sort((a,b)=>(b.createdAt?.toMillis?.()||0)-(a.createdAt?.toMillis?.()||0)).slice(0,10).map(x=>limitText([x.city,x.title].filter(Boolean).join(" · ")));
  },()=>{community=[]});
- onSnapshot(query(collection(db,"directoryAds"),where("status","==","approved")),snap=>{
-  ads=snap.docs.map(d=>d.data()).filter(x=>x.title&&x.expiresAt?.toMillis?.()>Date.now()).map(x=>limitText(x.title+" · "+(x.body||""))).slice(0,12);
- },()=>{ads=[]});
 }catch(e){console.warn("RDI overlay sources unavailable",e)}}
 loadFirebaseWidgets();
