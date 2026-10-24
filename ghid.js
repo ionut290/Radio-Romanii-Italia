@@ -1,13 +1,15 @@
+import {createDirectoryMap, mergeBusinesses, filterBusinesses, categoryTheme, sourceNote, safeUrl} from "./directory-map.js?v=20261024-atlas-1";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {getFirestore,collection,addDoc,query,where,onSnapshot,serverTimestamp,doc,updateDoc} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import {getStorage,ref,uploadBytes,getDownloadURL} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
 import {firebaseConfig} from "./firebase-config.js";
 const $=id=>document.getElementById(id);
-const categories=["Restaurante românești","Magazine românești","Transport România–Italia","Contabilitate și fiscalitate","Traduceri și interpretariat","Avocatură","Construcții și renovări","Curățenie","Îngrijire și frumusețe","Auto și mecanică","Sănătate și servicii profesionale","Alte servicii","Voluntariat și colaborări"];
+const categories=["Restaurante românești","Magazine românești","Transport România–Italia","Contabilitate și fiscalitate","Traduceri și interpretariat","Avocatură","Construcții și renovări","Curățenie","Îngrijire și frumusețe","Auto și mecanică","Sănătate și servicii profesionale","Alte servicii","Voluntariat și colaborări","Transport și logistică","Asociații și comunitate"];
 for(const id of ["category","kind"]){const select=$(id);for(const c of categories){const o=document.createElement("option");o.value=c;o.textContent=c;select.append(o)}}
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),storage=getStorage(app);
-const adminEmail="ionut29019@gmail.com";let user=null,records=[],pending=[],stopPending=null;
+const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
+const directoryMap=createDirectoryMap({onOpen:openBusiness});
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
 const safeLink=(value)=>{try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:null}catch{return null}};
 const whatsappNumber=value=>{
@@ -40,7 +42,9 @@ function openBusiness(b){
  const images=businessImages(b);
  if(images.length){const cover=node("img",undefined,"detail-hero");cover.src=images[0];cover.alt="Fotografie: "+b.name;inner.append(cover);if(images.length>1){let i=0;const timer=setInterval(()=>{if(!dialog.isConnected){clearInterval(timer);return}i=(i+1)%images.length;cover.src=images[i]},5000);dialog.addEventListener("close",()=>clearInterval(timer),{once:true})}}
  inner.append(node("span",b.category||"Activitate","pill"),node("h2",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
- inner.append(node("h3","Despre activitate"),node("p",b.description||""));
+ inner.append(node("h3","Despre activitate"),node("p",b.description||[b.category,b.city].filter(Boolean).join(" · ")));
+ inner.append(sourceNote(b,directoryMap.locate(b)));
+ if(directoryMap.locate(b)){const focus=node("button","⌖ "+atlasText("showMap"),"action secondary");focus.type="button";focus.onclick=()=>{dialog.close();directoryMap.focus(b)};inner.append(focus)}
  if(images.length>1){const gallery=node("div",undefined,"photo-gallery");for(const url of images.slice(1)){const a=node("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";const img=node("img");img.src=url;img.loading="lazy";img.alt="Fotografie: "+b.name;a.append(img);gallery.append(a)}inner.append(gallery)}
  if(b.address)inner.append(node("p","📍 "+b.address));
  if(b.hours)inner.append(node("p","🕒 "+b.hours));
@@ -52,17 +56,48 @@ function drawCard(b,admin=false){
  const el=node("article",undefined,"panel business business-teaser"+(admin?" pending":""));
  const images=businessImages(b);
  if(images.length){const cover=node("img",undefined,"business-cover");cover.src=images[0];cover.alt="Fotografie: "+b.name;cover.loading="lazy";el.append(cover);if(images.length>1){let i=0;const timer=setInterval(()=>{if(!el.isConnected){clearInterval(timer);return}i=(i+1)%images.length;cover.src=images[i]},5000)}}
- else{el.append(node("div","🏪","business-placeholder"))}
+ else{const placeholder=node("div",categoryTheme(b.category)[1],"business-placeholder");placeholder.style.color=categoryTheme(b.category)[0];placeholder.setAttribute("aria-hidden","true");el.append(placeholder)}
  const content=node("div",undefined,"business-teaser-content");
  content.append(node("span",b.category||"Activitate","pill"),node("h3",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
- const preview=node("p",b.description||"","business-preview");content.append(preview);contactLinks(b,content);
- const open=node("button","Deschide detaliile →","action detail-open");open.type="button";open.onclick=()=>openBusiness(b);content.append(open);el.append(content);
+ if(!admin)content.append(node("span",b.sourceUrl?atlasText("publicBadge"):atlasText("listedBadge"),b.sourceUrl?"directory-public-badge":"directory-listed-badge"));
+ const preview=node("p",b.description||b.address||"","business-preview");content.append(preview);contactLinks(b,content);
+ const open=node("button","Deschide detaliile →","action detail-open");open.type="button";open.onclick=()=>openBusiness(b);content.append(open);if(!admin && directoryMap.locate(b)){const show=node("button","⌖ "+atlasText("showMap"),"directory-show-map");show.type="button";show.onclick=()=>directoryMap.focus(b);content.append(show)}el.append(content);
  if(admin){const controls=node("div",undefined,"actions");for(const [status,label] of [["approved","Aprobă"],["rejected","Respinge"]]){const btn=node("button",label,status==="rejected"?"secondary":"");btn.onclick=async()=>{btn.disabled=true;try{await updateDoc(doc(db,"directoryBusinesses",b.id),{status,reviewedAt:serverTimestamp()})}catch(e){alert("Nu s-a putut actualiza: "+e.message)}finally{btn.disabled=false}};controls.append(btn)}el.append(controls)}
  return el;
 }
-function render(){const q=$("search").value.trim().toLocaleLowerCase("ro"),cat=$("category").value,region=$("region").value.trim().toLowerCase(),province=$("province").value.trim().toLowerCase(),city=$("city").value.trim().toLowerCase();const found=records.filter(b=>(!cat||b.category===cat)&&(!region||(b.region||"").toLowerCase().includes(region))&&(!province||(b.province||"").toLowerCase().includes(province))&&(!city||(b.city||"").toLowerCase().includes(city))&&(!q||[b.name,b.category,b.description,b.city,b.province].join(" ").toLocaleLowerCase("ro").includes(q)));$("count").textContent=found.length+" afaceri și servicii";$("businesses").replaceChildren(...(found.length?found.map(b=>drawCard(b)):[node("p","Nu există încă afaceri pentru filtrele selectate. Poți înscrie prima afacere.")]))}
-for(const id of ["search","category","region","province","city"])$(id).addEventListener("input",render);
-onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{records=snapshot.docs.map(d=>({id:d.id,...d.data()}));render()},error=>{$("count").textContent="Nu s-a putut încărca ghidul: "+error.message});
+const atlasMessages={ro:{results:"afaceri și servicii",showMap:"Vezi pe hartă",publicBadge:"Sursă publică · de confirmat",listedBadge:"Publicat pe RDI",empty:"Nu am găsit activități",emptyHelp:"Încearcă alt oraș sau elimină câteva filtre.",more:"Mai multe activități",all:"Toate",public:"listări din surse publice",managed:"listări RDI",coverage:"Ghidul include înregistrările consultate individual și listările RDI aprobate. Nu reprezintă toate firmele românești din Italia.",loadError:"Unele surse nu s-au încărcat. Listările RDI disponibile sunt afișate."},it:{results:"attività e servizi",showMap:"Mostra sulla mappa",publicBadge:"Fonte pubblica · da confermare",listedBadge:"Pubblicata su RDI",empty:"Nessuna attività trovata",emptyHelp:"Prova un’altra città o rimuovi alcuni filtri.",more:"Mostra altre attività",all:"Tutte",public:"schede da fonti pubbliche",managed:"schede RDI",coverage:"La guida include le schede consultate singolarmente e le attività approvate su RDI. Non rappresenta tutte le imprese romene in Italia.",loadError:"Alcune fonti non sono state caricate. Le schede RDI disponibili restano visibili."},en:{results:"businesses and services",showMap:"Show on map",publicBadge:"Public source · to be confirmed",listedBadge:"Published on RDI",empty:"No businesses found",emptyHelp:"Try a different town or remove some filters.",more:"Load more listings",all:"All",public:"public-source listings",managed:"RDI listings",coverage:"This guide includes individually retrieved public listings and approved RDI listings. It is not a complete census of Romanian businesses in Italy.",loadError:"Some sources could not be loaded. Available RDI listings remain visible."}};
+function atlasText(key){return (atlasMessages[window.rdiLanguage?.()||"ro"]||atlasMessages.ro)[key]||key}
+let sourceError=false,publicSources=[];
+function filters(){return Object.fromEntries(["search","category","region","province","city"].map(id=>[id,$(id).value]))}
+function renderChips(){
+ const chips=$("directory-chips"),counts=new Map();for(const b of records)counts.set(b.category,(counts.get(b.category)||0)+1);
+ chips.replaceChildren();
+ for(const category of ["",...categories.filter(c=>counts.has(c))]){const btn=node("button");btn.append(node("span",category||atlasText("all")),node("small"," · "+(category?counts.get(category):records.length)));btn.type="button";btn.dataset.category=category;btn.style.setProperty("--category-color",categoryTheme(category)[0]);btn.classList.toggle("active",category===$("category").value);btn.setAttribute("aria-pressed",String(category===$("category").value));btn.onclick=()=>{$("category").value=category;pageLimit=24;render()};chips.append(btn)}
+}
+function render(){
+ const found=filterBusinesses(records,filters());
+ $("count").textContent=found.length+" "+atlasText("results");
+ if(found.length)$("businesses").replaceChildren(...found.slice(0,pageLimit).map(b=>drawCard(b)));
+ else{const empty=node("div",undefined,"directory-empty");empty.append(node("strong",atlasText("empty")),node("span",atlasText("emptyHelp")));$("businesses").replaceChildren(empty)}
+ $("directory-more").hidden=found.length<=pageLimit || $("find-panel").hidden;$("directory-more").textContent=atlasText("more")+" ("+Math.min(24,Math.max(0,found.length-pageLimit))+")";
+ directoryMap.update(found,cityIndex);renderChips();
+ $("directory-coverage").textContent=publicRecords.length+" "+atlasText("public")+" · "+approvedRecords.length+" "+atlasText("managed")+". "+atlasText("coverage")+(sourceError?" "+atlasText("loadError"):"");
+ window.rdiTranslate?.();
+}
+for(const id of ["search","category","region","province","city"])$(id).addEventListener("input",()=>{pageLimit=24;render()});
+$("directory-reset").onclick=()=>{for(const id of ["search","category","region","province","city"])$(id).value="";pageLimit=24;render()};
+$("directory-more").onclick=()=>{pageLimit+=24;render()};
+document.addEventListener("directory-view-change",()=>{render()});
+document.addEventListener("rdi-language-changed",render);
+async function loadPublicDirectory(){
+ const results=await Promise.allSettled([fetch("./data/directory-public.json?v=20261024-atlas-1",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("Directory source unavailable");return r.json()}),fetch("./data/directory-cities.json?v=20261024-atlas-1").then(r=>{if(!r.ok)throw Error("Town coordinates unavailable");return r.json()})]);
+ if(results[0].status==="fulfilled"){const data=results[0].value;publicRecords=Array.isArray(data.businesses)?data.businesses:[];publicSources=data.sources||[];
+ for(const source of publicSources){if(!safeUrl(source.url))continue;const a=node("a",source.name+" ↗");a.href=source.url;a.target="_blank";a.rel="noopener noreferrer";$("directory-source-links").append(a)}}else sourceError=true;
+ if(results[1].status==="fulfilled")cityIndex=results[1].value;
+ records=mergeBusinesses(publicRecords,approvedRecords);render();
+}
+loadPublicDirectory();
+onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{approvedRecords=snapshot.docs.map(d=>({id:d.id,...d.data()}));records=mergeBusinesses(publicRecords,approvedRecords);render()},error=>{console.warn("RDI listings unavailable",error.code);sourceError=true;render()});
 function renderPending(){$("pending").replaceChildren(...(pending.length?pending.map(b=>drawCard(b,true)):[node("p","Nu există cereri în așteptare.")]))}
 onAuthStateChanged(auth,u=>{user=u;$("signin").hidden=!!u;$("signout").hidden=!u;$("business-form").hidden=!u;$("admin-panel").hidden=!isAdmin();$("direct-label").hidden=!isAdmin();$("identity").textContent=u?"Conectat: "+(u.displayName||u.email)+(isAdmin()?" · Administrator":""):"Conectează-te pentru a înscrie o afacere.";if(stopPending){stopPending();stopPending=null}if(isAdmin()){stopPending=onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","pending")),snapshot=>{pending=snapshot.docs.map(d=>({id:d.id,...d.data()}));renderPending()},e=>$("pending").textContent="Nu pot încărca cererile: "+e.message)}});
 $("signin").onclick=async()=>{try{await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){alert("Autentificare nereușită: "+e.message)}};
