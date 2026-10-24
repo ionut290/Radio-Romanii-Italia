@@ -87,15 +87,12 @@ for ident, item in articles.items():
     url = BASE + "/articole/" + ident + "-social.html"
     make_image(item, ident)
     make_image(item, ident, portrait=True)
-    # Prefer the branded RDI card when it contains the real photo. If a
-    # publisher blocks server-side downloads, give Facebook the same
-    # HTTPS photograph shown on the RDI article instead of a blue card.
-    original_photo = str(item.get("image") or "").strip()
-    use_original = (original_photo.startswith("https://")
-                    and not original_photo.lower().split("?")[0].endswith(".svg")
-                    and _is_fallback_card(IMAGES / (ident + "-social.jpg"), (1200, 630)))
-    preview_image_url = original_photo if use_original else image_url
-    image_dimensions = "" if use_original else '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+    # The image Meta fetches must live on RDI. Hotlinking publisher CDNs
+    # (e.g. s.iw.ro) caused a blank Facebook preview even when the image
+    # loaded normally in the news card. generate_card() retries photo fetch,
+    # but always publishes a valid same-origin JPEG.
+    preview_image_url = image_url
+    image_dimensions = '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
     intro = readable_content(item) or "<p>" + escape(title) + "</p>"
     target = BASE + "/?articolo=" + ident
     html_page = f"""<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)} | RDI</title><meta name="description" content="{escape(summary)}"><link rel="canonical" href="{escape(url)}"><meta property="og:type" content="article"><meta property="og:site_name" content="RDI - Radio Romanii din Italia"><meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(summary)}"><meta property="og:url" content="{escape(url)}"><meta property="og:image" content="{escape(preview_image_url)}">{image_dimensions}<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(summary)}"><meta name="twitter:image" content="{escape(preview_image_url)}"><style>body{{font:18px system-ui;background:#101827;color:white;max-width:760px;margin:35px auto;padding:15px}}img{{width:100%;border-radius:16px}}a{{color:#f2c66c}}</style></head><body><img src="{escape(preview_image_url)}" alt="RDI"><h1>{escape(title)}</h1><section id="article-summary">{intro}</section><p><a href="{escape(target)}">Leggi su RDI / Citește pe RDI →</a></p></body></html>"""
