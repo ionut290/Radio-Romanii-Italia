@@ -1,5 +1,5 @@
 import {createDirectoryMap, mergeBusinesses, filterBusinesses, categoryTheme, sourceNote, safeUrl} from "./directory-map.js?v=20261024-atlas-4";
-import {buildDirectoryExtras,directoryIntro,composeDirectoryDescription,profileUrlAllowed} from "./directory-enrichment.js?v=20261024-details-2";
+import {buildDirectoryExtras,directoryIntro,composeDirectoryDescription,profileUrlAllowed} from "./directory-enrichment.js?v=20261024-verified-1";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 import {getFirestore,collection,addDoc,query,where,onSnapshot,serverTimestamp,doc,updateDoc} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
@@ -11,6 +11,7 @@ for(const id of ["category","kind"]){const select=$(id);for(const c of categorie
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),storage=getStorage(app);
 const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
 const directoryMap=createDirectoryMap({onOpen:openBusiness});
+let heldPublicRecords=0,verifiedDetailCount=0;
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
 const safeLink=(value)=>{try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:null}catch{return null}};
 const whatsappNumber=value=>{
@@ -32,6 +33,7 @@ function contactLinks(b,container){
  const isRdiVolunteer=b.category==="Voluntariat și colaborări"&&/radio românii din italia|radio romanii din italia|\\brdi\\b/i.test([b.name,b.description].join(" "));
  const number=whatsappNumber(b.whatsapp)||(isRdiVolunteer?whatsappNumber(b.phone)||"393892352575":null);
  if(number){const a=node("a",isRdiVolunteer?"🤝 Vreau să devin voluntar":"💬 WhatsApp","action");a.href="https://wa.me/"+number;a.target="_blank";a.rel="noopener noreferrer";links.append(a)}
+ if(b.email&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(b.email)){const a=node("a","✉ Email","action secondary");a.href="mailto:"+b.email;links.append(a)}
  if(b.website){const href=safeLink(b.website);if(href){const a=node("a","🌐 Site web","action secondary");a.href=href;a.target="_blank";a.rel="noopener noreferrer";links.append(a)}}
  if(b.address&&!/^(online|activitate online)/i.test(b.address)){const a=node("a","📍 Google Maps","action secondary");a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent([b.address,b.city,b.province,"Italia"].filter(Boolean).join(", "));a.target="_blank";a.rel="noopener noreferrer";links.append(a)}
  container.append(links);
@@ -84,7 +86,7 @@ function render(){
  else{const empty=node("div",undefined,"directory-empty");empty.append(node("strong",atlasText("empty")),node("span",atlasText("emptyHelp")));$("businesses").replaceChildren(empty)}
  $("directory-more").hidden=found.length<=pageLimit || $("find-panel").hidden;$("directory-more").textContent=atlasText("more")+" ("+Math.min(24,Math.max(0,found.length-pageLimit))+")";
  directoryMap.update(found,cityIndex);renderChips();
- $("directory-coverage").textContent=publicRecords.length+" "+atlasText("public")+" · "+approvedRecords.length+" "+atlasText("managed")+". "+atlasText("coverage")+(sourceError?" "+atlasText("loadError"):"");
+ $("directory-coverage").textContent=publicRecords.length+" "+atlasText("public")+" · "+approvedRecords.length+" "+atlasText("managed")+". "+atlasText("coverage")+(verifiedDetailCount?" · "+verifiedDetailCount+" fișe cu informații suplimentare din surse oficiale.":"")+(heldPublicRecords?" · "+heldPublicRecords+" fișe retrase temporar pentru neconcordanțe.":"")+(sourceError?" "+atlasText("loadError"):"");
  window.rdiTranslate?.();
 }
 for(const id of ["search","category","region","province","city"])$(id).addEventListener("input",()=>{pageLimit=24;render()});
@@ -93,10 +95,26 @@ $("directory-more").onclick=()=>{pageLimit+=24;render()};
 document.addEventListener("directory-view-change",()=>{render()});
 document.addEventListener("rdi-language-changed",render);
 async function loadPublicDirectory(){
- const results=await Promise.allSettled([fetch("./data/directory-public.json?v=20261024-atlas-1",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("Directory source unavailable");return r.json()}),fetch("./data/directory-cities.json?v=20261024-atlas-1").then(r=>{if(!r.ok)throw Error("Town coordinates unavailable");return r.json()})]);
+ const results=await Promise.allSettled([fetch("./data/directory-public.json?v=20261024-atlas-1",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("Directory source unavailable");return r.json()}),fetch("./data/directory-cities.json?v=20261024-atlas-1").then(r=>{if(!r.ok)throw Error("Town coordinates unavailable");return r.json()}),fetch("./data/directory-enrichments.json?v=20261024-verified-1",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("Enrichments unavailable");return r.json()})]);
  if(results[0].status==="fulfilled"){const data=results[0].value;publicRecords=Array.isArray(data.businesses)?data.businesses:[];publicSources=data.sources||[];
  for(const source of publicSources){if(!safeUrl(source.url))continue;const a=node("a",source.name+" ↗");a.href=source.url;a.target="_blank";a.rel="noopener noreferrer";$("directory-source-links").append(a)}}else sourceError=true;
  if(results[1].status==="fulfilled")cityIndex=results[1].value;
+ if(results[2].status==="fulfilled"){
+   const details=results[2].value?.records||{};
+   if(details&&typeof details==="object"){
+     const next=[];heldPublicRecords=0;verifiedDetailCount=0;
+     for(const b of publicRecords){
+       const entry=Object.hasOwn(details,b.id)?details[b.id]:null;
+       if(entry?.reviewHold){heldPublicRecords++;continue;}
+       if(!entry||typeof entry!=="object"){next.push(b);continue;}
+       const fields=["description","services","products","prices","languages","payments","access","delivery","hours","phone","email","facebookUrl","instagramUrl","detailsSourceUrl","detailsSourceName","detailsCheckedAt","verificationDetail"];
+       const approved=Object.fromEntries(fields.filter(k=>typeof entry[k]==="string").map(k=>[k,entry[k]]));
+       if(approved.verificationDetail==="official-source")verifiedDetailCount++;
+       next.push({...b,...approved});
+     }
+     publicRecords=next;
+   }
+ }
  records=mergeBusinesses(publicRecords,approvedRecords);render();
 }
 loadPublicDirectory();
