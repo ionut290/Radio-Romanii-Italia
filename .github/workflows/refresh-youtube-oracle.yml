@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['youtube-news.html']
+    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'data/spot-campaigns.json', 'spot-images/**']
 
 permissions:
   contents: read
@@ -26,14 +26,17 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          expected=$(sha256sum youtube-news.html | cut -d ' ' -f 1)
           for attempt in {1..24}; do
-            if curl --fail --silent --show-error --max-time 5 \
-              "https://radioromanii.duckdns.org/youtube-news.html?v=${GITHUB_SHA}" \
-              -o /tmp/rdi-youtube-published.html; then
-              actual=$(sha256sum /tmp/rdi-youtube-published.html | cut -d ' ' -f 1)
-              if [ "$actual" = "$expected" ]; then exit 0; fi
-            fi
+            ready=true
+            for file in youtube-news.html youtube-spots.js youtube-spots-core.js youtube-spots.css data/spot-campaigns.json; do
+              expected=$(sha256sum "$file" | cut -d ' ' -f 1)
+              if ! curl --fail --silent --show-error --max-time 5 \
+                "https://radioromanii.duckdns.org/${file}?v=${GITHUB_SHA}" \
+                -o /tmp/rdi-youtube-published; then ready=false; break; fi
+              actual=$(sha256sum /tmp/rdi-youtube-published | cut -d ' ' -f 1)
+              if [ "$actual" != "$expected" ]; then ready=false; break; fi
+            done
+            if [ "$ready" = true ]; then exit 0; fi
             sleep 5
           done
           echo '::error::La nuova pagina YouTube non è ancora pubblicata; ricarica annullata.'

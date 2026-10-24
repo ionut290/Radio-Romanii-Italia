@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "campaigns": [
+    {
+      "id": "ghid",
+      "title": "Ghidul Românilor din Italia",
+      "matchAny": [
+        "ghid",
+        "guida rom",
+        "pubblicita gratuita",
+        "publicitate gratuita"
+      ],
+      "sceneSeconds": 5,
+      "footer": "Înscrie-ți gratuit activitatea",
+      "website": "radioromanii.duckdns.org/ghid.html",
+      "scenes": [
+        {
+          "image": "./spot-images/ghid-poster.webp",
+          "title": "",
+          "text": "",
+          "poster": true
+        },
+        {
+          "image": "./spot-images/ghid-restaurant.webp",
+          "title": "Restaurante, aproape de tine",
+          "text": "Descoperă activitățile comunității românești din Italia."
+        },
+        {
+          "image": "./spot-images/ghid-grocery.webp",
+          "title": "Magazine și gusturi de acasă",
+          "text": "Ghidul Românilor din Italia · RDI"
+        },
+        {
+          "image": "./spot-images/ghid-salon.webp",
+          "title": "Frumusețe și îngrijire",
+          "text": "Oameni și servicii, mai aproape."
+        },
+        {
+          "image": "./spot-images/ghid-garage.webp",
+          "title": "Ateliere și profesioniști",
+          "text": "Descoperă activitățile din comunitate."
+        },
+        {
+          "image": "./spot-images/ghid-cafe.webp",
+          "title": "Locuri în care ne întâlnim",
+          "text": "Afaceri, servicii și oameni. Mai aproape."
+        },
+        {
+          "image": "./spot-images/ghid-home.webp",
+          "title": "Servicii pentru casa ta",
+          "text": "Caută activități în Ghidul Românilor din Italia."
+        },
+        {
+          "image": "./spot-images/ghid-community.webp",
+          "title": "O comunitate care se conectează",
+          "text": "Români și italieni, mai aproape."
+        },
+        {
+          "image": "./spot-images/ghid-registration.webp",
+          "title": "Ai o activitate în Italia?",
+          "text": "Înscrie-ți gratuit activitatea în Ghid."
+        }
+      ]
+    },
+    {
+      "id": "podcast",
+      "title": "Riflessioni sulla Diaspora",
+      "matchAny": [
+        "riflessioni sulla diaspora",
+        "riflessioni diaspora"
+      ],
+      "songIds": [
+        "57709d64867bb68057dfa5c6d13e63f8"
+      ],
+      "sceneSeconds": 5,
+      "footer": "Riflessioni sulla Diaspora · Podcast RDI",
+      "website": "radioromanii.duckdns.org",
+      "scenes": [
+        {
+          "image": "./spot-images/podcast-studio.webp",
+          "title": "Riflessioni sulla Diaspora",
+          "text": "Il podcast di Radio Românii din Italia."
+        },
+        {
+          "image": "./spot-images/podcast-listen.webp",
+          "title": "Una voce che ti accompagna",
+          "text": "Storie, pensieri e vita nella diaspora."
+        },
+        {
+          "image": "./spot-images/podcast-family.webp",
+          "title": "Le persone che portiamo con noi",
+          "text": "Riflessioni sulla Diaspora · RDI"
+        },
+        {
+          "image": "./spot-images/podcast-journey.webp",
+          "title": "Tra partenze e nuovi inizi",
+          "text": "Il podcast della nostra comunità."
+        },
+        {
+          "image": "./spot-images/podcast-call.webp",
+          "title": "Vicini, anche da lontano",
+          "text": "Riflessioni sulla Diaspora · RDI"
+        },
+        {
+          "image": "./spot-images/podcast-work.webp",
+          "title": "La vita di ogni giorno",
+          "text": "Una pausa per ascoltare e riflettere."
+        },
+        {
+          "image": "./spot-images/podcast-memories.webp",
+          "title": "Le radici restano con noi",
+          "text": "Riflessioni sulla Diaspora · RDI"
+        },
+        {
+          "image": "./spot-images/ghid-community.webp",
+          "title": "Storie che ci avvicinano",
+          "text": "La comunità, attraverso le sue voci."
+        },
+        {
+          "image": "./spot-images/podcast-bridge.webp",
+          "title": "Riflessioni sulla Diaspora",
+          "text": "Ascolta il podcast di RDI."
+        }
+      ]
+    }
+  ]
+}

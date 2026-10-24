@@ -1,0 +1,20 @@
+#rdiSpot{position:absolute;z-index:9;inset:92px 44px 22px;overflow:hidden;border-radius:20px;background:#081b34;color:#fff;border:1px solid #7087a4;box-shadow:0 16px 52px #0008}
+#rdiSpot[hidden]{display:none}
+.rdi-spot-active #panel,.rdi-spot-active #ticker,.rdi-spot-active #progress,.rdi-spot-active #rdiExtras{visibility:hidden}
+.spot-photo,.spot-shade{position:absolute;inset:0}
+.spot-photo{background-position:center;background-size:cover;will-change:transform}
+.spot-shade{background:linear-gradient(90deg,#07182de8 0%,#07182d70 38%,transparent 67%),linear-gradient(0deg,#061428 0%,transparent 35%)}
+.spot-copy{position:absolute;left:40px;top:47px;width:41%;text-shadow:0 2px 9px #0008}
+.spot-label{color:#f2ca70;font-size:15px;letter-spacing:2px;font-weight:800;margin-bottom:24px}
+.spot-copy h1{font-size:clamp(30px,3.1vw,46px);line-height:1.13;margin:0 0 22px;overflow-wrap:anywhere}
+.spot-copy p{font-size:23px;line-height:1.4;margin:0;color:#e1eaf6}
+.spot-footer{position:absolute;bottom:27px;left:40px;right:40px;display:flex;flex-direction:column;gap:7px;padding-top:18px;border-top:1px solid #e3bb5b7a}
+.spot-footer strong{font-size:23px;color:#f2ca70}.spot-footer span{font-size:19px}
+.spot-count{position:absolute;right:30px;top:27px;background:#07182dcc;border:1px solid #d1b47670;padding:8px 12px;border-radius:20px;font-size:13px;color:#f2ca70}
+.spot-poster .spot-photo{background-size:contain;background-repeat:no-repeat}
+.spot-poster .spot-copy,.spot-poster .spot-shade,.spot-poster .spot-footer{display:none}
+#rdiSpot[data-campaign="automatic"] .spot-photo{background-size:contain;background-repeat:no-repeat;background-position:right center;opacity:.6}
+#rdiSpot[data-campaign="automatic"][data-scene="1"],#rdiSpot[data-campaign="automatic"][data-scene="4"],#rdiSpot[data-campaign="automatic"][data-scene="7"]{background:radial-gradient(ellipse at 70% 40%,#72502b,#07182d 70%)}
+#rdiSpot[data-campaign="automatic"][data-scene="2"],#rdiSpot[data-campaign="automatic"][data-scene="5"],#rdiSpot[data-campaign="automatic"][data-scene="8"]{background:radial-gradient(ellipse at 20% 20%,#274c73,#07182d 70%)}
+#rdiSpot[data-campaign="automatic"].spot-poster .spot-copy,#rdiSpot[data-campaign="automatic"].spot-poster .spot-shade,#rdiSpot[data-campaign="automatic"].spot-poster .spot-footer{display:block}
+@media(max-width:800px){#rdiSpot{left:18px;right:18px}.spot-copy{left:24px;width:50%}.spot-copy h1{font-size:28px}.spot-copy p{font-size:18px}.spot-footer{left:24px;right:24px}}
