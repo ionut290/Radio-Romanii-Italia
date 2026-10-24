@@ -50,7 +50,7 @@ function openBusiness(b){
  if(b.hours)inner.append(node("p","🕒 "+b.hours));
  contactLinks(b,inner);dialog.append(inner);document.body.append(dialog);
  dialog.addEventListener("close",()=>dialog.remove(),{once:true});dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
- dialog.showModal();
+ dialog.showModal();window.rdiTranslate?.();
 }
 function drawCard(b,admin=false){
  const el=node("article",undefined,"panel business business-teaser"+(admin?" pending":""));
