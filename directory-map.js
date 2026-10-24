@@ -94,6 +94,7 @@ export function createDirectoryMap({onOpen}) {
       if(!point)continue;
       const [color,symbol]=categoryTheme(b.category), icon=element('span',symbol,'directory-pin');icon.style.setProperty('--pin-color',color);
       const marker=window.L.marker([point.lat,point.lng],{title:b.name,alt:b.name,keyboard:true,icon:window.L.divIcon({html:icon,className:'directory-marker',iconSize:[34,42],iconAnchor:[17,40],popupAnchor:[0,-36]})});
+      marker.on('add',()=>marker.getElement()?.setAttribute('aria-label',b.name));
       marker.bindPopup(()=>popup(b,point),{maxWidth:310,minWidth:220});markerById.set(b.id,marker);markers.push(marker);
     }
     clusters.addLayers(markers);fit();
