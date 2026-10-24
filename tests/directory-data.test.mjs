@@ -9,7 +9,7 @@ test('every enrichment belongs to an existing business and cites public evidence
  assert.ok(values.length>=30);
  for(const [id,b] of Object.entries(detail.records)){
   assert.ok(ids.has(id),id);
-  assert.match(b.detailsCheckedAt,/^\\d{4}-\\d{2}-\\d{2}$/);
+  assert.match(b.detailsCheckedAt,/^\d{4}-\d{2}-\d{2}$/);
   assert.match(b.detailsSourceUrl,/^https:\/\//);
   assert.ok(b.detailsSourceName);
   assert.ok(['official-source','location-conflict','identity-conflict'].includes(b.verificationDetail));
