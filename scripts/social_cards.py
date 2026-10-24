@@ -41,14 +41,36 @@ def source_image(source):
             host = urlsplit(source).hostname or ""
             if not host:
                 raise ValueError("no host")
-            req = Request(source, headers={"User-Agent": "Mozilla/5.0 (RDI social preview)"})
-            with urlopen(req, timeout=5) as response:
-                if not response.headers.get("Content-Type", "").lower().startswith("image/"):
-                    raise ValueError("not an image")
-                payload = response.read(5_000_001)
-            if len(payload) > 5_000_000:
-                raise ValueError("image too large")
-            img = Image.open(io.BytesIO(payload)).convert("RGB")
+            # Some Romanian news CDNs reject generic server clients even
+            # though the image loads in a mobile browser. Try browser-like
+            # headers and the publisher referer before using artwork.
+            attempts = (
+                {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                 "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+                 "Referer": "https://www.digi24.ro/"},
+                {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 Version/18.0 Safari/605.1.15",
+                 "Accept": "image/jpeg,image/png,image/webp,image/*;q=0.8"},
+            )
+            last_error = None
+            for headers in attempts:
+                try:
+                    req = Request(source, headers=headers)
+                    with urlopen(req, timeout=12) as response:
+                        if not response.headers.get("Content-Type", "").lower().startswith("image/"):
+                            raise ValueError("not an image")
+                        payload = response.read(8_000_001)
+                    if len(payload) > 8_000_000:
+                        raise ValueError("image too large")
+                    with Image.open(io.BytesIO(payload)) as candidate:
+                        candidate.load()
+                        if candidate.width < 200 or candidate.height < 200:
+                            raise ValueError("image too small")
+                        img = candidate.convert("RGB")
+                    break
+                except Exception as exc:
+                    last_error = exc
+            if img is None and last_error:
+                raise last_error
         elif source and not source.startswith(("http:", "//")):
             path = (ROOT / source.lstrip("./")).resolve()
             if not path.is_relative_to(ROOT) or not path.is_file():
