@@ -52,9 +52,21 @@ const element = (tag, text, className) => {const el=document.createElement(tag);
 function anchor(label, href, className) {
   const a=element('a',label,className); a.href=href; a.target='_blank'; a.rel='noopener noreferrer'; return a;
 }
+export function evidenceLevel(b) {
+  if (!b?.sourceUrl) return 'rdi';
+  if (b.verificationDetail === 'official-source') return 'official';
+  if (b.verificationDetail === 'public-directory') return 'third-party';
+  return 'basic';
+}
 export function sourceNote(b, point) {
   const box=element('div',null,'directory-provenance');
-  box.append(element('span',b.sourceUrl ? mapText('source') : mapText('managed')));
+  const lang=window.rdiLanguage?.()||'ro';
+  const names={
+    ro:{official:'Detalii din surse oficiale · cu referință', 'third-party':'Detalii din repertorii · de confirmat',basic:'Fișă de bază · informații în completare',rdi:'Listare publicată de RDI'},
+    it:{official:'Dettagli da fonti ufficiali · con riferimento', 'third-party':'Dettagli da elenchi pubblici · da confermare',basic:'Scheda iniziale · informazioni da completare',rdi:'Scheda pubblicata da RDI'},
+    en:{official:'Details from official sources · cited', 'third-party':'Directory details · please confirm',basic:'Basic listing · more information needed',rdi:'Published by RDI'}
+  };
+  box.append(element('span',(names[lang]||names.ro)[evidenceLevel(b)]));
   if(point)box.append(element('small',mapText(point.precision==='city'?'approximate':'position')));
   if(b.sourceUrl && safeUrl(b.sourceUrl))box.append(anchor(mapText('reference')+' ↗',safeUrl(b.sourceUrl)));
   return box;
