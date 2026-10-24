@@ -25,15 +25,18 @@ export function businessReviewLinks(b){
  const nameCity=[b.name,b.city,"Italia"].filter(Boolean).join(" ");
  const details=b.reviewLinks&&typeof b.reviewLinks==="object"?b.reviewLinks:{};
  const google=reviewUrl(details.google||b.googleMapsUrl,["google.com","google.it","maps.google.com"]);
+ const placeId=/^[A-Za-z0-9_-]{8,255}$/.test(b.googlePlaceId||"")?b.googlePlaceId:null;
+ const mapsSearch="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q)+(placeId?"&query_place_id="+encodeURIComponent(placeId):"");
  const facebook=reviewUrl(details.facebook||b.facebookUrl,["facebook.com","fb.com"]);
  const tripadvisor=reviewUrl(details.tripadvisor||b.tripadvisorUrl,["tripadvisor.it","tripadvisor.com"]);
  const trustpilot=reviewUrl(details.trustpilot||b.trustpilotUrl,["trustpilot.com"]);
  const out=[
-  {name:"Google Maps",url:google||"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q),direct:!!google},
+  {name:"Google Maps",url:google||mapsSearch,direct:!!google||!!placeId},
   {name:"Facebook",url:facebook||"https://www.facebook.com/search/pages/?q="+encodeURIComponent(nameCity),direct:!!facebook}
  ];
  if(/restaurante|restaurant|turism|hotel|cazare|ospitalit/i.test(String(b.category||"")))out.push({name:"Tripadvisor",url:tripadvisor||"https://www.tripadvisor.it/Search?q="+encodeURIComponent(nameCity),direct:!!tripadvisor});
  if(b.website||trustpilot)out.push({name:"Trustpilot",url:trustpilot||"https://it.trustpilot.com/search?query="+encodeURIComponent(b.name||""),direct:!!trustpilot});
+ const source=reviewUrl(b.sourceUrl,["deafara.com"]);if(source)out.push({name:"De afară",url:source,direct:true});
  return out;
 }
 export function directoryIntro(b){return splitDirectoryDescription(b.description).intro;}
