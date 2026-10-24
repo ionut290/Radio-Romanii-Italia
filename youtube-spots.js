@@ -30,7 +30,8 @@ function render(){
  const duration=Number(nowPlaying.duration)||0;
  // Fail back to news if metadata disappears or the track outlives its end time.
  if(performance.now()-lastSuccess>10000||(duration>0&&elapsed>duration+3)){stop();return;}
- const timed=duration>0&&duration<active.scenes.length*active.sceneSeconds
+ // Exactly nine scenes across the *whole* audio spot (e.g. 90s = 10s each).
+ const timed=duration>0&&active.scenes.length
   ?{...active,sceneSeconds:duration/active.scenes.length}:active;
  const {scene,index}=sceneAt(timed,elapsed);
  const frame=active.key+'|'+active.trackId+'|'+index;
@@ -38,7 +39,7 @@ function render(){
  lastFrame=frame;
  box.dataset.scene=String(index);box.dataset.campaign=active.id||'automatic';
  box.classList.toggle('spot-poster',scene.poster===true);
- photo.style.backgroundImage='';
+ // Keep the previous photograph visible until the next one is ready.
  const img=preloaded.get(scene.image);
  if(img?.complete&&img.naturalWidth)photo.style.backgroundImage='url('+JSON.stringify(scene.image)+')';
  else if(scene.image){
@@ -48,7 +49,9 @@ function render(){
   if(!img){pending.src=scene.image;preloaded.set(scene.image,pending);}
  }
  photo.getAnimations().forEach(a=>a.cancel());
- photo.animate([{transform:'scale(1)'},{transform:'scale(1.045)'}],{duration:5000,fill:'forwards'});
+ const displayMs=(Number(timed.sceneSeconds)||5)*1000;
+ photo.animate([{transform:'scale(1)'},{transform:'scale(1.065)'}],{duration:displayMs,fill:'forwards',easing:'linear'});
+ photo.animate([{opacity:.42},{opacity:1}],{duration:850,fill:'forwards',easing:'ease-out'});
  heading.textContent=scene.title||active.title;
  copy.textContent=scene.text||'';
  box.querySelector('.spot-footer strong').textContent=active.footer||'Radio Românii din Italia';
