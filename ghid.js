@@ -1,4 +1,4 @@
-import {createDirectoryMap, mergeBusinesses, filterBusinesses, categoryTheme, sourceNote, safeUrl} from "./directory-map.js?v=20261024-atlas-4";
+import {createDirectoryMap, mergeBusinesses, filterBusinesses, categoryTheme, sourceNote, safeUrl} from "./directory-map.js?v=20261024-wheel-1";
 import {buildDirectoryExtras,directoryIntro,composeDirectoryDescription,profileUrlAllowed} from "./directory-enrichment.js?v=20261024-verified-2";
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
