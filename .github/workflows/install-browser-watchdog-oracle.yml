@@ -1,0 +1,69 @@
+name: RDI - Installa watchdog Chromium su Oracle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'youtube-live/install-browser-watchdog.sh'
+      - '.github/workflows/install-browser-watchdog-oracle.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-youtube-browser-watchdog-install
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out installation script
+        uses: actions/checkout@v4
+
+      - name: Validate installer
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash -n youtube-live/install-browser-watchdog.sh
+
+      - name: Configure restricted Oracle SSH key
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo "::error::Missing RDI_ORACLE_SSH_KEY_B64 secret"; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Missing RDI_ORACLE_KNOWN_HOSTS secret"; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1 || {
+            echo "::error::Oracle SSH private key is invalid or passphrase-protected"
+            exit 1
+          }
+
+      - name: Install browser-only watchdog without interrupting YouTube
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" \
+            -o BatchMode=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=12 \
+            ubuntu@129.151.255.41 \
+            'sudo bash -s' < youtube-live/install-browser-watchdog.sh
+
+      - name: Verify watchdog and YouTube relay remain active
+        shell: bash
+        run: |
+          ssh -i "$HOME/.ssh/id_rdi" \
+            -o BatchMode=yes \
+            -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=12 \
+            ubuntu@129.151.255.41 \
+            'systemctl is-active --quiet rdi-youtube-browser-watchdog.timer && systemctl is-active --quiet radio-youtube-visual.service && echo "Browser watchdog installed; YouTube visual relay is still active."'
