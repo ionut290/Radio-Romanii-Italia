@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-25",
   "scope": "Partial public-source collection, not the complete 1,914-entry third-party catalog. Source claims about Romanian links, current operation and coordinates require confirmation.",
   "sources": [
     {
@@ -9460,8 +9460,8 @@
       "name": "Atlassib · Reggio Calabria",
       "category": "Transport România–Italia",
       "city": "Reggio Calabria",
-      "province": "",
-      "region": "",
+      "province": "RC",
+      "region": "Calabria",
       "address": "VIA GUGLIELMO PEPE.26",
       "phone": "0039 3278312495",
       "website": "https://www.flixbus.ro/atlassib/agentii",
@@ -9472,7 +9472,8 @@
       "verification": "public-source",
       "locationPrecision": "city",
       "lat": null,
-      "lng": null
+      "lng": null,
+      "provinceName": "Reggio Calabria"
     },
     {
       "id": "public-5893950cb383fa3c",
