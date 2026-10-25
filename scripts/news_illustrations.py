@@ -16,6 +16,18 @@ COLORS = {
     "știri consulare": ("#153e64", "#427c9b", "#edc26b"),
     "drepturile muncitorilor": ("#183e5b", "#408c81", "#e9b957"),
 }
+AI_IMAGE_BY_TOPIC = {
+    "community": "community",
+    "finance": "economy",
+    "health": "health",
+    "travel": "travel",
+    "institution": "consular",
+    "education": "community",
+    "justice": "workers",
+    "weather": "travel",
+    "general": "community",
+}
+
 TOPICS = [
     (("meteo", "ploi", "ploaie", "vreme", "tempo", "allerta"), "weather"),
     (("sanit", "medic", "spital", "salute", "ospedal"), "health"),
@@ -93,9 +105,12 @@ def fill_missing_images(items):
         fallback = "./" + path.as_posix()
         item["fallbackImage"] = fallback
         if not item.get("image"):
-            item["image"] = fallback
-            item["imageType"] = "editorial-illustration"
-            item["imageAttribution"] = "Ilustrație editorială RDI (nu este fotografie a evenimentului)"
+            category = str(item.get("category") or "").casefold()
+            topic = topic_for(item)
+            image_key = "workers" if category == "drepturile muncitorilor" else AI_IMAGE_BY_TOPIC.get(topic, "community")
+            item["image"] = f"./editorial-images/ai-{image_key}-rdi.jpg"
+            item["imageType"] = "ai-editorial-illustration"
+            item["imageAttribution"] = "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
     for path in OUT.glob("rdi-auto-*.svg"):
         if path.name not in used:
             path.unlink()
