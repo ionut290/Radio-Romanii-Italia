@@ -1,15 +1,15 @@
 {
-  "news_updated_at": "2026-10-25T15:52:44.512833+00:00",
+  "news_updated_at": "2026-10-25T16:03:55.177645+00:00",
   "editorial_updated_at": "2026-10-25T15:34:13.240143+01:00",
   "translations_updated_at": "2026-10-25T14:59:14.404190+00:00",
   "feed_total": 70,
-  "feed_extended_400": 19,
-  "feed_missing_body": 50,
+  "feed_extended_400": 26,
+  "feed_missing_body": 43,
   "feed_short_body": 1,
   "editorial_total": 19,
   "archived_editorials": 26,
   "translation_records": 43,
-  "pending_total": 112,
+  "pending_total": 123,
   "pending": [
     {
       "title": "Lavoratore costretto a uno straordinario “abnorme”. Il Tribunale: va risarcito per danno psicofisico - la Repubblica",
@@ -194,12 +194,6 @@
     {
       "title": "Banche, l’IA entra nel conto. l’allarme negli Stati Uniti - la Repubblica",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYURPUXRFTGRFRVZveEZPYmYzZU1Pa19nOFR1Ui1sZTduUWRVVl9wdTdMdmp1M3I1OFlyLXI5NW5IVVNCR0poY041TzRTeFpjdll2S3hZdjd3WmFZQlZOUTI4RTNJZGl0aVc3d2tnNEQxc2JFcEVKeTJGOXZMc3RVdnFzSXdwWWw1NmZKMkxTeVZKSDNYbFVySGhJUThJQTRIWWdwOVNxT0M3WE5Rd3RiLVVEa2hGZkhF?oc=5",
-      "reason": "Approfondimento verificato non ancora disponibile; fonte originale e riscontri da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Lollobrigida: \"Ristorazione motore economico, consumi per oltre 100 miliardi\" - Touchpoint News",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVGtZbkRvOUp2ODBFQnIxR1JyZy1nME1WYnlJM0RUQzVESHhwbTFIVnVISkZKVjcwOXR4dXU1WkNHOXpuQnhBS3pyWTJEZ0ZNTWl4YnBrc3ppckFhaTlTSXdORGZzRlhlQjZ1Vnp1b2V6cWlpT281d0JhVU9pWjlTOW5mQTh1aG9EV1dwQjN0Vjh2MU9yZndKQTRHVXlhUFdTeV9qRlJIanY4ajlWVzh4VFJVMA?oc=5",
       "reason": "Approfondimento verificato non ancora disponibile; fonte originale e riscontri da consultare",
       "attempts": 0
     },
@@ -682,13 +676,99 @@
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNS2QxRU1IUzFCa2hrMXVZbW00WHZnMjNJYndkbllpb1lSLU42LXJjSzZ5V0YydTJpZ2lzY0EyUk1USWNWYlFTY3YxVmFLYktiX3Z0eWt2V2htRkx5UVE1VTF3UE1obDJ6cUhqclR3QWViMG9FcGFYWDV2XzBFMV9SQnZIYW41cDJi?oc=5",
       "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
       "attempts": 0
+    },
+    {
+      "title": "Dan Motreanu: Grindeanu împarte sarcini miniștrilor, în timp ce Niculescu rămâne cu vizitele oficiale și postările de protocol",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/dan-motreanu-grindeanu-imparte-sarcini-ministrilor-in-timp-ce-niculescu-ramane-cu-vizitele-oficiale-si-postarile-de-protocol-4008177",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Arabia Saudită redeschide parțial aeroportul din Riad, după atacurile rebelilor Houthi. Avertismentul transmis de yemeniți",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/arabia-saudita-redeschide-partial-aeroportul-din-riad-dupa-atacurile-rebelilor-houthi-avertismentul-transmis-de-yemeniti-4008145",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Schlein: 'Con gli alleati faremo in fretta, manca l'ultimo miglio'",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/schlein-con-gli-alleati-faremo-in-fretta-manca-lultimo-miglio_598626db-d4d8-46f7-8dd6-934e20753907.html",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Serie A: Atalanta-Frosinone 4-3 DIRETTA e FOTO",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-atalanta-frosinone-4-3-diretta-e-foto_a77748e3-d2d7-4936-94c2-0fa83f6041ae.html",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Iranul, mesaj pentru SUA și Israel în plin impas al negocierilor: „Politica noastră va rămâne aceeași”",
+      "url": "https://www.digi24.ro/stiri/externe/iranul-mesaj-pentru-sua-si-israel-in-plin-impas-al-negocierilor-politica-noastra-va-ramane-aceeasi-4008129",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Un consilier de la Kremlin vrea Europa la masa negocierilor de pace: „Nu e suficient să discutăm cu Kievul”",
+      "url": "https://www.digi24.ro/stiri/externe/un-consilier-de-la-kremlin-vrea-europa-la-masa-negocierilor-de-pace-nu-e-suficient-sa-discutam-cu-kievul-4008093",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "”Laudele” lui Sorin Grindeanu pentru Ilie Bolojan și Direcția pe care PSD vrea să o dea României - iDevice.ro",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdGZOOWtPM0h6T21tNTJGcGx1NUNmNUQ2UDNRNEc2clZJYWV5ak50MGlUQ1N2Vm04THctUGdPclpmanJ2QXd2a1FaRFJHdVdWOXdiVmZ5RHJqeVR0NXpWaFdmMTNEYWhad0h5Tk1SS2xrZ25RdlU1X051VkNzRDYwTzljcy0yVjNSS2ZrbnZBS3kwckpKdTZaZ1RxaVg4UW91WFRmQ2ZaYw?oc=5",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Prioritățile Oficiale Anunțate de Florin Manole pentru Români după Preluarea Mandatului de Ministru al Muncii - iDevice.ro",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWTdhb1NycVFJYlNxZ19YNlVuZDlfMTk0THFYcEl3RGhrSUxsWU9PTlNrUC1GdEEzc3kwZDBEckFIM0QwTEd6dTM2TXlOM09Rb3FzYkZTeUVhcVd1Z04wNGFnM3d0TXE1XzZFazZKUVYxREtWQUlrNlZYdzdGRkdkRkRkaXplZmpTT2ZVY2d2SmdwVTgxYnotN3k5QnJmSVM5RVkxNXRBbHhDZnZTWm1CbVRlaGYxQ3hDMXJhMWVn?oc=5",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Meteo Padova, lunedì 26 ottobre asciutto e massime in aumento: il bollettino ARPAV delle 13 - Padova24Ore",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBCRTBuZVFwZ25wYnFFTDR5M1lOaGhPblpCR3h5NXZGa09hV3U0ZXBLZDdsdWl4d29yb244OVlBMUVLUVNPaDBPVUtiTTVsN243YjRvWEViM2trWG91NW1MNWpabTc3WEg4YnpZcUlaOHp1em40dFhJbDh0Mkc?oc=5",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
     }
   ],
   "recent_news": [
     {
+      "title": "Ilie Bolojan, dezvăluiri despre cum a ajuns să fie propus premier. „Probabil că și cei care au fost contactați n-aveau soluții”",
+      "category": "România",
+      "published": "2026-10-25T16:01:00+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/ilie-bolojan-dezvaluiri-despre-cum-a-ajuns-sa-fie-propus-premier-probabil-ca-si-cei-care-au-fost-contactati-n-aveau-solutii-4008205",
+      "words": 0,
+      "source": "Digi24"
+    },
+    {
+      "title": "Medvedev cere Statelor Unite să-l asasineze pe Zelenski și îi spune lui Trump cum să facă asta",
+      "category": "România",
+      "published": "2026-10-25T16:00:49+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/medvedev-cere-statelor-unite-sa-l-asasineze-pe-zelenski-si-ii-spune-lui-trump-cum-sa-faca-asta-4008185",
+      "words": 0,
+      "source": "Digi24"
+    },
+    {
+      "title": "Serie A: Atalanta-Frosinone termina 4-4 CRONACA e FOTO",
+      "category": "Italia",
+      "published": "2026-10-25T16:00:29+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-atalanta-frosinone-termina-4-4-cronaca-e-foto_a77748e3-d2d7-4936-94c2-0fa83f6041ae.html",
+      "words": 0,
+      "source": "ANSA"
+    },
+    {
+      "title": "Româncă ținută într-o baracă și obligată să se prostitueze în Italia. A avut încredere în omul de care se îndrăgostise - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-25T15:49:56+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNd0FMS1VmUXlVaGljQ3lWUEpCclpaSFZGQ0lHUmY2VHY3ekRjaGF6QTRoMUNYdjBFejhmSkpfeFVYRl9LbEhLWkgyZEhkYU92eWlCT3QwMzJLSWRhTU93bTRISF9SNllrZmRWMjhoZkVuUHRIXzFRQVk1NEVGRU43UGg5UWJXNndMTU9LZjY3cDJUOGxfUjU3dFJlX0V0d2hmVy1GYUZ2XzF4QUdBS0tveTZ1T1hMMVBIbUk4TXliSHBKSTJwc3hnTVhwX0ZYWDRUaFgwaHBqN2g?oc=5",
+      "words": 0,
+      "source": "Rotalianul – Revista românului din Italia"
+    },
+    {
       "title": "Domani la richiesta di convalida del fermo per Youssef Siher. Anche la moglie è indagata",
       "category": "Italia",
-      "published": "2026-10-25T15:43:17+00:00",
+      "published": "2026-10-25T15:44:02+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/domani-la-richiesta-di-convalida-del-fermo-per-youssef-sehir-tra-le-accuse_dde34ca0-69ba-4c10-86ed-1c191da76dca.html",
       "words": 0,
       "source": "ANSA"
@@ -714,7 +794,7 @@
       "category": "Italia",
       "published": "2026-10-25T15:30:25+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/25/musetti-torna-alla-vittoria-dopo-4-anni-e-fa-suo-il-torneo-di-lione_6f02948e-209f-4776-bd6f-f5a249a06116.html",
-      "words": 0,
+      "words": 453,
       "source": "ANSA"
     },
     {
@@ -738,7 +818,7 @@
       "category": "România",
       "published": "2026-10-25T15:15:09+00:00",
       "url": "https://www.digi24.ro/stiri/ambasada-sua-militarii-americani-si-romani-lucreaza-umar-la-umar-pentru-siguranta-flancului-estic-al-nato-4008147",
-      "words": 0,
+      "words": 422,
       "source": "Digi24"
     },
     {
@@ -746,14 +826,6 @@
       "category": "Italia",
       "published": "2026-10-25T15:14:56+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
-      "words": 0,
-      "source": "ANSA"
-    },
-    {
-      "title": "Serie A: Atalanta-Frosinone 4-3 DIRETTA e FOTO",
-      "category": "Italia",
-      "published": "2026-10-25T15:11:35+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-atalanta-frosinone-4-3-diretta-e-foto_a77748e3-d2d7-4936-94c2-0fa83f6041ae.html",
       "words": 0,
       "source": "ANSA"
     },
@@ -886,14 +958,6 @@
       "source": "Rotalianul – Revista românului din Italia"
     },
     {
-      "title": "Meteo Padova, lunedì 26 ottobre asciutto e massime in aumento: il bollettino ARPAV delle 13 - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-25T12:48:15+00:00",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBCRTBuZVFwZ25wYnFFTDR5M1lOaGhPblpCR3h5NXZGa09hV3U0ZXBLZDdsdWl4d29yb244OVlBMUVLUVNPaDBPVUtiTTVsN243YjRvWEViM2trWG91NW1MNWpabTc3WEg4YnpZcUlaOHp1em40dFhJbDh0Mkc?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
-    },
-    {
       "title": "Roberto Vannacci, „masculul alfa” al politicii italiene: cum vrea să câștige votul manosferei promovând „patriarhatul mediteranean”",
       "category": "România",
       "published": "2026-10-25T12:39:02+00:00",
@@ -918,20 +982,12 @@
       "source": "Digi24"
     },
     {
-      "title": "Pontevigodarzere, terminata la bonifica della bomba: il Comune autorizza il rientro a casa - Padova24Ore",
+      "title": "Lavoro, opportunità di impiego nella Ferrero: assunzioni anche in Campania - Il Mattino",
       "category": "Italia",
-      "published": "2026-10-25T11:34:22+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNS2QxRU1IUzFCa2hrMXVZbW00WHZnMjNJYndkbllpb1lSLU42LXJjSzZ5V0YydTJpZ2lzY0EyUk1USWNWYlFTY3YxVmFLYktiX3Z0eWt2V2htRkx5UVE1VTF3UE1obDJ6cUhqclR3QWViMG9FcGFYWDV2XzBFMV9SQnZIYW41cDJi?oc=5",
+      "published": "2026-10-25T11:27:35+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdUwzbTZsWGcyaXlySWpUTFRGU2EwSDB6N1p4dERHSmNTbWxCcVo3V0RMYzRlLVdaN294NE5FSk1MbV8xQlhOaTZ0UWNlVnBYOEF4MXNEOUd2bkNrQV93eFlrQmFBMXdxbTgwNFREX2RDcXc5TmtLalJpM01rU0F1YmhWcHo3NktGQXg5SDZTTdIBjgFBVV95cUxQa2s1Mm1fcHNYd0NtVFRpa1oxRGRsX3hvUElKVFZFMndXS25YRmgzT21kMkNtWTVVYzVtdjVqNEhyS2E3bnVRWUxWb19YQmJqemhISm1fRGlESFkxd1dvVGRTell4RVlkRnBaa2hNNF82MlpSdkpjV1BYT1dIOExaVDVhalJiVEpfc0FreXdn?oc=5",
       "words": 0,
-      "source": "Padova24Ore"
-    },
-    {
-      "title": "Ucraina a lansat un atac masiv cu drone asupra orașului rusesc Belgorod: doi morți și distrugeri de amploare",
-      "category": "România",
-      "published": "2026-10-25T11:32:55+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/rusia/ucraina-a-lansat-un-atac-masiv-cu-drone-asupra-orasului-rusesc-belgorod-doi-morti-si-distrugeri-de-amploare-4007987",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Il Mattino"
     },
     {
       "title": "Netanyahu posta la foto di un'atomica su Tel Aviv, '2 anni per finire il lavoro con l'Iran'",
@@ -958,28 +1014,12 @@
       "source": "Touchpoint News"
     },
     {
-      "title": "Oana Gheorghiu, după criticile lui Grindeanu la adresa lui Bolojan: „Atacurile politice nu plătesc facturi și nu reduc deficitul”",
-      "category": "România",
-      "published": "2026-10-25T11:03:04+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/oana-gheorghiu-dupa-criticile-lui-grindeanu-la-adresa-lui-bolojan-atacurile-politice-nu-platesc-facturi-si-nu-reduc-deficitul-4007969",
-      "words": 0,
-      "source": "Digi24"
-    },
-    {
       "title": "Economia e lavoro, il sindaco Luca Salvetti: \"Livorno cresce e sta cambiando il suo futuro, altro che autocelebrazioni\" - LivornoToday",
       "category": "Italia",
       "published": "2026-10-25T11:02:59+00:00",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRVVqTXZydk1JeS1Rc0tZeTNkT0VfMEdKenlNcUt3QXN3am5LSndsWUJMYlhma2phQS1Yc1dyWk52ZGEyM0REOFVVbUwwMDVoRlJtcnc0dklBMWhhd3lZREV6bFM2T19TclRReDZUeXYzV3dZdjM4ODhwMzlCMTNpcE9JbDhaZw?oc=5",
       "words": 0,
       "source": "LivornoToday"
-    },
-    {
-      "title": "Montegrotto linea M, deviazione per la Castagnata fino alle 20 - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-25T10:49:49+00:00",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1reFEyQ1NNY3BKT3RvdXk1dG95SW5odE1rbmZVblFvbHRhVGF4WERtbzE4dHJ0OVpPMjB0bGlwdmxzQnFEN1FQeG5US3JLQlRtOGlZSDZFaC1aMkU1VzFTTG9oSGlobDF0M1RYM2Y1UUp3aElNcVJHMw?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
     },
     {
       "title": "Carlo Rambaldi, a San Diego cento artisti celebrano il suo centenario",
@@ -998,22 +1038,6 @@
       "source": "Torino Plus"
     },
     {
-      "title": "Notizie di Padova ore 10: bomba day, carcere, prevenzione e cinema oggi in città - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-25T09:50:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1Ebng1U25QYUFnbEJCbTBMZWcwdWFPZkxYcU5qMWNTa0t1aW9iZm1TOEprR2lkb2ZtSDFCNlk0cmVvZkw5MDYxRTVneTNfTmtHb2ZVU1dodzZfWWw0aDJ2bnZQS1hjQ2V6dmdxbEwwSWc?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
-    },
-    {
-      "title": "Scuole di Padova, proposta da 100 milioni per i consumi - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-25T09:49:27+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLU1STlcxZFUtN0J1d1RnMXlhWWNxV2E4empQcUo3OWZXZzdjQWkwSFlaQktiZGRLRktpSmRaY2RlWWo3ZFBUeDJTVEotcHZ1VFQ2VHNvR3JrekpnWkVBWVh2MlVUNHJkZThJcXk2aFFhbXFybXQ5czRFVXhvVExWalNnSQ?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
-    },
-    {
       "title": "Barack Obama: Casa Alba a lui Donald Trump Arată ca o Fabrica de Cheesecakes a lui Saddam Hussein - iDevice.ro",
       "category": "România",
       "published": "2026-10-25T09:15:46+00:00",
@@ -1028,14 +1052,6 @@
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbEszZkJrdjZFaFRlRUFMLUhMNUM0dmVMVmM4X29ycW83dTlUd1M2TUFiSG11bFRFUGo4RjZWZGRPUG82bEZMZ2REMEhyTzBnNnY3TFRxME9xay0wUThQRWFVd3dyRFJMdkpSMWxoNGY2Q1Rtb0tXOEtkekZocHNUNURUSlNPVFR0ODRoQnBwMEduOTJER05KZWE1NjV0NkJHWHMwMUJaMmtieTRkWXN4OVI3TjlUVjJ5c001bzBwLXJTU3NxNVFpWGhHSGxmZTBG?oc=5",
       "words": 0,
       "source": "la Repubblica"
-    },
-    {
-      "title": "Italianissima a Padova, oggi musica e solidarietà per LILT - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-25T08:50:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XLWFlQXNNeTZjNXB4SktZVmtZT0VCUWNKaGtCTUgyeVpucEhkcHM2VXVjQ2FIYkNYblJqU3pKWVdHX2FpelFPTzFyTkh6Q0hzMzU3Y0RKUTAwekVKWWh1LWFmVHZjSEJXdTlYNzNvZjg3OTFUWEtzSE9XY3pFdnc?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
     },
     {
       "title": "Românii din Italia vor avea o nouă biserică. „Un proiect costisitor, lucrările avansează în funcție de fondurile disponibile” - Rotalianul – Revista românului din Italia",
@@ -1118,22 +1134,6 @@
       "source": "Touchpoint News"
     },
     {
-      "title": "Notizie di Padova ore 23: tensione in stazione, Padova corsaro e gemelli da record - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-24T21:25:38+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBZS0dCV2lIY29mQ2VkZ3Vmb2xZTlpSSEIzUk5aXzZMUDZ5Q3EzbkUwTW05VFpmVk8yekMybGUtT21QTlBTTzhoanF2ZTBmOVNDaWd5bjNMbkpYUmM4TGRUajRiMFZCcnN5U0ZBQ0VNZTc?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
-    },
-    {
-      "title": "Albignasego e Casalserugo, progetto contro gli allagamenti: risorse da cercare nel 2027 - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-24T20:48:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNY2xRd2xVQ3MwRm9xYlBrUjhQMk05T0F6SENQN3BBTm03NVJwbU83WnIzdG5NM2J0cVRDbE5wc2ZfU1NYY18yZGp4NldWMTNuYVBJb19MUjBUVzFJdEhJRDV0R2hYU1Z4SjhwMVlrSXhaTHc4MnN3cnV0NUJRLTkyTGVR?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
-    },
-    {
       "title": "'Il futuro è passato da qui', a Firenze il Festival delle Regioni",
       "category": "Italia",
       "published": "2026-10-24T19:19:40+00:00",
@@ -1156,6 +1156,22 @@
       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNVHlYYW1STGZNdkFzaTNWNlN2NHYweWJVQXVEb2IyZGFsWnk3TUYzTkt3UWhyc1RnQVJGR1NMcDhEcUVCYm1vajFmR0EwZW9rQmdmMWZzVTg3WG1zWWU0dVNSa2VkenBzeFJkbWdSSjZOWmpMalhOdzhmdUhfMzZ5WHlIUmk1T3BtNTZNak1ReGtIOXl4elFMLTlmT3VHRU1kSGlkWnZ0amhfUFZPdlF1c3NmLU5Tb01aUUdQM09nenF4Y0RYcXgyTEQ5Q3I5Y2ZQejNOSGNEc2RMMVl1TzIwblVZT0lxZEdrbE1hbzhpcWYxUmVRVnpud3pzMFVkbWhlZ1E?oc=5",
       "words": 468,
       "source": "Rotalianul – Revista românului din Italia"
+    },
+    {
+      "title": "Schiacciato tra un camion e un muro: muore sul lavoro un 48enne a Baveno - RaiNews",
+      "category": "Italia",
+      "published": "2026-10-24T13:39:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPMWtXWmRiTFpfVWJtWk5hem9zQV90Sjl3N0NZZG9TM19ZWUhKVWFyRndEWUt4SXlockNEZUNkdU1DX3RSTWlEdFlYdEJuN3NZUGJyeGVJWkxWcFA5YmhzdXdjRmNqaFQxRExnTldnVEIwODdFN053Q19XLWxlLUpURGtPbU5qWjRINnZNRGt3NDZIeWJEVE41ejRpSTdNQmprb3dqY3J4NWtBS1htbDlZajRCdkhYYnJXYnZRUGRZYTdvU3l1eVd3ZnU2THFweml6RWc1SGJUREdxa3JXbklfRTNSd1hIYkND0gHuAUFVX3lxTFBOYWdPb3dkVjNpUGpSbU5KTDVFUk9iUTBvX1l5QlFGbkdzR1liWjFrT0Nhc1cwODFlZEsteEVKMk9XcGJEbTN4U05DNnc2UHZJRGNZWXo5RUpyRl9RT21mZnNCUmpTOEhTTHlIN1lJQW1XZDZhQmxXQUV5Y3ZoWHJJMnljVUVIQ0JSN2NwS0ltejFnTXgzak9vck1FVTl4UTE5TzA1ZHZHZmNhMjY1a0xfUDZ5YnozN3hoSWF0OENWNmdneGg5cUgxYWFxQ0FzMnVxNWNXVklSbkEzd01xcjNrdU1qZ2M2OFViYWNIb2c?oc=5",
+      "words": 456,
+      "source": "RaiNews"
+    },
+    {
+      "title": "Lavoro, Confintesa: \"Contratti pirata costano fino a 12mila al lavoratore\" - Touchpoint News",
+      "category": "Italia",
+      "published": "2026-10-24T13:38:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYlNjZjItdUNKVWNMZzE1emZkYURfeDdxV0pGcDVFZGdJcXY2QTUxbG4yZEViMjRScnRNN3ZhVHh1OGRwRTkzWjE4aWFmb3cyUUFrMkRvUTVkYkRUVXR2RjBNRXp1Tk1maDBYTGZvSUxhVEJDZ2loMWhoaWFfSjBrUTZqeUJzM2x0VnhXVmh1YzFDV1VBeDNLcnV0YXNCSWFrd3NUd0hnVUl1Szg5czI4?oc=5",
+      "words": 436,
+      "source": "Touchpoint News"
     },
     {
       "title": "Rareș Bogdan, critici la adresa lui Bolojan: „A dat-o de gard total”. Ce soluție propune pentru reducerea... - Digi24",
@@ -1182,6 +1198,14 @@
       "source": "Kanal D Romania"
     },
     {
+      "title": "L’Italia bloccata dai tir che si è rimangiata la cura del ferro - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-24T11:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU2VrczNONTJjTVlzaGZXdlB6dFQ2azAtNWJtMjc2dzl1dlFlcjhBQ2wxRkhTWklNa2RsS2NfY0hiMWFySjNqZEdNa2NVbDQyY2xsbnhZeVdLOFFOV3R4bU5tVnFldURiZWNreGc5VG1td2FmV2hXWjAyT0hWVExJUnVpaTdzdWdZUHpXeUZESEFGODBqeGxkWVhVRWVJbHJLX25QWUpWZW5NUkh6T0Q0VXJ5N1VuRTVjM1dYTzJrcjhXUQ?oc=5",
+      "words": 429,
+      "source": "la Repubblica"
+    },
+    {
       "title": "Moldoveancă din Italia, condamnată pentru hărțuirea unei doctorițe. Susținea că i-au fost furate ovocitele și copiii născuți din ele erau ai săi - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-24T10:58:42+00:00",
@@ -1198,12 +1222,36 @@
       "source": "RaiNews"
     },
     {
+      "title": "In Italia la ricchezza è degli anziani. Le ragioni dei giovani e il torto della violenza - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-24T06:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQS0RaRV8ybTJjbFRTLVpKanBEcDNQMGpReGROU1dObHFyWHlmcFBvSzltZmRodHdkbnhNdXVzWVo3X0NHbUdzbzh4azZHNHZGWjR4OWZWa01TR1RCN2R3SExpbGhMZERGci02V1VSYmlnOUJOYzNVRnJzV3I0SFg2SHFZLWlFRFZtYW9ZMWQ5eEgwb2QzVlhZYUxsMThfR0JIYUwzWVEzdUc3YmlDcmRYQ2J1N0I3dkNJd2NRaXFfTHJ1UVU0SmpsY1NZaWZEY2xOVVlCWm9UdGZIcmlad1E?oc=5",
+      "words": 504,
+      "source": "la Repubblica"
+    },
+    {
       "title": "Ora de iarnă 2026 – în această noapte ora 04:00 devine ora 03:00 - ZCH",
       "category": "România",
       "published": "2026-10-24T05:26:26+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOYlZ0Nm5wS2sydGtfNnVJblRmNUlZV0NCd1JiMEVleFlySlo1VGZxTjdRMUE1NU9FYU1KeVcxcUgyNVZCR24xM2ZmYXNDa3U2cTBLb1lYX3JydDR2cFJpMHVpMUE5X0YtSzNBZFl3cV9jbHlTX1F4RDgwNjJ6N0EyUml3?oc=5",
       "words": 451,
       "source": "ZCH"
+    },
+    {
+      "title": "La minaccia di El Niño:“Danni per 7mila miliardi all’economia globale” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-23T23:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNSnVMdTViaElXSmFaWnF3M1lzUXNuZFZzQlAxUFpJR1pMNlBPb01mNEpYSFg3SDVEYURmYU4zWmF6TEVkT2J4SklOMTRUOXFQa0lLS1ZweUhYN3VrNnVteWxWWVVBMFFhMFNFQzFfaExxWkhsX2VtWjNoemhDZ0hKRHhZbGJkV1VqZjdveTMzaEU2bFFST1U5YWFsQU9wUWFjLXFMOElfMlB4RDJoOE5lbXlTQlRLa3VEdkI3bw?oc=5",
+      "words": 452,
+      "source": "la Repubblica"
+    },
+    {
+      "title": "Manovra, mini Irpef per il primo impiego o bonus in busta paga a fine anno. Le opzioni per i giovani - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-23T23:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQakpob2xSSlZhQU03NHhpOUFSSm1kNVd3WnBYbkEtQlRLS3hlQXNsY3J3YXVJME1IUTd3TjY5OHhZQmZ0UlBacEFGY0YyNktUQzlFbjctVVkyLWJOaTF6VTMzdVlIdk9JdlFqY0dOSXBzSms4cGxFRzVmWDJxVlNZWndWN0w4eEdBbWdTUmpuNVZsU1U?oc=5",
+      "words": 0,
+      "source": "la Repubblica"
     },
     {
       "title": "Badantă condamnată la șase ani de închisoare în Italia. A obținut bani și proprietăți de peste două milioane de euro de la o bătrână - Rotalianul – Revista românului din Italia",
