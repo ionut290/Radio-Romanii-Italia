@@ -13,7 +13,8 @@ out center tags;`;
 const response = await fetch(endpoint, {
   method: "POST",
   headers: { "content-type": "application/x-www-form-urlencoded", "user-agent": "RDI-Ghid-Candidate-Importer/1.0" },
-  body: new URLSearchParams({ data: query })
+  body: new URLSearchParams({ data: query }),
+  signal: AbortSignal.timeout(45000)
 });
 if (!response.ok) throw new Error(`Overpass returned ${response.status}`);
 const payload = await response.json();
