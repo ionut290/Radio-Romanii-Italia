@@ -34,7 +34,15 @@ QUERIES = [
     ("Știri consulare", "site:econsulat.ro servicii consulare Italia when:14d", "ro", "RO"),
     ("Diaspora", "site:rotalianul.com români Italia when:3d", "ro", "RO"),
     ("Diaspora", "site:gazetaromaneasca.com români Italia when:3d", "ro", "RO"),
+    ("Diaspora", "site:stiridiaspora.ro români Italia when:3d", "ro", "RO"),
+    ("Diaspora", "site:roma.mae.ro OR site:milano.mae.ro OR site:torino.mae.ro OR site:bologna.mae.ro români when:7d", "ro", "RO"),
 ]
+# One city is scanned at each run: all ten are covered in roughly 100 minutes,
+# without flooding Google News or letting a single city dominate the bulletin.
+RADAR_CITIES = ("Roma", "Milano", "Torino", "Bologna", "Padova", "Verona", "Firenze", "Napoli", "Genova", "Venezia")
+radar_now = dt.datetime.now(dt.timezone.utc)
+radar_city = RADAR_CITIES[(radar_now.hour * 6 + radar_now.minute // 10) % len(RADAR_CITIES)]
+QUERIES.append(("Diaspora", f'"români" {radar_city} comunitate muncă asociație eveniment when:7d', "ro", "RO"))
 WORKER_TERMS = ("român", "români", "românilor", "romania", "romania", "romeno", "romeni", "rumeno", "rumeni", "rumeni", "române", "romane", "moldoven", "diaspora")
 WORKER_ITALY_TERMS = ("italia", "italy", "italian", "italien", "inps", "patronato", "cgil", "naspi", "permesso di soggiorno", "contract de muncă", "contracte de muncă", "lavoro")
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
@@ -45,7 +53,7 @@ ITALY_CONTEXT = ("italia", "italy", "italian", "romeni", "români", "diaspora", 
 CONSULAR_CONTEXT = ("românia", "româniei", "român", "romeni", "romeno", "rumeno", "ambasada", "consulat", "econsulat")
 items = []
 seen = set()
-now = dt.datetime.now(dt.timezone.utc)
+now = radar_now
 
 for category, query, lang, country in QUERIES:
     params = urllib.parse.urlencode({
@@ -269,6 +277,19 @@ for item in items:
     if len(balanced) >= MAX_TOTAL:
         break
 items = balanced
+
+# Transparent provenance lets the desk give precedence to institutions and
+# identify community reporting without treating it as an official notice.
+OFFICIAL_SOURCES = ("mae.ro", "econsulat", "inps", "inail", "lavoro.gov.it", "ispettorato", "agenziaentrate", "agerpres")
+COMMUNITY_SOURCES = ("rotalianul", "gazeta românească", "gazetaromaneasca", "știri diaspora", "stiridiaspora")
+for item in items:
+    provenance = f"{item.get('source', '')} {item.get('url', '')}".casefold()
+    item["source_tier"] = (
+        "official" if any(name in provenance for name in OFFICIAL_SOURCES)
+        else "community" if any(name in provenance for name in COMMUNITY_SOURCES)
+        else "news"
+    )
+
 from news_details import enrich_items
 enrich_items(items)
 from news_illustrations import fill_missing_images
