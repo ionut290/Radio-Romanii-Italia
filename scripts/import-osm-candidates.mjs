@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+// OpenStreetMap candidate import — source data is not published without review.\nimport { readFile, writeFile } from "node:fs/promises";
 
 const endpoint = "https://overpass-api.de/api/interpreter";
 const source = JSON.parse(await readFile("data/directory-public.json", "utf8"));
