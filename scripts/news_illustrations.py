@@ -72,12 +72,16 @@ def make_svg(item):
 </svg>'''
 
 def fill_missing_images(items):
+    """Assign a permanent RDI fallback to every story.
+
+    Publisher photos remain the preferred image.  The local editorial SVG is
+    also prepared for items that already have a remote photo, because some
+    publishers block hotlinking or remove a photo after publication.
+    """
     OUT.mkdir(parents=True, exist_ok=True)
     used = set()
     count = 0
     for item in items:
-        if item.get("image"):
-            continue
         identity = str(item.get("url") or item.get("title") or "")
         digest = hashlib.sha256(identity.encode("utf-8")).hexdigest()[:20]
         path = OUT / f"rdi-auto-v2-{digest}.svg"
@@ -86,10 +90,13 @@ def fill_missing_images(items):
             path.write_text(rendered, encoding="utf-8")
             count += 1
         used.add(path.name)
-        item["image"] = "./" + path.as_posix()
-        item["imageType"] = "editorial-illustration"
-        item["imageAttribution"] = "Ilustrație editorială RDI (nu este fotografie a evenimentului)"
+        fallback = "./" + path.as_posix()
+        item["fallbackImage"] = fallback
+        if not item.get("image"):
+            item["image"] = fallback
+            item["imageType"] = "editorial-illustration"
+            item["imageAttribution"] = "Ilustrație editorială RDI (nu este fotografie a evenimentului)"
     for path in OUT.glob("rdi-auto-*.svg"):
         if path.name not in used:
             path.unlink()
-    print(f"Ilustrații RDI noi: {count}; active: {len(used)}")
+    print(f"Ilustrații RDI noi: {count}; copii de siguranță active: {len(used)}")
