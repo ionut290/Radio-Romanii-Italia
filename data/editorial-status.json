@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-25T17:37:15.950220+00:00",
+  "news_updated_at": "2026-10-25T17:57:43.907846+00:00",
   "editorial_updated_at": "2026-10-25T18:34:14.151692+01:00",
-  "translations_updated_at": "2026-10-25T17:04:47.168781+00:00",
-  "feed_total": 77,
-  "feed_extended_400": 19,
-  "feed_missing_body": 58,
+  "translations_updated_at": "2026-10-25T17:53:37.420323+00:00",
+  "feed_total": 78,
+  "feed_extended_400": 21,
+  "feed_missing_body": 57,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 27,
-  "translation_records": 45,
+  "translation_records": 46,
   "pending_total": 36,
-  "pending_filtered_out": 101,
-  "editorial_verde": 22,
-  "editorial_galben": 33,
-  "editorial_rosu": 36,
+  "pending_filtered_out": 103,
+  "editorial_verde": 24,
+  "editorial_galben": 34,
+  "editorial_rosu": 34,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -378,6 +378,96 @@
   ],
   "recent_news": [
     {
+      "title": "Epidemia de Ebola. SUA introduc o nouă obligaţie de călătorie, inclusiv pentru pasagerii care pleacă din România",
+      "category": "România",
+      "published": "2026-10-25T17:54:06+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/epidemia-de-ebola-sua-introduc-o-noua-obligatie-de-calatorie-inclusiv-pentru-pasagerii-care-pleaca-din-romania-4008297",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Napoli, studenti ripuliscono la scuola dopo giorni di occupazione",
+      "category": "Italia",
+      "published": "2026-10-25T17:52:02+00:00",
+      "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/25/napoli-studenti-ripuliscono-la-scuola-dopo-giorni-di-occupazione_59e788c3-26b8-45bb-9d48-90be42769132.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Centuripe, il borgo siciliano a forma di essere umano",
+      "category": "Italia",
+      "published": "2026-10-25T17:51:59+00:00",
+      "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/25/centuripe-il-borgo-siciliano-a-forma-di-essere-umano_42c30d2e-df75-4c63-a57a-ecdf906673d0.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Lecce-Juventus 0-2 DIRETTA e FOTO",
+      "category": "Italia",
+      "published": "2026-10-25T17:50:07+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-in-campo-lecce-juventus-0-2-diretta-e-foto_c687213b-7c89-45e6-8894-59efa16e9e36.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "In Serbia affluenza in forte aumento alle urne, 'irregolarità e incidenti a seggi'. Presidenziali in Bulgaria",
+      "category": "Italia",
+      "published": "2026-10-25T17:50:03+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Accident între trei mașini pe autostrada A3. Trafic îngreunat pe sensul Ploiești - București",
+      "category": "România",
+      "published": "2026-10-25T17:45:13+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/acident-intre-trei-masini-pe-autostrada-a3-trafic-ingreunat-pe-sensul-ploiesti-bucuresti-4008281",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Musetti torna alla vittoria dopo quattro anni e fa suo il torneo di Lione",
+      "category": "Italia",
+      "published": "2026-10-25T17:44:54+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/25/musetti-torna-alla-vittoria-dopo-quattro-anni-e-fa-suo-il-torneo-di-lione_6f02948e-209f-4776-bd6f-f5a249a06116.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Putin: 'Accusarci per i disordini segno di debolezza e incapacità dei leader europei'",
+      "category": "Italia",
+      "published": "2026-10-25T17:41:44+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/putin-accusarci-per-i-disordini-segno-di-debolezza-e-incapacita-dei-leader-europei_675a626d-46d1-4d07-ba6e-e272987fb120.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Netanyahu posta la foto di un'atomica su Tel Aviv, '2 anni per finire il lavoro con l'Iran'",
+      "category": "Italia",
+      "published": "2026-10-25T17:39:58+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/netanyahu-posta-la-foto-di-unatomica-su-tel-aviv-2-anni-per-finire-il-lavoro_b57751fe-5586-4c9f-87f2-638df6696482.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Urne aperte in Brasile, Bolsonaro al seggio a Rio: 'È l'ora del cambiamento'. Lula vota a San Paolo e attacca lo sfidante: 'Bugiardo'",
+      "category": "Italia",
+      "published": "2026-10-25T17:34:32+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Maria Corina Machado revine în țară după aproape un an în exil. Ce planuri are lidera opoziției venezuelene",
       "category": "România",
       "published": "2026-10-25T17:30:46+00:00",
@@ -396,31 +486,13 @@
       "words": 499
     },
     {
-      "title": "Acident între trei mașini pe autostrada A3. Trafic îngreunat pe sensul Ploiești - București",
-      "category": "România",
-      "published": "2026-10-25T17:23:18+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/acident-intre-trei-masini-pe-autostrada-a3-trafic-ingreunat-pe-sensul-ploiesti-bucuresti-4008281",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Examenul de Evaluare Națională ar putea fi modificat. Ministrul Sorin Costreie: „Aş mai aduce în joc o probă care să devină relevantă”",
       "category": "România",
       "published": "2026-10-25T17:15:57+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/educatie/examenul-de-evaluare-nationala-ar-putea-fi-modificat-ministrul-sorin-costreie-as-mai-aduce-in-joc-o-proba-care-sa-devina-relevanta-4008275",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "In Serbia affluenza in forte aumento alle urne, 'irregolarità e incidenti a seggi'. Presidenziali in Bulgaria",
-      "category": "Italia",
-      "published": "2026-10-25T17:09:10+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 436
     },
     {
       "title": "Ministrul Educației vrea fiscalizarea meditațiilor. Sorin Costreie: Un fenomen de amploare care îmi arată că şcoala are o mare problemă",
@@ -430,15 +502,6 @@
       "source": "Digi24",
       "status": "verde",
       "words": 435
-    },
-    {
-      "title": "Serie A: in campo Lecce-Juventus 0-0 DIRETTA e FOTO",
-      "category": "Italia",
-      "published": "2026-10-25T17:00:07+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-in-campo-lecce-juventus-0-0-diretta-e-foto_c687213b-7c89-45e6-8894-59efa16e9e36.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Rezultate LOTO - Duminică, 25 octombrie 2026. Numerele extrase și premiile puse în joc de Loteria Română",
@@ -522,15 +585,6 @@
       "words": 0
     },
     {
-      "title": "Musetti torna alla vittoria dopo 4 anni e fa suo il torneo di Lione",
-      "category": "Italia",
-      "published": "2026-10-25T15:30:25+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/25/musetti-torna-alla-vittoria-dopo-4-anni-e-fa-suo-il-torneo-di-lione_6f02948e-209f-4776-bd6f-f5a249a06116.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 453
-    },
-    {
       "title": "Arabia Saudită redeschide parțial aeroportul din Riad, după atacurile rebelilor Houthi. Avertismentul transmis de yemeniți",
       "category": "România",
       "published": "2026-10-25T15:25:48+00:00",
@@ -556,24 +610,6 @@
       "source": "Digi24",
       "status": "verde",
       "words": 422
-    },
-    {
-      "title": "Urne aperte in Brasile, Bolsonaro al seggio a Rio: 'È l'ora del cambiamento'. Lula vota a San Paolo e attacca lo sfidante: 'Bugiardo'",
-      "category": "Italia",
-      "published": "2026-10-25T15:14:56+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ioana Dogioiu îl acuză pe Pavel Popescu că „minte cum respiră”: „Dorea bani publici pentru o chermeză cu o mie de persoane”",
-      "category": "România",
-      "published": "2026-10-25T15:02:38+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/ioana-dogioiu-il-acuza-pe-pavel-popescu-ca-minte-cum-respira-dorea-bani-publici-pentru-o-chermeza-cu-o-mie-de-persoane-4008039",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
     },
     {
       "title": "Iranul, mesaj pentru SUA și Israel în plin impas al negocierilor: „Politica noastră va rămâne aceeași”",
@@ -610,15 +646,6 @@
       "source": "Digi24",
       "status": "verde",
       "words": 454
-    },
-    {
-      "title": "Festa del Cinema, il più grande film sulla guerra a tematica gay: \"La Bola Negra\"",
-      "category": "Italia",
-      "published": "2026-10-25T14:20:05+00:00",
-      "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/10/25/festa-del-cinema-il-piu-grande-film-sulla-guerra-a-tematica-gay_aa575656-f716-45e4-9cda-219a957d64f7.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "”Laudele” lui Sorin Grindeanu pentru Ilie Bolojan și Direcția pe care PSD vrea să o dea României - iDevice.ro",
@@ -707,26 +734,8 @@
       "published": "2026-10-25T11:34:22+00:00",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNS2QxRU1IUzFCa2hrMXVZbW00WHZnMjNJYndkbllpb1lSLU42LXJjSzZ5V0YydTJpZ2lzY0EyUk1USWNWYlFTY3YxVmFLYktiX3Z0eWt2V2htRkx5UVE1VTF3UE1obDJ6cUhqclR3QWViMG9FcGFYWDV2XzBFMV9SQnZIYW41cDJi?oc=5",
       "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Netanyahu posta la foto di un'atomica su Tel Aviv, '2 anni per finire il lavoro con l'Iran'",
-      "category": "Italia",
-      "published": "2026-10-25T11:26:53+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/netanyahu-posta-la-foto-di-unatomica-su-tel-aviv-2-anni-per-finire-il-lavoro_b57751fe-5586-4c9f-87f2-638df6696482.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Putin: 'Accusarci per i disordini segno di debolezza e incapacità dei leader europei'",
-      "category": "Italia",
-      "published": "2026-10-25T11:14:55+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/putin-accusarci-per-i-disordini-segno-di-debolezza-e-incapacita-dei-leader-europei_675a626d-46d1-4d07-ba6e-e272987fb120.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 458
     },
     {
       "title": "Lavoro, Rinaldi (Fn): “Diminuire cuneo fiscale è solo un palliativo” - Touchpoint News",
@@ -918,15 +927,6 @@
       "words": 500
     },
     {
-      "title": "Il settore dei ricambi auto offre lavoro - Motor1.com Italia",
-      "category": "Italia",
-      "published": "2026-10-24T22:01:16+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wZktsN0gyVF9KdDdLNHhwTXY3M1FSRHZCdk9EUnhUWkdxclhoUWZMcW5ROEgwTmo3YUROLUlVMkdrRDVhWW5HSFhQdlZBR1dHMGF2cjV0ZVptMlIyR2Vic3BGVkRBaWlHbG8wdlhMdDNBdFB0MEtJSFZB?oc=5",
-      "source": "Motor1.com Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Albignasego e Casalserugo, progetto contro gli allagamenti: risorse da cercare nel 2027 - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-24T20:48:51+00:00",
@@ -997,6 +997,15 @@
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
+    },
+    {
+      "title": "L’Italia bloccata dai tir che si è rimangiata la cura del ferro - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-24T11:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU2VrczNONTJjTVlzaGZXdlB6dFQ2azAtNWJtMjc2dzl1dlFlcjhBQ2wxRkhTWklNa2RsS2NfY0hiMWFySjNqZEdNa2NVbDQyY2xsbnhZeVdLOFFOV3R4bU5tVnFldURiZWNreGc5VG1td2FmV2hXWjAyT0hWVExJUnVpaTdzdWdZUHpXeUZESEFGODBqeGxkWVhVRWVJbHJLX25QWUpWZW5NUkh6T0Q0VXJ5N1VuRTVjM1dYTzJrcjhXUQ?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 429
     },
     {
       "title": "Moldoveancă din Italia, condamnată pentru hărțuirea unei doctorițe. Susținea că i-au fost furate ovocitele și copiii născuți din ele erau ai săi - Rotalianul – Revista românului din Italia",
