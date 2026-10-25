@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-25T18:32:12.777270+00:00",
-  "editorial_updated_at": "2026-10-25T18:34:14.151692+01:00",
+  "news_updated_at": "2026-10-25T19:02:35.221150+00:00",
+  "editorial_updated_at": "2026-10-25T19:58:19.413056+01:00",
   "translations_updated_at": "2026-10-25T17:57:43.775468+00:00",
-  "feed_total": 35,
-  "feed_extended_400": 7,
-  "feed_missing_body": 28,
+  "feed_total": 77,
+  "feed_extended_400": 23,
+  "feed_missing_body": 54,
   "feed_short_body": 0,
   "editorial_total": 19,
-  "archived_editorials": 27,
+  "archived_editorials": 28,
   "translation_records": 49,
-  "pending_total": 36,
-  "pending_filtered_out": 103,
-  "editorial_verde": 10,
-  "editorial_galben": 35,
-  "editorial_rosu": 4,
+  "pending_total": 38,
+  "pending_filtered_out": 106,
+  "editorial_verde": 23,
+  "editorial_galben": 33,
+  "editorial_rosu": 33,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -93,6 +93,16 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
+      "attempts": 0
+    },
+    {
+      "title": "Epidemia de Ebola. SUA introduc o nouă obligaţie de călătorie, inclusiv pentru pasagerii care pleacă din România",
+      "category": "",
+      "published": "2026-10-25T17:54:06+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/epidemia-de-ebola-sua-introduc-o-noua-obligatie-de-calatorie-inclusiv-pentru-pasagerii-care-pleaca-din-romania-4008297",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
       "attempts": 0
     },
     {
@@ -266,6 +276,16 @@
       "attempts": 0
     },
     {
+      "title": "Românii au ieșit în stradă la Roma pentru Călin Georgescu. Mesaj puternic către București - Ziarul Românesc Austria",
+      "category": "",
+      "published": "2026-10-25T18:53:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc2p3cmg3R1hUUkhHeFhuLU13c3JNZ29mOG9hQ2xqTTJqY3NWdm9IOEdTMEZQS3ZaZFg0dndDU2lrSHdNRzMzSWNnQ1c1MHV0OHhqR2dMYnBMSW0wWTlKRDh0b3BEWHpHNGR6dmtzVHZoR1M0ZjV2enJ6RHNFeFFnSFQxTEgwNXM?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
+      "attempts": 0
+    },
+    {
       "title": "Răzbunarea lui „Trump de la tropice”. Alegeri în Brazilia: tinerii muncitori îi întorc spatele lui Lula și pariază pe Bolsonaro",
       "category": "",
       "published": "2026-10-25T05:00:34+00:00",
@@ -378,12 +398,66 @@
   ],
   "recent_news": [
     {
-      "title": "Alexandru Nazare nu exclude noi creșteri de taxe și impozite: „Nu îmi doresc, dar avem nevoie de sustenabilitate”",
+      "title": "Ministrul de Finanțe, Alexandru Nazare: Impozitele pe proprietăți nu cresc în 2027. Nu există acest pericol",
       "category": "România",
-      "published": "2026-10-25T18:26:39+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/alexandru-nazare-nu-exclude-noi-cresteri-de-taxe-si-impozite-nu-imi-doresc-dar-avem-nevoie-de-sustenabilitate-4008321",
+      "published": "2026-10-25T19:00:28+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/ministrul-de-finanse-alexandru-nazare-impozitele-pe-proprietati-nu-cresc-in-2027-4008375",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ploșnițe la Institutul de Psihiatrie Socola din Iași. Rogobete trimite Inspecția Sanitară în control",
+      "category": "România",
+      "published": "2026-10-25T18:58:27+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/plosnite-la-institutul-de-psihiatrie-socola-din-iasi-rogobete-trimite-inspectia-sanitara-in-control-4008371",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Alexandru Nazare nu exclude noi creșteri de taxe și impozite: „Nu îmi doresc, dar avem nevoie de sustenabilitate”",
+      "category": "România",
+      "published": "2026-10-25T18:52:52+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/alexandru-nazare-nu-exclude-noi-cresteri-de-taxe-si-impozite-nu-imi-doresc-dar-avem-nevoie-de-sustenabilitate-4008321",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 438
+    },
+    {
+      "title": "Vor fi indexate pensiile la începutul lui 2027? Răspunsul ministrului Finanțelor, Alexandru Nazare",
+      "category": "România",
+      "published": "2026-10-25T18:44:44+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/vor-fi-indexate-pensiile-la-inceputul-lui-2027-raspunsul-ministrului-finantelor-alexandru-nazare-4008333",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "In Serbia affluenza in forte aumento, 'irregolarità e incidenti a seggi'. Bulgaria verso il ballottaggio",
+      "category": "Italia",
+      "published": "2026-10-25T18:43:41+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Lecce-Juventus 0-2 DIRETTA e FOTO",
+      "category": "Italia",
+      "published": "2026-10-25T18:41:15+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-in-campo-lecce-juventus-0-2-diretta-e-foto_c687213b-7c89-45e6-8894-59efa16e9e36.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trump: 'Obama presidente incompetente e ora sostiene un jihadista antisemita'",
+      "category": "Italia",
+      "published": "2026-10-25T18:16:00+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/trump-obama-presidente-incompetente-e-ora-sostiene-un-jihadista-anti-semita_4027c932-07ad-4ba1-a7d0-8eb7636955f9.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -396,21 +470,21 @@
       "words": 499
     },
     {
-      "title": "Serie A: in campo Lecce-Juventus 0-2 DIRETTA e FOTO",
-      "category": "Italia",
-      "published": "2026-10-25T18:05:15+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-in-campo-lecce-juventus-0-2-diretta-e-foto_c687213b-7c89-45e6-8894-59efa16e9e36.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Netanyahu publică o imagine AI cu o explozie nucleară în Tel Aviv și avertizează asupra unui „al doilea Holocaust” înaintea alegerilor",
       "category": "România",
       "published": "2026-10-25T18:00:11+00:00",
       "url": "https://www.digi24.ro/stiri/externe/netanyahu-publica-o-imagine-ai-cu-o-explozie-nucleara-in-tel-aviv-si-avertizeaza-asupra-unui-al-doilea-holocaust-inaintea-alegerilor-4008305",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "La premio Nobel Machado torna in Venezuela dopo dieci mesi",
+      "category": "Italia",
+      "published": "2026-10-25T17:57:14+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/10/25/la-premio-nobel-machado-torna-in-venezuela-dopo-dieci-mesi_5e7fe194-a6eb-407f-97d9-d5bd0891ac76.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -428,8 +502,8 @@
       "published": "2026-10-25T17:52:02+00:00",
       "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/25/napoli-studenti-ripuliscono-la-scuola-dopo-giorni-di-occupazione_59e788c3-26b8-45bb-9d48-90be42769132.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 457
     },
     {
       "title": "Centuripe, il borgo siciliano a forma di essere umano",
@@ -437,16 +511,25 @@
       "published": "2026-10-25T17:51:59+00:00",
       "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/25/centuripe-il-borgo-siciliano-a-forma-di-essere-umano_42c30d2e-df75-4c63-a57a-ecdf906673d0.html",
       "source": "ANSA",
-      "status": "roșu",
+      "status": "verde",
+      "words": 460
+    },
+    {
+      "title": "Agguato al boss in Calabria, l'ipotesi della guerra tra cosche",
+      "category": "Italia",
+      "published": "2026-10-25T17:50:27+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/agguato-al-boss-in-calabria-lipotesi-della-guerra-tra-cosche_467460d0-47ab-41da-84aa-a89d315df971.html",
+      "source": "ANSA",
+      "status": "galben",
       "words": 0
     },
     {
-      "title": "In Serbia affluenza in forte aumento alle urne, 'irregolarità e incidenti a seggi'. Presidenziali in Bulgaria",
-      "category": "Italia",
-      "published": "2026-10-25T17:50:03+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
-      "source": "ANSA",
-      "status": "galben",
+      "title": "Soluțiile Ministrului Educației după Atacurile din Școli și Decizia care Surprinde Mulți Români - iDevice.ro",
+      "category": "România",
+      "published": "2026-10-25T17:47:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQU0FfOWJhNHhuNmJQODR5VFBUY0pyMzRfY05SbnhUbE5kaTVZUnowMUtTTnpmRldsTVliRnIwRmRlRVE1YzhLWnE4YkRtbUxuWFFPZkFDaVVER2RxVHhDa2NOZ09FV2s4ODB1bnBfSVF2OW5hQ3U0N2VVemh5ZFdhOV90LVNkS2JfMVltTDB2LUhwaUVLT3pKeHYtWDl2Zw?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -463,15 +546,6 @@
       "category": "Italia",
       "published": "2026-10-25T17:44:54+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/25/musetti-torna-alla-vittoria-dopo-quattro-anni-e-fa-suo-il-torneo-di-lione_6f02948e-209f-4776-bd6f-f5a249a06116.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Putin: 'Accusarci per i disordini segno di debolezza e incapacità dei leader europei'",
-      "category": "Italia",
-      "published": "2026-10-25T17:41:44+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/putin-accusarci-per-i-disordini-segno-di-debolezza-e-incapacita-dei-leader-europei_675a626d-46d1-4d07-ba6e-e272987fb120.html",
       "source": "ANSA",
       "status": "galben",
       "words": 0
@@ -513,6 +587,15 @@
       "words": 436
     },
     {
+      "title": "Statali premiati per andare in ufficio, da gennaio si cambia: ora arriva la riforma del merito - Il Messaggero",
+      "category": "Italia",
+      "published": "2026-10-25T17:07:20+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbnl0Z2JiZEQyMlRmNWtuZWpfa3g5ZS01VlR2dEx6QzhhZzN2OGpIR21XaVBTX1V6N1JzaU9lR2V2QnlLeVNGNTJ6cmdfNFo4UjlDdmdyU200WXRLc1l2UXg4bWZIeWczZ3lUdHRfaXFzMWdKZ1M3bUR2cE9TNW9WcC1saHFPajExTHpzX3k2Q0huZlpmcFQyUTc2eVpQVksxX3ZOQjRR0gGkAUFVX3lxTE50c1RyNkxQaUNhSkNPYVA2WUdKbTZ5b21OYXVNZV9rOWEzQVBGNzRZLWdfRERmQ0JjTHl1dmlsWmJYR2lyeFN6QUFTNG5Md3Jvb2thOUgwS0hxaXNKYWd1M1RfRXJ6cUZTTTh5dGpJWXpoZzVVQ0E1b2JXM21nNUJ4THE1OHJua2FEdnRFMnlSS0VoUEttRG42R1ZMTndvRkhjNzd1?oc=5",
+      "source": "Il Messaggero",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Ministrul Educației vrea fiscalizarea meditațiilor. Sorin Costreie: Un fenomen de amploare care îmi arată că şcoala are o mare problemă",
       "category": "România",
       "published": "2026-10-25T17:03:39+00:00",
@@ -531,21 +614,30 @@
       "words": 0
     },
     {
-      "title": "Dopo il ciclone Obama in Michigan arriva Trump, nuovo comizio per le midterm",
-      "category": "Italia",
-      "published": "2026-10-25T16:47:32+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/dopo-il-ciclone-obama-in-michigan-arriva-trump-nuovo-comizio-per-le-midterm_4027c932-07ad-4ba1-a7d0-8eb7636955f9.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Emil Boc: Trăim cele mai dificile momente de după 1989. Războiul este din nou în Europa",
       "category": "România",
       "published": "2026-10-25T16:31:11+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/emil-boc-traim-cele-mai-dificile-momente-de-dupa-1989-razboiul-este-din-nou-in-europa-4008227",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "La settimana finanziaria. Mercati alle prese con banche centrali, dati macro e conti tech - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-25T16:22:43+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa3RwLWVVSWZvTWxpX1hPVTNVbG5YNWx2UEtSNjhZZFYtT3BGdHlFWnFrSVZOV04zSzZuSlV0Ny1uUWZyNEY3SGpPLWdwSGZES2VsZnk4WGZ0cXlIMWhKYnd5bWdVNFNQN01zcjRfU3lmclJzVUc4OFhSZWVRX2FzdXhtdndnMXZ0dWNMb1VRYw?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Astra Film Festival: filmul lui Vlad Petri, cel mai bun documentar din Competiția România - Substantial.ro",
+      "category": "România",
+      "published": "2026-10-25T16:21:31+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSTBqRVNldnhFR29tYUJEeEY2TldGR3VhY3M4d3hUMTRtSDZsMVlHLVBVaXRsNGJVQi12UVAwbWFlT1BzOG1NV0I0dk43WlZhVkNGUDBQUVNYeFpVd0pfdGZVM1IySWt0X3lwdmhjYXhMbm9zSjRZZTd3eHBBZlN4a29hVmo2QlRDS1lfUFhyZU55NWVjR0FkTkY0R3VIdi1ua3JDTmxkMFY0dWt0SkM2Vg?oc=5",
+      "source": "Substantial.ro",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -576,6 +668,15 @@
       "words": 0
     },
     {
+      "title": "Româncă ținută într-o baracă și obligată să se prostitueze în Italia. A avut încredere în omul de care se îndrăgostise - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-25T15:49:56+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNd0FMS1VmUXlVaGljQ3lWUEpCclpaSFZGQ0lHUmY2VHY3ekRjaGF6QTRoMUNYdjBFejhmSkpfeFVYRl9LbEhLWkgyZEhkYU92eWlCT3QwMzJLSWRhTU93bTRISF9SNllrZmRWMjhoZkVuUHRIXzFRQVk1NEVGRU43UGg5UWJXNndMTU9LZjY3cDJUOGxfUjU3dFJlX0V0d2hmVy1GYUZ2XzF4QUdBS0tveTZ1T1hMMVBIbUk4TXliSHBKSTJwc3hnTVhwX0ZYWDRUaFgwaHBqN2g?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Domani la richiesta di convalida del fermo per Youssef Siher. Anche la moglie è indagata",
       "category": "Italia",
       "published": "2026-10-25T15:44:02+00:00",
@@ -603,15 +704,6 @@
       "words": 0
     },
     {
-      "title": "Schlein: 'Con gli alleati faremo in fretta, manca l'ultimo miglio'",
-      "category": "Italia",
-      "published": "2026-10-25T15:20:06+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/schlein-con-gli-alleati-faremo-in-fretta-manca-lultimo-miglio_598626db-d4d8-46f7-8dd6-934e20753907.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ambasada SUA: Militarii americani şi români lucrează umăr la umăr pentru siguranţa flancului estic al NATO",
       "category": "România",
       "published": "2026-10-25T15:15:09+00:00",
@@ -630,30 +722,21 @@
       "words": 0
     },
     {
-      "title": "Un consilier de la Kremlin vrea Europa la masa negocierilor de pace: „Nu e suficient să discutăm cu Kievul”",
+      "title": "”Laudele” lui Sorin Grindeanu pentru Ilie Bolojan și Direcția pe care PSD vrea să o dea României - iDevice.ro",
       "category": "România",
-      "published": "2026-10-25T14:37:50+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/un-consilier-de-la-kremlin-vrea-europa-la-masa-negocierilor-de-pace-nu-e-suficient-sa-discutam-cu-kievul-4008093",
-      "source": "Digi24",
-      "status": "galben",
+      "published": "2026-10-25T14:15:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdGZOOWtPM0h6T21tNTJGcGx1NUNmNUQ2UDNRNEc2clZJYWV5ak50MGlUQ1N2Vm04THctUGdPclpmanJ2QXd2a1FaRFJHdVdWOXdiVmZ5RHJqeVR0NXpWaFdmMTNEYWhad0h5Tk1SS2xrZ25RdlU1X051VkNzRDYwTzljcy0yVjNSS2ZrbnZBS3kwckpKdTZaZ1RxaVg4UW91WFRmQ2ZaYw?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
       "words": 0
     },
     {
-      "title": "Nicușor Dan, de Ziua Armatei, la Baza 86 Aeriană: „Au doborât cu precizie două drone ostile”. Mesajul premierului Luca Niculescu",
+      "title": "Prioritățile Oficiale Anunțate de Florin Manole pentru Români după Preluarea Mandatului de Ministru al Muncii - iDevice.ro",
       "category": "România",
-      "published": "2026-10-25T14:36:46+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/nicusor-dan-de-ziua-armatei-la-baza-86-aeriana-au-doborat-cu-precizie-doua-drone-ostile-mesajul-premierului-luca-niculescu-4008085",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 454
-    },
-    {
-      "title": "Plaje închise în Emiratele Arabe Unite. O pată uriașă de petrol a ajuns pe litoral",
-      "category": "România",
-      "published": "2026-10-25T14:04:18+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/plaje-inchise-in-emiratele-arabe-unite-o-pata-uriasa-de-petrol-a-ajuns-pe-litoral-4008073",
-      "source": "Digi24",
-      "status": "galben",
+      "published": "2026-10-25T13:49:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWTdhb1NycVFJYlNxZ19YNlVuZDlfMTk0THFYcEl3RGhrSUxsWU9PTlNrUC1GdEEzc3kwZDBEckFIM0QwTEd6dTM2TXlOM09Rb3FzYkZTeUVhcVd1Z04wNGFnM3d0TXE1XzZFazZKUVYxREtWQUlrNlZYdzdGRkdkRkRkaXplZmpTT2ZVY2d2SmdwVTgxYnotN3k5QnJmSVM5RVkxNXRBbHhDZnZTWm1CbVRlaGYxQ3hDMXJhMWVn?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -666,6 +749,60 @@
       "words": 0
     },
     {
+      "title": "Scandal în Italia din cauza unui român care locuiește într-o rulotă. Vecinii au ajuns la capătul răbdării! - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-25T12:57:18+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWU9qVHFuY3ZBTzZGbC1zR0N5bi0yMElfUVFCakR2S25NOWYxNW9vWDVJUVpGSUVFRVdWZUVEdDhITDRmblNOUXo3Mm4zcl9TY0NFWXNpVTFHTnR0RzFfVDRTdTVOTmplNlc0bERmcjViSXE5TV9OVFZyejg1OTE0cmM5X0paMlNua18wWjFQWTZWXzhNbllwUTZxOUF1Wkw0ZzdiUk53OWRJVF82OHJqdzlZQTZIZlV0dnZGWU9tR1RUM1FtdGVN?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Proteste în Franța: peste 500.000 de oameni în stradă. Atmosferă mai calmă decât pe 17 octombrie - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-25T11:48:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVk5KSFBPTng5UmtDQ0Mwejd1bDVhQzl3ejlFQVFmQzdtN2lhaGJ5WlhIaWtkRXkxRFl6S3puRGxlemFVNjQ5M1BvUHRVbzdmOVpEMExvaGNWRDVXT2M4X3ZXa2lTMlY1bXFRODMwTE5MZGZkY1ZDOTVYbWVlNkxUTWF1NjROMkVYeVVKN2doV045UjhWRmgyVFFFN0xzYW5XanRtc1c2OVBrS0FGREJFNm50YjBGNmNOaEkzNDlkbmozUGR0N1JKN2NKQ1N1QlEy0gHWAUFVX3lxTE04eGxzaHlqbmFncHRteVAwUnoyaHhwWU4wNkdxbGxwX2lpYlZhOTRmWHJrZGpWVVFMbUt3RjdJUWh5amZFbjVTbno2cEdRZFFPcG95T0lGY1cwa1d1c1RONVg2T2xpNzJxVk80cThKcERmQi1rSWo1T085NEN6d2JockZ",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Lavoro, opportunità di impiego nella Ferrero: assunzioni anche in Campania - Il Mattino",
+      "category": "Italia",
+      "published": "2026-10-25T11:27:35+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdUwzbTZsWGcyaXlySWpUTFRGU2EwSDB6N1p4dERHSmNTbWxCcVo3V0RMYzRlLVdaN294NE5FSk1MbV8xQlhOaTZ0UWNlVnBYOEF4MXNEOUd2bkNrQV93eFlrQmFBMXdxbTgwNFREX2RDcXc5TmtLalJpM01rU0F1YmhWcHo3NktGQXg5SDZTTdIBjgFBVV95cUxQa2s1Mm1fcHNYd0NtVFRpa1oxRGRsX3hvUElKVFZFMndXS25YRmgzT21kMkNtWTVVYzVtdjVqNEhyS2E3bnVRWUxWb19YQmJqemhISm1fRGlESFkxd1dvVGRTell4RVlkRnBaa2hNNF82MlpSdkpjV1BYT1dIOExaVDVhalJiVEpfc0FreXdn?oc=5",
+      "source": "Il Mattino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Lavoro, Rinaldi (Fn): “Diminuire cuneo fiscale è solo un palliativo” - Touchpoint News",
+      "category": "Italia",
+      "published": "2026-10-25T11:10:55+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTNYUldLRkxBNXNuX1ZzMkd4SHFjdlhFU3Z3YlY1aVJKQ2dFVzRwQ0pmLUdIU01nb1VUaW9hWFZ3T1NWR2UxNmNEVGxzYWxLQkE4czBrR2pnRnRYTng3SWYwWFU4eFFvRUF0RnRvTkxIVHlBYzRvWWpVdGltLU5xUXpSbEhvZWtLbHh6NVREVmR0ODZSem1CSzdhb3Nrd1dfY29FZg?oc=5",
+      "source": "Touchpoint News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Economia e lavoro, il sindaco Luca Salvetti: \"Livorno cresce e sta cambiando il suo futuro, altro che autocelebrazioni\" - LivornoToday",
+      "category": "Italia",
+      "published": "2026-10-25T11:02:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRVVqTXZydk1JeS1Rc0tZeTNkT0VfMEdKenlNcUt3QXN3am5LSndsWUJMYlhma2phQS1Yc1dyWk52ZGEyM0REOFVVbUwwMDVoRlJtcnc0dklBMWhhd3lZREV6bFM2T19TclRReDZUeXYzV3dZdjM4ODhwMzlCMTNpcE9JbDhaZw?oc=5",
+      "source": "LivornoToday",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Proteste violente în Barcelona. Poliția a reținut 128 de persoane, dintre care 73 sunt minori - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-25T10:58:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNazJ2NERQRWNVQ1A5MmxaaU9xYjJkempvS2hvTTBCWk5BdkZjNVdDdk9XWjdIZEVOOHI4dUtnOVZ3enBJWnJYOGxoUm9WaWRldGZVOWZlUmxvQkY1UWpUUFcxb2Jmb1R5WWVDSXJ3LWtyTWlmZHJrc1Y2OW41NWotRmR6SVZadnRYLW1VVXk4RDBnc09xZGg3WlUzNmhGOHJuWkZjMUJva0pHN1dBQmVPampPNGd5VXJ4bEhuNFU4dURtWDhtZzUycE5KeGnSAdIBQVVfeXFMUHVnVE1pRlJPS09pWnREaThEYUJtSEdtVU5nQ1ltZ05aMHVQRWNfNURMZnZkOTVLaE53THNLSFhPLXZzWmhhOHV4Tl9ZSi1vQjdqcXA0SVJucjh3aHJkYzRNWU1wNmE2WmxFQ2JMbG1RLUJLOHpNbjhNQUZnOXZvaFNfT1VtMFg",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Carlo Rambaldi, a San Diego cento artisti celebrano il suo centenario",
       "category": "Italia",
       "published": "2026-10-25T10:20:53+00:00",
@@ -675,12 +812,66 @@
       "words": 466
     },
     {
-      "title": "World Pasta Day, per 9 italiani su 10 senza pasta mancherebbe l'identità gastronomica del Paese",
+      "title": "Due giovani piemontesi tra i migliori studenti d’Italia: Sofia Maria Vella e Mattia Rebuffo premiati al Quirinale - Torino Plus",
       "category": "Italia",
-      "published": "2026-10-25T08:27:44+00:00",
-      "url": "https://www.ansa.it/canale_terraegusto/notizie/fiere_eventi/2026/10/24/world-pasta-day-per-9-italiani-su-10-senza-pasta-mancherebbe-lidentita-gastronomica_88d4f3f2-c8ae-44a4-be51-83742c3343f3.html",
-      "source": "ANSA",
-      "status": "galben",
+      "published": "2026-10-25T10:16:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE02anZ3N1dxWW1CQ2U0TFJxbi13eVpPUkhDWWNFNkJ4MEl3U2FqdXMxNWRNN2JhaHBWNGZxbVk3cDk3TElCSl9BeVlfRmtHWnlYeHJzTWpaT19JY3UwNVdKdGVLdXZSSk9sM25SaG8xanY5SFNWNlJF?oc=5",
+      "source": "Torino Plus",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nicușor Dan, mesaj de Ziua Armatei: România e pregătită să acționeze ferm pentru a descuraja orice... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-25T10:03:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdmk1S1BSN2JfY1RmQmhKRzBNR2h0N2FxQ0Y0eTllQ1oyWDc2bDBGOEtsWXdKMlBqU0dYRk1HM3hXOU05bzR4ak51NmVkd2pPRDQyemp1c0tfeU9PdDNCWGdJRDNMX2w1djA0Ny1PUDF3enk3ZWZEUDFESC15TjBlYlJCSzVIYWZyVTZucjIzVVc5Sy1aa2lJSFd3TWd2dHhhenZDZnBEem9MRzJSSDlBcEdrZjR4VEpKNU9lS0FYT1N6VlZ0d0FPTDBtNkRETVViSURTbWJCNUpCbTF5Vm5xNmFB0gHnAUFVX3lxTE1fYjd5Y2RfUWRqNmUyUGZHNWFqRk9ub3oyU0g0RHNJYkcxdktnajY0U3hJX200bF9NczdoZGdHZlIyaE52MWRZdFhXNmJfQWluQlNMdlJCZ1huWU1JVFZHQ2lKbnRvNk9jQTVGelB4ZjV",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Barack Obama: Casa Alba a lui Donald Trump Arată ca o Fabrica de Cheesecakes a lui Saddam Hussein - iDevice.ro",
+      "category": "România",
+      "published": "2026-10-25T09:15:46+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG1lUXNkTGhlcU1Nb3ppSndObG5rUFlVNWtUVUljUF9NdVRUcTBxTFBkbUhFREZEakRSR1ZEMU1RUS1NaWVqRjJRbUNFUjJmNUZWRFgybk92TVh6M1ZLRzdnU1g4ZldOQUhmaEZlQXpyN3lDWEpXSERQSzhXaDRSLVByOTd5cm1Ob25sd1k2bUdRLS1VdzZfUkJiekJPd0tuWmk4R0hvbkVjWUk0cEk1MTlB?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Addestratori di robot intelligenti cercasi, un lavoro che piace ai giovani - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-25T09:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbEszZkJrdjZFaFRlRUFMLUhMNUM0dmVMVmM4X29ycW83dTlUd1M2TUFiSG11bFRFUGo4RjZWZGRPUG82bEZMZ2REMEhyTzBnNnY3TFRxME9xay0wUThQRWFVd3dyRFJMdkpSMWxoNGY2Q1Rtb0tXOEtkekZocHNUNURUSlNPVFR0ODRoQnBwMEduOTJER05KZWE1NjV0NkJHWHMwMUJaMmtieTRkWXN4OVI3TjlUVjJ5c001bzBwLXJTU3NxNVFpWGhHSGxmZTBG?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Românii din Italia vor avea o nouă biserică. „Un proiect costisitor, lucrările avansează în funcție de fondurile disponibile” - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-25T08:41:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNclcxRC16VV9fNzhYMlFEVjRrU1JpeG5vUGZvckxRZ2FyMktRQ0w0WXloeG9tM0xadWJ2dUxDV051c3hzblluTFp6OU53S1o2dXJNSndoLVVHMzgxRTVncENYM2E0V20waU5UTUlVeUxiQlE0UWc5MTdyclh3dUtMVnNMVmd0d2ZNUXdFazBGVmpPZlV2RkxDTUhhTUNfSW9IS21sblVCV3VUUXBHbktNSFJ5Y0xvcnpady1yeE9LUXdOQ2JmZDAwRm1ZTFd2RVpNM0drN0V6cDdYVUdOdFE?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 431
+    },
+    {
+      "title": "Român de 14 ani din Italia, acuzat că administra un grup de WhatsApp prin care îndemna la vandalizarea... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-25T08:33:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNX1I5Uk5pWjQ4d0Ntb1hQUTNZRUVRQlJDOUFfVUhjdjR0cTM5X191eV9wU18tSHRTQjdSTklITFhwamFQUE9RdWhSUGVVcU8tY29oUWZWeEF3WW8zYnJ4MkhiQThPZmEwQnY2SVVGMTZaYU03S1NhUFBpWHdGa01OckRjRDlnZm9hbWx4eDk4SXZ3ZEMwYUJudVZqM1h6MVRJV1FxWXQzV21SdnNxSlVrb3JPd1BPekVYY2QyOEU1WVAweW85QnpIdUpUVHVCYVZwZ0xiSDc2Ri13RWU1TEtYR0JTdXRTRDVHQ0k4Zlg0UUxiLV9YakN0eWpjZ2VxV0lPejVLbkpn0gGLAkFVX3lxTE9BQjgwbS1sbGFIcExWZUFVT1ZfYXdPdkhzNTVGeWVZcTJIUE1aVENqWEZiODNCR3lybTlfUGw0dTFiUm1aM3BxbHRXMHQ",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Sorin Grindeanu acuză: Guvernul Bolojan a lăsat România cu datorii uriașe. Liderul PSD face promisiuni... - Digi24",
+      "category": "România",
+      "published": "2026-10-25T07:58:48+00:00",
+      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW5",
+      "source": "Digi24",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -691,20 +882,216 @@
       "source": "ANSA",
       "status": "roșu",
       "words": 0
+    },
+    {
+      "title": "25 Octombrie: La mulți ani, Armatei Române! - Arges Stiri",
+      "category": "România",
+      "published": "2026-10-25T06:37:13+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNay1hYnV1YUlqVDcwVk5sNWlqUTBvUmFRako1M2x0LTdqdmZBUGlNS2lqNFpzYkRaTTVBR1g2SHYxblpTRlBldk1UbmlVNWhnYlI4RnRZODdOZFkyZEx2My1fSWx2S3QtQUtPSFBZdWNfM2xtWnQxSEJVTi1HVU1IWQ?oc=5",
+      "source": "Arges Stiri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Svizzera, che fatica: lo stipendio non basta più - La Prealpina",
+      "category": "Italia",
+      "published": "2026-10-25T06:30:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOGtFbEIzTU1OWTFPMWY4T0FSWmdnZ2d6ZDFCa0Y1Y0JRUzQ3WVRhMGlZMElONUFzTkZjQTZydUZRS2N3dVJwVWg1WGt0aDBKajFNalFnS25CQ2hveGdKSThOV09LY29FZGxlVW9ja3JQR1JWLWZhODJTbldFWUNuc0Y5WHdCYzJmdnh3MlJGSmtITEcxMF93M2wzWjRPZw?oc=5",
+      "source": "La Prealpina",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Elveția oferă Moldovei 5,6 milioane de dolari pentru sănătatea refugiaților - logos-pres.md",
+      "category": "România",
+      "published": "2026-10-25T06:00:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTmp5MUFPZDd2UGZJZHNDZFpkSDZHTUF0eFJ2aWQzLUpXaUhSWnBEbEdxR25ycjBaY0F2TEhRREVIdVFzeWYyYjFvVEloZjFYRndHNWg4c1pyRVNTLXlfVVU1akQ2X25hQ1FuTVZ5b1I0SDZiOElTTW1od0dsYTh5WXdYaHg2WURxX3JjckN2SGVQbnNWZWh1X1dXa19jUzdyX2cyR3Y0NXowSU9NeENSQ0s1SnE4dmtyM0JIeXdQZUJpNWM2XzViNFFzY0dPS2ZSNHlUa0g1VlhfZmdPUURscEJhOEQyUFAyTGc?oc=5",
+      "source": "logos-pres.md",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Lavoro, Rinaldi (Fn): \"Per aumentare salari necessario recuperare produttività\" - Touchpoint News",
+      "category": "Italia",
+      "published": "2026-10-25T01:07:13+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcFlEV3paTFRKMjNtM05jWTNoazlPNEtOblhfVDdYeUNvWVJMVmRZa2ZKQk9XVFZnZWFtSXh5T3pEN0dHWUZTamNDdWlqTUpLYjhCS1p5U2JnLTRNcGNLVlFMUkY3WUVkTE1DQVhLdTNqWmgzWk90blphTXQwb2lpSGFnTFNIa1ZFcF9pTERUQmtSOXUweU9yajR4RTdURlpSY2RGS2pGSjNKVlFtbk8xamlfWQ?oc=5",
+      "source": "Touchpoint News",
+      "status": "verde",
+      "words": 499
+    },
+    {
+      "title": "Lavoro, Salvitti (FdI): \"Rinnovi contrattuali importanti per garantire salario giusto\" - Touchpoint News",
+      "category": "Italia",
+      "published": "2026-10-24T23:53:12+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONmtPb1U5WWZwNlB5c1BjVXFqVzBiUXdybUFEU2w2eWVHbU9NNUVlZHNUX09tRjZNc2t0cEpZNmVrSTJYbVZwOEx3VFFjcFJtckNxRExGRnROX0h6WXB2bUpXQ3NRSUQxOVR6dXRRc0VhWmkxeHk1QVNvbWdYNWN0X2lzazJsZjd2b0V3bGJ0azNZdm5xR3JBN21NS3cwWndQLU5tTlo0QkhQTGhyR3FiOUY3d2ZfeG5SbFJCeg?oc=5",
+      "source": "Touchpoint News",
+      "status": "verde",
+      "words": 500
+    },
+    {
+      "title": "Badantă româncă, arestată în Italia. Acuzată că a bătut bătrâna și a obligat-o să mănânce cu forța - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-24T18:29:16+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPeVJTWWVaLS1VdEIxLXBoam00bktONWhHamVDUzVhaGQxMWZLeEJNamFPV2pQU0NzMHA1SkVWZlpKTm5iZGVCYkpxZnJ2NzB0NTNETG9WLWdsbzRKTWZ0NzJkbGNGRDRtVVhsZlpoQ0FYclZaQ3QzZ25SLUhYSUowLTRVMk04bDhhRXpiYm1SN21EYUlWMlNycHBpMUJGeHlUUlhlLXNtNjQtZXJ6WlY0SVl5NWI5NzdPQ3hJTg?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 420
+    },
+    {
+      "title": "Salari al centro Consulta Confintesa, riconferma Prudenzano alla guida - Touchpoint News",
+      "category": "Italia",
+      "published": "2026-10-24T17:31:35+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQLXBvNmtLOXZyVkhBZHgzUHFvd2Y2MEc0ZWE1YU9WQVNiRGFnX3BmOVp5RWdJZXBvYmZ0QWZ2WWduaklSeXlLbnVrM1dzYW5GTWNZNXJMY0RNZFdVRDlSRHlLX2V0RjE0VC02LVFsVkNUNG1VQUNPWE1XSlZDLWhaRjEzaTM1SDhQNDBzYmR0X1FSTmxfdmp3SHRBdWZYb3hvYnVJLWhWdXFpTG1PUVE?oc=5",
+      "source": "Touchpoint News",
+      "status": "verde",
+      "words": 432
+    },
+    {
+      "title": "Adolescent român de 14 ani din Italia, acuzat că instiga oamenii la ocuparea școlilor și provocarea de pagube. Părinții săi au colaborat cu polițiștii - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-24T16:52:10+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNVHlYYW1STGZNdkFzaTNWNlN2NHYweWJVQXVEb2IyZGFsWnk3TUYzTkt3UWhyc1RnQVJGR1NMcDhEcUVCYm1vajFmR0EwZW9rQmdmMWZzVTg3WG1zWWU0dVNSa2VkenBzeFJkbWdSSjZOWmpMalhOdzhmdUhfMzZ5WHlIUmk1T3BtNTZNak1ReGtIOXl4elFMLTlmT3VHRU1kSGlkWnZ0amhfUFZPdlF1c3NmLU5Tb01aUUdQM09nenF4Y0RYcXgyTEQ5Q3I5Y2ZQejNOSGNEc2RMMVl1TzIwblVZT0lxZEdrbE1hbzhpcWYxUmVRVnpud3pzMFVkbWhlZ1E?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 468
+    },
+    {
+      "title": "Structura de rezistenţă a blocului din Drumul Taberei nu a fost afectată. Locatarii au revenit în... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-24T13:39:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPVk8tSkk2cmVUQWxwY2NPSWc0SGVJeUhwaktYbG1uQ1lLUEh0cXhvOXY0THhDTmROWVRkWnUyT1ZUTzQzd09leEdBRFN4Q2FvcmZUY1c0ZTdLSDVmcTIyUm91YV9WZTRSRmdQU0NzcUc2dEtrLURYQjZ0aUh3R2dSVHZtdENGczFwS3NFaFRRazJYOTJFU2VoV2s1MmxNX2x4QmMxOE5vcm1VRHJFZUNfU21Ia1pNZXdsUENzMUptQWFsWkd6S0x4b0RCNWNsMkJHMFZNdDhwX3ZCaFhM0gHiAUFVX3lxTE1wV29heEF2TzZZRmVhRkxRZ3pCaGFqMXBkeGxGTnNBSWZhZExqRHIzR1ItUEVFekhOcmJ1Ykd4SFJWY3MzR3otWk1wSkVKRFFzblBuNkhLalhTSXZtbUJJSnJxREs4d0pGZnd5T1pJVm1ycFc1TUV",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Lavoro, Confintesa: \"Contratti pirata costano fino a 12mila al lavoratore\" - Touchpoint News",
+      "category": "Italia",
+      "published": "2026-10-24T13:38:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYlNjZjItdUNKVWNMZzE1emZkYURfeDdxV0pGcDVFZGdJcXY2QTUxbG4yZEViMjRScnRNN3ZhVHh1OGRwRTkzWjE4aWFmb3cyUUFrMkRvUTVkYkRUVXR2RjBNRXp1Tk1maDBYTGZvSUxhVEJDZ2loMWhoaWFfSjBrUTZqeUJzM2x0VnhXVmh1YzFDV1VBeDNLcnV0YXNCSWFrd3NUd0hnVUl1Szg5czI4?oc=5",
+      "source": "Touchpoint News",
+      "status": "verde",
+      "words": 436
+    },
+    {
+      "title": "Rareș Bogdan, critici la adresa lui Bolojan: „A dat-o de gard total”. Ce soluție propune pentru reducerea... - Digi24",
+      "category": "România",
+      "published": "2026-10-24T13:24:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPQjlrMlpiN1VUWERqaEFXMF9paDFjaE1URGNqUjF5ZkV4dlhXQlo2bXNPTnRmc05LWHJPZkFDYm9NeFhfYXFkS3pIRDgwRWtKQVMzb0hjaTRVX3lYZHNnLTJKMnBYY2NyTHlKSVZJcGllcC1ybEdSdnpvNHpqUzAtdUxaTUtvb0kwdFNieFRpa3p1LWU4WHpZclJ5RmV3a1FkYnhpaTdrZE5lLUp1Z3hkM2c2VS05Z2dBZ2x0OVh6NlZPMXBtSDI4RzNVWXZDNzVad3FyZWZmMnk4WGF4cmdLZ1JHWGVheTJTZFp3Z1ZxWFRQYi1LYngwQlFyQUhqSjUyZnIwVW85ckjSAYgCQVVfeXFMT0I5azJaYjdVVFhEamhBVzBfaWgxY2hNVERjalIxeWZFeHZYV0JaNm1zT050ZnNOS1hyT2ZBQ2JvTXhYX2FxZEt6SEQ",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 456
+    },
+    {
+      "title": "Românca de 18 ani care a născut în autocar, în Austria, apoi a ucis bebelușul a fost condamnată la... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-24T12:56:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNMUhNQl9BUG5pYnk4YVZKMEFZSWxsZjlNcTg5S2huMmJYTlV3YldOLW0yclg5SjF5UUMyVncycFJPRFRzMUxwN0hQczl1WjdKajUtcjRTOE9pMkNhSlpfZ2lFN1V0dlV2dmJIcUoyNXZaRmp4dnN4VFdodWRURlBLMDJzZ1pIVlA4REVuVWRoay1MYVpDTjZ6M0ZFdXpaYlZ1aXZteXZqa2hhWHZUYmpYamRiblNabmdxdUhLZEtrLXhUY25qQ3RPNDd1SUt2cjB3c2lKSmFsTWR6VTBkQjdOSjVn0gHnAUFVX3lxTE8tOGdQYllzZEhrSXM5YVh2cU94M1NscEdyTmJjX3gtX2tjSzBnUTRFU0JtUm50SXRaemR3RTc5UGV3cXUxRnplRWRxTUxQTjZtVTBZY1d5d2Q2WHRyX1ZNZGE1SGNZTm9nbGRLWHNlUVR",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Lavoro, le professioni più richieste in Italia nel 2026: dal direttore AI al bioinformatico, l'elenco completo - Il Messaggero",
+      "category": "Italia",
+      "published": "2026-10-24T12:23:36+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTE9JOFB0NmZYdXF1RHBVWmR5cXMyamQ5SVp0U2V6OXRhZXFxQjRuNnAwbzlmOFlFelN6VGxKQU1IMF9BeE80elBZSHN1NHhxSTFnaWtud3RFOEI3dXJrNndkQlBfbllqc3lqR3RkTF9XMWN0RURKVFlSczBjOUk1d00yNmNycXdvaDNOWFllbC3SAY8BQVVfeXFMTS1ZRVpQZE1sVmF0NUp3M0JReDYxX2dlUGhoakJUS0pBeHdnNnEzemUyejdqVUpoMFVLTVktWlVaNGF6aHpBT1AyRGJHSTVJRkFEdDdkQXMyN1NXNTFobEl5d1JYNXNQZHlIVzhnZmg1aTdqVTJGbVN3czV1UHFyd2JXR2E5dkpjSV8tSS1HMXM?oc=5",
+      "source": "Il Messaggero",
+      "status": "verde",
+      "words": 476
+    },
+    {
+      "title": "Avertisment MAE pentru românii care merg în Franța! Sâmbătă sunt așteptate proteste violente în mai... - Kanal D Romania",
+      "category": "Știri consulare",
+      "published": "2026-10-24T12:01:11+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWVFWMkZjOEVkWjNMdkp1bUdocmVObVVvZnFaeWtyd0N3SXZESUZPdEg1a3l0dm5hd3BncE5NSzgyZl9ELW4weU13RGNuZGxVUnk4OGhmak5aUTd1emxYdjZGcF9nQWpUdXlETzhsNzhMcHZFRmhWbXVtay11WFh2RHdiNUdhXzVVNnZWdjlKd1habC1zYTMtel9GQVIxOHlVUllxZGJNclBKbmRVLXBKX3VVdURZemZfSDlZTWZVZzBtR1ZjMnNRRldvY0pLWW9MVTQwV2t4SDbSAd4BQVVfeXFMT3VVZ2RmTTZSSXZyUkNrN0NXcm94NkZuWVFjc1pWa1h5TUNWdmJiSk1jckFkaXdTcElJZld3eG1fLTNsaDQ2SWRkMHBfREVDMGpHbE1obVFtTERiWi13UzZyZ3VMYWtIWmdPc1Q3SDFVb1FLQ3hUckszRjZ",
+      "source": "Kanal D Romania",
+      "status": "verde",
+      "words": 457
+    },
+    {
+      "title": "Furtună puternică în Germania: mai multe persoane au fost rănite - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-24T11:58:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa1pWWmtCbE8xYW5Rd3l4R0x4VVc4SURfbWtNTGFSZkcxTGxpZ21rTTczREstUzVjcDBVSjVPWHN2a1VOWlBmemVaYklrbXp6MjNIaFhCQlNhelBkQ1k4VV8ybWNVcTFRSC1XMnFaR2VNRUxxRklmcTdNbjkzdjVBa0VXazdaTTBpdF9VQTJ3djdzSE5vWjdqRE1reV9Cc1kzcWpYMXVzd9IBrAFBVV95cUxNTEVTSGtmdC1jTFMxV2t0a2t5M05UV2lOa1p5RmJ1eUdxU2tIVEd4cGlFNmNlejM3MDFEZWw0QlVyOFNzSUV6RHdHS1JHYlFnNFNwZ0syUkgyZ2JrSHNwLTRfZXA0ODVJM0lyZUtQNVlkZGJXMnNGbE1zUk1hckNnT3dIZl9abkg3MDlHSmdUTkJzeGdGTDExbGRlS0l5VzJHN2NZVkwyLVlMZ2J",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "L’Italia bloccata dai tir che si è rimangiata la cura del ferro - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-24T11:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQU2VrczNONTJjTVlzaGZXdlB6dFQ2azAtNWJtMjc2dzl1dlFlcjhBQ2wxRkhTWklNa2RsS2NfY0hiMWFySjNqZEdNa2NVbDQyY2xsbnhZeVdLOFFOV3R4bU5tVnFldURiZWNreGc5VG1td2FmV2hXWjAyT0hWVExJUnVpaTdzdWdZUHpXeUZESEFGODBqeGxkWVhVRWVJbHJLX25QWUpWZW5NUkh6T0Q0VXJ5N1VuRTVjM1dYTzJrcjhXUQ?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 429
+    },
+    {
+      "title": "Moldoveancă din Italia, condamnată pentru hărțuirea unei doctorițe. Susținea că i-au fost furate ovocitele și copiii născuți din ele erau ai săi - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-24T10:58:42+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNckh4SUdHaGQ2Z2ZXYkRRUWRKQ0hTZEkzbHY1S01vVlBVTDZ3bGhNbUlVSFpLRktmVlFseG5icGdEaWFBQlkyMklYU2lpRks2T0d6czlUWXo0VjBnbWMtOUZYQzRNeGZteFFzQVNiQnEyWWlCRlVGY0JPNi1TWVp5R1otYzRScHhjQV8tSk45UVlkQkl1OVVJZThJYU5wM29fUTdyZW1ub2sxRzR5dGFsWXpLYXhVSko2WVpEZlQ2QzNoNkVma014am15YU1QMXV4SVp3Q2c1YXByeUJaaFJaQ0gzLTRoWXVyMjY1Y0ZSZmdVbGF0SjUzSFdn?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 463
+    },
+    {
+      "title": "Bloc cu bulină din București, evacuat. Locatarii au sunat la 112 după ce a apărut o crăpătură... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-24T10:35:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOWRFclplT3lIOU9razJ5R2gwMEdXY2RuMElpbWZpUHpXNGtEZ2RCRW8wcjBicHJfYzRUcG0tcnJUQTJnaFktQ3NMUEZaNWM4VFBBV3MtdHlqamV2OEJrRmZNaWZzcGE4T21Tc1JzX3dkVnlBMTRBQkpIVkVueU9BT1A5a2hLZUR0Q1pMcm9wQUFLdDR6a2VKVHV6LTRJcERMNThzRVFNYUV6MXAxdHJVc1Y3MEFubkxFdVNzdnBPeTB2MGxQT24yYnM1NlFwNGtVVndV0gHYAUFVX3lxTE91dG00dEJjZDczRDlOSy1nanV3eTd0dFNRdFg5VldDS3huNVNDUFBOUTRwbVdGM0FvTktnamlDY3ZUQTVNQ1BlcW9mRU0xdjdPeGZZRDQ2QUZjd05ITWM1WE9MTFJ4VDhBQzFKaHdGalJtNWZaaXN4eU1fU1FYZ3p",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Accident grav de muncă pe o stradă din Graz. Un român a ajuns în stare gravă la spital - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-24T10:11:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdXdtcFlZUXFSOUpBbHJBdGNLU1lNZUxjdjRCWE1vYWJGRF9NczNoNGluRXZucU5aUS10WmwyTGlqQmxBMXFVT0JQZkpVN3NjZ0RRN3YtajVLbG9SYllNTlJVeUk1d1dIam1YQTlnZjdQMmRYYlJDN0h2SkR5Zzd0dkJFVVk0WVJlem1Ib0Z6SDZsN0k1Ul9ra0Z0QlFHRlBXdkJWdTFaVzM0WEhPanRiOFlkWDhfLU0xOGJWVUo3LTd3aHdR0gHKAUFVX3lxTE5KRG5xcnFVanQtNzhjdjdpd1dYUDFPUFBqMHZqNy1vbmhVRms5UW1iQ0x3enpXUVo4NG5Dem1jYkV1ZnE0UVA2ODBKTl8zQkVKVGhOaE5jdHIxSG1UdDRJVFJpc3VzaHRWaEl4X1Z2NW5oZDVDTXh5a05VZnpUdkZkbGtUblVMeWxZY0UwQ2t",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "O româncă din Spania și-a luat copiii și a plecat cu ei în România. Femeia e acum anchetată pentru... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-24T08:11:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOWUh3elVNR2RobG5jSUtoejNqNVFMdzhEQ0t5MXA5VGdLbnM0bTdWRVRzQlFqcm91UDUyWWMyS0NxQUhaYVFpbm1PR2hsYlVubHlwME1tZ3hUMVpLOWVJcGwzczh0dG12aS13S3ptUW5ydnNVUVl0SXN3clJOLWQ1dGRaVlhTaHpSTzZiRWhYYlB3N2NEU0h6Ulozc3dhZlgxc2EyWmVMMkpDYTNnYmMwYkNkMnZEUjMwSjdKOGpqazJSQmk5OTdyam41el9Hb0FXeHlRWXhyOGNxODFDTmfSAeMBQVVfeXFMT0ZGRGFiUWg1ZW90Q2lmb1BnOUdrMXNwZHd3MVdheGV5OEZQbXFlLS1ycmtVU1Q3cFdpZVNPY0c1aHVXN3pwN0RlbjlDenI1THgyLTZ0TEphRkQ0M1dwbXVNVTFCR0tFTEdkbS1kRDJzM21fSlF",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "In Italia la ricchezza è degli anziani. Le ragioni dei giovani e il torto della violenza - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-24T06:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQS0RaRV8ybTJjbFRTLVpKanBEcDNQMGpReGROU1dObHFyWHlmcFBvSzltZmRodHdkbnhNdXVzWVo3X0NHbUdzbzh4azZHNHZGWjR4OWZWa01TR1RCN2R3SExpbGhMZERGci02V1VSYmlnOUJOYzNVRnJzV3I0SFg2SHFZLWlFRFZtYW9ZMWQ5eEgwb2QzVlhZYUxsMThfR0JIYUwzWVEzdUc3YmlDcmRYQ2J1N0I3dkNJd2NRaXFfTHJ1UVU0SmpsY1NZaWZEY2xOVVlCWm9UdGZIcmlad1E?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 504
+    },
+    {
+      "title": "Ora de iarnă 2026 – în această noapte ora 04:00 devine ora 03:00 - ZCH",
+      "category": "România",
+      "published": "2026-10-24T05:26:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOYlZ0Nm5wS2sydGtfNnVJblRmNUlZV0NCd1JiMEVleFlySlo1VGZxTjdRMUE1NU9FYU1KeVcxcUgyNVZCR24xM2ZmYXNDa3U2cTBLb1lYX3JydDR2cFJpMHVpMUE5X0YtSzNBZFl3cV9jbHlTX1F4RDgwNjJ6N0EyUml3?oc=5",
+      "source": "ZCH",
+      "status": "verde",
+      "words": 451
+    },
+    {
+      "title": "Manovra, mini Irpef per il primo impiego o bonus in busta paga a fine anno. Le opzioni per i giovani - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-23T23:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQakpob2xSSlZhQU03NHhpOUFSSm1kNVd3WnBYbkEtQlRLS3hlQXNsY3J3YXVJME1IUTd3TjY5OHhZQmZ0UlBacEFGY0YyNktUQzlFbjctVVkyLWJOaTF6VTMzdVlIdk9JdlFqY0dOSXBzSms4cGxFRzVmWDJxVlNZWndWN0w4eEdBbWdTUmpuNVZsU1U?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
     }
   ],
   "radio_briefs": [
-    {
-      "title": "Torino: misiune economică România–Italia, dedicată investițiilor și antreprenorilor din diaspora",
-      "category": "Diaspora",
-      "published": "2026-10-23T19:17:19+02:00",
-      "url": "https://www.jurnalit.com/2026/10/21/misiune-economica-romania-italia-la-torino-pe-23-octombrie-2026/",
-      "source": "Jurnalit (21 octombrie 2026); Știri pe Surse (15 octombrie 2026)",
-      "status": "verde",
-      "words": 353,
-      "intro": "La Torino a fost anunțată pentru 23 octombrie o misiune economică România–Italia la Muzeul Național al Automobilului, cu participarea instituțiilor camerale și a comunității de afaceri româno-italiene.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
     {
       "title": "Roma: recitalul „Glasul emoției” a fost programat la Accademia di Romania, cu Iulia Isaev și Liana Mareș",
       "category": "Diaspora",
@@ -728,6 +1115,17 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
+      "title": "Ora de iarnă 2026 – în această noapte ora 04:00 devine ora 03:00 - ZCH",
+      "category": "România",
+      "published": "2026-10-24T05:26:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOYlZ0Nm5wS2sydGtfNnVJblRmNUlZV0NCd1JiMEVleFlySlo1VGZxTjdRMUE1NU9FYU1KeVcxcUgyNVZCR24xM2ZmYXNDa3U2cTBLb1lYX3JydDR2cFJpMHVpMUE5X0YtSzNBZFl3cV9jbHlTX1F4RDgwNjJ6N0EyUml3?oc=5",
+      "source": "ZCH",
+      "status": "verde",
+      "words": 451,
+      "intro": "România revine la ora standard în noaptea de sâmbătă, 24 octombrie, spre duminică, 25 octombrie 2026.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Ardea, lângă Roma: comunitatea românească a inaugurat noua biserică „Sfânta Muceniță Cecilia”",
       "category": "Diaspora",
       "published": "2026-10-24T08:03:00Z",
@@ -739,15 +1137,15 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "Bologna, patru ore de violențe în centrul orașului: 17 răniți, baricade și vitrine sparte",
-      "category": "Știri din redacție",
-      "published": "2026-10-25T09:10:00+01:00",
-      "url": "https://www.bolognatoday.it/cronaca/scontri-a-bologna-quattro-ore-di-guerriglia-17-feriti-barricate-e-negozi-devastati.html",
-      "source": "BolognaToday · Il Resto del Carlino · RaiNews",
+      "title": "Moldoveancă din Italia, condamnată pentru hărțuirea unei doctorițe. Susținea că i-au fost furate ovocitele și copiii născuți din ele erau ai săi - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-24T10:58:42+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNckh4SUdHaGQ2Z2ZXYkRRUWRKQ0hTZEkzbHY1S01vVlBVTDZ3bGhNbUlVSFpLRktmVlFseG5icGdEaWFBQlkyMklYU2lpRks2T0d6czlUWXo0VjBnbWMtOUZYQzRNeGZteFFzQVNiQnEyWWlCRlVGY0JPNi1TWVp5R1otYzRScHhjQV8tSk45UVlkQkl1OVVJZThJYU5wM29fUTdyZW1ub2sxRzR5dGFsWXpLYXhVSko2WVpEZlQ2QzNoNkVma014am15YU1QMXV4SVp3Q2c1YXByeUJaaFJaQ0gzLTRoWXVyMjY1Y0ZSZmdVbGF0SjUzSFdn?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
       "status": "verde",
-      "words": 679,
-      "intro": "Sâmbătă, 24 octombrie 2026, centrul orașului Bologna a fost scena unor confruntări violente între o parte dintre participanții la o manifestație și forțele de ordine.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+      "words": 463,
+      "intro": "O femeie de 34 de ani, originară din Republica Moldova și stabilită în Italia, a fost condamnată la un an și două luni de închisoare într-un dosar de acte persecutorii îndreptate împotriva unei doctorițe și a soțului acesteia.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
 }
