@@ -6,6 +6,7 @@ on:
       - 'scripts/update_news.py'
       - 'scripts/news_illustrations.py'
       - 'scripts/news_details.py'
+      - 'scripts/build_editorial_status.py'
       - 'data/news-summaries.json'
       - '.github/workflows/news.yml'
   schedule:
