@@ -1,0 +1,72 @@
+{
+  "updated_at": "2026-10-25T00:00:00Z",
+  "purpose": "Catalog de surse pentru Radar Diaspora; orice semnal din comunitate rămâne în verificare editorială.",
+  "cities": [
+    "Roma",
+    "Milano",
+    "Torino",
+    "Bologna",
+    "Padova",
+    "Verona",
+    "Firenze",
+    "Napoli",
+    "Genova",
+    "Venezia"
+  ],
+  "sources": [
+    {
+      "name": "MAE / consulate românești în Italia",
+      "type": "instituțional",
+      "tier": "official",
+      "coverage": "acte, programări, alerte consulare"
+    },
+    {
+      "name": "INPS",
+      "type": "instituțional",
+      "tier": "official",
+      "coverage": "pensii, NASpI, alocații, servicii"
+    },
+    {
+      "name": "INAIL / Ministero del Lavoro / Ispettorato",
+      "type": "instituțional",
+      "tier": "official",
+      "coverage": "muncă, siguranță, drepturi"
+    },
+    {
+      "name": "Agenzia delle Entrate",
+      "type": "instituțional",
+      "tier": "official",
+      "coverage": "rezidență fiscală și taxe"
+    },
+    {
+      "name": "Rotalianul",
+      "type": "comunitar",
+      "tier": "community",
+      "coverage": "românii din Italia"
+    },
+    {
+      "name": "Gazeta Românească",
+      "type": "comunitar",
+      "tier": "community",
+      "coverage": "informații comunitare"
+    },
+    {
+      "name": "ȘtiriDiaspora",
+      "type": "comunitar",
+      "tier": "community",
+      "coverage": "diaspora românească"
+    },
+    {
+      "name": "Google News city radar",
+      "type": "agregator",
+      "tier": "news",
+      "coverage": "o zonă urbană la fiecare rulare"
+    }
+  ],
+  "editorial_rules": [
+    "Sursele instituționale au prioritate pentru informații practice.",
+    "O știre comunitară sau o semnalare necesită verificare înainte de publicare.",
+    "Rularea orașelor se rotește pentru a evita concentrarea pe Roma și Milano.",
+    "Știrile sunt păstrate maximum 48 de ore în feedul public."
+  ]
+}
