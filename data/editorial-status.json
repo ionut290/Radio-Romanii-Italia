@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-25T19:02:35.221150+00:00",
+  "news_updated_at": "2026-10-25T19:13:24.721106+00:00",
   "editorial_updated_at": "2026-10-25T19:58:19.413056+01:00",
-  "translations_updated_at": "2026-10-25T17:57:43.775468+00:00",
-  "feed_total": 77,
-  "feed_extended_400": 23,
-  "feed_missing_body": 54,
+  "translations_updated_at": "2026-10-25T19:02:36.425745+00:00",
+  "feed_total": 78,
+  "feed_extended_400": 20,
+  "feed_missing_body": 58,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 28,
-  "translation_records": 49,
+  "translation_records": 40,
   "pending_total": 38,
   "pending_filtered_out": 106,
-  "editorial_verde": 23,
-  "editorial_galben": 33,
-  "editorial_rosu": 33,
+  "editorial_verde": 21,
+  "editorial_galben": 34,
+  "editorial_rosu": 36,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -398,11 +398,47 @@
   ],
   "recent_news": [
     {
+      "title": "Nazare: Nu există un cufăr de galbeni secret la Ministerul Finanţelor. România e aproape de jumătatea drumului de la deficitul de 9,3%",
+      "category": "România",
+      "published": "2026-10-25T19:11:14+00:00",
+      "url": "https://www.digi24.ro/finante/nazare-nu-exista-un-cufar-de-galbeni-secret-la-ministerul-finantelor-romania-e-aproape-de-jumatatea-drumului-de-la-deficitul-de-93-4008387",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Alexandru Nazare nu exclude noi creșteri de taxe și impozite: „Nu îmi doresc, dar avem nevoie de sustenabilitate”",
+      "category": "România",
+      "published": "2026-10-25T19:05:33+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/alexandru-nazare-nu-exclude-noi-cresteri-de-taxe-si-impozite-nu-imi-doresc-dar-avem-nevoie-de-sustenabilitate-4008321",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 438
+    },
+    {
+      "title": "Serie A: a Lecce la Juventus vince 2-0 CRONACA e FOTO",
+      "category": "Italia",
+      "published": "2026-10-25T19:05:28+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-in-campo-lecce-juventus-0-2-diretta-e-foto_c687213b-7c89-45e6-8894-59efa16e9e36.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Ministrul de Finanțe, Alexandru Nazare: Impozitele pe proprietăți nu cresc în 2027. Nu există acest pericol",
       "category": "România",
       "published": "2026-10-25T19:00:28+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/ministrul-de-finanse-alexandru-nazare-impozitele-pe-proprietati-nu-cresc-in-2027-4008375",
       "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Trump in Michigan attacca Obama, 'appoggia un jihadista'",
+      "category": "Italia",
+      "published": "2026-10-25T18:59:45+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/trump-obama-presidente-incompetente-e-ora-sostiene-un-jihadista-anti-semita_4027c932-07ad-4ba1-a7d0-8eb7636955f9.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -416,13 +452,13 @@
       "words": 0
     },
     {
-      "title": "Alexandru Nazare nu exclude noi creșteri de taxe și impozite: „Nu îmi doresc, dar avem nevoie de sustenabilitate”",
-      "category": "România",
-      "published": "2026-10-25T18:52:52+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/alexandru-nazare-nu-exclude-noi-cresteri-de-taxe-si-impozite-nu-imi-doresc-dar-avem-nevoie-de-sustenabilitate-4008321",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 438
+      "title": "Netanyahu gioca la carta della 'minaccia atomica su Tel Aviv'",
+      "category": "Italia",
+      "published": "2026-10-25T18:48:11+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/netanyahu-posta-la-foto-di-unatomica-su-tel-aviv-2-anni-per-finire-il-lavoro_b57751fe-5586-4c9f-87f2-638df6696482.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Vor fi indexate pensiile la începutul lui 2027? Răspunsul ministrului Finanțelor, Alexandru Nazare",
@@ -438,24 +474,6 @@
       "category": "Italia",
       "published": "2026-10-25T18:43:41+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Serie A: in campo Lecce-Juventus 0-2 DIRETTA e FOTO",
-      "category": "Italia",
-      "published": "2026-10-25T18:41:15+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-in-campo-lecce-juventus-0-2-diretta-e-foto_c687213b-7c89-45e6-8894-59efa16e9e36.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Trump: 'Obama presidente incompetente e ora sostiene un jihadista antisemita'",
-      "category": "Italia",
-      "published": "2026-10-25T18:16:00+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/trump-obama-presidente-incompetente-e-ora-sostiene-un-jihadista-anti-semita_4027c932-07ad-4ba1-a7d0-8eb7636955f9.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
@@ -551,15 +569,6 @@
       "words": 0
     },
     {
-      "title": "Netanyahu posta la foto di un'atomica su Tel Aviv, '2 anni per finire il lavoro con l'Iran'",
-      "category": "Italia",
-      "published": "2026-10-25T17:39:58+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/netanyahu-posta-la-foto-di-unatomica-su-tel-aviv-2-anni-per-finire-il-lavoro_b57751fe-5586-4c9f-87f2-638df6696482.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Urne aperte in Brasile, Bolsonaro al seggio a Rio: 'È l'ora del cambiamento'. Lula vota a San Paolo e attacca lo sfidante: 'Bugiardo'",
       "category": "Italia",
       "published": "2026-10-25T17:34:32+00:00",
@@ -587,15 +596,6 @@
       "words": 436
     },
     {
-      "title": "Statali premiati per andare in ufficio, da gennaio si cambia: ora arriva la riforma del merito - Il Messaggero",
-      "category": "Italia",
-      "published": "2026-10-25T17:07:20+00:00",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbnl0Z2JiZEQyMlRmNWtuZWpfa3g5ZS01VlR2dEx6QzhhZzN2OGpIR21XaVBTX1V6N1JzaU9lR2V2QnlLeVNGNTJ6cmdfNFo4UjlDdmdyU200WXRLc1l2UXg4bWZIeWczZ3lUdHRfaXFzMWdKZ1M3bUR2cE9TNW9WcC1saHFPajExTHpzX3k2Q0huZlpmcFQyUTc2eVpQVksxX3ZOQjRR0gGkAUFVX3lxTE50c1RyNkxQaUNhSkNPYVA2WUdKbTZ5b21OYXVNZV9rOWEzQVBGNzRZLWdfRERmQ0JjTHl1dmlsWmJYR2lyeFN6QUFTNG5Md3Jvb2thOUgwS0hxaXNKYWd1M1RfRXJ6cUZTTTh5dGpJWXpoZzVVQ0E1b2JXM21nNUJ4THE1OHJua2FEdnRFMnlSS0VoUEttRG42R1ZMTndvRkhjNzd1?oc=5",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ministrul Educației vrea fiscalizarea meditațiilor. Sorin Costreie: Un fenomen de amploare care îmi arată că şcoala are o mare problemă",
       "category": "România",
       "published": "2026-10-25T17:03:39+00:00",
@@ -620,15 +620,6 @@
       "url": "https://www.digi24.ro/stiri/actualitate/politica/emil-boc-traim-cele-mai-dificile-momente-de-dupa-1989-razboiul-este-din-nou-in-europa-4008227",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "La settimana finanziaria. Mercati alle prese con banche centrali, dati macro e conti tech - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-25T16:22:43+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa3RwLWVVSWZvTWxpX1hPVTNVbG5YNWx2UEtSNjhZZFYtT3BGdHlFWnFrSVZOV04zSzZuSlV0Ny1uUWZyNEY3SGpPLWdwSGZES2VsZnk4WGZ0cXlIMWhKYnd5bWdVNFNQN01zcjRfU3lmclJzVUc4OFhSZWVRX2FzdXhtdndnMXZ0dWNMb1VRYw?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -713,12 +704,12 @@
       "words": 422
     },
     {
-      "title": "Iranul, mesaj pentru SUA și Israel în plin impas al negocierilor: „Politica noastră va rămâne aceeași”",
-      "category": "România",
-      "published": "2026-10-25T14:57:51+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/iranul-mesaj-pentru-sua-si-israel-in-plin-impas-al-negocierilor-politica-noastra-va-ramane-aceeasi-4008129",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Note solidali Camposampiero, oggi concerto per il Cuamm - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T14:47:41+00:00",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5falBrYjZ6aGNmMURjdHVCQmd0UEE5dUpFT1ItQUx3dU9JaVVYYW05M19KT0p2YmQtT2w0VmtsbzZ5aDVGLWxNcjI2c1VGNFpVUjhkV1NXVHh4amEtYmJhNjF3NzM4TW1tdm1ZbE9Nbi1FRVI3NVFJQkl6dVI?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -758,20 +749,20 @@
       "words": 0
     },
     {
+      "title": "Meteo Padova, lunedì 26 ottobre asciutto e massime in aumento: il bollettino ARPAV delle 13 - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T12:48:15+00:00",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBCRTBuZVFwZ25wYnFFTDR5M1lOaGhPblpCR3h5NXZGa09hV3U0ZXBLZDdsdWl4d29yb244OVlBMUVLUVNPaDBPVUtiTTVsN243YjRvWEViM2trWG91NW1MNWpabTc3WEg4YnpZcUlaOHp1em40dFhJbDh0Mkc?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Proteste în Franța: peste 500.000 de oameni în stradă. Atmosferă mai calmă decât pe 17 octombrie - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-25T11:48:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVk5KSFBPTng5UmtDQ0Mwejd1bDVhQzl3ejlFQVFmQzdtN2lhaGJ5WlhIaWtkRXkxRFl6S3puRGxlemFVNjQ5M1BvUHRVbzdmOVpEMExvaGNWRDVXT2M4X3ZXa2lTMlY1bXFRODMwTE5MZGZkY1ZDOTVYbWVlNkxUTWF1NjROMkVYeVVKN2doV045UjhWRmgyVFFFN0xzYW5XanRtc1c2OVBrS0FGREJFNm50YjBGNmNOaEkzNDlkbmozUGR0N1JKN2NKQ1N1QlEy0gHWAUFVX3lxTE04eGxzaHlqbmFncHRteVAwUnoyaHhwWU4wNkdxbGxwX2lpYlZhOTRmWHJrZGpWVVFMbUt3RjdJUWh5amZFbjVTbno2cEdRZFFPcG95T0lGY1cwa1d1c1RONVg2T2xpNzJxVk80cThKcERmQi1rSWo1T085NEN6d2JockZ",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Lavoro, opportunità di impiego nella Ferrero: assunzioni anche in Campania - Il Mattino",
-      "category": "Italia",
-      "published": "2026-10-25T11:27:35+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdUwzbTZsWGcyaXlySWpUTFRGU2EwSDB6N1p4dERHSmNTbWxCcVo3V0RMYzRlLVdaN294NE5FSk1MbV8xQlhOaTZ0UWNlVnBYOEF4MXNEOUd2bkNrQV93eFlrQmFBMXdxbTgwNFREX2RDcXc5TmtLalJpM01rU0F1YmhWcHo3NktGQXg5SDZTTdIBjgFBVV95cUxQa2s1Mm1fcHNYd0NtVFRpa1oxRGRsX3hvUElKVFZFMndXS25YRmgzT21kMkNtWTVVYzVtdjVqNEhyS2E3bnVRWUxWb19YQmJqemhISm1fRGlESFkxd1dvVGRTell4RVlkRnBaa2hNNF82MlpSdkpjV1BYT1dIOExaVDVhalJiVEpfc0FreXdn?oc=5",
-      "source": "Il Mattino",
       "status": "roșu",
       "words": 0
     },
@@ -803,6 +794,15 @@
       "words": 0
     },
     {
+      "title": "Montegrotto, Castagnata in corso: linea M deviata e cinque fermate sospese fino alle 20 - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T10:49:49+00:00",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1reFEyQ1NNY3BKT3RvdXk1dG95SW5odE1rbmZVblFvbHRhVGF4WERtbzE4dHJ0OVpPMjB0bGlwdmxzQnFEN1FQeG5US3JLQlRtOGlZSDZFaC1aMkU1VzFTTG9oSGlobDF0M1RYM2Y1UUp3aElNcVJHMw?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Carlo Rambaldi, a San Diego cento artisti celebrano il suo centenario",
       "category": "Italia",
       "published": "2026-10-25T10:20:53+00:00",
@@ -830,6 +830,24 @@
       "words": 0
     },
     {
+      "title": "Notizie di Padova ore 10: bomba day, carcere, prevenzione e cinema oggi in città - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T09:50:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1Ebng1U25QYUFnbEJCbTBMZWcwdWFPZkxYcU5qMWNTa0t1aW9iZm1TOEprR2lkb2ZtSDFCNlk0cmVvZkw5MDYxRTVneTNfTmtHb2ZVU1dodzZfWWw0aDJ2bnZQS1hjQ2V6dmdxbEwwSWc?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Padova, proposta da 100 milioni per le scuole: risparmio energetico e possibili lavori nel 2027 - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T09:49:27+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLU1STlcxZFUtN0J1d1RnMXlhWWNxV2E4empQcUo3OWZXZzdjQWkwSFlaQktiZGRLRktpSmRaY2RlWWo3ZFBUeDJTVEotcHZ1VFQ2VHNvR3JrekpnWkVBWVh2MlVUNHJkZThJcXk2aFFhbXFybXQ5czRFVXhvVExWalNnSQ?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Barack Obama: Casa Alba a lui Donald Trump Arată ca o Fabrica de Cheesecakes a lui Saddam Hussein - iDevice.ro",
       "category": "România",
       "published": "2026-10-25T09:15:46+00:00",
@@ -844,6 +862,15 @@
       "published": "2026-10-25T09:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbEszZkJrdjZFaFRlRUFMLUhMNUM0dmVMVmM4X29ycW83dTlUd1M2TUFiSG11bFRFUGo4RjZWZGRPUG82bEZMZ2REMEhyTzBnNnY3TFRxME9xay0wUThQRWFVd3dyRFJMdkpSMWxoNGY2Q1Rtb0tXOEtkekZocHNUNURUSlNPVFR0ODRoQnBwMEduOTJER05KZWE1NjV0NkJHWHMwMUJaMmtieTRkWXN4OVI3TjlUVjJ5c001bzBwLXJTU3NxNVFpWGhHSGxmZTBG?oc=5",
       "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Padova, quattro arresti dopo il corteo in stazione: il nuovo bilancio distingue i provvedimenti - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T08:47:31+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPajJnZ1NuN0twZmtDZmZxeVdMTkZnMTJlNDA1OU1ZaWw2MVdZVXpyWTUtWUNhc0hhXzAzeDNIM0ZPMWxNTXlUQkJqTXdNM2VUQzF3N1FXdGZhVG9uWkhMcDhVWUpranB1OTVKUmtLaUg5VjZ5cS1FT25mckxILVpPekFxMW0?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -929,6 +956,24 @@
       "words": 500
     },
     {
+      "title": "Notizie di Padova ore 23: tensione in stazione, Padova corsaro e gemelli da record - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-24T21:25:38+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBZS0dCV2lIY29mQ2VkZ3Vmb2xZTlpSSEIzUk5aXzZMUDZ5Q3EzbkUwTW05VFpmVk8yekMybGUtT21QTlBTTzhoanF2ZTBmOVNDaWd5bjNMbkpYUmM4TGRUajRiMFZCcnN5U0ZBQ0VNZTc?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Albignasego e Casalserugo, progetto contro gli allagamenti: risorse da cercare nel 2027 - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-24T20:48:51+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNY2xRd2xVQ3MwRm9xYlBrUjhQMk05T0F6SENQN3BBTm03NVJwbU83WnIzdG5NM2J0cVRDbE5wc2ZfU1NYY18yZGp4NldWMTNuYVBJb19MUjBUVzFJdEhJRDV0R2hYU1Z4SjhwMVlrSXhaTHc4MnN3cnV0NUJRLTkyTGVR?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Badantă româncă, arestată în Italia. Acuzată că a bătut bătrâna și a obligat-o să mănânce cu forța - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-24T18:29:16+00:00",
@@ -936,15 +981,6 @@
       "source": "Rotalianul – Revista românului din Italia",
       "status": "verde",
       "words": 420
-    },
-    {
-      "title": "Salari al centro Consulta Confintesa, riconferma Prudenzano alla guida - Touchpoint News",
-      "category": "Italia",
-      "published": "2026-10-24T17:31:35+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQLXBvNmtLOXZyVkhBZHgzUHFvd2Y2MEc0ZWE1YU9WQVNiRGFnX3BmOVp5RWdJZXBvYmZ0QWZ2WWduaklSeXlLbnVrM1dzYW5GTWNZNXJMY0RNZFdVRDlSRHlLX2V0RjE0VC02LVFsVkNUNG1VQUNPWE1XSlZDLWhaRjEzaTM1SDhQNDBzYmR0X1FSTmxfdmp3SHRBdWZYb3hvYnVJLWhWdXFpTG1PUVE?oc=5",
-      "source": "Touchpoint News",
-      "status": "verde",
-      "words": 432
     },
     {
       "title": "Adolescent român de 14 ani din Italia, acuzat că instiga oamenii la ocuparea școlilor și provocarea de pagube. Părinții săi au colaborat cu polițiștii - Rotalianul – Revista românului din Italia",
@@ -963,15 +999,6 @@
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Lavoro, Confintesa: \"Contratti pirata costano fino a 12mila al lavoratore\" - Touchpoint News",
-      "category": "Italia",
-      "published": "2026-10-24T13:38:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYlNjZjItdUNKVWNMZzE1emZkYURfeDdxV0pGcDVFZGdJcXY2QTUxbG4yZEViMjRScnRNN3ZhVHh1OGRwRTkzWjE4aWFmb3cyUUFrMkRvUTVkYkRUVXR2RjBNRXp1Tk1maDBYTGZvSUxhVEJDZ2loMWhoaWFfSjBrUTZqeUJzM2x0VnhXVmh1YzFDV1VBeDNLcnV0YXNCSWFrd3NUd0hnVUl1Szg5czI4?oc=5",
-      "source": "Touchpoint News",
-      "status": "verde",
-      "words": 436
     },
     {
       "title": "Rareș Bogdan, critici la adresa lui Bolojan: „A dat-o de gard total”. Ce soluție propune pentru reducerea... - Digi24",
@@ -1064,15 +1091,6 @@
       "words": 0
     },
     {
-      "title": "In Italia la ricchezza è degli anziani. Le ragioni dei giovani e il torto della violenza - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-24T06:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQS0RaRV8ybTJjbFRTLVpKanBEcDNQMGpReGROU1dObHFyWHlmcFBvSzltZmRodHdkbnhNdXVzWVo3X0NHbUdzbzh4azZHNHZGWjR4OWZWa01TR1RCN2R3SExpbGhMZERGci02V1VSYmlnOUJOYzNVRnJzV3I0SFg2SHFZLWlFRFZtYW9ZMWQ5eEgwb2QzVlhZYUxsMThfR0JIYUwzWVEzdUc3YmlDcmRYQ2J1N0I3dkNJd2NRaXFfTHJ1UVU0SmpsY1NZaWZEY2xOVVlCWm9UdGZIcmlad1E?oc=5",
-      "source": "la Repubblica",
-      "status": "verde",
-      "words": 504
-    },
-    {
       "title": "Ora de iarnă 2026 – în această noapte ora 04:00 devine ora 03:00 - ZCH",
       "category": "România",
       "published": "2026-10-24T05:26:26+00:00",
@@ -1080,15 +1098,6 @@
       "source": "ZCH",
       "status": "verde",
       "words": 451
-    },
-    {
-      "title": "Manovra, mini Irpef per il primo impiego o bonus in busta paga a fine anno. Le opzioni per i giovani - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-23T23:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQakpob2xSSlZhQU03NHhpOUFSSm1kNVd3WnBYbkEtQlRLS3hlQXNsY3J3YXVJME1IUTd3TjY5OHhZQmZ0UlBacEFGY0YyNktUQzlFbjctVVkyLWJOaTF6VTMzdVlIdk9JdlFqY0dOSXBzSms4cGxFRzVmWDJxVlNZWndWN0w4eEdBbWdTUmpuNVZsU1U?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
