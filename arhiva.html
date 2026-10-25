@@ -1,0 +1,41 @@
+<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101827"><title>Arhiva știrilor redacției RDI</title><meta name="description" content="Arhiva permanentă a materialelor publicate de redacția Radio Românii din Italia."><style>
+*{box-sizing:border-box}body{margin:0;background:#0e1a2b;color:#f5f7fb;font-family:system-ui,sans-serif}main{max-width:1040px;margin:auto;padding:25px 17px 70px}a{color:#f2cd7f}h1{font-size:clamp(32px,5vw,48px)}h2{font-size:20px}p{line-height:1.65;color:#cad6e3}input,select{background:#172e46;color:white;border:1px solid #4d6885;border-radius:10px;padding:13px;font:inherit}.filters{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.filters input{flex:2;min-width:190px}.filters select{flex:1;min-width:160px}.entry{padding:23px;background:#182c43;border:1px solid #3c5877;border-radius:17px;margin:15px 0}.meta{font-size:13px;color:#f3ce7e}.entry h2{margin:10px 0}.entry button{cursor:pointer;border:1px solid #9cb0c5;background:#273e58;color:#fff;border-radius:8px;padding:9px 12px;margin:7px 0}.body{white-space:pre-line;margin-top:12px;color:#e6eff7}footer{margin-top:40px;color:#96a8c0;font-size:13px}
+</style></head><body><main><a href="./index.html">← Radio Românii din Italia</a><h1>Arhiva redacției</h1><p>Articolele publicate de Radio Românii din Italia rămân în această arhivă și după ce dispar din lista știrilor de ultimă oră. Datele și sursele sunt păstrate; evenimentele în desfășurare se pot schimba între timp.</p><div class="filters"><input type="search" id="search" placeholder="Caută după titlu, subiect sau sursă" aria-label="Caută în arhivă"><select id="category" aria-label="Categorie"><option value="">Toate categoriile</option></select></div><p id="result-count" aria-live="polite">Se încarcă arhiva…</p><div id="items"></div><footer>Arhivă editorială publică · Materialele provenite din surse externe sunt atribuite. Pentru noutăți verifică mereu data articolului și sursa originală.</footer></main><script>
+let articles=[];
+const $=id=>document.getElementById(id);
+const date=s=>{let d=new Date(s||'');return isNaN(d)?'':new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',dateStyle:'medium'}).format(d)};
+const safeUrl=u=>typeof u==='string'&&/^https:\/\//i.test(u)?u:null;
+function render(){
+ const term=$('search').value.toLocaleLowerCase('ro').trim(),category=$('category').value;
+ const found=articles.filter(a=>(!category||a.category===category)&&[a.title,a.summary,a.source].some(v=>String(v||'').toLocaleLowerCase('ro').includes(term)));
+ $('result-count').textContent=found.length+' articole găsite · arhivă de '+articles.length+' materiale';
+ const root=$('items');root.replaceChildren();
+ for(const a of found.slice(0,150)){
+  const item=document.createElement('article');item.className='entry';
+  const meta=document.createElement('div');meta.className='meta';meta.textContent=(a.category||'Redacție')+' · '+date(a.published)+' · '+(a.source||'RDI');item.append(meta);
+  const heading=document.createElement('h2');heading.textContent=a.title||'Articol';item.append(heading);
+  const intro=document.createElement('p');intro.textContent=String(a.summary||a.body||'').slice(0,600);item.append(intro);
+  const full=String(a.body||'').trim();
+  if(full&&full!==String(a.summary||'').trim()){
+   const btn=document.createElement('button');btn.type='button';btn.textContent='Citește articolul complet';
+   const body=document.createElement('p');body.className='body';body.hidden=true;body.textContent=full;
+   btn.addEventListener('click',()=>{body.hidden=!body.hidden;btn.textContent=body.hidden?'Citește articolul complet':'Ascunde articolul';});
+   item.append(btn,body);
+  }
+  const url=safeUrl(a.url);if(url){const link=document.createElement('p');const anchor=document.createElement('a');anchor.href=url;anchor.rel='noopener noreferrer';anchor.target='_blank';anchor.textContent='Sursa originală ↗';link.append(anchor);item.append(link);}
+  root.append(item);
+ }
+ if(!found.length)root.textContent='Niciun articol găsit.';
+}
+async function load(){
+ try{
+  const res=await fetch('./data/editorial-archive.json?ts='+Date.now(),{cache:'no-store'});
+  if(!res.ok)throw Error('HTTP '+res.status);
+  const data=await res.json();articles=Array.isArray(data.items)?data.items:[];
+  const categories=[...new Set(articles.map(x=>x.category).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ro'));
+  for(const c of categories){const option=document.createElement('option');option.value=c;option.textContent=c;$('category').append(option)}
+  render();
+ }catch(e){$('result-count').textContent='Arhiva este momentan indisponibilă: '+e.message;}
+}
+$('search').addEventListener('input',render);$('category').addEventListener('change',render);load();
+</script></body></html>

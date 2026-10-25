@@ -39,3 +39,14 @@ La 23 octombrie 2026 a fost actualizată și reactivată automatizarea ChatGPT *
 Scripturile RSS continuă să importe știri la frecvența lor existentă și să atașeze aprofundările deja salvate. Redactarea se execută separat prin automatizarea ChatGPT, nu în fiecare execuție RSS. O știre poate apărea inițial ca rezumat până la prelucrare. Frecvența maximă disponibilă pentru această automatizare este o oră; nu promite extindere la fiecare zece minute, finalizare instantanee ori acoperirea întregului flux într-o singură executare. Verifică rezultatele și restanțele înainte să declari toate știrile completate.
 
 Nu este necesară o nouă cheie API pentru această cale. Dacă automatizarea este oprită sau eșuează, raportează situația; nu prezenta simpla existență a regulii în acest document ca dovadă de funcționare.
+
+
+## Redacție: panou, arhivă și statistici – 25 octombrie 2026
+
+- redactie.html este un **panou public de monitorizare** (nu un CMS securizat). Afișează din data/editorial-status.json numărul știrilor, textele de peste 400 de cuvinte, intrările fără corp, traducerile și coada pending. Actualizarea sa este produsă de scripts/build_editorial_status.py în workflow-ul news.yml; nu declara „în timp real” datele până la următoarea rulare.
+- Modificarea și aprobarea materialelor se fac prin contul GitHub autorizat, folosind legăturile din panou. Nu expune tokenuri, chei API sau documente private în browser.
+- scripts/archive_editorial.py salvează în data/editorial-archive.json articolele din editorial.json **înainte și după** curățarea feedului de 48 de ore. Cititorii le pot căuta în arhiva.html. Arhiva nu schimbă datele originale și nu reintroduce articolele în lista de actualitate.
+- Articolele inexacte trebuie corectate în sursă și în arhivă; în cazul unei retrageri editoriale trebuie revizuit explicit conținutul arhivat. Persistența unei arhive nu prevalează asupra obligațiilor de corectare și confidențialitate.
+- romani-italia.html și widgetul homepage folosesc data/romanians-italy.json. La 1 ianuarie 2025, cifra verificată este **1.053.042 cetățeni cu cetățenie română rezidenți în Italia**, sursa statistică ISTAT (https://demo.istat.it/app/?i=RCS&l=it). Sunt excluși cetățenii italieni de origine română; cifra **nu este măsurată în timp real**. Dacă apar date noi, modifică numai după verificarea unei surse oficiale datate și a concordanței sumelor regionale.
+- YouTube afișează această statistică doar cu data explicită și mențiunea „nu în timp real”. Nu extrapola zilnic și nu anima artificial cifra.
+- Teste dedicate: node --test tests/editorial-system.test.mjs și workflow-ul editorial-check.yml; fluxurile principale de știri și redacție trebuie verificate separat în GitHub Actions.

@@ -1,0 +1,59 @@
+name: RDI - Test redazione e statistiche
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'redactie.html'
+      - 'arhiva.html'
+      - 'romani-italia.html'
+      - 'rdi-census*'
+      - 'data/romanians-italy.json'
+      - 'data/editorial-status.json'
+      - 'data/editorial-archive.json'
+      - 'scripts/archive_editorial.py'
+      - 'scripts/build_editorial_status.py'
+      - 'tests/editorial-system.test.mjs'
+      - '.github/workflows/editorial-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'redactie.html'
+      - 'arhiva.html'
+      - 'romani-italia.html'
+      - 'rdi-census*'
+      - 'data/romanians-italy.json'
+      - 'scripts/archive_editorial.py'
+      - 'scripts/build_editorial_status.py'
+      - 'tests/editorial-system.test.mjs'
+      - '.github/workflows/editorial-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  editorial-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica sintassi e integrazione
+        run: |
+          python -m py_compile scripts/archive_editorial.py scripts/build_editorial_status.py
+          node --test tests/editorial-system.test.mjs
+      - name: Prova archivio e cruscotto senza pubblicare
+        run: |
+          python scripts/archive_editorial.py
+          python scripts/build_editorial_status.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          archive=json.loads(Path("data/editorial-archive.json").read_text())
+          state=json.loads(Path("data/editorial-status.json").read_text())
+          assert len(archive["items"]) >= 1
+          assert state["feed_total"] >= state["feed_extended_400"] + state["feed_missing_body"]
+          assert isinstance(state["pending"], list)
+          print("Controllo integrità redazione completato.")
+          PY

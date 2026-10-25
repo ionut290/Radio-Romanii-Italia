@@ -49,12 +49,14 @@ jobs:
           if age>90:
               raise SystemExit('Actualizarea știrilor este prea veche; verifică sursele RSS și execuția automată.')
           PY
+      - name: Calculează starea redacției
+        run: python scripts/build_editorial_status.py
       - name: Publică actualizarea
         run: |
-          if [ -n "$(git status --porcelain -- news.json editorial-images/)" ]; then
+          if [ -n "$(git status --porcelain -- news.json editorial-images/ data/editorial-status.json)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A news.json editorial-images/
+            git add -A news.json editorial-images/ data/editorial-status.json
             git commit -m "Actualizare automată știri"
             for attempt in 1 2 3 4 5; do
               if git pull --rebase -X ours origin main && git push origin HEAD:main; then

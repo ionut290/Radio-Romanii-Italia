@@ -1,0 +1,48 @@
+<!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101827"><title>Redacția RDI – situația știrilor</title><meta name="robots" content="noindex"><style>
+*{box-sizing:border-box}body{margin:0;background:#0d1729;color:#f3f5fa;font-family:system-ui,-apple-system,sans-serif}main{max-width:1160px;margin:auto;padding:24px 18px 75px}a{color:#f4d88c}header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}header a{text-decoration:none}h1{font-size:clamp(28px,5vw,44px);margin:29px 0 5px}h2{font-size:21px;margin:24px 0 12px}p{color:#bac9d9;line-height:1.5}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin:23px 0}.metric{background:#182a40;border:1px solid #39526b;border-radius:15px;padding:17px}.metric b{display:block;color:#f7d88b;font-size:31px;font-variant-numeric:tabular-nums}.metric span{font-size:13px;color:#ced9e6}.box{background:#15243b;border:1px solid #3d5069;border-radius:16px;padding:20px;margin:20px 0}.note{border-left:4px solid #d1a95b;padding:12px 16px;background:#283147;color:#f0e7d3;font-size:13px;line-height:1.6}input,select{font:inherit;background:#102033;color:white;border:1px solid #55718a;border-radius:9px;padding:10px;min-width:100px}input{width:100%}.toolbar{display:grid;grid-template-columns:2fr 1fr;gap:10px;margin:15px 0}.entry{border-top:1px solid #3b516a;padding:13px 0}.entry h3{font-size:16px;margin:0 0 6px;line-height:1.4}.entry p{font-size:13px;margin:5px 0}.meta{font-size:12px;color:#a4bacd}a.action{display:inline-block;background:#30516c;color:#fff;border-radius:8px;padding:8px 12px;margin:5px 7px 0 0;text-decoration:none;font-weight:700;font-size:13px}a.action:hover{background:#3e698e}button{background:#e5c477;color:#19243a;border:0;border-radius:8px;padding:9px 15px;font-weight:700;cursor:pointer;margin:4px}footer{color:#9aaebf;font-size:12px;margin-top:35px}@media(max-width:520px){.toolbar{grid-template-columns:1fr}} 
+</style></head><body><main><header><a href="./index.html">← Radio Românii din Italia</a><strong>RDI · REDACȚIE</strong></header><h1>Panoul redacției</h1><p>Verifică actualizările, urmărește materialele de completat și intră în arhivă. Datele vin din fluxul public al redacției.</p>
+<div class="note"><strong>Important:</strong> acest panou este de monitorizare, nu un editor privat. Articolele se modifică doar prin contul autorizat GitHub; linkurile de editare de mai jos cer autentificare pe GitHub. Nu publicăm materiale neverificate direct de aici.</div>
+<div class="grid"><div class="metric"><b id="total">—</b><span>Știri în flux</span></div><div class="metric"><b id="full">—</b><span>Articole cu ≥400 cuvinte</span></div><div class="metric"><b id="missing">—</b><span>Fără text integral</span></div><div class="metric"><b id="pending">—</b><span>În așteptarea documentării</span></div><div class="metric"><b id="archive">—</b><span>Articole arhivate</span></div><div class="metric"><b id="translated">—</b><span>Înregistrări traduceri</span></div></div>
+<section class="box"><h2>Starea surselor</h2><p id="freshness" aria-live="polite">Se încarcă…</p><div><a class="action" href="https://github.com/ionut290/Radio-Romanii-Italia/actions/workflows/news.yml" target="_blank" rel="noopener noreferrer">Flux RSS / GitHub Actions</a><a class="action" href="https://github.com/ionut290/Radio-Romanii-Italia/actions/workflows/editorial.yml" target="_blank" rel="noopener noreferrer">Redacția automată</a><a class="action" href="./arhiva.html">Arhiva redacției</a></div></section>
+<section class="box"><h2>Materiale în așteptare</h2><p>Coadă pentru documentare și verificarea surselor. Articolele din această listă nu trebuie considerate automat publicabile.</p><div class="toolbar"><input id="query" type="search" placeholder="Caută o știre..." aria-label="Caută în lista de așteptare"><select id="mode" aria-label="Selectează tipul"><option value="pending">De documentat</option><option value="recent">Știri recente</option><option value="incomplete">Articole fără text complet</option></select></div><p class="meta" id="listcount"></p><div id="rows" aria-live="polite"></div></section>
+<section class="box"><h2>Gestionează publicarea</h2><p>După verificarea informațiilor, un editor autorizat poate corecta textul și sursele în repository. Securitatea scrierii este asigurată de autentificarea GitHub, nu de acest panou public.</p><a class="action" target="_blank" rel="noopener noreferrer" href="https://github.com/ionut290/Radio-Romanii-Italia/edit/main/data/news-summaries.json">Editează articolele documentate</a><a class="action" target="_blank" rel="noopener noreferrer" href="https://github.com/ionut290/Radio-Romanii-Italia/edit/main/editorial.json">Editează editorialele</a><a class="action" target="_blank" rel="noopener noreferrer" href="https://github.com/ionut290/Radio-Romanii-Italia/actions">Verifică publicarea</a></section>
+<footer>RDI – Panou de transparență. Un număr de cuvinte nu dovedește verificarea faptelor. Statutul editorial se confirmă prin surse și revizie umană.</footer></main>
+<script>
+const $=id=>document.getElementById(id);
+let state=null;
+const safeLink=u=>typeof u==='string'&&/^https:\/\//i.test(u)?u:null;
+const when=x=>{const t=Date.parse(x||'');return Number.isFinite(t)?new Intl.DateTimeFormat('ro-RO',{dateStyle:'medium',timeStyle:'short',timeZone:'Europe/Rome'}).format(t):'indisponibil'};
+const aged=x=>{const t=Date.parse(x||'');return Number.isFinite(t)?Math.max(0,Math.round((Date.now()-t)/60000)):null};
+function show(){
+ if(!state)return;
+ const mode=$('mode').value,needle=$('query').value.toLocaleLowerCase('ro').trim();
+ const all=mode==='pending'?state.pending||[]:mode==='incomplete'?(state.recent_news||[]).filter(x=>x.words<400):state.recent_news||[];
+ const rows=all.filter(x=>[x.title,x.reason,x.category,x.source].some(s=>String(s||'').toLocaleLowerCase('ro').includes(needle)));
+ $('rows').replaceChildren();
+ $('listcount').textContent=rows.length+' din '+all.length+' înregistrări';
+ for(const item of rows.slice(0,100)){
+  const row=document.createElement('article');row.className='entry';
+  const title=document.createElement('h3');title.textContent=item.title||'Material fără titlu';row.append(title);
+  const meta=document.createElement('p');meta.className='meta';
+  meta.textContent=mode==='pending'?(item.reason||'Așteaptă documentarea'):(item.category||'Știri')+' · '+(item.words||0)+' cuvinte · '+when(item.published);
+  row.append(meta);
+  if(safeLink(item.url)){const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Sursă originală ↗';row.append(link);}
+  $('rows').append(row);
+ }
+ if(!rows.length)$('rows').textContent='Niciun rezultat.';
+}
+async function load(){
+ try{
+  const response=await fetch('./data/editorial-status.json?ts='+Date.now(),{cache:'no-store'});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  state=await response.json();
+  const metrics={total:'feed_total',full:'feed_extended_400',missing:'feed_missing_body',pending:'pending_total',archive:'archived_editorials',translated:'translation_records'};
+  for(const [id,key] of Object.entries(metrics))$(id).textContent=Number(state[key]||0).toLocaleString('ro-RO');
+  const age=aged(state.news_updated_at);
+  $('freshness').textContent='Flux știri: '+when(state.news_updated_at)+(age===null?'':' · acum '+age+' minute')+'; editoriale: '+when(state.editorial_updated_at)+'; traduceri: '+when(state.translations_updated_at)+'. Datele nu sunt colectate secundă cu secundă.';
+  if(age!==null&&age>90)$('freshness').textContent+=' ⚠ Fluxul RSS nu a fost actualizat de peste 90 de minute.';
+  show();
+ }catch(e){$('freshness').textContent='Nu se poate încărca situația: '+e.message+'. Verifică GitHub Actions.';}
+}
+$('query').addEventListener('input',show);$('mode').addEventListener('change',show);load();setInterval(load,180000);
+</script></body></html>

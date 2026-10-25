@@ -27,8 +27,12 @@ jobs:
           python-version: '3.12'
       - name: Verifică sintaxa editorului
         run: python -m py_compile scripts/publish_editorial.py
+      - name: Arhivează materialele existente înainte de expirarea lor
+        run: python scripts/archive_editorial.py
       - name: Actualizează știrile din surse RSS
         run: python scripts/publish_editorial.py
+      - name: Adaugă în arhivă articolele noi
+        run: python scripts/archive_editorial.py
       - name: Verifică arhiva JSON
         run: |
           python - <<'PY'
@@ -43,14 +47,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain -- editorial.json)" ]; then
+          if [ -z "$(git status --porcelain -- editorial.json data/editorial-archive.json)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Nicio știre nouă sau expirată."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add editorial.json
+          git add editorial.json data/editorial-archive.json
           git commit -m "Actualizează știrile despre diaspora"
           for attempt in 1 2 3; do
             if ! git pull --rebase origin main; then

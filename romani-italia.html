@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101827"><title>Românii din Italia – date ISTAT | Radio RDI</title><meta name="description" content="Date oficiale ISTAT despre numărul cetățenilor români rezidenți în Italia și distribuția pe regiuni."><style>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#234760,#0d192d 70%);color:#f3f7fb;font-family:system-ui,-apple-system,sans-serif}main{max-width:1050px;margin:0 auto;padding:24px 18px 70px}a{color:#f4d287}header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:35px;flex-wrap:wrap}header a{text-decoration:none}header strong{font-size:18px}h1{font-size:clamp(30px,5vw,49px);line-height:1.14;margin:0 0 15px}.lead{color:#c8d7e3;line-height:1.6;max-width:800px}.hero{background:linear-gradient(135deg,#184556,#152443);border:1px solid #7b9fad;border-radius:24px;padding:28px;margin:25px 0}.number{font-size:clamp(42px,8vw,77px);font-weight:900;line-height:1.15;color:#f5ce77;font-variant-numeric:tabular-nums}.fact{color:#e3ebf2;font-size:14px;line-height:1.65}h2{font-size:25px;margin:35px 0 14px}.info{border:1px solid #47617e;background:#14263e;border-radius:15px;padding:17px;color:#dce7f2;line-height:1.65}.region{display:grid;grid-template-columns:minmax(135px,230px) 1fr 90px;align-items:center;gap:12px;margin:13px 0;font-size:14px}.bar{height:12px;background:#2b3f55;border-radius:50px;overflow:hidden}.fill{background:linear-gradient(90deg,#75c8b8,#e9cb80);height:100%;border-radius:50px}.val{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}footer{color:#adbdcc;margin-top:38px;font-size:13px}@media(max-width:550px){.region{grid-template-columns:minmax(95px,130px) 1fr 75px;gap:7px;font-size:11px}}
+</style></head><body><main><header><a href="./index.html">← Radio Românii din Italia</a><strong>🇷🇴 🇮🇹 RDI · DATE</strong></header>
+<h1>Românii rezidenți în Italia</h1><p class="lead">Câți cetățeni români locuiesc în Italia? Aici găsești ultima cifră oficială disponibilă, data statisticii și distribuția pe regiuni.</p>
+<section class="hero" aria-label="Populație română rezidentă"><div class="number" id="count">1.053.042</div><p class="fact" id="asof">Cetățeni români rezidenți la 1 ianuarie 2025 · Sursa ISTAT</p><p class="fact"><strong>Nu este un contor în timp real.</strong> Datele despre populație sunt publicate periodic. O actualizare a paginii nu înseamnă o nouă măsurătoare. Cetățenii de origine română care au dobândit cetățenia italiană nu sunt cuprinși în acest total.</p><a href="https://demo.istat.it/app/?i=RCS&amp;l=it" target="_blank" rel="noopener noreferrer">Sursă oficială ISTAT ↗</a></section>
+<h2>Distribuție pe regiuni</h2><p class="lead">Date la 1 ianuarie 2025. Regiunile sunt ordonate după numărul rezidenților cu cetățenie română.</p><div id="regions" role="list" aria-label="Rezidenți pe regiuni"><p>Se încarcă datele regionale…</p></div>
+<h2>Ce măsoară această statistică?</h2><div class="info">Indicatorul se referă la persoane cu cetățenie română înscrise ca rezidente în Italia, nu la toți cei născuți în România sau cu origini românești. Persoanele cu cetățenie italiană sunt clasificate distinct în statistica populației după cetățenie. Numărul real al persoanelor de origine română poate fi mai mare; nu există o măsurare oficială continuă secundă cu secundă. Pentru comparații în timp folosește aceeași definiție și aceeași sursă.</div>
+<p class="fact">Surse: <a href="https://demo.istat.it/app/?i=RCS&amp;l=it" target="_blank" rel="noopener noreferrer">ISTAT – populația rezidentă după cetățenie</a> și <a href="https://www.tuttitalia.it/statistiche/cittadini-stranieri/romania/" target="_blank" rel="noopener noreferrer">tabelul regional elaborat din date ISTAT</a>.</p>
+<footer>Radio Românii din Italia · Informare statistică; cifrele se actualizează numai când apare o nouă sursă verificată.</footer></main><script>
+const numberFormat=new Intl.NumberFormat('ro-RO');
+fetch('./data/romanians-italy.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{
+ if(!Number.isSafeInteger(data.residents)||data.residents<=0||data.realtime!==false||!/^\d{4}-\d{2}-\d{2}$/.test(data.as_of))throw Error('Invalid demographic data');
+ document.getElementById('count').textContent=numberFormat.format(data.residents);
+ const stamp=new Date(data.as_of+'T12:00:00Z');
+ document.getElementById('asof').textContent='Cetățeni români rezidenți la '+new Intl.DateTimeFormat('ro-RO',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(stamp)+' · Sursa ISTAT';
+ const entries=Object.entries(data.regions||{}).filter(([,n])=>Number.isSafeInteger(n)&&n>=0).sort((a,b)=>b[1]-a[1]);
+ const root=document.getElementById('regions');root.replaceChildren();
+ for(const [name,n] of entries){
+  const line=document.createElement('div');line.className='region';line.setAttribute('role','listitem');
+  const title=document.createElement('span');title.textContent=name;
+  const bar=document.createElement('div');bar.className='bar';
+  const fill=document.createElement('div');fill.className='fill';fill.style.width=(100*n/entries[0][1]).toFixed(2)+'%';
+  const value=document.createElement('span');value.className='val';value.textContent=numberFormat.format(n);
+  bar.append(fill);line.append(title,bar,value);root.append(line);
+ }
+}).catch(()=>{document.getElementById('regions').textContent='Datele regionale nu pot fi încărcate momentan. Consultă sursa ISTAT.'});
+</script></body></html>
