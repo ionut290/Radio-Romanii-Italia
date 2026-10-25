@@ -2,7 +2,7 @@
 const box=document.getElementById("rdiExtras");
 const label=document.getElementById("rdiExtraLabel");
 const value=document.getElementById("rdiExtraValue");
-let song="",weather="",events=[],community=[],breaking="",pointer=0;
+let song="",weather="",events=[],community=[],breaking="",romanianPopulation="",pointer=0;
 const limitText=(s,n=115)=>String(s||"").trim().slice(0,n);
 const italyDay=x=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).format(x);
 function options(){
@@ -10,6 +10,7 @@ function options(){
  if(breaking)out.push(["ULTIMA ORĂ",breaking]);
  if(song)out.push(["ACUM ASCULȚI",song]);
  if(weather)out.push(["METEO ITALIA",weather]);
+ if(romanianPopulation)out.push(["ROMÂNII DIN ITALIA · ISTAT",romanianPopulation]);
  out.push(["PODCAST RDI","Riflessioni sulla Diaspora · Ascultă podcastul și pe Spotify"]);
  if(events.length)out.push(["EVENIMENTE",events[pointer%events.length]]);
  if(community.length)out.push(["COMUNITATE",community[pointer%community.length]]);
@@ -32,6 +33,18 @@ async function loadNowPlaying(){
  }catch{song=""}
 }
 loadNowPlaying();setInterval(loadNowPlaying,30000);
+async function loadRomanianPopulation(){
+ try{
+  const response=await fetch("./data/romanians-italy.json",{cache:"no-store",signal:AbortSignal.timeout(5000)});
+  if(!response.ok)throw Error("census");
+  const data=await response.json();
+  if(Number.isSafeInteger(data.residents)&&data.residents>0&&data.realtime===false&&/^\d{4}-\d{2}-\d{2}$/.test(data.as_of)){
+   const date=data.as_of.split("-");
+   romanianPopulation=data.residents.toLocaleString("ro-RO")+" cetățeni români rezidenți · date la "+date[2]+"."+date[1]+"."+date[0]+" · nu în timp real";
+  }
+ }catch{romanianPopulation="";}
+}
+loadRomanianPopulation();setInterval(loadRomanianPopulation,86400000);
 const cities=[["Roma",41.90,12.50],["Milano",45.46,9.19],["Bologna",44.49,11.34],["Torino",45.07,7.69],["Napoli",40.85,14.27]];
 async function loadWeather(){
  try{
