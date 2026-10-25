@@ -57,7 +57,7 @@ async function load(){
    image:x.image||'',url:x.url||'',city:x.city||''
   }));
   // Only today's publications in the Italian timezone enter the YouTube news rotation.
-  // Events are included only when announced today; visual advertising is disabled.
+  // Events are included only when announced today; advertising appears only during actual AzuraCast spot audio.
   const romeDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'});
   function publishedToday(x){
     const raw=x&&x.published;
@@ -99,7 +99,7 @@ function tvExcerpt(value,limit=160){
  return cut.slice(0,space>limit*.6?space:cut.length).trimEnd()+'…';
 }
 function show(){
- if(!stories.length)return;
+ if(!stories.length||window.rdiSpotActive)return;
  const x=stories[index%stories.length];
  $('category').textContent=x.category||'Actualitate';
  $('headline').textContent=x.title;
@@ -121,6 +121,16 @@ function show(){
  ticker.textContent=[tvExcerpt(x.title,100),displaySummary].filter(Boolean).join(' — ');
  startTicker(true);
 }
+// Ads pause the news timeline, so a resumed broadcast starts a clean card.
+window.rdiPauseNews=function(){
+ sequence++;
+ if(nextTimer){clearTimeout(nextTimer);nextTimer=null;}
+ if(tickerAnimation){tickerAnimation.cancel();tickerAnimation=null;}
+};
+window.rdiResumeNews=function(){
+ if(stories.length)show();
+ else load();
+};
 function startTicker(brief=false){
  if(tickerAnimation){tickerAnimation.cancel();tickerAnimation=null}
  if(nextTimer){clearTimeout(nextTimer);nextTimer=null}
@@ -148,4 +158,4 @@ function startTicker(brief=false){
  },cardDuration);
 }
 load();setInterval(load,300000);
-</script><script type="module" src="./youtube-extras.js?v=20261022-numeric-fix-3"></script></body></html>
+</script><script type="module" src="./youtube-extras.js?v=20261022-numeric-fix-3"></script><script type="module" src="./youtube-spots.js?v=20261025-enable-spots-1"></script></body></html>
