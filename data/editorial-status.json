@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-25T22:06:40.311821+00:00",
+  "news_updated_at": "2026-10-25T22:37:10.813813+00:00",
   "editorial_updated_at": "2026-10-25T22:41:30.152459+01:00",
-  "translations_updated_at": "2026-10-25T21:03:28.825467+00:00",
-  "feed_total": 77,
-  "feed_extended_400": 21,
-  "feed_missing_body": 56,
+  "translations_updated_at": "2026-10-25T22:06:39.559152+00:00",
+  "feed_total": 80,
+  "feed_extended_400": 22,
+  "feed_missing_body": 58,
   "feed_short_body": 0,
   "editorial_total": 20,
   "archived_editorials": 29,
-  "translation_records": 40,
+  "translation_records": 39,
   "pending_total": 49,
   "pending_filtered_out": 124,
-  "editorial_verde": 24,
+  "editorial_verde": 25,
   "editorial_galben": 34,
-  "editorial_rosu": 36,
+  "editorial_rosu": 38,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -508,12 +508,48 @@
   ],
   "recent_news": [
     {
-      "title": "Știri Jurnalul din 26 Octombrie 2026 - Jurnalul",
+      "title": "Caos alle urne, il ballottaggio in Brasile a rischio annullamento",
+      "category": "Italia",
+      "published": "2026-10-25T22:18:29+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Gli studenti vincono le elezioni in Serbia, lo annuncia lo sconfitto Vucic",
+      "category": "Italia",
+      "published": "2026-10-25T22:17:17+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Un pilot de vânătoare a avut dureri de cap inexplicabile timp de un an și jumătate. Ce le provoca, de fapt",
       "category": "România",
-      "published": "2026-10-25T22:00:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9sYkluN0tzYXM1NFVpT0Z4aUlzYjU5eC1la21MN3ZqWEFSZFZqa2xfcFlqZnZUbzBQV3NBSHN0Z0ZaU3dsOGc?oc=5",
-      "source": "Jurnalul",
-      "status": "roșu",
+      "published": "2026-10-25T22:13:07+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/un-pilot-de-vanatoare-a-avut-dureri-de-cap-inexplicabile-timp-de-un-an-si-jumatate-ce-le-provoca-de-fapt-4003105",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Organele care dezvoltă un nou rol după menopauză. Descoperirea îi intrigă pe cercetători",
+      "category": "România",
+      "published": "2026-10-25T22:11:30+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/organele-care-dezvolta-un-nou-rol-dupa-menopauza-descoperirea-ii-intriga-pe-cercetatori-4001549",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Accident grav în apropierea Barcelonei: Un autobuz cu peste 100 de persoane a căzut într-o prăpastie",
+      "category": "România",
+      "published": "2026-10-25T22:08:01+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/accident-grav-in-apropierea-barcelonei-un-autobuz-cu-peste-100-de-persoane-a-cazut-intr-o-prapastie-4008507",
+      "source": "Digi24",
+      "status": "galben",
       "words": 0
     },
     {
@@ -562,37 +598,10 @@
       "words": 434
     },
     {
-      "title": "Gli studenti vincono le elezioni in Serbia, lo annuncia lo sconfitto Vucic",
-      "category": "Italia",
-      "published": "2026-10-25T21:26:25+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Bulgaria: Președinta în exercițiu conduce în primul tur al alegerilor prezidențiale, arată sondajele la ieșirea de la urne",
       "category": "România",
       "published": "2026-10-25T21:05:39+00:00",
       "url": "https://www.digi24.ro/stiri/externe/bulgaria-presedinta-in-exercitiu-conduce-in-primul-tur-al-alegerilor-prezidentiale-arata-sondajele-la-iesirea-de-la-urne-4008583",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Brasile col fiato sospeso, sfida decisa da un pugno di voti",
-      "category": "Italia",
-      "published": "2026-10-25T21:01:04+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Accident grav în apropierea Barcelonei: Un autobuz cu peste 100 de persoane a căzut într-o prăpastie",
-      "category": "România",
-      "published": "2026-10-25T20:58:11+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/accident-grav-in-apropierea-barcelonei-un-autobuz-cu-peste-100-de-persoane-a-cazut-intr-o-prapastie-4008507",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -796,12 +805,12 @@
       "words": 0
     },
     {
-      "title": "Accident între trei mașini pe autostrada A3. Trafic îngreunat pe sensul Ploiești - București",
-      "category": "România",
-      "published": "2026-10-25T17:45:13+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/acident-intre-trei-masini-pe-autostrada-a3-trafic-ingreunat-pe-sensul-ploiesti-bucuresti-4008281",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "SP 307 Del Santo, progetto da 900 mila euro per asfalto e segnaletica in quattro comuni - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T17:47:22+00:00",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9Zc1dyYWVSUUNCYmZtRkltZHFwdUtPdkQtQjB2T1dzaUlYN1RRRkZKNXZMaXBmQnhRVkVDbG1pT3dxb0lTdTZLQm0wQTI5ZlpMZ3lBTjUtRG1JTDJHRWdCUGoyTHN2c1FFdHRTQUJCRjU4OUtKYmNZQnJwRUM?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -814,20 +823,20 @@
       "words": 0
     },
     {
-      "title": "Maria Corina Machado revine în țară după aproape un an în exil. Ce planuri are lidera opoziției venezuelene",
-      "category": "România",
-      "published": "2026-10-25T17:30:46+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/maria-corina-machado-revine-in-tara-dupa-aproape-un-an-in-exil-ce-planuri-are-lidera-opozitiei-venezuelene-4008283",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "La settimana finanziaria. Mercati alle prese con banche centrali, dati macro e conti tech - la Repubblica",
       "category": "Italia",
       "published": "2026-10-25T16:22:43+00:00",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa3RwLWVVSWZvTWxpX1hPVTNVbG5YNWx2UEtSNjhZZFYtT3BGdHlFWnFrSVZOV04zSzZuSlV0Ny1uUWZyNEY3SGpPLWdwSGZES2VsZnk4WGZ0cXlIMWhKYnd5bWdVNFNQN01zcjRfU3lmclJzVUc4OFhSZWVRX2FzdXhtdndnMXZ0dWNMb1VRYw?oc=5",
       "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Accident în străinătate, într-un autocar sau microbuz înmatriculat și asigurat în România: ce drepturi au pasagerii răniți și familiile celor decedați - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-25T16:14:31+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQQTA2Tm1IeHhrYlVUajBVZEtfMll3ZTNOQWxmWWpERFNVZm5qc2FXaXRocFFmSjVYdC1WbE8xRGZ1cGxyUy1HMTAyUnhNdnRkaEZPRUxVZXdmcVFzSk1kcEpHV2VOYWUyTGFkNEZ4dlc3NXYtZi1TMDZBamNkREZ6RXJqb3FsbnlSZ2NWOWxtaEJxcl9oTzJKczZEcW9YSTY0Zk5TQ0VsS0U3MVZ6bXV6RzVrSEZzTGNtMUluRmh4QzRia2ZSRGNFQUNQMUFMRmJCNU5DVVBIdVZKaHpPSHluQ3RVYlduakkzX1FpRFFIV2EyS3pJY01vd0h0eEh1NmZ0aGc?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     },
@@ -931,15 +940,6 @@
       "words": 458
     },
     {
-      "title": "Lavoro, opportunità di impiego nella Ferrero: assunzioni anche in Campania - Il Mattino",
-      "category": "Italia",
-      "published": "2026-10-25T11:27:35+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdUwzbTZsWGcyaXlySWpUTFRGU2EwSDB6N1p4dERHSmNTbWxCcVo3V0RMYzRlLVdaN294NE5FSk1MbV8xQlhOaTZ0UWNlVnBYOEF4MXNEOUd2bkNrQV93eFlrQmFBMXdxbTgwNFREX2RDcXc5TmtLalJpM01rU0F1YmhWcHo3NktGQXg5SDZTTdIBjgFBVV95cUxQa2s1Mm1fcHNYd0NtVFRpa1oxRGRsX3hvUElKVFZFMndXS25YRmgzT21kMkNtWTVVYzVtdjVqNEhyS2E3bnVRWUxWb19YQmJqemhISm1fRGlESFkxd1dvVGRTell4RVlkRnBaa2hNNF82MlpSdkpjV1BYT1dIOExaVDVhalJiVEpfc0FreXdn?oc=5",
-      "source": "Il Mattino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Lavoro, Rinaldi (Fn): “Diminuire cuneo fiscale è solo un palliativo” - Touchpoint News",
       "category": "Italia",
       "published": "2026-10-25T11:10:55+00:00",
@@ -985,29 +985,11 @@
       "words": 466
     },
     {
-      "title": "Due giovani piemontesi tra i migliori studenti d’Italia: Sofia Maria Vella e Mattia Rebuffo premiati al Quirinale - Torino Plus",
-      "category": "Italia",
-      "published": "2026-10-25T10:16:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE02anZ3N1dxWW1CQ2U0TFJxbi13eVpPUkhDWWNFNkJ4MEl3U2FqdXMxNWRNN2JhaHBWNGZxbVk3cDk3TElCSl9BeVlfRmtHWnlYeHJzTWpaT19JY3UwNVdKdGVLdXZSSk9sM25SaG8xanY5SFNWNlJF?oc=5",
-      "source": "Torino Plus",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Nicușor Dan, mesaj de Ziua Armatei: România e pregătită să acționeze ferm pentru a descuraja orice... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-25T10:03:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdmk1S1BSN2JfY1RmQmhKRzBNR2h0N2FxQ0Y0eTllQ1oyWDc2bDBGOEtsWXdKMlBqU0dYRk1HM3hXOU05bzR4ak51NmVkd2pPRDQyemp1c0tfeU9PdDNCWGdJRDNMX2w1djA0Ny1PUDF3enk3ZWZEUDFESC15TjBlYlJCSzVIYWZyVTZucjIzVVc5Sy1aa2lJSFd3TWd2dHhhenZDZnBEem9MRzJSSDlBcEdrZjR4VEpKNU9lS0FYT1N6VlZ0d0FPTDBtNkRETVViSURTbWJCNUpCbTF5Vm5xNmFB0gHnAUFVX3lxTE1fYjd5Y2RfUWRqNmUyUGZHNWFqRk9ub3oyU0g0RHNJYkcxdktnajY0U3hJX200bF9NczdoZGdHZlIyaE52MWRZdFhXNmJfQWluQlNMdlJCZ1huWU1JVFZHQ2lKbnRvNk9jQTVGelB4ZjV",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Notizie di Padova ore 10: bomba day, carcere, prevenzione e cinema oggi in città - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-25T09:50:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1Ebng1U25QYUFnbEJCbTBMZWcwdWFPZkxYcU5qMWNTa0t1aW9iZm1TOEprR2lkb2ZtSDFCNlk0cmVvZkw5MDYxRTVneTNfTmtHb2ZVU1dodzZfWWw0aDJ2bnZQS1hjQ2V6dmdxbEwwSWc?oc=5",
-      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1035,6 +1017,15 @@
       "published": "2026-10-25T09:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbEszZkJrdjZFaFRlRUFMLUhMNUM0dmVMVmM4X29ycW83dTlUd1M2TUFiSG11bFRFUGo4RjZWZGRPUG82bEZMZ2REMEhyTzBnNnY3TFRxME9xay0wUThQRWFVd3dyRFJMdkpSMWxoNGY2Q1Rtb0tXOEtkekZocHNUNURUSlNPVFR0ODRoQnBwMEduOTJER05KZWE1NjV0NkJHWHMwMUJaMmtieTRkWXN4OVI3TjlUVjJ5c001bzBwLXJTU3NxNVFpWGhHSGxmZTBG?oc=5",
       "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Padova, oggi Italianissima al Don Bosco: canzoni con orchestra e Ciclamini Solidali per LILT - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T08:50:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XLWFlQXNNeTZjNXB4SktZVmtZT0VCUWNKaGtCTUgyeVpucEhkcHM2VXVjQ2FIYkNYblJqU3pKWVdHX2FpelFPTzFyTkh6Q0hzMzU3Y0RKUTAwekVKWWh1LWFmVHZjSEJXdTlYNzNvZjg3OTFUWEtzSE9XY3pFdnc?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1084,11 +1075,29 @@
       "words": 0
     },
     {
+      "title": "25 Octombrie: La mulți ani, Armatei Române! - Arges Stiri",
+      "category": "România",
+      "published": "2026-10-25T06:37:13+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNay1hYnV1YUlqVDcwVk5sNWlqUTBvUmFRako1M2x0LTdqdmZBUGlNS2lqNFpzYkRaTTVBR1g2SHYxblpTRlBldk1UbmlVNWhnYlI4RnRZODdOZFkyZEx2My1fSWx2S3QtQUtPSFBZdWNfM2xtWnQxSEJVTi1HVU1IWQ?oc=5",
+      "source": "Arges Stiri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Svizzera, che fatica: lo stipendio non basta più - La Prealpina",
       "category": "Italia",
       "published": "2026-10-25T06:30:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOGtFbEIzTU1OWTFPMWY4T0FSWmdnZ2d6ZDFCa0Y1Y0JRUzQ3WVRhMGlZMElONUFzTkZjQTZydUZRS2N3dVJwVWg1WGt0aDBKajFNalFnS25CQ2hveGdKSThOV09LY29FZGxlVW9ja3JQR1JWLWZhODJTbldFWUNuc0Y5WHdCYzJmdnh3MlJGSmtITEcxMF93M2wzWjRPZw?oc=5",
       "source": "La Prealpina",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Elveția oferă Moldovei 5,6 milioane de dolari pentru sănătatea refugiaților - logos-pres.md",
+      "category": "România",
+      "published": "2026-10-25T06:00:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTmp5MUFPZDd2UGZJZHNDZFpkSDZHTUF0eFJ2aWQzLUpXaUhSWnBEbEdxR25ycjBaY0F2TEhRREVIdVFzeWYyYjFvVEloZjFYRndHNWg4c1pyRVNTLXlfVVU1akQ2X25hQ1FuTVZ5b1I0SDZiOElTTW1od0dsYTh5WXdYaHg2WURxX3JjckN2SGVQbnNWZWh1X1dXa19jUzdyX2cyR3Y0NXowSU9NeENSQ0s1SnE4dmtyM0JIeXdQZUJpNWM2XzViNFFzY0dPS2ZSNHlUa0g1VlhfZmdPUURscEJhOEQyUFAyTGc?oc=5",
+      "source": "logos-pres.md",
       "status": "roșu",
       "words": 0
     },
@@ -1109,6 +1118,15 @@
       "source": "Touchpoint News",
       "status": "verde",
       "words": 500
+    },
+    {
+      "title": "Il settore dei ricambi auto offre lavoro - Motor1.com Italia",
+      "category": "Italia",
+      "published": "2026-10-24T22:01:16+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wZktsN0gyVF9KdDdLNHhwTXY3M1FSRHZCdk9EUnhUWkdxclhoUWZMcW5ROEgwTmo3YUROLUlVMkdrRDVhWW5HSFhQdlZBR1dHMGF2cjV0ZVptMlIyR2Vic3BGVkRBaWlHbG8wdlhMdDNBdFB0MEtJSFZB?oc=5",
+      "source": "Motor1.com Italia",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Badantă româncă, arestată în Italia. Acuzată că a bătut bătrâna și a obligat-o să mănânce cu forța - Rotalianul – Revista românului din Italia",
@@ -1199,6 +1217,15 @@
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
+    },
+    {
+      "title": "Ora de iarnă 2026 – în această noapte ora 04:00 devine ora 03:00 - ZCH",
+      "category": "România",
+      "published": "2026-10-24T05:26:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOYlZ0Nm5wS2sydGtfNnVJblRmNUlZV0NCd1JiMEVleFlySlo1VGZxTjdRMUE1NU9FYU1KeVcxcUgyNVZCR24xM2ZmYXNDa3U2cTBLb1lYX3JydDR2cFJpMHVpMUE5X0YtSzNBZFl3cV9jbHlTX1F4RDgwNjJ6N0EyUml3?oc=5",
+      "source": "ZCH",
+      "status": "verde",
+      "words": 451
     }
   ],
   "radio_briefs": [
@@ -1225,6 +1252,17 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
+      "title": "Ora de iarnă 2026 – în această noapte ora 04:00 devine ora 03:00 - ZCH",
+      "category": "România",
+      "published": "2026-10-24T05:26:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOYlZ0Nm5wS2sydGtfNnVJblRmNUlZV0NCd1JiMEVleFlySlo1VGZxTjdRMUE1NU9FYU1KeVcxcUgyNVZCR24xM2ZmYXNDa3U2cTBLb1lYX3JydDR2cFJpMHVpMUE5X0YtSzNBZFl3cV9jbHlTX1F4RDgwNjJ6N0EyUml3?oc=5",
+      "source": "ZCH",
+      "status": "verde",
+      "words": 451,
+      "intro": "România revine la ora standard în noaptea de sâmbătă, 24 octombrie, spre duminică, 25 octombrie 2026.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Ardea, lângă Roma: comunitatea românească a inaugurat noua biserică „Sfânta Muceniță Cecilia”",
       "category": "Diaspora",
       "published": "2026-10-24T08:03:00Z",
@@ -1245,17 +1283,6 @@
       "words": 463,
       "intro": "O femeie de 34 de ani, originară din Republica Moldova și stabilită în Italia, a fost condamnată la un an și două luni de închisoare într-un dosar de acte persecutorii îndreptate împotriva unei doctorițe și a soțului acesteia.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Avertisment MAE pentru românii care merg în Franța! Sâmbătă sunt așteptate proteste violente în mai... - Kanal D Romania",
-      "category": "Știri consulare",
-      "published": "2026-10-24T12:01:11+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWVFWMkZjOEVkWjNMdkp1bUdocmVObVVvZnFaeWtyd0N3SXZESUZPdEg1a3l0dm5hd3BncE5NSzgyZl9ELW4weU13RGNuZGxVUnk4OGhmak5aUTd1emxYdjZGcF9nQWpUdXlETzhsNzhMcHZFRmhWbXVtay11WFh2RHdiNUdhXzVVNnZWdjlKd1habC1zYTMtel9GQVIxOHlVUllxZGJNclBKbmRVLXBKX3VVdURZemZfSDlZTWZVZzBtR1ZjMnNRRldvY0pLWW9MVTQwV2t4SDbSAd4BQVVfeXFMT3VVZ2RmTTZSSXZyUkNrN0NXcm94NkZuWVFjc1pWa1h5TUNWdmJiSk1jckFkaXdTcElJZld3eG1fLTNsaDQ2SWRkMHBfREVDMGpHbE1obVFtTERiWi13UzZyZ3VMYWtIWmdPc1Q3SDFVb1FLQ3hUckszRjZ",
-      "source": "Kanal D Romania",
-      "status": "verde",
-      "words": 457,
-      "intro": "Ministerul Afacerilor Externe al României a transmis o atenționare pentru cetățenii care se aflau în Franța, traversau teritoriul francez sau intenționau să călătorească acolo sâmbătă, 24 octombrie 2026.",
-      "question": "Ce trebuie verificat sau făcut concret de către românii din Italia?"
     }
   ]
 }
