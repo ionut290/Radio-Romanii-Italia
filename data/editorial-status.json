@@ -1,1305 +1,958 @@
 {
-  "news_updated_at": "2026-10-25T16:26:56.143635+00:00",
+  "news_updated_at": "2026-10-25T16:45:54.176545+00:00",
   "editorial_updated_at": "2026-10-25T17:04:09.264170+01:00",
   "translations_updated_at": "2026-10-25T16:05:04.167620+00:00",
-  "feed_total": 71,
-  "feed_extended_400": 21,
-  "feed_missing_body": 49,
+  "feed_total": 70,
+  "feed_extended_400": 18,
+  "feed_missing_body": 51,
   "feed_short_body": 1,
   "editorial_total": 18,
   "archived_editorials": 26,
   "translation_records": 44,
-  "pending_total": 123,
+  "pending_total": 25,
+  "pending_filtered_out": 98,
+  "editorial_verde": 22,
+  "editorial_galben": 36,
+  "editorial_rosu": 26,
   "pending": [
     {
-      "title": "Lavoratore costretto a uno straordinario “abnorme”. Il Tribunale: va risarcito per danno psicofisico - la Repubblica",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOYXpneko2cnBkWDQwWlFPN2pGci1jV2QyRXFYa0xxYl93OXMtaU9CXzVYcV9LenpuTFRDUnp4a1hNS0h6azItTWRhaWhwMjlpVVJVbC1YdWVWQ3p0TkdBYkRsM19VMnpFbUZLSHR0Z2trRE9UUGFsZDFTNWpBVGY1VTZzT1phNjFLc2s5UUF4SDNZSEZjREN3dFp1aGlnRklfYndJbWFlR09xM29NV2VoXy1Bc1U0LXVQVGN4NnBqTVViOHJYM3Z5b2hvSFFObkYxa2xR?oc=5",
-      "reason": "Fonte originale consultata: disponibile solo l'anteprima; mancano identificativi e testo della sentenza per verificare i dettagli del caso. Non completato.",
-      "attempts": 1
-    },
-    {
-      "title": "Il futuro non si aspetta, si costruisce: 24 storie che raccontano l’Italia della rigenerazione - la Repubblica",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNDZwU3RhN3hfc05VS3dFblFtQXJSZ2pLTWdDdGctTko0ak5PbUxiSGZmTmdaUzE4bDVGOE8xWnRNLVlLMDNRa2pUU29fdnNIVEF2a2lsS3dJU3Ffd0FncU9JSUxIYTFubXZpT0JPbU8xbGtmQVJWRzBPWlJYcnBVNm1jTmZJdUVvWjJ1Mks5b3NkVjNXYWFXdVFDamNvM1hHai1NV21GNjJnZVRNTkUzODJVSmdQWnhaaUVxUUIwUdIBxAFBVV95cUxQV1JxQzA3REpENjdqOE9QVnZlQk1vZnJSTTMybGVpeHlHMFN4VEZjZ0M5Um1ac2VtM0xCYzIyYkR0R1pMelJ2c2pPX2N1YzhmVmpLV3QtZ2w4SmxEd1ZHVzFEb05Ha0RNN0kxWW42NUI0MTFpV1hwc3daRmpCUHhkWnpMR3czS09vbXpOTnc2dkd3ZHp",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Rivolta",
-      "url": "https://www.ansa.it/sito/podcast/la_parola_della_settimana/2026/10/24/rivolta_be9b1bc5-fff6-4dd8-9e27-045ca5ea3326.html",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Luce, cibo, respiro: i consigli degli esperti per ritrovare il sonno naturale",
-      "url": "https://www.ansa.it/canale_lifestyle/notizie/beauty_fitness/2026/10/19/luce-cibo-respiro-i-consigli-degli-esperti-per-ritrovare-il-sonno-naturale_b6d37344-54fc-49b3-89b6-37d8704a4ea0.html",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Gino Cecchettin, 'spero il film su Giulia apra un percorso di salvezza'",
-      "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/23/gino-cecchettin-spero-il-film-su-giulia-apra-un-percorso-di-salvezza_6ec080cf-cf37-4054-b185-9d287832ca86.html",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Il racconto della settimana in immagini: dal 17 al 23 ottobre",
-      "url": "https://www.ansa.it/sito/videogallery/short_video/2026/10/24/il-racconto-della-settimana-in-immagini-dal-17-al-23-ottobre_d99b20e8-e159-4ce9-a353-69b839825993.html",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Novembre, possibile partenza sprint con freddo, pioggia e fiocchi di neve - Idealista",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOaEhrOWxrZlFCcjV5VlRBaGdiQ3J3ZXZhTkNwLXY1cHVpY2VWV2J2NF9oTWE1T1VFakoxUUhLQTE1V2VubjRTckRJRWprX1dJZXVtMW1DUG1ZT2NKRzBQN09RZHZra3d6NWFGaUUzTjdUZGFvemNHV1diTThRMzBvaVFMSjIzZWgzWjhabmRBNjR5a25Va2tqandFZFFUSW5DbzBmRmZkSWRpRUR3VWdkRXg0RjNMNG5UT1MzV1Q3Ql90N2hYSG4xelhSeEbSAdIBQVVfeXFMTjJGSFZ3U2NIQnN0NWI1a1Zfd09FRjY2Z05sY1QxWk9abnJfeHNGYUhMVGpQZlIxUGJvVU5PSmdsOG1meEoxckoybUlMVk1SQl9VLXNXMzB3NTRRc2Nad2FTRzh4OU41X0lfLTVEcjlLM1NtZFpNYU9VOHB0cGcyM2tTbU1Jc2t",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Manovra, più vicino l’ok della Ue. Le banche: non stampiamo soldi - la Repubblica",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORlNMdlg3cUFXV1hNa0oyOVNZQU12QkFDLWdGMjJIXzJTdkxsdExkUnR2T3IxYUs0ZHhZbHpFSGM4MXJsWEpqZ0FBTG1NeGtUS1hwcmpQU0ZDelBWVjJZbTdFT3Y1QmpyQkFMaTNqZzBoSEkySklwUHhndHIwZ05Qb2xIdW5EbTh0RXgwYXZfdUN5d0NlUTMxM1BfeHJsbXE1endjX1VQQWtyaC1vVzdIYXF0ak5EeFg3TTdFMGoyZVUtdw?oc=5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Il momento del crollo del palazzo di 18 piani in Kenya",
-      "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/24/il-momento-del-crollo-del-palazzo-di-18-piani-in-kenya_b5fb1dcc-8a55-4423-a70c-c710ebdb81c9.html",
-      "reason": "Testo integrale assente o troppo breve; ricerca e verifica delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "„Mâncăm” un card de plastic pe săptămână. Reguli simple de la experți pentru a evita microplasticul din mâncare: Aruncati caserolele!",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/mancam-un-card-de-plastic-pe-saptamana-reguli-simple-de-la-experti-pentru-a-evita-microplasticul-din-mancare-aruncati-caserolele-4007013",
-      "reason": "Testo integrale assente o troppo breve; ricerca e verifica delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Notizie di Padova ore 10: lutto a Ponte San Nicolò, olio e cultura in primo piano - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5mNFF6MlpJT2tzVlpWc1BMeGU3eWJpNjJ3aXdNSWpjTDZ6X3B5RzRBeWp6ZDRCNjc0TWpXQ1QxTkx5a2dsYjJ6T284S2lZa0kxdmhEWi0zQ2VXaWNMZTVlbUhVR3BoYkpDbG9PTm1HWGo?oc=5",
-      "reason": "Testo integrale assente o troppo breve; ricerca e verifica delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Notizie di Padova ore 23: controlli Digos, razzismo nel calcio e nuovo vertice al Pollini - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1MeE1XTjhHbTBIWXBESFZyVFFGd3dRNnNXTEszNDVoNlZ5N3Q0eDhSN1JCd0lJbVZlVzFoSEJULXNOVFJ1LXVvSHZWU2FfV3pBWTlmTXN3c0tiVnctSV9CWXR0LUlkWWJMSEhwQVlpYkU?oc=5",
-      "reason": "Testo integrale assente o troppo breve; ricerca e verifica delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Manovra, mini Irpef per il primo impiego o bonus in busta paga a fine anno. Le opzioni per i giovani - la Repubblica",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQakpob2xSSlZhQU03NHhpOUFSSm1kNVd3WnBYbkEtQlRLS3hlQXNsY3J3YXVJME1IUTd3TjY5OHhZQmZ0UlBacEFGY0YyNktUQzlFbjctVVkyLWJOaTF6VTMzdVlIdk9JdlFqY0dOSXBzSms4cGxFRzVmWDJxVlNZWndWN0w4eEdBbWdTUmpuNVZsU1U?oc=5",
-      "reason": "Testo integrale assente o troppo breve; ricerca e verifica delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Cine conduce Guvernul: Sorin Grindeanu sau Luca Niculescu? Răspunsul lui Florin Manole",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/cine-conduce-guvernul-sorin-grindeanu-sau-luca-niculescu-raspunsul-lui-florin-manole-4003745",
-      "reason": "Approfondimento parziale: verifica e fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Cine sunt cei mai bogați miniștri din noul Guvern și ce avere are premierul Luca Niculescu",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/cine-sunt-cei-mai-bogati-ministri-din-noul-guvern-si-ce-avere-are-premierul-luca-niculescu-4007183",
-      "reason": "Testo integrale verificato non ancora disponibile; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Serie A, in campo Cagliari-Bologna 0-0 LIVE",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/24/serie-a-in-campo-cagliari-bologna-0-0-live_b18806a1-665a-4359-a3a7-ceedf9a8155a.html",
-      "reason": "Testo integrale verificato non ancora disponibile; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Serie A, in campo Como-Sassuolo 0-0 LIVE",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/24/serie-a-in-campo-como-sassuolo-0-0-live_bf2ff375-49d1-4bde-b88d-92cb101f25e1.html",
-      "reason": "Testo integrale verificato non ancora disponibile; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Intesa Sanpaolo, oggi tre eventi per il Festival internazionale dell'Economia",
-      "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/23/intesa-sanpaolo-sabato-tre-eventi-per-il-festival-internazionale-delleconomia_643e90f0-0981-4913-8cc7-381162c9f13e.html",
-      "reason": "Testo integrale verificato non ancora disponibile; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Kim Jong Un a trecut granița în China pe un pod deschis la 12 ani de la finalizare. Întâlnire la nivel înalt la Dandong",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/kim-jong-un-a-trecut-granita-in-china-pe-un-pod-deschis-la-12-ani-de-la-finalizare-intalnire-la-nivel-inalt-la-dandong-4007145",
-      "reason": "Testo integrale verificato non ancora disponibile; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Preşedintele iranian merge la Moscova și se va întâlni cu Putin. Ce subiecte vor discuta cei doi lideri",
-      "url": "https://www.digi24.ro/stiri/externe/presedintele-iranian-merge-la-moscova-si-se-va-intalni-cu-putin-ce-subiecte-vor-discuta-cei-doi-lideri-4007149",
-      "reason": "Testo integrale verificato non ancora disponibile; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "O britanică a murit decedată în Bahamas în timp ce încerca să-şi salveze fiii de la înec. Cum s-a întâmplat totul",
-      "url": "https://www.digi24.ro/stiri/o-britanica-a-murit-decedata-in-bahamas-in-timp-ce-incerca-sa-si-salveze-fiii-de-la-inec-cum-s-a-intamplat-totul-4007355",
-      "reason": "Approfondimento verificato ancora da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Andrew Tate s-a îmbolnăvit în închisoare, susține avocatul lui. „Rugați-vă pentru el”",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/andrew-tate-s-a-imbolnavit-in-inchisoare-sustine-avocatul-lui-rugati-va-pentru-el-4007271",
-      "reason": "Approfondimento verificato ancora da completare",
-      "attempts": 0
-    },
-    {
-      "title": "L'atleta Red Bull Diego Poncelet è il nuovo skateboarder più veloce del mondo",
-      "url": "https://www.ansa.it/sito/videogallery/sport/2026/10/24/latleta-red-bull-diego-poncelet-e-il-nuovo-skateboarder-piu-veloce-del_4236b9f0-2e39-4f9c-be5c-386f9363d161.html",
-      "reason": "Approfondimento verificato ancora da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Avellino–Padova oggi: 24 convocati per Calabro al Partenio - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBKTEZJMHFQMUNKMnVkbzVaVndsVFFKRm5FOXExeURpZTRCckhvRXVjM3hTU2pvcHp6ZTVNLUhPWXNOUElkb0FKa2h6ckN0ZnEtVVpoZ2UyN1JNYXhfUUVtZElnbDc5WnF0UGdSeFQ5SExucDRrWEZBU2kyQnA?oc=5",
-      "reason": "Approfondimento verificato ancora da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Serie A: Napoli-Roma 1-0 DIRETTA e FOTO",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/24/serie-a-napoli-roma-1-0-diretta-e-foto_a2424423-eb0f-4a4d-92b6-40d67458049a.html",
-      "reason": "Approfondimento verificato non ancora disponibile; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "De Luca: \"Alla violenza si risponde con una repressione dura\"",
-      "url": "https://www.ansa.it/sito/videogallery/italia/2026/10/24/de-luca-alla-violenza-si-risponde-con-una-repressione-dura_4029a8c4-9764-451c-be6d-689f2a5673cc.html",
-      "reason": "Approfondimento verificato non ancora disponibile; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "O britanică a murit în Bahamas în timp ce încerca să-şi salveze fiii de la înec. Cum s-a întâmplat totul",
-      "url": "https://www.digi24.ro/stiri/o-britanica-a-murit-in-bahamas-in-timp-ce-incerca-sa-si-salveze-fiii-de-la-inec-cum-s-a-intamplat-totul-4007355",
-      "reason": "Approfondimento verificato non ancora disponibile; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "++ Scontri al centro di Roma, cariche e idranti sui manifestanti ++",
-      "url": "https://www.ansa.it/sito/notizie/flash/2026/10/24/-scontri-al-centro-di-roma-cariche-e-idranti-sui-manifestanti-_a1eff41c-de3d-4992-996c-e5410fab9960.html",
-      "reason": "Testo integrale assente o brevissimo; fonti da verificare",
-      "attempts": 0
-    },
-    {
-      "title": "Arieșul Mihai Viteazu, victorie 4-0 cu Viitorul Gârbău - TurdaNews",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNkY3SFlhTFJPTE54T2NGQWItVW9TM2w0U1NTNGdKT0p4NklzemxfTnBWcVdjenc4OXZBbjVWR084cWNWRzctMWpaVFJvZGU3UmQtUHhQLXphejFFRjJpeFpKRWZYMGVOdDNaMlhhSFBtM3JCUVhwSTVPOXlFZG5LTmVpQkZBemZhWVA4cG9kMzZ0ZDViTDJkMXAtQzBFT0hfZkl1aVJ6aE14NHh4UjBpb3VpRQ?oc=5",
-      "reason": "Approfondimento verificato assente; fonti ancora da verificare",
-      "attempts": 0
-    },
-    {
-      "title": "Gli 007 a Rubio: 'L'Iran vuole assassinare i diplomatici americani'",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/24/gli-007-a-rubio-liran-vuole-assassinare-i-diplomatici-americani_7373399c-26ef-45a1-a1d1-1018eb555b3a.html",
-      "reason": "Approfondimento verificato non ancora disponibile; fonte originale e riscontri da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Banche, l’IA entra nel conto. l’allarme negli Stati Uniti - la Repubblica",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYURPUXRFTGRFRVZveEZPYmYzZU1Pa19nOFR1Ui1sZTduUWRVVl9wdTdMdmp1M3I1OFlyLXI5NW5IVVNCR0poY041TzRTeFpjdll2S3hZdjd3WmFZQlZOUTI4RTNJZGl0aVc3d2tnNEQxc2JFcEVKeTJGOXZMc3RVdnFzSXdwWWw1NmZKMkxTeVZKSDNYbFVySGhJUThJQTRIWWdwOVNxT0M3WE5Rd3RiLVVEa2hGZkhF?oc=5",
-      "reason": "Approfondimento verificato non ancora disponibile; fonte originale e riscontri da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Plebiscito Padova, 8-24 con Ekipe Orizzonte: la cronaca - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tVUVyYmF3Rk1NeFpZaVNyUnpVTnVtcno4WmlaVzBIa1RyaWxlSnpfbHJOQWMyLTRzZ0loWVY1Y1ROWmFqcU1xWE9ILWNIdU9jXzlzNXkwUkdheE04ZjRuMUhDZWlJTmxGa0F3c2o4c0VJdzZL?oc=5",
-      "reason": "Articolo ancora breve o assente; verificare fonti indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Monselice, domenica mercatino e solidarietà: Città della Speranza in centro dalle 7:30 - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9CZGd3eGxUUnpXRHNQY0ZURTdQS09BcjV1VDV0bXkxbG9kbXNWc1JvNVdHaXQwZFk2clcyWjFHZVdFRVZHUGw5ZlM2aVFwQWdBVGF5WExnU2MwWE56Qi00OEtMa1QtWnpSQXQ0OWZZc1QyUURKR1hYNkUwN28?oc=5",
-      "reason": "Articolo ancora breve o assente; verificare fonti indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Știri Jurnalul din 25 Octombrie 2026 - Jurnalul",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5VNmZpQWdJNFhoSExQUldvXzVETzdNYlhxSklMX3N6MFY0OWl1SlVicDFoQzRGRDJsTXdvU09FWXk3UVhJU0E?oc=5",
-      "reason": "Testo breve o assente; approfondimento e verifica delle fonti ancora necessari",
-      "attempts": 0
-    },
-    {
-      "title": "Notizie di Padova ore 23: corteo, calcio e gemelli - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBZS0dCV2lIY29mQ2VkZ3Vmb2xZTlpSSEIzUk5aXzZMUDZ5Q3EzbkUwTW05VFpmVk8yekMybGUtT21QTlBTTzhoanF2ZTBmOVNDaWd5bjNMbkpYUmM4TGRUajRiMFZCcnN5U0ZBQ0VNZTc?oc=5",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
+      "category": "",
+      "published": "2026-10-25T06:37:13+00:00",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNay1hYnV1YUlqVDcwVk5sNWlqUTBvUmFRako1M2x0LTdqdmZBUGlNS2lqNFpzYkRaTTVBR1g2SHYxblpTRlBldk1UbmlVNWhnYlI4RnRZODdOZFkyZEx2My1fSWx2S3QtQUtPSFBZdWNfM2xtWnQxSEJVTi1HVU1IWQ?oc=5",
+      "source": "",
+      "status": "roșu",
       "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Svizzera, che fatica: lo stipendio non basta più - La Prealpina",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOGtFbEIzTU1OWTFPMWY4T0FSWmdnZ2d6ZDFCa0Y1Y0JRUzQ3WVRhMGlZMElONUFzTkZjQTZydUZRS2N3dVJwVWg1WGt0aDBKajFNalFnS25CQ2hveGdKSThOV09LY29FZGxlVW9ja3JQR1JWLWZhODJTbldFWUNuc0Y5WHdCYzJmdnh3MlJGSmtITEcxMF93M2wzWjRPZw?oc=5",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Elveția oferă Moldovei 5,6 milioane de dolari pentru sănătatea refugiaților - logos-pres.md",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTmp5MUFPZDd2UGZJZHNDZFpkSDZHTUF0eFJ2aWQzLUpXaUhSWnBEbEdxR25ycjBaY0F2TEhRREVIdVFzeWYyYjFvVEloZjFYRndHNWg4c1pyRVNTLXlfVVU1akQ2X25hQ1FuTVZ5b1I0SDZiOElTTW1od0dsYTh5WXdYaHg2WURxX3JjckN2SGVQbnNWZWh1X1dXa19jUzdyX2cyR3Y0NXowSU9NeENSQ0s1SnE4dmtyM0JIeXdQZUJpNWM2XzViNFFzY0dPS2ZSNHlUa0g1VlhfZmdPUURscEJhOEQyUFAyTGc?oc=5",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Mirosurile transmise prin internet. Cum funcționează Scentronic, tehnologia ce vrea să schimbe comunicarea digitală",
-      "url": "https://www.digi24.ro/stiri/sci-tech/lumea-digitala/mirosurile-transmise-prin-internet-cum-functioneaza-scentronic-tehnologia-ce-vrea-sa-schimbe-comunicarea-digitala-4004175",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Cazul „tăietorului de degete” și „brazilianului Escobar”: bărbații aflați în centrul celui mai mediatizat proces al deceniului",
-      "url": "https://www.digi24.ro/stiri/externe/ue/cazul-taietorului-de-degete-si-brazilianului-escobar-barbatii-aflati-in-centrul-celui-mai-mediatizat-proces-al-deceniului-3999991",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Ultima fortăreață a „imperiului Wagner”: Cum a reușit un playboy răsfățat să țină în viață cea mai notorie forță de mercenari din lume",
-      "url": "https://www.digi24.ro/stiri/externe/ultima-fortareata-a-imperiului-wagner-cum-a-reusit-un-playboy-rasfatat-sa-tina-in-viata-cea-mai-notorie-forta-de-mercenari-din-lume-3999249",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Telenovela de la Casa Albă: Idila dintre o aliată a lui Trump și un afacerist turc a declanșat o luptă aprigă pentru avere și influență",
-      "url": "https://www.digi24.ro/stiri/externe/telenovela-de-la-casa-alba-idila-dintre-o-aliata-a-lui-trump-si-un-afacerist-turc-a-declansat-o-lupta-apriga-pentru-avere-si-influenta-4004597",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "NATO 3.0, un pariu periculos: planul administrației Trump riscă să dărâme cei doi piloni fundamentali care protejează Europa",
-      "url": "https://www.digi24.ro/stiri/externe/ue/de-ce-este-nato-3-0-un-pariu-periculos-planul-administratiei-trump-risca-sa-darame-cei-doi-piloni-fundamentali-care-protejeaza-europa-4003597",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Sanae Takaichi, mâna forte cu un stil politic atipic: cum gestionează prima femeie premier a Japoniei cele mai grele provocări",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/sanae-takaichi-mana-forte-cu-un-stil-politic-atipic-cum-gestioneaza-prima-femeie-premier-a-japoniei-cele-mai-grele-provocari-4001729",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Luna se micșorează: ce au descoperit cercetătorii despre faliile misterioase apărute pe suprafața satelitului",
-      "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/luna-se-micsoreaza-ce-au-descoperit-cercetatorii-despre-faliile-misterioase-aparute-pe-suprafata-satelitului-4000097",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Sfântul Dumitru se sărbătorește pe 26 sau pe 27 octombrie? De ce sunt două praznice importante în zile consecutive",
-      "url": "https://www.digi24.ro/magazin/sfantul-dumitru-se-sarbatoreste-pe-26-sau-pe-27-octombrie-de-ce-sunt-doua-praznice-importante-in-zile-consecutive-4006049",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Digistoria – cele mai importante evenimente petrecute pe 25 octombrie",
-      "url": "https://www.digi24.ro/digistoria/digistoria-cele-mai-importante-evenimente-petrecute-pe-25-octombrie-2-4007757",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Răzbunarea lui „Trump de la tropice”. Alegeri în Brazilia: tinerii muncitori îi întorc spatele lui Lula și pariază pe Bolsonaro",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/razbunarea-lui-trump-de-la-tropice-alegeri-in-brazilia-tinerii-muncitori-ii-intorc-spatele-lui-lula-si-pariaza-pe-bolsonaro-4000415",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Un gest banal pe care îl faci acasă poate afecta aerul pe care îl respiri. Avertismentul medicilor: „Poate irita căile respiratorii”",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/un-gest-banal-pe-care-il-faci-acasa-poate-afecta-aerul-pe-care-il-respiri-avertismentul-medicilor-poate-irita-caile-respiratorii-4006097",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Criza serviciului militar zguduie alianțele politice din Israel: evreii ultraortodocși, între Netanyahu și tentația schimbării politice",
-      "url": "https://www.digi24.ro/stiri/externe/criza-serviciului-militar-zguduie-aliantele-politice-din-israel-evreii-ultraortodocsi-intre-netanyahu-si-tentatia-schimbarii-politice-4002199",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Va ajunge vreodată „mașina zburătoare” Tesla pe piață? Cât de realist este planul lui Elon Musk",
-      "url": "https://www.digi24.ro/stiri/sci-tech/va-ajunge-vreodata-masina-zburatoare-tesla-pe-piata-cat-de-realist-este-planul-lui-elon-musk-4003149",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Christina Applegate a fost diagnosticată greșit cu scleroză multiplă. De ce este dificil de identificat această boală",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/christina-applegate-a-fost-diagnosticata-gresit-cu-scleroza-multipla-de-ce-este-dificil-de-identificat-aceasta-boala-4007611",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Mihai și-a pierdut viața în Italia, după ce s-a izbit violent cu motocicleta de un zid - Kanal D Romania",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQlZpNTdXY2x5SFZhVUhzSzZGRUlVVEVhWG0yWlEwZlZQNTU3c3pVbHNtUlU2LUhHZWJJX3FUWkMydW0xR3J1MHdiVldJcjdoR0ZqSTgtenFGbFc5QXFjaDZ1VnE4anZNazRicENkanhFZzVUSTlGTEI4cGJoandVT19xMHlsNkw3VnJVWmFvREIzR3RCSkVlNUtJYkdsZHhES2NpV1RmT2ZNR0JjNEZuMGhlLU4yck3SAbwBQVVfeXFMUDlGaGxFMDRPejVFMXdQQ1ZHM0w2bGJ2eThrdDhpaGM0LVBzajBaTm45dExaQzRxYkVlZkhHckhBN1FGOHlnSUdvWXNLb1JHWFN5T21WTHVmRDh3VkRKajVsRkoxb2VIU1VhNkpUSEdta1Zrc1Z2ZG9ncXB5cHJhU0s4NmZUUzB0UG5oV3VZOS1NdzBqbTdaaUhyR2s",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Rezultate LOTO - Duminică, 25 octombrie 2026: Fond de câștiguri suplimentat la 6/49. La Noroc sunt în joc peste 283.000 de euro",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/rezultate-loto-duminica-25-octombrie-2026-fond-de-castiguri-suplimentat-la-6-49-la-noroc-sunt-in-joc-peste-283-000-de-euro-4006661",
-      "reason": "Fonte originale non accessibile; informazioni ancora insufficienti per approfondimento verificato",
-      "attempts": 1
-    },
-    {
-      "title": "Bulgaria își alege președintele, cu războiul din Ucraina în centrul scrutinului. Ce arată sondajele",
-      "url": "https://www.digi24.ro/stiri/externe/ue/bulgaria-isi-alege-presedintele-cu-razboiul-din-ucraina-in-centrul-scrutinului-ce-arata-sondajele-4007817",
-      "reason": "Fonte originale non accessibile; informazioni ancora insufficienti per approfondimento verificato",
-      "attempts": 1
-    },
-    {
-      "title": "Il Brasile al voto, l'ultimo sondaggio: Bolsonaro in lieve vantaggio su Lula",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
-      "reason": "Approfondimento verificato mancante; ricerca fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Serbia votează sub presiunea protestelor: Vucici, opoziția studențească și dilema europeană la urne",
-      "url": "https://www.digi24.ro/stiri/externe/serbia-voteaza-sub-presiunea-protestelor-vucici-opozitia-studenteasca-si-dilema-europeana-la-urne-4007815",
-      "reason": "Approfondimento verificato mancante; ricerca fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Comprendere non significa giustificare",
-      "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/10/23/comprendere-non-significa-giustificare_31482d02-3b4c-4273-bd48-e3d11e366ffc.html",
-      "reason": "Approfondimento verificato mancante; ricerca fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "L'Iran: 'Lo Stretto di Hormuz non tornerà allo status pre-guerra'",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/liran-lo-stretto-di-hormuz-non-tornera-allo-status-pre-guerra_8bf2465a-7e05-43cc-997d-16e8579cf77c.html",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Sorin Grindeanu acuză: Guvernul Bolojan a lăsat România cu datorii uriașe. Liderul PSD face promisiuni: „Acest trend trebuie inversat”",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/sorin-grindeanu-acuza-guvernul-bolojan-a-lasat-romania-cu-datorii-uriase-liderul-psd-face-promisiuni-acest-trend-trebuie-inversat-4007853",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Regatul Unit ar putea reveni la regulile UE privind libera circulație. Premierul Andy Burnham cere o dezbatere sinceră",
-      "url": "https://www.digi24.ro/stiri/externe/regatul-unit-ar-putea-reveni-la-regulile-ue-privind-libera-circulatie-premierul-andy-burnham-cere-o-dezbatere-sincera-4007843",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Luca Niculescu, de Ziua Armatei: „Pacea nu mai poate fi considerată un dat”. Cele trei direcții asumate de guvern în domeniul apărării",
-      "url": "https://www.digi24.ro/stiri/actualitate/luca-niculescu-de-ziua-armatei-pacea-nu-mai-poate-fi-considerata-un-dat-cele-trei-directii-asumate-de-guvern-in-domeniul-apararii-4007903",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Eficiența statului, criticată chiar de propriii angajați. 7 din 10 bugetari spun că banii publici sunt risipiți",
-      "url": "https://www.digi24.ro/stiri/eficienta-statului-criticata-chiar-de-propriii-angajati-7-din-10-bugetari-spun-ca-banii-publici-sunt-risipiti-4007873",
-      "reason": "Verificata notizia Digi24, ma non identificato lo studio originale, il campione e la metodologia; approfondimento sospeso in attesa di riscontri indipendenti",
-      "attempts": 1
-    },
-    {
-      "title": "Funzionari iraniani al Nyt: 'Lecito colpire diplomatici americani'",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/funzionari-iraniani-al-nyt-lecito-colpire-diplomatici-americani_8bf2465a-7e05-43cc-997d-16e8579cf77c.html",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Anche i macachi diventano più attenti ai germi dopo un'epidemia  VIDEO",
-      "url": "https://www.ansa.it/canale_scienza/notizie/natura/2026/10/25/anche-i-macachi-diventano-piu-attenti-ai-germi-dopo-unepidemia-video_87e28064-8702-42ba-8cc6-db106996145e.html",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Sorin Costreie explică de ce România are nevoie de două ministere ale Educației: un argument ar fi practica europeană",
-      "url": "https://www.digi24.ro/stiri/actualitate/educatie/sorin-costreie-explica-de-ce-romania-are-nevoie-de-doua-ministere-ale-educatiei-un-argument-ar-fi-practica-europeana-4007339",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Midterm, Obama tira la volata a El-Sayed: 'C'è aria di cambiamento negli Usa'",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/midterm-obama-tira-la-volata-a-el-sayed-ce-aria-di-cambiamento-negli-usa_616e3eb7-1aea-4deb-a54d-614da5270d1d.html",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Quanto costa il sogno del “nomade digitale”: 4mila euro al mese a New York, Italia competitiva - la Repubblica",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOQklEcWJfY3FXdXVBUHdBeDdjcEE1NmFwZ1NwaVVwNDRFNE16RVlOVFg5Uk0wM2VtaGNxQkI0RWJZaFJ0dHdSbnR4eE50SkNSVE00OVl1TVdQUGRFRktWYjFlUDRVY2s3R2htT29mc0RGT3FLM3pmT1BodUlqVDNURXRfWGZUa01NVVRhMl84LTNSYW9EcGhtbGFpSm1scGxSYUMzWGJNOHZtaEZwam1IcXJfRFNxQmRQc2dzRnd6QVkwSUJRT1R2dDhKT2ViTUUyaTl5aU9YTXIwb3hHSllzbjl5Qmk2SGM?oc=5",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Il settore dei ricambi auto offre lavoro - Motor1.com Italia",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wZktsN0gyVF9KdDdLNHhwTXY3M1FSRHZCdk9EUnhUWkdxclhoUWZMcW5ROEgwTmo3YUROLUlVMkdrRDVhWW5HSFhQdlZBR1dHMGF2cjV0ZVptMlIyR2Vic3BGVkRBaWlHbG8wdlhMdDNBdFB0MEtJSFZB?oc=5",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Cortei di protesta da Roma a Milano TUTTI I VIDEO",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/24/cortei-di-protesta-da-roma-a-milano-tutti-i-video_2bb860a1-c867-4ceb-aabb-2889ee1baa7b.html",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Melanoma, primo vaccino 'su misura' riduce il rischio di recidiva del 42%",
-      "url": "https://www.ansa.it/canale_saluteebenessere/notizie/focus_tumore/2026/10/24/ansamelanoma-primo-vaccino-su-misura-riduce-rischio-recidiva-del-42_fe745f27-155f-4e78-ac1d-3704a0253305.html",
-      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Putin: 'Accusarci per i disordini segno di debolezza e incapacità dei leader europei'",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/putin-accusarci-per-i-disordini-segno-di-debolezza-e-incapacita-dei-leader-europei_675a626d-46d1-4d07-ba6e-e272987fb120.html",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Rusia anunță că a lovit o navă de marfă în Marea Neagră și trei centre logistice din Harkov",
-      "url": "https://www.digi24.ro/stiri/externe/rusia/rusia-anunta-ca-a-lovit-o-nava-de-marfa-in-marea-neagra-si-trei-centre-logistice-din-harkov-4007927",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Due giovani piemontesi tra i migliori studenti d’Italia: Sofia Maria Vella e Mattia Rebuffo premiati al Quirinale - Torino Plus",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE02anZ3N1dxWW1CQ2U0TFJxbi13eVpPUkhDWWNFNkJ4MEl3U2FqdXMxNWRNN2JhaHBWNGZxbVk3cDk3TElCSl9BeVlfRmtHWnlYeHJzTWpaT19JY3UwNVdKdGVLdXZSSk9sM25SaG8xanY5SFNWNlJF?oc=5",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "„Când vrei să îngropi o problemă, faci o comisie”. Raluca Turcan critică măsurile anunţate de guvern după violențele din școli",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/cand-vrei-sa-ingropi-o-problema-faci-o-comisie-raluca-turcan-critica-masurile-anuntate-de-guvern-dupa-violentele-din-scoli-4007919",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Barack Obama: Casa Alba a lui Donald Trump Arată ca o Fabrica de Cheesecakes a lui Saddam Hussein - iDevice.ro",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG1lUXNkTGhlcU1Nb3ppSndObG5rUFlVNWtUVUljUF9NdVRUcTBxTFBkbUhFREZEakRSR1ZEMU1RUS1NaWVqRjJRbUNFUjJmNUZWRFgybk92TVh6M1ZLRzdnU1g4ZldOQUhmaEZlQXpyN3lDWEpXSERQSzhXaDRSLVByOTd5cm1Ob25sd1k2bUdRLS1VdzZfUkJiekJPd0tuWmk4R0hvbkVjWUk0cEk1MTlB?oc=5",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "La fine del Sistema Solare potrebbe essere più rapida del previsto",
-      "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/10/25/la-fine-del-sistema-solare-potrebbe-essere-piu-rapida-del-previsto_42cd1573-8fbb-4c2a-9cad-5e840ab51a7b.html",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Albignasego e Casalserugo, progetto contro gli allagamenti: risorse da cercare nel 2027 - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNY2xRd2xVQ3MwRm9xYlBrUjhQMk05T0F6SENQN3BBTm03NVJwbU83WnIzdG5NM2J0cVRDbE5wc2ZfU1NYY18yZGp4NldWMTNuYVBJb19MUjBUVzFJdEhJRDV0R2hYU1Z4SjhwMVlrSXhaTHc4MnN3cnV0NUJRLTkyTGVR?oc=5",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Unii italieni se mută în România, deși salariile sunt mai mici. Explicații și controverse - Mediafax",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYllSUG5RWXNHSGlXVTd2c0RsUlVuS1BhcktJaU9PTnRscF9icmdyOWcxcGVGYXBCXzVZcGVlVWZSZnVfMlZZTzYtc0tkMno3LUtmYWhCMlBVTkdQWlJwTjNGRWg2RnZZTkdfMFd2TlpIcXJxRm9JZ04wdl9sT3F4aVNPNEdITng4T0ZBT2F5dnNodDZDMjZhdWdCX04tVGI1VV9KbWxzejJpUzhEUXloNWlVbTZad0RQNTNJ0gHAAUFVX3lxTE82NWhsbTBheUE1TW9URDQ3bVFWUmVCX2tmdEhJU2N4SjlndGo2VzVYVHJncTdTNUJjU3g2ZEtwUEt3Z2VkVjRPWjR0bFlOdjlWa3Y1VTYtR3lRMUZHclJJZ01uUUtNQVBFMVpqdHl4RTZTVEtPMWdMMDVSYUNTZFFrTzJONkRlOTFkTU9Sc0RCYkRNMWNNWFB",
-      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Ucraina a lansat un atac masiv cu drone asupra orașului rusesc Belgorod: doi morți și distrugeri de amploare",
-      "url": "https://www.digi24.ro/stiri/externe/rusia/ucraina-a-lansat-un-atac-masiv-cu-drone-asupra-orasului-rusesc-belgorod-doi-morti-si-distrugeri-de-amploare-4007987",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Netanyahu posta la foto di un'atomica su Tel Aviv, '2 anni per finire il lavoro con l'Iran'",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/netanyahu-posta-la-foto-di-unatomica-su-tel-aviv-2-anni-per-finire-il-lavoro_b57751fe-5586-4c9f-87f2-638df6696482.html",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Domani la richiesta di convalida del fermo per Youssef Sehir",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/domani-la-richiesta-di-convalida-del-fermo-per-youssef-sehir-tra-le-accuse_dde34ca0-69ba-4c10-86ed-1c191da76dca.html",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Pavel Popescu, atac la adresa lui Bolojan după ce a afirmat că ANCOM se pregătea să „spargă” 200.000 de euro: „Ipocrizie halucinantă”",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/pavel-popescu-atac-la-adresa-lui-bolojan-dupa-ce-a-afirmat-ca-ancom-se-pregatea-sa-sparga-200-000-de-euro-ipocrizie-halucinanta-4007931",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Lavoro, Rinaldi (Fn): “Diminuire cuneo fiscale è solo un palliativo” - Touchpoint News",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTNYUldLRkxBNXNuX1ZzMkd4SHFjdlhFU3Z3YlY1aVJKQ2dFVzRwQ0pmLUdIU01nb1VUaW9hWFZ3T1NWR2UxNmNEVGxzYWxLQkE4czBrR2pnRnRYTng3SWYwWFU4eFFvRUF0RnRvTkxIVHlBYzRvWWpVdGltLU5xUXpSbEhvZWtLbHh6NVREVmR0ODZSem1CSzdhb3Nrd1dfY29FZg?oc=5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Oana Gheorghiu, după criticile lui Grindeanu la adresa lui Bolojan: „Atacurile politice nu plătesc facturi și nu reduc deficitul”",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/oana-gheorghiu-dupa-criticile-lui-grindeanu-la-adresa-lui-bolojan-atacurile-politice-nu-platesc-facturi-si-nu-reduc-deficitul-4007969",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
       "title": "Addestratori di robot intelligenti cercasi, un lavoro che piace ai giovani - la Repubblica",
+      "category": "",
+      "published": "",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbEszZkJrdjZFaFRlRUFMLUhMNUM0dmVMVmM4X29ycW83dTlUd1M2TUFiSG11bFRFUGo4RjZWZGRPUG82bEZMZ2REMEhyTzBnNnY3TFRxME9xay0wUThQRWFVd3dyRFJMdkpSMWxoNGY2Q1Rtb0tXOEtkekZocHNUNURUSlNPVFR0ODRoQnBwMEduOTJER05KZWE1NjV0NkJHWHMwMUJaMmtieTRkWXN4OVI3TjlUVjJ5c001bzBwLXJTU3NxNVFpWGhHSGxmZTBG?oc=5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Italianissima a Padova, oggi musica e solidarietà per LILT - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XLWFlQXNNeTZjNXB4SktZVmtZT0VCUWNKaGtCTUgyeVpucEhkcHM2VXVjQ2FIYkNYblJqU3pKWVdHX2FpelFPTzFyTkh6Q0hzMzU3Y0RKUTAwekVKWWh1LWFmVHZjSEJXdTlYNzNvZjg3OTFUWEtzSE9XY3pFdnc?oc=5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Sorin Grindeanu acuză: Guvernul Bolojan a lăsat România cu datorii uriașe. Liderul PSD face promisiuni... - Digi24",
-      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Un român plecat la muncă în Italia a fost găsit fără suflare. Bărbatul era tatăl a cinci copii - Kanal D Romania",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUDgwOFdLaW1PdEtwVW9VUFY3NzJXUTJFaGZNanhtUVV3SFVzUGdmT3ZCYkMyY0JEaDRHWVBtYTFxcW41blQ2YVgwODdUaHZBNm91V0tQdEVfVk5lRldZalRHUE9TTFlGOHN2ZHViZUoxNUZlYmJmTlBkTGFCblRNRjlhRnQ4cExWWWxLSU9UQnIwYzV2a2RhLXFEYmtQRXZ4aWxuM1Q3RVBGU21oX0ZRcjc0VncxY09lNUlIWHBxeERVd9IBxwFBVV95cUxQcDBFTjNsTTUwc0g1MXVxY2drT2hGQVNUdUVjTUVQUWdKY3J3TjhWSWdLaEc2SzI1YldISTVpLUZKMHg1bUx3cEpxeXlxQU8wTzZCVGxpSU9aQzgtaVFLeXZQeW00MFpVMHJoRFl5R0Z5OThvdU5UZHNnSEFFOGJsbXd1cEE0U2NLWkxIRmxUR3d",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Roberto Vannacci, „masculul alfa” al politicii italiene: cum vrea să câștige votul manosferei promovând „patriarhatul mediteranean”",
-      "url": "https://www.digi24.ro/stiri/externe/ue/un-general-italian-de-extrema-dreapta-vaneaza-voturile-din-manosfera-4004329",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Titluri alarmiste pe Facebook despre Armata României. Ministerul Apărării: Şeful Statului Major nu a emis nicio „alertă națională”",
-      "url": "https://www.digi24.ro/stiri/actualitate/titluri-alarmiste-pe-facebook-despre-armata-romaniei-ministerul-apararii-seful-statului-major-nu-a-emis-nicio-alerta-nationala-4008023",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Madre e figlio trovati morti in casa in Molise",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/madre-e-figlio-trovati-morti-in-casa-in-molise_c9d157ce-dfb1-42c0-b028-ff9ee83bd11f.html",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Criză de gaze în Iran înaintea iernii. Cine reduce consumul primește bani, promit autoritățile",
-      "url": "https://www.digi24.ro/stiri/economie/criza-de-gaze-in-iran-inaintea-iernii-cine-reduce-consumul-primeste-bani-promit-autoritatile-4008009",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Economia e lavoro, il sindaco Luca Salvetti: \"Livorno cresce e sta cambiando il suo futuro, altro che autocelebrazioni\" - LivornoToday",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRVVqTXZydk1JeS1Rc0tZeTNkT0VfMEdKenlNcUt3QXN3am5LSndsWUJMYlhma2phQS1Yc1dyWk52ZGEyM0REOFVVbUwwMDVoRlJtcnc0dklBMWhhd3lZREV6bFM2T19TclRReDZUeXYzV3dZdjM4ODhwMzlCMTNpcE9JbDhaZw?oc=5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Montegrotto linea M, deviazione per la Castagnata fino alle 20 - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1reFEyQ1NNY3BKT3RvdXk1dG95SW5odE1rbmZVblFvbHRhVGF4WERtbzE4dHJ0OVpPMjB0bGlwdmxzQnFEN1FQeG5US3JLQlRtOGlZSDZFaC1aMkU1VzFTTG9oSGlobDF0M1RYM2Y1UUp3aElNcVJHMw?oc=5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Notizie di Padova ore 10: bomba day, carcere, prevenzione e cinema oggi in città - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1Ebng1U25QYUFnbEJCbTBMZWcwdWFPZkxYcU5qMWNTa0t1aW9iZm1TOEprR2lkb2ZtSDFCNlk0cmVvZkw5MDYxRTVneTNfTmtHb2ZVU1dodzZfWWw0aDJ2bnZQS1hjQ2V6dmdxbEwwSWc?oc=5",
-      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Român de 14 ani din Italia, acuzat că administra un grup de WhatsApp prin care îndemna la vandalizarea... - StiriDiaspora",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNX1I5Uk5pWjQ4d0Ntb1hQUTNZRUVRQlJDOUFfVUhjdjR0cTM5X191eV9wU18tSHRTQjdSTklITFhwamFQUE9RdWhSUGVVcU8tY29oUWZWeEF3WW8zYnJ4MkhiQThPZmEwQnY2SVVGMTZaYU03S1NhUFBpWHdGa01OckRjRDlnZm9hbWx4eDk4SXZ3ZEMwYUJudVZqM1h6MVRJV1FxWXQzV21SdnNxSlVrb3JPd1BPekVYY2QyOEU1WVAweW85QnpIdUpUVHVCYVZwZ0xiSDc2Ri13RWU1TEtYR0JTdXRTRDVHQ0k4Zlg0UUxiLV9YakN0eWpjZ2VxV0lPejVLbkpn0gGLAkFVX3lxTE9BQjgwbS1sbGFIcExWZUFVT1ZfYXdPdkhzNTVGeWVZcTJIUE1aVENqWEZiODNCR3lybTlfUGw0dTFiUm1aM3BxbHRXMHQ",
+      "source": "",
+      "status": "roșu",
       "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
       "title": "Adelin este românul care și-a dat ultima suflare într-un penitenciar din Italia. Avocatul face acuzații... - Kanal D Romania",
+      "category": "",
+      "published": "",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOU1I3VG5IcXhwd0h3YTlPbWZFR0FnYllRYU5ZdDBmQTk1aDFLZld5WE4tdm40b19tQ29sRmpudjJKTWY4QVF3VWN1Tnlla2IyRjZqUVlZX2VQZDlnWFl3YzZsTUFPU3B2SHVFTlo3bFlhTGlCTnYzaFdSSmdKMzdjZ0N2cjNNbkJYT3BsZHh6SzVuS0ExQWVBeVlvOGdfdEgzYnJrbk1sODRyeWx0d3VVZGI5MzRoU1hUTmgtTkRhaUJDOGoyZGZwOEVXSWpubml5RVU4LW1rMWI0YkdpYXktdS1VOXhPRmFDZExFMk5R0gHzAUFVX3lxTE56LU1CRm1ld0xQa2lhY2V4cEhiTzZ1UnRpLVM3eUFUYXdiMWlKcmpxWndlSDM2dEMydldLYjBXSmc4Z0ZTejVkUVlKUDlicUtmRGpzNnJTMHplOWF2c3Z0QXBxZnF",
+      "source": "",
+      "status": "roșu",
       "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Serie A: Inter-Fiorentina in campo 1-1 CRONACA E FOTO",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-inter-fiorentina-in-campo-1-1-cronaca-e-foto_9d15e23a-75af-48ea-b319-406e416cd6ed.html",
-      "reason": "Testo originale assente o breve; ricerca e verifica delle fonti da completare",
-      "attempts": 0
-    },
-    {
       "title": "Care este marele defect al lui Nicușor Dan? Răspunsul ministrului Educației, Sorin Costreie, fost consilier prezidențial",
+      "category": "",
+      "published": "2026-10-25T13:27:54+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/care-este-marele-defect-al-lui-nicusor-dan-raspunsul-ministrului-educatiei-sorin-costreie-fost-consilier-prezidential-4008049",
+      "source": "",
+      "status": "roșu",
       "reason": "Testo originale assente o breve; ricerca e verifica delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Ioana Dogioiu îl acuză pe Pavel Popescu că „minte cum respiră”: „Dorea bani publici pentru o chermeză cu o mie de persoane”",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/ioana-dogioiu-il-acuza-pe-pavel-popescu-ca-minte-cum-respira-dorea-bani-publici-pentru-o-chermeza-cu-o-mie-de-persoane-4008039",
-      "reason": "Testo originale assente o breve; ricerca e verifica delle fonti da completare",
+      "title": "Due giovani piemontesi tra i migliori studenti d’Italia: Sofia Maria Vella e Mattia Rebuffo premiati al Quirinale - Torino Plus",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE02anZ3N1dxWW1CQ2U0TFJxbi13eVpPUkhDWWNFNkJ4MEl3U2FqdXMxNWRNN2JhaHBWNGZxbVk3cDk3TElCSl9BeVlfRmtHWnlYeHJzTWpaT19JY3UwNVdKdGVLdXZSSk9sM25SaG8xanY5SFNWNlJF?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
       "attempts": 0
     },
     {
-      "title": "In Serbia affluenza in forte aumento alle urne, 'irregolarità e incidenti a seggi'. Presidenziali in Bulgaria",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
-      "reason": "Testo originale assente o breve; ricerca e verifica delle fonti da completare",
+      "title": "Economia e lavoro, il sindaco Luca Salvetti: \"Livorno cresce e sta cambiando il suo futuro, altro che autocelebrazioni\" - LivornoToday",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRVVqTXZydk1JeS1Rc0tZeTNkT0VfMEdKenlNcUt3QXN3am5LSndsWUJMYlhma2phQS1Yc1dyWk52ZGEyM0REOFVVbUwwMDVoRlJtcnc0dklBMWhhd3lZREV6bFM2T19TclRReDZUeXYzV3dZdjM4ODhwMzlCMTNpcE9JbDhaZw?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Ce se împarte de Sfântul Dumitru 2026: Preotul explică lista alimentelor permise pentru pachetele de pomană din 26 octombrie",
-      "url": "https://www.digi24.ro/magazin/ce-se-imparte-de-sfantul-dumitru-2026-preotul-explica-lista-alimentelor-permise-pentru-pachetele-de-pomana-din-26-octombrie-4006007",
-      "reason": "Testo originale assente o breve; ricerca e verifica delle fonti da completare",
+      "title": "Il futuro non si aspetta, si costruisce: 24 storie che raccontano l’Italia della rigenerazione - la Repubblica",
+      "category": "",
+      "published": "2026-10-24T06:06:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNDZwU3RhN3hfc05VS3dFblFtQXJSZ2pLTWdDdGctTko0ak5PbUxiSGZmTmdaUzE4bDVGOE8xWnRNLVlLMDNRa2pUU29fdnNIVEF2a2lsS3dJU3Ffd0FncU9JSUxIYTFubXZpT0JPbU8xbGtmQVJWRzBPWlJYcnBVNm1jTmZJdUVvWjJ1Mks5b3NkVjNXYWFXdVFDamNvM1hHai1NV21GNjJnZVRNTkUzODJVSmdQWnhaaUVxUUIwUdIBxAFBVV95cUxQV1JxQzA3REpENjdqOE9QVnZlQk1vZnJSTTMybGVpeHlHMFN4VEZjZ0M5Um1ac2VtM0xCYzIyYkR0R1pMelJ2c2pPX2N1YzhmVmpLV3QtZ2w4SmxEd1ZHVzFEb05Ha0RNN0kxWW42NUI0MTFpV1hwc3daRmpCUHhkWnpMR3czS09vbXpOTnc2dkd3ZHp",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
       "attempts": 0
     },
     {
-      "title": "Israelul impune blocadă în Cisiordania în ziua alegerilor, după uciderea a doi soldați. Palestinieni evacuați forțat din Hebron",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/israelul-impune-blocada-in-cisiordania-in-ziua-alegerilor-dupa-uciderea-a-doi-soldati-palestinieni-evacuati-fortat-din-hebron-4008033",
-      "reason": "Testo originale assente o breve; ricerca e verifica delle fonti da completare",
+      "title": "Il settore dei ricambi auto offre lavoro - Motor1.com Italia",
+      "category": "",
+      "published": "2026-10-24T22:01:16+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wZktsN0gyVF9KdDdLNHhwTXY3M1FSRHZCdk9EUnhUWkdxclhoUWZMcW5ROEgwTmo3YUROLUlVMkdrRDVhWW5HSFhQdlZBR1dHMGF2cjV0ZVptMlIyR2Vic3BGVkRBaWlHbG8wdlhMdDNBdFB0MEtJSFZB?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
       "attempts": 0
     },
     {
-      "title": "Serie A: Atalanta-Frosinone 1-2 DIRETTA e FOTO",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-atalanta-frosinone-1-2-diretta-e-foto_a77748e3-d2d7-4936-94c2-0fa83f6041ae.html",
-      "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
+      "title": "Italianissima a Padova, oggi musica e solidarietà per LILT - Padova24Ore",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XLWFlQXNNeTZjNXB4SktZVmtZT0VCUWNKaGtCTUgyeVpucEhkcHM2VXVjQ2FIYkNYblJqU3pKWVdHX2FpelFPTzFyTkh6Q0hzMzU3Y0RKUTAwekVKWWh1LWFmVHZjSEJXdTlYNzNvZjg3OTFUWEtzSE9XY3pFdnc?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Festa del Cinema, il più grande film sulla guerra a tematica gay: \"La Bola Negra\"",
-      "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/10/25/festa-del-cinema-il-piu-grande-film-sulla-guerra-a-tematica-gay_aa575656-f716-45e4-9cda-219a957d64f7.html",
-      "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
+      "title": "Lavoro, Rinaldi (Fn): “Diminuire cuneo fiscale è solo un palliativo” - Touchpoint News",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTNYUldLRkxBNXNuX1ZzMkd4SHFjdlhFU3Z3YlY1aVJKQ2dFVzRwQ0pmLUdIU01nb1VUaW9hWFZ3T1NWR2UxNmNEVGxzYWxLQkE4czBrR2pnRnRYTng3SWYwWFU4eFFvRUF0RnRvTkxIVHlBYzRvWWpVdGltLU5xUXpSbEhvZWtLbHh6NVREVmR0ODZSem1CSzdhb3Nrd1dfY29FZg?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Cozi uriașe la alegerile din Serbia care vor decide direcția țării. Ce spun primele sondaje",
-      "url": "https://www.digi24.ro/stiri/externe/ue/cozi-uriase-la-alegerile-din-serbia-care-vor-decide-directia-tarii-ce-spun-primele-sondaje-4008047",
-      "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
+      "title": "Mihai și-a pierdut viața în Italia, după ce s-a izbit violent cu motocicleta de un zid - Kanal D Romania",
+      "category": "",
+      "published": "2026-10-24T13:02:45+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQlZpNTdXY2x5SFZhVUhzSzZGRUlVVEVhWG0yWlEwZlZQNTU3c3pVbHNtUlU2LUhHZWJJX3FUWkMydW0xR3J1MHdiVldJcjdoR0ZqSTgtenFGbFc5QXFjaDZ1VnE4anZNazRicENkanhFZzVUSTlGTEI4cGJoandVT19xMHlsNkw3VnJVWmFvREIzR3RCSkVlNUtJYkdsZHhES2NpV1RmT2ZNR0JjNEZuMGhlLU4yck3SAbwBQVVfeXFMUDlGaGxFMDRPejVFMXdQQ1ZHM0w2bGJ2eThrdDhpaGM0LVBzajBaTm45dExaQzRxYkVlZkhHckhBN1FGOHlnSUdvWXNLb1JHWFN5T21WTHVmRDh3VkRKajVsRkoxb2VIU1VhNkpUSEdta1Zrc1Z2ZG9ncXB5cHJhU0s4NmZUUzB0UG5oV3VZOS1NdzBqbTdaaUhyR2s",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
       "attempts": 0
     },
     {
-      "title": "Plaje închise în Emiratele Arabe Unite. O pată uriașă de petrol a ajuns pe litoral",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/plaje-inchise-in-emiratele-arabe-unite-o-pata-uriasa-de-petrol-a-ajuns-pe-litoral-4008073",
-      "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
+      "title": "Netanyahu posta la foto di un'atomica su Tel Aviv, '2 anni per finire il lavoro con l'Iran'",
+      "category": "",
+      "published": "",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/netanyahu-posta-la-foto-di-unatomica-su-tel-aviv-2-anni-per-finire-il-lavoro_b57751fe-5586-4c9f-87f2-638df6696482.html",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Kim Kardashian, in All's Fair noi donne lottiamo l'una per l'altra",
-      "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/10/24/kim-kardashian-in-alls-fair-noi-donne-lottiamo-luna-per-laltra_839aed5a-bfee-42cb-96d8-c9f10c525ca3.html",
-      "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
+      "title": "Prioritățile Oficiale Anunțate de Florin Manole pentru Români după Preluarea Mandatului de Ministru al Muncii - iDevice.ro",
+      "category": "",
+      "published": "2026-10-25T13:49:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWTdhb1NycVFJYlNxZ19YNlVuZDlfMTk0THFYcEl3RGhrSUxsWU9PTlNrUC1GdEEzc3kwZDBEckFIM0QwTEd6dTM2TXlOM09Rb3FzYkZTeUVhcVd1Z04wNGFnM3d0TXE1XzZFazZKUVYxREtWQUlrNlZYdzdGRkdkRkRkaXplZmpTT2ZVY2d2SmdwVTgxYnotN3k5QnJmSVM5RVkxNXRBbHhDZnZTWm1CbVRlaGYxQ3hDMXJhMWVn?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "attempts": 0
+    },
+    {
+      "title": "Quanto costa il sogno del “nomade digitale”: 4mila euro al mese a New York, Italia competitiva - la Repubblica",
+      "category": "",
+      "published": "2026-10-25T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOQklEcWJfY3FXdXVBUHdBeDdjcEE1NmFwZ1NwaVVwNDRFNE16RVlOVFg5Uk0wM2VtaGNxQkI0RWJZaFJ0dHdSbnR4eE50SkNSVE00OVl1TVdQUGRFRktWYjFlUDRVY2s3R2htT29mc0RGT3FLM3pmT1BodUlqVDNURXRfWGZUa01NVVRhMl84LTNSYW9EcGhtbGFpSm1scGxSYUMzWGJNOHZtaEZwam1IcXJfRFNxQmRQc2dzRnd6QVkwSUJRT1R2dDhKT2ViTUUyaTl5aU9YTXIwb3hHSllzbjl5Qmk2SGM?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
+      "attempts": 0
+    },
+    {
+      "title": "Român de 14 ani din Italia, acuzat că administra un grup de WhatsApp prin care îndemna la vandalizarea... - StiriDiaspora",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNX1I5Uk5pWjQ4d0Ntb1hQUTNZRUVRQlJDOUFfVUhjdjR0cTM5X191eV9wU18tSHRTQjdSTklITFhwamFQUE9RdWhSUGVVcU8tY29oUWZWeEF3WW8zYnJ4MkhiQThPZmEwQnY2SVVGMTZaYU03S1NhUFBpWHdGa01OckRjRDlnZm9hbWx4eDk4SXZ3ZEMwYUJudVZqM1h6MVRJV1FxWXQzV21SdnNxSlVrb3JPd1BPekVYY2QyOEU1WVAweW85QnpIdUpUVHVCYVZwZ0xiSDc2Ri13RWU1TEtYR0JTdXRTRDVHQ0k4Zlg0UUxiLV9YakN0eWpjZ2VxV0lPejVLbkpn0gGLAkFVX3lxTE9BQjgwbS1sbGFIcExWZUFVT1ZfYXdPdkhzNTVGeWVZcTJIUE1aVENqWEZiODNCR3lybTlfUGw0dTFiUm1aM3BxbHRXMHQ",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
+      "attempts": 0
+    },
+    {
+      "title": "Răzbunarea lui „Trump de la tropice”. Alegeri în Brazilia: tinerii muncitori îi întorc spatele lui Lula și pariază pe Bolsonaro",
+      "category": "",
+      "published": "2026-10-25T05:00:34+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/razbunarea-lui-trump-de-la-tropice-alegeri-in-brazilia-tinerii-muncitori-ii-intorc-spatele-lui-lula-si-pariaza-pe-bolsonaro-4000415",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
       "attempts": 0
     },
     {
       "title": "Scandal în Italia din cauza unui român care locuiește într-o rulotă. Vecinii au ajuns la capătul răbdării! - Rotalianul – Revista românului din Italia",
+      "category": "",
+      "published": "2026-10-25T12:57:18+00:00",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWU9qVHFuY3ZBTzZGbC1zR0N5bi0yMElfUVFCakR2S25NOWYxNW9vWDVJUVpGSUVFRVdWZUVEdDhITDRmblNOUXo3Mm4zcl9TY0NFWXNpVTFHTnR0RzFfVDRTdTVOTmplNlc0bERmcjViSXE5TV9OVFZyejg1OTE0cmM5X0paMlNua18wWjFQWTZWXzhNbllwUTZxOUF1Wkw0ZzdiUk53OWRJVF82OHJqdzlZQTZIZlV0dnZGWU9tR1RUM1FtdGVN?oc=5",
+      "source": "",
+      "status": "roșu",
       "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
       "attempts": 0
     },
     {
-      "title": "Pontevigodarzere, terminata la bonifica della bomba: il Comune autorizza il rientro a casa - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNS2QxRU1IUzFCa2hrMXVZbW00WHZnMjNJYndkbllpb1lSLU42LXJjSzZ5V0YydTJpZ2lzY0EyUk1USWNWYlFTY3YxVmFLYktiX3Z0eWt2V2htRkx5UVE1VTF3UE1obDJ6cUhqclR3QWViMG9FcGFYWDV2XzBFMV9SQnZIYW41cDJi?oc=5",
-      "reason": "Testo assente o breve; verificare fonte originale e riscontri indipendenti prima dell'approfondimento",
+      "title": "Sorin Costreie explică de ce România are nevoie de două ministere ale Educației: un argument ar fi practica europeană",
+      "category": "",
+      "published": "2026-10-25T08:41:17+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/educatie/sorin-costreie-explica-de-ce-romania-are-nevoie-de-doua-ministere-ale-educatiei-un-argument-ar-fi-practica-europeana-4007339",
+      "source": "",
+      "status": "roșu",
+      "reason": "Testo assente o approfondimento non ancora verificato; ricercare fonti originali e indipendenti",
       "attempts": 0
     },
     {
-      "title": "Dan Motreanu: Grindeanu împarte sarcini miniștrilor, în timp ce Niculescu rămâne cu vizitele oficiale și postările de protocol",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/dan-motreanu-grindeanu-imparte-sarcini-ministrilor-in-timp-ce-niculescu-ramane-cu-vizitele-oficiale-si-postarile-de-protocol-4008177",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "title": "Sorin Grindeanu acuză: Guvernul Bolojan a lăsat România cu datorii uriașe. Liderul PSD face promisiuni... - Digi24",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Arabia Saudită redeschide parțial aeroportul din Riad, după atacurile rebelilor Houthi. Avertismentul transmis de yemeniți",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/arabia-saudita-redeschide-partial-aeroportul-din-riad-dupa-atacurile-rebelilor-houthi-avertismentul-transmis-de-yemeniti-4008145",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "title": "Sorin Grindeanu acuză: Guvernul Bolojan a lăsat România cu datorii uriașe. Liderul PSD face promisiuni: „Acest trend trebuie inversat”",
+      "category": "",
+      "published": "2026-10-25T07:58:48+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/sorin-grindeanu-acuza-guvernul-bolojan-a-lasat-romania-cu-datorii-uriase-liderul-psd-face-promisiuni-acest-trend-trebuie-inversat-4007853",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
       "attempts": 0
     },
     {
-      "title": "Schlein: 'Con gli alleati faremo in fretta, manca l'ultimo miglio'",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/schlein-con-gli-alleati-faremo-in-fretta-manca-lultimo-miglio_598626db-d4d8-46f7-8dd6-934e20753907.html",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "title": "Titluri alarmiste pe Facebook despre Armata României. Ministerul Apărării: Şeful Statului Major nu a emis nicio „alertă națională”",
+      "category": "",
+      "published": "",
+      "url": "https://www.digi24.ro/stiri/actualitate/titluri-alarmiste-pe-facebook-despre-armata-romaniei-ministerul-apararii-seful-statului-major-nu-a-emis-nicio-alerta-nationala-4008023",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Serie A: Atalanta-Frosinone 4-3 DIRETTA e FOTO",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-atalanta-frosinone-4-3-diretta-e-foto_a77748e3-d2d7-4936-94c2-0fa83f6041ae.html",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "title": "Un român plecat la muncă în Italia a fost găsit fără suflare. Bărbatul era tatăl a cinci copii - Kanal D Romania",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNUDgwOFdLaW1PdEtwVW9VUFY3NzJXUTJFaGZNanhtUVV3SFVzUGdmT3ZCYkMyY0JEaDRHWVBtYTFxcW41blQ2YVgwODdUaHZBNm91V0tQdEVfVk5lRldZalRHUE9TTFlGOHN2ZHViZUoxNUZlYmJmTlBkTGFCblRNRjlhRnQ4cExWWWxLSU9UQnIwYzV2a2RhLXFEYmtQRXZ4aWxuM1Q3RVBGU21oX0ZRcjc0VncxY09lNUlIWHBxeERVd9IBxwFBVV95cUxQcDBFTjNsTTUwc0g1MXVxY2drT2hGQVNUdUVjTUVQUWdKY3J3TjhWSWdLaEc2SzI1YldISTVpLUZKMHg1bUx3cEpxeXlxQU8wTzZCVGxpSU9aQzgtaVFLeXZQeW00MFpVMHJoRFl5R0Z5OThvdU5UZHNnSEFFOGJsbXd1cEE0U2NLWkxIRmxUR3d",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
       "attempts": 0
     },
     {
-      "title": "Iranul, mesaj pentru SUA și Israel în plin impas al negocierilor: „Politica noastră va rămâne aceeași”",
-      "url": "https://www.digi24.ro/stiri/externe/iranul-mesaj-pentru-sua-si-israel-in-plin-impas-al-negocierilor-politica-noastra-va-ramane-aceeasi-4008129",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
+      "title": "Unii italieni se mută în România, deși salariile sunt mai mici. Explicații și controverse - Mediafax",
+      "category": "",
+      "published": "",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOYllSUG5RWXNHSGlXVTd2c0RsUlVuS1BhcktJaU9PTnRscF9icmdyOWcxcGVGYXBCXzVZcGVlVWZSZnVfMlZZTzYtc0tkMno3LUtmYWhCMlBVTkdQWlJwTjNGRWg2RnZZTkdfMFd2TlpIcXJxRm9JZ04wdl9sT3F4aVNPNEdITng4T0ZBT2F5dnNodDZDMjZhdWdCX04tVGI1VV9KbWxzejJpUzhEUXloNWlVbTZad0RQNTNJ0gHAAUFVX3lxTE82NWhsbTBheUE1TW9URDQ3bVFWUmVCX2tmdEhJU2N4SjlndGo2VzVYVHJncTdTNUJjU3g2ZEtwUEt3Z2VkVjRPWjR0bFlOdjlWa3Y1VTYtR3lRMUZHclJJZ01uUUtNQVBFMVpqdHl4RTZTVEtPMWdMMDVSYUNTZFFrTzJONkRlOTFkTU9Sc0RCYkRNMWNNWFB",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o testo troppo breve; fonti da consultare",
       "attempts": 0
     },
     {
-      "title": "Un consilier de la Kremlin vrea Europa la masa negocierilor de pace: „Nu e suficient să discutăm cu Kievul”",
-      "url": "https://www.digi24.ro/stiri/externe/un-consilier-de-la-kremlin-vrea-europa-la-masa-negocierilor-de-pace-nu-e-suficient-sa-discutam-cu-kievul-4008093",
+      "title": "World Pasta Day, per 9 italiani su 10 senza pasta mancherebbe l'identità gastronomica del Paese",
+      "category": "",
+      "published": "2026-10-25T08:27:44+00:00",
+      "url": "https://www.ansa.it/canale_terraegusto/notizie/fiere_eventi/2026/10/24/world-pasta-day-per-9-italiani-su-10-senza-pasta-mancherebbe-lidentita-gastronomica_88d4f3f2-c8ae-44a4-be51-83742c3343f3.html",
+      "source": "",
+      "status": "roșu",
       "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
       "attempts": 0
     },
     {
       "title": "”Laudele” lui Sorin Grindeanu pentru Ilie Bolojan și Direcția pe care PSD vrea să o dea României - iDevice.ro",
+      "category": "",
+      "published": "2026-10-25T14:15:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdGZOOWtPM0h6T21tNTJGcGx1NUNmNUQ2UDNRNEc2clZJYWV5ak50MGlUQ1N2Vm04THctUGdPclpmanJ2QXd2a1FaRFJHdVdWOXdiVmZ5RHJqeVR0NXpWaFdmMTNEYWhad0h5Tk1SS2xrZ25RdlU1X051VkNzRDYwTzljcy0yVjNSS2ZrbnZBS3kwckpKdTZaZ1RxaVg4UW91WFRmQ2ZaYw?oc=5",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
-      "attempts": 0
-    },
-    {
-      "title": "Prioritățile Oficiale Anunțate de Florin Manole pentru Români după Preluarea Mandatului de Ministru al Muncii - iDevice.ro",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWTdhb1NycVFJYlNxZ19YNlVuZDlfMTk0THFYcEl3RGhrSUxsWU9PTlNrUC1GdEEzc3kwZDBEckFIM0QwTEd6dTM2TXlOM09Rb3FzYkZTeUVhcVd1Z04wNGFnM3d0TXE1XzZFazZKUVYxREtWQUlrNlZYdzdGRkdkRkRkaXplZmpTT2ZVY2d2SmdwVTgxYnotN3k5QnJmSVM5RVkxNXRBbHhDZnZTWm1CbVRlaGYxQ3hDMXJhMWVn?oc=5",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
-      "attempts": 0
-    },
-    {
-      "title": "Meteo Padova, lunedì 26 ottobre asciutto e massime in aumento: il bollettino ARPAV delle 13 - Padova24Ore",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBCRTBuZVFwZ25wYnFFTDR5M1lOaGhPblpCR3h5NXZGa09hV3U0ZXBLZDdsdWl4d29yb244OVlBMUVLUVNPaDBPVUtiTTVsN243YjRvWEViM2trWG91NW1MNWpabTc3WEg4YnpZcUlaOHp1em40dFhJbDh0Mkc?oc=5",
+      "source": "",
+      "status": "roșu",
       "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
       "attempts": 0
     }
   ],
   "recent_news": [
     {
+      "title": "Rezultate LOTO - Duminică, 25 octombrie 2026. Numerele extrase și premiile puse în joc de Loteria Română",
+      "category": "România",
+      "published": "2026-10-25T16:44:01+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/rezultate-loto-duminica-25-octombrie-2026-fond-de-castiguri-suplimentat-la-6-49-la-noroc-sunt-in-joc-peste-283-000-de-euro-4006661",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ministrul Educației vrea fiscalizarea meditațiilor. Sorin Costreie: Un fenomen de amploare care îmi arată că şcoala are o mare problemă",
+      "category": "România",
+      "published": "2026-10-25T16:42:03+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/educatie/ministrul-educatiei-vrea-fiscalizarea-meditatiilor-sorin-costreie-un-fenomen-de-amploare-care-imi-arata-ca-scoala-are-o-mare-problema-4008233",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Emil Boc: Trăim cele mai dificile momente de după 1989. Războiul este din nou în Europa",
+      "category": "România",
+      "published": "2026-10-25T16:31:11+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/emil-boc-traim-cele-mai-dificile-momente-de-dupa-1989-razboiul-este-din-nou-in-europa-4008227",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Ce se împarte de Sfântul Dumitru 2026: Preotul explică lista alimentelor permise pentru pachetele de pomană din 26 octombrie",
       "category": "România",
       "published": "2026-10-25T16:08:41+00:00",
       "url": "https://www.digi24.ro/magazin/ce-se-imparte-de-sfantul-dumitru-2026-preotul-explica-lista-alimentelor-permise-pentru-pachetele-de-pomana-din-26-octombrie-4006007",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "'Il futuro è passato da qui', a Firenze il Festival delle Regioni",
       "category": "Italia",
       "published": "2026-10-25T16:08:26+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/10/24/il-futuro-e-passato-da-qui-a-firenze-il-festival-delle-regioni_f54d642f-ee1a-47cd-b63a-07dad0e96fb8.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Salvini riconfermato segretario della Lega: 'Dirò in Cdm basta soldi e armi all'Ucraina'",
       "category": "Italia",
       "published": "2026-10-25T16:02:47+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/salvini-riconfermato-segretario-della-lega-con-465-voti-contro-i-146_bcf46509-0de0-4534-8ceb-a67876aeff8b.html",
-      "words": 499,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "verde",
+      "words": 499
     },
     {
       "title": "Ilie Bolojan, dezvăluiri despre cum a ajuns să fie propus premier. „Probabil că și cei care au fost contactați n-aveau soluții”",
       "category": "România",
       "published": "2026-10-25T16:01:00+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/ilie-bolojan-dezvaluiri-despre-cum-a-ajuns-sa-fie-propus-premier-probabil-ca-si-cei-care-au-fost-contactati-n-aveau-solutii-4008205",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Medvedev cere Statelor Unite să-l asasineze pe Zelenski și îi spune lui Trump cum să facă asta",
       "category": "România",
       "published": "2026-10-25T16:00:49+00:00",
       "url": "https://www.digi24.ro/stiri/externe/medvedev-cere-statelor-unite-sa-l-asasineze-pe-zelenski-si-ii-spune-lui-trump-cum-sa-faca-asta-4008185",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Serie A: Atalanta-Frosinone termina 4-4 CRONACA e FOTO",
       "category": "Italia",
       "published": "2026-10-25T16:00:29+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-atalanta-frosinone-termina-4-4-cronaca-e-foto_a77748e3-d2d7-4936-94c2-0fa83f6041ae.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Româncă ținută într-o baracă și obligată să se prostitueze în Italia. A avut încredere în omul de care se îndrăgostise - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-25T15:49:56+00:00",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNd0FMS1VmUXlVaGljQ3lWUEpCclpaSFZGQ0lHUmY2VHY3ekRjaGF6QTRoMUNYdjBFejhmSkpfeFVYRl9LbEhLWkgyZEhkYU92eWlCT3QwMzJLSWRhTU93bTRISF9SNllrZmRWMjhoZkVuUHRIXzFRQVk1NEVGRU43UGg5UWJXNndMTU9LZjY3cDJUOGxfUjU3dFJlX0V0d2hmVy1GYUZ2XzF4QUdBS0tveTZ1T1hMMVBIbUk4TXliSHBKSTJwc3hnTVhwX0ZYWDRUaFgwaHBqN2g?oc=5",
-      "words": 0,
-      "source": "Rotalianul – Revista românului din Italia"
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Domani la richiesta di convalida del fermo per Youssef Siher. Anche la moglie è indagata",
       "category": "Italia",
       "published": "2026-10-25T15:44:02+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/domani-la-richiesta-di-convalida-del-fermo-per-youssef-sehir-tra-le-accuse_dde34ca0-69ba-4c10-86ed-1c191da76dca.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Dan Motreanu: Grindeanu împarte sarcini miniștrilor, în timp ce Niculescu rămâne cu vizitele oficiale și postările de protocol",
       "category": "România",
       "published": "2026-10-25T15:40:26+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/dan-motreanu-grindeanu-imparte-sarcini-ministrilor-in-timp-ce-niculescu-ramane-cu-vizitele-oficiale-si-postarile-de-protocol-4008177",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Musetti torna alla vittoria dopo 4 anni e fa suo il torneo di Lione",
       "category": "Italia",
       "published": "2026-10-25T15:30:25+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/10/25/musetti-torna-alla-vittoria-dopo-4-anni-e-fa-suo-il-torneo-di-lione_6f02948e-209f-4776-bd6f-f5a249a06116.html",
-      "words": 453,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "verde",
+      "words": 453
     },
     {
       "title": "Arabia Saudită redeschide parțial aeroportul din Riad, după atacurile rebelilor Houthi. Avertismentul transmis de yemeniți",
       "category": "România",
       "published": "2026-10-25T15:25:48+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/arabia-saudita-redeschide-partial-aeroportul-din-riad-dupa-atacurile-rebelilor-houthi-avertismentul-transmis-de-yemeniti-4008145",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Schlein: 'Con gli alleati faremo in fretta, manca l'ultimo miglio'",
       "category": "Italia",
       "published": "2026-10-25T15:20:06+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/schlein-con-gli-alleati-faremo-in-fretta-manca-lultimo-miglio_598626db-d4d8-46f7-8dd6-934e20753907.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Ambasada SUA: Militarii americani şi români lucrează umăr la umăr pentru siguranţa flancului estic al NATO",
       "category": "România",
       "published": "2026-10-25T15:15:09+00:00",
       "url": "https://www.digi24.ro/stiri/ambasada-sua-militarii-americani-si-romani-lucreaza-umar-la-umar-pentru-siguranta-flancului-estic-al-nato-4008147",
-      "words": 422,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "verde",
+      "words": 422
     },
     {
       "title": "Urne aperte in Brasile, Bolsonaro al seggio a Rio: 'È l'ora del cambiamento'. Lula vota a San Paolo e attacca lo sfidante: 'Bugiardo'",
       "category": "Italia",
       "published": "2026-10-25T15:14:56+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Ioana Dogioiu îl acuză pe Pavel Popescu că „minte cum respiră”: „Dorea bani publici pentru o chermeză cu o mie de persoane”",
       "category": "România",
       "published": "2026-10-25T15:02:38+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/ioana-dogioiu-il-acuza-pe-pavel-popescu-ca-minte-cum-respira-dorea-bani-publici-pentru-o-chermeza-cu-o-mie-de-persoane-4008039",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Iranul, mesaj pentru SUA și Israel în plin impas al negocierilor: „Politica noastră va rămâne aceeași”",
       "category": "România",
       "published": "2026-10-25T14:57:51+00:00",
       "url": "https://www.digi24.ro/stiri/externe/iranul-mesaj-pentru-sua-si-israel-in-plin-impas-al-negocierilor-politica-noastra-va-ramane-aceeasi-4008129",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Note solidali Camposampiero, oggi concerto per il Cuamm - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-25T14:47:41+00:00",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5falBrYjZ6aGNmMURjdHVCQmd0UEE5dUpFT1ItQUx3dU9JaVVYYW05M19KT0p2YmQtT2w0VmtsbzZ5aDVGLWxNcjI2c1VGNFpVUjhkV1NXVHh4amEtYmJhNjF3NzM4TW1tdm1ZbE9Nbi1FRVI3NVFJQkl6dVI?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Un consilier de la Kremlin vrea Europa la masa negocierilor de pace: „Nu e suficient să discutăm cu Kievul”",
       "category": "România",
       "published": "2026-10-25T14:37:50+00:00",
       "url": "https://www.digi24.ro/stiri/externe/un-consilier-de-la-kremlin-vrea-europa-la-masa-negocierilor-de-pace-nu-e-suficient-sa-discutam-cu-kievul-4008093",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Nicușor Dan, de Ziua Armatei, la Baza 86 Aeriană: „Au doborât cu precizie două drone ostile”. Mesajul premierului Luca Niculescu",
       "category": "România",
       "published": "2026-10-25T14:36:46+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/social/nicusor-dan-de-ziua-armatei-la-baza-86-aeriana-au-doborat-cu-precizie-doua-drone-ostile-mesajul-premierului-luca-niculescu-4008085",
-      "words": 454,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "verde",
+      "words": 454
     },
     {
       "title": "Festa del Cinema, il più grande film sulla guerra a tematica gay: \"La Bola Negra\"",
       "category": "Italia",
       "published": "2026-10-25T14:20:05+00:00",
       "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/10/25/festa-del-cinema-il-piu-grande-film-sulla-guerra-a-tematica-gay_aa575656-f716-45e4-9cda-219a957d64f7.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "”Laudele” lui Sorin Grindeanu pentru Ilie Bolojan și Direcția pe care PSD vrea să o dea României - iDevice.ro",
       "category": "România",
       "published": "2026-10-25T14:15:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdGZOOWtPM0h6T21tNTJGcGx1NUNmNUQ2UDNRNEc2clZJYWV5ak50MGlUQ1N2Vm04THctUGdPclpmanJ2QXd2a1FaRFJHdVdWOXdiVmZ5RHJqeVR0NXpWaFdmMTNEYWhad0h5Tk1SS2xrZ25RdlU1X051VkNzRDYwTzljcy0yVjNSS2ZrbnZBS3kwckpKdTZaZ1RxaVg4UW91WFRmQ2ZaYw?oc=5",
-      "words": 0,
-      "source": "iDevice.ro"
-    },
-    {
-      "title": "Cazul de la Bistrița pune presiune pe Educație. Sorin Costreie anunță inițiative legislative și campanii în premieră",
-      "category": "România",
-      "published": "2026-10-25T14:14:17+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/educatie/cazul-de-la-bistrita-pune-presiune-pe-educatie-sorin-costreie-anunta-initiative-legislative-si-campanii-in-premiera-4006957",
-      "words": 447,
-      "source": "Digi24"
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Cozi uriașe la alegerile din Serbia care vor decide direcția țării. Ce spun primele sondaje",
       "category": "România",
       "published": "2026-10-25T14:08:41+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/cozi-uriase-la-alegerile-din-serbia-care-vor-decide-directia-tarii-ce-spun-primele-sondaje-4008047",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Plaje închise în Emiratele Arabe Unite. O pată uriașă de petrol a ajuns pe litoral",
       "category": "România",
       "published": "2026-10-25T14:04:18+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/plaje-inchise-in-emiratele-arabe-unite-o-pata-uriasa-de-petrol-a-ajuns-pe-litoral-4008073",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Care este marele defect al lui Nicușor Dan? Răspunsul ministrului Educației, Sorin Costreie, fost consilier prezidențial",
       "category": "România",
       "published": "2026-10-25T13:57:07+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/care-este-marele-defect-al-lui-nicusor-dan-raspunsul-ministrului-educatiei-sorin-costreie-fost-consilier-prezidential-4008049",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Prioritățile Oficiale Anunțate de Florin Manole pentru Români după Preluarea Mandatului de Ministru al Muncii - iDevice.ro",
       "category": "România",
       "published": "2026-10-25T13:49:59+00:00",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWTdhb1NycVFJYlNxZ19YNlVuZDlfMTk0THFYcEl3RGhrSUxsWU9PTlNrUC1GdEEzc3kwZDBEckFIM0QwTEd6dTM2TXlOM09Rb3FzYkZTeUVhcVd1Z04wNGFnM3d0TXE1XzZFazZKUVYxREtWQUlrNlZYdzdGRkdkRkRkaXplZmpTT2ZVY2d2SmdwVTgxYnotN3k5QnJmSVM5RVkxNXRBbHhDZnZTWm1CbVRlaGYxQ3hDMXJhMWVn?oc=5",
-      "words": 0,
-      "source": "iDevice.ro"
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Kim Kardashian, in All's Fair noi donne lottiamo l'una per l'altra",
       "category": "Italia",
       "published": "2026-10-25T13:46:44+00:00",
       "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/10/24/kim-kardashian-in-alls-fair-noi-donne-lottiamo-luna-per-laltra_839aed5a-bfee-42cb-96d8-c9f10c525ca3.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "In Serbia affluenza in forte aumento alle urne, 'irregolarità e incidenti a seggi'. Presidenziali in Bulgaria",
       "category": "Italia",
       "published": "2026-10-25T13:38:29+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/in-serbia-affluenza-in-forte-aumento-alle-urne-irregolarita-e-incidenti-a-seggi.-presidenziali_87f3828a-9352-4958-a756-d408a61a1bd3.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Israelul impune blocadă în Cisiordania în ziua alegerilor, după uciderea a doi soldați. Palestinieni evacuați forțat din Hebron",
       "category": "România",
       "published": "2026-10-25T12:58:11+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/israelul-impune-blocada-in-cisiordania-in-ziua-alegerilor-dupa-uciderea-a-doi-soldati-palestinieni-evacuati-fortat-din-hebron-4008033",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Scandal în Italia din cauza unui român care locuiește într-o rulotă. Vecinii au ajuns la capătul răbdării! - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-25T12:57:18+00:00",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWU9qVHFuY3ZBTzZGbC1zR0N5bi0yMElfUVFCakR2S25NOWYxNW9vWDVJUVpGSUVFRVdWZUVEdDhITDRmblNOUXo3Mm4zcl9TY0NFWXNpVTFHTnR0RzFfVDRTdTVOTmplNlc0bERmcjViSXE5TV9OVFZyejg1OTE0cmM5X0paMlNua18wWjFQWTZWXzhNbllwUTZxOUF1Wkw0ZzdiUk53OWRJVF82OHJqdzlZQTZIZlV0dnZGWU9tR1RUM1FtdGVN?oc=5",
-      "words": 0,
-      "source": "Rotalianul – Revista românului din Italia"
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Meteo Padova, lunedì 26 ottobre asciutto e massime in aumento: il bollettino ARPAV delle 13 - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-25T12:48:15+00:00",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBCRTBuZVFwZ25wYnFFTDR5M1lOaGhPblpCR3h5NXZGa09hV3U0ZXBLZDdsdWl4d29yb244OVlBMUVLUVNPaDBPVUtiTTVsN243YjRvWEViM2trWG91NW1MNWpabTc3WEg4YnpZcUlaOHp1em40dFhJbDh0Mkc?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Roberto Vannacci, „masculul alfa” al politicii italiene: cum vrea să câștige votul manosferei promovând „patriarhatul mediteranean”",
       "category": "România",
       "published": "2026-10-25T12:39:02+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/un-general-italian-de-extrema-dreapta-vaneaza-voturile-din-manosfera-4004329",
-      "words": 0,
-      "source": "Digi24"
-    },
-    {
-      "title": "Titluri alarmiste pe Facebook despre Armata României. Ministerul Apărării: Şeful Statului Major nu a emis nicio „alertă națională”",
-      "category": "România",
-      "published": "2026-10-25T12:37:56+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/titluri-alarmiste-pe-facebook-despre-armata-romaniei-ministerul-apararii-seful-statului-major-nu-a-emis-nicio-alerta-nationala-4008023",
-      "words": 0,
-      "source": "Digi24"
-    },
-    {
-      "title": "Criză de gaze în Iran înaintea iernii. Cine reduce consumul primește bani, promit autoritățile",
-      "category": "România",
-      "published": "2026-10-25T11:59:38+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/criza-de-gaze-in-iran-inaintea-iernii-cine-reduce-consumul-primeste-bani-promit-autoritatile-4008009",
-      "words": 0,
-      "source": "Digi24"
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Pontevigodarzere, terminata la bonifica della bomba: il Comune autorizza il rientro a casa - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-25T11:34:22+00:00",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNS2QxRU1IUzFCa2hrMXVZbW00WHZnMjNJYndkbllpb1lSLU42LXJjSzZ5V0YydTJpZ2lzY0EyUk1USWNWYlFTY3YxVmFLYktiX3Z0eWt2V2htRkx5UVE1VTF3UE1obDJ6cUhqclR3QWViMG9FcGFYWDV2XzBFMV9SQnZIYW41cDJi?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
-    },
-    {
-      "title": "Lavoro, opportunità di impiego nella Ferrero: assunzioni anche in Campania - Il Mattino",
-      "category": "Italia",
-      "published": "2026-10-25T11:27:35+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdUwzbTZsWGcyaXlySWpUTFRGU2EwSDB6N1p4dERHSmNTbWxCcVo3V0RMYzRlLVdaN294NE5FSk1MbV8xQlhOaTZ0UWNlVnBYOEF4MXNEOUd2bkNrQV93eFlrQmFBMXdxbTgwNFREX2RDcXc5TmtLalJpM01rU0F1YmhWcHo3NktGQXg5SDZTTdIBjgFBVV95cUxQa2s1Mm1fcHNYd0NtVFRpa1oxRGRsX3hvUElKVFZFMndXS25YRmgzT21kMkNtWTVVYzVtdjVqNEhyS2E3bnVRWUxWb19YQmJqemhISm1fRGlESFkxd1dvVGRTell4RVlkRnBaa2hNNF82MlpSdkpjV1BYT1dIOExaVDVhalJiVEpfc0FreXdn?oc=5",
-      "words": 0,
-      "source": "Il Mattino"
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Netanyahu posta la foto di un'atomica su Tel Aviv, '2 anni per finire il lavoro con l'Iran'",
       "category": "Italia",
       "published": "2026-10-25T11:26:53+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/netanyahu-posta-la-foto-di-unatomica-su-tel-aviv-2-anni-per-finire-il-lavoro_b57751fe-5586-4c9f-87f2-638df6696482.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Putin: 'Accusarci per i disordini segno di debolezza e incapacità dei leader europei'",
       "category": "Italia",
       "published": "2026-10-25T11:14:55+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/putin-accusarci-per-i-disordini-segno-di-debolezza-e-incapacita-dei-leader-europei_675a626d-46d1-4d07-ba6e-e272987fb120.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Lavoro, Rinaldi (Fn): “Diminuire cuneo fiscale è solo un palliativo” - Touchpoint News",
       "category": "Italia",
       "published": "2026-10-25T11:10:55+00:00",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQTNYUldLRkxBNXNuX1ZzMkd4SHFjdlhFU3Z3YlY1aVJKQ2dFVzRwQ0pmLUdIU01nb1VUaW9hWFZ3T1NWR2UxNmNEVGxzYWxLQkE4czBrR2pnRnRYTng3SWYwWFU4eFFvRUF0RnRvTkxIVHlBYzRvWWpVdGltLU5xUXpSbEhvZWtLbHh6NVREVmR0ODZSem1CSzdhb3Nrd1dfY29FZg?oc=5",
-      "words": 0,
-      "source": "Touchpoint News"
+      "source": "Touchpoint News",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Economia e lavoro, il sindaco Luca Salvetti: \"Livorno cresce e sta cambiando il suo futuro, altro che autocelebrazioni\" - LivornoToday",
       "category": "Italia",
       "published": "2026-10-25T11:02:59+00:00",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRVVqTXZydk1JeS1Rc0tZeTNkT0VfMEdKenlNcUt3QXN3am5LSndsWUJMYlhma2phQS1Yc1dyWk52ZGEyM0REOFVVbUwwMDVoRlJtcnc0dklBMWhhd3lZREV6bFM2T19TclRReDZUeXYzV3dZdjM4ODhwMzlCMTNpcE9JbDhaZw?oc=5",
-      "words": 0,
-      "source": "LivornoToday"
+      "source": "LivornoToday",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Montegrotto linea M, deviazione per la Castagnata fino alle 20 - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-25T10:49:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1reFEyQ1NNY3BKT3RvdXk1dG95SW5odE1rbmZVblFvbHRhVGF4WERtbzE4dHJ0OVpPMjB0bGlwdmxzQnFEN1FQeG5US3JLQlRtOGlZSDZFaC1aMkU1VzFTTG9oSGlobDF0M1RYM2Y1UUp3aElNcVJHMw?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Carlo Rambaldi, a San Diego cento artisti celebrano il suo centenario",
       "category": "Italia",
       "published": "2026-10-25T10:20:53+00:00",
       "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/25/carlo-rambaldi-a-san-diego-cento-artisti-celebrano-il-suo-centenario_ec6d8004-62bb-4334-b0c7-bc80a4b554dc.html",
-      "words": 466,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "verde",
+      "words": 466
     },
     {
       "title": "Due giovani piemontesi tra i migliori studenti d’Italia: Sofia Maria Vella e Mattia Rebuffo premiati al Quirinale - Torino Plus",
       "category": "Italia",
       "published": "2026-10-25T10:16:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE02anZ3N1dxWW1CQ2U0TFJxbi13eVpPUkhDWWNFNkJ4MEl3U2FqdXMxNWRNN2JhaHBWNGZxbVk3cDk3TElCSl9BeVlfRmtHWnlYeHJzTWpaT19JY3UwNVdKdGVLdXZSSk9sM25SaG8xanY5SFNWNlJF?oc=5",
-      "words": 0,
-      "source": "Torino Plus"
+      "source": "Torino Plus",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Scuole di Padova, proposta da 100 milioni per i consumi - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-25T09:49:27+00:00",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPLU1STlcxZFUtN0J1d1RnMXlhWWNxV2E4empQcUo3OWZXZzdjQWkwSFlaQktiZGRLRktpSmRaY2RlWWo3ZFBUeDJTVEotcHZ1VFQ2VHNvR3JrekpnWkVBWVh2MlVUNHJkZThJcXk2aFFhbXFybXQ5czRFVXhvVExWalNnSQ?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Barack Obama: Casa Alba a lui Donald Trump Arată ca o Fabrica de Cheesecakes a lui Saddam Hussein - iDevice.ro",
       "category": "România",
       "published": "2026-10-25T09:15:46+00:00",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbG1lUXNkTGhlcU1Nb3ppSndObG5rUFlVNWtUVUljUF9NdVRUcTBxTFBkbUhFREZEakRSR1ZEMU1RUS1NaWVqRjJRbUNFUjJmNUZWRFgybk92TVh6M1ZLRzdnU1g4ZldOQUhmaEZlQXpyN3lDWEpXSERQSzhXaDRSLVByOTd5cm1Ob25sd1k2bUdRLS1VdzZfUkJiekJPd0tuWmk4R0hvbkVjWUk0cEk1MTlB?oc=5",
-      "words": 0,
-      "source": "iDevice.ro"
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Addestratori di robot intelligenti cercasi, un lavoro che piace ai giovani - la Repubblica",
       "category": "Italia",
       "published": "2026-10-25T09:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbEszZkJrdjZFaFRlRUFMLUhMNUM0dmVMVmM4X29ycW83dTlUd1M2TUFiSG11bFRFUGo4RjZWZGRPUG82bEZMZ2REMEhyTzBnNnY3TFRxME9xay0wUThQRWFVd3dyRFJMdkpSMWxoNGY2Q1Rtb0tXOEtkekZocHNUNURUSlNPVFR0ODRoQnBwMEduOTJER05KZWE1NjV0NkJHWHMwMUJaMmtieTRkWXN4OVI3TjlUVjJ5c001bzBwLXJTU3NxNVFpWGhHSGxmZTBG?oc=5",
-      "words": 0,
-      "source": "la Repubblica"
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Padova, quattro arresti dopo il corteo in stazione: il nuovo bilancio distingue i provvedimenti - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-25T08:47:31+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPajJnZ1NuN0twZmtDZmZxeVdMTkZnMTJlNDA1OU1ZaWw2MVdZVXpyWTUtWUNhc0hhXzAzeDNIM0ZPMWxNTXlUQkJqTXdNM2VUQzF3N1FXdGZhVG9uWkhMcDhVWUpranB1OTVKUmtLaUg5VjZ5cS1FT25mckxILVpPekFxMW0?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Românii din Italia vor avea o nouă biserică. „Un proiect costisitor, lucrările avansează în funcție de fondurile disponibile” - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-25T08:41:23+00:00",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNclcxRC16VV9fNzhYMlFEVjRrU1JpeG5vUGZvckxRZ2FyMktRQ0w0WXloeG9tM0xadWJ2dUxDV051c3hzblluTFp6OU53S1o2dXJNSndoLVVHMzgxRTVncENYM2E0V20waU5UTUlVeUxiQlE0UWc5MTdyclh3dUtMVnNMVmd0d2ZNUXdFazBGVmpPZlV2RkxDTUhhTUNfSW9IS21sblVCV3VUUXBHbktNSFJ5Y0xvcnpady1yeE9LUXdOQ2JmZDAwRm1ZTFd2RVpNM0drN0V6cDdYVUdOdFE?oc=5",
-      "words": 431,
-      "source": "Rotalianul – Revista românului din Italia"
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 431
     },
     {
       "title": "Midterm, Obama tira la volata a El-Sayed: 'C'è aria di cambiamento negli Usa'",
       "category": "Italia",
       "published": "2026-10-25T08:32:58+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/25/midterm-obama-tira-la-volata-a-el-sayed-ce-aria-di-cambiamento-negli-usa_616e3eb7-1aea-4deb-a54d-614da5270d1d.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "World Pasta Day, per 9 italiani su 10 senza pasta mancherebbe l'identità gastronomica del Paese",
       "category": "Italia",
       "published": "2026-10-25T08:27:44+00:00",
       "url": "https://www.ansa.it/canale_terraegusto/notizie/fiere_eventi/2026/10/24/world-pasta-day-per-9-italiani-su-10-senza-pasta-mancherebbe-lidentita-gastronomica_88d4f3f2-c8ae-44a4-be51-83742c3343f3.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Sorin Grindeanu acuză: Guvernul Bolojan a lăsat România cu datorii uriașe. Liderul PSD face promisiuni... - Digi24",
       "category": "România",
       "published": "2026-10-25T07:58:48+00:00",
-      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMA?oc=5",
-      "words": 0,
-      "source": "Digi24"
+      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW5",
+      "source": "Digi24",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Comprendere non significa giustificare",
       "category": "Italia",
       "published": "2026-10-25T07:30:53+00:00",
       "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/10/23/comprendere-non-significa-giustificare_31482d02-3b4c-4273-bd48-e3d11e366ffc.html",
-      "words": 0,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - Arges Stiri",
       "category": "România",
       "published": "2026-10-25T06:37:13+00:00",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNay1hYnV1YUlqVDcwVk5sNWlqUTBvUmFRako1M2x0LTdqdmZBUGlNS2lqNFpzYkRaTTVBR1g2SHYxblpTRlBldk1UbmlVNWhnYlI4RnRZODdOZFkyZEx2My1fSWx2S3QtQUtPSFBZdWNfM2xtWnQxSEJVTi1HVU1IWQ?oc=5",
-      "words": 0,
-      "source": "Arges Stiri"
+      "source": "Arges Stiri",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Svizzera, che fatica: lo stipendio non basta più - La Prealpina",
       "category": "Italia",
       "published": "2026-10-25T06:30:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOGtFbEIzTU1OWTFPMWY4T0FSWmdnZ2d6ZDFCa0Y1Y0JRUzQ3WVRhMGlZMElONUFzTkZjQTZydUZRS2N3dVJwVWg1WGt0aDBKajFNalFnS25CQ2hveGdKSThOV09LY29FZGxlVW9ja3JQR1JWLWZhODJTbldFWUNuc0Y5WHdCYzJmdnh3MlJGSmtITEcxMF93M2wzWjRPZw?oc=5",
-      "words": 0,
-      "source": "La Prealpina"
+      "source": "La Prealpina",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Elveția oferă Moldovei 5,6 milioane de dolari pentru sănătatea refugiaților - logos-pres.md",
       "category": "România",
       "published": "2026-10-25T06:00:06+00:00",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTmp5MUFPZDd2UGZJZHNDZFpkSDZHTUF0eFJ2aWQzLUpXaUhSWnBEbEdxR25ycjBaY0F2TEhRREVIdVFzeWYyYjFvVEloZjFYRndHNWg4c1pyRVNTLXlfVVU1akQ2X25hQ1FuTVZ5b1I0SDZiOElTTW1od0dsYTh5WXdYaHg2WURxX3JjckN2SGVQbnNWZWh1X1dXa19jUzdyX2cyR3Y0NXowSU9NeENSQ0s1SnE4dmtyM0JIeXdQZUJpNWM2XzViNFFzY0dPS2ZSNHlUa0g1VlhfZmdPUURscEJhOEQyUFAyTGc?oc=5",
-      "words": 0,
-      "source": "logos-pres.md"
+      "source": "logos-pres.md",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Lavoro, Rinaldi (Fn): \"Per aumentare salari necessario recuperare produttività\" - Touchpoint News",
       "category": "Italia",
       "published": "2026-10-25T01:07:13+00:00",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcFlEV3paTFRKMjNtM05jWTNoazlPNEtOblhfVDdYeUNvWVJMVmRZa2ZKQk9XVFZnZWFtSXh5T3pEN0dHWUZTamNDdWlqTUpLYjhCS1p5U2JnLTRNcGNLVlFMUkY3WUVkTE1DQVhLdTNqWmgzWk90blphTXQwb2lpSGFnTFNIa1ZFcF9pTERUQmtSOXUweU9yajR4RTdURlpSY2RGS2pGSjNKVlFtbk8xamlfWQ?oc=5",
-      "words": 499,
-      "source": "Touchpoint News"
+      "source": "Touchpoint News",
+      "status": "verde",
+      "words": 499
     },
     {
       "title": "Lavoro, Salvitti (FdI): \"Rinnovi contrattuali importanti per garantire salario giusto\" - Touchpoint News",
       "category": "Italia",
       "published": "2026-10-24T23:53:12+00:00",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONmtPb1U5WWZwNlB5c1BjVXFqVzBiUXdybUFEU2w2eWVHbU9NNUVlZHNUX09tRjZNc2t0cEpZNmVrSTJYbVZwOEx3VFFjcFJtckNxRExGRnROX0h6WXB2bUpXQ3NRSUQxOVR6dXRRc0VhWmkxeHk1QVNvbWdYNWN0X2lzazJsZjd2b0V3bGJ0azNZdm5xR3JBN21NS3cwWndQLU5tTlo0QkhQTGhyR3FiOUY3d2ZfeG5SbFJCeg?oc=5",
-      "words": 500,
-      "source": "Touchpoint News"
+      "source": "Touchpoint News",
+      "status": "verde",
+      "words": 500
     },
     {
       "title": "Notizie di Padova ore 23: tensione in stazione, Padova corsaro e gemelli da record - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-24T21:25:38+00:00",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBZS0dCV2lIY29mQ2VkZ3Vmb2xZTlpSSEIzUk5aXzZMUDZ5Q3EzbkUwTW05VFpmVk8yekMybGUtT21QTlBTTzhoanF2ZTBmOVNDaWd5bjNMbkpYUmM4TGRUajRiMFZCcnN5U0ZBQ0VNZTc?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Albignasego e Casalserugo, progetto contro gli allagamenti: risorse da cercare nel 2027 - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-24T20:48:51+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNY2xRd2xVQ3MwRm9xYlBrUjhQMk05T0F6SENQN3BBTm03NVJwbU83WnIzdG5NM2J0cVRDbE5wc2ZfU1NYY18yZGp4NldWMTNuYVBJb19MUjBUVzFJdEhJRDV0R2hYU1Z4SjhwMVlrSXhaTHc4MnN3cnV0NUJRLTkyTGVR?oc=5",
-      "words": 0,
-      "source": "Padova24Ore"
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Badantă româncă, arestată în Italia. Acuzată că a bătut bătrâna și a obligat-o să mănânce cu forța - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-24T18:29:16+00:00",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPeVJTWWVaLS1VdEIxLXBoam00bktONWhHamVDUzVhaGQxMWZLeEJNamFPV2pQU0NzMHA1SkVWZlpKTm5iZGVCYkpxZnJ2NzB0NTNETG9WLWdsbzRKTWZ0NzJkbGNGRDRtVVhsZlpoQ0FYclZaQ3QzZ25SLUhYSUowLTRVMk04bDhhRXpiYm1SN21EYUlWMlNycHBpMUJGeHlUUlhlLXNtNjQtZXJ6WlY0SVl5NWI5NzdPQ3hJTg?oc=5",
-      "words": 420,
-      "source": "Rotalianul – Revista românului din Italia"
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 420
     },
     {
       "title": "Adolescent român de 14 ani din Italia, acuzat că instiga oamenii la ocuparea școlilor și provocarea de pagube. Părinții săi au colaborat cu polițiștii - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-24T16:52:10+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNVHlYYW1STGZNdkFzaTNWNlN2NHYweWJVQXVEb2IyZGFsWnk3TUYzTkt3UWhyc1RnQVJGR1NMcDhEcUVCYm1vajFmR0EwZW9rQmdmMWZzVTg3WG1zWWU0dVNSa2VkenBzeFJkbWdSSjZOWmpMalhOdzhmdUhfMzZ5WHlIUmk1T3BtNTZNak1ReGtIOXl4elFMLTlmT3VHRU1kSGlkWnZ0amhfUFZPdlF1c3NmLU5Tb01aUUdQM09nenF4Y0RYcXgyTEQ5Q3I5Y2ZQejNOSGNEc2RMMVl1TzIwblVZT0lxZEdrbE1hbzhpcWYxUmVRVnpud3pzMFVkbWhlZ1E?oc=5",
-      "words": 468,
-      "source": "Rotalianul – Revista românului din Italia"
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 468
     },
     {
       "title": "Rareș Bogdan, critici la adresa lui Bolojan: „A dat-o de gard total”. Ce soluție propune pentru reducerea... - Digi24",
       "category": "România",
       "published": "2026-10-24T13:24:23+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPQjlrMlpiN1VUWERqaEFXMF9paDFjaE1URGNqUjF5ZkV4dlhXQlo2bXNPTnRmc05LWHJPZkFDYm9NeFhfYXFkS3pIRDgwRWtKQVMzb0hjaTRVX3lYZHNnLTJKMnBYY2NyTHlKSVZJcGllcC1ybEdSdnpvNHpqUzAtdUxaTUtvb0kwdFNieFRpa3p1LWU4WHpZclJ5RmV3a1FkYnhpaTdrZE5lLUp1Z3hkM2c2VS05Z2dBZ2x0OVh6NlZPMXBtSDI4RzNVWXZDNzVad3FyZWZmMnk4WGF4cmdLZ1JHWGVheTJTZFp3Z1ZxWFRQYi1LYngwQlFyQUhqSjUyZnIwVW85ckjSAYgCQVVfeXFMT0I5azJaYjdVVFhEamhBVzBfaWgxY2hNVERjalIxeWZFeHZYV0JaNm1zT050ZnNOS1hyT2ZBQ2JvTXhYX2FxZEt6SEQ4MEVrSkFTM29IY2k0VV95WGRzZy0ySjJwWGNjckx5SklWSXBpZXAtcmxHUnZ6bzR6alMwLXVMWk1Lb29JMHRTYnhUaWt6dS1lOFh6WXJSeUZld2tRZGJ4aWk3a2ROZS1KdWd4ZDNnNlUtOWdnQWdsdDlYejZWTzFwbUgyOEczVVl2Qzc1WndxcmVmZjJ5OFhheHJnS2dSR1hlYXkyU2Rad2dWcVhUUGItS2J4MEJRckFIako1MmZyMFVvOXJI?oc=5",
-      "words": 456,
-      "source": "Digi24"
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxPQjlrMlpiN1VUWERqaEFXMF9paDFjaE1URGNqUjF5ZkV4dlhXQlo2bXNPTnRmc05LWHJPZkFDYm9NeFhfYXFkS3pIRDgwRWtKQVMzb0hjaTRVX3lYZHNnLTJKMnBYY2NyTHlKSVZJcGllcC1ybEdSdnpvNHpqUzAtdUxaTUtvb0kwdFNieFRpa3p1LWU4WHpZclJ5RmV3a1FkYnhpaTdrZE5lLUp1Z3hkM2c2VS05Z2dBZ2x0OVh6NlZPMXBtSDI4RzNVWXZDNzVad3FyZWZmMnk4WGF4cmdLZ1JHWGVheTJTZFp3Z1ZxWFRQYi1LYngwQlFyQUhqSjUyZnIwVW85ckjSAYgCQVVfeXFMT0I5azJaYjdVVFhEamhBVzBfaWgxY2hNVERjalIxeWZFeHZYV0JaNm1zT050ZnNOS1hyT2ZBQ2JvTXhYX2FxZEt6SEQ",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 456
     },
     {
       "title": "Lavoro, le professioni più richieste in Italia nel 2026: dal direttore AI al bioinformatico, l'elenco completo - Il Messaggero",
       "category": "Italia",
       "published": "2026-10-24T12:23:36+00:00",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQTE9JOFB0NmZYdXF1RHBVWmR5cXMyamQ5SVp0U2V6OXRhZXFxQjRuNnAwbzlmOFlFelN6VGxKQU1IMF9BeE80elBZSHN1NHhxSTFnaWtud3RFOEI3dXJrNndkQlBfbllqc3lqR3RkTF9XMWN0RURKVFlSczBjOUk1d00yNmNycXdvaDNOWFllbC3SAY8BQVVfeXFMTS1ZRVpQZE1sVmF0NUp3M0JReDYxX2dlUGhoakJUS0pBeHdnNnEzemUyejdqVUpoMFVLTVktWlVaNGF6aHpBT1AyRGJHSTVJRkFEdDdkQXMyN1NXNTFobEl5d1JYNXNQZHlIVzhnZmg1aTdqVTJGbVN3czV1UHFyd2JXR2E5dkpjSV8tSS1HMXM?oc=5",
-      "words": 476,
-      "source": "Il Messaggero"
+      "source": "Il Messaggero",
+      "status": "verde",
+      "words": 476
     },
     {
       "title": "Avertisment MAE pentru românii care merg în Franța! Sâmbătă sunt așteptate proteste violente în mai... - Kanal D Romania",
       "category": "Știri consulare",
       "published": "2026-10-24T12:01:11+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWVFWMkZjOEVkWjNMdkp1bUdocmVObVVvZnFaeWtyd0N3SXZESUZPdEg1a3l0dm5hd3BncE5NSzgyZl9ELW4weU13RGNuZGxVUnk4OGhmak5aUTd1emxYdjZGcF9nQWpUdXlETzhsNzhMcHZFRmhWbXVtay11WFh2RHdiNUdhXzVVNnZWdjlKd1habC1zYTMtel9GQVIxOHlVUllxZGJNclBKbmRVLXBKX3VVdURZemZfSDlZTWZVZzBtR1ZjMnNRRldvY0pLWW9MVTQwV2t4SDbSAd4BQVVfeXFMT3VVZ2RmTTZSSXZyUkNrN0NXcm94NkZuWVFjc1pWa1h5TUNWdmJiSk1jckFkaXdTcElJZld3eG1fLTNsaDQ2SWRkMHBfREVDMGpHbE1obVFtTERiWi13UzZyZ3VMYWtIWmdPc1Q3SDFVb1FLQ3hUckszRjZuNlc5MkhPUHRBWjFLb3lUTmNsbVRqNE5jbGpIendPTVBvV0N4UWpNQXZlRlNyQ2N1X0gwa2RqS3dOUzd6WG40NEhQTm85ak0taXZ2Q0xvVWpzOGZDVmxtQWVVV3pZLV91aVJ3?oc=5",
-      "words": 457,
-      "source": "Kanal D Romania"
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWVFWMkZjOEVkWjNMdkp1bUdocmVObVVvZnFaeWtyd0N3SXZESUZPdEg1a3l0dm5hd3BncE5NSzgyZl9ELW4weU13RGNuZGxVUnk4OGhmak5aUTd1emxYdjZGcF9nQWpUdXlETzhsNzhMcHZFRmhWbXVtay11WFh2RHdiNUdhXzVVNnZWdjlKd1habC1zYTMtel9GQVIxOHlVUllxZGJNclBKbmRVLXBKX3VVdURZemZfSDlZTWZVZzBtR1ZjMnNRRldvY0pLWW9MVTQwV2t4SDbSAd4BQVVfeXFMT3VVZ2RmTTZSSXZyUkNrN0NXcm94NkZuWVFjc1pWa1h5TUNWdmJiSk1jckFkaXdTcElJZld3eG1fLTNsaDQ2SWRkMHBfREVDMGpHbE1obVFtTERiWi13UzZyZ3VMYWtIWmdPc1Q3SDFVb1FLQ3hUckszRjZ",
+      "source": "Kanal D Romania",
+      "status": "verde",
+      "words": 457
     },
     {
       "title": "Moldoveancă din Italia, condamnată pentru hărțuirea unei doctorițe. Susținea că i-au fost furate ovocitele și copiii născuți din ele erau ai săi - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-24T10:58:42+00:00",
       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNckh4SUdHaGQ2Z2ZXYkRRUWRKQ0hTZEkzbHY1S01vVlBVTDZ3bGhNbUlVSFpLRktmVlFseG5icGdEaWFBQlkyMklYU2lpRks2T0d6czlUWXo0VjBnbWMtOUZYQzRNeGZteFFzQVNiQnEyWWlCRlVGY0JPNi1TWVp5R1otYzRScHhjQV8tSk45UVlkQkl1OVVJZThJYU5wM29fUTdyZW1ub2sxRzR5dGFsWXpLYXhVSko2WVpEZlQ2QzNoNkVma014am15YU1QMXV4SVp3Q2c1YXByeUJaaFJaQ0gzLTRoWXVyMjY1Y0ZSZmdVbGF0SjUzSFdn?oc=5",
-      "words": 463,
-      "source": "Rotalianul – Revista românului din Italia"
-    },
-    {
-      "title": "Schiacciato tra il camion e il muro, muore sul lavoro a Baveno - RaiNews",
-      "category": "Italia",
-      "published": "2026-10-24T07:26:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOVVZtcmd1RHlDejhYaUhORGJHcGRlQXpUMUhESThDQnh2dm9NaFZQdGVRRXluMnd5ODg1dEhxOEpOd01jQnM0NTVaWUZBWElDNkxvNmtsdFluUzJqQ1BZUlE3YXY0VTY1WWlHYnpkMlBLTmcyLWUwOGhmazJYWUMzSUsxSWp0SEpoM2pDVEhXUWVYbmozYjVna3BRZzBOa053bzRCVGwtMUFpMTdsS2lHRVJJRDdJS2hGbTFoNkFyeDNfZmRGYmJGRlBLd0FtaGpOUU15azlfNHJTLS1GWUdRam0yaHZId2NHY1HSAe8BQVVfeXFMUDBIMlp3TjNyT3MxSmNfYk9hckJmVXhJM2t1dmtjU1kzX3g4c29ES0xaaUtyUFpJYmt0V2daNWgzdzR3RVJUeG1lcXRicnNmNFV1TW1pUFJyYVVzZ1Fhd1pFRHlubXpFSHk3bVR2S0RUem1EVFpwcFVvZFZQTUFZVEh3cmNFTWdMMzl3cDkyNzVBSXNtNUg3dWMtQU9PeUJ5c1FNc1o4MEk4Q09KTllwLXktNWF5czQ5OFNvRnJrcktxdGp1d1NIY0I3T0dKRlAtdTkyS1hMd21EMnBzMW5CMWdjYl9LN3FkZ0lwZ3dlMTQ?oc=5",
-      "words": 465,
-      "source": "RaiNews"
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 463
     },
     {
       "title": "Ora de iarnă 2026 – în această noapte ora 04:00 devine ora 03:00 - ZCH",
       "category": "România",
       "published": "2026-10-24T05:26:26+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOYlZ0Nm5wS2sydGtfNnVJblRmNUlZV0NCd1JiMEVleFlySlo1VGZxTjdRMUE1NU9FYU1KeVcxcUgyNVZCR24xM2ZmYXNDa3U2cTBLb1lYX3JydDR2cFJpMHVpMUE5X0YtSzNBZFl3cV9jbHlTX1F4RDgwNjJ6N0EyUml3?oc=5",
-      "words": 451,
-      "source": "ZCH"
+      "source": "ZCH",
+      "status": "verde",
+      "words": 451
+    },
+    {
+      "title": "Manovra, mini Irpef per il primo impiego o bonus in busta paga a fine anno. Le opzioni per i giovani - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-23T23:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQakpob2xSSlZhQU03NHhpOUFSSm1kNVd3WnBYbkEtQlRLS3hlQXNsY3J3YXVJME1IUTd3TjY5OHhZQmZ0UlBacEFGY0YyNktUQzlFbjctVVkyLWJOaTF6VTMzdVlIdk9JdlFqY0dOSXBzSms4cGxFRzVmWDJxVlNZWndWN0w4eEdBbWdTUmpuNVZsU1U?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Badantă condamnată la șase ani de închisoare în Italia. A obținut bani și proprietăți de peste două milioane de euro de la o bătrână - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-23T18:38:25+00:00",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQSkFmcE5TVXVQRFdlWHJBWTZSVTRDQjN4ODBoUlFUWFV0dlhWbjYxTDFRRUs2a0VNc1U1ZFJ1VlBsYUg4NjBqQ1pOa2NpcnB5b2RteFNhWHN0VFZzeGh2b1FaaUl2cUh3VUhOVEtFV1dhWWV3Q21SbEtiVVhFa1dTZlpsVjhvTEpway1SeGo3d0ZHNWNWWnJPWTkyVE9aNVFvN2I0bmJXc2kxcEpZZEdZS2tFczNZczRPeThya2NoQ1l4Snp2QUdnb1RhQS1JRW9ZWi1KTzFfbEo3WXpJbUpObGFXeWdFZnZ3NTFj?oc=5",
-      "words": 420,
-      "source": "Rotalianul – Revista românului din Italia"
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 420
     },
     {
       "title": "Țepele de pe Booking Investigate în Sfărșit de Comisia Europeană - iDevice.ro",
       "category": "România",
       "published": "2026-10-23T18:04:50+00:00",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOd0xDRE53N21qT2szTi1HcmtkNTd1Si1VV1VDRll4WXdlRk01OGc3cjloUFRNNzJXUWdkbkVxQ3l2SWF6MDRiQXV4b1BES09ibnFBN1l5d1FvWTRMSTgzRGl6dFNWaXEzTmtwVXM3V3otNjdfTDJHYWlLV2F0THJqSTNrMTRsMkNqdzBieHpTdzVrN2p5ckxQcWln?oc=5",
-      "words": 462,
-      "source": "iDevice.ro"
+      "source": "iDevice.ro",
+      "status": "verde",
+      "words": 462
     },
     {
       "title": "Ora solare per una società in perenne jet lag, i consigli utili e i falsi amici da bannare",
       "category": "Italia",
       "published": "2026-10-23T17:35:02+00:00",
       "url": "https://www.ansa.it/canale_lifestyle/notizie/societa_diritti/2026/10/22/ora-solare-per-una-societa-in-perenne-jet-lag-i-consigli-utili_63f2ebb7-ec8d-4eaf-9f84-214db9e89f81.html",
-      "words": 505,
-      "source": "ANSA"
+      "source": "ANSA",
+      "status": "verde",
+      "words": 505
     },
     {
       "title": "Marius Lulea, despre „succesul economic” Ilie Bolojan: „A fost un adevărat război dus împotriva economiei românești” - Realitatea.NET",
       "category": "România",
       "published": "2026-10-23T17:07:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNMFVWUlFmQlhUMHVrTE9qeEl1N0EtcGp6MmJQeEJfNHFQNDFMVWdZZzZkRlExMlp2NS1SRlhHZkZCTjg1WjNheDVtbEZWU3dnSnJ2ZXNwQm03b2VySlg5VDlETUZ6MnRrQmNTZ3VrdU45emFPYUR0OTNZTzhpU3puZi1WZUFtSUxYMllkS2NFSEdSTWZ4MWhpX1lHX1YyMFZkeWstUHdTYXQxT0lXZ2Ric1E4Y0VXVF9yUDJ0bm5jSTdhVUlwUGdJWElwTVliMmdGT1djTjJ2N3kydFAxMGNKRDgxaG1ValNSOGs2Um12YjQ?oc=5",
-      "words": 393,
-      "source": "Realitatea.NET"
+      "source": "Realitatea.NET",
+      "status": "galben",
+      "words": 393
+    }
+  ],
+  "radio_briefs": [
+    {
+      "title": "Ora solare per una società in perenne jet lag, i consigli utili e i falsi amici da bannare",
+      "category": "Italia",
+      "published": "2026-10-23T17:35:02+00:00",
+      "url": "https://www.ansa.it/canale_lifestyle/notizie/societa_diritti/2026/10/22/ora-solare-per-una-societa-in-perenne-jet-lag-i-consigli-utili_63f2ebb7-ec8d-4eaf-9f84-214db9e89f81.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 505,
+      "intro": "Dormire meno è diventata norma (sbagliata e così siamo fuori sincrono rispetto al nostro orologio biologico",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
-      "title": "O hartă a României pe peretele unui spital italian și povestea familiilor de români pentru care fericirea înseamnă să poată merge împreună acasă - Rotalianul – Revista românului din Italia",
+      "title": "Țepele de pe Booking Investigate în Sfărșit de Comisia Europeană - iDevice.ro",
+      "category": "România",
+      "published": "2026-10-23T18:04:50+00:00",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOd0xDRE53N21qT2szTi1HcmtkNTd1Si1VV1VDRll4WXdlRk01OGc3cjloUFRNNzJXUWdkbkVxQ3l2SWF6MDRiQXV4b1BES09ibnFBN1l5d1FvWTRMSTgzRGl6dFNWaXEzTmtwVXM3V3otNjdfTDJHYWlLV2F0THJqSTNrMTRsMkNqdzBieHpTdzVrN2p5ckxQcWln?oc=5",
+      "source": "iDevice.ro",
+      "status": "verde",
+      "words": 462,
+      "intro": "Comisia Europeană a deschis la 21 octombrie 2026 o investigație oficială privind modul în care platforma Booking.com identifică și limitează riscurile de fraudă pentru turiști.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
+      "title": "Badantă condamnată la șase ani de închisoare în Italia. A obținut bani și proprietăți de peste două milioane de euro de la o bătrână - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
-      "published": "2026-10-23T16:28:05+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQbXRrTHM3dUttU0J6U0p1Wm9CRk13X3VET05vLU43bEV5WnpnX19xeVk3VjJmdWwySTdlZzhmbkZ4ckJGQ2YxRlNvVWRzNURacDBHeE9vazdTUExFVUFzd3B1cEo4S1RGMjBXZXZ5Y0pjVTVuRDV6WFE2NUs3aUY0M3pRSjRraEUwcTJyN29XM244Y2EzM1hOQlA1bmNkS1BpNmRPOHF2b2JTT3NndlhGMVR6WkduOFFDUzVPckNNX0twVnVEZ19INDJZX2FmR0hmcFYzTGtPV1pySDFjTGdkMlVYLU9Rb3V5NXgtRmpkN1c3bmt3VWVva182MU4?oc=5",
-      "words": 406,
-      "source": "Rotalianul – Revista românului din Italia"
+      "published": "2026-10-23T18:38:25+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQSkFmcE5TVXVQRFdlWHJBWTZSVTRDQjN4ODBoUlFUWFV0dlhWbjYxTDFRRUs2a0VNc1U1ZFJ1VlBsYUg4NjBqQ1pOa2NpcnB5b2RteFNhWHN0VFZzeGh2b1FaaUl2cUh3VUhOVEtFV1dhWWV3Q21SbEtiVVhFa1dTZlpsVjhvTEpway1SeGo3d0ZHNWNWWnJPWTkyVE9aNVFvN2I0bmJXc2kxcEpZZEdZS2tFczNZczRPeThya2NoQ1l4Snp2QUdnb1RhQS1JRW9ZWi1KTzFfbEo3WXpJbUpObGFXeWdFZnZ3NTFj?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 420,
+      "intro": "Tribunalul din Ancona a pronunțat o condamnare de șase ani de închisoare împotriva unei îngrijitoare la domiciliu, într-un dosar privind patrimoniul unei femei în vârstă de 94 de ani.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Torino: misiune economică România–Italia, dedicată investițiilor și antreprenorilor din diaspora",
+      "category": "Diaspora",
+      "published": "2026-10-23T19:17:19+02:00",
+      "url": "https://www.jurnalit.com/2026/10/21/misiune-economica-romania-italia-la-torino-pe-23-octombrie-2026/",
+      "source": "Jurnalit (21 octombrie 2026); Știri pe Surse (15 octombrie 2026)",
+      "status": "verde",
+      "words": 353,
+      "intro": "La Torino a fost anunțată pentru 23 octombrie o misiune economică România–Italia la Muzeul Național al Automobilului, cu participarea instituțiilor camerale și a comunității de afaceri româno-italiene.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Roma: recitalul „Glasul emoției” a fost programat la Accademia di Romania, cu Iulia Isaev și Liana Mareș",
+      "category": "Diaspora",
+      "published": "2026-10-24T00:07:22.179Z",
+      "url": "https://turneedepoveste.ro/pretutindeni/",
+      "source": "Turnee de poveste · program oficial 2026; Jurnalit · 22 octombrie 2026",
+      "status": "verde",
+      "words": 418,
+      "intro": "Pentru 23 octombrie 2026, organizatorii au anunțat la Accademia di Romania din Roma recitalul „Glasul emoției”, susținut de soprana Iulia Isaev și pianista Liana Mareș.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
 }
