@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-25T19:13:24.721106+00:00",
+  "news_updated_at": "2026-10-25T19:47:12.683778+00:00",
   "editorial_updated_at": "2026-10-25T19:58:19.413056+01:00",
   "translations_updated_at": "2026-10-25T19:02:36.425745+00:00",
-  "feed_total": 78,
-  "feed_extended_400": 20,
-  "feed_missing_body": 58,
+  "feed_total": 80,
+  "feed_extended_400": 17,
+  "feed_missing_body": 63,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 28,
   "translation_records": 40,
   "pending_total": 38,
   "pending_filtered_out": 106,
-  "editorial_verde": 21,
-  "editorial_galben": 34,
-  "editorial_rosu": 36,
+  "editorial_verde": 19,
+  "editorial_galben": 36,
+  "editorial_rosu": 39,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -398,12 +398,84 @@
   ],
   "recent_news": [
     {
+      "title": "Territori e futuro, a Firenze apre il festival delle Regioni",
+      "category": "Italia",
+      "published": "2026-10-25T19:42:47+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/territori-e-futuro-a-firenze-apre-il-festival-delle-regioni_f54d642f-ee1a-47cd-b63a-07dad0e96fb8.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Călătorie în țara badantelor”. Un preot din Italia a dus un grup de italieni în România pentru a le arăta țara din care provin femeile care le îngrijesc bătrânii - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-25T19:42:24+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQNHYzV1pNQ2pGU0lFWU1GOHBMbjI0UVF3cEl5ZWxJS0o5N3dxZGd0UDlFWlhSTW9ZdW8ySzliWl9MLTVHMTdoM1dmVVg1TjZUdGktenhlOUNRY0xubllGTkdiUWt2Zm1hakN5N05TZUJVQ0xLVTFOWkJqdlJGc056RW1nUW9WMGpvTVZKMkhKOVdaQUZGeG1HNWJWajY2Z0tXbzNxSUtfeWVZMDF4UzR3aVc0ZlVBdHJaSWtkNU9VMEpqYUhDMlVCaV92LXRKYnVMVldVZk9obDVBUkZNRHVsLU41YlJIRjdGVWxhbm1pc0FxbzVRaWRUeU1wWTdKbGhuejYwUmYwemdWc2F1LVQyWQ?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A, in campo Udinese-Milan LIVE",
+      "category": "Italia",
+      "published": "2026-10-25T19:42:17+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-udinese-milan-diretta-e-foto_ada4ee21-0c89-46e0-854c-ac6a99956170.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Una 'lista stupri' nei bagni del liceo Righi a Roma",
+      "category": "Italia",
+      "published": "2026-10-25T19:40:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/una-lista-stupri-nei-bagni-del-liceo-righi-a-roma_4a4f14f2-a323-4aa5-a4e4-dea55e0441ba.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Nazare: Nu există un cufăr de galbeni secret la Ministerul Finanţelor. România e aproape de jumătatea drumului de la deficitul de 9,3%",
       "category": "România",
-      "published": "2026-10-25T19:11:14+00:00",
+      "published": "2026-10-25T19:38:15+00:00",
       "url": "https://www.digi24.ro/finante/nazare-nu-exista-un-cufar-de-galbeni-secret-la-ministerul-finantelor-romania-e-aproape-de-jumatatea-drumului-de-la-deficitul-de-93-4008387",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Youssef Siher in carcere, 'aveva un progetto eversivo'",
+      "category": "Italia",
+      "published": "2026-10-25T19:36:41+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/domani-la-richiesta-di-convalida-del-fermo-per-youssef-sehir-tra-le-accuse_dde34ca0-69ba-4c10-86ed-1c191da76dca.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Traian Băsescu: „Stăpânul Guvernului va fi Grindeanu”. Cum ar urma să controleze PSD Executivul",
+      "category": "România",
+      "published": "2026-10-25T19:33:50+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/traian-basescu-stapanul-guvernului-va-fi-grindeanu-cum-ar-urma-sa-controleze-psd-executivul-4008403",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nazare: fără impozit pe proprietate la valoarea de piață în 2027; pensiile, indexate „prudent” - Monden.ro",
+      "category": "România",
+      "published": "2026-10-25T19:33:21+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNbEZmZ3VFM05GcUd6OVFaOVAzMHgzaGJYMXdtTkVoRmYtUDNqaG1aVm5BcGEzS3A0SHAxUW9zR19EQmtpbVVGeU5OZFhTNGxLR3ZPVm1GM1dzWkJ1b1lPbGd6YkJUQmhpXzRfYTJBR01fbDFuUFJJQ3RXRjIyMXRVdW9LaDlzVjNnTldPQ0gySGIxNklKTXZmQWdyRTdkUFVxbHlOZklzcnZBelZ3bUxmNmhQTHFKTDg?oc=5",
+      "source": "Monden.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Salvini resta leader della Lega, ma avverte: 'Stop armi all'Ucraina'",
+      "category": "Italia",
+      "published": "2026-10-25T19:24:05+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/salvini-resta-leader-della-lega-ma-avverte-stop-armi-allucraina_bcf46509-0de0-4534-8ceb-a67876aeff8b.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -414,15 +486,6 @@
       "source": "Digi24",
       "status": "verde",
       "words": 438
-    },
-    {
-      "title": "Serie A: a Lecce la Juventus vince 2-0 CRONACA e FOTO",
-      "category": "Italia",
-      "published": "2026-10-25T19:05:28+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/25/serie-a-in-campo-lecce-juventus-0-2-diretta-e-foto_c687213b-7c89-45e6-8894-59efa16e9e36.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Ministrul de Finanțe, Alexandru Nazare: Impozitele pe proprietăți nu cresc în 2027. Nu există acest pericol",
@@ -479,30 +542,12 @@
       "words": 0
     },
     {
-      "title": "Salvini riconfermato segretario della Lega: 'Dirò in Cdm basta soldi e armi all'Ucraina'",
-      "category": "Italia",
-      "published": "2026-10-25T18:11:16+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/25/salvini-riconfermato-segretario-della-lega-con-465-voti-contro-i-146_bcf46509-0de0-4534-8ceb-a67876aeff8b.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 499
-    },
-    {
       "title": "Netanyahu publică o imagine AI cu o explozie nucleară în Tel Aviv și avertizează asupra unui „al doilea Holocaust” înaintea alegerilor",
       "category": "România",
       "published": "2026-10-25T18:00:11+00:00",
       "url": "https://www.digi24.ro/stiri/externe/netanyahu-publica-o-imagine-ai-cu-o-explozie-nucleara-in-tel-aviv-si-avertizeaza-asupra-unui-al-doilea-holocaust-inaintea-alegerilor-4008305",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "La premio Nobel Machado torna in Venezuela dopo dieci mesi",
-      "category": "Italia",
-      "published": "2026-10-25T17:57:14+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/10/25/la-premio-nobel-machado-torna-in-venezuela-dopo-dieci-mesi_5e7fe194-a6eb-407f-97d9-d5bd0891ac76.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -632,15 +677,6 @@
       "words": 0
     },
     {
-      "title": "'Il futuro è passato da qui', a Firenze il Festival delle Regioni",
-      "category": "Italia",
-      "published": "2026-10-25T16:08:26+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/24/il-futuro-e-passato-da-qui-a-firenze-il-festival-delle-regioni_f54d642f-ee1a-47cd-b63a-07dad0e96fb8.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 467
-    },
-    {
       "title": "Ilie Bolojan, dezvăluiri despre cum a ajuns să fie propus premier. „Probabil că și cei care au fost contactați n-aveau soluții”",
       "category": "România",
       "published": "2026-10-25T16:01:00+00:00",
@@ -668,15 +704,6 @@
       "words": 0
     },
     {
-      "title": "Domani la richiesta di convalida del fermo per Youssef Siher. Anche la moglie è indagata",
-      "category": "Italia",
-      "published": "2026-10-25T15:44:02+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/25/domani-la-richiesta-di-convalida-del-fermo-per-youssef-sehir-tra-le-accuse_dde34ca0-69ba-4c10-86ed-1c191da76dca.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Dan Motreanu: Grindeanu împarte sarcini miniștrilor, în timp ce Niculescu rămâne cu vizitele oficiale și postările de protocol",
       "category": "România",
       "published": "2026-10-25T15:40:26+00:00",
@@ -693,15 +720,6 @@
       "source": "Digi24",
       "status": "galben",
       "words": 0
-    },
-    {
-      "title": "Ambasada SUA: Militarii americani şi români lucrează umăr la umăr pentru siguranţa flancului estic al NATO",
-      "category": "România",
-      "published": "2026-10-25T15:15:09+00:00",
-      "url": "https://www.digi24.ro/stiri/ambasada-sua-militarii-americani-si-romani-lucreaza-umar-la-umar-pentru-siguranta-flancului-estic-al-nato-4008147",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 422
     },
     {
       "title": "Note solidali Camposampiero, oggi concerto per il Cuamm - Padova24Ore",
@@ -893,6 +911,15 @@
       "words": 0
     },
     {
+      "title": "Alegeri prezidențiale în Bulgaria. Președinta în exercițiu, apropiată de Moscova, este favorită - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-25T08:15:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNVGJJRnRFY3NsNGxRQ3ZhckptNW56a2tMTmFHSzFKV3NSR0VMWFM5MjRlNl92a2FfNjM3cmJuVm5YQVJWMEJWNE84Zm55VjhpSHdET3kwclc0QlZJbDhzaGlrczkwQ211Q3BjbkdWbjlOODNheFJ3TlNjeWVMMFBEaUN6cmIyWW9KM2Z5N1BjTExqZm1Jb1ZlX3A2Zm9HVHd1R3VqX094bllfdko1ZllReUJCUk9LaWhkekUtUFlGWDBVNXVyeWY4RUNPVnkwZ9IB0wFBVV95cUxPekpTak9QM01VdjY4Qkp0MDRqNFRGWG96MC1qa0xvdzFQZnNJRFZyMmVkeWw4LWFkYmxEcFRaYlVqNWU2QmJ0VTFENnpiWmFHQ1FIUk95cWlyODRwUVdYblB6SkVKaFVPUXB5VXBkTTMtZU54Z0ZkeW85NkNJNlRvbXlOSkk",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Sorin Grindeanu acuză: Guvernul Bolojan a lăsat România cu datorii uriașe. Liderul PSD face promisiuni... - Digi24",
       "category": "România",
       "published": "2026-10-25T07:58:48+00:00",
@@ -954,15 +981,6 @@
       "source": "Touchpoint News",
       "status": "verde",
       "words": 500
-    },
-    {
-      "title": "Notizie di Padova ore 23: tensione in stazione, Padova corsaro e gemelli da record - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-24T21:25:38+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBZS0dCV2lIY29mQ2VkZ3Vmb2xZTlpSSEIzUk5aXzZMUDZ5Q3EzbkUwTW05VFpmVk8yekMybGUtT21QTlBTTzhoanF2ZTBmOVNDaWd5bjNMbkpYUmM4TGRUajRiMFZCcnN5U0ZBQ0VNZTc?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Albignasego e Casalserugo, progetto contro gli allagamenti: risorse da cercare nel 2027 - Padova24Ore",
@@ -1073,15 +1091,6 @@
       "words": 0
     },
     {
-      "title": "Accident grav de muncă pe o stradă din Graz. Un român a ajuns în stare gravă la spital - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-24T10:11:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdXdtcFlZUXFSOUpBbHJBdGNLU1lNZUxjdjRCWE1vYWJGRF9NczNoNGluRXZucU5aUS10WmwyTGlqQmxBMXFVT0JQZkpVN3NjZ0RRN3YtajVLbG9SYllNTlJVeUk1d1dIam1YQTlnZjdQMmRYYlJDN0h2SkR5Zzd0dkJFVVk0WVJlem1Ib0Z6SDZsN0k1Ul9ra0Z0QlFHRlBXdkJWdTFaVzM0WEhPanRiOFlkWDhfLU0xOGJWVUo3LTd3aHdR0gHKAUFVX3lxTE5KRG5xcnFVanQtNzhjdjdpd1dYUDFPUFBqMHZqNy1vbmhVRms5UW1iQ0x3enpXUVo4NG5Dem1jYkV1ZnE0UVA2ODBKTl8zQkVKVGhOaE5jdHIxSG1UdDRJVFJpc3VzaHRWaEl4X1Z2NW5oZDVDTXh5a05VZnpUdkZkbGtUblVMeWxZY0UwQ2t",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "O româncă din Spania și-a luat copiii și a plecat cu ei în România. Femeia e acum anchetată pentru... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-24T08:11:00+00:00",
@@ -1098,6 +1107,15 @@
       "source": "ZCH",
       "status": "verde",
       "words": 451
+    },
+    {
+      "title": "Manovra, mini Irpef per il primo impiego o bonus in busta paga a fine anno. Le opzioni per i giovani - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-23T23:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQakpob2xSSlZhQU03NHhpOUFSSm1kNVd3WnBYbkEtQlRLS3hlQXNsY3J3YXVJME1IUTd3TjY5OHhZQmZ0UlBacEFGY0YyNktUQzlFbjctVVkyLWJOaTF6VTMzdVlIdk9JdlFqY0dOSXBzSms4cGxFRzVmWDJxVlNZWndWN0w4eEdBbWdTUmpuNVZsU1U?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
     }
   ],
   "radio_briefs": [
