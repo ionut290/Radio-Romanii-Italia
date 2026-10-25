@@ -11,7 +11,7 @@ REPO = os.environ["GITHUB_REPOSITORY"]
 TOKEN = os.environ["GH_TOKEN"]
 API = f"https://api.github.com/repos/{REPO}"
 NOW = dt.datetime.now(dt.timezone.utc)
-FLOWS = {"news.yml": ("Notizie generali", 75), "editorial.yml": ("Editoriali", 180), "events.yml": ("Eventi", 180)}
+FLOWS = {"news.yml": ("Notizie generali", 75), "editorial.yml": ("Editoriali", 180), "events.yml": ("Eventi", 180), "translate-news.yml": ("Traduzioni", 180)}
 
 def api(path, method="GET", data=None):
     request = urllib.request.Request(
