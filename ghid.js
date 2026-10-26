@@ -11,7 +11,7 @@ const $=id=>document.getElementById(id);
 const categories=["Restaurante românești","Magazine românești","Transport România–Italia","Contabilitate și fiscalitate","Traduceri și interpretariat","Avocatură","Construcții și renovări","Curățenie","Îngrijire și frumusețe","Auto și mecanică","Sănătate și servicii profesionale","Alte servicii","Voluntariat și colaborări","Transport și logistică","Asociații și comunitate"];
 for(const id of ["category","kind"]){const select=$(id);for(const c of categories){const o=document.createElement("option");o.value=c;o.textContent=c;select.append(o)}}
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),storage=getStorage(app);
-const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],publicSourceRecords=[],publicImportRecords=[],publicOverrides=new Map(),approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
+const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],publicSourceRecords=[],publicImportRecords=[],publicOverrides=new Map(),publicOverridesReady=false,approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
 const directoryMap=createDirectoryMap({onOpen:openBusiness});
 let heldPublicRecords=0,verifiedDetailCount=0;
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
@@ -57,7 +57,7 @@ function openBusiness(b){
  if(b.address)inner.append(node("p","📍 "+b.address));
  if(b.hours)inner.append(node("p","🕒 "+b.hours));
  contactLinks(b,inner);inner.append(buildDirectoryExtras(b,lang));
- if(/^public-[A-Za-z0-9_-]+$/.test(String(b.id||""))&&isAdmin()&&auth.currentUser?.emailVerified){
+ if(/^public-[A-Za-z0-9_-]+$/.test(String(b.id||""))&&isAdmin()&&auth.currentUser?.emailVerified&&publicOverridesReady){
   const edit=node("button","✏️ Correggi contatti / aggiungi foto","action secondary");edit.type="button";
   edit.onclick=()=>{dialog.close();try{openPublicEditor({business:b,db,storage,getAdminUid:()=>isAdmin()&&auth.currentUser?.emailVerified?auth.currentUser.uid:null})}catch(error){alert(error.message)}};
   inner.append(edit);
@@ -148,7 +148,7 @@ function refreshDirectoryRecords(){
 }
 loadPublicDirectory();
 onSnapshot(collection(db,"directoryOverrides"),snapshot=>{
- publicOverrides=new Map(snapshot.docs.map(entry=>[entry.id,entry.data()]));
+ publicOverridesReady=true;publicOverrides=new Map(snapshot.docs.map(entry=>[entry.id,entry.data()]));
  refreshDirectoryRecords();
 },error=>console.info("Correzioni amministrative non disponibili fino alla pubblicazione delle regole Firebase:",error?.code||error));
 onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{approvedRecords=snapshot.docs.map(d=>({id:d.id,...d.data()}));records=mergeBusinesses(publicRecords,approvedRecords);render()},error=>{console.warn("RDI listings unavailable",error.code);sourceError=true;render()});
