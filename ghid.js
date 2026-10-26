@@ -5,6 +5,7 @@ import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} f
 import {getFirestore,collection,addDoc,query,where,onSnapshot,serverTimestamp,doc,updateDoc} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 import {getStorage,ref,uploadBytes,getDownloadURL} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
 import {firebaseConfig} from "./firebase-config.js";
+import {createDirectoryQualityPanel} from "./directory-quality.js?v=20261026-1";
 const $=id=>document.getElementById(id);
 const categories=["Restaurante românești","Magazine românești","Transport România–Italia","Contabilitate și fiscalitate","Traduceri și interpretariat","Avocatură","Construcții și renovări","Curățenie","Îngrijire și frumusețe","Auto și mecanică","Sănătate și servicii profesionale","Alte servicii","Voluntariat și colaborări","Transport și logistică","Asociații și comunitate"];
 for(const id of ["category","kind"]){const select=$(id);for(const c of categories){const o=document.createElement("option");o.value=c;o.textContent=c;select.append(o)}}
@@ -13,6 +14,7 @@ const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[
 const directoryMap=createDirectoryMap({onOpen:openBusiness});
 let heldPublicRecords=0,verifiedDetailCount=0;
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
+const qualityPanel=createDirectoryQualityPanel({canView:()=>!!auth.currentUser&&auth.currentUser.email?.toLowerCase()===adminEmail&&auth.currentUser.emailVerified===true});
 const safeLink=(value)=>{try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:null}catch{return null}};
 const whatsappNumber=value=>{
  const raw=String(value||"").trim();if(!raw)return "";
@@ -88,6 +90,7 @@ function render(){
  $("directory-more").hidden=found.length<=pageLimit || $("find-panel").hidden;$("directory-more").textContent=atlasText("more")+" ("+Math.min(24,Math.max(0,found.length-pageLimit))+")";
  directoryMap.update(found,cityIndex);renderChips();
  $("directory-coverage").textContent=publicRecords.length+" "+atlasText("public")+" · "+approvedRecords.length+" "+atlasText("managed")+". "+atlasText("coverage")+" · "+verifiedDetailCount+" fișe cu date suplimentare din surse citate · "+Math.max(0,publicRecords.length-verifiedDetailCount)+" fișe de bază încă de completat."+(heldPublicRecords?" · "+heldPublicRecords+" fișe retrase temporar pentru neconcordanțe.":"")+(sourceError?" "+atlasText("loadError"):"");
+ qualityPanel.render(records);
  window.rdiTranslate?.();
 }
 for(const id of ["search","category","region","province","city"])$(id).addEventListener("input",()=>{pageLimit=24;render()});
@@ -129,6 +132,7 @@ onAuthStateChanged(auth,u=>{user=u;
  const sessionStatus=$("rdi-session-status");
  if(sessionStatus)sessionStatus.textContent=u?(isAdmin()?"● Connesso · Amministratore":"● Connesso · "+(u.displayName||u.email||"Google")):"○ Non connesso";
  if(sessionStatus)sessionStatus.style.color=u?"#bbf7d0":"#fecaca";
+ qualityPanel.render(records);
  if(sessionAction){sessionAction.disabled=false;sessionAction.textContent=u?"Esci":"Accedi";}
 
  const isVerifiedAdmin=!!u&&u.email?.toLowerCase()===adminEmail&&u.emailVerified===true;
