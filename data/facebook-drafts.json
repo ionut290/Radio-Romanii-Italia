@@ -1,30 +1,46 @@
 {
   "version": 1,
-  "description": "Registro delle bozze Facebook RDI create tramite ChatGPT/Metricool. Non pubblica automaticamente.",
+  "description": "Registro pubblicazioni Facebook RDI tramite ChatGPT e Metricool, con controllo duplicati e stato programmazione.",
   "items": [
     {
       "article_id": "rss-1a7118a4f649ec3d0ca4",
       "article_url": "https://radioromanii.duckdns.org/articole/5e9bf68-ro-social.html",
       "metricool_uuid": "-781262093556232961",
-      "metricool_post_id": "406125795",
-      "status": "draft",
-      "created_at": "2026-10-26T00:51:00Z"
+      "metricool_post_id": "406129863",
+      "status": "scheduled",
+      "created_at": "2026-10-26T00:51:00Z",
+      "auto_publish": true,
+      "scheduled_for": "2026-10-26T12:00:00+01:00"
     },
     {
       "article_id": "rss-80d811b0247bb656c362",
       "article_url": "https://radioromanii.duckdns.org/articole/63720914-ro-social.html",
       "metricool_uuid": "5546848634920454275",
-      "metricool_post_id": "406129189",
-      "status": "draft",
-      "created_at": "2026-10-26T00:58:00Z"
+      "metricool_post_id": "406129874",
+      "status": "scheduled",
+      "created_at": "2026-10-26T00:58:00Z",
+      "auto_publish": true,
+      "scheduled_for": "2026-10-26T10:00:00+01:00"
     },
     {
       "article_id": "rss-ce727286b37e7372c167",
       "article_url": "https://radioromanii.duckdns.org/articole/2375a7bb-ro-social.html",
       "metricool_uuid": "-5096310896619273851",
-      "metricool_post_id": "406129201",
-      "status": "draft",
-      "created_at": "2026-10-26T00:58:00Z"
+      "metricool_post_id": "406129889",
+      "status": "scheduled",
+      "created_at": "2026-10-26T00:58:00Z",
+      "auto_publish": true,
+      "scheduled_for": "2026-10-26T17:00:00+01:00"
+    },
+    {
+      "article_id": "rdi-brand-intro-20261026",
+      "article_url": "https://radioromanii.duckdns.org/",
+      "metricool_uuid": "-583232310479467442",
+      "metricool_post_id": "406128617",
+      "status": "published",
+      "auto_publish": false,
+      "public_url": "https://facebook.com/1365404166659194/posts/122104373391517635",
+      "published_at": "2026-10-26T01:57:00+01:00"
     }
   ]
 }
