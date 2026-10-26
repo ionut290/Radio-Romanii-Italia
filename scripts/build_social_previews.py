@@ -188,6 +188,30 @@ for event in events:
 for existing in EVENTS.glob("*.html"):
     if existing.name not in valid_event_pages and "<!-- rdi-event-preview -->" in existing.read_text(encoding="utf-8"):
         existing.unlink()
+# Preserve previews linked from the Facebook publication register, including
+# articles that have disappeared from the rolling news feed. Scheduled and
+# published Facebook URLs must not become 404s when RSS items expire.
+registry_path = ROOT / "data" / "facebook-drafts.json"
+if registry_path.exists():
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise RuntimeError("Cannot read Facebook publication register; refusing to prune previews") from exc
+    for entry in registry.get("items", []):
+        path = urlsplit(str(entry.get("article_url") or "")).path
+        match = re.fullmatch(r"/articole/([0-9a-f]+)-(?:ro|it)-social\\.html", path)
+        if not match:
+            continue
+        ident = match.group(1)
+        for ending in (".html", "-social.html", "-ro.html", "-ro-social.html", "-it.html", "-it-social.html"):
+            name = ident + ending
+            if (OUT / name).is_file():
+                valid_pages.add(name)
+        for ending in ("-social", "-facebook", "-ro-social", "-ro-facebook", "-it-social", "-it-facebook"):
+            name = ident + ending
+            if (IMAGES / (name + ".jpg")).is_file():
+                valid_images.add(name)
+
 for folder, suffix in ((OUT, ".html"), (IMAGES, ".jpg")):
     for existing in folder.glob("*" + suffix):
         if (folder == OUT and existing.name not in valid_pages) or (folder == IMAGES and existing.stem not in valid_images):
