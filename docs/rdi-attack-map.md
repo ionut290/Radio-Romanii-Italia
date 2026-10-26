@@ -3,6 +3,8 @@
 ## Public
 - [Harta publică](https://radioromanii.duckdns.org/harta-atacurilor.html) – filtre după zi/interval, țară, tip; hartă cu puncte aproximative și listă accesibilă.
 - Date publice: [data/attack-monitor.json](../data/attack-monitor.json). Fiecare eveniment include surse jurnalistice, bilanțuri *raportate* și dată a faptelor. Nu reprezintă toate incidentele din lume.
+- Un incident poate fi distribuit separat cu `?incident=<id>&lang=ro|it`; pagina filtrează la acel caz, are comandă de revenire la lista completă, iar marcajul include legătura către articolul RDI dacă acesta există. Butonul „Distribuie incidentul” utilizează opțiunile native de partajare sau copiază linkul, în funcție de browser.
+- Valorile necunoscute (`null`) la răniți/decedați sunt afișate cu „—”; ele nu trebuie transformate în zero în bilanțurile redacției.
 - Marcajele nu indică coordonate exacte; nu se publică detalii tactice, identitatea minorilor sau a victimelor.
 - Nu se clasifică violența în funcție de religia persoanei. Motivul, dacă este cunoscut, se atribuie exclusiv surselor.
 
@@ -17,7 +19,7 @@ Surse active de *descoperire*:
 
 Câmpul `date` din rezultatele Google News reprezintă **data publicării**, iar din GDELT **data observării articolului**, nu data atacului! `date_kind` marchează această diferență, iar `event_date_confirmed: false` indică necesitatea verificării. Doar editorul documentează și stabilește data exactă a evenimentului. Nu inferea coordonate sau bilanțuri din agregatoare.
 
-Fluxurile sunt accesate cu cereri reduse și timeout. Dacă GDELT este limitat sau returnează alt format decât JSON, sursa apare ca eroare în `source_status`; NU se consideră că a furnizat piste verificate. Dacă unul e indisponibil, se păstrează pistele anterioare; dacă toate eșuează, scriptul nu suprascrie fișierul existent. `source_status` permite redacției să vadă ce a funcționat în ultima execuție. Atribuirile, evaluările și sursele independente adăugate de editor sunt păstrate după reluare.
+GDELT este interogat o singură dată pe execuție, cu termeni grupați, pentru a limita răspunsurile de tip HTTP 429. În cazul limitării, `source_status.gdelt` raportează `rate_limited` și codul HTTP, fără încercări agresive de reinterogare. Fluxurile sunt accesate cu cereri reduse și timeout. Dacă GDELT este limitat sau returnează alt format decât JSON, sursa apare ca eroare în `source_status`; NU se consideră că a furnizat piste verificate. Dacă unul e indisponibil, se păstrează pistele anterioare; dacă toate eșuează, scriptul nu suprascrie fișierul existent. `source_status` permite redacției să vadă ce a funcționat în ultima execuție. Atribuirile, evaluările și sursele independente adăugate de editor sunt păstrate după reluare.
 
 Date de referință suplimentare, **nu integrate fără acces/autorizare și verificare**:
 - **UCDP Candidate / GED** – date codificate științific despre conflicte violente, inclusiv seturi lunare, nu neapărat flux live: https://ucdp.uu.se/downloads/
