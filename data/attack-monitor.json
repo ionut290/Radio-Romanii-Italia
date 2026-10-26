@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-26T18:55:00Z",
+  "updated_at": "2026-10-26T18:59:56Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
@@ -124,6 +124,40 @@
         {
           "name": "Radio Pakistan",
           "url": "https://radio.gov.pk/22-10-2026/security-forces-kill-three-terrorists-foil-attack-in-gwadar"
+        }
+      ]
+    },
+    {
+      "id": "rdi-france-trappes-la-verriere-20261023",
+      "date": "2026-10-23",
+      "reported_on": "2026-10-26",
+      "country": "Franța",
+      "country_code": "FR",
+      "place": "Trappes și La Verrière, Yvelines",
+      "lat": 48.777,
+      "long": 2.002,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": 1,
+      "injured": 5,
+      "actor": "Un bărbat de 39 de ani arestat; motivul rasist și calificarea teroristă sunt investigate de Parchetul național antiterorist francez",
+      "title_ro": "Franța: atac armat la Trappes și La Verrière, un mort și cinci răniți",
+      "title_it": "Francia: sparatoria a Trappes e La Verrière, un morto e cinque feriti",
+      "description_ro": "La 23 octombrie, un atacator a tras asupra trecătorilor din Trappes și La Verrière. Reuters și AFP relatează un mort și cinci răniți, inclusiv un copil. Parchetul antiterorist francez investighează un posibil motiv rasist; calificarea juridică definitivă și responsabilitățile nu sunt stabilite. Suspectul a fost arestat și supus unei evaluări psihiatrice. Bilanțul este provizoriu; nu include autorul printre victime.",
+      "description_it": "Il 23 ottobre un uomo ha sparato contro passanti a Trappes e La Verrière. Reuters e AFP riportano un morto e cinque feriti, tra cui una minore. La Procura antiterrorismo francese indaga su un possibile movente razzista; qualificazione definitiva e responsabilità restano da accertare. Il sospettato è stato arrestato e sottoposto a valutazione psichiatrica. Bilancio provvisorio, distinto dall'autore.",
+      "sources": [
+        {
+          "name": "Reuters, 23 ottobre 2026",
+          "url": "https://www.reuters.com/world/least-two-injured-shooting-street-near-paris-bfm-reports-2026-10-23/"
+        },
+        {
+          "name": "AFP / TV5MONDE, 25 ottobre 2026",
+          "url": "https://information.tv5monde.com/france/attaque-mortelle-dans-les-yvelines-la-garde-vue-de-lassaillant-suspendue-pour-raisons-psychiatriques-2843079"
+        },
+        {
+          "name": "Le Monde, 24 ottobre 2026",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/24/attentat-raciste-de-trappes-le-tireur-presume-a-dit-avoir-voulu-venger-les-commercants-pilles-le-17-octobre-et-avoir-cible-des-personnes-de-couleur_6799689_3224.html"
         }
       ]
     }
