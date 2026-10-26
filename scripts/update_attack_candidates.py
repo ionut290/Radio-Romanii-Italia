@@ -73,7 +73,7 @@ def decode_row(cells, today):
     city = middle[0][:100] if middle and not middle[0].isdigit() else ""
     if not description or description.lower() == "description":
         return None
-    kind = "potential_plot" if re.search(r"\\b(planned|plot|foiled|threat|arrested|attempted)\\b",description,re.I) else "reported_incident"
+    kind = "potential_plot" if re.search(r"\b(planned|plot|foiled|threat|arrested|attempted)\b",description,re.I) else "reported_incident"
     key = f"{when.isoformat()}|{country.casefold()}|{city.casefold()}|{description.casefold()}"
     item_id = "lead-" + hashlib.sha256(key.encode()).hexdigest()[:18]
     return {
