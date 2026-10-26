@@ -1,5 +1,10 @@
 name: RDI - Monitorizare incidente (semnalări)
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_attack_candidates.py'
+      - '.github/workflows/incident-leads.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 7 * * *'
