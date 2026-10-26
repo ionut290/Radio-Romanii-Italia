@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-26T18:30:00Z",
+  "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
+  "reviewed_by": "Redacția Radio Românii din Italia",
+  "items": [
+    {
+      "id": "rdi-mali-menaka-20261018",
+      "date": "2026-10-18",
+      "date_label": "18–19 octombrie 2026",
+      "reported_on": "2026-10-20",
+      "country": "Mali",
+      "country_code": "ML",
+      "place": "Regiunea Ménaka",
+      "lat": 15.916,
+      "long": 2.403,
+      "precision": "approx_region",
+      "type": "attack",
+      "status": "reported",
+      "killed": 48,
+      "injured": null,
+      "actor": "Militanți asociați IS Sahel, potrivit surselor",
+      "title_ro": "Atacuri asupra civililor în regiunea Ménaka",
+      "title_it": "Attacchi contro civili nella regione di Ménaka",
+      "description_ro": "Reuters și AP relatează că cel puțin 48 de persoane au fost ucise în mai multe localități din regiune. Numărul este provizoriu; atribuirea atacurilor rămâne bazată pe declarațiile surselor citate.",
+      "description_it": "Reuters e AP riferiscono di almeno 48 morti in più località della regione. Bilancio provvisorio e attribuzione basata sulle fonti citate.",
+      "sources": [
+        {
+          "name": "Reuters / Internazionale",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/20/islamic-state-linked-militants-kill-at-least-48-civilians-in-eastern-mali-sources-say"
+        },
+        {
+          "name": "Associated Press",
+          "url": "https://apnews.com/article/b65482e0b8f3b814e2465ab61c41ee1f"
+        }
+      ],
+      "rdi_article_id": "rdi-20261026-mali-menaka-48-victime"
+    },
+    {
+      "id": "rdi-nigeria-borno-20261017",
+      "date": "2026-10-17",
+      "date_label": "17 octombrie 2026",
+      "reported_on": "2026-10-19",
+      "country": "Nigeria",
+      "country_code": "NG",
+      "place": "Zona Gamboru Ngala, Borno",
+      "lat": 12.37,
+      "long": 14.22,
+      "precision": "approx_area",
+      "type": "attack",
+      "status": "reported",
+      "killed": 15,
+      "injured": 6,
+      "actor": "Autori neconfirmați; suspiciuni privind Boko Haram",
+      "title_ro": "Ambuscadă împotriva unui convoi în Borno",
+      "title_it": "Imboscata contro un convoglio nello Stato di Borno",
+      "description_ro": "Reuters citează doi militari: cel puțin 15 persoane ucise și șase militari răniți. Agenția precizează că nu a putut verifica independent bilanțul.",
+      "description_it": "Reuters cita due militari: almeno 15 morti e sei feriti. L'agenzia non ha potuto verificare autonomamente le cifre.",
+      "sources": [
+        {
+          "name": "Reuters / Internazionale",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/attack-on-convoy-in-nigeria-s-borno-kills-15-soldiers-say"
+        }
+      ],
+      "rdi_article_id": "rdi-20261026-nigeria-borno-convoi"
+    },
+    {
+      "id": "rdi-thailand-yala-20261015",
+      "date": "2026-10-15",
+      "date_label": "15 octombrie 2026",
+      "reported_on": "2026-10-16",
+      "country": "Thailand",
+      "country_code": "TH",
+      "place": "Bannang Sata, provincia Yala",
+      "lat": 6.265,
+      "long": 101.261,
+      "precision": "approx_town",
+      "type": "attack",
+      "status": "reported",
+      "killed": 0,
+      "injured": 5,
+      "actor": "Autori neidentificați",
+      "title_ro": "Explozie la un post de securitate din Yala",
+      "title_it": "Esplosione presso un posto di sicurezza a Yala",
+      "description_ro": "Thai PBS World și Bangkok Post relatează rănirea a cinci voluntari de securitate. Identitatea autorilor și motivația nu au fost confirmate în materialele consultate.",
+      "description_it": "Thai PBS World e Bangkok Post riferiscono di cinque volontari della sicurezza feriti. Autori e movente non confermati.",
+      "sources": [
+        {
+          "name": "Thai PBS World",
+          "url": "https://www.thaipbsworld.com/world/571124"
+        },
+        {
+          "name": "Thai Examiner",
+          "url": "https://www.thaiexaminer.com/thai-news-foreigners/2026/10/16/base-pipe-bomb-attack-on-thursday-in-southern-yala-province-left-five-army-officers-with-minor-injuries/"
+        }
+      ]
+    },
+    {
+      "id": "rdi-pakistan-gwadar-20261022",
+      "date": "2026-10-22",
+      "date_label": "22 octombrie 2026",
+      "reported_on": "2026-10-23",
+      "country": "Pakistan",
+      "country_code": "PK",
+      "place": "Gwadar",
+      "lat": 25.127,
+      "long": 62.326,
+      "precision": "approx_city",
+      "type": "foiled",
+      "status": "reported",
+      "killed": 0,
+      "injured": 0,
+      "actor": "Suspecți înarmați, atribuire disputată",
+      "title_ro": "Atac împiedicat la un șantier neocupat din Gwadar",
+      "title_it": "Sventato un attacco a un cantiere disabitato a Gwadar",
+      "description_ro": "Dawn citează autoritățile: a fost împiedicat un atac asupra unei tabere de construcții neocupate. Trei suspecți înarmați au murit în operațiune; cifra NU este inclusă în victimele civile sau de securitate de pe hartă.",
+      "description_it": "Dawn cita le autorità: sventato l'attacco a un campo di costruzione vuoto. Tre sospetti armati sono morti nell'operazione e non sono conteggiati tra le vittime sulla mappa.",
+      "sources": [
+        {
+          "name": "Dawn",
+          "url": "https://www.dawn.com/news/2039144"
+        },
+        {
+          "name": "Radio Pakistan",
+          "url": "https://radio.gov.pk/22-10-2026/security-forces-kill-three-terrorists-foil-attack-in-gwadar"
+        }
+      ]
+    }
+  ]
+}
