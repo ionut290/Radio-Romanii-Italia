@@ -13,13 +13,17 @@ export function missingForBusiness(b) {
   return PRESENT_FIELDS.filter(([field]) => field === "photos" ? !photos(b) :
     !value(b[field])).map(([, label]) => label);
 }
+export function filterIncompleteRecords(records, field = "") {
+  return records.filter(b => field === "photos" ? !photos(b) :
+    field ? !value(b[field]) : missingForBusiness(b).length > 0);
+}
 function quoted(s) { return '"' + String(s ?? "").replaceAll('"', '""') + '"'; }
 function downloadMissing(records, field = "") {
   const columns = ["id", "name", "category", "region", "province", "city", "address",
     "phone", "whatsapp", "email", "website", "hours", "foto_presente",
     "dati_mancanti", "sourceUrl", "detailsSourceUrl"];
-  const filtered = records.map(b => ({...b, foto_presente: photos(b) ? "si" : "no",
-    dati_mancanti: missingForBusiness(b).join(", ")})).filter(b => b.dati_mancanti && (!field || (field === "photos" ? !photos(b) : !value(b[field]))));
+  const filtered = filterIncompleteRecords(records, field).map(b => ({...b, foto_presente: photos(b) ? "si" : "no",
+    dati_mancanti: missingForBusiness(b).join(", ")}));
   const text = "\uFEFF" + columns.join(";") + "\r\n" +
     filtered.map(b => columns.map(k => quoted(b[k])).join(";")).join("\r\n");
   const blob = new Blob([text], {type: "text/csv;charset=utf-8"});
@@ -43,7 +47,7 @@ export function createDirectoryQualityPanel({canView}) {
   function renderRows(){
     table.replaceChildren();
     const field=filterInput?.value||"";
-    const matches=current.filter(b => field ? (field==="photos"?!photos(b):!value(b[field])):missingForBusiness(b).length);
+    const matches=filterIncompleteRecords(current,field);
     table.append(document.createElement("strong"));
     table.firstChild.textContent="Schede da completare: "+matches.length+" (prime 20 visualizzate)";
     for (const b of matches.slice(0,20)) {
