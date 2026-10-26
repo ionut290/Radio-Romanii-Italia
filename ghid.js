@@ -9,7 +9,7 @@ const $=id=>document.getElementById(id);
 const categories=["Restaurante românești","Magazine românești","Transport România–Italia","Contabilitate și fiscalitate","Traduceri și interpretariat","Avocatură","Construcții și renovări","Curățenie","Îngrijire și frumusețe","Auto și mecanică","Sănătate și servicii profesionale","Alte servicii","Voluntariat și colaborări","Transport și logistică","Asociații și comunitate"];
 for(const id of ["category","kind"]){const select=$(id);for(const c of categories){const o=document.createElement("option");o.value=c;o.textContent=c;select.append(o)}}
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),storage=getStorage(app);
-const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
+const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],publicImportRecords=[],approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
 const directoryMap=createDirectoryMap({onOpen:openBusiness});
 let heldPublicRecords=0,verifiedDetailCount=0;
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
@@ -97,7 +97,7 @@ document.addEventListener("directory-view-change",()=>{render()});
 document.addEventListener("rdi-language-changed",render);
 async function loadPublicDirectory(){
  const results=await Promise.allSettled([fetch("./data/directory-public.json?v=20261024-atlas-1",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("Directory source unavailable");return r.json()}),fetch("./data/directory-cities.json?v=20261024-atlas-1").then(r=>{if(!r.ok)throw Error("Town coordinates unavailable");return r.json()}),fetch("./data/directory-enrichments.json?v=20261024-verified-1",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("Enrichments unavailable");return r.json()})]);
- if(results[0].status==="fulfilled"){const data=results[0].value;publicRecords=Array.isArray(data.businesses)?data.businesses:[];publicSources=data.sources||[];
+ if(results[0].status==="fulfilled"){const data=results[0].value;publicRecords=Array.isArray(data.businesses)?data.businesses:[];publicImportRecords=publicRecords.slice();publicSources=data.sources||[];
  for(const source of publicSources){if(!safeUrl(source.url))continue;const a=node("a",source.name+" ↗");a.href=source.url;a.target="_blank";a.rel="noopener noreferrer";$("directory-source-links").append(a)}}else sourceError=true;
  if(results[1].status==="fulfilled")cityIndex=results[1].value;
  if(results[2].status==="fulfilled"){
@@ -137,7 +137,7 @@ onAuthStateChanged(auth,u=>{user=u;
  if(!isVerifiedAdmin){unmountExcel?.();excelMounted=false;unmountExcel=null;}
  else if(!excelMounted){excelMounted=true;import("./directory-excel-safe.js?v=20261026-safe3").then(({mountExcel})=>{
    if(!auth.currentUser||auth.currentUser.uid!==u.uid)return;
-   unmountExcel=mountExcel({db,admin:()=>!!auth.currentUser&&auth.currentUser.email?.toLowerCase()===adminEmail&&auth.currentUser.emailVerified===true,getPublic:()=>publicRecords,getUid:()=>auth.currentUser?.uid});
+   unmountExcel=mountExcel({db,admin:()=>!!auth.currentUser&&auth.currentUser.email?.toLowerCase()===adminEmail&&auth.currentUser.emailVerified===true,getPublic:()=>publicImportRecords,getUid:()=>auth.currentUser?.uid});
  }).catch(e=>{excelMounted=false;if(excelRoot)excelRoot.hidden=true;console.warn("Admin Excel unavailable",e);});}
 $("signin").hidden=!!u;$("signout").hidden=!u;$("business-form").hidden=!u;$("admin-panel").hidden=!isAdmin();$("direct-label").hidden=!isAdmin();$("identity").textContent=u?"Conectat: "+(u.displayName||u.email)+(isAdmin()?" · Administrator":""):"Conectează-te pentru a înscrie o afacere.";if(stopPending){stopPending();stopPending=null}if(isAdmin()){stopPending=onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","pending")),snapshot=>{pending=snapshot.docs.map(d=>({id:d.id,...d.data()}));renderPending()},e=>$("pending").textContent="Nu pot încărca cererile: "+e.message)}});
 $("signin").onclick=async()=>{try{await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){alert("Autentificare nereușită: "+e.message)}};
