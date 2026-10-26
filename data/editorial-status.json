@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-26T14:03:57.282984+00:00",
-  "editorial_updated_at": "2026-10-26T13:49:34.580022+01:00",
-  "translations_updated_at": "2026-10-26T14:02:27.796958+00:00",
-  "feed_total": 82,
-  "feed_extended_400": 16,
-  "feed_missing_body": 66,
+  "news_updated_at": "2026-10-26T14:37:18.674560+00:00",
+  "editorial_updated_at": "2026-10-26T15:24:27.129747+01:00",
+  "translations_updated_at": "2026-10-26T14:19:14.501219+00:00",
+  "feed_total": 80,
+  "feed_extended_400": 10,
+  "feed_missing_body": 70,
   "feed_short_body": 0,
-  "editorial_total": 18,
-  "archived_editorials": 33,
-  "translation_records": 38,
+  "editorial_total": 17,
+  "archived_editorials": 34,
+  "translation_records": 48,
   "pending_total": 69,
   "pending_filtered_out": 162,
-  "editorial_verde": 16,
-  "editorial_galben": 31,
-  "editorial_rosu": 50,
+  "editorial_verde": 11,
+  "editorial_galben": 36,
+  "editorial_rosu": 48,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -618,21 +618,156 @@
   ],
   "recent_news": [
     {
+      "title": "Bărbatul care a lovit un pompier cu o cărămidă în Argeș a fost reținut. Salvatorul este în continuare internat în spital",
+      "category": "România",
+      "published": "2026-10-26T14:25:33+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/barbatul-care-a-lovit-un-pompier-cu-o-caramida-in-arges-a-fost-retinut-salvatorul-este-in-continuare-internat-in-spital-4009353",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Proiect de lege care vizează pensionarii militari, depus de fostul ministru al Apărării, Radu Miruță",
+      "category": "România",
+      "published": "2026-10-26T14:22:36+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/proiect-de-lege-care-vizeaza-pensionarii-militari-depus-de-fostul-ministru-al-apararii-radu-miruta-4009325",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Aproape un milion de euro confiscați pe Aeroportul Otopeni, dispăruți fără urmă. Descoperirea, făcută când trebuia să dea banii înapoi",
+      "category": "România",
+      "published": "2026-10-26T14:21:39+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/aproape-un-milion-de-euro-confiscati-pe-aeroportul-otopeni-disparuti-fara-urma-descoperirea-facuta-cand-trebuia-sa-dea-banii-inapoi-4009347",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "'Gli studenti vincono le elezioni in Serbia', lo annuncia lo sconfitto Vucic",
+      "category": "Italia",
+      "published": "2026-10-26T14:16:49+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/gli-studenti-vincono-le-elezioni-in-serbia-lo-annuncia-lo-sconfitto-vucic_87f3828a-9352-4958-a756-d408a61a1bd3.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "PARASPORT FORUM, inițiativa națională susținută de Betano pentru dezvoltarea bazei de antrenori din sportul paralimpic",
+      "category": "România",
+      "published": "2026-10-26T14:16:45+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/companii/parasport-forum-initiativa-nationala-sustinuta-de-betano-pentru-dezvoltarea-bazei-de-antrenori-din-sportul-paralimpic-4009333",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "In Europa il Paese di residenza incide sul rischio di tumore",
+      "category": "Italia",
+      "published": "2026-10-26T14:15:26+00:00",
+      "url": "https://www.ansa.it/canale_saluteebenessere/notizie/medicina/2026/10/24/studio-in-europa-il-paese-di-residenza-incide-sul-rischio-di-tumore_02fdade3-b055-4d0d-b30c-a06f88667e44.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Brasile, Lula rieletto presidente. Bolsonaro contesta l'esito del voto",
+      "category": "Italia",
+      "published": "2026-10-26T14:15:06+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/brasile-lula-rieletto-presidente.-bolsonaro-contesta-lesito-del-voto-_56cc4597-7350-4738-9bed-c5925ac6574d.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ordinul Ministrului Sănătății care Stabilește Noi Reguli pentru Transplantul de Organe în România - iDevice.ro",
+      "category": "România",
+      "published": "2026-10-26T14:15:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcTlweXVsMkxWYlNRXzJKZk43QmdLaEhQVDhROFk2NUhXTVBfNVlMc0VaUHlFZ3Bic1NWOWhSNG9EOWhReGhXYV82c3pFeWF1UjRkaE80QU5SdmV2Ukh0WnlzNGM3TXNrWFhFZERocUxrYm5xTWVibUxLLWYyUlBVWDZwY1B0QWx2OThQYUM1WW5fT1BNVHNmeXVmd1JTVHMxb2NSemM0cF94TlpkNmpOQmRIaGFPUlp6Y3RrcmFR?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "L'omicidio di Giulia, i giudici riconoscono la premeditazione per Impagnatiello",
+      "category": "Italia",
+      "published": "2026-10-26T14:14:30+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/lomicidio-di-giulia-i-giudici-riconoscono-la-premeditazione-per-impagnatiello_abfac359-fe4a-4b41-9936-acd3ba50715d.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 459
+    },
+    {
+      "title": "Ex Ilva, la procura chiede i domiciliari per Lucia Morselli e altri due",
+      "category": "Italia",
+      "published": "2026-10-26T14:12:33+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/ex-ilva-la-procura-chiede-i-domiciliari-per-lucia-morselli-e-altri-due_274cd5e7-da49-4369-92c0-c1216c25c981.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Epidemie generalizată de HIV în zeci de regiuni din Rusia. Cauzele care stau în spatele răspândirii scăpate de sub control",
+      "category": "România",
+      "published": "2026-10-26T14:09:03+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/epidemie-generalizata-de-hiv-in-zeci-de-regiuni-din-rusia-cauzele-care-stau-in-spatele-raspandirii-scapate-de-sub-control-4009291",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "De ce apar ciocuri osoase şi cum se tratează corect. „Atenţie la suplimentele cu calciu luate fără recomandarea medicului!”",
+      "category": "România",
+      "published": "2026-10-26T14:08:54+00:00",
+      "url": "https://www.digi24.ro/facem-romania-bine/de-ce-apar-ciocuri-osoase-si-cum-se-trateaza-corect-atentie-la-suplimentele-cu-calciu-luate-fara-recomandarea-medicului-4009319",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Lo scandalo dei sondaggi inventati investe le midterm ad una settimana dal voto",
+      "category": "Italia",
+      "published": "2026-10-26T14:07:18+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/26/lo-scandalo-dei-sondaggi-inventati-investe-le-midterm-ad-una-settimana-dal-voto_f9d2fc5c-fa41-4a72-a7fa-aeab90405291.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Data-limită până la care România trebuie să finalizeze procedurile pentru banii din PNRR. Anunțul făcut de ministrul Investițiilor - Stirile ProTV",
+      "category": "România",
+      "published": "2026-10-26T14:05:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQcjVfRDZOS3owT2stT2N2VFFiRFd0ZGxHWTdFdHV3TllQY0FsYmdBb0tvak5sOG8taG1SRmM5TGtvNFktU3lpLXNfZUpvbE5pOVZxcWI4V0RkWmdvZldhajNOVkdxVWlveVV2UUhqeVRJQ1hLTlNwc3JNWGs0LXR6WXI0SkFmdHA3bXAtWVJCc1RtcmlSSFpsQnNza3ZnVEJHX1FPY3p1TG1mX09lcUJWZjlDWTR5bW9BSlhvbnhiSzBDZlNTOXZvTEh3LVNXSlowQTlmTGhRcDlyM3R1WG9jdld5UWdlV0J5TFdaZ1Y3bTROMlU1RlgtQUVoQkVqeFgwWjZlMw?oc=5",
+      "source": "Stirile ProTV",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Scuola Futura incontra le Regioni",
+      "category": "Italia",
+      "published": "2026-10-26T14:04:20+00:00",
+      "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/26/right-to-stay-la-tua-regione-il-tuo-futuro_3e832548-789c-4b1b-9037-43059a68da23.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Marele premiu la Loto 6/49 de peste 3,32 milioane € a fost câștigat de un prahovean: „Jucați în continuare, așa cum voi face și eu”",
+      "category": "România",
+      "published": "2026-10-26T14:03:05+00:00",
+      "url": "https://www.digi24.ro/stiri/marele-premiu-la-loto-6-49-de-peste-332-milioane-e-a-fost-castigat-de-un-prahovean-jucati-in-continuare-asa-cum-voi-face-si-eu-4009261",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Prima reacție a Rusiei după înfrângerea aliatului său, Aleksandar Vucic, în alegerile din Serbia",
       "category": "România",
       "published": "2026-10-26T14:00:18+00:00",
       "url": "https://www.digi24.ro/stiri/externe/prima-reactie-a-rusiei-dupa-infrangerea-aliatului-sau-aleksandar-vucic-in-alegerile-din-serbia-4009135",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "La nuova era Mediobanca. Lovaglio spinge la fusione - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-26T13:52:45+00:00",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZTF4c2EwV1BZc2NiUzEzWXpDU2pST0xtRXAyb1ozMEViNHUwbC1WbnlqMzVjcjNxa0hERndIbDg3N0poSGVuWFFCZFlsRWg4RWdjb0RMcWFONXp5Zld3blVPdWxKUFJXWnpOdXd4RmdiQUdTRFNIeDdMVHRnS1oyMENyM1VyTHRmRS1yX29vU2N4SVU5eV9KM3ZyVUdNTWNC?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -649,15 +784,6 @@
       "category": "Italia",
       "published": "2026-10-26T13:49:13+00:00",
       "url": "https://www.ansa.it/sito/podcast/ansa_voice_economia/2026/10/26/fintech-non-solo-i-giganti-ma-giovani-piccole-e-con-poche-donne_1864bf68-3c8c-41fb-b2fd-21599abd3550.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Lo scandalo dei sondaggi inventati investe le midterm ad una settimana dal voto",
-      "category": "Italia",
-      "published": "2026-10-26T13:43:13+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/lo-scandalo-dei-sondaggi-inventati-investe-le-midterm-ad-una-settimana-dal-voto_2095abc8-145e-4d6d-89ff-59feb709beca.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
@@ -685,15 +811,6 @@
       "category": "România",
       "published": "2026-10-26T13:28:45+00:00",
       "url": "https://www.digi24.ro/stiri/economie/guvernul-vrea-sa-prelungeasca-reducerea-accizei-la-motorina-pana-la-31-ianuarie-2027-cat-ar-putea-creste-preturile-fara-aceasta-masura-4009257",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Marele premiu la Loto 6/49 de peste 3,32 milioane € a fost câștigat de un prahovean: „Jucați în continuare, așa cum voi face și eu”",
-      "category": "România",
-      "published": "2026-10-26T13:24:36+00:00",
-      "url": "https://www.digi24.ro/stiri/marele-premiu-la-loto-6-49-de-peste-332-milioane-e-a-fost-castigat-de-un-prahovean-jucati-in-continuare-asa-cum-voi-face-si-eu-4009261",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -762,6 +879,15 @@
       "words": 0
     },
     {
+      "title": "Ecopol, finanziamento da 103 milioni per innovazione e ampliamento dello stabilimento italiano - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-26T12:47:47+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMlg0X2M3M1J6YW5fOUZNN18xbEh3SFQ5R1NuYWUxUnB3NGlPQVpYWGdyQzZnZVdtMWdnUUdla25jUzFVWjNZMHNxRWs2LU9yelYwem82d2hLUzZMN2ZJdTV6dkNVek5MLUdRSWFucXZLYi1zbTIzREN2UkxBVVlFY0s5NkNxYnc?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "USR și PNL cer din nou o comisie de anchetă pentru zborurile „Mykonos-Nordis”. PSD este acuzat că blochează demersul",
       "category": "România",
       "published": "2026-10-26T12:47:32+00:00",
@@ -789,20 +915,20 @@
       "words": 0
     },
     {
+      "title": "Disabilità e patenti speciali, Anglat 'adattare l'auto costa troppo'",
+      "category": "Italia",
+      "published": "2026-10-26T12:44:18+00:00",
+      "url": "https://www.ansa.it/responsabilmente/notizie/accessibilita/2026/10/26/disabilita-e-patenti-speciali-anglat-adattare-lauto-costa-troppo_2cdbaa61-bc07-4731-941f-5510201f77db.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Banca d'Italia, Angelini: per l'Africa serve far crescere insieme infrastrutture e competenze - la Repubblica",
       "category": "Italia",
       "published": "2026-10-26T12:43:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQMmN4SF9EYnBfeGYyVTJYZTFOWHB4NjlsVW9lbTJ5WWo0d0RwOEFkQUN3UUhrSlNxVm5XcHhJSHduQ085UktCc3pjaUhlVHpocldrcTVmXzd5QmtJbXZ6eFhKV2Rrc3E4UU5lYlJVUmZxMXNlZE9vbWhWakdmdVltWHIyQW53TWFKTkxvR0tkeXZTeHRuTFRuVzlGTzVMLVlLWjNkRVNMa2d0a21OTnpkQXZucVduMUVYeHQ3LUVWYko5UlhYcktfYU1lU0FQVVMzUEhJZnVlMA?oc=5",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Due giornate di squalifica per Allegri",
-      "category": "Italia",
-      "published": "2026-10-26T12:33:23+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/2026/10/26/due-giornate-di-squalifica-per-allegri-_b829a109-b649-467d-8c86-26473729cb05.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -814,15 +940,6 @@
       "source": "Digi24",
       "status": "galben",
       "words": 0
-    },
-    {
-      "title": "L'omicidio di Giulia, i giudici riconoscono la premeditazione per Impagnatiello",
-      "category": "Italia",
-      "published": "2026-10-26T12:15:17+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/lomicidio-di-giulia-i-giudici-riconoscono-la-premeditazione-per-impagnatiello_abfac359-fe4a-4b41-9936-acd3ba50715d.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 459
     },
     {
       "title": "Vucic sulla sconfitta elettorale: “rivoluzione sostenuta da alcuni Paesi europei”",
@@ -852,21 +969,12 @@
       "words": 0
     },
     {
-      "title": "Brasile, Lula rieletto presidente. Bolsonaro contesta l'esito del voto",
+      "title": "Monumento ai Caduti di Cefalonia, il Comune valuta il recupero: sopralluogo all’Arcella - Padova24Ore",
       "category": "Italia",
-      "published": "2026-10-26T11:52:36+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/brasile-lula-rieletto-presidente.-bolsonaro-contesta-lesito-del-voto-_56cc4597-7350-4738-9bed-c5925ac6574d.html",
-      "source": "ANSA",
+      "published": "2026-10-26T11:34:16+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAxbUJ3ZEU3Qzh1RGxLeEdVNVJfUVpqQkNQdU9jeGJkSjY1NERvMFJBTDhuRXVPM2t5NWFMNE5Xb05MTGhjQUJEeGJoNXljNHBtWUtEdWQ5dUpGaElmaDZwemE4Z2hNUnl1M0diUHc2c0t0OXN4TTdVeFJB?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "O nouă taxă pentru comenzile de pe Temu, Shein, AliExpress și alți comercianți din afara UE, de la 1 noiembrie. Cum va fi calculată",
-      "category": "România",
-      "published": "2026-10-26T11:40:58+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/o-noua-taxa-pentru-comenzile-de-pe-temu-shein-aliexpress-si-alti-comercianti-din-afara-ue-de-la-1-noiembrie-cum-va-fi-calculata-4009123",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -879,102 +987,12 @@
       "words": 448
     },
     {
-      "title": "San Marino fa le pulizie bancarie e si apre al mercato unico Ue - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-26T11:27:29+00:00",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNbW9YLU5tU0pjMzVOemZsTlk1RVNyNnpQdnhLNUMyYldzS2NnSWtYSmlHWHhnSXdYSzRXSVp2cUpJTHJiSDZhaFB4aXVabGVkNEU3dDBLR1VMUkZOVW9vYXZlU1FUeUZXZ1J6RVgwcElDeWN1RkExbkFVLWFGeW01YkJVeC1oU3Y3N01Xa3BibFhTQmY1bWpKWWV3MFhNM0h5RTZibTJ5WQ?oc=5",
-      "source": "la Repubblica",
-      "status": "verde",
-      "words": 441
-    },
-    {
       "title": "Grevă generală, în Italia, pe 30 octombrie. Vor fi afectate transporturile, școlile și serviciile... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-26T11:26:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPeThUTHBtaFZxMlJiNXRTenpyc0hmaWpiaFJmX3A4a0I1dG9RNWxLWHRRRk1wZVY0S0lDZ2xfNU1RdUNQa0lIYzBmMHFvZEdzNjNremw3MDZhYWdYbGJHZk9UbXhCal9haF82d0FXSVkxNE1KMG1GRmRnZ01KY3dRX3N6bjFVa21xTUFFUTNMbWpwZnZNMTlsVXpPdEZoNnhvQTNnajhuTkNVaUhmQ05BYklPOThjRDhzTENoeElCQ3hxaEQ2ZU5qX1pLMmJnNlBxbTNQUkc4dUIxUdIB3wFBVV95cUxNYU5JdjQySXdPVWl2QlNkS3E1TGNnQlcyZ2tGdzE2b0ZyeTQ0WG1ra0podHZrcEtJb2tkSmI2WVYzaUZEV0ZWQjRQR2dUSm4zdVVtcFREcFlXbklVWnRoRWhLbVh2Z1ZBTkFURWtpa3hxMXpnVXNTZ2p",
       "source": "StiriDiaspora",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Vremea se răcește. Meteorologii anunță prognoza până pe 8 noiembrie, pentru fiecare regiune din țară",
-      "category": "România",
-      "published": "2026-10-26T11:18:14+00:00",
-      "url": "https://www.digi24.ro/meteo/vremea-se-raceste-meteorologii-anunta-prognoza-pana-pe-8-noiembrie-pentru-fiecare-regiune-din-tara-4009087",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 448
-    },
-    {
-      "title": "Operaio 51enne muore schiacciato da un macchinario a Brindisi",
-      "category": "Italia",
-      "published": "2026-10-26T11:17:51+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/26/operaio-51enne-muore-schiacciato-da-un-macchinario-a-brindisi-indagini_5589bd15-983f-4517-9878-045c127183e6.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 428
-    },
-    {
-      "title": "Ce dobânzi pot cere băncile după declararea scadenței anticipate a unui credit. Decizia Înaltei Curți de Casație și Justiție",
-      "category": "România",
-      "published": "2026-10-26T11:15:48+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/consumatori/ce-dobanzi-pot-cere-bancile-dupa-declararea-scadentei-anticipate-a-unui-credit-decizia-inaltei-curti-de-casatie-si-justitie-4009111",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 430
-    },
-    {
-      "title": "Q8 Italia conferma il sostegno agli automobilisti: price cap fino a fine anno - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-26T11:03:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVHE5akVkYnR1T2dVbkREY2NiMUV0NUhFaklOSGEtbmNBR1RpWHBBVi1majJlWU1JUlZ4eXdfelY5dzdNQWxUTzhwYVpQYUFnQUhUMkNFdEFwTlFRS2JjMHdCWC02aUJISVpWbzdRQmtVUUY4NlBDdU5jRU5ESzZmUm9vd1R5Sm5VckZJRTY5NWZVbFU5TTUtSmNIU05RejFhR2hEbUZsTm9tbi1MOWYzT0QwcnkwSmF5Z0VRZXlSMF9Hb0FZY0NRMlRkQjRxaE04LWl3Zw?oc=5",
-      "source": "la Repubblica",
-      "status": "verde",
-      "words": 437
-    },
-    {
-      "title": "Grindeanu spune că „nu vor fi schimbări în perioada următoare la Pilonul II” de pensii. „Nu e pe agenda PSD”",
-      "category": "România",
-      "published": "2026-10-26T10:59:57+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/grindeanu-spune-ca-nu-vor-fi-schimbari-in-perioada-urmatoare-la-pilonul-ii-de-pensii-nu-e-pe-agenda-psd-4009081",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 412
-    },
-    {
-      "title": "AUR cere anchetă parlamentară privind migrația ilegală, de la infracțiunile comise de străini la exploatarea muncitorilor din afara UE",
-      "category": "România",
-      "published": "2026-10-26T10:59:47+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/aur-cere-ancheta-parlamentara-privind-migratia-ilegala-de-la-infractiunile-comise-de-straini-la-exploatarea-muncitorilor-din-afara-ue-4009083",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Disagio sociale a Padova, l’Istat individua nove aree critiche: indice fino a 109,21 - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-26T10:52:35+00:00",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XdnFFNnNqdXJfMzY3UFlnbEljUmFyQ2tqYmFGT1VqRDBWU3Z3VHFSdGxCM2dlOUdwMU9BRDh2cXRFanh5akF5Z1MyZTNIOHB3MGZfR01GWXZEYUcxM1R0OUVlazQwVExaZE91RDR1MA?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ce amendă trebuie să plătească un profesor din Alba, condamnat după ce a luat de gât un elev de 14 ani. Bărbatul continuă să predea",
-      "category": "România",
-      "published": "2026-10-26T10:49:16+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/educatie/ce-amenda-trebuie-sa-plateasca-un-profesor-din-alba-condamnat-dupa-ce-a-luat-de-gat-un-elev-de-14-ani-barbatul-continua-sa-predea-4009073",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "'Gli studenti vincono le elezioni in Serbia', lo annuncia lo sconfitto Vucic",
-      "category": "Italia",
-      "published": "2026-10-26T10:24:19+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/gli-studenti-vincono-le-elezioni-in-serbia-lo-annuncia-lo-sconfitto-vucic_87f3828a-9352-4958-a756-d408a61a1bd3.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -1023,15 +1041,6 @@
       "words": 438
     },
     {
-      "title": "Esplode la festa da Belgrado a Rio per la svolta della lista studenti in Serbia e Lula presidente",
-      "category": "Italia",
-      "published": "2026-10-26T09:41:36+00:00",
-      "url": "https://www.ansa.it/sito/photogallery/primopiano/2026/10/26/esplode-la-festa-da-belgrado-a-rio-per-la-svolta-della-lista-studenti-in-serbia_fb8e8170-74e5-49e6-8064-b568c024145a.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Știri din secțiunea Internațional - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-26T09:39:15+00:00",
@@ -1041,31 +1050,13 @@
       "words": 0
     },
     {
-      "title": "Traian Băsescu critică măsurile lui Ilie Bolojan: „Mărind taxele n-a reușit decât să frâneze economia” - Realitatea.NET",
-      "category": "România",
-      "published": "2026-10-26T09:26:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNWlBYQkhOMXJLdkluSU1Sa1kzd3hzYjB2Z0pucmFQakZDc01BM0R5YmpLTVVZWWo3RWcyMzY1Vm01aEZReWh2Nzg4UG54RUgtVTBwSGtnYnJxdFRqaVIyM2ptSkRZdVV2dzlxVF94dzVmeGtNZUJULThlYVdQWUhRLTZQUWpZRXFfN2hDajc5bjFMbnd0NUFFdXJ5MzYxUUZJLVdIaVVadzhzSTcxT2RTUjVqdXFHV2FKX3hHY2RwOWlMSjQ5cmpzaWZ5Q0ZZZ0R2TGpZUlA5MGQyWWJfY1B6elZ3?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Român din Italia, arestat după ce și-a înjunghiat tatăl în timpul unui scandal - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-26T09:14:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOR3IzVGtTODNRbjFRaUpwekpyTFJ3a092Q25DbUhjd0hZeVkwRWc1RUNkRzZ6bV80YkNYWmpCRkZfODJqY2xRcUZ2MWRqVGRFV2JvUWJ0QmRYeVVDSWNrdUlMZlJuTXk4WUdFaGVyWjFEMnJjR05IT1JRd0ZRQnpqSXpDMVh6TC1hejE0M2pFZy1CYnpjc0l2WHpJYXgtaFNORkQ5enF2VEs4YjR2OHRLX3ozSkJ5WDcxcHBoeTFYWdIBvwFBVV95cUxOR3IzVGtTODNRbjFRaUpwekpyTFJ3a092Q25DbUhjd0hZeVkwRWc1RUNkRzZ6bV80YkNYWmpCRkZfODJqY2xRcUZ2MWRqVGRFV2JvUWJ0QmRYeVVDSWNrdUlMZlJuTXk4WUdFaGVyWjFEMnJjR05IT1JRd0ZRQnpqSXpDMVh6TC1hejE0M2pFZy1CYnp",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOdVJmWTdhNHlUczJnbW5OMldhT05la1JYaHc2OXlVajQ2NERQNldmajM3RGdFMjFNZTFZcjZscmhnTG5OVzhEX1JGaUdKS2t1TlpqS094ejRhbDUyaVpFN0FvQm5FYldGRkFOTGRBZHE0ZTRyR0Y2dXY1V1RCcF84Zm5XM0xyMm5TdXdPbWg5THN3NnNEV296LXBuVjgwQnBmYXlad3p5X2pjVjJTbmVRS2x2MmlxZUdtSXfSAb8BQVVfeXFMTkdyM1RrUzgzUW4xUWlKcHpKckxSd2tPdkNuQ21IY3dIWXlZMEVnNUVDZEc2em1fNGJDWFpqQkZGXzgyamNsUXFGdjFkalRkRVdib1FidEJkWHlVQ0lja3VJTGZSbk15OFlHRWhlcloxRDJyY0dOSE9SUXdGUUJ6akl6QzFYekwtYXoxNDNqRWctQmJ6Y3NJdlh",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Jobfair, a Pisa la formazione di eccellenza incontra il mondo del lavoro",
-      "category": "Italia",
-      "published": "2026-10-26T09:10:19+00:00",
-      "url": "https://www.ansa.it/canale_legalita_scuola/notizie/tavoli_legalita/regione/toscana/2026/10/23/jobfair-a-pisa-la-formazione-di-eccellenza-incontra-il-mondo-del-lavoro_9d93ddfd-46a5-411e-bfb2-685f63c11cac.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 501
     },
     {
       "title": "Innovazione, nasce Innovators Under 35 Europe. Nel 2027 premi ai nuovi talenti europei",
@@ -1095,11 +1086,29 @@
       "words": 0
     },
     {
-      "title": "Le cellule tumorali diventano zombie per sfuggire alla chemioterapia",
+      "title": "Q8 Italia conferma il sostegno agli automobilisti: price cap fino a fine anno - la Repubblica",
       "category": "Italia",
-      "published": "2026-10-26T07:10:14+00:00",
-      "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/10/26/le-cellule-tumorali-diventano-zombie-per-sfuggire-alla-chemioterapia-_0437ab44-8d6a-4982-8c41-0a77fff6c73c.html",
-      "source": "ANSA",
+      "published": "2026-10-26T08:03:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVHE5akVkYnR1T2dVbkREY2NiMUV0NUhFaklOSGEtbmNBR1RpWHBBVi1majJlWU1JUlZ4eXdfelY5dzdNQWxUTzhwYVpQYUFnQUhUMkNFdEFwTlFRS2JjMHdCWC02aUJISVpWbzdRQmtVUUY4NlBDdU5jRU5ESzZmUm9vd1R5Sm5VckZJRTY5NWZVbFU5TTUtSmNIU05RejFhR2hEbUZsTm9tbi1MOWYzT0QwcnkwSmF5Z0VRZXlSMF9Hb0FZY0NRMlRkQjRxaE04LWl3Zw?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 437
+    },
+    {
+      "title": "La top 5 dei nomi più diffusi in Italia maschili e femminili - Idealista",
+      "category": "Italia",
+      "published": "2026-10-26T07:58:38+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWDl4QkUtS09pS3NqZmN6YVVLai1ZcEEzbWdna1RTb0d1Y293QUMySmVOSVYyZWVIUk01RDNLSWpQckd6SFc4VERXcnBHM1pBdnJWLVQwS3c1R3hTSDJ4V3laejVLSnlsZW5iY2hUcE9xU0NxVV85aVBqckJlV1d4dXNnQnhhUUY0eUVfTklBQWpUSEkyTmlMci1US2pWRVQyLUJpcE9GSlJCM25HMDhGdmZiUEhrcnF3U3NiOF9DaUtQb1kzd0JMWdIByAFBVV95cUxQWDl4QkUtS09pS3NqZmN6YVVLai1ZcEEzbWdna1RTb0d1Y293QUMySmVOSVYyZWVIUk01RDNLSWpQckd6SFc4VERXcnBHM1pBdnJWLVQwS3c1R3hTSDJ4V3laejVLSnlsZW5iY2hUcE9xU0NxVV85aVBqckJlV1d4dXNnQnhhUUY0eUV",
+      "source": "Idealista",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Autobuz răsturnat într-o prăpastie de 20 de metri, lângă Barcelona: 83 de persoane rănite, 25 în stare gravă - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-26T07:45:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSFdRMGVLU3hOdXZuQmk3ZENLMWJnWGd4RlBVM0h2R3Y5b21GbXZweVBFeFFqNVcxSFdNZGx6Q2RZUHpWM2lYaDF6SnNfaDBmeGU3S1RTSGI4RHdnc1FicXU2akNaSmQxREItcXpmU0U0Vk54MU1XXy1DX2s1YVN4cjBQby1TUGFLSldWYVhjTURJaDh3RVFHeEFiUWdPS0cwWlB2VDYyV1JHQTR1RkpkdWtPZVJ1djdDWUdSbjJJWkdjVmRUTWRaeUJiNTZTVlR1MjdncWdhdzN6TnUyYWtV?oc=5",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1109,15 +1118,6 @@
       "published": "2026-10-26T07:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNnpLUzV6UFQ3MlRSM1lGRnhXM0U0MG9JSGpkSS05ZVZrQ0RpRWRJTkVDZjV3aThZbk5NZTFEYWxja2R6Q0VOalJqRTMtdnIzQ1A5NkFOYnpuSHFObW1EbS1SVnd2XzNocHY2bG1kQW91RTNWZkhVMEJORmNNUjF0TlNiMHg1eG5WRW1IVVVoZ2xmYTRILXladjEzeDNHOTlnNzIzNldBQjRLODZZbk1YaUlhWGxtUHp6?oc=5",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Conducerea PSD se reunește luni. Urmează noi măsuri guvernamentale și schimbări majore de prefecți - Newsweek România",
-      "category": "România",
-      "published": "2026-10-26T06:10:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTGFsYVpjRktKOGZhY2FocktLcEwwM2VhWUhrX3BLZENjZ1libUdjQVhOcmV0WjhWdzhiNzAwQ3JraG1FVmJacDFYVlRHZWdIUFkyeGJaWU1KZG1MakVqSnIyaTluWjJLSkYzbG9scjZOUUgzT0JJdWJCZnpFV3I2YTBtUU1FVFR3SGpnTDNLUnhXTWhwazZuVkdBdUw4VEl5dnhzd3lBYnE5eUh0NHREZkZhSXFCSXRxUlBxNGhfRHBqNFdF?oc=5",
-      "source": "Newsweek România",
       "status": "roșu",
       "words": 0
     },
@@ -1167,10 +1167,10 @@
       "words": 442
     },
     {
-      "title": "Giorgio Gandini Del Grano, Grande piccolo maestro della pittura",
+      "title": "Luce, cibo, respiro: i consigli degli esperti per ritrovare il sonno naturale",
       "category": "Italia",
-      "published": "2026-10-25T16:16:55+00:00",
-      "url": "https://www.ansa.it/canale_viaggi/notizie/arte/2026/10/25/giorgio-gandini-del-grano-grande-piccolo-maestro-della-pittura_78d25d31-ab15-429f-befc-3fa15acc673a.html",
+      "published": "2026-10-25T19:05:55+00:00",
+      "url": "https://www.ansa.it/canale_lifestyle/notizie/beauty_fitness/2026/10/25/luce-cibo-respiro-i-consigli-degli-esperti-per-ritrovare-il-sonno-naturale_b6d37344-54fc-49b3-89b6-37d8704a4ea0.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
@@ -1284,15 +1284,6 @@
       "words": 0
     },
     {
-      "title": "Alertă de vreme rea în Germania. Furtuna \"Manja\" va lovi în anumite zone cu forța unui uragan - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-25T09:29:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQWGxhQWE1ZHkydEVHbkhuS01henZ2MDY5MzczRm1oWm1ybTlYUzR4akEwUEZKRk1aU0JIdzlsQ09OU0dYck9FLURiMUtvcXRfWnY3OFFqbndjczFmQ3pNT3dWNWZqN09WSnRFWU5mXzZKRjZWejZWOTY0TVNpbTVFSGhIUjZnd29JWXJNOWQ4Z2U4WG1TbWJzQXZsX2xtQmZJTVVYM2lBZFJKR253UkpnSXA3RmIwVGhTbWpPSW5MazBCMkoxeGtpSXlEUQ?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Românii din Italia vor avea o nouă biserică. „Un proiect costisitor, lucrările avansează în funcție de fondurile disponibile” - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-25T08:41:23+00:00",
@@ -1316,15 +1307,6 @@
       "published": "2026-10-25T07:58:48+00:00",
       "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW5",
       "source": "Digi24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Elveția oferă Moldovei 5,6 milioane de dolari pentru sănătatea refugiaților - logos-pres.md",
-      "category": "România",
-      "published": "2026-10-25T06:00:06+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTmp5MUFPZDd2UGZJZHNDZFpkSDZHTUF0eFJ2aWQzLUpXaUhSWnBEbEdxR25ycjBaY0F2TEhRREVIdVFzeWYyYjFvVEloZjFYRndHNWg4c1pyRVNTLXlfVVU1akQ2X25hQ1FuTVZ5b1I0SDZiOElTTW1od0dsYTh5WXdYaHg2WURxX3JjckN2SGVQbnNWZWh1X1dXa19jUzdyX2cyR3Y0NXowSU9NeENSQ0s1SnE4dmtyM0JIeXdQZUJpNWM2XzViNFFzY0dPS2ZSNHlUa0g1VlhfZmdPUURscEJhOEQyUFAyTGc?oc=5",
-      "source": "logos-pres.md",
       "status": "roșu",
       "words": 0
     },
