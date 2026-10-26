@@ -17,6 +17,13 @@ Pentru materiale obișnuite destinate publicării, cererea utilizatorului de a p
 ## Exemplu
 Articolul INCA România despre pensii și drepturile lucrătorilor, publicat în `editorial.json`, cu imaginea `images/redactie-inca-romania-pensii.svg`.
 
+## Imagini pentru războaie, atacuri și victime — 26 octombrie 2026
+
+- Articolele despre conflicte armate, ambuscade, atentate, bombardamente sau atacuri soldate cu victime trebuie să folosească o imagine sobră, specifică subiectului. **Nu utiliza** fotografia generică cu persoane zâmbitoare `editorial-images/ai-community-rdi.jpg` și nici alte imagini cu atmosferă festivă ori turistică.
+- Prioritatea este pentru fotografii documentare relevante, folosite numai când există permisiune/licență adecvată și credit verificabil. Nu presupune că o fotografie Reuters/AP este liberă pentru republicare.
+- Dacă nu există o fotografie utilizabilă legal, creează sau alege o grafică editorială simbolică originală: `editorial-images/rdi-conflict-editorial.svg` (sau o ilustrație dedicată țării/evenimentului). Menționează clar **„Imagine ilustrativă”**; nu prezenta grafica drept fotografie de la fața locului.
+- Pentru `editorial.json`, salvează `image`, `imageType: "editorial-illustration"`, `imageAttribution` și `fallbackImage` adecvate. Înainte de publicare verifică imaginea în cardul principal, cardurile mici și cititorul articolului.
+
 ## Rezumat pentru distribuirea pe Facebook
 Pentru fiecare articol redactat original, scrie în `summary` un rezumat substanțial, de regulă 250–450 de cuvinte în 3–5 paragrafe, dacă materialul verificat permite. Include ce s-a întâmplat, unde și când, persoanele implicate, contextul și implicațiile confirmate. Păstrează limba originală. Nu inventa detalii și nu copia integral textul unei alte publicații. Dacă sursa oferă puține informații, păstrează un rezumat mai scurt și semnalează limita; nu umple textul cu repetiții.
 Comanda «Copia post Facebook» copiază titlul, textul disponibil și linkul. Utilizatorul lipește textul în postarea Facebook și publică din Facebook.
