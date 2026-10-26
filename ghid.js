@@ -122,7 +122,17 @@ async function loadPublicDirectory(){
 loadPublicDirectory();
 onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{approvedRecords=snapshot.docs.map(d=>({id:d.id,...d.data()}));records=mergeBusinesses(publicRecords,approvedRecords);render()},error=>{console.warn("RDI listings unavailable",error.code);sourceError=true;render()});
 function renderPending(){$("pending").replaceChildren(...(pending.length?pending.map(b=>drawCard(b,true)):[node("p","Nu există cereri în așteptare.")]))}
-onAuthStateChanged(auth,u=>{user=u;$("signin").hidden=!!u;$("signout").hidden=!u;$("business-form").hidden=!u;$("admin-panel").hidden=!isAdmin();$("direct-label").hidden=!isAdmin();$("identity").textContent=u?"Conectat: "+(u.displayName||u.email)+(isAdmin()?" · Administrator":""):"Conectează-te pentru a înscrie o afacere.";if(stopPending){stopPending();stopPending=null}if(isAdmin()){stopPending=onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","pending")),snapshot=>{pending=snapshot.docs.map(d=>({id:d.id,...d.data()}));renderPending()},e=>$("pending").textContent="Nu pot încărca cererile: "+e.message)}});
+let excelMounted=false,unmountExcel=null;
+onAuthStateChanged(auth,u=>{user=u;
+ const isVerifiedAdmin=!!u&&u.email?.toLowerCase()===adminEmail&&u.emailVerified===true;
+ const excelRoot=document.getElementById("rdi-excel-admin");
+ if(excelRoot)excelRoot.hidden=!isVerifiedAdmin;
+ if(!isVerifiedAdmin){unmountExcel?.();excelMounted=false;unmountExcel=null;}
+ else if(!excelMounted){excelMounted=true;import("./directory-excel-safe.js?v=20261026-safe2").then(({mountExcel})=>{
+   if(!auth.currentUser||auth.currentUser.uid!==u.uid)return;
+   unmountExcel=mountExcel({db,admin:()=>!!auth.currentUser&&auth.currentUser.email?.toLowerCase()===adminEmail&&auth.currentUser.emailVerified===true,getPublic:()=>publicRecords});
+ }).catch(e=>{excelMounted=false;if(excelRoot)excelRoot.hidden=true;console.warn("Admin Excel unavailable",e);});}
+$("signin").hidden=!!u;$("signout").hidden=!u;$("business-form").hidden=!u;$("admin-panel").hidden=!isAdmin();$("direct-label").hidden=!isAdmin();$("identity").textContent=u?"Conectat: "+(u.displayName||u.email)+(isAdmin()?" · Administrator":""):"Conectează-te pentru a înscrie o afacere.";if(stopPending){stopPending();stopPending=null}if(isAdmin()){stopPending=onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","pending")),snapshot=>{pending=snapshot.docs.map(d=>({id:d.id,...d.data()}));renderPending()},e=>$("pending").textContent="Nu pot încărca cererile: "+e.message)}});
 $("signin").onclick=async()=>{try{await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){alert("Autentificare nereușită: "+e.message)}};
 $("signout").onclick=()=>signOut(auth);
 $("business-form").addEventListener("submit",async e=>{e.preventDefault();if(!user)return;const submit=$("submit");submit.disabled=true;const status=$("submit-status");status.textContent="Se trimite...";const val=id=>$(id).value.trim();const website=val("website");if(website&&!safeLink(website)){status.textContent="Adresa site-ului nu este validă.";submit.disabled=false;return}const details=Object.fromEntries(["services","products","prices","languages","payments","access","delivery","facebookUrl","instagramUrl"].map(id=>[id,val(id)]));
