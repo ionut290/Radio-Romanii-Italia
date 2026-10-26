@@ -28,6 +28,19 @@ match /profiles/{uid}{allow read:if signed() && (request.auth.uid==uid || commun
 }
 match /comments/{commentId}{allow read:if ((!resource.data.keys().hasAny(['status']) || resource.data.status=='published') && get(/databases/$(database)/documents/posts/$(postId)).data.status=='published') || (signed() && (resource.data.uid==request.auth.uid || communityAdmin()));allow create:if signed()&&get(/databases/$(database)/documents/posts/$(postId)).data.status=='published'&&request.resource.data.keys().hasOnly(['uid','author','body','createdAt','status'])&&request.resource.data.uid==request.auth.uid&&request.resource.data.createdAt==request.time&&shortText(request.resource.data.author,1,100)&&shortText(request.resource.data.body,2,500)&&request.resource.data.status=='pending';allow update:if communityAdmin() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status','reviewedAt']) && request.resource.data.status in ['published','rejected'] && request.resource.data.reviewedAt==request.time;allow delete:if false;}}match /reports/{id}{allow create:if signed()&&request.resource.data.keys().hasOnly(['postId','reporterUid','reason','createdAt'])&&request.resource.data.reporterUid==request.auth.uid&&request.resource.data.createdAt==request.time&&shortText(request.resource.data.postId,1,150)&&shortText(request.resource.data.reason,5,500);allow read,update,delete:if false;}
 function directoryAdmin(){return signed() && request.auth.token.email == 'ionut29019@gmail.com' && request.auth.token.email_verified == true;}
+match /directoryOverrides/{businessId} {
+ allow read: if true;
+ allow create,update: if directoryAdmin()
+   && request.resource.data.keys().hasOnly(['name','description','phone','whatsapp','website','address','hours'])
+   && (!request.resource.data.keys().hasAny(['name']) || shortText(request.resource.data.name,2,110))
+   && (!request.resource.data.keys().hasAny(['description']) || shortText(request.resource.data.description,25,1200))
+   && (!request.resource.data.keys().hasAny(['phone']) || shortText(request.resource.data.phone,0,40))
+   && (!request.resource.data.keys().hasAny(['whatsapp']) || shortText(request.resource.data.whatsapp,0,40))
+   && (!request.resource.data.keys().hasAny(['website']) || shortText(request.resource.data.website,0,250))
+   && (!request.resource.data.keys().hasAny(['address']) || shortText(request.resource.data.address,3,180))
+   && (!request.resource.data.keys().hasAny(['hours']) || shortText(request.resource.data.hours,0,150));
+ allow delete: if false;
+}
 match /directoryBusinesses/{businessId} {
   allow read: if resource.data.status == 'approved' || (signed() && (resource.data.uid == request.auth.uid || directoryAdmin()));
   allow create: if signed()
