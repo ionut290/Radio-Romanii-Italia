@@ -135,9 +135,9 @@ onAuthStateChanged(auth,u=>{user=u;
  const excelRoot=document.getElementById("rdi-excel-admin");
  if(excelRoot)excelRoot.hidden=!isVerifiedAdmin;
  if(!isVerifiedAdmin){unmountExcel?.();excelMounted=false;unmountExcel=null;}
- else if(!excelMounted){excelMounted=true;import("./directory-excel-safe.js?v=20261026-safe2").then(({mountExcel})=>{
+ else if(!excelMounted){excelMounted=true;import("./directory-excel-safe.js?v=20261026-safe3").then(({mountExcel})=>{
    if(!auth.currentUser||auth.currentUser.uid!==u.uid)return;
-   unmountExcel=mountExcel({db,admin:()=>!!auth.currentUser&&auth.currentUser.email?.toLowerCase()===adminEmail&&auth.currentUser.emailVerified===true,getPublic:()=>publicRecords});
+   unmountExcel=mountExcel({db,admin:()=>!!auth.currentUser&&auth.currentUser.email?.toLowerCase()===adminEmail&&auth.currentUser.emailVerified===true,getPublic:()=>publicRecords,getUid:()=>auth.currentUser?.uid});
  }).catch(e=>{excelMounted=false;if(excelRoot)excelRoot.hidden=true;console.warn("Admin Excel unavailable",e);});}
 $("signin").hidden=!!u;$("signout").hidden=!u;$("business-form").hidden=!u;$("admin-panel").hidden=!isAdmin();$("direct-label").hidden=!isAdmin();$("identity").textContent=u?"Conectat: "+(u.displayName||u.email)+(isAdmin()?" · Administrator":""):"Conectează-te pentru a înscrie o afacere.";if(stopPending){stopPending();stopPending=null}if(isAdmin()){stopPending=onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","pending")),snapshot=>{pending=snapshot.docs.map(d=>({id:d.id,...d.data()}));renderPending()},e=>$("pending").textContent="Nu pot încărca cererile: "+e.message)}});
 $("signin").onclick=async()=>{try{await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){alert("Autentificare nereușită: "+e.message)}};
