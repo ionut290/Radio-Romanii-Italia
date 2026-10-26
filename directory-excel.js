@@ -2,6 +2,9 @@
 import {collection,getDocs,doc,updateDoc,addDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 const FIELDS=["source","id","name","category","region","province","city","address","phone","whatsapp","website","hours","description","status"];
 const FIELDS_EDIT=["name","description","phone","whatsapp","website","address","hours"];
+const validUrl=v=>!v||/^https?:\/\/[^\s.]+\.[^\s]+$/i.test(v);
+const lengths={name:[2,110],description:[25,1200],phone:[0,40],whatsapp:[0,40],website:[0,250],address:[3,180],hours:[0,150]};
+const validEdit=(values)=>Object.entries(values).every(([k,v])=>{const bounds=lengths[k];return bounds&&clean(v).length>=bounds[0]&&clean(v).length<=bounds[1]&&(k!=="website"||validUrl(v));});
 const clean=v=>String(v??"").trim();
 const esc=v=>'"'+String(v??"").replaceAll('"','""')+'"';
 function csv(rows){return "\uFEFF"+[FIELDS.join(";"),...rows.map(r=>FIELDS.map(k=>esc(r[k])).join(";"))].join("\r\n");}
@@ -57,9 +60,9 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
         if(r.source==="firestore"&&(!r.id||!existing.has(r.id))){invalid.push("Riga "+r.line+": ID Firestore inesistente");continue;}
         const old=existing.get(r.id);
         if(old){const changes=Object.fromEntries(FIELDS_EDIT.filter(k=>clean(old[k])!==clean(r[k])).map(k=>[k,r[k]]));
-          if(Object.keys(changes).length){staged.push({kind:"update",id:r.id,changes});updates++;}continue;}
+          if(Object.keys(changes).length){if(!validEdit(changes)){invalid.push("Riga "+r.line+": campi aggiornati non validi");continue;}staged.push({kind:"update",id:r.id,changes});updates++;}continue;}
         if(r.id){invalid.push("Riga "+r.line+": nuove attività devono avere ID vuoto e source=new");continue;}
-        if(!r.name||r.name.length<2||r.name.length>110||!r.category||r.category.length<3||!r.region||r.region.length<2||!r.province||r.province.length<2||!r.city||r.city.length<2||!r.address||r.address.length<3||r.description.length<25||r.description.length>1200||r.phone.length>40||r.whatsapp.length>40||r.website.length>250||r.hours.length>150){invalid.push("Riga "+r.line+": dati obbligatori mancanti o troppo lunghi");continue;}
+        if(!r.name||r.name.length<2||r.name.length>110||!r.category||r.category.length<3||!r.region||r.region.length<2||!r.province||r.province.length<2||!r.city||r.city.length<2||!r.address||r.address.length<3||r.description.length<25||r.description.length>1200||r.phone.length>40||r.whatsapp.length>40||r.website.length>250||!validUrl(r.website)||r.hours.length>150){invalid.push("Riga "+r.line+": dati obbligatori mancanti o troppo lunghi");continue;}
         if(used.has(nameKey(r))){invalid.push("Riga "+r.line+": possibile duplicato");continue;}
         used.add(nameKey(r));staged.push({kind:"add",data:Object.fromEntries(FIELDS.filter(k=>!["source","id","status"].includes(k)).map(k=>[k,r[k]]))});adds++;
       }
@@ -69,9 +72,11 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
   };
   close.onclick=()=>{modal.hidden=true;staged=[];};
   apply.onclick=async()=>{if(!isAdmin()||!staged.length)return;
-    if(!confirm("Applicare "+staged.length+" modifiche su Firestore? Esporta prima il backup CSV."))return;
+    if(!confirm("Applicare "+staged.length+" modifiche su Firestore? Sarà scaricato un backup completo prima delle modifiche."))return;
     apply.disabled=true;close.disabled=true;let done=0;
     try{
+      const backup=await getDocs(collection(db,"directoryBusinesses"));
+      download(backup.docs.map(d=>({...d.data(),source:"firestore",id:d.id})));
       // Sequential writes intentionally avoid a partial parallel overwrite storm.
       for(const item of staged){
         if(!isAdmin())throw Error("Sessione amministratore terminata.");
