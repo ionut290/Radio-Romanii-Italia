@@ -115,7 +115,9 @@ async function loadPublicDirectory(){
        const approved=Object.fromEntries(fields.filter(k=>typeof entry[k]==="string").map(k=>[k,entry[k]]));
        if(approved.verificationDetail==="official-source"||approved.verificationDetail==="public-directory")verifiedDetailCount++;
        const coordinates=typeof entry.lat==="number"&&typeof entry.lng==="number"&&Number.isFinite(entry.lat)&&Number.isFinite(entry.lng)&&entry.lat>=35&&entry.lat<=48&&entry.lng>=6&&entry.lng<=19?{lat:entry.lat,lng:entry.lng}:{};
-       next.push({...b,...approved,...coordinates});
+       const permittedPhoto=entry.photoRightsStatus==="permission-granted"||entry.photoRightsStatus==="owned-by-rdi";
+       const approvedImages=permittedPhoto&&Array.isArray(entry.imageUrls)?entry.imageUrls.filter(u=>typeof u==="string"&&/^https:\/\//i.test(u)).slice(0,10):[];
+       next.push({...b,...approved,...coordinates,...(approvedImages.length?{imageUrls:approvedImages}:{} )});
      }
      publicRecords=next;
    }
