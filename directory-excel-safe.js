@@ -1,7 +1,8 @@
 // Admin-only Excel workflow: bounded loading, verified preview and safe bulk import.
 import {collection,getDocs,doc,updateDoc,addDoc,serverTimestamp,writeBatch} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-const FIELDS=["origin","id","name","category","region","province","city","address","phone","whatsapp","website","hours","description","status"];
-const EDIT=["name","address","phone","whatsapp","website","hours","description"];
+const FIELDS=["origin","id","name","category","region","province","city","address","phone","whatsapp","website","hours","description","status","email"];
+const REQUIRED_FIELDS=FIELDS.filter(k=>k!=="email");
+const EDIT=["name","address","phone","whatsapp","website","hours","description","email"];
 const str=x=>String(x??"").trim();
 const normalize=x=>str(x).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("it").replace(/[^\p{L}\p{N}]+/gu," ").trim();
 const key=b=>[b.name,b.city,b.address].map(normalize).join("|");
@@ -21,8 +22,8 @@ function excel(){return libraryPromise ||= (async()=>{
  }
  throw Error("Impossibile caricare il lettore Excel (connessione o blocco CDN). "+(err?.message||""));
 })().catch(e=>{libraryPromise=null;throw e})}
-const limits={name:[2,110],category:[3,80],region:[2,70],province:[2,70],city:[2,70],address:[3,180],phone:[0,40],whatsapp:[0,40],website:[0,250],hours:[0,150],description:[25,1200]};
-const valid=(o,fields)=>fields.every(k=>{const v=str(o[k]),[min,max]=limits[k];return v.length>=min&&v.length<=max&&(k!=="website"||!v||/^https?:\/\/[^\s]+$/i.test(v))});
+const limits={name:[2,110],category:[3,80],region:[2,70],province:[2,70],city:[2,70],address:[3,180],phone:[0,40],whatsapp:[0,40],website:[0,250],email:[0,250],hours:[0,150],description:[25,1200]};
+const valid=(o,fields)=>fields.every(k=>{const v=str(o[k]),[min,max]=limits[k];return v.length>=min&&v.length<=max&&(k!=="website"||!v||/^https?:\/\/[^\s]+$/i.test(v))&&(k!=="email"||!v||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v))});
 const requiredNew=["name","category","region","province","city","address","phone","whatsapp","website","hours","description"];
 const readBusinesses=db=>timeout(getDocs(collection(db,"directoryBusinesses")),25000,"Firebase non risponde entro 25 secondi. Controlla rete, accesso e autorizzazioni.");
 export function mountExcel({db,admin,getPublic,getUid}){
@@ -46,7 +47,7 @@ export function mountExcel({db,admin,getPublic,getUid}){
    const XLSX=await excel();const book=XLSX.read(await file.arrayBuffer(),{type:"array"}),sheet=book.Sheets.Attivita||book.Sheets[book.SheetNames[0]];
    if(!sheet)throw Error("Foglio Attivita vuoto");const rows=XLSX.utils.sheet_to_json(sheet,{defval:"",raw:false});
    if(!rows.length||rows.length>10000)throw Error("Il file deve contenere da 1 a 10.000 attività.");
-   if(!FIELDS.every(f=>Object.hasOwn(rows[0],f)))throw Error("Colonne Excel mancanti: "+FIELDS.filter(f=>!Object.hasOwn(rows[0],f)).join(", "));
+   if(!REQUIRED_FIELDS.every(f=>Object.hasOwn(rows[0],f)))throw Error("Colonne Excel mancanti: "+REQUIRED_FIELDS.filter(f=>!Object.hasOwn(rows[0],f)).join(", "));
    if(!getPublic().length)throw Error("Il catalogo pubblico non è stato caricato. Aggiorna la pagina e attendi la comparsa delle attività prima di importare.");
    const snap=await fetchSnapshot();show("Verifica di "+rows.length+" schede e duplicati...");
    const byId=new Map(snap.docs.map(d=>[d.id,d.data()]));const publicById=new Map(getPublic().map(d=>[str(d.id),d]));
@@ -54,7 +55,7 @@ export function mountExcel({db,admin,getPublic,getUid}){
    const seenIds=new Set(),seenKeys=new Set(),problems=[];let skippedPublic=0,duplicates=0,unchanged=0,updates=0,adds=0;
    for(let i=0;i<rows.length;i++){
     const r=rows[i],line=i+2,origin=str(r.origin),id=str(r.id);
-    if(!FIELDS.every(f=>Object.hasOwn(r,f))){problems.push("Riga "+line+": colonne mancanti");continue}
+    if(!REQUIRED_FIELDS.every(f=>Object.hasOwn(r,f))){problems.push("Riga "+line+": colonne mancanti");continue}
     const recordKey=key(r);
     if(id&&seenIds.has(origin+":"+id)){duplicates++;continue}if(id)seenIds.add(origin+":"+id);
     if(origin==="public-json"&&publicById.has(id)){skippedPublic++;continue}
@@ -68,8 +69,8 @@ export function mountExcel({db,admin,getPublic,getUid}){
     if(origin!=="new"&&origin!=="public-json"){problems.push("Riga "+line+": origine sconosciuta");continue}
     if(origin==="new"&&id){problems.push("Riga "+line+": per nuove schede l'ID deve essere vuoto");continue}
     if(!recordKey||existingKeys.has(recordKey)||seenKeys.has(recordKey)){duplicates++;continue}
-    if(!valid(r,requiredNew)){problems.push("Riga "+line+": campi obbligatori incompleti o non validi");continue}
-    seenKeys.add(recordKey);staging.push({kind:"add",data:Object.fromEntries(requiredNew.map(k=>[k,str(r[k])]))});adds++;
+    if(!valid(r,requiredNew)||!valid(r,["email"])){problems.push("Riga "+line+": campi obbligatori incompleti o non validi");continue}
+    seenKeys.add(recordKey);staging.push({kind:"add",data:{...Object.fromEntries(requiredNew.map(k=>[k,str(r[k])])),...(str(r.email)?{email:str(r.email)}:{})}});adds++;
    }
    report.hidden=false;
    report.querySelector("#rdi-excel-summary").textContent=updates+" aggiornamenti, "+adds+" nuove schede, "+skippedPublic+" già nel catalogo pubblico, "+duplicates+" duplicati, "+unchanged+" senza modifiche, "+problems.length+" anomalie escluse. "+problems.slice(0,12).join("; ");
