@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-26T03:37:12.087966+00:00",
+  "news_updated_at": "2026-10-26T04:03:17.450465+00:00",
   "editorial_updated_at": "2026-10-26T02:44:12.970286+01:00",
   "translations_updated_at": "2026-10-26T03:02:27.791552+00:00",
-  "feed_total": 83,
-  "feed_extended_400": 33,
-  "feed_missing_body": 50,
+  "feed_total": 84,
+  "feed_extended_400": 35,
+  "feed_missing_body": 49,
   "feed_short_body": 0,
   "editorial_total": 18,
   "archived_editorials": 29,
   "translation_records": 56,
-  "pending_total": 50,
-  "pending_filtered_out": 105,
-  "editorial_verde": 33,
-  "editorial_galben": 26,
-  "editorial_rosu": 37,
+  "pending_total": 49,
+  "pending_filtered_out": 106,
+  "editorial_verde": 35,
+  "editorial_galben": 24,
+  "editorial_rosu": 38,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -86,6 +86,16 @@
       "attempts": 0
     },
     {
+      "title": "Ardea, lângă Roma: comunitatea românească a inaugurat noua biserică „Sfânta Muceniță Cecilia”",
+      "category": "",
+      "published": "2026-10-24T08:03:00Z",
+      "url": "https://episcopia-italiei.it/stiri/ro/aplicatie/inaugurarea-noii-biserici-a-parohiei-sfanta-mucenita-cecilia-din-ardea",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato non ancora completato; verificare la fonte originale e altre fonti prima della pubblicazione.",
+      "attempts": 0
+    },
+    {
       "title": "Astra Film Festival: filmul lui Vlad Petri, cel mai bun documentar din Competiția România - Substantial.ro",
       "category": "",
       "published": "2026-10-25T16:21:31+00:00",
@@ -143,16 +153,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato assente o insufficiente; ricerca delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Epidemia de Ebola. SUA introduc o nouă obligaţie de călătorie, inclusiv pentru pasagerii care pleacă din România",
-      "category": "",
-      "published": "2026-10-25T17:54:06+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/epidemia-de-ebola-sua-introduc-o-noua-obligatie-de-calatorie-inclusiv-pentru-pasagerii-care-pleaca-din-romania-4008297",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
       "attempts": 0
     },
     {
@@ -223,16 +223,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Nazare: Nu există un cufăr de galbeni secret la Ministerul Finanţelor. România e aproape de jumătatea drumului de la deficitul de 9,3%",
-      "category": "",
-      "published": "2026-10-25T19:38:15+00:00",
-      "url": "https://www.digi24.ro/finante/nazare-nu-exista-un-cufar-de-galbeni-secret-la-ministerul-finantelor-romania-e-aproape-de-jumatatea-drumului-de-la-deficitul-de-93-4008387",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato non ancora completato; consultare la fonte originale e riscontri indipendenti",
       "attempts": 0
     },
     {
@@ -581,6 +571,15 @@
       "words": 505
     },
     {
+      "title": "Revista românului din Italia – Pagina 1770 - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-25T21:41:20+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE10OFBic25YWlBFQTAzY1NoVUdMWEV6c3hQV1AycGVqZWdfWi1SUjVVT2tRNnJ1WkZ3Mm1SQnpxQjJKZ01LZG5IaA?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Aleksandar Vucic și-a recunoscut înfrângerea în alegerile din Serbia. Liderul sârb își încheie domnia de 12 ani",
       "category": "România",
       "published": "2026-10-25T21:40:32+00:00",
@@ -712,8 +711,8 @@
       "published": "2026-10-25T19:38:15+00:00",
       "url": "https://www.digi24.ro/finante/nazare-nu-exista-un-cufar-de-galbeni-secret-la-ministerul-finantelor-romania-e-aproape-de-jumatatea-drumului-de-la-deficitul-de-93-4008387",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 438
     },
     {
       "title": "Traian Băsescu: „Stăpânul Guvernului va fi Grindeanu”. Cum ar urma să controleze PSD Executivul",
@@ -793,8 +792,8 @@
       "published": "2026-10-25T17:54:06+00:00",
       "url": "https://www.digi24.ro/stiri/externe/epidemia-de-ebola-sua-introduc-o-noua-obligatie-de-calatorie-inclusiv-pentru-pasagerii-care-pleaca-din-romania-4008297",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 427
     },
     {
       "title": "Centuripe, il borgo siciliano a forma di essere umano",
@@ -1040,19 +1039,19 @@
       "words": 0
     },
     {
-      "title": "Padova, oggi Italianissima al Don Bosco: canzoni con orchestra e Ciclamini Solidali per LILT - Padova24Ore",
+      "title": "Addestratori di robot intelligenti cercasi, un lavoro che piace ai giovani - la Repubblica",
       "category": "Italia",
-      "published": "2026-10-25T08:50:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XLWFlQXNNeTZjNXB4SktZVmtZT0VCUWNKaGtCTUgyeVpucEhkcHM2VXVjQ2FIYkNYblJqU3pKWVdHX2FpelFPTzFyTkh6Q0hzMzU3Y0RKUTAwekVKWWh1LWFmVHZjSEJXdTlYNzNvZjg3OTFUWEtzSE9XY3pFdnc?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-10-25T09:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbEszZkJrdjZFaFRlRUFMLUhMNUM0dmVMVmM4X29ycW83dTlUd1M2TUFiSG11bFRFUGo4RjZWZGRPUG82bEZMZ2REMEhyTzBnNnY3TFRxME9xay0wUThQRWFVd3dyRFJMdkpSMWxoNGY2Q1Rtb0tXOEtkekZocHNUNURUSlNPVFR0ODRoQnBwMEduOTJER05KZWE1NjV0NkJHWHMwMUJaMmtieTRkWXN4OVI3TjlUVjJ5c001bzBwLXJTU3NxNVFpWGhHSGxmZTBG?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Padova, quattro arresti dopo il corteo in stazione: il nuovo bilancio distingue i provvedimenti - Padova24Ore",
+      "title": "Padova, oggi Italianissima al Don Bosco: canzoni con orchestra e Ciclamini Solidali per LILT - Padova24Ore",
       "category": "Italia",
-      "published": "2026-10-25T08:47:31+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPajJnZ1NuN0twZmtDZmZxeVdMTkZnMTJlNDA1OU1ZaWw2MVdZVXpyWTUtWUNhc0hhXzAzeDNIM0ZPMWxNTXlUQkJqTXdNM2VUQzF3N1FXdGZhVG9uWkhMcDhVWUpranB1OTVKUmtLaUg5VjZ5cS1FT25mckxILVpPekFxMW0?oc=5",
+      "published": "2026-10-25T08:50:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1XLWFlQXNNeTZjNXB4SktZVmtZT0VCUWNKaGtCTUgyeVpucEhkcHM2VXVjQ2FIYkNYblJqU3pKWVdHX2FpelFPTzFyTkh6Q0hzMzU3Y0RKUTAwekVKWWh1LWFmVHZjSEJXdTlYNzNvZjg3OTFUWEtzSE9XY3pFdnc?oc=5",
       "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
