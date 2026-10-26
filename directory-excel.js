@@ -36,8 +36,8 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
   function error(e){alert("Import/Export: "+(e?.message||e));}
   exp.onclick=async()=>{if(!isAdmin())return;exp.disabled=true;try{
     const docs=await getDocs(collection(db,"directoryBusinesses"));
-    const fire=docs.docs.map(d=>({source:"firestore",id:d.id,...d.data()}));
-    const pub=getPublicRecords().map(r=>({source:"public-json",...r}));
+    const fire=docs.docs.map(d=>({...d.data(),source:"firestore",id:d.id}));
+    const pub=getPublicRecords().map(r=>({...r,source:"public-json"}));
     download([...pub,...fire]);alert("Esportate "+(pub.length+fire.length)+" schede. Il CSV si apre in Excel; conserva le colonne source e id.");
   }catch(e){error(e)}finally{exp.disabled=false;}};
   imp.onclick=()=>{if(isAdmin())file.click();};
@@ -48,7 +48,7 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
       if(rows.length>10000)throw Error("Troppi record (max 10.000).");
       const snap=await getDocs(collection(db,"directoryBusinesses"));
       const existing=new Map(snap.docs.map(d=>[d.id,d.data()]));
-      const used=new Set(snap.docs.map(d=>nameKey(d.data())));
+      const used=new Set([...snap.docs.map(d=>nameKey(d.data())),...getPublicRecords().map(nameKey)]);
       const seenIds=new Set();let skipped=0,invalid=[],updates=0,adds=0;
       for(const r of rows){
         if(r.source==="public-json"){skipped++;continue;}
