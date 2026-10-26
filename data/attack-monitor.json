@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-26T19:25:36.752Z",
+  "updated_at": "2026-10-26T22:55:13Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
@@ -140,12 +140,12 @@
       "type": "attack",
       "status": "reported",
       "killed": 1,
-      "injured": 5,
+      "injured": 7,
       "actor": "Un bărbat de 39 de ani arestat; motivul rasist și calificarea teroristă sunt investigate de Parchetul național antiterorist francez",
       "title_ro": "Franța: atac armat la Trappes și La Verrière, un mort și cinci răniți",
       "title_it": "Francia: sparatoria a Trappes e La Verrière, un morto e cinque feriti",
-      "description_ro": "La 23 octombrie, un atacator a tras asupra trecătorilor din Trappes și La Verrière. Reuters și AFP relatează un mort și cinci răniți, inclusiv un copil. Parchetul antiterorist francez investighează un posibil motiv rasist; calificarea juridică definitivă și responsabilitățile nu sunt stabilite. Suspectul a fost arestat și supus unei evaluări psihiatrice. Bilanțul este provizoriu; nu include autorul printre victime.",
-      "description_it": "Il 23 ottobre un uomo ha sparato contro passanti a Trappes e La Verrière. Reuters e AFP riportano un morto e cinque feriti, tra cui una minore. La Procura antiterrorismo francese indaga su un possibile movente razzista; qualificazione definitiva e responsabilità restano da accertare. Il sospettato è stato arrestato e sottoposto a valutazione psichiatrica. Bilancio provvisorio, distinto dall'autore.",
+      "description_ro": "Atacul din 23 octombrie de la Trappes și La Verrière a provocat un mort și șapte răniți (patru grav și trei ușor), conform bilanțului actualizat comunicat de procurorul antiterorist Olivier Christen la 26 octombrie și relatat de Le Monde. Bilanțul inițial de cinci răniți a fost revizuit. Parchetul investighează faptele sub încadrare teroristă și circumstanță agravantă rasistă; suspectul contestă mobilul rasist, iar vinovăția nu este stabilită prin hotărâre judecătorească. Bilanț provizoriu, fără autor în rândul victimelor.",
+      "description_it": "L'attacco del 23 ottobre a Trappes e La Verrière ha causato un morto e sette feriti (quattro gravi e tre lievi), secondo il bilancio aggiornato comunicato il 26 ottobre dal procuratore antiterrorismo Olivier Christen e riportato da Le Monde. Il dato iniziale di cinque feriti è stato rivisto. La procura indaga con qualificazione terroristica e aggravante razzista; l'indagato nega il movente razzista e non esiste una condanna. Bilancio provvisorio, aggressore escluso dalle vittime.",
       "sources": [
         {
           "name": "Reuters, 23 ottobre 2026",
@@ -158,6 +158,10 @@
         {
           "name": "Le Monde, 24 ottobre 2026",
           "url": "https://www.lemonde.fr/societe/article/2026/10/24/attentat-raciste-de-trappes-le-tireur-presume-a-dit-avoir-voulu-venger-les-commercants-pilles-le-17-octobre-et-avoir-cible-des-personnes-de-couleur_6799689_3224.html"
+        },
+        {
+          "name": "Le Monde, conferenza del procuratore antiterrorismo, 26 ottobre 2026",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/26/attentat-de-trappes-la-garde-a-vue-de-kevin-t-a-repris-lundi-apres-un-nouvel-examen-psychiatrique_6800828_3224.html"
         }
       ]
     },
