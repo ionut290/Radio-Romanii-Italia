@@ -14,7 +14,7 @@ test("public map has documented incidents with unique IDs, defensible coordinate
   for(const v of incidents.items){
     assert.ok(v.id && !ids.has(v.id));ids.add(v.id);
     assert.match(v.date,iso);
-    assert.ok(v.date<="2026-10-26","Never label a future event historical in this fixture");
+    assert.ok(v.date<=new Date().toISOString().slice(0,10),"Never label a future event historical");
     assert.ok(Number.isFinite(v.lat)&&Number.isFinite(v.long)&&Math.abs(v.lat)<=90&&Math.abs(v.long)<=180);
     assert.ok(v.precision && v.precision.startsWith("approx"));
     assert.ok(["attack","foiled"].includes(v.type));
@@ -25,7 +25,8 @@ test("public map has documented incidents with unique IDs, defensible coordinate
   }
 });
 test("incidents link only to real RDI article IDs",()=>{
-  const ids=new Set(articles.items.map(x=>x.id));
+  const archive=JSON.parse(text("data/editorial-archive.json"));
+  const ids=new Set([...articles.items,...archive.items].map(x=>x.id));
   for(const v of incidents.items)if(v.rdi_article_id) assert.ok(ids.has(v.rdi_article_id),v.rdi_article_id);
 });
 test("candidate reports are kept out of the published map and editorial feed by default",()=>{
@@ -40,4 +41,5 @@ test("navigation, map, translation, and provenance links exist",()=>{
   assert.match(text("harta-atacurilor.html"),/harta-atacurilor\.js/);
   assert.match(text("harta-atacurilor.js"),/data\/attack-monitor\.json/);
   assert.match(text("harta-atacurilor.html"),/openstreetmap\.org\/copyright/);
+  assert.match(text("harta-atacurilor.js"),/observator-articol\.html/);
 });
