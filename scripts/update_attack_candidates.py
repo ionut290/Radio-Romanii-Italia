@@ -1,24 +1,40 @@
 #!/usr/bin/env python3
-"""Daily, polite, non-publishing CSPII lead monitor for the RDI editorial desk.
+"""RDI worldwide conflict/attack lead discovery. Not an automatic news publisher.
 
-This is NOT a terrorism classifier and NOT an automated fact checker.
-Rows are leads only. No row is automatically put onto the public map,
-counted in statistics, or published as a news article.
+Sources: CSPII listing, GDELT article search, and multilingual Google News RSS.
+ALL rows are editorial leads only. Never publish them to the map or as news.
+Publication dates from news aggregators must not be mistaken for event dates.
 """
 from __future__ import annotations
 
 import datetime as dt
+import email.utils
 import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 
-SOURCE = "https://www.cspii.org/attacks"
 OUTPUT = Path("data/attack-candidates.json")
+SOURCE = "https://www.cspii.org/attacks"
 DAYS = 35
-MAX_ITEMS = 200
+MAX_ITEMS = 240
+TIMEOUT = 24
+USER_AGENT = "RDI-EditorialMonitor/1.1 (+https://radioromanii.duckdns.org/; daily non-commercial research)"
+
+GOOGLE_QUERIES = [
+    ("en", "US", "US:en", '"terror attack" OR "bomb attack" OR "militant attack" when:2d'),
+    ("it", "IT", "IT:it", 'attentato OR "attacco armato" OR "attacco terroristico" when:2d'),
+    ("es", "ES", "ES:es", 'atentado OR "ataque armado" OR "ataque terrorista" when:2d'),
+    ("fr", "FR", "FR:fr", 'attentat OR "attaque armée" OR "attaque terroriste" when:2d'),
+]
+GDELT_QUERIES = [
+    '"terrorist attack" OR "bomb attack" OR "militant attack"',
+    '"armed assault" OR "suicide bombing" OR "terror plot"',
+]
 
 class TableParser(HTMLParser):
     def __init__(self):
@@ -56,94 +72,200 @@ class TableParser(HTMLParser):
         elif tag == "table":
             self.table_depth = max(0, self.table_depth - 1)
 
-def decode_row(cells, today):
-    try:
-        when = dt.datetime.strptime(cells[0], "%B %d, %Y").date()
-    except ValueError:
-        return None
-    # Source occasionally has future-dated listings. NEVER present them as historical attacks.
-    if when > today or when < today - dt.timedelta(days=DAYS):
-        return None
-    country = cells[1].strip()[:100]
-    if not country:
-        return None
-    # Descriptions can contain empty columns; preserve only uncontroversial lead metadata.
-    description = cells[-1].strip()[:300]
-    middle = cells[2:-1]
-    city = middle[0][:100] if middle and not middle[0].isdigit() else ""
-    if not description or description.lower() == "description":
-        return None
-    kind = "potential_plot" if re.search(r"\b(planned|plot|foiled|threat|arrested|attempted)\b",description,re.I) else "reported_incident"
-    key = f"{when.isoformat()}|{country.casefold()}|{city.casefold()}|{description.casefold()}"
-    item_id = "lead-" + hashlib.sha256(key.encode()).hexdigest()[:18]
-    return {
-        "id":item_id,"date":when.isoformat(),"country":country,
-        "place":city,"description_en":description,
-        "kind_hint":kind,"review_state":"pending",
-        "attribution":"Source lead only; no independent check performed",
-        "source_url":SOURCE,
-    }
-
-def download_html():
-    req=urllib.request.Request(SOURCE,headers={
-        "User-Agent":"RDI-EditorialMonitor/1.0 (+https://radioromanii.duckdns.org/; one request daily)",
-        "Accept":"text/html",
-        "Accept-Language":"en",
+def read_url(url, accept="application/json, application/rss+xml, text/html"):
+    parsed = urllib.parse.urlparse(url)
+    if parsed.scheme != "https" or parsed.hostname not in {
+        "www.cspii.org", "news.google.com", "api.gdeltproject.org"
+    }:
+        raise ValueError("Disallowed feed host")
+    request = urllib.request.Request(url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": accept,
+        "Accept-Language": "en",
     })
-    with urllib.request.urlopen(req, timeout=30) as res:
-        content_type=res.headers.get("content-type","").lower()
-        if "html" not in content_type:
-            raise ValueError("Expected HTML: "+content_type)
-        raw=res.read(2_000_001)
-    if len(raw)>2_000_000:
-        raise ValueError("HTML size exceeds safe limit")
-    return raw.decode("utf-8","replace")
+    with urllib.request.urlopen(request, timeout=TIMEOUT) as response:
+        raw = response.read(2_000_001)
+        if len(raw) > 2_000_000:
+            raise ValueError("Feed exceeds size limit")
+        return raw.decode("utf-8", "replace")
 
-def process(html, old, today):
-    parser=TableParser()
-    parser.feed(html)
-    if len(parser.rows)<3:
-        raise ValueError("No readable HTML table found; do not publish any content")
-    prior = {r["id"]:r for r in old.get("items",[]) if isinstance(r,dict) and r.get("id")}
-    found = {}
-    for cells in parser.rows[:120]:
-        lead=decode_row(cells,today)
-        if not lead:
-            continue
-        entry=prior.get(lead["id"],{})
-        # Preserve human editorial assessments, never silently promote unverified leads.
-        for field in ("review_state","editorial_notes","independent_sources","reviewed_by","reviewed_at"):
-            if field in entry:
-                lead[field]=entry[field]
-        found[lead["id"]]=lead
-    for key,old_item in prior.items():
+def get_iso(value):
+    try:
+        stamp = email.utils.parsedate_to_datetime(value)
+        if stamp is not None:
+            return stamp.date().isoformat()
+    except (TypeError, ValueError, OverflowError):
+        pass
+    try:
+        return dt.datetime.fromisoformat(str(value).replace("Z","+00:00")).date().isoformat()
+    except (TypeError, ValueError, OverflowError):
+        return None
+
+def plausible_date(value, today):
+    if not value:
+        return False
+    try:
+        parsed = dt.date.fromisoformat(value)
+        return today - dt.timedelta(days=DAYS) <= parsed <= today
+    except (ValueError, TypeError):
+        return False
+
+def lead_id(key):
+    return "lead-" + hashlib.sha256(key.encode("utf-8")).hexdigest()[:18]
+
+def kind_hint(description):
+    # Automated detection is only an editorial clue; it is NOT classification.
+    return "potential_plot" if re.search(r"\b(planned|plot|foiled|threat|arrested|attempted|sventato|complot|menace|frustrado)\b", description, re.I) else "reported_incident"
+
+def cspii_leads(today):
+    parser = TableParser()
+    parser.feed(read_url(SOURCE, "text/html"))
+    if len(parser.rows) < 3:
+        raise ValueError("CSPII table missing/empty")
+    leads = []
+    for cells in parser.rows[:130]:
         try:
-            date=dt.date.fromisoformat(old_item["date"])
-            if date >= today-dt.timedelta(days=DAYS) and key not in found:
-                found[key]=old_item
-        except (KeyError,TypeError,ValueError):
-            pass
-    items=sorted(found.values(),key=lambda v:(v["date"],v["id"]),reverse=True)[:MAX_ITEMS]
-    if not items:
-        raise ValueError("No valid non-future rows found; leaving previous data untouched")
-    return items,len(parser.rows)
+            when = dt.datetime.strptime(cells[0], "%B %d, %Y").date().isoformat()
+        except (ValueError, IndexError):
+            continue
+        if not plausible_date(when,today) or len(cells)<3:
+            continue
+        country = cells[1].strip()[:100]
+        description = cells[-1].strip()[:350]
+        mid = cells[2:-1]
+        place = mid[0][:100] if mid and not mid[0].isdigit() else ""
+        if not country or not description or description.lower()=="description":
+            continue
+        key=f"{when}|{country.casefold()}|{place.casefold()}|{description.casefold()}"
+        leads.append({
+            "id":lead_id(key), "date":when,"date_kind":"source_claimed_incident_date",
+            "country":country,"place":place,"description_en":description,
+            "kind_hint":kind_hint(description),"review_state":"pending",
+            "attribution":"Single source claim. No independent verification.",
+            "source_id":"cspii","source_name":"CSPII / TheReligionOfPeace",
+            "source_url":SOURCE, "event_date_confirmed":False
+        })
+    return leads
+
+def google_news_leads(today):
+    result=[]
+    for lang,geo,ceid,query in GOOGLE_QUERIES:
+        url = "https://news.google.com/rss/search?" + urllib.parse.urlencode({
+            "q":query, "hl":lang,"gl":geo,"ceid":ceid
+        })
+        xml = ET.fromstring(read_url(url,"application/rss+xml"))
+        for item in xml.findall(".//channel/item")[:35]:
+            title = (item.findtext("title") or "").strip()[:300]
+            article_url = (item.findtext("link") or "").strip()
+            observed = get_iso(item.findtext("pubDate") or "")
+            if not title or not article_url.startswith("https://") or not plausible_date(observed,today):
+                continue
+            publisher = (item.findtext("source") or "").strip()[:120]
+            item_id = lead_id("google|" + article_url.split("?")[0])
+            result.append({
+                "id":item_id,"date":observed,
+                "date_kind":"article_publication_date_NOT_event_date",
+                "country":"","place":"","description_en":title,
+                "kind_hint":"unclassified_news_lead","review_state":"pending",
+                "attribution":"Search discovery only. Incident, date, actors and motives unverified.",
+                "source_id":"google_news_"+lang, "source_name":"Google News search / "+lang,
+                "publisher":publisher,"source_url":article_url,
+                "event_date_confirmed":False
+            })
+    return result
+
+def gdelt_leads(today):
+    result=[]
+    for query in GDELT_QUERIES:
+        url = "https://api.gdeltproject.org/api/v2/doc/doc?" + urllib.parse.urlencode({
+            "query":query,"mode":"artlist","format":"json","maxrecords":60,
+            "timespan":"2d","sort":"datedesc"
+        })
+        document=json.loads(read_url(url,"application/json"))
+        for art in document.get("articles", [])[:60]:
+            if not isinstance(art,dict):
+                continue
+            article_url=str(art.get("url") or "")[:1200]
+            title=str(art.get("title") or "").strip()[:300]
+            seen=str(art.get("seendate") or "").strip()
+            try:
+                stamp=dt.datetime.strptime(seen[:14],"%Y%m%d%H%M%S").date().isoformat()
+            except ValueError:
+                stamp=get_iso(seen)
+            if not article_url.startswith("https://") or not title or not plausible_date(stamp,today):
+                continue
+            result.append({
+                "id":lead_id("gdelt|" + article_url.split("?")[0]),
+                "date":stamp,"date_kind":"article_observed_date_NOT_event_date",
+                "country":"","place":"","description_en":title,
+                "kind_hint":"unclassified_news_lead","review_state":"pending",
+                "attribution":"News index lead; do not infer confirmed incident or motive.",
+                "source_id":"gdelt","source_name":"GDELT DOC 2.0",
+                "publisher":str(art.get("domain") or "")[:120],
+                "source_url":article_url,"event_date_confirmed":False
+            })
+    return result
+
+def merge_candidates(new, old, today):
+    preserved={}
+    for item in old.get("items",[]):
+        if isinstance(item,dict) and item.get("id") and plausible_date(item.get("date"),today):
+            preserved[item["id"]]=item
+    for item in new:
+        prior=preserved.get(item["id"],{})
+        if prior:
+            for field in ("review_state","editorial_notes","independent_sources","reviewed_by","reviewed_at"):
+                if field in prior:
+                    item[field]=prior[field]
+        preserved[item["id"]]=item
+    # Preserve reviewed entries preferentially even when many feed results arrive.
+    result=sorted(preserved.values(),key=lambda v:(
+        v.get("review_state") not in ("verified","rejected","needs_followup"),
+        v.get("date",""),v.get("id","")
+    ),reverse=True)
+    # Date-prioritization of unreviewed entries, with retained reviewed entries.
+    reviewed=[x for x in result if x.get("review_state") not in ("pending",None)]
+    pending=sorted((x for x in result if x.get("review_state") in ("pending",None)),
+                   key=lambda v:(v.get("date",""),v.get("id","")),reverse=True)
+    return (reviewed[:60] + pending)[:MAX_ITEMS]
 
 def main():
     today=dt.datetime.now(dt.timezone.utc).date()
-    old=json.loads(OUTPUT.read_text(encoding="utf8")) if OUTPUT.exists() else {"items":[]}
-    items,total=process(download_html(),old,today)
-    out={
-        "schema_version":1,
+    old=json.loads(OUTPUT.read_text(encoding="utf-8")) if OUTPUT.exists() else {"items":[]}
+    new=[]
+    status={}
+    for name,loader in (
+        ("cspii",cspii_leads),
+        ("google_news",google_news_leads),
+        ("gdelt",gdelt_leads),
+    ):
+        try:
+            found=loader(today)
+            new.extend(found)
+            status[name]={"status":"ok","new_leads":len(found)}
+            print(f"{name}: {len(found)} possible leads")
+        except Exception as exc:
+            status[name]={"status":"error","error_type":type(exc).__name__}
+            print(f"{name}: unavailable ({type(exc).__name__}); preserving prior leads")
+    if not any(v["status"]=="ok" for v in status.values()):
+        raise SystemExit("All feeds unavailable; keeping last published candidates JSON untouched")
+    items=merge_candidates(new,old,today)
+    output={
+        "schema_version":2,
         "updated_at":dt.datetime.now(dt.timezone.utc).isoformat(),
-        "source":SOURCE,
         "state":"leads_pending_manual_verification",
-        "notice":"These are unverified source leads. They are NOT on the public map and never auto-published as articles.",
-        "raw_rows_read":total,
+        "notice":"Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
+        "sources":{
+            "cspii":"https://www.cspii.org/attacks",
+            "gdelt":"https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+            "google_news":"https://news.google.com/"
+        },
+        "source_status":status,
         "items":items
     }
     OUTPUT.parent.mkdir(parents=True,exist_ok=True)
-    OUTPUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
-    print(f"Collected {len(items)} possible leads from {total} source rows; no public publication.")
+    OUTPUT.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print(f"Editorial queue: {len(items)} leads, 0 automatically published.")
 
 if __name__=="__main__":
     main()
