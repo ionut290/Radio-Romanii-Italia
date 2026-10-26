@@ -16,6 +16,7 @@ from pathlib import Path
 import re
 import urllib.parse
 import urllib.request
+import urllib.error
 import xml.etree.ElementTree as ET
 
 OUTPUT = Path("data/attack-candidates.json")
@@ -31,9 +32,9 @@ GOOGLE_QUERIES = [
     ("es", "ES", "ES:es", 'atentado OR "ataque armado" OR "ataque terrorista" when:2d'),
     ("fr", "FR", "FR:fr", 'attentat OR "attaque armée" OR "attaque terroriste" when:2d'),
 ]
+# One combined request per daily run to minimize rate limiting. No repeat/retry storm.
 GDELT_QUERIES = [
-    '"terrorist attack" OR "bomb attack" OR "militant attack"',
-    '"armed assault" OR "suicide bombing" OR "terror plot"',
+    '("terrorist attack" OR "bomb attack" OR "militant attack" OR "armed assault" OR "suicide bombing" OR "terror plot")',
 ]
 
 class TableParser(HTMLParser):
@@ -273,6 +274,10 @@ def main():
             print(f"{name}: {len(found)} possible leads")
         except Exception as exc:
             status[name]={"status":"error","error_type":type(exc).__name__}
+            if isinstance(exc, urllib.error.HTTPError):
+                status[name]["http_status"]=exc.code
+                if exc.code == 429:
+                    status[name]["status"]="rate_limited"
             print(f"{name}: unavailable ({type(exc).__name__}); preserving prior leads")
     if not any(v["status"]=="ok" for v in status.values()):
         raise SystemExit("All feeds unavailable; keeping last published candidates JSON untouched")
