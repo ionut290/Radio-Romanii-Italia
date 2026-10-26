@@ -111,7 +111,7 @@ async function loadPublicDirectory(){
        const entry=Object.hasOwn(details,b.id)?details[b.id]:null;
        if(entry?.reviewHold){heldPublicRecords++;continue;}
        if(!entry||typeof entry!=="object"){next.push(b);continue;}
-       const fields=["description","services","products","prices","languages","payments","access","delivery","hours","phone","whatsapp","email","facebookUrl","instagramUrl","website","address","bookingUrl","menuUrl","tripadvisorUrl","googleMapsUrl","googlePlaceId","locationPrecision","detailsSourceUrl","detailsSourceName","detailsCheckedAt","verificationDetail","locationSourceUrl"];
+       const fields=["description","services","products","prices","languages","payments","access","delivery","hours","phone","whatsapp","email","facebookUrl","instagramUrl","website","address","bookingUrl","menuUrl","tripadvisorUrl","googleMapsUrl","googlePlaceId","locationPrecision","detailsSourceUrl","detailsSourceName","detailsCheckedAt","contactSourceUrl","contactVerification","contactCheckedAt","phoneSourceUrl","phoneCheckedAt","whatsappSourceUrl","whatsappCheckedAt","verificationDetail","locationSourceUrl"];
        const approved=Object.fromEntries(fields.filter(k=>typeof entry[k]==="string").map(k=>[k,entry[k]]));
        if(approved.verificationDetail==="official-source"||approved.verificationDetail==="public-directory")verifiedDetailCount++;
        const coordinates=typeof entry.lat==="number"&&typeof entry.lng==="number"&&Number.isFinite(entry.lat)&&Number.isFinite(entry.lng)&&entry.lat>=35&&entry.lat<=48&&entry.lng>=6&&entry.lng<=19?{lat:entry.lat,lng:entry.lng}:{};
