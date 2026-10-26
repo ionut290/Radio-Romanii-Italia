@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-26T19:30:00Z",
+  "notice_ro": "Știri din zone de conflict publicate azi și verificate editorial. Data publicării nu este automat data incidentului. Pozițiile sunt aproximative și nu indică ținte militare.",
+  "notice_it": "Notizie dalle zone di conflitto pubblicate oggi e verificate editorialmente. La data di pubblicazione non coincide necessariamente con quella degli eventi. Posizioni solo indicative, senza obiettivi militari.",
+  "items": [
+    {
+      "id": "war-kharkiv-20261026",
+      "published_date": "2026-10-26",
+      "event_date": "2026-10-26",
+      "region": "Ucraina",
+      "place": "Harkiv, Ucraina",
+      "lat": 49.99,
+      "long": 36.23,
+      "precision": "approx_city",
+      "title_ro": "Harkiv: două persoane ucise și patru rănite în lovituri cu rachete",
+      "title_it": "Kharkiv: due morti e quattro feriti in attacchi missilistici",
+      "summary_ro": "Reuters citează primarul Ihor Terehov: trei lovituri au afectat locuințe din oraș. În regiunea Dnipropetrovsk, autoritățile au raportat și atacuri cu drone și artilerie. Bilanțuri preliminare, atribuite surselor locale.",
+      "summary_it": "Secondo Reuters, il sindaco Ihor Terekhov ha riferito di tre attacchi e danni alle abitazioni. Le autorità hanno segnalato anche attacchi con droni e artiglieria nella regione di Dnipropetrovsk. Bilanci provvisori attribuiti alle fonti locali.",
+      "source_name": "Reuters / Internazionale",
+      "source_url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/26/russian-missile-strikes-on-ukraine-s-kharkiv-kill-two-injure-four-mayor-says"
+    },
+    {
+      "id": "war-hebron-20261026",
+      "published_date": "2026-10-26",
+      "event_date": null,
+      "region": "Cisiordania",
+      "place": "Hebron, Cisiordania",
+      "lat": 31.53,
+      "long": 35.09,
+      "precision": "approx_city",
+      "title_ro": "Hebron: ONU avertizează asupra agravării situației civile",
+      "title_it": "Hebron: l'ONU avverte sull'aggravarsi della situazione dei civili",
+      "summary_ro": "Organizația Națiunilor Unite își exprimă îngrijorarea pentru restricțiile și operațiunea militară israeliană din Cisiordania după un atac mortal asupra unor soldați. Datele despre deplasări și restricții provin din rapoarte ONU; evoluția este în curs.",
+      "summary_it": "Le Nazioni Unite segnalano gravi preoccupazioni per le restrizioni e l'operazione militare israeliana in Cisgiordania dopo un attacco mortale a soldati. I dati sugli sfollamenti e sulle restrizioni provengono dalle fonti ONU; la situazione resta in evoluzione.",
+      "source_name": "Nazioni Unite / UN Palestine",
+      "source_url": "https://palestine.un.org/en/325150-west-bank-guterres-alarmed-israel-imposes-sweeping-closures-after-deadly-hebron-attack"
+    },
+    {
+      "id": "war-oleshky-20261026",
+      "published_date": "2026-10-26",
+      "event_date": null,
+      "region": "Ucraina",
+      "place": "Oleșkî, regiunea Herson, Ucraina",
+      "lat": 46.63,
+      "long": 32.72,
+      "precision": "approx_city",
+      "title_ro": "Oleșkî: acuzații reciproce înaintea unui armistițiu umanitar local",
+      "title_it": "Oleshky: accuse non verificate prima della tregua umanitaria locale",
+      "summary_ro": "Ministerul rus al Apărării a acuzat Ucraina de bombardamente și lovituri cu drone în ultima săptămână, înainte de un armistițiu local planificat pentru 27 octombrie. Reuters precizează că nu a putut verifica independent aceste acuzații; poziția Ucrainei nu era disponibilă în relatare.",
+      "summary_it": "Il ministero della Difesa russo accusa l'Ucraina di attacchi con artiglieria e droni nella settimana precedente la tregua locale prevista per il 27 ottobre. Reuters dichiara di non aver potuto verificare autonomamente le accuse; nell'articolo non è riportata una risposta immediata ucraina.",
+      "source_name": "Reuters / Internazionale",
+      "source_url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/26/russia-says-ukraine-has-repeatedly-struck-oleshky-with-artillery-and-drones-ahead-of-local-ceasefire"
+    }
+  ]
+}
