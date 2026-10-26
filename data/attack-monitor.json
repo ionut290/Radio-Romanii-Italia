@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-26T18:59:56Z",
+  "updated_at": "2026-10-26T19:05:00Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
@@ -158,6 +158,37 @@
         {
           "name": "Le Monde, 24 ottobre 2026",
           "url": "https://www.lemonde.fr/societe/article/2026/10/24/attentat-raciste-de-trappes-le-tireur-presume-a-dit-avoir-voulu-venger-les-commercants-pilles-le-17-octobre-et-avoir-cible-des-personnes-de-couleur_6799689_3224.html"
+        }
+      ]
+    },
+    {
+      "id": "rdi-iordania-karak-20261023",
+      "date": "2026-10-23",
+      "date_label": "23 octombrie 2026",
+      "reported_on": "2026-10-26",
+      "country": "Jordan",
+      "country_code": "JO",
+      "place": "Regiunea Karak (zona Hmoud)",
+      "lat": 31.18,
+      "long": 35.7,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": 9,
+      "injured": 34,
+      "actor": "Trei suspecți arestați la 26 octombrie, potrivit poliției; responsabilitatea nu a fost revendicată de vreun grup",
+      "title_ro": "Atac armat în timpul unei înmormântări la o biserică din Iordania",
+      "title_it": "Attacco armato durante un funerale in una chiesa in Giordania",
+      "description_ro": "Un atac armat petrecut la 23 octombrie, în timpul unei înmormântări la o biserică greco-ortodoxă din zona Karak, a provocat nouă morți și 34 de răniți, potrivit bilanțurilor relatate la 26 octombrie. Autoritățile au anunțat arestarea a trei suspecți; niciun grup nu a revendicat atacul. Cifrele au fost revizuite față de relatările inițiale.",
+      "description_it": "Un attacco a colpi d'arma da fuoco durante un funerale in una chiesa greco-ortodossa nella zona di Karak, il 23 ottobre, ha provocato nove morti e 34 feriti secondo i bilanci riferiti il 26 ottobre. Le autorità hanno annunciato l'arresto di tre sospettati; nessun gruppo ha rivendicato l'attacco. I numeri sono stati aggiornati rispetto alle prime notizie.",
+      "sources": [
+        {
+          "name": "Associated Press, aggiornamento 26 ottobre",
+          "url": "https://apnews.com/article/jordan-church-shooting-karak-arrests-c3f87a077a08b4fcf7a15b169a83a6b5"
+        },
+        {
+          "name": "People, 26 ottobre 2026",
+          "url": "https://people.com/3-men-arrested-after-gunmen-opened-fire-during-church-funeral-killing-9-injuring-34-12194106"
         }
       ]
     }
