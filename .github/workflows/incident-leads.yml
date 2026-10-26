@@ -1,0 +1,44 @@
+name: RDI - Monitorizare incidente (semnalări)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 7 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: rdi-incident-leads
+  cancel-in-progress: false
+jobs:
+  gather-candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate script
+        run: python -m py_compile scripts/update_attack_candidates.py
+      - name: Check one public source for non-verified incident leads
+        run: python scripts/update_attack_candidates.py
+      - name: Save editor inbox, never alter public map or news
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain -- data/attack-candidates.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/attack-candidates.json
+            git commit -m "RDI: refresh unverified incident leads for editorial review"
+            for attempt in 1 2 3; do
+              if git pull --rebase origin main && git push origin HEAD:main; then
+                exit 0
+              fi
+              git rebase --abort || true
+              sleep 3
+            done
+            exit 1
+          fi
