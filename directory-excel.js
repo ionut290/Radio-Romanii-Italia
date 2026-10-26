@@ -24,6 +24,23 @@ function parseCsv(text){
   if(!FIELDS.every(k=>headers.includes(k)))throw Error("Colonne mancanti: "+FIELDS.filter(k=>!headers.includes(k)).join(", "));
   return rows.map((cells,i)=>({line:i+2,...Object.fromEntries(headers.map((h,j)=>[h,clean(cells[j])]))}));
 }
+async function readSpreadsheet(file){
+  if(/\.csv$/i.test(file.name))return parseCsv(await file.text());
+  if(!/\.xlsx?$/i.test(file.name))throw Error("Formato non supportato: carica .xlsx, .xls o .csv");
+  if(!window.XLSX){
+    await new Promise((resolve,reject)=>{
+      const script=document.createElement("script");
+      script.src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js";
+      script.onload=resolve;script.onerror=()=>reject(Error("Impossibile caricare il lettore Excel."));
+      document.head.append(script);
+    });
+  }
+  const book=window.XLSX.read(await file.arrayBuffer(),{type:"array",cellDates:false});
+  const sheet=book.Sheets[book.SheetNames[0]];
+  if(!sheet)throw Error("Foglio Excel vuoto.");
+  const rows=window.XLSX.utils.sheet_to_json(sheet,{defval:"",raw:false});
+  return rows.map((r,i)=>({line:i+2,...Object.fromEntries(Object.entries(r).map(([k,v])=>[clean(k),clean(v)]))}));
+}
 function download(rows){
   const blob=new Blob([csv(rows)],{type:"text/csv;charset=utf-8"});
   const url=URL.createObjectURL(blob),link=document.createElement("a");
@@ -47,7 +64,8 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
   file.onchange=async()=>{if(!isAdmin()||!file.files[0])return;apply.disabled=true;staged=[];
     try{
       if(file.files[0].size>8_000_000)throw Error("File oltre 8 MB.");
-      const rows=parseCsv(await file.files[0].text());
+      const rows=await readSpreadsheet(file.files[0]);
+      if(rows.some(r=>!FIELDS.every(k=>Object.hasOwn(r,k))))throw Error("Colonne obbligatorie mancanti nel file Excel.");
       if(rows.length>10000)throw Error("Troppi record (max 10.000).");
       const snap=await getDocs(collection(db,"directoryBusinesses"));
       const existing=new Map(snap.docs.map(d=>[d.id,d.data()]));
