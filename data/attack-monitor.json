@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-26T19:05:00Z",
+  "updated_at": "2026-10-26T19:40:00Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
@@ -189,6 +189,41 @@
         {
           "name": "People, 26 ottobre 2026",
           "url": "https://people.com/3-men-arrested-after-gunmen-opened-fire-during-church-funeral-killing-9-injuring-34-12194106"
+        }
+      ]
+    },
+    {
+      "id": "rdi-ukraine-kharkiv-20261026",
+      "date": "2026-10-26",
+      "date_label": "26 octombrie 2026",
+      "reported_on": "2026-10-26",
+      "country": "Ucraina",
+      "country_code": "UA",
+      "place": "Harkiv, Ucraina",
+      "lat": 49.99,
+      "long": 36.23,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": 2,
+      "injured": 4,
+      "actor": "Lovituri rusești cu rachete, potrivit autorităților locale citate de Reuters",
+      "title_ro": "Ucraina: două persoane ucise și patru rănite în atacuri la Harkiv",
+      "title_it": "Ucraina: due morti e quattro feriti negli attacchi a Kharkiv",
+      "description_ro": "Reuters și Interfax-Ucraina relatează, citând primarul orașului Harkiv, două persoane ucise și patru rănite în trei lovituri care au avariat locuințe și vehicule la 26 octombrie. Bilanțul este atribuit autorităților și poate fi revizuit.",
+      "description_it": "Reuters e Interfax-Ucraina riferiscono, citando il sindaco di Kharkiv, di due morti e quattro feriti dopo tre attacchi del 26 ottobre che hanno danneggiato abitazioni e veicoli. Il bilancio è attribuito alle autorità e può cambiare.",
+      "sources": [
+        {
+          "name": "Reuters / Internazionale, 26 ottobre",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/26/russian-missile-strikes-on-ukraine-s-kharkiv-kill-two-injure-four-mayor-says"
+        },
+        {
+          "name": "Interfax-Ucraina, 26 ottobre",
+          "url": "https://en.interfax.com.ua/news/general/1226348.html"
+        },
+        {
+          "name": "Ukrainska Pravda, 26 ottobre",
+          "url": "https://www.pravda.com.ua/eng/news/2026/10/26/8059817/"
         }
       ]
     }
