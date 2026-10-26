@@ -1,8 +1,9 @@
 // Admin-only Excel workflow: bounded loading, verified preview and safe bulk import.
 import {collection,getDocs,doc,updateDoc,addDoc,serverTimestamp,writeBatch} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
-const FIELDS=["origin","id","name","category","region","province","city","address","phone","whatsapp","website","hours","description","status","email"];
-const REQUIRED_FIELDS=FIELDS.filter(k=>k!=="email");
+const FIELDS=["origin","id","name","category","region","province","city","address","phone","whatsapp","website","hours","description","status","email","contactSourceUrl"];
+const REQUIRED_FIELDS=FIELDS.filter(k=>k!=="email"&&k!=="contactSourceUrl");
 const EDIT=["name","address","phone","whatsapp","website","hours","description","email"];
+const PUBLIC_EDIT=["address","phone","whatsapp","email","website","hours","description"];
 const str=x=>String(x??"").trim();
 const normalize=x=>str(x).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("it").replace(/[^\p{L}\p{N}]+/gu," ").trim();
 const key=b=>[b.name,b.city,b.address].map(normalize).join("|");
@@ -52,13 +53,26 @@ export function mountExcel({db,admin,getPublic,getUid}){
    const snap=await fetchSnapshot();show("Verifica di "+rows.length+" schede e duplicati...");
    const byId=new Map(snap.docs.map(d=>[d.id,d.data()]));const publicById=new Map(getPublic().map(d=>[str(d.id),d]));
    const existingKeys=new Set([...snap.docs.map(d=>key(d.data())),...getPublic().map(key)]);
-   const seenIds=new Set(),seenKeys=new Set(),problems=[];let skippedPublic=0,duplicates=0,unchanged=0,updates=0,adds=0;
+   const seenIds=new Set(),seenKeys=new Set(),problems=[];let publicUpdates=0,blockedPublic=0,duplicates=0,unchanged=0,updates=0,adds=0;
    for(let i=0;i<rows.length;i++){
     const r=rows[i],line=i+2,origin=str(r.origin),id=str(r.id);
     if(!REQUIRED_FIELDS.every(f=>Object.hasOwn(r,f))){problems.push("Riga "+line+": colonne mancanti");continue}
     const recordKey=key(r);
     if(id&&seenIds.has(origin+":"+id)){duplicates++;continue}if(id)seenIds.add(origin+":"+id);
-    if(origin==="public-json"&&publicById.has(id)){skippedPublic++;continue}
+    if(origin==="public-json"){
+     if(!id||!publicById.has(id)){problems.push("Riga "+line+": ID pubblico non trovato");continue}
+     const before=publicById.get(id);
+     const changes=Object.fromEntries(PUBLIC_EDIT.filter(k=>str(r[k])&&str(before[k])!==str(r[k])).map(k=>[k,str(r[k])]));
+     if(!Object.keys(changes).length){unchanged++;continue}
+     if(!valid(changes,Object.keys(changes))){problems.push("Riga "+line+": correzione pubblica non valida");continue}
+     const source=str(r.contactSourceUrl);
+     if(["phone","whatsapp","email"].some(k=>Object.hasOwn(changes,k))){
+      if(!/^https:\/\/[^\s]+$/i.test(source)){problems.push("Riga "+line+": per nuovi recapiti pubblici serve contactSourceUrl HTTPS verificabile");continue}
+      changes.contactSourceUrl=source;
+     }
+     if(Object.hasOwn(changes,"address"))changes.locationPrecision="city";
+     staging.push({kind:"public",id,changes});publicUpdates++;continue;
+    }
     if(origin==="firestore"){
      if(!id||!byId.has(id)){problems.push("Riga "+line+": ID Firestore sconosciuto");continue}
      const old=byId.get(id);const changes=Object.fromEntries(EDIT.filter(k=>str(r[k])&&str(old[k])!==str(r[k])).map(k=>[k,str(r[k])]));
@@ -66,14 +80,18 @@ export function mountExcel({db,admin,getPublic,getUid}){
      if(!valid(changes,Object.keys(changes))){problems.push("Riga "+line+": valori da aggiornare non validi");continue}
      staging.push({kind:"update",id,changes});updates++;continue;
     }
-    if(origin!=="new"&&origin!=="public-json"){problems.push("Riga "+line+": origine sconosciuta");continue}
+    if(origin!=="new"){problems.push("Riga "+line+": origine sconosciuta");continue}
     if(origin==="new"&&id){problems.push("Riga "+line+": per nuove schede l'ID deve essere vuoto");continue}
     if(!recordKey||existingKeys.has(recordKey)||seenKeys.has(recordKey)){duplicates++;continue}
     if(!valid(r,requiredNew)||!valid(r,["email"])){problems.push("Riga "+line+": campi obbligatori incompleti o non validi");continue}
     seenKeys.add(recordKey);staging.push({kind:"add",data:{...Object.fromEntries(requiredNew.map(k=>[k,str(r[k])])),...(str(r.email)?{email:str(r.email)}:{})}});adds++;
    }
+   if(publicUpdates){
+    try{await timeout(getDocs(collection(db,"directoryOverrides")),15000,"Verifica permessi correzioni pubbliche scaduta");}
+    catch(e){blockedPublic=publicUpdates;staging=staging.filter(item=>item.kind!=="public");show("Attenzione: correzioni alle schede pubbliche non autorizzate da Firebase. Le altre modifiche restano disponibili.");}
+   }
    report.hidden=false;
-   report.querySelector("#rdi-excel-summary").textContent=updates+" aggiornamenti, "+adds+" nuove schede, "+skippedPublic+" già nel catalogo pubblico, "+duplicates+" duplicati, "+unchanged+" senza modifiche, "+problems.length+" anomalie escluse. "+problems.slice(0,12).join("; ");
+   report.querySelector("#rdi-excel-summary").textContent=updates+" aggiornamenti Firestore, "+(publicUpdates-blockedPublic)+" correzioni pubbliche, "+blockedPublic+" bloccate per permessi Firebase, "+adds+" nuove schede, "+duplicates+" duplicati, "+unchanged+" senza modifiche, "+problems.length+" anomalie escluse. "+problems.slice(0,12).join("; ");
    show("Analisi completata: "+staging.length+" operazioni pronte da confermare."+(problems.length?" Alcune righe sono escluse: consulta il riepilogo.":""));
   }catch(e){reset();show("Errore importazione: "+e.message);alert("Importazione Excel: "+e.message)}finally{picker.value="";setBusy(false)}
  };
@@ -87,6 +105,7 @@ export function mountExcel({db,admin,getPublic,getUid}){
    // Small atomic groups: no duplicated edits to the same document inside one batch.
    for(let pos=0;pos<staging.length;pos+=40){requireAdmin();const batch=writeBatch(db);const part=staging.slice(pos,pos+40);
     for(const item of part){if(item.kind==="update")batch.update(doc(db,"directoryBusinesses",item.id),{...item.changes,status:"approved",reviewedAt:serverTimestamp()});
+     else if(item.kind==="public")batch.set(doc(db,"directoryOverrides",item.id),{...item.changes,updatedAt:serverTimestamp()},{merge:true});
      else batch.set(doc(collection(db,"directoryBusinesses")),{...item.data,uid,imageUrls:[],status:"approved",createdAt:serverTimestamp()});}
     show("Salvataggio Firebase: "+done+" di "+staging.length+" completate...");
     await timeout(batch.commit(),45000,"Firebase non ha confermato il salvataggio entro 45 secondi: esito incerto. Non ripetere subito l'importazione, aggiorna prima la pagina e verifica le attività.");
