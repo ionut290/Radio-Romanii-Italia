@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-26T18:44:10.583642+00:00",
+  "updated_at": "2026-10-26T18:57:46.789956+00:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
@@ -16,15 +16,16 @@
     },
     "google_news": {
       "status": "ok",
-      "new_leads": 135
+      "new_leads": 140
     },
     "bbc_world": {
       "status": "ok",
       "new_leads": 3
     },
     "gdelt": {
-      "status": "error",
-      "error_type": "HTTPError"
+      "status": "rate_limited",
+      "error_type": "HTTPError",
+      "http_status": 429
     }
   },
   "items": [
@@ -749,6 +750,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-9bef34782cc34e5677",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Detenidos los tres \"terroristas\" sospechosos del atentado con nueve muertos en una iglesia en Karak - Teleprensa",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_es",
+      "source_name": "Google News search / es",
+      "publisher": "Teleprensa",
+      "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPV0cwQTEyQVNfakxnazVvQXZjbkg1TUV4TzlRRGdBcG5hYjBtTGZQeDhRNEw1X3Bna21xZzR3dVZNX1FQazhJZGFoOWFLTDZLajJfekhuMGZyaXVOdVlQTzdDRDktcEEzV0YxdG51WTM4Q2pOUmJ1ZndkUElHLXN1MmpvMlM4SFotd3RYTGdRNUxwRndveEZzQVVWQV9QM0NPSXIyZUgwaDlidVJHWVM1VkZvUjVWdXVacTEzSWtiNXJMZ0NMRkE5ZC0xMzVIY3BZRmNIUEpMN0NNc3hmQ1d2WdIB4AFBVV95cUxPV0cwQTEyQVNfakxnazVvQXZjbkg1TUV4TzlRRGdBcG5hYjBtTGZQeDhRNEw1X3Bna21xZzR3dVZNX1FQazhJZGFoOWFLTDZLajJfekhuMGZyaXVOdVlQTzdDRDktcEEzV0YxdG51WTM4Q2pOUmJ1ZndkUElHLXN1MmpvMlM4SFotd3RYTGdRNUxwRndveEZzQVVWQV9QM0NPSXIyZUgwaDlidVJHWVM1VkZvUjVWdXVacTEzSWtiNXJMZ0NMRkE5ZC0xMzVIY3BZRmNIUEpMN0NNc3hmQ1d2WQ?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-9ad2297435cd823905",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -930,7 +947,7 @@
       "date_kind": "article_publication_date_NOT_event_date",
       "country": "",
       "place": "",
-      "description_en": "Attentat raciste et islamophobe à Trappes : des tracts du RN retrouvés dans la voiture du tireur - L'Humanité",
+      "description_en": "Attentat raciste à Trappes : le tireur avait-il des tracts liés à l’extrême droite ? - L'Humanité",
       "kind_hint": "unclassified_news_lead",
       "review_state": "pending",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
@@ -1386,6 +1403,22 @@
       "source_name": "Google News search / en",
       "publisher": "Jagonews24",
       "source_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1weTk0Ym1SVDVFODVka09uOGxhaFB1V0JUTjh1NktVUDlsRmpwTmlpZ0ZwYjgxQTR6N1BWZHJmcXdMZHEtcjR1SEJTSjRjRThRSmdLeE12aUZiOWQxVXc?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-4fb05a2200b18718bf",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "El sospechoso del atentado de Trappes sale del hospital tras descartarse que sufra una patología mental - 20Minutos",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_es",
+      "source_name": "Google News search / es",
+      "publisher": "20Minutos",
+      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNNHhzYnVsb0k4QWc2VXVBa3QzZWlLWUFUeHJ6U3A3X2NTNzM2aVVuMlNVVVVEN3k2VWtDWTlnNHhkWXJKZExqaWRJTmgwVmlOMEZ5T201R2tHdGtxZVg0SVRXc2FoRXlnVzZjRG8tWXBNZ0R0T0dfVFVmbGFRMlBodElLWF9PS3lJcHNNUjRUMGoyb3F2TmNFMzRmeElMUlNVRUNKYUFqaXhTNkJkNlRUS1hDYWttdmIyTElLS3h5RDdnd1NoSmdtSDlMdTVZczNNWnp5dU1vYVpELUXSAeABQVVfeXFMUG4tdWFEaVEyQ0xKSGpseF91RW04QXVFc09xWVZWMnkzRFNDOFNFNUVMbmtSUlh5Z1dLcmEyckRzRTBaaHFwSEUtaWZxWkhONGVkMlhCellZZGd3UUd5RF9rSXlnM1Q5WVlvSTVvckZUV1oxaGZ5RkQ5M1VLX25lT2dwSTJYU0dsMFl5dE9IbjBScVk4SWpnaXg1YnF3eFY0ZEFuZWhsTjlHMG1HT1pKSi14RUZVZHBuaEFKZmFHUVN1ZGJka3h2ZEVUdThYSk5YMnZlWWFrSGlsLWxqc2gtbXQ?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -3750,36 +3783,6 @@
       "place": "Nablus",
       "description_en": "Planned explosive drone assassination plot against Ben-Gvir",
       "kind_hint": "potential_plot",
-      "review_state": "pending",
-      "attribution": "Single source claim. No independent verification.",
-      "source_id": "cspii",
-      "source_name": "CSPII / TheReligionOfPeace",
-      "source_url": "https://www.cspii.org/attacks",
-      "event_date_confirmed": false
-    },
-    {
-      "id": "lead-fed15d30f4264b7a25",
-      "date": "2026-09-22",
-      "date_kind": "source_claimed_incident_date",
-      "country": "Pakistan",
-      "place": "Naushki",
-      "description_en": "Gunmen killed two policemen guarding anti-polio vaccinators",
-      "kind_hint": "reported_incident",
-      "review_state": "pending",
-      "attribution": "Single source claim. No independent verification.",
-      "source_id": "cspii",
-      "source_name": "CSPII / TheReligionOfPeace",
-      "source_url": "https://www.cspii.org/attacks",
-      "event_date_confirmed": false
-    },
-    {
-      "id": "lead-0e8fa1b69b289b110f",
-      "date": "2026-09-22",
-      "date_kind": "source_claimed_incident_date",
-      "country": "Yemen",
-      "place": "Mokha",
-      "description_en": "Saudi-led airstrikes on Mokha killed civilians and wounded eight",
-      "kind_hint": "reported_incident",
       "review_state": "pending",
       "attribution": "Single source claim. No independent verification.",
       "source_id": "cspii",
