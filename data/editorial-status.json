@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-26T10:57:26.918360+00:00",
+  "news_updated_at": "2026-10-26T10:58:10.499152+00:00",
   "editorial_updated_at": "2026-10-26T11:54:17.852249+01:00",
   "translations_updated_at": "2026-10-26T10:05:21.485758+00:00",
-  "feed_total": 90,
-  "feed_extended_400": 17,
-  "feed_missing_body": 73,
+  "feed_total": 84,
+  "feed_extended_400": 18,
+  "feed_missing_body": 66,
   "feed_short_body": 0,
   "editorial_total": 17,
   "archived_editorials": 31,
   "translation_records": 45,
-  "pending_total": 63,
+  "pending_total": 62,
   "pending_filtered_out": 150,
-  "editorial_verde": 17,
-  "editorial_galben": 38,
-  "editorial_rosu": 48,
+  "editorial_verde": 18,
+  "editorial_galben": 37,
+  "editorial_rosu": 42,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -170,16 +170,6 @@
       "category": "",
       "published": "2026-10-26T10:10:20+00:00",
       "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPMmNyQ0hDZEVEdXlkelRRNDRnTE56ZEhITUhXU0g1SjZRUjZDTnN1Vkh2UlpCSThUaHowbzl1MXFMbllqS0lZQXZYazFxVVV0MVN6cGJCOG9HbUl6M2VzMnE5MjZ4TEpxLXIzdWMtd2ZFWUFjcmF5eUxSWkJSMXd4S2xBYmg5d093YkFvT3RPOHBFNzhNQXVlM1NfYjdBV0Q4d09STU5MamhWNW9ld2NPYjhCNGFTQnVDVGx4TkoxWjF6clpzSzM1R0s2WEtGRWlJZkVGSU9CRXdkRGlfS0MxNEd4OEpVY1ZiWS1MRWtvbGE3RlRHSThJdkFfVFFWNUF4aGoyOXVfRXo4VmZxRWdEOGxUQlRhY3hXTG03azdHaFRFZkVSekpndUUxbHVzRldaa1haQXBVNA?oc=5",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato da completare; fonte originale e riscontri indipendenti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Cosmin Marinescu, viceguvernator BNR: „România este pe cale să înregistreze un record european de menținere a dobânzii-cheie”",
-      "category": "",
-      "published": "2026-10-26T10:22:58+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/cosmin-marinescu-viceguvernator-bnr-romania-este-pe-cale-sa-inregistreze-un-record-european-de-mentinere-a-dobanzii-cheie-4009035",
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato da completare; fonte originale e riscontri indipendenti da consultare",
@@ -614,6 +604,16 @@
       "status": "roșu",
       "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
       "attempts": 0
+    },
+    {
+      "title": "Știri din secțiunea Internațional - StiriDiaspora",
+      "category": "",
+      "published": "2026-10-26T09:39:15+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1GWUZTQjFNYkdzR3JRNUt2bmVCQ05vUXEwMlhvOXlXNVA4QlhjelJ2UGR6WGJxamNQSEVSaFFuQ090NFg3N3kwc05HWVhxallaXzYwRU5EUGpid3c?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato da completare; fonte originale e riscontri indipendenti da consultare",
+      "attempts": 0
     }
   ],
   "recent_news": [
@@ -722,8 +722,8 @@
       "published": "2026-10-26T10:22:58+00:00",
       "url": "https://www.digi24.ro/stiri/economie/cosmin-marinescu-viceguvernator-bnr-romania-este-pe-cale-sa-inregistreze-un-record-european-de-mentinere-a-dobanzii-cheie-4009035",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 456
     },
     {
       "title": "Grindeanu va cere angajarea răspunderii Guvernului pentru două reforme majore: „Vom arăta concret cum se face”",
@@ -861,15 +861,6 @@
       "words": 0
     },
     {
-      "title": "Traian Băsescu critică măsurile lui Ilie Bolojan: „Mărind taxele n-a reușit decât să frâneze economia” - Realitatea.NET",
-      "category": "România",
-      "published": "2026-10-26T09:26:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNWlBYQkhOMXJLdkluSU1Sa1kzd3hzYjB2Z0pucmFQakZDc01BM0R5YmpLTVVZWWo3RWcyMzY1Vm01aEZReWh2Nzg4UG54RUgtVTBwSGtnYnJxdFRqaVIyM2ptSkRZdVV2dzlxVF94dzVmeGtNZUJULThlYVdQWUhRLTZQUWpZRXFfN2hDajc5bjFMbnd0NUFFdXJ5MzYxUUZJLVdIaVVadzhzSTcxT2RTUjVqdXFHV2FKX3hHY2RwOWlMSjQ5cmpzaWZ5Q0ZZZ0R2TGpZUlA5MGQyWWJfY1B6elZ3?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Capcana lui Putin: condiția care vizează direct România. De ce vrea Kremlinul Europa la negocierile privind Ucraina (The Telegraph)",
       "category": "România",
       "published": "2026-10-26T09:22:03+00:00",
@@ -933,15 +924,6 @@
       "words": 0
     },
     {
-      "title": "Passaporto digitale, Reliable coinvolge 18 imprese venete: primi risultati per moda e scarponi - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-26T08:22:52+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9LNFREY194Q1JCUGpvYmdCUmZXZjYyY09sTXNSVi1aaGtBMk12eEQwWWJSRjB3d3dpWDRQZDh6bEFIcnhsX21YS3RyOHlwdlRGeW10Zm84Tl9jdHJITXV5blJHUVpCSU5BUkZNUXNsdzZ3ZnhtRjhPdHBDRQ?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Q8 Italia conferma il sostegno agli automobilisti: price cap fino a fine anno - la Repubblica",
       "category": "Italia",
       "published": "2026-10-26T08:03:01+00:00",
@@ -974,15 +956,6 @@
       "published": "2026-10-26T06:48:18+00:00",
       "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/26/prime-pagine-youssef-siher-in-carcere-aveva-un-progetto-eversivo_ea6b0eb5-512a-4361-86f0-4612a1106dc5.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Luca Niculescu se întâlnește astăzi cu Mugur Isărescu și reprezentanții mediului de afaceri. Bugetul pe 2027, marea provocare - Realitatea.NET",
-      "category": "România",
-      "published": "2026-10-26T05:55:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQMXA2aGg4ZFY1bHo0OE9DQS0wMmZ0NDEyRG84ZlhGeWZxeXl2SFUwNk91ZldWOG1Ua3B1VW9MUDNJSGE5c3dVY0dOc2I2Ykh2NWdoa2lFdGZUMFlLbXozSi11VkJHX0pLR3ZtckdURDlkaEdGNmo3cHdqcDE5OGhqazk4XzU3b0MyQTQzYkMzY2JtbkpGdjMwTUkyVW9hSkM3TnJmV21sM0lFN2ZPYWlqTDZ1XzZKT3ZxU2NSSFo0ZU42dkhtRmV4X3VaWWpMZmpSLXNvMUozNWlYN3ZBWkthdGlTUFFibWV5b0NZOTFHcmhhTjZLVmdSWFFnNnV6c2o4NkE?oc=5",
-      "source": "Realitatea.NET",
       "status": "roșu",
       "words": 0
     },
@@ -1086,29 +1059,11 @@
       "words": 0
     },
     {
-      "title": "Adrian Cuculis, mesaj tranșant despre protestele din Europa și situația din România: Ce îi cere noului Guvern - Realitatea.NET",
-      "category": "România",
-      "published": "2026-10-25T17:26:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOQjk2Q2NhV0FvUEdWU3NMYVVRSnBzSlhZWnZnTXhsaXgyR2E4dWt6aU1FaktUQlRNT3NBWnJhYjVrdzZoTjJVeEhfVDlXM050ZW5tMVB4ZkZkVHN4MWdCS1QwTFMwNE1nczVqbkJuZ0VpWFBLQkl5cEY2WUxpTXZxb1RJVWFCZmdwTjJVRlFEck0yUzNKM2tYT3M3cGp1S0IyanBMYnRlUTJ5TDgyQjM2Mlk0VUFFMkxSc1BQcWxzOGZaWHdSSzAzc2dTT2ZmYWNPRkltUzVab1d5aHpLSkVSOGxwNVYxcGN0OF9acg?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "La settimana finanziaria. Mercati alle prese con banche centrali, dati macro e conti tech - la Repubblica",
       "category": "Italia",
       "published": "2026-10-25T16:22:43+00:00",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOa3RwLWVVSWZvTWxpX1hPVTNVbG5YNWx2UEtSNjhZZFYtT3BGdHlFWnFrSVZOV04zSzZuSlV0Ny1uUWZyNEY3SGpPLWdwSGZES2VsZnk4WGZ0cXlIMWhKYnd5bWdVNFNQN01zcjRfU3lmclJzVUc4OFhSZWVRX2FzdXhtdndnMXZ0dWNMb1VRYw?oc=5",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Astra Film Festival: filmul lui Vlad Petri, cel mai bun documentar din Competiția România - Substantial.ro",
-      "category": "România",
-      "published": "2026-10-25T16:21:31+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSTBqRVNldnhFR29tYUJEeEY2TldGR3VhY3M4d3hUMTRtSDZsMVlHLVBVaXRsNGJVQi12UVAwbWFlT1BzOG1NV0I0dk43WlZhVkNGUDBQUVNYeFpVd0pfdGZVM1IySWt0X3lwdmhjYXhMbm9zSjRZZTd3eHBBZlN4a29hVmo2QlRDS1lfUFhyZU55NWVjR0FkTkY0R3VIdi1ua3JDTmxkMFY0dWt0SkM2Vg?oc=5",
-      "source": "Substantial.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1307,15 +1262,6 @@
       "published": "2026-10-25T06:30:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOGtFbEIzTU1OWTFPMWY4T0FSWmdnZ2d6ZDFCa0Y1Y0JRUzQ3WVRhMGlZMElONUFzTkZjQTZydUZRS2N3dVJwVWg1WGt0aDBKajFNalFnS25CQ2hveGdKSThOV09LY29FZGxlVW9ja3JQR1JWLWZhODJTbldFWUNuc0Y5WHdCYzJmdnh3MlJGSmtITEcxMF93M2wzWjRPZw?oc=5",
       "source": "La Prealpina",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Elveția oferă Moldovei 5,6 milioane de dolari pentru sănătatea refugiaților - logos-pres.md",
-      "category": "România",
-      "published": "2026-10-25T06:00:06+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTmp5MUFPZDd2UGZJZHNDZFpkSDZHTUF0eFJ2aWQzLUpXaUhSWnBEbEdxR25ycjBaY0F2TEhRREVIdVFzeWYyYjFvVEloZjFYRndHNWg4c1pyRVNTLXlfVVU1akQ2X25hQ1FuTVZ5b1I0SDZiOElTTW1od0dsYTh5WXdYaHg2WURxX3JjckN2SGVQbnNWZWh1X1dXa19jUzdyX2cyR3Y0NXowSU9NeENSQ0s1SnE4dmtyM0JIeXdQZUJpNWM2XzViNFFzY0dPS2ZSNHlUa0g1VlhfZmdPUURscEJhOEQyUFAyTGc?oc=5",
-      "source": "logos-pres.md",
       "status": "roșu",
       "words": 0
     },
