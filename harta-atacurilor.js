@@ -17,7 +17,7 @@ function getFiltered(){const q=$("search").value.trim().toLocaleLowerCase(),star
 function translatedName(item){return lang==="it"?item.title_it:item.title_ro}
 function translatedDesc(item){return lang==="it"?item.description_it:item.description_ro}
 function updateNumbers(items){$("stat-events").textContent=fmt(items.length);$("stat-countries").textContent=fmt(new Set(items.map(x=>x.country_code)).size);for(const [field,id] of [["killed","stat-killed"],["injured","stat-injured"]]){const known=items.filter(x=>Number.isFinite(x[field]));$(id).textContent=known.length?fmt(known.reduce((n,x)=>n+x[field],0)):"—"}$("count").textContent=fmt(items.length)+" · "+t("seen");$("empty").hidden=items.length>0;$("focus-banner").hidden=!focusedId}
-function attachSource(node,url,label){const safe=validUrl(url);if(!safe)return;const a=el("a",null,label+" ↗");a.href=safe;a.target="_blank";a.rel="noopener noreferrer";node.append(a)}
+function attachSource(node,url,label){const safe=validUrl(url);if(!safe)return;const a=el("a",null,label.includes("↗")?label:label+" ↗");a.href=safe;a.target="_blank";a.rel="noopener noreferrer";node.append(a)}
 function linkNews(node,item){if(!item.rdi_article_id)return;attachSource(node,"./observator-articol.html?id="+encodeURIComponent(item.rdi_article_id),t("article"))}
 function incidentLink(item){const url=new URL(location.href);url.searchParams.set("incident",item.id);url.hash="";return url.href}
 function clearFocus(){if(!focusedId)return;focusedId="";const url=new URL(location.href);url.searchParams.delete("incident");history.replaceState(null,"",url.pathname+url.search+url.hash)}
