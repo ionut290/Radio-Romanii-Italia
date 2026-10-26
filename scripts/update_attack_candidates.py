@@ -75,7 +75,7 @@ class TableParser(HTMLParser):
 def read_url(url, accept="application/json, application/rss+xml, text/html"):
     parsed = urllib.parse.urlparse(url)
     if parsed.scheme != "https" or parsed.hostname not in {
-        "www.cspii.org", "news.google.com", "api.gdeltproject.org"
+        "www.cspii.org", "news.google.com", "api.gdeltproject.org", "feeds.bbci.co.uk"
     }:
         raise ValueError("Disallowed feed host")
     request = urllib.request.Request(url, headers={
@@ -174,6 +174,32 @@ def google_news_leads(today):
             })
     return result
 
+def bbc_leads(today):
+    """Original editorial headlines for cross-checking, not event classification."""
+    url = "https://feeds.bbci.co.uk/news/world/rss.xml"
+    root = ET.fromstring(read_url(url, "application/rss+xml, text/xml"))
+    results = []
+    keyword = re.compile(r"\\b(attack|attacks|bomb|bombing|explosion|gunmen|shooting|militant|terror|hostages)\\b",re.I)
+    for item in root.findall(".//channel/item")[:100]:
+        title = (item.findtext("title") or "").strip()[:300]
+        observed = get_iso(item.findtext("pubDate") or "")
+        article_url = (item.findtext("link") or "").strip()
+        if not keyword.search(title) or not plausible_date(observed,today):
+            continue
+        if not article_url.startswith("https://www.bbc.") and not article_url.startswith("https://bbc."):
+            continue
+        results.append({
+            "id":lead_id("bbc|" + article_url.split("?")[0]),
+            "date":observed,"date_kind":"article_publication_date_NOT_event_date",
+            "country":"","place":"","description_en":title,
+            "kind_hint":"unclassified_news_lead","review_state":"pending",
+            "attribution":"News headline to verify; no incident facts inferred.",
+            "source_id":"bbc_world","source_name":"BBC World RSS",
+            "publisher":"BBC News","source_url":article_url,
+            "event_date_confirmed":False
+        })
+    return results
+
 def gdelt_leads(today):
     result=[]
     for query in GDELT_QUERIES:
@@ -237,6 +263,7 @@ def main():
     for name,loader in (
         ("cspii",cspii_leads),
         ("google_news",google_news_leads),
+        ("bbc_world",bbc_leads),
         ("gdelt",gdelt_leads),
     ):
         try:
@@ -258,7 +285,8 @@ def main():
         "sources":{
             "cspii":"https://www.cspii.org/attacks",
             "gdelt":"https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
-            "google_news":"https://news.google.com/"
+            "google_news":"https://news.google.com/",
+            "bbc_world":"https://feeds.bbci.co.uk/news/world/rss.xml"
         },
         "source_status":status,
         "items":items
