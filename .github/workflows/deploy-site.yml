@@ -22,7 +22,7 @@ jobs:
           test -s directory-manage.js
           test -s directory-feed.js
           echo "File RDI presenti. La pubblicazione è gestita da GitHub Pages (main / root)."
-      - name: Verifica dati e schede del Ghid
+      - name: Verifica la sintassi dei componenti della mappa\n        run: |\n          node --check harta-atacurilor.js\n          python -m py_compile scripts/update_attack_candidates.py\n      - name: Verifica dati e schede del Ghid
         run: |
           set -euo pipefail
-          node --test tests/directory-quality.test.mjs tests/directory-map.test.mjs tests/directory-enrichment.test.mjs tests/directory-data.test.mjs tests/youtube-spots.test.mjs tests/editorial-system.test.mjs
+          node --test tests/directory-quality.test.mjs tests/directory-map.test.mjs tests/directory-enrichment.test.mjs tests/directory-data.test.mjs tests/youtube-spots.test.mjs tests/editorial-system.test.mjs tests/attack-map.test.mjs
