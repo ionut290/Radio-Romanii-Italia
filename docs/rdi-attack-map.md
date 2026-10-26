@@ -13,10 +13,11 @@ Surse active de *descoperire*:
 - **CSPII / TheReligionOfPeace** – primul tabel public al incidentelor declarate. Sursa are propria selecție și poate include evenimente viitoare, planuri, acuzații sau date inexacte. Verificare independentă obligatorie.
 - **Google News RSS** – căutări în engleză, italiană, spaniolă și franceză pentru atentate și atacuri armate. Agregatorul nu este o confirmare. Linkurile către edițiile originale necesită verificare.
 - **GDELT DOC 2.0** – index de articole despre atacuri, atentate și tentative, cu căutări limitate la ultimele 48 de ore. https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/
+- **BBC World RSS** – titluri originale din știrile mondiale, prefiltrate prin termeni despre atacuri sau explozii. https://feeds.bbci.co.uk/news/world/rss.xml
 
 Câmpul `date` din rezultatele Google News reprezintă **data publicării**, iar din GDELT **data observării articolului**, nu data atacului! `date_kind` marchează această diferență, iar `event_date_confirmed: false` indică necesitatea verificării. Doar editorul documentează și stabilește data exactă a evenimentului. Nu inferea coordonate sau bilanțuri din agregatoare.
 
-Fluxurile sunt accesate cu cereri reduse și timeout. Dacă unul e indisponibil, se păstrează pistele anterioare; dacă toate eșuează, scriptul nu suprascrie fișierul existent. `source_status` permite redacției să vadă ce a funcționat în ultima execuție. Atribuirile, evaluările și sursele independente adăugate de editor sunt păstrate după reluare.
+Fluxurile sunt accesate cu cereri reduse și timeout. Dacă GDELT este limitat sau returnează alt format decât JSON, sursa apare ca eroare în `source_status`; NU se consideră că a furnizat piste verificate. Dacă unul e indisponibil, se păstrează pistele anterioare; dacă toate eșuează, scriptul nu suprascrie fișierul existent. `source_status` permite redacției să vadă ce a funcționat în ultima execuție. Atribuirile, evaluările și sursele independente adăugate de editor sunt păstrate după reluare.
 
 Date de referință suplimentare, **nu integrate fără acces/autorizare și verificare**:
 - **UCDP Candidate / GED** – date codificate științific despre conflicte violente, inclusiv seturi lunare, nu neapărat flux live: https://ucdp.uu.se/downloads/
