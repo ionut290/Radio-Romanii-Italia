@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-26T18:43:44.049284+00:00",
+  "updated_at": "2026-10-26T18:44:10.583642+00:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
@@ -16,15 +16,15 @@
     },
     "google_news": {
       "status": "ok",
-      "new_leads": 140
+      "new_leads": 135
     },
     "bbc_world": {
       "status": "ok",
-      "new_leads": 0
+      "new_leads": 3
     },
     "gdelt": {
       "status": "error",
-      "error_type": "JSONDecodeError"
+      "error_type": "HTTPError"
     }
   },
   "items": [
@@ -637,6 +637,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-a6eb336c714fbb3762",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Chris Brown given suspended eight-month prison sentence over nightclub attack",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "News headline to verify; no incident facts inferred.",
+      "source_id": "bbc_world",
+      "source_name": "BBC World RSS",
+      "publisher": "BBC News",
+      "source_url": "https://www.bbc.co.uk/news/articles/cq3dje4g4d5jo?at_medium=RSS&at_campaign=rss",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-a6cea41aecc0235074",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -1213,6 +1229,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-61bb6cbd117190e9e9",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Nurse killed in attack while responding to Ebola alert in DR Congo",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "News headline to verify; no incident facts inferred.",
+      "source_id": "bbc_world",
+      "source_name": "BBC World RSS",
+      "publisher": "BBC News",
+      "source_url": "https://www.bbc.co.uk/news/articles/crx2dyd24188o?at_medium=RSS&at_campaign=rss",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-60701bfc7e53e4c3ae",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -1290,6 +1322,22 @@
       "source_name": "Google News search / fr",
       "publisher": "Libération",
       "source_url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNNUhMRk9VemY4Q2xyMmw1am1qS2tZakRsOWRMdWc3NUU1S014SDk3eF9SSDdPc1JFeDEtY0FWVGNQQ0U4U0pzbVJnY0NOZVBjMko3cXRXZTNYWDVtek8za2NOT3V1VWRuSDM4Y2dTNHBXV29kMjNCbDBCS2JvMmx0Qk83RU9nNk1IZEtUOHAwMExFaWNQbFE5Tzlpd1RVVlVLekt6dHk1UHhNTTUxRlVWbjNROHczN2ZzNlYyR0NNYzBsa2hsZ2lpTno0WlA4eGdveU03YzZGejhyTkN3VjQweGNORWU4Z2cyaHRhVl9DeG9wRUZSNzVEaXA0VkRJaHgyOVNrSGdtbENXWEJKVFNTVHhOMEhtSzNad0VFRnVvSEJULXhO?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-57c2468bee7d53367d",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Police arrest teenager after shooting that injured 12, including children, in Florida",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "News headline to verify; no incident facts inferred.",
+      "source_id": "bbc_world",
+      "source_name": "BBC World RSS",
+      "publisher": "BBC News",
+      "source_url": "https://www.bbc.co.uk/news/articles/ckpdg8vnv171o?at_medium=RSS&at_campaign=rss",
       "event_date_confirmed": false
     },
     {
@@ -3731,51 +3779,6 @@
       "country": "Yemen",
       "place": "Mokha",
       "description_en": "Saudi-led airstrikes on Mokha killed civilians and wounded eight",
-      "kind_hint": "reported_incident",
-      "review_state": "pending",
-      "attribution": "Single source claim. No independent verification.",
-      "source_id": "cspii",
-      "source_name": "CSPII / TheReligionOfPeace",
-      "source_url": "https://www.cspii.org/attacks",
-      "event_date_confirmed": false
-    },
-    {
-      "id": "lead-cd252781fceaa212f3",
-      "date": "2026-09-21",
-      "date_kind": "source_claimed_incident_date",
-      "country": "Nigeria",
-      "place": "Plateau State",
-      "description_en": "Fulani militia attacked Christian villages and security forces during a curfew.",
-      "kind_hint": "reported_incident",
-      "review_state": "pending",
-      "attribution": "Single source claim. No independent verification.",
-      "source_id": "cspii",
-      "source_name": "CSPII / TheReligionOfPeace",
-      "source_url": "https://www.cspii.org/attacks",
-      "event_date_confirmed": false
-    },
-    {
-      "id": "lead-8e6ea208c489409020",
-      "date": "2026-09-21",
-      "date_kind": "source_claimed_incident_date",
-      "country": "Nigeria",
-      "place": "Plateau",
-      "description_en": "Gunmen killed a pastor and nine others in Plateau State.",
-      "kind_hint": "reported_incident",
-      "review_state": "pending",
-      "attribution": "Single source claim. No independent verification.",
-      "source_id": "cspii",
-      "source_name": "CSPII / TheReligionOfPeace",
-      "source_url": "https://www.cspii.org/attacks",
-      "event_date_confirmed": false
-    },
-    {
-      "id": "lead-06983e41ab6d047fe0",
-      "date": "2026-09-21",
-      "date_kind": "source_claimed_incident_date",
-      "country": "Afghanistan",
-      "place": "",
-      "description_en": "Pakistan air strikes hit TTP suicide bomber training sites",
       "kind_hint": "reported_incident",
       "review_state": "pending",
       "attribution": "Single source claim. No independent verification.",
