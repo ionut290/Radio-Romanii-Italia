@@ -71,6 +71,7 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
       const rows=await readSpreadsheet(file.files[0]);
       if(rows.some(r=>!FIELDS.every(k=>Object.hasOwn(r,k))))throw Error("Colonne obbligatorie mancanti nel file Excel.");
       if(rows.length>10000)throw Error("Troppi record (max 10.000).");
+      if(rows.length===0)throw Error("Il file Excel non contiene attività.");
       const snap=await getDocs(collection(db,"directoryBusinesses"));
       const existing=new Map(snap.docs.map(d=>[d.id,d.data()]));
       const publicById=new Map(getPublicRecords().map(r=>[String(r.id),r]));
