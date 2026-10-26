@@ -59,6 +59,17 @@ match /directoryBusinesses/{businessId} {
   allow delete: if false;
 }
 
+match /directoryOverrides/{businessId} {
+  allow read: if true;
+  allow create, update: if directoryAdmin()
+    && businessId.matches('^public-[A-Za-z0-9_-]+$')
+    && request.resource.data.keys().hasOnly(['phone','whatsapp','email','website','hours','address','description','contactSourceUrl','locationPrecision','imageUrls','photoRightsStatus','updatedAt'])
+    && request.resource.data.keys().hasAll(['updatedAt'])
+    && request.resource.data.updatedAt == request.time
+    && (!request.resource.data.keys().hasAny(['imageUrls']) || (request.resource.data.imageUrls is list && request.resource.data.imageUrls.size() <= 10))
+    && (!request.resource.data.keys().hasAny(['photoRightsStatus']) || request.resource.data.photoRightsStatus in ['permission-granted','owned-by-rdi']);
+  allow delete: if false;
+}
 match /directoryAds/{id} {
  allow read: if resource.data.status == 'approved' || (signed() && (resource.data.uid == request.auth.uid || directoryAdmin()));
  allow create: if signed()
