@@ -47,6 +47,7 @@ export function mountExcel({db,admin,getPublic,getUid}){
    if(!sheet)throw Error("Foglio Attivita vuoto");const rows=XLSX.utils.sheet_to_json(sheet,{defval:"",raw:false});
    if(!rows.length||rows.length>10000)throw Error("Il file deve contenere da 1 a 10.000 attività.");
    if(!FIELDS.every(f=>Object.hasOwn(rows[0],f)))throw Error("Colonne Excel mancanti: "+FIELDS.filter(f=>!Object.hasOwn(rows[0],f)).join(", "));
+   if(!getPublic().length)throw Error("Il catalogo pubblico non è stato caricato. Aggiorna la pagina e attendi la comparsa delle attività prima di importare.");
    const snap=await fetchSnapshot();show("Verifica di "+rows.length+" schede e duplicati...");
    const byId=new Map(snap.docs.map(d=>[d.id,d.data()]));const publicById=new Map(getPublic().map(d=>[str(d.id),d]));
    const existingKeys=new Set([...snap.docs.map(d=>key(d.data())),...getPublic().map(key)]);
