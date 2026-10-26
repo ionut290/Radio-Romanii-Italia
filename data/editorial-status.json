@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-26T00:42:13.118478+00:00",
+  "news_updated_at": "2026-10-26T01:03:48.718234+00:00",
   "editorial_updated_at": "2026-10-26T01:11:25.595585+01:00",
   "translations_updated_at": "2026-10-26T00:03:29.770496+00:00",
   "feed_total": 81,
-  "feed_extended_400": 27,
-  "feed_missing_body": 54,
+  "feed_extended_400": 30,
+  "feed_missing_body": 51,
   "feed_short_body": 0,
   "editorial_total": 20,
   "archived_editorials": 29,
   "translation_records": 54,
   "pending_total": 50,
   "pending_filtered_out": 122,
-  "editorial_verde": 30,
-  "editorial_galben": 30,
-  "editorial_rosu": 38,
+  "editorial_verde": 32,
+  "editorial_galben": 29,
+  "editorial_rosu": 36,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -103,16 +103,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Bulgaria: Președinta în exercițiu conduce în primul tur al alegerilor prezidențiale, arată sondajele la ieșirea de la urne",
-      "category": "",
-      "published": "2026-10-25T21:05:39+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/bulgaria-presedinta-in-exercitiu-conduce-in-primul-tur-al-alegerilor-prezidentiale-arata-sondajele-la-iesirea-de-la-urne-4008583",
-      "source": "",
-      "status": "roșu",
-      "reason": "Testo completo assente; ricerca e verifica delle fonti da completare",
       "attempts": 0
     },
     {
@@ -386,6 +376,16 @@
       "attempts": 0
     },
     {
+      "title": "România pierde lupta pentru aur la nivel mondial. Băncile centrale ale lumii încep să cumpere masiv - Realitatea.NET",
+      "category": "",
+      "published": "2026-10-24T09:08:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQbHpuRkwtVkg2dEp3OFJqNUc3eXFWTHlWT0pNcWZaTTNXZ3FwbHNQa3lTTE9QRmdzeklxYzFGUFk1VTFNdUgzanlqOHRGN3lGRmhjaFN3R19uUUJ5MzZXbEhGUElkYmYwWDVxQTlBYW9IS1h2c2lNcGhtdFpZYnh2bTY0UXpKaXFBUzY1SDJMYVJhWUJ0Q3FtYnJwdlM0MnhSR3c4cmRZck83azZnNGxjYmZDajZQX19WUlNBTVhhUWQ3OTlyZ2RmU2duVEVoeXZhY3BIRWZBUVdPYmhVZEVqVw?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
+      "attempts": 0
+    },
+    {
       "title": "Răzbunarea lui „Trump de la tropice”. Alegeri în Brazilia: tinerii muncitori îi întorc spatele lui Lula și pariază pe Bolsonaro",
       "category": "",
       "published": "2026-10-25T05:00:34+00:00",
@@ -520,11 +520,11 @@
     {
       "title": "Brasile, Lula rieletto presidente",
       "category": "Italia",
-      "published": "2026-10-26T00:21:49+00:00",
+      "published": "2026-10-26T00:45:02+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/il-brasile-al-voto-lultimo-sondaggio-bolsonaro-in-lieve-vantaggio-su-lula_56cc4597-7350-4738-9bed-c5925ac6574d.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 521
     },
     {
       "title": "F1: Antonelli vince ad Austin, il Mondiale sempre più vicino",
@@ -586,8 +586,8 @@
       "published": "2026-10-25T21:56:39+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/2026/10/25/inter-folle-rimonta-e-in-testa-con-la-lazio.-milan-e-juve-ripartono_48165f49-25f1-4256-b483-815a22d32165.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 505
     },
     {
       "title": "Aleksandar Vucic și-a recunoscut înfrângerea în alegerile din Serbia. Liderul sârb își încheie domnia de 12 ani",
@@ -631,8 +631,8 @@
       "published": "2026-10-25T21:05:39+00:00",
       "url": "https://www.digi24.ro/stiri/externe/bulgaria-presedinta-in-exercitiu-conduce-in-primul-tur-al-alegerilor-prezidentiale-arata-sondajele-la-iesirea-de-la-urne-4008583",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 447
     },
     {
       "title": "Youssef Siher in carcere, 'aveva un progetto eversivo'. Indagata anche la moglie",
@@ -959,15 +959,6 @@
       "words": 0
     },
     {
-      "title": "Rubano, oggi Happy Halloween a Sarmeola: festa per famiglie e aiuto al Banco di Solidarietà - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-25T11:47:28+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNUkk5NXJCMGM0VHBxSmtZcEZfaTJ0WWlsWEFFdDVDUi10Y0lwLVRFOVEtQ0xrWmhTUzlrdEZxQWY5WUNVRFRFNU00YVAxd0tQS2k4ZS1HenNvb3hEc0w5ajYzemFwOXFFTzV1ZV9UWS1VMlVpV0h4TUNfc1BieDM2bnRaSVFNQQ?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Pontevigodarzere, terminata la bonifica della bomba: il Comune autorizza il rientro a casa - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-25T11:34:22+00:00",
@@ -1076,10 +1067,10 @@
       "words": 431
     },
     {
-      "title": "Alegeri prezidențiale în Bulgaria. Președinta în exercițiu, apropiată de Moscova, este favorită - StiriDiaspora",
+      "title": "Român de 14 ani din Italia, acuzat că administra un grup de WhatsApp prin care îndemna la vandalizarea... - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-25T08:15:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNVGJJRnRFY3NsNGxRQ3ZhckptNW56a2tMTmFHSzFKV3NSR0VMWFM5MjRlNl92a2FfNjM3cmJuVm5YQVJWMEJWNE84Zm55VjhpSHdET3kwclc0QlZJbDhzaGlrczkwQ211Q3BjbkdWbjlOODNheFJ3TlNjeWVMMFBEaUN6cmIyWW9KM2Z5N1BjTExqZm1Jb1ZlX3A2Zm9HVHd1R3VqX094bllfdko1ZllReUJCUk9LaWhkekUtUFlGWDBVNXVyeWY4RUNPVnkwZ9IB0wFBVV95cUxPekpTak9QM01VdjY4Qkp0MDRqNFRGWG96MC1qa0xvdzFQZnNJRFZyMmVkeWw4LWFkYmxEcFRaYlVqNWU2QmJ0VTFENnpiWmFHQ1FIUk95cWlyODRwUVdYblB6SkVKaFVPUXB5VXBkTTMtZU54Z0ZkeW85NkNJNlRvbXlOSkk",
+      "published": "2026-10-25T08:33:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNX1I5Uk5pWjQ4d0Ntb1hQUTNZRUVRQlJDOUFfVUhjdjR0cTM5X191eV9wU18tSHRTQjdSTklITFhwamFQUE9RdWhSUGVVcU8tY29oUWZWeEF3WW8zYnJ4MkhiQThPZmEwQnY2SVVGMTZaYU03S1NhUFBpWHdGa01OckRjRDlnZm9hbWx4eDk4SXZ3ZEMwYUJudVZqM1h6MVRJV1FxWXQzV21SdnNxSlVrb3JPd1BPekVYY2QyOEU1WVAweW85QnpIdUpUVHVCYVZwZ0xiSDc2Ri13RWU1TEtYR0JTdXRTRDVHQ0k4Zlg0UUxiLV9YakN0eWpjZ2VxV0lPejVLbkpn0gGLAkFVX3lxTE9BQjgwbS1sbGFIcExWZUFVT1ZfYXdPdkhzNTVGeWVZcTJIUE1aVENqWEZiODNCR3lybTlfUGw0dTFiUm1aM3BxbHRXMHQ",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1137,6 +1128,15 @@
       "source": "Touchpoint News",
       "status": "verde",
       "words": 500
+    },
+    {
+      "title": "Il settore dei ricambi auto offre lavoro - Motor1.com Italia",
+      "category": "Italia",
+      "published": "2026-10-24T22:01:16+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wZktsN0gyVF9KdDdLNHhwTXY3M1FSRHZCdk9EUnhUWkdxclhoUWZMcW5ROEgwTmo3YUROLUlVMkdrRDVhWW5HSFhQdlZBR1dHMGF2cjV0ZVptMlIyR2Vic3BGVkRBaWlHbG8wdlhMdDNBdFB0MEtJSFZB?oc=5",
+      "source": "Motor1.com Italia",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Badantă româncă, arestată în Italia. Acuzată că a bătut bătrâna și a obligat-o să mănânce cu forța - Rotalianul – Revista românului din Italia",
