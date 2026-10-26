@@ -13,7 +13,9 @@ const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),s
 const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
 const directoryMap=createDirectoryMap({onOpen:openBusiness});
 const refreshDirectoryExcel=initDirectoryExcel({db,isAdmin:()=>isAdmin()&&!!user?.emailVerified,getUid:()=>user?.uid,getPublicRecords:()=>publicRecords});
-let heldPublicRecords=0,verifiedDetailCount=0;
+let heldPublicRecords=0,verifiedDetailCount=0,publicOverrides=new Map();
+function applyPublicOverrides(){return publicRecords.map(r=>({...r,...(publicOverrides.get(String(r.id))||{})}));}
+function refreshDirectoryRecords(){records=mergeBusinesses(applyPublicOverrides(),approvedRecords);render();}
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
 const safeLink=(value)=>{try{const u=new URL(value);return ["https:","http:"].includes(u.protocol)?u.href:null}catch{return null}};
 const whatsappNumber=value=>{
@@ -119,9 +121,10 @@ async function loadPublicDirectory(){
      publicRecords=next;
    }
  }
- records=mergeBusinesses(publicRecords,approvedRecords);render();
+ refreshDirectoryRecords();
 }
 loadPublicDirectory();
+onSnapshot(collection(db,"directoryOverrides"),snapshot=>{publicOverrides=new Map(snapshot.docs.map(d=>[d.id,d.data()]));refreshDirectoryRecords();},err=>console.warn("Directory overlays unavailable",err.code));
 onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{approvedRecords=snapshot.docs.map(d=>({id:d.id,...d.data()}));records=mergeBusinesses(publicRecords,approvedRecords);render()},error=>{console.warn("RDI listings unavailable",error.code);sourceError=true;render()});
 function renderPending(){$("pending").replaceChildren(...(pending.length?pending.map(b=>drawCard(b,true)):[node("p","Nu există cereri în așteptare.")]))}
 onAuthStateChanged(auth,u=>{user=u;refreshDirectoryExcel?.();$("signin").hidden=!!u;$("signout").hidden=!u;$("business-form").hidden=!u;$("admin-panel").hidden=!isAdmin();$("direct-label").hidden=!isAdmin();$("identity").textContent=u?"Conectat: "+(u.displayName||u.email)+(isAdmin()?" · Administrator":""):"Conectează-te pentru a înscrie o afacere.";if(stopPending){stopPending();stopPending=null}if(isAdmin()){stopPending=onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","pending")),snapshot=>{pending=snapshot.docs.map(d=>({id:d.id,...d.data()}));renderPending()},e=>$("pending").textContent="Nu pot încărca cererile: "+e.message)}});
