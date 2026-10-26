@@ -1,5 +1,5 @@
 // Admin-only CSV workflow (CSV opens and saves in Excel); public JSON rows are export-only.
-import {collection,getDocs,doc,updateDoc,addDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+import {collection,getDocs,doc,updateDoc,addDoc,setDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 const FIELDS=["source","id","name","category","region","province","city","address","phone","whatsapp","website","hours","description","status"];
 const FIELDS_EDIT=["name","description","phone","whatsapp","website","address","hours"];
 const validUrl=v=>!v||/^https?:\/\/[^\s.]+\.[^\s]+$/i.test(v);
@@ -24,24 +24,26 @@ function parseCsv(text){
   if(!FIELDS.every(k=>headers.includes(k)))throw Error("Colonne mancanti: "+FIELDS.filter(k=>!headers.includes(k)).join(", "));
   return rows.map((cells,i)=>({line:i+2,...Object.fromEntries(headers.map((h,j)=>[h,clean(cells[j])]))}));
 }
+async function loadSheetJs(){
+  if(window.XLSX)return;
+  await new Promise((resolve,reject)=>{const script=document.createElement("script");script.src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js";script.onload=resolve;script.onerror=()=>reject(Error("Lettore Excel non disponibile"));document.head.append(script);});
+}
 async function readSpreadsheet(file){
   if(/\.csv$/i.test(file.name))return parseCsv(await file.text());
   if(!/\.xlsx?$/i.test(file.name))throw Error("Formato non supportato: carica .xlsx, .xls o .csv");
-  if(!window.XLSX){
-    await new Promise((resolve,reject)=>{
-      const script=document.createElement("script");
-      script.src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js";
-      script.onload=resolve;script.onerror=()=>reject(Error("Impossibile caricare il lettore Excel."));
-      document.head.append(script);
-    });
-  }
+  await loadSheetJs();
   const book=window.XLSX.read(await file.arrayBuffer(),{type:"array",cellDates:false});
   const sheet=book.Sheets[book.SheetNames[0]];
   if(!sheet)throw Error("Foglio Excel vuoto.");
   const rows=window.XLSX.utils.sheet_to_json(sheet,{defval:"",raw:false});
   return rows.map((r,i)=>({line:i+2,...Object.fromEntries(Object.entries(r).map(([k,v])=>[clean(k),clean(v)]))}));
 }
-function download(rows){
+async function download(rows){
+  if(!window.XLSX)await loadSheetJs();
+  const sheet=window.XLSX.utils.json_to_sheet(rows,{header:FIELDS});
+  const book=window.XLSX.utils.book_new();window.XLSX.utils.book_append_sheet(book,sheet,"Attivita");
+  window.XLSX.writeFile(book,"RDI-ghid-attivita-"+new Date().toISOString().slice(0,10)+".xlsx");
+  return;
   const blob=new Blob([csv(rows)],{type:"text/csv;charset=utf-8"});
   const url=URL.createObjectURL(blob),link=document.createElement("a");
   link.href=url;link.download="RDI-ghid-attivita-"+new Date().toISOString().slice(0,10)+".csv";
@@ -57,8 +59,10 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
   exp.onclick=async()=>{if(!isAdmin())return;exp.disabled=true;try{
     const docs=await getDocs(collection(db,"directoryBusinesses"));
     const fire=docs.docs.map(d=>({...d.data(),source:"firestore",id:d.id}));
-    const pub=getPublicRecords().map(r=>({...r,source:"public-json"}));
-    download([...pub,...fire]);alert("Esportate "+(pub.length+fire.length)+" schede. Il CSV si apre in Excel; conserva le colonne source e id.");
+    const overrides=await getDocs(collection(db,"directoryOverrides"));
+    const byId=new Map(overrides.docs.map(d=>[d.id,d.data()]));
+    const pub=getPublicRecords().map(r=>({...r,...(byId.get(String(r.id))||{}),source:"public-json",id:r.id}));
+    await download([...pub,...fire]);alert("Esportate "+(pub.length+fire.length)+" schede. Il CSV si apre in Excel; conserva le colonne source e id.");
   }catch(e){error(e)}finally{exp.disabled=false;}};
   imp.onclick=()=>{if(isAdmin())file.click();};
   file.onchange=async()=>{if(!isAdmin()||!file.files[0])return;apply.disabled=true;staged=[];
@@ -69,10 +73,20 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
       if(rows.length>10000)throw Error("Troppi record (max 10.000).");
       const snap=await getDocs(collection(db,"directoryBusinesses"));
       const existing=new Map(snap.docs.map(d=>[d.id,d.data()]));
+      const publicById=new Map(getPublicRecords().map(r=>[String(r.id),r]));
+      const overrideSnap=await getDocs(collection(db,"directoryOverrides"));
+      for(const d of overrideSnap.docs){if(publicById.has(d.id))publicById.set(d.id,{...publicById.get(d.id),...d.data()});}
       const used=new Set([...snap.docs.map(d=>nameKey(d.data())),...getPublicRecords().map(nameKey)]);
       const seenIds=new Set();let skipped=0,invalid=[],updates=0,adds=0;
       for(const r of rows){
-        if(r.source==="public-json"){skipped++;continue;}
+        if(r.source==="public-json"){
+          const original=publicById.get(r.id);
+          if(!r.id||!original){invalid.push("Riga "+r.line+": ID pubblico inesistente");continue;}
+          if(seenIds.has("public:"+r.id)){invalid.push("Riga "+r.line+": ID pubblico duplicato");continue;}
+          seenIds.add("public:"+r.id);
+          const changes=Object.fromEntries(FIELDS_EDIT.filter(k=>clean(original[k])!==clean(r[k])).map(k=>[k,r[k]]));
+          if(Object.keys(changes).length){if(!validEdit(changes)){invalid.push("Riga "+r.line+": modifica pubblica non valida");continue;}staged.push({kind:"public",id:r.id,changes});updates++;}continue;
+        }
         if(r.source!=="firestore"&&r.source!=="new"){invalid.push("Riga "+r.line+": origine sconosciuta");continue;}
         if(r.id&&seenIds.has(r.id)){invalid.push("Riga "+r.line+": ID duplicato");continue;}if(r.id)seenIds.add(r.id);
         if(r.source==="firestore"&&(!r.id||!existing.has(r.id))){invalid.push("Riga "+r.line+": ID Firestore inesistente");continue;}
@@ -98,7 +112,8 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
       // Sequential writes intentionally avoid a partial parallel overwrite storm.
       for(const item of staged){
         if(!isAdmin())throw Error("Sessione amministratore terminata.");
-        if(item.kind==="update")await updateDoc(doc(db,"directoryBusinesses",item.id),{...item.changes,status:"approved",reviewedAt:serverTimestamp()});
+        if(item.kind==="public")await setDoc(doc(db,"directoryOverrides",item.id),item.changes,{merge:true});
+        else if(item.kind==="update")await updateDoc(doc(db,"directoryBusinesses",item.id),{...item.changes,status:"approved",reviewedAt:serverTimestamp()});
         else await addDoc(collection(db,"directoryBusinesses"),{...item.data,imageUrls:[],uid:getUid(),status:"approved",createdAt:serverTimestamp()});
         done++;
       }
