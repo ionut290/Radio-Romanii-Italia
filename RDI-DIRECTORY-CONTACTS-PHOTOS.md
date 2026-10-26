@@ -44,3 +44,10 @@ Non aggiungere URL fotografici quando manca l'autorizzazione. Per le schede priv
 - La colonna email è facoltativa: i file precedenti restano compatibili.
 - Le fotografie non sono prelevate in automatico dal web; i titolari possono inviarle al processo di approvazione.
 - RDI non può dedurre la disponibilità di WhatsApp dal solo numero telefonico.
+
+## Aggiornamento amministrazione del 26 ottobre 2026 — limitazioni e nuovi strumenti
+- Il pannello **Qualità del catalogo RDI** ora consente di filtrare per telefono, WhatsApp, email, foto, sito e orari mancanti. Mostra fino a 20 schede alla volta, offre link di ricerca per nome e indirizzo ed esporta un CSV coerente con il filtro.
+- Il modulo `directory-public-admin.js` prepara un editor separato per le schede del catalogo pubblico; il codice originale del catalogo resta immutato. **La funzione è intenzionalmente nascosta finché il client non riesce a leggere `directoryOverrides` tramite Firestore.**
+- **Attenzione:** nel file `firestore.rules` attualmente versionato NON è presente una regola `directoryOverrides`. L'editor non è abilitato e NON bisogna aspettarsi che salvi modifiche. È necessario progettare, revisionare, testare e pubblicare regole appropriate su Firebase prima di abilitarlo.
+- Le integrazioni di recapiti verificate via ricerca sono state aggiunte a `data/directory-enrichments.json`, senza modificare le schede presenti direttamente in Firestore.
+- Pubblicazione GitHub Pages e autorizzazioni Firestore sono processi diversi: un commit GitHub non dimostra che le regole Firebase siano già aggiornate.
