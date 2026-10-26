@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a182c">
+<meta name="description" content="Observatorul RDI al incidentelor de violență și terorism documentate: hartă interactivă, cronologie, surse și articole.">
+<meta property="og:title" content="RDI | Harta mondială a atacurilor">
+<meta property="og:description" content="Incidente documentate, date, surse verificate și articolele redacției.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://radioromanii.duckdns.org/RADIO-COVER.jpg">
+<link rel="icon" href="./RADIO-LOGO.png">
+<link rel="canonical" href="https://radioromanii.duckdns.org/harta-atacurilor.html">
+<title>Harta mondială a atacurilor | Radio Românii din Italia</title>
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="./harta-atacurilor.css?v=20261026">
+<script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script defer src="./harta-atacurilor.js?v=20261026"></script>
+</head>
+<body>
+<a class="skip" href="#main">Sari al contenuto / Salt la conținut</a>
+<header class="topbar">
+<a class="brand" href="./index.html" aria-label="Radio Românii din Italia, acasă"><img src="./RADIO-LOGO.png" alt="" width="44" height="44"><span><b>RADIO ROMÂNII</b><small>DIN ITALIA · REDACȚIA</small></span></a>
+<nav class="headlinks"><a href="./index.html" data-t="home">Acasă</a><a href="./arhiva.html" data-t="archive">Arhiva știrilor</a><a href="./redactie.html" data-t="desk">Redacția</a></nav>
+<label class="lang-label" for="language">🌐 <select id="language" aria-label="Limba"><option value="ro">Română</option><option value="it">Italiano</option></select></label>
+</header>
+<main id="main" class="shell">
+<section class="intro">
+<div class="eyebrow"><span class="live-dot"></span><span data-t="eyebrow">RDI · OBSERVATOR INTERNAȚIONAL</span></div>
+<h1 data-t="title">Harta mondială a atacurilor</h1>
+<p class="lead" data-t="subtitle">O hartă documentară a incidentelor raportate. Date, locuri, victime, surse și articole — cu verificare editorială și respect pentru cei afectați.</p>
+<div class="introbottom"><span id="update" aria-live="polite">—</span><a href="#metodologie" data-t="methodLink">Cum verificăm informațiile ↗</a></div>
+</section>
+<section class="stats" aria-label="Statistici ale selecției">
+<div class="stat"><span class="stat-icon">◉</span><strong id="stat-events">—</strong><small data-t="events">Incidente din selecție</small></div>
+<div class="stat"><span class="stat-icon">◎</span><strong id="stat-countries">—</strong><small data-t="countries">Țări</small></div>
+<div class="stat"><span class="stat-icon">✦</span><strong id="stat-killed">—</strong><small data-t="killed">Decese raportate*</small></div>
+<div class="stat"><span class="stat-icon">＋</span><strong id="stat-injured">—</strong><small data-t="injured">Răniți raportați*</small></div>
+</section>
+<p class="stats-note" data-t="statsNote">* Totaluri doar pentru incidentele afișate cu cifre cunoscute; nu sunt statistici mondiale exhaustive. Bilanțurile pot fi revizuite.</p>
+<section class="atlas">
+<div class="panel filters">
+<div class="panel-title"><div><span class="mini" data-t="explore">EXPLOREAZĂ</span><h2 data-t="filters">Caută în hartă</h2></div><button id="reset" class="reset" type="button" data-t="reset">Resetează</button></div>
+<label for="search" data-t="searchLabel">Loc, țară sau cuvânt-cheie</label><input id="search" type="search" autocomplete="off" placeholder="Ex: Mali, Yala..." maxlength="120">
+<div class="filter-grid"><div><label for="from" data-t="from">De la data</label><input id="from" type="date"></div><div><label for="to" data-t="to">Până la data</label><input id="to" type="date"></div></div>
+<label for="country" data-t="country">Țară</label><select id="country"><option value="" data-t="allCountries">Toate țările</option></select>
+<label for="kind" data-t="kind">Tip de incident</label><select id="kind"><option value="" data-t="allKinds">Toate tipurile</option><option value="attack" data-t="attacks">Atacuri raportate</option><option value="foiled" data-t="foiled">Tentative împiedicate</option></select>
+<div class="quick"><button type="button" data-days="7">7 zile</button><button type="button" data-days="30">30 zile</button><button type="button" data-days="90">90 zile</button><button type="button" data-days="0" class="active" data-t="allDates">Toate</button></div>
+<p class="hint"><span class="symbol"></span><span data-t="approx">Marcajele arată o zonă aproximativă, nu locul exact al incidentului.</span></p>
+</div>
+<div class="map-area">
+<div id="map" role="region" aria-label="Hartă geografică interactivă"><div class="loading" id="map-loading">Se încarcă harta…</div></div>
+<div class="map-footer"><div class="legend"><span class="dot red"></span><span data-t="attackLabel">Atac raportat</span><span class="dot amber"></span><span data-t="foiledLabel">Tentativă împiedicată</span></div><span class="osm">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span></div>
+</div>
+</section>
+<section class="activity">
+<div class="section-heading"><div><span class="mini" data-t="chronology">CRONOLOGIE</span><h2 data-t="latest">Incidente documentate</h2></div><span id="count" class="counter">—</span></div>
+<div class="warning"><b data-t="editorialStatus">Selecție editorială</b><span data-t="warning"> Nu publicăm automat ca fapt confirmat orice înregistrare a unui agregator. Datele sunt atribuite surselor și pot fi corectate.</span></div>
+<div id="incidents" class="incident-list" aria-live="polite"><p class="loading">Se încarcă…</p></div>
+<div id="empty" class="empty" hidden><h3 data-t="noResults">Niciun rezultat în intervalul ales</h3><p data-t="changeFilters">Schimbă perioada sau filtrele pentru a vedea alte incidente.</p></div>
+</section>
+<section class="method" id="metodologie"><span class="mini" data-t="methodEyebrow">TRANSPARENȚĂ EDITORIALĂ</span><h2 data-t="methodTitle">Cum funcționează observatorul RDI</h2>
+<div class="method-grid">
+<div><b data-t="m1title">1. Semnalare</b><p data-t="m1">Surse precum CSPII / TheReligionOfPeace și presa internațională indică posibile evenimente. O semnalare nu este automat un atac confirmat.</p></div>
+<div><b data-t="m2title">2. Verificare</b><p data-t="m2">Comparăm informațiile cu relatări independente și indicăm explicit incertitudinile, datele provizorii și atribuirea responsabilității.</p></div>
+<div><b data-t="m3title">3. Publicare responsabilă</b><p data-t="m3">Pe hartă apar numai incidente selectate editorial. Nu includem coordonate tactice sau identitatea victimelor. Cazurile investigate nu devin verdicte.</p></div>
+</div>
+<p class="disclaimer" data-t="disclaimer">Această hartă este o selecție jurnalistică limitată, nu un registru complet și nu un indicator al unei religii sau comunități. Violența extremistă nu reprezintă credincioșii în ansamblu. Unele date provin din relatări preliminare.</p>
+<div class="source-links"><a href="https://www.cspii.org/attacks" target="_blank" rel="noopener noreferrer">CSPII – baza de semnalări ↗</a><a href="https://acleddata.com/conflict-data" target="_blank" rel="noopener noreferrer">ACLED – metodologia evenimentelor ↗</a><a href="./redactie.html" data-t="deskOpen">Redacția RDI ↗</a></div>
+</section>
+</main>
+<footer class="footer"><span>© Radio Românii din Italia · RDI</span><a href="./index.html" data-t="back">Înapoi la radio</a></footer>
+</body></html>
