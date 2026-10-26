@@ -6,10 +6,24 @@
 - Marcajele nu indică coordonate exacte; nu se publică detalii tactice, identitatea minorilor sau a victimelor.
 - Nu se clasifică violența în funcție de religia persoanei. Motivul, dacă este cunoscut, se atribuie exclusiv surselor.
 
-## Semnalări zilnice
-Workflow [RDI - Monitorizare incidente](../.github/workflows/incident-leads.yml) rulează o dată pe zi (07:17 UTC) și citește **doar primul tabel** din pagina publică CSPII. Scrie maximum 200 de piste în [data/attack-candidates.json](../data/attack-candidates.json). Dacă sursa nu poate fi citită, eșuează fără a șterge datele existente.
+## Semnalări zilnice din surse multiple
+Workflow [RDI - Monitorizare incidente](../.github/workflows/incident-leads.yml) rulează zilnic la 07:17 UTC și la schimbări ale scriptului. **Nu publică automat atacuri**: actualizează numai coada de documentare [data/attack-candidates.json](../data/attack-candidates.json), cu un maximum de 240 de piste și istoric recent limitat.
 
-**Nicio semnalare nu ajunge automat pe hartă sau în știri.** Site-ul CSPII este o sursă cu o selecție editorială proprie, nu un registru neutru/definitiv; include și tentative, simple planuri și date care necesită rectificări.
+Surse active de *descoperire*:
+- **CSPII / TheReligionOfPeace** – primul tabel public al incidentelor declarate. Sursa are propria selecție și poate include evenimente viitoare, planuri, acuzații sau date inexacte. Verificare independentă obligatorie.
+- **Google News RSS** – căutări în engleză, italiană, spaniolă și franceză pentru atentate și atacuri armate. Agregatorul nu este o confirmare. Linkurile către edițiile originale necesită verificare.
+- **GDELT DOC 2.0** – index de articole despre atacuri, atentate și tentative, cu căutări limitate la ultimele 48 de ore. https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/
+
+Câmpul `date` din rezultatele Google News reprezintă **data publicării**, iar din GDELT **data observării articolului**, nu data atacului! `date_kind` marchează această diferență, iar `event_date_confirmed: false` indică necesitatea verificării. Doar editorul documentează și stabilește data exactă a evenimentului. Nu inferea coordonate sau bilanțuri din agregatoare.
+
+Fluxurile sunt accesate cu cereri reduse și timeout. Dacă unul e indisponibil, se păstrează pistele anterioare; dacă toate eșuează, scriptul nu suprascrie fișierul existent. `source_status` permite redacției să vadă ce a funcționat în ultima execuție. Atribuirile, evaluările și sursele independente adăugate de editor sunt păstrate după reluare.
+
+Date de referință suplimentare, **nu integrate fără acces/autorizare și verificare**:
+- **UCDP Candidate / GED** – date codificate științific despre conflicte violente, inclusiv seturi lunare, nu neapărat flux live: https://ucdp.uu.se/downloads/
+- **ACLED** – date despre conflicte, necesită cont myACLED și respectarea condițiilor de acces: https://acleddata.com/api-documentation/getting-started
+- **ReliefWeb** – rapoarte umanitare, API cere `appname` aprobat: https://apidoc.reliefweb.int/
+
+**Nicio semnalare nu ajunge automat pe hartă sau în știri.** A nu se confunda numărul de articole cu numărul de atacuri: aceeași întâmplare poate apărea de zeci de ori, iar relatările despre un complot împiedicat nu sunt atacuri realizate.
 
 ## Publicarea verificată – procedura editorului
 1. Deschide fișierul de semnalări și compară faptele cu minimum o sursă de încredere independentă (ideal două: Reuters/AP, autorități, presă locală credibilă). Nu considera republicări ale aceluiași comunicat ca dovezi independente.
