@@ -15,6 +15,7 @@ COLORS = {
     "diaspora": ("#183c67", "#835a9d", "#e9ad69"),
     "știri consulare": ("#153e64", "#427c9b", "#edc26b"),
     "drepturile muncitorilor": ("#183e5b", "#408c81", "#e9b957"),
+    "conflict": ("#101f35", "#34415a", "#d5ad79"),
 }
 AI_IMAGE_BY_TOPIC = {
     "community": "community",
@@ -39,7 +40,20 @@ TOPICS = [
     (("famil", "diaspor", "român", "român", "comunit", "migrant"), "community"),
 ]
 
+def is_armed_conflict(item):
+    """Detect armed violence without classifying ordinary political/economic 'attacks' as war."""
+    combined = " ".join(str(item.get(key) or "") for key in ("title", "summary", "category")).casefold()
+    explicit = r"ambuscad|ambush|emboscad|bombard|război|razboi|guerra|guerre|\\bwar\\b|jihad|teroris|terroris|masacr|massacr|conflict armat|armed conflict"
+    attacks = r"atac|attacc|attack|assalt|raid"
+    victims = r"militar|solda|civili|civilian|ucis|morț|morti|killed|\\bdead\\b|armată|armata|armed|bomba|exploz|explosi|jihad|teroris|terroris"
+    return bool(re.search(explicit, combined) or (
+        re.search(attacks, combined) and re.search(victims, combined)
+    ))
+
+
 def topic_for(item):
+    if is_armed_conflict(item):
+        return "conflict"
     combined = (item.get("title", "") + " " + item.get("category", "")).casefold()
     for needles, topic in TOPICS:
         if any(needle in combined for needle in needles):
@@ -48,6 +62,8 @@ def topic_for(item):
 
 def drawing(topic, accent):
     # Vector illustrations deliberately symbolic: never represent a real event or person.
+    if topic == "conflict":
+        return '<g transform="translate(784 300)"><path d="M0-125 113 89H-113Z" fill="#d5ad79"/><path d="M0-45v67" stroke="#17283f" stroke-width="19" stroke-linecap="round"/><circle cy="54" r="11" fill="#17283f"/></g><circle cx="784" cy="300" r="202" fill="none" stroke="#fff" stroke-opacity=".2" stroke-width="6"/>'
     if topic == "finance":
         return '<g fill="#f5cf75"><rect x="600" y="340" width="85" height="160" rx="8"/><rect x="710" y="283" width="85" height="217" rx="8"/><rect x="820" y="208" width="85" height="292" rx="8"/></g><path d="M615 260 735 205 790 220 910 118" fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round"/>'
     if topic == "weather":
@@ -107,10 +123,15 @@ def fill_missing_images(items):
         if not item.get("image"):
             category = str(item.get("category") or "").casefold()
             topic = topic_for(item)
-            image_key = "workers" if category == "drepturile muncitorilor" else AI_IMAGE_BY_TOPIC.get(topic, "community")
-            item["image"] = f"./editorial-images/ai-{image_key}-rdi.jpg"
-            item["imageType"] = "ai-editorial-illustration"
-            item["imageAttribution"] = "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+            if topic == "conflict":
+                item["image"] = "./editorial-images/rdi-conflict-editorial.svg"
+                item["imageType"] = "editorial-illustration"
+                item["imageAttribution"] = "Ilustrație editorială RDI. Nu este fotografia evenimentului."
+            else:
+                image_key = "workers" if category == "drepturile muncitorilor" else AI_IMAGE_BY_TOPIC.get(topic, "community")
+                item["image"] = f"./editorial-images/ai-{image_key}-rdi.jpg"
+                item["imageType"] = "ai-editorial-illustration"
+                item["imageAttribution"] = "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
     for path in OUT.glob("rdi-auto-*.svg"):
         if path.name not in used:
             path.unlink()
