@@ -36,3 +36,19 @@ test("filter and CSV share the same missing-field criteria",()=>{
  assert.deepEqual(filterIncompleteRecords(rows,"whatsapp"),[a,b]);
  assert.deepEqual(filterIncompleteRecords(rows,""),[a,b]);
 });
+
+test("public Excel edits require a cited HTTPS source and do not modify base JSON",async()=>{
+ const file=await readFile(new URL("../directory-excel-safe.js",import.meta.url),"utf8");
+ assert.ok(file.includes('const PUBLIC_EDIT='));
+ assert.ok(file.includes('source=str(r.contactSourceUrl)'));
+ assert.ok(file.includes('per nuovi recapiti pubblici serve contactSourceUrl HTTPS'));
+ assert.ok(file.includes('batch.set(doc(db,"directoryOverrides",item.id)'));
+ assert.ok(file.includes('blockedPublic=publicUpdates'));
+});
+test("Firebase rules limit public business corrections to verified administrators",async()=>{
+ const rules=await readFile(new URL("../firestore.rules",import.meta.url),"utf8");
+ assert.equal(rules.split("match /directoryOverrides/").length-1,1);
+ assert.ok(rules.includes('allow create, update: if directoryAdmin()'));
+ assert.ok(rules.includes("request.resource.data.updatedAt == request.time"));
+ assert.ok(rules.includes("request.resource.data.imageUrls.size() <= 10"));
+});
