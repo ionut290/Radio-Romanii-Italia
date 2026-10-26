@@ -179,7 +179,7 @@ def bbc_leads(today):
     url = "https://feeds.bbci.co.uk/news/world/rss.xml"
     root = ET.fromstring(read_url(url, "application/rss+xml, text/xml"))
     results = []
-    keyword = re.compile(r"\\b(attack|attacks|bomb|bombing|explosion|gunmen|shooting|militant|terror|hostages)\\b",re.I)
+    keyword = re.compile(r"\b(attack|attacks|bomb|bombing|explosion|gunmen|shooting|militant|terror|hostages)\b",re.I)
     for item in root.findall(".//channel/item")[:100]:
         title = (item.findtext("title") or "").strip()[:300]
         observed = get_iso(item.findtext("pubDate") or "")
