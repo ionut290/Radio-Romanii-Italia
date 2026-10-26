@@ -37,6 +37,17 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 <div id="rdiExtras" hidden><span id="rdiExtraLabel"></span><span id="rdiExtraValue"></span></div><div id="progress"></div><div id="ticker"><div id="tickerLabel">ACTUALITATE</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • Acasă, oriunde ai fi! • Știri, muzică și comunitate</div></div></div>
 <script>
 const $=id=>document.getElementById(id);
+// The Chromium page on the server stays open for days. A small public build
+// marker makes it reload itself after a new YouTube layout is deployed.
+const RDI_YOUTUBE_BUILD='20261026-auto-refresh-1';
+async function refreshWhenDeployed(){
+ try{
+  const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
+  const data=response.ok?await response.json():null;
+  if(data?.build&&data.build!==RDI_YOUTUBE_BUILD)location.reload();
+ }catch(e){/* Keep the broadcast running if GitHub Pages is briefly unavailable. */}
+}
+setInterval(refreshWhenDeployed,60000);
 const clockTimeFmt=new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
 const clockDateFmt=new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',year:'numeric'});
 function updateRdiClock(){const now=new Date();$('rdiClockTime').textContent=clockTimeFmt.format(now);$('rdiClockDate').textContent=clockDateFmt.format(now)+' · ORA ITALIEI'}
