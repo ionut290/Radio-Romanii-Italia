@@ -1,0 +1,28 @@
+<!doctype html><html lang="ro"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071322"><meta name="robots" content="index,follow">
+<title>Articol documentat | RDI Observator</title><link rel="icon" href="./RADIO-LOGO.png">
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#09182a;color:#f0f4fa}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#173b56,#09182a 60%)}header{padding:22px max(20px,calc((100vw - 900px)/2));border-bottom:1px solid #31455a;display:flex;gap:20px;justify-content:space-between;align-items:center}header a,footer a{color:#ebce94;text-decoration:none;font-size:13px}main{max-width:860px;margin:40px auto 75px;padding:0 20px}.kicker{color:#e4bf79;letter-spacing:.13em;font-weight:700;font-size:11px}h1{font-size:clamp(30px,4.5vw,49px);line-height:1.15;letter-spacing:-.035em}h2{font-size:20px;color:#e4c88d;margin-top:35px}.meta{color:#adc0d3;font-size:13px}.summary{font-size:19px;line-height:1.6;color:#d6e4ef;padding:15px 20px;border-left:3px solid #dfba73;background:#14283a;border-radius:0 10px 10px 0}.article-body p{font-size:16px;line-height:1.87;color:#d2dde7;margin:22px 0}.refs{display:flex;flex-wrap:wrap;gap:15px}.refs a{color:#f4d294;font-size:13px}footer{border-top:1px solid #31455a;padding:23px;display:flex;justify-content:center}.notice{color:#a9bdd0;font-size:12px;line-height:1.6}a:focus{outline:2px solid #fff;outline-offset:3px}</style></head><body>
+<header><a href="./index.html">← RADIO ROMÂNII DIN ITALIA</a><a href="./harta-atacurilor.html">🌍 Harta atacurilor</a></header>
+<main><div class="kicker">RDI · REDACȚIA · OBSERVATOR INTERNAȚIONAL</div><article id="story"><h1>Se încarcă articolul…</h1></article></main>
+<footer><a href="./arhiva.html">Arhiva redacției RDI ↗</a></footer>
+<script>
+"use strict";
+(async function(){
+const container=document.getElementById("story"),p=new URLSearchParams(location.search),id=p.get("id")||"";
+function element(tag,value,cls){const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(cls)n.className=cls;return n}
+if(!/^rdi-[a-z0-9-]{4,100}$/.test(id)){container.replaceChildren(element("p","Articolul nu a fost găsit."));return}
+let item=null;
+for(const src of ["./editorial.json","./data/editorial-archive.json"]){
+  try{const res=await fetch(src,{cache:"no-store"});if(!res.ok)continue;const payload=await res.json();item=payload.items?.find(x=>x.id===id&&x.editorial&&x.category==="Știri din redacție");if(item)break}catch(e){console.warn("RDI reader:",e)}
+}
+if(!item){container.replaceChildren(element("p","Articolul nu este disponibil. Consultă arhiva RDI."));return}
+document.title=item.title+" | Radio Românii din Italia";
+container.replaceChildren(element("h1",item.title),element("p",new Date(item.published).toLocaleDateString("ro-RO",{dateStyle:"long"})+" · "+(item.byline||"Redacția RDI"),"meta"));
+if(item.summary)container.append(element("p",item.summary,"summary"));
+const body=element("div",undefined,"article-body");(item.body||"").split(/\n\s*\n/).filter(Boolean).forEach(t=>body.append(element("p",t.trim())));container.append(body);
+container.append(element("h2","Surse și verificare"));const links=element("div",undefined,"refs");if(item.url?.startsWith("https://")){const a=element("a","Sursă principală ↗");a.href=item.url;a.target="_blank";a.rel="noopener noreferrer";links.append(a)}container.append(links);
+container.append(element("p","Relatare originală RDI, bazată pe surse jurnalistice. Bilanțurile, acuzațiile și responsabilitățile pot fi actualizate pe măsură ce apar informații noi.","notice"));
+})();
+</script></body></html>
