@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-26T18:41:24.925913+00:00",
+  "updated_at": "2026-10-26T18:42:14.049765+00:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
@@ -15,7 +15,7 @@
     },
     "google_news": {
       "status": "ok",
-      "new_leads": 135
+      "new_leads": 140
     },
     "gdelt": {
       "status": "error",
@@ -72,6 +72,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-f89132f9dc78a12fa7",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "I procuratori spagnoli pongono il regime iraniano al centro del complotto per assassinare Vidal-Quadras - National Council of Resistance of Iran - NCRI",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "National Council of Resistance of Iran - NCRI",
+      "source_url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQaXBhemJ1dnI1NDE3RHF2YmNZaklFTlV1UUs0ZF9DN1NKejdScjAtQk5Od2VKaWwya1IyQzUxbDZ3TkFfUDlzOTFqRDVuU2NjYUhzSXRSN0l6R2RGTy1ZcGxIQm9ZT1ctbzRNTmxTZWxqaC1kck5KcE5HTjJFOWY5QWpDckZIMWdWZ3pNbUoyZm5iUmNHWGk3UUlZOVVGc2JXTWZEWGJ3TEdrend4Z1E0SVlkNGc1VFhSXzVMNWlyTEpsTEJ1N2RFMzMzNnZUckdJeWtPS0xIY0NjS2dWX3RQbkxJYTluZ3pDNWdN0gHwAUFVX3lxTE9Fb3RwaThqUUdNdFhDQ21VdVNmSmRNZS03amM1c3JaQzNSYUZCNWlfZ2VJcWo1ZmpKMHYzWFJhZDA0akEzMUN3cXdwRmEzeHFoVnIzdFpSd2JJTDlyeHhacnFwUF9tNlllMDF1QjJ5SkRUZTlkQ2lrVm9EU2l1R0VCYTJieElSbnZfNFF3dlhlb1V5ZzliRlRYU1drUE9ZNzR6TjNwOXI1OWlWMmRCOF9mdU1lTWxWR20ybWs1ck9BNUY0MzN0d2hVb2tZRUREZnQ1clhDVTdudGMyeXl2VVR5N1MyWlRuQXNBZUh0VGo4Yg?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-f79681a9cb867e61ec",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -117,6 +133,22 @@
       "source_name": "Google News search / es",
       "publisher": "MONCLOA.COM",
       "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOWkFLWHYzeldzQmtQZTllVngxZ0NWNlYwMTIza0NtY2FZQ0NJZl9pVDF3VTNIZTRsVUpVUXVLd3BlbEg4bXhiNmd1RGZqZzdacEpTeEFrTngzMVlPZF93RmF1RHJvTV9yWnpZWE92SWNCam5GQjJlZ1l5UzVDU2daRU1qaGExcS1lOURR?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-ef95ccdb1fd472fecc",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Attentat de Trappes : la garde à vue du suspect a repris, ce dernier conteste le mobile raciste - France 24",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_fr",
+      "source_name": "Google News search / fr",
+      "publisher": "France 24",
+      "source_url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPSHppXzd2VG9OLVU1S0FLel8xbE1PTjVIM1JqcWpmSXFhS0dLWFpWZDdoV0taSGRQcWtPT2RpZVFNWHdzNjRnVW1naURZUDV5VHMxbFY5bmRiNTFhSmFpeWs4bmpLWmV2YTU4ZjduYm5JcXlxcjhhRGZ5SUI3UWFrYjBHcGpGUDFXc2tLcnF4ZDNzMUwzVV9Ydm5QVzlETjNPTTYzemVjTkpxUTFsYkJHcklFSmtwNkR4Umw3aUpTWWoyZkdKSjFPSG5Keks?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -312,6 +344,38 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-d66c62ed3a51c23a09",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Paura al Dong Xuan Center: uomo aggredito con un machete, amputata una mano - il Mitte",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "il Mitte",
+      "source_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPemNYbXhYOTV3ZlI5QmUtOGxWNi12cXdYZXYxOU5KMFpZWTR4dDU3bjIyVVV5UmtQZml1WlUxOFlDOTRvSjdpaXhsWE1SaXZtUVZyYmlVQnVFdnZZRE1BS05LVUFNMjdCR2kwWVNMT1UtNTQ4ZHB0YUpPb3l0MFUwcFBnNA?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-d4d75a394f9683c189",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Ampliamento | Arrestati i tre \"terroristi\" implicati nell'attacco mortale contro una chiesa a Karak - Demócrata",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "Demócrata",
+      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOcXlsbXVtMV9lUFNCcDY1T25qenFTQXBKd3A4cnc3YkZlakxuYXY5NHN3ZE9sc3psUVFSd3NMSmlJY25ubUxqLWdOUzFkaUVFZWpTbVE4OWRFN0hPSjhyRlEwX19KQXQ1clRsZWNyZ3B5X3RaNFJiWEJJQnlGOGlBeWw4VkVnODM0Tk5xV29kanl6cTJCQXFMRV9mUThWODZMdE5SaDdPQXdvN0RnWnNjdXhYeGhyQTM1U0FZX1ZTdFltMFpIMVdfbHEzejlYdHhMY3dOWFVKamg4dXfSAdsBQVVfeXFMTnF5bG11bTFfZVBTQnA2NU9uanpxU0FwSndwOHJ3N2JGZWpMbmF2OTRzd2RPbHN6bFFRUndzTEppSWNubm1Mai1nTlMxZGlFRWVqU21RODlkRTdIT0o4ckZRMF9fSkF0NXJUbGVjcmdweV90WjRSYlhCSUJ5RjhpQXlsOFZFZzgzNE5OcVdvZGp5enEyQkFxTEVfZlE4Vjg2THROUmg3T0F3bzdEZ1pzY3V4WHhockEzNVNBWV9WU3RZbTBaSDFXX2xxM3o5WHR4TGN3TlhVSmpoOHV3?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-cbaa680fa06f25b823",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -357,6 +421,22 @@
       "source_name": "Google News search / fr",
       "publisher": "Le Dauphiné Libéré",
       "source_url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOcE9yNTJMYjBKb2tOd0xwNVhKdndBY1FpWndKWGRhclRqOTAwd1kwOFlJS3FQc1lEanNmVlRodzRIMWxYS01nQXFWQXFidVdNOGdkQVoyNDUzN3N4VDhaUVVQY3NGOVZndERYSkVGT3FMQlRDZ2JtZHZnNjNOQlVYbUFKZUVETTRvWXRvWmczdjgwS2p0Zmx0Y0hjWFVjbWFLNXhyVFhZRnZRNFU4NG14OFVPdjFScmtmZFdkNzdFcnp0VlFGY195dUthcG5sd2VnZHFLU1Z3RG4wUGVma2lRS3BWbw?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-c407ce3d11081feb53",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Arrestati i tre \"terroristi\" collegati all'attacco con nove morti in una chiesa di Karak - Demócrata",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "Demócrata",
+      "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNdDdOQXVINUpnbFdVNEQ0ZngwRk1jdVVaejg0Vm9HaXo1aGdKTWtpWnc3UFlhbVNDbmM4a1lyYXAxTXk0cTItd21fZ2Q2Mkx5YkdiRTRMYkI4Wjk2WmdYNFJacmt0bEhXXzNMY2F4YktBakQ4c0xzNktUZUszMmhfWGdwSFl0RWJ4VVZJLURlZlZ3emxDWDlJOUpoSG8tbnpJdkVNS3d5MnJEZ3FsbElhUlRlZlo2S3NlM0l1TURKZTlzaVdWbWNOeVVpc1lDc0HSAc8BQVVfeXFMTXQ3TkF1SDVKZ2xXVTRENGZ4MEZNY3VVWno4NFZvR2l6NWhnSk1raVp3N1BZYW1TQ25jOGtZcmFwMU15NHEyLXdtX2dkNjJMeWJHYkU0TGJCOFo5NlpnWDRSWnJrdGxIV18zTGNheGJLQWpEOHNMczZLVGVLMzJoX1hncEhZdEVieFVWSS1EZWZWd3psQ1g5STlKaEhvLW56SXZFTUt3eTJyRGdxbGxJYVJUZWZaNktzZTNJdU1ESmU5c2lXVm1jTnlVaXNZQ3NB?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -469,6 +549,22 @@
       "source_name": "Google News search / fr",
       "publisher": "BFM",
       "source_url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPbXp6MEhZLXpEemY1RGVWRWhzMGlOQTFVTTFpalU4SjNKOGxnZjZ4NU1HVGM3VHd1d2JzSjBNZ1l6a2Jxa3loaHZ4ZzJXUWhfcFMyakhWakJURmN0TUl4ZUxYWmF1c001UFdJSTZZWjRkc3pOQTdobDVOdnNHWWZydkNTZHFva3ZLd3NYWWlScWtuZW4wRnNrd1daSkJmMXR1VVRMdXE4OTZRX28xUmtGbEVYZEpzbE4yd2hyQkJHMWdnTnlFM1RYZHh0VGlMeV9xN0hrNENhSnhHV0ZNenYxYkRXWGptMVQ1Tl9IdU9lRVlpX2RXV1dmU1hObjlMY3hYci1J?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-ab0bdd384d8af3ea15",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Attentat raciste à Trappes : \"C'est une contrevérité grave\" d'affirmer que les auteurs d'attentats d'extrême droite sont traités différemment, réagit l'ancien procureur antiterroriste - franceinfo",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_fr",
+      "source_name": "Google News search / fr",
+      "publisher": "franceinfo",
+      "source_url": "https://news.google.com/rss/articles/CBMiggNBVV95cUxPOUlOMFl1dm1QMFl2Yjc2Mmx3OW9ZVlNOMml5WkxFQ1gyb0puZXU4ZG9maG5wN3hPai1keVdVZXhyV2RLdmdsaHJKTXUwVm1hMk5xdGhtODItdVhWaEluTndtUzFTNWFlQ1JvemU1TVVYZ0tFUlEzeFBPbmg0bGNGeWh0amFMdGlkREpkVE50Nm1mWTF1WHRGWTdyUTVaVE1XbjB5eWsxbU9hOWprZVpPZEZtMEYxQzdJVTVZTlRyQmFIZk56MXNPMjgwSXlRT2hYeVFjSDh5ZFRMQkIxdXhPYVM3YzAxcDl5MnJfSEZhdm1GYkZjbGZ1SEVZZWFkb0pwcnRGNVlhMDZReDlHQzNIQlVTaENOeVc3WmhQMUJhaXJ0eEJzcy1MSHVYU0dvMG5PNUFfajJQQXFPcllWZ2JCQzA0SXdvNVpuYWU0RmxlLVdTdm1DUnBUMUJ5Q25VY2pMXzU1My1OcDltRzJuU3IyblZsT0ZxSGhOQzI0bGFNSjd0QQ?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -1128,6 +1224,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-5d0ceb4557d10b5745",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Le guerre impoveriscono il mondo - L'Osservatore Romano",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "L'Osservatore Romano",
+      "source_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNZ2hqYnBrVWpZak01MGxlbV9yRFFaemxQQ0Z5ZmJDemRiVnYtV0x0enByWWVZcUY4aUJpMXVxMDh5Z3RnRnZjRHhsZm8waTRUbHhkbEU5cUF3NE9tRWx4VEE1eWZfSGE0VVNSN0UtQ2tLNlhXNFc0UmlfRDRmUExOV0FZZzNjX2RxMlJXOW5YR2pLamwyUEZ1anRn?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-5c03c085f8399f8f40",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -1208,6 +1320,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-4d4935c5a9df294655",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Le guerre impoveriscono il mondo - L'Osservatore Romano",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "L'Osservatore Romano",
+      "source_url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPR0wwU0lxbm5zSnU5NWlDV1BJWnk2NmVkRlhBcXVuNDI0VlI0M3cxNG8zWjdORldzMEtXM2xVUkZuUjAwbmU0MllWVzdaZmg5cG1RUTl1QVN6TkR5SFJobkZhZUgxVHFEZjVRYldtbTZwY25kWEVYMHIwNGNUNm5sTGdRNzh5Vll2a2ZzaUdab3FJdERUYVBOYWd0cw?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-4227c90cb0da130afb",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -1285,6 +1413,22 @@
       "source_name": "Google News search / it",
       "publisher": "LinkOristano",
       "source_url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWUJ0bElOd1JReTBmbk1DbVBSdS1MWjBJWjZJUll0MGdxRndOUXo1M2g5RnYxb1kwNUZfVTJGOVFFTkRuVmhGZXVFcUhyQmc1S3dfSGkyRDZhQ1F2WW93OHdjYnBZRnkweG5kWm42YXZIZU9XdnVsTDd1Z1A2OHFHYV9IVE1NZlNkUVpSQTBVZWI0Nzh5ejhTd2w0Z3l0ckl4bkdTVVZxTk9DSVpuZi00QtIBtgFBVV95cUxPR3oyOXQ2amR1M2N5UVpHS0lVV2ZFZ2NJbThpODM2X29KMVdoZXA4SDF4azA3Y25zUGpKdFRpMHpUTlY3VVBjdGZlckh4Qk13UGNJWkRsa0VrbkdjS0ZHUHpkTlBSejYzWFBzclk1UG0ydm1zbXpVYlp5V0xYdFZ1YllUQmZGb1BUd1ozYmZvd3ByQjdRdVNBeGN3amtubzdkdzlrcTNDSXRQdXkyS1VvRGQ3R0dwZw?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-35a85fefb026d5d972",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "L’omaggio di Bologna a Francesco Guccini: tanta musica nei 10 appuntamenti dal 26 ottobre all'1 novembre - Il Resto del Carlino",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "Il Resto del Carlino",
+      "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOVNrRW9XSFdRUm8wdG1fUHFlckplZkNPVm9EU0UxSDdPWmVhWlJiZi1iLWtsSG5NcUcxSk5sajE2X0xhN0dfS0tDX1dHRzFBM0lVQWtrRE0xNS1wYldiRlV2clU0ak0wQWY5RVhJSzcwZ0hjWHcxTmRtQTc5VHQ4dnRPZGY0WVR5RFNwLTZlYThGMS1CWkFCaGVFUVFNbnYtRDlKUkJjNHNtTTVOVUFId2Zzdw?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -1592,6 +1736,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-f75aca098cb699a9a0",
+      "date": "2026-10-25",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Giordania, la regina Rania fa visita alle famiglie delle vittime dell’attacco alla chiesa di Karak - Il Sole 24 ORE",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "Il Sole 24 ORE",
+      "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQU0o2UmFVaTMyYUVlOGpzTk5EQ2RrN0VaaWx5ZmFwZVJ2TTU2UDJ1MHA4WDN2ZzR3dk5qX29XR0xuWkZpM24zN1hlOXU3M3VDYWpUdzJwWmRTZ3F5VGVHSWhqQUlQZW5DWVRpNUNJQU52YllCRE1JVmR2LU5rTHFTQjNESDYta0pjTEc0SUtrNGd5dTBtRVlIRk9nZFZ3SjFhck5XSzJzdlNicjkwMjNoZ0hqWldjaFI5b1dXQ0dSVjhDVlJ4NUhkZA?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-f5597b82d0b65c73a1",
       "date": "2026-10-25",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -1749,6 +1909,22 @@
       "source_name": "Google News search / it",
       "publisher": "Velvet Cinema",
       "source_url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWWlPeUoxTnJvTWUwY045Mmcxdm9aMldyQWlMSHA0S2ZCSV9iZkhhOS12SWNaTTlPOWt3M1NKRGlxd0o0Tkt6dlFoa1hpRTRtM092cHJRbV9ZUFRPdkQ4RVJIcms2akpqTHNyZmFnTDFZb1BoWDZNRWV5VWw2YW5Gb9IBhgFBVV95cUxOX2UzT3pDRXFHNTRISDV1NFA2SEFCQ2dCOHJNQmJjQmtVN3R1MEVzZzN6V3RHMHJ2Ylkxb0ttZDNEWURlXzNhVDdreTU1MFh0Um9PeGxtUkx5Q1luVXBrTnpoSm0wd3ZPSEtaTnpseXQtWWVEaHJwbnNKTEJLVW91emtCbkc5QQ?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-c2c36a8a0d7633a302",
+      "date": "2026-10-25",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "«Il doppio sparo», Maurizio Ferrari racconta il caso Anteo Zamboni - L'Eco di Bergamo",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "L'Eco di Bergamo",
+      "source_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQTzMwTk5oZThSdXlvVHVxQXFiYUxaam5JRW9wNDRDQWZ4ZDNRNlBsWW85aXBfSTJKT3ZkN2JVSjZtZ3VoSFFLZlNyTmVsVzltcVBnMVdiV2h5VjVPZ0hoTkZyUjZvMzdCY0RQQV94ZW0tbllJWHBPUW1yZDUwOW91eE42ZGNfeHdZdTlvdmN2NS1aX0F4WVg1Si1ybUtKS003RC1zYUVqN29mRDZ0dGhQUUE1bjY1WUlOMnByN1NTNF9VYXNlNGdtMTMzSk9jVExNRlNYeVQ3OG1STEE?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -1927,6 +2103,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-6449a9c8eeecbbcda9",
+      "date": "2026-10-25",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Quale sicurezza? Israele al voto dopo la repressione a Hebron - La Nuova Bussola Quotidiana",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "La Nuova Bussola Quotidiana",
+      "source_url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPa3JzY0FzRGhONXBJZlllQ3JlaEVXcmNBQXFYTkQ0aE43Vy1EVnJqSy1zc3pacTNZZUdZZ0FqbVM3eTFzTnJDaEtLTkxNbmVjYWhudEhhX3ZBWFlFMlR5Rm9GbVM4M3E1SnRiSHpoUlBSc3MzdHY2NGN5Ql9wRFRkMnVFX0t2QXd0SW5oUA?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-626f216ce6703a9781",
       "date": "2026-10-25",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -1943,6 +2135,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-6078c4d0ba625fc9fd",
+      "date": "2026-10-25",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Survivor of Jordan church shooting recalls 'crawling for his life' in 'terror attack' - AOL.com",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_en",
+      "source_name": "Google News search / en",
+      "publisher": "AOL.com",
+      "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNV3M0MV81cmhMbnBzQ1UxdngzaUU1VTZ6OTEzZmpBN21XNVZmZGM3eHBmT3VmT180d0Q2UnZrd2MzSHhuZVFHZjlCd3JmMzFaWTlUWTFfeFFKbDRQRmZ4OWVaNER1SHI1cWhXeUVGZHp2ZkV1N0xHSWJiWlNybGx2NmgzYTFVc3V2ZG13?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-5dabf2a7622727d46d",
       "date": "2026-10-25",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -1956,6 +2164,22 @@
       "source_name": "Google News search / es",
       "publisher": "Antena 3 Noticias",
       "source_url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPa0tBQ0s1Ujk0dEwyY1pMakNKVzJaUWtUTEhSbXd0ZGxhZ2hZUUFucmZGZVZjQ2gtTHRtNkVHS0ZFV0VRWlhxb09KbGwtWWNsOGtvUmxUVlduM0VWV0QwWDZkWmt5elRCVWFYNmhuZDNaYTZ6MHh3Qm4yeDBEX1NCRDBPbjhUeTBrM1FPdFVRM1VmUklMbnFseDh4aFV2bGZodFNSNW1ENmxLRWhrYkoyT0pBSFBpWE1WbWY3Zk0yUG5lUl9VV3BpYnR4cWctbHlWeHI0cFZTckNKdE5SemNXdnM4OE5DTmpXQW9wSk5rcVbSAfABQVVfeXFMUG5CVjdWbjNsb3VRMGJIRGotb1FaZjhwY1E1UGpsZEwwWWlGYll4LWVRV3RoWHUtaHg1T0VjSnR0anZIR2owanN2aE5Hb2lWS0pNRUVhN0M2TGdFQ1NQQ1M0Qi03XzRCVndIcEM4clpWelltYUk5TnNoM19MUW9JMkFpbTZYcnhBZ0owUGhHWXhGNDVQcXJpSU9rVS10U2Jud3VtRFY4MVliNFNSM2xmczhmeDV6SzViSUtJYjFNREJNNXpYUjFnS2JtdUgwRk5tOGhvU1hvZ2hraEVjZ1YwN0Z4RGl4M0YzY2p4RnFIZDlS?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-55e4486a459ece74ab",
+      "date": "2026-10-25",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Anp, '2.670 palestinesi sfollati dalle proprie case dall'Idf a Hebron' - Il Resto del Carlino",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "Il Resto del Carlino",
+      "source_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOOWZIc3lWMElGOVFVcXNJVm83bU1QRDNnS3pIbF8yMXU3ZUU3dU43OVFjV2RENjlpNkpsRGxfSTRkMXNXMmpnVjFKNE5EbU9kN2ZLNWVmbGtrVmxKOW14bFdnYzRKOEdvU05yMVNHdmpkWkQ3YlZQTVJmaFhkOFp6ZjZsWTZGSURZclJUYzNOX1M?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -1988,6 +2212,22 @@
       "source_name": "Google News search / en",
       "publisher": "NewsCord",
       "source_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQeTkxMFVHTWZMckxuSGp3SlZGM0liRDljWDhzdmk2YU1XbVFIdmVJLU1TOVVreklISi1rVkdVSkJ0eGo3TG9tUnMxNHcySGRnaVVvbkNiVExGT2pLWHYxRUJUVG9vaGVLWWdldnJoUGRiLXBlZGwtS1dXdTAzZlE1aHI3c2pQaGo4YzFzS2pVSW9iU1JqOW9IUm0ySVoyNUJFZXhjYjFlZ3k0Q0psUXpzanRuSUR4U3piS3RNZG1KOWItSjR0NFZoQzluYnU1eFNXNm40NGdFb05YOWxNbWFYb3FXOGZWbUcwaUE?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-3332e47da6744c9a2f",
+      "date": "2026-10-25",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Anp, '2.670 palestinesi sfollati dalle proprie case dall'Idf a Hebron' - La Gazzetta del Mezzogiorno",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "La Gazzetta del Mezzogiorno",
+      "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNDVIZVBmaFZqYzJyVDVKenA3bGt6MnpnYW10OEJPSEo2bUJKeFV2cU5HUzJaWnFKZ01KS0NaWGtMQWxiaWczeks4enpNM3NzNUs5NmY5SV93VHZEamxibHNieDNmczlBUThRSTQwNGdVc2xJbm1tU0stazlISDJ2Zm5iR1M1WTFrY1BZd3JZVmVmY1VBbWVmQ0s1VHA2RGxacDBqcElPY2RHQlZNSTAwYWFjaGlfRkVrSkMybi1hQlpoWFBnSGtqNGVTNGR3M25QRFE?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -2211,6 +2451,38 @@
       "source_name": "Google News search / en",
       "publisher": "The Tablet",
       "source_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNeG5KdzZwR2RJU283Z0NWbFZ5SXhUemszcmlmQW1oVGZ4ZDFuNWdDYkwxUld0OENXUWZQcmtaS3Y3aG5GbmZCMTJGVkpWeVR5Rl9TVEdvSGVQa1Q3eEZGeklpNFBFT2k2ZlNMSU1vMDdPMWxFVzVFMjc4bFA0ekNQVHlwbVdfQmJ0bXhmd2Y0TFFMQQ?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-422ce14ed2f8295cfd",
+      "date": "2026-10-24",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Blitz dell’Idf a Hebron: 70 arresti, centinaia di famiglie sgomberate - la Repubblica",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "la Repubblica",
+      "source_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPR3V1UEJzWlVUTkRZU1N5X0NBd0tfeURjMy1jWTJlLUFpa29CTm9qeVAtMjJtTzZ2MzNmM01OaFFyQXJ4YXNsb3k4U3BJT3RSQThCcndTN2JoQXZKV3NJU0J0ZEljS1J4eDA1OF92Q2wxeGtzUHRxZjI5QkdMOTNzdTU5VmZlMGkwRlpSQ2RYR1R0TzhUMWM1QkJ3R2kzQ0l2U0syWENRZ9IBrAFBVV95cUxPSU1KSWpNRlhsSTNqOUpJdGxZdzI0R1VSck5fRF95SGVEUURVTEItcjRoV0NkU0Z0QXZQTFBfc2l2TWV5SHFCa2JTX0NOaTl1aUFINDFaREZPR09UWFBPQlNkRkk1SFIxZ1ZNbnk1RnNOdDZwLU1DQy1BR3ZrVHVmc1UyNTViZnppVlA0WGZUT0w5MGZxaHNiZllXX1JEREdnVFdwallseE1YTEst?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-06f8eef986289d1716",
+      "date": "2026-10-24",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "La Fiscalía atribuye a Irán el atentado contra Vidal-Quadras y pide 27 años para el autor material - MONCLOA.COM",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_es",
+      "source_name": "Google News search / es",
+      "publisher": "MONCLOA.COM",
+      "source_url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQc2xQbTdFOHJZSGN5aWhnTVc3ZjRpc2w4SFpONDYwbFE5aDlmUWxjOERlUmhNLVh5eTRIR3Y2Tnk0U2dDZHFyTnB6VVFKQk1LeWhsYWpvazdkRVBmVHl0SWhWVFpMS09vRW1IajJlaU5uWnBFTkl4NDgtQUhJM3JvRUctRm1nTjQ?oc=5",
       "event_date_confirmed": false
     },
     {
