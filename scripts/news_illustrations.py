@@ -43,9 +43,9 @@ TOPICS = [
 def is_armed_conflict(item):
     """Detect armed violence without classifying ordinary political/economic 'attacks' as war."""
     combined = " ".join(str(item.get(key) or "") for key in ("title", "summary", "category")).casefold()
-    explicit = r"ambuscad|ambush|emboscad|bombard|război|razboi|guerra|guerre|\\bwar\\b|jihad|teroris|terroris|masacr|massacr|conflict armat|armed conflict"
+    explicit = r"ambuscad|ambush|emboscad|bombard|război|razboi|guerra|guerre|\bwar\b|jihad|teroris|terroris|masacr|massacr|conflict armat|armed conflict"
     attacks = r"atac|attacc|attack|assalt|raid"
-    victims = r"militar|solda|civili|civilian|ucis|morț|morti|killed|\\bdead\\b|armată|armata|armed|bomba|exploz|explosi|jihad|teroris|terroris"
+    victims = r"militar|solda|civili|civilian|ucis|morț|morti|killed|\bdead\b|armată|armata|armed|bomba|exploz|explosi|jihad|teroris|terroris"
     return bool(re.search(explicit, combined) or (
         re.search(attacks, combined) and re.search(victims, combined)
     ))
