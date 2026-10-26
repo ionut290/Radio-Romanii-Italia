@@ -6,11 +6,12 @@ import {getFirestore,collection,addDoc,query,where,onSnapshot,serverTimestamp,do
 import {getStorage,ref,uploadBytes,getDownloadURL} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-storage.js";
 import {firebaseConfig} from "./firebase-config.js";
 import {createDirectoryQualityPanel} from "./directory-quality.js?v=20261026-1";
+import {openPublicEditor} from "./directory-public-admin.js?v=20261026-1";
 const $=id=>document.getElementById(id);
 const categories=["Restaurante românești","Magazine românești","Transport România–Italia","Contabilitate și fiscalitate","Traduceri și interpretariat","Avocatură","Construcții și renovări","Curățenie","Îngrijire și frumusețe","Auto și mecanică","Sănătate și servicii profesionale","Alte servicii","Voluntariat și colaborări","Transport și logistică","Asociații și comunitate"];
 for(const id of ["category","kind"]){const select=$(id);for(const c of categories){const o=document.createElement("option");o.value=c;o.textContent=c;select.append(o)}}
 const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),storage=getStorage(app);
-const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],publicImportRecords=[],approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
+const adminEmail="ionut29019@gmail.com";let user=null,records=[],publicRecords=[],publicSourceRecords=[],publicImportRecords=[],publicOverrides=new Map(),approvedRecords=[],cityIndex={},pending=[],stopPending=null,pageLimit=24;
 const directoryMap=createDirectoryMap({onOpen:openBusiness});
 let heldPublicRecords=0,verifiedDetailCount=0;
 const isAdmin=()=>user?.email?.toLowerCase()===adminEmail;
@@ -55,7 +56,13 @@ function openBusiness(b){
  if(images.length>1){const gallery=node("div",undefined,"photo-gallery");for(const url of images.slice(1)){const a=node("a");a.href=url;a.target="_blank";a.rel="noopener noreferrer";const img=node("img");img.src=url;img.loading="lazy";img.alt="Fotografie: "+b.name;a.append(img);gallery.append(a)}inner.append(gallery)}
  if(b.address)inner.append(node("p","📍 "+b.address));
  if(b.hours)inner.append(node("p","🕒 "+b.hours));
- contactLinks(b,inner);inner.append(buildDirectoryExtras(b,lang));dialog.append(inner);document.body.append(dialog);
+ contactLinks(b,inner);inner.append(buildDirectoryExtras(b,lang));
+ if(/^public-[A-Za-z0-9_-]+$/.test(String(b.id||""))&&isAdmin()&&auth.currentUser?.emailVerified){
+  const edit=node("button","✏️ Correggi contatti / aggiungi foto","action secondary");edit.type="button";
+  edit.onclick=()=>{dialog.close();try{openPublicEditor({business:b,db,storage,getAdminUid:()=>isAdmin()&&auth.currentUser?.emailVerified?auth.currentUser.uid:null})}catch(error){alert(error.message)}};
+  inner.append(edit);
+ }
+ dialog.append(inner);document.body.append(dialog);
  dialog.addEventListener("close",()=>dialog.remove(),{once:true});dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
  dialog.showModal();window.rdiTranslate?.();
 }
@@ -122,9 +129,28 @@ async function loadPublicDirectory(){
      publicRecords=next;
    }
  }
+ publicSourceRecords=publicRecords.slice();
+ refreshDirectoryRecords();
+}
+function refreshDirectoryRecords(){
+ const fields=["phone","whatsapp","email","website","hours","address","description","contactSourceUrl","locationPrecision"];
+ publicRecords=publicSourceRecords.map(original=>{
+  const override=publicOverrides.get(String(original.id));
+  if(!override)return original;
+  const patch=Object.fromEntries(fields.filter(k=>typeof override[k]==="string").map(k=>[k,override[k]]));
+  if((override.photoRightsStatus==="permission-granted"||override.photoRightsStatus==="owned-by-rdi")&&Array.isArray(override.imageUrls)){
+   const safeImages=override.imageUrls.filter(u=>typeof u==="string"&&/^https:\/\//i.test(u)).slice(0,10);
+   if(safeImages.length)patch.imageUrls=safeImages;
+  }
+  return {...original,...patch};
+ });
  records=mergeBusinesses(publicRecords,approvedRecords);render();
 }
 loadPublicDirectory();
+onSnapshot(collection(db,"directoryOverrides"),snapshot=>{
+ publicOverrides=new Map(snapshot.docs.map(entry=>[entry.id,entry.data()]));
+ refreshDirectoryRecords();
+},error=>console.info("Correzioni amministrative non disponibili fino alla pubblicazione delle regole Firebase:",error?.code||error));
 onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{approvedRecords=snapshot.docs.map(d=>({id:d.id,...d.data()}));records=mergeBusinesses(publicRecords,approvedRecords);render()},error=>{console.warn("RDI listings unavailable",error.code);sourceError=true;render()});
 function renderPending(){$("pending").replaceChildren(...(pending.length?pending.map(b=>drawCard(b,true)):[node("p","Nu există cereri în așteptare.")]))}
 let excelMounted=false,unmountExcel=null;
