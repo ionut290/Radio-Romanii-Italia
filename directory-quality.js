@@ -19,7 +19,7 @@ function downloadMissing(records, field = "") {
     "phone", "whatsapp", "email", "website", "hours", "foto_presente",
     "dati_mancanti", "sourceUrl", "detailsSourceUrl"];
   const filtered = records.map(b => ({...b, foto_presente: photos(b) ? "si" : "no",
-    dati_mancanti: missingForBusiness(b).join(", ")})).filter(b => b.dati_mancanti && (!field || !value(b[field]) || (field === "photos" && !photos(b))));
+    dati_mancanti: missingForBusiness(b).join(", ")})).filter(b => b.dati_mancanti && (!field || (field === "photos" ? !photos(b) : !value(b[field]))));
   const text = "\uFEFF" + columns.join(";") + "\r\n" +
     filtered.map(b => columns.map(k => quoted(b[k])).join(";")).join("\r\n");
   const blob = new Blob([text], {type: "text/csv;charset=utf-8"});
