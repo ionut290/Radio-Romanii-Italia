@@ -22,7 +22,7 @@ export function mountExcel({db,admin,getPublic}){
  const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,XLSX.utils.json_to_sheet(rows,{header:FIELDS}),"Attivita");XLSX.writeFile(wb,"RDI-attivita-"+new Date().toISOString().slice(0,10)+".xlsx");
  }catch(e){alert(e.message)}finally{exportBtn.disabled=false}};
  importBtn.onclick=()=>{if(currentUser())picker.click()};
- picker.onchange=async()=>{try{requireAdmin();reset();const file=picker.files[0];if(!file)return;if(file.size>8e6)throw Error("File troppo grande");
+ picker.onchange=async()=>{try{requireAdmin();const file=picker.files[0];reset();if(!file)return;if(file.size>8e6)throw Error("File troppo grande");
  const XLSX=await excel();const book=XLSX.read(await file.arrayBuffer(),{type:"array"}),sheet=book.Sheets[book.SheetNames[0]];if(!sheet)throw Error("Foglio vuoto");
  const rows=XLSX.utils.sheet_to_json(sheet,{defval:"",raw:false});if(rows.length>10000)throw Error("Troppe righe");
  const snap=await getDocs(collection(db,"directoryBusinesses")),byId=new Map(snap.docs.map(d=>[d.id,d.data()]));const seen=new Set();const problems=[];let skipped=0;
