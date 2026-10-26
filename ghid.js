@@ -139,7 +139,7 @@ onAuthStateChanged(auth,u=>{user=u;
  const excelRoot=document.getElementById("rdi-excel-admin");
  if(excelRoot)excelRoot.hidden=!isVerifiedAdmin;
  if(!isVerifiedAdmin){unmountExcel?.();excelMounted=false;unmountExcel=null;}
- else if(!excelMounted){excelMounted=true;import("./directory-excel-safe.js?v=20261026-safe3").then(({mountExcel})=>{
+ else if(!excelMounted){excelMounted=true;import("./directory-excel-safe.js?v=20261026-safe4").then(({mountExcel})=>{
    if(!auth.currentUser||auth.currentUser.uid!==u.uid)return;
    unmountExcel=mountExcel({db,admin:()=>!!auth.currentUser&&auth.currentUser.email?.toLowerCase()===adminEmail&&auth.currentUser.emailVerified===true,getPublic:()=>publicImportRecords,getUid:()=>auth.currentUser?.uid});
  }).catch(e=>{excelMounted=false;if(excelRoot)excelRoot.hidden=true;console.warn("Admin Excel unavailable",e);});}
