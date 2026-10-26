@@ -1,12 +1,13 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-26T18:42:14.049765+00:00",
+  "updated_at": "2026-10-26T18:43:44.049284+00:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
     "cspii": "https://www.cspii.org/attacks",
     "gdelt": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
-    "google_news": "https://news.google.com/"
+    "google_news": "https://news.google.com/",
+    "bbc_world": "https://feeds.bbci.co.uk/news/world/rss.xml"
   },
   "source_status": {
     "cspii": {
@@ -17,9 +18,13 @@
       "status": "ok",
       "new_leads": 140
     },
+    "bbc_world": {
+      "status": "ok",
+      "new_leads": 0
+    },
     "gdelt": {
       "status": "error",
-      "error_type": "HTTPError"
+      "error_type": "JSONDecodeError"
     }
   },
   "items": [
@@ -181,6 +186,22 @@
       "source_name": "Google News search / es",
       "publisher": "MONCLOA.COM",
       "source_url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTnJmcVVZOWZ6UzhmRzBvSGRMdUpFbmZhTlNFUmZXZmpvTER4REFoWG9yaTNLX1Q1X1F2NEsxa3MxUTlHLXdWTTQzNkF4aVlsNlQ2QUpXWXNDQ3ptZHRQeUxDdnhfaXp6akZjXzFCTERPV0Y3UEd1TUN1WDFINGQwRDFjNFFPRmVwMkJV?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-eb07f22200ab8a3466",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Attentat à Trappes et La Verrière : Des rassemblements contre le racisme lu… - 20 Minutes",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_fr",
+      "source_name": "Google News search / fr",
+      "publisher": "20 Minutes",
+      "source_url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNYk9ESERxOWdnbWh6LTQ0a3N5UVowdWdHRndkRHcyMjFBTXQyQWRwcnBTTGhPNjFaZHNZazIwWFhaYXRQOVdDbzZRZnBsS0JqdzhMaVdxNEVOaTdQLVVUbTBzSkpneHRHeGlkcFlJTGloWm9jVWZrMXV3Nl9uQU1mdlNJa2kxUzJoUU51RV9jVTBQYzJuN3IyLUNJLXhVaWo0TWJTRC1YMEtaX3gydUhIeU5WMGQ1SlA3SEp2MkM4bkxaaUZHTjFLeg?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -597,6 +618,22 @@
       "source_name": "Google News search / en",
       "publisher": "VOI.ID",
       "source_url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE82ZVY3WEI4N2ttdTc0cFgwR2JIS05wNnJzWnVyNmw0N0o3WDNoQnduWTN1RFJnWmlmd2ZFNVIzTUpLdEXSAUJBVV95cUxPejNINHZLdXBLMGdMWjJwcU95ZWZOSnNrOFJZcHVRaGN5bGl3YUxCb0JXSWdDWmRjR0Zsa3FrajJsMkE?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-a949373d4a0094a0ab",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Jordan: Three Arrested over Deadly Church Attack - Tempo.co English",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_en",
+      "source_name": "Google News search / en",
+      "publisher": "Tempo.co English",
+      "source_url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNaTRBdlVYVjU5ZzdoMlJDdmQza25JakhXNVM4VTc4bjI3U2x1LTlrNklKSDl3cGpsZF9CeHpDU0lLN09QelJ5cm0yY1FXMURQaTA4dWtNM09yS0RVaEhvVzNraUlUSXBsUS1rbUQwS2xDOWZWcnRkaURVTEcyNVlxcVVJV2Nxdw?oc=5",
       "event_date_confirmed": false
     },
     {
@@ -1624,6 +1661,22 @@
       "event_date_confirmed": false
     },
     {
+      "id": "lead-119bf5b2f8b922b5a7",
+      "date": "2026-10-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Nessuno tocchi Caino in missione in Giordania e Siria per la moratoria universale sulle esecuzioni - Il Dubbio",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_it",
+      "source_name": "Google News search / it",
+      "publisher": "Il Dubbio",
+      "source_url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPQWJDRTNKa2Z2d3dnaGZtamtqVXZ3aWhMeUI1V2JINXZHSkFpR2dqbnNFWERFVGZOZDBkd1oydnF2R1pjeVpnOUZVZ1F2bU0xWkttODY0Y3NIQ3g5NVlMQW1CT1hxMUJkclBUWElIZWxnNWFqaFprbGtHR0UxeGMxbERsa0Z2Q3VNeDhTUW1sMW0xdE5kUHV1bno1Qk1SVGFxXzA2VzhjVTI1YV9GTVZLdm54T1c5dm9C?oc=5",
+      "event_date_confirmed": false
+    },
+    {
       "id": "lead-11718bfbe788f0f065",
       "date": "2026-10-26",
       "date_kind": "article_publication_date_NOT_event_date",
@@ -2037,6 +2090,22 @@
       "source_name": "Google News search / it",
       "publisher": "La Nuova Bussola Quotidiana",
       "source_url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNY2ZnSldqRHI1R2t4Rm1HbzZPU0lSWHlJdkQ1YzExaDlOdmFySjBhYUR2OE1rVHV3c0UtbmZOYWxCYkU1ak54bVRCejhDWGZOTDdhekdHU3RlWTlhS3FjMVN0aXl6amhoY2JJa1oxVmg2alMtVUVwLUEzZi13UWxDWEJZcy1aU0pSN005azZB?oc=5",
+      "event_date_confirmed": false
+    },
+    {
+      "id": "lead-78207428f0cce1b98b",
+      "date": "2026-10-25",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Muere a los 26 años Pengo Bossio Wangi, luchador amateur de MMA, asesinado a tiros en París - Telecinco",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
+      "source_id": "google_news_es",
+      "source_name": "Google News search / es",
+      "publisher": "Telecinco",
+      "source_url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQeHF0d25jb2ptVWZqZ0ZhTXcxUjcyYjlVRXhtNjVveTEwUU5JOXdBVEo4anBXazFTaHhzQ2RGOGhfZ0lCLURLd19YcTV5RnFvOGJXQUlpZC1ITlBQZ2phc2xLZlVVZmY0eDFNa0RQODRxR0dCMEM1NVh6YXhFWllZMm5OSGVGWkNiUjI2Yk5pUDNFUUY0UGpaMThDZ1dGeF80RFp3Q1dlZWdtLWlwVU9QVlNHUTFOeXF1cjFpTjBUdE5iNXFOb3JzYWlQOGtoZGtuREhr?oc=5",
       "event_date_confirmed": false
     },
     {
