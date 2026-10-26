@@ -79,6 +79,17 @@ export function buildDirectoryExtras(b,language="ro"){
     source.href=httpUrl(b.locationSourceUrl);source.target="_blank";source.rel="noopener noreferrer";c.append(source);frag.append(c);
   }
  }
+ const contactSources=[["contactSourceUrl","Recapiti"],["phoneSourceUrl","Telefono"],["whatsappSourceUrl","WhatsApp"]];
+ const seenContactUrls=new Set([b.detailsSourceUrl]);
+ for(const [field,label] of contactSources){
+  const href=httpUrl(b[field]);if(!href||seenContactUrls.has(href))continue;
+  seenContactUrls.add(href);
+  const proof=text("p",undefined,"rdi-source-date");
+  const link=text("a",({ro:"Sursa contactelor: ",it:"Fonte dei contatti: ",en:"Contact source: "}[language]||"Fonte: ")+label+" ↗");
+  link.href=href;link.target="_blank";link.rel="noopener noreferrer";proof.append(link);
+  if(/^\d{4}-\d{2}-\d{2}$/.test(b.contactCheckedAt||""))proof.append(text("span"," · "+b.contactCheckedAt));
+  frag.append(proof);
+ }
  if(/^\d{4}-\d{2}-\d{2}$/.test(b.checkedAt||""))frag.append(text("p",t.consulted+" "+b.checkedAt,"rdi-source-date"));
  return frag;
 }
