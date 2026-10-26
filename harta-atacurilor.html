@@ -14,9 +14,9 @@
 <title>Harta mondială a atacurilor | Radio Românii din Italia</title>
 <link rel="preconnect" href="https://unpkg.com">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
-<link rel="stylesheet" href="./harta-atacurilor.css?v=20261026b">
+<link rel="stylesheet" href="./harta-atacurilor.css?v=20261026today1">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-<script defer src="./harta-atacurilor.js?v=20261026c"></script>
+<script defer src="./harta-atacurilor.js?v=20261026today1"></script>
 </head>
 <body>
 <a class="skip" href="#main">Sari al contenuto / Salt la conținut</a>
@@ -46,13 +46,19 @@
 <div class="filter-grid"><div><label for="from" data-t="from">De la data</label><input id="from" type="date"></div><div><label for="to" data-t="to">Până la data</label><input id="to" type="date"></div></div>
 <label for="country" data-t="country">Țară</label><select id="country"><option value="" data-t="allCountries">Toate țările</option></select>
 <label for="kind" data-t="kind">Tip de incident</label><select id="kind"><option value="" data-t="allKinds">Toate tipurile</option><option value="attack" data-t="attacks">Atacuri raportate</option><option value="foiled" data-t="foiled">Tentative împiedicate</option></select>
-<div class="quick"><button type="button" data-days="7">7 zile</button><button type="button" data-days="30">30 zile</button><button type="button" data-days="90">90 zile</button><button type="button" data-days="0" class="active" data-t="allDates">Toate</button></div>
+<div class="quick"><button type="button" data-days="-1" class="active" data-t="todayButton">Astăzi</button><button type="button" data-days="7">7 zile</button><button type="button" data-days="30">30 zile</button><button type="button" data-days="90">90 zile</button><button type="button" data-days="0" data-t="allDates">Toate</button></div>
 <p class="hint"><span class="symbol"></span><span data-t="approx">Marcajele arată o zonă aproximativă, nu locul exact al incidentului.</span></p>
 </div>
 <div class="map-area">
 <div id="map" role="region" aria-label="Hartă geografică interactivă"><div class="loading" id="map-loading">Se încarcă harta…</div></div>
-<div class="map-footer"><div class="legend"><span class="dot red"></span><span data-t="attackLabel">Atac raportat</span><span class="dot amber"></span><span data-t="foiledLabel">Tentativă împiedicată</span></div><span class="osm">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span></div>
+<div class="map-footer"><div class="legend"><span class="dot red"></span><span data-t="attackLabel">Atac raportat</span><span class="dot amber"></span><span data-t="foiledLabel">Tentativă împiedicată</span><span class="dot blue"></span><span data-t="warLegend">Știre dintr-o zonă de conflict</span></div><span class="osm">© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a></span></div>
 </div>
+</section>
+<section class="war-news" id="war-news" aria-labelledby="war-news-title">
+<div class="section-heading"><div><span class="mini" data-t="warEyebrow">RDI · ACTUALITATE INTERNAȚIONALĂ</span><h2 id="war-news-title" data-t="warTitle">Astăzi în zonele de conflict</h2></div><span id="war-count" class="counter">—</span></div>
+<p class="war-explainer" data-t="warExplainer">Știri publicate azi, distincte de incidentele petrecute azi. Marcajele albastre arată numai localități aproximative; nu reprezintă atacuri confirmate și nu intră în bilanțul de victime.</p>
+<div id="war-list" class="war-grid" aria-live="polite"><p class="loading" data-t="warLoading">Se încarcă știrile verificate…</p></div>
+<p id="war-empty" class="empty" hidden data-t="warEmpty">Nu sunt încă știri verificate publicate astăzi pentru această rubrică.</p>
 </section>
 <section class="activity">
 <div class="section-heading"><div><span class="mini" data-t="chronology">CRONOLOGIE</span><h2 data-t="latest">Incidente documentate</h2></div><span id="count" class="counter">—</span></div>
