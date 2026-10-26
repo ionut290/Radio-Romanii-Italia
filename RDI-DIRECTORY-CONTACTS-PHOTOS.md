@@ -51,3 +51,20 @@ Non aggiungere URL fotografici quando manca l'autorizzazione. Per le schede priv
 - **Attenzione:** nel file `firestore.rules` attualmente versionato NON è presente una regola `directoryOverrides`. L'editor non è abilitato e NON bisogna aspettarsi che salvi modifiche. È necessario progettare, revisionare, testare e pubblicare regole appropriate su Firebase prima di abilitarlo.
 - Le integrazioni di recapiti verificate via ricerca sono state aggiunte a `data/directory-enrichments.json`, senza modificare le schede presenti direttamente in Firestore.
 - Pubblicazione GitHub Pages e autorizzazioni Firestore sono processi diversi: un commit GitHub non dimostra che le regole Firebase siano già aggiornate.
+
+## Progressi aggiuntivi del 26 ottobre 2026
+- Ricerca manuale ampliata in diverse città: nuovi numeri verificati per San Donà di Piave, Bolzano, Flero, Monteriggioni, Firenze, Sciacca, Campobasso, Roma e Dueville. Numeri, email e siti vengono aggiunti solo quando nome e indirizzo corrispondono.
+- L'importatore Excel riconosce adesso le righe con `origin=public-json` e differenze nei campi esistenti. Per cambiare telefono, WhatsApp o email pubblici è richiesta la colonna facoltativa `contactSourceUrl` con URL HTTPS verificabile. La colonna `email` resta facoltativa, compatibile con vecchie esportazioni.
+- Le correzioni pubbliche sono salvate con `setDoc(..., {merge:true})` nella raccolta `directoryOverrides`; in caso di permessi Firebase mancanti vengono segnalate come bloccate, senza arrestare la preparazione delle altre operazioni.
+- Il backup Excel eseguito dal pannello ora include gli arricchimenti pubblici consultati, conservando gli ID originari.
+- Il repository contiene ora una regola `directoryOverrides` con scrittura riservata all'amministratore verificato. **Questa regola è presente su GitHub, ma non risulta pubblicata in Firebase tramite i soli commit.**
+- Il database delle attività approvate su Firestore non è stato esportato direttamente in questa sessione. I conteggi del catalogo pubblico non rappresentano tutto il database operativo.
+
+### Prima importazione dopo la pubblicazione delle regole
+1. Confronta le regole Firestore attive con il repository e pubblica solo la modifica approvata.
+2. Accedi al Ghid con l'account amministratore verificato e scarica il backup Excel.
+3. Modifica una sola scheda pubblica, lasciando invariati `origin` e `id`; per telefono, WhatsApp ed email nuovi inserisci `contactSourceUrl` HTTPS.
+4. Esegui l'importazione di prova, controlla il numero delle modifiche e verifica la scheda nel Ghid.
+5. Procedi per lotti e controlla eventuali doppioni o righe escluse; non ripetere un lotto dall'esito incerto.
+
+Le fotografie rimangono assenti dal catalogo pubblico finché non sono fornite o autorizzate. I telefoni mobili non vengono presentati automaticamente come WhatsApp.
