@@ -123,7 +123,14 @@ loadPublicDirectory();
 onSnapshot(query(collection(db,"directoryBusinesses"),where("status","==","approved")),snapshot=>{approvedRecords=snapshot.docs.map(d=>({id:d.id,...d.data()}));records=mergeBusinesses(publicRecords,approvedRecords);render()},error=>{console.warn("RDI listings unavailable",error.code);sourceError=true;render()});
 function renderPending(){$("pending").replaceChildren(...(pending.length?pending.map(b=>drawCard(b,true)):[node("p","Nu există cereri în așteptare.")]))}
 let excelMounted=false,unmountExcel=null;
+const sessionAction=$("rdi-session-action");
+if(sessionAction)sessionAction.addEventListener("click",()=>{$(auth.currentUser?"signout":"signin")?.click()});
 onAuthStateChanged(auth,u=>{user=u;
+ const sessionStatus=$("rdi-session-status");
+ if(sessionStatus)sessionStatus.textContent=u?(isAdmin()?"● Connesso · Amministratore":"● Connesso · "+(u.displayName||u.email||"Google")):"○ Non connesso";
+ if(sessionStatus)sessionStatus.style.color=u?"#bbf7d0":"#fecaca";
+ if(sessionAction){sessionAction.disabled=false;sessionAction.textContent=u?"Esci":"Accedi";}
+
  const isVerifiedAdmin=!!u&&u.email?.toLowerCase()===adminEmail&&u.emailVerified===true;
  const excelRoot=document.getElementById("rdi-excel-admin");
  if(excelRoot)excelRoot.hidden=!isVerifiedAdmin;
