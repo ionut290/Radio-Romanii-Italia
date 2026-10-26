@@ -5,6 +5,8 @@ const base=JSON.parse(await readFile(new URL('../data/directory-public.json',imp
 const detail=JSON.parse(await readFile(new URL('../data/directory-enrichments.json',import.meta.url),'utf8'));
 const ids=new Set(base.businesses.map(x=>x.id));
 const values=Object.values(detail.records);
+const backlog=JSON.parse(await readFile(new URL('../data/DIRECTORY-RESEARCH-BACKLOG.json',import.meta.url),'utf8'));
+const backlogIds=new Set(backlog.items.map(x=>x.id));
 test('every enrichment belongs to an existing business and cites public evidence',()=>{
  assert.ok(values.length>=30);
  for(const [id,b] of Object.entries(detail.records)){
@@ -14,7 +16,10 @@ test('every enrichment belongs to an existing business and cites public evidence
   assert.ok(b.detailsSourceName);
   assert.ok(['official-source','public-directory','location-conflict','identity-conflict'].includes(b.verificationDetail));
   if(b.reviewHold)assert.ok(b.reviewReason);
-  else assert.ok(b.description&&b.services);
+  else {
+   assert.ok(b.description,'missing public description for '+id);
+   if(!b.services)assert.ok(backlogIds.has(id),'unverified services must remain in research backlog: '+id);
+  }
  }
 });
 test('quarantined records must not appear in public directory',()=>{
@@ -29,8 +34,10 @@ test('approved own business listings remain independent of imported enrichment m
 });
 
 test('research backlog covers exactly all remaining public listings without inventing data',async()=>{
- const backlog=JSON.parse(await readFile(new URL('../data/DIRECTORY-RESEARCH-BACKLOG.json',import.meta.url),'utf8'));
- const expected=base.businesses.filter(b=>!Object.hasOwn(detail.records,b.id));
+ const expected=base.businesses.filter(b=>{
+  const entry=detail.records[b.id];
+  return !entry || (!entry.reviewHold && (!entry.description || !entry.services));
+ });
  assert.equal(backlog.total,expected.length);
  assert.equal(backlog.items.length,expected.length);
  assert.equal(new Set(backlog.items.map(x=>x.id)).size,backlog.items.length);
@@ -38,6 +45,8 @@ test('research backlog covers exactly all remaining public listings without inve
  for(const entry of backlog.items){
    assert.equal(entry.status,'da_ricercare');
    assert.match(entry.sourceUrl,/^https:\/\//);
-   assert.ok(entry.missing.includes('description'));
+   assert.ok(entry.missing.includes('description') || entry.missing.includes('services'));
+   const research=detail.records[entry.id];
+   if(research?.description)assert.ok(entry.missing.includes('services'),'partially researched business still needs verified services');
  }
 });
