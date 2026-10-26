@@ -199,7 +199,7 @@ if registry_path.exists():
         raise RuntimeError("Cannot read Facebook publication register; refusing to prune previews") from exc
     for entry in registry.get("items", []):
         path = urlsplit(str(entry.get("article_url") or "")).path
-        match = re.fullmatch(r"/articole/([0-9a-f]+)-(?:ro|it)-social\\.html", path)
+        match = re.fullmatch(r"/articole/([0-9a-f]+)-(?:ro|it)-social\.html", path)
         if not match:
             continue
         ident = match.group(1)
