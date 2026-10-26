@@ -43,11 +43,7 @@ async function download(rows){
   const sheet=window.XLSX.utils.json_to_sheet(rows,{header:FIELDS});
   const book=window.XLSX.utils.book_new();window.XLSX.utils.book_append_sheet(book,sheet,"Attivita");
   window.XLSX.writeFile(book,"RDI-ghid-attivita-"+new Date().toISOString().slice(0,10)+".xlsx");
-  return;
-  const blob=new Blob([csv(rows)],{type:"text/csv;charset=utf-8"});
-  const url=URL.createObjectURL(blob),link=document.createElement("a");
-  link.href=url;link.download="RDI-ghid-attivita-"+new Date().toISOString().slice(0,10)+".csv";
-  document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+
 }
 const nameKey=r=>[r.name,r.city,r.address].map(v=>clean(v).toLocaleLowerCase("ro")).join("|");
 export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
