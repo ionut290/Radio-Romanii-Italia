@@ -13,3 +13,16 @@ test("directory coverage accepts verified https business images but ignores empt
  b.imageUrls=["https://example.com/owned.jpg"];
  assert.deepEqual(missingForBusiness(b),[]);
 });
+
+test("public photo source requires documented reuse rights",async()=>{
+ const ghid=await readFile(new URL("../ghid.js",import.meta.url),"utf8");
+ assert.ok(ghid.includes('entry.photoRightsStatus==="permission-granted"'));
+ assert.ok(ghid.includes('entry.photoRightsStatus==="owned-by-rdi"'));
+ assert.ok(ghid.includes('approvedImages.length?{imageUrls:approvedImages}'));
+});
+test("directory rules contain only one approval workflow and allow optional reviewed media",async()=>{
+ const rules=await readFile(new URL("../firestore.rules",import.meta.url),"utf8");
+ assert.equal(rules.split("match /directoryBusinessEdits/").length-1,1);
+ assert.equal(rules.split("match /directoryAds/").length-1,1);
+ assert.ok(rules.includes("'email','imageUrls'])"));
+});
