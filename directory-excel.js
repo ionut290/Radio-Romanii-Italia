@@ -28,7 +28,7 @@ function download(rows){
   document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 const nameKey=r=>[r.name,r.city,r.address].map(v=>clean(v).toLocaleLowerCase("ro")).join("|");
-export function initDirectoryExcel({db,isAdmin,getPublicRecords}){
+export function initDirectoryExcel({db,isAdmin,getPublicRecords,getUid}){
   const wrap=document.getElementById("directory-excel-admin"),exp=document.getElementById("directory-excel-export"),imp=document.getElementById("directory-excel-import"),file=document.getElementById("directory-excel-file"),modal=document.getElementById("directory-excel-review"),summary=document.getElementById("directory-excel-summary"),apply=document.getElementById("directory-excel-apply"),close=document.getElementById("directory-excel-close");
   if(!wrap||!exp||!imp||!file||!modal)return;
   let staged=[];
@@ -76,7 +76,7 @@ export function initDirectoryExcel({db,isAdmin,getPublicRecords}){
       for(const item of staged){
         if(!isAdmin())throw Error("Sessione amministratore terminata.");
         if(item.kind==="update")await updateDoc(doc(db,"directoryBusinesses",item.id),{...item.changes,status:"approved",reviewedAt:serverTimestamp()});
-        else await addDoc(collection(db,"directoryBusinesses"),{...item.data,imageUrls:[],uid:db.app?.options?.projectId?"": "",status:"approved",createdAt:serverTimestamp()});
+        else await addDoc(collection(db,"directoryBusinesses"),{...item.data,imageUrls:[],uid:getUid(),status:"approved",createdAt:serverTimestamp()});
         done++;
       }
       alert(done+" modifiche completate.");staged=[];modal.hidden=true;
