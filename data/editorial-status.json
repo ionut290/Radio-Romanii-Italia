@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-26T09:01:25.469546+00:00",
+  "news_updated_at": "2026-10-26T09:03:15.038270+00:00",
   "editorial_updated_at": "2026-10-26T07:02:50.184756+01:00",
   "translations_updated_at": "2026-10-26T07:05:15.446274+00:00",
-  "feed_total": 87,
+  "feed_total": 86,
   "feed_extended_400": 20,
-  "feed_missing_body": 67,
+  "feed_missing_body": 66,
   "feed_short_body": 0,
   "editorial_total": 18,
   "archived_editorials": 30,
   "translation_records": 56,
-  "pending_total": 52,
-  "pending_filtered_out": 133,
+  "pending_total": 50,
+  "pending_filtered_out": 131,
   "editorial_verde": 22,
   "editorial_galben": 34,
-  "editorial_rosu": 46,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
@@ -113,16 +113,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Testo completo assente; ricerca e verifica delle fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Ardea, lângă Roma: comunitatea românească a inaugurat noua biserică „Sfânta Muceniță Cecilia”",
-      "category": "",
-      "published": "2026-10-24T08:03:00Z",
-      "url": "https://episcopia-italiei.it/stiri/ro/aplicatie/inaugurarea-noii-biserici-a-parohiei-sfanta-mucenita-cecilia-din-ardea",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato non ancora completato; verificare la fonte originale e altre fonti prima della pubblicazione.",
       "attempts": 0
     },
     {
@@ -260,16 +250,6 @@
       "category": "",
       "published": "2026-10-25T10:03:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPdmk1S1BSN2JfY1RmQmhKRzBNR2h0N2FxQ0Y0eTllQ1oyWDc2bDBGOEtsWXdKMlBqU0dYRk1HM3hXOU05bzR4ak51NmVkd2pPRDQyemp1c0tfeU9PdDNCWGdJRDNMX2w1djA0Ny1PUDF3enk3ZWZEUDFESC15TjBlYlJCSzVIYWZyVTZucjIzVVc5Sy1aa2lJSFd3TWd2dHhhenZDZnBEem9MRzJSSDlBcEdrZjR4VEpKNU9lS0FYT1N6VlZ0d0FPTDBtNkRETVViSURTbWJCNUpCbTF5Vm5xNmFB0gHnAUFVX3lxTE1fYjd5Y2RfUWRqNmUyUGZHNWFqRk9ub3oyU0g0RHNJYkcxdktnajY0U3hJX200bF9NczdoZGdHZlIyaE52MWRZdFhXNmJfQWluQlNMdlJCZ1huWU1JVFZHQ2lKbnRvNk9jQTVGelB4ZjV",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "O româncă din Spania și-a luat copiii și a plecat cu ei în România. Femeia e acum anchetată pentru... - StiriDiaspora",
-      "category": "",
-      "published": "2026-10-24T08:11:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOWUh3elVNR2RobG5jSUtoejNqNVFMdzhEQ0t5MXA5VGdLbnM0bTdWRVRzQlFqcm91UDUyWWMyS0NxQUhaYVFpbm1PR2hsYlVubHlwME1tZ3hUMVpLOWVJcGwzczh0dG12aS13S3ptUW5ydnNVUVl0SXN3clJOLWQ1dGRaVlhTaHpSTzZiRWhYYlB3N2NEU0h6Ulozc3dhZlgxc2EyWmVMMkpDYTNnYmMwYkNkMnZEUjMwSjdKOGpqazJSQmk5OTdyam41el9Hb0FXeHlRWXhyOGNxODFDTmfSAeMBQVVfeXFMT0ZGRGFiUWg1ZW90Q2lmb1BnOUdrMXNwZHd3MVdheGV5OEZQbXFlLS1ycmtVU1Q3cFdpZVNPY0c1aHVXN3pwN0RlbjlDenI1THgyLTZ0TEphRkQ0M1dwbXVNVTFCR0tFTEdkbS1kRDJzM21fSlF",
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
@@ -853,6 +833,15 @@
       "words": 0
     },
     {
+      "title": "Leonardo Maria Del Vecchio studia un’Opa totalitaria sul Fatto quotidiano - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-25T21:10:48+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPSUZjUkpLYjJRYVJISmpJbFh2cktCV21BekVYZG84WXB4SjNhXy1zWDd3S2UyNkRvd0ROUFpKckZzclFka1UxODRzUDB6MzJnYkVYUHhOdXdCRnFEX3dQc1RZaFJPdUhPcDVRaEUtNnFxQmdlMjVtQkl6UTZKcmV2ckZyN3dScXNEVXB2SDkwRUZHWHFsUko3T3c3ZU1BcWFvSGRKM1JBeVkyeXQ4ZE1TTE9aRndXOUZDVUdIaWFlZ3dkQ3pURU84?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Youssef Siher in carcere, 'aveva un progetto eversivo'. Indagata anche la moglie",
       "category": "Italia",
       "published": "2026-10-25T20:40:58+00:00",
@@ -1164,24 +1153,6 @@
       "published": "2026-10-25T07:58:48+00:00",
       "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW5",
       "source": "Digi24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "25 Octombrie: La mulți ani, Armatei Române! - Arges Stiri",
-      "category": "România",
-      "published": "2026-10-25T06:37:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNay1hYnV1YUlqVDcwVk5sNWlqUTBvUmFRako1M2x0LTdqdmZBUGlNS2lqNFpzYkRaTTVBR1g2SHYxblpTRlBldk1UbmlVNWhnYlI4RnRZODdOZFkyZEx2My1fSWx2S3QtQUtPSFBZdWNfM2xtWnQxSEJVTi1HVU1IWQ?oc=5",
-      "source": "Arges Stiri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Svizzera, che fatica: lo stipendio non basta più - La Prealpina",
-      "category": "Italia",
-      "published": "2026-10-25T06:30:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNOGtFbEIzTU1OWTFPMWY4T0FSWmdnZ2d6ZDFCa0Y1Y0JRUzQ3WVRhMGlZMElONUFzTkZjQTZydUZRS2N3dVJwVWg1WGt0aDBKajFNalFnS25CQ2hveGdKSThOV09LY29FZGxlVW9ja3JQR1JWLWZhODJTbldFWUNuc0Y5WHdCYzJmdnh3MlJGSmtITEcxMF93M2wzWjRPZw?oc=5",
-      "source": "La Prealpina",
       "status": "roșu",
       "words": 0
     },
