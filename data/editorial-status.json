@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-26T17:32:15.810480+00:00",
-  "editorial_updated_at": "2026-10-26T17:04:15.499349+01:00",
-  "translations_updated_at": "2026-10-26T17:01:22.023170+00:00",
+  "news_updated_at": "2026-10-26T18:06:23.350644+00:00",
+  "editorial_updated_at": "2026-10-26T18:03:44.539Z",
+  "translations_updated_at": "2026-10-26T18:03:59.857336+00:00",
   "feed_total": 83,
-  "feed_extended_400": 11,
-  "feed_missing_body": 72,
+  "feed_extended_400": 14,
+  "feed_missing_body": 69,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 36,
-  "translation_records": 27,
-  "pending_total": 86,
-  "pending_filtered_out": 194,
-  "editorial_verde": 11,
-  "editorial_galben": 40,
-  "editorial_rosu": 48,
+  "translation_records": 29,
+  "pending_total": 88,
+  "pending_filtered_out": 197,
+  "editorial_verde": 14,
+  "editorial_galben": 39,
+  "editorial_rosu": 47,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -173,6 +173,16 @@
       "source": "",
       "status": "roșu",
       "reason": "Articolo breve o assente: verifica delle fonti e approfondimento ancora necessari",
+      "attempts": 0
+    },
+    {
+      "title": "CASS ar putea fi eliminată pentru unele pensii din 2028 - Ziarul Național",
+      "category": "",
+      "published": "2026-10-26T16:35:17+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQem54WFpIdTFMWWNpOWpyWEdKRjRhZU5iSmZDamg0R0xuUUgwQlJXRzFnWVZNZllaWk44dGJJM2dwSlF3VzFGV183Q1NTdlJaYmlPa0c4WDNVRkswNTRNcmNiODQyNnhsVnJLSTJZc2tZN1RoOGRuZE1TcDZ6QkMyb1NSSk04WUxUaXdSYlRKTGtmNkNyT2RGYkxIaVZkbE44ZTQ0dlZ1NXpweFJucFE?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o inferiore a 350 parole; fonti da consultare",
       "attempts": 0
     },
     {
@@ -486,6 +496,16 @@
       "attempts": 0
     },
     {
+      "title": "Moldovean mort în Italia după ce s-a izbit cu mașina de un copac. Bărbatul avea numai 35 de ani - Rotalianul – Revista românului din Italia",
+      "category": "",
+      "published": "2026-10-26T17:28:20+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQR24ydVBtTjdVRExXSm1RallfYm9DWXlrZ011UFBYVDZ3dTBsMXprNTFDWkJ4Wldkc3F3RzJaSXNZelplb2xCbnlVNm5qVU9KRjNVS05ZT3h1LUxUV2JZRG92V2xkZ2dGYW1iVEJPQlQ5Q1ZPSFlvSnpKSllySHU2OEFYYkEzVFNaNUV2RXNERG1vdENLN2RBRV9JWEdaS0djZDY1bmtHZ0JvZVBuT2FYZTRVZGlDS01ZVWc?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato assente o inferiore a 350 parole; fonti da consultare",
+      "attempts": 0
+    },
+    {
       "title": "Nazare: fără impozit pe proprietate la valoarea de piață în 2027; pensiile, indexate „prudent” - Monden.ro",
       "category": "",
       "published": "2026-10-25T19:33:21+00:00",
@@ -594,29 +614,45 @@
       "status": "roșu",
       "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
       "attempts": 0
-    },
-    {
-      "title": "Planul german: ziua de muncă de 12 ore. Se iau în calcul reducerea numărului de muncitori străini și înăsprirea examenelor de limbă",
-      "category": "",
-      "published": "2026-10-26T16:01:35+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/planul-german-ziua-de-munca-de-12-ore-se-iau-in-calcul-reducerea-numarului-de-muncitori-straini-si-inasprirea-examenelor-de-limba-4009555",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato non ancora disponibile; fonti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "Prioritățile Oficiale Anunțate de Florin Manole pentru Români după Preluarea Mandatului de Ministru al Muncii - iDevice.ro",
-      "category": "",
-      "published": "2026-10-25T13:49:59+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPWTdhb1NycVFJYlNxZ19YNlVuZDlfMTk0THFYcEl3RGhrSUxsWU9PTlNrUC1GdEEzc3kwZDBEckFIM0QwTEd6dTM2TXlOM09Rb3FzYkZTeUVhcVd1Z04wNGFnM3d0TXE1XzZFazZKUVYxREtWQUlrNlZYdzdGRkdkRkRkaXplZmpTT2ZVY2d2SmdwVTgxYnotN3k5QnJmSVM5RVkxNXRBbHhDZnZTWm1CbVRlaGYxQ3hDMXJhMWVn?oc=5",
-      "source": "",
-      "status": "roșu",
-      "reason": "Testo originale e supplemento privi di approfondimento verificato; necessaria ricerca di fonti indipendenti.",
-      "attempts": 0
     }
   ],
   "recent_news": [
+    {
+      "title": "ONU trage un semnal de alarmă privind riscul de „epurare etnică” la Hebron, unde Armata israeliană a lansat o operațiune militară",
+      "category": "România",
+      "published": "2026-10-26T18:00:38+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/onu-trage-un-semnal-de-alarma-privind-riscul-de-epurare-etnica-la-hebron-unde-armata-israeliana-a-lansat-o-operatiune-militara-4009793",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Radu Marinescu anunţă deblocarea unui proiect care priveşte Legea femicidului",
+      "category": "România",
+      "published": "2026-10-26T17:59:14+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/radu-marinescu-anunta-deblocarea-unui-proiect-care-priveste-legea-femicidului-4009783",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Un ucrainean a trecut granița în Moldova cu motoparapanta și a cerut azil la Chișinău",
+      "category": "România",
+      "published": "2026-10-26T17:59:06+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/moldova/un-ucrainean-a-trecut-granita-in-moldova-cu-motoparapanta-si-a-cerut-azil-la-chisinau-4009785",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "MAI: Au fost întărite dispozitivele de securitate și patrulare în apropierea obiectivelor cu profil de apărare. Apelul către cetățeni",
+      "category": "România",
+      "published": "2026-10-26T17:45:20+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/mai-au-fost-intarite-dispozitivele-de-securitate-si-patrulare-in-apropierea-obiectivelor-cu-profil-de-aparare-apelul-catre-cetateni-4009775",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
     {
       "title": "Moldovean mort în Italia după ce s-a izbit cu mașina de un copac. Bărbatul avea numai 35 de ani - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
@@ -758,8 +794,8 @@
       "published": "2026-10-26T16:33:09+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/alexandru-rogobete-anunta-ca-a-gasit-primele-solutii-concrete-pentru-a-preveni-sincopele-in-aprovizionarea-cu-medicamente-4009695",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 423
     },
     {
       "title": "Domani mattina a San Vittore l'interrogatorio di convalida del fermo per Youssef Siher",
@@ -777,15 +813,6 @@
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPZ3ZzOUE2cXJGTDBlUXNMRnMzYWhScUZDLUhwNlVxN1ZCMHVWUkpfaUlRSU15dHV0NGcxT29wYm4xZlJWRk1XdEpabHB3QnVBS2xoZ1QxTWtiQ3NrNmF6SUY3emtkT1VISFNXVElWYndhbTBKRzlibGN6X0NIWERaZFFLY1pGYVZCZ3FyeXdMUFZrQWUtYkxaRzE2UnkyZmpMblcxMmV0UjgteHZhYnlvenROS3FacXgyeGVrTThn?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Niculescu, la întâlnirea cu mediul de afaceri: Trebuie să repornim motoarele economiei, să îi ajutăm pe cei care oferă locuri de muncă",
-      "category": "România",
-      "published": "2026-10-26T16:28:52+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/niculescu-la-intalnirea-cu-mediul-de-afaceri-trebuie-sa-repornim-motoarele-economiei-sa-ii-ajutam-pe-cei-care-ofera-locuri-de-munca-4009553",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -812,8 +839,8 @@
       "published": "2026-10-26T16:18:46+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/austria-ameninta-cu-blocarea-aprobarii-viitorului-buget-al-uniunii-europene-pentru-perioada-2028-2034-4009641",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 412
     },
     {
       "title": "Nou derapaj xenofob al deputatului AUR Dan Tanasă, în Parlament: „Ați readus lepra, ați adus traficanți de droguri”",
@@ -861,6 +888,15 @@
       "words": 0
     },
     {
+      "title": "15 case con vista lago a meno di 200.000 euro - Idealista",
+      "category": "Italia",
+      "published": "2026-10-26T16:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTDVzcHhCUVJJMXpyM0hURDJMLWd1M3FPenowZk5yN3RKSk15ZXVjU3AyZDBEcnRBWm9uSEJ1Smp5QzEycnhIRXYxLUhYNF80ZVE5a0ZyTHphM3ZoZzJaQkVQTFEzbWxld1owN0NXejNaSWhiVWc3dEFhU3NJVWtpQWQ3MmJwTkVlUi1LV0JSQmNhQXN0dTUzS2htM1RMblNyRHl6U0NLQmhOZkNza25VVnN1RVExYWRCWG9SbHRB0gHDAUFVX3lxTE1kM3JvVjl3ZEthaFlZOGVQc3ZSS25RdTh1TGJfcVNaeU1yUFZnN1hQMmMzSHR4SnZPc1dlNHdVTWlTa3pMS05pMTRnNldLNUpLemVLZHlXcUhybnNxYnpudTY4b2lGZVJVY2xxcTg4N3AwVXNDLUZPc3MyWDZlM3dhSldhVlpVLXd3Y21ROTg3OHFpdDB",
+      "source": "Idealista",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Carlo Borzaga, la ricerca come impegno - Cooperazione Trentina",
       "category": "Italia",
       "published": "2026-10-26T15:50:45+00:00",
@@ -879,29 +915,11 @@
       "words": 0
     },
     {
-      "title": "„1.000 de zile să fim pregătiți să luptăm și să învingem”. Șeful Armatei britanice anunță când ar putea Putin să atace NATO",
-      "category": "România",
-      "published": "2026-10-26T15:47:06+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/1000-de-zile-sa-fim-pregatiti-sa-luptam-si-sa-invingem-seful-armatei-britanice-anunta-cand-ar-putea-putin-sa-atace-nato-4009549",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "'Gli studenti vincono le elezioni in Serbia', lo annuncia lo sconfitto Vucic",
       "category": "Italia",
       "published": "2026-10-26T15:45:16+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/25/gli-studenti-vincono-le-elezioni-in-serbia-lo-annuncia-lo-sconfitto-vucic_87f3828a-9352-4958-a756-d408a61a1bd3.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Protestele din Franța, prin ochii scriitorului român Matei Vișniec: „Strada este un loc unde se rezolvă problemele politice”",
-      "category": "România",
-      "published": "2026-10-26T15:39:58+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/protestele-din-franta-prin-ochii-scriitorului-roman-matei-visniec-strada-este-un-loc-unde-se-rezolva-problemele-politice-4009479",
-      "source": "Digi24",
       "status": "galben",
       "words": 0
     },
@@ -933,21 +951,12 @@
       "words": 463
     },
     {
-      "title": "Il Coraggio di Cambiare, a 60 anni sfida i pregiudizi con il burlesque - Padova24Ore",
+      "title": "DIGITALmeet chiude con 135 eventi: Potti dichiara un milione di contatti e guarda al 2027 - Padova24Ore",
       "category": "Italia",
-      "published": "2026-10-26T15:24:58+00:00",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5pcTFhb1ZzNmxSZTZxYnNkTGtRSTBPOUVuNjB4b0dQUU03VFRrbERiTFhQbEF4V3dkbTdNU1otR3hzZlpsRVBfQ2prbkdXOXgtZ2wtR3dXM2NJb0tuOEVTeUN5ZHVQTFFJSERmWHFZQ2lHMWphem12NnJoVDM?oc=5",
+      "published": "2026-10-26T14:31:57+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNZXJ1bmd3VmE0MXVXRjZPQUpPcW1LUGZQMjl1TWh1amQ0WE93TUVSUV9tc0ZBRDlsNmlLMWRBelQ0WmZxVlAwODFPbEFzY3NwbU9hSllYQ05QdmVIT3NFYllQUVFEYTJRMlk3THhwWGlYdTdZY3lPTkdCcTVXZjQtUWJZMHg?oc=5",
       "source": "Padova24Ore",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Măsurile anunțate de Universitatea din Iași după arestarea fiului lui Tudorel Toader, acuzat de viol",
-      "category": "România",
-      "published": "2026-10-26T15:20:48+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/educatie/masurile-anuntate-de-universitatea-din-iasi-dupa-arestarea-fiului-lui-tudorel-toader-acuzat-de-viol-4009431",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -956,8 +965,8 @@
       "published": "2026-10-26T14:29:10+00:00",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBHQUFNbHBVeEY2RFQ5alB2RHA3YVRTSS1MeGNWbjJuRHo5YmVzdG5LdlZ2TnBoMXdhNmUzZWpCUEFReDR5RlJqTVI4Sm5VYVpqUWlaUjA2c1lLcXpCOXBFUVQwcHRlbktaM0Zac1BKaHlHQlVOMW1EN0VXbldsQQ?oc=5",
       "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 455
     },
     {
       "title": "Parco Contarini a Este: riapertura il 29 ottobre dopo i lavori - Padova24Ore",
@@ -1046,15 +1055,6 @@
       "published": "2026-10-26T12:01:13+00:00",
       "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/26/vucic-sulla-sconfitta-elettorale-rivoluzione-sostenuta-da-alcuni-paesi-europei_11b8e952-7571-4407-97a2-7621eb9b6f36.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Este, maxi gru in via Battisti: il cantiere per il ponte ferroviario verso la conclusione - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-26T11:57:21+00:00",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBTeUY0cEtxend3YzAxNTY4ZFpZRzlMY0tGekkwWG16aTJpVUh4VmtOU2YzNDdqSnhESkotbEFXOEYyS3FUM1ZuOERXQlZmeDNVVTVMazdacmdvWVhTVUFNY0d4UF9vWXlrU2ZQOUxfMUk2Zy1WZFROTXFJbzM?oc=5",
-      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
