@@ -27,7 +27,7 @@ jobs:
           python-version: '3.12'
       - name: Validate script
         run: python -m py_compile scripts/update_attack_candidates.py
-      - name: Check one public source for non-verified incident leads
+      - name: Collect worldwide candidates from CSPII, GDELT and multilingual news feeds
         run: python scripts/update_attack_candidates.py
       - name: Save editor inbox, never alter public map or news
         shell: bash
