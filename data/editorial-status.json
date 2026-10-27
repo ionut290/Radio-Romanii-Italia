@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-27T12:37:15.496362+00:00",
+  "news_updated_at": "2026-10-27T12:58:43.867800+00:00",
   "editorial_updated_at": "2026-10-27T13:04:16.005746+01:00",
   "translations_updated_at": "2026-10-27T12:04:17.958947+00:00",
   "feed_total": 79,
-  "feed_extended_400": 18,
-  "feed_missing_body": 61,
+  "feed_extended_400": 21,
+  "feed_missing_body": 58,
   "feed_short_body": 0,
   "editorial_total": 24,
   "archived_editorials": 50,
   "translation_records": 30,
-  "pending_total": 95,
-  "pending_filtered_out": 253,
-  "editorial_verde": 18,
-  "editorial_galben": 47,
-  "editorial_rosu": 33,
+  "pending_total": 98,
+  "pending_filtered_out": 257,
+  "editorial_verde": 20,
+  "editorial_galben": 45,
+  "editorial_rosu": 32,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -336,6 +336,16 @@
       "attempts": 0
     },
     {
+      "title": "De ce se întorc unii români din Italia. Chiriile din Roma au crescut, iar salariile… - Mediafax",
+      "category": "",
+      "published": "2026-10-27T11:52:32+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQdm9pSWpsLXNZcHd6bHc0M0c4U0RlaWdrMHo0cHU2aDBNMjk0QlVTckxSakNqU2VzZzJqRlpLcUttZG56RG1DZVFmVi02c1gyX0RfTjFjZ3c1VXhtdFJHbWhPS2lzOG9jSkZ6NXY5TmZMZ0FESWNvRG5IdG8zQk84ZlZTZGUxRGhQdW9YRU15YWctWFJkNExqMFZ6eEtackxYWW5fVkdVLVdNaXlkVm9COE9MY092ZGl5MGxyU3k3bVJiblFOMlVDMTV6dFRvcmppSGNKcmtUOWV3QjVIeEF2RHVLUdIB6AFBVV95cUxQbXZrQ3BxaEVLOG9mbHhVMTJoc0NKVUl5VURrT29vYzkzTjVWbXQ5ZzJMZUpJRzUyOGFWejZWd1F3YU0tQkdsMTRqT0ZzYzNWY1N4bE9sWkdxYURFN3N3VFBtOVRMX1lheEZETzduRkt",
+      "source": "",
+      "status": "roșu",
+      "reason": "Testo originale assente o breve; verifica indipendente e approfondimento ancora necessari",
+      "attempts": 0
+    },
+    {
       "title": "Dumitru, un român de 46 de ani, este acuzat că a ucis un tânăr în Italia - Stirile Kanal D",
       "category": "",
       "published": "2026-10-27T09:03:06+00:00",
@@ -604,27 +614,35 @@
       "status": "roșu",
       "reason": "Articolo breve o assente: verifica delle fonti e approfondimento ancora necessari",
       "attempts": 0
-    },
-    {
-      "title": "Notizie di Padova ore 10: arresti alla stazione, nuovo ospedale, lavoro e furti nei locali - Padova24Ore",
-      "category": "",
-      "published": "2026-10-26T10:08:16+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE92blozbjVJNm9FR09OM2EyNFQyNGVMUE5uN0swN0RSYUJOc29CdFhuR0ZUdzdJbTJKVTI1UmFuUUJTQVlzZlh6Rk1kbDAtU0VwMGFuUW9lWGFMV0c4TEx6Ti1TbndtU1B6b0VrQk5qalQ?oc=5",
-      "source": "",
-      "status": "roșu",
-      "reason": "Articolo breve o assente: verifica delle fonti e approfondimento ancora necessari",
-      "attempts": 0
     }
   ],
   "recent_news": [
+    {
+      "title": "VIDEO Au fost demolate etajele superioare ale blocului din Rahova afectat de explozie",
+      "category": "România",
+      "published": "2026-10-27T12:52:30+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/video-au-fost-demolate-etajele-superioare-ale-blocului-din-rahova-afectat-de-explozie-4010787",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ministerul Sănătăţii anunță că 370.000 de doze de vaccin antigripal sunt disponibile în depozite şi pot fi comandate de farmacii",
+      "category": "România",
+      "published": "2026-10-27T12:38:58+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/ministerul-sanatatii-anunta-ca-370-000-de-doze-de-vaccin-antigripal-sunt-disponibile-in-depozite-si-pot-fi-comandate-de-farmacii-4010777",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
     {
       "title": "Valea Saulei a fost declarată a treia arie naturală protejată din Capitală. Zona adăpostește peste 350 de specii sălbatice",
       "category": "România",
       "published": "2026-10-27T12:27:17+00:00",
       "url": "https://www.digi24.ro/stiri/valea-saulei-a-fost-declarata-a-treia-arie-naturala-protejata-din-capitala-zona-adaposteste-peste-350-de-specii-salbatice-4010715",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 445
     },
     {
       "title": "Il mondo celebra Kane 'star senza lustrini', solo la Spagna non esulta",
@@ -677,8 +695,8 @@
       "published": "2026-10-27T12:09:42+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/social/tinerii-sub-18-ani-nu-vor-mai-putea-inchiria-trotinete-electrice-in-bucuresti-exista-insa-si-o-exceptie-4010693",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 447
     },
     {
       "title": "Meghan confermata co-conduttrice di Junior MasterChef Australia",
@@ -789,6 +807,15 @@
       "words": 0
     },
     {
+      "title": "Ancona (Hilti): \"Academy favorisce lavoro di squadra\" - Touchpoint News",
+      "category": "Italia",
+      "published": "2026-10-27T11:09:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbmxOZWFaVGNuY2JEVmg0WUdmLWdhOWgwMUVrLUZRdlUwT25qaVBMVFRQMUx5dENhazBsMm56MVo0azl2OHhaWFYyLU11Mzh5ZERGaFdlMVVGTzl6ZGJSQUxnSmZEcklNWXIxMFU2UXN4czNzbF9UdFVZa3RfVTI2bktUV1JWUTBiWGFFZUhGVm9ZUQ?oc=5",
+      "source": "Touchpoint News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Eurovision 2027, în centrul unei noi controverse: o țară se retrage din concurs. Care este motivul",
       "category": "România",
       "published": "2026-10-27T11:07:40+00:00",
@@ -830,8 +857,8 @@
       "published": "2026-10-27T10:38:54+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/10/27/mattarella-soccorso-in-mare-valore-fondante-della-marina-nazionale_9436ddb5-6edd-44a5-877d-95d96661bdd8.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 465
     },
     {
       "title": "Generalul (r) Bălăceanu, după acțiunile de sabotaj ale Rusiei în România: Trebuie să acționăm rapid pentru modificarea Codului Penal",
@@ -870,21 +897,12 @@
       "words": 0
     },
     {
-      "title": "Iradierea de precizie a leziunilor de la nivelul creierului",
-      "category": "România",
-      "published": "2026-10-27T10:06:07+00:00",
-      "url": "https://www.digi24.ro/sanatate-digimatinal/iradierea-de-precizie-a-leziunilor-de-la-nivelul-creierului-4010559",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Politicianul din Slatina care a tras cu arma spre mascații veniți la percheziții a fost reținut",
-      "category": "România",
-      "published": "2026-10-27T10:01:36+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/politicianul-din-slatina-care-a-tras-cu-arma-spre-mascatii-veniti-la-perchezitii-a-fost-retinut-4010529",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "70 de hoți români au dat lovitură după lovitură pe șantiere din Germania, de unde au furat cabluri... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-27T09:43:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOU1RsSmRDZ2hlc205MWZmVVlKNHYzVFViV0hzMGtwVWJwdWZCM1N3eW5vMkFGMnpuSm5XRlpBRS1oMGh4MV9lYVFHbkxFRjc3VENOWVY1cllfOHhCVGxQS3VoRVR2YzcxNmladXRBS1I4YkY4ZE5jNDJaNExqczd1aFdPXzl4OEVKdmFzM2ZRSTEtSzBOdEZETlQ3VWdRdnFNT1BzcThBa1p2UUlMNlQwcEhxc3pRSjlCd1dvN0hVRS1oY1dGQWxUNFNyS3NXMTAxNG1IczNiN0ZsVjBuRjd1ZzM1a3U2VzlxSS1TZXBqYk5CaTV3WnZIMG81UFV3eUNqS0HSAYcCQVVfeXFMTkRiT2JKcTBIME9Ea3k0S0xzdlFKRjBZaXU2b3pYbTVCbFJfM0dMSjhWNVdoMmRLcTBMQk1HWjF4dmd4UGlYbDZ2SVE2RDd0eGt",
+      "source": "StiriDiaspora",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -915,6 +933,15 @@
       "words": 0
     },
     {
+      "title": "Alegeri în SUA: Trump a cerut anularea a 20.000 de voturi, un tribunal i-a refuzat cererea - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-27T08:51:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNM2ZTNEI1dW1mb3dRMGpMbDNHcUdrbEdqcWNscTliMnNqQUdXeFVOMlR1SFJUTWNIU1VwMjF4V3Z0ZGJQLUJkZGpsRTJVZkx2bi1KVE5Eb2tzaXE3VGQ2Yl9uZURZakhjZEs3VTdBRnhCeUNWNWNHbnlxUVVIbE0xcmszS1YxcUU3NHdJWDk0Qk1NUHB1Tm9uSXlkTUFPX0xJeTV1akMwNW9XTHh6eU1xQjBPQjBTSmZjV1o3bzVCS0ZOSXNRYlp1MdIBzgFBVV95cUxPS0Q2NlkzcllGaGNvOHBCM2RSalU3ckpkdklLR2NnS1RnMmNwalZBem9DNTlYTFJzUDZSLUlzOXRhSmNDS2xseHp0SEpKZXBZckptOFdRRFdhZE1ZalhsZmoxT2NPRVBOWnNGOW5OSTQ5em4xaGh5ZDVtZ0ZrUTJZeUFFeXlRdjRFbml",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Trump: 'Il partito del presidente non ottiene di solito buoni risultati alle midterm'",
       "category": "Italia",
       "published": "2026-10-27T08:46:03+00:00",
@@ -929,6 +956,15 @@
       "published": "2026-10-27T08:12:05+00:00",
       "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/10/27/jay-z-si-esibira-personalmente-nellintervallo-del-super-bowl-di-febbraio_dbcdfe85-1c0f-4bc6-89c4-9d6a40bf427b.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cinci persoane rănite grav, după ce o maşină a intrat într-un grup în nordul Germaniei - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-27T07:10:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdGhPVnk1SUxRU1RxQ1Q2eXd4OTdwNThDUUFwTlZaWmlNbU5wOENxanc2Z01HeVlGTXRjQ0NLN3VseEZmNFZTV3o2VW1falh2dUt6YUZzWXJkVEpNY0dQNTFiNUJtS282cVkxQ2N1V0tzNzlpTWxhTWhtNW56TFk0c2F4X2cyVlA2UVhRaFpWTzZ1QlczdjNEektlbVlNOVZTSVl6R3UxbjdOUGJ4UW1UX1I5UlFxUW5GblVOanpLa3ltblI40gHKAUFVX3lxTE5SYk96czZuT2xON1RZUHF6NlZzRDNKZEprdGNjQWk2SzgzLXRzU1h1M1IxWjFITVZ0dkxHMWFiTnZfQmtPbTV5YkFlSFVySWJLZHRHWW13cjdwVDhrVGpOSnF2Q1d1QTljTG5IVlFpNXotaURpaEZuMTFaR0M0R1dHdHdOeUlqbE5XMU83T2R",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1122,15 +1158,6 @@
       "words": 0
     },
     {
-      "title": "Călin Georgescu ar putea fi eliberat în această săptămână. Tribunalul București a respins cererea... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-26T11:56:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNb2ZjYXhvZHljMFU1YnhkcW9fMWRMNXhmOS1fNzlHZWVUeVhRMHpfbGdCLXJENFhLSUotUTNXN05KdXdKYkUzUlZzcGttaEpfUUVoa04wSDcwQ3BocWJNZFJXVkhMLWtNakhRWUh2RGVOS3UyeUtEN0tnLWdicVJuOURxeW9uek93aUdHY1hidEduaW92QU1PSzA3T2FIRVlQcW1EZEV1bjczdTJHb3BWMTdtRUtHYnltdm9HdjBWN3IzQmZSTXNNSXl6RHdJMk9nWWQ4WjBWWC1qOWh40gHiAUFVX3lxTE04RFhhOW80Z1h4RlREMk01YUlpeTFOX3NreHAtazM2M3c3RGptMVp2WHJ3ZkJ6M2I0cmNHQks3NEVnTlR5NXozWEVfd194aHc5M3NxVk1OQzh0YTA2S0VLMk9mQ2pGZlR4WHpaOVFGT2h1QjFMQjI",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Grevă generală, în Italia, pe 30 octombrie. Vor fi afectate transporturile, școlile și serviciile... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-26T11:26:00+00:00",
@@ -1239,15 +1266,6 @@
       "words": 0
     },
     {
-      "title": "Opinioni sui social e rapporto di lavoro: fin dove arriva la libertà di espressione - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-26T04:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObzBqS2ZXTXhpalFrV2wtLTNzV0xYUFRvRzU2cDVpVEhmeE5oQ3c2d1ZDYU9CN1BxVEMzWkJFdWprcHJlbjVhSE44bElDWkFQNkdJLV9QOHF3S3BuU0NDMWtWS3V0Ni1GbVhCYW9JcDJ5T3hrLWt4NU9oNW9DLTNyQWhrdlAtOGV5d3ozTjZPcmxzelVVZUd3ZDhjUVBORndpdUFheno0M2xpNXM0STR4VGhaRzFzbHAwcUM0?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Revista românului din Italia – Pagina 1770 - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-25T21:41:20+00:00",
@@ -1307,24 +1325,6 @@
       "published": "2026-10-25T14:15:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOdGZOOWtPM0h6T21tNTJGcGx1NUNmNUQ2UDNRNEc2clZJYWV5ak50MGlUQ1N2Vm04THctUGdPclpmanJ2QXd2a1FaRFJHdVdWOXdiVmZ5RHJqeVR0NXpWaFdmMTNEYWhad0h5Tk1SS2xrZ25RdlU1X051VkNzRDYwTzljcy0yVjNSS2ZrbnZBS3kwckpKdTZaZ1RxaVg4UW91WFRmQ2ZaYw?oc=5",
       "source": "iDevice.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Scandal în Italia din cauza unui român care locuiește într-o rulotă. Vecinii au ajuns la capătul răbdării! - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-10-25T12:57:18+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWU9qVHFuY3ZBTzZGbC1zR0N5bi0yMElfUVFCakR2S25NOWYxNW9vWDVJUVpGSUVFRVdWZUVEdDhITDRmblNOUXo3Mm4zcl9TY0NFWXNpVTFHTnR0RzFfVDRTdTVOTmplNlc0bERmcjViSXE5TV9OVFZyejg1OTE0cmM5X0paMlNua18wWjFQWTZWXzhNbllwUTZxOUF1Wkw0ZzdiUk53OWRJVF82OHJqdzlZQTZIZlV0dnZGWU9tR1RUM1FtdGVN?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Rețea de hoți de catalizatoare, destructurată în Spania. Trei români au ajuns după gratii - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-25T12:49:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRkw1YXZ1ZXNFTGZPQWQ1ckJEcHFaVTlSLWhKdnFPVGNCU0ZxOWVfdHM4OG1aUklybDcyTUQ1T192TG1wTkxYV2lCVnF3S2NSS2dGSlBheWx5aXVfMmEwaXRGNGtXaVlfaW9QQ0ZSUVp3a3JWUTNDQ2tlRGhIWkFiWmo4VHBPTUIzdlJ2VDcwLUZ3VkRuanBqZDZPLUdRLWxQVkwxeUtFZjJTaXBLOWxZQUh3R1ZLemNnNWM1aDc1UWNudXcyZXpz0gHMAUFVX3lxTE9UUzVmbkJreGtpdzlBYXFlaFQ2ZmpkQlVCbVg1bkxfMEllLTdtM3ZlNFdKd053Zk5HZXJyVkM4LURNVkhNT0FVRUNzcEhvYnF4SzRmOHNEV0FEZTVxbGJmbkZJWXhTQWZqY2JzcVhwNXg5UXBNdHVyZmxFOXVESGU1ZHVyNGNJcG9RQ3J",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     }
