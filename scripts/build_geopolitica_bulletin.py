@@ -127,7 +127,9 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, hi
         for url in edition.get("source_urls", [])
         if isinstance(url, str)
     }
-    result = [item for item in result if story_signature(item) not in used and item["url"] not in recently_used_urls]
+    # A substantially updated report is eligible again under its original URL;
+    # unchanged reports stay off-air.
+    result = [item for item in result if story_signature(item) not in used]
     result.sort(key=lambda item: (item["date"], item["curated"]), reverse=True)
     # Promote geographic diversity without inventing priorities or ranking political actors.
     selected = []
