@@ -159,9 +159,11 @@
     $("feed-count").textContent=filtered.length+" "+t("count");
     const featured=$("featured"),list=$("stories");
     featured.replaceChildren();list.replaceChildren();
-    const top=filtered.slice(0,2);
+    const top=[];
+    for(const item of filtered){if(!top.length || item.category!==top[0].category){top.push(item);if(top.length===2)break}}
+    if(top.length<2){for(const item of filtered){if(!top.includes(item)){top.push(item);break}}}
     for(let i=0;i<top.length;i++)featured.append(makeCard(top[i],true,i===1));
-    for(const item of filtered.slice(2,50))list.append(makeCard(item));
+    for(const item of filtered.filter(item=>!top.includes(item)).slice(0,48))list.append(makeCard(item));
     $("empty").hidden=filtered.length>0;
     if(!state.items.length){$("empty").hidden=false;$("empty").querySelector("p").textContent=t("sourceUnavailable")}
     else $("empty").querySelector("p").textContent=t("tryFilters");
@@ -208,4 +210,7 @@
   $("search").addEventListener("input",render);
   $("clear").addEventListener("click",()=>{state.topic="all";state.region="all";$("search").value="";render()});
   applyLanguage();load();
+  // Refresh the open page after the hourly publisher updates the JSON feed.
+  setInterval(()=>{if(!document.hidden)load()},5*60*1000);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
 })();
