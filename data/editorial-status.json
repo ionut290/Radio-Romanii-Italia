@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-27T06:37:14.663559+00:00",
+  "news_updated_at": "2026-10-27T06:59:42.876167+00:00",
   "editorial_updated_at": "2026-10-27T07:24:14.617049+01:00",
   "translations_updated_at": "2026-10-27T06:04:55.321272+00:00",
   "feed_total": 83,
-  "feed_extended_400": 20,
-  "feed_missing_body": 63,
+  "feed_extended_400": 23,
+  "feed_missing_body": 60,
   "feed_short_body": 0,
   "editorial_total": 24,
   "archived_editorials": 44,
   "translation_records": 47,
   "pending_total": 96,
-  "pending_filtered_out": 221,
-  "editorial_verde": 21,
-  "editorial_galben": 41,
-  "editorial_rosu": 40,
+  "pending_filtered_out": 218,
+  "editorial_verde": 24,
+  "editorial_galben": 39,
+  "editorial_rosu": 39,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -23,16 +23,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato da completare; fonte originale e riscontri indipendenti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "25 Octombrie: La mulți ani, Armatei Române! - arges-stiri.ro",
-      "category": "",
-      "published": "2026-10-25T06:37:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNay1hYnV1YUlqVDcwVk5sNWlqUTBvUmFRako1M2x0LTdqdmZBUGlNS2lqNFpzYkRaTTVBR1g2SHYxblpTRlBldk1UbmlVNWhnYlI4RnRZODdOZFkyZEx2My1fSWx2S3QtQUtPSFBZdWNfM2xtWnQxSEJVTi1HVU1IWQ?oc=5",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
       "attempts": 0
     },
     {
@@ -486,6 +476,16 @@
       "attempts": 0
     },
     {
+      "title": "Lavoro, l’Italia accelera: cresce l’occupazione, cala la disoccupazione - Ulisse online",
+      "category": "",
+      "published": "2026-10-26T17:40:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbXl3ejY0dVNCdEU0NndjTXNhZlAyb3E5QzZHazcyeG5GM0h1Q0ZxUjY0VjhYZUVVT3VKMmVKNV9GMjRaTExGYWtvZzVZdWVlXy1hVHRXRTV0eXVYZEU5anFPRFpraGlqaTVSQ01XZTFNSjFkRXo2bjV3T3owNjcyYVRhTUhZVUlDcU9BMFVXLURJcHd5Q2xQeThWeU1RcVVkTTM5Y3JhLVc?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato mancante o testo troppo breve; fonti da consultare",
+      "attempts": 0
+    },
+    {
       "title": "Lavoro, opportunità di impiego nella Ferrero: assunzioni anche in Campania - Il Mattino",
       "category": "",
       "published": "2026-10-25T11:27:35+00:00",
@@ -618,10 +618,37 @@
   ],
   "recent_news": [
     {
-      "title": "Când devine o eroare medicală caz de malpraxis. Ce drepturi au pacienții și cum pot obține despăgubiri",
+      "title": "Tablou semnat de un pictor celebru, la preț de covrig. Cum a ajuns o pictură a lui Grigorescu să fie evaluată la 3,5 lei",
       "category": "România",
-      "published": "2026-10-27T06:27:58+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/cand-devine-o-eroare-medicala-caz-de-malpraxis-ce-drepturi-au-pacientii-si-cum-pot-obtine-despagubiri-4006205",
+      "published": "2026-10-27T06:55:38+00:00",
+      "url": "https://www.digi24.ro/magazin/timp-liber/cultura/tablou-semnat-de-un-pictor-celebru-la-pret-de-covrig-cum-a-ajuns-o-pictura-a-lui-grigorescu-sa-fie-evaluata-la-35-lei-4010243",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Fostul director FBI James Comey a fost pus sub acuzare a treia oară. „S-au întors”",
+      "category": "România",
+      "published": "2026-10-27T06:51:03+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/fostul-director-fbi-james-comey-a-fost-pus-sub-acuzare-a-treia-oara-s-au-intors-4010241",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Încetarea focului negociată de Melania Trump a intrat în vigoare într-un oraș ucrainean ocupat de ruși. Mii de civili așteaptă ajutoare",
+      "category": "România",
+      "published": "2026-10-27T06:49:12+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/incetarea-focului-negociata-de-melania-trump-a-intrat-in-vigoare-intr-un-oras-ucrainean-ocupat-de-rusi-mii-de-civili-asteapta-ajutoare-4010245",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Încercare fără precedent a administraţiei Trump: Curtea de apel respinge anularea a 20.000 de voturi din California",
+      "category": "România",
+      "published": "2026-10-27T06:46:14+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/incercare-fara-precedent-a-administratiei-trump-curtea-de-apel-respinge-anularea-a-20-000-de-voturi-din-california-4010247",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -677,8 +704,8 @@
       "published": "2026-10-27T06:03:35+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/26/lula-trionfa-in-brasile-esplode-la-festa-ma-crollano-la-borsa-e-il-real_56cc4597-7350-4738-9bed-c5925ac6574d.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 488
     },
     {
       "title": "Luca Niculescu merge azi în prima vizită oficială în calitate de premier. Cu cine se va întâlni la Chişinău",
@@ -789,31 +816,13 @@
       "words": 0
     },
     {
-      "title": "„Este un risc inacceptabil”. Pentagonul pregătește bazele militare de pe teritoriul SUA pentru un război de amploare",
-      "category": "România",
-      "published": "2026-10-27T05:00:12+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/este-un-risc-inacceptabil-pentagonul-pregateste-bazele-militare-de-pe-teritoriul-sua-pentru-un-razboi-de-amploare-4009209",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cum a devenit Marea Neagră cea mai periculoasă rută maritimă din lume. „Este aproape o misiune sinucigașă”",
-      "category": "România",
-      "published": "2026-10-27T05:00:11+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/cum-a-devenit-marea-neagra-cea-mai-periculoasa-ruta-maritima-din-lume-este-aproape-o-misiune-sinucigasa-4009171",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Un pensionar din Gorj a obținut în instanță decontarea integrală a costurilor unei operații cu robotul chirurgical la o clinică privată",
-      "category": "România",
-      "published": "2026-10-27T05:00:04+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/un-pensionar-din-gorj-a-obtinut-in-instanta-decontarea-integrala-a-costurilor-unei-operatii-cu-robotul-chirurgical-la-o-clinica-privata-4009335",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "title": "Concordato preventivo per partite Iva e imprese, regole e date del ravvedimento speciale - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-27T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQVTdsR3B5b1kzTFdOWFZFMlp3bzVISTVKVm05WWxNdVdXRVBTRlItdVpGTDk0SDhCcldpWk9ERUVuVmZaWldmSFdieFljUjFPdTNvZnRGb0J6UE8zV3NxYVVBMW5WVEFHWWNGY1hzemlnSE1yRWhLRS05ajZOc1J0LU5MeEE1czZycS1iWjJraERRQ2tSbXdLMXZPRnVEcUZKLUNnNWhDWFpUaDk1QmVuWS1pM29yVmlyWU5feEZ5NXFjLTNTVjgzZHdfZ1M3U0paZzVMdTdXSTRVWjJRWVY2ejllVkt6MjF1ZlBXUHV3?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 484
     },
     {
       "title": "Chimica, stretta di Bruxelles all’import cinese. Via libera al piano Temu contro le vendite illegali - Il Messaggero",
@@ -870,13 +879,22 @@
       "words": 472
     },
     {
+      "title": "Sistemul de sănătate mai are nevoie de 11 miliarde de lei până la sfârșitul anului. Rogobete: „Sub nicio... - Digi24",
+      "category": "România",
+      "published": "2026-10-26T20:01:41+00:00",
+      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOS01GU0NGaVFxelQ2anJJbWVHMWhtYS1lUzAtU3FpU1JXalZSbmhHcF92UWxDay0xc3BTQjlwaVlXTlNTanlsdEFyM3RsVXBOMHJoa1lPeDQzLTBWT2tWcndzbXdTMDMzeWcxX1d1bVdTczJHSGt5cHIwSmJCYlFHSnc3ZEdmb2xKRC1MM2hHbjB6bTJtWmU1WF9ybFNleDlYYVcyMDNrT2ZLcUpBMEhibXAwLV9sM0ZnNUNpdjRvRHZXSmpObEMtQWFISjdlNnBXeDV1cjFMQXU0c2dOQksxZkZnZmhNcmVBODlzQlItOEtjeURjZFJRZ284NHhCVTRqeWY4X2Z3cGlFcnZxSGFRcFdpc3QzcXJXTmVxa1BR0gGeAkFVX3lxTE5LTUZTQ0ZpUXF6VDZqckltZUcxaG1hLWVTMC1TcWlTUldqVlJuaEdwX3ZRbEN",
+      "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "La Serbia volta pagina, ora per gli Studenti la sfida del governo",
       "category": "Italia",
       "published": "2026-10-26T19:49:42+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/10/26/la-serbia-volta-pagina-ora-per-gli-studenti-la-sfida-del-governo_f215e45f-faf5-446c-80fb-aee6e0a4d11a.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 455
     },
     {
       "title": "Ex Ilva, la procura chiede i domiciliari per Lucia Morselli e altri due",
@@ -924,15 +942,6 @@
       "words": 443
     },
     {
-      "title": "Lavoro, l’Italia accelera: cresce l’occupazione, cala la disoccupazione - Ulisse online",
-      "category": "Italia",
-      "published": "2026-10-26T17:40:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbXl3ejY0dVNCdEU0NndjTXNhZlAyb3E5QzZHazcyeG5GM0h1Q0ZxUjY0VjhYZUVVT3VKMmVKNV9GMjRaTExGYWtvZzVZdWVlXy1hVHRXRTV0eXVYZEU5anFPRFpraGlqaTVSQ01XZTFNSjFkRXo2bjV3T3owNjcyYVRhTUhZVUlDcU9BMFVXLURJcHd5Q2xQeThWeU1RcVVkTTM5Y3JhLVc?oc=5",
-      "source": "Ulisse online",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Moldovean mort în Italia după ce s-a izbit cu mașina de un copac. Bărbatul avea numai 35 de ani - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-26T17:28:20+00:00",
@@ -960,11 +969,29 @@
       "words": 459
     },
     {
+      "title": "Chi è Lucia Morselli, la camaleontica “lady d’acciaio” passata da Stream all’Ilva - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-26T16:04:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZnFWVm9Lb0M1b01UNURzelBCeC1JR0pFRGFUZWNDek05cHJXM3JmVi1iWVR0T1hxbzdEOXlVNlJ3Nmdnb1dfdWtZamRnQzJqVmhJdGpocEtZYkxiWl9SN2NJM2RJY1dkMlRNcEx5T2h2cFVORmpMTjV5X05ldEpRdzUyWHU4SWNtRDVRclZ5bnZzVFRwWXhjWExuOGNqcHRlXzdF?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Carlo Borzaga, la ricerca come impegno - Cooperazione Trentina",
       "category": "Italia",
       "published": "2026-10-26T15:50:45+00:00",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcWg2S0xJYjdONzc3LUxBUjdMUTRrd0tES2I4NmhPS1NOLTVCVFpvdU1fRmFDYm1XNjZHLUpxeHhKa3hQTkJBVEstZmZDNTRUVDNGbUtXUEZIY3BKTUdXT01JZUZrTXZNRXlQamZXX0dwcXc4M0VKMG5IZ2QwRWtwdWk1UXJFZURE?oc=5",
       "source": "Cooperazione Trentina",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Niculescu, la întâlnirea cu mediul de afaceri: Trebuie să repornim motoarele economiei, să îi ajutăm pe... - Digi24",
+      "category": "România",
+      "published": "2026-10-26T15:34:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGpCSGNxOHY0NGpyUHQ3ZVJKV040ZlJoYWJPOGQxc0piNDY1VFhmLUUyZS1uWWF3enFucm9kcnY5bVk5QXhualUwaTIxd2dickl1cXZKQ2s3V29oV3EtYXpEdkVNeV8tWmIycXZXWndxTURKOEg4Q0FyWkVGOU5VT1ZvRUdzVEFxYnVaSFF0VkQ1Tl9SZmVfRHlFUnphQk43bmlFNmN2V1dmZjgyT1ZNVVBMSWN5aXp2UnpGd3ptVkdBX2ZaUkxHZ25mNGc4XzNNdFZCXzRuMUhueENPT05yZmNfbXdqSUJPbnhjMlBodjVDQVpIMGtFZVlyd9IBogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGp",
+      "source": "Digi24",
       "status": "roșu",
       "words": 0
     },
@@ -1176,15 +1203,6 @@
       "words": 0
     },
     {
-      "title": "Passaporto digitale, Reliable coinvolge 18 imprese venete: primi risultati per moda e scarponi - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-26T08:22:52+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9LNFREY194Q1JCUGpvYmdCUmZXZjYyY09sTXNSVi1aaGtBMk12eEQwWWJSRjB3d3dpWDRQZDh6bEFIcnhsX21YS3RyOHlwdlRGeW10Zm84Tl9jdHJITXV5blJHUVpCSU5BUkZNUXNsdzZ3ZnhtRjhPdHBDRQ?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "La top 5 dei nomi più diffusi in Italia maschili e femminili - Idealista",
       "category": "Italia",
       "published": "2026-10-26T07:58:38+00:00",
@@ -1208,24 +1226,6 @@
       "published": "2026-10-26T06:56:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVVY3dU1zLXM2Unh6eVM2eHBfOVF1R2h2SUZDMHpoQ3ZaaWdSUnpqeDQwWGZhSUJRTWxJWG91aGNwdzVydTJDdXhJMVp4ZVhBdFoxTmFPNnFiQmhaMjZuYWczaXJVbU14Z3gyS0tRdXNCekUtS3hzd3dNWS1YUGVocVdwX2p4SHlQeWV1TnMxWlZtUFZSb0tJT1NFVmdBUktObktjZDRKOFBldU85S3ZtS3dMMlE4R2dBbDdPMk92YXM3WVVuVnFR0gHMAUFVX3lxTE1LMU8zRnpaaGptZmgzSm55OUpRTW8ycGFwVHhhcHlQZWpMc0s4eXJHM0x1NmM1R3JLUmRPVi1NQlJES3ozbEl5QmFoUlhWc3A4V3FRdzJqNzN4V2czX2RrSlF1Wm9PbTZMVXB6ejFVSjdJdTY2dDF3UFV4cTZranRFeDhRNE8tc0R0cGZ",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ședință importantă la PSD, de la 10:00. Ce măsuri și schimbări pregătesc miniștrii social-democrați din Guvernul Niculescu - Stirile ProTV",
-      "category": "România",
-      "published": "2026-10-26T06:13:26+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQOWdrZU1hQVVDMkRSekdOZGlQTHVZQm9TRThlZVJSTzlVaHNZOTBiSENYMHVXd2JaclFTc2FGazU1NVdZYjBGNWVocG8yUmdiWDdpSTBIcWlhYkpvaHRlTVljU21XU3FNRGZINVJCOXA2bDNnY19Ib2w5b3BwNlNCeGQ0aFA3RkFmanIyeHRQQXVER3RNVFhpclNLbHR0U0MzWHJmaHQzTXFFcVJ2dTYyV3hyc3ZLY3ZyZ1AwYzZDOXg0VTJmN1phdGc2aWtxOEw4THM4ZGlvQW1OTldvdkNvRzZlSHg2ckJGcXU3WGlHdV9BSzF3MXc?oc=5",
-      "source": "Stirile ProTV",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "ANM: Buletinul Oficial al Prognozei Meteo cu Starea Vremii pentru Toată România din 26 Octombrie 2026 - iDevice.ro",
-      "category": "România",
-      "published": "2026-10-26T05:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUnZYdDBfZ1YtWDU2NGtYa2NVaTViQ3lhc2o3SHRQQ2lLcG03bDNxMjU0V0RHSk5RR3lEWGhrVUxZd0pxb3pROENObUZtWjhZMW9tTEgwcE1MeHFNQVhnMWZFSGtIeUhzZUR2eHZ2aE81SzUzUVo1RndVZ2pMM00wd2dTdjdBR2dpbWRxNy1reTVvakQ1dG9Jbk9fcmR4XzZjQm94R3B2WnNvb2ZYRnVlVmczWk5WaUtObW8tMDN5TW83akE?oc=5",
-      "source": "iDevice.ro",
       "status": "roșu",
       "words": 0
     },
