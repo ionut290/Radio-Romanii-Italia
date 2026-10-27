@@ -69,4 +69,5 @@ test("deduplication and category balancing",()=>{
   let selected=chooseFeatured(input,now,5);
   assert.ok(selected.length<=5);
   assert.equal(new Set(selected.map(x=>x.url)).size,selected.length);
+  assert.ok(selected.filter(x=>x.image===img).length>=3, "Use photographs for most cards when photos are available");
 });
