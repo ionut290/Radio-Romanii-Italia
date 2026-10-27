@@ -15,9 +15,9 @@
       climate:"Climă & mediu",climateDesc:"Riscuri și acorduri",
       newsEyebrow:"02 / FLUXUL INTERNAȚIONAL",storiesTitle:"Ce se întâmplă în lume",
       loading:"Se încarcă sursele…",region:"Regiune",allRegions:"Toate regiunile",reset:"Resetează filtrele",
-      sourceNote:"Știri din fluxuri externe. Titlurile pot fi în limba sursei; nu sunt automat verificate de redacție.",
+      sourceNote:"Titlurile sunt traduse automat în română. Sursele și datele sunt indicate; RDI nu le verifică independent pe toate.",
       noResults:"Nicio știre pentru selecția actuală",tryFilters:"Încearcă alt domeniu, o altă regiune sau revino mai târziu.",
-      externalDisclaimer:"O selecție de titluri externe, nu o confirmare independentă a evenimentelor. Verifică data și sursa articolului.",
+      externalDisclaimer:"Traducerile automate pot conține erori. Titlurile aparțin publicațiilor citate, nu reprezintă confirmări RDI.",
       archiveOpen:"Arhiva RDI ↗",
       atlasEyebrow:"03 / DATE ȘI CONTEXT",atlasTitle:"Observatorul conflictelor",
       atlasDescription:"Harta interactivă cu incidente documentate, știri din zone de conflict, filtre de perioadă și surse. Nu amestecăm știrile cu bilanțurile incidentelor confirmate.",
@@ -33,7 +33,7 @@
       ethicsText:"Fluxul automat colectează titluri și fragmente atribuite publicațiilor. Acestea sunt semnalări jurnalistice, nu fapte verificate independent de RDI. Materialele proprii sunt distincte; o analiză sau o opinie trebuie etichetată ca atare. Data publicării unei știri nu este neapărat data unui eveniment.",
       editorialPolicy:"Despre redacție ↗",back:"Înapoi la radio ↑",read:"Citește sursa ↗",
       curated:"Observator RDI",external:"SURSĂ EXTERNĂ",published:"Publicat",updated:"Flux actualizat",
-      fallback:"Fluxul extern nu este încă disponibil. Sunt afișate materialele existente în observatorul RDI.",
+      fallback:"Fluxul extern tradus nu este încă disponibil. Sunt afișate doar materiale bilingve din observatorul RDI.",
       count:"știri",sourceUnavailable:"Nu există încă materiale pentru această selecție.",
       searchPlaceholder:"Caută un subiect sau o țară…"
     },
@@ -50,9 +50,9 @@
       climate:"Clima e ambiente",climateDesc:"Rischi e accordi",
       newsEyebrow:"02 / NOTIZIE DAL MONDO",storiesTitle:"Cosa succede nel mondo",
       loading:"Caricamento delle fonti…",region:"Regione",allRegions:"Tutte le regioni",reset:"Reimposta filtri",
-      sourceNote:"Notizie da fonti esterne. I titoli possono essere nella lingua originale; non sono automaticamente verificati dalla redazione.",
+      sourceNote:"I titoli sono tradotti automaticamente in italiano. Sono indicati fonte e data; RDI non li verifica tutti in modo indipendente.",
       noResults:"Nessuna notizia per questa selezione",tryFilters:"Prova un altro tema, un'altra regione oppure torna più tardi.",
-      externalDisclaimer:"Titoli esterni selezionati, non verifiche indipendenti dei fatti. Controlla sempre data e fonte.",
+      externalDisclaimer:"Le traduzioni automatiche possono contenere errori. I titoli appartengono alle testate citate, non sono conferme RDI.",
       archiveOpen:"Archivio RDI ↗",
       atlasEyebrow:"03 / DATI E CONTESTO",atlasTitle:"Osservatorio dei conflitti",
       atlasDescription:"La mappa interattiva con episodi documentati, notizie dalle zone di conflitto, filtri temporali e fonti. Le notizie restano distinte dai bilanci degli attacchi confermati.",
@@ -68,7 +68,7 @@
       ethicsText:"Il flusso automatico raccoglie titoli e brevi estratti attribuiti alle testate. Sono segnalazioni giornalistiche e non verifiche indipendenti di RDI. I contenuti originali sono separati; analisi e opinioni devono essere indicate come tali. La data dell'articolo non coincide necessariamente con quella dell'evento.",
       editorialPolicy:"La redazione ↗",back:"Torna alla radio ↑",read:"Leggi la fonte ↗",
       curated:"Osservatorio RDI",external:"FONTE ESTERNA",published:"Pubblicato",updated:"Flusso aggiornato",
-      fallback:"Il flusso esterno non è ancora disponibile. Mostriamo i contenuti esistenti nell'osservatorio RDI.",
+      fallback:"Il flusso internazionale tradotto non è ancora disponibile. Mostriamo solo contenuti bilingui dell’osservatorio RDI.",
       count:"notizie",sourceUnavailable:"Nessun contenuto disponibile per questa selezione.",
       searchPlaceholder:"Cerca un argomento o un Paese…"
     }
@@ -81,6 +81,7 @@
   const REGIONS = ["all","europa","orient","asia","africa","americi","global"];
   const TOPICS = ["diplomatie","conflicte","europa","economie","energie","securitate","tehnologie","clima"];
   const state = {lang:"ro",topic:"all",region:"all",items:[],feedOk:false,updated:""};
+  let cachedTranslations = {};
   try {if(localStorage.getItem("rdi-lang")==="it")state.lang="it"}catch(_){}
   function t(key){return dict[state.lang][key]||key}
   function validUrl(value){try {const u=new URL(String(value));return u.protocol==="https:"?u.href:null}catch(_){return null}}
@@ -98,12 +99,15 @@
     return "global";
   }
   function normalizeExternal(item){
-    if(!item||!validUrl(item.url)||!item.title||!TOPICS.includes(item.category)||!dateISO(item.published))return null;
+    // Strictly show only a translated headline in the selected language.
+    const title=state.lang==="it"?item?.title_it:item?.title_ro;
+    if(!item||!validUrl(item.url)||!title||!TOPICS.includes(item.category)||!dateISO(item.published))return null;
     const published=dateISO(item.published);
     if(published.getTime()>Date.now()+3600000)return null;
-    return {title:String(item.title).slice(0,260),summary:String(item.summary||"").slice(0,400),
-      category:item.category,region:REGIONS.includes(item.region)?item.region:regionGuess(item.title),
-      url:validUrl(item.url),source:String(item.source||"Publicație externă").slice(0,100),
+    const summary=state.lang==="it"?item.summary_it:item.summary_ro;
+    return {title:String(title).slice(0,260),summary:String(summary||"").slice(0,400),
+      category:item.category,region:REGIONS.includes(item.region)?item.region:regionGuess(title),
+      url:validUrl(item.url),source:String(item.source||"RDI").slice(0,100),
       published:item.published,type:"external"};
   }
   function normalizeWar(item){
@@ -116,9 +120,12 @@
   function isGeoEditorial(item){const s=String(item.title||"")+" "+String(item.category||"");return /geopolit|diploma[tț]|conflict|război|razboi|atac|sudan|ukrain|ucrain|gaza|israel|nato|mali|nigeria|energie|rusia|china|iran|onu|uniunea europe/i.test(s)}
   function normalizeEditorial(item){
     if(!item||!item.title||!validUrl(item.url)||!isGeoEditorial(item)||!dateISO(item.published))return null;
-    const name=String(item.title);
-    const category=/energie|petrol|gaz|resurse/i.test(name)?"energie":/diploma|negoc|ambasad|onu|tratat/i.test(name)?"diplomatie":/nato|securitate|apărare/i.test(name)?"securitate":/uniunea european|comisia european|bruxelles/i.test(name)?"europa":"conflicte";
-    return {title:name,summary:String(item.summary||"").slice(0,400),category,region:regionGuess(name),
+    const record=cachedTranslations[item.id]||cachedTranslations[item.url];
+    const localized=record?.[state.lang];
+    if(!record?.ro?.title||!record?.it?.title||!localized?.title)return null;
+    const name=String(localized.title);
+    const category=/energie|petrol|gaz|resurse|energia|gas|risorse/i.test(name)?"energie":/diploma|negoc|ambasad|onu|tratat|negoziat/i.test(name)?"diplomatie":/nato|securitate|apărare|sicurezza|difesa/i.test(name)?"securitate":/uniunea european|comisia european|bruxelles|unione europea|commissione europea/i.test(name)?"europa":"conflicte";
+    return {title:name,summary:String(localized.summary||"").slice(0,400),category,region:regionGuess(name),
       url:validUrl(item.url),source:"RDI / "+String(item.source||"Redacție").slice(0,70),published:item.published,type:"curated"};
   }
   function cardData(){
@@ -169,17 +176,18 @@
   let external=[],war=[],editorial=[];
   async function getJSON(path){const response=await fetch(path+"?v="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);return response.json()}
   async function load(){
-    const results=await Promise.allSettled([getJSON("./data/geopolitica-news.json"),getJSON("./data/war-zone-news.json"),getJSON("./editorial.json")]);
+    const results=await Promise.allSettled([getJSON("./data/geopolitica-news.json"),getJSON("./data/war-zone-news.json"),getJSON("./editorial.json"),getJSON("./news-translations.json")]);
     if(results[0].status==="fulfilled"){
-      const data=results[0].value;external=(Array.isArray(data.items)?data.items:[]).map(normalizeExternal).filter(Boolean);
-      state.feedOk=external.length>0;state.updated=data.updated_at||"";
+      const data=results[0].value;external=Array.isArray(data.items)?data.items:[];
+      state.feedOk=external.some(item=>item.title_ro&&item.title_it);state.updated=data.updated_at||"";
     }
     if(results[1].status==="fulfilled")war=Array.isArray(results[1].value.items)?results[1].value.items:[];
     if(results[2].status==="fulfilled")editorial=Array.isArray(results[2].value.items)?results[2].value.items:[];
+    if(results[3].status==="fulfilled")cachedTranslations=results[3].value.items||{};
     refreshContent();
   }
   function refreshContent(){
-    const list=[...external,...war.map(normalizeWar),...editorial.map(normalizeEditorial)].filter(Boolean);
+    const list=[...external.map(normalizeExternal),...war.map(normalizeWar),...editorial.map(normalizeEditorial)].filter(Boolean);
     const seen=new Set();
     state.items=list.filter(x=>{const key=x.url.toLowerCase();if(seen.has(key))return false;seen.add(key);return true})
       .sort((a,b)=>Date.parse(b.published)-Date.parse(a.published));
