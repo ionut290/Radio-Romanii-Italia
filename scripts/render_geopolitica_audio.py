@@ -10,13 +10,19 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
-import shutil
 import subprocess
 from pathlib import Path
 
 
+def ffmpeg_executable() -> str:
+    # Bundled FFmpeg binary via pip; no sudo or apt repositories required.
+    from imageio_ffmpeg import get_ffmpeg_exe
+    return get_ffmpeg_exe()
+
+
 def cmd(*args: str) -> None:
-    subprocess.run(list(args), check=True, stdout=subprocess.DEVNULL)
+    command = [ffmpeg_executable() if args[0] == "ffmpeg" else args[0], *args[1:]]
+    subprocess.run(command, check=True, stdout=subprocess.DEVNULL)
 
 
 def chime(path: Path, descending: bool = False) -> None:
@@ -43,11 +49,9 @@ async def speech(text: str, voice: str, path: Path) -> None:
 
 
 def duration(path: Path) -> float:
-    p = subprocess.check_output([
-        "ffprobe", "-v", "error", "-show_entries", "format=duration",
-        "-of", "default=nokey=1:noprint_wrappers=1", str(path)
-    ], text=True)
-    return float(p.strip())
+    # Mutagen reads MP3 metadata; ffprobe is unnecessary in minimal CI.
+    from mutagen.mp3 import MP3
+    return float(MP3(str(path)).info.length)
 
 
 def main() -> int:
@@ -59,8 +63,9 @@ def main() -> int:
     transcript = (folder / "bulletin.txt").read_text(encoding="utf-8").strip()
     if len(transcript) < 200 or data.get("story_count", 0) < 1:
         raise ValueError("No viable editorial script")
-    if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
-        raise RuntimeError("FFmpeg and FFprobe required")
+    executable = Path(ffmpeg_executable())
+    if not executable.is_file():
+        raise RuntimeError("Bundled FFmpeg executable unavailable")
     voice = {"ro": "ro-RO-AlinaNeural", "it": "it-IT-ElsaNeural"}[data["language"]]
     speech_path = folder / "narration.mp3"
     asyncio.run(speech(transcript, voice, speech_path))
