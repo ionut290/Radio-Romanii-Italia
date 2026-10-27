@@ -49,7 +49,7 @@ html:not(.youtube-news) .grid .tile h3{margin-top:0;font-size:clamp(17px,1.35vw,
 html:not(.youtube-news) main>footer{max-width:100%;padding:36px 14px 10px}
 
 /* Large laptop / desktop: cinematic full-bleed use of the working area. */
-@media(min-width:1100px){
+@media(min-width:960px){
   html:not(.youtube-news) body>main{
     display:grid;
     grid-template-columns:minmax(0,1.5fr) minmax(365px,.86fr);
@@ -132,7 +132,7 @@ html:not(.youtube-news) main>footer{max-width:100%;padding:36px 14px 10px}
   html:not(.youtube-news) .bottom-nav button span{font-size:20px!important}
 }
 /* Tablet and compact laptop: full window, magazine grid. */
-@media(min-width:700px) and (max-width:1099px){
+@media(min-width:700px) and (max-width:959px){
   html:not(.youtube-news) body>main{padding:20px 26px 112px}
   html:not(.youtube-news) .home-quick-links{grid-template-columns:repeat(3,minmax(0,1fr))}
   html:not(.youtube-news) .radio-brand-hero{aspect-ratio:3.8/1;max-height:250px}
