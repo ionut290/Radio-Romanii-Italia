@@ -31,6 +31,8 @@ def duration(path: Path) -> float:
 
 async def speech(text: str, voice: str, path: Path) -> None:
     import edge_tts
+    # Avoid long pauses between the station initials in spoken segments.
+    text = text.replace("R. D. I.", "Erre di i").replace("R.D.I.", "Erre di i")
     await edge_tts.Communicate(text, voice, rate="-5%").save(str(path))
 
 
@@ -101,7 +103,7 @@ def produce(folder: Path) -> dict:
     voice = "it-IT-DiegoNeural"
     jingle_voice = folder / "jingle-voce.mp3"
     asyncio.run(speech(
-        "Erre. Di. I. Geopolitica. Il mondo in primo piano.",
+        "Erre di i. Geopolitica. Il mondo in primo piano.",
         voice, jingle_voice,
     ))
     bed = folder / "jingle-note.mp3"
