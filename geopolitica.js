@@ -3,6 +3,10 @@
   const $ = (id) => document.getElementById(id);
   const dict = {
     ro: {
+      brandDesk:"DIN ITALIA / REDACȚIA GLOBALĂ",briefing:"RDI / SINTEZĂ INTERNAȚIONALĂ",mainTitle:"GEOPOLITICĂ",worldMonitoring:"MONITORIZARE GLOBALĂ",worldArea:"RDI · EUROPA / LUME",
+      tickerDesk:"RDI · REDACȚIA GLOBALĂ",tickerEurope:"EUROPA",tickerDiplomacy:"DIPLOMAȚIE",tickerSecurity:"SECURITATE",tickerEconomy:"ECONOMIE",tickerEnergy:"ENERGIE",tickerClimate:"CLIMĂ",tickerTech:"TEHNOLOGIE",
+      atlasLabel:"RDI / OBSERVATOR MONDIAL",footerDesk:"© RADIO ROMÂNII DIN ITALIA · REDACȚIA GLOBALĂ",
+      topicsAria:"Domenii urmărite",navigationAria:"Navigare",languageAria:"Limbă",filtersAria:"Filtre tematice",searchAria:"Caută știri",
       radio:"Radio",news:"Actualitate",atlas:"Observator",archive:"Arhivă",
       subtitle:"Dincolo de titluri. O privire asupra conflictelor, diplomației, puterii economice și deciziilor care schimbă lumea.",
       discover:"Descoperă actualitatea ↗",exploremap:"Explorează harta ↘",
@@ -38,6 +42,10 @@
       searchPlaceholder:"Caută un subiect sau o țară…"
     },
     it: {
+      brandDesk:"DALL'ITALIA / REDAZIONE INTERNAZIONALE",briefing:"RDI / NOTIZIARIO INTERNAZIONALE",mainTitle:"GEOPOLITICA",worldMonitoring:"MONITORAGGIO GLOBALE",worldArea:"RDI · EUROPA / MONDO",
+      tickerDesk:"RDI · REDAZIONE INTERNAZIONALE",tickerEurope:"EUROPA",tickerDiplomacy:"DIPLOMAZIA",tickerSecurity:"SICUREZZA",tickerEconomy:"ECONOMIA",tickerEnergy:"ENERGIA",tickerClimate:"CLIMA",tickerTech:"TECNOLOGIA",
+      atlasLabel:"RDI / OSSERVATORIO MONDIALE",footerDesk:"© RADIO ROMÂNII DIN ITALIA · REDAZIONE INTERNAZIONALE",
+      topicsAria:"Temi seguiti",navigationAria:"Navigazione",languageAria:"Lingua",filtersAria:"Filtri per argomento",searchAria:"Cerca notizie",
       radio:"Radio",news:"Attualità",atlas:"Osservatorio",archive:"Archivio",
       subtitle:"Oltre i titoli. Uno sguardo a conflitti, diplomazia, potere economico e decisioni che cambiano il mondo.",
       discover:"Esplora le notizie ↗",exploremap:"Esplora la mappa ↘",
@@ -165,6 +173,7 @@
   function applyLanguage(){
     document.documentElement.lang=state.lang;
     document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(dict[state.lang][key])el.textContent=t(key)});
+    document.querySelectorAll("[data-i18n-aria]").forEach(el=>{const key=el.dataset.i18nAria;if(dict[state.lang][key])el.setAttribute("aria-label",t(key))});
     document.querySelectorAll("[data-lang]").forEach(b=>{const on=b.dataset.lang===state.lang;b.classList.toggle("selected",on);b.setAttribute("aria-pressed",String(on))});
     const regions={ro:["Toate regiunile","Europa","Orientul Mijlociu","Asia-Pacific","Africa","Americi","Global"],it:["Tutte le regioni","Europa","Medio Oriente","Asia-Pacifico","Africa","Americhe","Globale"]};
     [...$("region").options].forEach((op,i)=>op.textContent=regions[state.lang][i]);
