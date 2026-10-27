@@ -10,7 +10,9 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import re
+import hashlib
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -20,6 +22,8 @@ CURATED = ROOT / "data/war-zone-news.json"
 EXTRA = ROOT / "data/geopolitica-radio-verified.json"
 MAX_STORIES = 5
 MAX_AGE_HOURS = 35  # Publication dates from the curated feed have day precision.
+HISTORY_LIMIT = 72  # Recent broadcast editions kept locally on Oracle.
+DEFAULT_HISTORY = Path(os.environ.get("RDI_GEOPOLITICA_HISTORY", "/var/lib/rdi-geopolitica/broadcast-history.json"))
 
 OPENING = {
     "ro": "Radio Românii din Italia. Ascultați RDI Geopolitica, sinteza evenimentelor internaționale.",
@@ -67,7 +71,19 @@ def clean_spoken(value: object, limit: int = 650) -> str:
     return text[:limit].strip(" ,.;:")
 
 
-def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict) -> list[dict]:
+def story_signature(item: dict) -> str:
+    """Treat changed text as an update, not merely a new ID or URL."""
+    normalized = " ".join(str(item.get(key, "")).casefold().split() for key in ("title", "summary"))
+    return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:24]
+
+
+def recent_history(history: dict) -> set[str]:
+    entries = history.get("editions", []) if isinstance(history, dict) else []
+    return {str(signature) for edition in entries[-HISTORY_LIMIT:] if isinstance(edition, dict)
+            for signature in edition.get("signatures", []) if isinstance(signature, str)}
+
+
+def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dict | None = None) -> list[dict]:
     result = []
     seen_urls = set()
     # war-zone-news.json is the existing editorially verified feed, not the raw attack leads.
@@ -103,6 +119,8 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict) ->
             "date": publication, "region": str(item.get("region") or "").strip(),
             "id": str(item.get("id") or url), "curated": is_curated
         })
+    used = recent_history(history or {})
+    result = [item for item in result if story_signature(item) not in used]
     result.sort(key=lambda item: (item["date"], item["curated"]), reverse=True)
     # Promote geographic diversity without inventing priorities or ranking political actors.
     selected = []
@@ -165,9 +183,9 @@ def broadcast_summary(text: str, lang: str, source: str) -> str:
     return re.sub(r"\s+", " ", text).strip(" ,.;:")
 
 
-def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | None:
+def build(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dict | None = None) -> dict | None:
     now = now.astimezone(ROME)
-    stories = available_items(now, lang, curated, extras)
+    stories = available_items(now, lang, curated, extras, history)
     if not stories:
         return None
     date_text = display_date(now.date(), lang)
@@ -205,6 +223,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | No
         "edition_id": edition_id,
         "track_title": f"RDI-GEOPOLITICA-{lang.upper()}-{edition_id}",
         "story_count": len(stories),
+        "story_signatures": [story_signature(x) for x in stories],
         "sources": [{
             "id": x["id"], "url": x["url"], "source": x["source"],
             "published_date": x["date"].isoformat()
@@ -219,9 +238,10 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--language", choices=("ro", "it"), default="it")
     parser.add_argument("--output", default="/tmp/rdi-geopolitica")
+    parser.add_argument("--history", default=str(DEFAULT_HISTORY))
     args = parser.parse_args()
     now = dt.datetime.now(ROME)
-    program = build(now, args.language, read_json(CURATED), read_json(EXTRA))
+    program = build(now, args.language, read_json(CURATED), read_json(EXTRA), read_json(Path(args.history)))
     if not program:
         print("Nessun bollettino: nessuna notizia abbastanza recente e revisionata.")
         return 2
