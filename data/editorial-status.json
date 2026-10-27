@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-10-27T18:37:19.126952+00:00",
+  "news_updated_at": "2026-10-27T19:06:11.682647+00:00",
   "editorial_updated_at": "2026-10-27T19:04:14.907822+01:00",
   "translations_updated_at": "2026-10-27T18:02:47.638573+00:00",
   "feed_total": 77,
-  "feed_extended_400": 17,
-  "feed_missing_body": 60,
+  "feed_extended_400": 19,
+  "feed_missing_body": 58,
   "feed_short_body": 0,
   "editorial_total": 31,
   "archived_editorials": 56,
   "translation_records": 31,
-  "pending_total": 98,
-  "pending_filtered_out": 282,
-  "editorial_verde": 21,
-  "editorial_galben": 47,
+  "pending_total": 100,
+  "pending_filtered_out": 290,
+  "editorial_verde": 23,
+  "editorial_galben": 45,
   "editorial_rosu": 35,
   "pending": [
     {
@@ -133,6 +133,16 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato ancora da redigere: fonti indipendenti da consultare.",
+      "attempts": 0
+    },
+    {
+      "title": "Angeletti (Santandrea): \"Comodità, servizi e sicurezza sono i driver della domanda di lusso in Italia” - Idealista",
+      "category": "",
+      "published": "2026-10-27T16:02:46+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOaE9TRlJXazk3em9QNHg0YmRNUWJPRjdjYnlWYWl1OV9VczlhMkt0d0ZuY3hmNEVGbjY0QUlTdExKNWY4YkRtUGYzZUt5cHQ2TzZqcUEtbGtQNDNqcGNuZlRDRmszZkRWLTVyTEdLenFmeU9ZQmMxYlBsTjdGS1RJa1VrTEhveFpvQXRoNHpHdEdmTVJ1UTdFTHpYbkhNbWU1X2l3VGlQNl9Ib2NjZDQ3blJfWklfS1hWTHE0VW5RUlJrYnR1RllxYkIwdk93RVdMNmRTRUR5SEJKdWtJMlNyZnVMNTB0NG9k0gHuAUFVX3lxTE0zb0R2NERtQ2hlVkM2czZUaEVlRnNYZjEyY3Q1OEt0YW1adF9tbEkyRWdUX2JoeFZEVUtQZ1Q3bUd2Sm9oc09lVV83QUVpZzMyR0xmQk53eWg4ZWcxbnJzaUNLdXZkOVVWT2J",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento non ancora verificato; ricerca su fonte originale e riscontri indipendenti necessaria",
       "attempts": 0
     },
     {
@@ -604,25 +614,69 @@
       "status": "roșu",
       "reason": "Approfondimento verificato ancora da redigere: fonti indipendenti da consultare.",
       "attempts": 0
-    },
-    {
-      "title": "Monopostul LGM1, legenda curselor românești, renaște după 46 de ani: povestea mașinii uitate într-o curte din Argeș",
-      "category": "",
-      "published": "2026-10-27T05:00:25+00:00",
-      "url": "https://www.digi24.ro/stiri/sci-tech/auto/monopostul-lgm1-legenda-curselor-romanesti-renaste-dupa-46-de-ani-povestea-masinii-uitate-intr-o-curte-din-arges-4009977",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato ancora mancante; verificare fonte e riscontri indipendenti",
-      "attempts": 0
     }
   ],
   "recent_news": [
     {
       "title": "„Insinuări calomnioase” și „acuzații fără temei”. Reacția Ambasadei Rusiei privind sabotajul de la Carfil și atacurile din Marea Neagră",
       "category": "România",
-      "published": "2026-10-27T18:35:02+00:00",
+      "published": "2026-10-27T19:05:22+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/insinuari-calomnioase-si-acuzatii-fara-temei-reactia-ambasadei-rusiei-privind-sabotajul-de-la-carfil-si-atacurile-din-marea-neagra-4011287",
       "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Mesajul lui Luca Niculescu după întâlnirea cu Maia Sandu, la Chișinău: „Viitorul Republicii Moldova este în familia europeană”",
+      "category": "România",
+      "published": "2026-10-27T19:04:35+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/mesajul-lui-luca-niculescu-dupa-intalnirea-cu-maia-sandu-la-chisinau-viitorul-republicii-moldova-este-in-familia-europeana-4011337",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Sassuolo-Lazio 2-5 DIRETTA",
+      "category": "Italia",
+      "published": "2026-10-27T18:56:48+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/27/serie-a-in-campo-sassuolo-lazio-0-0-diretta_8454c10b-5c60-48ca-8a57-b9995fdd4b9d.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "La premier del Marocco Fatima Ezzahra El Mansouri risponde duramente all’opposizione",
+      "category": "Italia",
+      "published": "2026-10-27T18:53:15+00:00",
+      "url": "https://www.ansa.it/sito/videogallery/short_video/2026/10/27/la-premier-del-marocco-fatima-ezzahra-el-mansouri-risponde-duramente-allopposizione_02a8f8f6-f88c-47d6-ad12-e71a948a7413.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Alimentazione vegetale e longevity, i legumi la fonte proteica meno utilizzata dagli italiani",
+      "category": "Italia",
+      "published": "2026-10-27T18:45:01+00:00",
+      "url": "https://www.ansa.it/canale_lifestyle/notizie/food/2026/10/26/alimentazione-vegetale-e-longevity-i-legumi-la-fonte-proteica-meno-utilizzata-dagli-italiani_545459d4-aa99-4770-913d-009d447bbdab.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Le frasi shock degli agenti mentre Fakir era a terra: 'È schiattato', 'che me ne frega'",
+      "category": "Italia",
+      "published": "2026-10-27T18:43:13+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/le-frasi-shock-degli-agenti-mentre-fakir-era-a-terra-e-schiattato-che_67fdb0f4-6e72-41d4-b8af-2d52b259663a.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Israele al voto, affluenza record: alle 18 è al 66,7%. I seggi chiuderanno alle 21 (ora italiana)",
+      "category": "Italia",
+      "published": "2026-10-27T18:27:39+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-al-voto-affluenza-record-alle-18-e-al-667.-appello-di-netanyahu-a-votare_a1c108b8-6cbb-4e8e-bbd7-353e896240bd.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -632,8 +686,8 @@
       "published": "2026-10-27T18:24:06+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/romania-si-republica-moldova-isi-coordoneaza-actiunile-impotriva-atacurilor-hibride-si-incursiunilor-cu-drone-anuntul-premierului-4011301",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 437
     },
     {
       "title": "Cancerul papei „schimbă regulile jocului” pentru papalitate, susţine ministrul de externe al Vaticanului",
@@ -645,40 +699,13 @@
       "words": 0
     },
     {
-      "title": "Le frasi shock degli agenti mentre Fakir era a terra: 'È schiattato', 'che me ne frega'",
-      "category": "Italia",
-      "published": "2026-10-27T18:22:48+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/le-frasi-shock-degli-agenti-mentre-fakir-era-a-terra-e-schiattato-che_67fdb0f4-6e72-41d4-b8af-2d52b259663a.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Serie A: in campo Sassuolo-Lazio 2-4 DIRETTA",
-      "category": "Italia",
-      "published": "2026-10-27T18:20:03+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/27/serie-a-in-campo-sassuolo-lazio-0-0-diretta_8454c10b-5c60-48ca-8a57-b9995fdd4b9d.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "++ Giorgetti, sulle banche 'abbiamo trovato un accordo tra di noi' ++",
-      "category": "Italia",
-      "published": "2026-10-27T18:16:49+00:00",
-      "url": "https://www.ansa.it/sito/notizie/flash/2026/10/27/-giorgetti-sulle-banche-abbiamo-trovato-un-accordo-tra-di-noi-_49be0c1f-8877-4812-918f-900c733848b7.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Piantedosi: 'Sugli scontri non è finita, attenzione alta per venerdì'",
       "category": "Italia",
       "published": "2026-10-27T18:10:26+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/10/27/piantedosi-sugli-scontri-non-e-finita-attenzione-alta-per-venerdi_f453532f-bbda-4ca2-a09a-2831b65ca114.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 426
     },
     {
       "title": "Donald Trump Jr., la vânătoare în Mongolia cu un oligarh apropiat de Kremlin şi un alt rus aflat pe lista sancţiunilor americane (FT)",
@@ -697,6 +724,15 @@
       "source": "ANSA",
       "status": "verde",
       "words": 439
+    },
+    {
+      "title": "Trump: 'Accetterò i risultati delle Midterm solo se saranno elezioni corrette'",
+      "category": "Italia",
+      "published": "2026-10-27T17:54:06+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/27/trump-il-partito-del-presidente-non-ottiene-di-solito-buoni-risultati-alle_53773608-7ce2-4fa4-adc1-3cd956274c2a.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Flavio Bolsonaro ar fi părăsit Brazilia pentru SUA. Pașapoartele sale au fost anulate, după ce acesta nu a predat documentele poliției",
@@ -724,15 +760,6 @@
       "source": "Digi24",
       "status": "verde",
       "words": 408
-    },
-    {
-      "title": "Fatima Ezzahra El Mansouri: “Io sono la signora primo ministro, fateci l’abitudine”",
-      "category": "Italia",
-      "published": "2026-10-27T17:46:01+00:00",
-      "url": "https://www.ansa.it/donne/videogallery/2026/10/27/fatima-ezzahra-el-mansouri-io-sono-la-signora-primo-ministro-fateci-labitudine_e1b54eca-d902-4417-bc96-f20d89ba61c1.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Brasile, media: 'Bolsonaro ha lasciato il Brasile ed è in volo per gli Stati Uniti'",
@@ -767,15 +794,6 @@
       "published": "2026-10-27T17:21:39+00:00",
       "url": "https://www.digi24.ro/stiri/externe/daca-statul-nu-reactioneaza-va-trebui-sa-luam-propriile-decizii-aleksandar-vucic-avertisment-dupa-violentele-din-serbia-4011227",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Israele al voto, affluenza record: alle 18 è al 66,7%. Appello di Netanyahu a votare",
-      "category": "Italia",
-      "published": "2026-10-27T17:19:35+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-al-voto-affluenza-record-alle-18-e-al-667.-appello-di-netanyahu-a-votare_a1c108b8-6cbb-4e8e-bbd7-353e896240bd.html",
-      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -888,15 +906,6 @@
       "words": 0
     },
     {
-      "title": "Fritz, după mesajul AUR cu privire la sabotaj: Dacă a aflat abia azi cine e agresorul, să nu mai ducă mai departe mesajele Kremlinului",
-      "category": "România",
-      "published": "2026-10-27T16:27:54+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/fritz-dupa-mesajul-aur-cu-privire-la-sabotaj-daca-a-aflat-abia-azi-cine-e-agresorul-sa-nu-mai-duca-mai-departe-mesajele-kremlinului-4011105",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Roncadin annuncia oltre 80 milioni di investimenti tra Italia e USA: obiettivo 500 milioni di ricavi - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-27T16:21:19+00:00",
@@ -911,6 +920,15 @@
       "published": "2026-10-27T16:20:17+00:00",
       "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxPdDFGU3o1WjVrRWVYM0J4aE9xX2V2TkNmSlVQTm9kZl9FaE9uTWo5ajJRX3UtYko5WWgzMWxZWVVuOUtXcU5SMlVEbjFmblB6Y2dtMFVUeFl5SWpFYXVZVDhDSjVaX1lDX3VVVVJqWGhDT2JXNHJ0OHFnNE9VUUhBTHpucEhaT205Y0RZM0VGVktOTDc5MEFya0NqZElMT3kycGJBcHdFS190MnZWWF8zWDFTNFROMFVZTzQ1VFdVMHN2WnhZUEM5ZUZWODBSYXhwQW9tcmtPNWxHV015bDQ2aS13eWx4c19zT0RRa3pROW4ybWNDVlB4UE5QTmo4VjlTUkR6M2RoNXcySkR2VUVuV3BjZjlBS29zVGlWT05BTXUzVkRrVEVNTFlSVGZGdVZH?oc=5",
       "source": "Oficiul de Știri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Banca Sella e Confindustria Veneto Est, plafond da 50 milioni per gli investimenti delle imprese - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-27T16:19:17+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSWlMRGdWcG45d0RhdXM0bWF4VWVDS05POVpURVc3X1FleDd2SjNtUEltZm94VnVjUVloYUcxeE9kdmNDcEJnS2haYkZ5XzllY005SXgteVVNeTBYRzExcjVPVjYyOUItZ3ZLRFRxb3I1WGN5UVRvNTRUclFadHMwX1NzSWFqQi1feklBYkRSSDllQQ?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -931,15 +949,6 @@
       "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Hypatia, da una piccola pietra una storia inattesa del Sistema solare",
-      "category": "Italia",
-      "published": "2026-10-27T16:16:01+00:00",
-      "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/10/27/hypatia-da-una-piccola-pietra-una-storia-inattesa-del-sistema-solare_969de46b-ea75-4588-8474-7f472610a4a1.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 433
     },
     {
       "title": "Difesa del suolo nel Padovano: 690 mila euro regionali per cinque Comuni, ecco gli interventi - Padova24Ore",
@@ -1032,21 +1041,21 @@
       "words": 0
     },
     {
+      "title": "iPhone Duo con schermi rotti, Apple sostituirà i modelli difettosi",
+      "category": "Italia",
+      "published": "2026-10-27T12:13:42+00:00",
+      "url": "https://www.ansa.it/canale_tecnologia/notizie/future_tech/2026/10/27/iphone-duo-con-schermi-rotti-apple-sostituira-i-modelli-difettosi_a634de00-d966-4953-9124-1cf0826b17fc.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Opt poliţişti au fost condamnaţi pentru că au bătut şi torturat doi tineri în București, în... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-27T12:08:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQY09JcjVQTUVlTzFxRi0tbk9QZVNMSklCRENtQXM0eTdOOHp1SktJOGtWN19KbVFnMFFTYXlqMldkWnptazd1NTlRLVZFcHZxeUFlRnFSTkpYdHRIeHlUckVjTEktWWZKZm1tSjlMUXNieWVWbU5zUnE1M3hCU0dhbXM0VzQ3dFlkWmlOV2plN1puT19HUnlUc05YemtjYjY0Zi1LTnhZeUZSUXJZX1hnS01nMzA5NjVnQzJhd1FQOEVzUEYzR2VrbzNIU3NqU0tHLWtNUXdreDIta0xxQWpGM2lB0gHnAUFVX3lxTE1HTUw2S0dKMU1JeEVJM3VnclBtb2JsTUF3ejh4Uk1HdC1LMXV6ZTRCWk81cDltS1VoNlpWeE1NTWxGSHhqTlRxUkozYnRGUTQxclZRc1NXNFN3ZnpTUVJib2lvVEhYZi1TeGluV2haUEV",
       "source": "StiriDiaspora",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Meghan confermata co-conduttrice di Junior MasterChef Australia",
-      "category": "Italia",
-      "published": "2026-10-27T12:06:05+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/meghan-confermata-co-conduttrice-di-junior-masterchef-australia_161736cc-442b-4737-bbd2-736c13eb7634.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -1066,6 +1075,15 @@
       "source": "StiriDiaspora",
       "status": "verde",
       "words": 422
+    },
+    {
+      "title": "Sciopero al Teatro Verdi di Padova: stipendi e protesta - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-27T11:05:39+00:00",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBselIyQVN2M2dqNExmZFI2M2k4ZDVjalZyM0w3WXZGeFdTaVJZV211cExSOGVvZnJTMnpxQ045Nzd4clhWMWpIcTBiVndjZDVmcFJlQmFiekEzZkRlM3NDQ21tTzY4cHo2cVpfWFkxWHUya0U?oc=5",
+      "source": "Padova24Ore",
+      "status": "verde",
+      "words": 434
     },
     {
       "title": "Padova, 56 chili di rifiuti in più a testa in tre anni: la sostenibilità non è solo una classifica - Padova24Ore",
@@ -1131,6 +1149,15 @@
       "words": 0
     },
     {
+      "title": "Il sorriso è modellato da rare varianti di un gene",
+      "category": "Italia",
+      "published": "2026-10-27T06:43:21+00:00",
+      "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/10/27/il-sorriso-e-modellato-da-rare-varianti-di-un-gene-_e6882537-1dc2-4866-9fe4-e9f00e581296.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Gratuito patrocinio, così la legge beffa gli infortunati sul lavoro - la Repubblica",
       "category": "Italia",
       "published": "2026-10-27T00:00:00+00:00",
@@ -1147,15 +1174,6 @@
       "source": "Rotalianul – Revista românului din Italia",
       "status": "verde",
       "words": 448
-    },
-    {
-      "title": "Almodovar debutta nel romanzo, 'la buona fiction sia eterna'",
-      "category": "Italia",
-      "published": "2026-10-26T16:46:02+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cultura/libri/narrativa/2026/10/26/almodovar-debutta-nel-romanzo-la-buona-fiction-sia-eterna_c31bce8b-a254-4b17-b519-d2442fbedec1.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
     },
     {
       "title": "Român acuzat în Italia că a ucis un tânăr de 19 ani într-un parc. Polițiștii l-au găsit acasă - Rotalianul – Revista românului din Italia",
@@ -1192,15 +1210,6 @@
       "source": "Inail",
       "status": "verde",
       "words": 483
-    },
-    {
-      "title": "Chiusura ponte di Zinola, esplode la rabbia degli esercenti - RaiNews",
-      "category": "Italia",
-      "published": "2026-10-26T13:49:44+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQYmk3QUFoaEtpRDVnSVk3d1ZHU1NmNks3NDllLVdRdGk2LWZIaHFNaFlrbTBZc2NYM1hlSmJ3dEpJX3N5dFd6VW9ETVpNY2VoSXdwZ0tGYmg2dVZPZUFOVE5QWnU3WmlzODNaZzVFckxTcUEzYUR5X2FyelN6ZmFSQXhrbWVCTnBYY0FfbzIyRFdMRmYtdmlTN19fVTVOdXhkOVdpWlMwbjhPdWgzVDdTYlA1am92LWRDRi1pTzlOQmxvNXREeTNncE9HTTlxR1p0WTk1bkl5ZUlPSkx3LUNrSWJVWHnSAeoBQVVfeXFMT2JkaHdOMGxQbWoyU0Zqai1TM2VxWU9JTURwY3owQWFPZkVFTHNBU3hNUkE1M2xHQVIxOWtKbTNZVHhzTXhFVkVQYnNLY2phSVliMU1iMF9uUVhnZTUtSUlCQnZ3a2FySDYzbjc0ZVl",
-      "source": "RaiNews",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Franţa adoptă restricţii pentru a împiedica escaladarea violenţelor în timpul protestelor - StiriDiaspora",
@@ -1280,15 +1289,6 @@
       "published": "2026-10-26T04:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxQMmFXQkJONElybm5fem84Nl9MVlI3d3NFX1NMaXdTX3g2ZlZEcUJHSVY1YlM2QkZub2lKZHk3WENISGQxM21EQjlpRjVjcF9DWERyQmhvdlhBbmtLT1FQRU5FTEMwbURBbzB5QXphcTltMlRiN0lGeXZDZDVBVXJEcDVqYk96aklJTk9OZTBLVEwtUkhuQ0lFU1k0Q2hTYk12RzJNUHZ6YmxBakx5dHh3Z3JDNHZKVzA5WTN3ejhieGJEWkk1clJILUdvd0pvaUs1MVlhMWFaR0JRWG1yZGtZWERoNXFXVE43M00tQVFXbm5qaDItdEN0OHM3azhSdEpqOUJsbWpINDF0bDdHc0x0eEFTWEtzY2VIUy1ueDJ6Vm9Wb3JtcWc2ZjlEaVhjTnN1a1pMOXFSNmdWVC10eEFDRFE0OWVIaEZUWHVoeXJfYWVNeGJ2SkF",
       "source": "News.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Opinioni sui social e rapporto di lavoro: fin dove arriva la libertà di espressione - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-26T04:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObzBqS2ZXTXhpalFrV2wtLTNzV0xYUFRvRzU2cDVpVEhmeE5oQ3c2d1ZDYU9CN1BxVEMzWkJFdWprcHJlbjVhSE44bElDWkFQNkdJLV9QOHF3S3BuU0NDMWtWS3V0Ni1GbVhCYW9JcDJ5T3hrLWt4NU9oNW9DLTNyQWhrdlAtOGV5d3ozTjZPcmxzelVVZUd3ZDhjUVBORndpdUFheno0M2xpNXM0STR4VGhaRzFzbHAwcUM0?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
