@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
 import {
   normalizedCandidates, chooseFeatured, scoreStory, safeImage, safeLink
 } from "../rdi-featured-core.mjs";
@@ -70,4 +71,15 @@ test("deduplication and category balancing",()=>{
   assert.ok(selected.length<=5);
   assert.equal(new Set(selected.map(x=>x.url)).size,selected.length);
   assert.ok(selected.filter(x=>x.image===img).length>=3, "Use photographs for most cards when photos are available");
+});
+
+test("photographs are above placeholders without hover and fallbacks never show RDI radio cover",()=>{
+  const css=readFileSync(new URL("../rdi-featured.css",import.meta.url),"utf8");
+  const js=readFileSync(new URL("../rdi-featured.js",import.meta.url),"utf8");
+  const page=readFileSync(new URL("../index.html",import.meta.url),"utf8");
+  assert.match(css,/\.rdi-featured-image-placeholder\[hidden\]\{display:none!important\}/);
+  assert.match(css,/\.rdi-featured-visual img\{position:absolute;inset:0;z-index:1;/);
+  assert.match(css,/\.rdi-featured-image-placeholder\{position:absolute;inset:0;z-index:0;/);
+  assert.doesNotMatch(js,/fallback=safeImage\(article\.fallbackImage\)\|\|"\.\/RADIO-COVER\.jpg"/);
+  assert.match(page,/rdi-featured\.css\?v=20261027-photo-fix/);
 });
