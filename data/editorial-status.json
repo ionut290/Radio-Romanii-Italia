@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-27T17:06:48.352276+00:00",
-  "editorial_updated_at": "2026-10-27T17:29:08.622937+01:00",
-  "translations_updated_at": "2026-10-27T16:05:55.543451+00:00",
+  "news_updated_at": "2026-10-27T17:37:18.651685+00:00",
+  "editorial_updated_at": "2026-10-27T17:07:27.087Z",
+  "translations_updated_at": "2026-10-27T17:06:45.231819+00:00",
   "feed_total": 78,
-  "feed_extended_400": 19,
-  "feed_missing_body": 59,
+  "feed_extended_400": 18,
+  "feed_missing_body": 60,
   "feed_short_body": 0,
-  "editorial_total": 28,
+  "editorial_total": 30,
   "archived_editorials": 53,
-  "translation_records": 34,
+  "translation_records": 31,
   "pending_total": 99,
   "pending_filtered_out": 272,
-  "editorial_verde": 20,
-  "editorial_galben": 49,
-  "editorial_rosu": 33,
+  "editorial_verde": 21,
+  "editorial_galben": 48,
+  "editorial_rosu": 34,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -618,20 +618,128 @@
   ],
   "recent_news": [
     {
-      "title": "„Cascadorii râsului”. Imagini virale cu parada de Ziua Armatei în Călărași: jandarmii n-au nimerit pasul, iar fanfara notele",
+      "title": "Serie A: in campo Sassuolo-Lazio 0-0 DIRETTA",
+      "category": "Italia",
+      "published": "2026-10-27T17:29:49+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/27/serie-a-in-campo-sassuolo-lazio-0-0-diretta_8454c10b-5c60-48ca-8a57-b9995fdd4b9d.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trei persoane trimise în judecată într-un dosar cu un prejudiciu de 3,5 milioane de euro din fondurile UE pentru fermieri",
       "category": "România",
-      "published": "2026-10-27T17:00:38+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/cascadorii-rasului-imagini-virale-cu-parada-de-ziua-armatei-in-calarasi-jandarmii-n-au-nimerit-pasul-iar-fanfara-notele-4011153",
+      "published": "2026-10-27T17:29:43+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/trei-persoane-trimise-in-judecata-intr-un-dosar-cu-un-prejudiciu-de-35-milioane-de-euro-din-fondurile-ue-pentru-fermieri-4011233",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Brasile, la polizia sta indagando su una possibile fuga all'estero di Bolsonaro. Annullati i suoi passaporti",
+      "title": "++ Piantedosi, 'non credo sarò ancora ministro dell'Interno, ma servirà continuità' ++",
       "category": "Italia",
-      "published": "2026-10-27T16:58:28+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/brasile-la-polizia-sta-indagando-su-una-possibile-fuga-allestero-di-bolsonaro.-annullati_bec521a5-35b6-4db4-91cf-30e166594cb9.html",
+      "published": "2026-10-27T17:27:42+00:00",
+      "url": "https://www.ansa.it/sito/notizie/flash/2026/10/27/-piantedosi-non-credo-saro-ancora-ministro-dellinterno-ma-servira-continuita-_35dc5837-b4f1-4e3d-bb33-c194d58ce133.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Piantedosi: 'Sugli scontri non è finita, attenzione alta per venerdì'",
+      "category": "Italia",
+      "published": "2026-10-27T17:27:39+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/27/piantedosi-sugli-scontri-non-e-finita-attenzione-alta-per-venerdi_f453532f-bbda-4ca2-a09a-2831b65ca114.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il femminicidio di Ilaria Sula, Mark Samson condannato all'ergastolo",
+      "category": "Italia",
+      "published": "2026-10-27T17:23:18+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/femminicidio-sula-condanna-allergastolo-per-samson_7d1a3db0-28e4-4400-b91f-2cd49cc08df4.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "„Dacă statul nu reacționează, va trebui să luăm propriile decizii”. Aleksandar Vucic, avertisment după violențele din Serbia",
+      "category": "România",
+      "published": "2026-10-27T17:21:39+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/daca-statul-nu-reactioneaza-va-trebui-sa-luam-propriile-decizii-aleksandar-vucic-avertisment-dupa-violentele-din-serbia-4011227",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Israele al voto, affluenza record: alle 18 è al 66,7%. Appello di Netanyahu a votare",
+      "category": "Italia",
+      "published": "2026-10-27T17:19:35+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-al-voto-affluenza-record-alle-18-e-al-667.-appello-di-netanyahu-a-votare_a1c108b8-6cbb-4e8e-bbd7-353e896240bd.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Brasile, media: 'Bolsonaro ha lasciato il Brasile ed è in volo per gli Stati Uniti'",
+      "category": "Italia",
+      "published": "2026-10-27T17:18:00+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/brasile-media-bolsonaro-ha-lasciato-il-brasile-ed-e-in-volo-per-gli-stati-uniti_bec521a5-35b6-4db4-91cf-30e166594cb9.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ministerul Justiției a demarat reorganizarea Administraţiei Naţionale a Penitenciarelor şi a Direcţiei Naţionale de Probaţiune",
+      "category": "România",
+      "published": "2026-10-27T17:16:42+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/ministerul-justitiei-a-demarat-reorganizarea-administratiei-nationale-a-penitenciarelor-si-a-directiei-nationale-de-probatiune-4011225",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Per i consulenti del pm la morte di Fakir per agitazione, cocaina e posizione prona",
+      "category": "Italia",
+      "published": "2026-10-27T17:09:20+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/per-i-consulenti-del-pm-la-morte-di-fakir-ha-tre-concause_67fdb0f4-6e72-41d4-b8af-2d52b259663a.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Preşedintele polonez Karol Nawrocki va fi audiat într-un dosar legat de prostituţie",
+      "category": "România",
+      "published": "2026-10-27T17:08:24+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/presedintele-polonez-karol-nawrocki-va-fi-audiat-intr-un-dosar-legat-de-prostitutie-4011211",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cod roșu de ploi în Constanța. Mai multe zone au fost inundate, iar localnicii au primit două mesaje RO-Alert",
+      "category": "România",
+      "published": "2026-10-27T17:07:44+00:00",
+      "url": "https://www.digi24.ro/meteo/alerta-meteo-cod-rosu-de-ploi-in-judetul-constanta-care-sunt-localitatile-vizate-si-cat-dureaza-avertizarea-4010947",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 415
+    },
+    {
+      "title": "Innovazione, al via le candidature per Innovators Under 35 Europe. Premi nel 2027",
+      "category": "Italia",
+      "published": "2026-10-27T17:03:55+00:00",
+      "url": "https://www.ansa.it/ansacom/notizie/economia/eni/2026/10/26/innovazione-nasce-innovators-under-35-europe.-nel-2027-premi-ai-nuovi-talenti_535e290a-e9d7-4816-b9c8-235535121eb3.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 431
+    },
+    {
+      "title": "„Cascadorii râsului”. Imagini virale cu parada de Ziua Armatei în Călărași: jandarmii n-au nimerit pasul, iar fanfara notele",
+      "category": "România",
+      "published": "2026-10-27T17:00:38+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/cascadorii-rasului-imagini-virale-cu-parada-de-ziua-armatei-in-calarasi-jandarmii-n-au-nimerit-pasul-iar-fanfara-notele-4011153",
+      "source": "Digi24",
       "status": "galben",
       "words": 0
     },
@@ -643,24 +751,6 @@
       "source": "Digi24",
       "status": "galben",
       "words": 0
-    },
-    {
-      "title": "Il femminicidio di Ilaria Sula, Mark Samson condannato all'ergastolo",
-      "category": "Italia",
-      "published": "2026-10-27T16:56:34+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/femminicidio-sula-condanna-allergastolo-per-samson_7d1a3db0-28e4-4400-b91f-2cd49cc08df4.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cod roșu de ploi în Constanța. Mai multe zone au fost inundate, iar localnicii au primit două mesaje RO-Alert",
-      "category": "România",
-      "published": "2026-10-27T16:54:18+00:00",
-      "url": "https://www.digi24.ro/meteo/alerta-meteo-cod-rosu-de-ploi-in-judetul-constanta-care-sunt-localitatile-vizate-si-cat-dureaza-avertizarea-4010947",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 415
     },
     {
       "title": "Manovra: salta l'ipotesi del taglio Irpef oltre i 50mila euro. Decontribuzione per le mamme",
@@ -678,15 +768,6 @@
       "url": "https://www.digi24.ro/stiri/externe/sua/donald-trump-sustine-ca-va-interzice-termenul-inteligenta-artificiala-o-denumire-extrem-de-nepotrivita-si-inexacta-4011177",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Eveniment NEWS.RO: Dragoş Doroş avansează ideea unor „profesionişti care să se uite pe sănătatea firmelor” pentru a preveni situaţiile de insolvenţă - News.ro",
-      "category": "România",
-      "published": "2026-10-27T16:51:16+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxNaDFSeHBHTWIwUnlkZTFwQ2hrYmlDaHppRjNqOFRUQ3pzSnZxWVFXMGlnQWdMUnBLWEtFSTI5UkNmZlVVQmR6eDFyZGtYWXRDRGx3d2xROWJjak5uY0M5UE1samt4Sk1CVC0talI1b3lfbGdwSTVoMXZXWmdQT3Q4NE5rNmdtWkl2SkFHckFac0xxVmZubVYzNFlRbzk2SVlWWFJLUG55eU52XzUyS21ick55bWFqaDBxT29PYWRnallSbU9uZG05bDQ1M0pkT0tFdEtjT215SHBheEZidnRHbWVmZUZkdHNPb2w5UnpZMl85WEY5dWQwMldocGpzdWEyUGgtNEg5eWo0NkNrd1NyNlhJZENqVjRhXzRZZEkzTU9tZDA0SzJwU1dkYw?oc=5",
-      "source": "News.ro",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -708,12 +789,21 @@
       "words": 0
     },
     {
-      "title": "Piantedosi: 'Sugli scontri non è finita, attenzione alta per venerdì'",
+      "title": "Protocollo d’intesa siglato tra San Marino Innovation e ASI per lo sviluppo delle ICT - San Marino Rtv",
       "category": "Italia",
-      "published": "2026-10-27T16:42:31+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/27/piantedosi-sugli-scontri-non-e-finita-attenzione-alta-per-venerdi_f453532f-bbda-4ca2-a09a-2831b65ca114.html",
-      "source": "ANSA",
-      "status": "galben",
+      "published": "2026-10-27T16:37:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUU9qdnVrUU5uV2dzbGVHYWp6NG5zRlM3X1lXaWczUkhOQWVWcU9kd0ltaHV3TmFQd202bFhQWmVoUTdhMTQtbnIzY0NIREZkbjV6OThUZ0lNMkxuN096c1ZvNElLLWdWaW9TNmtES05MQlZ5RlVCX0pJRTR1aUNobW1EMW54ZFFjTW1RSUdzS1NfbUNXcmVFblZqYjBMLWpLcFFBNk9HUXJzd0FqS2xKSWxBcm1hX1loY3pGRUxXRlhmZ1huV0hhTFpOWVdOaEVzZFNVMg?oc=5",
+      "source": "San Marino Rtv",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "ex Ilva, iniziato incontro Governo-sindacati su futuro Taranto - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-27T16:36:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWUlsc3ZFWVBLWkdkek5sand3anJiM2pLNTlUTXFINXpnemdZcFY2RmpQX0dGUU9YSmtOQnZCeDg5MGl4YnpjZmFfWlFPODNvTmFDSVEtQXpCQTA5VzFFbUdtanNQV0c1RVpHUWs4cEE4bFhTbjhXV2wxVzlweFMzbV93b1VlR3VQd05wTnlpMlJjUkgwRzc3OTB2ME80ejhwOWxCTVhRSlBlOFgxdVJQWWhR?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -753,29 +843,11 @@
       "words": 0
     },
     {
-      "title": "Israele al voto, affluenza record: alle 16 è al 55,7%, la più alta dal 1973. Appello di Netanyahu a votare",
-      "category": "Italia",
-      "published": "2026-10-27T16:24:20+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-al-voto-affluenza-record-alle-16-e-al-557-la-piu-alta-dal-1973._a1c108b8-6cbb-4e8e-bbd7-353e896240bd.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Cum se simte Marina Voica, după ce a ajuns de urgență la spital: detalii importante despre starea de sănătate a artistei. Cântăreața în vârstă de 90 de ani este în continuare internată - Oficiul de Știri",
       "category": "România",
       "published": "2026-10-27T16:20:17+00:00",
       "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxPdDFGU3o1WjVrRWVYM0J4aE9xX2V2TkNmSlVQTm9kZl9FaE9uTWo5ajJRX3UtYko5WWgzMWxZWVVuOUtXcU5SMlVEbjFmblB6Y2dtMFVUeFl5SWpFYXVZVDhDSjVaX1lDX3VVVVJqWGhDT2JXNHJ0OHFnNE9VUUhBTHpucEhaT205Y0RZM0VGVktOTDc5MEFya0NqZElMT3kycGJBcHdFS190MnZWWF8zWDFTNFROMFVZTzQ1VFdVMHN2WnhZUEM5ZUZWODBSYXhwQW9tcmtPNWxHV015bDQ2aS13eWx4c19zT0RRa3pROW4ybWNDVlB4UE5QTmo4VjlTUkR6M2RoNXcySkR2VUVuV3BjZjlBS29zVGlWT05BTXUzVkRrVEVNTFlSVGZGdVZH?oc=5",
       "source": "Oficiul de Știri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Banca Sella e Confindustria Veneto Est, plafond da 50 milioni per gli investimenti delle imprese - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-27T16:19:17+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSWlMRGdWcG45d0RhdXM0bWF4VWVDS05POVpURVc3X1FleDd2SjNtUEltZm94VnVjUVloYUcxeE9kdmNDcEJnS2haYkZ5XzllY005SXgteVVNeTBYRzExcjVPVjYyOUItZ3ZLRFRxb3I1WGN5UVRvNTRUclFadHMwX1NzSWFqQi1feklBYkRSSDllQQ?oc=5",
-      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -843,24 +915,6 @@
       "words": 0
     },
     {
-      "title": "Elevul de 13 ani, autorul atacului cu cuţitul dintr-o şcoală din Bistrița, externat de la Psihiatrie şi dus la audieri",
-      "category": "România",
-      "published": "2026-10-27T15:39:12+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/elevul-de-13-ani-autorul-atacului-cu-cutitul-dintr-o-scoala-din-bistrita-externat-de-la-psihiatrie-si-dus-la-audieri-4011075",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Luca Niculescu, despre sabotajul rusesc de la Carfil: „Am şi prevenit multe alte incidente şi acum am reacţionat foarte rapid”",
-      "category": "România",
-      "published": "2026-10-27T15:30:27+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/luca-niculescu-despre-sabotajul-rusesc-de-la-carfil-am-si-prevenit-multe-alte-incidente-si-acum-am-reactionat-foarte-rapid-4011039",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Blue Economy, 225 miliardi ma solo un’impresa italiana su cinque è al femminile - la Repubblica",
       "category": "Italia",
       "published": "2026-10-27T15:29:03+00:00",
@@ -879,24 +933,6 @@
       "words": 0
     },
     {
-      "title": "Anunțul premierilor Niculescu și Tofan: România și Republica Moldova își unesc forțele pentru apărare și energie",
-      "category": "România",
-      "published": "2026-10-27T15:25:01+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/moldova/anuntul-premierilor-niculescu-si-tofan-romania-si-republica-moldova-isi-unesc-fortele-pentru-aparare-si-energie-4011047",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Polonezii au pierdut o dronă în timpul unor zboruri de test: aparatul s-a prăbușit în Marea Baltică. Avertisment pentru populație",
-      "category": "România",
-      "published": "2026-10-27T15:18:43+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/polonezii-au-pierdut-o-drona-in-timpul-unor-zboruri-de-test-aparatul-s-a-prabusit-in-marea-baltica-avertisment-pentru-populatie-4011049",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Medicii în Centrul unor Schimbări Naționale Anunțate de Ministrul Sănătății, ce Măsuri sunt Propuse - iDevice.ro",
       "category": "România",
       "published": "2026-10-27T15:05:00+00:00",
@@ -911,15 +947,6 @@
       "published": "2026-10-27T14:55:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZ0w1dVM5ak83QlFRMXdCTHptbGFuUmhGaFpuSlRseWtUZG5oRmtpNVhMYTN1WTh4ay1GXzE2QW93eFpOaURsNVVYanVnWlRLMmh0ZnUzdno2dldKeWFkSUVUc0Qyd2M5S19hX2FoSWZCRGtuZmdxVjBIemxZUHBKVm5QNXY3VndXTllabldRZ1pUWUI1cEU4ZS12Q2ZmU1NKZ2o3TnJWaw?oc=5",
       "source": "News | Südtiroler Landesverwaltung",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Per i consulenti del pm la morte di Fakir ha tre concause",
-      "category": "Italia",
-      "published": "2026-10-27T14:41:54+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/per-i-consulenti-del-pm-la-morte-di-fakir-ha-tre-concause_67fdb0f4-6e72-41d4-b8af-2d52b259663a.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -948,15 +975,6 @@
       "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/27/trump-il-partito-del-presidente-non-ottiene-di-solito-buoni-risultati-alle_53773608-7ce2-4fa4-adc1-3cd956274c2a.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Il mondo celebra Kane 'star senza lustrini', solo la Spagna non esulta",
-      "category": "Italia",
-      "published": "2026-10-27T12:37:19+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/2026/10/27/il-mondo-celebra-kane-star-senza-lustrini-solo-la-spagna-non-esulta_4ef78dc6-1dde-4850-8eaf-ffafb8003cf3.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -1010,24 +1028,6 @@
       "published": "2026-10-27T09:43:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOU1RsSmRDZ2hlc205MWZmVVlKNHYzVFViV0hzMGtwVWJwdWZCM1N3eW5vMkFGMnpuSm5XRlpBRS1oMGh4MV9lYVFHbkxFRjc3VENOWVY1cllfOHhCVGxQS3VoRVR2YzcxNmladXRBS1I4YkY4ZE5jNDJaNExqczd1aFdPXzl4OEVKdmFzM2ZRSTEtSzBOdEZETlQ3VWdRdnFNT1BzcThBa1p2UUlMNlQwcEhxc3pRSjlCd1dvN0hVRS1oY1dGQWxUNFNyS3NXMTAxNG1IczNiN0ZsVjBuRjd1ZzM1a3U2VzlxSS1TZXBqYk5CaTV3WnZIMG81UFV3eUNqS0HSAYcCQVVfeXFMTkRiT2JKcTBIME9Ea3k0S0xzdlFKRjBZaXU2b3pYbTVCbFJfM0dMSjhWNVdoMmRLcTBMQk1HWjF4dmd4UGlYbDZ2SVE2RDd0eGt",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tifoso aggredito a Pozzuoli: 8 arresti, confessa l'ultrà che ha colpito il 34enne",
-      "category": "Italia",
-      "published": "2026-10-27T09:07:26+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/27/tifoso-aggredito-a-pozzuoli-8-arresti-confessa-ultra-che-ha-colpito-il-34enne_8e36f786-40b5-49d6-8300-795189da69a0.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Voli, le compagnie lasciano posti vuoti a bordo piuttosto che abbassare i prezzi - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-27T09:07:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxORzNkdmdaV3NoQkhEU3hydkpZS1BwMXpKSTY2Y3JwUHVTZjd0NkQxQnhudF96RUw3QkhSQjVfTmZCSjU3YjVrazdOSENHWUhfbWN4cWtib29VRU1mQ1ZYWmROR1MyZjkwaEh6MTZ1SlIzb2VyaXVvU2lpaDFhc0xWWWNNS0c0aDM5YTlpYTc3SVB4aERSb0MwT0ctM3dNRFF5UUlhZUthal9aNEktbG1wbk1JU0oyMU9XT1JHVDJsSHE?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1086,15 +1086,6 @@
       "words": 431
     },
     {
-      "title": "Sistemul de sănătate mai are nevoie de 11 miliarde de lei până la sfârșitul anului. Rogobete: „Sub nicio... - Digi24",
-      "category": "România",
-      "published": "2026-10-26T20:01:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOS01GU0NGaVFxelQ2anJJbWVHMWhtYS1lUzAtU3FpU1JXalZSbmhHcF92UWxDay0xc3BTQjlwaVlXTlNTanlsdEFyM3RsVXBOMHJoa1lPeDQzLTBWT2tWcndzbXdTMDMzeWcxX1d1bVdTczJHSGt5cHIwSmJCYlFHSnc3ZEdmb2xKRC1MM2hHbjB6bTJtWmU1WF9ybFNleDlYYVcyMDNrT2ZLcUpBMEhibXAwLV9sM0ZnNUNpdjRvRHZXSmpObEMtQWFISjdlNnBXeDV1cjFMQXU0c2dOQksxZkZnZmhNcmVBODlzQlItOEtjeURjZFJRZ284NHhCVTRqeWY4X2Z3cGlFcnZxSGFRcFdpc3QzcXJXTmVxa1BR0gGeAkFVX3lxTE5LTUZTQ0ZpUXF6VDZqckltZUcxaG1hLWVTMC1TcWlTUldqVlJuaEdwX3ZRbEN",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 421
-    },
-    {
       "title": "Moldovean mort în Italia după ce s-a izbit cu mașina de un copac. Bărbatul avea numai 35 de ani - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-26T17:28:20+00:00",
@@ -1131,15 +1122,6 @@
       "words": 0
     },
     {
-      "title": "Niculescu, la întâlnirea cu mediul de afaceri: Trebuie să repornim motoarele economiei, să îi ajutăm pe... - Digi24",
-      "category": "România",
-      "published": "2026-10-26T15:34:06+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGpCSGNxOHY0NGpyUHQ3ZVJKV040ZlJoYWJPOGQxc0piNDY1VFhmLUUyZS1uWWF3enFucm9kcnY5bVk5QXhualUwaTIxd2dickl1cXZKQ2s3V29oV3EtYXpEdkVNeV8tWmIycXZXWndxTURKOEg4Q0FyWkVGOU5VT1ZvRUdzVEFxYnVaSFF0VkQ1Tl9SZmVfRHlFUnphQk43bmlFNmN2V1dmZjgyT1ZNVVBMSWN5aXp2UnpGd3ptVkdBX2ZaUkxHZ25mNGc4XzNNdFZCXzRuMUhueENPT05yZmNfbXdqSUJPbnhjMlBodjVDQVpIMGtFZVlyd9IBogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGp",
-      "source": "Digi24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Român acuzat în Italia că a ucis un tânăr de 19 ani într-un parc. Polițiștii l-au găsit acasă - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-26T15:28:04+00:00",
@@ -1154,6 +1136,15 @@
       "published": "2026-10-26T14:42:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVEdYMVZDb1RtLTZud1BQZThqS3hESlhFS3QzTDRIVHQtUVo1akZEbTJoSFBKczBBNS1iN2dDNGVNd3B6WlBrYkhScUJST2NmTHNRQmVPOWM5dmFNU3N0VmNyZTRkdHFXMDVFTkowb1A4blNvTUNjRExTTEtXd2lZaWxaemdUdUVZOGZXZ2FuMS1VNkFmeW1HcUI3OVdUNF9vblkxZzdn0gGmAUFVX3lxTE9UR1gxVkNvVG0tNm53UFBlOGpLeERKWEVLdDNMNEhUdC1RWjVqRkRtMmhIUEpzMEE1LWI3Z0M0ZU13cHpaUGtiSFJxQlJPY2ZMc1FCZU85Yzl2YU1Tc3RWY3JlNGR0cVcwNUVOSjBvUDhuU29NQ2NETFNMS1d3aVlpbFp6Z1R1RVk4ZldnYW4xLVU2QWZ5bUdxQjc5V1Q0X29uWTFnN2c?oc=5",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ordinul Ministrului Sănătății care Stabilește Noi Reguli pentru Transplantul de Organe în România - iDevice.ro",
+      "category": "România",
+      "published": "2026-10-26T14:15:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcTlweXVsMkxWYlNRXzJKZk43QmdLaEhQVDhROFk2NUhXTVBfNVlMc0VaUHlFZ3Bic1NWOWhSNG9EOWhReGhXYV82c3pFeWF1UjRkaE80QU5SdmV2Ukh0WnlzNGM3TXNrWFhFZERocUxrYm5xTWVibUxLLWYyUlBVWDZwY1B0QWx2OThQYUM1WW5fT1BNVHNmeXVmd1JTVHMxb2NSemM0cF94TlpkNmpOQmRIaGFPUlp6Y3RrcmFR?oc=5",
+      "source": "iDevice.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1239,13 +1230,13 @@
       "words": 0
     },
     {
-      "title": "Innovazione, nasce Innovators Under 35 Europe. Nel 2027 premi ai nuovi talenti europei",
-      "category": "Italia",
-      "published": "2026-10-26T09:01:54+00:00",
-      "url": "https://www.ansa.it/ansacom/notizie/economia/eni/2026/10/26/innovazione-nasce-innovators-under-35-europe.-nel-2027-premi-ai-nuovi-talenti_535e290a-e9d7-4816-b9c8-235535121eb3.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 431
+      "title": "Zelenski a confirmat că negocierile de pace între Rusia și Ucraina vor fi reluate - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-26T08:27:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNc3JWcG4wQnZTY3VvenJ4SmIyZVBubDdPeU13bkg4bnh4S2Q3aGN0MG40NEhJbnJXWXl1NnhYR3cxNW9SZlVSNl9OeGw0VHowRzFVUk5TS2dVTlRfQjA0a1B4MEFobHZVZ0tLR3lUMjNyVy02TUdjb3ZXOGNLaVREOFpxc0FrYTl1dE1GSGJUTkhaLWxyNU9FMjhNOTg0Z1o4WDBGVGw1V1ZyaVRONGd6dmM0Vnp1VDdidkFCc0NOa9IBxAFBVV95cUxQenE3aUtCQXRTd1lUbGFqY21Ddkl3OGY1QlJIN1UxZGFhYU5LME5pU3E1eThiNTRuOEtObUJwNDV0Uk1HeVVaUDBHdlV5cmNkLXFQRV9MeEE1NVByX2pyNEhXQ3pQaFd6ZHhMbUlMSW43WkF6Ul9wNEVvZ2NRVkxHWkFCUzJWZmZqNkp2WWg3OTdRVGR",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Q8 Italia conferma il sostegno agli automobilisti: price cap fino a fine anno - la Repubblica",
@@ -1255,15 +1246,6 @@
       "source": "la Repubblica",
       "status": "verde",
       "words": 437
-    },
-    {
-      "title": "Autobuz răsturnat într-o prăpastie de 20 de metri, lângă Barcelona: 83 de persoane rănite, 25 în stare gravă - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-26T07:45:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSFdRMGVLU3hOdXZuQmk3ZENLMWJnWGd4RlBVM0h2R3Y5b21GbXZweVBFeFFqNVcxSFdNZGx6Q2RZUHpWM2lYaDF6SnNfaDBmeGU3S1RTSGI4RHdnc1FicXU2akNaSmQxREItcXpmU0U0Vk54MU1XXy1DX2s1YVN4cjBQby1TUGFLSldWYVhjTURJaDh3RVFHeEFiUWdPS0cwWlB2VDYyV1JHQTR1RkpkdWtPZVJ1djdDWUdSbjJJWkdjVmRUTWRaeUJiNTZTVlR1MjdncWdhdzN6TnUyYWtV?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "L'Olanda annuncia 25.000 posti pubblici in meno, tra AI e riorganizzazione - Pasquale Pillitteri",
@@ -1289,6 +1271,24 @@
       "published": "2026-10-26T06:56:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVVY3dU1zLXM2Unh6eVM2eHBfOVF1R2h2SUZDMHpoQ3ZaaWdSUnpqeDQwWGZhSUJRTWxJWG91aGNwdzVydTJDdXhJMVp4ZVhBdFoxTmFPNnFiQmhaMjZuYWczaXJVbU14Z3gyS0tRdXNCekUtS3hzd3dNWS1YUGVocVdwX2p4SHlQeWV1TnMxWlZtUFZSb0tJT1NFVmdBUktObktjZDRKOFBldU85S3ZtS3dMMlE4R2dBbDdPMk92YXM3WVVuVnFR0gHMAUFVX3lxTE1LMU8zRnpaaGptZmgzSm55OUpRTW8ycGFwVHhhcHlQZWpMc0s4eXJHM0x1NmM1R3JLUmRPVi1NQlJES3ozbEl5QmFoUlhWc3A4V3FRdzJqNzN4V2czX2RrSlF1Wm9PbTZMVXB6ejFVSjdJdTY2dDF3UFV4cTZranRFeDhRNE8tc0R0cGZ",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "ANM: Buletinul Oficial al Prognozei Meteo cu Starea Vremii pentru Toată România din 26 Octombrie 2026 - iDevice.ro",
+      "category": "România",
+      "published": "2026-10-26T05:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUnZYdDBfZ1YtWDU2NGtYa2NVaTViQ3lhc2o3SHRQQ2lLcG03bDNxMjU0V0RHSk5RR3lEWGhrVUxZd0pxb3pROENObUZtWjhZMW9tTEgwcE1MeHFNQVhnMWZFSGtIeUhzZUR2eHZ2aE81SzUzUVo1RndVZ2pMM00wd2dTdjdBR2dpbWRxNy1reTVvakQ1dG9Jbk9fcmR4XzZjQm94R3B2WnNvb2ZYRnVlVmczWk5WaUtObW8tMDN5TW83akE?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Conducerea PSD se reuneşte în şedinţă. Social-democraţii analizează măsurile guvernamentale urgente pe care miniştrii PSD urmează să le ia şi numirile în funcţii, după instalarea noului Executiv - News.ro",
+      "category": "România",
+      "published": "2026-10-26T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxQMmFXQkJONElybm5fem84Nl9MVlI3d3NFX1NMaXdTX3g2ZlZEcUJHSVY1YlM2QkZub2lKZHk3WENISGQxM21EQjlpRjVjcF9DWERyQmhvdlhBbmtLT1FQRU5FTEMwbURBbzB5QXphcTltMlRiN0lGeXZDZDVBVXJEcDVqYk96aklJTk9OZTBLVEwtUkhuQ0lFU1k0Q2hTYk12RzJNUHZ6YmxBakx5dHh3Z3JDNHZKVzA5WTN3ejhieGJEWkk1clJILUdvd0pvaUs1MVlhMWFaR0JRWG1yZGtZWERoNXFXVE43M00tQVFXbm5qaDItdEN0OHM3azhSdEpqOUJsbWpINDF0bDdHc0x0eEFTWEtzY2VIUy1ueDJ6Vm9Wb3JtcWc2ZjlEaVhjTnN1a1pMOXFSNmdWVC10eEFDRFE0OWVIaEZUWHVoeXJfYWVNeGJ2SkF",
+      "source": "News.ro",
       "status": "roșu",
       "words": 0
     },
