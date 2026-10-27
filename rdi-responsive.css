@@ -1,0 +1,201 @@
+/* RDI responsive home — 27 October 2026
+   Desktop: use the full available browser width, with editorial columns.
+   Mobile: readable, touch-friendly stacked cards. The YouTube news capture
+   retains its independent full-screen layout. */
+html:not(.youtube-news),html:not(.youtube-news) body{max-width:100%;overflow-x:clip}
+html:not(.youtube-news) body{min-width:0}
+html:not(.youtube-news) body>main{
+  width:100%;
+  max-width:none;
+  min-width:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:clamp(14px,1.8vw,32px) clamp(15px,2.8vw,56px) calc(118px + env(safe-area-inset-bottom,0px));
+}
+html:not(.youtube-news) body>main>*{min-width:0;max-width:100%}
+html:not(.youtube-news) .rdi-top{align-items:center;gap:18px;margin-bottom:14px}
+html:not(.youtube-news) .rdi-identity img{width:clamp(56px,6vw,90px);height:clamp(54px,6vw,82px)}
+html:not(.youtube-news) .rdi-identity strong{font-size:clamp(16px,1.4vw,23px);line-height:1.14}
+html:not(.youtube-news) .rdi-identity span{font-size:clamp(12px,1vw,14px)}
+html:not(.youtube-news) .home-quick-links{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;gap:12px;margin:0 0 14px;
+}
+html:not(.youtube-news) .home-quick-link{min-width:0;gap:9px;font-size:clamp(13px,1vw,16px);min-height:50px;padding:12px clamp(12px,1.4vw,24px)}
+html:not(.youtube-news) .rdi-census{max-width:100%;margin:8px auto 18px}
+html:not(.youtube-news) .radio-brand-hero{width:100%;max-width:none;border-radius:18px;overflow:hidden}
+html:not(.youtube-news) .radio-brand-hero img{display:block;width:100%;height:100%;object-fit:cover}
+html:not(.youtube-news) .card.radio-compact{width:100%;max-width:none;border-radius:18px}
+html:not(.youtube-news) .radio-compact #status{overflow-wrap:anywhere}
+html:not(.youtube-news) .rdi-radio-buttons,.rdi-radio-controls{min-width:0}
+html:not(.youtube-news) .rdi-featured-head h2{font-size:clamp(23px,2vw,33px)}
+html:not(.youtube-news) .news-head h2{font-size:clamp(23px,2vw,32px)}
+html:not(.youtube-news) .rdi-featured-head a{font-size:13px}
+html:not(.youtube-news) #news-list{min-width:0}
+html:not(.youtube-news) #news-list>.news-item{min-width:0}
+html:not(.youtube-news) #news-list .news-image{width:100%;max-width:100%;object-fit:cover}
+html:not(.youtube-news) .rdi-featured-story{min-width:0}
+html:not(.youtube-news) .rdi-featured-visual{width:100%;max-width:100%}
+html:not(.youtube-news) .news-section .news-filters{gap:9px;overflow-x:auto}
+html:not(.youtube-news) .news-section .news-filters button{min-height:36px}
+html:not(.youtube-news) .news-section .news-list{gap:clamp(12px,1.3vw,23px)}
+html:not(.youtube-news) .rdi-events{width:100%;max-width:100%}
+html:not(.youtube-news) .rdi-event-cards{min-width:0;max-width:100%}
+html:not(.youtube-news) .rdi-event-card{width:clamp(170px,16vw,285px);min-width:clamp(170px,16vw,285px)}
+html:not(.youtube-news) main>.grid{width:100%;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.5vw,24px)}
+html:not(.youtube-news) .grid .tile{border-radius:16px;padding:clamp(16px,1.8vw,30px)}
+html:not(.youtube-news) .grid .tile h3{margin-top:0;font-size:clamp(17px,1.35vw,23px)}
+html:not(.youtube-news) main>footer{max-width:100%;padding:36px 14px 10px}
+
+/* Large laptop / desktop: cinematic full-bleed use of the working area. */
+@media(min-width:1100px){
+  html:not(.youtube-news) body>main{
+    display:grid;
+    grid-template-columns:minmax(0,1.5fr) minmax(365px,.86fr);
+    column-gap:clamp(18px,2vw,36px);
+    row-gap:14px;
+  }
+  html:not(.youtube-news) body>main>:not(.radio-brand-hero):not(.radio-compact){grid-column:1/-1}
+  html:not(.youtube-news) body>main>.radio-brand-hero{
+    grid-column:1;
+    height:100%;
+    min-height:255px;
+    max-height:365px;
+    aspect-ratio:auto;
+    margin:0;
+  }
+  html:not(.youtube-news) body>main>.card.radio-compact{
+    grid-column:2;
+    height:100%;
+    min-height:255px;
+    margin:0;
+    padding:clamp(19px,2vw,30px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  html:not(.youtube-news) .rdi-radio-heading h2{font-size:clamp(20px,1.7vw,27px)!important}
+  html:not(.youtube-news) .rdi-radio-heading small{font-size:12px}
+  html:not(.youtube-news) .rdi-radio-controls{grid-template-columns:clamp(80px,8vw,130px) minmax(0,1fr);gap:clamp(12px,1.4vw,24px)}
+  html:not(.youtube-news) .rdi-radio-controls .radio-brand-logo{width:100%;height:auto;aspect-ratio:1}
+  html:not(.youtube-news) .radio-compact button{font-size:clamp(11px,.85vw,14px);padding:11px 8px}
+  html:not(.youtube-news) .rdi-volume-row{margin-top:8px}
+  html:not(.youtube-news) .rdi-featured-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1.55fr) repeat(2,minmax(0,1fr));
+    grid-template-rows:repeat(2,minmax(0,auto));
+    gap:clamp(12px,1.3vw,22px);
+  }
+  html:not(.youtube-news) .rdi-featured-story:first-child{
+    grid-column:1;
+    grid-row:1 / span 2;
+  }
+  html:not(.youtube-news) .rdi-featured-story:first-child .rdi-featured-visual{
+    flex:1 1 auto;
+    min-height:300px;
+    aspect-ratio:auto;
+  }
+  html:not(.youtube-news) .rdi-featured-story:first-child .rdi-featured-story-body{flex:0 0 auto}
+  html:not(.youtube-news) .rdi-featured-story:first-child h3{font-size:clamp(21px,2vw,30px);-webkit-line-clamp:4}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-visual{aspect-ratio:16/8.5}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-story-body{padding:clamp(12px,1.2vw,20px)}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) h3{font-size:clamp(15px,1.1vw,20px)}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-excerpt{-webkit-line-clamp:2}
+  html:not(.youtube-news) .news-section .news-list{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+  }
+  html:not(.youtube-news) #news-list>.news-item:first-child{grid-column:span 2}
+  html:not(.youtube-news) .news-item h3{font-size:clamp(15px,1.08vw,19px)}
+  html:not(.youtube-news) .news-item:first-child h3{font-size:clamp(21px,1.7vw,27px)}
+  html:not(.youtube-news) #community-spotlight:not([hidden]){
+    display:grid;
+    grid-template-columns:minmax(220px,32%) minmax(0,1fr);
+    align-items:stretch;
+    max-height:270px;
+  }
+  html:not(.youtube-news) #spotlight-photo-link{height:100%;min-height:200px;max-height:270px}
+  html:not(.youtube-news) .rdi-spotlight-copy{padding:clamp(16px,2vw,30px)}
+  html:not(.youtube-news) #community-spotlight h3{font-size:clamp(20px,1.7vw,27px)}
+  html:not(.youtube-news) .bottom-nav{
+    inset:auto clamp(18px,2.8vw,56px) 15px auto!important;
+    width:min(700px,calc(100% - 36px));
+    max-width:min(700px,calc(100% - 36px));
+    border-radius:18px;
+    box-shadow:0 9px 42px #102f5b29!important;
+    border:1px solid #e1eaf6!important;
+    padding:8px 10px 10px!important;
+    -webkit-transform:none;
+    transform:none;
+  }
+  html:not(.youtube-news) .bottom-nav button,html:not(.youtube-news) .bottom-nav a{font-size:11px!important;min-width:0!important}
+  html:not(.youtube-news) .bottom-nav button span{font-size:20px!important}
+}
+/* Tablet and compact laptop: full window, magazine grid. */
+@media(min-width:700px) and (max-width:1099px){
+  html:not(.youtube-news) body>main{padding:20px 26px 112px}
+  html:not(.youtube-news) .home-quick-links{grid-template-columns:repeat(3,minmax(0,1fr))}
+  html:not(.youtube-news) .radio-brand-hero{aspect-ratio:3.8/1;max-height:250px}
+  html:not(.youtube-news) .radio-brand-hero img{object-fit:cover}
+  html:not(.youtube-news) .rdi-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  html:not(.youtube-news) .rdi-featured-story:first-child{grid-column:1/-1}
+  html:not(.youtube-news) .rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/6}
+  html:not(.youtube-news) .news-section .news-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+  html:not(.youtube-news) #news-list>.news-item:first-child{grid-column:span 2}
+  html:not(.youtube-news) .rdi-radio-controls{grid-template-columns:110px minmax(0,1fr)}
+}
+/* Phone: avoid tiny columns, narrow cut-off controls or sideways scrolling. */
+@media(max-width:699px){
+  html:not(.youtube-news) body>main{
+    display:block;
+    width:100%;
+    padding:11px max(12px,env(safe-area-inset-left)) calc(105px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-right));
+  }
+  html:not(.youtube-news) .rdi-top{gap:8px;margin:2px 0 12px}
+  html:not(.youtube-news) .rdi-identity{gap:7px}
+  html:not(.youtube-news) .rdi-identity img{width:clamp(48px,12vw,68px);height:clamp(48px,12vw,66px)}
+  html:not(.youtube-news) .rdi-identity strong{font-size:clamp(12px,3.6vw,17px)}
+  html:not(.youtube-news) .rdi-identity span{font-size:11px}
+  html:not(.youtube-news) #rdi-language{max-width:70px}
+  html:not(.youtube-news) .home-quick-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}
+  html:not(.youtube-news) .home-quick-link{font-size:clamp(11px,3vw,13px);min-height:44px;padding:9px 11px;line-height:1.3}
+  html:not(.youtube-news) .home-quick-link:last-child:nth-child(odd){grid-column:1/-1}
+  html:not(.youtube-news) .radio-brand-hero{aspect-ratio:2.5/1;max-height:220px;border-radius:14px;margin-bottom:12px}
+  html:not(.youtube-news) .card.radio-compact{padding:13px;margin-bottom:18px}
+  html:not(.youtube-news) .rdi-radio-controls{grid-template-columns:clamp(66px,21vw,104px) minmax(0,1fr);gap:10px}
+  html:not(.youtube-news) .rdi-radio-controls .radio-brand-logo{width:100%;height:auto;aspect-ratio:1}
+  html:not(.youtube-news) .radio-compact button{font-size:clamp(10px,2.5vw,12px);min-height:38px}
+  html:not(.youtube-news) .radio-compact #status{font-size:11px}
+  html:not(.youtube-news) .rdi-featured-head{align-items:center}
+  html:not(.youtube-news) .rdi-featured-head h2{font-size:clamp(21px,5.2vw,27px)}
+  html:not(.youtube-news) .rdi-featured-grid{grid-template-columns:1fr;gap:11px}
+  html:not(.youtube-news) .rdi-featured-story:first-child{grid-column:1}
+  html:not(.youtube-news) .rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/9}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-link{flex-direction:row;min-height:138px}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-visual{width:39%;flex:0 0 39%;aspect-ratio:auto;min-height:138px}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-story-body{width:61%;padding:10px 11px;gap:6px}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-excerpt{display:none}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) h3{font-size:clamp(13px,3.7vw,17px);line-height:1.28;-webkit-line-clamp:3}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-source{font-size:10px;white-space:normal;-webkit-line-clamp:1;display:-webkit-box;-webkit-box-orient:vertical}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-read{font-size:10px}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-photo-label{font-size:9px;padding:3px 4px}
+  html:not(.youtube-news) .news-section .news-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  html:not(.youtube-news) #news-list>.news-item:first-child{grid-column:1/-1}
+  html:not(.youtube-news) .news-section .news-item h3{font-size:clamp(13px,3.4vw,17px)}
+  html:not(.youtube-news) .news-section .news-item:first-child h3{font-size:clamp(18px,4.8vw,23px)}
+  html:not(.youtube-news) .news-filters{gap:6px}
+  html:not(.youtube-news) .news-section .news-filters button{min-height:38px}
+  html:not(.youtube-news) main>.grid{grid-template-columns:1fr;gap:12px}
+  html:not(.youtube-news) main>.grid .tile{padding:17px}
+  html:not(.youtube-news) .rdi-events .rdi-event-card{min-width:180px;width:180px}
+  html:not(.youtube-news) .bottom-nav{max-width:100vw}
+}
+@media(max-width:400px){
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-link{min-height:124px}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-visual{min-height:124px;width:37%;flex-basis:37%}
+  html:not(.youtube-news) .rdi-featured-story:not(:first-child) .rdi-featured-story-body{width:63%}
+  html:not(.youtube-news) .news-section .news-list{grid-template-columns:1fr}
+  html:not(.youtube-news) #news-list>.news-item:first-child{grid-column:1}
+  html:not(.youtube-news) .radio-compact button{padding:9px 4px}
+  html:not(.youtube-news) #rdi-language{font-size:11px}
+}
