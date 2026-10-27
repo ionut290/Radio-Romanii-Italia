@@ -120,7 +120,9 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, hi
             "id": str(item.get("id") or url), "curated": is_curated
         })
     used = recent_history(history or {})
-    # Avoid repeated coverage even when headlines are lightly rewritten; a truly\n    # new development must be published under a distinct editorial source URL.\n    history_editions = (history or {}).get("editions", [])\n    if not isinstance(history_editions, list):\n        history_editions = []\n    used_urls = {u for edition in history_editions[-HISTORY_LIMIT:] if isinstance(edition, dict)\n                 for u in edition.get("source_urls", []) if isinstance(u, str)}\n    result = [item for item in result if story_signature(item) not in used and item["url"] not in used_urls]
+    # Exclude news already broadcast; only a materially revised and verified
+    # summary can be treated as a new edition of the same report.
+    result = [item for item in result if story_signature(item) not in used]
     result.sort(key=lambda item: (item["date"], item["curated"]), reverse=True)
     # Promote geographic diversity without inventing priorities or ranking political actors.
     selected = []
