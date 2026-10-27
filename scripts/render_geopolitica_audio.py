@@ -100,7 +100,7 @@ def produce(folder: Path) -> dict:
     if not exe.is_file():
         raise RuntimeError("FFmpeg portatile non disponibile")
 
-    voice = "it-IT-DiegoNeural"
+    voice = "it-IT-ElsaNeural"
     jingle_voice = folder / "jingle-voce.mp3"
     asyncio.run(speech(
         "Erre di i. Geopolitica. Il mondo in primo piano.",
