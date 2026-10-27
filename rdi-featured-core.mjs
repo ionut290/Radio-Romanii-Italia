@@ -29,7 +29,7 @@ function localize(x, translations, lang) {
   const translation = translations?.[key];
   const target = translation?.[lang];
   if (translation?.original?.title === x.title && target?.title) {
-    return { title: target.title, summary: target.summary || x.summary || "" };
+    return { title: target.title, summary: target.summary || "" };
   }
   // Existing feeds are mostly Romanian, while 'Italia' contains Italian items.
   // Without a matching translation, do not silently present Romanian as Italian.
