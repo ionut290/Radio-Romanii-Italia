@@ -163,6 +163,34 @@ def remove_old_from_playlist(client: Client, media: list, newest: str) -> None:
     print(f"OLD_RDI_TRACKS_UNLINKED={len(paths)}")
 
 
+def prune_expired_own_media(client: Client, media: list[dict], newest: str) -> None:
+    """Retain the latest 48 hours of our own MP3s, never other radio media."""
+    removed = 0
+    now = dt.datetime.now(dt.timezone.utc)
+    for record in media:
+        relative = str(record.get("path", ""))
+        if relative == newest or not relative.startswith(MEDIA_DIR + "/"):
+            continue
+        match = FILENAME_RE.fullmatch(relative.split("/")[-1])
+        if not match:
+            continue
+        try:
+            stamp = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
+            stamp = stamp.replace(tzinfo=dt.timezone.utc)
+            age = (now - stamp).total_seconds()
+            if age < 48 * 3600:
+                continue
+            media_id = int(record.get("id", 0))
+            if media_id <= 0:
+                continue
+            # Only isolated, >48h-old RDI editions are eligible for deletion.
+            client.call("DELETE", f"/station/1/file/{media_id}")
+            removed += 1
+        except (ValueError, RuntimeError) as error:
+            print("OLD_TRACK_RETENTION_WARNING=" + type(error).__name__)
+    print(f"OLD_RDI_MP3S_REMOVED={removed}")
+
+
 def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> None:
     item, relative = valid_issue(issue_file, mp3_file)
     # Confirm authorized access before creating anything.
@@ -207,6 +235,7 @@ def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> N
     verified = playlist(client, False)
     if not verified or not verified.get("is_enabled"):
         raise RuntimeError("RDI news playlist not activated")
+    prune_expired_own_media(client, tracks, relative)
     print("RDI_GEOPOLITICA_HOURLY=ACTIVE")
     print("RDI_GEOPOLITICA_CURRENT_TRACK=" + item["track_title"])
 
