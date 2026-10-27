@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Create a broadcast-ready MP3 from an editorial RDI geopolitical script.
+"""Produce the Italian RDI Geopolitica radio edition with timed TV slides.
 
-Audio is generated in CI as a PREVIEW; no AzuraCast playlists are changed.
-This uses a synthetic voice (not a human presenter's identity) and an
-original three-note chime, not a third-party copyrighted jingle.
+Original three-note audio identity + synthetic voice + one speech clip per story.
+Precisely aligned slide timings are saved from the individual, measured MP3 clips.
+This file never publishes an unverified headline or modifies AzuraCast.
 """
 from __future__ import annotations
 
@@ -15,7 +15,6 @@ from pathlib import Path
 
 
 def ffmpeg_executable() -> str:
-    # Bundled FFmpeg binary via pip; no sudo or apt repositories required.
     from imageio_ffmpeg import get_ffmpeg_exe
     return get_ffmpeg_exe()
 
@@ -25,22 +24,9 @@ def cmd(*args: str) -> None:
     subprocess.run(command, check=True, stdout=subprocess.DEVNULL)
 
 
-def chime(path: Path, descending: bool = False) -> None:
-    frequencies = [660, 550, 440] if descending else [440, 550, 660]
-    inputs = []
-    for frequency in frequencies:
-        inputs += ["-f", "lavfi", "-i", f"sine=frequency={frequency}:sample_rate=44100:duration=2.3"]
-    filters = (
-        "[0:a]volume=0.025,adelay=0|0[a0];"
-        "[1:a]volume=0.023,adelay=480|480[a1];"
-        "[2:a]volume=0.020,adelay=960|960[a2];"
-        "[a0][a1][a2]amix=inputs=3:duration=longest,"
-        "afade=t=in:st=0:d=0.15,afade=t=out:st=1.25:d=0.95,"
-        "aformat=channel_layouts=stereo[out]"
-    )
-    cmd("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs,
-        "-filter_complex", filters, "-map", "[out]", "-c:a", "libmp3lame",
-        "-b:a", "160k", str(path))
+def duration(path: Path) -> float:
+    from mutagen.mp3 import MP3
+    return float(MP3(str(path)).info.length)
 
 
 async def speech(text: str, voice: str, path: Path) -> None:
@@ -48,53 +34,152 @@ async def speech(text: str, voice: str, path: Path) -> None:
     await edge_tts.Communicate(text, voice, rate="-5%").save(str(path))
 
 
-def duration(path: Path) -> float:
-    # Mutagen reads MP3 metadata; ffprobe is unnecessary in minimal CI.
-    from mutagen.mp3 import MP3
-    return float(MP3(str(path)).info.length)
+def chime(path: Path, descending: bool = False) -> None:
+    """Three-note identity written for RDI; not sampled from another radio."""
+    frequencies = [784, 587, 440] if descending else [440, 587, 784]
+    inputs = []
+    for frequency in frequencies:
+        inputs += ["-f", "lavfi", "-i", f"sine=frequency={frequency}:sample_rate=44100:duration=3.0"]
+    filters = (
+        "[0:a]volume=0.035,adelay=0|0[a0];"
+        "[1:a]volume=0.032,adelay=470|470[a1];"
+        "[2:a]volume=0.030,adelay=940|940[a2];"
+        "[a0][a1][a2]amix=inputs=3:duration=longest,"
+        "afade=t=in:st=0:d=0.08,afade=t=out:st=2.05:d=0.92,"
+        "aresample=44100,aformat=channel_layouts=stereo[out]"
+    )
+    cmd("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs,
+        "-filter_complex", filters, "-map", "[out]", "-c:a", "libmp3lame",
+        "-b:a", "192k", "-ar", "44100", str(path))
+
+
+def mixing_jingle(bed: Path, spoken: Path, destination: Path) -> None:
+    filters = (
+        "[0:a]aresample=44100,aformat=channel_layouts=stereo,volume=0.72[music];"
+        "[1:a]aresample=44100,aformat=channel_layouts=stereo,"
+        "loudnorm=I=-18:TP=-1.5:LRA=11[voice];"
+        "[music][voice]amix=inputs=2:duration=longest:dropout_transition=0[out]"
+    )
+    cmd("ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+        "-i", str(bed), "-i", str(spoken), "-filter_complex", filters,
+        "-map", "[out]", "-c:a", "libmp3lame", "-b:a", "192k",
+        "-ar", "44100", str(destination))
+
+
+def stitch(clips: list[Path], destination: Path, track_title: str) -> None:
+    inputs = []
+    pieces = []
+    for idx, clip in enumerate(clips):
+        inputs += ["-i", str(clip)]
+        pieces.append(f"[{idx}:a]aresample=44100,aformat=channel_layouts=stereo,"
+                      f"loudnorm=I=-18:TP=-1.5:LRA=11[a{idx}]")
+    join = "".join(f"[a{idx}]" for idx in range(len(clips)))
+    filters = ";".join(pieces + [f"{join}concat=n={len(clips)}:v=0:a=1[out]"])
+    cmd("ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+        *inputs, "-filter_complex", filters, "-map", "[out]",
+        "-metadata", f"title={track_title}",
+        "-metadata", "artist=Radio Românii din Italia",
+        "-metadata", "album=RDI Geopolitica",
+        "-id3v2_version", "3", "-c:a", "libmp3lame", "-b:a", "192k",
+        "-ar", "44100", str(destination))
+
+
+def produce(folder: Path) -> dict:
+    manifest_path = folder / "manifest.json"
+    data = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if data.get("language") != "it":
+        raise ValueError("La produzione automatica richiede la lingua italiana")
+    segments = data.get("segments")
+    if not isinstance(segments, list) or len(segments) < 3:
+        raise ValueError("Segmenti editoriali mancanti")
+    if data.get("story_count", 0) < 1 or len(data.get("track_title", "")) < 20:
+        raise ValueError("Dati o titolo radiofonico mancanti")
+    exe = Path(ffmpeg_executable())
+    if not exe.is_file():
+        raise RuntimeError("FFmpeg portatile non disponibile")
+
+    voice = "it-IT-ElsaNeural"
+    jingle_voice = folder / "jingle-voce.mp3"
+    asyncio.run(speech(
+        "Radio Românii din Italia. Geopolitica. Il mondo, in primo piano.",
+        voice, jingle_voice,
+    ))
+    bed = folder / "jingle-note.mp3"
+    opening = folder / "jingle-iniziale.mp3"
+    chime(bed)
+    mixing_jingle(bed, jingle_voice, opening)
+
+    clips = [opening]
+    timing = [{"kind": "jingle", "start_seconds": 0.0, "end_seconds": round(duration(opening), 2)}]
+    elapsed = duration(opening)
+    articles_by_id = {row["id"]: row for row in data.get("articles", [])}
+    for index, segment in enumerate(segments):
+        words = str(segment.get("text", "")).strip()
+        if len(words) < 20:
+            raise ValueError("Testo di un segmento vuoto o troppo corto")
+        audio = folder / f"voce-{index:02}.mp3"
+        asyncio.run(speech(words, voice, audio))
+        if audio.stat().st_size < 6000:
+            raise ValueError("Segmento di voce non valido")
+        sec = duration(audio)
+        scene = {
+            "kind": segment["kind"], "start_seconds": round(elapsed, 2),
+            "end_seconds": round(elapsed + sec, 2),
+        }
+        if segment["kind"] == "story":
+            article = articles_by_id.get(segment.get("id"))
+            if not article or not str(article.get("article_url", "")).startswith("https://"):
+                raise ValueError("Fonte non pubblicabile per il video")
+            scene.update({
+                "id": article["id"], "country": article["country"],
+                "title": article["title"], "summary": article["summary"],
+                "article_url": article["article_url"],
+                "published_date": article["published_date"],
+            })
+        timing.append(scene)
+        clips.append(audio)
+        elapsed += sec
+
+    closing = folder / "jingle-finale.mp3"
+    chime(closing, descending=True)
+    clips.append(closing)
+    end = elapsed + duration(closing)
+    timing.append({
+        "kind": "end-jingle", "start_seconds": round(elapsed, 2),
+        "end_seconds": round(end, 2),
+    })
+    track_title = data["track_title"]
+    output = folder / f"{track_title}.mp3"
+    stitch(clips, output, track_title)
+    measured = duration(output)
+    if not 40 <= measured <= 420:
+        output.unlink(missing_ok=True)
+        raise ValueError(f"Durata radiofonica non ammessa: {measured:.2f}s")
+    if abs(measured-end) > 2.5:
+        raise ValueError(f"Sincronizzazione audio imprecisa: {measured:.2f}s vs {end:.2f}s")
+
+    data["audio_duration_seconds"] = round(measured, 2)
+    data["synthetic_voice"] = voice
+    data["audio_filename"] = output.name
+    data["timeline"] = timing
+    manifest_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tv = {
+        "schema_version": 1, "language": "it", "edition_id": data["edition_id"],
+        "track_title": track_title, "audio_duration_seconds": round(measured, 2),
+        "generated_at": data["generated_at"], "timeline": timing,
+        "site": "https://radioromanii.duckdns.org/geopolitica.html",
+        "notice": "Gli articoli e le fonti sono disponibili sul sito RDI. La lettura è in italiano.",
+    }
+    (folder / "tv-timing.json").write_text(json.dumps(tv, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Anteprima pronta: {output.name}, {measured:.0f} secondi, {len(segments)-2} articoli sincronizzati")
+    return data
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--folder", default="/tmp/rdi-geopolitica")
     args = parser.parse_args()
-    folder = Path(args.folder)
-    data = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
-    transcript = (folder / "bulletin.txt").read_text(encoding="utf-8").strip()
-    if len(transcript) < 200 or data.get("story_count", 0) < 1:
-        raise ValueError("No viable editorial script")
-    executable = Path(ffmpeg_executable())
-    if not executable.is_file():
-        raise RuntimeError("Bundled FFmpeg executable unavailable")
-    voice = {"ro": "ro-RO-AlinaNeural", "it": "it-IT-ElsaNeural"}[data["language"]]
-    speech_path = folder / "narration.mp3"
-    asyncio.run(speech(transcript, voice, speech_path))
-    if speech_path.stat().st_size < 10_000:
-        raise ValueError("Speech synthesis returned empty/invalid media")
-    intro = folder / "opening.mp3"
-    outro = folder / "closing.mp3"
-    chime(intro)
-    chime(outro, descending=True)
-    final = folder / "rdi-geopolitica.mp3"
-    filters = (
-        "[0:a]aresample=44100,aformat=channel_layouts=stereo[a0];"
-        "[1:a]aresample=44100,aformat=channel_layouts=stereo,"
-        "loudnorm=I=-18:TP=-1.5:LRA=11[a1];"
-        "[2:a]aresample=44100,aformat=channel_layouts=stereo[a2];"
-        "[a0][a1][a2]concat=n=3:v=0:a=1[out]"
-    )
-    cmd("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(intro),
-        "-i", str(speech_path), "-i", str(outro), "-filter_complex", filters,
-        "-map", "[out]", "-c:a", "libmp3lame", "-b:a", "192k",
-        "-ar", "44100", str(final))
-    seconds = duration(final)
-    if not 40 <= seconds <= 420:
-        final.unlink(missing_ok=True)
-        raise ValueError(f"Unexpected bulletin duration: {seconds:.1f} sec")
-    data["audio_duration_seconds"] = round(seconds, 1)
-    data["synthetic_voice"] = voice
-    (folder / "manifest.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"RDI geopolitical audio preview: {final} ({seconds:.0f}s), synthetic voice {voice}")
+    produce(Path(args.folder))
     return 0
 
 
