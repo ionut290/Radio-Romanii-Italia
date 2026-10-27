@@ -20,7 +20,7 @@ def news(**overrides):
         "summary_ro": "Redacția a verificat această relatare pe baza surselor identificabile, iar informațiile rămân atribuite acestora.",
         "summary_it": "La redazione ha verificato la notizia sulla base delle fonti indicate; le informazioni restano attribuite alle fonti.",
         "source_name": "Agenție de presă", "source_url": "https://example.org/news/1",
-        "region": "Europa",
+        "region": "Ucraina",
     }
     item.update(overrides)
     return item
@@ -31,15 +31,21 @@ class TestBulletin(unittest.TestCase):
         program = bulletin.build(NOW, "ro", {"items": [news()]}, {})
         self.assertIsNotNone(program)
         self.assertEqual(program["story_count"], 1)
-        self.assertIn("Potrivit sursei", program["text"])
+        self.assertIn("Ucraina.", program["text"])
         self.assertIn("Un titlu verificat", program["text"])
         self.assertNotIn("Un titolo verificato", program["text"])
 
     def test_italian_is_fully_localized(self):
         program = bulletin.build(NOW, "it", {"items": [news()]}, {})
-        self.assertIn("Secondo la fonte", program["text"])
+        self.assertIn("Per leggere gli articoli completi", program["text"])
+        self.assertIn("Ucraina.", program["text"])
+        self.assertNotIn("Secondo la fonte", program["text"])
+        self.assertNotIn("Agenție de presă", program["text"])
         self.assertIn("Un titolo verificato", program["text"])
         self.assertNotIn("Un titlu verificat", program["text"])
+        self.assertEqual(program["segments"][1]["kind"], "story")
+        self.assertTrue(program["segments"][1]["text"].startswith("Ucraina."))
+        self.assertEqual(program["articles"][0]["source_name"], "Agenție de presă")
 
     def test_unverified_external_geopolitical_feed_is_never_spoken(self):
         self.assertIsNone(bulletin.build(NOW, "ro", {}, {"items": [news()]}))
@@ -59,6 +65,18 @@ class TestBulletin(unittest.TestCase):
 
     def test_missing_translation_skipped(self):
         self.assertIsNone(bulletin.build(NOW, "it", {"items": [news(title_it="")]}, {}))
+
+    def test_source_mentions_removed_from_speech(self):
+        passage = ("Secondo Reuters e AP, il 27 ottobre si è verificato un evento. "
+                   "Un testimone Reuters ha riferito i fatti.")
+        spoken = bulletin.broadcast_summary(passage, "it", "Reuters")
+        self.assertNotIn("Reuters", spoken)
+        self.assertNotIn("Secondo", spoken)
+        self.assertIn("testimone", spoken)
+
+    def test_default_language_is_italian(self):
+        import argparse
+        self.assertEqual(bulletin.build(NOW, "it", {"items": [news()]}, {})["language"], "it")
 
     def test_duplicate_source_skipped(self):
         first = news()
