@@ -120,13 +120,6 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, hi
             "id": str(item.get("id") or url), "curated": is_curated
         })
     used = recent_history(history or {})
-    recent_editions = (history or {}).get("editions", [])
-    recently_used_urls = {
-        url for edition in recent_editions[-HISTORY_LIMIT:]
-        if isinstance(edition, dict)
-        for url in edition.get("source_urls", [])
-        if isinstance(url, str)
-    }
     # A substantially updated report is eligible again under its original URL;
     # unchanged reports stay off-air.
     result = [item for item in result if story_signature(item) not in used]
