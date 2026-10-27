@@ -95,6 +95,7 @@
   function validUrl(value){try {const u=new URL(String(value));return u.protocol==="https:"?u.href:null}catch(_){return null}}
   function dateISO(value){const d=new Date(value||"");return Number.isNaN(d.getTime())?null:d}
   function dateLabel(value){const d=dateISO(value);return d?new Intl.DateTimeFormat(state.lang==="it"?"it-IT":"ro-RO",{timeZone:"Europe/Rome",day:"numeric",month:"short",year:"numeric"}).format(d):""}
+  function updateTimeLabel(value){const d=dateISO(value);return d?new Intl.DateTimeFormat(state.lang==="it"?"it-IT":"ro-RO",{timeZone:"Europe/Rome",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).format(d)+" (Roma)":""}
   function localToday(){return new Intl.DateTimeFormat(state.lang==="it"?"it-IT":"ro-RO",{timeZone:"Europe/Rome",day:"numeric",month:"long",year:"numeric"}).format(new Date())}
   function node(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n}
   function regionGuess(value){
@@ -168,7 +169,7 @@
     if(!state.items.length){$("empty").hidden=false;$("empty").querySelector("p").textContent=t("sourceUnavailable")}
     else $("empty").querySelector("p").textContent=t("tryFilters");
     $("feed-info").textContent=!state.feedOk?t("fallback"):t("sourceNote");
-    $("updated").textContent=state.updated?t("updated")+": "+dateLabel(state.updated):t("sourceNote").split(".")[0];
+    $("updated").textContent=state.updated?t("updated")+": "+updateTimeLabel(state.updated):t("sourceNote").split(".")[0];
     document.querySelectorAll(".topic").forEach(b=>{const on=b.dataset.topic===state.topic;b.classList.toggle("active",on);b.setAttribute("aria-pressed",String(on))});
     $("region").value=state.region;
   }
