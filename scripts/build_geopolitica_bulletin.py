@@ -26,16 +26,16 @@ HISTORY_LIMIT = 72  # Recent broadcast editions kept locally on Oracle.
 DEFAULT_HISTORY = Path(os.environ.get("RDI_GEOPOLITICA_HISTORY", "/var/lib/rdi-geopolitica/broadcast-history.json"))
 
 OPENING = {
-    "ro": "Radio Românii din Italia. Ascultați RDI Geopolitica, sinteza evenimentelor internaționale.",
-    "it": "Radio Românii din Italia presenta Geopolitica. Le principali notizie dal mondo, Paese per Paese.",
+    "ro": "R. D. I. Lumea în prim-plan. Iată principalele știri geopolitice și evenimente internaționale.",
+    "it": "R. D. I. Il mondo in primo piano. Dall’Ucraina al Medio Oriente, dall’Europa agli scenari internazionali: le notizie che stanno cambiando il mondo. Ecco gli ultimi aggiornamenti geopolitici, per capire cosa accade oltre i confini.",
 }
 CAUTION = {
     "ro": "Relatările sunt atribuite publicațiilor și instituțiilor citate. Informațiile aflate în evoluție pot fi actualizate sau corectate.",
-    "it": "Per leggere gli articoli completi, verificare le fonti e trovare gli aggiornamenti, visitate la sezione Geopolitica sul sito di Radio Românii din Italia. Le notizie in evoluzione possono essere aggiornate.",
+    "it": "Per leggere gli articoli completi, verificare le fonti e trovare gli aggiornamenti, visitate la sezione Geopolitica sul sito di R. D. I. Le notizie in evoluzione possono essere aggiornate.",
 }
 OUTRO = {
-    "ro": "Mai multe detalii, surse și context găsiți în secțiunea Geopolitică, pe site-ul Radio Românii din Italia. Rămâneți cu noi, muzica revine imediat.",
-    "it": "Questo era RDI Geopolitica. Continuate a seguirci sul sito della radio. Tra poco torna la musica.",
+    "ro": "Mai multe detalii, surse și context găsiți în secțiunea Geopolitică, pe site-ul R. D. I. Rămâneți cu noi, muzica revine imediat.",
+    "it": "Questo era R. D. I. Geopolitica. R. D. I., l’informazione senza confini. Continuate a seguirci sul sito della radio. Tra poco torna la musica.",
 }
 TRANSITIONS = {
     "ro": ("În continuare.", "Tot în actualitatea internațională.", "Într-un alt subiect.", "În final."),
@@ -199,13 +199,9 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dic
     stories = available_items(now, lang, curated, extras, history)
     if not stories:
         return None
-    date_text = display_date(now.date(), lang)
-    hour_text = f"{now.hour:02d}:{now.minute:02d}"
-    intro = (f"Ediția de la ora {hour_text}, {date_text}."
-             if lang == "ro" else f"Edizione delle {hour_text} del {date_text}.")
     segments = [{
         "kind": "intro",
-        "text": "\n".join((OPENING[lang], intro, CAUTION[lang])),
+        "text": "\n".join((OPENING[lang], CAUTION[lang])),
     }]
     public_articles = []
     for index, item in enumerate(stories):
