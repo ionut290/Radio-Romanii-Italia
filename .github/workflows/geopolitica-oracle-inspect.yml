@@ -1,0 +1,35 @@
+name: RDI - Verifica AzuraCast prima del notiziario orario
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/inspect-geopolitica-oracle.sh'
+      - '.github/workflows/geopolitica-oracle-inspect.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica la connessione Oracle esistente
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo "::error::Chiave SSH Oracle non configurata"; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Host SSH Oracle non verificato"; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 8 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
+            ubuntu@129.151.255.41 'sudo -n bash -s' < scripts/inspect-geopolitica-oracle.sh
