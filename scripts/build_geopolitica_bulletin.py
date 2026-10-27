@@ -245,7 +245,7 @@ def main() -> int:
     now = dt.datetime.now(ROME)
     program = build(now, args.language, read_json(CURATED), read_json(EXTRA), read_json(Path(args.history)))
     if not program:
-        print("Nessun bollettino: nessuna notizia abbastanza recente e revisionata.")
+        print("Nessun nuovo bollettino: tutte le notizie verificate recenti sono gia state trasmesse oppure non ve ne sono.")
         return 2
     dest = Path(args.output)
     dest.mkdir(parents=True, exist_ok=True)
