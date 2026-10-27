@@ -23,15 +23,15 @@ MAX_AGE_HOURS = 35  # Publication dates from the curated feed have day precision
 
 OPENING = {
     "ro": "Radio Românii din Italia. Ascultați RDI Geopolitica, sinteza evenimentelor internaționale.",
-    "it": "Radio Românii din Italia. Ascoltate RDI Geopolitica, il notiziario di attualità internazionale.",
+    "it": "Radio Românii din Italia presenta Geopolitica: i principali aggiornamenti dal mondo.",
 }
 CAUTION = {
     "ro": "Relatările sunt atribuite publicațiilor și instituțiilor citate. Informațiile aflate în evoluție pot fi actualizate sau corectate.",
-    "it": "Le notizie sono attribuite alle testate e alle istituzioni citate. I dati in evoluzione possono essere aggiornati o corretti.",
+    "it": "Le informazioni che seguono provengono dalle fonti giornalistiche e istituzionali indicate. Per gli eventi in evoluzione, i dati potrebbero cambiare.",
 }
 OUTRO = {
     "ro": "Mai multe detalii, surse și context găsiți în secțiunea Geopolitică, pe site-ul Radio Românii din Italia. Rămâneți cu noi, muzica revine imediat.",
-    "it": "Altri dettagli, fonti e approfondimenti sono nella sezione Geopolitica sul sito di Radio Românii din Italia. Restate con noi, tra poco torna la musica.",
+    "it": "Per altri dettagli e per consultare le fonti, visitate la sezione Geopolitica sul sito di Radio Românii din Italia. Grazie per averci ascoltato. Tra poco torna la musica.",
 }
 TRANSITIONS = {
     "ro": ("În continuare.", "Tot în actualitatea internațională.", "Într-un alt subiect.", "În final."),
@@ -131,7 +131,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | No
     hour_text = f"{now.hour:02d}:{now.minute:02d}"
     intro = (
         f"Ediția de la ora {hour_text}, {date_text}."
-        if lang == "ro" else f"Edizione delle ore {hour_text} del {date_text}."
+        if lang == "ro" else f"Edizione aggiornata alle {hour_text} del {date_text}."
     )
     parts = [OPENING[lang], intro, CAUTION[lang]]
     for index, story in enumerate(stories):
@@ -154,7 +154,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | No
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--language", choices=("ro", "it"), default="ro")
+    parser.add_argument("--language", choices=("ro", "it"), default="it")
     parser.add_argument("--output", default="/tmp/rdi-geopolitica")
     args = parser.parse_args()
     now = dt.datetime.now(ROME)
