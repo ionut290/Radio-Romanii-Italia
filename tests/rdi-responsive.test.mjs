@@ -6,7 +6,7 @@ const html=readFileSync(new URL("../index.html",import.meta.url),"utf8");
 const css=readFileSync(new URL("../rdi-responsive.css",import.meta.url),"utf8");
 
 test("RDI home loads full-window layout last, without affecting YouTube broadcast view",()=>{
-  assert.match(html,/<link rel="stylesheet" href="\.\/rdi-responsive\.css\?v=20261027-fullscreen-2">/);
+  assert.match(html,/<link rel="stylesheet" href="\.\/rdi-responsive\.css\?v=20261027-fullscreen-3">/);
   assert.ok(html.indexOf("rdi-responsive.css") > html.indexOf("rdi-featured.css"));
   assert.ok(html.indexOf("rdi-responsive.css") < html.indexOf("</head>"));
   assert.match(css,/html:not\(\.youtube-news\) body>main\{[\s\S]*?width:100%;[\s\S]*?max-width:none;/);
@@ -25,4 +25,13 @@ test("phone and small-screen layouts use readable stacked cards",()=>{
   assert.match(css,/@media\(max-width:400px\)/);
   assert.match(css,/\.news-section \.news-list\{grid-template-columns:1fr\}/);
   assert.match(css,/overflow-x:clip/);
+});
+
+test("the sponsor banner and the live radio player use one guaranteed aligned desktop row",()=>{
+  assert.match(html,/<div class="rdi-broadcast-layout"[^>]*><div class="radio-brand-hero"/);
+  assert.match(html,/<\/audio><\/section><\/div><section id="rdi-featured"/);
+  assert.match(css,/\.rdi-broadcast-layout\{[\s\S]*?grid-template-columns:minmax\(0,1\.5fr\) minmax\(365px,\.86fr\)/);
+  assert.match(css,/\.rdi-broadcast-layout>\.radio-brand-hero\{[\s\S]*?grid-column:1;\s*grid-row:1;/);
+  assert.match(css,/\.rdi-broadcast-layout>\.card\.radio-compact\{[\s\S]*?grid-column:2;\s*grid-row:1;/);
+  assert.match(css,/body>main\{display:block;width:100%!important;max-width:none!important/);
 });
