@@ -60,7 +60,7 @@ function displayImage(visual,article,cfg,lead=false) {
   container.append(element("span","", "◉"),element("strong","","RDI"));
   visual.append(container);
   const selected=safeImage(article.image);
-  const fallback=safeImage(article.fallbackImage)||"./RADIO-COVER.jpg";
+  const fallback=safeImage(article.fallbackImage)||"";
   const image=document.createElement("img");
   image.loading=lead?"eager":"lazy";
   image.decoding="async";
@@ -85,8 +85,12 @@ function displayImage(visual,article,cfg,lead=false) {
     }
   });
   if(article.editorialIllustration)addIllustrationLabel(visual,cfg);
-  image.src=selected||fallback;
-  visual.append(image);
+  if(selected||fallback){
+    image.src=selected||fallback;
+    visual.append(image);
+  } else {
+    addIllustrationLabel(visual,cfg);
+  }
 }
 function paint() {
   if(!section||!grid)return;
