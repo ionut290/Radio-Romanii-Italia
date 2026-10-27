@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-27T19:02:02.962473Z",
+  "updated_at": "2026-10-27T19:17:04.756620Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-0959171642cdb0d5",
+      "category": "europa",
+      "region": "europa",
+      "title": "Luca Niculescu, despre aderarea Moldovei la UE: Dacă apar probleme, le discutăm atunci",
+      "summary": "",
+      "source": "Stiri.md",
+      "published": "2026-10-27T19:10:02Z",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZ3BUTlNQUFJmYmRkXzBJVDdLczhJWWpfMllPUUY0Ul9mRmVsR2FyQmd1eEdIWFVTN0ZLYS1WMnk3X0o2RjdRbjhNVVlFN280cTNSamJlTjZNUWJDeDZZUUk5NmM3NVpNTFJ3U0R2ZnZZWHJITWROZDQyVWRtTzdtRnRfcXRfajlmaHdya1czdV9JUm9EUEdaLXp2d0RDSFRyc0hWbGN3TEtsaEVsSlBQT2RXX0c?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Luca Niculescu, despre aderarea Moldovei la UE: Dacă apar probleme, le discutăm atunci",
+      "title_it": "Luca Niculescu, sull'adesione della Moldavia all'UE: Se sorgono problemi, allora li discutiamo",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-04191948c6596c54",
       "category": "diplomatie",
@@ -47,6 +61,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "NATO citează ajutorul Ucrainei drept esențial pentru pace și securitate europeană la reuniunea E5",
       "title_it": "La NATO cita gli aiuti all’Ucraina come fondamentali per la pace e la sicurezza europea alla riunione dell’E5",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2c093f39731426b0",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Whose interests does the ceasefire serve?",
+      "summary": "",
+      "source": "Middle East Monitor",
+      "published": "2026-10-27T17:44:00Z",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPaHE4blNPT2tqVVVINzBEZlNwOVFvWHUtSmZ0WjBfSTlJWE04eVNyaGd4LVF3b2JFZm1hWDdUOG9hYmg4UVJlZUJGdGxCM3FNZ2VZdmU0MDdmdGhFQWllVWMtaWJEaEU0LVExbjExU2lTQUZLaGNHSmM3eTFlN1ltdmhuOGVlSlY5TE14VA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Al cui interese servește încetarea focului?",
+      "title_it": "Di quali interessi serve il cessate il fuoco?",
       "translation_status": "machine_translation"
     },
     {
@@ -218,20 +246,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-27498e90e8c461f2",
-      "category": "europa",
-      "region": "europa",
-      "title": "România, în topul deceselor de pe șosele. La nivelul Uniunii Europene numărul lor este în scădere",
-      "summary": "",
-      "source": "Cotidianul RO",
-      "published": "2026-10-27T15:32:46Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOaUVGajFkNURKZFlROTBZM1ViLXJQdDc4Mklla2o3LWJ6VzhJTmxXcXk3b2otaFliRUVpSHlEMkdSaldxMWFWSkZxcnhrREh6X05rOFZ6OHQydHdGb3VQeThvTER6Mjd3ZlRtX2tKb0ltSDV5LVRqM3ppSzhEOWNGVEY4bUVhQl94Ni04N1p0TXJIRDh4SmZTZ2cySDdWb0pCb1daZGs3em9qc1lsWjFmaTkyMERvTXUtS3lWRjNmaw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "România, în topul deceselor de pe șosele. La nivelul Uniunii Europene numărul lor este în scădere",
-      "title_it": "La Romania è al primo posto per numero di morti sulla strada. A livello dell’Unione Europea, il loro numero sta diminuendo",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-8e2acf42ed483866",
       "category": "europa",
       "region": "europa",
@@ -260,14 +274,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-c0efc1f0650324bd",
+      "id": "geo-cb19d7adc7c82f99",
       "category": "securitate",
       "region": "asia",
       "title": "Hegseth heads to Manila to shore up US ties with Asia-Pacific partners",
       "summary": "",
       "source": "Al Jazeera",
       "published": "2026-10-27T15:15:19Z",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQU1NKNjdWbWpMNzRvNTB5bUl6YTkyU09PX2szM0JVNTFzSEhVa082NHRkMzZRZ0dTVFZCRFU4OHVHVHZLWG95Y0hsUFl6cTBCV2hvYlVzRFFPUGlJUlgtazhPRUJVNnhmOXk0d3lrc1RRS3FTWV85RnRfc0VpSGFWVjU4ekdWWU52MmJHLWwybmI3V0hXa1cweDBNYkR6T25IcWQzMHFpNlAzUlN1Zl9vS2N30gG3AUFVX3lxTE1VVzdpOVBwelVXeDJvNkp0eWI4RGZyTE9FUzY1ODFvOEhBOXpGVFlaVmd4SFE0YktxOWFTSExqMFZsNVdZWlozWXptcmZxNDJxdnZGSDh5SGgwLVVwdmMzckc3czFXb21HS0s1SFJJOTB2UkZVYUUwQ2xieEgyUmgyZGFEMnFZWTRQRE5QendRYlZRUktNVmtMUldXeEtvMHlsU3d0ODNONVg3d3BYMFJHbmIxd1FMOA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQU1NKNjdWbWpMNzRvNTB5bUl6YTkyU09PX2szM0JVNTFzSEhVa082NHRkMzZRZ0dTVFZCRFU4OHVHVHZLWG95Y0hsUFl6cTBCV2hvYlVzRFFPUGlJUlgtazhPRUJVNnhmOXk0d3lrc1RRS3FTWV85RnRfc0VpSGFWVjU4ekdWWU52MmJHLWwybmI3V0hXa1cweDBNYkR6T25IcWQzMHFpNlAzUlN1Zl9vS2N3?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Hegseth se îndreaptă la Manila pentru a consolida legăturile SUA cu partenerii din Asia-Pacific",
       "title_it": "Hegseth si reca a Manila per rafforzare i legami degli Stati Uniti con i partner dell’Asia-Pacifico",
@@ -330,6 +344,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-b43326d85fc4e79d",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Lana Nusseibeh: The UAE’s UN bid in the shadow of Gaza and Sudan",
+      "summary": "",
+      "source": "نون بوست",
+      "published": "2026-10-27T14:20:47Z",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAzcVdkMFFoWXJHbTRnVGxxQVVsWFlJVzYtMHRKTDhZOXhqMHZPSVpVWG04eHpIZm50aFZCaFlFajNtZnI2LVpPTEh4UHpCZFpzdDY40gFTQVVfeXFMUDNxV2QwUWhZckdtNGdUbHFBVWxYWUlXNi0wdEpMOFk5eGowdk9JWlVYbTh4ekhmbnRoVkJoWUVqM21mcjYtWk9MSHhQekJkWnN0Njg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Lana Nusseibeh: Candidatura Emiratelor Arabe Unite la ONU în umbra Gazei și Sudanului",
+      "title_it": "Lana Nusseibeh: la candidatura degli Emirati Arabi Uniti alle Nazioni Unite all’ombra di Gaza e del Sudan",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-43ffa97beac33b2f",
       "category": "diplomatie",
       "region": "americi",
@@ -355,20 +383,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Securitatea energetică globală este în pericol dacă strâmtoarea Ormuz nu se deschide în câteva săptămâni, spune șeful AIE",
       "title_it": "La sicurezza energetica globale è a rischio se lo Stretto di Hormuz non si aprirà entro poche settimane, afferma il capo dell’AIE",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-82d6fb4dc1dc14cd",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "National and International News in Focus: Oct. 27",
-      "summary": "",
-      "source": "WKTV",
-      "published": "2026-10-27T14:12:51Z",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUGNmekotUjZsZnBYX0RBazhUNTdjRFVZZkxWOXQ4Tk5INjZxc2I0R0s3QXEybTl4UFRZdWZYbzV5TUhkNDhDdTVGakhTc3RTdzlYQkR6dE00M3pNYUkwQkNyOWs0MGFWbjd3SWJ0OU1JMFFSOTlpT3NuMi1vbjhIdUluejNiSnFWMS1yOGV4NUFKcDJPbUh4QXVwNkxJRFZoSWNESC0zdERQUE1nc3hFT2FWbXlUdzNRTnhSTVByNkRfTU1GN1RxeEZiZHQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Știri naționale și internaționale în atenție: 27 octombrie",
-      "title_it": "Notizie nazionali e internazionali in primo piano: 27 ottobre",
       "translation_status": "machine_translation"
     },
     {
@@ -414,20 +428,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2eeafe1a8854f9ec",
-      "category": "energie",
-      "region": "global",
-      "title": "Alternative Routes for Middle East Oil and Gas Due to Hormuz Disruption",
-      "summary": "",
-      "source": "EnergyNow.com",
-      "published": "2026-10-27T13:53:21Z",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNE1fMzFiSjhrOFpJV21kajdMYkJEd20zcGM4Sm0yREpWU09IZnBwX0VyUk9LTWlHYWhDYXZCOS04eng0d1lPdVlKX2pZUjFwYzAwZkM4NWlDazVaSUFfRHlLaTczenpiZTdrb0lXd09XZTRiWHpNVGYxcDRjaHhoZ3JvcVFtb1VZM29raVc4RE9kUXBZWVdkbmktRU5FbV9hb1Fweg?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Rute alternative pentru petrol și gaze din Orientul Mijlociu din cauza perturbării ormuzului",
-      "title_it": "Rotte alternative per il petrolio e il gas del Medio Oriente a causa dell'interruzione di Hormuz",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-6806c895a63014d5",
       "category": "securitate",
       "region": "asia",
@@ -439,6 +439,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Cartea albă de apărare a Japoniei din 2026",
       "title_it": "Il Libro bianco sulla difesa del Giappone per il 2026",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-bcf157d0165eafbc",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "What Is Going on in Cybersecurity?",
+      "summary": "",
+      "source": "Stimson Center",
+      "published": "2026-10-27T13:47:01Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBoTHZLTW9uWHM4c0NlZzlza0ZQZ3kyVDFjbk5RTVU4RC1JVmUxTUx5NXFRME5qa0JDcTJLV0pxVmNhRUdFTlQ2YzAxQVJBbDJ5cWE4S1dENXVGaWxWWVRtS3hEZi1yQWZWaDhNYUx5bXE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ce se întâmplă în securitatea cibernetică?",
+      "title_it": "Cosa sta succedendo nella sicurezza informatica?",
       "translation_status": "machine_translation"
     },
     {
@@ -498,20 +512,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-90d88b1ecdedf319",
-      "category": "europa",
-      "region": "europa",
-      "title": "Antonio Costa și Ursula von der Leyen merg la Montreal pentru summitul UE-Canada. Liderii vor…",
-      "summary": "",
-      "source": "Mediafax",
-      "published": "2026-10-27T13:05:05Z",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQMExHS2VORnN6NTVIZ3Fkc2dlOVlWRFN2bnFaazdiOVFVMFJnMXdNbF9Ud3diVzNnZ056RkxUZ3VhemZWZERVdS0xR2FHTTZlc0ZQdFc1SzQwaWdUMTJuRWNBMDhBOVh2dHZTaGJCZlZRR2lJbHJnQnVqeGExMVBFWTU2VFhDQ3ZyQVg5Wjk0VzNQVlhwUGtWdkdWNHh2dzg5RUR1TXprX3ZKY1F0bm1vVWs0R2JEVHR4bHFFcGo2RG5FNEp4cmhWekFxSWM2ZUxzc2hrVnBSbVVZTktyTjlkSF9YY2IwTnpXUWg4UUJTbUlLN3PSAfgBQVVfeXFMT0RpVUxWY0VJWlhqQ09hWUhRRVNzNmhpX1hNX2pPRkhQbHNlQUM0anFsUkY2VWNpZ3oySXF2cWh4RlpBYkVyMkFVTHN1d1A3RlJMaDMzWkVacHBLT2Zkb05tbE9HamlBQnBpYS1qaXNTcFNDcHdLbnJjTTNQYmVwc05kZXdnZFY1QXV3N2hxOXk3Q3ZGX0NjYlNlVkpYS1ltNG8tVnJ5MHYzWUoyX2o5c0FJR1VwNmd3V0lMOUc3SHZQbDRaLUhjZWNDNEdLZ1hoUG1laVZpa1FsZ3Q3VGdoV2tjUHVhN3FqaVFBYzJPMmFOT2VsN2xSNE4?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Antonio Costa și Ursula von der Leyen merg la Montreal pentru summitul UE-Canada. Liderii vor…",
-      "title_it": "Antonio Costa e Ursula von der Leyen vanno a Montreal per il vertice Ue-Canada. I leader…",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-64c143cfe8ff4af0",
       "category": "diplomatie",
       "region": "americi",
@@ -537,20 +537,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Forțele israeliene ucig 14 în Gaza, în timp ce comisia ONU afirmă că genocidul continuă",
       "title_it": "Le forze israeliane uccidono 14 persone a Gaza mentre la commissione delle Nazioni Unite afferma che il genocidio continua",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-d5aca7921ab861b9",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Amnesty UK decries Israeli polls as 'apartheid at the ballot box'",
-      "summary": "",
-      "source": "Yeni Şafak English",
-      "published": "2026-10-27T12:50:43Z",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWnVicHhDeGcwaml6bThMS2ppaUtKWTBuNy1tVmJhMEN6YWJodWgxbnczaldqM2pqZGl3alJSWnlKcUloejNER2loREZlX0FlSm80bU52X0hfbEZ1VU9CSnVVb2x5cEIwalVkMS13ZUhTQlVwTHFER3Q3VFZRMTdFel9YM2lFMTMtM3lBX3I0ZWxuMWZ1OUxWVy15d3hGQW0tc3dweQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Amnesty UK condamnă sondajele israeliene drept „apartheid la urne”",
-      "title_it": "Amnesty UK denuncia i sondaggi israeliani come “apartheid alle urne”",
       "translation_status": "machine_translation"
     },
     {
@@ -596,20 +582,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-25fa4ea6b74ec7a1",
-      "category": "europa",
-      "region": "europa",
-      "title": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
-      "summary": "",
-      "source": "VareseNews",
-      "published": "2026-10-27T11:58:18Z",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSE9vQnhEZTYyTGNLeUVnNW9VR3NIc2I2VDVmN1Z0anBkNlJ5NGNYUUNzc3NUalNWZkx1UFJCRGFYVjRKSHRUZlB6eG9vYU5QY3hCWXFwUWk0eS1GMGk5VWZBVUstcWd6VElNd1FvOGhTNWxSZnh6ZjRabzJONUxMMXNadW9XVmF4QjZIR3JEQ3ZuYktyelNSRktlZ0VlV2NxVmtVRFJFcUFONE5RODBCeTFxbDl1aXJxQWZiWF9qQU02ODdmd3F4NnVlcC1fOUR3OWstcg?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De la Green Deal la bugetul european, provocările ultimului Consiliu European și viitorul Uniunii",
-      "title_it": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-e8338bf2d238a205",
       "category": "securitate",
       "region": "europa",
@@ -649,6 +621,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "O încetare a focului într-un singur oraș între Rusia și Ucraina intermediată de prima doamnă Melania Trump este în vigoare",
       "title_it": "È in vigore un cessate il fuoco di una sola città tra Russia e Ucraina mediato dalla First Lady Melania Trump",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4a306ab24e390b57",
+      "category": "europa",
+      "region": "europa",
+      "title": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
+      "summary": "",
+      "source": "MalpensaNews",
+      "published": "2026-10-27T11:04:22Z",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOS2JHbGcxWFlWLTlzU0FxSmtJWDdCSVI1a19kbkxEeGdPV2FLbDZLM29rXzdlVGNjbzJHb3NXMFlmczdYRUdYcVNvcTVvTFE4TVhGOWUwU2FzZGJyVktvVm5kbHNBRFVlUldjRVc1bS1PRU9kNklGVnNUU0NMemhpMUNRcmVld0dENnYySTBNd3hXdjNMRjFJdzRtSUhfRDBqelNrZlhPVmF3SlNaMXN2bTVkV1J6T2VNTm1CU0xrSnRuMFB1SHRzQ3hyQnB3aDJSOWdOTnpR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De la Green Deal la bugetul european, provocările ultimului Consiliu European și viitorul Uniunii",
+      "title_it": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
       "translation_status": "machine_translation"
     },
     {
@@ -694,17 +680,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-696aaa204c5375cb",
+      "id": "geo-3bbba88b11d41a4f",
       "category": "conflicte",
-      "region": "europa",
-      "title": "Oleshky Truce, Kyiv Missiles: The Two Faces of Russia’s War in Ukraine",
+      "region": "orient",
+      "title": "What does Israel's election mean for Gaza and the wider world?",
       "summary": "",
-      "source": "The Korea Post",
-      "published": "2026-10-27T10:08:55Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1wVG05SHhyYjlQREJOR0NxTnpkUDZ2OTk2Mk0ycTVSQU5XbndFSnZCLWNKOW1ZVXg2cjRkcEZvVktvUHJNUmlVdjJ6VmIwZk40LTdaQWIyczFfdVdtWEdtbUViSGZCYkNUd0FJU0Nn0gFuQVVfeXFMTXBUbTlIeHJiOVBEQk5HQ3FOemRQNnY5OTYyTTJxNVJBTldud0VKdkItY0o5bVlVeDZyNGRwRm9WS29Qck1SaVV2MnpWYjBmTjQtN1pBYjJzMV91V21YR21tRWJIZkJiQ1R3QUlTQ2c?oc=5",
+      "source": "BBC",
+      "published": "2026-10-27T10:17:36Z",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9NZFJwOEozQUZUejVNNkRjSVJtbi14UEktRUF6bk1UUHFfZTV3NkxiZnlUZTJ0MTVNc1kzNUs1SDN6VEx0OG51LVFfMHl4YXZ0NFJTMjFwcVM?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Armistițiu Oleshky, Rachete Kiev: Cele două fețe ale războiului Rusiei în Ucraina",
-      "title_it": "La tregua di Oleshky, Missili di Kiev: i due volti della guerra russa in Ucraina",
+      "title_ro": "Ce înseamnă alegerea Israelului pentru Gaza și întreaga lume?",
+      "title_it": "Cosa significa l'elezione di Israele per Gaza e il resto del mondo?",
       "translation_status": "machine_translation"
     },
     {
@@ -736,6 +722,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-bd0aa0fb132da036",
+      "category": "europa",
+      "region": "europa",
+      "title": "Vizita lui Zelenski la Bruxelles, anulată după schimbări în planurile SUA. Ce discuții erau pregătite",
+      "summary": "",
+      "source": "Realitatea.NET",
+      "published": "2026-10-27T09:33:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPZmZFMkxoMHpfX3B4LWhjMGRvN2dkS2xoS25nRl9mNGVqaHhRajUwNi15SlRjZU5MMDFwcUpQb1ZJNjQ4Y2wzTzVOWHNnVEVibDJiak5qU2ZTRjlGUC1XUThKOGpPbUh2b1JUbU00aDFqdFVkR3psNENDRVZteWVpVVhGdWRqdDBQMjE5YnM5bG1FVU4wZks0b3hPODZ5OXd2ZE0tOF9mM1dTVE1PLVU1OWdMRVVmdDVNT1R4d09WRTljTFAyRmIxRTlnc3NGN21iaTYxd3g0bU1DTExnNHUw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Vizita lui Zelenski la Bruxelles, anulată după schimbări în planurile SUA. Ce discuții erau pregătite",
+      "title_it": "La visita di Zelenskiy a Bruxelles è stata annullata dopo i cambiamenti nei piani statunitensi. Quali discussioni sono state preparate",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-dcd72782cee335a1",
       "category": "economie",
       "region": "global",
@@ -747,6 +747,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Inflația globală a mărfurilor testează băncile centrale pe măsură ce creșterea încetinește",
       "title_it": "L’inflazione globale delle materie prime mette alla prova le banche centrali mentre la crescita rallenta",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-3ade369c4f1bb71a",
+      "category": "economie",
+      "region": "global",
+      "title": "Global Trade Faces Rising Commodity Costs as Energy Disruptions Spread",
+      "summary": "",
+      "source": "Kalkine",
+      "published": "2026-10-27T09:22:00Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOU9VZ0xDR3VxWkl0SU1jSGM5TG1mVmgwckFDTTNZNUlJOUstTVBSMkJNd0NDd2swUTlPY2VjQ0hhY3c5Ukd4dlEtWWcyeGhYbG4waXFKX25yODNNYkNBVE5YTVBuWU44LUNZWVEwMzVJY3p5OXVZRG13NFdVSFRvVTJ4TnFNM3huZEZ0YTVJaEpjZFlISFVJbnhpRzA1QmlCZHNNREU1bFJqa3JCWEVVSjF3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Comerțul global se confruntă cu creșterea costurilor mărfurilor pe măsură ce perturbările energetice se răspândesc",
+      "title_it": "Il commercio globale si trova ad affrontare l’aumento dei costi delle materie prime mentre si diffondono le interruzioni energetiche",
       "translation_status": "machine_translation"
     },
     {
@@ -831,20 +845,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Bruxelles-ul vrea deportări în afara UE. Frontex ar putea primi puteri noi și o rezervă de grăniceri pentru crize",
       "title_it": "Bruxelles vuole le deportazioni fuori dall’Ue. Frontex potrebbe ottenere nuovi poteri e un sostegno di guardie di frontiera per le crisi",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f7811083bd9bbe74",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Top Swiss diplomat to visit Pyongyang for opening of new diplomatic office",
-      "summary": "",
-      "source": "Hankyoreh : English Edition",
-      "published": "2026-10-27T08:31:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbWlSUW9aWVdUMlZ3c0Z1Unl0OE11U0Y2TGVBbV9aeXFuRDhvTmVFZHZxZjlvZ2FoQ1Q4eXg4UkJWQnhIQTQ1dWZKdllrUk9LOVlTWUFGbW1MV1pDeTByU0J5eEI0ZnFzU2VCOUdjVENkODZhMWphdXgySm8ySk43UlB3?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Înalt diplomat elvețian va vizita Phenianul pentru deschiderea unui nou birou diplomatic",
-      "title_it": "Uno dei migliori diplomatici svizzeri visiterà Pyongyang per l'apertura di una nuova sede diplomatica",
       "translation_status": "machine_translation"
     }
   ]
