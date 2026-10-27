@@ -14,13 +14,15 @@ import sys
 SCRIPT = pathlib.Path("/usr/local/bin/rdi-geopolitica-hourly.sh")
 STATE = pathlib.Path("/var/lib/rdi-geopolitica")
 MARKER = 'scripts/record_geopolitica_history.py --manifest "$WORKDIR/manifest.json"'
-NEEDLE = '        --php-helper scripts/rdi-geopolitica-auth.php\n  else'
+NEEDLE = (
+    '      --php-helper scripts/rdi-geopolitica-auth.php\n'
+    'else\n'
+)
 INSERT = (
-    '        --php-helper scripts/rdi-geopolitica-auth.php\n'
-    '\n'
-    '      # Persist history only after successful upload to AzuraCast.\n'
-    '      "$PYTHON" scripts/record_geopolitica_history.py --manifest "$WORKDIR/manifest.json"\n'
-    '  else'
+    '      --php-helper scripts/rdi-geopolitica-auth.php\n'
+    '    # Record only editions successfully published to AzuraCast.\n'
+    '    "$PYTHON" scripts/record_geopolitica_history.py --manifest "$WORKDIR/manifest.json"\n'
+    'else\n'
 )
 
 
