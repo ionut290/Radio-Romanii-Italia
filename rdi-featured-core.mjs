@@ -1,6 +1,6 @@
 /* RDI homepage newsroom selection. Pure utilities, shared by browser and tests. */
 export const MAX_AGE_HOURS = 48;
-const relevance = /(?:ucrain|ukrain|kyiv|kiev|kharkiv|harkiv|russi|rusia|sudan|gaza|israel|palestin|cisgiord|cisiordan|pace|tregu|ceasefire|armisti|guerr|războ|razbo|conflitt|conflict|criz|crisi|nato|ue\b|europe|europ|summit|elez|aleger|vot|voto|premier|govern|guvern|parlament|embarg|sanzion|sancți|energia|energi|prezz|preț|econo|migra|consul|diaspora|românilor din italia|romeni in italia|munc|lavor|transport|scioper|grev|inunda|terrem|cutremur|incendi|alluvion|evacua|umanitar|humanitar|attac|atac|exploz|explos)/i;
+const relevance = /(?:ucrain|ukrain|kyiv|kiev|kharkiv|harkiv|russi|rusia|sudan|gaza|israel|palestin|cisgiord|cisiordan|pace|tregu|ceasefire|armisti|guerr|războ|razbo|conflitt|conflict|criz|crisi|nato|ue\b|europe|europ|summit|elez|aleger|vot|voto|premier|govern|guvern|parlament|embarg|sanzion|sancți|energia|energi|econo|migra|consul|diaspora|românilor din italia|romeni in italia|munc|lavor|transport|scioper|grev|inunda|terrem|cutremur|incendi|alluvion|evacua|umanitar|humanitar|attac|atac|exploz|explos)/i;
 const irrelevant = /(?:oroscop|horoscop|vedet|celebrit|zodiac|gossip|loteri|lotto|trucur|sf[âa]ntul|sfanta|mod[ăa]|fashion|hobby|rețet|retet|ricett|sportiv|calcio|fotbal)/i;
 const editorialIllustration = /(?:^\.\/editorial-images\/|^\.\/images\/|\.svg(?:$|[?#]))/i;
 const genericEditorialImage = /(?:ai-community-rdi|ai-economy-rdi|rdi-conflict-editorial)/i;
@@ -122,6 +122,23 @@ export function chooseFeatured(items, now=Date.now(), limit=5) {
     return true;
   }
   if(imageLead) categoryCounts.set(String(imageLead.category||"Altro"),1);
+  // Show at least one checked conflict story when present.
+  const firstReviewed=ranked.find(x=>x.fromWar && canAdd(x,true));
+  if(firstReviewed && selected.length<limit) {
+    selected.push(firstReviewed); keys.add(firstReviewed.url);
+    categoryCounts.set("geopolitica",(categoryCounts.get("geopolitica")||0)+1);
+    topicCounts.set(firstReviewed.region,(topicCounts.get(firstReviewed.region)||0)+1);
+  }
+  // Photojournalism deserves its own space; don't let a dense conflict RSS
+  // feed replace all other images with generic illustrations.
+  const photoTarget=Math.min(3,ranked.filter(x=>imageIsPhotograph(x.image)).length);
+  for(const x of ranked.filter(x=>imageIsPhotograph(x.image))) {
+    if(selected.length>=limit || selected.filter(y=>imageIsPhotograph(y.image)).length>=photoTarget)break;
+    if(!canAdd(x,false))continue;
+    selected.push(x);keys.add(x.url);
+    const cat=x.fromWar?"geopolitica":String(x.category||"Altro");
+    categoryCounts.set(cat,(categoryCounts.get(cat)||0)+1);
+  }
   for(const balance of [true,false]){
     for(const x of ranked) {
       if(selected.length>=limit)break;
