@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-27T04:37:16.021538+00:00",
+  "news_updated_at": "2026-10-27T05:02:44.874108+00:00",
   "editorial_updated_at": "2026-10-27T04:04:49Z",
-  "translations_updated_at": "2026-10-27T04:06:19.946788+00:00",
+  "translations_updated_at": "2026-10-27T04:40:00Z",
   "feed_total": 83,
-  "feed_extended_400": 30,
-  "feed_missing_body": 53,
+  "feed_extended_400": 23,
+  "feed_missing_body": 60,
   "feed_short_body": 0,
   "editorial_total": 24,
-  "archived_editorials": 43,
-  "translation_records": 50,
-  "pending_total": 97,
-  "pending_filtered_out": 223,
-  "editorial_verde": 30,
-  "editorial_galben": 32,
-  "editorial_rosu": 39,
+  "archived_editorials": 44,
+  "translation_records": 51,
+  "pending_total": 94,
+  "pending_filtered_out": 216,
+  "editorial_verde": 23,
+  "editorial_galben": 42,
+  "editorial_rosu": 36,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -23,16 +23,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato da completare; fonte originale e riscontri indipendenti da consultare",
-      "attempts": 0
-    },
-    {
-      "title": "++ Ue all'Italia, 'valutiamo aiuti Pac contro caro-carburanti' ++ - ANSA",
-      "category": "",
-      "published": "2026-10-26T20:47:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNWnE1SW1YeFNJbVA3YkFvVXpwQ2VsVXN6OHA2TmhKVnBFU1lzLXpKbndwblpVOXRxdDJWRFFEazNWOER3bXRINjNDWHU4SUxrQVdjY3kyM0RsSVJlR0tGZFA3bDNndHRLVk1TZ096M2JocjdQZFBJM3pNOGVLOE5pZFJYQXYtdGozWDd2UUNDbzYzSWRZTDJCUnhuQ001Vkx1WEpyZ1I3dlJfZm9jZml4eHZyaDcyN1Yzemp5S2NKNDVRX19BbG1oUU1BOUFsWktrZ0hIeThjTEcyYUp4bVNROWwxNmpVY1JpSUFLTXhkLUpveENzZDUw0gH8AUFVX3lxTE41eUxPVVlTZS1SZzFabDkzc1lRd1lDT2N1WVUzTDFTWmRQQkxLSTRnU2kwQWlQeElNZjQxZlV2SjZZeGZsNUxpTTRrUlZPTnFNZlhXVC0weWRTSzB",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato mancante o testo originale troppo breve; fonti da consultare",
       "attempts": 0
     },
     {
@@ -614,9 +604,118 @@
       "status": "roșu",
       "reason": "Approfondimento verificato non ancora completato; fonti da consultare",
       "attempts": 0
+    },
+    {
+      "title": "Notizie di Padova ore 10: arresti alla stazione, nuovo ospedale, lavoro e furti nei locali - Padova24Ore",
+      "category": "",
+      "published": "2026-10-26T10:08:16+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE92blozbjVJNm9FR09OM2EyNFQyNGVMUE5uN0swN0RSYUJOc29CdFhuR0ZUdzdJbTJKVTI1UmFuUUJTQVlzZlh6Rk1kbDAtU0VwMGFuUW9lWGFMV0c4TEx6Ti1TbndtU1B6b0VrQk5qalQ?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Articolo breve o assente: verifica delle fonti e approfondimento ancora necessari",
+      "attempts": 0
     }
   ],
   "recent_news": [
+    {
+      "title": "Din spatele gratiilor înapoi pe piața muncii. Cât de greu le e foștilor deținuți să facă pasul spre o nouă viață: „Oamenii se feresc”",
+      "category": "România",
+      "published": "2026-10-27T05:00:50+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/din-spatele-gratiilor-inapoi-pe-piata-muncii-cat-de-greu-le-e-fostilor-detinuti-sa-faca-pasul-spre-o-noua-viata-oamenii-se-feresc-4010045",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cine plătește reparațiile când o conductă spartă îți inundă apartamentul. În ce condiții răspunde asociația de proprietari",
+      "category": "România",
+      "published": "2026-10-27T05:00:44+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/cine-plateste-reparatiile-cand-o-conducta-sparta-iti-inunda-apartamentul-in-ce-conditii-raspunde-asociatia-de-proprietari-4009447",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Sfântul Dimitrie cel Nou: Cui îi spui „La mulți ani” pe 27 octombrie și care este cea mai importantă tradiție a zilei",
+      "category": "România",
+      "published": "2026-10-27T05:00:44+00:00",
+      "url": "https://www.digi24.ro/magazin/sfantul-dimitrie-cel-nou-cui-ii-spui-la-multi-ani-pe-27-octombrie-si-care-este-cea-mai-importanta-traditie-a-zilei-4009293",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cele trei variante transmise de Zelenski Statelor Unite pentru a opri atacurile asupra rafinăriilor rusești. „Este echitabil”",
+      "category": "România",
+      "published": "2026-10-27T05:00:42+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/cele-trei-variante-transmise-de-zelenski-statelor-unite-pentru-a-opri-atacurile-asupra-rafinariilor-rusesti-este-echitabil-4009065",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Hobby-ul bizar care se răspândește printre tinerii din China: „adoptarea unei cărămizi”. „Satisface nevoia de companie fără obligații”",
+      "category": "România",
+      "published": "2026-10-27T05:00:34+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/hobby-ul-bizar-care-se-raspandeste-printre-tinerii-din-china-adoptarea-unei-caramizi-satisface-nevoia-de-companie-fara-obligatii-4009193",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Orașul în care asociațiile de proprietari pot cere căsuțe pentru pisicile fără stăpân din jurul blocurilor. Cum funcționează proiectul",
+      "category": "România",
+      "published": "2026-10-27T05:00:19+00:00",
+      "url": "https://www.digi24.ro/magazin/stil-de-viata/animale/orasul-in-care-asociatiile-de-proprietari-pot-cere-casute-pentru-pisicile-fara-stapan-din-jurul-blocurilor-cum-functioneaza-proiectul-4010017",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Când devine o eroare medicală caz de malpraxis. Ce drepturi au pacienții și cum pot obține despăgubiri",
+      "category": "România",
+      "published": "2026-10-27T05:00:17+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/cand-devine-o-eroare-medicala-caz-de-malpraxis-ce-drepturi-au-pacientii-si-cum-pot-obtine-despagubiri-4006205",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Este un risc inacceptabil”. Pentagonul pregătește bazele militare de pe teritoriul SUA pentru un război de amploare",
+      "category": "România",
+      "published": "2026-10-27T05:00:12+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/este-un-risc-inacceptabil-pentagonul-pregateste-bazele-militare-de-pe-teritoriul-sua-pentru-un-razboi-de-amploare-4009209",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cum a devenit Marea Neagră cea mai periculoasă rută maritimă din lume. „Este aproape o misiune sinucigașă”",
+      "category": "România",
+      "published": "2026-10-27T05:00:11+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/cum-a-devenit-marea-neagra-cea-mai-periculoasa-ruta-maritima-din-lume-este-aproape-o-misiune-sinucigasa-4009171",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Un pensionar din Gorj a obținut în instanță decontarea integrală a costurilor unei operații cu robotul chirurgical la o clinică privată",
+      "category": "România",
+      "published": "2026-10-27T05:00:04+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/un-pensionar-din-gorj-a-obtinut-in-instanta-decontarea-integrala-a-costurilor-unei-operatii-cu-robotul-chirurgical-la-o-clinica-privata-4009335",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Trei din patru piloți europeni au ațipit în cockpit în timpul zborului. Aproape un sfert continuă să piloteze deși sunt prea obosiți",
+      "category": "România",
+      "published": "2026-10-27T05:00:03+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/trei-din-patru-piloti-europeni-au-atipit-in-cockpit-in-timpul-zborului-aproape-un-sfert-continua-sa-piloteze-desi-sunt-prea-obositi-4009125",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
     {
       "title": "Concordato preventivo per partite Iva e imprese, regole e date del ravvedimento speciale - la Repubblica",
       "category": "Italia",
@@ -659,8 +758,8 @@
       "published": "2026-10-27T00:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbC0tN0NwNkpDQXVZVjlJaTFoUU02UzQ1LTd6MDJDVXdCVjlIWV8xVFFLV0U2ZlNvWGVRbms1LUk2SEdQcTNzNE1MMlVMbFAwOFpUeU50NDJfRS04V3RpZTRrVXQxQmxKZ2gycmVrMkZjb21WejVqTHJMMk4xUGZteWlZdzg5UVVfUDUxVFZqUU9jUkU1M3h2OFBaTnZOYnM2Yjg5SG1fcHNwVkdQOXkzNlc1NVF4UQ?oc=5",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 436
     },
     {
       "title": "“Il Paese è indietro sulle rinnovabili”: ritardi sugli obiettivi per il clima 2030 nel report Asvis - la Repubblica",
@@ -699,13 +798,13 @@
       "words": 507
     },
     {
-      "title": "Cazul 4836: Nouă polițiști au bătut, torturat și urinat pe doi bărbați care le-au făcut o observație. Pedepsele date 6 ani mai târziu",
+      "title": "Monopostul LGM1, legenda curselor românești, renaște după 46 de ani: povestea mașinii uitate într-o curte din Argeș",
       "category": "România",
-      "published": "2026-10-26T22:52:45+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/cazul-4836-noua-politisti-au-batut-torturat-si-urinat-pe-doi-tineri-care-le-au-facut-o-observatie-pedepsele-date-6-ani-mai-tarziu-4010025",
+      "published": "2026-10-26T22:16:43+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/auto/monopostul-lgm1-legenda-curselor-romanesti-renaste-dupa-46-de-ani-povestea-masinii-uitate-intr-o-curte-din-arges-4009977",
       "source": "Digi24",
-      "status": "verde",
-      "words": 425
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Lula trionfa in Brasile, Trump: 'Il voto è stato truccato ma lui mi piace'",
@@ -717,19 +816,19 @@
       "words": 0
     },
     {
-      "title": "Kevin T., autorul atacului de vineri din Franța, arestat preventiv din nou: bărbatul suferă de schizofrenie și a mai fost condamnat",
+      "title": "Campanie Digi24 - Pe frontul dezinformării: Test de fake news în Parlament",
       "category": "România",
-      "published": "2026-10-26T21:55:31+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/kevin-t-autorul-atacului-de-vineri-din-franta-in-care-un-barbat-a-fost-ucis-si-alte-patru-ranite-arestat-preventiv-din-nou-4010119",
+      "published": "2026-10-26T22:05:22+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/campanie-digi24-pe-frontul-dezinformarii-test-de-fake-news-in-parlament-4009837",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Haos înainte de Gala Balonului de Aur 2026: France Football a publicat din greșeală numele câștigătorului",
+      "title": "Kevin T., autorul atacului de vineri din Franța, arestat preventiv din nou: bărbatul suferă de schizofrenie și a mai fost condamnat",
       "category": "România",
-      "published": "2026-10-26T21:29:02+00:00",
-      "url": "https://www.digi24.ro/stiri/sport/haos-inainte-de-gala-balonului-de-aur-2026-france-football-a-publicat-numele-castigatorului-4010013",
+      "published": "2026-10-26T21:55:31+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/kevin-t-autorul-atacului-de-vineri-din-franta-in-care-un-barbat-a-fost-ucis-si-alte-patru-ranite-arestat-preventiv-din-nou-4010119",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -744,58 +843,13 @@
       "words": 0
     },
     {
-      "title": "Un membru al familiei princiare din Monaco a fost găsit mort într-un parc. Un bărbat a fost arestat preventiv",
-      "category": "România",
-      "published": "2026-10-26T21:19:54+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/un-membru-al-familiei-princiare-din-monaco-a-fost-gasit-mort-intr-un-parc-un-barbat-a-fost-arestat-preventiv-4010047",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Trump promite câte un milion de dolari celor care denunță fraude electorale. Condiția pentru încasarea recompensei",
-      "category": "România",
-      "published": "2026-10-26T21:17:17+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/trump-promite-cate-un-milion-de-dolari-celor-care-denunta-fraude-electorale-conditia-pentru-incasarea-recompensei-4010085",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Șase persoane și o companie, trimise în judecată de EPPO pentru cumpărarea frauduloasă a două remorchere pentru Dunărea de Jos",
-      "category": "România",
-      "published": "2026-10-26T20:54:19+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/sase-persoane-si-o-companie-trimise-in-judecata-de-eppo-pentru-cumpararea-frauduloasa-a-doua-remorchere-pentru-dunarea-de-jos-4010029",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 447
-    },
-    {
-      "title": "Rogobete: „Îmi doresc plata gărzilor pentru rezidenţii de anul 1, 2 şi 3”. Câți bani în plus s-ar putea primi pentru gărzi suplimentare",
-      "category": "România",
-      "published": "2026-10-26T20:52:30+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/rogobete-imi-doresc-plata-garzilor-pentru-rezidentii-de-anul-1-2-si-3-cati-bani-in-plus-s-ar-putea-primi-pentru-garzi-suplimentare-4010027",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 435
-    },
-    {
       "title": "++ Ue all'Italia, 'valutiamo aiuti Pac contro caro-carburanti' ++ - ANSA",
       "category": "Italia",
       "published": "2026-10-26T20:47:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNWnE1SW1YeFNJbVA3YkFvVXpwQ2VsVXN6OHA2TmhKVnBFU1lzLXpKbndwblpVOXRxdDJWRFFEazNWOER3bXRINjNDWHU4SUxrQVdjY3kyM0RsSVJlR0tGZFA3bDNndHRLVk1TZ096M2JocjdQZFBJM3pNOGVLOE5pZFJYQXYtdGozWDd2UUNDbzYzSWRZTDJCUnhuQ001Vkx1WEpyZ1I3dlJfZm9jZml4eHZyaDcyN1Yzemp5S2NKNDVRX19BbG1oUU1BOUFsWktrZ0hIeThjTEcyYUp4bVNROWwxNmpVY1JpSUFLTXhkLUpveENzZDUw0gH8AUFVX3lxTE41eUxPVVlTZS1SZzFabDkzc1lRd1lDT2N1WVUzTDFTWmRQQkxLSTRnU2kwQWlQeElNZjQxZlV2SjZZeGZsNUxpTTRrUlZPTnFNZlhXVC0weWRTSzB",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Donald Trump spune că alegerile din Brazilia au fost „trucate”: „Nu am luat partea nimănui”",
-      "category": "România",
-      "published": "2026-10-26T20:38:26+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/donald-trump-spune-ca-alegerile-din-brazilia-au-fost-trucate-nu-am-luat-partea-nimanui-4010007",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 431
     },
     {
       "title": "Mercoledì il cdm sulla manovra. L'Ue risponde ma ancora nodi da sciogliere",
@@ -807,66 +861,12 @@
       "words": 472
     },
     {
-      "title": "Kelemen Hunor: Trebuie să fim capabili să protejăm infrastructura Neptun Deep, ca după 2027 să avem o situație energetică mai bună",
-      "category": "România",
-      "published": "2026-10-26T20:27:09+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/kelemen-hunor-trebuie-sa-fim-capabili-sa-protejam-infrastructura-neptun-deep-ca-dupa-2027-sa-avem-o-situatie-energetica-mai-buna-4009981",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 424
-    },
-    {
-      "title": "Kelemen Hunor, despre atacurile din școli: Influență nefastă care vine din zona TikTok, Facebook. E o responsabilitate și în familie",
-      "category": "România",
-      "published": "2026-10-26T20:25:23+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/kelemen-hunor-despre-atacurile-din-scoli-influenta-nefasta-care-vine-din-zona-tiktok-facebook-e-o-responsabilitate-si-in-familie-4009955",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 422
-    },
-    {
-      "title": "Orice majorare a impozitelor și taxelor în 2027 este „o decizie sinucigașă”. Liderul UDMR: Pentru mine a fost experiența cea mai crudă",
-      "category": "România",
-      "published": "2026-10-26T20:22:59+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/orice-majorare-a-impozitelor-si-taxelor-in-2027-este-o-decizie-sinucigasa-liderul-udmr-pentru-mine-a-fost-experienta-cea-mai-cruda-4009971",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 425
-    },
-    {
-      "title": "Sistemul de sănătate mai are nevoie de 11 miliarde de lei până la sfârșitul anului. Rogobete: „Sub nicio formă nu se închid spitale”",
+      "title": "Sistemul de sănătate mai are nevoie de 11 miliarde de lei până la sfârșitul anului. Rogobete: „Sub nicio... - Digi24",
       "category": "România",
       "published": "2026-10-26T20:01:41+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/sistemul-de-sanatate-mai-are-nevoie-de-11-miliarde-de-lei-pana-la-sfarsitul-anului-rogobete-sub-nicio-forma-nu-se-inchid-spitale-4009951",
+      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOS01GU0NGaVFxelQ2anJJbWVHMWhtYS1lUzAtU3FpU1JXalZSbmhHcF92UWxDay0xc3BTQjlwaVlXTlNTanlsdEFyM3RsVXBOMHJoa1lPeDQzLTBWT2tWcndzbXdTMDMzeWcxX1d1bVdTczJHSGt5cHIwSmJCYlFHSnc3ZEdmb2xKRC1MM2hHbjB6bTJtWmU1WF9ybFNleDlYYVcyMDNrT2ZLcUpBMEhibXAwLV9sM0ZnNUNpdjRvRHZXSmpObEMtQWFISjdlNnBXeDV1cjFMQXU0c2dOQksxZkZnZmhNcmVBODlzQlItOEtjeURjZFJRZ284NHhCVTRqeWY4X2Z3cGlFcnZxSGFRcFdpc3QzcXJXTmVxa1BR0gGeAkFVX3lxTE5LTUZTQ0ZpUXF6VDZqckltZUcxaG1hLWVTMC1TcWlTUldqVlJuaEdwX3ZRbEN",
       "source": "Digi24",
-      "status": "verde",
-      "words": 414
-    },
-    {
-      "title": "Kelemen Hunor explică restanțele bugetare: S-au adunat tocmai pentru că a fost guvern interimar, ele nu dezechilibrează deficitul",
-      "category": "România",
-      "published": "2026-10-26T19:55:28+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/kelemen-hunor-explica-restantele-bugetare-s-au-adunat-tocmai-pentru-ca-a-fost-guvern-interimar-ele-nu-dezechilibreaza-deficitul-4009929",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 437
-    },
-    {
-      "title": "Kelemen Hunor nu exclude o moțiune de cenzură dacă „lucrurile se vor complica”, dar crede că PSD va guverna până în 2028",
-      "category": "România",
-      "published": "2026-10-26T19:54:40+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/kelemen-hunor-nu-exclude-o-motiune-de-cenzura-daca-lucrurile-se-vor-complica-dar-crede-ca-psd-va-guverna-pana-in-2028-4009933",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 482
-    },
-    {
-      "title": "Angajarea răspunderii propusă de PSD: Comasarea localităților mici nu poate fi făcută „în birou”, atrage atenția Kelemen Hunor",
-      "category": "România",
-      "published": "2026-10-26T19:46:16+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/angajarea-raspunderii-propusa-de-psd-comasarea-localitatilor-mici-nu-poate-fi-facuta-in-birou-atrage-atentia-kelemen-hunor-4009917",
-      "source": "Digi24",
-      "status": "galben",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -886,15 +886,6 @@
       "source": "ANSA",
       "status": "verde",
       "words": 455
-    },
-    {
-      "title": "Ce se întâmplă cu pensiile și salariile în 2027? Kelemen Hunor: „Trebuie făcute aceste indexări”. Când vom ști dacă există bani",
-      "category": "România",
-      "published": "2026-10-26T19:39:30+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/kelemen-hunor-despre-majorarea-pensiilor-si-salariilor-in-2027-trebuie-facute-aceste-indexari-cand-se-va-sti-daca-sunt-bani-4009905",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 405
     },
     {
       "title": "Chiesto il carcere per Siher, 'strategia rivoluzionaria'",
@@ -987,6 +978,24 @@
       "words": 0
     },
     {
+      "title": "Sfântul Dimitrie cel Nou 2026: De ce este considerat ocrotitorul Bucureștiului și ce semnificație are sărbătoarea din 27 octombrie",
+      "category": "România",
+      "published": "2026-10-26T15:46:28+00:00",
+      "url": "https://www.digi24.ro/magazin/sfantul-dimitrie-cel-nou-2026-de-ce-este-considerat-ocrotitorul-bucurestiului-si-ce-semnificatie-are-sarbatoarea-din-27-octombrie-4009423",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Niculescu, la întâlnirea cu mediul de afaceri: Trebuie să repornim motoarele economiei, să îi ajutăm pe... - Digi24",
+      "category": "România",
+      "published": "2026-10-26T15:34:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGpCSGNxOHY0NGpyUHQ3ZVJKV040ZlJoYWJPOGQxc0piNDY1VFhmLUUyZS1uWWF3enFucm9kcnY5bVk5QXhualUwaTIxd2dickl1cXZKQ2s3V29oV3EtYXpEdkVNeV8tWmIycXZXWndxTURKOEg4Q0FyWkVGOU5VT1ZvRUdzVEFxYnVaSFF0VkQ1Tl9SZmVfRHlFUnphQk43bmlFNmN2V1dmZjgyT1ZNVVBMSWN5aXp2UnpGd3ptVkdBX2ZaUkxHZ25mNGc4XzNNdFZCXzRuMUhueENPT05yZmNfbXdqSUJPbnhjMlBodjVDQVpIMGtFZVlyd9IBogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGp",
+      "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Lula trionfa in Brasile, battuto il trumpiano Bolsonaro",
       "category": "Italia",
       "published": "2026-10-26T15:30:23+00:00",
@@ -1001,8 +1010,8 @@
       "published": "2026-10-26T15:28:04+00:00",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZS1lWGxlNmwzVmYwOUJscGtTWXpLOTdRS1Q1UHZZaUNOVFA5eTZ3VjFOYjlGSC1sWTlqcFpPVFZwek4zVFphTWxabGJnbFBhSmUyRXgtSk5tZUdEX3RySEdKSVkwRm1YVm9ZeE5LeWFuRjhRWFo3NHZjZG1TSTgtYlZ2NGFBRlpQNno4N1J4WkUyaktuYWhQQVNTZmthOFJRUnlyWHNqRE0yN1cwdGJYUUFuODNQTGc?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 422
     },
     {
       "title": "Svolta storica per Londra, il cuore di Oxford Street è pedonale",
@@ -1083,6 +1092,15 @@
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOQXRFcnZzUnE3Q2MwZm5fdnczdmNwNWh5MkJPQk8zXzVMOTRZS2lwa2VweFFmUllmWEl2QzNuM2pYczlfaXY3VFF1WUVmckxnenNqT05TSWJXd09XajhMLWhXQWZ1YzhpYjhzWUVEaVNjSlo2VGx6UC1ab3pFUVZUN3A4ZEprZHpDTk9MaGxFY0Q1b3pTS29oRl9IcDB1ODNDdTVuSlV4RWNDUWx6VE1qR3hfaXE5eGlFNmVNekwxQk5HUFI5S0psUzV30gHPAUFVX3lxTE5mdlhZY0trNTVkZTVBXzRUM19ORmd3bXZGVEJrUEhqSFZjaTNmOWlrcVBhU3FLTjQ1ZXpyOTEydE5wSHF2STNnU1pzbEI1cGRDTTNnU0hqOTBmbXhFLXZJcDVLYk92emhoX3g5VnE4Uk9yR05YNmlUZmZOR3REWXZTZU9xU2VkT1o",
       "source": "StiriDiaspora",
       "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ucraina a ajuns exportator de arme. O țară europeană vrea să cumpere „rachete-dronă” Bars, dezvoltate de Kiev",
+      "category": "România",
+      "published": "2026-10-26T13:27:35+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ucraina-a-ajuns-exportator-de-arme-o-tara-europeana-vrea-sa-cumpere-rachete-drona-bars-dezvoltate-de-kiev-4009249",
+      "source": "Digi24",
+      "status": "galben",
       "words": 0
     },
     {
@@ -1199,15 +1217,6 @@
       "published": "2026-10-26T07:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNnpLUzV6UFQ3MlRSM1lGRnhXM0U0MG9JSGpkSS05ZVZrQ0RpRWRJTkVDZjV3aThZbk5NZTFEYWxja2R6Q0VOalJqRTMtdnIzQ1A5NkFOYnpuSHFObW1EbS1SVnd2XzNocHY2bG1kQW91RTNWZkhVMEJORmNNUjF0TlNiMHg1eG5WRW1IVVVoZ2xmYTRILXladjEzeDNHOTlnNzIzNldBQjRLODZZbk1YaUlhWGxtUHp6?oc=5",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Alegeri în Serbia: Victorie istorică a mişcării studenţeşti în faţa lui Aleksandar Vucic - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-26T06:56:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVVY3dU1zLXM2Unh6eVM2eHBfOVF1R2h2SUZDMHpoQ3ZaaWdSUnpqeDQwWGZhSUJRTWxJWG91aGNwdzVydTJDdXhJMVp4ZVhBdFoxTmFPNnFiQmhaMjZuYWczaXJVbU14Z3gyS0tRdXNCekUtS3hzd3dNWS1YUGVocVdwX2p4SHlQeWV1TnMxWlZtUFZSb0tJT1NFVmdBUktObktjZDRKOFBldU85S3ZtS3dMMlE4R2dBbDdPMk92YXM3WVVuVnFR0gHMAUFVX3lxTE1LMU8zRnpaaGptZmgzSm55OUpRTW8ycGFwVHhhcHlQZWpMc0s4eXJHM0x1NmM1R3JLUmRPVi1NQlJES3ozbEl5QmFoUlhWc3A4V3FRdzJqNzN4V2czX2RrSlF1Wm9PbTZMVXB6ejFVSjdJdTY2dDF3UFV4cTZranRFeDhRNE8tc0R0cGZ",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1352,15 +1361,6 @@
       "published": "2026-10-25T07:58:48+00:00",
       "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW50X2hjbWtwNlZ2MDlNREFuRHVkcjRrWTNMQnJxRzN0cVBkcUJKQkNmTEg3Qk4zbl9kUTV5dVJaaHRQZFFhRl9QR3pJb1NtWHNsRHVoZXNqd1ZFN1B5Z0p4Y25NemRiazNxdGs1d3pOaVJUNFBtQVNDYVZybzJaUkNReHkwX0xzRGF0MmFhQUpQZHJqdmZyMGRxTHJ0all3QTNTOUdMMjJCckxWOTgtZU5qeHFRbGxyeXdheGNBLUpoNjdLX1pUWExIYmx2ZG0yWGR6NTZFT1JRSVBrNkZOVGx1VXdzcFIxWUVZVllEMUl0ZTVHMNIBnwJBVV95cUxQSmFpTml4RENJeXBhaHowcG5XaEpQb01KR3BzSzVBcGtjbktpUDk5V1J1TW5",
       "source": "Digi24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Elveția oferă Moldovei 5,6 milioane de dolari pentru sănătatea refugiaților - logos-pres.md",
-      "category": "România",
-      "published": "2026-10-25T06:00:06+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTmp5MUFPZDd2UGZJZHNDZFpkSDZHTUF0eFJ2aWQzLUpXaUhSWnBEbEdxR25ycjBaY0F2TEhRREVIdVFzeWYyYjFvVEloZjFYRndHNWg4c1pyRVNTLXlfVVU1akQ2X25hQ1FuTVZ5b1I0SDZiOElTTW1od0dsYTh5WXdYaHg2WURxX3JjckN2SGVQbnNWZWh1X1dXa19jUzdyX2cyR3Y0NXowSU9NeENSQ0s1SnE4dmtyM0JIeXdQZUJpNWM2XzViNFFzY0dPS2ZSNHlUa0g1VlhfZmdPUURscEJhOEQyUFAyTGc?oc=5",
-      "source": "logos-pres.md",
       "status": "roșu",
       "words": 0
     }
