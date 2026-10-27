@@ -14,11 +14,12 @@ html:not(.youtube-news) #rdi-featured{margin:10px 0 22px;color:#142b4b}
 .rdi-featured-link{display:flex;flex-direction:column;flex:1;color:inherit;text-decoration:none!important;min-width:0}
 .rdi-featured-visual{width:100%;position:relative;aspect-ratio:16/10;overflow:hidden;background:#112946;isolation:isolate}
 .rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/8}
-.rdi-featured-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.rdi-featured-visual img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
 .rdi-featured-story:hover .rdi-featured-visual img{transform:scale(1.04)}
-.rdi-featured-image-placeholder{position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,#32679a,#152a48 62%);display:flex;align-items:center;justify-content:center;gap:12px;color:#d6e7ff;font-size:30px;font-weight:900}
+.rdi-featured-image-placeholder{position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 70% 20%,#32679a,#152a48 62%);display:flex;align-items:center;justify-content:center;gap:12px;color:#d6e7ff;font-size:30px;font-weight:900}
+.rdi-featured-image-placeholder[hidden]{display:none!important}
 .rdi-featured-image-placeholder span{font-size:40px;opacity:.65}
-.rdi-featured-photo-label{position:absolute;bottom:9px;left:9px;right:9px;width:max-content;max-width:calc(100% - 18px);background:#051a31d9;color:white;padding:5px 9px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.2px;z-index:2}
+.rdi-featured-photo-label{position:absolute;bottom:9px;left:9px;right:9px;width:max-content;max-width:calc(100% - 18px);background:#051a31d9;color:white;padding:5px 9px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.2px;z-index:3}
 .rdi-featured-story-body{padding:13px 13px 15px;flex:1;display:flex;flex-direction:column;gap:7px}
 .rdi-featured-meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center;font-size:10px;color:#72849e;font-weight:600}
 .rdi-featured-category{display:inline-flex;border-radius:100px;padding:4px 8px;color:#0a5bbd;background:#edf5ff;font-weight:900;letter-spacing:.2px}
