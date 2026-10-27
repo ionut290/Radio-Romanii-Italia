@@ -35,4 +35,4 @@ jobs:
       - name: Verifica dati e schede del Ghid
         run: |
           set -euo pipefail
-          node --test tests/directory-quality.test.mjs tests/directory-map.test.mjs tests/directory-enrichment.test.mjs tests/directory-data.test.mjs tests/youtube-spots.test.mjs tests/editorial-system.test.mjs tests/attack-map.test.mjs tests/rdi-featured.test.mjs
+          node --test tests/directory-quality.test.mjs tests/directory-map.test.mjs tests/directory-enrichment.test.mjs tests/directory-data.test.mjs tests/youtube-spots.test.mjs tests/editorial-system.test.mjs tests/attack-map.test.mjs tests/rdi-featured.test.mjs tests/rdi-responsive.test.mjs
