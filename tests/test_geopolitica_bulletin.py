@@ -78,6 +78,36 @@ class TestBulletin(unittest.TestCase):
         import argparse
         self.assertEqual(bulletin.build(NOW, "it", {"items": [news()]}, {})["language"], "it")
 
+    def test_recently_spoken_story_is_not_repeated(self):
+        item = news()
+        signature = bulletin.story_signature({
+            "title": item["title_it"], "summary": item["summary_it"]
+        })
+        history = {"editions": [{"signatures": [signature]}]}
+        self.assertIsNone(bulletin.build(NOW, "it", {"items": [item]}, {}, history))
+
+    def test_new_verified_secondary_story_replaces_used_story(self):
+        first = news()
+        second = news(id="new-story", source_url="https://example.org/news/2",
+                      region="Sudan", title_it="Un altro fatto verificato")
+        signature = bulletin.story_signature({
+            "title": first["title_it"], "summary": first["summary_it"]
+        })
+        program = bulletin.build(NOW, "it", {"items": [first, second]}, {},
+                                 {"editions": [{"signatures": [signature]}]})
+        self.assertEqual(program["story_count"], 1)
+        self.assertEqual(program["articles"][0]["id"], "new-story")
+
+    def test_substantive_update_can_be_selected(self):
+        original = news()
+        updated = news(summary_it="Un nuovo aggiornamento verificato aggiunge dettagli sostanziali e concreti alla notizia originaria.")
+        signature = bulletin.story_signature({
+            "title": original["title_it"], "summary": original["summary_it"]
+        })
+        program = bulletin.build(NOW, "it", {"items": [updated]}, {},
+                                 {"editions": [{"signatures": [signature]}]})
+        self.assertEqual(program["story_count"], 1)
+
     def test_duplicate_source_skipped(self):
         first = news()
         second = news(id="other", title_ro="Altă știre")
