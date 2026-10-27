@@ -98,14 +98,12 @@ class TestBulletin(unittest.TestCase):
         self.assertEqual(program["story_count"], 1)
         self.assertEqual(program["articles"][0]["id"], "new-story")
 
-    def test_substantive_update_can_be_selected(self):
+    def test_updated_report_requires_distinct_editorial_source_url(self):
         original = news()
-        updated = news(summary_it="Un nuovo aggiornamento verificato aggiunge dettagli sostanziali e concreti alla notizia originaria.")
-        signature = bulletin.story_signature({
-            "title": original["title_it"], "summary": original["summary_it"]
-        })
-        program = bulletin.build(NOW, "it", {"items": [updated]}, {},
-                                 {"editions": [{"signatures": [signature]}]})
+        updated = news(source_url="https://example.org/news/verified-development",
+                       summary_it="Un nuovo sviluppo sostanziale è stato verificato dalla redazione e documentato con una fonte distinta.")
+        history = {"editions": [{"source_urls": [original["source_url"]]}]}
+        program = bulletin.build(NOW, "it", {"items": [updated]}, {}, history)
         self.assertEqual(program["story_count"], 1)
 
     def test_published_url_is_skipped_even_if_summary_changes(self):
