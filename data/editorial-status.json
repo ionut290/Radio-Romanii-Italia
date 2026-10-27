@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-10-27T21:02:30.110470+00:00",
-  "editorial_updated_at": "2026-10-27T21:00:53.104Z",
-  "translations_updated_at": "2026-10-27T21:00:29.991997+00:00",
-  "feed_total": 78,
-  "feed_extended_400": 17,
+  "news_updated_at": "2026-10-27T21:37:14.296694+00:00",
+  "editorial_updated_at": "2026-10-27T21:02:10.104Z",
+  "translations_updated_at": "2026-10-27T21:02:57.361358+00:00",
+  "feed_total": 79,
+  "feed_extended_400": 18,
   "feed_missing_body": 61,
   "feed_short_body": 0,
   "editorial_total": 32,
   "archived_editorials": 58,
-  "translation_records": 37,
+  "translation_records": 39,
   "pending_total": 102,
   "pending_filtered_out": 299,
-  "editorial_verde": 20,
-  "editorial_galben": 49,
+  "editorial_verde": 21,
+  "editorial_galben": 48,
   "editorial_rosu": 36,
   "pending": [
     {
@@ -618,19 +618,91 @@
   ],
   "recent_news": [
     {
-      "title": "Ted Bundy, identificat ca ucigașul unei adolescente din Utah după cinci decenii. Detaliile care au schimbat ancheta",
+      "title": "Israele spaccato: Netanyahu regge, ma il blocco di Eisenkot è avanti",
+      "category": "Italia",
+      "published": "2026-10-27T21:34:27+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-spaccato-netanyahu-regge-ma-il-blocco-di-eisenkot-e-avanti_b2e19377-c270-4498-ba32-400374367485.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Roma-Cagliari 4-2 e Torino-Como 1-1 DIRETTA",
+      "category": "Italia",
+      "published": "2026-10-27T21:33:40+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/27/serie-a-in-campo-roma-cagliari-0-0-e-torino-como-0-0-diretta_47dcb4bd-36fb-476b-950d-28ea0282c1cd.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Reacția Baroului Iași după ce Facultatea de Drept a decis ca avocații lui Alexandru Toader să nu mai predea studenților de anul IV",
       "category": "România",
-      "published": "2026-10-27T20:59:34+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/ted-bundy-identificat-ca-ucigasul-unei-adolescente-din-utah-dupa-cinci-decenii-detaliile-care-au-schimbat-ancheta-4011499",
+      "published": "2026-10-27T21:30:42+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/reactia-baroului-iasi-dupa-ce-facultatea-de-drept-a-decis-ca-avocatii-lui-alexandru-toader-sa-nu-mai-predea-studentilor-de-anul-iv-4011515",
       "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "++ Israele, affluenza alla chiusura dei seggi al 77,7% ++",
+      "category": "Italia",
+      "published": "2026-10-27T21:27:47+00:00",
+      "url": "https://www.ansa.it/sito/notizie/flash/2026/10/27/-israele-affluenza-alla-chiusura-dei-seggi-al-777-_905c6061-02e0-4063-a682-f796410fc390.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
     {
       "title": "Exit-poll Israel: Niciun câștigător, cele două tabere nu au o cale clară către formarea unui guvern. Reacția rivalului lui Netanyahu",
       "category": "România",
-      "published": "2026-10-27T20:58:52+00:00",
+      "published": "2026-10-27T21:19:08+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/alegeri-in-israel-partidul-lui-netanyahu-conduce-dar-niciuna-din-cele-doua-tabere-nu-are-o-cale-clara-catre-formarea-unui-guvern-4011437",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "George Simion, despre Călin Georgescu: Este deţinut politic. Am făcut mii de kilometri pentru a internaţionaliza această problemă",
+      "category": "România",
+      "published": "2026-10-27T21:16:36+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/george-simion-despre-calin-georgescu-este-detinut-politic-am-facut-mii-de-kilometri-pentru-a-internationaliza-aceasta-problema-4011509",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ucraina: Stubb e Store chiamano Putin. Meloni, 'l'Ue non vada in ordine sparso'",
+      "category": "Italia",
+      "published": "2026-10-27T21:10:25+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/ucraina-stubb-e-store-chiamano-putin.-meloni-lue-non-vada-in-ordine_f24da4b3-81f4-4c1d-899b-62951b2301c0.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Brasile: Bolsonaro fugge in Florida, Trump pronto a dargli l'asilo",
+      "category": "Italia",
+      "published": "2026-10-27T21:07:46+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/brasile-media-bolsonaro-ha-lasciato-il-brasile-ed-e-in-volo-per-gli-stati-uniti_bec521a5-35b6-4db4-91cf-30e166594cb9.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "La manovra che verrà: flat tax per i giovani. Sull'Irpef si tratta ancora",
+      "category": "Italia",
+      "published": "2026-10-27T21:03:40+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/10/27/la-manovra-che-verra-flat-tax-per-i-giovani.-sullirpef-si-tratta-ancora_6fc9fca1-c596-4520-94b8-30e064861904.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ted Bundy, identificat ca ucigașul unei adolescente din Utah după cinci decenii. Detaliile care au schimbat ancheta",
+      "category": "România",
+      "published": "2026-10-27T20:59:34+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/ted-bundy-identificat-ca-ucigasul-unei-adolescente-din-utah-dupa-cinci-decenii-detaliile-care-au-schimbat-ancheta-4011499",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -654,29 +726,11 @@
       "words": 0
     },
     {
-      "title": "Primi exit poll Israele: il blocco del cambiamento di Eisenkot a 52 seggi, quello di Netanyahu a 50",
-      "category": "Italia",
-      "published": "2026-10-27T20:45:11+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/israele-al-voto-exit-poll-il-blocco-di-eisenkot-a-52-seggi-quello-di-netanyahu-a-50_a1c108b8-6cbb-4e8e-bbd7-353e896240bd.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Ce spune liderul USR despre teoria că e agent german: Dacă aș avea un plan malefic pe 20 de ani să plantez un spion, nu l-aș numi Fritz",
       "category": "România",
       "published": "2026-10-27T20:43:37+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/ce-spune-liderul-usr-despre-teoria-ca-e-spion-german-daca-as-avea-un-plan-malefic-pe-20-de-ani-sa-plantez-un-spion-nu-l-as-numi-fritz-4011471",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "La manovra che verrà: flat tax per i giovani. Sull'Irpef si tratta ancora",
-      "category": "Italia",
-      "published": "2026-10-27T20:42:59+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/10/27/la-manovra-che-verra-flat-tax-per-i-giovani.-sullirpef-si-tratta-ancora_6fc9fca1-c596-4520-94b8-30e064861904.html",
-      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -687,15 +741,6 @@
       "url": "https://www.digi24.ro/stiri/actualitate/politica/ministra-culturii-ioana-ciocan-despre-curiosul-caz-al-tabloului-semnat-de-grigorescu-care-valoreaza-cat-un-covrig-o-eroare-4011419",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Serie A: in campo Roma-Cagliari 2-1 e Torino-Como 1-0 DIRETTA",
-      "category": "Italia",
-      "published": "2026-10-27T20:20:00+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/27/serie-a-in-campo-roma-cagliari-0-0-e-torino-como-0-0-diretta_47dcb4bd-36fb-476b-950d-28ea0282c1cd.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -816,15 +861,6 @@
       "words": 0
     },
     {
-      "title": "Ambasada Rusiei susține că România a acuzat „fără temei” Moscova de tentativa de sabotaj de la Carfil",
-      "category": "România",
-      "published": "2026-10-27T19:08:00+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/insinuari-calomnioase-si-acuzatii-fara-temei-reactia-ambasadei-rusiei-privind-sabotajul-de-la-carfil-si-atacurile-din-marea-neagra-4011287",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "La premier del Marocco all'opposizione: “Non siamo lampadari, ma coscienza e cervello\"",
       "category": "Italia",
       "published": "2026-10-27T19:04:45+00:00",
@@ -849,42 +885,6 @@
       "url": "https://www.ansa.it/canale_lifestyle/notizie/food/2026/10/26/alimentazione-vegetale-e-longevity-i-legumi-la-fonte-proteica-meno-utilizzata-dagli-italiani_545459d4-aa99-4770-913d-009d447bbdab.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "România și Republica Moldova își coordonează acțiunile împotriva atacurilor hibride și incursiunilor cu drone. Anunțul premierului",
-      "category": "România",
-      "published": "2026-10-27T18:24:06+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/romania-si-republica-moldova-isi-coordoneaza-actiunile-impotriva-atacurilor-hibride-si-incursiunilor-cu-drone-anuntul-premierului-4011301",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 437
-    },
-    {
-      "title": "Manovra 2027, domani Cdm. Fonti: no taglio Irpef oltre 50mila euro - Sky TG24",
-      "category": "Italia",
-      "published": "2026-10-27T17:58:59+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBQdnd4SXJEQWNYaVowbVZuM2NHdzU0Y3hBMFBRNUFMQ2Y3SUV1WnU2RUVUR1Q3SzZIdXlHa0ZpenhlenVLNE56c3MyQUN6dmVEaExRNGc3UVJZaWJKN19EX0dyWTBvWkF4YnJPcWlILXQ?oc=5",
-      "source": "Sky TG24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Trump: 'Accetterò i risultati delle Midterm solo se saranno elezioni corrette'",
-      "category": "Italia",
-      "published": "2026-10-27T17:54:06+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/27/trump-il-partito-del-presidente-non-ottiene-di-solito-buoni-risultati-alle_53773608-7ce2-4fa4-adc1-3cd956274c2a.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Brasile, media: 'Bolsonaro ha lasciato il Brasile ed è in volo per gli Stati Uniti'",
-      "category": "Italia",
-      "published": "2026-10-27T17:42:26+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/brasile-media-bolsonaro-ha-lasciato-il-brasile-ed-e-in-volo-per-gli-stati-uniti_bec521a5-35b6-4db4-91cf-30e166594cb9.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -920,6 +920,15 @@
       "published": "2026-10-27T16:50:40+00:00",
       "url": "https://www.ansa.it/sito/podcast/frida/2026/10/27/canone-inverso.-i-centri-per-gli-uomini-violenti-come-funzionano-e-perche_49974421-91b0-4b54-8f23-90e04291c989.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Protocollo d’intesa siglato tra San Marino Innovation e ASI per lo sviluppo delle ICT - San Marino Rtv",
+      "category": "Italia",
+      "published": "2026-10-27T16:37:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUU9qdnVrUU5uV2dzbGVHYWp6NG5zRlM3X1lXaWczUkhOQWVWcU9kd0ltaHV3TmFQd202bFhQWmVoUTdhMTQtbnIzY0NIREZkbjV6OThUZ0lNMkxuN096c1ZvNElLLWdWaW9TNmtES05MQlZ5RlVCX0pJRTR1aUNobW1EMW54ZFFjTW1RSUdzS1NfbUNXcmVFblZqYjBMLWpLcFFBNk9HUXJzd0FqS2xKSWxBcm1hX1loY3pGRUxXRlhmZ1huV0hhTFpOWVdOaEVzZFNVMg?oc=5",
+      "source": "San Marino Rtv",
       "status": "roșu",
       "words": 0
     },
@@ -996,6 +1005,24 @@
       "words": 0
     },
     {
+      "title": "Repatrierea sau investiția de la distanță: criterii de siguranță pentru românii din străinătate... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-27T14:18:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQVFNPMFY3ZkVDTmkxbFQzUGFHWEQxRURtUEJCbGx4NG00V2VqQjlKTkZTeFRtOU41SkRfYzN3Zk41UlhmajNQY3lrS0xNd21BWkoxTElLaTd3UmNWZWlzQVY1Z2twczZqUUdqR01zdnNVeVpLdGpnX2xXT1BFdm5VVmw4Zmo1ZHJOcVhvRnNDdVB3cWNuMS1ZcU93S2NoSDFnM3p1ZkhZVVJCdWt5Uy1KVS0tRXlRLXZGWjF4dWFya0FZZjA0aVo1Qzc3eHNJQUhmMlhKdy1wbUhwbWd1TXIzdGstOXl4ZW9BWnhDbWoweHRpaGRpMVBVVWRIQ2Z2d1nSAYQCQVVfeXFMUFhGU3g0SjFPNmpGdVItbmRqeEVwM3VGd2JpR1dEdlFxdTJPSFFrZ0Y4dFFZVHB2RUQydUdFUGprb1RadkpRR2pwYldLdWZZR0pUTlV",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Horoscop 28 octombrie 2026: Leii cunosc oameni noi; Berbec, trebuie să ceri o mărire! - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-27T14:12:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOdzNzb1NXd05NQWdQblUxbHFzTWUtLWFUTUV3ZGpFTUlJYUdGejIwMXZpbjRDVWkzaTFiaG42clF2ZW5iVGNEN1YzS3gtLVBudnJ5TEoxZ01YcHRYbldBdU9fRW9vSDdyaVF3VjZNa295YnRzLXMzWHpDQWFFR1dmbFFjakhkNW05Z3JVV216cTNqTmtxYk5PWDNVTWF2UmVRLXNvWFZxa2Z5b1lFMXBRUjlXb3VzS09vM0ZjYW0yY9IBxAFBVV95cUxPY3FHenlxdlFkM3VRNllHcHVFTUFBZXFGaWNiOGpKYjZwYm05UDYxLXc0a1h3MTYyQWt4TzUyNWFfa0RZWTdYUkxCYy1ZRzBJY25HSmpOYlEyc0xJMENPZHZxMUFfbWRBZlNKMng2RHFyWGlrdGJYRm42X1o0VGZRYXZRVEtrbHJaRlBHS0JXV29yU3F",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "La Holding dei fondatori di Immobiliare.it ha acquistato la maggioranza di una rete di agenzie immobiliari - Idealista",
       "category": "Italia",
       "published": "2026-10-27T14:00:01+00:00",
@@ -1005,19 +1032,10 @@
       "words": 0
     },
     {
-      "title": "I leader di Finlandia e Norvegia sentono Putin. Le critiche della premier danese",
-      "category": "Italia",
-      "published": "2026-10-27T13:47:21+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/27/putin-sente-i-leader-di-finlandia-e-norvegia.-le-critiche-della-premier-danese_f24da4b3-81f4-4c1d-899b-62951b2301c0.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Româncă ucisă în apartamentul său din Dublin. Loredana ar fi trăit de luni de zile în teroare - StiriDiaspora",
+      "title": "O mare companie din China va produce un SUV în Bulgaria, începând din 2027 - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-27T13:24:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPZG1vWTg3VF9xWnRlM0hGckhVeXZNOVJZc3pIeHZ4STMzZEdPTmFUamRFUi1Xb1NvNE4zSEptdVh4UTBlRHV6YzVPUnZua3FwMTA0djV2ZUxEV1l2UVNFNVY1bmExbWlOQlhjSE9jcGZ4Y1Rjam9idXpfRFd0WHFVQ0pjWmgzbWVxWHhoZktreGN0bllhU2JDZ1BUc1J6VHpCVGpFdDdMaU0ycHo2NDk0ZkxEbzB4U095X1hkaDdRZTRudGlMRHh0NGY3bWxvd9IB0wFBVV95cUxPbTVKSWVxQUZuZlZBZmxhS2xleU5zaVlOYWpuUmpHVFpXOFR3cnowWFVZNGdMemZqUjBrdkNrMjVyRjdjc1BRSjd2YlVFcXZSakV2d1otOElKX0pCWEhQTFdITU5WS0IxdFEzX3Bwd1pBV1ZjdU9zVkluQ0RQd1gzX25JSFh",
+      "published": "2026-10-27T13:57:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQzhRUS1nbVpzQXlSWmFLUGRBQnR2eXdIREpoZzJMV0JZQXNCenNlUS14WW4yd2Qzam1temxGRjhFbXFxSEFfX1ZaNUEyNHlBSERrQV9OY2FxVURWYXdGYm9ORGtBdVVidDFaUHp2QWtMVHBBNEpqc2VfZXFJcU5FZkdyS016SGFMTWp4THRwVHRhMVJkUjZZbUJoWnp0UVdSOTNadWtGYmpiUU9xOHM3UDlEVELSAboBQVVfeXFMT2ZmbERuUnJyd2V1ZVNvZWg3Yld1TmRXTG5YUGFjZnVadVI4Q29YLW1lWmhYTGNJT3dOeU1PYkowd3hNRzNjNEdLNXB6UlJsQng0YWMyS0lNX2k0djF0a3RSLUxCdHRPSkFBeFhNdm10MXJiSmdzZl9lQTF6TGFtQ2VPOURpVFBSeVBZWkZ5MXJ0QmpPVVhLSExKTlNuWE0",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1068,15 +1086,6 @@
       "words": 422
     },
     {
-      "title": "Ancona (Hilti): \"Academy favorisce lavoro di squadra\" - Touchpoint News",
-      "category": "Italia",
-      "published": "2026-10-27T11:09:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbmxOZWFaVGNuY2JEVmg0WUdmLWdhOWgwMUVrLUZRdlUwT25qaVBMVFRQMUx5dENhazBsMm56MVo0azl2OHhaWFYyLU11Mzh5ZERGaFdlMVVGTzl6ZGJSQUxnSmZEcklNWXIxMFU2UXN4czNzbF9UdFVZa3RfVTI2bktUV1JWUTBiWGFFZUhGVm9ZUQ?oc=5",
-      "source": "Touchpoint News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "70 de hoți români au dat lovitură după lovitură pe șantiere din Germania, de unde au furat cabluri... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-27T09:43:00+00:00",
@@ -1090,15 +1099,6 @@
       "category": "Diaspora",
       "published": "2026-10-27T08:51:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNM2ZTNEI1dW1mb3dRMGpMbDNHcUdrbEdqcWNscTliMnNqQUdXeFVOMlR1SFJUTWNIU1VwMjF4V3Z0ZGJQLUJkZGpsRTJVZkx2bi1KVE5Eb2tzaXE3VGQ2Yl9uZURZakhjZEs3VTdBRnhCeUNWNWNHbnlxUVVIbE0xcmszS1YxcUU3NHdJWDk0Qk1NUHB1Tm9uSXlkTUFPX0xJeTV1akMwNW9XTHh6eU1xQjBPQjBTSmZjV1o3bzVCS0ZOSXNRYlp1MdIBzgFBVV95cUxPS0Q2NlkzcllGaGNvOHBCM2RSalU3ckpkdklLR2NnS1RnMmNwalZBem9DNTlYTFJzUDZSLUlzOXRhSmNDS2xseHp0SEpKZXBZckptOFdRRFdhZE1ZalhsZmoxT2NPRVBOWnNGOW5OSTQ5em4xaGh5ZDVtZ0ZrUTJZeUFFeXlRdjRFbml",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Bărbatul care a înjunghiat un senegalez de 19 ani, în Parcul Dora din Torino, a fost prins. E vorba de... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-27T08:14:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOOFFvbE9BM3dnaGtUc2wzQ05JS2k0Y2tXOE83TWppdzRDcmJ4bV9jYTFySV9DYmozdmlySllWdmN6eThFVVJVeW5xeml0enNMbUlUX3Y2T0pxaWQ0ZDNlSWdubmpvS3JvV1lqM0JVcGpSallrS3BzVXhXYTM5TUhPVVk4Q1g5RjZnaGRWR3hCdU93V21FNUMxdGNQd1Y4Q1hXcXNkanh6Z3RnLXhwUEtQMXloZXZ2Q1R6Vk1oaDJ4ZDhVYWRBQWhNeThhbk1oZVIyeDJhd25uUTBudGw1ODNZUm1xLUxhakMzS2VIbTlYQlpmRFpl0gH6AUFVX3lxTE5ZN05hVXFzZE1zQUpfLXpGQnRYaFJPbm1YRDJvWVBUcjV3RVJWbU9qMllSQVRuLURSaVVFME9XYWpuN2J1SXZzYWE5dV9IVUlJM1lEVG5DRnM5VUxOU0o",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1122,6 +1122,15 @@
       "words": 0
     },
     {
+      "title": "Manovra 2027, domani Cdm. Fonti: no taglio Irpef oltre 50mila euro - Sky TG24",
+      "category": "Italia",
+      "published": "2026-10-27T05:31:22+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBQdnd4SXJEQWNYaVowbVZuM2NHdzU0Y3hBMFBRNUFMQ2Y3SUV1WnU2RUVUR1Q3SzZIdXlHa0ZpenhlenVLNE56c3MyQUN6dmVEaExRNGc3UVJZaWJKN19EX0dyWTBvWkF4YnJPcWlILXQ?oc=5",
+      "source": "Sky TG24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Gratuito patrocinio, così la legge beffa gli infortunati sul lavoro - la Repubblica",
       "category": "Italia",
       "published": "2026-10-27T00:00:00+00:00",
@@ -1140,6 +1149,15 @@
       "words": 431
     },
     {
+      "title": "Sistemul de sănătate mai are nevoie de 11 miliarde de lei până la sfârșitul anului. Rogobete: „Sub nicio... - Digi24",
+      "category": "România",
+      "published": "2026-10-26T20:01:41+00:00",
+      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOS01GU0NGaVFxelQ2anJJbWVHMWhtYS1lUzAtU3FpU1JXalZSbmhHcF92UWxDay0xc3BTQjlwaVlXTlNTanlsdEFyM3RsVXBOMHJoa1lPeDQzLTBWT2tWcndzbXdTMDMzeWcxX1d1bVdTczJHSGt5cHIwSmJCYlFHSnc3ZEdmb2xKRC1MM2hHbjB6bTJtWmU1WF9ybFNleDlYYVcyMDNrT2ZLcUpBMEhibXAwLV9sM0ZnNUNpdjRvRHZXSmpObEMtQWFISjdlNnBXeDV1cjFMQXU0c2dOQksxZkZnZmhNcmVBODlzQlItOEtjeURjZFJRZ284NHhCVTRqeWY4X2Z3cGlFcnZxSGFRcFdpc3QzcXJXTmVxa1BR0gGeAkFVX3lxTE5LTUZTQ0ZpUXF6VDZqckltZUcxaG1hLWVTMC1TcWlTUldqVlJuaEdwX3ZRbEN",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 421
+    },
+    {
       "title": "Moldovean mort în Italia după ce s-a izbit cu mașina de un copac. Bărbatul avea numai 35 de ani - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-26T17:28:20+00:00",
@@ -1149,20 +1167,20 @@
       "words": 448
     },
     {
-      "title": "Manovra, la mano tesa dell’Europa all’Italia: massimo vantaggio dalla flessibilità per l’energia - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-26T16:43:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNSzFBc0RGZ2pVZ1o1MFNhU2ZZOTF6enBtVXpqRGsxeXUxZnpYd0czMVZGaTdFS0V0eEtkbXVGTFVfQk52MHplamxIZDh6YWw5MTA1QjVqb1RZdjByTV9jcm9QNVUwOEFmdklQRFhwaWp5R3JFenQwOWwzMFpBYks4UHlKb0g2bDdKX1NWOWdxZ2pPYlBueUUzZDhoTWZCRzZfRzlYekpsZnE0emNGSGtCa2g2VVp1dw?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Microsoft, maxi piano di incentivi all’esodo: coinvolte fino a 60 mila persone - la Repubblica",
       "category": "Italia",
       "published": "2026-10-26T16:42:38+00:00",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUlNIZjIteVhhMHFxazRVb2MxRElRLWh2RVNiVzZTbTRIZ003ZFRQRXMwQmwybjRFYWhoc2NXTDREeU5YejBRTGdWT21RQS1tMlZvZlFjWXIwclc2UzZuekxKYXh2SWFoLU9XVDdCZFBrZkU5TXFuREppWUhyM1FhOUlfME83aGpXZFJQNHBkdEJFc2EyOFJQY2dmd2U1UEY5OE5rbjd3?oc=5",
       "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Niculescu, la întâlnirea cu mediul de afaceri: Trebuie să repornim motoarele economiei, să îi ajutăm pe... - Digi24",
+      "category": "România",
+      "published": "2026-10-26T15:34:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGpCSGNxOHY0NGpyUHQ3ZVJKV040ZlJoYWJPOGQxc0piNDY1VFhmLUUyZS1uWWF3enFucm9kcnY5bVk5QXhualUwaTIxd2dickl1cXZKQ2s3V29oV3EtYXpEdkVNeV8tWmIycXZXWndxTURKOEg4Q0FyWkVGOU5VT1ZvRUdzVEFxYnVaSFF0VkQ1Tl9SZmVfRHlFUnphQk43bmlFNmN2V1dmZjgyT1ZNVVBMSWN5aXp2UnpGd3ptVkdBX2ZaUkxHZ25mNGc4XzNNdFZCXzRuMUhueENPT05yZmNfbXdqSUJPbnhjMlBodjVDQVpIMGtFZVlyd9IBogJBVV95cUxNc1l4Z0swLW5BNEZwbWFpc21aVGZXUklCQXptNEJSRERXeVhmQjloTGp",
+      "source": "Digi24",
       "status": "roșu",
       "words": 0
     },
@@ -1221,10 +1239,10 @@
       "words": 0
     },
     {
-      "title": "Un drum nou spre nordul județului: CJ Constanța reabilitează DJ 226 și facilitează accesul la întreg patrimoniul turistic - StiriDiaspora",
+      "title": "Un drum nou spre nordul județului: CJ Constanța reabilitează DJ 226 și facilitează accesul la... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-26T13:21:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQZTdkSGFaTFg0N2pPVFNBYWdBOUxUVDU1bWIybTZSbi0wWDA5V1I1WUFfQVVqSXdmR0VNRHJGTEdjZHRIdklfeVBhS3p1Tnh6OElqTTZtQzJ3WEt5OVBOR29UUndVMUl5OVFDQ2xuczVVY1hrLWltakFSRFVvdDlzTTFwcTYwZXlqX1RtUzktWXlPNHZoY05FeDc0M2VJRjN5bXBIVmo5bjhDOW1OV0VpUWlvTmZ0cmlEZHhJRjA0MHRndG0tcDFBMGhLeWZWRVBQb2tWZU1xdlhqOHFwUlZwVno2ckg2MW1LVFI5V3ctVGxrblk?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQZTdkSGFaTFg0N2pPVFNBYWdBOUxUVDU1bWIybTZSbi0wWDA5V1I1WUFfQVVqSXdmR0VNRHJGTEdjZHRIdklfeVBhS3p1Tnh6OElqTTZtQzJ3WEt5OVBOR29UUndVMUl5OVFDQ2xuczVVY1hrLWltakFSRFVvdDlzTTFwcTYwZXlqX1RtUzktWXlPNHZoY05FeDc0M2VJRjN5bXBIVmo5bjhDOW1OV0VpUWlvTmZ0cmlEZHhJRjA0MHRndG0tcDFBMGhLeWZWRVBQb2tWZU1xdlhqOHFwUlZwVno2ckg2MW1LVFI5V3ctVGxrblnSAfgBQVVfeXFMT2JzWVZiczhyZGM3LVFqRU0zSXRjbDFCZldoRlI0Mm42M2o4bWd3Q1JuM056VGUtMm1aazJraGg3SG40Q1g4dGpkSGx1NnlPSzQ1Ni1QLWktTUNseVFqOUc",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1266,6 +1284,15 @@
       "words": 0
     },
     {
+      "title": "Q8 Italia conferma il sostegno agli automobilisti: price cap fino a fine anno - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-26T08:03:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVHE5akVkYnR1T2dVbkREY2NiMUV0NUhFaklOSGEtbmNBR1RpWHBBVi1majJlWU1JUlZ4eXdfelY5dzdNQWxUTzhwYVpQYUFnQUhUMkNFdEFwTlFRS2JjMHdCWC02aUJISVpWbzdRQmtVUUY4NlBDdU5jRU5ESzZmUm9vd1R5Sm5VckZJRTY5NWZVbFU5TTUtSmNIU05RejFhR2hEbUZsTm9tbi1MOWYzT0QwcnkwSmF5Z0VRZXlSMF9Hb0FZY0NRMlRkQjRxaE04LWl3Zw?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 437
+    },
+    {
       "title": "Autobuz răsturnat într-o prăpastie de 20 de metri, lângă Barcelona: 83 de persoane rănite, 25 în... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-26T07:45:00+00:00",
@@ -1280,24 +1307,6 @@
       "published": "2026-10-26T07:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSmUtMmcxSVFwRTFBdHhXWVVFUkw0NWlLa1hHb01UcjdlcTRkZFhQNU1fSlVlQlRDMTM1R1BPcFFfSllsUmRKRUoxTXpZclAyOGxRMUhhZWRfOVFIRWF1NElwRW5FVTdrcFYwZk5yenQ0Slg2bXhfNGZ2UktrZzNmTkdn?oc=5",
       "source": "Pasquale Pillitteri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "ANM: Buletinul Oficial al Prognozei Meteo cu Starea Vremii pentru Toată România din 26 Octombrie 2026 - iDevice.ro",
-      "category": "România",
-      "published": "2026-10-26T05:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUnZYdDBfZ1YtWDU2NGtYa2NVaTViQ3lhc2o3SHRQQ2lLcG03bDNxMjU0V0RHSk5RR3lEWGhrVUxZd0pxb3pROENObUZtWjhZMW9tTEgwcE1MeHFNQVhnMWZFSGtIeUhzZUR2eHZ2aE81SzUzUVo1RndVZ2pMM00wd2dTdjdBR2dpbWRxNy1reTVvakQ1dG9Jbk9fcmR4XzZjQm94R3B2WnNvb2ZYRnVlVmczWk5WaUtObW8tMDN5TW83akE?oc=5",
-      "source": "iDevice.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Conducerea PSD se reuneşte în şedinţă. Social-democraţii analizează măsurile guvernamentale urgente pe care miniştrii PSD urmează să le ia şi numirile în funcţii, după instalarea noului Executiv - News.ro",
-      "category": "România",
-      "published": "2026-10-26T04:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxQMmFXQkJONElybm5fem84Nl9MVlI3d3NFX1NMaXdTX3g2ZlZEcUJHSVY1YlM2QkZub2lKZHk3WENISGQxM21EQjlpRjVjcF9DWERyQmhvdlhBbmtLT1FQRU5FTEMwbURBbzB5QXphcTltMlRiN0lGeXZDZDVBVXJEcDVqYk96aklJTk9OZTBLVEwtUkhuQ0lFU1k0Q2hTYk12RzJNUHZ6YmxBakx5dHh3Z3JDNHZKVzA5WTN3ejhieGJEWkk1clJILUdvd0pvaUs1MVlhMWFaR0JRWG1yZGtZWERoNXFXVE43M00tQVFXbm5qaDItdEN0OHM3azhSdEpqOUJsbWpINDF0bDdHc0x0eEFTWEtzY2VIUy1ueDJ6Vm9Wb3JtcWc2ZjlEaVhjTnN1a1pMOXFSNmdWVC10eEFDRFE0OWVIaEZUWHVoeXJfYWVNeGJ2SkF",
-      "source": "News.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1321,6 +1330,17 @@
     }
   ],
   "radio_briefs": [
+    {
+      "title": "Q8 Italia conferma il sostegno agli automobilisti: price cap fino a fine anno - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-26T08:03:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVHE5akVkYnR1T2dVbkREY2NiMUV0NUhFaklOSGEtbmNBR1RpWHBBVi1majJlWU1JUlZ4eXdfelY5dzdNQWxUTzhwYVpQYUFnQUhUMkNFdEFwTlFRS2JjMHdCWC02aUJISVpWbzdRQmtVUUY4NlBDdU5jRU5ESzZmUm9vd1R5Sm5VckZJRTY5NWZVbFU5TTUtSmNIU05RejFhR2hEbUZsTm9tbi1MOWYzT0QwcnkwSmF5Z0VRZXlSMF9Hb0FZY0NRMlRkQjRxaE04LWl3Zw?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 437,
+      "intro": "Q8 Italia ha comunicato lunedì 26 ottobre 2026 la proroga fino al 31 dicembre del proprio tetto ai prezzi di benzina e gasolio.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
     {
       "title": "Istat, l’Italia migliora ma resta diseguale: 5,4 milioni di poveri, più precari, scuola in affanno - la Repubblica",
       "category": "Italia",
@@ -1363,17 +1383,6 @@
       "status": "verde",
       "words": 422,
       "intro": "Un bărbat de origine română, în vârstă de 46 de ani, a fost reținut de poliția din Torino în ancheta privind moartea lui Saloum Fall, un tânăr senegalez de 19 ani înjunghiat în Parco Dora.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Moldovean mort în Italia după ce s-a izbit cu mașina de un copac. Bărbatul avea numai 35 de ani - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-10-26T17:28:20+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQR24ydVBtTjdVRExXSm1RallfYm9DWXlrZ011UFBYVDZ3dTBsMXprNTFDWkJ4Wldkc3F3RzJaSXNZelplb2xCbnlVNm5qVU9KRjNVS05ZT3h1LUxUV2JZRG92V2xkZ2dGYW1iVEJPQlQ5Q1ZPSFlvSnpKSllySHU2OEFYYkEzVFNaNUV2RXNERG1vdENLN2RBRV9JWEdaS0djZDY1bmtHZ0JvZVBuT2FYZTRVZGlDS01ZVWc?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
-      "status": "verde",
-      "words": 448,
-      "intro": "Un bărbat originar din Republica Moldova a murit în Italia în urma unui accident rutier petrecut sâmbătă, 24 octombrie 2026, în apropiere de Parma.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
