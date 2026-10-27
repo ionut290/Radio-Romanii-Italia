@@ -7,6 +7,7 @@ on:
       - 'scripts/inspect-geopolitica-oracle.sh'
       - '.github/workflows/geopolitica-oracle-inspect.yml'
       - 'scripts/rdi-geopolitica-auth.php'
+      - 'scripts/deploy-geopolitica-oracle.py'
   workflow_dispatch:
 
 permissions:
@@ -36,3 +37,7 @@ jobs:
             ubuntu@129.151.255.41 'sudo -n bash -s' < scripts/inspect-geopolitica-oracle.sh
           ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
             ubuntu@129.151.255.41 'sudo -n docker exec -i azuracast php /dev/stdin probe' < scripts/rdi-geopolitica-auth.php
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
+            ubuntu@129.151.255.41 'sudo -n sh -c "umask 077; cat > /tmp/rdi-geopolitica-auth.php"' < scripts/rdi-geopolitica-auth.php
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
+            ubuntu@129.151.255.41 'sudo -n python3 - inspect --php-helper /tmp/rdi-geopolitica-auth.php; result=$?; sudo -n rm -f /tmp/rdi-geopolitica-auth.php; exit "$result"' < scripts/deploy-geopolitica-oracle.py
