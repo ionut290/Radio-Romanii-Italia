@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/inspect-geopolitica-oracle.sh'
       - '.github/workflows/geopolitica-oracle-inspect.yml'
+      - 'scripts/rdi-geopolitica-auth.php'
   workflow_dispatch:
 
 permissions:
@@ -33,3 +34,5 @@ jobs:
           timeout 8 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
           ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
             ubuntu@129.151.255.41 'sudo -n bash -s' < scripts/inspect-geopolitica-oracle.sh
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
+            ubuntu@129.151.255.41 'sudo -n docker exec -i azuracast php /dev/stdin probe' < scripts/rdi-geopolitica-auth.php
