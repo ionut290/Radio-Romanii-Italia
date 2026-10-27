@@ -1,0 +1,12 @@
+[Unit]
+Description=RDI Geopolitica Oracle collector and GitHub publisher
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/rdi-geopolitica
+ExecStart=/bin/bash /home/ubuntu/rdi-geopolitica/oracle/rdi-geopolitica-publish.sh
+TimeoutStartSec=12min
+Nice=10
