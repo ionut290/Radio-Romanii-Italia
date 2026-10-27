@@ -34,12 +34,12 @@ jobs:
           set -euo pipefail
           python -m py_compile scripts/build_geopolitica_bulletin.py scripts/render_geopolitica_audio.py
           python -m unittest discover -s tests -p 'test_geopolitica_bulletin.py' -v
-      - name: Prepara notiziario in rumeno
+      - name: Prepara notiziario interamente in italiano
         id: draft
         shell: bash
         run: |
           set +e
-          python scripts/build_geopolitica_bulletin.py --language ro --output /tmp/rdi-geopolitica
+          python scripts/build_geopolitica_bulletin.py --language it --output /tmp/rdi-geopolitica
           code=$?
           set -e
           if [ "$code" -eq 2 ]; then
@@ -66,7 +66,7 @@ jobs:
         if: steps.draft.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: rdi-geopolitica-audio-ro
+          name: rdi-geopolitica-audio-it
           path: |
             /tmp/rdi-geopolitica/rdi-geopolitica.mp3
             /tmp/rdi-geopolitica/bulletin.txt
