@@ -164,7 +164,7 @@ def remove_old_from_playlist(client: Client, media: list, newest: str) -> None:
 
 
 def prune_expired_own_media(client: Client, media: list[dict], newest: str) -> None:
-    """Retain the latest 48 hours of our own MP3s, never other radio media."""
+    """Keep a two-hour safety window for recently broadcast MP3s."""
     removed = 0
     now = dt.datetime.now(dt.timezone.utc)
     for record in media:
@@ -178,12 +178,12 @@ def prune_expired_own_media(client: Client, media: list[dict], newest: str) -> N
             stamp = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
             stamp = stamp.replace(tzinfo=dt.timezone.utc)
             age = (now - stamp).total_seconds()
-            if age < 48 * 3600:
+            if age < 2 * 3600:
                 continue
             media_id = int(record.get("id", 0))
             if media_id <= 0:
                 continue
-            # Only isolated, >48h-old RDI editions are eligible for deletion.
+            # Delete only detached RDI editions older than two hours; never the newest.
             client.call("DELETE", f"/station/1/file/{media_id}")
             removed += 1
         except (ValueError, RuntimeError) as error:
