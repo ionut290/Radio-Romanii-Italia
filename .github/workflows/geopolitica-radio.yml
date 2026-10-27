@@ -17,8 +17,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: rdi-geopolitica-audio
-  cancel-in-progress: false
+  group: rdi-geopolitica-audio-portable
+  cancel-in-progress: true
 
 jobs:
   create-preview:
