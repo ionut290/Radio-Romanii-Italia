@@ -24,10 +24,10 @@
 
   const editionFrom = np => {
     const raw = [np?.song?.title, np?.song?.text].filter(Boolean).join(" ");
-    const match = raw.match(/RDI[\\s_-]*GEOPOLITICA[\\s_-]*IT[\\s_-]*(20\\d{6})[\\s_-]*(\\d{4})/i);
+    const match = raw.match(/RDI[\s_-]*GEOPOLITICA[\s_-]*IT[\s_-]*(20\d{6})[\s_-]*(\d{4})/i);
     return match ? match[1] + "-" + match[2] : null;
   };
-  const clean = text => String(text || "").replace(/\\s+/g, " ").trim();
+  const clean = text => String(text || "").replace(/\s+/g, " ").trim();
   function stop() {
     active = null; edition = ""; lastScene = -1;
     window.rdiGeoActive = false;
