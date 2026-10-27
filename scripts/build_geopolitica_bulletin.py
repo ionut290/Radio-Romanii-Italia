@@ -120,8 +120,8 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, hi
             "id": str(item.get("id") or url), "curated": is_curated
         })
     used = recent_history(history or {})
-    # Exclude news already broadcast; only a materially revised and verified
-    # summary can be treated as a new edition of the same report.
+    # Exclude previously broadcast stories, including minor rewrites.
+    # Genuine new developments need a separately verified source URL.
     recent_editions = (history or {}).get("editions", [])
     if not isinstance(recent_editions, list):
         recent_editions = []
