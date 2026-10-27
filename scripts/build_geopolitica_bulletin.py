@@ -120,7 +120,8 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, hi
             "id": str(item.get("id") or url), "curated": is_curated
         })
     used = recent_history(history or {})
-    result = [item for item in result if story_signature(item) not in used]
+    recently_used_urls = {str(url) for edition in (history or {}).get("editions", [])[-HISTORY_LIMIT:] if isinstance(edition, dict) for url in edition.get("source_urls", []) if isinstance(url, str)}
+    result = [item for item in result if story_signature(item) not in used and item["url"] not in recently_used_urls]
     result.sort(key=lambda item: (item["date"], item["curated"]), reverse=True)
     # Promote geographic diversity without inventing priorities or ranking political actors.
     selected = []
