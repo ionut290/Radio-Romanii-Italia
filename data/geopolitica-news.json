@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-27T20:17:05.315192Z",
+  "updated_at": "2026-10-27T20:32:03.263086Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-2b9bc2a536360f50",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Tracking Pax Silica’s Evolution: A Timeline | Blogs | Oct 27, 2026",
+      "summary": "",
+      "source": "Information Technology and Innovation Foundation",
+      "published": "2026-10-27T20:24:42Z",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1EOGFBSVJUMnRoQm9jVGJFNlhnUWZWV29zZ2hPN0RITUpocXBuQWxiN3JHVGtjZk5ScmRkcUxDRkJBaXlvWnhFVm5rQ3BheTZ3UV82bjRlaVZDTjNmWm1mOXlUZFFEN3A4U0FBRDhR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Urmărirea evoluției lui Pax Silica: o cronologie | Bloguri | 27 octombrie 2026",
+      "title_it": "Tracciare l'evoluzione di Pax Silica: una sequenza temporale | Blog | 27 ottobre 2026",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-3ab0ffbbf90c4fbe",
       "category": "diplomatie",
@@ -33,6 +47,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ştiri Shafaq..Israelul ucide patru palestinieni în Gaza",
       "title_it": "Shafaq News..Israele uccide quattro palestinesi a Gaza",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-33803d7e2e6f77d4",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russian missiles kill at least 3 civilians in Ukraine, officials say",
+      "summary": "",
+      "source": "Scripps News",
+      "published": "2026-10-27T19:38:49Z",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNOEMtMTItcmw0eXN5N2wwRzdDczZ6c2hRc3JKVC1vMEEwLVBCYnhaMWdrZnRFTlhja3dwbWJhdHNlcVZadU5VZllNaWZDb05vT2RRelliMEZkSUFPZ3lSWDRwWEp0TjZGUnhYcjlyYWF0ZFprOGtqckl6cnFYZXhhVU1oMFNpckttZU81ek9ZQ0lCMF9GRE1ONTJxZDJGSll2R3p0N012cGNaS21Oc3Q4aVRDcTA3cF9LeFNzT25fOTVMaVp6NzlvemZOQkpNaDNqbXd0aUJIZU1QT0k?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rachetele rusești ucid cel puțin 3 civili în Ucraina, spun oficialii",
+      "title_it": "Missili russi uccidono almeno 3 civili in Ucraina, dicono i funzionari",
       "translation_status": "machine_translation"
     },
     {
@@ -316,34 +344,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-8e2acf42ed483866",
-      "category": "europa",
-      "region": "europa",
-      "title": "Strade UE, \"solo\" 19.350 morti in un anno: in 12 mesi si sono salvati in 580",
-      "summary": "",
-      "source": "Eunews",
-      "published": "2026-10-27T15:32:15Z",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMG9Zc3dIZXBhcG5VTGJoOThSUGgxUUNpX0ctQm1GY182UzhyeFJZeTJDeHU5VUI5N1dZWjNRRDEwQVBOSHVYZFdudlRfaGJJQVZ0Y3UwejZaQ2wtcnVoYnpYbUh2T0kydURjQXhHVGVkMHhra2lfbDVJTEVLWHdBY3lFNGJXZjRidjhwQUxoa3ZrNThOdDJWX3pUMkI0eTNOQ2VoNEVySWlKZw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Drumuri UE, „doar” 19.350 de decese într-un an: în 12 luni au fost salvate 580",
-      "title_it": "Strade UE, \"solo\" 19.350 morti in un anno: in 12 mesi si sono salvati in 580",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-24a8478d4aa5befe",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Localized Ukraine ceasefire brokered by Melania Trump starts as Nordic leaders speak to Putin",
-      "summary": "",
-      "source": "The Korea Times",
-      "published": "2026-10-27T15:32:00Z",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxORWR6aFpUSHdhRDRUNVNmOElYVkcyRkJWN2t6MWo0WEN2amNCRnFoejhUNjJNWkppS29hR2dPS1ozdW9FTDI3eVM2Z3hkclRvT1ZhZGdwYl9MMDVkeUwtbHdCc3Z4UzVZeG5xU2lzMHlINlpOaFNUTHJPXzhEdlF4b2psMmNUTVdpSUtDbEVJZ0ZtZE9MUy1FYTRZY1BrZndaRGJSQ25MTlEzanFpbXUtZkV1SFgzR2xCY19Bdm4tSlFIanVGYWJrVVJMMkt2TVYxTjE40gHYAUFVX3lxTFBlLUtSenZaYzFlM3lFNnpudC1NZ0kwX0l0U3Y5azBDSExGTVJ5MDlmQ29Ud011b2FKMjZaOTJEU3dUbkx6anNBX3NPcUpFc3dEeFlZdEd3NTA0Snlfal9EWEU4cld3Mi1MMm0xX2RuYUpqOHVVZXR5d1MwM1pzUVVfQkdnd3ZHZzYwNFU0TExCeWIxSGZVOHpjNmJ5cXNyYU1ORzl2S2RNSENEWTJBbk9YRG1xYWZVaXcteW9jMU5zZG81NU16eFpmUGpZSFh5bXh4UFlOeVd6Ug?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Încetarea focului localizată în Ucraina, intermediată de Melania Trump, începe în timp ce liderii nordici vorbesc cu Putin",
-      "title_it": "Il cessate il fuoco localizzato in Ucraina, mediato da Melania Trump, inizia mentre i leader nordici parlano con Putin",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-2e6f97564ae80e11",
       "category": "diplomatie",
       "region": "americi",
@@ -411,20 +411,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Turcia va transforma angajamentele climatice în acțiuni de durată la COP31: oficial",
       "title_it": "La Turchia trasformerà gli impegni sul clima in azioni durature alla COP31: ufficiale",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-b43326d85fc4e79d",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Lana Nusseibeh: The UAE’s UN bid in the shadow of Gaza and Sudan",
-      "summary": "",
-      "source": "نون بوست",
-      "published": "2026-10-27T14:20:47Z",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAzcVdkMFFoWXJHbTRnVGxxQVVsWFlJVzYtMHRKTDhZOXhqMHZPSVpVWG04eHpIZm50aFZCaFlFajNtZnI2LVpPTEh4UHpCZFpzdDY40gFTQVVfeXFMUDNxV2QwUWhZckdtNGdUbHFBVWxYWUlXNi0wdEpMOFk5eGowdk9JWlVYbTh4ekhmbnRoVkJoWUVqM21mcjYtWk9MSHhQekJkWnN0Njg?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Lana Nusseibeh: Candidatura Emiratelor Arabe Unite la ONU în umbra Gazei și Sudanului",
-      "title_it": "Lana Nusseibeh: la candidatura degli Emirati Arabi Uniti alle Nazioni Unite all’ombra di Gaza e del Sudan",
       "translation_status": "machine_translation"
     },
     {
@@ -582,6 +568,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-d5aca7921ab861b9",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Amnesty UK decries Israeli polls as 'apartheid at the ballot box'",
+      "summary": "",
+      "source": "Yeni Safak English",
+      "published": "2026-10-27T12:50:43Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNWnVicHhDeGcwaml6bThMS2ppaUtKWTBuNy1tVmJhMEN6YWJodWgxbnczaldqM2pqZGl3alJSWnlKcUloejNER2loREZlX0FlSm80bU52X0hfbEZ1VU9CSnVVb2x5cEIwalVkMS13ZUhTQlVwTHFER3Q3VFZRMTdFel9YM2lFMTMtM3lBX3I0ZWxuMWZ1OUxWVy15d3hGQW0tc3dweQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Amnesty UK condamnă sondajele israeliene drept „apartheid la urne”",
+      "title_it": "Amnesty UK denuncia i sondaggi israeliani come “apartheid alle urne”",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-d6aa51aa2eecacf2",
       "category": "diplomatie",
       "region": "asia",
@@ -624,20 +624,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-25fa4ea6b74ec7a1",
-      "category": "europa",
-      "region": "europa",
-      "title": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
-      "summary": "",
-      "source": "VareseNews",
-      "published": "2026-10-27T11:58:18Z",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSE9vQnhEZTYyTGNLeUVnNW9VR3NIc2I2VDVmN1Z0anBkNlJ5NGNYUUNzc3NUalNWZkx1UFJCRGFYVjRKSHRUZlB6eG9vYU5QY3hCWXFwUWk0eS1GMGk5VWZBVUstcWd6VElNd1FvOGhTNWxSZnh6ZjRabzJONUxMMXNadW9XVmF4QjZIR3JEQ3ZuYktyelNSRktlZ0VlV2NxVmtVRFJFcUFONE5RODBCeTFxbDl1aXJxQWZiWF9qQU02ODdmd3F4NnVlcC1fOUR3OWstcg?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De la Green Deal la bugetul european, provocările ultimului Consiliu European și viitorul Uniunii",
-      "title_it": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-e8338bf2d238a205",
       "category": "securitate",
       "region": "europa",
@@ -663,6 +649,34 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Bruxelles-ul prezintă un cadru de reziliență la schimbările climatice pentru o Europă mai bine pregătită și protejată",
       "title_it": "Bruxelles presenta un quadro di resilienza climatica per un’Europa meglio preparata e protetta",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d0c31e0e4ad76a68",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "A one-city ceasefire between Russia and Ukraine brokered by First Lady Melania Trump is in effect",
+      "summary": "",
+      "source": "WWNY",
+      "published": "2026-10-27T11:07:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNVUhnck5XNUJ5ZHN0MWl1Z1d6YUl5NVQ3SFYwYVJJM0VLeWlCcEt1TXBfM3Z2WWV0TXFCRGl0S3VDNnlPODRoaTdSa09KSFBXc3lEMGRlREZOemVlTWZaSkxLeHhYMUV5Umk0Zm9KNG9zYVFkOFMtVFgtZWgxZzNiSlVSNnNLU2NnWW5UVGdkWnJnbFBIUi1weGlfSUllV2ZsMHpGX3Mza3NpdHlyRkVYRjBpZHp5QTYzY0VSc2lrSDVCeGY3Vk1oeXZDRHpJZGs2LV9oStIB1AFBVV95cUxNVUhnck5XNUJ5ZHN0MWl1Z1d6YUl5NVQ3SFYwYVJJM0VLeWlCcEt1TXBfM3Z2WWV0TXFCRGl0S3VDNnlPODRoaTdSa09KSFBXc3lEMGRlREZOemVlTWZaSkxLeHhYMUV5Umk0Zm9KNG9zYVFkOFMtVFgtZWgxZzNiSlVSNnNLU2NnWW5UVGdkWnJnbFBIUi1weGlfSUllV2ZsMHpGX3Mza3NpdHlyRkVYRjBpZHp5QTYzY0VSc2lrSDVCeGY3Vk1oeXZDRHpJZGs2LV9oSg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "O încetare a focului într-un singur oraș între Rusia și Ucraina intermediată de prima doamnă Melania Trump este în vigoare",
+      "title_it": "È in vigore un cessate il fuoco di una sola città tra Russia e Ucraina mediato dalla First Lady Melania Trump",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4a306ab24e390b57",
+      "category": "europa",
+      "region": "europa",
+      "title": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
+      "summary": "",
+      "source": "MalpensaNews",
+      "published": "2026-10-27T11:04:22Z",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOS2JHbGcxWFlWLTlzU0FxSmtJWDdCSVI1a19kbkxEeGdPV2FLbDZLM29rXzdlVGNjbzJHb3NXMFlmczdYRUdYcVNvcTVvTFE4TVhGOWUwU2FzZGJyVktvVm5kbHNBRFVlUldjRVc1bS1PRU9kNklGVnNUU0NMemhpMUNRcmVld0dENnYySTBNd3hXdjNMRjFJdzRtSUhfRDBqelNrZlhPVmF3SlNaMXN2bTVkV1J6T2VNTm1CU0xrSnRuMFB1SHRzQ3hyQnB3aDJSOWdOTnpR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De la Green Deal la bugetul european, provocările ultimului Consiliu European și viitorul Uniunii",
+      "title_it": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
       "translation_status": "machine_translation"
     },
     {
@@ -705,34 +719,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ce înseamnă alegerea Israelului pentru Gaza și întreaga lume?",
       "title_it": "Cosa significa l'elezione di Israele per Gaza e il resto del mondo?",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-696aaa204c5375cb",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Oleshky Truce, Kyiv Missiles: The Two Faces of Russia’s War in Ukraine",
-      "summary": "",
-      "source": "The Korea Post",
-      "published": "2026-10-27T10:08:55Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1wVG05SHhyYjlQREJOR0NxTnpkUDZ2OTk2Mk0ycTVSQU5XbndFSnZCLWNKOW1ZVXg2cjRkcEZvVktvUHJNUmlVdjJ6VmIwZk40LTdaQWIyczFfdVdtWEdtbUViSGZCYkNUd0FJU0Nn0gFuQVVfeXFMTXBUbTlIeHJiOVBEQk5HQ3FOemRQNnY5OTYyTTJxNVJBTldud0VKdkItY0o5bVlVeDZyNGRwRm9WS29Qck1SaVV2MnpWYjBmTjQtN1pBYjJzMV91V21YR21tRWJIZkJiQ1R3QUlTQ2c?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Armistițiu Oleshky, Rachete Kiev: Cele două fețe ale războiului Rusiei în Ucraina",
-      "title_it": "La tregua di Oleshky, Missili di Kiev: i due volti della guerra russa in Ucraina",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-14a065564ba41961",
-      "category": "europa",
-      "region": "europa",
-      "title": "Il caso Ceuta e il corto circuito dell’Europa sui migranti",
-      "summary": "",
-      "source": "www.lavitadelpopolo.it",
-      "published": "2026-10-27T10:06:50Z",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRW95aHBzdkdxUFRsSzJEek9mdXBscWVPMmxfb21YOG5ZVTNpaVhtNjBIMDZqWFF4UkFLMndqenQ0ZEpTUUlxQU5kU1diY212UTlOYjZIVWZVeUVqOEZ5TVpyQThrSTgxelZKWXBSMjJuODFGNGgtb2o0cnhobWZkczBwVU1IaVE3ajdsNlJuMmJCN2tHcG1XZnRIcUJ2X2JLQkE3Q0ktdkNHWHZrRWZhSmR3?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Cazul Ceuta și scurtcircuitul european asupra migranților",
-      "title_it": "Il caso Ceuta e il corto circuito dell’Europa sui migranti",
       "translation_status": "machine_translation"
     },
     {
@@ -845,6 +831,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Merz strânge legăturile UE-Asia și avertizează asupra presiunii din China",
       "title_it": "Merz avvicina i legami tra UE e Asia e avverte delle pressioni della Cina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-366b23fbcc9e7b2b",
+      "category": "europa",
+      "region": "europa",
+      "title": "Bruxelles-ul vrea deportări în afara UE. Frontex ar putea primi puteri noi și o rezervă de grăniceri pentru crize",
+      "summary": "",
+      "source": "Antena 3",
+      "published": "2026-10-27T08:39:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOLVdRMWNJVGUzT3J5dG5yZlZ6YWFpSlRfZXFOUHpMcTg2OXdEckV2X05HQmpXNHVGWng3YVlLM0h0eXBsdWxrbk1wYWN3eDJaMEJpcTJUbEkzY3V2aFk2a0hJcGxOWUtScTdSbDBTZkc1X2VLZTloUGpadlBuY1pnakF0UG9GdE8xT0stcTZTdEx3bXJJQW1HQjFQcjBxR1NUTUlacDg4WU1rVDNjdEFIZEV6Sm94Y3JiamtEVlNPak9SLTg4ZUp5b1RBdG96a1A5Y3Q2XzRCVFVUZHZGb3dEVzY4M3lFR0J5ckQw0gHmAUFVX3lxTE1fSjN5WklyeVF1THlkWFYzWFZVTWtKRkNaVTcxMzZjaS1xNmgxRjFzRjFEUjlrbS10SXVjbkE0by13ZV9xSWUyT1lxX0NFbjh5OXNMTk9ySEtlRlVNNnJFNVltWVNZR2sxX3c1M2tzR2xXVjNqME5xVVdEb3F3WmFCRHFaOEIxQWlJU2c3akpEdWFCSHNFM1RfWV92cl9OM19PSkVHc2ZFdTZuN3JOZWlPbHVkenI0OC10VzhKQm55cmJIVGZ1Um9QVkVacmxHZ0ZqV3o2WC01VjBOS1hiRlFibDY4X3ln?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Bruxelles-ul vrea deportări în afara UE. Frontex ar putea primi puteri noi și o rezervă de grăniceri pentru crize",
+      "title_it": "Bruxelles vuole le deportazioni fuori dall’Ue. Frontex potrebbe ottenere nuovi poteri e un sostegno di guardie di frontiera per le crisi",
       "translation_status": "machine_translation"
     }
   ]
