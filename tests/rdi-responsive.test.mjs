@@ -13,7 +13,7 @@ test("RDI home loads full-window layout last, without affecting YouTube broadcas
   assert.doesNotMatch(css,/^[^\n]*html\.youtube-news [^\n]+\{/m);
 });
 test("desktop layouts fill viewport and present banner, player and editorial columns",()=>{
-  assert.match(css,/@media\(min-width:1100px\)/);
+  assert.match(css,/@media\(min-width:960px\)/);
   assert.match(css,/grid-template-columns:minmax\(0,1\.5fr\) minmax\(365px,\.86fr\)/);
   assert.match(css,/grid-template-columns:minmax\(0,1\.55fr\) repeat\(2,minmax\(0,1fr\)\)/);
   assert.match(css,/\.news-section \.news-list\{\s*grid-template-columns:repeat\(4,minmax\(0,1fr\)\)/);
