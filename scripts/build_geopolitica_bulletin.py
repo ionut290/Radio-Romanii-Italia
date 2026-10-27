@@ -23,15 +23,15 @@ MAX_AGE_HOURS = 35  # Publication dates from the curated feed have day precision
 
 OPENING = {
     "ro": "Radio Românii din Italia. Ascultați RDI Geopolitica, sinteza evenimentelor internaționale.",
-    "it": "Radio Românii din Italia presenta Geopolitica: i principali aggiornamenti dal mondo.",
+    "it": "Radio Românii din Italia presenta Geopolitica. Le principali notizie dal mondo, Paese per Paese.",
 }
 CAUTION = {
     "ro": "Relatările sunt atribuite publicațiilor și instituțiilor citate. Informațiile aflate în evoluție pot fi actualizate sau corectate.",
-    "it": "Le informazioni che seguono provengono dalle fonti giornalistiche e istituzionali indicate. Per gli eventi in evoluzione, i dati potrebbero cambiare.",
+    "it": "Per leggere gli articoli completi, verificare le fonti e trovare gli aggiornamenti, visitate la sezione Geopolitica sul sito di Radio Românii din Italia. Le notizie in evoluzione possono essere aggiornate.",
 }
 OUTRO = {
     "ro": "Mai multe detalii, surse și context găsiți în secțiunea Geopolitică, pe site-ul Radio Românii din Italia. Rămâneți cu noi, muzica revine imediat.",
-    "it": "Per altri dettagli e per consultare le fonti, visitate la sezione Geopolitica sul sito di Radio Românii din Italia. Grazie per averci ascoltato. Tra poco torna la musica.",
+    "it": "Questo era RDI Geopolitica. Continuate a seguirci sul sito della radio. Tra poco torna la musica.",
 }
 TRANSITIONS = {
     "ro": ("În continuare.", "Tot în actualitatea internațională.", "Într-un alt subiect.", "În final."),
@@ -122,32 +122,95 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict) ->
     return selected
 
 
+
+def country_name(item: dict, lang: str) -> str:
+    """A geographical label, never a source's name or publisher."""
+    raw = str(item.get("region") or "").strip()
+    simplified = {
+        "it": {
+            "Ucraina": "Ucraina", "Sudan": "Sudan", "Cisiordania": "Cisgiordania",
+            "Cisjordania": "Cisgiordania", "Gaza": "Striscia di Gaza",
+            "România": "Romania", "Italia": "Italia",
+        },
+        "ro": {"Ucraina": "Ucraina", "Sudan": "Sudan", "Cisiordania": "Cisiordania"},
+    }
+    return clean_spoken(simplified.get(lang, {}).get(raw, raw or ("Mondo" if lang == "it" else "Lumea")), 70)
+
+
+def broadcast_summary(text: str, lang: str, source: str) -> str:
+    """Remove newspaper/publisher credits from the spoken text, not from metadata.
+
+    Keep substantive caveats about unconfirmed reports and official claims.
+    """
+    text = clean_spoken(text, 700)
+    if lang == "it":
+        text = re.sub(r"^(?:Secondo|Stando a)\\s+(?:Reuters(?:\\s+e\\s+AP)?|Associated Press|AP)\\s*,?\\s*",
+                      "", text, flags=re.IGNORECASE)
+        text = re.sub(r"^Reuters\\s+(?:riferisce|segnala)\\s+che\\s+", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"^Reuters\\s+cita\\s+(il sindaco[^:]{0,100}):\\s*",
+                      r"\\1 ha riferito che ", text, flags=re.IGNORECASE)
+        text = re.sub(r"\\bUn testimone Reuters\\b", "Un testimone", text, flags=re.IGNORECASE)
+        text = re.sub(r"\\bReuters(?:\\s+e\\s+AP)?\\s+(?:riferisce|riporta)\\s+che\\s+",
+                      "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\\bReuters\\s+(?:dichiara|precisa)\\s+che\\s+non\\s+ha\\s+potuto\\s+verificare\\s+(?:indipendentemente|autonomamente)\\s+",
+                      "Non è stato possibile verificare indipendentemente ", text, flags=re.IGNORECASE)
+        # A publisher name can appear inside an editorial summary; don't read it.
+        for outlet in ("Reuters", "Associated Press", "Internazionale"):
+            text = re.sub(r"\\b" + re.escape(outlet) + r"\\b", "", text, flags=re.IGNORECASE)
+    elif lang == "ro":
+        text = re.sub(r"\\bReuters(?:\\s+și\\s+AP)?\\b", "", text, flags=re.IGNORECASE)
+    if source:
+        # Never voice the stored outlet name. Retain it for the written article.
+        text = text.replace(source, "")
+    return re.sub(r"\\s+", " ", text).strip(" ,.;:")
+
+
 def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | None:
     now = now.astimezone(ROME)
     stories = available_items(now, lang, curated, extras)
     if not stories:
-        return None  # Never read stale or unreviewed headlines as fresh news.
+        return None
     date_text = display_date(now.date(), lang)
     hour_text = f"{now.hour:02d}:{now.minute:02d}"
-    intro = (
-        f"Ediția de la ora {hour_text}, {date_text}."
-        if lang == "ro" else f"Edizione aggiornata alle {hour_text} del {date_text}."
-    )
-    parts = [OPENING[lang], intro, CAUTION[lang]]
-    for index, story in enumerate(stories):
-        if index:
-            parts.append(TRANSITIONS[lang][min(index-1, len(TRANSITIONS[lang])-1)])
-        source_intro = (
-            f"Potrivit sursei {story['source']}, într-o relatare publicată la {display_date(story['date'], lang)}:"
-            if lang == "ro" else
-            f"Secondo la fonte {story['source']}, in una notizia pubblicata il {display_date(story['date'], lang)}:"
-        )
-        parts += [source_intro, story["title"] + ".", story["summary"]]
-    parts.append(OUTRO[lang])
-    transcript = "\n\n".join(parts) + "\n"
+    intro = (f"Ediția de la ora {hour_text}, {date_text}."
+             if lang == "ro" else f"Edizione delle {hour_text} del {date_text}.")
+    segments = [{
+        "kind": "intro",
+        "text": "\\n".join((OPENING[lang], intro, CAUTION[lang])),
+    }]
+    public_articles = []
+    for index, item in enumerate(stories):
+        label = country_name(item, lang)
+        title = item["title"]
+        summary = broadcast_summary(item["summary"], lang, item["source"])
+        # Don't repeat "Ucraina: Ucraina: ...".
+        title_spoken = re.sub(r"^" + re.escape(label) + r"\\s*[:—-]\\s*", "", title, flags=re.IGNORECASE)
+        transition = "" if index == 0 else TRANSITIONS[lang][min(index - 1, len(TRANSITIONS[lang]) - 1)] + " "
+        segment = {
+            "kind": "story", "id": item["id"], "country": label,
+            "title": title, "summary": summary,
+            "text": transition + label + ". " + title_spoken.rstrip(".") + ". " + summary.rstrip(".") + ".",
+        }
+        segments.append(segment)
+        public_articles.append({
+            "id": item["id"], "country": label, "title": title,
+            "summary": summary, "article_url": item["url"],
+            "source_name": item["source"], "published_date": item["date"].isoformat(),
+        })
+    segments.append({"kind": "outro", "text": OUTRO[lang]})
+    transcript = "\\n\\n".join(item["text"] for item in segments) + "\\n"
+    edition_id = now.strftime("%Y%m%d-%H%M")
     return {
-        "language": lang, "generated_at": now.isoformat(), "story_count": len(stories),
-        "sources": [{"id": x["id"], "url": x["url"], "source": x["source"], "published_date": x["date"].isoformat()} for x in stories],
+        "language": lang, "generated_at": now.isoformat(),
+        "edition_id": edition_id,
+        "track_title": f"RDI-GEOPOLITICA-{lang.upper()}-{edition_id}",
+        "story_count": len(stories),
+        "sources": [{
+            "id": x["id"], "url": x["url"], "source": x["source"],
+            "published_date": x["date"].isoformat()
+        } for x in stories],
+        "articles": public_articles,
+        "segments": segments,
         "text": transcript,
     }
 
