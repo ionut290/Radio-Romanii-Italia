@@ -1,18 +1,6 @@
 name: RDI - Notiziario Geopolitica (trasmissione automatica)
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "scripts/build_geopolitica_bulletin.py"
-      - "scripts/render_geopolitica_audio.py"
-      - "scripts/deploy-geopolitica-oracle.py"
-      - "scripts/rdi-geopolitica-auth.php"
-      - "data/geopolitica-radio-verified.json"
-      - "tests/test_geopolitica_bulletin.py"
-      - ".github/workflows/geopolitica-radio.yml"
-  schedule:
-    - cron: "47 * * * *"
   workflow_dispatch:
 
 permissions:
