@@ -36,7 +36,8 @@ test("candidate reports are kept out of the published map and editorial feed by 
   assert.ok(!text("scripts/update_attack_candidates.py").includes('Path("editorial.json")'));
 });
 test("navigation, map, translation, and provenance links exist",()=>{
-  assert.match(text("index.html"),/harta-atacurilor\.html/);
+  assert.match(text("index.html"),/geopolitica\.html/);
+  assert.match(text("geopolitica.html"),/harta-atacurilor\.html/);
   assert.match(text("redactie.html"),/incident-leads\.yml/);
   assert.match(text("harta-atacurilor.html"),/harta-atacurilor\.js/);
   assert.match(text("harta-atacurilor.js"),/data\/attack-monitor\.json/);
