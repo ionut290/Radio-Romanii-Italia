@@ -1,4 +1,4 @@
-import {normalizedCandidates,chooseFeatured,safeImage,imageIsPhotograph} from "./rdi-featured-core.mjs?v=20261027a";
+import {normalizedCandidates,chooseFeatured,safeImage,imageIsPhotograph} from "./rdi-featured-core.mjs?v=20261027b";
 
 /* RDI – auto-updated homepage editorial picks. No separate publishing service. */
 const section=document.getElementById("rdi-featured");
@@ -8,6 +8,14 @@ const strap=document.getElementById("rdi-featured-kicker");
 const note=document.getElementById("rdi-featured-note");
 const allLink=document.getElementById("rdi-featured-all");
 const picker=document.getElementById("rdi-language");
+const categoryTranslations={
+  it:{"România":"Romania","Știri din redacție":"Redazione","Știri consulare":"Servizi consolari",
+      "Drepturile muncitorilor":"Lavoro e diritti","Geopolitica":"Geopolitica",
+      "Diaspora":"Diaspora","Italia":"Italia"},
+  ro:{"România":"România","Știri din redacție":"Știri din redacție","Știri consulare":"Știri consulare",
+      "Drepturile muncitorilor":"Drepturile muncitorilor","Geopolitica":"Geopolitică",
+      "Diaspora":"Diaspora","Italia":"Italia"}
+};
 let collections={news:[],editorial:[],war:[],translations:{}};
 let fetchedAt=0;
 let refreshPromise=null;
@@ -102,7 +110,7 @@ function paint() {
     displayImage(visual,story,cfg,index===0);
     const body=element("div","rdi-featured-story-body");
     const meta=element("div","rdi-featured-meta");
-    const category=element("span","rdi-featured-category",story.category==="Geopolitica"?(lang==="ro"?"Geopolitică":"Geopolitica"):story.category);
+    const category=element("span","rdi-featured-category",categoryTranslations[lang][story.category] || story.category);
     const date=new Date(story.published);
     const dateString=Number.isFinite(date.getTime())?new Intl.DateTimeFormat(cfg.date,{timeZone:"Europe/Rome",day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"}).format(date):"";
     meta.append(category,element("time","",dateString));
