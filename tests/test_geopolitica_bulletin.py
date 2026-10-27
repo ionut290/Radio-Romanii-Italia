@@ -108,6 +108,24 @@ class TestBulletin(unittest.TestCase):
                                  {"editions": [{"signatures": [signature]}]})
         self.assertEqual(program["story_count"], 1)
 
+    def test_published_url_is_skipped_even_if_summary_changes(self):
+        item = news(summary_it="Un aggiornamento testuale che non prova automaticamente un evento nuovo.")
+        history = {"editions": [{"source_urls": [item["source_url"]]}]}
+        self.assertIsNone(bulletin.build(NOW, "it", {"items": [item]}, {}, history))
+
+    def test_second_edition_uses_different_verified_source(self):
+        first = news()
+        second = news(id="secondary", source_url="https://example.org/news/secondary",
+                      title_it="Una seconda notizia verificata", region="Sudan")
+        first_edition = bulletin.build(NOW, "it", {"items": [first]}, {})
+        history = {"editions": [{
+            "signatures": first_edition["story_signatures"],
+            "source_urls": [src["url"] for src in first_edition["sources"]],
+        }]}
+        next_edition = bulletin.build(NOW, "it", {"items": [first, second]}, {}, history)
+        self.assertEqual(next_edition["story_count"], 1)
+        self.assertEqual(next_edition["sources"][0]["url"], second["source_url"])
+
     def test_duplicate_source_skipped(self):
         first = news()
         second = news(id="other", title_ro="Altă știre")
