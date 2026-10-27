@@ -36,9 +36,11 @@ jobs:
           import json
           from pathlib import Path
           data=json.loads(Path('data/geopolitica-news.json').read_text(encoding='utf-8'))
-          assert data.get('schema_version') == 1
+          assert data.get('schema_version') == 2
           assert isinstance(data.get('items'), list)
           assert all(x.get('url','').startswith('https://') and x.get('source') and x.get('published') for x in data['items'])
+          assert all(bool(x.get('title_ro')) == bool(x.get('title_it')) for x in data['items'])
+          print('Titoli bilingui:',sum(bool(x.get('title_ro') and x.get('title_it')) for x in data['items']))
           print('Titluri validate:',len(data['items']))
           PY
           fi
