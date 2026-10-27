@@ -118,6 +118,12 @@ def produce(folder: Path) -> dict:
     # Brevi separatori originali fra le notizie, senza coprire la voce.
     separator = folder / "stacco-notizie.mp3"
     chime(separator)
+    # Short, unobtrusive transition, preserving the original sound identity.
+    short_separator = folder / "stacco-breve.mp3"
+    cmd("ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+        "-i", str(separator), "-t", "1.7", "-af", "afade=t=out:st=1.15:d=0.5",
+        "-c:a", "libmp3lame", "-b:a", "192k", str(short_separator))
+    separator = short_separator
     separator_seconds = duration(separator)
     for index, segment in enumerate(segments):
         if segment.get("kind") == "story" and index > 1:
