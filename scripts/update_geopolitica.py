@@ -36,7 +36,7 @@ QUERIES = [
 ]
 MAX_PER_QUERY = 9
 MAX_TOTAL = 100
-MAX_NEW_BILINGUAL_TITLES = 32  # bounded API requests per hourly run
+MAX_NEW_BILINGUAL_TITLES = 72  # bounded API requests per hourly run
 NOW = dt.datetime.now(dt.timezone.utc)
 seen_urls = set()
 seen_titles = set()
