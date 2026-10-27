@@ -13,12 +13,13 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 OUTPUT = Path("data/geopolitica-news.json")
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia-Geopolitica/1.0; editorial news index)"}
 # Each search labels a news topic for browsing; labels do not assert the truth of a headline.
 QUERIES = [
-    ("diplomatie", "global", "global diplomacy UN peace negotiations summit when:3d", "en", "US"),
+    ("diplomatie", "global", "global diplomacy UN peace negotiations summit when:1d", "en", "US"),
     ("diplomatie", "europa", "UE diplomație relații internaționale negocieri when:3d", "ro", "RO"),
     ("conflicte", "europa", "Ukraine Russia war peace negotiations civilians when:3d", "en", "US"),
     ("conflicte", "orient", "Gaza Israel Middle East humanitarian ceasefire when:3d", "en", "US"),
@@ -30,14 +31,15 @@ QUERIES = [
     ("securitate", "europa", "NATO defense alliance European security when:3d", "en", "US"),
     ("securitate", "asia", "China Taiwan Japan Indo Pacific security when:3d", "en", "US"),
     ("tehnologie", "global", "AI semiconductor chip export controls space race when:3d", "en", "US"),
-    ("clima", "global", "climate diplomacy COP climate agreement environment when:4d", "en", "US"),
+    ("clima", "global", "climate diplomacy COP climate agreement environment when:1d", "en", "US"),
     ("diplomatie", "americi", "United States Latin America diplomacy summit when:3d", "en", "US"),
     ("diplomatie", "asia", "Asia Pacific China India diplomacy foreign policy when:3d", "en", "US"),
 ]
 MAX_PER_QUERY = 9
-MAX_TOTAL = 100
+MAX_TOTAL = 60
 MAX_NEW_BILINGUAL_TITLES = 72  # bounded API requests per hourly run
 NOW = dt.datetime.now(dt.timezone.utc)
+TODAY_ROME = NOW.astimezone(ZoneInfo('Europe/Rome')).date()
 seen_urls = set()
 seen_titles = set()
 entries = []
@@ -140,7 +142,7 @@ def fetch_query(topic, region, query, lang, country):
             when = when.astimezone(dt.timezone.utc)
         except (TypeError, ValueError, OverflowError):
             continue
-        if when > NOW + dt.timedelta(hours=1) or NOW - when > dt.timedelta(days=5):
+        if when > NOW + dt.timedelta(hours=1) or when.astimezone(ZoneInfo('Europe/Rome')).date() != TODAY_ROME:
             continue
         # Google News RSS descriptions contain related-article HTML rather than reliable summaries.
         # We intentionally do not turn that HTML into an editorial summary.
@@ -174,10 +176,7 @@ def main():
             failures.append(f"{topic}/{region}: {type(exc).__name__}: {exc}")
             print("Sursa RSS indisponibilă:", failures[-1])
     if not entries:
-        if OUTPUT.exists():
-            print("Nu s-au obținut rezultate; versiunea anterioară este păstrată nemodificată.")
-            return
-        raise SystemExit("Nicio sursă disponibilă; nu publicăm date fictive.")
+        print("Nessuna notizia pubblicata oggi (ora italiana): il feed del giorno sarà vuoto.")
     entries.sort(key=lambda row: row["published"], reverse=True)
     entries[:] = entries[:MAX_TOTAL]
     add_bilingual_titles(entries)
