@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: rdi-geopolitica-audio-portable
@@ -26,6 +26,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -68,11 +72,39 @@ jobs:
         with:
           name: rdi-geopolitica-audio-it
           path: |
-            /tmp/rdi-geopolitica/rdi-geopolitica.mp3
+            /tmp/rdi-geopolitica/RDI-GEOPOLITICA-IT-*.mp3
             /tmp/rdi-geopolitica/bulletin.txt
             /tmp/rdi-geopolitica/manifest.json
+            /tmp/rdi-geopolitica/tv-timing.json
           if-no-files-found: error
           retention-days: 3
+      - name: Pubblica i tempi dei singoli articoli per YouTube (non va in onda finché l'MP3 non è su AzuraCast)
+        if: steps.draft.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          edition=$(python -c 'import json;print(json.load(open("/tmp/rdi-geopolitica/tv-timing.json"))["edition_id"])')
+          if ! [[ "$edition" =~ ^20[0-9]{6}-[0-9]{4}$ ]]; then
+            echo 'Identificativo edizione non valido' >&2
+            exit 1
+          fi
+          mkdir -p data/geopolitica-tv
+          cp /tmp/rdi-geopolitica/tv-timing.json "data/geopolitica-tv/${edition}.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "data/geopolitica-tv/${edition}.json"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "RDI: sincronizzazione TV edizione Geopolitica ${edition}"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase -X ours origin main && git push origin HEAD:main; then
+              echo "Timeline pubblicata: ${edition}"
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep "$((attempt * 3))"
+          done
+          echo 'Impossibile pubblicare la sincronizzazione TV' >&2
+          exit 1
       # Safety gate: no AzuraCast upload and no playlist changes.
       # Broadcast activation requires reviewing a real sample, validating the
       # station's existing playlist configuration and secure deployment access.
