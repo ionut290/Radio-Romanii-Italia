@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-26T22:58:00Z",
+  "updated_at": "2026-10-27T01:55:34Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
@@ -231,6 +231,42 @@
         }
       ],
       "rdi_article_id": "rdi-20261026-ucraina-harkiv-doua-victime"
+    },
+    {
+      "id": "rdi-bangladesh-dhaka-amar-desh-20261025",
+      "date": "2026-10-25",
+      "date_label": "25 octombrie 2026, seara",
+      "reported_on": "2026-10-27",
+      "country": "Bangladesh",
+      "country_code": "BD",
+      "place": "Dhaka, zona Tejgaon (localizare aproximativă)",
+      "lat": 23.76,
+      "long": 90.4,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": 0,
+      "injured": 2,
+      "actor": "Autori neidentificați; anchetă în curs, fără motiv stabilit",
+      "title_ro": "Bangladesh: explozie în apropierea tipografiei Amar Desh, două persoane rănite",
+      "title_it": "Bangladesh: esplosione vicino alla tipografia Amar Desh, due feriti",
+      "description_ro": "La 25 octombrie, seara, două dispozitive explozive improvizate au fost aruncate lângă tipografia Amar Desh din Dhaka; unul a detonat. The Daily Star, citând poliția, relatează doi răniți (un agent de pază și o vânzătoare), în timp ce alte relatări inițiale menționau unul. Autorii și motivul nu au fost stabiliți. Nu există probe publice pentru a clasifica atacul drept terorism.",
+      "description_it": "La sera del 25 ottobre due ordigni rudimentali sono stati lanciati nei pressi della tipografia del quotidiano Amar Desh a Dhaka; uno è esploso. The Daily Star, citando la polizia, riferisce due feriti (una guardia e una venditrice), mentre i primi resoconti ne indicavano uno. Autori e movente restano sconosciuti; non vi sono elementi pubblici per classificare il fatto come terrorismo.",
+      "sources": [
+        {
+          "name": "The Daily Star, 26 ottobre 2026 (polizia: due feriti)",
+          "url": "https://www.thedailystar.net/news/crime-justice/news/crude-bombs-hurled-front-amar-desh-press-tejgaon-two-injured-4307891"
+        },
+        {
+          "name": "Jago News24, 26 ottobre 2026 (dichiarazione DRU)",
+          "url": "https://www.jagonews24.com/en/national/news/97466"
+        },
+        {
+          "name": "The New Nation, 27 ottobre 2026 (organizzazioni stampa)",
+          "url": "https://dailynewnation.com/news/865956"
+        }
+      ],
+      "rdi_article_id": "rdi-20261027-bangladesh-amar-desh-presa"
     }
   ]
 }
