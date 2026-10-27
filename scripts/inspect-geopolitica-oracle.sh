@@ -26,4 +26,14 @@ echo "AZURACAST_CLI_COMMANDS:"
 if docker ps --format '{{.Names}}' | grep -qx azuracast; then
   docker exec azuracast sh -c 'if command -v azuracast_cli >/dev/null 2>&1; then azuracast_cli list --raw 2>/dev/null | grep -E "azuracast:(station|api|account|sync|radio)" | head -n 32; elif test -e /var/azuracast/www/bin/console; then php /var/azuracast/www/bin/console list --raw 2>/dev/null | grep -E "azuracast:(station|api|account|sync|radio)" | head -n 32; fi' || true
 fi
+echo "AZURACAST_KEY_VARIABLE_PRESENCE:"
+if docker ps --format '{{.Names}}' | grep -qx azuracast; then
+  docker exec azuracast sh -c '
+    for name in INIT_ADMIN_API_KEY AZURACAST_API_KEY RDI_AZURACAST_API_KEY; do
+      if printenv "$name" >/dev/null; then echo "$name=present"; else echo "$name=absent"; fi
+    done
+    for path in /var/azuracast/www/backend/src/Entity/StationPlaylist.php /var/azuracast/www/backend/src/Entity/ApiKey.php /var/azuracast/www/vendor/autoload.php; do
+      if test -f "$path"; then echo "$path=present"; else echo "$path=absent"; fi
+    done' || true
+fi
 echo "RDI_ORACLE_PROBE=end"
