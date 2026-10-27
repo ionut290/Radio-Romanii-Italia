@@ -1,0 +1,61 @@
+name: RDI - Actualizare Geopolitică
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_geopolitica.py"
+      - ".github/workflows/geopolitica.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "37 * * * *"
+permissions:
+  contents: write
+concurrency:
+  group: rdi-geopolitica
+  cancel-in-progress: false
+jobs:
+  actualizeaza:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verifică sintaxa importatorului
+        run: python -m py_compile scripts/update_geopolitica.py
+      - name: Colectează titluri cu surse identificabile
+        run: python scripts/update_geopolitica.py
+      - name: Verifică structura fluxului, dacă a fost actualizat
+        run: |
+          if test -s data/geopolitica-news.json; then
+            python - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('data/geopolitica-news.json').read_text(encoding='utf-8'))
+          assert data.get('schema_version') == 1
+          assert isinstance(data.get('items'), list)
+          assert all(x.get('url','').startswith('https://') and x.get('source') and x.get('published') for x in data['items'])
+          print('Titluri validate:',len(data['items']))
+          PY
+          fi
+      - name: Publică fluxul, fără să schimbe radioul sau harta
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain -- data/geopolitica-news.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/geopolitica-news.json
+            git commit -m "RDI: actualizare surse geopolitice"
+            for attempt in 1 2 3 4 5; do
+              if git pull --rebase -X ours origin main && git push origin HEAD:main; then exit 0; fi
+              git rebase --abort || true
+              sleep $((attempt * 3))
+            done
+            echo "Actualizarea geopolitică nu a putut fi publicată." >&2
+            exit 1
+          fi
