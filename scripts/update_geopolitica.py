@@ -8,6 +8,7 @@ import hashlib
 import html
 import json
 import re
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -35,11 +36,82 @@ QUERIES = [
 ]
 MAX_PER_QUERY = 9
 MAX_TOTAL = 100
+MAX_NEW_BILINGUAL_TITLES = 32  # bounded API requests per hourly run
 NOW = dt.datetime.now(dt.timezone.utc)
 seen_urls = set()
 seen_titles = set()
 entries = []
 failures = []
+
+try:
+    old_data = json.loads(OUTPUT.read_text(encoding="utf-8"))
+    old_titles = {x["id"]: x for x in old_data.get("items", []) if isinstance(x, dict) and x.get("id")}
+except (OSError, ValueError, TypeError):
+    old_titles = {}
+
+def translate_google(value, target):
+    # The language of an RSS title may differ from the language of the search query.
+    query = urllib.parse.urlencode({"client": "gtx", "sl": "auto", "tl": target, "dt": "t", "q": value})
+    request = urllib.request.Request(
+        "https://translate.googleapis.com/translate_a/single?" + query,
+        headers={"User-Agent": "Mozilla/5.0 (compatible; RDI-WorldDesk/1.1)"}
+    )
+    with urllib.request.urlopen(request, timeout=9) as response:
+        data = json.loads(response.read(300000))
+    translated = html.unescape("".join(str(piece[0] or "") for piece in data[0] if piece and piece[0])).strip()
+    source_lang = str(data[2] or "").lower() if len(data) > 2 else ""
+    if not translated or len(translated) < 5:
+        raise ValueError("empty translation")
+    if source_lang and source_lang != target and translated.casefold() == value.casefold() and len(value.split()) >= 4:
+        raise ValueError("untranslated text")
+    return translated[:260]
+
+def strip_source_suffix(title, publisher):
+    # Some RSS headlines include the publisher name as a suffix.
+    suffix = " - " + publisher
+    return title[:-len(suffix)].strip() if publisher and title.endswith(suffix) else title
+
+def add_bilingual_titles(items):
+    # Preserve translations when the matching original headline has not changed.
+    pending = []
+    for item in items:
+        previous = old_titles.get(item["id"], {})
+        if previous.get("title") == item["title"] and previous.get("title_ro") and previous.get("title_it"):
+            item["title_ro"] = previous["title_ro"]
+            item["title_it"] = previous["title_it"]
+            item["translation_status"] = previous.get("translation_status", "machine_translation")
+        else:
+            pending.append(item)
+    # Spread translations across every topic rather than only the first feed.
+    by_topic = {}
+    for item in pending:
+        by_topic.setdefault(item["category"], []).append(item)
+    prioritized = []
+    topics = list(by_topic)
+    while any(by_topic.values()):
+        for topic in topics:
+            if by_topic[topic]:
+                prioritized.append(by_topic[topic].pop(0))
+    completed = 0
+    consecutive_failures = 0
+    for item in prioritized:
+        if completed >= MAX_NEW_BILINGUAL_TITLES or consecutive_failures >= 5:
+            break
+        try:
+            original = item["title"]
+            ro = translate_google(original, "ro")
+            it = translate_google(original, "it")
+            item["title_ro"] = ro
+            item["title_it"] = it
+            item["translation_status"] = "machine_translation"
+            completed += 1
+            consecutive_failures = 0
+            time.sleep(0.15)
+        except Exception as exc:
+            consecutive_failures += 1
+            print("Titlu nepublicat până la traducere:", item["id"], type(exc).__name__)
+    print("Titluri bilingve noi:", completed, "titluri rămase:", len(pending) - completed)
+
 
 def normalized_title(value):
     value = html.unescape(value)
@@ -57,6 +129,7 @@ def fetch_query(topic, region, query, lang, country):
         title = html.unescape((item.findtext("title") or "").strip())
         link = html.unescape((item.findtext("link") or "").strip())
         publisher = html.unescape((item.findtext("source") or "Google News").strip())
+        title = strip_source_suffix(title, publisher)
         date_string = (item.findtext("pubDate") or "").strip()
         if not title or len(title) < 12 or not link.startswith("https://") or len(link) > 3000:
             continue
@@ -106,14 +179,17 @@ def main():
             return
         raise SystemExit("Nicio sursă disponibilă; nu publicăm date fictive.")
     entries.sort(key=lambda row: row["published"], reverse=True)
+    entries[:] = entries[:MAX_TOTAL]
+    add_bilingual_titles(entries)
     output = {
-        "schema_version": 1,
+        "schema_version": 2,
         "updated_at": NOW.isoformat().replace("+00:00", "Z"),
         "origin": "Google News RSS / publisher headlines",
         "verification": "external_headlines_not_independently_verified",
+        "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
         "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
         "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
-        "items": entries[:MAX_TOTAL],
+        "items": entries,
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
