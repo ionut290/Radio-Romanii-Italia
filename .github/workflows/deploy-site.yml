@@ -18,6 +18,9 @@ jobs:
         run: |
           set -euo pipefail
           test -s index.html
+          test -s geopolitica.html
+          test -s geopolitica.css
+          test -s geopolitica.js
           test -s ghid.html
           test -s directory-manage.js
           test -s directory-feed.js
@@ -25,7 +28,8 @@ jobs:
       - name: Verifica la sintassi dei componenti della mappa
         run: |
           node --check harta-atacurilor.js
-          python -m py_compile scripts/update_attack_candidates.py
+          node --check geopolitica.js
+          python -m py_compile scripts/update_attack_candidates.py scripts/update_geopolitica.py
       - name: Verifica dati e schede del Ghid
         run: |
           set -euo pipefail
