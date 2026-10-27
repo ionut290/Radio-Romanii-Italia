@@ -199,3 +199,50 @@ html:not(.youtube-news) main>footer{max-width:100%;padding:36px 14px 10px}
   html:not(.youtube-news) .radio-compact button{padding:9px 4px}
   html:not(.youtube-news) #rdi-language{font-size:11px}
 }
+
+/* Stable broadcast row: a single explicit grid prevents implicit main-grid
+   placement from leaving whitespace or misaligning the radio card. */
+html:not(.youtube-news) body>main{display:block;width:100%!important;max-width:none!important;margin-inline:0!important}
+html:not(.youtube-news) .rdi-broadcast-layout{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+html:not(.youtube-news) .rdi-broadcast-layout>*{min-width:0;max-width:100%}
+html:not(.youtube-news) .rdi-broadcast-layout #pwa-install[hidden]{display:none!important}
+@media(min-width:960px){
+  html:not(.youtube-news) .rdi-broadcast-layout{
+    display:grid;
+    grid-template-columns:minmax(0,1.5fr) minmax(365px,.86fr);
+    gap:clamp(18px,2vw,36px);
+    align-items:stretch;
+    margin:0 0 clamp(18px,2vw,30px);
+  }
+  html:not(.youtube-news) .rdi-broadcast-layout>.radio-brand-hero{
+    grid-column:1;
+    grid-row:1;
+    margin:0!important;
+    height:100%;
+    min-height:260px;
+    aspect-ratio:auto;
+    align-self:stretch;
+  }
+  html:not(.youtube-news) .rdi-broadcast-layout>.card.radio-compact{
+    grid-column:2;
+    grid-row:1;
+    margin:0!important;
+    padding:clamp(18px,2vw,28px);
+    min-height:260px;
+    height:100%;
+    align-self:stretch;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  html:not(.youtube-news) .rdi-broadcast-layout>#pwa-install:not([hidden]){
+    grid-row:2;
+    grid-column:1/-1;
+    justify-self:start;
+  }
+}
+@media(max-width:959px){
+  html:not(.youtube-news) .rdi-broadcast-layout{display:flex;flex-direction:column;gap:0}
+  html:not(.youtube-news) .rdi-broadcast-layout>.radio-brand-hero{width:100%;margin-bottom:12px}
+  html:not(.youtube-news) .rdi-broadcast-layout>.card.radio-compact{width:100%;margin-bottom:18px}
+}
