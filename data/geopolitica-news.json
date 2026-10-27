@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-27T18:32:02.785305Z",
+  "updated_at": "2026-10-27T18:47:02.946343Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -69,7 +69,7 @@
       "region": "europa",
       "title": "Trump Effect: Top NATO Powers Pledge to Commit More to Defence, Reaffirm U.S. Alliance",
       "summary": "",
-      "source": "Breitbart News",
+      "source": "Breitbart",
       "published": "2026-10-27T16:59:06Z",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWWo1ZnNMbUUxX0xjenFHdXVkNlJjdXExZUxxZ2xEQmpaSUZ2UklWTFR5RnhRci14a3Y1MVRrTzRHT1JaTDBrTko3OUppenFnUTl3VTZSZjJldjh6WGh2eDFkZjhEUU92UnlINk9adlVGcWstbk9jUmJ4MGRaMEpZS0dvSnJOS3JkN0VTUlNwNGc3bXphMlljcWNFZnBtMFNMMFpwdnZ6OHNUa2lKZVhPdDBSVk81SlpUVUdIcDhLSDROMWZSR3dj0gHMAUFVX3lxTFBqRnJ4eE5sRmhsdHBGZG1DSHA4NUhxNUlHR2NTLUVZTkExdXVvUTl4WnJHRjRuNk9HVUhkZEo2MXB4dXRJb2thVEJkWFF4cGFsaTFjaVZpM09GNHdKcVVINzgtbk96RXdCdjZ6aklxZGE5U0dYd19heUhkYXlid3MwblFMRmprZUtGWk9ST012OVRneWJEdkRDR3czdVQtRmRMSFEtLUZkcjFUWGJ3MG5PMzRnVjlZMzR5ZXpMeng1dnNmZFRSU3hxOV9jUA?oc=5",
       "review_status": "external_headline_unverified",
@@ -218,6 +218,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-8e2acf42ed483866",
+      "category": "europa",
+      "region": "europa",
+      "title": "Strade UE, \"solo\" 19.350 morti in un anno: in 12 mesi si sono salvati in 580",
+      "summary": "",
+      "source": "Eunews",
+      "published": "2026-10-27T15:32:15Z",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMG9Zc3dIZXBhcG5VTGJoOThSUGgxUUNpX0ctQm1GY182UzhyeFJZeTJDeHU5VUI5N1dZWjNRRDEwQVBOSHVYZFdudlRfaGJJQVZ0Y3UwejZaQ2wtcnVoYnpYbUh2T0kydURjQXhHVGVkMHhra2lfbDVJTEVLWHdBY3lFNGJXZjRidjhwQUxoa3ZrNThOdDJWX3pUMkI0eTNOQ2VoNEVySWlKZw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Drumuri UE, „doar” 19.350 de decese într-un an: în 12 luni au fost salvate 580",
+      "title_it": "Strade UE, \"solo\" 19.350 morti in un anno: in 12 mesi si sono salvati in 580",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-24a8478d4aa5befe",
       "category": "conflicte",
       "region": "europa",
@@ -302,20 +316,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-b43326d85fc4e79d",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Lana Nusseibeh: The UAE’s UN bid in the shadow of Gaza and Sudan",
-      "summary": "",
-      "source": "نون بوست",
-      "published": "2026-10-27T14:20:47Z",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFAzcVdkMFFoWXJHbTRnVGxxQVVsWFlJVzYtMHRKTDhZOXhqMHZPSVpVWG04eHpIZm50aFZCaFlFajNtZnI2LVpPTEh4UHpCZFpzdDY40gFTQVVfeXFMUDNxV2QwUWhZckdtNGdUbHFBVWxYWUlXNi0wdEpMOFk5eGowdk9JWlVYbTh4ekhmbnRoVkJoWUVqM21mcjYtWk9MSHhQekJkWnN0Njg?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Lana Nusseibeh: Candidatura Emiratelor Arabe Unite la ONU în umbra Gazei și Sudanului",
-      "title_it": "Lana Nusseibeh: la candidatura degli Emirati Arabi Uniti alle Nazioni Unite all’ombra di Gaza e del Sudan",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-43ffa97beac33b2f",
       "category": "diplomatie",
       "region": "americi",
@@ -341,6 +341,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Securitatea energetică globală este în pericol dacă strâmtoarea Ormuz nu se deschide în câteva săptămâni, spune șeful AIE",
       "title_it": "La sicurezza energetica globale è a rischio se lo Stretto di Hormuz non si aprirà entro poche settimane, afferma il capo dell’AIE",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-82d6fb4dc1dc14cd",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "National and International News in Focus: Oct. 27",
+      "summary": "",
+      "source": "WKTV",
+      "published": "2026-10-27T14:12:51Z",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUGNmekotUjZsZnBYX0RBazhUNTdjRFVZZkxWOXQ4Tk5INjZxc2I0R0s3QXEybTl4UFRZdWZYbzV5TUhkNDhDdTVGakhTc3RTdzlYQkR6dE00M3pNYUkwQkNyOWs0MGFWbjd3SWJ0OU1JMFFSOTlpT3NuMi1vbjhIdUluejNiSnFWMS1yOGV4NUFKcDJPbUh4QXVwNkxJRFZoSWNESC0zdERQUE1nc3hFT2FWbXlUdzNRTnhSTVByNkRfTU1GN1RxeEZiZHQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Știri naționale și internaționale în atenție: 27 octombrie",
+      "title_it": "Notizie nazionali e internazionali in primo piano: 27 ottobre",
       "translation_status": "machine_translation"
     },
     {
@@ -568,6 +582,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-25fa4ea6b74ec7a1",
+      "category": "europa",
+      "region": "europa",
+      "title": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
+      "summary": "",
+      "source": "VareseNews",
+      "published": "2026-10-27T11:58:18Z",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSE9vQnhEZTYyTGNLeUVnNW9VR3NIc2I2VDVmN1Z0anBkNlJ5NGNYUUNzc3NUalNWZkx1UFJCRGFYVjRKSHRUZlB6eG9vYU5QY3hCWXFwUWk0eS1GMGk5VWZBVUstcWd6VElNd1FvOGhTNWxSZnh6ZjRabzJONUxMMXNadW9XVmF4QjZIR3JEQ3ZuYktyelNSRktlZ0VlV2NxVmtVRFJFcUFONE5RODBCeTFxbDl1aXJxQWZiWF9qQU02ODdmd3F4NnVlcC1fOUR3OWstcg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De la Green Deal la bugetul european, provocările ultimului Consiliu European și viitorul Uniunii",
+      "title_it": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-e8338bf2d238a205",
       "category": "securitate",
       "region": "europa",
@@ -596,31 +624,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-d0c31e0e4ad76a68",
+      "id": "geo-0bc7e1ec3e7e248e",
       "category": "conflicte",
       "region": "europa",
       "title": "A one-city ceasefire between Russia and Ukraine brokered by First Lady Melania Trump is in effect",
       "summary": "",
-      "source": "WWNY",
+      "source": "Western Mass News",
       "published": "2026-10-27T11:07:00Z",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNVUhnck5XNUJ5ZHN0MWl1Z1d6YUl5NVQ3SFYwYVJJM0VLeWlCcEt1TXBfM3Z2WWV0TXFCRGl0S3VDNnlPODRoaTdSa09KSFBXc3lEMGRlREZOemVlTWZaSkxLeHhYMUV5Umk0Zm9KNG9zYVFkOFMtVFgtZWgxZzNiSlVSNnNLU2NnWW5UVGdkWnJnbFBIUi1weGlfSUllV2ZsMHpGX3Mza3NpdHlyRkVYRjBpZHp5QTYzY0VSc2lrSDVCeGY3Vk1oeXZDRHpJZGs2LV9oStIB1AFBVV95cUxNVUhnck5XNUJ5ZHN0MWl1Z1d6YUl5NVQ3SFYwYVJJM0VLeWlCcEt1TXBfM3Z2WWV0TXFCRGl0S3VDNnlPODRoaTdSa09KSFBXc3lEMGRlREZOemVlTWZaSkxLeHhYMUV5Umk0Zm9KNG9zYVFkOFMtVFgtZWgxZzNiSlVSNnNLU2NnWW5UVGdkWnJnbFBIUi1weGlfSUllV2ZsMHpGX3Mza3NpdHlyRkVYRjBpZHp5QTYzY0VSc2lrSDVCeGY3Vk1oeXZDRHpJZGs2LV9oSg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPVk5PTkF4VlFMUGtPWFNEazZBTXY4TzdnZjJ5LXotSzJ4ZzgzVldhbThmdW1RLXRnT2cwbWlUTzZhUnpka2dzUGdLOThTWnF5TncxVi15WUxkak5NOFRJQlJ4cWJ0clo3TF9FX3NGZmdKcWdvOVRrTm5jYlp6Z2V1cUVHdG81dlFfMzlMUmlVVjdWOVdaRTNpcENxMmhNdWVBaWpQY0tWcE5fQUVBU2t2Unc2RHZBV2RheXVSSWRfR1QyRXRLREdYSmVqc3RKX3czR0xhRlRYOWhpdDBZeEFleNIB4AFBVV95cUxPVk5PTkF4VlFMUGtPWFNEazZBTXY4TzdnZjJ5LXotSzJ4ZzgzVldhbThmdW1RLXRnT2cwbWlUTzZhUnpka2dzUGdLOThTWnF5TncxVi15WUxkak5NOFRJQlJ4cWJ0clo3TF9FX3NGZmdKcWdvOVRrTm5jYlp6Z2V1cUVHdG81dlFfMzlMUmlVVjdWOVdaRTNpcENxMmhNdWVBaWpQY0tWcE5fQUVBU2t2Unc2RHZBV2RheXVSSWRfR1QyRXRLREdYSmVqc3RKX3czR0xhRlRYOWhpdDBZeEFleA?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "O încetare a focului într-un singur oraș între Rusia și Ucraina intermediată de Prima Doamnă Melania Trump este în vigoare",
+      "title_ro": "O încetare a focului într-un singur oraș între Rusia și Ucraina intermediată de prima doamnă Melania Trump este în vigoare",
       "title_it": "È in vigore un cessate il fuoco di una sola città tra Russia e Ucraina mediato dalla First Lady Melania Trump",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-4a306ab24e390b57",
-      "category": "europa",
-      "region": "europa",
-      "title": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
-      "summary": "",
-      "source": "MalpensaNews",
-      "published": "2026-10-27T11:04:22Z",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOS2JHbGcxWFlWLTlzU0FxSmtJWDdCSVI1a19kbkxEeGdPV2FLbDZLM29rXzdlVGNjbzJHb3NXMFlmczdYRUdYcVNvcTVvTFE4TVhGOWUwU2FzZGJyVktvVm5kbHNBRFVlUldjRVc1bS1PRU9kNklGVnNUU0NMemhpMUNRcmVld0dENnYySTBNd3hXdjNMRjFJdzRtSUhfRDBqelNrZlhPVmF3SlNaMXN2bTVkV1J6T2VNTm1CU0xrSnRuMFB1SHRzQ3hyQnB3aDJSOWdOTnpR?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De la Green Deal la bugetul european, provocările ultimului Consiliu European și viitorul Uniunii",
-      "title_it": "Dal Green Deal al bilancio europeo, le sfide dell'ultimo Consiglio Europeo e il futuro dell'Unione",
       "translation_status": "machine_translation"
     },
     {
@@ -666,31 +680,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-3bbba88b11d41a4f",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "What does Israel's election mean for Gaza and the wider world?",
-      "summary": "",
-      "source": "BBC",
-      "published": "2026-10-27T10:17:36Z",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9NZFJwOEozQUZUejVNNkRjSVJtbi14UEktRUF6bk1UUHFfZTV3NkxiZnlUZTJ0MTVNc1kzNUs1SDN6VEx0OG51LVFfMHl4YXZ0NFJTMjFwcVM?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ce înseamnă alegerea Israelului pentru Gaza și întreaga lume?",
-      "title_it": "Cosa significa l'elezione di Israele per Gaza e il resto del mondo?",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-696aaa204c5375cb",
-      "category": "conflicte",
+      "id": "geo-14a065564ba41961",
+      "category": "europa",
       "region": "europa",
-      "title": "Oleshky Truce, Kyiv Missiles: The Two Faces of Russia’s War in Ukraine",
+      "title": "Il caso Ceuta e il corto circuito dell’Europa sui migranti",
       "summary": "",
-      "source": "The Korea Post",
-      "published": "2026-10-27T10:08:55Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1wVG05SHhyYjlQREJOR0NxTnpkUDZ2OTk2Mk0ycTVSQU5XbndFSnZCLWNKOW1ZVXg2cjRkcEZvVktvUHJNUmlVdjJ6VmIwZk40LTdaQWIyczFfdVdtWEdtbUViSGZCYkNUd0FJU0Nn0gFuQVVfeXFMTXBUbTlIeHJiOVBEQk5HQ3FOemRQNnY5OTYyTTJxNVJBTldud0VKdkItY0o5bVlVeDZyNGRwRm9WS29Qck1SaVV2MnpWYjBmTjQtN1pBYjJzMV91V21YR21tRWJIZkJiQ1R3QUlTQ2c?oc=5",
+      "source": "www.lavitadelpopolo.it",
+      "published": "2026-10-27T10:06:50Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRW95aHBzdkdxUFRsSzJEek9mdXBscWVPMmxfb21YOG5ZVTNpaVhtNjBIMDZqWFF4UkFLMndqenQ0ZEpTUUlxQU5kU1diY212UTlOYjZIVWZVeUVqOEZ5TVpyQThrSTgxelZKWXBSMjJuODFGNGgtb2o0cnhobWZkczBwVU1IaVE3ajdsNlJuMmJCN2tHcG1XZnRIcUJ2X2JLQkE3Q0ktdkNHWHZrRWZhSmR3?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Armistițiu Oleshky, Rachete Kiev: Cele două fețe ale războiului Rusiei în Ucraina",
-      "title_it": "La tregua di Oleshky, Missili di Kiev: i due volti della guerra russa in Ucraina",
+      "title_ro": "Cazul Ceuta și scurtcircuitul european asupra migranților",
+      "title_it": "Il caso Ceuta e il corto circuito dell’Europa sui migranti",
       "translation_status": "machine_translation"
     },
     {
@@ -719,6 +719,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Inflația globală a mărfurilor testează băncile centrale pe măsură ce creșterea încetinește",
       "title_it": "L’inflazione globale delle materie prime mette alla prova le banche centrali mentre la crescita rallenta",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-3ade369c4f1bb71a",
+      "category": "economie",
+      "region": "global",
+      "title": "Global Trade Faces Rising Commodity Costs as Energy Disruptions Spread",
+      "summary": "",
+      "source": "Kalkine",
+      "published": "2026-10-27T09:22:00Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQOU9VZ0xDR3VxWkl0SU1jSGM5TG1mVmgwckFDTTNZNUlJOUstTVBSMkJNd0NDd2swUTlPY2VjQ0hhY3c5Ukd4dlEtWWcyeGhYbG4waXFKX25yODNNYkNBVE5YTVBuWU44LUNZWVEwMzVJY3p5OXVZRG13NFdVSFRvVTJ4TnFNM3huZEZ0YTVJaEpjZFlISFVJbnhpRzA1QmlCZHNNREU1bFJqa3JCWEVVSjF3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Comerțul global se confruntă cu creșterea costurilor mărfurilor pe măsură ce perturbările energetice se răspândesc",
+      "title_it": "Il commercio globale si trova ad affrontare l’aumento dei costi delle materie prime mentre si diffondono le interruzioni energetiche",
       "translation_status": "machine_translation"
     },
     {
@@ -820,31 +834,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-9d858e51bf1dab91",
-      "category": "europa",
-      "region": "europa",
-      "title": "Frontex ar putea deveni o agenție europeană de deportare, apropiată de modelul ICE din SUA.…",
+      "id": "geo-d391828d07bcdeda",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Israel votes Tuesday in tight race as Netanyahu faces Eisenkot challenge",
       "summary": "",
-      "source": "Mediafax",
-      "published": "2026-10-27T07:46:08Z",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPbElLSzgyQUZfXzRMOEtxcDVXMnczRG5QNFBfZjZSN205Y1Bfc0toakx1QkhvNl9kU1RuRmJvUmlsYnJGSzZPZUlhTnRTMEhCZE5WY1BNeFltWDF6TGpLQ1RJeFhfRVpqWl9ackMycmZzdFY4VmlnUGxvdGxFVkZac2xqWmFKODBFb1JJVUZBTVlDSFYzRThYdTdnWFNNSnVWdGNQSjhQMHduZnd6aG1GWWNhRFVxMzIxOUxoXzZ4MExOM1QtU01mOUVvLWc2ckl0R1B4V3ptaUJWM3NYRTlxdkdzUlFCUV9YQXZJdmQxZWpDdDhOdzJPVnZLX3Faa2VzX2lj0gGIAkFVX3lxTFBFYmxsS0NsOWtEdGJIMGlvcnBqNWw0R1BoaGhUN2Z1aUVVZTZFLTYxa25seEJQNXdBblpmR3RFLVF0QXp2MWpMTVl4V3ZQMzVJdUhpeE5qNzlXUzhySjhraVVGZTB4LVdDdVlSb3JVckRUOWNma1RvX0hwSUNRMjhJWlVrMjRPUW1KTE5rNU53akEwZVRyT3d2X295TXUzMldXRGpXTV9wYk9PWFFhM29JMnF3dEFJUWRfeFc0Y0Zjb09IdEVxRGJhQnhSZFJvZHV4QUQzeUFQNzFub0l2N0kwQVRfNHpjS0lhUVUxVkVid3BXQzJQTGdJQTZCdUVzTmJMcFJkb1BONg?oc=5",
+      "source": "Yeni Şafak English",
+      "published": "2026-10-27T08:07:59Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONmppRkNyUU96ZnFCc3UwSzBEU25QT0RhS001dVRzZnJrLW1rTzZJemxfWmRNMmhnZkwwT0NDcEpvaVQ2VmxQLXhDbzdaWG1FMXdFQk5WTkJkdWxkWDQzUXl6NXhkMVVBMmtsZEFIbGM0WXRmNnA5SVVfb20zaDJfbTV5bGJYZUhOZm04UWF4Y09PSGctVkhRQlNPeUZ1Y2MyZWdjY3djbWRwb3k0NkVZeg?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Frontex ar putea deveni o agenție europeană de deportare, apropiată de modelul ICE din SUA.…",
-      "title_it": "Frontex potrebbe diventare un’agenzia europea di deportazione, vicina al modello americano ICE.…",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-22ef8efb36aceae3",
-      "category": "clima",
-      "region": "global",
-      "title": "The circular economy makes its debut on the agenda of COP 31 in Turkey",
-      "summary": "",
-      "source": "Il Sole 24 ORE",
-      "published": "2026-10-27T07:41:24Z",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNaUVudEJSWVMxYzF5bUUwbFNqMFNPNTFjVGxjMU9yNS1samFxcl9KZUR4dFJ6alBxbHI3Rl9sR2pRU2xqMkF6emZKX3A0YlJBTTJ0aFNLRS0wSThmbEttWmhrSGZNbUhodzZtSzRJc0VhbXNONE1SbnRBX2g5bUotZW1KcTB6T0Y2VXMzNHJaOXVIV293c1pCNjhuUVhrSGxYbkp0ejRGZDhGWi1sck5j?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Economia circulară își face debutul pe agenda COP 31 din Turcia",
-      "title_it": "L’economia circolare fa il suo debutto nell’agenda della COP 31 in Turchia",
+      "title_ro": "Israelul votează marți într-o cursă strânsă, în timp ce Netanyahu se confruntă cu provocarea lui Eisenkot",
+      "title_it": "Israele vota martedì in una corsa serrata mentre Netanyahu affronta la sfida di Eisenkot",
       "translation_status": "machine_translation"
     }
   ]
