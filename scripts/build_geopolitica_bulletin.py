@@ -144,25 +144,25 @@ def broadcast_summary(text: str, lang: str, source: str) -> str:
     """
     text = clean_spoken(text, 700)
     if lang == "it":
-        text = re.sub(r"^(?:Secondo|Stando a)\\s+(?:Reuters(?:\\s+e\\s+AP)?|Associated Press|AP)\\s*,?\\s*",
+        text = re.sub(r"^(?:Secondo|Stando a)\s+(?:Reuters(?:\s+e\s+AP)?|Associated Press|AP)\s*,?\s*",
                       "", text, flags=re.IGNORECASE)
-        text = re.sub(r"^Reuters\\s+(?:riferisce|segnala)\\s+che\\s+", "", text, flags=re.IGNORECASE)
-        text = re.sub(r"^Reuters\\s+cita\\s+(il sindaco[^:]{0,100}):\\s*",
-                      r"\\1 ha riferito che ", text, flags=re.IGNORECASE)
-        text = re.sub(r"\\bUn testimone Reuters\\b", "Un testimone", text, flags=re.IGNORECASE)
-        text = re.sub(r"\\bReuters(?:\\s+e\\s+AP)?\\s+(?:riferisce|riporta)\\s+che\\s+",
+        text = re.sub(r"^Reuters\s+(?:riferisce|segnala)\s+che\s+", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"^Reuters\s+cita\s+(il sindaco[^:]{0,100}):\s*",
+                      r"\1 ha riferito che ", text, flags=re.IGNORECASE)
+        text = re.sub(r"\bUn testimone Reuters\b", "Un testimone", text, flags=re.IGNORECASE)
+        text = re.sub(r"\bReuters(?:\s+e\s+AP)?\s+(?:riferisce|riporta)\s+che\s+",
                       "", text, flags=re.IGNORECASE)
-        text = re.sub(r"\\bReuters\\s+(?:dichiara|precisa)\\s+che\\s+non\\s+ha\\s+potuto\\s+verificare\\s+(?:indipendentemente|autonomamente)\\s+",
+        text = re.sub(r"\bReuters\s+(?:dichiara|precisa)\s+che\s+non\s+ha\s+potuto\s+verificare\s+(?:indipendentemente|autonomamente)\s+",
                       "Non è stato possibile verificare indipendentemente ", text, flags=re.IGNORECASE)
         # A publisher name can appear inside an editorial summary; don't read it.
         for outlet in ("Reuters", "Associated Press", "Internazionale"):
-            text = re.sub(r"\\b" + re.escape(outlet) + r"\\b", "", text, flags=re.IGNORECASE)
+            text = re.sub(r"\b" + re.escape(outlet) + r"\b", "", text, flags=re.IGNORECASE)
     elif lang == "ro":
-        text = re.sub(r"\\bReuters(?:\\s+și\\s+AP)?\\b", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\bReuters(?:\s+și\s+AP)?\b", "", text, flags=re.IGNORECASE)
     if source:
         # Never voice the stored outlet name. Retain it for the written article.
         text = text.replace(source, "")
-    return re.sub(r"\\s+", " ", text).strip(" ,.;:")
+    return re.sub(r"\s+", " ", text).strip(" ,.;:")
 
 
 def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | None:
@@ -176,7 +176,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | No
              if lang == "ro" else f"Edizione delle {hour_text} del {date_text}.")
     segments = [{
         "kind": "intro",
-        "text": "\\n".join((OPENING[lang], intro, CAUTION[lang])),
+        "text": "\n".join((OPENING[lang], intro, CAUTION[lang])),
     }]
     public_articles = []
     for index, item in enumerate(stories):
@@ -184,7 +184,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | No
         title = item["title"]
         summary = broadcast_summary(item["summary"], lang, item["source"])
         # Don't repeat "Ucraina: Ucraina: ...".
-        title_spoken = re.sub(r"^" + re.escape(label) + r"\\s*[:—-]\\s*", "", title, flags=re.IGNORECASE)
+        title_spoken = re.sub(r"^" + re.escape(label) + r"\s*[:—-]\s*", "", title, flags=re.IGNORECASE)
         transition = "" if index == 0 else TRANSITIONS[lang][min(index - 1, len(TRANSITIONS[lang]) - 1)] + " "
         segment = {
             "kind": "story", "id": item["id"], "country": label,
@@ -198,7 +198,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict) -> dict | No
             "source_name": item["source"], "published_date": item["date"].isoformat(),
         })
     segments.append({"kind": "outro", "text": OUTRO[lang]})
-    transcript = "\\n\\n".join(item["text"] for item in segments) + "\\n"
+    transcript = "\n\n".join(item["text"] for item in segments) + "\n"
     edition_id = now.strftime("%Y%m%d-%H%M")
     return {
         "language": lang, "generated_at": now.isoformat(),
