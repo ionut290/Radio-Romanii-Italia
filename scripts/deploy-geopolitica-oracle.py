@@ -241,7 +241,19 @@ def main() -> int:
             playlists = client.call("GET", "/station/1/playlists")
             print("AZURACAST_AUTHENTICATED=true")
             print(f"AZURACAST_PLAYLIST_COUNT={len(playlists)}")
-            print("RDI_GEOPOLITICA_EXISTS=" + str(any(p.get("name") == PLAYLIST_NAME for p in playlists)).lower())
+            ours = [p for p in playlists if p.get("name") == PLAYLIST_NAME]
+            print("RDI_GEOPOLITICA_EXISTS=" + str(bool(ours)).lower())
+            if ours:
+                p = ours[0]
+                print("RDI_PLAYLIST_ID=" + str(p.get("id")))
+                print("RDI_PLAYLIST_ENABLED=" + str(p.get("is_enabled")))
+                print("RDI_PLAYLIST_MINUTE=" + str(p.get("play_per_hour_minute")))
+                print("RDI_PLAYLIST_MEDIA_COUNT=" + str(p.get("num_songs")))
+                media = list_own_media(client)
+                print("RDI_OWN_MEDIA_COUNT=" + str(len(media)))
+                for row in media[-3:]:
+                    print("RDI_MEDIA=" + str(row.get("path")) + "|id=" + str(row.get("id"))
+                          + "|playlists=" + str(row.get("playlists"))[:220])
         elif args.action == "apply":
             apply(client, pathlib.Path(args.manifest), pathlib.Path(args.mp3))
         else:
