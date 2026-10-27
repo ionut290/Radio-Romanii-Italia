@@ -1,9 +1,45 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27T01:55:34Z",
+  "updated_at": "2026-10-27T17:06:59.357Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
+    {
+      "id": "rdi-nigeria-taraba-binnari-20261023",
+      "date": "2026-10-23",
+      "date_label": "23 octombrie 2026",
+      "reported_on": "2026-10-27",
+      "country": "Nigeria",
+      "country_code": "NG",
+      "place": "Binnari, districtul Karim-Lamido, statul Taraba",
+      "lat": 9.22,
+      "long": 10.87,
+      "precision": "approx_district",
+      "type": "attack",
+      "status": "reported",
+      "killed": 62,
+      "injured": 52,
+      "actor": "Atacatori înarmați neidentificați; poliția folosește termenul «bandiți». Fără atribuire jihadistă confirmată.",
+      "title_ro": "Nigeria: cel puțin 62 de morți în atacul de la Binnari, potrivit NEMA",
+      "title_it": "Nigeria: almeno 62 morti nell'attacco a Binnari, secondo NEMA",
+      "description_ro": "Atacul a avut loc la 23 octombrie în comunitatea Binnari (Taraba). La 27 octombrie, NEMA a raportat cel puțin 62 de decese și 52 de răniți; bilanț provizoriu, diferit de cele anterioare ale poliției. Unele victime au murit în timp ce fugeau spre râu. Autorii nu au fost identificați definitiv. Marcajul arată doar zona administrativă aproximativă.",
+      "description_it": "L'attacco è avvenuto il 23 ottobre nella comunità di Binnari (Taraba). Il 27 ottobre l'agenzia NEMA ha segnalato almeno 62 morti e 52 feriti: bilancio provvisorio, diverso dai precedenti dati della polizia. Alcune persone sono morte durante la fuga verso il fiume. Responsabili non identificati con certezza. Il punto indica solo l'area amministrativa approssimativa.",
+      "sources": [
+        {
+          "name": "Associated Press, 27 ottobre 2026",
+          "url": "https://apnews.com/article/ecc5e9432b73275371b8490c775320dc"
+        },
+        {
+          "name": "Premium Times Nigeria, 26 ottobre 2026",
+          "url": "https://www.premiumtimesng.com/regional/nnorth-east/920349-four-hours-of-horror-how-market-day-became-a-massacre-in-taraba-community.html"
+        },
+        {
+          "name": "Channels Television, 25 ottobre 2026",
+          "url": "https://www.channelstv.com/2026/10/25/taraba-community-puts-death-toll-from-binnari-attack-at-50/"
+        }
+      ],
+      "rdi_article_id": "rdi-20261027-nigeria-taraba-binnari-62"
+    },
     {
       "id": "rdi-mali-menaka-20261018",
       "date": "2026-10-18",
