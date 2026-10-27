@@ -101,7 +101,7 @@ def produce(folder: Path) -> dict:
     voice = "it-IT-ElsaNeural"
     jingle_voice = folder / "jingle-voce.mp3"
     asyncio.run(speech(
-        "Radio Românii din Italia. Geopolitica. Il mondo, in primo piano.",
+        "Erre. Di. I. Geopolitica. Il mondo in primo piano.",
         voice, jingle_voice,
     ))
     bed = folder / "jingle-note.mp3"
@@ -113,7 +113,19 @@ def produce(folder: Path) -> dict:
     timing = [{"kind": "jingle", "start_seconds": 0.0, "end_seconds": round(duration(opening), 2)}]
     elapsed = duration(opening)
     articles_by_id = {row["id"]: row for row in data.get("articles", [])}
+    # Brevi separatori originali fra le notizie, senza coprire la voce.
+    separator = folder / "stacco-notizie.mp3"
+    chime(separator)
+    separator_seconds = duration(separator)
     for index, segment in enumerate(segments):
+        if segment.get("kind") == "story" and index > 1:
+            clips.append(separator)
+            timing.append({
+                "kind": "transition",
+                "start_seconds": round(elapsed, 2),
+                "end_seconds": round(elapsed + separator_seconds, 2),
+            })
+            elapsed += separator_seconds
         words = str(segment.get("text", "")).strip()
         if len(words) < 20:
             raise ValueError("Testo di un segmento vuoto o troppo corto")
