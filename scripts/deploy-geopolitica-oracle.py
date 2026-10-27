@@ -260,9 +260,13 @@ def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> N
     editions = [e for e in editions if isinstance(e, dict) and e.get("edition_id") != entry["edition_id"]]
     editions.append(entry)
     destination = history_path.with_suffix(".json.tmp")
-    destination.write_text(json.dumps({"editions": editions[-72:]}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    destination.replace(history_path)
-    print("RDI_HISTORY_RECORDED=" + str(len(editions[-72:])))
+    try:
+        destination.write_text(json.dumps({"editions": editions[-72:]}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        destination.replace(history_path)
+    except OSError as error:
+        print("RDI_HISTORY_WARNING=" + type(error).__name__)
+    else:
+        print("RDI_HISTORY_RECORDED=" + str(len(editions[-72:])))
 
 
 def suspend(client: Client) -> None:
