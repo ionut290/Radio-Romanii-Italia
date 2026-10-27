@@ -212,6 +212,6 @@
   $("clear").addEventListener("click",()=>{state.topic="all";state.region="all";$("search").value="";render()});
   applyLanguage();load();
   // Refresh the open page after the hourly publisher updates the JSON feed.
-  setInterval(()=>{if(!document.hidden)load()},5*60*1000);
+  setInterval(()=>{if(!document.hidden)load()},60*1000);
   document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
 })();
