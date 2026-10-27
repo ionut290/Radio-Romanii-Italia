@@ -1,0 +1,71 @@
+name: RDI - Notiziario Geopolitica (anteprima audio)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_geopolitica_bulletin.py"
+      - "scripts/render_geopolitica_audio.py"
+      - "data/geopolitica-radio-verified.json"
+      - "tests/test_geopolitica_bulletin.py"
+      - ".github/workflows/geopolitica-radio.yml"
+  schedule:
+    - cron: "47 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-geopolitica-audio
+  cancel-in-progress: false
+
+jobs:
+  create-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa testi, fonti e lingue senza modificare la radio
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/build_geopolitica_bulletin.py scripts/render_geopolitica_audio.py
+          python -m unittest discover -s tests -p 'test_geopolitica_bulletin.py' -v
+      - name: Prepara notiziario in rumeno
+        id: draft
+        shell: bash
+        run: |
+          set +e
+          python scripts/build_geopolitica_bulletin.py --language ro --output /tmp/rdi-geopolitica
+          code=$?
+          set -e
+          if [ "$code" -eq 2 ]; then
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo 'Nessuna notizia editoriale recente: non generiamo audio obsoleto.'
+            exit 0
+          fi
+          if [ "$code" -ne 0 ]; then exit "$code"; fi
+          echo 'ready=true' >> "$GITHUB_OUTPUT"
+      - name: Installa la voce sintetica
+        if: steps.draft.outputs.ready == 'true'
+        run: python -m pip install --disable-pip-version-check "edge-tts>=7,<8"
+      - name: Genera il file audio MP3 di anteprima
+        if: steps.draft.outputs.ready == 'true'
+        run: python scripts/render_geopolitica_audio.py --folder /tmp/rdi-geopolitica
+      - name: Conserva MP3, testo e fonti per verifica
+        if: steps.draft.outputs.ready == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-geopolitica-audio-ro
+          path: |
+            /tmp/rdi-geopolitica/rdi-geopolitica.mp3
+            /tmp/rdi-geopolitica/bulletin.txt
+            /tmp/rdi-geopolitica/manifest.json
+          if-no-files-found: error
+          retention-days: 3
+      # Safety gate: no AzuraCast upload and no playlist changes.
+      # Broadcast activation requires reviewing a real sample, validating the
+      # station's existing playlist configuration and secure deployment access.
