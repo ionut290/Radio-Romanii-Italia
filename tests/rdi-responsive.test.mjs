@@ -6,7 +6,7 @@ const html=readFileSync(new URL("../index.html",import.meta.url),"utf8");
 const css=readFileSync(new URL("../rdi-responsive.css",import.meta.url),"utf8");
 
 test("RDI home loads full-window layout last, without affecting YouTube broadcast view",()=>{
-  assert.match(html,/<link rel="stylesheet" href="\.\/rdi-responsive\.css\?v=20261027-fullscreen-1">/);
+  assert.match(html,/<link rel="stylesheet" href="\.\/rdi-responsive\.css\?v=20261027-fullscreen-2">/);
   assert.ok(html.indexOf("rdi-responsive.css") > html.indexOf("rdi-featured.css"));
   assert.ok(html.indexOf("rdi-responsive.css") < html.indexOf("</head>"));
   assert.match(css,/html:not\(\.youtube-news\) body>main\{[\s\S]*?width:100%;[\s\S]*?max-width:none;/);
