@@ -72,7 +72,7 @@ def playlist(client: Client, create: bool) -> dict | None:
         raise ValueError("Multiple matching RDI Geopolitica playlists: refusing update")
     if ours:
         record = ours[0]
-        if record.get("type") != "once_per_hour" or int(record.get("play_per_hour_minute", -1)) != 0:
+        if record.get("type") != "once_per_hour" or int(record.get("play_per_hour_minute", -1)) != 10:
             raise ValueError("A playlist with this name exists but has unexpected schedule")
         return record
     if not create:
@@ -84,7 +84,7 @@ def playlist(client: Client, create: bool) -> dict | None:
         "source": "songs",
         "order": "sequential",
         "is_enabled": False,  # Activate only once upload + assignment succeed.
-        "play_per_hour_minute": 0,
+        "play_per_hour_minute": 10,
         "include_in_requests": False,
         "include_in_on_demand": False,
         "avoid_duplicates": False,
