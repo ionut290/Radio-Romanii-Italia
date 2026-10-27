@@ -73,7 +73,7 @@ def clean_spoken(value: object, limit: int = 650) -> str:
 
 def story_signature(item: dict) -> str:
     """Treat changed text as an update, not merely a new ID or URL."""
-    normalized = " ".join(str(item.get(key, "")).casefold().split() for key in ("title", "summary"))
+    normalized = " ".join(" ".join(str(item.get(key, "")).casefold().split()) for key in ("title", "summary"))
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:24]
 
 
