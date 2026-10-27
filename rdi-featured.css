@@ -1,0 +1,34 @@
+/* RDI home: news lead and four photo stories, isolated from radio player. */
+html:not(.youtube-news) #rdi-featured{margin:10px 0 22px;color:#142b4b}
+#rdi-featured[hidden]{display:none!important}
+.rdi-featured-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 12px}
+.rdi-featured-kicker{display:inline-flex;align-items:center;gap:7px;color:#1168ce;font-size:10px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase}
+.rdi-featured-kicker::before{content:"";width:7px;height:7px;background:#ed4562;border-radius:50%;box-shadow:0 0 0 4px #ed45621a}
+.rdi-featured-head h2{font-size:clamp(21px,4vw,28px);line-height:1.18;letter-spacing:-.5px;margin:4px 0 0;font-weight:900;color:#10284e}
+.rdi-featured-head a{flex:none;font-size:12px;font-weight:800;color:#0961c6;text-decoration:none;margin-bottom:3px}
+.rdi-featured-head a:hover{text-decoration:underline}
+.rdi-featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.rdi-featured-story{min-width:0;min-height:0;background:#fff;border:1px solid #e4ebf5;box-shadow:0 5px 15px #19385813;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.rdi-featured-story:hover{transform:translateY(-2px);box-shadow:0 11px 24px #19385820}
+.rdi-featured-story:first-child{grid-column:1/-1}
+.rdi-featured-link{display:flex;flex-direction:column;flex:1;color:inherit;text-decoration:none!important;min-width:0}
+.rdi-featured-visual{width:100%;position:relative;aspect-ratio:16/10;overflow:hidden;background:#112946;isolation:isolate}
+.rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/8}
+.rdi-featured-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.rdi-featured-story:hover .rdi-featured-visual img{transform:scale(1.04)}
+.rdi-featured-image-placeholder{position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,#32679a,#152a48 62%);display:flex;align-items:center;justify-content:center;gap:12px;color:#d6e7ff;font-size:30px;font-weight:900}
+.rdi-featured-image-placeholder span{font-size:40px;opacity:.65}
+.rdi-featured-photo-label{position:absolute;bottom:9px;left:9px;right:9px;width:max-content;max-width:calc(100% - 18px);background:#051a31d9;color:white;padding:5px 9px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:.2px;z-index:2}
+.rdi-featured-story-body{padding:13px 13px 15px;flex:1;display:flex;flex-direction:column;gap:7px}
+.rdi-featured-meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center;font-size:10px;color:#72849e;font-weight:600}
+.rdi-featured-category{display:inline-flex;border-radius:100px;padding:4px 8px;color:#0a5bbd;background:#edf5ff;font-weight:900;letter-spacing:.2px}
+.rdi-featured-story h3{margin:0;color:#14294e;font-size:clamp(14px,2.2vw,17px);line-height:1.32;font-weight:850;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:break-word}
+.rdi-featured-story:first-child h3{font-size:clamp(20px,3.5vw,26px);-webkit-line-clamp:3}
+.rdi-featured-excerpt{font-size:12px;line-height:1.43;color:#586e8c;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rdi-featured-story:first-child .rdi-featured-excerpt{-webkit-line-clamp:3;font-size:13px}
+.rdi-featured-source{font-size:10px;line-height:1.3;color:#71819a;margin-top:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rdi-featured-read{font-size:11px;font-weight:900;color:#0965cb;margin-top:2px}
+.rdi-featured-editorial-note{color:#6c7e99;font-size:11px;line-height:1.42;margin:10px 2px 0}
+@media(max-width:430px){.rdi-featured-grid{gap:8px}.rdi-featured-story-body{padding:10px}.rdi-featured-story h3{font-size:13px}.rdi-featured-story:first-child h3{font-size:20px}.rdi-featured-excerpt{font-size:11px}.rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/9}.rdi-featured-head h2{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.rdi-featured-story,.rdi-featured-visual img{transition:none}}
+html.youtube-news #rdi-featured{display:none!important}
