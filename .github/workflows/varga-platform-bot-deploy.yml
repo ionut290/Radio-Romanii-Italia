@@ -1,0 +1,72 @@
+name: Varga platforms - deploy dedicated bot to Oracle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'oracle/varga-platform-bot.py'
+      - 'oracle/varga-platform-dashboard.py'
+      - 'oracle/varga-platform-dashboard.html'
+      - 'oracle/varga-platform-bot.service'
+      - 'oracle/varga-platform-bot.timer'
+      - 'oracle/varga-platform-dashboard.service'
+      - 'oracle/install-varga-platform-bot.sh'
+      - '.github/workflows/varga-platform-bot-deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: varga-platform-bot-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Validate dedicated Varga bot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile oracle/varga-platform-bot.py oracle/varga-platform-dashboard.py
+          bash -n oracle/install-varga-platform-bot.sh
+      - name: Configure restricted Oracle connection
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo '::error::Manca la chiave di accesso Oracle'; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo '::error::Manca il fingerprint SSH Oracle'; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_varga_bot"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_varga_bot" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_varga_bot" </dev/null >/dev/null 2>&1
+      - name: Install separate bot and verify its private dashboard
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          STAGE="/tmp/varga-platform-bot-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          [[ "$STAGE" =~ ^/tmp/varga-platform-bot-[0-9]+-[0-9]+$ ]]
+          SSH=(ssh -i "$HOME/.ssh/id_varga_bot" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 -o ServerAliveInterval=5 -o ServerAliveCountMax=2)
+          SCP=(scp -q -i "$HOME/.ssh/id_varga_bot" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
+          "${SSH[@]}" "$REMOTE" "install -d -m 700 '$STAGE/oracle'"
+          cleanup() { "${SSH[@]}" "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          "${SCP[@]}" oracle/varga-platform-bot.py oracle/varga-platform-dashboard.py oracle/varga-platform-dashboard.html oracle/varga-platform-bot.service oracle/varga-platform-bot.timer oracle/varga-platform-dashboard.service oracle/install-varga-platform-bot.sh "$REMOTE:$STAGE/oracle/"
+          "${SSH[@]}" "$REMOTE" "sudo -n bash '$STAGE/oracle/install-varga-platform-bot.sh'"
+          "${SSH[@]}" "$REMOTE" 'bash -s' <<'VERIFY'
+          set -euo pipefail
+          sudo -n systemctl is-active --quiet varga-platform-bot.timer
+          sudo -n systemctl is-active --quiet varga-platform-dashboard.service
+          curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8790/api/status | python3 -c 'import json,sys; d=json.load(sys.stdin); print("scope:", ", ".join(d["scope"])); print("state:", d["overall"]); print("services:", sum(len(p["services"]) for p in d["platforms"].values()))'
+          VERIFY
