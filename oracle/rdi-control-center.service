@@ -1,0 +1,14 @@
+[Unit]
+Description=RDI Control Center - safe monitoring
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /opt/rdi-control-center/rdi-control-center.py --repair
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/rdi-control-center
