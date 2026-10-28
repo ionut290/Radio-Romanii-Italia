@@ -1,5 +1,11 @@
 name: Actualizare automată evenimente diaspora
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/events.yml'
+      - 'scripts/update_events.py'
+      - 'data/associazioni-diaspora-italia.json'
   schedule:
     - cron: '1,11,21,31,41,51 * * * *'
   workflow_dispatch:
