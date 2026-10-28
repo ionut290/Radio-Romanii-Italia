@@ -133,6 +133,8 @@ jobs:
               "$REMOTE" "sudo -n python3 '$STAGE/deploy-geopolitica-oracle.py' apply --mp3 '$STAGE/RDI-GEOPOLITICA-IT-${edition}.mp3' --manifest '$STAGE/manifest.json' --php-helper '$STAGE/rdi-geopolitica-auth.php'"
             echo "Notiziario italiano ${edition} consegnato ad AzuraCast per la prossima fascia oraria."
           else
-            echo "Nessuna nuova notizia verificata: non disattivare la playlist live."
-            echo "Conserviamo l'ultima edizione gia pubblicata, senza generare MP3 obsoleti."
+            echo "Nessuna nuova notizia verificata: non generare né ripetere un'edizione vecchia."
+            ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+              "$REMOTE" "sudo -n python3 '$STAGE/deploy-geopolitica-oracle.py' install-cleanup --php-helper '$STAGE/rdi-geopolitica-auth.php'"
+            echo "Controllo post-trasmissione attivo: il MP3 RDI verrà eliminato a riproduzione conclusa."
           fi
