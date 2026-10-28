@@ -37,7 +37,8 @@ jobs:
             ubuntu@129.151.255.41 'sudo -n bash -s' < scripts/inspect-geopolitica-oracle.sh
           ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
             ubuntu@129.151.255.41 'sudo -n docker exec -i azuracast php /dev/stdin probe' < scripts/rdi-geopolitica-auth.php
+          REMOTE_AUTH_HELPER="/home/ubuntu/.rdi-geopolitica-auth-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.php"
           ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
-            ubuntu@129.151.255.41 'sudo -n sh -c "umask 077; cat > /tmp/rdi-geopolitica-auth.php"' < scripts/rdi-geopolitica-auth.php
+            ubuntu@129.151.255.41 "umask 077; cat > '$REMOTE_AUTH_HELPER'" < scripts/rdi-geopolitica-auth.php
           ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=10 \
-            ubuntu@129.151.255.41 'sudo -n python3 - inspect --php-helper /tmp/rdi-geopolitica-auth.php; result=$?; sudo -n rm -f /tmp/rdi-geopolitica-auth.php; exit "$result"' < scripts/deploy-geopolitica-oracle.py
+            ubuntu@129.151.255.41 "set +e; sudo -n python3 - inspect --php-helper '$REMOTE_AUTH_HELPER'; result=\$?; rm -f '$REMOTE_AUTH_HELPER'; exit \"\$result\"" < scripts/deploy-geopolitica-oracle.py
