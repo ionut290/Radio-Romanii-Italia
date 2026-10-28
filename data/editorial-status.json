@@ -1,16 +1,16 @@
 {
-  "news_updated_at": "2026-10-28T05:13:50.804025+00:00",
+  "news_updated_at": "2026-10-28T05:47:17.255607+00:00",
   "editorial_updated_at": "2026-10-28T01:00:00Z",
-  "translations_updated_at": "2026-10-28T05:06:03.330793+00:00",
+  "translations_updated_at": "2026-10-28T05:13:47.979891+00:00",
   "feed_total": 75,
   "feed_extended_400": 34,
   "feed_missing_body": 41,
   "feed_short_body": 0,
   "editorial_total": 35,
   "archived_editorials": 61,
-  "translation_records": 50,
-  "pending_total": 104,
-  "pending_filtered_out": 294,
+  "translation_records": 45,
+  "pending_total": 101,
+  "pending_filtered_out": 291,
   "editorial_verde": 33,
   "editorial_galben": 39,
   "editorial_rosu": 28,
@@ -618,6 +618,24 @@
   ],
   "recent_news": [
     {
+      "title": "Caviar, şampanie şi transfer cu Porsche. Companiile aeriene investesc în lux, în timp ce pasagerii clasei economice reduc cheltuielile",
+      "category": "România",
+      "published": "2026-10-28T05:35:23+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/caviar-sampanie-si-transfer-cu-porsche-companiile-aeriene-investesc-in-lux-in-timp-ce-pasagerii-clasei-economice-reduc-cheltuielile-4011589",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cât de greu este să rupi legăturile cu Washingtonul: De ce virarea Canadei către apărarea europeană are limite (Politico)",
+      "category": "România",
+      "published": "2026-10-28T05:16:16+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/cat-de-greu-este-sa-rupi-legaturile-cu-washingtonul-de-ce-virarea-canadei-catre-apararea-europeana-are-limite-politico-4010311",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Cât trebuie să fie umiditatea în casă pentru a preveni mucegaiul. Temperatura recomandată în dormitor, în sezonul rece",
       "category": "România",
       "published": "2026-10-28T05:00:55+00:00",
@@ -634,15 +652,6 @@
       "source": "Digi24",
       "status": "verde",
       "words": 417
-    },
-    {
-      "title": "Cât de greu este să rupi legăturile cu Washingtonul: De ce virarea Canadei către apărarea europeană are limite (Politico)",
-      "category": "România",
-      "published": "2026-10-28T05:00:51+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/cat-de-greu-este-sa-rupi-legaturile-cu-washingtonul-de-ce-virarea-canadei-catre-apararea-europeana-are-limite-politico-4010311",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
     },
     {
       "title": "Topirea ghețarilor din Dolomiți scoate la iveală un pericol ascuns din Primul Război Mondial. Ce au descoperit militarii italieni",
@@ -798,15 +807,6 @@
       "words": 467
     },
     {
-      "title": "George Simion, despre Călin Georgescu: Este deţinut politic. Am făcut mii de kilometri pentru a internaţionaliza această problemă",
-      "category": "România",
-      "published": "2026-10-27T21:16:36+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/george-simion-despre-calin-georgescu-este-detinut-politic-am-facut-mii-de-kilometri-pentru-a-internationaliza-aceasta-problema-4011509",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Ucraina: Stubb e Store chiamano Putin. Meloni, 'l'Ue non vada in ordine sparso'",
       "category": "Italia",
       "published": "2026-10-27T21:10:25+00:00",
@@ -841,6 +841,15 @@
       "source": "ANSA",
       "status": "verde",
       "words": 453
+    },
+    {
+      "title": "Mps, via libera della Bce alla scalata di Intesa. Nell’assemblea di Siena il 70% del capitale - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-27T20:31:17+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQd3lnSEtwd1FyU01PNGUyNnI2VTJjVFZ6dlpHM19wNUgycDNNVXhZNk5sZ3l2UmU3QW1tZ0VFc1NkYndEUnJFejFQcnFWVmxVS3BqME10NUh1N08tc0lZYXdCZ2IwZzFYSUJUeGVHT1B3M2tyQ2Q5NHZpUUd1QTlwbzY5RERvY3JxWG45Z3lzNkN2VEpZMV9wbFk5blFMTFFwb0E?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Piantedosi: 'Sugli scontri non è finita'. Il Mit precetta sciopero del 30. L'Usb, 'lo confermiamo'",
@@ -955,15 +964,6 @@
       "category": "Italia",
       "published": "2026-10-27T16:19:17+00:00",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSWlMRGdWcG45d0RhdXM0bWF4VWVDS05POVpURVc3X1FleDd2SjNtUEltZm94VnVjUVloYUcxeE9kdmNDcEJnS2haYkZ5XzllY005SXgteVVNeTBYRzExcjVPVjYyOUItZ3ZLRFRxb3I1WGN5UVRvNTRUclFadHMwX1NzSWFqQi1feklBYkRSSDllQQ?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ristoranti nel Padovano, attività in crescita ma solo il 42% resta dopo cinque anni: i dati APPE - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-27T16:17:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY3I2TWlMODY4X09NczEydHpEeXNpdWdZZzhzSW8zOV9jV01DM3hWcWtEdHJvUWhGVG5SWlhyWWNoRTJaLXpuNzhHZndNNUpZTTVTSEcyc2pxeGNlUUt2X1Jybk5vbUtrSEt5bzFKUlZFdlRETjhuTE8tVjBGZ0VGWFJxTmdHR2JxYVRWMVhUUk92QQ?oc=5",
       "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
@@ -1104,15 +1104,6 @@
       "words": 422
     },
     {
-      "title": "Ancona (Hilti): \"Academy favorisce lavoro di squadra\" - Touchpoint News",
-      "category": "Italia",
-      "published": "2026-10-27T11:09:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPbmxOZWFaVGNuY2JEVmg0WUdmLWdhOWgwMUVrLUZRdlUwT25qaVBMVFRQMUx5dENhazBsMm56MVo0azl2OHhaWFYyLU11Mzh5ZERGaFdlMVVGTzl6ZGJSQUxnSmZEcklNWXIxMFU2UXN4czNzbF9UdFVZa3RfVTI2bktUV1JWUTBiWGFFZUhGVm9ZUQ?oc=5",
-      "source": "Touchpoint News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Sciopero al Teatro Verdi di Padova: stipendi e protesta - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-27T11:05:39+00:00",
@@ -1217,6 +1208,15 @@
       "published": "2026-10-26T14:42:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPeEs4cG5UTXVhd0UxQ0QweHRBSEZWcGVzVEtjaUM1R2RvU1dkallzTFV6NWduY1dhaXp0WFNEZnlCMzF1VndRSzZwUWRJamQ4NlRSRnI5c2g1WEFlV3J4Y0NERmFXMUFhcUVWQXhBT1RfREdFcVdndUtTeTVLcmR4bUNVSnlRb1dfZ3N6ODgwLWhJaDBjRUE1MHpweUVqemxC0gGmAUFVX3lxTE9UR1gxVkNvVG0tNm53UFBlOGpLeERKWEVLdDNMNEhUdC1RWjVqRkRtMmhIUEpzMEE1LWI3Z0M0ZU13cHpaUGtiSFJxQlJPY2ZMc1FCZU85Yzl2YU1Tc3RWY3JlNGR0cVcwNUVOSjBvUDhuU29NQ2NETFNMS1d3aVlpbFp6Z1R1RVk4ZldnYW4xLVU2QWZ5bUdxQjc5V1Q0X29uWTFnN2c?oc=5",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Università, quanto costa davvero e quando la laurea ripaga - Idealista",
+      "category": "Italia",
+      "published": "2026-10-26T14:07:21+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPU3ZlS3hrVWVrSVNzR0RQVjE2SkxveEwwdEh4cFFVSEZlMy1sM3p6QlAyVGhKQ21GWWpZc25tT1d3SFhoZUpZNUQ3eEljVGpjTkRMbkJTMVhHdVJxR2RGQUxUdEYyZGg0VlE2dEo2UGxtLTR2aXp1TGt6OVhydjFiNzdfeE1JNmdEWHVIZW5KT3Z4Z3QzWlZVcU03dE1CMXRkbVdKWXJZaTBXbHY4cDJRbGI2N0RwQVZjN3p1MdIBwgFBVV95cUxQVEdkMzBJMlc2M25kemZFdkZGU0VkWTlhY1BMdlNVemJaWklqZ3NYWDFLSC0ybVdxanVjdTg4ckRRV19UdC0xckQyb3dWNmpTbEN3UkotckdtV3JSQXBrS1pXQzlPRENUS0F6VGhsYThFS01GN0ZVc1YtcDhob0FOZk9zTDBkWTJxZHBlaG84aGFWMTFIWFV",
+      "source": "Idealista",
       "status": "roșu",
       "words": 0
     },
