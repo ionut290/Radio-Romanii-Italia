@@ -18,6 +18,7 @@ h1{font-size:clamp(28px,5vw,42px);margin:4px 0}h2{font-size:18px;margin:0 0 12px
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.stat{padding:9px;border-radius:10px;background:#0d192b;min-width:0}
 .stat b{display:block;color:var(--gold);font-size:19px;overflow-wrap:anywhere}.stat span{display:block;color:var(--muted);font-size:12px}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d192b;border-radius:9px;padding:10px;color:#cbd9e9;font-size:12px;max-height:220px;overflow:auto}
+button{border:1px solid #526b8d;background:#1d3555;color:var(--text);padding:10px 14px;border-radius:9px;font:inherit;font-weight:700;cursor:pointer}button:hover{background:#27466d}button:disabled{opacity:.55;cursor:not-allowed}.control-buttons{display:flex;gap:10px;flex-wrap:wrap}.control-result{min-height:24px;margin-top:10px;color:var(--muted)}
 .diagnostics{display:grid;gap:10px}.diag{padding:11px 13px;border-radius:10px;background:#0d192b;border-left:4px solid var(--line)}.diag.warning{border-color:var(--warn)}.diag.error{border-color:var(--bad)}.diag.info{border-color:#77b7ff}.diag b{display:block;margin-bottom:3px}.diag p{margin:0;font-size:13px}
 .notice{background:#282d3c;border-left:4px solid var(--gold);border-radius:8px;padding:12px 15px;margin:15px 0;color:#e7e0cf}
 #actions .row{border-top:1px solid var(--line);padding:9px 0;font-size:13px}.error{color:var(--bad)}
@@ -35,6 +36,7 @@ footer{margin-top:22px;color:var(--muted);font-size:12px}
 <section class="card"><div class="head"><h2>Sito web</h2><span class="badge" id="site-state">—</span></div><div id="site-pages"></div></section>
 <section class="card"><div class="head"><h2>Oracle Cloud</h2><span class="badge" id="oracle-state">—</span></div><div class="stats" id="oracle-stats"></div><pre id="docker"></pre></section>
 </div>
+<section class="card"><div class="head"><h2>Azioni controllate</h2><span class="meta">accesso locale protetto</span></div><div class="control-buttons"><button id="refresh-action" type="button">Aggiorna controlli ora</button><button id="recover-action" type="button">Riattiva notiziario · playlist 12</button></div><div class="control-result" id="control-result" role="status" aria-live="polite">Il ripristino interviene solo se trova un MP3 recente, assegnato e successivo all’ultima trasmissione. Non tocca altre playlist o YouTube Live.</div></section>
 <section class="card" aria-live="polite"><div class="head"><h2>Problemi rilevati e cosa verificare</h2><span class="meta" id="diag-count">—</span></div><div class="diagnostics" id="diagnostics"></div></section>
 <section class="card"><div class="head"><h2>Interventi automatici registrati</h2><span class="meta">registro locale Oracle</span></div><div id="actions"></div></section>
 <footer>Dashboard locale, sola lettura. Apribile con tunnel SSH verso 127.0.0.1:8787. Il collegamento YouTube RTMP non è dichiarato attivo soltanto perché FFmpeg è in esecuzione: va confermato separatamente in YouTube Studio.</footer>
@@ -91,6 +93,18 @@ function renderDiagnostics(d){
   row.append(title,detail);box.append(row);
  }
 }
+async function invokeControl(path,payload){
+ const refresh=$('refresh-action'),recover=$('recover-action'),result=$('control-result');
+ refresh.disabled=true;recover.disabled=true;result.textContent='Operazione in corso…';
+ try{
+  const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload||{}),cache:'no-store'});
+  const data=await response.json();
+  if(data.status)render(data.status);
+  result.textContent=data.message||'Operazione completata.';
+  if(!response.ok)result.textContent='Errore: '+result.textContent;
+ }catch(e){result.textContent='Connessione al Control Center non riuscita: '+e.message}
+ finally{refresh.disabled=false;recover.disabled=String(($('azura-state').textContent||'').toLowerCase())==='ok'&&String(document.querySelector('#azura-stats .stat:nth-child(2) b')?.textContent||'').toLowerCase()==='true'}
+}
 function render(d){
  $('checked').textContent=d.checked_at?new Date(d.checked_at).toLocaleString('it-IT'):'—';$('overall').textContent=d.overall||'—';$('overall').className=d.overall==='ok'?'':'error';
  const r=d.radio||{};badge('radio-state',r.state);const np=r.nowplaying||{},st=r.stream||{};
@@ -105,5 +119,9 @@ function render(d){
  const actions=$('actions');actions.replaceChildren();const history=d.audit_log||[];for(const a of history.slice().reverse()){const row=document.createElement('div');row.className='row';row.textContent=(a.recorded_at||'')+' · '+a.action+' · '+a.service+(a.verified_active?' · verificato':'');actions.append(row)}if(!history.length)actions.textContent='Nessun intervento automatico registrato.';
 }
 async function load(){try{const r=await fetch('/api/status?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);render(await r.json())}catch(e){$('overall').textContent='status non disponibile';$('overall').className='error';$('checked').textContent=e.message}}
+$('refresh-action').addEventListener('click',()=>invokeControl('/api/actions/refresh',{}));
+$('recover-action').addEventListener('click',()=>{
+ if(confirm('Riattivare soltanto la playlist geopolitica ID 12? Il server procederà solo se l’MP3 è recente, assegnato e non già trasmesso.')) invokeControl('/api/actions/recover-geopolitica',{confirmation:'RIATTIVA NOTIZIARIO ID 12'});
+});
 load();setInterval(load,30000);
 </script></body></html>

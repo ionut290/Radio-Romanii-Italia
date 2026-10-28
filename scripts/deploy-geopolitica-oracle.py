@@ -17,6 +17,7 @@ import re
 import subprocess
 import sys
 import time
+from zoneinfo import ZoneInfo
 import urllib.error
 import urllib.request
 
@@ -26,6 +27,7 @@ PLAYLIST_NAME = "RDI Geopolitica - ogni ora"
 MEDIA_DIR = "RDI Geopolitica"
 FILENAME_RE = re.compile(r"^RDI-GEOPOLITICA-IT-(20\d{6})-(\d{4})\.mp3$")
 TIMEOUT_SECONDS = 45
+ROME = ZoneInfo("Europe/Rome")
 
 
 def azura_php(source: bytes, action: str, *args: str) -> str:
@@ -445,48 +447,56 @@ def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> N
 
 
 def recover(client: Client) -> None:
-    """Re-enable only an existing correctly scheduled playlist with indexed RDI audio."""
+    """Enable only playlist 12 when its assigned RDI MP3 is fresh and unplayed."""
     rec = playlist(client, False)
     if rec is None:
         print("RDI_RECOVERY=NO_PLAYLIST")
+        return
+    if int(rec.get("id", -1)) != 12:
+        print("RDI_RECOVERY=UNEXPECTED_PLAYLIST_ID")
         return
     if rec.get("is_enabled"):
         print("RDI_RECOVERY=ALREADY_ENABLED")
         return
     media = list_own_media(client)
-    if not media:
-        print("RDI_RECOVERY=NO_INDEXED_RDI_MP3")
-        return
-    # The file list alone does not prove a track is assigned to this playlist.
-    playlist_id = int(rec["id"])
     eligible = []
     for row in media:
         linked = row.get("playlists") or []
         if isinstance(linked, list) and any(
-            (isinstance(p, dict) and int(p.get("id", -1)) == playlist_id)
-            or (isinstance(p, (int, str)) and str(p) == str(playlist_id))
+            (isinstance(p, dict) and int(p.get("id", -1)) == 12)
+            or (isinstance(p, (int, str)) and str(p) == "12")
             for p in linked
         ):
             eligible.append(row)
     if not eligible:
         print("RDI_RECOVERY=NO_ASSIGNED_RDI_MP3")
         return
-    # Never broadcast an arbitrarily old bulletin as a current update.
+    try:
+        last_played = epoch_seconds(rec.get("played_at")) if rec.get("played_at") else None
+    except (TypeError, ValueError, OverflowError):
+        print("RDI_RECOVERY=PLAYBACK_TIME_UNVERIFIED")
+        return
     now = dt.datetime.now(dt.timezone.utc)
-    fresh = []
+    fresh_unplayed = []
     for row in eligible:
         name = str(row.get("path", "")).split("/")[-1]
         match = FILENAME_RE.fullmatch(name)
-        if match:
-            stamp = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
-            stamp = stamp.replace(tzinfo=dt.timezone.utc)
-            if dt.timedelta(0) <= now - stamp <= dt.timedelta(hours=2):
-                fresh.append(row)
-    if not fresh:
-        print("RDI_RECOVERY=NO_RECENT_ASSIGNED_MP3")
+        if not match:
+            continue
+        local_stamp = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M").replace(tzinfo=ROME)
+        stamp_utc = local_stamp.astimezone(dt.timezone.utc)
+        age = now - stamp_utc
+        if dt.timedelta(0) <= age <= dt.timedelta(hours=2):
+            if last_played is None or stamp_utc.timestamp() > last_played:
+                fresh_unplayed.append(row)
+    if not fresh_unplayed:
+        print("RDI_RECOVERY=NO_RECENT_UNPLAYED_ASSIGNED_MP3")
         return
     enable(client, rec, True)
-    print("RDI_RECOVERY=ENABLED_WITH_RECENT_ASSIGNED_MP3")
+    verified = playlist(client, False)
+    if not verified or int(verified.get("id", -1)) != 12 or not verified.get("is_enabled"):
+        raise RuntimeError("RDI playlist 12 activation could not be verified")
+    print("RDI_RECOVERY=ENABLED_WITH_RECENT_UNPLAYED_ASSIGNED_MP3")
 
 def suspend(client: Client) -> None:
     rec = playlist(client, False)

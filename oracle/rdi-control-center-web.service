@@ -1,5 +1,5 @@
 [Unit]
-Description=RDI Control Center local read-only dashboard
+Description=RDI Control Center local dashboard with guarded actions
 After=network-online.target rdi-control-center.service
 Wants=network-online.target
 
@@ -13,7 +13,8 @@ NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=true
-ReadOnlyPaths=/opt/rdi-control-center /var/lib/rdi-control-center
+ReadOnlyPaths=/opt/rdi-control-center
+ReadWritePaths=/var/lib/rdi-control-center
 RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
 LockPersonality=true
 
