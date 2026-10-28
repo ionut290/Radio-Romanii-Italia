@@ -1,0 +1,12 @@
+[Unit]
+Description=Check Varga Cantieri and Gestionale every 5 minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitInactiveSec=5min
+AccuracySec=30s
+Persistent=true
+Unit=varga-platform-bot.service
+
+[Install]
+WantedBy=timers.target
