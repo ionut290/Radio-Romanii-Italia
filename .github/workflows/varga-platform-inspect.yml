@@ -47,6 +47,28 @@ jobs:
           journalctl -u varga-platform-bot.service -n 12 --no-pager || true
           echo '--- Dashboard locale Oracle ---'
           curl --fail --silent --show-error --max-time 8 http://127.0.0.1:8790/api/status | python3 -c 'import json,sys; d=json.load(sys.stdin); print("overall="+str(d.get("overall"))); print("checked_at="+str(d.get("checked_at"))); print("actions="+json.dumps(d.get("actions",[]),ensure_ascii=False)); [print(p["label"]+": "+p["state"]+"; "+", ".join(k+"="+v["state"] for k,v in p["services"].items())) for p in d.get("platforms",{}).values()]' || true
+          echo '--- Database Varga Cantieri (stato e probe read-only) ---'
+          sudo -n docker inspect db-postgres-1 --format='state={{.State.Status}} health={{if .State.Health}}{{.State.Health.Status}}{{else}}not-configured{{end}} restart={{.HostConfig.RestartPolicy.Name}} compose_project={{index .Config.Labels "com.docker.compose.project"}} compose_service={{index .Config.Labels "com.docker.compose.service"}}' || true
+          sudo -n docker exec db-postgres-1 pg_isready -U varga -d varga_cantieri || true
+          echo '--- Route GET salute/status API Cantieri (solo nomi percorso) ---'
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('/home/ubuntu/varga-cantieri/api/server.cjs')
+          if not p.exists():
+              print('source_not_found')
+          else:
+              text=p.read_text(errors='replace')
+              pattern=r'\\b(?:app|router)\\.(get|head)\\s*\\(\\s*([\x27"])(.*?)\\2'
+              found=[]
+              for m in re.finditer(pattern,text,re.I):
+                  path=m.group(3)
+                  if re.search(r'health|ready|live|status|ping',path,re.I):
+                      found.append(path)
+              print('\\n'.join(sorted(set(found))) or 'no_explicit_health_route_found')
+          PY
+          echo '--- Probe GET API Gestione ale (solo codice HTTP) ---'
+          curl -sS -o /dev/null --max-time 5 -w 'gestionale_api_health_http=%{http_code}\\n' http://127.0.0.1:18098/api/gestionale/v1/health || true
           echo '--- Ascolto locale porta 8790 ---'
           ss -lnt | grep -F '127.0.0.1:8790' || true
           REMOTE
