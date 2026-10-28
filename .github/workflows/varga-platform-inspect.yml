@@ -1,0 +1,41 @@
+name: Varga platforms - ricognizione container in sola lettura
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/varga-platform-inspect.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Configura accesso Oracle
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+      - name: Legge stato dei soli container Varga
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 ubuntu@129.151.255.41 'bash -s' <<'REMOTE'
+          set -euo pipefail
+          echo '--- Container Varga Cantieri e Varga Gestionale (stato, healthcheck, restart policy, servizio compose, porte) ---'
+          sudo -n docker ps -a --format '{{.Names}}' | grep -E '^(varga-cantieri|vg-gestionale-oracle|varga-gestionale-oracle)' | while IFS= read -r name; do
+            sudo -n docker inspect --format='name={{.Name}} | image={{.Config.Image}} | state={{.State.Status}} | health={{if .State.Health}}{{.State.Health.Status}}{{else}}not-configured{{end}} | restart={{.HostConfig.RestartPolicy.Name}} | compose_project={{index .Config.Labels "com.docker.compose.project"}} | compose_service={{index .Config.Labels "com.docker.compose.service"}} | ports={{json .NetworkSettings.Ports}} | healthcheck={{json .Config.Healthcheck}}' "$name"
+          done
+          REMOTE
