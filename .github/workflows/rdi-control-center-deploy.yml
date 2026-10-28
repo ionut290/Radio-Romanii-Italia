@@ -77,5 +77,5 @@ jobs:
           sudo -n systemctl is-active --quiet rdi-control-center.timer
           sudo -n systemctl is-active --quiet rdi-control-center-web.service
           curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/api/status \
-            | python3 -c 'import json,sys; d=json.load(sys.stdin); assert d.get("schema_version")==2; assert d["safety"]["other_playlists_modified"] is False; assert d["safety"]["youtube_live_configuration_modified"] is False; print("Control Center online; safety invariants verified.")'
+            | python3 -c 'import json,sys; d=json.load(sys.stdin); assert d.get("schema_version")==2; assert d["safety"]["other_playlists_modified"] is False; assert d["safety"]["youtube_live_configuration_modified"] is False; print("Control Center online; safety invariants verified."); print("overall=",d["overall"],"issues=",",".join(d["issues"])); print("radio=",d["radio"]["state"],"azuracast=",d["azuracast"]["state"],"youtube=",d["youtube"]["state"],"redaction=",d["redaction"]["state"],"site=",d["site"]["state"]); print("oracle_cpu=",d["oracle"]["cpu_percent"],"memory=",d["oracle"]["memory_percent"],"disk=",d["oracle"]["disk_percent"],"docker=",d["oracle"]["docker"]["state"])'
           VERIFY
