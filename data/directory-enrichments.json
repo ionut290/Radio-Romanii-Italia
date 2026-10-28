@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26",
+  "updatedAt": "2026-10-28",
   "policy": "Entries require source evidence. External ratings are never copied. If a location conflict exists, put the listing on hold pending manual verification.",
   "records": {
     "public-207fa8e4c93f593a": {
@@ -4285,6 +4285,76 @@
       "detailsSourceName": "Elenco pubblico consultato",
       "verificationDetail": "public-directory",
       "detailsCheckedAt": "2026-10-25"
+    },
+    "public-rdi-danubiana-market-via-guelfa": {
+      "description": "Negozio di alimentari romeni. Orari pubblicati: lunedì–sabato 09:00–18:00; domenica chiuso.",
+      "hours": "Lun–sab 09:00–18:00; dom chiuso.",
+      "phone": "+39 339 814 3892",
+      "phoneSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceName": "Danubiana Group · punti vendita",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-28"
+    },
+    "public-rdi-danubiana-market-via-lombardia": {
+      "description": "Negozio di alimentari romeni. Orari pubblicati: lunedì–sabato 10:00–20:00; domenica chiuso.",
+      "hours": "Lun–sab 10:00–20:00; dom chiuso.",
+      "phone": "+39 339 814 3892",
+      "phoneSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceName": "Danubiana Group · punti vendita",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-28"
+    },
+    "public-rdi-danubiana-market-via-marco-emilio-lepido": {
+      "description": "Negozio di alimentari romeni. Orari pubblicati: lunedì 14:00–20:00; martedì–sabato 09:00–20:00; domenica chiuso.",
+      "hours": "Lun 14:00–20:00; mar–sab 09:00–20:00; dom chiuso.",
+      "phone": "+39 353 381 8507",
+      "phoneSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceName": "Danubiana Group · punti vendita",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-28"
+    },
+    "public-rdi-danubiana-market-imola": {
+      "description": "Negozio di alimentari romeni. Orari pubblicati: lunedì 15:30–19:00; martedì–venerdì 10:00–13:00 e 15:30–19:00; sabato 09:30–19:00; domenica chiuso.",
+      "hours": "Lun 15:30–19:00; mar–ven 10:00–13:00 e 15:30–19:00; sab 09:30–19:00; dom chiuso.",
+      "phone": "+39 0544 453666",
+      "phoneSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceUrl": "https://www.danubiana-group.com/it/market",
+      "detailsSourceName": "Danubiana Group · punti vendita",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-28"
+    },
+    "public-rdi-mix-markt-bologna-piazza-xx-settembre": {
+      "description": "Supermercato di specialità dell'Europa orientale; assortimento indicato dal marchio include prodotti rumeni. Orari pubblicati: tutti i giorni 09:00–20:00.",
+      "hours": "Tutti i giorni 09:00–20:00.",
+      "phone": "+39 051 0015 149",
+      "phoneSourceUrl": "https://mixmarkt.it/negozi/",
+      "detailsSourceUrl": "https://mixmarkt.it/negozi/",
+      "detailsSourceName": "Mix Markt Italia · elenco negozi",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-28"
+    },
+    "public-rdi-mix-markt-bologna-via-di-corticella": {
+      "description": "Supermercato di specialità dell'Europa orientale; l'elenco ufficiale riporta prodotti rumeni tra le specialità. Orari pubblicati: tutti i giorni 09:00–20:00.",
+      "hours": "Tutti i giorni 09:00–20:00.",
+      "phone": "+39 350 980 3192",
+      "phoneSourceUrl": "https://mixmarkt.it/negozi/",
+      "detailsSourceUrl": "https://mixmarkt.it/negozi/",
+      "detailsSourceName": "Mix Markt Italia · elenco negozi",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-28"
+    },
+    "public-rdi-mix-markt-imola": {
+      "description": "Specialità dell'Europa orientale: la pagina del negozio cita cucina rumena e prodotti alimentari di carne, pesce, latticini, conserve, dolci e bevande. Orari pubblicati: lunedì–sabato 09:00–20:00; domenica 09:00–18:00.",
+      "hours": "Lun–sab 09:00–20:00; dom 09:00–18:00.",
+      "phone": "+39 329 817 4220",
+      "phoneSourceUrl": "https://mixmarkt.it/negozi/mix-markt-imola-bo-via-appia/",
+      "detailsSourceUrl": "https://mixmarkt.it/negozi/mix-markt-imola-bo-via-appia/",
+      "detailsSourceName": "Mix Markt Italia · pagina negozio Imola",
+      "verificationDetail": "official-source",
+      "detailsCheckedAt": "2026-10-28"
     }
   },
   "scope": "Dettagli integrati soltanto da fonti citate. Le informazioni non pubblicate dalle fonti restano vuote e devono essere confermate direttamente con l'attività."
