@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Varga Platforms Control</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#142238;--line:#2c405d;--text:#eef4fb;--muted:#a9bad0;--gold:#f2d18b;--ok:#39d98a;--warn:#ffd166;--bad:#ff6b7a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:28px 20px 60px}
+header{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}.kicker{color:var(--gold);font-weight:800;letter-spacing:.12em;font-size:12px}h1{font-size:clamp(28px,5vw,42px);margin:4px 0}h2{font-size:20px;margin:0 0 14px}p,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:20px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.head{display:flex;justify-content:space-between;align-items:center;gap:8px}.badge{border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800;text-transform:uppercase}.ok{background:#153c32;color:var(--ok)}.degraded{background:#493a1d;color:var(--warn)}.error{background:#4b222d;color:var(--bad)}.service{padding:12px 0;border-top:1px solid var(--line)}.service:first-of-type{border-top:0}.service b{display:block}.small{font-size:13px;color:var(--muted);overflow-wrap:anywhere}section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d192b;border-radius:9px;padding:12px;color:#cbd9e9;font-size:12px;max-height:280px;overflow:auto}
+</style>
+</head>
+<body><main>
+<header><div><div class="kicker">Varga · solo Cantieri e Gestionale</div><h1>Varga Platforms Control</h1><p>Monitoraggio Oracle e riparazione limitata ai servizi web/API.</p></div><div class="small" id="updated">Caricamento…</div></header>
+<div class="grid" id="platforms"></div>
+<section><div class="head"><h2>Ultimi interventi</h2><span class="small">Registro locale Oracle</span></div><pre id="actions">Caricamento…</pre></section>
+<section><h2>Limiti del bot</h2><p>Agisce solo sui container web/API elencati. Attende due controlli falliti, verifica il risultato e limita i riavvii a tre per container ogni 24 ore. Database, backup, shadow, radio e altre piattaforme sono esclusi.</p><p class="small">Dashboard di sola lettura, disponibile tramite tunnel SSH su 127.0.0.1:8790.</p></section>
+</main>
+<script>
+const esc=s=>String(s??"—").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function refresh(){
+ try{
+  const r=await fetch("/api/status",{cache:"no-store"}),d=await r.json();
+  document.getElementById("updated").textContent="Ultimo controllo: "+new Date(d.checked_at).toLocaleString("it-IT")+" · stato: "+d.overall;
+  document.getElementById("platforms").innerHTML=Object.values(d.platforms||{}).map(p=>'<article class="card"><div class="head"><h2>'+esc(p.label)+'</h2><span class="badge '+esc(p.state)+'">'+esc(p.state)+'</span></div>'+Object.entries(p.services||{}).map(([k,s])=>'<div class="service"><b>'+esc(k.toUpperCase())+' · '+esc(s.state)+'</b><div class="small">Container: '+esc(s.container_state)+' · healthcheck: '+esc(s.container_health)+'</div><div class="small">Probe: '+esc(s.probe?.kind)+' · '+esc(s.probe?.http??s.probe?.target)+' · '+(s.probe?.reachable?'raggiungibile':'non raggiungibile')+'</div><div class="small">Errori consecutivi: '+esc(s.failure_streak)+'</div></div>').join("")+'</article>').join("");
+  document.getElementById("actions").textContent=(d.actions||[]).length?JSON.stringify(d.actions,null,2):"Nessun intervento nell'ultimo controllo. Tutti i controlli vengono salvati nel registro Oracle.";
+ }catch(e){document.getElementById("updated").textContent="Dati non disponibili: "+e}
+}
+refresh();setInterval(refresh,30000);
+</script></body></html>
