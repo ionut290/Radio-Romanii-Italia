@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths:
       - "scripts/update_geopolitica.py"
-      - "scripts/generate_geopolitica_articles.py"
+      - "scripts/validate_geopolitica_articles.py"
       - ".github/workflows/geopolitica.yml"
   workflow_dispatch:
   schedule:
@@ -27,17 +27,11 @@ jobs:
         with:
           python-version: "3.12"
       - name: Verifică sintaxa importatorului
-        run: python -m py_compile scripts/update_geopolitica.py scripts/generate_geopolitica_articles.py
-      - name: Install editorial extraction libraries
-        run: python -m pip install --disable-pip-version-check trafilatura beautifulsoup4
+        run: python -m py_compile scripts/update_geopolitica.py scripts/validate_geopolitica_articles.py
       - name: Colectează titluri cu surse identificabile
         run: python scripts/update_geopolitica.py
-      - name: Generate evidence-grounded bilingual analyses (only with configured API key)
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          RDI_ENABLE_AI_IMAGES: ${{ vars.RDI_ENABLE_AI_IMAGES }}
-          RDI_ARTICLES_PER_RUN: "2"
-        run: python scripts/generate_geopolitica_articles.py
+      - name: Validate manually curated bilingual RDI articles
+        run: python scripts/validate_geopolitica_articles.py
       - name: Verifică structura fluxului, dacă a fost actualizat
         run: |
           if test -s data/geopolitica-news.json; then
