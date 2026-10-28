@@ -318,12 +318,12 @@ def install_cleanup_timer(helper_file: pathlib.Path) -> None:
         "After=docker.service\n\n[Service]\nType=oneshot\n"
         "ExecStart=/usr/bin/python3 /usr/local/lib/rdi-geopolitica/deploy-geopolitica-oracle.py "
         "cleanup-played --php-helper /usr/local/lib/rdi-geopolitica/rdi-geopolitica-auth.php\n"
-        "TimeoutStartSec=90\n",
+        "TimeoutStartSec=180\n",
         encoding="utf-8",
     )
     timer.write_text(
         "[Unit]\nDescription=Check completed RDI Geopolitica broadcasts every five minutes\n\n"
-        "[Timer]\nOnBootSec=2min\nOnUnitActiveSec=5min\nAccuracySec=30s\nUnit=rdi-geopolitica-cleanup.service\n\n"
+        "[Timer]\nOnBootSec=2min\nOnActiveSec=1min\nOnUnitActiveSec=5min\nAccuracySec=30s\nUnit=rdi-geopolitica-cleanup.service\n\n"
         "[Install]\nWantedBy=timers.target\n",
         encoding="utf-8",
     )
@@ -333,6 +333,12 @@ def install_cleanup_timer(helper_file: pathlib.Path) -> None:
         ["systemctl", "is-active", "--quiet", "rdi-geopolitica-cleanup.timer"],
     ):
         subprocess.run(command, check=True, capture_output=True, timeout=30)
+    # Reconcile immediately as well: this prevents a completed old edition from
+    # being selected again while waiting for the first timer tick.
+    subprocess.run(
+        [sys.executable, str(installed_script), "cleanup-played", "--php-helper", str(installed_helper)],
+        check=True, timeout=180,
+    )
     print("RDI_POSTPLAY_CLEANUP_TIMER=active_interval_5m")
 
 
