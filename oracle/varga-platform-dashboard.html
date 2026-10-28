@@ -12,7 +12,7 @@ header{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-
 </head>
 <body><main>
 <header><div><div class="kicker">Varga · solo Cantieri e Gestionale</div><h1>Varga Platforms Control</h1><p>Monitoraggio applicativo, database, risorse Oracle e recupero controllato.</p></div><div class="small" id="updated">Caricamento…</div></header>
-<section class="access"><h2>Accesso diretto alle piattaforme</h2><p>I pulsanti aprono Cantieri e Gestionale tramite il tuo browser. Per usarli, tieni attivo un tunnel SSH con questi inoltri:</p><code>ssh -L 8790:127.0.0.1:8790 -L 18081:127.0.0.1:18081 -L 18086:127.0.0.1:18086 ubuntu@&lt;oracle-host&gt;</code><p class="small">Sostituisci &lt;oracle-host&gt; con l’indirizzo Oracle. I link funzionano mentre il tunnel SSH è attivo.</p></section><div class="grid" id="platforms"></div>
+<section class="access"><h2>Accesso diretto alle piattaforme</h2><p>Usa i pulsanti nelle schede per aprire Varga Cantieri o Varga Gestionale.</p></section><div class="grid" id="platforms"></div>
 <section><div class="head"><h2>Risorse Oracle</h2><span class="badge ok" id="host-state">—</span></div><div class="stats" id="host-stats"></div></section>
 <section><div class="head"><h2>Eventi e interventi recenti</h2><span class="small">Registro locale Oracle</span></div><pre id="actions">Caricamento…</pre></section>
 <section><h2>Regole di recupero</h2><p>Il bot attende due controlli consecutivi falliti. Riavvia soltanto i container web/API autorizzati; massimo 3 riavvii per container ogni 24 ore e almeno 30 minuti tra due riavvii.</p><p>Database, shadow, backup e altre applicazioni sono esclusi. Il probe Gestionale verifica anche il database con una query di sola lettura. Per Cantieri l’API non espone una route salute dedicata: si controllano risposta HTTP e salute PostgreSQL separatamente.</p><p class="small">Dashboard di sola lettura su 127.0.0.1:8790 tramite tunnel SSH. Aggiornamento automatico ogni 30 secondi.</p></section>
@@ -24,7 +24,7 @@ function probeLabel(p){
  const response=p.http!==undefined?"HTTP "+p.http:(p.result||p.target||p.kind);
  return [p.kind,response,p.response_ms!==undefined?p.response_ms+" ms":null].filter(Boolean).join(" · ");
 }
-const ACCESS_URLS={cantieri:"http://127.0.0.1:18081/",gestionale:"http://127.0.0.1:18086/"};
+const ACCESS_URLS={cantieri:"https://cantieri.radio-romanii-italia.duckdns.org/index.html",gestionale:"https://gestionale.radio-romanii-italia.duckdns.org/oracle/original-app.html"};
 async function refresh(){
  try{
   const r=await fetch("/api/status",{cache:"no-store"}),d=await r.json();
