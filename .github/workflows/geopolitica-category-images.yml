@@ -49,5 +49,7 @@ jobs:
           git add data/geopolitica-images/categories/conflicte/ data/geopolitica-images/categories/europa/ data/geopolitica-images/categories/economie/ data/geopolitica-images/categories/energie/ data/geopolitica-images/categories/securitate/ data/geopolitica-images/categories/tehnologie/ data/geopolitica-images/categories/clima/
           if ! git diff --cached --quiet; then
             git commit -m "Publish 70 topic-specific WebP images for Geopolitica"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
