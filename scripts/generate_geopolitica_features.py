@@ -68,9 +68,12 @@ def candidates(title, diagnostic=False):
             found = [e.findtext("link", "") for e in root.findall("./channel/item")]
             if diagnostic: print("RICERCA:", query, "| RISULTATI:", len(found))
             for link in found[:20]:
-                if link.startswith("https://") and link not in seen:
+                parsed = urlparse(link)
+                if parsed.scheme in ("http", "https") and parsed.netloc and link not in seen:
                     seen.add(link)
                     links.append(link)
+                elif diagnostic and link:
+                    print("LINK NON ACCETTATO:", repr(link[:180]))
         except Exception as exc:
             if diagnostic: print("ERRORE RICERCA:", type(exc).__name__, str(exc)[:150])
     if diagnostic: print("RISULTATI RICERCA TOTALI:", len(links))
