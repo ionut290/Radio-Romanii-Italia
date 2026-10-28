@@ -1,0 +1,12 @@
+[Unit]
+Description=Run RDI Control Center every 5 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=5min
+AccuracySec=30s
+Persistent=true
+Unit=rdi-control-center.service
+
+[Install]
+WantedBy=timers.target
