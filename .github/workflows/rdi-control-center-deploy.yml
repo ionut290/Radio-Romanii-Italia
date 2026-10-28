@@ -1,0 +1,63 @@
+name: RDI - Deploy Control Center Oracle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'oracle/rdi-control-center.py'
+      - 'oracle/rdi-control-center-web.py'
+      - 'oracle/rdi-control-center-web.service'
+      - 'oracle/rdi-control-center.service'
+      - 'oracle/rdi-control-center.timer'
+      - 'oracle/control-center.html'
+      - 'oracle/install-rdi-control-center.sh'
+      - 'scripts/deploy-geopolitica-oracle.py'
+      - 'scripts/rdi-geopolitica-auth.php'
+      - '.github/workflows/rdi-control-center-deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-control-center-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate scripts before remote install
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile oracle/rdi-control-center.py oracle/rdi-control-center-web.py scripts/deploy-geopolitica-oracle.py
+          bash -n oracle/install-rdi-control-center.sh
+      - name: Configure restricted Oracle connection
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo '::error::Manca RDI_ORACLE_SSH_KEY_B64'; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo '::error::Manca RDI_ORACLE_KNOWN_HOSTS'; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Install and verify the private local Control Center
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 -o ServerAliveInterval=5 -o ServerAliveCountMax=2 ubuntu@129.151.255.41 'sudo -n bash -s' < oracle/install-rdi-control-center.sh
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 -o ServerAliveInterval=5 -o ServerAliveCountMax=2 ubuntu@129.151.255.41 'sudo -n systemctl is-active --quiet rdi-control-center.timer && sudo -n systemctl is-active --quiet rdi-control-center-web.service && curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/api/status | python3 -c '\''import json,sys; d=json.load(sys.stdin); assert d.get("schema_version")==2; assert d["safety"]["other_playlists_modified"] is False; assert d["safety"]["youtube_live_configuration_modified"] is False; print("Control Center online; safety invariants verified.")'\'''
