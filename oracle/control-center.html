@@ -53,7 +53,7 @@ function render(d){
  badge('site-state',d.site?.state);pageRows(d.site?.pages);
  const o=d.oracle||{},docker=o.docker||{};badge('oracle-state',docker.state==='ok'?'ok':'degraded');stats('oracle-stats',[['CPU',o.cpu_percent===null?'—':o.cpu_percent+'%'],['Memoria',o.memory_percent===null?'—':o.memory_percent+'%'],['Disco',o.disk_percent===null?'—':o.disk_percent+'%'],['Docker attivi',docker.running_count??'—'],['Spazio disco libero',o.disk_free_bytes?Math.round(o.disk_free_bytes/1073741824)+' GB':'—']]);
  $('docker').textContent=(docker.containers||[]).map(x=>x.name+' · '+x.status).join('\n')||'Nessun container rilevato';
- const actions=$('actions');actions.replaceChildren();for(const a of (d.actions||[])){const row=document.createElement('div');row.className='row';row.textContent=a.action+' · '+a.service+(a.verified_active?' · verificato':'');actions.append(row)}if(!(d.actions||[]).length)actions.textContent='Nessun intervento automatico in questo controllo.';
+ const actions=$('actions');actions.replaceChildren();const history=d.audit_log||[];for(const a of history.slice().reverse()){const row=document.createElement('div');row.className='row';row.textContent=(a.recorded_at||'')+' · '+a.action+' · '+a.service+(a.verified_active?' · verificato':'');actions.append(row)}if(!history.length)actions.textContent='Nessun intervento automatico registrato.';
 }
 async function load(){try{const r=await fetch('/api/status?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);render(await r.json())}catch(e){$('overall').textContent='status non disponibile';$('overall').className='error';$('checked').textContent=e.message}}
 load();setInterval(load,30000);
