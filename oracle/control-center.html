@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>RDI Control Center</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#142238;--line:#2c405d;--text:#eef4fb;--muted:#a9bad0;--gold:#f2d18b;--ok:#39d98a;--warn:#ffd166;--bad:#ff6b7a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1280px;margin:auto;padding:28px 20px 60px}header{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;flex-wrap:wrap}
+h1{font-size:clamp(28px,5vw,42px);margin:4px 0}h2{font-size:18px;margin:0 0 12px}p{color:var(--muted);margin:6px 0}
+.kicker{color:var(--gold);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+.meta{font-size:13px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:15px;margin:22px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;min-height:180px}
+.head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}
+.badge{border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800;text-transform:uppercase;background:#344258;color:var(--muted)}
+.badge.ok{background:#153c32;color:var(--ok)}.badge.degraded{background:#493a1d;color:var(--warn)}.badge.error{background:#4b222d;color:var(--bad)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.stat{padding:9px;border-radius:10px;background:#0d192b;min-width:0}
+.stat b{display:block;color:var(--gold);font-size:19px;overflow-wrap:anywhere}.stat span{display:block;color:var(--muted);font-size:12px}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d192b;border-radius:9px;padding:10px;color:#cbd9e9;font-size:12px;max-height:220px;overflow:auto}
+.notice{background:#282d3c;border-left:4px solid var(--gold);border-radius:8px;padding:12px 15px;margin:15px 0;color:#e7e0cf}
+#actions .row{border-top:1px solid var(--line);padding:9px 0;font-size:13px}.error{color:var(--bad)}
+footer{margin-top:22px;color:var(--muted);font-size:12px}
+@media(max-width:500px){main{padding:20px 13px}.card{padding:15px}}
+</style></head>
+<body><main>
+<header><div><div class="kicker">Oracle Cloud · monitoraggio ogni 5 minuti</div><h1>RDI Control Center</h1><p>Stato della diretta, AzuraCast, YouTube Live, redazione, sito e server.</p></div><div class="meta">Ultimo controllo: <b id="checked">—</b><br>Stato generale: <b id="overall">—</b></div></header>
+<div class="notice"><b>Interventi protetti:</b> il bot può riavviare soltanto il relay YouTube principale quando systemd lo segna come fallito, il relay visuale è fermo e il limite anti-ripetizione lo consente. Non modifica playlist e non cambia la configurazione della diretta. Gli altri guasti vengono segnalati.</div>
+<div class="grid">
+<section class="card"><div class="head"><h2>Radio in diretta</h2><span class="badge" id="radio-state">—</span></div><div class="stats" id="radio-stats"></div><p class="meta" id="radio-note"></p></section>
+<section class="card"><div class="head"><h2>AzuraCast</h2><span class="badge" id="azura-state">—</span></div><div class="stats" id="azura-stats"></div><p class="meta">Il controllo è in sola lettura. Le altre playlist non vengono modificate.</p></section>
+<section class="card"><div class="head"><h2>YouTube Live</h2><span class="badge" id="youtube-state">—</span></div><div class="stats" id="youtube-stats"></div><p class="meta" id="youtube-note"></p></section>
+<section class="card"><div class="head"><h2>Redazione</h2><span class="badge" id="redaction-state">—</span></div><div class="stats" id="redaction-stats"></div><p class="meta">Il feed aggiornato non certifica da solo il completamento dell’automazione editoriale.</p></section>
+<section class="card"><div class="head"><h2>Sito web</h2><span class="badge" id="site-state">—</span></div><div id="site-pages"></div></section>
+<section class="card"><div class="head"><h2>Oracle Cloud</h2><span class="badge" id="oracle-state">—</span></div><div class="stats" id="oracle-stats"></div><pre id="docker"></pre></section>
+</div>
+<section class="card"><div class="head"><h2>Interventi automatici registrati</h2><span class="meta">registro locale Oracle</span></div><div id="actions"></div></section>
+<footer>Dashboard locale, sola lettura. Apribile con tunnel SSH verso 127.0.0.1:8787. Il collegamento YouTube RTMP non è dichiarato attivo soltanto perché FFmpeg è in esecuzione: va confermato separatamente in YouTube Studio.</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+function badge(id,state){const x=$(id);x.textContent=state||'unknown';x.className='badge '+(state==='ok'?'ok':state==='error'?'error':state==='degraded'?'degraded':'')}
+function stats(id,items){const box=$(id);box.replaceChildren();for(const [label,value] of items){const d=document.createElement('div');d.className='stat';const b=document.createElement('b');b.textContent=value??'—';const s=document.createElement('span');s.textContent=label;d.append(b,s);box.append(d)}}
+function pageRows(data){const box=$('site-pages');box.replaceChildren();for(const [name,item] of Object.entries(data||{})){const row=document.createElement('p');row.className='meta';row.textContent=name+': '+(item.state||'unknown')+(item.http?' · HTTP '+item.http:'')+(item.json?' · JSON '+item.json:'');box.append(row)}}
+function render(d){
+ $('checked').textContent=d.checked_at||'—';$('overall').textContent=d.overall||'—';$('overall').className=d.overall==='ok'?'':'error';
+ const r=d.radio||{};badge('radio-state',r.state);const np=r.nowplaying||{},st=r.stream||{};
+ stats('radio-stats',[['Stazione online',np.station_is_online?'sì':'no'],['Ascoltatori live',np.listeners_current],['In onda',np.title||'—'],['Stream audio',st.state==='ok'?'audio rilevato':'errore']]);
+ $('radio-note').textContent=(np.artist||'')+(st.content_type?' · '+st.content_type:'');
+ const a=d.azuracast||{};badge('azura-state',a.state);stats('azura-stats',[['Playlist',a.playlist_id||'—'],['Attiva',String(a.playlist_enabled??'—')],['Fascia oraria','ogni ora :'+String(a.scheduled_minute||'—').padStart(2,'0')],['Brani assegnati',a.media_count??'—'],['Ultima riproduzione',a.last_played_at||'—'],['Media RDI',a.own_media_count??'—']]);
+ const y=d.youtube||{};badge('youtube-state',y.state);stats('youtube-stats',[['Modalità',y.mode||'—'],['Processi encoder',y.encoder_process_count??'—'],['Relay standard',y.services?.standard?.state||'—'],['Relay visuale',y.services?.visual?.state||'—'],['Watchdog browser',y.services?.browser_watchdog?.state||'—'],['RTMP confermato',y.rtmp_connection_confirmed?'sì':'no']]);$('youtube-note').textContent=y.note||'';
+ const n=d.redaction||{};badge('redaction-state',n.state);stats('redaction-stats',[['Feed notizie, minuti',n.feed_age_minutes??'—'],['Notizie in feed',n.feed_total??'—'],['In coda',n.pending_total??'—'],['Geopolitica, minuti',n.geopolitica_age_minutes??'—'],['Articoli geopolitici',n.geopolitica_articles??'—'],['Non revisionati',n.geopolitica_unreviewed??'—']]);
+ badge('site-state',d.site?.state);pageRows(d.site?.pages);
+ const o=d.oracle||{},docker=o.docker||{};badge('oracle-state',docker.state==='ok'?'ok':'degraded');stats('oracle-stats',[['CPU',o.cpu_percent===null?'—':o.cpu_percent+'%'],['Memoria',o.memory_percent===null?'—':o.memory_percent+'%'],['Disco',o.disk_percent===null?'—':o.disk_percent+'%'],['Docker attivi',docker.running_count??'—'],['Spazio disco libero',o.disk_free_bytes?Math.round(o.disk_free_bytes/1073741824)+' GB':'—']]);
+ $('docker').textContent=(docker.containers||[]).map(x=>x.name+' · '+x.status).join('\n')||'Nessun container rilevato';
+ const actions=$('actions');actions.replaceChildren();for(const a of (d.actions||[])){const row=document.createElement('div');row.className='row';row.textContent=a.action+' · '+a.service+(a.verified_active?' · verificato':'');actions.append(row)}if(!(d.actions||[]).length)actions.textContent='Nessun intervento automatico in questo controllo.';
+}
+async function load(){try{const r=await fetch('/api/status?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);render(await r.json())}catch(e){$('overall').textContent='status non disponibile';$('overall').className='error';$('checked').textContent=e.message}}
+load();setInterval(load,30000);
+</script></body></html>
