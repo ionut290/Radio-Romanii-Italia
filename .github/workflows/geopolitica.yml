@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - "scripts/update_geopolitica.py"
+      - "scripts/generate_geopolitica_articles.py"
       - ".github/workflows/geopolitica.yml"
   workflow_dispatch:
   schedule:
@@ -26,9 +27,17 @@ jobs:
         with:
           python-version: "3.12"
       - name: Verifică sintaxa importatorului
-        run: python -m py_compile scripts/update_geopolitica.py
+        run: python -m py_compile scripts/update_geopolitica.py scripts/generate_geopolitica_articles.py
+      - name: Install editorial extraction libraries
+        run: python -m pip install --disable-pip-version-check trafilatura beautifulsoup4
       - name: Colectează titluri cu surse identificabile
         run: python scripts/update_geopolitica.py
+      - name: Generate evidence-grounded bilingual analyses (only with configured API key)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RDI_ENABLE_AI_IMAGES: ${{ vars.RDI_ENABLE_AI_IMAGES }}
+          RDI_ARTICLES_PER_RUN: "2"
+        run: python scripts/generate_geopolitica_articles.py
       - name: Verifică structura fluxului, dacă a fost actualizat
         run: |
           if test -s data/geopolitica-news.json; then
@@ -48,10 +57,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if [ -n "$(git status --porcelain -- data/geopolitica-news.json)" ]; then
+          if [ -n "$(git status --porcelain -- data/geopolitica-news.json data/geopolitica-articles.json data/geopolitica-images/)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/geopolitica-news.json
+            git add data/geopolitica-news.json data/geopolitica-articles.json data/geopolitica-images/
             git commit -m "RDI: actualizare surse geopolitice"
             for attempt in 1 2 3 4 5; do
               if git pull --rebase -X ours origin main && git push origin HEAD:main; then exit 0; fi
