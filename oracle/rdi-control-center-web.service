@@ -1,0 +1,21 @@
+[Unit]
+Description=RDI Control Center local read-only dashboard
+After=network-online.target rdi-control-center.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /opt/rdi-control-center/rdi-control-center-web.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/rdi-control-center /var/lib/rdi-control-center
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target
