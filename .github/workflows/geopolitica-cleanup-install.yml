@@ -1,0 +1,55 @@
+name: RDI - Installa pulizia MP3 dopo la trasmissione
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-geopolitica-cleanup-install
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Prepara SSH Oracle
+        env:
+          SSH_KEY_B64: \${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: \${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo '::error::Manca la chiave SSH Oracle'; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo '::error::Mancano le impronte SSH Oracle'; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Installa controllo che elimina solo gli MP3 RDI già trasmessi
+        env:
+          SSH_KEY_B64: \${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: \${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-geopolitica-cleanup-\${GITHUB_RUN_ID}-\${GITHUB_RUN_ATTEMPT}"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+            "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup() {
+            ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+              "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true
+          }
+          trap cleanup EXIT
+          scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+            "$REMOTE" "sudo -n python3 '$STAGE/deploy-geopolitica-oracle.py' install-cleanup --php-helper '$STAGE/rdi-geopolitica-auth.php'"
