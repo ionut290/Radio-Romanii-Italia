@@ -71,7 +71,7 @@ jobs:
           if-no-files-found: error
           retention-days: 3
       - name: Pubblica i tempi dei singoli articoli per YouTube (non va in onda finché l'MP3 non è su AzuraCast)
-        if: steps.draft.outputs.ready == 'true'
+        if: steps.draft.outputs.ready == 'true' && github.event_name == 'schedule'
         shell: bash
         run: |
           set -euo pipefail
