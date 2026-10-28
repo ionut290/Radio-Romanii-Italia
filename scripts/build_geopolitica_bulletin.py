@@ -20,6 +20,9 @@ ROME = ZoneInfo("Europe/Rome")
 ROOT = Path(__file__).resolve().parent.parent
 CURATED = ROOT / "data/war-zone-news.json"
 EXTRA = ROOT / "data/geopolitica-radio-verified.json"
+ARTICLES = ROOT / "data/geopolitica-articles.json"
+MAX_SOURCE_CHECK_AGE_HOURS = 48
+AGGREGATOR_HOSTS = {"news.google.com", "translate.google.com", "bing.com", "www.bing.com"}
 MAX_STORIES = 5
 MAX_AGE_HOURS = 35  # Publication dates from the curated feed have day precision.
 HISTORY_LIMIT = 72  # Recent broadcast editions kept locally on Oracle.
@@ -85,15 +88,80 @@ def recent_history(history: dict) -> set[str]:
             for signature in edition.get("signatures", []) if isinstance(signature, str)}
 
 
-def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dict | None = None) -> list[dict]:
+def article_radio_items(articles: dict, lang: str, now: dt.datetime) -> list[dict]:
+    """Adapt only explicitly reviewed and radio-approved articles with fresh, independent sources."""
+    raw_items = articles.get("items", {}) if isinstance(articles, dict) else {}
+    if isinstance(raw_items, dict):
+        raw_items = list(raw_items.values())
+    if not isinstance(raw_items, list):
+        return []
+    result = []
+    for article in raw_items:
+        if not isinstance(article, dict):
+            continue
+        if article.get("editorial_status") != "editorially_reviewed" or article.get("approved_for_radio") is not True:
+            continue
+        try:
+            checked_at = dt.datetime.fromisoformat(str(article.get("source_checked_at", "")).replace("Z", "+00:00"))
+            if checked_at.tzinfo is None:
+                continue
+            age = (now.astimezone(dt.timezone.utc) - checked_at.astimezone(dt.timezone.utc)).total_seconds() / 3600
+            if age < 0 or age > MAX_SOURCE_CHECK_AGE_HOURS:
+                continue
+        except (TypeError, ValueError):
+            continue
+        urls = article.get("source_urls")
+        if not isinstance(urls, list):
+            continue
+        hosts = set()
+        valid_urls = []
+        from urllib.parse import urlparse
+        for source_url in urls:
+            if not safe_source(source_url):
+                continue
+            try:
+                host = (urlparse(source_url).hostname or "").lower()
+            except ValueError:
+                continue
+            if not host or host in AGGREGATOR_HOSTS:
+                continue
+            hosts.add(host)
+            valid_urls.append(source_url)
+        if len(hosts) < 2:
+            continue
+        localized = article.get(lang)
+        if not isinstance(localized, dict):
+            continue
+        try:
+            published_dt = dt.datetime.fromisoformat(str(article.get("source_published", "")).replace("Z", "+00:00"))
+            if published_dt.tzinfo is None:
+                continue
+            published_date = published_dt.astimezone(ROME).date()
+        except (TypeError, ValueError):
+            continue
+        result.append({
+            "id": str(article.get("id") or article.get("source_url") or ""),
+            "title_" + lang: localized.get("title"),
+            "summary_" + lang: localized.get("lead"),
+            "source_name": article.get("source_name"),
+            "source_url": article.get("source_url"),
+            "source_urls": valid_urls,
+            "published_date": published_date.isoformat(),
+            "region": article.get("region", ""),
+        })
+    return result
+
+
+def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dict | None = None, articles: dict | None = None) -> list[dict]:
     result = []
     seen_urls = set()
     # war-zone-news.json is the existing editorially verified feed, not the raw attack leads.
-    incoming = [(x, True) for x in curated.get("items", []) if isinstance(x, dict)]
+    incoming = [(x, True, False) for x in curated.get("items", []) if isinstance(x, dict)]
     # Additional geopolitical news must be explicitly approved for radio by the redaction.
-    incoming += [(x, False) for x in extras.get("items", []) if isinstance(x, dict)]
-    for item, is_curated in incoming:
-        if not is_curated and not (item.get("editorial_verified") is True and item.get("approved_for_radio") is True):
+    incoming += [(x, False, False) for x in extras.get("items", []) if isinstance(x, dict)]
+    incoming += [(x, False, True) for x in article_radio_items(articles or {}, lang, now)]
+    for item, is_curated, is_article in incoming:
+        if not is_curated and not is_article and not (item.get("editorial_verified") is True and item.get("approved_for_radio") is True):
             continue
         title = clean_spoken(item.get("title_" + lang), 240)
         summary = clean_spoken(item.get("summary_" + lang), 700)
@@ -119,7 +187,8 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, hi
         result.append({
             "title": title, "summary": summary, "source": source, "url": url,
             "date": publication, "region": str(item.get("region") or "").strip(),
-            "id": str(item.get("id") or url), "curated": is_curated
+            "id": str(item.get("id") or url), "curated": is_curated,
+            "source_urls": item.get("source_urls", [url]) if is_article else [url]
         })
     used = recent_history(history or {})
     # Exclude previously broadcast stories, including minor rewrites.
@@ -196,9 +265,9 @@ def broadcast_summary(text: str, lang: str, source: str) -> str:
     return re.sub(r"\s+", " ", text).strip(" ,.;:")
 
 
-def build(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dict | None = None) -> dict | None:
+def build(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dict | None = None, articles: dict | None = None) -> dict | None:
     now = now.astimezone(ROME)
-    stories = available_items(now, lang, curated, extras, history)
+    stories = available_items(now, lang, curated, extras, history, articles)
     if not stories:
         return None
     segments = [{
@@ -235,6 +304,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dic
         "story_signatures": [story_signature(x) for x in stories],
         "sources": [{
             "id": x["id"], "url": x["url"], "source": x["source"],
+            "source_urls": x.get("source_urls", [x["url"]]),
             "published_date": x["date"].isoformat()
         } for x in stories],
         "articles": public_articles,
@@ -250,7 +320,7 @@ def main() -> int:
     parser.add_argument("--history", default=str(DEFAULT_HISTORY))
     args = parser.parse_args()
     now = dt.datetime.now(ROME)
-    program = build(now, args.language, read_json(CURATED), read_json(EXTRA), read_json(Path(args.history)))
+    program = build(now, args.language, read_json(CURATED), read_json(EXTRA), read_json(Path(args.history)), read_json(ARTICLES))
     if not program:
         print("Nessun nuovo bollettino: tutte le notizie verificate recenti sono gia state trasmesse oppure non ve ne sono.")
         return 2
