@@ -186,7 +186,7 @@
       if(publishedArticle.conclusion){body.append(node("h3","",state.lang==="it"?"Conclusioni":"Concluzii"));body.append(node("p","",String(publishedArticle.conclusion)))}
     } else body.append(...paragraphs.map(p=>node("p","",p)));
     const image=record?.image;
-    if(typeof image==="string" && /^\\.\\/data\\/geopolitica-images\\/geo-[a-z0-9-]+\\.png$/.test(image)){
+    if(typeof image==="string" && image.startsWith("./data/geopolitica-images/") && image.endsWith(".png")){
       const img=body.querySelector(".rdi-editorial-cover");if(img)img.src=image;
     }
     $("article-attribution").textContent=item.source+" · "+dateLabel(item.published);
@@ -249,7 +249,7 @@
     const date=dateLabel(item.published);if(date)meta.append(node("time","",date));
     const title=node("h3","",item.title);const cover=coverElement(item,featured);
     const richImage=item.id&&aiArticles[item.id]?.image;
-    if(typeof richImage==="string" && /^\\.\\/data\\/geopolitica-images\\/geo-[a-z0-9-]+\\.png$/.test(richImage))cover.querySelector("img").src=richImage;
+    if(typeof richImage==="string" && richImage.startsWith("./data/geopolitica-images/") && richImage.endsWith(".png"))cover.querySelector("img").src=richImage;
     card.append(cover,meta,title);
     const intro=String(item.summary||"").replace(/\s+/g," ").trim();
     if(intro && intro.toLocaleLowerCase()!==item.title.toLocaleLowerCase()){card.append(node("p","",intro.slice(0,featured?240:150)+(intro.length>(featured?240:150)?"…":"")))}
