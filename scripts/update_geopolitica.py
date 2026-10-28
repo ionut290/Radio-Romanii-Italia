@@ -16,6 +16,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 OUTPUT = Path("data/geopolitica-news.json")
+## Scheduled refresh smoke-test: keep publisher workflow trigger wired to this importer.
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia-Geopolitica/1.0; editorial news index)"}
 # Each search labels a news topic for browsing; labels do not assert the truth of a headline.
 QUERIES = [
