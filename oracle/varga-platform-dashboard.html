@@ -6,24 +6,44 @@
 <title>Varga Platforms Control</title>
 <style>
 :root{color-scheme:dark;--bg:#0b1220;--panel:#142238;--line:#2c405d;--text:#eef4fb;--muted:#a9bad0;--gold:#f2d18b;--ok:#39d98a;--warn:#ffd166;--bad:#ff6b7a}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:28px 20px 60px}
-header{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}.kicker{color:var(--gold);font-weight:800;letter-spacing:.12em;font-size:12px}h1{font-size:clamp(28px,5vw,42px);margin:4px 0}h2{font-size:20px;margin:0 0 14px}p,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:20px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.head{display:flex;justify-content:space-between;align-items:center;gap:8px}.badge{border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800;text-transform:uppercase}.ok{background:#153c32;color:var(--ok)}.degraded{background:#493a1d;color:var(--warn)}.error{background:#4b222d;color:var(--bad)}.service{padding:12px 0;border-top:1px solid var(--line)}.service:first-of-type{border-top:0}.service b{display:block}.small{font-size:13px;color:var(--muted);overflow-wrap:anywhere}section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d192b;border-radius:9px;padding:12px;color:#cbd9e9;font-size:12px;max-height:280px;overflow:auto}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:28px 20px 60px}
+header{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}.kicker{color:var(--gold);font-weight:800;letter-spacing:.12em;font-size:12px}h1{font-size:clamp(28px,5vw,42px);margin:4px 0}h2{font-size:20px;margin:0 0 14px}p,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;margin:20px 0}.card,section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.head{display:flex;justify-content:space-between;align-items:center;gap:8px}.badge{border-radius:999px;padding:3px 10px;font-size:12px;font-weight:800;text-transform:uppercase}.ok{background:#153c32;color:var(--ok)}.degraded{background:#493a1d;color:var(--warn)}.warning{background:#493a1d;color:var(--warn)}.service,.database{padding:12px 0;border-top:1px solid var(--line)}.service b,.database b{display:block}.small{font-size:13px;color:var(--muted);overflow-wrap:anywhere}.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin:14px 0}.stat{background:#0d192b;border-radius:10px;padding:11px}.stat strong{display:block;color:var(--gold);font-size:20px}.stat span{font-size:12px;color:var(--muted)}section{margin-top:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d192b;border-radius:9px;padding:12px;color:#cbd9e9;font-size:12px;max-height:300px;overflow:auto}
 </style>
 </head>
 <body><main>
-<header><div><div class="kicker">Varga · solo Cantieri e Gestionale</div><h1>Varga Platforms Control</h1><p>Monitoraggio Oracle e riparazione limitata ai servizi web/API.</p></div><div class="small" id="updated">Caricamento…</div></header>
+<header><div><div class="kicker">Varga · solo Cantieri e Gestionale</div><h1>Varga Platforms Control</h1><p>Monitoraggio applicativo, database, risorse Oracle e recupero controllato.</p></div><div class="small" id="updated">Caricamento…</div></header>
 <div class="grid" id="platforms"></div>
-<section><div class="head"><h2>Ultimi interventi</h2><span class="small">Registro locale Oracle</span></div><pre id="actions">Caricamento…</pre></section>
-<section><h2>Limiti del bot</h2><p>Agisce solo sui container web/API elencati. Attende due controlli falliti, verifica il risultato e limita i riavvii a tre per container ogni 24 ore. Database, backup, shadow, radio e altre piattaforme sono esclusi.</p><p class="small">Dashboard di sola lettura, disponibile tramite tunnel SSH su 127.0.0.1:8790.</p></section>
+<section><div class="head"><h2>Risorse Oracle</h2><span class="badge ok" id="host-state">—</span></div><div class="stats" id="host-stats"></div></section>
+<section><div class="head"><h2>Eventi e interventi recenti</h2><span class="small">Registro locale Oracle</span></div><pre id="actions">Caricamento…</pre></section>
+<section><h2>Regole di recupero</h2><p>Il bot attende due controlli consecutivi falliti. Riavvia soltanto i container web/API autorizzati; massimo 3 riavvii per container ogni 24 ore e almeno 30 minuti tra due riavvii.</p><p>Database, shadow, backup e altre applicazioni sono esclusi. Il probe Gestionale verifica anche il database con una query di sola lettura. Per Cantieri l’API non espone una route salute dedicata: si controllano risposta HTTP e salute PostgreSQL separatamente.</p><p class="small">Dashboard di sola lettura su 127.0.0.1:8790 tramite tunnel SSH. Aggiornamento automatico ogni 30 secondi.</p></section>
 </main>
 <script>
 const esc=s=>String(s??"—").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function probeLabel(p){
+ if(!p)return "Probe non disponibile";
+ const response=p.http!==undefined?"HTTP "+p.http:(p.result||p.target||p.kind);
+ return [p.kind,response,p.response_ms!==undefined?p.response_ms+" ms":null].filter(Boolean).join(" · ");
+}
 async function refresh(){
  try{
   const r=await fetch("/api/status",{cache:"no-store"}),d=await r.json();
   document.getElementById("updated").textContent="Ultimo controllo: "+new Date(d.checked_at).toLocaleString("it-IT")+" · stato: "+d.overall;
-  document.getElementById("platforms").innerHTML=Object.values(d.platforms||{}).map(p=>'<article class="card"><div class="head"><h2>'+esc(p.label)+'</h2><span class="badge '+esc(p.state)+'">'+esc(p.state)+'</span></div>'+Object.entries(p.services||{}).map(([k,s])=>'<div class="service"><b>'+esc(k.toUpperCase())+' · '+esc(s.state)+'</b><div class="small">Container: '+esc(s.container_state)+' · healthcheck: '+esc(s.container_health)+'</div><div class="small">Probe: '+esc(s.probe?.kind)+' · '+esc(s.probe?.http??s.probe?.target)+' · '+(s.probe?.reachable?'raggiungibile':'non raggiungibile')+'</div><div class="small">Errori consecutivi: '+esc(s.failure_streak)+'</div></div>').join("")+'</article>').join("");
-  document.getElementById("actions").textContent=(d.actions||[]).length?JSON.stringify(d.actions,null,2):"Nessun intervento nell'ultimo controllo. Tutti i controlli vengono salvati nel registro Oracle.";
+  document.getElementById("platforms").innerHTML=Object.values(d.platforms||{}).map(p=>{
+   const db=p.database||{};
+   return '<article class="card"><div class="head"><h2>'+esc(p.label)+'</h2><span class="badge '+esc(p.state)+'">'+esc(p.state)+'</span></div>'+
+    '<div class="database"><b>Database · '+esc(db.state)+'</b><div class="small">'+esc(db.container)+' · container '+esc(db.container_state)+' · health '+esc(db.container_health)+'</div><div class="small">'+esc(probeLabel(db.probe))+'</div><div class="small">Riavvio automatico: escluso</div></div>'+
+    Object.entries(p.services||{}).map(([k,s])=>'<div class="service"><b>'+esc(k.toUpperCase())+' · '+esc(s.state)+'</b><div class="small">Container: '+esc(s.container_state)+' · Docker health: '+esc(s.container_health)+' · riavvii: '+esc(s.restart_count)+'</div><div class="small">Probe: '+esc(probeLabel(s.probe))+'</div><div class="small">Errori consecutivi: '+esc(s.failure_streak)+(s.dependency_ok===false?' · dipendenza non pronta':'')+'</div></div>').join("")+'</article>';
+  }).join("");
+  const h=d.host||{};
+  document.getElementById("host-state").className="badge "+esc(h.state||"warning");
+  document.getElementById("host-state").textContent=esc(h.state||"non disponibile");
+  document.getElementById("host-stats").innerHTML=[
+   ["CPU load · 1 min",h.load_average?.[0]??"—"],
+   ["Memoria usata",h.memory_percent===null?"—":h.memory_percent+"%"],
+   ["Disco usato",h.disk_percent===null?"—":h.disk_percent+"%"],
+   ["Disco libero",h.disk_free_bytes===undefined?"—":(h.disk_free_bytes/1073741824).toFixed(1)+" GB"]
+  ].map(x=>'<div class="stat"><strong>'+esc(x[1])+'</strong><span>'+esc(x[0])+'</span></div>').join("");
+  document.getElementById("actions").textContent=(d.actions||[]).length?JSON.stringify(d.actions,null,2):"Nessun cambio di stato o intervento automatico registrato.";
  }catch(e){document.getElementById("updated").textContent="Dati non disponibili: "+e}
 }
 refresh();setInterval(refresh,30000);

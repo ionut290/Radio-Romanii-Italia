@@ -18,7 +18,7 @@ systemctl start varga-platform-bot.service
 systemctl is-active --quiet varga-platform-bot.timer
 systemctl is-active --quiet varga-platform-dashboard.service
 curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8790/api/status \
-  | /usr/bin/python3 -c 'import json,sys; d=json.load(sys.stdin); assert d.get("schema_version")==1 and set(d.get("platforms",{}))=={"cantieri","gestionale"}'
+  | /usr/bin/python3 -c 'import json,sys; d=json.load(sys.stdin); assert d.get("schema_version")==2 and set(d.get("platforms",{}))=={"cantieri","gestionale"}'
 systemctl list-timers --no-pager varga-platform-bot.timer
 echo "Dedicated Varga bot installed. Dashboard listens only on 127.0.0.1:8790."
 echo "SSH tunnel: ssh -L 8790:127.0.0.1:8790 ubuntu@<oracle-host>"
