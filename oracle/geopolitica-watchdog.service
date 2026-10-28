@@ -1,0 +1,21 @@
+[Unit]
+Description=RDI Geopolitica GitHub refresh watchdog
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/Radio-Romanii-Italia
+EnvironmentFile=/etc/rdi-geopolitica-watchdog.env
+Environment=RDI_WATCHDOG_STATE=/home/ubuntu/.local/state/rdi-geopolitica-watchdog/last_dispatch
+ExecStart=/usr/bin/python3 /home/ubuntu/Radio-Romanii-Italia/oracle/geopolitica-watchdog.py
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/ubuntu/.local/state/rdi-geopolitica-watchdog
+
+[Install]
+WantedBy=multi-user.target
