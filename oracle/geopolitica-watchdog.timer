@@ -1,0 +1,11 @@
+[Unit]
+Description=Check RDI Geopolitica feed every 10 minutes
+
+[Timer]
+OnCalendar=*:0/10
+Persistent=true
+RandomizedDelaySec=30
+Unit=geopolitica-watchdog.service
+
+[Install]
+WantedBy=timers.target
