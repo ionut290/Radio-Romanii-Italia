@@ -1,9 +1,89 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T00:55:26Z",
+  "updated_at": "2026-10-28T01:00:00Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
+    {
+      "id": "rdi-ethiopia-arsi-shirka-20261024",
+      "date": "2026-10-24",
+      "place": "Districtul Shirka (Sherka), zona Arsi, Oromia",
+      "lat": 7.571,
+      "long": 39.577,
+      "killed": 46,
+      "title_ro": "Etiopia: 46 de persoane ucise la Shirka, potrivit Bisericii Ortodoxe",
+      "title_it": "Etiopia: 46 morti a Shirka, secondo la Chiesa ortodossa",
+      "date_label": "24 octombrie 2026",
+      "reported_on": "2026-10-27",
+      "country": "Etiopia",
+      "country_code": "ET",
+      "precision": "approx_district",
+      "type": "attack",
+      "status": "reported",
+      "injured": null,
+      "actor": "Responsabilitate contestată, fără dovezi concludente privind autorii sau motivația.",
+      "description_ro": "Atacul din 2026-10-24 în districtul Districtul Shirka (Sherka), zona Arsi, Oromia: 46 morți potrivit Bisericii Ortodoxe Etiopiene, relatat de Reuters și AP la 27 octombrie. Pentru ambele atacuri Biserica a raportat peste 20 de răniți grav, fără distribuție pe districte; răniții acestui punct sunt necunoscuți (null). Autorii nu au fost identificați definitiv. Marcaj administrativ aproximativ, nu locul atacului.",
+      "description_it": "Attacco del 2026-10-24 nel distretto Districtul Shirka (Sherka), zona Arsi, Oromia: 46 morti secondo la Chiesa ortodossa etiope, riferiti da Reuters e AP il 27 ottobre. Per i due episodi la Chiesa ha indicato oltre 20 feriti gravi complessivi, senza ripartizione; feriti di questo punto sconosciuti (null). Responsabili non accertati. Posizione amministrativa approssimativa.",
+      "sources": [
+        {
+          "name": "Reuters, 27 ottobre 2026",
+          "url": "https://www.reuters.com/world/africa/attackers-kill-60-people-ethiopias-conflict-hit-oromiya-region-orthodox-church-2026-10-27/"
+        },
+        {
+          "name": "Associated Press, 27 ottobre 2026",
+          "url": "https://apnews.com/article/2619e078e655a87f0f29cd1e8dd9db5d"
+        },
+        {
+          "name": "Africanews, 27 ottobre 2026",
+          "url": "https://www.africanews.com/amp/2026/10/27/ethiopia-at-least-60-christians-killed-in-attacks-in-oromia-region/"
+        },
+        {
+          "name": "Open Administrative Data, coordinate indicative",
+          "url": "https://github.com/open-admin-data/ethiopia-administrative-divisions/blob/master/divisions/oromia/arsi/README.md"
+        }
+      ],
+      "rdi_article_id": "rdi-20261027-etiopia-oromia-arsi-60-victime"
+    },
+    {
+      "id": "rdi-ethiopia-arsi-merti-20261020",
+      "date": "2026-10-20",
+      "place": "Districtul Merti, zona Arsi, Oromia",
+      "lat": 8.529,
+      "long": 39.839,
+      "killed": 14,
+      "title_ro": "Etiopia: 14 persoane ucise la Merti, potrivit Bisericii Ortodoxe",
+      "title_it": "Etiopia: 14 morti a Merti, secondo la Chiesa ortodossa",
+      "date_label": "20 octombrie 2026",
+      "reported_on": "2026-10-27",
+      "country": "Etiopia",
+      "country_code": "ET",
+      "precision": "approx_district",
+      "type": "attack",
+      "status": "reported",
+      "injured": null,
+      "actor": "Responsabilitate contestată, fără dovezi concludente privind autorii sau motivația.",
+      "description_ro": "Atacul din 2026-10-20 în districtul Districtul Merti, zona Arsi, Oromia: 14 morți potrivit Bisericii Ortodoxe Etiopiene, relatat de Reuters și AP la 27 octombrie. Pentru ambele atacuri Biserica a raportat peste 20 de răniți grav, fără distribuție pe districte; răniții acestui punct sunt necunoscuți (null). Autorii nu au fost identificați definitiv. Marcaj administrativ aproximativ, nu locul atacului.",
+      "description_it": "Attacco del 2026-10-20 nel distretto Districtul Merti, zona Arsi, Oromia: 14 morti secondo la Chiesa ortodossa etiope, riferiti da Reuters e AP il 27 ottobre. Per i due episodi la Chiesa ha indicato oltre 20 feriti gravi complessivi, senza ripartizione; feriti di questo punto sconosciuti (null). Responsabili non accertati. Posizione amministrativa approssimativa.",
+      "sources": [
+        {
+          "name": "Reuters, 27 ottobre 2026",
+          "url": "https://www.reuters.com/world/africa/attackers-kill-60-people-ethiopias-conflict-hit-oromiya-region-orthodox-church-2026-10-27/"
+        },
+        {
+          "name": "Associated Press, 27 ottobre 2026",
+          "url": "https://apnews.com/article/2619e078e655a87f0f29cd1e8dd9db5d"
+        },
+        {
+          "name": "Africanews, 27 ottobre 2026",
+          "url": "https://www.africanews.com/amp/2026/10/27/ethiopia-at-least-60-christians-killed-in-attacks-in-oromia-region/"
+        },
+        {
+          "name": "Open Administrative Data, coordinate indicative",
+          "url": "https://github.com/open-admin-data/ethiopia-administrative-divisions/blob/master/divisions/oromia/arsi/README.md"
+        }
+      ],
+      "rdi_article_id": "rdi-20261027-etiopia-oromia-arsi-60-victime"
+    },
     {
       "id": "rdi-colombia-cucuta-20261027",
       "date": "2026-10-27",
