@@ -29,7 +29,7 @@ def probe_station():
             data = json.load(response)
         return {
             "api": "ok",
-            "station_is_online": bool((data.get("station") or {}).get("is_online")),
+            "station_is_online": data.get("is_online") if isinstance(data.get("is_online"), bool) else None,
             "listeners_current": (data.get("listeners") or {}).get("current"),
             "note": "API only, not proof of audible stream",
         }
