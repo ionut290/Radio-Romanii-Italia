@@ -75,7 +75,7 @@ def story_signature(item: dict) -> str:
     """Treat changed text as an update, not merely a new ID or URL."""
     title = item.get("title") or item.get("title_it") or item.get("title_ro") or ""
     summary = item.get("summary") or item.get("summary_it") or item.get("summary_ro") or ""
-    normalized = " ".join(" ".join(str(value).casefold().split()) for value in (title, summary))
+    normalized = " ".join(" ".join(value.casefold().split()) for value in (clean_spoken(title, 240), clean_spoken(summary, 700)))
     return hashlib.sha256(normalized.encode("utf-8")).hexdigest()[:24]
 
 
