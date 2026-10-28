@@ -6,6 +6,8 @@ on:
       - "scripts/update_geopolitica.py"
       - ".github/workflows/geopolitica.yml"
   workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
 permissions:
   contents: write
 concurrency:
