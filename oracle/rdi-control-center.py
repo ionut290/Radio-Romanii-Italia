@@ -159,26 +159,38 @@ def probe_station() -> dict:
         nowplaying = {"state": "error", "error_type": type(exc).__name__}
     stream = {}
     try:
-        code, headers, body = fetch(STREAM_URL, timeout=12, limit=65536)
+        # A live stream is unbounded. Read a small sample instead of using fetch(),
+        # whose JSON size guard correctly rejects responses larger than its limit.
+        req = urllib.request.Request(
+            STREAM_URL,
+            headers={"User-Agent": "RDI-Control-Center/2.1", "Accept": "audio/*, */*"},
+        )
+        with urllib.request.urlopen(req, timeout=12) as response:
+            code = response.status
+            headers = dict(response.headers.items())
+            body = response.read(16384)
         content_type = headers.get("Content-Type", "").split(";", 1)[0].lower()
         has_id3 = body.startswith(b"ID3")
         has_mpeg_frame = any(
             body[i] == 0xFF and i + 1 < len(body) and (body[i + 1] & 0xE0) == 0xE0
             for i in range(min(len(body) - 1, 8192))
         )
-        valid_audio = has_id3 or has_mpeg_frame
+        audio_frame = has_id3 or has_mpeg_frame
+        reachable = 200 <= code < 300 and len(body) > 0
         stream = {
-            "state": "ok" if 200 <= code < 300 and valid_audio else "error",
+            "state": "ok" if reachable else "error",
             "http": code,
             "content_type": content_type,
-            "audio_frame_detected": valid_audio,
+            "reachable": reachable,
+            "audio_frame_detected": audio_frame,
+            "audio_format": "mp3" if audio_frame else "not_identified",
             "bytes_sampled": len(body),
+            "note": "Stream endpoint responded; audio framing is shown separately",
         }
     except (OSError, ValueError, urllib.error.URLError) as exc:
-        stream = {"state": "error", "error_type": type(exc).__name__}
+        stream = {"state": "error", "reachable": False, "error_type": type(exc).__name__}
     state = "ok" if nowplaying.get("state") == "ok" and stream.get("state") == "ok" else "degraded"
     return {"state": state, "nowplaying": nowplaying, "stream": stream}
-
 
 def probe_azuracast(previous: dict | None) -> dict:
     checked = None
