@@ -37,7 +37,8 @@ QUERIES = [
 ]
 MAX_PER_QUERY = 9
 MAX_TOTAL = 60
-MAX_NEW_BILINGUAL_TITLES = 72  # bounded API requests per hourly run
+MAX_NEW_BILINGUAL_TITLES = 24  # keep the 15-minute refresh within a bounded runtime
+RUN_DEADLINE = time.monotonic() + 420  # stop gracefully before Actions timeout
 NOW = dt.datetime.now(dt.timezone.utc)
 TODAY_ROME = NOW.astimezone(ZoneInfo('Europe/Rome')).date()
 seen_urls = set()
@@ -97,7 +98,7 @@ def add_bilingual_titles(items):
     completed = 0
     consecutive_failures = 0
     for item in prioritized:
-        if completed >= MAX_NEW_BILINGUAL_TITLES or consecutive_failures >= 5:
+        if completed >= MAX_NEW_BILINGUAL_TITLES or consecutive_failures >= 5 or time.monotonic() >= RUN_DEADLINE:
             break
         try:
             original = item["title"]
@@ -175,6 +176,8 @@ def main():
         except Exception as exc:
             failures.append(f"{topic}/{region}: {type(exc).__name__}: {exc}")
             print("Sursa RSS indisponibilă:", failures[-1])
+    if len(failures) == len(QUERIES):
+        raise RuntimeError("Tutte le fonti RSS non disponibili: mantengo il feed precedente.")
     if not entries:
         print("Nessuna notizia pubblicata oggi (ora italiana): il feed del giorno sarà vuoto.")
     entries.sort(key=lambda row: row["published"], reverse=True)
