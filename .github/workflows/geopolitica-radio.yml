@@ -30,12 +30,31 @@ jobs:
           set -euo pipefail
           python -m py_compile scripts/build_geopolitica_bulletin.py scripts/render_geopolitica_audio.py scripts/deploy-geopolitica-oracle.py
           python -m unittest discover -s tests -p 'test_geopolitica_bulletin.py' -v
+      - name: Recupera in sola lettura lo storico trasmissioni da Oracle
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo '::error::Manca la chiave SSH Oracle'; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo '::error::Mancano le impronte SSH Oracle'; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+            ubuntu@129.151.255.41 \
+            "sudo -n python3 -c 'import json,pathlib; p=pathlib.Path(\"/var/lib/rdi-geopolitica/broadcast-history.json\"); print(json.dumps(json.loads(p.read_text()) if p.exists() else {\"editions\": []}))'" \
+            > "$RUNNER_TEMP/rdi-broadcast-history.json"
+          python -m json.tool "$RUNNER_TEMP/rdi-broadcast-history.json" >/dev/null
       - name: Prepara notiziario interamente in italiano
         id: draft
         shell: bash
         run: |
           set +e
-          python scripts/build_geopolitica_bulletin.py --language it --output /tmp/rdi-geopolitica
+          python scripts/build_geopolitica_bulletin.py --language it --output /tmp/rdi-geopolitica --history "$RUNNER_TEMP/rdi-broadcast-history.json"
           code=$?
           set -e
           if [ "$code" -eq 2 ]; then
