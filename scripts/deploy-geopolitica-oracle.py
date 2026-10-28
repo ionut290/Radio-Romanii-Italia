@@ -269,6 +269,51 @@ def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> N
         print("RDI_HISTORY_RECORDED=" + str(len(editions[-72:])))
 
 
+
+def recover(client: Client) -> None:
+    """Re-enable only an existing correctly scheduled playlist with indexed RDI audio."""
+    rec = playlist(client, False)
+    if rec is None:
+        print("RDI_RECOVERY=NO_PLAYLIST")
+        return
+    if rec.get("is_enabled"):
+        print("RDI_RECOVERY=ALREADY_ENABLED")
+        return
+    media = list_own_media(client)
+    if not media:
+        print("RDI_RECOVERY=NO_INDEXED_RDI_MP3")
+        return
+    # The file list alone does not prove a track is assigned to this playlist.
+    playlist_id = int(rec["id"])
+    eligible = []
+    for row in media:
+        linked = row.get("playlists") or []
+        if isinstance(linked, list) and any(
+            (isinstance(p, dict) and int(p.get("id", -1)) == playlist_id)
+            or (isinstance(p, (int, str)) and str(p) == str(playlist_id))
+            for p in linked
+        ):
+            eligible.append(row)
+    if not eligible:
+        print("RDI_RECOVERY=NO_ASSIGNED_RDI_MP3")
+        return
+    # Never broadcast an arbitrarily old bulletin as a current update.
+    now = dt.datetime.now(dt.timezone.utc)
+    fresh = []
+    for row in eligible:
+        name = str(row.get("path", "")).split("/")[-1]
+        match = FILENAME_RE.fullmatch(name)
+        if match:
+            stamp = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
+            stamp = stamp.replace(tzinfo=dt.timezone.utc)
+            if dt.timedelta(0) <= now - stamp <= dt.timedelta(hours=2):
+                fresh.append(row)
+    if not fresh:
+        print("RDI_RECOVERY=NO_RECENT_ASSIGNED_MP3")
+        return
+    enable(client, rec, True)
+    print("RDI_RECOVERY=ENABLED_WITH_RECENT_ASSIGNED_MP3")
+
 def suspend(client: Client) -> None:
     rec = playlist(client, False)
     if rec is None:
@@ -280,7 +325,7 @@ def suspend(client: Client) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=["inspect", "apply", "suspend"])
+    parser.add_argument("action", choices=["inspect", "apply", "suspend", "recover"])
     parser.add_argument("--manifest")
     parser.add_argument("--mp3")
     parser.add_argument("--php-helper", default="/tmp/rdi-geopolitica-auth.php")
@@ -314,6 +359,8 @@ def main() -> int:
                           + "|playlists=" + str(row.get("playlists"))[:220])
         elif args.action == "apply":
             apply(client, pathlib.Path(args.manifest), pathlib.Path(args.mp3))
+        elif args.action == "recover":
+            recover(client)
         else:
             suspend(client)
         return 0
