@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-28T14:11:58.951960+00:00",
+  "news_updated_at": "2026-10-28T15:06:43.564053+00:00",
   "editorial_updated_at": "2026-10-28T09:20:03.168345+01:00",
   "translations_updated_at": "2026-10-28T14:06:34.011704+00:00",
-  "feed_total": 74,
-  "feed_extended_400": 7,
-  "feed_missing_body": 67,
+  "feed_total": 72,
+  "feed_extended_400": 8,
+  "feed_missing_body": 64,
   "feed_short_body": 0,
   "editorial_total": 38,
   "archived_editorials": 64,
   "translation_records": 31,
   "pending_total": 87,
   "pending_filtered_out": 298,
-  "editorial_verde": 11,
-  "editorial_galben": 53,
-  "editorial_rosu": 42,
+  "editorial_verde": 12,
+  "editorial_galben": 52,
+  "editorial_rosu": 41,
   "pending": [
     {
       "title": "++ Ue all'Italia, 'valutiamo aiuti Pac contro caro-carburanti' ++ - ANSA",
@@ -618,12 +618,147 @@
   ],
   "recent_news": [
     {
+      "title": "Zi decisivă pentru Călin Georgescu: Fostul candidat a ajuns la Curtea de Apel București. Ședința a început",
+      "category": "România",
+      "published": "2026-10-28T15:01:16+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/zi-decisiva-pentru-calin-georgescu-fostul-candidat-afla-daca-judecatorii-ii-prelungesc-arestul-preventiv-in-dosarul-diicot-4011795",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Alegerile din Israel, prin ochii vecinilor: puțini se așteaptă la un moment de cotitură, dar rezultatul influențează războiul cu Iranul",
+      "category": "România",
+      "published": "2026-10-28T14:47:25+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/alegerile-din-israel-prin-ochii-vecinilor-putini-se-asteapta-la-un-moment-de-cotitura-dar-rezultatul-influenteaza-razboiul-cu-iranul-4012547",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Comisarul pentru Apărare: Europa trebuie să fie gata să crească producția de combustibil pentru a-și susține forțele în timp de război",
+      "category": "România",
+      "published": "2026-10-28T14:45:25+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/comisarul-pentru-aparare-europa-trebuie-sa-fie-gata-sa-creasca-productia-de-combustibil-pentru-a-si-sustine-fortele-in-timp-de-razboi-4012551",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Serghei Lavrov se deplasează în SUA pentru summitul miniștrilor de Externe G20",
+      "category": "România",
+      "published": "2026-10-28T14:44:26+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/serghei-lavrov-ajunge-in-sua-pentru-summitul-ministrilor-de-externe-g20-4012553",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Youssef Siher torna in libertà, la gip non convalida il fermo. Meloni: 'Decisione vergognosa'",
+      "category": "Italia",
+      "published": "2026-10-28T14:44:09+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/il-gip-di-milano-rimette-in-liberta-youssef-siher_c3831f66-7791-4ae1-9745-5d4a8cbb9980.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Spagna: Toledo, almeno 64 morti nello scontro tra due treni. La Farnesina: 'A bordo 5 italiani, 4 stanno bene. Dispersa una donna'",
+      "category": "Italia",
+      "published": "2026-10-28T14:43:39+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/spagna-toledo-almeno-64-morti-nello-scontro-tra-due-treni.-la-farnesina_3124daf4-1c75-4126-a99f-4356a4740361.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il gas supera i 100 euro, timori di una crisi energetica in Europa",
+      "category": "Italia",
+      "published": "2026-10-28T14:37:34+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/10/28/il-gas-supera-i-100-euro-timori-di-una-crisi-energetica-in-europa_33abb0b4-0d7b-4572-9cbd-1620a031c0a9.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cdm al via, sul tavolo manovra, decreto bollette e riforma dell'artigianato",
+      "category": "Italia",
+      "published": "2026-10-28T14:36:08+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/cdm-al-via-sul-tavolo-manovra-decreto-bollette-e-riforma-dellartigianato_a800dc0a-5e17-4252-b135-567ad9587d2b.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Zelenski, schimbare radicală de poziție în negocierile de pace. Anunțul liderului de la Kiev",
+      "category": "România",
+      "published": "2026-10-28T14:35:39+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/zelenski-schimbare-radicala-de-pozitie-in-negocierile-de-pace-anuntul-liderului-de-la-kiev-4012523",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Flávio Bolsonaro è atterrato a Miami con la famiglia",
+      "category": "Italia",
+      "published": "2026-10-28T14:31:20+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/flavio-bolsonaro-e-atterrato-a-miami-con-la-famiglia_1b9d2be9-8a00-428f-926e-46b20bfc3e26.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Paradoxul prosperității europene: anarhia stradală din Occident și limitele modelului asistențial",
+      "category": "România",
+      "published": "2026-10-28T14:28:35+00:00",
+      "url": "https://www.digi24.ro/opinii/agora-digi/paradoxul-prosperitatii-europene-anarhia-stradala-din-occident-si-limitele-modelului-asistential-4012529",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ce măsuri propune Ministerul Energiei pentru a asigura alimentarea cu energie electrică și gaze naturale în această iarnă",
+      "category": "România",
+      "published": "2026-10-28T14:27:55+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/energie/ce-masuri-propune-ministerul-energiei-pentru-a-asigura-alimentarea-cu-energie-electrica-si-gaze-naturale-in-aceasta-iarna-4012519",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Israele: scrutinio delle urne terminato, 53 seggi al blocco Netanyahu, 48 a blocco Eisenkot",
+      "category": "Italia",
+      "published": "2026-10-28T14:26:50+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/israele-scrutinio-delle-urne-terminato-53-seggi-al-blocco-netanyahu-48-a-blocco-eisenkot_74766689-3c93-4a0a-8778-21bf55ce3a7c.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Anunțul Comisiei Europene în privința prețului motorinei în 2027. Bruxellesul pregătește schimbări majore în industria de rafinare",
+      "category": "România",
+      "published": "2026-10-28T14:25:21+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/anuntul-comisiei-europene-in-privinta-pretului-motorinei-in-2027-bruxellesul-pregateste-schimbari-majore-in-industria-de-rafinare-4012521",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Sorin Grindeanu și Marian Neacșu au ajuns la Guvern. Cei doi ar urma să discute cu Luca Niculescu",
       "category": "România",
-      "published": "2026-10-28T14:05:22+00:00",
+      "published": "2026-10-28T14:13:12+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/sorin-grindeanu-si-marian-neacsu-au-ajuns-la-guvern-cei-doi-ar-urma-sa-discute-cu-luca-niculescu-4012477",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "L'attore Davide Iacopini ha ripreso conoscenza, era stato travolto dalla minicar",
+      "category": "Italia",
+      "published": "2026-10-28T14:07:12+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/spinto-dalla-minicar-lattore-iacopini-ha-ripreso-conoscenza_99c52601-2424-4413-9d4a-3dba23951b3e.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -650,8 +785,8 @@
       "published": "2026-10-28T13:56:06+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/social/tinerii-europeni-tot-mai-implicati-in-societate-ce-isi-doresc-de-la-ue-si-cum-vor-sa-si-faca-vocea-auzita-eurobarometru-4012469",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 515
     },
     {
       "title": "Premiera Anunțată de BCR România pentru Milioane de Clienți, ce Serviciu Special Oferă - iDevice.ro",
@@ -676,60 +811,6 @@
       "category": "România",
       "published": "2026-10-28T13:50:07+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/alegeri-in-israel-netanyahu-revendica-o-majoritate-a-dreptei-dar-rezultatele-partiale-arata-o-lupta-stransa-pentru-putere-4011437",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Spagna: Toledo, almeno 64 morti nello scontro tra due treni. La Farnesina: 'A bordo 5 italiani, 4 stanno bene. Verifiche sul quinto'",
-      "category": "Italia",
-      "published": "2026-10-28T13:47:16+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/spagna-toledo-almeno-64-morti-nello-scontro-tra-due-treni.-la-farnesina_3124daf4-1c75-4126-a99f-4356a4740361.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Consiglio dei ministri alle 15, sul tavolo la manovra e un nuovo decreto sui costi di luce e gas",
-      "category": "Italia",
-      "published": "2026-10-28T13:43:25+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/consiglio-dei-ministri-alle-15-sul-tavolo-la-manovra-e-un-nuovo-decreto-sui_a800dc0a-5e17-4252-b135-567ad9587d2b.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Flávio Bolsonaro è in Florida e ha incontrato il fratello Eduardo",
-      "category": "Italia",
-      "published": "2026-10-28T13:41:44+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/flavio-bolsonaro-e-in-florida-e-ha-incontrato-il-fratello-eduardo_1b9d2be9-8a00-428f-926e-46b20bfc3e26.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Israele: scrutinio delle urne terminato, 53 seggi al blocco Netanyahu, 48 a blocco Eisenkot",
-      "category": "Italia",
-      "published": "2026-10-28T13:39:51+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/israele-scrutinio-delle-urne-terminato-53-seggi-al-blocco-netanyahu-48-a-blocco-eisenkot_74766689-3c93-4a0a-8778-21bf55ce3a7c.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Youssef Siher torna in libertà, la gip non convalida il fermo. Meloni: 'Decisione vergognosa'",
-      "category": "Italia",
-      "published": "2026-10-28T13:38:45+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/il-gip-di-milano-rimette-in-liberta-youssef-siher_c3831f66-7791-4ae1-9745-5d4a8cbb9980.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Zi decisivă pentru Călin Georgescu: Când începe procesul la Curtea de Apel. Mai mulți susținători îl așteaptă pe treptele instanței",
-      "category": "România",
-      "published": "2026-10-28T13:35:54+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/zi-decisiva-pentru-calin-georgescu-fostul-candidat-afla-daca-judecatorii-ii-prelungesc-arestul-preventiv-in-dosarul-diicot-4011795",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -807,15 +888,6 @@
       "words": 0
     },
     {
-      "title": "Commissione Ue, 'sulla Nec dialogo costruttivo e costante con le autorità italiane' - ANSA",
-      "category": "Italia",
-      "published": "2026-10-28T12:33:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNSExjYnZTQzgtUFhzUVJDMGlfdVV6SmZfRFNQNGNoWV9vX1RyTGgxTHVPZDVzODVrY2JWNnVwdnNrZzNwaWhKOGxJUVVSRGc1c1M1UElaV2lteVRGM1oxSV80enRiY0ZRUi1Ha2NWQ1AwWlpvTks5aGVlek9hSTF0S3oyN3poejBHcmh6SFVqem9yRHotY3hmYVNJeVBFWjFlMWFwWm5iN1ZRMDR6ZUQxM1dwaUNFNWVTekNoRy1JUVNoa3RaQzV3NUx2WUcyT0RKRmFtdWxiUHI0Uy1yNUJCUHpjS2pUdVZuZDRtRmhsZm1tc1VxcVZzYVF6NGd3MzRNVUtBVG90V0F2QzlyN05XZEpLYmxjQdIBmwJBVV95cUxNQVA2M3RPdFd4b1ZsRFM3ZTBUU3RvbGdKZnlfZGZzV1RsYVhGa0pZNmR4NjlfZnNLZ1lid2h",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Peste 100 de muncitori străini exploatați în Italia, după ce au plătit până la 12.000 de euro pentru a lucra în Italia - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-28T12:28:55+00:00",
@@ -834,12 +906,12 @@
       "words": 0
     },
     {
-      "title": "Mesajele transmise de președintele Nicuşor Dan şi de premierul Luca Niculescu, după tragedia feroviară din Spania",
-      "category": "România",
-      "published": "2026-10-28T12:23:03+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mesajele-transmise-de-presedintele-nicusor-dan-si-de-premierul-luca-niculescu-dupa-tragedia-feroviara-din-spania-4012229",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Career Day CNA a Padova: oltre 500 studenti incontrano 44 imprese alla Fiera, colloqui al via - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-28T12:24:08+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNd1A3UHlhdGhJRXlaM3VwRkdjTVZ6VndOSmJhbEJjSEI4M2hJSG9hNG9IRk1RY0pLX1poMVhsekI2aUFJT0ZVN3IwTEljTnpEdTVxa2huMEpUSXItOG9KdmN5NVd1VE9QQVhRM29hUHZWZDhkOWVoV0ZDbTctZVI3Y1AtZzg?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -861,15 +933,6 @@
       "words": 0
     },
     {
-      "title": "L'attore Davide Iacopini ha ripreso conoscenza, era stato travolto dalla minicar",
-      "category": "Italia",
-      "published": "2026-10-28T12:15:32+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/spinto-dalla-minicar-lattore-iacopini-ha-ripreso-conoscenza_99c52601-2424-4413-9d4a-3dba23951b3e.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Preşedintele AEP anunță în câte localități ar trebui organizate alegeri, după ce mandatele primarilor au încetat înainte de termen",
       "category": "România",
       "published": "2026-10-28T12:12:29+00:00",
@@ -879,30 +942,12 @@
       "words": 0
     },
     {
-      "title": "Femeie omorâtă în bătaie de partenerul ei, în Dolj. Bărbatul a fost arestat preventiv",
-      "category": "România",
-      "published": "2026-10-28T12:03:52+00:00",
-      "url": "https://www.digi24.ro/stiri/femeie-omorata-in-bataie-de-partenerul-ei-in-dolj-barbatul-a-fost-arestat-preventiv-4012237",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "ÎNTREBAREA SĂPTĂMÂNII: Ce se va schimba în America și în lume după alegerile pentru Congresul SUA?",
-      "category": "România",
-      "published": "2026-10-28T12:00:48+00:00",
-      "url": "https://www.digi24.ro/opinii/intrebarea-saptamanii/intrebarea-saptamanii-ce-se-va-schimba-in-america-si-in-lume-dupa-alegerile-pentru-congresul-sua-4012215",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Șeful AEP, despre recuperarea celor 14 milioane de lei de la PNL: „Am revenit la ANAF”",
-      "category": "România",
-      "published": "2026-10-28T12:00:05+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/seful-aep-despre-recuperarea-celor-14-milioane-de-lei-de-la-pnl-am-revenit-la-anaf-4012217",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Cultura a Padova, la filiera vale quasi 2 miliardi: musei e turismo trainano l’economia - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-28T12:02:27+00:00",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE15MWxmNXVpSlptSk1kaFB0OUlXX3ZzcDFaU3docFZkNUxPemZ3MFRhV0RINzUyWmNXZFV0X2pzWXI0YWFoT1JnSlc5eUNaWE8yVkRvRDR3cnZYQ25ESkZvR2R4THAzNTBqQ2pCeGtR?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -915,15 +960,6 @@
       "words": 0
     },
     {
-      "title": "Burse sociale pentru studenți în anul universitar 2026-2027: Cine poate beneficia și ce sumă se acordă lunar",
-      "category": "România",
-      "published": "2026-10-28T11:59:06+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/educatie/burse-sociale-pentru-studenti-in-anul-universitar-2026-2027-cine-poate-beneficia-si-ce-suma-se-acorda-lunar-4012187",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Manovra 2027, oggi il Cdm. Tajani: \"Ottimista su estensione taglio Irpef\" - Sky TG24",
       "category": "Italia",
       "published": "2026-10-28T11:58:37+00:00",
@@ -931,24 +967,6 @@
       "source": "Sky TG24",
       "status": "verde",
       "words": 443
-    },
-    {
-      "title": "ÎNTREBAREA SĂPTĂMÂNII: Cine conduce, de fapt, Guvernul Luca Niculescu?",
-      "category": "România",
-      "published": "2026-10-28T11:54:42+00:00",
-      "url": "https://www.digi24.ro/opinii/intrebarea-saptamanii/intrebarea-saptamanii-cine-conduce-de-fapt-guvernul-luca-niculescu-4012197",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "George Simion: „Vedem din ce în ce mai mulţi muncitori din ţări terţe. Am cerut o comisie de anchetă”",
-      "category": "România",
-      "published": "2026-10-28T11:53:49+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/george-simion-vedem-din-ce-in-ce-mai-multi-muncitori-din-tari-terte-am-cerut-o-comisie-de-ancheta-4012169",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
     },
     {
       "title": "Al capo della Polizia la stella al merito sportivo paralimpico",
@@ -978,20 +996,20 @@
       "words": 0
     },
     {
-      "title": "Nuovo taglio delle accise fino al 7 novembre, circa 4,9 centesimi sul gasolio",
-      "category": "Italia",
-      "published": "2026-10-28T10:06:14+00:00",
-      "url": "https://www.ansa.it/canale_motori/notizie/mondo_motori/2026/10/28/nuovo-taglio-delle-accise-fino-al-7-novembre-circa-49-centesimi-sul-gasolio_c75099a5-85cb-46a3-ac0b-03e6560f276b.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "VIDEO| L’Usb scende in piazza contro riarmo e carovita: \"I soldi vadano a salari e servizi, non all'economia di guerra\" - IlPescara",
       "category": "Italia",
       "published": "2026-10-28T10:02:51+00:00",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMmRKTkJmdUtRS0dfel9JYmNXZHBkU2V4QUxibUhQbVAzQ1FlTVB6bDdLUW5Vb0dmTFZhNmF1bVhRWGtCRGQ2dVVhS0VDMzBPOWRpX1BfTUNyVnpnR0tDNGo2LVFUWEo4a3JfZ2lzRUtERjI4NHlDOWxuTENqM3ZKQndIVk1DTFM1dUhHUUFoRmtUNUprdGFjRw?oc=5",
       "source": "IlPescara",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Notizie di Padova ore 10: nuovo incarico all’ex prefetto, tram, anziani soli e terme - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-28T10:00:38+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5kZEktWWpSdWwyZVB1NjRjUENNWElwWWxDaXJVZ2ctV3Z2ZFFRdVZ0UlpXWkVhNjFZd1E1MHp3S3FvN3ladURQOWRnNndkM1JXNHhrUm93eklhMDRnamQyYXpOb0h4UkZ6c0s2U1p3bFk?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1023,29 +1041,38 @@
       "words": 0
     },
     {
+      "title": "Abano Terme, sei sabati a teatro con mamma e papà: spettacoli per bambini a tre euro - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-28T09:22:32+00:00",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1JaC15WjV2Ml9KUF90WktFeXo4R0FFaHd3ZXh5SkUtRm53UjA0MEVIOUN2YktPeWJvc3N4ZzJLNXVGWUM1RXB3bjFRWndhRlpqNnIxTU9lc1ZHNGRrWmFUT0R6ZmFjSXVxTEhhMWEtTlZlVXNJUk4wa1k4Zw?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Unicredit, presidente Pier Carlo Padoan lascerà incarico a fine mandato - Virgilio",
+      "category": "Italia",
+      "published": "2026-10-28T09:22:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQZy1HYl9ya0RIZVFmeUludmUtTElrTkVYUmhwRnFtYlgzM0NDSkhZbnl2Y3RBMVFDV1ZpcFdrdWxMWU5SZVdJb3kwQmZHcmtSRU1oY3hqSHFCaWNabW05NFNTV080YnNHeHNrZmx4aXhYQlJkNjJCSHhOU2RBYjdVZzhFUkwxN1lySzdIcnpiYWdlLWVSeXg5bmcwUXZCemhKS0owdUw5eGM3R2VLd2xKQzl0d3E4R0Vhd3ItN21hdktHLW9NOXVqYVFzTWVwLUZ6Q0HSAdcBQVVfeXFMTnZUQldjc2JfNFNodXNvalhKTm5EN3hwOWhId3FWakpkXzFkaEFEMlFtY01ybnhYcFB1VU9Zb1hFZExmZFJ4QlJhQWNxU3M3Z2g5eUd3cF9TbzVOalNWYUZpdS1QU0lMS1BRX2oxUDcwWlJEWS1qUXB1UUhpeEJWWGd",
+      "source": "Virgilio",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Sabati Ecologici all’Arcella: il 31 ottobre raccolta gratuita di ingombranti ed elettronica - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-28T09:17:45+00:00",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ZNHdWMk9RT2M0Vk1pWUpHYnNWdmhkQ3BmNTZ1R2hSaC04Wl9JbmtSaFFjdmJXZkxyWDhUZHN1WGtRRUhkS1Y4UGpuMURSTGhJTzdaRXpsel9ibkJ0eHF0dXg4TjJqRUpFUnNqM0trdVpoZjRSbGhv?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "România cumpără patru radare mobile de la Thales pentru 68 mil. euro - logos-pres.md",
       "category": "România",
       "published": "2026-10-28T08:57:05+00:00",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNN1B1Mm4zbG5Gdy1pclJTblBPanEtbVhhUDZsbkFYWWI2Vlp1Y0JHUTJESzdSM3VKT0tRV3BlcHpyTXU5cFo0V1J5cUR3aFlGWWM5OTdYVEJ0eVRlcm9VN0hxZjNWTUFIdHhrcGR0dWJiQUh2bk9za0I4YjNSc0JrdjZNYXZ4OEMtUUp4ZERZc09zc2hLbkhaQUNiVTJxZw?oc=5",
       "source": "logos-pres.md",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Lombardia ai vertici per lavoro giovani adulti e valore aggiunto, con terziario milanese primo in Italia - La Gazzetta del Mezzogiorno",
-      "category": "Italia",
-      "published": "2026-10-28T08:50:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQmx6VEZrTGJ3b21BRE52TjB1OTZzMjdnWkE1cThkdEM2Rm9vWWk2akh3VWFMdUJ2SnloREJKQkZENWVsMVFRQ2lxd29SVkZjT2l6RXFHR0xwUUdRU216SF9pTzRUVkFLSEJ2VkVveFNMTWFyZlFKZjJIQjhQZ2lfQVk5UTB2NnhpZjNzcDg5TDJzajdhOGdsenh1dTVBUWFkVDZ2eVJBc2JwSE1nVHpVWXdJb2xxcm1DZ2ZmSERZVE91STEyeTlmTTRseGxRQWFuaUVIdVI4c29vWVN1UXBGY2R5RDZYRUI5bW5fRnI1YjFqMG8wMzhJNUd0RjhQdXfSAf4BQVVfeXFMTy1VdG5VOUVCRVNKcU16NFl3QWJkNnFxWWJzbzBJeVM3YXlORE1YbFoxV044MzJPVkl5OWtBY1FOZVlMNDNkYU1XdGNiOUZOWnRFSnZ",
-      "source": "La Gazzetta del Mezzogiorno",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Revoluție în educație: Cum folosesc universitățile de top avatare AI pentru a preda studenților... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-28T08:26:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNW01dG1nUDhCbTlsMUVBUEFOOXpQTHBGM2ZCUGkxVkJmbnQtSEV5d2RGVlp6alNVNGUteHFpT05ITjRfc01GVlJFbXU5dW14enA5MTRsTDVOQlFwRTZDQkh2ZDdibFcyQVZHVUV5aDgzMWRna1ZjS2oyTlZiT3MwYlFzWFJoanZacERESldDV3dFTDBwSGxYdGVySXNvclAxRXM3QlNzV0plc3EyMEJxRVEyZGZlR1pIZy1Qa1NLVW5jSXBmSkFDeF82UVFCeXk1OUxlWTFTVdIB3AFBVV95cUxPSFFYS0RqcUwzRXI1dERpZDhsVlFOU0YyWHVPb1MtZFdQOTVVaGtILVRQdWV0ZHBlZTZVT3BsQnd6Y0gxMjBNaFNhb0hsTy1BUm5Ga2dYUFltU0Y0ZktKQ3VxNkVGNE5JQkU1NnhNZ2dzRnFVcC1qQ09yczR",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1063,15 +1090,6 @@
       "category": "Italia",
       "published": "2026-10-28T07:37:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOYVJibEszYVUxMTdGbXRScThLOTVOQ2dHVlpKckZCTzhHVmE3MjFJZzRuQkpWcDJVU090VGllWmEtT3JxTWVLY0ZjYTdCSG5tTTZsSy1tdGl4UEJiRENwcUs0cGxZYXplOHdnSG9WSVQzeExDQy1wUFlCR0EyN1dMWlE1TjY3eFRkeWhJMGo1LUFCcnhiZHN0c1pOeXhnOExFeFlYTk5PYlRpM01ERE1iQXFIUVFkTk5tUVZ0V0JTQ043RlQyV1pfRUhhR2RPUi1iS1HSAdcBQVVfeXFMTzYyVUJjSUV2akh1TzFZV3hxLU90RVN0Vm8yWGFJck9fUHVobUR4WWNLdm5QQWw2U2VRSnhsTlBzQ0I0eTQ3am9vVWdTanQ4RU9zWlZTLXNxODdBOS0zdU9GN0xRTW0xVG9LNm9lWENENFNMaWdmSGxyTk1VdG0tZVR",
-      "source": "Idealista",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Brividi da est la prossima settimana, ecco il freddo invernale - Idealista",
-      "category": "Italia",
-      "published": "2026-10-28T07:31:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWmVCS1duZVdoVXo4UTRvNGdPQlFuWmNvZ0VaRHNEQlE1d0RMZU9FVEpVWi0wbUJmTkQ3T0VqYXNYakZkMk5RLU5CYVJrc05UOUtaejNvdUF0a1N0cVpxWUtCb3dNLXVFVnc2T1g3QXdhbVRwU09QcV9nRTF1WkM2RW1LS1lfN1ljNThFQmhhZVFhbXMxR1B2enpwWjZGWlJ3RzUxb3U3azlUYl9yd2JsX0ZTRTVmdmQ5cVNCTWE0d9IBxAFBVV95cUxPN2tCN09Hcy01ajNlYlBaamdNeVlmblVTaERsMzVjTDR1WUxFaUF6YndqSXlzRXFkMGtaQ19FV1BuU0xSaUJvOG5nc0REeDJHc0hMTEYtYmVJTGRxNkxKcGg5cmNEaVFQMzNGNTV5T0tiN3Q2QlRVUTY0ZnR2MDB3Z3dVVDVnbGJMenNPOEotdm83WVZ",
       "source": "Idealista",
       "status": "roșu",
       "words": 0
@@ -1104,15 +1122,6 @@
       "words": 0
     },
     {
-      "title": "Legge di bilancio in dirittura d'arrivo: tra coperta corta e taglio Irpef. Oggi il varo al Cdm - RaiNews",
-      "category": "Italia",
-      "published": "2026-10-28T03:05:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxPb2E0aHE1WjB1a25OT2lYd21MV3pMemZpOFV5RzVKRF9Rcml4dGJtakFUeThfd3hodEt1dUtHeUVsX0U5Z2wwdWs3VkZwN0xsaE9uQXVQa19paXFBZnVVcjdvU0tDaExLYlpHMm41SjF4T2lYYVFKM0R6enp3MHVkU0NkT2NSR2ppbUg4Yjl6V0pkSFNSbmgzVnlYODN4UllGVFc0TGNmWkxqME9wWUJ6czJuVWJsUy10WlZfd2VldGJXUXpRaHdjYlBwMnVHdEU3b19WWjhJazNJZm11Mklia0JuYzJtZDk0R0tfanFHZFY5VElmcWwtd0VVQTA1czJSRVRJ0gGIAkFVX3lxTFBIaV9CQ3dmcUZDZG1oNDdjNGtDZzZzM1AtbFFqeWhwcko5bFJpSFhPZmF3REE1Zm9xbV9vaHU5N0JJTVZzcjY3RFBqQWhaQzN",
-      "source": "RaiNews",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Manovra, è corsa alla flat tax. Mini prelievi per giovani, partite Iva e tredicesime - la Repubblica",
       "category": "Italia",
       "published": "2026-10-28T00:00:00+00:00",
@@ -1122,11 +1131,11 @@
       "words": 0
     },
     {
-      "title": "Mps, via libera della Bce alla scalata di Intesa. Nell’assemblea di Siena il 70% del capitale - la Repubblica",
+      "title": "Notizie di Padova ore 23: madre gravissima, tentato furto e svolta per l’A4 Brescia-Padova - Padova24Ore",
       "category": "Italia",
-      "published": "2026-10-27T20:31:17+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQd3lnSEtwd1FyU01PNGUyNnI2VTJjVFZ6dlpHM19wNUgycDNNVXhZNk5sZ3l2UmU3QW1tZ0VFc1NkYndEUnJFejFQcnFWVmxVS3BqME10NUh1N08tc0lZYXdCZ2IwZzFYSUJUeGVHT1B3M2tyQ2Q5NHZpUUd1QTlwbzY5RERvY3JxWG45Z3lzNkN2VEpZMV9wbFk5blFMTFFwb0E?oc=5",
-      "source": "la Repubblica",
+      "published": "2026-10-27T21:03:52+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qVDRYYlFGWlM3bnFfUWFDeUtwdmtWQi0yY0hmbGpwOS1tWlg5UkdPa0ltVUZOOGpRaXpTM0FLallYMzNKSlNJNEdJSEZLUFFhSVRkUGJ5NXZxanJuRG1kdmdnY1NIeUQwdEx3bktaTTE?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1136,15 +1145,6 @@
       "published": "2026-10-27T17:36:35+00:00",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMjhlN1J1RnRaTngwVjhIdDhmRmZlOUVpak9GM0JiZV93TTJVZklab2ZnUFJib1l4eGRyanRvdDVDX1VwSTZDNnQzcmx2RUJKeWhZUm9HZlVob1E1Si1Pb3k5c3lOa0p6WElhdzhqVGRodVNCakQxSUhzbEtMdmVkUG9vdlozU2NlbC1WNDkyako2dW4tTjlKWTg3UWViMlRvWkNCUTd0WnZIUHVBZE01THZSUDlzWGt4ZHc?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "ex Ilva, iniziato incontro Governo-sindacati su futuro Taranto - Borsa Italiana",
-      "category": "Italia",
-      "published": "2026-10-27T16:31:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMmlWSVRnOGVUb2gzUEFjU0RVU1VLamFEYzFVVXhIdThESFVvUVRzZFdVb2NRRnFTRmpNcmFMRmktQmhxUHdHNmZXdXRJWXVPZkhfOEFIZUlaX01XR01UUXhhTldhVE9WMmw5RVpDQzRxZWFNY1JrMmRKcm5JYnR6UllsRnFLZDEzQVVWb1NaMDgybU1RWjBOclFxLUJUdzBhWE12SlJCekZqd2VIS3c3TFE2SnNnZDFYNTk4QnlLUUxWLWlfTmJ0Z2E2UE5KXzA5czBSYUtRcHJHVVEzaUs4?oc=5",
-      "source": "Borsa Italiana",
       "status": "roșu",
       "words": 0
     },
@@ -1212,11 +1212,11 @@
       "words": 0
     },
     {
-      "title": "Microsoft vuole tagliare 60mila dipendenti, un quarto della forza lavoro: \"Soldi da investire nell'AI\" - Il Fatto Quotidiano",
-      "category": "Italia",
-      "published": "2026-10-27T09:37:56+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ2dXUmZGQWdZQ0pfZ3l6Z3VqNmZndjFQc0tFMkdJSks4MF9VYUtua2syZnBtTmZXOWY2SHRPS1poM3VHVUhmR1dZaU5vR1hJb3NGS3pSdDJraG9LMGU0R1RFTTVpdWwzWWtuMmZoVGZQQ1c4NTYyY1FWeVpJd28xSUlva1VCUFg5MzZzTnMwVnVBd2UxT1I5Wm1waVhMLW5RZnNja3ItN3UxTFM4azVQeUZ5Nk1yVndCYmZrbjM2eHlCbWhCcU5WZzl0dU9sZkEw?oc=5",
-      "source": "Il Fatto Quotidiano",
+      "title": "Alegeri în SUA: Trump a cerut anularea a 20.000 de voturi, un tribunal i-a refuzat cererea - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-27T08:51:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNM2ZTNEI1dW1mb3dRMGpMbDNHcUdrbEdqcWNscTliMnNqQUdXeFVOMlR1SFJUTWNIU1VwMjF4V3Z0ZGJQLUJkZGpsRTJVZkx2bi1KVE5Eb2tzaXE3VGQ2Yl9uZURZakhjZEs3VTdBRnhCeUNWNWNHbnlxUVVIbE0xcmszS1YxcUU3NHdJWDk0Qk1NUHB1Tm9uSXlkTUFPX0xJeTV1akMwNW9XTHh6eU1xQjBPQjBTSmZjV1o3bzVCS0ZOSXNRYlp1MdIBzgFBVV95cUxPS0Q2NlkzcllGaGNvOHBCM2RSalU3ckpkdklLR2NnS1RnMmNwalZBem9DNTlYTFJzUDZSLUlzOXRhSmNDS2xseHp0SEpKZXBZckptOFdRRFdhZE1ZalhsZmoxT2NPRVBOWnNGOW5OSTQ5em4xaGh5ZDVtZ0ZrUTJZeUFFeXlRdjRFbml",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1264,24 +1264,6 @@
       "source": "Rotalianul – Revista românului din Italia",
       "status": "verde",
       "words": 422
-    },
-    {
-      "title": "Horoscop 27 octombrie 2026: Previziuni pentru toate zodiile - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-26T14:42:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPeEs4cG5UTXVhd0UxQ0QweHRBSEZWcGVzVEtjaUM1R2RvU1dkallzTFV6NWduY1dhaXp0WFNEZnlCMzF1VndRSzZwUWRJamQ4NlRSRnI5c2g1WEFlV3J4Y0NERmFXMUFhcUVWQXhBT1RfREdFcVdndUtTeTVLcmR4bUNVSnlRb1dfZ3N6ODgwLWhJaDBjRUE1MHpweUVqemxC0gGmAUFVX3lxTE9UR1gxVkNvVG0tNm53UFBlOGpLeERKWEVLdDNMNEhUdC1RWjVqRkRtMmhIUEpzMEE1LWI3Z0M0ZU13cHpaUGtiSFJxQlJPY2ZMc1FCZU85Yzl2YU1Tc3RWY3JlNGR0cVcwNUVOSjBvUDhuU29NQ2NETFNMS1d3aVlpbFp6Z1R1RVk4ZldnYW4xLVU2QWZ5bUdxQjc5V1Q0X29uWTFnN2c?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ordinul Ministrului Sănătății care Stabilește Noi Reguli pentru Transplantul de Organe în România - iDevice.ro",
-      "category": "România",
-      "published": "2026-10-26T14:15:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcTlweXVsMkxWYlNRXzJKZk43QmdLaEhQVDhROFk2NUhXTVBfNVlMc0VaUHlFZ3Bic1NWOWhSNG9EOWhReGhXYV82c3pFeWF1UjRkaE80QU5SdmV2Ukh0WnlzNGM3TXNrWFhFZERocUxrYm5xTWVibUxLLWYyUlBVWDZwY1B0QWx2OThQYUM1WW5fT1BNVHNmeXVmd1JTVHMxb2NSemM0cF94TlpkNmpOQmRIaGFPUlp6Y3RrcmFR?oc=5",
-      "source": "iDevice.ro",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
