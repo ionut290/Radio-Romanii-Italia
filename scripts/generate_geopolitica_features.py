@@ -47,19 +47,34 @@ def extract(url, diagnostic=False):
         return None
 
 def candidates(title, diagnostic=False):
-    # Discover corroborating material, not a substitute for reading the articles.
-    q = " ".join(re.findall(r"[\wÀ-ÿ'-]+", title)[:11])
-    url = "https://www.bing.com/news/search?" + urlencode(
-        {"q": q, "format": "rss"})
-    try:
-        raw, _ = get(url)
-        root = ET.fromstring(raw)
-        links = [e.findtext("link", "") for e in root.findall("./channel/item")][:12]
-        if diagnostic: print("RISULTATI RICERCA:", len(links))
-        return links
-    except Exception as exc:
-        if diagnostic: print("ERRORE RICERCA:", type(exc).__name__, str(exc)[:170])
-        return []
+    """Use several focused search formulations; one exact headline is too narrow."""
+    words = re.findall(r"[\wÀ-ÿ'-]+", title)
+    stop = {"why", "how", "the", "are", "is", "against", "and", "for",
+            "with", "from", "about", "into", "over", "in", "of", "to"}
+    focused = [w for w in words if w.casefold() not in stop]
+    queries = [
+        " ".join(words[:11]),
+        " ".join(focused[:7]),
+        " ".join(focused[:5]),
+    ]
+    links = []
+    seen = set()
+    for query in dict.fromkeys(q for q in queries if q):
+        url = "https://www.bing.com/news/search?" + urlencode(
+            {"q": query, "format": "rss"})
+        try:
+            raw, _ = get(url)
+            root = ET.fromstring(raw)
+            found = [e.findtext("link", "") for e in root.findall("./channel/item")]
+            if diagnostic: print("RICERCA:", query, "| RISULTATI:", len(found))
+            for link in found[:20]:
+                if link.startswith("https://") and link not in seen:
+                    seen.add(link)
+                    links.append(link)
+        except Exception as exc:
+            if diagnostic: print("ERRORE RICERCA:", type(exc).__name__, str(exc)[:150])
+    if diagnostic: print("RISULTATI RICERCA TOTALI:", len(links))
+    return links[:35]
 
 def source_pack(item, diagnostic=False):
     urls = [item.get("url", "")] + candidates(item["title"], diagnostic=diagnostic)
