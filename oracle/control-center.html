@@ -18,6 +18,7 @@ h1{font-size:clamp(28px,5vw,42px);margin:4px 0}h2{font-size:18px;margin:0 0 12px
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.stat{padding:9px;border-radius:10px;background:#0d192b;min-width:0}
 .stat b{display:block;color:var(--gold);font-size:19px;overflow-wrap:anywhere}.stat span{display:block;color:var(--muted);font-size:12px}
 pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d192b;border-radius:9px;padding:10px;color:#cbd9e9;font-size:12px;max-height:220px;overflow:auto}
+.diagnostics{display:grid;gap:10px}.diag{padding:11px 13px;border-radius:10px;background:#0d192b;border-left:4px solid var(--line)}.diag.warning{border-color:var(--warn)}.diag.error{border-color:var(--bad)}.diag.info{border-color:#77b7ff}.diag b{display:block;margin-bottom:3px}.diag p{margin:0;font-size:13px}
 .notice{background:#282d3c;border-left:4px solid var(--gold);border-radius:8px;padding:12px 15px;margin:15px 0;color:#e7e0cf}
 #actions .row{border-top:1px solid var(--line);padding:9px 0;font-size:13px}.error{color:var(--bad)}
 footer{margin-top:22px;color:var(--muted);font-size:12px}
@@ -34,6 +35,7 @@ footer{margin-top:22px;color:var(--muted);font-size:12px}
 <section class="card"><div class="head"><h2>Sito web</h2><span class="badge" id="site-state">—</span></div><div id="site-pages"></div></section>
 <section class="card"><div class="head"><h2>Oracle Cloud</h2><span class="badge" id="oracle-state">—</span></div><div class="stats" id="oracle-stats"></div><pre id="docker"></pre></section>
 </div>
+<section class="card" aria-live="polite"><div class="head"><h2>Problemi rilevati e cosa verificare</h2><span class="meta" id="diag-count">—</span></div><div class="diagnostics" id="diagnostics"></div></section>
 <section class="card"><div class="head"><h2>Interventi automatici registrati</h2><span class="meta">registro locale Oracle</span></div><div id="actions"></div></section>
 <footer>Dashboard locale, sola lettura. Apribile con tunnel SSH verso 127.0.0.1:8787. Il collegamento YouTube RTMP non è dichiarato attivo soltanto perché FFmpeg è in esecuzione: va confermato separatamente in YouTube Studio.</footer>
 </main>
@@ -42,15 +44,62 @@ const $=id=>document.getElementById(id);
 function badge(id,state){const x=$(id);x.textContent=state||'unknown';x.className='badge '+(state==='ok'?'ok':state==='error'?'error':state==='degraded'?'degraded':'')}
 function stats(id,items){const box=$(id);box.replaceChildren();for(const [label,value] of items){const d=document.createElement('div');d.className='stat';const b=document.createElement('b');b.textContent=value??'—';const s=document.createElement('span');s.textContent=label;d.append(b,s);box.append(d)}}
 function pageRows(data){const box=$('site-pages');box.replaceChildren();for(const [name,item] of Object.entries(data||{})){const row=document.createElement('p');row.className='meta';row.textContent=name+': '+(item.state||'unknown')+(item.http?' · HTTP '+item.http:'')+(item.json?' · JSON '+item.json:'');box.append(row)}}
+function renderDiagnostics(d){
+ const rows=[];
+ const add=(kind,title,detail)=>rows.push({kind,title,detail});
+ const r=d.radio||{},np=r.nowplaying||{},stream=r.stream||{};
+ if(r.state!=='ok'){
+  if(np.station_is_online===true&&stream.state!=='ok'){
+   add('warning','Radio: stazione online, ma il controllo dello stream audio è fallito',
+       'Il controllo automatico non ha riconosciuto un campione audio valido'+(stream.http?' (HTTP '+stream.http+')':'')+(stream.content_type?' · '+stream.content_type:'')+'. Verifica l’ascolto dal player e l’indirizzo dello stream; il Control Center non cambia la messa in onda.');
+  }else{
+   add('error','Radio: servizio o stream non regolare','Stato stazione: '+String(np.station_is_online??'non disponibile')+' · controllo stream: '+String(stream.state||'non disponibile')+'. Verifica lo stato in AzuraCast e prova l’ascolto.');
+  }
+ }
+ const a=d.azuracast||{};
+ if(a.state!=='ok'){
+  if(String(a.playlist_enabled).toLowerCase()==='false'){
+   add('error','AzuraCast: la playlist 12 risulta disattivata','La verifica di sola lettura indica che la playlist 12 non è attiva. Controlla AzuraCast; la dashboard non la riattiva né la modifica.');
+  }else if(a.scheduled_minute!==undefined&&String(a.scheduled_minute)!=='10'){
+   add('warning','AzuraCast: orario della playlist diverso dal minuto previsto','Minuto rilevato: '+String(a.scheduled_minute)+'. Controlla la programmazione della sola playlist 12.');
+  }else{
+   add('warning','AzuraCast: verifica della playlist 12 non completamente regolare','ID playlist: '+String(a.playlist_id??'non rilevato')+' · ultimo controllo: '+String(a.checked_at??'non disponibile')+'. Apri AzuraCast e verifica playlist, media e ultima riproduzione.');
+  }
+ }
+ const y=d.youtube||{};
+ if(y.state!=='ok') add('error','YouTube Live: encoder o relay in stato anomalo','Modalità: '+String(y.mode||'non disponibile')+' · processi encoder: '+String(y.encoder_process_count??'non rilevato')+'.');
+ if(y.rtmp_connection_confirmed!==true) add('info','YouTube Live: ricezione RTMP da confermare','La presenza dell’encoder non conferma che YouTube riceva il flusso. Controlla lo stato della diretta in YouTube Studio; il Control Center non cambia la configurazione.');
+ const pages=(d.site||{}).pages||{};
+ for(const [name,item] of Object.entries(pages)) if(item.state!=='ok') add('error','Sito: '+name+' non risponde regolarmente','Stato: '+String(item.state||'non disponibile')+(item.http?' · HTTP '+item.http:'')+'.');
+ const red=d.redaction||{};
+ if(red.state!=='ok') add('warning','Redazione: feed da verificare','Ultimo aggiornamento del feed: '+String(red.feed_age_minutes??'non disponibile')+' minuti fa.');
+ if(Number(red.geopolitica_unreviewed)>0) add('info','Redazione: articoli geopolitici non revisionati',String(red.geopolitica_unreviewed)+' articoli risultano non revisionati; controllali prima della pubblicazione editoriale.');
+ const o=d.oracle||{},docker=o.docker||{};
+ if(Number(o.cpu_percent)>=95) add('error','Oracle: CPU molto alta',String(o.cpu_percent)+'% di utilizzo.');
+ if(Number(o.memory_percent)>=95) add('error','Oracle: memoria molto alta',String(o.memory_percent)+'% di utilizzo.');
+ if(Number(o.disk_percent)>=90) add('error','Oracle: disco quasi pieno',String(o.disk_percent)+'% utilizzato.');
+ if(docker.state!=='ok') add('error','Oracle: controllo Docker non riuscito','Verifica il servizio Docker sul server.');
+ else if(!String(docker.azuracast_container||'').toLowerCase().startsWith('up ')) add('error','Oracle: container AzuraCast non risulta attivo',String(docker.azuracast_container||'stato non disponibile')+'.');
+ const box=$('diagnostics');box.replaceChildren();
+ const warnings=rows.filter(x=>x.kind==='warning'||x.kind==='error').length;
+ $('diag-count').textContent=warnings+' problemi · '+(rows.length-warnings)+' note';
+ if(!rows.length){box.textContent='Nessuna anomalia rilevata nei controlli disponibili.';return}
+ for(const item of rows){
+  const row=document.createElement('div');row.className='diag '+item.kind;
+  const title=document.createElement('b');title.textContent=item.title;
+  const detail=document.createElement('p');detail.textContent=item.detail;
+  row.append(title,detail);box.append(row);
+ }
+}
 function render(d){
- $('checked').textContent=d.checked_at||'—';$('overall').textContent=d.overall||'—';$('overall').className=d.overall==='ok'?'':'error';
+ $('checked').textContent=d.checked_at?new Date(d.checked_at).toLocaleString('it-IT'):'—';$('overall').textContent=d.overall||'—';$('overall').className=d.overall==='ok'?'':'error';
  const r=d.radio||{};badge('radio-state',r.state);const np=r.nowplaying||{},st=r.stream||{};
  stats('radio-stats',[['Stazione online',np.station_is_online?'sì':'no'],['Ascoltatori live',np.listeners_current],['In onda',np.title||'—'],['Stream audio',st.state==='ok'?'audio rilevato':'errore']]);
  $('radio-note').textContent=(np.artist||'')+(st.content_type?' · '+st.content_type:'');
  const a=d.azuracast||{};badge('azura-state',a.state);stats('azura-stats',[['Playlist',a.playlist_id||'—'],['Attiva',String(a.playlist_enabled??'—')],['Fascia oraria','ogni ora :'+String(a.scheduled_minute||'—').padStart(2,'0')],['Brani assegnati',a.media_count??'—'],['Ultima riproduzione',a.last_played_at||'—'],['Media RDI',a.own_media_count??'—']]);
  const y=d.youtube||{};badge('youtube-state',y.state);stats('youtube-stats',[['Modalità',y.mode||'—'],['Processi encoder',y.encoder_process_count??'—'],['Relay standard',y.services?.standard?.state||'—'],['Relay visuale',y.services?.visual?.state||'—'],['Watchdog browser',y.services?.browser_watchdog?.state||'—'],['RTMP confermato',y.rtmp_connection_confirmed?'sì':'no']]);$('youtube-note').textContent=y.note||'';
  const n=d.redaction||{};badge('redaction-state',n.state);stats('redaction-stats',[['Feed notizie, minuti',n.feed_age_minutes??'—'],['Notizie in feed',n.feed_total??'—'],['In coda',n.pending_total??'—'],['Geopolitica, minuti',n.geopolitica_age_minutes??'—'],['Articoli geopolitici',n.geopolitica_articles??'—'],['Non revisionati',n.geopolitica_unreviewed??'—']]);
- badge('site-state',d.site?.state);pageRows(d.site?.pages);
+ badge('site-state',d.site?.state);pageRows(d.site?.pages);renderDiagnostics(d);
  const o=d.oracle||{},docker=o.docker||{};badge('oracle-state',docker.state==='ok'?'ok':'degraded');stats('oracle-stats',[['CPU',o.cpu_percent===null?'—':o.cpu_percent+'%'],['Memoria',o.memory_percent===null?'—':o.memory_percent+'%'],['Disco',o.disk_percent===null?'—':o.disk_percent+'%'],['Docker attivi',docker.running_count??'—'],['Spazio disco libero',o.disk_free_bytes?Math.round(o.disk_free_bytes/1073741824)+' GB':'—']]);
  $('docker').textContent=(docker.containers||[]).map(x=>x.name+' · '+x.status).join('\n')||'Nessun container rilevato';
  const actions=$('actions');actions.replaceChildren();const history=d.audit_log||[];for(const a of history.slice().reverse()){const row=document.createElement('div');row.className='row';row.textContent=(a.recorded_at||'')+' · '+a.action+' · '+a.service+(a.verified_active?' · verificato':'');actions.append(row)}if(!history.length)actions.textContent='Nessun intervento automatico registrato.';
