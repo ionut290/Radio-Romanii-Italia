@@ -54,18 +54,25 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import re
-          p=Path('/home/ubuntu/varga-cantieri/api/server.cjs')
-          if not p.exists():
-              print('source_not_found')
-          else:
-              text=p.read_text(errors='replace')
-              pattern=re.compile(r"""(?:app|router)\\.(?:get|head)\\s*\\(\\s*['"]([^'"]+)['"]""", re.I)
-              found=[]
-              for m in pattern.finditer(text):
-                  path=m.group(1)
-                  if re.search(r'health|ready|live|status|ping',path,re.I):
-                      found.append(path)
-              print('\\n'.join(sorted(set(found))) or 'no_explicit_health_route_found')
+          try:
+              p=Path('/home/ubuntu/varga-cantieri/api/server.cjs')
+              if not p.exists():
+                  print('source_not_found')
+              else:
+                  found=[]
+                  for line in p.read_text(errors='replace').splitlines():
+                      lower=line.lower()
+                      if not re.search(r'\.(?:get|head)\s*\(', line, re.I):
+                          continue
+                      if not any(term in lower for term in ('health','ready','live','status','ping')):
+                          continue
+                      tail=line.split('(',1)[1].lstrip()
+                      if tail[:1] in ("'", '"', '\x60'):
+                          route=tail[1:].split(tail[0],1)[0]
+                          found.append(route)
+                  print('\n'.join(sorted(set(found))) or 'no_explicit_health_route_found')
+          except Exception as exc:
+              print('route_scan_error='+type(exc).__name__)
           PY
           echo '--- Probe GET API Gestione ale (solo codice HTTP) ---'
           curl -sS -o /dev/null --max-time 5 -w 'gestionale_api_health_http=%{http_code}\\n' http://127.0.0.1:18098/api/gestionale/v1/health || true
