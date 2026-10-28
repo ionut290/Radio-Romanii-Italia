@@ -30,21 +30,23 @@ def get(url, timeout=14):
     with urlopen(Request(url, headers=HEADERS), timeout=timeout) as r:
         return r.read(1200000).decode("utf-8", "replace"), r.geturl()
 
-def extract(url):
+def extract(url, diagnostic=False):
     try:
         if urlparse(url).hostname in ("news.google.com", "translate.google.com"):
+            if diagnostic: print("SKIP AGGREGATORE:", url[:110])
             return None
         raw, final = get(url)
         text = trafilatura.extract(raw, include_comments=False, include_tables=False,
                                   favor_precision=True)
         if not text or len(text) < 1800:
+            if diagnostic: print("TESTO INSUFFICIENTE:", final[:125], "caratteri:", len(text or ""))
             return None
         return {"url": final, "host": urlparse(final).hostname or "", "text": text[:11000]}
     except Exception as exc:
-        print("Source unavailable:", type(exc).__name__, url[:140])
+        if diagnostic: print("FONTE NON ACCESSIBILE:", type(exc).__name__, str(exc)[:140], url[:110])
         return None
 
-def candidates(title):
+def candidates(title, diagnostic=False):
     # Discover corroborating material, not a substitute for reading the articles.
     q = " ".join(re.findall(r"[\wÀ-ÿ'-]+", title)[:11])
     url = "https://www.bing.com/news/search?" + urlencode(
@@ -52,17 +54,21 @@ def candidates(title):
     try:
         raw, _ = get(url)
         root = ET.fromstring(raw)
-        return [e.findtext("link", "") for e in root.findall("./channel/item")][:12]
-    except Exception:
+        links = [e.findtext("link", "") for e in root.findall("./channel/item")][:12]
+        if diagnostic: print("RISULTATI RICERCA:", len(links))
+        return links
+    except Exception as exc:
+        if diagnostic: print("ERRORE RICERCA:", type(exc).__name__, str(exc)[:170])
         return []
 
-def source_pack(item):
-    urls = [item.get("url", "")] + candidates(item["title"])
+def source_pack(item, diagnostic=False):
+    urls = [item.get("url", "")] + candidates(item["title"], diagnostic=diagnostic)
+    if diagnostic: print("URL DA CONTROLLARE:", len(urls))
     # Read only direct publisher pages; aggregator URLs are not evidence.
     sources = []
     hosts = set()
     for url in urls:
-        doc = extract(url)
+        doc = extract(url, diagnostic=diagnostic)
         if not doc:
             continue
         host = doc["host"].lower().removeprefix("www.")
@@ -72,6 +78,9 @@ def source_pack(item):
         sources.append(doc)
         if len(sources) >= 4:
             break
+    if diagnostic:
+        print("FONTI ORIGINALI LEGGIBILI:", len(sources))
+        for source in sources: print("LETTA:", source["host"], "CARATTERI:", len(source["text"]))
     return sources if len(sources) >= 2 else []
 
 def word_count(body):
