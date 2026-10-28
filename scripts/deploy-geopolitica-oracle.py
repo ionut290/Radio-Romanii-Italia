@@ -510,9 +510,10 @@ def main() -> int:
                 print("RDI_PLAYLIST_ENABLED=" + str(p.get("is_enabled")))
                 print("RDI_PLAYLIST_MINUTE=" + str(p.get("play_per_hour_minute")))
                 print("RDI_PLAYLIST_MEDIA_COUNT=" + str(p.get("num_songs")))
+                print("RDI_PLAYLIST_PLAYED_AT=" + str(p.get("played_at")))
                 media = list_own_media(client)
                 print("RDI_OWN_MEDIA_COUNT=" + str(len(media)))
-                for row in media[-3:]:
+                for row in media:
                     print("RDI_MEDIA=" + str(row.get("path")) + "|id=" + str(row.get("id"))
                           + "|playlists=" + str(row.get("playlists"))[:220])
         elif args.action == "apply":
