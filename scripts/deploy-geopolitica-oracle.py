@@ -254,6 +254,19 @@ def playlist_ids(record: dict) -> set[int] | None:
     return result
 
 
+def epoch_seconds(value: object) -> float:
+    if isinstance(value, (int, float)):
+        return float(value)
+    raw = str(value or "").strip()
+    try:
+        return float(raw)
+    except ValueError:
+        parsed = dt.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=dt.timezone.utc)
+        return parsed.timestamp()
+
+
 def cleanup_played(client: Client, data: dict) -> None:
     rec = playlist(client, False)
     if rec is None or int(rec.get("id", -1)) != 12:
@@ -266,10 +279,28 @@ def cleanup_played(client: Client, data: dict) -> None:
     # rolls over. With one RDI track assigned at a time, this safely catches a
     # completed episode when the cleaner is first installed.
     try:
-        playlist_played_at = float(rec.get("played_at", 0))
-    except (TypeError, ValueError):
+        playlist_played_at = epoch_seconds(rec.get("played_at", 0))
+    except (TypeError, ValueError, OverflowError):
         playlist_played_at = 0
     media = list_own_media(client)
+    episode_stamps = {}
+    for record in media:
+        name = str(record.get("path", "")).split("/")[-1]
+        match = FILENAME_RE.fullmatch(name)
+        if not match:
+            continue
+        try:
+            from zoneinfo import ZoneInfo
+            generated = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
+            episode_stamps[name] = generated.replace(tzinfo=ZoneInfo("Europe/Rome")).timestamp()
+        except (ValueError, OverflowError):
+            continue
+    # Only the newest edition that existed at the recorded playlist play time
+    # can be the detached file selected by this single-track playlist.
+    latest_before_play = max(
+        (name for name, stamp in episode_stamps.items() if stamp <= playlist_played_at),
+        key=lambda name: episode_stamps[name], default="",
+    )
     for record in media:
         relative = str(record.get("path", ""))
         filename = relative.split("/")[-1]
@@ -280,19 +311,11 @@ def cleanup_played(client: Client, data: dict) -> None:
         if ids is None or not ids.issubset({12}):
             print("RDI_DELETE=SKIPPED_OTHER_PLAYLIST_OR_UNKNOWN_LINKS|" + filename)
             continue
-        # Filename timestamps are local Rome time. A playlist play after this
-        # edition was generated proves this single-track playlist selected it.
-        # Convert Europe/Rome wall time to UTC without relying on the host timezone.
-        try:
-            from zoneinfo import ZoneInfo
-            generated = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
-            generated = generated.replace(tzinfo=ZoneInfo("Europe/Rome")).timestamp()
-        except (ValueError, OverflowError):
-            continue
+        generated = episode_stamps.get(filename, 0)
         finished = playlist_played_at > generated and now >= playlist_played_at + 450
         currently_playing = episode_title((data.get("now_playing") or {}).get("song") or {}) == match.group(0)
         history_confirms = filename in completed and not currently_playing
-        playlist_confirms = finished and not currently_playing and 12 in ids
+        playlist_confirms = finished and not currently_playing and filename == latest_before_play
         if not (history_confirms or playlist_confirms):
             continue
         media_id = int(record.get("id", 0))
