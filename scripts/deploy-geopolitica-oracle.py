@@ -191,6 +191,151 @@ def prune_expired_own_media(client: Client, media: list[dict], newest: str) -> N
     print(f"OLD_RDI_MP3S_REMOVED={removed}")
 
 
+CLEANUP_ROOT = pathlib.Path("/usr/local/lib/rdi-geopolitica")
+CLEANUP_UNIT = "rdi-geopolitica-cleanup"
+
+
+def public_nowplaying() -> dict:
+    request = urllib.request.Request(
+        API + "/nowplaying/1",
+        headers={"Accept": "application/json", "User-Agent": "RDI-Geopolitica-cleanup/1.0"},
+    )
+    with urllib.request.urlopen(request, timeout=TIMEOUT_SECONDS) as response:
+        data = json.loads(response.read(2_000_000))
+    if not isinstance(data, dict):
+        raise RuntimeError("Unexpected AzuraCast now-playing response")
+    return data
+
+
+def episode_title(song: dict) -> str:
+    for value in (song.get("title"), song.get("text")):
+        match = re.search(r"(RDI-GEOPOLITICA-IT-20\d{6}-\d{4})", str(value or ""))
+        if match:
+            return match.group(1)
+    return ""
+
+
+def completed_episode_names(data: dict, now: float | None = None) -> set[str]:
+    now = time.time() if now is None else now
+    current = episode_title((data.get("now_playing") or {}).get("song") or {})
+    completed = set()
+    history = data.get("song_history", [])
+    if not isinstance(history, list):
+        return completed
+    for row in history:
+        if not isinstance(row, dict):
+            continue
+        title = episode_title(row.get("song") or {})
+        if not title or title == current:
+            continue
+        try:
+            played_at = float(row.get("played_at", 0))
+            duration = float(row.get("duration", 0))
+        except (TypeError, ValueError):
+            continue
+        # Let Liquidsoap finish the MP3 before removing it from AzuraCast.
+        if duration > 0 and now >= played_at + duration + 30:
+            completed.add(title + ".mp3")
+    return completed
+
+
+def playlist_ids(record: dict) -> set[int] | None:
+    linked = record.get("playlists")
+    if not isinstance(linked, list):
+        return None
+    result = set()
+    for item in linked:
+        if isinstance(item, dict):
+            item = item.get("id")
+        try:
+            result.add(int(item))
+        except (TypeError, ValueError):
+            return None
+    return result
+
+
+def cleanup_played(client: Client, data: dict) -> None:
+    rec = playlist(client, False)
+    if rec is None or int(rec.get("id", -1)) != 12:
+        print("RDI_DELETE=SKIPPED_PLAYLIST_NOT_ID_12")
+        return
+    now = time.time()
+    current = episode_title((data.get("now_playing") or {}).get("song") or {})
+    completed = completed_episode_names(data, now)
+    # The playlist API retains its last-played timestamp after the public song history
+    # rolls over. With one RDI track assigned at a time, this safely catches a
+    # completed episode when the cleaner is first installed.
+    try:
+        playlist_played_at = float(rec.get("played_at", 0))
+    except (TypeError, ValueError):
+        playlist_played_at = 0
+    media = list_own_media(client)
+    for record in media:
+        relative = str(record.get("path", ""))
+        filename = relative.split("/")[-1]
+        match = FILENAME_RE.fullmatch(filename)
+        if not match or filename in completed or not record.get("playlists"):
+            continue
+        ids = playlist_ids(record)
+        if ids is None or not ids.issubset({12}):
+            print("RDI_DELETE=SKIPPED_OTHER_PLAYLIST_OR_UNKNOWN_LINKS|" + filename)
+            continue
+        # Filename timestamps are local Rome time. A playlist play after this
+        # edition was generated proves this single-track playlist selected it.
+        generated = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
+        generated = generated.replace(tzinfo=dt.timezone(dt.timedelta(0))).timestamp()
+        # Convert Europe/Rome wall time to UTC without relying on the host timezone.
+        try:
+            from zoneinfo import ZoneInfo
+            generated = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
+            generated = generated.replace(tzinfo=ZoneInfo("Europe/Rome")).timestamp()
+        except (ValueError, OverflowError):
+            continue
+        finished = playlist_played_at > generated and now >= playlist_played_at + 450
+        if not (filename in completed or (finished and episode_title(
+                (data.get("now_playing") or {}).get("song") or {}) != match.group(0))):
+            continue
+        media_id = int(record.get("id", 0))
+        if media_id <= 0:
+            print("RDI_DELETE=SKIPPED_INVALID_MEDIA_ID|" + filename)
+            continue
+        client.call("DELETE", f"/station/1/file/{media_id}")
+        print("RDI_PLAYED_MP3_DELETED=" + filename)
+
+
+def install_cleanup_timer(helper_file: pathlib.Path) -> None:
+    CLEANUP_ROOT.mkdir(parents=True, exist_ok=True)
+    installed_script = CLEANUP_ROOT / "deploy-geopolitica-oracle.py"
+    installed_helper = CLEANUP_ROOT / "rdi-geopolitica-auth.php"
+    installed_script.write_bytes(pathlib.Path(__file__).read_bytes())
+    installed_helper.write_bytes(helper_file.read_bytes())
+    installed_script.chmod(0o644)
+    installed_helper.chmod(0o644)
+    service = pathlib.Path("/etc/systemd/system/rdi-geopolitica-cleanup.service")
+    timer = pathlib.Path("/etc/systemd/system/rdi-geopolitica-cleanup.timer")
+    service.write_text(
+        "[Unit]\nDescription=Remove RDI Geopolitica MP3 after completed AzuraCast playback\n"
+        "After=docker.service\n\n[Service]\nType=oneshot\n"
+        "ExecStart=/usr/bin/python3 /usr/local/lib/rdi-geopolitica/deploy-geopolitica-oracle.py "
+        "cleanup-played --php-helper /usr/local/lib/rdi-geopolitica/rdi-geopolitica-auth.php\n"
+        "TimeoutStartSec=90\n",
+        encoding="utf-8",
+    )
+    timer.write_text(
+        "[Unit]\nDescription=Check completed RDI Geopolitica broadcasts every five minutes\n\n"
+        "[Timer]\nOnBootSec=2min\nOnUnitActiveSec=5min\nAccuracySec=30s\nUnit=rdi-geopolitica-cleanup.service\n\n"
+        "[Install]\nWantedBy=timers.target\n",
+        encoding="utf-8",
+    )
+    for command in (
+        ["systemctl", "daemon-reload"],
+        ["systemctl", "enable", "--now", "rdi-geopolitica-cleanup.timer"],
+        ["systemctl", "is-active", "--quiet", "rdi-geopolitica-cleanup.timer"],
+    ):
+        subprocess.run(command, check=True, capture_output=True, timeout=30)
+    print("RDI_POSTPLAY_CLEANUP_TIMER=active_interval_5m")
+
+
 def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> None:
     item, relative = valid_issue(issue_file, mp3_file)
     # Confirm authorized access before creating anything.
@@ -325,12 +470,19 @@ def suspend(client: Client) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("action", choices=["inspect", "apply", "suspend", "recover"])
+    parser.add_argument("action", choices=["inspect", "apply", "suspend", "recover", "install-cleanup", "cleanup-played"])
     parser.add_argument("--manifest")
     parser.add_argument("--mp3")
     parser.add_argument("--php-helper", default="/tmp/rdi-geopolitica-auth.php")
     args = parser.parse_args()
-    helper = pathlib.Path(args.php_helper).read_bytes()
+    helper_path = pathlib.Path(args.php_helper)
+    helper = helper_path.read_bytes()
+    if args.action == "install-cleanup":
+        install_cleanup_timer(helper_path)
+        return 0
+    play_data = None
+    if args.action == "cleanup-played":
+        play_data = public_nowplaying()
     if args.action == "apply":
         if not args.mp3 or not args.manifest:
             parser.error("--mp3 and --manifest are required")
@@ -359,8 +511,11 @@ def main() -> int:
                           + "|playlists=" + str(row.get("playlists"))[:220])
         elif args.action == "apply":
             apply(client, pathlib.Path(args.manifest), pathlib.Path(args.mp3))
+            install_cleanup_timer(helper_path)
         elif args.action == "recover":
             recover(client)
+        elif args.action == "cleanup-played":
+            cleanup_played(client, play_data or {})
         else:
             suspend(client)
         return 0
