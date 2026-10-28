@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-28T03:42:19.156171+00:00",
+  "news_updated_at": "2026-10-28T04:05:34.118042+00:00",
   "editorial_updated_at": "2026-10-28T01:00:00Z",
   "translations_updated_at": "2026-10-28T03:06:59.843252+00:00",
   "feed_total": 75,
-  "feed_extended_400": 35,
-  "feed_missing_body": 40,
+  "feed_extended_400": 38,
+  "feed_missing_body": 37,
   "feed_short_body": 0,
   "editorial_total": 35,
   "archived_editorials": 61,
   "translation_records": 48,
   "pending_total": 104,
-  "pending_filtered_out": 299,
-  "editorial_verde": 36,
-  "editorial_galben": 34,
-  "editorial_rosu": 32,
+  "pending_filtered_out": 297,
+  "editorial_verde": 39,
+  "editorial_galben": 33,
+  "editorial_rosu": 30,
   "pending": [
     {
       "title": "\"I pensionati si sono presi tutto, i giovani pagano il conto\": la proposta choc di Zingales, tassare i boomer e l’intelligenza artificiale - Giornale La Voce",
@@ -812,8 +812,8 @@
       "published": "2026-10-27T20:09:29+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/psd-reclama-o-gaura-de-40-de-miliarde-de-lei-si-ameninta-ca-blocheaza-rectificarea-bugetara-surse-4011399",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 428
     },
     {
       "title": "Când va fi expus public Coiful de la Coțofenești, care este restaurat după ce a fost furat în Olanda. Anunțul ministrei Culturii",
@@ -942,6 +942,15 @@
       "words": 0
     },
     {
+      "title": "ex Ilva, iniziato incontro Governo-sindacati su futuro Taranto - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-27T16:36:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWUlsc3ZFWVBLWkdkek5sand3anJiM2pLNTlUTXFINXpnemdZcFY2RmpQX0dGUU9YSmtOQnZCeDg5MGl4YnpjZmFfWlFPODNvTmFDSVEtQXpCQTA5VzFFbUdtanNQV0c1RVpHUWs4cEE4bFhTbjhXV2wxVzlweFMzbV93b1VlR3VQd05wTnlpMlJjUkgwRzc3OTB2ME80ejhwOWxCTVhRSlBlOFgxdVJQWWhR?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Roncadin annuncia oltre 80 milioni di investimenti tra Italia e USA: obiettivo 500 milioni di ricavi - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-27T16:21:19+00:00",
@@ -985,6 +994,15 @@
       "source": "Rotalianul – Revista românului din Italia",
       "status": "verde",
       "words": 438
+    },
+    {
+      "title": "Tredicesime detassate in arrivo, come cambiano gli importi: ecco le simulazioni per fasce di reddito - Il Messaggero",
+      "category": "Italia",
+      "published": "2026-10-27T15:17:49+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdmFDaDQzQU9XWVVpX3JjMEFQclNRTWdnR3BoSFJEVDJGTDVndEJYNW5QSUdwYzB6WjhRck11ZkhmTjBocW9vTFFjRFUwQXpHdkpHY1A0VFlFNzNqMXJYRXVoeE84M2hXYWxJNmZwZm5zaFlGRW9JZnhSLTl5YWU2WDQtV1h1bjRHUU5rMnltdHhocEtMUXpIYkN4MEctUjVXbi1NWUNYU19fOVJoY2I40gGuAUFVX3lxTFBxemd0Z3FsaWtSZlM2RG5McUpwYkdTa0pzMl9OSy15ZUhINXpnb3JCclVCTDh2Tl95c2pNOFh1UzdBZnM2eGV5Vk9rYkVJdWEzWE1Pc1dtS04tWTZoRmxORkVzQk1Xd1A1UVA0ZmlUVHY3cGNnclo5c19wcExVZHV4Yzl2aVNrazQ4V1ZrU3Zkb3FjbWxhT1NSRWlyN0VHa3RjTF9",
+      "source": "Il Messaggero",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Notizie di Padova ore 10: sciopero dei teatri, multe, terme e sostenibilità urbana - Padova24Ore",
@@ -1059,15 +1077,6 @@
       "words": 426
     },
     {
-      "title": "Clima, Ue: Per adattamento infrastrutture servono 70 miliardi l'anno - Geagency - Geagency",
-      "category": "Italia",
-      "published": "2026-10-27T11:54:05+00:00",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQRC0yUWtCZE11bHhvTUY1d05Vd2hiaW12cFg0bVFXX05KRkZkRDFGUmo4SXN4VHExQm9VcHFaeFNxWFBLNkJSZTNoQlJITkF0OVpSTW9OamduM0V3N2JLanZVYnB1TWNYTlQzN2ZPTlk2bTZ5QXJ6cmhsdkpoWHlNUGRNLW5QaWptWFIyemtEaXdqeXRkc1ppWi1CNTM3cnVlOWpFS1pXONIBpwFBVV95cUxQRC0yUWtCZE11bHhvTUY1d05Vd2hiaW12cFg0bVFXX05KRkZkRDFGUmo4SXN4VHExQm9VcHFaeFNxWFBLNkJSZTNoQlJITkF0OVpSTW9OamduM0V3N2JLanZVYnB1TWNYTlQzN2ZPTlk2bTZ5QXJ6cmhsdkpoWHlNUGRNLW5QaWptWFIyemtEaXdqeXRkc1ppWi1CNTM3cnVlOWpFS1pXOA?oc=5",
-      "source": "Geagency",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Palazzo Chigi cerca una banca per i suoi dipendenti. Una partita da 1 milione di euro - la Repubblica",
       "category": "Italia",
       "published": "2026-10-27T11:29:36+00:00",
@@ -1113,15 +1122,6 @@
       "words": 0
     },
     {
-      "title": "Nur atteso al Marco Polo il 27 ottobre: raggiunge la famiglia accolta per le cure a Padova - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-27T09:35:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZVUwb2VfeFJxR1JUMExOazFET29TYUFId216eHY1S2czdnVnLUFyRlpDQnJkekpYWlJ6VW85eTlUejJ1SUt1OEFCY2RTdWRQdmRGLVhKcHBRdUxyM1VuQ1VvMGRuT3pEblhpNWJIZnBHdzVacEFzNTdUSEI3d1FTQ3lhS0I?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Case in vendita a Padova, offerta in calo del 10,7% nel terzo trimestre: il report idealista - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-27T09:27:52+00:00",
@@ -1154,8 +1154,17 @@
       "published": "2026-10-27T06:43:21+00:00",
       "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/10/27/il-sorriso-e-modellato-da-rare-varianti-di-un-gene-_e6882537-1dc2-4866-9fe4-e9f00e581296.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 454
+    },
+    {
+      "title": "Gratuito patrocinio, così la legge beffa gli infortunati sul lavoro - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-27T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQc1ZkN2x1VnN4UXdSN0V1TllHR203SENTX0h1d0pOYS1JUG9IbnBMMjVYRTBPRkhnSEVDY1ZMTmYtdHJ4VmpHbzRyQkhLOVJXWDFzVmd0WjI3UlgxZmZDSmxZaEdmYjlFNTFRMm92YjdfX2ZvLS1HdWJyd0lLWHM4eFh1Rl9IMDNxdDBZZU1qdTNqV1FSSk1yY2dQaUhTdkFBamg5SnJ5a3ZRTEhQYzNYMVpMalA?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 442
     },
     {
       "title": "Sistemul de sănătate mai are nevoie de 11 miliarde de lei până la sfârșitul anului. Rogobete: „Sub nicio... - Digi24",
@@ -1280,15 +1289,6 @@
       "published": "2026-10-26T06:56:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVVY3dU1zLXM2Unh6eVM2eHBfOVF1R2h2SUZDMHpoQ3ZaaWdSUnpqeDQwWGZhSUJRTWxJWG91aGNwdzVydTJDdXhJMVp4ZVhBdFoxTmFPNnFiQmhaMjZuYWczaXJVbU14Z3gyS0tRdXNCekUtS3hzd3dNWS1YUGVocVdwX2p4SHlQeWV1TnMxWlZtUFZSb0tJT1NFVmdBUktObktjZDRKOFBldU85S3ZtS3dMMlE4R2dBbDdPMk92YXM3WVVuVnFR0gHMAUFVX3lxTE1LMU8zRnpaaGptZmgzSm55OUpRTW8ycGFwVHhhcHlQZWpMc0s4eXJHM0x1NmM1R3JLUmRPVi1NQlJES3ozbEl5QmFoUlhWc3A4V3FRdzJqNzN4V2czX2RrSlF1Wm9PbTZMVXB6ejFVSjdJdTY2dDF3UFV4cTZranRFeDhRNE8tc0R0cGZ",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Opinioni sui social e rapporto di lavoro: fin dove arriva la libertà di espressione - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-26T04:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObzBqS2ZXTXhpalFrV2wtLTNzV0xYUFRvRzU2cDVpVEhmeE5oQ3c2d1ZDYU9CN1BxVEMzWkJFdWprcHJlbjVhSE44bElDWkFQNkdJLV9QOHF3S3BuU0NDMWtWS3V0Ni1GbVhCYW9JcDJ5T3hrLWt4NU9oNW9DLTNyQWhrdlAtOGV5d3ozTjZPcmxzelVVZUd3ZDhjUVBORndpdUFheno0M2xpNXM0STR4VGhaRzFzbHAwcUM0?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     }
