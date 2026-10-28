@@ -17,7 +17,7 @@ concurrency:
 jobs:
   actualizeaza:
     runs-on: ubuntu-latest
-    timeout-minutes: 9
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
