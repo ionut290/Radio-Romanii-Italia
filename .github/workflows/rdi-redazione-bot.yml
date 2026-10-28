@@ -1,0 +1,29 @@
+name: RDI - Controllo redazione automatica
+
+on:
+  schedule:
+    - cron: '25 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  editorial-health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica archivi e notizie radio disponibili
+        run: python scripts/rdi_redazione_bot.py --output rdi-redazione-health.json
+      - name: Conserva il rapporto anche in caso di anomalia
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-redazione-health
+          path: rdi-redazione-health.json
+          if-no-files-found: warn
+          retention-days: 7
