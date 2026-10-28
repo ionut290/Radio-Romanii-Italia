@@ -11,7 +11,7 @@ import pathlib
 import subprocess
 import time
 
-SERVICES = ("radio-youtube.service",)
+SERVICES = ("radio-youtube-visual.service",)
 STATE = pathlib.Path("/var/lib/rdi-control-center/restarts.json")
 COOLDOWN = 3600
 MAX_RESTARTS_24H = 3
