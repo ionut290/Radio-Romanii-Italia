@@ -233,7 +233,10 @@
     const wrap=node("div","rdi-cover-wrap");
     wrap.style.cssText="position:relative;width:100%;margin:0 0 14px;overflow:hidden;border-radius:12px;background:#15283c";
     const img=node("img","rdi-editorial-cover");
-    img.src=storyIllustration(item);img.alt=state.lang==="it"?"Illustrazione editoriale originale RDI, non fotografia dell'evento":"Ilustrație editorială RDI, nu fotografie a evenimentului";
+    const picture=item.id&&aiArticles[item.id]?.image;
+    img.src=(typeof picture==="string" && /^\.\/data\/geopolitica-images\/geo-[a-z0-9-]+\.png$/.test(picture))?picture:storyIllustration(item);
+    img.onerror=()=>{img.onerror=null;img.src=storyIllustration(item)};
+    img.alt=state.lang==="it"?"Illustrazione editoriale originale RDI, non fotografia dell'evento":"Ilustrație editorială RDI, nu fotografie a evenimentului";
     img.loading="lazy";img.decoding="async";
     img.style.cssText="display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover";
     const label=node("span","rdi-cover-caption",state.lang==="it"?"ILLUSTRAZIONE RDI":"ILUSTRAȚIE RDI");
