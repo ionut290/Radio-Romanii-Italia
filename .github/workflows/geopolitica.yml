@@ -8,7 +8,7 @@ on:
       - ".github/workflows/geopolitica.yml"
   workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
 permissions:
   contents: write
 concurrency:
