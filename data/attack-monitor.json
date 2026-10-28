@@ -1,9 +1,49 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27T17:06:59.357Z",
+  "updated_at": "2026-10-28T00:55:26Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
+    {
+      "id": "rdi-colombia-cucuta-20261027",
+      "date": "2026-10-27",
+      "date_label": "27 octombrie 2026",
+      "reported_on": "2026-10-27",
+      "country": "Colombia",
+      "country_code": "CO",
+      "place": "Cúcuta, departamentul Norte de Santander, zona urbană (poziție aproximativă)",
+      "lat": 7.89,
+      "long": -72.5,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": 0,
+      "injured": null,
+      "actor": "Autorii nu au fost identificați; nu există atribuire verificată către o organizație.",
+      "title_ro": "Columbia: explozie în Cúcuta, în apropierea frontierei cu Venezuela",
+      "title_it": "Colombia: esplosione a Cúcuta, vicino al confine con il Venezuela",
+      "description_ro": "La 27 octombrie, un dispozitiv exploziv a detonat în sectorul El Escobal din Cúcuta, lângă sediul DIAN și podul Francisco de Paula Santander. AP a relatat cel puțin patru polițiști răniți; ANSA a indicat șapte răniți (trei polițiști și patru civili), iar alte relatări locale șase. Bilanțurile sunt divergente, de aceea numărul numeric de răniți este lăsat necunoscut (null). Nu au fost raportate decese. Autorii sunt necunoscuți. Punctul indică doar orașul, nu amplasamentul dispozitivului.",
+      "description_it": "Il 27 ottobre un ordigno è esploso nel settore El Escobal di Cúcuta, vicino agli uffici DIAN e al ponte Francisco de Paula Santander. AP ha segnalato almeno quattro agenti feriti; ANSA sette feriti (tre agenti e quattro civili), mentre altre cronache locali ne hanno indicati sei. I bilanci divergono: il dato numerico dei feriti resta sconosciuto (null). Non sono stati segnalati decessi. Responsabili non identificati. Il punto indica soltanto la città, non la posizione dell'ordigno.",
+      "sources": [
+        {
+          "name": "Associated Press, 27 ottobre 2026",
+          "url": "https://apnews.com/article/a2c539f7b5be172f0c6c211cc776405e"
+        },
+        {
+          "name": "ANSA Latina, 27 ottobre 2026",
+          "url": "https://www.ansalatina.com/amp/americalatina/noticia/latinoamerica/2026/10/27/atentado-con-explosivos-en-cucuta-frontera-con-venezuela_4cffa0d8-3ab5-4584-aeab-ef80b6883801.html"
+        },
+        {
+          "name": "Caracol Radio, 27 ottobre 2026",
+          "url": "https://caracol.com.co/2026/10/27/fuerte-explosion-cerca-del-puente-internacional-francisco-de-paula-santander-deja-varios-heridos/?outputType=amp"
+        },
+        {
+          "name": "El Universal, 27 ottobre 2026",
+          "url": "https://www.eluniversal.com.co/sucesos/2026/10/27/ataque-con-explosivos-en-cucuta-dejo-seis-personas-heridas-entre-ellas-2-policias/"
+        }
+      ],
+      "rdi_article_id": "rdi-20261027-colombia-cucuta-explozie-frontiera"
+    },
     {
       "id": "rdi-nigeria-taraba-binnari-20261023",
       "date": "2026-10-23",
