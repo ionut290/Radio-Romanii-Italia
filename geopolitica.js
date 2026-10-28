@@ -89,6 +89,7 @@
   const REGIONS = ["all","europa","orient","asia","africa","americi","global"];
   const TOPICS = ["diplomatie","conflicte","europa","economie","energie","securitate","tehnologie","clima"];
   const state = {lang:"ro",topic:"all",region:"all",items:[],feedOk:false,updated:""};
+  let aiArticles={};
   let cachedTranslations = {};
   try {if(localStorage.getItem("rdi-lang")==="it")state.lang="it"}catch(_){}
   function t(key){return dict[state.lang][key]||key}
@@ -114,7 +115,7 @@
     const published=dateISO(item.published);
     if(published.getTime()>Date.now()+3600000)return null;
     const summary=state.lang==="it"?item.summary_it:item.summary_ro;
-    return {title:String(title).slice(0,260),summary:String(summary||"").slice(0,400),
+    return {id:item.id,title:String(title).slice(0,260),summary:String(summary||"").slice(0,400),
       category:item.category,region:REGIONS.includes(item.region)?item.region:regionGuess(title),
       url:validUrl(item.url),source:String(item.source||"RDI").slice(0,100),
       published:item.published,type:"external"};
@@ -167,13 +168,27 @@
   };
   function showContext(item){
     const dialog=$("article-dialog");if(!dialog)return;
+    const record=item.id?aiArticles[item.id]:null;
+    const publishedArticle=record?.[state.lang];
     const paragraphs=CONTEXT[state.lang][item.category]||CONTEXT[state.lang].diplomatie;
     $("article-category").textContent=t(TOPIC_NAMES[item.category]?.[0]||"all")+" · RDI";
     $("article-title").textContent=item.title;
-    $("article-disclaimer").textContent=state.lang==="it"
+    $("article-disclaimer").textContent=publishedArticle?(state.lang==="it"?"Analisi RDI generata con assistenza IA a partire dal contenuto della fonte esterna, non verificata o revisionata dalla redazione.":"Analiză RDI generată cu asistența IA pe baza articolului extern, fără verificare sau revizuire editorială.") : state.lang==="it"
       ?"Approfondimento contestuale RDI. Il titolo è tratto da una fonte esterna e non è stato verificato indipendentemente. Il testo seguente spiega il contesto generale: non descrive come accertati i dettagli dell'episodio."
       :"Context explicativ RDI. Titlul provine dintr-o sursă externă și nu a fost verificat independent. Textul următor explică tema în general, fără a prezenta drept certe detaliile evenimentului.";
-    $("article-body").replaceChildren(coverElement(item,true),...paragraphs.map(p=>node("p","",p)));
+    const body=$("article-body");body.replaceChildren(coverElement(item,true));
+    if(publishedArticle){
+      if(publishedArticle.lead)body.append(node("p","",String(publishedArticle.lead)));
+      for(const section of publishedArticle.sections||[]){
+        if(section.heading)body.append(node("h3","",String(section.heading)));
+        for(const p of section.paragraphs||[])body.append(node("p","",String(p)));
+      }
+      if(publishedArticle.conclusion){body.append(node("h3","",state.lang==="it"?"Conclusioni":"Concluzii"));body.append(node("p","",String(publishedArticle.conclusion)))}
+    } else body.append(...paragraphs.map(p=>node("p","",p)));
+    const image=record?.image;
+    if(typeof image==="string" && /^\\.\\/data\\/geopolitica-images\\/geo-[a-z0-9-]+\\.png$/.test(image)){
+      const img=body.querySelector(".rdi-editorial-cover");if(img)img.src=image;
+    }
     $("article-attribution").textContent=item.source+" · "+dateLabel(item.published);
     $("article-original").href=item.url;
     $("article-original").textContent=t("read");
@@ -232,10 +247,14 @@
     const topicKey=TOPIC_NAMES[item.category]?.[0]||"all";
     meta.append(node("span","",t(topicKey)));
     const date=dateLabel(item.published);if(date)meta.append(node("time","",date));
-    const title=node("h3","",item.title);card.append(coverElement(item,featured),meta,title);
+    const title=node("h3","",item.title);const cover=coverElement(item,featured);
+    const richImage=item.id&&aiArticles[item.id]?.image;
+    if(typeof richImage==="string" && /^\\.\\/data\\/geopolitica-images\\/geo-[a-z0-9-]+\\.png$/.test(richImage))cover.querySelector("img").src=richImage;
+    card.append(cover,meta,title);
     const intro=String(item.summary||"").replace(/\s+/g," ").trim();
     if(intro && intro.toLocaleLowerCase()!==item.title.toLocaleLowerCase()){card.append(node("p","",intro.slice(0,featured?240:150)+(intro.length>(featured?240:150)?"…":"")))}
-    const contextLink=node("button","read-more",state.lang==="it"?"Leggi approfondimento RDI":"Citește analiza RDI");contextLink.type="button";contextLink.style.cssText="cursor:pointer;background:transparent;border:0;color:inherit;text-decoration:underline;padding:8px 10px 8px 0;margin-right:12px";contextLink.addEventListener("click",()=>showContext(item));card.append(contextLink);
+    const hasLongArticle=!!(item.id&&aiArticles[item.id]?.[state.lang]);
+    const contextLink=node("button","read-more",state.lang==="it"?(hasLongArticle?"Leggi articolo completo RDI":"Leggi il contesto RDI"):(hasLongArticle?"Citește articolul complet RDI":"Citește contextul RDI"));contextLink.type="button";contextLink.style.cssText="cursor:pointer;background:transparent;border:0;color:inherit;text-decoration:underline;padding:8px 10px 8px 0;margin-right:12px";contextLink.addEventListener("click",()=>showContext(item));card.append(contextLink);
     const link=node("a","read-more",t("read"));link.href=item.url;link.target="_blank";link.rel="noopener noreferrer";card.append(link);
     return card;
   }
@@ -272,7 +291,7 @@
   let external=[],war=[],editorial=[];
   async function getJSON(path){const response=await fetch(path+"?v="+Date.now(),{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);return response.json()}
   async function load(){
-    const results=await Promise.allSettled([getJSON("./data/geopolitica-news.json"),getJSON("./data/war-zone-news.json"),getJSON("./editorial.json"),getJSON("./news-translations.json")]);
+    const results=await Promise.allSettled([getJSON("./data/geopolitica-news.json"),getJSON("./data/war-zone-news.json"),getJSON("./editorial.json"),getJSON("./news-translations.json"),getJSON("./data/geopolitica-articles.json")]);
     if(results[0].status==="fulfilled"){
       const data=results[0].value;external=Array.isArray(data.items)?data.items:[];
       state.feedOk=external.some(item=>item.title_ro&&item.title_it);state.updated=data.updated_at||"";
@@ -280,6 +299,7 @@
     if(results[1].status==="fulfilled")war=Array.isArray(results[1].value.items)?results[1].value.items:[];
     if(results[2].status==="fulfilled")editorial=Array.isArray(results[2].value.items)?results[2].value.items:[];
     if(results[3].status==="fulfilled")cachedTranslations=results[3].value.items||{};
+    if(results[4].status==="fulfilled")aiArticles=results[4].value.items||{};
     refreshContent();
   }
   function refreshContent(){
