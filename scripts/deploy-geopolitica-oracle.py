@@ -429,7 +429,7 @@ def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> N
         "edition_id": item["edition_id"],
         "generated_at": item["generated_at"],
         "signatures": item.get("story_signatures", []),
-        "source_urls": [src["url"] for src in item.get("sources", []) if isinstance(src, dict) and src.get("url")],
+        "source_urls": sorted({url for src in item.get("sources", []) if isinstance(src, dict) for url in ([src.get("url")] + src.get("source_urls", [])) if isinstance(url, str) and url.startswith("https://")}),
     }
     editions = [e for e in editions if isinstance(e, dict) and e.get("edition_id") != entry["edition_id"]]
     editions.append(entry)
