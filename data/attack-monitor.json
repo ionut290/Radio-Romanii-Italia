@@ -1,9 +1,47 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-28T01:00:00Z",
+  "updated_at": "2026-10-28T09:53:55+01:00",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "Redacția Radio Românii din Italia",
   "items": [
+    {
+      "id": "rdi-serbia-belgrad-ambasada-israel-20261028",
+      "date": "2026-10-28",
+      "place": "Belgrad, Serbia (marcaj aproximativ la nivel de oraș)",
+      "lat": 44.8176,
+      "long": 20.4633,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "country": "Serbia",
+      "country_code": "RS",
+      "killed": 0,
+      "injured": 1,
+      "attacker_killed": 1,
+      "casualty_note_ro": "Un jandarm rănit ușor; atacatorul ucis de agent nu este inclus în numărul victimelor (killed=0). Date provizorii, potrivit autorităților sârbe.",
+      "casualty_note_it": "Un gendarme ferito lievemente; l'aggressore ucciso dall'agente non è incluso tra le vittime (killed=0). Dati provvisori secondo le autorità serbe.",
+      "title_ro": "Belgrad: jandarm rănit într-un atac cu cuțite lângă ambasada Israelului",
+      "title_it": "Belgrado: gendarme ferito in un attacco con coltelli presso l'ambasciata israeliana",
+      "description_ro": "În noaptea de 27 spre 28 octombrie 2026, un agresor înarmat cu două cuțite a atacat un jandarm care păzea Ambasada Israelului din Belgrad. Agentul a fost rănit ușor și l-a împușcat mortal pe atacator, potrivit ministrului sârb de interne, citat de Reuters, AP și RTS. Autoritățile investighează incidentul drept posibil act terorist și au ridicat alerta la nivelul maxim. Motivația și identitatea agresorului nu sunt stabilite independent. Punctul indică aproximativ orașul, nu amplasamentul diplomatic.",
+      "description_it": "Nella notte tra il 27 e il 28 ottobre 2026 un aggressore armato di due coltelli ha attaccato un gendarme di guardia presso l'ambasciata israeliana a Belgrado. L'agente è rimasto lievemente ferito e ha ucciso l'assalitore con un colpo d'arma da fuoco, secondo il ministro serbo dell'Interno citato da Reuters, AP e RTS. Le autorità indagano sull'episodio come possibile terrorismo e hanno alzato l'allerta al massimo. Identità e movente non sono accertati indipendentemente. Posizione approssimativa della città, non della sede diplomatica.",
+      "actor": "Autor neidentificat oficial la prima comunicare; ipoteze privind motivația formulate de autorități, neconfirmate independent.",
+      "sources": [
+        {
+          "name": "Reuters, 28 ottobre 2026 (ripresa Internazionale)",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/28/policeman-kills-knife-attacker-outside-israel-s-embassy-in-serbia"
+        },
+        {
+          "name": "Associated Press, 28 ottobre 2026",
+          "url": "https://apnews.com/article/5b6d28dc67b691d73b4ee6e4eae760e1"
+        },
+        {
+          "name": "RTS Serbia, 28 ottobre 2026",
+          "url": "https://www.rts.rs/lat/vesti/drustvo/6070810/dacic-teroristicki-napad-ispred-ambasade-izraela-u-beogradu-napadac-ubijen--proglasen-crveni-stepen-opasnosti-od-terorizma.html"
+        }
+      ],
+      "rdi_article_id": "rdi-20261028-belgrad-atac-ambasada-israel",
+      "reported_on": "2026-10-28"
+    },
     {
       "id": "rdi-ethiopia-arsi-shirka-20261024",
       "date": "2026-10-24",
