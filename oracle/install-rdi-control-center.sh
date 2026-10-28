@@ -21,10 +21,13 @@ install -m 644 "$ROOT/oracle/rdi-control-center.timer" /etc/systemd/system/rdi-c
 install -m 644 "$ROOT/oracle/rdi-control-center-web.service" /etc/systemd/system/rdi-control-center-web.service
 systemctl daemon-reload
 systemctl enable --now rdi-control-center.timer
-systemctl enable --now rdi-control-center-web.service
-systemctl start rdi-control-center.service
+systemctl enable rdi-control-center-web.service
+systemctl restart rdi-control-center-web.service
+systemctl restart rdi-control-center.service
 systemctl is-active --quiet rdi-control-center.timer
 systemctl is-active --quiet rdi-control-center-web.service
+curl --fail --silent --show-error --max-time 5 http://127.0.0.1:8787/api/status \
+  | /usr/bin/python3 -c 'import json,sys; d=json.load(sys.stdin); assert d.get("schema_version")==2'
 systemctl list-timers --no-pager rdi-control-center.timer
 echo "RDI Control Center installed. Dashboard listens only on 127.0.0.1:8787."
 echo "Open it through SSH: ssh -L 8787:127.0.0.1:8787 ubuntu@<oracle-host>"
