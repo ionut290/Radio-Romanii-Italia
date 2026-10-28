@@ -173,7 +173,7 @@
     const paragraphs=CONTEXT[state.lang][item.category]||CONTEXT[state.lang].diplomatie;
     $("article-category").textContent=t(TOPIC_NAMES[item.category]?.[0]||"all")+" · RDI";
     $("article-title").textContent=item.title;
-    $("article-disclaimer").textContent=publishedArticle?(state.lang==="it"?"Analisi RDI generata con assistenza IA a partire dal contenuto della fonte esterna, non verificata o revisionata dalla redazione.":"Analiză RDI generată cu asistența IA pe baza articolului extern, fără verificare sau revizuire editorială.") : state.lang==="it"
+    $("article-disclaimer").textContent=publishedArticle?(record.editorial_status==="editorially_reviewed"?(state.lang==="it"?"Approfondimento RDI con fonti indicate e revisione editoriale.":"Analiză RDI cu surse indicate și revizuire editorială."):(state.lang==="it"?"Analisi RDI assistita dall'IA, non ancora revisionata dalla redazione.":"Analiză RDI asistată de IA, încă nerevizuită editorial.")) : state.lang==="it"
       ?"Approfondimento contestuale RDI. Il titolo è tratto da una fonte esterna e non è stato verificato indipendentemente. Il testo seguente spiega il contesto generale: non descrive come accertati i dettagli dell'episodio."
       :"Context explicativ RDI. Titlul provine dintr-o sursă externă și nu a fost verificat independent. Textul următor explică tema în general, fără a prezenta drept certe detaliile evenimentului.";
     const body=$("article-body");body.replaceChildren(coverElement(item,true));
@@ -303,7 +303,14 @@
     refreshContent();
   }
   function refreshContent(){
-    const list=[...external.map(normalizeExternal),...war.map(normalizeWar),...editorial.map(normalizeEditorial)].filter(Boolean);
+    const standalone=Object.values(aiArticles).filter(x=>x&&x.id&&x.source_url&&x.it?.title&&x.ro?.title).map(x=>({
+      id:x.id,title:String(x[state.lang].title),summary:String(x[state.lang].lead||"").slice(0,400),
+      category:TOPICS.includes(x.category)?x.category:"diplomatie",
+      region:REGIONS.includes(x.region)?x.region:"global",
+      url:x.source_url,source:"RDI / "+String(x.source_name||"Redazione"),
+      published:x.source_published,type:"curated"
+    }));
+    const list=[...standalone,...external.map(normalizeExternal),...war.map(normalizeWar),...editorial.map(normalizeEditorial)].filter(Boolean);
     const seen=new Set();
     state.items=list.filter(x=>{const key=x.url.toLowerCase();if(seen.has(key))return false;seen.add(key);return true})
       .sort((a,b)=>Date.parse(b.published)-Date.parse(a.published));
