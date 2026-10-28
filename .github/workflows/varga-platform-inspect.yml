@@ -59,10 +59,10 @@ jobs:
               print('source_not_found')
           else:
               text=p.read_text(errors='replace')
-              pattern=r'\\b(?:app|router)\\.(get|head)\\s*\\(\\s*([\x27"])(.*?)\\2'
+              pattern=re.compile(r"""(?:app|router)\\.(?:get|head)\\s*\\(\\s*['"]([^'"]+)['"]""", re.I)
               found=[]
-              for m in re.finditer(pattern,text,re.I):
-                  path=m.group(3)
+              for m in pattern.finditer(text):
+                  path=m.group(1)
                   if re.search(r'health|ready|live|status|ping',path,re.I):
                       found.append(path)
               print('\\n'.join(sorted(set(found))) or 'no_explicit_health_route_found')
