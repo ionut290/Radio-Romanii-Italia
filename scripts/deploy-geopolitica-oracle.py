@@ -429,7 +429,10 @@ def apply(client: Client, issue_file: pathlib.Path, mp3_file: pathlib.Path) -> N
         editions = []
     entry = {
         "edition_id": item["edition_id"],
+        "edition_date": item.get("edition_date") or str(item["edition_id"])[:8],
         "generated_at": item["generated_at"],
+        "story_count": int(item.get("story_count", len(item.get("story_signatures", [])))),
+        "audio_duration_seconds": item.get("audio_duration_seconds"),
         "signatures": item.get("story_signatures", []),
         "source_urls": sorted({url for src in item.get("sources", []) if isinstance(src, dict) for url in ([src.get("url")] + src.get("source_urls", [])) if isinstance(url, str) and url.startswith("https://")}),
     }

@@ -21,25 +21,26 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0d192b;border-radius
 button{border:1px solid #526b8d;background:#1d3555;color:var(--text);padding:10px 14px;border-radius:9px;font:inherit;font-weight:700;cursor:pointer}button:hover{background:#27466d}button:disabled{opacity:.55;cursor:not-allowed}.control-buttons{display:flex;gap:10px;flex-wrap:wrap}.control-result{min-height:24px;margin-top:10px;color:var(--muted)}
 .diagnostics{display:grid;gap:10px}.diag{padding:11px 13px;border-radius:10px;background:#0d192b;border-left:4px solid var(--line)}.diag.warning{border-color:var(--warn)}.diag.error{border-color:var(--bad)}.diag.info{border-color:#77b7ff}.diag b{display:block;margin-bottom:3px}.diag p{margin:0;font-size:13px}
 .notice{background:#282d3c;border-left:4px solid var(--gold);border-radius:8px;padding:12px 15px;margin:15px 0;color:#e7e0cf}
-#actions .row{border-top:1px solid var(--line);padding:9px 0;font-size:13px}.error{color:var(--bad)}
+#actions .row{border-top:1px solid var(--line);padding:9px 0;font-size:13px}.history-list{display:grid;gap:7px;max-height:360px;overflow:auto}.history-row{padding:9px 11px;border-radius:9px;background:#0d192b;font-size:13px}.history-row b{color:var(--gold)}.diag-actions{margin-top:8px}.diag-actions button{padding:5px 9px;font-size:12px}.workflow-row{padding:7px 0;border-top:1px solid var(--line);font-size:13px}.workflow-row a{color:#9acbff}.alert-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}.error{color:var(--bad)}
 footer{margin-top:22px;color:var(--muted);font-size:12px}
 @media(max-width:500px){main{padding:20px 13px}.card{padding:15px}}
 </style></head>
 <body><main>
 <header><div><div class="kicker">Oracle Cloud · monitoraggio ogni 5 minuti</div><h1>RDI Control Center</h1><p>Stato della diretta, AzuraCast, YouTube Live, redazione, sito e server.</p></div><div class="meta">Ultimo controllo: <b id="checked">—</b><br>Stato generale: <b id="overall">—</b></div></header>
-<div class="notice"><b>Interventi protetti:</b> il bot può riavviare soltanto il relay YouTube principale quando systemd lo segna come fallito, il relay visuale è fermo e il limite anti-ripetizione lo consente. Non modifica playlist e non cambia la configurazione della diretta. Gli altri guasti vengono segnalati.</div>
+<div class="notice"><b>Interventi protetti:</b> il riavvio automatico resta limitato al relay YouTube principale secondo i controlli di sicurezza. Dal pannello sono disponibili azioni confermate solo sulla playlist geopolitica ID 12. Nessun’altra playlist o configurazione YouTube viene modificata.</div>
 <div class="grid">
 <section class="card"><div class="head"><h2>Radio in diretta</h2><span class="badge" id="radio-state">—</span></div><div class="stats" id="radio-stats"></div><p class="meta" id="radio-note"></p></section>
-<section class="card"><div class="head"><h2>AzuraCast</h2><span class="badge" id="azura-state">—</span></div><div class="stats" id="azura-stats"></div><p class="meta">Controlla la playlist 12; la chiave API temporanea viene revocata al termine. Nessuna playlist viene modificata.</p></section>
+<section class="card"><div class="head"><h2>AzuraCast</h2><span class="badge" id="azura-state">—</span></div><div class="stats" id="azura-stats"></div><div class="meta" id="bulletin-meta">Dettagli ultima edizione non disponibili.</div><p class="meta">Controlla la playlist 12; la chiave API temporanea viene revocata al termine. Nessuna playlist viene modificata.</p></section>
 <section class="card"><div class="head"><h2>YouTube Live</h2><span class="badge" id="youtube-state">—</span></div><div class="stats" id="youtube-stats"></div><p class="meta" id="youtube-note"></p></section>
-<section class="card"><div class="head"><h2>Redazione</h2><span class="badge" id="redaction-state">—</span></div><div class="stats" id="redaction-stats"></div><p class="meta">Il feed aggiornato non certifica da solo il completamento dell’automazione editoriale.</p></section>
+<section class="card"><div class="head"><h2>Redazione</h2><span class="badge" id="redaction-state">—</span></div><div class="stats" id="redaction-stats"></div><div id="workflow-runs" class="meta"></div><p class="meta">I run verificano l’esito tecnico; revisione e controllo delle fonti restano editoriali.</p></section>
 <section class="card"><div class="head"><h2>Sito web</h2><span class="badge" id="site-state">—</span></div><div id="site-pages"></div></section>
 <section class="card"><div class="head"><h2>Oracle Cloud</h2><span class="badge" id="oracle-state">—</span></div><div class="stats" id="oracle-stats"></div><pre id="docker"></pre></section>
 </div>
-<section class="card"><div class="head"><h2>Azioni controllate</h2><span class="meta">accesso locale protetto</span></div><div class="control-buttons"><button id="refresh-action" type="button">Aggiorna controlli ora</button><button id="recover-action" type="button">Riattiva notiziario · playlist 12</button><button id="suspend-action" type="button">Sospendi notiziario · playlist 12</button></div><div class="control-result" id="control-result" role="status" aria-live="polite">Il ripristino richiede un MP3 recente, assegnato e successivo all’ultima trasmissione. La sospensione ferma solo la playlist 12. Nessuna azione tocca altre playlist o YouTube Live.</div></section>
+<section class="card"><div class="head"><h2>Azioni controllate</h2><span class="meta">accesso locale protetto</span></div><div class="control-buttons"><button id="refresh-action" type="button">Aggiorna controlli ora</button><button id="recover-action" type="button">Riattiva notiziario · playlist 12</button><button id="suspend-action" type="button">Sospendi notiziario · playlist 12</button></div><div class="control-result" id="control-result" role="status" aria-live="polite">Il ripristino richiede un MP3 recente, assegnato e successivo all’ultima trasmissione. La sospensione ferma solo la playlist 12. Nessuna azione tocca altre playlist o YouTube Live.</div><div class="alert-toolbar"><button id="alert-toggle" type="button">Attiva avvisi su questo browser</button><span class="meta" id="alert-state">Avvisi solo mentre il Control Center è aperto.</span></div></section>
 <section class="card" aria-live="polite"><div class="head"><h2>Problemi rilevati e cosa verificare</h2><span class="meta" id="diag-count">—</span></div><div class="diagnostics" id="diagnostics"></div></section>
-<section class="card"><div class="head"><h2>Interventi automatici registrati</h2><span class="meta">registro locale Oracle</span></div><div id="actions"></div></section>
-<footer>Dashboard locale, sola lettura. Apribile con tunnel SSH verso 127.0.0.1:8787. Il collegamento YouTube RTMP non è dichiarato attivo soltanto perché FFmpeg è in esecuzione: va confermato separatamente in YouTube Studio.</footer>
+<section class="card" aria-live="polite"><div class="head"><h2>Storico interventi</h2><span class="meta">registro locale Oracle</span></div><div id="actions"></div></section>
+<section class="card"><div class="head"><h2>Storico controlli</h2><span class="meta">ultimi 50 controlli, conservati su Oracle</span></div><div id="check-history" class="history-list"></div></section>
+<footer>Dashboard privata locale con interventi consentiti e registrati. Apribile con tunnel SSH verso 127.0.0.1:8787. Il processo encoder non conferma la ricezione YouTube RTMP: verificare separatamente in YouTube Studio.</footer>
 </main>
 <script>
 const $=id=>document.getElementById(id);
@@ -85,16 +86,20 @@ function renderDiagnostics(d){
  const box=$('diagnostics');box.replaceChildren();
  const warnings=rows.filter(x=>x.kind==='warning'||x.kind==='error').length;
  $('diag-count').textContent=warnings+' problemi · '+(rows.length-warnings)+' note';
- if(!rows.length){box.textContent='Nessuna anomalia rilevata nei controlli disponibili.';return}
+ if(!rows.length){box.textContent='Nessuna anomalia rilevata nei controlli disponibili.';updateAlertBaseline([]);return}
  for(const item of rows){
   const row=document.createElement('div');row.className='diag '+item.kind;
   const title=document.createElement('b');title.textContent=item.title;
   const detail=document.createElement('p');detail.textContent=item.detail;
-  row.append(title,detail);box.append(row);
+  const actions=document.createElement('div');actions.className='diag-actions';
+  const verify=document.createElement('button');verify.type='button';verify.textContent='Verifica di nuovo';
+  verify.addEventListener('click',()=>invokeControl('/api/actions/refresh',{}));
+  actions.append(verify);row.append(title,detail,actions);box.append(row);
  }
+ updateAlertBaseline(rows);
 }
 async function invokeControl(path,payload){
- const refresh=$('refresh-action'),recover=$('recover-action'),result=$('control-result');
+ const refresh=$('refresh-action'),recover=$('recover-action'),suspend=$('suspend-action'),result=$('control-result');
  refresh.disabled=true;recover.disabled=true;result.textContent='Operazione in corso…';
  try{
   const response=await fetch(path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload||{}),cache:'no-store'});
@@ -105,6 +110,63 @@ async function invokeControl(path,payload){
  }catch(e){result.textContent='Connessione al Control Center non riuscita: '+e.message}
  finally{refresh.disabled=false;const active=String(document.querySelector('#azura-stats .stat:nth-child(2) b')?.textContent||'').toLowerCase()==='true';recover.disabled=active;suspend.disabled=!active}
 }
+function localTime(value){if(!value)return '—';const date=new Date(value);return Number.isNaN(date.getTime())?String(value):date.toLocaleString('it-IT')}
+function renderBulletin(b){
+ const timer=b.cleanup_timer||{},box=$('bulletin-meta'),date=b.edition_date||'—';
+ const duration=Number(b.duration_seconds);const durationText=Number.isFinite(duration)&&duration>0?Math.floor(duration/60)+' min '+Math.round(duration%60)+' sec':'non disponibile per questa edizione';
+ box.textContent='Ultima edizione consegnata: '+date+' · generata '+localTime(b.generated_at)+' · '+(b.story_count??'—')+' notizie · durata '+durationText+' · '+(b.source_count??0)+' fonti referenziate · eliminazione dopo messa in onda: '+(timer.state==='active'?'timer attivo':'da verificare');
+}
+function renderWorkflows(w){
+ const box=$('workflow-runs');box.replaceChildren();
+ const latest=w.latest||{},entries=Object.entries(latest);
+ if(!entries.length){box.textContent='Stato automazioni: '+(w.state==='unavailable'?'non disponibile':'nessuna esecuzione recente trovata')+'.';return}
+ for(const [path,run] of entries){
+  const row=document.createElement('div');row.className='workflow-row';
+  const status=run.status==='completed'?(run.conclusion||'completato'):run.status;
+  const label=document.createElement('span');label.textContent=(run.label||path)+': '+status+' · '+localTime(run.updated_at||run.created_at);
+  row.append(label);
+  if(run.html_url){try{const link=new URL(run.html_url);if(link.hostname==='github.com'){const a=document.createElement('a');a.href=link.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=' · apri run';row.append(a)}}catch{}}
+  box.append(row);
+ }
+}
+function renderCheckHistory(items){
+ const box=$('check-history');box.replaceChildren();
+ if(!items.length){box.textContent='Lo storico dei controlli si popola dal prossimo ciclo.';return}
+ for(const item of items.slice().reverse().slice(0,50)){
+  const row=document.createElement('div');row.className='history-row';
+  const time=document.createElement('span');time.textContent=localTime(item.checked_at)+' · ';
+  const overall=document.createElement('b');overall.textContent=item.overall||'—';
+  const details=document.createElement('span');details.textContent=' · radio '+(item.radio||'—')+' · playlist '+(item.azuracast||'—')+' · YouTube '+(item.youtube||'—')+' · redazione '+(item.redaction||'—')+(item.issues?.length?' · problemi: '+item.issues.join(', '):'');
+  row.append(time,overall,details);box.append(row);
+ }
+}
+let alertEnabled=localStorage.getItem('rdi-alerts-enabled')==='true';
+let previousAlertKeys=new Set();
+try{previousAlertKeys=new Set(JSON.parse(localStorage.getItem('rdi-alert-keys')||'[]'))}catch{}
+function updateAlertButton(){
+ const button=$('alert-toggle'),state=$('alert-state');
+ if(!('Notification' in window)){button.disabled=true;state.textContent='Questo browser non supporta le notifiche.';return}
+ button.textContent=alertEnabled?'Disattiva avvisi su questo browser':'Attiva avvisi su questo browser';
+ state.textContent=alertEnabled&&Notification.permission==='granted'?'Avvisi attivi mentre il Control Center è aperto.':'Avvisi locali, senza invio di dati a servizi esterni.';
+}
+function updateAlertBaseline(rows){
+ const active=new Set(rows.filter(x=>x.kind==='warning'||x.kind==='error'||x.title==='Notiziario geopolitico sospeso in attesa di un MP3 nuovo').map(x=>x.title));
+ if(alertEnabled&&'Notification' in window&&Notification.permission==='granted'){
+  for(const title of active)if(!previousAlertKeys.has(title))new Notification('RDI Control Center',{body:title});
+ }
+ previousAlertKeys=active;
+ try{localStorage.setItem('rdi-alert-keys',JSON.stringify([...active]))}catch{}
+ updateAlertButton();
+}
+$('alert-toggle').addEventListener('click',async()=>{
+ if(!('Notification' in window))return;
+ if(alertEnabled){alertEnabled=false;localStorage.setItem('rdi-alerts-enabled','false');updateAlertButton();return}
+ const permission=Notification.permission==='default'?await Notification.requestPermission():Notification.permission;
+ alertEnabled=permission==='granted';localStorage.setItem('rdi-alerts-enabled',String(alertEnabled));
+ if(alertEnabled){const rows=[...document.querySelectorAll('.diag')].map(x=>({title:x.querySelector('b')?.textContent||''}));previousAlertKeys=new Set(rows.map(x=>x.title));try{localStorage.setItem('rdi-alert-keys',JSON.stringify([...previousAlertKeys]))}catch{}}
+ updateAlertButton();
+});
+updateAlertButton();
 function render(d){
  $('checked').textContent=d.checked_at?new Date(d.checked_at).toLocaleString('it-IT'):'—';$('overall').textContent=d.overall||'—';$('overall').className=d.overall==='ok'?'':'error';
  const r=d.radio||{};badge('radio-state',r.state);const np=r.nowplaying||{},st=r.stream||{};
@@ -112,11 +174,11 @@ function render(d){
  $('radio-note').textContent=(np.artist||'')+(st.content_type?' · '+st.content_type:'')+(st.state==='ok'&&!st.audio_frame_detected?' · formato del campione non identificato':'');
  const a=d.azuracast||{};badge('azura-state',a.state);const active=String(a.playlist_enabled??'').toLowerCase()==='true';const recoverButton=$('recover-action'),suspendButton=$('suspend-action');if(recoverButton){recoverButton.disabled=active;recoverButton.textContent=active?'Notiziario già attivo · playlist 12':'Riattiva notiziario · playlist 12'}if(suspendButton){suspendButton.disabled=!active;suspendButton.textContent=active?'Sospendi notiziario · playlist 12':'Notiziario già sospeso · playlist 12'}stats('azura-stats',[['Playlist',a.playlist_id||'—'],['Attiva',String(a.playlist_enabled??'—')],['Fascia oraria','ogni ora :'+String(a.scheduled_minute||'—').padStart(2,'0')],['Brani assegnati',a.media_count??'—'],['Ultima riproduzione',a.last_played_at?(new Date(a.last_played_at).toLocaleString('it-IT')):'—'],['Media RDI',a.own_media_count??'—']]);
  const y=d.youtube||{};badge('youtube-state',y.state);stats('youtube-stats',[['Modalità',y.mode||'—'],['Processi encoder',y.encoder_process_count??'—'],['Relay standard',y.services?.standard?.state||'—'],['Relay visuale',y.services?.visual?.state||'—'],['Watchdog browser',y.services?.browser_watchdog?.state||'—'],['RTMP confermato',y.rtmp_connection_confirmed?'sì':'no']]);$('youtube-note').textContent=y.note||'';
- const n=d.redaction||{};badge('redaction-state',n.state);stats('redaction-stats',[['Feed notizie, minuti',n.feed_age_minutes??'—'],['Notizie in feed',n.feed_total??'—'],['In coda',n.pending_total??'—'],['Geopolitica, minuti',n.geopolitica_age_minutes??'—'],['Articoli geopolitici',n.geopolitica_articles??'—'],['Non revisionati',n.geopolitica_unreviewed??'—']]);
+ const n=d.redaction||{};badge('redaction-state',n.state);stats('redaction-stats',[['Feed notizie, minuti',n.feed_age_minutes??'—'],['Notizie in feed',n.feed_total??'—'],['In coda',n.pending_total??'—'],['Geopolitica, minuti',n.geopolitica_age_minutes??'—'],['Articoli geopolitici',n.geopolitica_articles??'—'],['Non revisionati',n.geopolitica_unreviewed??'—'],['Schede approvate per radio',n.verified_radio_items??'—']]);renderBulletin(d.bulletin||{});renderWorkflows(n.automation||{});renderCheckHistory(d.check_history||[]);
  badge('site-state',d.site?.state);pageRows(d.site?.pages);renderDiagnostics(d);
  const o=d.oracle||{},docker=o.docker||{};badge('oracle-state',docker.state==='ok'?'ok':'degraded');stats('oracle-stats',[['CPU',o.cpu_percent===null?'—':o.cpu_percent+'%'],['Memoria',o.memory_percent===null?'—':o.memory_percent+'%'],['Disco',o.disk_percent===null?'—':o.disk_percent+'%'],['Docker attivi',docker.running_count??'—'],['Spazio disco libero',o.disk_free_bytes?Math.round(o.disk_free_bytes/1073741824)+' GB':'—']]);
  $('docker').textContent=(docker.containers||[]).map(x=>x.name+' · '+x.status).join('\n')||'Nessun container rilevato';
- const actions=$('actions');actions.replaceChildren();const history=d.audit_log||[];for(const a of history.slice().reverse()){const row=document.createElement('div');row.className='row';row.textContent=(a.recorded_at||'')+' · '+a.action+' · '+a.service+(a.verified_active?' · verificato':'');actions.append(row)}if(!history.length)actions.textContent='Nessun intervento automatico registrato.';
+ const actions=$('actions');actions.replaceChildren();const history=d.audit_log||[];for(const a of history.slice().reverse()){const row=document.createElement('div');row.className='row';row.textContent=(a.recorded_at||'')+' · '+a.action+' · '+a.service+' · '+(a.result||'')+(a.verified_active?' · verificato':'');actions.append(row)}if(!history.length)actions.textContent='Nessun intervento automatico registrato.';
 }
 async function load(){try{const r=await fetch('/api/status?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);render(await r.json())}catch(e){$('overall').textContent='status non disponibile';$('overall').className='error';$('checked').textContent=e.message}}
 $('refresh-action').addEventListener('click',()=>invokeControl('/api/actions/refresh',{}));

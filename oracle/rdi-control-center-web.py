@@ -69,7 +69,7 @@ def append_audit(action, service, result, verified=False):
 
 def refresh_report_audit(data):
     try:
-        lines = AUDIT.read_text(encoding="utf-8", errors="replace").splitlines()[-20:]
+        lines = AUDIT.read_text(encoding="utf-8", errors="replace").splitlines()[-100:]
         data["audit_log"] = [obj for line in lines if line.strip()
                              for obj in [json.loads(line)] if isinstance(obj, dict)]
     except (OSError, ValueError):

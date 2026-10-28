@@ -29,6 +29,16 @@ STATE = pathlib.Path(os.environ.get("RDI_CONTROL_CENTER_STATE", "/var/lib/rdi-co
 REPORT = STATE / "status.json"
 RESTARTS = STATE / "restarts.json"
 AUDIT = STATE / "actions.jsonl"
+CHECK_HISTORY = STATE / "checks.jsonl"
+BROADCAST_HISTORY = pathlib.Path("/var/lib/rdi-geopolitica/broadcast-history.json")
+GITHUB_ACTIONS_RUNS = "https://api.github.com/repos/ionut290/Radio-Romanii-Italia/actions/runs?per_page=100"
+WORKFLOW_NAMES = {
+    "editorial.yml": "Redazione editoriale",
+    "news.yml": "Notizie radio",
+    "geopolitica.yml": "Feed geopolitico",
+    "geopolitica-radio.yml": "Notiziario geopolitico MP3",
+    "editorial-check.yml": "Controllo editoriale",
+}
 COOLDOWN = 3600
 MAX_RESTARTS_24H = 3
 AZURA_CACHE_SECONDS = 900
@@ -101,6 +111,7 @@ def probe_site() -> dict:
         "news_summaries": SITE + "/data/news-summaries.json",
         "geopolitica_feed": SITE + "/data/geopolitica-news.json",
         "geopolitica_articles": SITE + "/data/geopolitica-articles.json",
+        "geopolitica_radio_verified": SITE + "/data/geopolitica-radio-verified.json",
     }.items():
         try:
             code, headers, body = fetch(url, timeout=10)
@@ -125,6 +136,10 @@ def probe_site() -> dict:
                                 1 for x in records.values() if isinstance(x, dict)
                                 and x.get("editorial_status") != "editorially_reviewed"
                             ) if isinstance(records, dict) else None
+                        elif name == "geopolitica_radio_verified":
+                            records = data.get("items", [])
+                            item["items"] = len(records) if isinstance(records, list) else None
+                            item["updated_at"] = data.get("updated_at")
                     elif isinstance(data, list):
                         item["items"] = len(data)
                 except (UnicodeDecodeError, ValueError):
@@ -223,16 +238,26 @@ def probe_azuracast(previous: dict | None) -> dict:
                            "RDI_PLAYLIST_MINUTE", "RDI_PLAYLIST_MEDIA_COUNT", "RDI_PLAYLIST_PLAYED_AT",
                            "RDI_OWN_MEDIA_COUNT"):
                     parsed[key] = value[:160]
+        enabled = parsed.get("RDI_PLAYLIST_ENABLED") == "True"
+        try:
+            media_count = int(parsed.get("RDI_PLAYLIST_MEDIA_COUNT", "0"))
+        except (TypeError, ValueError):
+            media_count = -1
+        valid_configuration = (
+            parsed.get("RDI_GEOPOLITICA_EXISTS") == "true"
+            and parsed.get("RDI_PLAYLIST_ID") == "12"
+            and parsed.get("RDI_PLAYLIST_MINUTE") == "10"
+        )
+        expected_suspended = not enabled and media_count == 0 and valid_configuration
         expected = (
             result.returncode == 0
             and parsed.get("AZURACAST_AUTHENTICATED") == "true"
-            and parsed.get("RDI_GEOPOLITICA_EXISTS") == "true"
-            and parsed.get("RDI_PLAYLIST_ID") == "12"
-            and parsed.get("RDI_PLAYLIST_ENABLED") == "True"
-            and parsed.get("RDI_PLAYLIST_MINUTE") == "10"
+            and valid_configuration
+            and (enabled or expected_suspended)
         )
         return {
             "state": "ok" if expected else "degraded",
+            "mode": "active" if enabled else ("suspended_no_media" if expected_suspended else "suspended_with_media"),
             "checked_at": utcnow().isoformat(),
             "playlist_id": parsed.get("RDI_PLAYLIST_ID"),
             "playlist_enabled": parsed.get("RDI_PLAYLIST_ENABLED"),
@@ -335,6 +360,78 @@ def probe_youtube() -> dict:
     }
 
 
+def probe_geopolitica_bulletin() -> dict:
+    history = load_json(BROADCAST_HISTORY, {})
+    editions = history.get("editions", []) if isinstance(history, dict) else []
+    editions = [x for x in editions if isinstance(x, dict)]
+    latest = editions[-1] if editions else {}
+    edition_id = str(latest.get("edition_id", ""))
+    edition_date = latest.get("edition_date")
+    if not edition_date and re.fullmatch(r"20[0-9]{6}-[0-9]{4}", edition_id):
+        edition_date = f"{edition_id[0:4]}-{edition_id[4:6]}-{edition_id[6:8]}"
+    source_urls = latest.get("source_urls", [])
+    if not isinstance(source_urls, list):
+        source_urls = []
+    cleanup = systemd_unit("rdi-geopolitica-cleanup.timer")
+    return {
+        "state": "ok" if latest else "degraded",
+        "edition_id": edition_id or None,
+        "edition_date": edition_date,
+        "generated_at": latest.get("generated_at"),
+        "story_count": latest.get("story_count", len(latest.get("signatures", []))),
+        "duration_seconds": latest.get("audio_duration_seconds"),
+        "source_count": len({x for x in source_urls if isinstance(x, str) and x.startswith("https://")}),
+        "cleanup_timer": cleanup,
+        "history_count": len(editions),
+        "note": "Dati dell'ultima edizione consegnata; la playlist può essere sospesa se oggi non ci sono notizie verificate.",
+    }
+
+
+def probe_workflow_runs() -> dict:
+    try:
+        code, payload, _ = fetch_json(GITHUB_ACTIONS_RUNS, timeout=10)
+        rows = payload.get("workflow_runs", []) if isinstance(payload, dict) else []
+        latest = {}
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            path = str(row.get("path", "")).split("@", 1)[0].rsplit("/", 1)[-1]
+            if path not in WORKFLOW_NAMES:
+                continue
+            stamp = str(row.get("created_at", ""))
+            previous = latest.get(path)
+            if previous is None or stamp > str(previous.get("created_at", "")):
+                latest[path] = row
+        result = {}
+        failures = []
+        for path, label in WORKFLOW_NAMES.items():
+            run = latest.get(path)
+            if not run:
+                continue
+            item = {
+                "label": label,
+                "status": str(run.get("status", "unknown")),
+                "conclusion": run.get("conclusion"),
+                "created_at": run.get("created_at"),
+                "updated_at": run.get("updated_at"),
+                "html_url": run.get("html_url"),
+                "run_number": run.get("run_number"),
+            }
+            result[path] = item
+            if item["status"] == "completed" and item["conclusion"] == "failure":
+                failures.append(path)
+        return {
+            "state": "degraded" if failures else "ok",
+            "http": code,
+            "latest": result,
+            "failed_workflows": failures,
+            "source": "GitHub Actions API pubblica, sola lettura",
+        }
+    except (OSError, ValueError, TypeError, urllib.error.URLError) as exc:
+        return {"state": "unavailable", "error_type": type(exc).__name__,
+                "latest": {}, "source": "GitHub Actions API pubblica, sola lettura"}
+
+
 def probe_redaction(site: dict) -> dict:
     pages = site.get("pages", {})
     metrics = pages.get("editorial_status", {})
@@ -352,8 +449,13 @@ def probe_redaction(site: dict) -> dict:
             return None
     feed_age = age_minutes(feed_time)
     geo_age = age_minutes(geo_time)
+    workflows = probe_workflow_runs()
+    state = "ok" if feed_age is not None and feed_age <= 90 else "degraded"
+    if workflows.get("state") == "degraded":
+        state = "degraded"
     return {
-        "state": "ok" if feed_age is not None and feed_age <= 90 else "degraded",
+        "state": state,
+        "automation": workflows,
         "feed_updated_at": feed_time,
         "feed_age_minutes": feed_age,
         "pending_total": metrics.get("pending_total"),
@@ -362,7 +464,8 @@ def probe_redaction(site: dict) -> dict:
         "geopolitica_age_minutes": geo_age,
         "geopolitica_articles": articles.get("items"),
         "geopolitica_unreviewed": articles.get("unreviewed"),
-        "note": "La disponibilità del feed non prova che l'automazione editoriale ChatGPT abbia completato l'ultimo run",
+        "verified_radio_items": (pages.get("geopolitica_radio_verified") or {}).get("items"),
+        "note": "Feed e schede radio sono monitorati separatamente; gli esiti dei workflow mostrano il completamento tecnico, non sostituiscono la verifica editoriale delle fonti.",
     }
 
 
@@ -386,11 +489,56 @@ def read_audit() -> list[dict]:
     if not AUDIT.is_file():
         return []
     try:
-        lines = AUDIT.read_text(encoding="utf-8", errors="replace").splitlines()[-20:]
+        lines = AUDIT.read_text(encoding="utf-8", errors="replace").splitlines()[-100:]
         return [item for line in lines if line.strip()
                 for item in [json.loads(line)] if isinstance(item, dict)]
     except (OSError, ValueError):
         return []
+
+
+def read_check_history() -> list[dict]:
+    if not CHECK_HISTORY.is_file():
+        return []
+    try:
+        rows = []
+        for line in CHECK_HISTORY.read_text(encoding="utf-8", errors="replace").splitlines()[-500:]:
+            if line.strip():
+                value = json.loads(line)
+                if isinstance(value, dict):
+                    rows.append(value)
+        return rows[-50:]
+    except (OSError, ValueError):
+        return []
+
+
+def append_check_history(report: dict) -> list[dict]:
+    STATE.mkdir(mode=0o750, parents=True, exist_ok=True)
+    snapshot = {
+        "checked_at": report.get("checked_at"),
+        "overall": report.get("overall"),
+        "issues": report.get("issues", []),
+        "radio": (report.get("radio") or {}).get("state"),
+        "azuracast": (report.get("azuracast") or {}).get("state"),
+        "youtube": (report.get("youtube") or {}).get("state"),
+        "redaction": (report.get("redaction") or {}).get("state"),
+        "site": (report.get("site") or {}).get("state"),
+        "cpu_percent": (report.get("oracle") or {}).get("cpu_percent"),
+        "memory_percent": (report.get("oracle") or {}).get("memory_percent"),
+        "disk_percent": (report.get("oracle") or {}).get("disk_percent"),
+    }
+    try:
+        with CHECK_HISTORY.open("a", encoding="utf-8") as stream:
+            stream.write(json.dumps(snapshot, ensure_ascii=False, separators=(",", ":")) + "\n")
+        CHECK_HISTORY.chmod(0o600)
+        rows = CHECK_HISTORY.read_text(encoding="utf-8", errors="replace").splitlines()
+        if len(rows) > 500:
+            temp = CHECK_HISTORY.with_suffix(".jsonl.tmp")
+            temp.write_text("\n".join(rows[-500:]) + "\n", encoding="utf-8")
+            temp.replace(CHECK_HISTORY)
+            CHECK_HISTORY.chmod(0o600)
+    except OSError:
+        pass
+    return read_check_history()
 
 
 def maybe_repair_youtube(report: dict) -> dict | None:
@@ -447,6 +595,7 @@ def inspect(repair: bool = False, force_azura: bool = False) -> dict:
         "azuracast": azura,
         "youtube": youtube,
         "redaction": probe_redaction(site),
+        "bulletin": probe_geopolitica_bulletin(),
         "site": site,
         "oracle": oracle,
         "actions": [],
@@ -483,8 +632,11 @@ def inspect(repair: bool = False, force_azura: bool = False) -> dict:
     elif not str(oracle.get("docker", {}).get("azuracast_container", "")).lower().startswith("up "):
         issues.append("azuracast_container_not_running")
     report["audit_log"] = read_audit()
+    if report.get("bulletin", {}).get("cleanup_timer", {}).get("state") != "active":
+        issues.append("geopolitica_cleanup_timer")
     report["issues"] = sorted(set(issues))
     report["overall"] = "ok" if not report["issues"] else "degraded"
+    report["check_history"] = append_check_history(report)
     temp = REPORT.with_suffix(".json.tmp")
     temp.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     temp.replace(REPORT)
