@@ -10,6 +10,9 @@ import json
 import pathlib
 import subprocess
 import time
+import urllib.request
+
+STATION_API = 'https://radio-romanii-italia.duckdns.org/api/nowplaying/1'
 
 SERVICES = ("radio-youtube-visual.service",)
 STATE = pathlib.Path("/var/lib/rdi-control-center/restarts.json")
@@ -18,6 +21,30 @@ MAX_RESTARTS_24H = 3
 
 def systemctl(*args):
     return subprocess.run(["systemctl", *args], capture_output=True, text=True, timeout=15)
+
+def probe_station():
+    try:
+        request = urllib.request.Request(STATION_API, headers={"User-Agent": "RDI-Control-Center/1.0"})
+        with urllib.request.urlopen(request, timeout=8) as response:
+            data = json.load(response)
+        return {
+            "api": "ok",
+            "station_is_online": bool((data.get("station") or {}).get("is_online")),
+            "listeners_current": (data.get("listeners") or {}).get("current"),
+            "note": "API only, not proof of audible stream",
+        }
+    except (OSError, ValueError, TypeError) as exc:
+        return {"api": "error", "error_type": type(exc).__name__}
+
+
+def probe_encoder():
+    try:
+        process = subprocess.run(["pgrep", "-x", "ffmpeg"], capture_output=True, text=True, timeout=5)
+        pids = [pid for pid in process.stdout.splitlines() if pid.isdigit()]
+        return {"ffmpeg_running": bool(pids), "ffmpeg_process_count": len(pids)}
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return {"ffmpeg_running": None, "error_type": type(exc).__name__}
+
 
 def inspect(repair=False):
     now = time.time()
@@ -49,7 +76,7 @@ def inspect(repair=False):
                 restarted = systemctl("restart", service)
                 result["action"] = "restart_attempted" if restarted.returncode == 0 else "restart_failed"
         report.append(result)
-    return {"checked_at": dt.datetime.now(dt.timezone.utc).isoformat(), "services": report}
+    return {"checked_at": dt.datetime.now(dt.timezone.utc).isoformat(), "services": report, "azuracast": probe_station(), "encoder": probe_encoder()}
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
