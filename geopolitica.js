@@ -240,10 +240,8 @@
     for(let i=0;i<identity.length;i++){imageHash=Math.imul(imageHash^identity.charCodeAt(i),16777619)>>>0}
     const variant=(imageHash%10)+1;
     const categoryPicture="./data/geopolitica-images/categories/"+category+"/"+String(variant).padStart(2,"0")+".webp";
-    const editorialPicture=(typeof picture==="string" && /^\.\/data\/geopolitica-images\/geo-[a-z0-9-]+\.png$/.test(picture))?picture:null;
-    img.src=editorialPicture||categoryPicture;
+    img.src=categoryPicture;
     img.onerror=()=>{
-      if(editorialPicture && img.src.includes(editorialPicture.slice(2))){img.src=categoryPicture;return}
       img.onerror=null;img.src=storyIllustration(item);
     };
     img.alt=state.lang==="it"?"Illustrazione editoriale originale RDI, non fotografia dell'evento":"Ilustrație editorială RDI, nu fotografie a evenimentului";
@@ -261,8 +259,6 @@
     meta.append(node("span","",t(topicKey)));
     const date=dateLabel(item.published);if(date)meta.append(node("time","",date));
     const title=node("h3","",item.title);const cover=coverElement(item,featured);
-    const richImage=item.id&&aiArticles[item.id]?.image;
-    if(typeof richImage==="string" && richImage.startsWith("./data/geopolitica-images/") && richImage.endsWith(".png"))cover.querySelector("img").src=richImage;
     card.append(cover,meta,title);
     const intro=String(item.summary||"").replace(/\s+/g," ").trim();
     if(intro && intro.toLocaleLowerCase()!==item.title.toLocaleLowerCase()){card.append(node("p","",intro.slice(0,featured?240:150)+(intro.length>(featured?240:150)?"…":"")))}
