@@ -53,3 +53,5 @@ jobs:
             scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
           ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
             "$REMOTE" "sudo -n python3 '$STAGE/deploy-geopolitica-oracle.py' install-cleanup --php-helper '$STAGE/rdi-geopolitica-auth.php'"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+            "$REMOTE" "sudo -n python3 '$STAGE/deploy-geopolitica-oracle.py' inspect --php-helper '$STAGE/rdi-geopolitica-auth.php'"
