@@ -6,6 +6,7 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 User=root
+TimeoutStartSec=110
 ExecStart=/usr/bin/python3 /opt/rdi-control-center/rdi-control-center.py --repair
 NoNewPrivileges=true
 PrivateTmp=true
