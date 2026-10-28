@@ -234,8 +234,18 @@
     wrap.style.cssText="position:relative;width:100%;margin:0 0 14px;overflow:hidden;border-radius:12px;background:#15283c";
     const img=node("img","rdi-editorial-cover");
     const picture=item.id&&aiArticles[item.id]?.image;
-    img.src=(typeof picture==="string" && /^\.\/data\/geopolitica-images\/geo-[a-z0-9-]+\.png$/.test(picture))?picture:storyIllustration(item);
-    img.onerror=()=>{img.onerror=null;img.src=storyIllustration(item)};
+    const category=TOPICS.includes(item.category)?item.category:"diplomatie";
+    const identity=String(item.id||item.url||item.title||"rdi");
+    let imageHash=2166136261;
+    for(let i=0;i<identity.length;i++){imageHash=Math.imul(imageHash^identity.charCodeAt(i),16777619)>>>0}
+    const variant=(imageHash%10)+1;
+    const categoryPicture="./data/geopolitica-images/categories/"+category+"/"+String(variant).padStart(2,"0")+".webp";
+    const editorialPicture=(typeof picture==="string" && /^\.\/data\/geopolitica-images\/geo-[a-z0-9-]+\.png$/.test(picture))?picture:null;
+    img.src=editorialPicture||categoryPicture;
+    img.onerror=()=>{
+      if(editorialPicture && img.src.includes(editorialPicture.slice(2))){img.src=categoryPicture;return}
+      img.onerror=null;img.src=storyIllustration(item);
+    };
     img.alt=state.lang==="it"?"Illustrazione editoriale originale RDI, non fotografia dell'evento":"Ilustrație editorială RDI, nu fotografie a evenimentului";
     img.loading="lazy";img.decoding="async";
     img.style.cssText="display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover";
