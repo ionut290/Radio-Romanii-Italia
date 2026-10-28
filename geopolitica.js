@@ -170,12 +170,11 @@
     const dialog=$("article-dialog");if(!dialog)return;
     const record=item.id?aiArticles[item.id]:null;
     const publishedArticle=record?.[state.lang];
-    const paragraphs=CONTEXT[state.lang][item.category]||CONTEXT[state.lang].diplomatie;
     $("article-category").textContent=t(TOPIC_NAMES[item.category]?.[0]||"all")+" · RDI";
     $("article-title").textContent=item.title;
     $("article-disclaimer").textContent=publishedArticle?(record.editorial_status==="editorially_reviewed"?(state.lang==="it"?"Approfondimento RDI con fonti indicate e revisione editoriale.":"Analiză RDI cu surse indicate și revizuire editorială."):(state.lang==="it"?"Analisi RDI assistita dall'IA, non ancora revisionata dalla redazione.":"Analiză RDI asistată de IA, încă nerevizuită editorial.")) : state.lang==="it"
-      ?"Approfondimento contestuale RDI. Il titolo è tratto da una fonte esterna e non è stato verificato indipendentemente. Il testo seguente spiega il contesto generale: non descrive come accertati i dettagli dell'episodio."
-      :"Context explicativ RDI. Titlul provine dintr-o sursă externă și nu a fost verificat independent. Textul următor explică tema în general, fără a prezenta drept certe detaliile evenimentului.";
+      ?"Scheda della notizia selezionata. La fonte esterna è indicata in fondo: RDI non dispone ancora di un approfondimento verificato per questo specifico articolo."
+      :"Fișa știrii selectate. Sursa externă este indicată mai jos: RDI nu are încă o analiză verificată pentru acest articol.";
     const body=$("article-body");body.replaceChildren(coverElement(item,true));
     if(publishedArticle){
       if(publishedArticle.lead)body.append(node("p","",String(publishedArticle.lead)));
@@ -184,7 +183,16 @@
         for(const p of section.paragraphs||[])body.append(node("p","",String(p)));
       }
       if(publishedArticle.conclusion){body.append(node("h3","",state.lang==="it"?"Conclusioni":"Concluzii"));body.append(node("p","",String(publishedArticle.conclusion)))}
-    } else body.append(...paragraphs.map(p=>node("p","",p)));
+    } else {
+      // No generic category essay masquerading as a specific news analysis.
+      body.append(node("h3","",state.lang==="it"?"La notizia":"Știrea"));
+      body.append(node("p","",item.title));
+      if(item.summary)body.append(node("p","",item.summary));
+      body.append(node("h3","",state.lang==="it"?"Cosa sappiamo dalla fonte":"Ce știm din sursă"));
+      body.append(node("p","",state.lang==="it"
+        ?"Questa scheda riporta il titolo pubblicato dalla testata indicata, con la data di pubblicazione. Per i dettagli, i protagonisti, le cause e le conseguenze occorre consultare l'articolo originale: non aggiungiamo ricostruzioni non documentate."
+        :"Această fișă redă titlul publicației citate și data publicării. Pentru detalii, persoanele implicate, cauze și consecințe, consultați articolul original; nu adăugăm explicații neverificate."));
+    }
     const image=record?.image;
     if(typeof image==="string" && image.startsWith("./data/geopolitica-images/") && image.endsWith(".png")){
       const img=body.querySelector(".rdi-editorial-cover");if(img)img.src=image;
@@ -263,7 +271,7 @@
     const intro=String(item.summary||"").replace(/\s+/g," ").trim();
     if(intro && intro.toLocaleLowerCase()!==item.title.toLocaleLowerCase()){card.append(node("p","",intro.slice(0,featured?240:150)+(intro.length>(featured?240:150)?"…":"")))}
     const hasLongArticle=!!(item.id&&aiArticles[item.id]?.[state.lang]);
-    const contextLink=node("button","read-more",state.lang==="it"?(hasLongArticle?"Leggi articolo completo RDI":"Leggi il contesto RDI"):(hasLongArticle?"Citește articolul complet RDI":"Citește contextul RDI"));contextLink.type="button";contextLink.style.cssText="cursor:pointer;background:transparent;border:0;color:inherit;text-decoration:underline;padding:8px 10px 8px 0;margin-right:12px";contextLink.addEventListener("click",()=>showContext(item));card.append(contextLink);
+    const contextLink=node("button","read-more",state.lang==="it"?(hasLongArticle?"Leggi articolo completo RDI":"Dettagli della notizia"):(hasLongArticle?"Citește articolul complet RDI":"Detaliile știrii"));contextLink.type="button";contextLink.style.cssText="cursor:pointer;background:transparent;border:0;color:inherit;text-decoration:underline;padding:8px 10px 8px 0;margin-right:12px";contextLink.addEventListener("click",()=>showContext(item));card.append(contextLink);
     const link=node("a","read-more",t("read"));link.href=item.url;link.target="_blank";link.rel="noopener noreferrer";card.append(link);
     return card;
   }
