@@ -127,7 +127,8 @@ def article_radio_items(articles: dict, lang: str, now: dt.datetime) -> list[dic
                 continue
             hosts.add(host)
             valid_urls.append(source_url)
-        if len(hosts) < 2:
+        primary_url = article.get("source_url")
+        if len(hosts) < 2 or primary_url not in valid_urls:
             continue
         localized = article.get(lang)
         if not isinstance(localized, dict):
