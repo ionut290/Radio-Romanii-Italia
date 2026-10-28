@@ -1,0 +1,18 @@
+[Unit]
+Description=Dedicated Varga Cantieri and Gestionale monitor with guarded recovery
+After=network-online.target docker.service
+Wants=network-online.target docker.service
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /opt/varga-platform-bot/varga-platform-bot.py --repair
+TimeoutStartSec=150
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/varga-platform-bot
+
+[Install]
+WantedBy=multi-user.target
