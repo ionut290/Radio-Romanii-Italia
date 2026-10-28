@@ -38,4 +38,12 @@ jobs:
           sudo -n docker ps -a --format '{{.Names}}' | grep -E '^(varga-cantieri|vg-gestionale-oracle|varga-gestionale-oracle)' | while IFS= read -r name; do
             sudo -n docker inspect --format='name={{.Name}} | image={{.Config.Image}} | state={{.State.Status}} | health={{if .State.Health}}{{.State.Health.Status}}{{else}}not-configured{{end}} | restart={{.HostConfig.RestartPolicy.Name}} | compose_project={{index .Config.Labels "com.docker.compose.project"}} | compose_service={{index .Config.Labels "com.docker.compose.service"}} | ports={{json .NetworkSettings.Ports}} | healthcheck={{json .Config.Healthcheck}}' "$name"
           done
+          echo '--- Servizi del bot Varga ---'
+          systemctl is-active varga-platform-bot.timer || true
+          systemctl is-active varga-platform-dashboard.service || true
+          systemctl show varga-platform-bot.service -p Result -p ExecMainStatus -p ExecMainStartTimestamp --no-pager || true
+          echo '--- Dashboard locale Oracle ---'
+          curl --fail --silent --show-error --max-time 8 http://127.0.0.1:8790/api/status | python3 -c 'import json,sys; d=json.load(sys.stdin); print("overall="+str(d.get("overall"))); [print(p["label"]+": "+p["state"]+"; "+", ".join(k+"="+v["state"] for k,v in p["services"].items())) for p in d.get("platforms",{}).values()]' || true
+          echo '--- Ascolto locale porta 8790 ---'
+          ss -lnt | grep -F '127.0.0.1:8790' || true
           REMOTE
