@@ -1,0 +1,50 @@
+name: Geopolitica category WebP images
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build_geopolitica_category_images.py
+      - .github/workflows/geopolitica-category-images.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: geopolitica-category-images
+  cancel-in-progress: false
+jobs:
+  build-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image encoder
+        run: python -m pip install 'Pillow>=11,<13'
+      - name: Generate 70 WebP illustrations
+        run: python scripts/build_geopolitica_category_images.py
+      - name: Verify 10 images in each category
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          root=Path('data/geopolitica-images/categories')
+          for name in ('diplomatie','conflicte','europa','economie','energie','securitate','tehnologie','clima'):
+              files=sorted((root/name).glob('*.webp'))
+              assert [p.name for p in files]==[f'{i:02}.webp' for i in range(1,11)], (name,files)
+              for p in files:
+                  with Image.open(p) as im:
+                      assert im.format=='WEBP' and im.size==(1200,675),p
+              print(name,len(files))
+          PY
+      - name: Commit only newly generated category images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/geopolitica-images/categories/conflicte/ data/geopolitica-images/categories/europa/ data/geopolitica-images/categories/economie/ data/geopolitica-images/categories/energie/ data/geopolitica-images/categories/securitate/ data/geopolitica-images/categories/tehnologie/ data/geopolitica-images/categories/clima/
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish 70 topic-specific WebP images for Geopolitica"
+            git push origin HEAD:main
+          fi
