@@ -274,7 +274,7 @@ def cleanup_played(client: Client, data: dict) -> None:
         relative = str(record.get("path", ""))
         filename = relative.split("/")[-1]
         match = FILENAME_RE.fullmatch(filename)
-        if not match or filename in completed or not record.get("playlists"):
+        if not match:
             continue
         ids = playlist_ids(record)
         if ids is None or not ids.issubset({12}):
@@ -282,8 +282,6 @@ def cleanup_played(client: Client, data: dict) -> None:
             continue
         # Filename timestamps are local Rome time. A playlist play after this
         # edition was generated proves this single-track playlist selected it.
-        generated = dt.datetime.strptime("".join(match.groups()), "%Y%m%d%H%M")
-        generated = generated.replace(tzinfo=dt.timezone(dt.timedelta(0))).timestamp()
         # Convert Europe/Rome wall time to UTC without relying on the host timezone.
         try:
             from zoneinfo import ZoneInfo
@@ -292,8 +290,10 @@ def cleanup_played(client: Client, data: dict) -> None:
         except (ValueError, OverflowError):
             continue
         finished = playlist_played_at > generated and now >= playlist_played_at + 450
-        if not (filename in completed or (finished and episode_title(
-                (data.get("now_playing") or {}).get("song") or {}) != match.group(0))):
+        currently_playing = episode_title((data.get("now_playing") or {}).get("song") or {}) == match.group(0)
+        history_confirms = filename in completed and not currently_playing
+        playlist_confirms = finished and not currently_playing and 12 in ids
+        if not (history_confirms or playlist_confirms):
             continue
         media_id = int(record.get("id", 0))
         if media_id <= 0:
