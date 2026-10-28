@@ -44,7 +44,7 @@ def collect_text(url):
         for bad in soup(["script","style","nav","footer","header"]):bad.decompose()
         candidate=soup.find("article") or soup.find("main")
         article=candidate.get_text(" ",strip=True) if candidate else ""
-    article=re.sub(r"\\s+"," ",article).strip()
+    article=re.sub(r"\s+"," ",article).strip()
     return article[:22000] if len(article)>=1000 else ""
 
 def create_article(item,source_text):
