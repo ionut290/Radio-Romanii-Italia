@@ -36,7 +36,7 @@ footer{margin-top:22px;color:var(--muted);font-size:12px}
 <section class="card"><div class="head"><h2>Sito web</h2><span class="badge" id="site-state">—</span></div><div id="site-pages"></div></section>
 <section class="card"><div class="head"><h2>Oracle Cloud</h2><span class="badge" id="oracle-state">—</span></div><div class="stats" id="oracle-stats"></div><pre id="docker"></pre></section>
 </div>
-<section class="card"><div class="head"><h2>Azioni controllate</h2><span class="meta">accesso locale protetto</span></div><div class="control-buttons"><button id="refresh-action" type="button">Aggiorna controlli ora</button><button id="recover-action" type="button">Riattiva notiziario · playlist 12</button></div><div class="control-result" id="control-result" role="status" aria-live="polite">Il ripristino interviene solo se trova un MP3 recente, assegnato e successivo all’ultima trasmissione. Non tocca altre playlist o YouTube Live.</div></section>
+<section class="card"><div class="head"><h2>Azioni controllate</h2><span class="meta">accesso locale protetto</span></div><div class="control-buttons"><button id="refresh-action" type="button">Aggiorna controlli ora</button><button id="recover-action" type="button">Riattiva notiziario · playlist 12</button><button id="suspend-action" type="button">Sospendi notiziario · playlist 12</button></div><div class="control-result" id="control-result" role="status" aria-live="polite">Il ripristino richiede un MP3 recente, assegnato e successivo all’ultima trasmissione. La sospensione ferma solo la playlist 12. Nessuna azione tocca altre playlist o YouTube Live.</div></section>
 <section class="card" aria-live="polite"><div class="head"><h2>Problemi rilevati e cosa verificare</h2><span class="meta" id="diag-count">—</span></div><div class="diagnostics" id="diagnostics"></div></section>
 <section class="card"><div class="head"><h2>Interventi automatici registrati</h2><span class="meta">registro locale Oracle</span></div><div id="actions"></div></section>
 <footer>Dashboard locale, sola lettura. Apribile con tunnel SSH verso 127.0.0.1:8787. Il collegamento YouTube RTMP non è dichiarato attivo soltanto perché FFmpeg è in esecuzione: va confermato separatamente in YouTube Studio.</footer>
@@ -103,14 +103,14 @@ async function invokeControl(path,payload){
   result.textContent=data.message||'Operazione completata.';
   if(!response.ok)result.textContent='Errore: '+result.textContent;
  }catch(e){result.textContent='Connessione al Control Center non riuscita: '+e.message}
- finally{refresh.disabled=false;recover.disabled=String(($('azura-state').textContent||'').toLowerCase())==='ok'&&String(document.querySelector('#azura-stats .stat:nth-child(2) b')?.textContent||'').toLowerCase()==='true'}
+ finally{refresh.disabled=false;const active=String(document.querySelector('#azura-stats .stat:nth-child(2) b')?.textContent||'').toLowerCase()==='true';recover.disabled=active;suspend.disabled=!active}
 }
 function render(d){
  $('checked').textContent=d.checked_at?new Date(d.checked_at).toLocaleString('it-IT'):'—';$('overall').textContent=d.overall||'—';$('overall').className=d.overall==='ok'?'':'error';
  const r=d.radio||{};badge('radio-state',r.state);const np=r.nowplaying||{},st=r.stream||{};
  stats('radio-stats',[['Stazione online',np.station_is_online?'sì':'no'],['Ascoltatori live',np.listeners_current],['In onda',np.title||'—'],['Stream audio',st.audio_frame_detected?'MP3 rilevato':(st.state==='ok'?'stream raggiungibile':'errore')]]);
  $('radio-note').textContent=(np.artist||'')+(st.content_type?' · '+st.content_type:'')+(st.state==='ok'&&!st.audio_frame_detected?' · formato del campione non identificato':'');
- const a=d.azuracast||{};badge('azura-state',a.state);const recoverButton=$('recover-action');if(recoverButton){const active=String(a.playlist_enabled??'').toLowerCase()==='true';recoverButton.disabled=active;recoverButton.textContent=active?'Notiziario già attivo · playlist 12':'Riattiva notiziario · playlist 12'}stats('azura-stats',[['Playlist',a.playlist_id||'—'],['Attiva',String(a.playlist_enabled??'—')],['Fascia oraria','ogni ora :'+String(a.scheduled_minute||'—').padStart(2,'0')],['Brani assegnati',a.media_count??'—'],['Ultima riproduzione',a.last_played_at?(new Date(a.last_played_at).toLocaleString('it-IT')):'—'],['Media RDI',a.own_media_count??'—']]);
+ const a=d.azuracast||{};badge('azura-state',a.state);const active=String(a.playlist_enabled??'').toLowerCase()==='true';const recoverButton=$('recover-action'),suspendButton=$('suspend-action');if(recoverButton){recoverButton.disabled=active;recoverButton.textContent=active?'Notiziario già attivo · playlist 12':'Riattiva notiziario · playlist 12'}if(suspendButton){suspendButton.disabled=!active;suspendButton.textContent=active?'Sospendi notiziario · playlist 12':'Notiziario già sospeso · playlist 12'}stats('azura-stats',[['Playlist',a.playlist_id||'—'],['Attiva',String(a.playlist_enabled??'—')],['Fascia oraria','ogni ora :'+String(a.scheduled_minute||'—').padStart(2,'0')],['Brani assegnati',a.media_count??'—'],['Ultima riproduzione',a.last_played_at?(new Date(a.last_played_at).toLocaleString('it-IT')):'—'],['Media RDI',a.own_media_count??'—']]);
  const y=d.youtube||{};badge('youtube-state',y.state);stats('youtube-stats',[['Modalità',y.mode||'—'],['Processi encoder',y.encoder_process_count??'—'],['Relay standard',y.services?.standard?.state||'—'],['Relay visuale',y.services?.visual?.state||'—'],['Watchdog browser',y.services?.browser_watchdog?.state||'—'],['RTMP confermato',y.rtmp_connection_confirmed?'sì':'no']]);$('youtube-note').textContent=y.note||'';
  const n=d.redaction||{};badge('redaction-state',n.state);stats('redaction-stats',[['Feed notizie, minuti',n.feed_age_minutes??'—'],['Notizie in feed',n.feed_total??'—'],['In coda',n.pending_total??'—'],['Geopolitica, minuti',n.geopolitica_age_minutes??'—'],['Articoli geopolitici',n.geopolitica_articles??'—'],['Non revisionati',n.geopolitica_unreviewed??'—']]);
  badge('site-state',d.site?.state);pageRows(d.site?.pages);renderDiagnostics(d);
@@ -122,6 +122,9 @@ async function load(){try{const r=await fetch('/api/status?ts='+Date.now(),{cach
 $('refresh-action').addEventListener('click',()=>invokeControl('/api/actions/refresh',{}));
 $('recover-action').addEventListener('click',()=>{
  if(confirm('Riattivare soltanto la playlist geopolitica ID 12? Il server procederà solo se l’MP3 è recente, assegnato e non già trasmesso.')) invokeControl('/api/actions/recover-geopolitica',{confirmation:'RIATTIVA NOTIZIARIO ID 12'});
+});
+$('suspend-action').addEventListener('click',()=>{
+ if(confirm('Sospendere soltanto il notiziario geopolitico sulla playlist ID 12? La radio e le altre playlist continuano normalmente.')) invokeControl('/api/actions/suspend-geopolitica',{confirmation:'SOSPENDI NOTIZIARIO ID 12'});
 });
 load();setInterval(load,30000);
 </script></body></html>

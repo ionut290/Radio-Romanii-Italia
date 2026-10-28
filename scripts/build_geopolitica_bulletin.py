@@ -24,7 +24,6 @@ ARTICLES = ROOT / "data/geopolitica-articles.json"
 MAX_SOURCE_CHECK_AGE_HOURS = 48
 AGGREGATOR_HOSTS = {"news.google.com", "translate.google.com", "bing.com", "www.bing.com"}
 MAX_STORIES = 5
-MAX_AGE_HOURS = 35  # Publication dates from the curated feed have day precision.
 HISTORY_LIMIT = 72  # Recent broadcast editions kept locally on Oracle.
 DEFAULT_HISTORY = Path(os.environ.get("RDI_GEOPOLITICA_HISTORY", "/var/lib/rdi-geopolitica/broadcast-history.json"))
 
@@ -175,12 +174,9 @@ def available_items(now: dt.datetime, lang: str, curated: dict, extras: dict, hi
             publication = dt.date.fromisoformat(str(day))
         except (TypeError, ValueError):
             continue
-        if publication > now.date():
-            continue
-        # Day-precision dates are approximated to midday local, not interpreted as event times.
-        published_at = dt.datetime.combine(publication, dt.time(12, 0), tzinfo=ROME)
-        age_hours = (now - published_at).total_seconds() / 3600
-        if age_hours > MAX_AGE_HOURS or age_hours < -12:
+        # The broadcast only includes stories published on today's Rome calendar date.
+        # If no current-day item passes editorial/source checks, no MP3 is produced.
+        if publication != now.date():
             continue
         if url in seen_urls:
             continue
@@ -271,10 +267,12 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dic
     stories = available_items(now, lang, curated, extras, history, articles)
     if not stories:
         return None
-    segments = [{
-        "kind": "intro",
-        "text": OPENING[lang] if lang == "it" else "\n".join((OPENING[lang], CAUTION[lang])),
-    }]
+    spoken_date = display_date(now.date(), lang)
+    if lang == "it":
+        opening_text = f"Notiziario geopolitico del {spoken_date}. " + OPENING[lang]
+    else:
+        opening_text = f"Buletin geopolitic din {spoken_date}. " + "\n".join((OPENING[lang], CAUTION[lang]))
+    segments = [{"kind": "intro", "text": opening_text}]
     public_articles = []
     for index, item in enumerate(stories):
         label = country_name(item, lang)
@@ -300,6 +298,7 @@ def build(now: dt.datetime, lang: str, curated: dict, extras: dict, history: dic
     return {
         "language": lang, "generated_at": now.isoformat(),
         "edition_id": edition_id,
+        "edition_date": now.date().isoformat(),
         "track_title": f"RDI-GEOPOLITICA-{lang.upper()}-{edition_id}",
         "story_count": len(stories),
         "story_signatures": [story_signature(x) for x in stories],

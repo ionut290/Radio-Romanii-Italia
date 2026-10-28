@@ -42,6 +42,19 @@ def run_recovery():
     return outcomes[-1] if outcomes else "UNKNOWN"
 
 
+def run_suspension():
+    result = subprocess.run(
+        ["/usr/bin/python3", str(ROOT / "deploy-geopolitica-oracle.py"), "suspend",
+         "--php-helper", str(ROOT / "rdi-geopolitica-auth.php")],
+        capture_output=True, text=True, timeout=100, check=False,
+    )
+    if result.returncode != 0:
+        raise RuntimeError("playlist suspension failed")
+    outcomes = [line.partition("=")[2] for line in result.stdout.splitlines()
+                if line.startswith("RDI_GEOPOLITICA_HOURLY=")]
+    return outcomes[-1] if outcomes else "UNKNOWN"
+
+
 def append_audit(action, service, result, verified=False):
     AUDIT.parent.mkdir(mode=0o750, parents=True, exist_ok=True)
     entry = {
@@ -126,10 +139,14 @@ class Handler(BaseHTTPRequestHandler):
             self.send_json(400, {"ok": False, "message": "Richiesta non valida"})
             return
         path = self.path.split("?", 1)[0]
-        if path not in ("/api/actions/refresh", "/api/actions/recover-geopolitica"):
+        if path not in ("/api/actions/refresh", "/api/actions/recover-geopolitica", "/api/actions/suspend-geopolitica"):
             self.send_json(404, {"ok": False, "message": "Azione non disponibile"})
             return
-        if path == "/api/actions/recover-geopolitica" and body.get("confirmation") != "RIATTIVA NOTIZIARIO ID 12":
+        confirmations = {
+            "/api/actions/recover-geopolitica": "RIATTIVA NOTIZIARIO ID 12",
+            "/api/actions/suspend-geopolitica": "SOSPENDI NOTIZIARIO ID 12",
+        }
+        if path in confirmations and body.get("confirmation") != confirmations[path]:
             self.send_json(400, {"ok": False, "message": "Conferma non valida"})
             return
         if not ACTION_LOCK.acquire(blocking=False):
@@ -143,6 +160,24 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_json(200, {"ok": True, "changed": False,
                                      "message": "Controlli aggiornati. Nessuna impostazione modificata.",
                                      "status": data})
+                return
+            if path == "/api/actions/suspend-geopolitica":
+                outcome = run_suspension()
+                data = run_status_check()
+                enabled = str((data.get("azuracast") or {}).get("playlist_enabled", "")).lower() == "true"
+                changed = outcome == "SUSPENDED_NO_CURRENT_EDITION" and not enabled
+                messages = {
+                    "SUSPENDED_NO_CURRENT_EDITION": "Playlist 12 sospesa e verifica aggiornata.",
+                    "ALREADY_SUSPENDED": "Playlist 12 era già sospesa.",
+                    "NOT_CONFIGURED": "Playlist 12 non trovata; nessuna modifica eseguita.",
+                    "UNEXPECTED_PLAYLIST_ID": "Identità playlist inattesa; intervento bloccato.",
+                }
+                message = messages.get(outcome, "Sospensione non verificata; controlla lo stato.")
+                append_audit("geopolitica_suspend", "azuracast_playlist_12", outcome,
+                             verified=not enabled)
+                refresh_report_audit(data)
+                self.send_json(200, {"ok": True, "changed": changed, "message": message,
+                                     "suspension": outcome, "status": data})
                 return
             outcome = run_recovery()
             data = run_status_check()

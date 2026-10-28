@@ -499,12 +499,19 @@ def recover(client: Client) -> None:
     print("RDI_RECOVERY=ENABLED_WITH_RECENT_UNPLAYED_ASSIGNED_MP3")
 
 def suspend(client: Client) -> None:
+    """Suspend only playlist 12; used when no current verified bulletin exists."""
     rec = playlist(client, False)
     if rec is None:
         print("RDI_GEOPOLITICA_HOURLY=NOT_CONFIGURED")
         return
+    if int(rec.get("id", -1)) != 12:
+        print("RDI_GEOPOLITICA_HOURLY=UNEXPECTED_PLAYLIST_ID")
+        return
+    if not rec.get("is_enabled"):
+        print("RDI_GEOPOLITICA_HOURLY=ALREADY_SUSPENDED")
+        return
     enable(client, rec, False)
-    print("RDI_GEOPOLITICA_HOURLY=SUSPENDED_NO_RECENT_VERIFIED_NEWS")
+    print("RDI_GEOPOLITICA_HOURLY=SUSPENDED_NO_CURRENT_EDITION")
 
 
 def main() -> int:
