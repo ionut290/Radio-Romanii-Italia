@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-10-28T01:57:15.625968+00:00",
+  "news_updated_at": "2026-10-28T01:59:28.997316+00:00",
   "editorial_updated_at": "2026-10-28T01:00:00Z",
   "translations_updated_at": "2026-10-28T00:57:51.409547+00:00",
   "feed_total": 75,
-  "feed_extended_400": 28,
-  "feed_missing_body": 47,
+  "feed_extended_400": 31,
+  "feed_missing_body": 44,
   "feed_short_body": 0,
   "editorial_total": 35,
   "archived_editorials": 61,
   "translation_records": 48,
-  "pending_total": 104,
-  "pending_filtered_out": 304,
-  "editorial_verde": 29,
-  "editorial_galben": 40,
+  "pending_total": 105,
+  "pending_filtered_out": 303,
+  "editorial_verde": 32,
+  "editorial_galben": 37,
   "editorial_rosu": 33,
   "pending": [
     {
@@ -668,8 +668,8 @@
       "published": "2026-10-27T22:00:24+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/alegeri-in-israel-partidul-lui-netanyahu-conduce-dar-niciuna-din-cele-doua-tabere-nu-are-o-cale-clara-catre-formarea-unui-guvern-4011437",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 401
     },
     {
       "title": "Gheorghe Piperea va fi candidatul AUR la Primăria Capitalei, a anunțat George Simion",
@@ -767,8 +767,8 @@
       "published": "2026-10-27T20:59:34+00:00",
       "url": "https://www.digi24.ro/stiri/externe/sua/ted-bundy-identificat-ca-ucigasul-unei-adolescente-din-utah-dupa-cinci-decenii-detaliile-care-au-schimbat-ancheta-4011499",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 408
     },
     {
       "title": "Tifoso in coma, 8 arresti e confessa l'aggressore di 19 anni",
@@ -942,15 +942,6 @@
       "words": 0
     },
     {
-      "title": "ex Ilva, iniziato incontro Governo-sindacati su futuro Taranto - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-27T16:36:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQWUlsc3ZFWVBLWkdkek5sand3anJiM2pLNTlUTXFINXpnemdZcFY2RmpQX0dGUU9YSmtOQnZCeDg5MGl4YnpjZmFfWlFPODNvTmFDSVEtQXpCQTA5VzFFbUdtanNQV0c1RVpHUWs4cEE4bFhTbjhXV2wxVzlweFMzbV93b1VlR3VQd05wTnlpMlJjUkgwRzc3OTB2ME80ejhwOWxCTVhRSlBlOFgxdVJQWWhR?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Roncadin annuncia oltre 80 milioni di investimenti tra Italia e USA: obiettivo 500 milioni di ricavi - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-27T16:21:19+00:00",
@@ -978,15 +969,6 @@
       "words": 0
     },
     {
-      "title": "Ristoranti nel Padovano, attività in crescita ma solo il 42% resta dopo cinque anni: i dati APPE - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-27T16:17:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY3I2TWlMODY4X09NczEydHpEeXNpdWdZZzhzSW8zOV9jV01DM3hWcWtEdHJvUWhGVG5SWlhyWWNoRTJaLXpuNzhHZndNNUpZTTVTSEcyc2pxeGNlUUt2X1Jybk5vbUtrSEt5bzFKUlZFdlRETjhuTE8tVjBGZ0VGWFJxTmdHR2JxYVRWMVhUUk92QQ?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Angeletti (Santandrea): \"Comodità, servizi e sicurezza sono i driver della domanda di lusso in Italia” - Idealista",
       "category": "Italia",
       "published": "2026-10-27T16:02:46+00:00",
@@ -1003,15 +985,6 @@
       "source": "Rotalianul – Revista românului din Italia",
       "status": "verde",
       "words": 438
-    },
-    {
-      "title": "Tredicesime detassate in arrivo, come cambiano gli importi: ecco le simulazioni per fasce di reddito - Il Messaggero",
-      "category": "Italia",
-      "published": "2026-10-27T15:17:49+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdmFDaDQzQU9XWVVpX3JjMEFQclNRTWdnR3BoSFJEVDJGTDVndEJYNW5QSUdwYzB6WjhRck11ZkhmTjBocW9vTFFjRFUwQXpHdkpHY1A0VFlFNzNqMXJYRXVoeE84M2hXYWxJNmZwZm5zaFlGRW9JZnhSLTl5YWU2WDQtV1h1bjRHUU5rMnltdHhocEtMUXpIYkN4MEctUjVXbi1NWUNYU19fOVJoY2I40gGuAUFVX3lxTFBxemd0Z3FsaWtSZlM2RG5McUpwYkdTa0pzMl9OSy15ZUhINXpnb3JCclVCTDh2Tl95c2pNOFh1UzdBZnM2eGV5Vk9rYkVJdWEzWE1Pc1dtS04tWTZoRmxORkVzQk1Xd1A1UVA0ZmlUVHY3cGNnclo5c19wcExVZHV4Yzl2aVNrazQ4V1ZrU3Zkb3FjbWxhT1NSRWlyN0VHa3RjTF9",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Notizie di Padova ore 10: sciopero dei teatri, multe, terme e sostenibilità urbana - Padova24Ore",
@@ -1059,13 +1032,22 @@
       "words": 0
     },
     {
+      "title": "Negozi sfitti a Padova, un locale può restare vuoto per 7 anni: «Servono interventi strutturali» - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-27T12:43:53+00:00",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90Y0hnd1dqQzFFbFlyTUtFc2RvZnB0STVvekR0T1JaazJpNUdMTWJ6SklzdVkxNmNJRkZ5cFZuRV80Y3owTFphaWtvWGtrZEljMS0wa3lDWFltbi1wMndwdVNPajVYN1NiQ0U0eWZ3?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "iPhone Duo con schermi rotti, Apple sostituirà i modelli difettosi",
       "category": "Italia",
       "published": "2026-10-27T12:13:42+00:00",
       "url": "https://www.ansa.it/canale_tecnologia/notizie/future_tech/2026/10/27/iphone-duo-con-schermi-rotti-apple-sostituira-i-modelli-difettosi_a634de00-d966-4953-9124-1cf0826b17fc.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 426
     },
     {
       "title": "Clima, Ue: Per adattamento infrastrutture servono 70 miliardi l'anno - Geagency - Geagency",
@@ -1118,6 +1100,15 @@
       "published": "2026-10-27T09:43:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOU1RsSmRDZ2hlc205MWZmVVlKNHYzVFViV0hzMGtwVWJwdWZCM1N3eW5vMkFGMnpuSm5XRlpBRS1oMGh4MV9lYVFHbkxFRjc3VENOWVY1cllfOHhCVGxQS3VoRVR2YzcxNmladXRBS1I4YkY4ZE5jNDJaNExqczd1aFdPXzl4OEVKdmFzM2ZRSTEtSzBOdEZETlQ3VWdRdnFNT1BzcThBa1p2UUlMNlQwcEhxc3pRSjlCd1dvN0hVRS1oY1dGQWxUNFNyS3NXMTAxNG1IczNiN0ZsVjBuRjd1ZzM1a3U2VzlxSS1TZXBqYk5CaTV3WnZIMG81UFV3eUNqS0HSAYcCQVVfeXFMTkRiT2JKcTBIME9Ea3k0S0xzdlFKRjBZaXU2b3pYbTVCbFJfM0dMSjhWNVdoMmRLcTBMQk1HWjF4dmd4UGlYbDZ2SVE2RDd0eGt",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nur atteso al Marco Polo il 27 ottobre: raggiunge la famiglia accolta per le cure a Padova - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-27T09:35:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZVUwb2VfeFJxR1JUMExOazFET29TYUFId216eHY1S2czdnVnLUFyRlpDQnJkekpYWlJ6VW85eTlUejJ1SUt1OEFCY2RTdWRQdmRGLVhKcHBRdUxyM1VuQ1VvMGRuT3pEblhpNWJIZnBHdzVacEFzNTdUSEI3d1FTQ3lhS0I?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1219,6 +1210,15 @@
       "source": "Inail",
       "status": "verde",
       "words": 483
+    },
+    {
+      "title": "Chiusura ponte di Zinola, esplode la rabbia degli esercenti - RaiNews",
+      "category": "Italia",
+      "published": "2026-10-26T13:49:44+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQYmk3QUFoaEtpRDVnSVk3d1ZHU1NmNks3NDllLVdRdGk2LWZIaHFNaFlrbTBZc2NYM1hlSmJ3dEpJX3N5dFd6VW9ETVpNY2VoSXdwZ0tGYmg2dVZPZUFOVE5QWnU3WmlzODNaZzVFckxTcUEzYUR5X2FyelN6ZmFSQXhrbWVCTnBYY0FfbzIyRFdMRmYtdmlTN19fVTVOdXhkOVdpWlMwbjhPdWgzVDdTYlA1am92LWRDRi1pTzlOQmxvNXREeTNncE9HTTlxR1p0WTk1bkl5ZUlPSkx3LUNrSWJVWHnSAeoBQVVfeXFMT2JkaHdOMGxQbWoyU0Zqai1TM2VxWU9JTURwY3owQWFPZkVFTHNBU3hNUkE1M2xHQVIxOWtKbTNZVHhzTXhFVkVQYnNLY2phSVliMU1iMF9uUVhnZTUtSUlCQnZ3a2FySDYzbjc0ZVl",
+      "source": "RaiNews",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Franţa adoptă restricţii pentru a împiedica escaladarea violenţelor în timpul protestelor - StiriDiaspora",
