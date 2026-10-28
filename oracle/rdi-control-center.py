@@ -370,6 +370,17 @@ def append_audit(entry: dict) -> None:
     AUDIT.chmod(0o600)
 
 
+def read_audit() -> list[dict]:
+    if not AUDIT.is_file():
+        return []
+    try:
+        lines = AUDIT.read_text(encoding="utf-8", errors="replace").splitlines()[-20:]
+        return [item for line in lines if line.strip()
+                for item in [json.loads(line)] if isinstance(item, dict)]
+    except (OSError, ValueError):
+        return []
+
+
 def maybe_repair_youtube(report: dict) -> dict | None:
     youtube = report.get("youtube", {})
     services = youtube.get("services", {})
@@ -459,6 +470,7 @@ def inspect(repair: bool = False, force_azura: bool = False) -> dict:
         issues.append("azuracast_container_missing")
     elif not str(oracle.get("docker", {}).get("azuracast_container", "")).lower().startswith("up "):
         issues.append("azuracast_container_not_running")
+    report["audit_log"] = read_audit()
     report["issues"] = sorted(set(issues))
     report["overall"] = "ok" if not report["issues"] else "degraded"
     temp = REPORT.with_suffix(".json.tmp")
