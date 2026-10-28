@@ -47,8 +47,8 @@ def extract(url):
 def candidates(title):
     # Discover corroborating material, not a substitute for reading the articles.
     q = " ".join(re.findall(r"[\wÀ-ÿ'-]+", title)[:11])
-    url = "https://news.google.com/rss/search?" + urlencode(
-        {"q": q + " when:7d", "hl": "en-US", "gl": "US", "ceid": "US:en"})
+    url = "https://www.bing.com/news/search?" + urlencode(
+        {"q": q, "format": "rss"})
     try:
         raw, _ = get(url)
         root = ET.fromstring(raw)
@@ -58,8 +58,7 @@ def candidates(title):
 
 def source_pack(item):
     urls = [item.get("url", "")] + candidates(item["title"])
-    # Google News RSS links frequently hide the original publisher URL; skip them
-    # unless a verified publisher URL can actually be resolved and read.
+    # Read only direct publisher pages; aggregator URLs are not evidence.
     sources = []
     hosts = set()
     for url in urls:
