@@ -30,6 +30,20 @@ const allowedImages=new Set(["image/jpeg","image/png","image/webp"]);
 function validImages(files){const a=Array.from(files||[]);if(a.length>10)throw Error("Poți încărca maximum 10 fotografii.");for(const f of a)if(!allowedImages.has(f.type)||f.size>5*1024*1024)throw Error("Fotografiile trebuie să fie JPG, PNG sau WebP și maximum 5 MB fiecare.");return a}
 $("photos").addEventListener("change",()=>{const dest=$("photo-preview");dest.replaceChildren();try{const a=validImages($("photos").files);for(const f of a){const img=node("img");img.src=URL.createObjectURL(f);img.alt=f.name;img.onload=()=>URL.revokeObjectURL(img.src);dest.append(img)}}catch(e){$("photos").value="";alert(e.message)}});
 function businessImages(b){return Array.isArray(b.imageUrls)?b.imageUrls.filter(u=>typeof u==="string"&&safeLink(u)).slice(0,10):[]}
+const generatedCategorySprites={"Restaurante românești":"./directory-category-images/00.png","Magazine românești":"./directory-category-images/01.png","Transport România–Italia":"./directory-category-images/02.png","Contabilitate și fiscalitate":"./directory-category-images/03.png","Traduceri și interpretariat":"./directory-category-images/04.png","Avocatură":"./directory-category-images/05.png","Construcții și renovări":"./directory-category-images/06.png","Curățenie":"./directory-category-images/07.png","Îngrijire și frumusețe":"./directory-category-images/08.png","Auto și mecanică":"./directory-category-images/09.png","Sănătate și servicii profesionale":"./directory-category-images/10.png","Alte servicii":"./directory-category-images/11.png","Voluntariat și colaborări":"./directory-category-images/12.png","Transport și logistică":"./directory-category-images/13.png","Asociații și comunitate":"./directory-category-images/14.png"};
+function generatedCategoryVisual(b,detail=false){
+ const url=generatedCategorySprites[b.category];if(!url)return null;
+ const key=String(b.id||b.name||b.category);let hash=0;for(let i=0;i<key.length;i++)hash=(Math.imul(hash,31)+key.charCodeAt(i))>>>0;
+ const frame=hash%10,x=frame%2?100:0,y=Math.floor(frame/2)*25;
+ const lang=window.rdiLanguage?.()||"ro",labels={ro:"Imagine generată · ilustrativă",it:"Immagine generata · illustrativa",en:"AI-generated illustrative image"};
+ const visual=node("div",undefined,detail?"detail-generated-visual":"business-placeholder generated-category-photo");
+ visual.style.backgroundImage=`linear-gradient(0deg,rgba(7,19,34,.62),rgba(7,19,34,.08)),url("${url}")`;
+ visual.style.backgroundSize="100% 100%, 200% 500%";
+ visual.style.backgroundPosition=`center, ${x}% ${y}%`;
+ visual.setAttribute("role","img");visual.setAttribute("aria-label",labels[lang]||labels.ro);
+ visual.append(node("span",labels[lang]||labels.ro,"generated-image-label"));
+ return visual;
+}
 function contactLinks(b,container){
  const links=node("div",undefined,"actions");
  if(b.phone){const phone=String(b.phone).replace(/[^+0-9]/g,"");if(phone){const a=node("a","📞 Sună","action secondary");a.href="tel:"+phone;links.append(a)}}
@@ -46,7 +60,7 @@ function openBusiness(b){
  const inner=node("div",undefined,"business-detail");
  const close=node("button","✕ Închide","detail-close secondary");close.type="button";close.onclick=()=>dialog.close();inner.append(close);
  const images=businessImages(b);
- if(images.length){const cover=node("img",undefined,"detail-hero");cover.src=images[0];cover.alt="Fotografie: "+b.name;inner.append(cover);if(images.length>1){let i=0;const timer=setInterval(()=>{if(!dialog.isConnected){clearInterval(timer);return}i=(i+1)%images.length;cover.src=images[i]},5000);dialog.addEventListener("close",()=>clearInterval(timer),{once:true})}}
+ if(images.length){const cover=node("img",undefined,"detail-hero");cover.src=images[0];cover.alt="Fotografie: "+b.name;inner.append(cover);if(images.length>1){let i=0;const timer=setInterval(()=>{if(!dialog.isConnected){clearInterval(timer);return}i=(i+1)%images.length;cover.src=images[i]},5000);dialog.addEventListener("close",()=>clearInterval(timer),{once:true})}}else{const visual=generatedCategoryVisual(b,true);if(visual)inner.append(visual)}
  inner.append(node("span",b.category||"Activitate","pill"),node("h2",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
  const intro=directoryIntro(b);const about={ro:"Despre activitate",it:"Informazioni sull’attività",en:"About the business"};const lang=window.rdiLanguage?.()||"ro";
  inner.append(node("h3",about[lang]||about.ro),node("p",intro||({ro:"Descrierea detaliată nu este încă disponibilă.",it:"La descrizione dettagliata non è ancora disponibile.",en:"A detailed description is not available yet."}[lang]||"Descrierea detaliată nu este încă disponibilă.")));
@@ -70,7 +84,7 @@ function drawCard(b,admin=false){
  const el=node("article",undefined,"panel business business-teaser"+(admin?" pending":""));
  const images=businessImages(b);
  if(images.length){const cover=node("img",undefined,"business-cover");cover.src=images[0];cover.alt="Fotografie: "+b.name;cover.loading="lazy";el.append(cover);if(images.length>1){let i=0;const timer=setInterval(()=>{if(!el.isConnected){clearInterval(timer);return}i=(i+1)%images.length;cover.src=images[i]},5000)}}
- else{const placeholder=node("div",categoryTheme(b.category)[1],"business-placeholder");placeholder.style.color=categoryTheme(b.category)[0];placeholder.setAttribute("aria-hidden","true");el.append(placeholder)}
+ else{const visual=generatedCategoryVisual(b);if(visual)el.append(visual);else{const placeholder=node("div",categoryTheme(b.category)[1],"business-placeholder");placeholder.style.color=categoryTheme(b.category)[0];placeholder.setAttribute("aria-hidden","true");el.append(placeholder)}}
  const content=node("div",undefined,"business-teaser-content");
  content.append(node("span",b.category||"Activitate","pill"),node("h3",b.name),node("p",[b.city,b.province,b.region].filter(Boolean).join(" · "),"muted"));
  if(!admin){const level=evidenceLevel(b),key=level==="official"?"publicBadgeOfficial":level==="third-party"?"publicBadgeThird":level==="basic"?"publicBadgeBasic":"listedBadge";
