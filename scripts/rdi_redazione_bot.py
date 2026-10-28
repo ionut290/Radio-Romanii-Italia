@@ -29,7 +29,8 @@ def run():
         from build_geopolitica_bulletin import available_items, read_json
         now = dt.datetime.now(ZoneInfo("Europe/Rome"))
         available = available_items(now, "it", read_json(ROOT / "data/war-zone-news.json"),
-                                    read_json(ROOT / "data/geopolitica-radio-verified.json"))
+                                    read_json(ROOT / "data/geopolitica-radio-verified.json"),
+                                    articles=read_json(ROOT / "data/geopolitica-articles.json"))
         checks.append(check("radio_editorial_supply", bool(available),
                             f"{len(available)} notizie verificate recenti disponibili (senza storico Oracle)"))
     except Exception as exc:
