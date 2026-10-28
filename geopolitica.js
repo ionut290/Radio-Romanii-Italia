@@ -173,7 +173,7 @@
     $("article-disclaimer").textContent=state.lang==="it"
       ?"Approfondimento contestuale RDI. Il titolo è tratto da una fonte esterna e non è stato verificato indipendentemente. Il testo seguente spiega il contesto generale: non descrive come accertati i dettagli dell'episodio."
       :"Context explicativ RDI. Titlul provine dintr-o sursă externă și nu a fost verificat independent. Textul următor explică tema în general, fără a prezenta drept certe detaliile evenimentului.";
-    $("article-body").replaceChildren(...paragraphs.map(p=>node("p","",p)));
+    $("article-body").replaceChildren(coverElement(item,true),...paragraphs.map(p=>node("p","",p)));
     $("article-attribution").textContent=item.source+" · "+dateLabel(item.published);
     $("article-original").href=item.url;
     $("article-original").textContent=t("read");
@@ -181,6 +181,50 @@
   }
   $("article-close")?.addEventListener("click",()=>$("article-dialog").close());
   $("article-dialog")?.addEventListener("click",e=>{if(e.target===$("article-dialog"))e.target.close()});
+  // Original, deterministic editorial SVG illustrations: never presented as event photographs.
+  const COVER_PALETTES={
+    diplomatie:["#102743","#257d9b","#b0e7ec"],conflicte:["#271e3b","#b85556","#ffc9a2"],
+    europa:["#15284f","#366fbe","#e7c77e"],economie:["#122f39","#219785","#b8ead2"],
+    energie:["#312340","#ce8053","#f1d0a1"],securitate:["#17253a","#4779a2","#9dc7ec"],
+    tehnologie:["#14213f","#855cbd","#c6b6ff"],clima:["#173b39","#4eac84","#bbebbb"]
+  };
+  function storyIllustration(item){
+    const colors=COVER_PALETTES[item.category]||COVER_PALETTES.diplomatie;
+    const key=String(item.url||item.title||"RDI");
+    let seed=0;for(let i=0;i<key.length;i++)seed=(Math.imul(seed,31)+key.charCodeAt(i))>>>0;
+    const x=145+(seed%420),y=100+((seed>>>7)%140);
+    const themeIcon={
+      diplomatie:'<path d="M350 128l-72 45v90l72 45 72-45v-90z M278 173h144 M278 263h144 M350 128v180"/>',
+      conflicte:'<path d="M350 134l-100 48v66q0 77 100 131 100-54 100-131v-66z M300 248h100 M350 197v104"/>',
+      europa:'<circle cx="350" cy="230" r="103"/><path d="M247 230h206 M350 127v206 M274 163q76 67 152 134 M426 163q-76 67-152 134"/>',
+      economie:'<path d="M240 315h230 M275 315v-85h48v85 M341 315V178h48v137 M407 315V132h48v183"/>',
+      energie:'<path d="M386 120l-109 140h83l-32 122 112-156h-87z"/>',
+      securitate:'<path d="M350 120l117 92-45 143H278l-45-143z M350 120v235 M233 212h234"/>',
+      tehnologie:'<rect x="280" y="157" width="140" height="140" rx="18"/><path d="M308 157v-35 M350 157v-35 M392 157v-35 M308 297v35 M350 297v35 M392 297v35 M280 185h-38 M280 227h-38 M280 269h-38 M420 185h38 M420 227h38 M420 269h38"/><circle cx="350" cy="227" r="40"/>',
+      clima:'<path d="M266 318q135-24 168-178-152 0-168 178z M266 318q70-100 130-145"/>'
+    };
+    const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" role="img">'+
+      '<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="'+colors[0]+'"/><stop offset="1" stop-color="'+colors[1]+'"/></linearGradient>'+
+      '<radialGradient id="halo"><stop stop-color="'+colors[2]+'" stop-opacity=".43"/><stop offset="1" stop-color="'+colors[2]+'" stop-opacity="0"/></radialGradient></defs>'+
+      '<rect width="700" height="420" fill="url(#bg)"/><circle cx="'+x+'" cy="'+y+'" r="220" fill="url(#halo)"/>'+
+      '<g opacity=".13" stroke="#fff" fill="none">'+Array.from({length:7},(_,i)=>'<path d="M0 '+(80+i*52)+' Q350 '+(12+i*52)+' 700 '+(80+i*52)+'"/>').join('')+'</g>'+
+      '<circle cx="350" cy="225" r="148" fill="none" stroke="'+colors[2]+'" stroke-opacity=".28" stroke-width="2"/>'+
+      '<g fill="none" stroke="'+colors[2]+'" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">'+(themeIcon[item.category]||themeIcon.diplomatie)+'</g>'+
+      '<text x="28" y="386" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">RDI / GEOPOLITICA</text>'+
+      '</svg>';
+    return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
+  }
+  function coverElement(item,isLarge){
+    const wrap=node("div","rdi-cover-wrap");
+    wrap.style.cssText="position:relative;width:100%;margin:0 0 14px;overflow:hidden;border-radius:12px;background:#15283c";
+    const img=node("img","rdi-editorial-cover");
+    img.src=storyIllustration(item);img.alt=state.lang==="it"?"Illustrazione editoriale originale RDI, non fotografia dell'evento":"Ilustrație editorială RDI, nu fotografie a evenimentului";
+    img.loading="lazy";img.decoding="async";
+    img.style.cssText="display:block;width:100%;height:auto;aspect-ratio:5/3;object-fit:cover";
+    const label=node("span","rdi-cover-caption",state.lang==="it"?"ILLUSTRAZIONE RDI":"ILUSTRAȚIE RDI");
+    label.style.cssText="position:absolute;bottom:9px;right:10px;font:600 10px Arial,sans-serif;letter-spacing:.08em;color:white;background:#071421bb;padding:6px 9px;border-radius:4px";
+    wrap.append(img,label);return wrap;
+  }
   function makeCard(item,featured=false,second=false){
     const card=node("article",featured?(second?"feature-side":"feature-lead"):"story-card");
     const meta=node("div",featured?"features-meta":"story-meta");
@@ -188,7 +232,7 @@
     const topicKey=TOPIC_NAMES[item.category]?.[0]||"all";
     meta.append(node("span","",t(topicKey)));
     const date=dateLabel(item.published);if(date)meta.append(node("time","",date));
-    const title=node("h3","",item.title);card.append(meta,title);
+    const title=node("h3","",item.title);card.append(coverElement(item,featured),meta,title);
     const intro=String(item.summary||"").replace(/\s+/g," ").trim();
     if(intro && intro.toLocaleLowerCase()!==item.title.toLocaleLowerCase()){card.append(node("p","",intro.slice(0,featured?240:150)+(intro.length>(featured?240:150)?"…":"")))}
     const contextLink=node("button","read-more",state.lang==="it"?"Leggi approfondimento RDI":"Citește analiza RDI");contextLink.type="button";contextLink.style.cssText="cursor:pointer;background:transparent;border:0;color:inherit;text-decoration:underline;padding:8px 10px 8px 0;margin-right:12px";contextLink.addEventListener("click",()=>showContext(item));card.append(contextLink);
