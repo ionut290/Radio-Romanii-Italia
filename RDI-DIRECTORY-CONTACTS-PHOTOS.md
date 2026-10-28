@@ -38,6 +38,9 @@ Le immagini da Google Maps, social network o directory non sono automaticamente 
 
 Non aggiungere URL fotografici quando manca l'autorizzazione. Per le schede prive di immagini restano i segnaposto tematici, senza attribuire fotografie errate.
 
+## Immagini illustrative generate
+Quando una scheda non ha foto dell'attività autorizzate, il sito può mostrare un'immagine illustrativa generata per la categoria. L'immagine deve restare chiaramente etichettata come illustrativa, non va descritta come fotografia della specifica attività e non sostituisce le foto fornite dal titolare. Le immagini generate sono elementi grafici del catalogo: non inserirle in `imageUrls` come foto dell'attività e non usarle per attribuire caratteristiche non documentate.
+
 ## Limiti noti
 - Il CSV "schede incomplete" è un report, non deve essere reimportato direttamente in Firestore.
 - Le email importate tramite Excel sono sottoposte a validazione, ma richiedono la pubblicazione delle nuove regole di Firestore.

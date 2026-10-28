@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-28",
   "purpose": "Elenco delle schede che non hanno ancora dettagli fattuali verificati oltre alla prima fonte. Gli URL di Google sono suggerimenti di ricerca, non evidenze.",
-  "total": 303,
+  "total": 310,
   "items": [
     {
       "id": "public-6b46f4ddaf918642",
@@ -6365,6 +6365,127 @@
         "website"
       ],
       "googleSearchUrl": "https://www.google.com/search?q=Zaharia%20Trasporti%20Vicenza%20VI%20Italia"
+    },
+    {
+      "id": "public-rdi-danubiana-market-via-guelfa",
+      "name": "Danubiana Market · Via Guelfa",
+      "category": "Magazine românești",
+      "city": "Bologna",
+      "province": "BO",
+      "region": "Emilia-Romagna",
+      "sourceUrl": "https://www.danubiana-group.com/it/market",
+      "missing": [
+        "services"
+      ],
+      "status": "da_ricercare",
+      "priority": "ricerca_pubblica_necessaria",
+      "website": "https://www.danubiana-group.com/it/market",
+      "phone": "+39 339 814 3892",
+      "googleSearchUrl": "https://www.google.com/search?q=Danubiana%20Market%20%C2%B7%20Via%20Guelfa%20Bologna%20BO%20Italia"
+    },
+    {
+      "id": "public-rdi-danubiana-market-via-lombardia",
+      "name": "Danubiana Market · Via Lombardia",
+      "category": "Magazine românești",
+      "city": "Bologna",
+      "province": "BO",
+      "region": "Emilia-Romagna",
+      "sourceUrl": "https://www.danubiana-group.com/it/market",
+      "missing": [
+        "services"
+      ],
+      "status": "da_ricercare",
+      "priority": "ricerca_pubblica_necessaria",
+      "website": "https://www.danubiana-group.com/it/market",
+      "phone": "+39 339 814 3892",
+      "googleSearchUrl": "https://www.google.com/search?q=Danubiana%20Market%20%C2%B7%20Via%20Lombardia%20Bologna%20BO%20Italia"
+    },
+    {
+      "id": "public-rdi-danubiana-market-via-marco-emilio-lepido",
+      "name": "Danubiana Market · Via Marco Emilio Lepido",
+      "category": "Magazine românești",
+      "city": "Bologna",
+      "province": "BO",
+      "region": "Emilia-Romagna",
+      "sourceUrl": "https://www.danubiana-group.com/it/market",
+      "missing": [
+        "services"
+      ],
+      "status": "da_ricercare",
+      "priority": "ricerca_pubblica_necessaria",
+      "website": "https://www.danubiana-group.com/it/market",
+      "phone": "+39 353 381 8507",
+      "googleSearchUrl": "https://www.google.com/search?q=Danubiana%20Market%20%C2%B7%20Via%20Marco%20Emilio%20Lepido%20Bologna%20BO%20Italia"
+    },
+    {
+      "id": "public-rdi-danubiana-market-imola",
+      "name": "Danubiana Market · Imola",
+      "category": "Magazine românești",
+      "city": "Imola",
+      "province": "BO",
+      "region": "Emilia-Romagna",
+      "sourceUrl": "https://www.danubiana-group.com/it/market",
+      "missing": [
+        "services"
+      ],
+      "status": "da_ricercare",
+      "priority": "ricerca_pubblica_necessaria",
+      "website": "https://www.danubiana-group.com/it/market",
+      "phone": "+39 0544 453666",
+      "googleSearchUrl": "https://www.google.com/search?q=Danubiana%20Market%20%C2%B7%20Imola%20Imola%20BO%20Italia"
+    },
+    {
+      "id": "public-rdi-mix-markt-bologna-piazza-xx-settembre",
+      "name": "Mix Markt · Bologna Piazza XX Settembre",
+      "category": "Magazine românești",
+      "city": "Bologna",
+      "province": "BO",
+      "region": "Emilia-Romagna",
+      "sourceUrl": "https://mixmarkt.it/negozi/mix-markt-bologna-bo-piazza-xx-settembre/",
+      "missing": [
+        "services",
+        "email"
+      ],
+      "status": "da_ricercare",
+      "priority": "ricerca_pubblica_necessaria",
+      "website": "https://mixmarkt.it/negozi/",
+      "phone": "+39 051 0015 149",
+      "googleSearchUrl": "https://www.google.com/search?q=Mix%20Markt%20%C2%B7%20Bologna%20Piazza%20XX%20Settembre%20Bologna%20BO%20Italia"
+    },
+    {
+      "id": "public-rdi-mix-markt-bologna-via-di-corticella",
+      "name": "Mix Markt · Bologna Via di Corticella",
+      "category": "Magazine românești",
+      "city": "Bologna",
+      "province": "BO",
+      "region": "Emilia-Romagna",
+      "sourceUrl": "https://mixmarkt.it/negozi/mix-markt-bologna-bo/",
+      "missing": [
+        "services",
+        "email"
+      ],
+      "status": "da_ricercare",
+      "priority": "ricerca_pubblica_necessaria",
+      "website": "https://mixmarkt.it/negozi/",
+      "phone": "+39 350 980 3192",
+      "googleSearchUrl": "https://www.google.com/search?q=Mix%20Markt%20%C2%B7%20Bologna%20Via%20di%20Corticella%20Bologna%20BO%20Italia"
+    },
+    {
+      "id": "public-rdi-mix-markt-imola",
+      "name": "Mix Markt · Imola",
+      "category": "Magazine românești",
+      "city": "Imola",
+      "province": "BO",
+      "region": "Emilia-Romagna",
+      "sourceUrl": "https://mixmarkt.it/negozi/mix-markt-imola-bo-via-appia/",
+      "missing": [
+        "services"
+      ],
+      "status": "da_ricercare",
+      "priority": "ricerca_pubblica_necessaria",
+      "website": "https://mixmarkt.it/negozi/mix-markt-imola-bo-via-appia/",
+      "phone": "+39 329 817 4220",
+      "googleSearchUrl": "https://www.google.com/search?q=Mix%20Markt%20%C2%B7%20Imola%20Imola%20BO%20Italia"
     }
   ]
 }
