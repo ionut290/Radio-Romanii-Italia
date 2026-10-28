@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-28T15:47:57.457870+00:00",
-  "editorial_updated_at": "2026-10-28T09:20:03.168345+01:00",
-  "translations_updated_at": "2026-10-28T15:06:41.220100+00:00",
+  "news_updated_at": "2026-10-28T16:10:12.194464+00:00",
+  "editorial_updated_at": "2026-10-28T16:56:42.193223+01:00",
+  "translations_updated_at": "2026-10-28T16:08:57.822517+00:00",
   "feed_total": 73,
-  "feed_extended_400": 5,
-  "feed_missing_body": 68,
+  "feed_extended_400": 6,
+  "feed_missing_body": 67,
   "feed_short_body": 0,
-  "editorial_total": 38,
-  "archived_editorials": 64,
-  "translation_records": 29,
+  "editorial_total": 35,
+  "archived_editorials": 68,
+  "translation_records": 20,
   "pending_total": 91,
   "pending_filtered_out": 295,
-  "editorial_verde": 9,
-  "editorial_galben": 55,
-  "editorial_rosu": 42,
+  "editorial_verde": 11,
+  "editorial_galben": 49,
+  "editorial_rosu": 43,
   "pending": [
     {
       "title": "++ Ue all'Italia, 'valutiamo aiuti Pac contro caro-carburanti' ++ - ANSA",
@@ -618,13 +618,76 @@
   ],
   "recent_news": [
     {
+      "title": "Noi informații în cazul fabricii Carfil: suspecții ar fi venit în recunoaștere cu câteva zile înainte de tentativa de sabotaj",
+      "category": "România",
+      "published": "2026-10-28T16:08:43+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/noi-informatii-in-cazul-fabricii-carfil-suspectii-ar-fi-venit-in-recunoastere-cu-cateva-zile-inainte-de-tentativa-de-sabotaj-4012711",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Noi probleme raportate printre utilizatorii Revolut, la mai puțin de zece zile de la ultimul episod similar",
+      "category": "România",
+      "published": "2026-10-28T16:08:03+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/noi-probleme-raportate-printre-utilizatorii-revolut-la-mai-putin-de-zece-zile-de-la-ultimul-episod-similar-4012645",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "AUR va depune moțiune de cenzură, cu sau fără asumarea răspunderii. Peiu, atac la Kelemen Hunor: „Nu știu dacă e o boală tratabilă”",
+      "category": "România",
+      "published": "2026-10-28T15:55:22+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/aur-va-depune-motiune-de-cenzura-cu-sau-fara-asumarea-raspunderii-peiu-atac-la-kelemen-hunor-nu-stiu-daca-e-o-boala-tratabila-4012623",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Via libera del consiglio dei ministri alla manovra",
+      "category": "Italia",
+      "published": "2026-10-28T15:52:40+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/via-libera-del-consiglio-dei-ministri-alla-manovra_a800dc0a-5e17-4252-b135-567ad9587d2b.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Mattarella: 'Guerre dissennate e progetti militari sottraggono risorse alla medicina. Le fake news contro i vaccini sono distruttive'",
+      "category": "Italia",
+      "published": "2026-10-28T15:50:33+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/mattarella-guerre-dissennate-e-progetti-militari-sottraggono-risorse-alla-medicina_99ab9e81-544d-4f94-8bc1-666ad0386c9b.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 527
+    },
+    {
+      "title": "Vladimir Putin: Musk este „un geniu, un geniu adevărat”",
+      "category": "România",
+      "published": "2026-10-28T15:49:46+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/vladimir-putin-musk-este-un-geniu-un-geniu-adevarat-4012685",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Israele: scrutinio delle urne terminato, 53 seggi al blocco Netanyahu, 48 a blocco Eisenkot",
+      "category": "Italia",
+      "published": "2026-10-28T15:47:05+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/israele-scrutinio-delle-urne-terminato-53-seggi-al-blocco-netanyahu-48-a-blocco-eisenkot_74766689-3c93-4a0a-8778-21bf55ce3a7c.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "„Ţi-e foame? Mănâncă-i pe bogaţi!” Proteste în Indonezia față de sărăcie, corupţie şi modul în care guvernul a gestionat incendiile",
       "category": "România",
       "published": "2026-10-28T15:45:44+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/ti-e-foame-mananca-i-pe-bogati-proteste-in-indonezia-fata-de-saracie-coruptie-si-modul-in-care-guvernul-a-gestionat-incendiile-4012679",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 446
     },
     {
       "title": "„Blatul PSD-AUR pentru București”. Alexandru Muraru susține că propunerea lui Piperea pentru PMB este încă un pas către o coaliție",
@@ -636,10 +699,10 @@
       "words": 0
     },
     {
-      "title": "Israele: scrutinio delle urne terminato, 53 seggi al blocco Netanyahu, 48 a blocco Eisenkot",
+      "title": "Spagna: Toledo, almeno 68 morti nello scontro tra due treni. La Farnesina: 'A bordo 5 italiani, 4 stanno bene. Dispersa una donna'",
       "category": "Italia",
-      "published": "2026-10-28T15:39:54+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/israele-scrutinio-delle-urne-terminato-53-seggi-al-blocco-netanyahu-48-a-blocco-eisenkot_74766689-3c93-4a0a-8778-21bf55ce3a7c.html",
+      "published": "2026-10-28T15:44:49+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/spagna-toledo-almeno-68-morti-nello-scontro-tra-due-treni.-la-farnesina_3124daf4-1c75-4126-a99f-4356a4740361.html",
       "source": "ANSA",
       "status": "galben",
       "words": 0
@@ -650,24 +713,6 @@
       "published": "2026-10-28T15:39:38+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/ghigiu-vizita-la-bruxelles-prioritatea-mea-este-sa-gasim-solutiile-necesare-pentru-ca-romania-sa-incaseze-fiecare-euro-din-pnrr-4012659",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Noi probleme raportate printre utilizatorii Revolut, la mai puțin de zece zile de la ultimul episod similar",
-      "category": "România",
-      "published": "2026-10-28T15:39:33+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/noi-probleme-raportate-printre-utilizatorii-revolut-la-mai-putin-de-zece-zile-de-la-ultimul-episod-similar-4012645",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Via libera del consiglio dei ministri alla manovra",
-      "category": "Italia",
-      "published": "2026-10-28T15:39:07+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/via-libera-del-consiglio-dei-ministri-alla-manovra_a800dc0a-5e17-4252-b135-567ad9587d2b.html",
-      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -690,15 +735,6 @@
       "words": 0
     },
     {
-      "title": "Spagna: Toledo, almeno 68 morti nello scontro tra due treni. La Farnesina: 'A bordo 5 italiani, 4 stanno bene. Dispersa una donna'",
-      "category": "Italia",
-      "published": "2026-10-28T15:36:22+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/spagna-toledo-almeno-68-morti-nello-scontro-tra-due-treni.-la-farnesina_3124daf4-1c75-4126-a99f-4356a4740361.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "UE se pregătește să renunțe la ideea de a oferi Canadei statutul de „membru asociat”. Ce prevede versiunea finală a declarației",
       "category": "România",
       "published": "2026-10-28T15:36:03+00:00",
@@ -714,15 +750,6 @@
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/28/morte-david-rossi-fascicolo-per-omicidio-indaga-la-dda-di-firenze_0bd303b6-e68f-48e4-8616-918b49148628.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "AUR va depune moțiune de cenzură, cu sau fără asumarea răspunderii. Peiu, atac la Kelemen Hunor: „Nu știu dacă e o boală tratabilă”",
-      "category": "România",
-      "published": "2026-10-28T15:23:04+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/aur-va-depune-motiune-de-cenzura-cu-sau-fara-asumarea-raspunderii-peiu-atac-la-kelemen-hunor-nu-stiu-daca-e-o-boala-tratabila-4012623",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -789,15 +816,6 @@
       "words": 0
     },
     {
-      "title": "Mattarella: 'Guerre dissennate e progetti militari sottraggono risorse alla medicina. Le fake news contro i vaccini sono distruttive'",
-      "category": "Italia",
-      "published": "2026-10-28T14:51:14+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/28/mattarella-guerre-dissennate-e-progetti-militari-sottraggono-risorse-alla-medicina_99ab9e81-544d-4f94-8bc1-666ad0386c9b.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 527
-    },
-    {
       "title": "Alegerile din Israel, prin ochii vecinilor: puțini se așteaptă la un moment de cotitură, dar rezultatul influențează războiul cu Iranul",
       "category": "România",
       "published": "2026-10-28T14:47:25+00:00",
@@ -834,15 +852,6 @@
       "words": 0
     },
     {
-      "title": "Zelenski, schimbare radicală de poziție în negocierile de pace. Anunțul liderului de la Kiev",
-      "category": "România",
-      "published": "2026-10-28T14:35:39+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/zelenski-schimbare-radicala-de-pozitie-in-negocierile-de-pace-anuntul-liderului-de-la-kiev-4012523",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Paradoxul prosperității europene: anarhia stradală din Occident și limitele modelului asistențial",
       "category": "România",
       "published": "2026-10-28T14:28:35+00:00",
@@ -856,15 +865,6 @@
       "category": "România",
       "published": "2026-10-28T14:27:55+00:00",
       "url": "https://www.digi24.ro/stiri/economie/energie/ce-masuri-propune-ministerul-energiei-pentru-a-asigura-alimentarea-cu-energie-electrica-si-gaze-naturale-in-aceasta-iarna-4012519",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Anunțul Comisiei Europene în privința prețului motorinei în 2027. Bruxellesul pregătește schimbări majore în industria de rafinare",
-      "category": "România",
-      "published": "2026-10-28T14:25:21+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/anuntul-comisiei-europene-in-privinta-pretului-motorinei-in-2027-bruxellesul-pregateste-schimbari-majore-in-industria-de-rafinare-4012521",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -1041,15 +1041,6 @@
       "words": 0
     },
     {
-      "title": "Abano Terme, sei sabati a teatro con mamma e papà: spettacoli per bambini a tre euro - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-28T09:22:32+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1JaC15WjV2Ml9KUF90WktFeXo4R0FFaHd3ZXh5SkUtRm53UjA0MEVIOUN2YktPeWJvc3N4ZzJLNXVGWUM1RXB3bjFRWndhRlpqNnIxTU9lc1ZHNGRrWmFUT0R6ZmFjSXVxTEhhMWEtTlZlVXNJUk4wa1k4Zw?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Unicredit, presidente Pier Carlo Padoan lascerà incarico a fine mandato - Virgilio",
       "category": "Italia",
       "published": "2026-10-28T09:22:00+00:00",
@@ -1064,15 +1055,6 @@
       "published": "2026-10-28T09:17:45+00:00",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ZNHdWMk9RT2M0Vk1pWUpHYnNWdmhkQ3BmNTZ1R2hSaC04Wl9JbmtSaFFjdmJXZkxyWDhUZHN1WGtRRUhkS1Y4UGpuMURSTGhJTzdaRXpsel9ibkJ0eHF0dXg4TjJqRUpFUnNqM0trdVpoZjRSbGhv?oc=5",
       "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "România cumpără patru radare mobile de la Thales pentru 68 mil. euro - logos-pres.md",
-      "category": "România",
-      "published": "2026-10-28T08:57:05+00:00",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNN1B1Mm4zbG5Gdy1pclJTblBPanEtbVhhUDZsbkFYWWI2Vlp1Y0JHUTJESzdSM3VKT0tRV3BlcHpyTXU5cFo0V1J5cUR3aFlGWWM5OTdYVEJ0eVRlcm9VN0hxZjNWTUFIdHhrcGR0dWJiQUh2bk9za0I4YjNSc0JrdjZNYXZ4OEMtUUp4ZERZc09zc2hLbkhaQUNiVTJxZw?oc=5",
-      "source": "logos-pres.md",
       "status": "roșu",
       "words": 0
     },
@@ -1108,6 +1090,15 @@
       "category": "Italia",
       "published": "2026-10-28T07:37:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOYVJibEszYVUxMTdGbXRScThLOTVOQ2dHVlpKckZCTzhHVmE3MjFJZzRuQkpWcDJVU090VGllWmEtT3JxTWVLY0ZjYTdCSG5tTTZsSy1tdGl4UEJiRENwcUs0cGxZYXplOHdnSG9WSVQzeExDQy1wUFlCR0EyN1dMWlE1TjY3eFRkeWhJMGo1LUFCcnhiZHN0c1pOeXhnOExFeFlYTk5PYlRpM01ERE1iQXFIUVFkTk5tUVZ0V0JTQ043RlQyV1pfRUhhR2RPUi1iS1HSAdcBQVVfeXFMTzYyVUJjSUV2akh1TzFZV3hxLU90RVN0Vm8yWGFJck9fUHVobUR4WWNLdm5QQWw2U2VRSnhsTlBzQ0I0eTQ3am9vVWdTanQ4RU9zWlZTLXNxODdBOS0zdU9GN0xRTW0xVG9LNm9lWENENFNMaWdmSGxyTk1VdG0tZVR",
+      "source": "Idealista",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Brividi da est la prossima settimana, ecco il freddo invernale - Idealista",
+      "category": "Italia",
+      "published": "2026-10-28T07:31:51+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWmVCS1duZVdoVXo4UTRvNGdPQlFuWmNvZ0VaRHNEQlE1d0RMZU9FVEpVWi0wbUJmTkQ3T0VqYXNYakZkMk5RLU5CYVJrc05UOUtaejNvdUF0a1N0cVpxWUtCb3dNLXVFVnc2T1g3QXdhbVRwU09QcV9nRTF1WkM2RW1LS1lfN1ljNThFQmhhZVFhbXMxR1B2enpwWjZGWlJ3RzUxb3U3azlUYl9yd2JsX0ZTRTVmdmQ5cVNCTWE0d9IBxAFBVV95cUxPN2tCN09Hcy01ajNlYlBaamdNeVlmblVTaERsMzVjTDR1WUxFaUF6YndqSXlzRXFkMGtaQ19FV1BuU0xSaUJvOG5nc0REeDJHc0hMTEYtYmVJTGRxNkxKcGg5cmNEaVFQMzNGNTV5T0tiN3Q2QlRVUTY0ZnR2MDB3Z3dVVDVnbGJMenNPOEotdm83WVZ",
       "source": "Idealista",
       "status": "roșu",
       "words": 0
@@ -1154,6 +1145,15 @@
       "published": "2026-10-27T21:03:52+00:00",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qVDRYYlFGWlM3bnFfUWFDeUtwdmtWQi0yY0hmbGpwOS1tWlg5UkdPa0ltVUZOOGpRaXpTM0FLallYMzNKSlNJNEdJSEZLUFFhSVRkUGJ5NXZxanJuRG1kdmdnY1NIeUQwdEx3bktaTTE?oc=5",
       "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Atenționare MAE pentru românii care călătoresc în Italia! Ce se întâmplă cu zborurile - Kanal D Romania",
+      "category": "Știri consulare",
+      "published": "2026-10-27T19:25:22+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNczZlQkdiOWZiV0dVMXF1UlhCM1lCU3JaTUhJTGFkeU1hM1hRQlRRZzl0cUJzNkpzRFV1YThzeHFpZjhydUFaa291UElhWmx2cmxaZlN4aFBVeHZoejNlTTRkeXJOS2ozeGkwcVNUM3dUZlprQlozWTFzbkJpcWlGbWpkTmFHVEhUSnBJM2dkdWREOUZzcEhibjRuQzFPTmVscHFPZFNuYWpNbFpkdzZWcl9QX01PQdIBuwFBVV95cUxPdzJrdkY1eS11N1ZnLS0tQUFtalNMd25rUlVGM25Pd2F6WlJETWh0TmJuSlkxNlJVdnBvYnlORWpZYkFhQnRBTVFlOEluZjc5V0RMWmNlSzZkUWR0SE9YV2lENDRDOU5WdlVGVGdTZzZnLWppZWJEM2xDU0toSXpIVkZFMzE4RGlLYVBBVmJQbFZkUl9JaFBoODdscFV",
+      "source": "Kanal D Romania",
       "status": "roșu",
       "words": 0
     },
