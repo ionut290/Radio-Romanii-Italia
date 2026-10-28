@@ -21,8 +21,8 @@ jobs:
           persist-credentials: false
       - name: Prepara SSH Oracle
         env:
-          SSH_KEY_B64: \${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
-          SSH_KNOWN_HOSTS: \${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
         shell: bash
         run: |
           set -euo pipefail
@@ -35,13 +35,13 @@ jobs:
           timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
       - name: Installa controllo che elimina solo gli MP3 RDI già trasmessi
         env:
-          SSH_KEY_B64: \${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
-          SSH_KNOWN_HOSTS: \${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
         shell: bash
         run: |
           set -euo pipefail
           REMOTE="ubuntu@129.151.255.41"
-          STAGE="/tmp/rdi-geopolitica-cleanup-\${GITHUB_RUN_ID}-\${GITHUB_RUN_ATTEMPT}"
+          STAGE="/tmp/rdi-geopolitica-cleanup-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
             "$REMOTE" "install -d -m 700 '$STAGE'"
           cleanup() {
