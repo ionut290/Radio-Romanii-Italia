@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'data/romanians-italy.json']
+    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'data/romanians-italy.json']
 
 permissions:
   contents: read
@@ -28,7 +28,7 @@ jobs:
           set -euo pipefail
           for attempt in {1..24}; do
             ready=true
-            for file in youtube-news.html youtube-geopolitica.js youtube-geopolitica.css data/youtube-build.json youtube-spots.js youtube-spots-core.js youtube-spots.css data/spot-campaigns.json youtube-extras.js data/romanians-italy.json; do
+            for file in youtube-news.html youtube-geopolitica.js youtube-geopolitica.css youtube-camera-breaks.js youtube-camera-core.mjs youtube-camera-breaks.css data/youtube-camera-breaks.json data/youtube-build.json youtube-spots.js youtube-spots-core.js youtube-spots.css data/spot-campaigns.json youtube-extras.js data/romanians-italy.json; do
               expected=$(sha256sum "$file" | cut -d ' ' -f 1)
               if ! curl --fail --silent --show-error --max-time 5 \
                 "https://radioromanii.duckdns.org/${file}?v=${GITHUB_SHA}" \

@@ -1,0 +1,21 @@
+/* RDI: a licensed camera may replace one normal news slot, never the radio audio. */
+#rdiCityCamera{position:absolute;z-index:12;inset:91px 43px 90px;overflow:hidden;isolation:isolate;
+ border-radius:19px;background:linear-gradient(135deg,#08213a,#132e4e 65%,#0d1a30);border:1px solid #5881ad;
+ box-shadow:0 14px 42px #0009;color:#fff}
+#rdiCityCamera[hidden]{display:none!important}
+.rdi-camera-view{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0b1829}
+.rdi-camera-view iframe,.rdi-camera-view video,.rdi-camera-view img{display:block;width:100%;height:100%;border:0;object-fit:cover;background:#10233d}
+.rdi-camera-view iframe{object-fit:fill}
+.rdi-camera-placeholder{font-size:24px;letter-spacing:2px;color:#bed2e9;font-weight:800;text-align:center;padding:15%}
+.rdi-camera-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#020e24be,transparent 27%,transparent 58%,#020d22ed 100%)}
+.rdi-camera-top{position:absolute;left:31px;right:30px;top:22px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.rdi-camera-top span{font-size:17px;font-weight:900;letter-spacing:1.7px;text-shadow:0 2px 5px #000b}
+.rdi-camera-pill{color:#ffe3aa;border:1px solid #d3b66e;background:#172a4488;padding:10px 17px;border-radius:99px}
+.rdi-camera-labels{position:absolute;bottom:38px;left:35px;right:30px;text-shadow:0 3px 11px #000e}
+.rdi-camera-country{font-size:26px;letter-spacing:3px;font-weight:900;color:#f2c678}
+.rdi-camera-city{font-size:68px;line-height:1.1;letter-spacing:-1px;font-weight:900;margin:9px 0}
+.rdi-camera-source{font-size:15px;font-weight:700;color:#e4edf9}
+.rdi-camera-progress{position:absolute;left:0;bottom:0;height:6px;width:0;background:#ffd075}
+body.rdi-camera-active #panel,body.rdi-camera-active #ticker,body.rdi-camera-active #progress,body.rdi-camera-active #rdiExtras{visibility:hidden!important}
+body.rdi-spot-active #rdiCityCamera,body.rdi-geo-active #rdiCityCamera{visibility:hidden}
+@media(max-width:800px){#rdiCityCamera{left:17px;right:17px}.rdi-camera-city{font-size:40px}.rdi-camera-country{font-size:17px}.rdi-camera-top{left:18px;right:18px}.rdi-camera-labels{left:18px;right:18px}.rdi-camera-source{font-size:12px}}
