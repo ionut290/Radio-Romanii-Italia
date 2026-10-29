@@ -185,3 +185,23 @@ I video della Commissione e del Parlamento non vanno ripubblicati o
 ritrasmessi indiscriminatamente: verificare per ciascun filmato
 le condizioni di utilizzo e eventuali diritti di terzi, non soltanto
 la lingua italiana disponibile.
+
+## Riconoscimento delle versioni italiane nelle pagine dinamiche
+
+Il portale audiovisivo usa un'applicazione web che carica i dettagli
+delle tracce linguistiche solo dopo l'apertura nel browser. Il semplice
+download dell'HTML può risultare privo di "Languages": non dimostra
+che il video sia sprovvisto di audio italiano.
+
+Dal 29/10 il monitor fa prima una richiesta HTTP e, se le lingue
+mancano, usa temporaneamente Chrome headless sul runner GitHub per
+leggere la **scheda ufficiale pubblica**. Non usa credenziali, non
+aggira restrizioni e non avvia un video in diretta. Il browser ha
+un timeout massimo di 26 secondi per pagina, e ogni esecuzione
+controlla un massimo di 8 filmati per evitare sovraccarico.
+
+Se la verifica è inconcludente, il contenuto resta
+`LINGUA_NON_LEGGIBILE` o `METADATI_NON_DISPONIBILI`, non diventa
+automaticamente italiano. Solo la presenza esplicita di "Italiano"
+nell'elenco `Languages` rende il video un *candidato*, mai un
+filmato autorizzato.
