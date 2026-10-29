@@ -56,6 +56,12 @@ incollare come file approvato):
   "rights_url": "https://audiovisual.ec.europa.eu/en/conditions-of-use",
   "credit": "© European Union, ANNO, CC BY 4.0",
   "duration_seconds": 120,
+  "audio_mode": "separate_it",
+  "audio_track_language": "it",
+  "audio_url": "https://INDIRIZZO-AUDIO-ITALIANO-LECITO.aac",
+  "audio_offset_ms": 0,
+  "original_audio_muted": true,
+  "audio_sync_verified": true,
   "approved": true,
   "audio_italiano_verificato": true,
   "diritti_verificati": true,
@@ -122,3 +128,60 @@ o autorizzazioni di ritrasmissione).
 
 Nessuno di questi candidati è attualmente pronto per il playout: la
 libreria di approvazioni è vuota e la diretta RDI resta invariata.
+
+## Audio italiano alternativo: verifica del 29/10/2026
+
+La scheda ufficiale
+https://audiovisual.ec.europa.eu/en/media/video/I-294336
+offre nella barra del lettore **LANGUAGE > Italiano**, e nella scheda
+**Downloads > Audio > Choose language > Italiano (IT)**. Il menu per il
+**video** invece propone solo **Original**. Questo distingue una
+interpretazione italiana riproducibile/scaricabile da un video MP4
+già doppiato. Il menu è stato verificato via browser; il file IT non
+è ancora stato scaricato o ascoltato integralmente, e i diritti del
+singolo filmato sono ancora da approvare.
+
+Il monitor `scripts/update_europa_videos.py` esamina progressivamente
+le pagine ufficiali cercando "Languages ... Italiano". Imposta
+`italian_audio_candidate` ma **non approva l'audio automaticamente**,
+perché i metadati possono riferirsi a una variante del video. Le schede
+controllate nel lettore hanno in più
+`italian_audio_in_player_verified` e
+`italian_audio_download_option_verified`; non sono autorizzazioni.
+
+### Procedura per preparare un video italiano senza andare in onda
+
+Una volta che la redazione ha ottenuto legalmente video originale e
+audio italiano separato, verificato i diritti, il parlato, l'allineamento
+e compilato tutti i campi in
+`data/europa-video-approved.json` (inclusi i campi qui sopra), si può
+preparare il file locale con:
+
+```bash
+python3 scripts/prepare_europa_av_preview.py \
+  --id IDENTIFICATIVO_VERIFICATO \
+  --video /percorso/locale/originale.mp4 \
+  --audio /percorso/locale/italiano.aac \
+  --output /percorso/locale/rdi-europa-anteprima.mp4
+```
+
+Senza `--execute` fa solo controlli e mostra il piano. Con
+`--execute` genera localmente un MP4 di prova, sostituendo l'audio
+originale con la traccia italiana. **Non** accede alla chiave YouTube
+e **non** modifica FFmpeg live, Facebook, Chromium o AzuraCast.
+
+Per video con audio italiano interno già verificato, usare
+`audio_mode: embedded_it` e `audio_stream_index` (indice fra le
+tracce audio; non l'indice globale del file); in tal caso omettere
+`--audio`. Sono richiesti comunque `audio_track_language: it`,
+`audio_sync_verified: true`, approvazione diritti e credito.
+
+La durata ammessa per anteprime approvate è ora fino a 30 minuti.
+Un filmato di 15:49 non viene più escluso automaticamente dal limite
+precedente di 15 minuti. Ogni preview è soggetta al collaudo umano di
+sincronizzazione prima di qualunque eventuale programmazione.
+
+I video della Commissione e del Parlamento non vanno ripubblicati o
+ritrasmessi indiscriminatamente: verificare per ciascun filmato
+le condizioni di utilizzo e eventuali diritti di terzi, non soltanto
+la lingua italiana disponibile.
