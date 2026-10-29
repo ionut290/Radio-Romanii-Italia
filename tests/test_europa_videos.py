@@ -23,6 +23,18 @@ class EuropaCatalogTests(unittest.TestCase):
         self.assertFalse(data[0]["audio_italiano_verificato"])
         self.assertFalse(data[0]["diritti_verificati"])
 
+    def test_malformed_parliament_rss_recovers_items(self):
+        source = mod.SOURCES[0]
+        xml = (b'<rss><channel><item><title>Video di un altro evento</title>'
+               b'<link>https://multimedia.europarl.europa.eu/it/otherevents_20261021_vd</link>'
+               b'<description>Durata 60 min.<br><br>Test</description>'
+               b'<pubDate>Wed, 21 Oct 2026 17:00:00 GMT</pubDate>'
+               b'</item></channel></rss>')
+        items = mod.parse_rss(xml, source)
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items[0]["language_hint"], "it")
+        self.assertFalse(items[0]["audio_italiano_verificato"])
+
     def test_commission_listing(self):
         source = mod.SOURCES[1]
         html = b'<a href="/en/media/video/I-291498">EU poverty strategy 29/10/2026 02:05</a>'
