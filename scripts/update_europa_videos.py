@@ -417,9 +417,18 @@ def main():
     # Esempi metadati certi: non approvati per la diretta e riconfermati alla scadenza.
     for item in official_italian_examples(now):
         old = retained.get(item["id"], {})
-        if old.get("language_checked_at"):
-            continue
-        retained[item["id"]] = item
+        # Il controllo del player del 29/10 ha verificato un audio italiano
+        # selezionabile e un'opzione di download audio IT, NON i diritti.
+        # Registrarlo anche nel catalogo già creato nei run precedenti.
+        if old:
+            old.update({key: item[key] for key in (
+                "italian_version_available", "italian_audio_candidate",
+                "italian_audio_in_player_verified",
+                "italian_audio_download_option_verified", "audio_evidence",
+                "provenance")})
+            retained[item["id"]] = old
+        else:
+            retained[item["id"]] = item
     diagnostics = []
     success_count = 0
     for source in SOURCES:
