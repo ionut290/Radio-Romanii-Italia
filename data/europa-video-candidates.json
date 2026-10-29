@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T19:20:45.398285+00:00",
+  "updated_at": "2026-10-29T19:29:52.207834+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -25,7 +25,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "c113564468ad15ffb5",
@@ -37,7 +41,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "b13e4b1d9193b88acf",
@@ -49,7 +57,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "a79f42f996a4d63077",
@@ -61,7 +73,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "9d93ff0f708e4d8ab7",
@@ -73,7 +89,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "84434d056c1181e088",
@@ -85,7 +105,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "66b172ab1f799c8220",
@@ -97,7 +121,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "65d21a3b8ff2c3d7c4",
@@ -109,7 +137,11 @@
       "language_hint": "und",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "language_status": "ITALIANO_NON_CONFERMATO",
+      "language_checked_at": "2026-10-29T19:29:52.207834+00:00"
     },
     {
       "id": "5e8cdef90605bb07ce",
@@ -412,6 +444,23 @@
       "status": "DA_VERIFICARE"
     },
     {
+      "id": "a485abbba7162e8e0f",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "Informal meeting of ministers responsible for Cohesion Policy – press conference",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-294336",
+      "published_at": "2026-09-15",
+      "language_hint": "und",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English Italiano",
+      "italian_version_available": true,
+      "language_status": "VERSIONE_IT_INDICATA",
+      "language_checked_at": "2026-10-29T12:00:00+00:00",
+      "provenance": "Scheda ufficiale AV UE, 29/10/2026; ascolto e licenza da verificare"
+    },
+    {
       "id": "5fbb6b6b45d6de2b7d",
       "source_id": "commissione_europea",
       "source": "Commissione europea",
@@ -496,5 +545,25 @@
       "status": "DA_VERIFICARE"
     }
   ],
+  "italian_versions": [
+    {
+      "id": "a485abbba7162e8e0f",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "Informal meeting of ministers responsible for Cohesion Policy – press conference",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-294336",
+      "published_at": "2026-09-15",
+      "language_hint": "und",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English Italiano",
+      "italian_version_available": true,
+      "language_status": "VERSIONE_IT_INDICATA",
+      "language_checked_at": "2026-10-29T12:00:00+00:00",
+      "provenance": "Scheda ufficiale AV UE, 29/10/2026; ascolto e licenza da verificare"
+    }
+  ],
+  "language_checks_this_run": 8,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
