@@ -1,0 +1,45 @@
+name: RDI Europa - Collaudo offline audio italiano
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/prepare_europa_av_preview.py'
+      - 'tests/test_europa_av_preview.py'
+      - '.github/workflows/europa-av-verify.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-europa-av-test
+  cancel-in-progress: false
+
+jobs:
+  offline-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installa FFmpeg per un collaudo reale
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          ffmpeg -version | head -n 1
+          ffprobe -version | head -n 1
+      - name: Verifica mixer italiano su media sintetici, senza streaming o download
+        run: |
+          python -m unittest discover -s tests -p 'test_europa_av_preview.py' -v
+      - name: Conferma diretta invariata
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path("data/europa-video-playout.json").read_text())
+          assert p["live_enabled"] is False
+          assert p["playback_mode"] == "STAGING_ONLY"
+          print("Solo test locale: niente trasmissioni, nessuna chiave RTMP caricata.")
+          PY
