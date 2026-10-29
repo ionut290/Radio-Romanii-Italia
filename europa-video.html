@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RDI Europa · Catalogo video istituzionali</title>
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{color-scheme:dark;font-family:Inter,Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:#0a1628;color:#f5f7fb}
+header{padding:30px max(24px,calc((100vw - 1140px)/2));background:#102642;border-bottom:1px solid #2c4867}
+h1{margin:8px 0;font-size:clamp(27px,4vw,42px)}p{line-height:1.6;color:#c8d7e9}
+main{max-width:1140px;padding:26px 24px 65px;margin:auto}
+nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+a{color:#cde8ff}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #ffdd71}
+.small{font-size:13px;color:#afc4db}
+.tag{display:inline-block;background:#214265;border:1px solid #41658a;border-radius:25px;padding:5px 11px;font-size:12px;font-weight:800;letter-spacing:.5px}
+.caution{border-left:4px solid #ffce60;background:#1b2d43;padding:15px 18px;margin:19px 0 25px;line-height:1.55}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+input,select{background:#152e4d;border:1px solid #4f7296;border-radius:8px;color:white;padding:13px 14px;font-size:15px}
+input{flex:1 1 280px;min-width:0}select{min-width:185px}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat{background:#142c49;border:1px solid #27425f;border-radius:10px;padding:14px 18px;min-width:190px}
+.stat b{display:block;font-size:25px;margin-bottom:4px}
+h2{font-size:23px;margin:32px 0 15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:14px}
+.card{background:#142b47;border:1px solid #33516d;padding:19px;border-radius:13px}
+.card h3{margin:11px 0;line-height:1.28;font-size:19px}
+.card .source{font-size:13px;color:#e9c87a;text-transform:uppercase;font-weight:bold}
+.card a{display:inline-block;margin-top:12px;font-weight:bold}
+.card p{margin:7px 0;color:#c6d8e8;font-size:13px}
+.empty{border:1px dashed #58728b;padding:28px;border-radius:10px}
+footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7;font-size:13px}
+</style></head><body>
+<header><nav><a href="./index.html">← Torna a RDI</a><span class="tag">REDAZIONE · NON IN ONDA</span></nav>
+<h1>RDI Europa</h1><p>Catalogo aggiornabile di video dalla Commissione europea e dal Parlamento europeo.</p></header>
+<main>
+<div class="caution"><strong>Attenzione:</strong> sono segnalazioni da verificare, non video già autorizzati alla trasmissione. La lingua del titolo non garantisce l'audio italiano. La riproduzione in diretta resta disabilitata finché non è collaudata la regia audio/video.</div>
+<div class="stats"><div class="stat"><b id="total">–</b><span>Video candidati</span></div>
+<div class="stat"><b id="sources">–</b><span>Fonti raggiungibili</span></div>
+<div class="stat"><b id="ready">–</b><span>Video approvati (solo preparazione)</span></div></div>
+<p id="updated" class="small" aria-live="polite">Lettura catalogo…</p>
+<h2>Prossimo spazio quotidiano · ore 18:00 (Italia)</h2><div id="slot" class="card">Palinsesto non ancora disponibile.</div>
+<h2>Ultimi video individuati</h2>
+<div class="controls"><input id="search" type="search" placeholder="Cerca per titolo…"><select id="filter" aria-label="Filtra per fonte"><option value="">Tutte le fonti</option><option value="commissione_europea">Commissione europea</option><option value="parlamento_europeo">Parlamento europeo</option></select></div>
+<div id="results" class="grid" aria-live="polite"></div>
+</main><footer>Radio Românii din Italia · Materiali delle istituzioni europee con attribuzione e verifica delle condizioni d'uso</footer>
+<script>
+(async()=>{
+ const $=id=>document.getElementById(id), results=$('results');
+ const message=value=>{const n=document.createElement('div');n.className='empty';n.textContent=value;results.replaceChildren(n)};
+ let items=[];
+ const render=()=>{
+  const q=$('search').value.trim().toLocaleLowerCase('it');
+  const src=$('filter').value;
+  const shown=items.filter(x=>(!src||x.source_id===src)&&(!q||(x.title||'').toLocaleLowerCase('it').includes(q))).slice(0,60);
+  results.replaceChildren();
+  if(!shown.length){message('Nessun video corrispondente ai filtri oppure catalogo non ancora alimentato.');return}
+  for(const x of shown){
+   const card=document.createElement('article');card.className='card';
+   const source=document.createElement('div');source.className='source';source.textContent=x.source||'Istituzione UE';
+   const title=document.createElement('h3');title.textContent=x.title||'Video senza titolo';
+   const date=document.createElement('p');date.textContent=x.published_at?'Data indicata: '+x.published_at.slice(0,10):'Data non verificata';
+   const warning=document.createElement('p');warning.textContent='Da verificare: audio italiano e licenza di questo video.';
+   const link=document.createElement('a');
+   try{const url=new URL(x.source_url);if(url.protocol==='https:'&&/(^|\.)(europarl\.europa\.eu|audiovisual\.ec\.europa\.eu)$/.test(url.hostname)){link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Apri video nella fonte ufficiale'} }catch{}
+   card.append(source,title,date,warning);if(link.href)card.append(link);
+   results.append(card)
+  }
+ };
+ $('search').addEventListener('input',render);$('filter').addEventListener('change',render);
+ try{
+  const [ca,pl]=await Promise.all([
+   fetch('./data/europa-video-candidates.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('catalogo');return r.json()}),
+   fetch('./data/europa-video-playout.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('palinsesto');return r.json()})
+  ]);
+  items=Array.isArray(ca.items)?ca.items:[];
+  $('total').textContent=items.length;
+  $('sources').textContent=(ca.success_sources||0)+' / 2';
+  $('ready').textContent=Array.isArray(pl.ready_videos)?pl.ready_videos.length:0;
+  $('updated').textContent=ca.updated_at?'Ultimo aggiornamento catalogo: '+new Date(ca.updated_at).toLocaleString('it-IT',{timeZone:'Europe/Rome'})+' · ora italiana':'Monitoraggio non ancora eseguito.';
+  const slot=Array.isArray(pl.daily_schedule)?pl.daily_schedule[0]:null;
+  $('slot').textContent=slot?(slot.status==='PRONTO_PER_REGIA'?'Video preparato per '+slot.date+' alle 18:00. Trasmissione non ancora attiva.':'Nessun video italiano approvato per '+slot.date+' alle 18:00; nessuna messa in onda automatica.'):'Non esiste ancora un palinsesto approvato.';
+  render();
+ }catch(e){$('updated').textContent='Catalogo non disponibile: '+e.message;message('Non è stato possibile caricare i dati; riprova più tardi.')}
+})();
+</script></body></html>
