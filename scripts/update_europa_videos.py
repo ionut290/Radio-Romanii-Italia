@@ -205,7 +205,12 @@ class CommissionListing(HTMLParser):
                 pass
         title = RE_DATE.sub("", value)
         title = RE_TIME.sub("", title).strip(" ·-– ")
-        obj = candidate(self.source, title, self.href, published)
+        publisher = self.source
+        # Il portale AV della Commissione include anche servizi ufficiali EP.
+        # Solo prefissi espliciti; questo è un indizio editoriale, NON prova di lingua/licenza.
+        if re.match(r"^(EP News|EP Press conference|European Parliament)\\b", title, re.I):
+            publisher = dict(self.source, id="parlamento_europeo", name="Parlamento europeo (tramite AV UE)")
+        obj = candidate(publisher, title, self.href, published)
         if obj:
             self.items.append(obj)
         self.href = None
