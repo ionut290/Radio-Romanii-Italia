@@ -1,0 +1,56 @@
+name: RDI Europa - Prova reale privata video + voce italiana
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/europa_real_av_staging.py'
+      - 'data/europa-real-av-staging.json'
+      - '.github/workflows/europa-real-av-staging.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-europa-real-av-staging
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica strumenti video installati
+        run: |
+          set -e
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          ffprobe -version | head -1
+      - name: Verifica condizioni e anteprima tecnica senza creare file
+        run: python scripts/europa_real_av_staging.py --id I-294336
+      - name: Crea solo 12 secondi di prova privata, senza streaming
+        run: |
+          mkdir -p /tmp/rdi-europa
+          python scripts/europa_real_av_staging.py --id I-294336 --execute --output /tmp/rdi-europa/europa-italiano-preview.mp4
+      - name: Verifica che il programma della radio non sia stato modificato
+        run: |
+          python - <<'PY'
+          import json
+          with open("data/europa-video-playout.json") as f:
+              x=json.load(f)
+          assert x["live_enabled"] is False
+          assert x["playback_mode"] == "STAGING_ONLY"
+          print("Il live pubblico NON è stato modificato.")
+          PY
+      - name: Salva anteprima di prova per verifica redazionale, non pubblicarla sul sito
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-europa-prima-prova-it
+          path: |
+            /tmp/rdi-europa/europa-italiano-preview.mp4
+            /tmp/rdi-europa/europa-italiano-preview.json
+          retention-days: 3
+          if-no-files-found: error
