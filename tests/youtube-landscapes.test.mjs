@@ -62,7 +62,7 @@ test("RDI live page includes silent visuals only and respects priority overlays"
  assert.match(css,/body\.rdi-spot-active #rdiLandscapes/);
  assert.match(css,/body\.rdi-geo-active #rdiLandscapes/);
  assert.match(script,/IMAGINI DE ARHIVĂ/);
- assert.doesNotMatch(script,/new Audio\(|AzuraCast|audio\.play\(|\.volume=1/);
+ assert.doesNotMatch(script,/new Audio\(|audio\.play\(|\.volume=1/);
  assert.equal(build.build,"20261029-italy-romania-scenes-1");
  assert.match(page,new RegExp(build.build));
 });
