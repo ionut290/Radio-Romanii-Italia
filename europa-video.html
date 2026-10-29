@@ -30,15 +30,15 @@ h2{font-size:23px;margin:32px 0 15px}
 footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7;font-size:13px}
 </style></head><body>
 <header><nav><a href="./index.html">← Torna a RDI</a><span class="tag">REDAZIONE · NON IN ONDA</span></nav>
-<h1>RDI Europa</h1><p>Catalogo aggiornabile di video dalla Commissione europea e dal Parlamento europeo.</p></header>
+<h1>RDI Europa</h1><p>Solo servizi istituzionali con audio italiano e diritti verificati dalla redazione.</p></header>
 <main>
-<div class="caution"><strong>Attenzione:</strong> sono segnalazioni da verificare, non video già autorizzati alla trasmissione. La lingua del titolo non garantisce l'audio italiano. La riproduzione in diretta resta disabilitata finché non è collaudata la regia audio/video.</div>
-<div class="stats"><div class="stat"><b id="total">–</b><span>Video candidati</span></div>
-<div class="stat"><b id="sources">–</b><span>Fonti raggiungibili</span></div>
-<div class="stat"><b id="ready">–</b><span>Video approvati (solo preparazione)</span></div></div>
+<div class="caution"><strong>Solo italiano:</strong> i filmati con voce straniera, audio sconosciuto o semplici sottotitoli italiani sono esclusi dall'elenco. I video approvati restano fuori onda fino al collaudo della regia audio/video.</div>
+<div class="stats"><div class="stat"><b id="total">–</b><span>Video con audio italiano approvati</span></div>
+<div class="stat"><b id="sources">–</b><span>Segnalazioni da controllare (non in elenco)</span></div>
+<div class="stat"><b id="ready">–</b><span>Video pronti per la regia di prova</span></div></div>
 <p id="updated" class="small" aria-live="polite">Lettura catalogo…</p>
 <h2>Prossimo spazio quotidiano · ore 18:00 (Italia)</h2><div id="slot" class="card">Palinsesto non ancora disponibile.</div>
-<h2>Ultimi video individuati</h2>
+<h2>Filmati verificati in italiano</h2>
 <div class="controls"><input id="search" type="search" placeholder="Cerca per titolo…"><select id="filter" aria-label="Filtra per fonte"><option value="">Tutte le fonti</option><option value="commissione_europea">Commissione europea</option><option value="parlamento_europeo">Parlamento europeo</option></select></div>
 <div id="results" class="grid" aria-live="polite"></div>
 </main><footer>Radio Românii din Italia · Materiali delle istituzioni europee con attribuzione e verifica delle condizioni d'uso</footer>
@@ -52,13 +52,13 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
   const src=$('filter').value;
   const shown=items.filter(x=>(!src||x.source_id===src)&&(!q||(x.title||'').toLocaleLowerCase('it').includes(q))).slice(0,60);
   results.replaceChildren();
-  if(!shown.length){message('Nessun video corrispondente ai filtri oppure catalogo non ancora alimentato.');return}
+  if(!shown.length){message('Al momento non ci sono video parlati in italiano verificati e autorizzati. I video in inglese non vengono mostrati.');return}
   for(const x of shown){
    const card=document.createElement('article');card.className='card';
    const source=document.createElement('div');source.className='source';source.textContent=x.source||'Istituzione UE';
    const title=document.createElement('h3');title.textContent=x.title||'Video senza titolo';
    const date=document.createElement('p');date.textContent=x.published_at?'Data indicata: '+x.published_at.slice(0,10):'Data non verificata';
-   const warning=document.createElement('p');warning.textContent='Da verificare: audio italiano e licenza di questo video.';
+   const warning=document.createElement('p');warning.textContent='Audio italiano e diritti verificati dalla redazione. Diretta ancora disabilitata.';
    const link=document.createElement('a');
    try{const url=new URL(x.source_url);if(url.protocol==='https:'&&/(^|\.)(europarl\.europa\.eu|audiovisual\.ec\.europa\.eu)$/.test(url.hostname)){link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Apri video nella fonte ufficiale'} }catch{}
    card.append(source,title,date,warning);if(link.href)card.append(link);
@@ -71,10 +71,10 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
    fetch('./data/europa-video-candidates.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('catalogo');return r.json()}),
    fetch('./data/europa-video-playout.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('palinsesto');return r.json()})
   ]);
-  items=Array.isArray(ca.items)?ca.items:[];
+  items=(Array.isArray(pl.ready_videos)?pl.ready_videos:[]).filter(x=>x.approved===true&&x.audio_italiano_verificato===true&&x.diritti_verificati===true&&x.musica_e_terzi_verificati===true);
   $('total').textContent=items.length;
-  $('sources').textContent=(ca.success_sources||0)+' / 2';
-  $('ready').textContent=Array.isArray(pl.ready_videos)?pl.ready_videos.length:0;
+  $('sources').textContent=(Array.isArray(ca.items)?ca.items.length:0);
+  $('ready').textContent=items.length;
   $('updated').textContent=ca.updated_at?'Ultimo aggiornamento catalogo: '+new Date(ca.updated_at).toLocaleString('it-IT',{timeZone:'Europe/Rome'})+' · ora italiana':'Monitoraggio non ancora eseguito.';
   const slot=Array.isArray(pl.daily_schedule)?pl.daily_schedule[0]:null;
   $('slot').textContent=slot?(slot.status==='PRONTO_PER_REGIA'?'Video preparato per '+slot.date+' alle 18:00. Trasmissione non ancora attiva.':'Nessun video italiano approvato per '+slot.date+' alle 18:00; nessuna messa in onda automatica.'):'Non esiste ancora un palinsesto approvato.';
