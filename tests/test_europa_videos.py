@@ -43,6 +43,14 @@ class EuropaCatalogTests(unittest.TestCase):
         self.assertEqual(data[0]["published_at"], "2026-10-29")
         self.assertEqual(data[0]["language_hint"], "und")
 
+    def test_ep_news_on_eu_av_portal(self):
+        source = mod.SOURCES[1]
+        html = b'<a href="/en/media/video/I-297008">EP News Visit by Roberta METSOLA 29/10/2026 03:23</a>'
+        data = mod.parse_listing(html, source)
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]["source_id"], "parlamento_europeo")
+        self.assertFalse(data[0]["diritti_verificati"])
+
     def test_host_does_not_trust_lookalikes(self):
         self.assertFalse(mod.page_allowed("https://audiovisual.ec.europa.eu.evil.example/en/media/video/I-42"))
         self.assertFalse(mod.page_allowed("http://audiovisual.ec.europa.eu/en/media/video/I-42"))
