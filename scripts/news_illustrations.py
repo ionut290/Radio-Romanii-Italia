@@ -4,6 +4,7 @@ Nessuna API a pagamento. Non sono fotografie né immagini prodotte da un modello
 """
 import hashlib
 import html
+import json
 import re
 import textwrap
 from pathlib import Path
@@ -107,6 +108,11 @@ def fill_missing_images(items):
     publishers block hotlinking or remove a photo after publication.
     """
     OUT.mkdir(parents=True, exist_ok=True)
+    assignment_file = Path(__file__).resolve().parents[1] / "data" / "news-cover-assignments.json"
+    try:
+        assignments = json.loads(assignment_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        assignments = {}
     used = set()
     count = 0
     for item in items:
@@ -120,6 +126,23 @@ def fill_missing_images(items):
         used.add(path.name)
         fallback = "./" + path.as_posix()
         item["fallbackImage"] = fallback
+        assignment = assignments.get(identity)
+        existing_image = str(item.get("image") or "")
+        is_generic_image = (
+            not existing_image
+            or "./editorial-images/ai-" in existing_image
+            or (existing_image.endswith(".svg") and "editorial-images/" in existing_image)
+        )
+        if assignment and is_generic_image:
+            cover = assignment.get("image")
+            if cover:
+                item["image"] = cover
+                item["fallbackImage"] = cover
+                item["imageType"] = "ai-editorial-photo"
+                item["image_credit"] = assignment.get(
+                    "credit",
+                    "Copertă fotorealistă generată cu IA; imagine de context, nu fotografia evenimentului.",
+                )
         if not item.get("image"):
             category = str(item.get("category") or "").casefold()
             topic = topic_for(item)
