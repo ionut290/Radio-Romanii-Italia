@@ -11,6 +11,7 @@ on:
       - 'tests/test_europa_av_preview.py'
       - 'tests/test_europa_videos.py'
       - 'data/europa-video-approved.json'
+      - 'data/europa-video-italian-archive.json'
       - '.github/workflows/europa-videos.yml'
 permissions:
   contents: write
