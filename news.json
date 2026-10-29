@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T08:07:54.348648+00:00",
+  "updated_at": "2026-10-29T08:09:17.047319+00:00",
   "items": [
     {
       "category": "România",
@@ -45,9 +45,10 @@
       "summary": "Dalla cedolare alle scuole, l'abolizione del bollo diventa definitiva per le auto meno potenti",
       "image": "./editorial-images/ai-health-rdi.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-b68dfb4d164344ec2de0.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/ai-health-rdi.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "România",
@@ -67,11 +68,12 @@
       "source": "ANSA",
       "published": "2026-10-29T07:40:07+00:00",
       "summary": "I carabinieri arrestano un 76enne, il parente disabile morto soffocato dal dolce",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-giustizia-tribunale.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-bcf819cf13ac8f305080.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-giustizia-tribunale.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "România",
@@ -112,9 +114,10 @@
       "summary": "Risultati deludenti in Cina e costi legati a riorganizzazione gruppo hanno inciso",
       "image": "./editorial-images/ai-economy-rdi.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-b23712288ceaa3f2dc62.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/ai-economy-rdi.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "România",
@@ -145,11 +148,12 @@
       "source": "ANSA",
       "published": "2026-10-29T07:00:59+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/ai-consular-rdi.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-7f17103821325908982e.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/ai-consular-rdi.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "România",
@@ -224,11 +228,12 @@
       "source": "Libero",
       "published": "2026-10-29T06:00:25+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-economy-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-economia-panificio.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-ac9fec8eb6a2a921c2b5.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-economia-panificio.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "România",
@@ -296,7 +301,8 @@
       "source_tier": "news",
       "fallbackImage": "./editorial-images/news-covers/italy-national-strike.jpg",
       "imageType": "ai-editorial-photo",
-      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -319,7 +325,8 @@
       ],
       "fallbackImage": "./editorial-images/news-covers/israel-election.jpg",
       "imageType": "ai-editorial-photo",
-      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -330,9 +337,10 @@
       "summary": "",
       "image": "./editorial-images/ai-community-rdi.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-81a118749ce3ded4351e.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/ai-community-rdi.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -354,7 +362,8 @@
       ],
       "fallbackImage": "./editorial-images/news-covers/school-safety.jpg",
       "imageType": "ai-editorial-photo",
-      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -367,7 +376,8 @@
       "source_tier": "news",
       "fallbackImage": "./editorial-images/news-covers/serie-a-table.jpg",
       "imageType": "ai-editorial-photo",
-      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -390,7 +400,8 @@
       ],
       "fallbackImage": "./editorial-images/news-covers/toledo-rail-investigation.jpg",
       "imageType": "ai-editorial-photo",
-      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -403,7 +414,8 @@
       "source_tier": "news",
       "fallbackImage": "./editorial-images/news-covers/brazil-politics.jpg",
       "imageType": "ai-editorial-photo",
-      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -416,7 +428,8 @@
       "source_tier": "news",
       "fallbackImage": "./editorial-images/news-covers/italy-budget-2027.jpg",
       "imageType": "ai-editorial-photo",
-      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -425,11 +438,12 @@
       "source": "ANSA",
       "published": "2026-10-28T21:00:07+00:00",
       "summary": "Le elezioni sono fissate per il 14 dicembre",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-consolato-sportello.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-0111916edfe3079abf29.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-consolato-sportello.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -438,11 +452,12 @@
       "source": "ANSA",
       "published": "2026-10-28T20:02:10+00:00",
       "summary": "Il contenimento, le richieste d'aiuto, i soccorritori e le frasi choc dei poliziotti",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-giustizia-assistenza-legale.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-c05b4fb996f0ebfab4bb.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-giustizia-assistenza-legale.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -451,11 +466,12 @@
       "source": "Idealista",
       "published": "2026-10-28T20:00:01+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-ambiente-fiume.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-cd0e76305f7a2024c468.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-ambiente-fiume.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Știri consulare",
@@ -464,11 +480,12 @@
       "source": "Capital.ro",
       "published": "2026-10-28T19:48:15+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-sport-pallavolo.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-463612de602ff38fee31.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-sport-pallavolo.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -477,7 +494,7 @@
       "source": "ANSA",
       "published": "2026-10-28T19:20:11+00:00",
       "summary": "Insieme a Brescia e Bergamo. La figlia: 'Finalmente è un delitto per tutti'",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/ai-workers-rdi.jpg",
       "source_tier": "news",
       "body": "La morte di David Rossi torna al centro di nuovi accertamenti giudiziari. Il 28 ottobre 2026 ANSA e RaiNews hanno riferito che la Direzione distrettuale antimafia di Firenze sta esaminando un fascicolo nel quale viene ipotizzato l'omicidio dell'ex responsabile della comunicazione del Monte dei Paschi di Siena. Rossi morì il 6 marzo 2013, dopo essere precipitato dalla finestra del proprio ufficio a Rocca Salimbeni. L'apertura di un fascicolo per omicidio non equivale a una sentenza né all'identificazione di responsabili.\n\nLa notizia rappresenta un passaggio importante perché le precedenti indagini della magistratura senese erano state archiviate sulla base della ricostruzione del suicidio. Secondo le ricostruzioni pubblicate il 28 ottobre, gli atti sarebbero stati trasmessi a Firenze dopo un esposto della moglie Antonella Tognazzi e della figlia Carolina Orlandi. Le due donne chiedono da anni nuovi approfondimenti sulla dinamica della morte. La procura competente dovrà ora valutare gli elementi disponibili secondo le regole del procedimento penale.\n\nUn ulteriore filone risulterebbe aperto presso la procura antimafia di Brescia. RaiNews e ANSA collegano gli approfondimenti a possibili verifiche sulle sponsorizzazioni del Monte dei Paschi e sui movimenti finanziari legati a quel settore. Le testate riportano un budget annuale di circa 50 milioni di euro per le sponsorizzazioni e una riduzione di circa dieci milioni precedente alla morte. Questi dati sono parte delle ipotesi investigative riferite dalla stampa: non dimostrano, da soli, né un movente né il coinvolgimento di persone specifiche.\n\nIl quadro è cambiato anche per effetto dei lavori della seconda commissione parlamentare d'inchiesta. Nella relazione intermedia di marzo 2026 la commissione ha sostenuto la tesi dell'intervento di terzi, contestando l'interpretazione del suicidio. A settembre, secondo ANSA, consulenti ascoltati dalla commissione hanno illustrato valutazioni medico-legali e psicologico-forensi considerate incompatibili con la sola caduta. Si tratta di conclusioni tecniche e parlamentari che devono essere distinte dagli accertamenti della magistratura e dalle eventuali decisioni di un giudice.\n\nLe reazioni della famiglia mostrano il significato personale della nuova fase. Tognazzi ha espresso soddisfazione per l'apertura del fascicolo e la speranza di arrivare a chiarire le responsabilità. Orlandi ha accolto la notizia come un superamento delle archiviazioni precedenti. Le loro dichiarazioni sono posizioni attribuite, non una prova giudiziaria autonoma. Anche le informazioni su eventuali collegamenti con ambienti criminali sono, allo stato delle fonti consultate, piste da verificare e non accuse accertate.\n\nL'analisi della redazione RDI distingue dunque tre livelli: la morte avvenuta nel 2013, i dubbi sollevati da perizie e commissione parlamentare, e le nuove indagini delle procure. La fase attuale può portare ad approfondimenti, nuove testimonianze o richieste di archiviazione e altri provvedimenti, ma nessuno di questi esiti può essere anticipato. Il diritto all'informazione richiede attenzione tanto alla ricerca della verità quanto alla presunzione d'innocenza di ogni persona eventualmente coinvolta.",
       "extended_summary": true,
@@ -499,7 +516,7 @@
       "source": "Rotalianul – Revista românului din Italia",
       "published": "2026-10-28T19:18:35+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-comunita-volontari.jpg",
       "source_tier": "community",
       "body": "La scriitoarea română Liliana Nechita, experiența migrației și munca de îngrijire nu sunt două povești separate. La 27 octombrie 2026, în cadrul prezentării Dossierului Statistic privind Imigrația 2026 la Nuovo Teatro Orione din Roma, ea a vorbit despre despărțirea de familie, munca în casele altora și dificultatea de a-și găsi un loc între identitatea de autoare și cea de îngrijitoare. Relatarea amplă a intervenției a fost publicată la 28 octombrie de Rotalianul; prezența sa în program este confirmată independent de portalul instituțional italian Integrazione Migranti și de organizatorii evenimentului.\n\nNechita trăiește în Italia de peste două decenii și este cunoscută pentru volumul „Cireșe amare”, care tratează experiențele femeilor plecate la muncă peste hotare. În intervenția relatată de Rotalianul, ea a explicat că se prezintă cu dificultate drept scriitoare tocmai pentru că nu vrea să se distanțeze de persoanele ale căror istorii le povestește. Această formulare descrie propria perspectivă, nu statutul tuturor îngrijitoarelor românce din Italia.\n\nUn episod personal a impresionat publicul: potrivit relatării, Nechita a povestit că, atunci când mama sa a murit în România, nu a putut fi alături de ea. A cerut două ore libere pentru a plânge, dar angajatorii i-ar fi răspuns că trebuie pregătită masa. Este mărturia atribuită autoarei și nu o constatare independentă privind un angajator identificat. Publicarea ei cere respect pentru persoana care a vorbit și pentru caracterul intim al experienței.\n\nScriitoarea a descris și alte situații de precaritate întâlnite în mediul muncii domestice: lipsa odihnei, dependența de familia angajatoare, separarea îndelungată de copii și sentimentul de a nu mai aparține pe deplin nici țării de origine, nici celei de destinație. Aceste relatări nu trebuie transformate automat în statistici reprezentative. Ele sunt mărturii care indică probleme de cercetat, de discutat cu lucrătoarele, organizațiile sindicale și instituțiile competente.\n\nContextul evenimentului oferă o dimensiune mai largă. Dossierul Statistic privind Imigrația 2026, realizat de Centrul de Studii IDOS împreună cu partenerii săi, a fost prezentat în Italia pe 27 octombrie. Programul oficial a inclus intervenții despre cercetarea migrației, sănătate și drepturi, alături de mărturia scriitoarei. Portalul guvernamental Integrazione Migranti a anunțat disponibilitatea unei sinteze și a raportului integral, utile pentru a distinge experiențele individuale de tendințele documentate prin date.\n\nPentru comunitatea română din Italia, povestea arată de ce contribuția îngrijitoarelor la viața familiilor italiene trebuie discutată împreună cu dreptul lor la viață familială, odihnă și demnitate. Analiza redacției RDI: literatura poate face vizibilă o experiență pe care cifrele o descriu doar parțial, dar schimbările sociale cer și date verificabile, reguli aplicate și dialog între lucrători și angajatori. Nu rezultă din sursele consultate că fiecare familie angajatoare se comportă astfel; rezultă că mărturia merită ascultată fără generalizări.",
       "extended_summary": true,
@@ -509,9 +526,10 @@
         "https://integrazionemigranti.gov.it/it-it/Ricerca-news/Dettaglio-news/id/4958/t/25",
         "https://www.nev.it/nev/2026/10/28/dossier-immigrazione-2026-oltre-linganno-delle-barriere/"
       ],
-      "fallbackImage": "./editorial-images/rdi-auto-v2-9a1487fb564ad4f78d0d.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-comunita-volontari.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Știri consulare",
@@ -520,11 +538,12 @@
       "source": "Digi24",
       "published": "2026-10-28T18:54:05+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-travel-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-trasporti-stazione.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-193bb5913a5b7efa7ee9.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-trasporti-stazione.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Știri consulare",
@@ -533,11 +552,12 @@
       "source": "Antena 3",
       "published": "2026-10-28T18:53:00+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/ai-travel-rdi.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-53aec454196265947e1c.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/ai-travel-rdi.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Diaspora",
@@ -546,11 +566,12 @@
       "source": "Rotalianul – Revista românului din Italia",
       "published": "2026-10-28T18:33:17+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-health-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-salute-farmacia.jpg",
       "source_tier": "community",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-fd4862af91ca0122b6f2.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-salute-farmacia.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -572,11 +593,12 @@
       "source": "ANSA",
       "published": "2026-10-28T17:51:14+00:00",
       "summary": "Fuori il 20 novembre in digitale, il 4 dicembre in formato fisico",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-tecnologia-digitale.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-c0136ddea10b77e602ca.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-tecnologia-digitale.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -598,11 +620,12 @@
       "source": "Padova24Ore",
       "published": "2026-10-28T17:27:46+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/ai-workers-rdi.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-794c90882f8a5e519c1c.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/ai-workers-rdi.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Diaspora",
@@ -689,7 +712,7 @@
       "source": "StiriDiaspora",
       "published": "2026-10-28T12:36:00+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/ai-travel-rdi.jpg",
       "source_tier": "community",
       "fallbackImage": "./editorial-images/rdi-auto-v2-3e802ec6965b7095e0a1.svg",
       "imageType": "ai-editorial-illustration",
@@ -737,11 +760,12 @@
       "source": "Padova24Ore",
       "published": "2026-10-28T12:24:08+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-scuola-preparazione.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-a75a3cba3818e8f4e811.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-scuola-preparazione.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -815,11 +839,12 @@
       "source": "Padova24Ore",
       "published": "2026-10-28T09:17:45+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-meteo-pioggia.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-fd2ca710de5831ce3723.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-meteo-pioggia.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Italia",
@@ -828,11 +853,12 @@
       "source": "La Gazzetta del Mezzogiorno",
       "published": "2026-10-28T08:50:02+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-lavoro-sicurezza.jpg",
       "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-6f20dee2f46d961e7ac7.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-lavoro-sicurezza.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Diaspora",
@@ -841,11 +867,12 @@
       "source": "StiriDiaspora",
       "published": "2026-10-28T08:26:00+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-educazione-corso-lingua.jpg",
       "source_tier": "community",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-9a30a9b87a9510d19318.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-educazione-corso-lingua.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Diaspora",
@@ -880,7 +907,7 @@
       "source": "StiriDiaspora",
       "published": "2026-10-28T07:18:00+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/ai-consular-rdi.jpg",
       "source_tier": "community",
       "fallbackImage": "./editorial-images/rdi-auto-v2-2819de71d9d96e63abd8.svg",
       "imageType": "ai-editorial-illustration",
@@ -893,11 +920,12 @@
       "source": "StiriDiaspora",
       "published": "2026-10-28T06:45:00+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/news-covers/rdi-servizi-digitali.jpg",
       "source_tier": "community",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-5cba535b99d2712dffa8.svg",
-      "imageType": "ai-editorial-illustration",
-      "imageAttribution": "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+      "fallbackImage": "./editorial-images/news-covers/rdi-servizi-digitali.jpg",
+      "imageType": "ai-editorial-photo",
+      "image_credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+      "imageAttribution": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
     },
     {
       "category": "Diaspora",
@@ -1046,7 +1074,7 @@
       "source": "StiriDiaspora",
       "published": "2026-10-27T08:51:00+00:00",
       "summary": "",
-      "image": "./editorial-images/ai-community-rdi.jpg",
+      "image": "./editorial-images/ai-workers-rdi.jpg",
       "source_tier": "community",
       "fallbackImage": "./editorial-images/rdi-auto-v2-b7eabf92a9bf5b344fc8.svg",
       "imageType": "ai-editorial-illustration",
