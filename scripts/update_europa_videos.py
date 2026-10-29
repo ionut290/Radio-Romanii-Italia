@@ -309,7 +309,7 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
         if urlparse(item.get("source_url", "")).hostname != "audiovisual.ec.europa.eu":
             continue
         checked = item.get("language_checked_at", "")
-        if checked:
+        if checked and item.get("language_probe_version") == 2:
             try:
                 stamp = dt.datetime.fromisoformat(checked.replace("Z", "+00:00"))
                 ttl = dt.timedelta(days=14 if item.get("language_status") in
@@ -335,6 +335,7 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
             item["italian_version_available"] = False
             item["language_error"] = str(exc)[:110]
         item["language_checked_at"] = now.isoformat()
+        item["language_probe_version"] = 2
     return count
 
 
@@ -480,7 +481,7 @@ def main():
                 old = retained.get(item["id"], {})
                 # La nuova acquisizione aggiorna titolo/data ma NON cancella
                 # la verifica delle lingue effettuata nelle esecuzioni precedenti.
-                for key in ("languages_declared", "italian_version_available", "italian_audio_candidate", "italian_audio_in_player_verified", "italian_audio_download_option_verified", "audio_evidence", "language_status", "language_checked_at", "language_error", "provenance"):
+                for key in ("languages_declared", "italian_version_available", "italian_audio_candidate", "italian_audio_in_player_verified", "italian_audio_download_option_verified", "audio_evidence", "language_status", "language_checked_at", "language_probe_version", "language_error", "provenance"):
                     if key in old:
                         item[key] = old[key]
                 retained[item["id"]] = item
