@@ -30,18 +30,18 @@ h2{font-size:23px;margin:32px 0 15px}
 footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7;font-size:13px}
 </style></head><body>
 <header><nav><a href="./index.html">← Torna a RDI</a><span class="tag">REDAZIONE · NON IN ONDA</span></nav>
-<h1>RDI Europa</h1><p>Solo servizi istituzionali con audio italiano e diritti verificati dalla redazione.</p></header>
+<h1>RDI Europa</h1><p>Archivio delle istituzioni europee: video con una versione italiana indicata nelle schede ufficiali.</p></header>
 <main>
-<div class="caution"><strong>Solo italiano:</strong> i filmati con voce straniera, audio sconosciuto o semplici sottotitoli italiani sono esclusi dall'elenco. I video approvati restano fuori onda fino al collaudo della regia audio/video.</div>
-<div class="stats"><div class="stat"><b id="total">–</b><span>Video con audio italiano approvati</span></div>
-<div class="stat"><b id="sources">–</b><span>Segnalazioni da controllare (non in elenco)</span></div>
+<div class="caution"><strong>Attenzione:</strong> questi video riportano <em>Italiano</em> tra le lingue della scheda ufficiale. Non tutti hanno una traccia già ascoltata o il permesso di ritrasmissione. I video d'archivio NON sono notizie nuove. Nessuno entra in diretta senza verifica editoriale e collaudo audio/video.</div>
+<div class="stats"><div class="stat"><b id="total">–</b><span>Video con italiano indicato</span></div>
+<div class="stat"><b id="sources">–</b><span>Altri video senza italiano confermato</span></div>
 <div class="stat"><b id="ready">–</b><span>Video pronti per la regia di prova</span></div></div>
 <p id="updated" class="small" aria-live="polite">Lettura catalogo…</p>
 <h2>Prossimo spazio quotidiano · ore 18:00 (Italia)</h2><div id="slot" class="card">Palinsesto non ancora disponibile.</div>
-<h2>Filmati verificati in italiano</h2>
+<h2>Video con opzione italiana · archivio e attualità</h2>
 <div class="controls"><input id="search" type="search" placeholder="Cerca per titolo…"><select id="filter" aria-label="Filtra per fonte"><option value="">Tutte le fonti</option><option value="commissione_europea">Commissione europea</option><option value="parlamento_europeo">Parlamento europeo</option></select></div>
 <div id="results" class="grid" aria-live="polite"></div>
-<h2>Versioni con italiano indicato dalla fonte · da verificare</h2><p>Queste schede riportano espressamente una versione in italiano, ma devono ancora essere ascoltate e autorizzate prima della diretta. Non sono in onda.</p><div id="italianReview" class="grid"></div>
+
 </main><footer>Radio Românii din Italia · Materiali delle istituzioni europee con attribuzione e verifica delle condizioni d'uso</footer>
 <script>
 (async()=>{
@@ -53,13 +53,13 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
   const src=$('filter').value;
   const shown=items.filter(x=>(!src||x.source_id===src)&&(!q||(x.title||'').toLocaleLowerCase('it').includes(q))).slice(0,60);
   results.replaceChildren();
-  if(!shown.length){message('Al momento non ci sono video parlati in italiano verificati e autorizzati. I video in inglese non vengono mostrati.');return}
+  if(!shown.length){message('Nessuna scheda con una versione italiana indicata corrisponde alla ricerca.');return}
   for(const x of shown){
    const card=document.createElement('article');card.className='card';
    const source=document.createElement('div');source.className='source';source.textContent=x.source||'Istituzione UE';
    const title=document.createElement('h3');title.textContent=x.title||'Video senza titolo';
-   const date=document.createElement('p');date.textContent=x.published_at?'Data indicata: '+x.published_at.slice(0,10):'Data non verificata';
-   const warning=document.createElement('p');warning.textContent='Audio italiano e diritti verificati dalla redazione. Diretta ancora disabilitata.';
+   const date=document.createElement('p');date.textContent=x.published_at?'Pubblicato: '+x.published_at.slice(0,10)+(x.editorial_topic?' · '+x.editorial_topic:'')+(x.duration_label?' · '+x.duration_label:''):'Archivio storico · data da confermare';
+   const warning=document.createElement('p');warning.textContent=(x.italian_audio_in_player_verified===true?'Italiano selezionabile nel lettore verificato. ':'Italiano indicato nella scheda UE. ')+'Ascolto del file e diritti di ritrasmissione ancora da approvare.';
    const link=document.createElement('a');
    try{const url=new URL(x.source_url);if(url.protocol==='https:'&&/(^|\.)(europarl\.europa\.eu|audiovisual\.ec\.europa\.eu)$/.test(url.hostname)){link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Apri video nella fonte ufficiale'} }catch{}
    card.append(source,title,date,warning);if(link.href)card.append(link);
@@ -72,38 +72,10 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
    fetch('./data/europa-video-candidates.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('catalogo');return r.json()}),
    fetch('./data/europa-video-playout.json?t='+Date.now(),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('palinsesto');return r.json()})
   ]);
-  items=(Array.isArray(pl.ready_videos)?pl.ready_videos:[]).filter(x=>x.approved===true&&x.audio_italiano_verificato===true&&x.diritti_verificati===true&&x.musica_e_terzi_verificati===true);
+  items=(Array.isArray(ca.italian_versions)?ca.italian_versions:[]).filter(x=>x.italian_version_available===true);
   $('total').textContent=items.length;
-  $('sources').textContent=(Array.isArray(ca.items)?ca.items.length:0);
-  $('ready').textContent=items.length;
-  // Versioni Italiane: metadati espliciti, ma MAI considerati audio verificato.
-  const review=$('italianReview');
-  const pending=Array.isArray(ca.italian_versions)?ca.italian_versions.filter(x=>x.italian_version_available===true):[];
-  if(!pending.length){
-    const empty=document.createElement('div');empty.className='empty';
-    empty.textContent='Nessuna versione italiana segnalata ancora; la scansione delle lingue continua.';
-    review.append(empty);
-  }
-  for(const x of pending.slice(0,30)){
-    const card=document.createElement('article');card.className='card';
-    const provider=document.createElement('div');provider.className='source';provider.textContent=x.source||'Archivio UE';
-    const h=document.createElement('h3');h.textContent=x.title||'Video istituzionale';
-    const languages=document.createElement('p');
-    languages.textContent='Lingue indicate: '+(x.languages_declared||'Italiano');
-    const audio=document.createElement('p');
-    audio.textContent=x.italian_audio_in_player_verified===true&&x.italian_audio_download_option_verified===true
-      ?'Traccia italiana selezionabile e opzione di download audio IT verificate nella scheda. Il file e la sincronizzazione non sono ancora collaudati.'
-      :'Italiano indicato nei metadati: verificare nel lettore LANGUAGE e in Download > Audio la traccia IT.';
-    const a=document.createElement('a');
-    try{
-      const url=new URL(x.source_url);
-      if(url.protocol==='https:'&&/(^|\.)(europarl\.europa\.eu|audiovisual\.ec\.europa\.eu)$/.test(url.hostname)){
-        a.href=url.href;a.textContent='Apri la scheda ufficiale';a.target='_blank';a.rel='noopener noreferrer';
-      }
-    }catch{}
-    card.append(provider,h,languages,audio);if(a.href)card.append(a);
-    review.append(card);
-  }
+  $('sources').textContent=Math.max(0,(Array.isArray(ca.items)?ca.items.length:0)-items.length);
+  $('ready').textContent=Array.isArray(pl.ready_videos)?pl.ready_videos.length:0;
   $('updated').textContent=ca.updated_at?'Ultimo aggiornamento catalogo: '+new Date(ca.updated_at).toLocaleString('it-IT',{timeZone:'Europe/Rome'})+' · ora italiana':'Monitoraggio non ancora eseguito.';
   const slot=Array.isArray(pl.daily_schedule)?pl.daily_schedule[0]:null;
   $('slot').textContent=slot?(slot.status==='PRONTO_PER_REGIA'?'Video preparato per '+slot.date+' alle 18:00. Trasmissione non ancora attiva.':'Nessun video italiano approvato per '+slot.date+' alle 18:00; nessuna messa in onda automatica.'):'Non esiste ancora un palinsesto approvato.';
