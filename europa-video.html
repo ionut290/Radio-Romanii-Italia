@@ -89,7 +89,11 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
     const provider=document.createElement('div');provider.className='source';provider.textContent=x.source||'Archivio UE';
     const h=document.createElement('h3');h.textContent=x.title||'Video istituzionale';
     const languages=document.createElement('p');
-    languages.textContent='Lingue indicate: '+(x.languages_declared||'Italiano')+' · audio da ascoltare prima dell’approvazione';
+    languages.textContent='Lingue indicate: '+(x.languages_declared||'Italiano');
+    const audio=document.createElement('p');
+    audio.textContent=x.italian_audio_in_player_verified===true&&x.italian_audio_download_option_verified===true
+      ?'Traccia italiana selezionabile e opzione di download audio IT verificate nella scheda. Il file e la sincronizzazione non sono ancora collaudati.'
+      :'Italiano indicato nei metadati: verificare nel lettore LANGUAGE e in Download > Audio la traccia IT.';
     const a=document.createElement('a');
     try{
       const url=new URL(x.source_url);
@@ -97,7 +101,7 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
         a.href=url.href;a.textContent='Apri la scheda ufficiale';a.target='_blank';a.rel='noopener noreferrer';
       }
     }catch{}
-    card.append(provider,h,languages);if(a.href)card.append(a);
+    card.append(provider,h,languages,audio);if(a.href)card.append(a);
     review.append(card);
   }
   $('updated').textContent=ca.updated_at?'Ultimo aggiornamento catalogo: '+new Date(ca.updated_at).toLocaleString('it-IT',{timeZone:'Europe/Rome'})+' · ora italiana':'Monitoraggio non ancora eseguito.';
