@@ -69,6 +69,9 @@ class EuropaCatalogTests(unittest.TestCase):
         self.assertFalse(available)
         self.assertEqual(declared, "Original English francais")
         self.assertEqual(mod.declared_language_versions(b"<h1>Italia</h1>"), ("", False))
+        # Testa i falsi positivi del footer istituzionale:
+        self.assertEqual(mod.declared_language_versions(
+            b"<footer>Languages on our websites Italiano English German</footer>"), ("", False))
 
     def test_browser_fallback_parses_actual_rendered_languages(self):
         html = b"<html><p>Languages Original English Italiano</p><p>Personalities Two Speakers</p></html>"
