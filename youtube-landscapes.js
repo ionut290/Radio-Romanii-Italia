@@ -125,7 +125,7 @@ import {parseLandscapeConfig,landscapeDue} from "./youtube-landscapes-core.mjs";
       if(cfg.enabled&&!active&&!window.rdiGeoActive&&!window.rdiSpotActive){
         const param=new URLSearchParams(location.search);
         const chosen=cfg.items.find(x=>x.id===param.get("landscape_id"))||cfg.items[0];
-        const started=show(chosen,cfg.duration,null);
+        const started=show(chosen,180,null); // preview only, broadcast always cfg.duration
         status.textContent=started?"Landscape preview: "+chosen.id:"Landscape preview: busy";
       }
     });
