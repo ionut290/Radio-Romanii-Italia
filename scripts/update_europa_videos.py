@@ -14,6 +14,8 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import shutil
+import subprocess
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
@@ -268,6 +270,35 @@ def declared_language_versions(blob: bytes) -> tuple[str, bool]:
     return declared[:160], available
 
 
+def fetch_rendered_metadata(url: str) -> bytes | None:
+    """Fallback: usa Chrome headless per il portale Angular (solo siti UE autorizzati).
+
+    Non riproduce o scarica i media; legge esclusivamente la scheda pubblica.
+    Il runner GitHub include Chrome, mentre installazioni minime possono non
+    averlo: in quel caso il risultato resta non confermato.
+    """
+    if not page_allowed(url) or urlparse(url).hostname != "audiovisual.ec.europa.eu":
+        return None
+    browser = next(
+        (shutil.which(name) for name in ("google-chrome", "chromium", "chromium-browser") if shutil.which(name)),
+        None,
+    )
+    if not browser:
+        return None
+    cmd = [
+        browser, "--headless", "--disable-gpu", "--disable-dev-shm-usage",
+        "--no-sandbox", "--no-first-run", "--no-default-browser-check",
+        "--disable-extensions", "--virtual-time-budget=9000", "--dump-dom", url,
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, timeout=26, check=False)
+        if result.returncode == 0 and b"Languages" in result.stdout and len(result.stdout) <= 4_000_000:
+            return result.stdout
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    return None
+
+
 def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> int:
     """Controllo graduale delle versioni linguistiche; massimo 8 HTTP per run."""
     count = 0
@@ -281,13 +312,20 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
         if checked:
             try:
                 stamp = dt.datetime.fromisoformat(checked.replace("Z", "+00:00"))
-                if stamp.tzinfo and now - stamp < dt.timedelta(days=14):
+                ttl = dt.timedelta(days=14 if item.get("language_status") in
+                                   ("VERSIONE_IT_INDICATA", "ITALIANO_NON_LISTATO")
+                                   else 1)
+                if stamp.tzinfo and now - stamp < ttl:
                     continue
             except ValueError:
                 pass
         count += 1
         try:
             language_list, has_it = declared_language_versions(fetch(item["source_url"]))
+            if not language_list:
+                rendered = fetch_rendered_metadata(item["source_url"])
+                if rendered:
+                    language_list, has_it = declared_language_versions(rendered)
             item["languages_declared"] = language_list
             item["italian_version_available"] = has_it
             item["italian_audio_candidate"] = has_it
