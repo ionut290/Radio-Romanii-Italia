@@ -359,7 +359,7 @@ def official_italian_examples(now: dt.datetime) -> list[dict]:
         if not isinstance(url, str) or urlparse(url).hostname != "audiovisual.ec.europa.eu":
             continue
         declared = str(entry.get("languages_declared", ""))[:160]
-        if not re.search(r"\\bItaliano\\b", declared, re.I):
+        if not re.search(r"\bItaliano\b", declared, re.I):
             continue
         item = candidate(source, str(entry.get("title", "")), url, str(entry.get("published_at", "")))
         if not item:
