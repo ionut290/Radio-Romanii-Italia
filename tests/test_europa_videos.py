@@ -4,6 +4,8 @@ import datetime as dt
 import importlib.util
 from pathlib import Path
 import unittest
+from unittest.mock import patch
+from types import SimpleNamespace
 from zoneinfo import ZoneInfo
 
 file = Path(__file__).resolve().parents[1] / "scripts/update_europa_videos.py"
@@ -67,6 +69,17 @@ class EuropaCatalogTests(unittest.TestCase):
         self.assertFalse(available)
         self.assertEqual(declared, "Original English francais")
         self.assertEqual(mod.declared_language_versions(b"<h1>Italia</h1>"), ("", False))
+
+    def test_browser_fallback_parses_actual_rendered_languages(self):
+        html = b"<html><p>Languages Original English Italiano</p><p>Personalities Two Speakers</p></html>"
+        with patch.object(mod.shutil, "which", return_value="/usr/bin/google-chrome"), patch.object(
+            mod.subprocess, "run", return_value=SimpleNamespace(returncode=0, stdout=html)
+        ) as run:
+            data = mod.fetch_rendered_metadata("https://audiovisual.ec.europa.eu/en/media/video/I-294336")
+            self.assertTrue(mod.declared_language_versions(data)[1])
+            self.assertIn("--dump-dom", run.call_args.args[0])
+            self.assertLessEqual(run.call_args.kwargs["timeout"], 30)
+        self.assertIsNone(mod.fetch_rendered_metadata("https://untrusted.example/media/video/I-1"))
 
     def test_italian_reference_is_pending_review(self):
         samples = mod.official_italian_examples(NOW)
