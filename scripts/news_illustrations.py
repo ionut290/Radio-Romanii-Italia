@@ -20,22 +20,6 @@ COLORS = {
     "drepturile muncitorilor": ("#183e5b", "#408c81", "#e9b957"),
     "conflict": ("#101f35", "#34415a", "#d5ad79"),
 }
-AI_IMAGE_BY_TOPIC = {
-    "community": "community",
-    "finance": "economy",
-    "health": "health",
-    "travel": "travel",
-    "institution": "consular",
-    "education": "community",
-    "justice": "workers",
-    "workers": "workers",
-    "environment": "travel",
-    "technology": "community",
-    "sports": "community",
-    "weather": "travel",
-    "general": "community",
-}
-
 TOPICS = [
     (("meteo", "ploi", "ploaie", "vreme", "tempo", "allerta"), "weather"),
     (("ambiente", "ambient", "clima", "climate", "rifiut", "riciclo", "forest", "inquin", "ecolog"), "environment"),
@@ -195,18 +179,16 @@ def fill_missing_images(items):
             )
             item["imageAttribution"] = item["image_credit"]
             used_library_covers.add(cover)
-        if not item.get("image"):
-            category = str(item.get("category") or "").casefold()
+        if not item.get("image") or (is_generic_image and not cover):
             topic = topic_for(item)
             if topic == "conflict":
                 item["image"] = "./editorial-images/rdi-conflict-editorial.svg"
                 item["imageType"] = "editorial-illustration"
                 item["imageAttribution"] = "Ilustrație editorială RDI. Nu este fotografia evenimentului."
             else:
-                image_key = "workers" if category == "drepturile muncitorilor" else AI_IMAGE_BY_TOPIC.get(topic, "community")
-                item["image"] = f"./editorial-images/ai-{image_key}-rdi.jpg"
-                item["imageType"] = "ai-editorial-illustration"
-                item["imageAttribution"] = "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+                item["image"] = fallback
+                item["imageType"] = "editorial-illustration"
+                item["imageAttribution"] = "Illustrazione editoriale RDI unica per questo articolo; non è una fotografia dell’evento."
     active_assignments = {}
     for item in items:
         identity = str(item.get("url") or "")
