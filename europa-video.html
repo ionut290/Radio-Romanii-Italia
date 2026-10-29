@@ -41,6 +41,7 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
 <h2>Filmati verificati in italiano</h2>
 <div class="controls"><input id="search" type="search" placeholder="Cerca per titolo…"><select id="filter" aria-label="Filtra per fonte"><option value="">Tutte le fonti</option><option value="commissione_europea">Commissione europea</option><option value="parlamento_europeo">Parlamento europeo</option></select></div>
 <div id="results" class="grid" aria-live="polite"></div>
+<h2>Versioni con italiano indicato dalla fonte · da verificare</h2><p>Queste schede riportano espressamente una versione in italiano, ma devono ancora essere ascoltate e autorizzate prima della diretta. Non sono in onda.</p><div id="italianReview" class="grid"></div>
 </main><footer>Radio Românii din Italia · Materiali delle istituzioni europee con attribuzione e verifica delle condizioni d'uso</footer>
 <script>
 (async()=>{
@@ -75,6 +76,30 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
   $('total').textContent=items.length;
   $('sources').textContent=(Array.isArray(ca.items)?ca.items.length:0);
   $('ready').textContent=items.length;
+  // Versioni Italiane: metadati espliciti, ma MAI considerati audio verificato.
+  const review=$('italianReview');
+  const pending=Array.isArray(ca.italian_versions)?ca.italian_versions.filter(x=>x.italian_version_available===true):[];
+  if(!pending.length){
+    const empty=document.createElement('div');empty.className='empty';
+    empty.textContent='Nessuna versione italiana segnalata ancora; la scansione delle lingue continua.';
+    review.append(empty);
+  }
+  for(const x of pending.slice(0,30)){
+    const card=document.createElement('article');card.className='card';
+    const provider=document.createElement('div');provider.className='source';provider.textContent=x.source||'Archivio UE';
+    const h=document.createElement('h3');h.textContent=x.title||'Video istituzionale';
+    const languages=document.createElement('p');
+    languages.textContent='Lingue indicate: '+(x.languages_declared||'Italiano')+' · audio da ascoltare prima dell’approvazione';
+    const a=document.createElement('a');
+    try{
+      const url=new URL(x.source_url);
+      if(url.protocol==='https:'&&/(^|\\.)(europarl\\.europa\\.eu|audiovisual\\.ec\\.europa\\.eu)$/.test(url.hostname)){
+        a.href=url.href;a.textContent='Apri la scheda ufficiale';a.target='_blank';a.rel='noopener noreferrer';
+      }
+    }catch{}
+    card.append(provider,h,languages);if(a.href)card.append(a);
+    review.append(card);
+  }
   $('updated').textContent=ca.updated_at?'Ultimo aggiornamento catalogo: '+new Date(ca.updated_at).toLocaleString('it-IT',{timeZone:'Europe/Rome'})+' · ora italiana':'Monitoraggio non ancora eseguito.';
   const slot=Array.isArray(pl.daily_schedule)?pl.daily_schedule[0]:null;
   $('slot').textContent=slot?(slot.status==='PRONTO_PER_REGIA'?'Video preparato per '+slot.date+' alle 18:00. Trasmissione non ancora attiva.':'Nessun video italiano approvato per '+slot.date+' alle 18:00; nessuna messa in onda automatica.'):'Non esiste ancora un palinsesto approvato.';
