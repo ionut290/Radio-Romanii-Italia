@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T19:51:44.204738+00:00",
+  "updated_at": "2026-10-29T20:04:21.804841+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -199,9 +199,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -220,9 +220,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -241,9 +241,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -262,9 +262,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original English français",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -283,9 +283,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -304,9 +304,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -325,9 +325,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -346,9 +346,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original English français",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T19:51:44.204738+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -368,7 +368,9 @@
       "languages_declared": "Original English français",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "44cf8ede5747246f84",
@@ -387,7 +389,9 @@
       "languages_declared": "English",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "357051604dc511bbd9",
@@ -406,7 +410,9 @@
       "languages_declared": "Original",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "7d6a318fd48382a45a",
@@ -422,10 +428,12 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "English français Deutsch See more",
+      "languages_declared": "English français Deutsch",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "5128660cd520906ee3",
@@ -441,10 +449,12 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "English français Deutsch See more",
+      "languages_declared": "English français Deutsch",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "8ab939a7be068956d2",
@@ -463,7 +473,9 @@
       "languages_declared": "English",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "2989ade6415b251d5c",
@@ -482,7 +494,9 @@
       "languages_declared": "Original",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "24086d994f566612d3",
@@ -501,7 +515,9 @@
       "languages_declared": "English",
       "italian_version_available": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:32:09.440594+00:00"
+      "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
+      "italian_audio_candidate": false,
+      "language_probe_version": 3
     },
     {
       "id": "f9ad9e36b9c631dfe3",
@@ -702,10 +718,17 @@
       "italian_audio_candidate": true,
       "italian_audio_in_player_verified": true,
       "italian_audio_download_option_verified": true,
-      "audio_evidence": "Browser UI: LANGUAGE > Italiano; Downloads > Audio > Italiano (IT), 29/10/2026",
+      "audio_evidence": "Verifica del player istituzionale e menu italiano: https://audiovisual.ec.europa.eu/en/media/video/I-294336",
       "language_probe_version": 3,
       "duration_label": "15:49",
-      "editorial_topic": "istituzioni"
+      "editorial_topic": "istituzioni",
+      "rights_review_status": "RIGHTS_AND_SYNC_PENDING",
+      "status_for_live": "NOT_APPROVED",
+      "review_audio_player_it": "CONFIRMED",
+      "review_audio_download_it": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": false,
+      "rights_review_note": "Il tab Conditions of use cita © European Union 2026 e avvisa di possibili restrizioni ulteriori; non elenca eccezioni specifiche.",
+      "review_next_step": "Verificare e ottenere legalmente audio italiano, prova sincronizzazione, licenza del file e crediti."
     },
     {
       "id": "5fbb6b6b45d6de2b7d",
@@ -816,7 +839,7 @@
       "published_at": "2026-07-28",
       "language_hint": "und",
       "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
+      "italian_audio_download_option_verified": true,
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
@@ -829,7 +852,14 @@
       "language_probe_version": 3,
       "provenance": "Elenco Languages della scheda ufficiale UE; audio/diritti da verificare",
       "duration_label": "02:25",
-      "editorial_topic": "salute"
+      "editorial_topic": "salute",
+      "rights_review_status": "THIRD_PARTY_RIGHTS_HOLD",
+      "status_for_live": "BLOCKED",
+      "review_audio_player_it": "NOT_AVAILABLE",
+      "review_audio_download_it": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": true,
+      "rights_review_note": "Eccezioni alla licenza EU 2026: musica Sparse Transactions (Jack Pierce) e immagini Artlist/Motion Array.",
+      "review_next_step": "Chiarire i diritti su musica e immagini; verificare file audio IT download separato."
     },
     {
       "id": "6055e41b852b8e44b2",
@@ -839,9 +869,9 @@
       "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-288034",
       "published_at": "2025-07-01",
       "language_hint": "und",
-      "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
-      "audio_evidence": "",
+      "italian_audio_in_player_verified": true,
+      "italian_audio_download_option_verified": true,
+      "audio_evidence": "Verifica del player istituzionale e menu italiano: https://audiovisual.ec.europa.eu/en/media/video/I-288034",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
@@ -853,7 +883,14 @@
       "language_probe_version": 3,
       "provenance": "Elenco Languages della scheda ufficiale UE; audio/diritti da verificare",
       "duration_label": "03:59",
-      "editorial_topic": "immigrazione e lavoro"
+      "editorial_topic": "immigrazione e lavoro",
+      "rights_review_status": "THIRD_PARTY_RIGHTS_HOLD",
+      "status_for_live": "BLOCKED",
+      "review_audio_player_it": "CONFIRMED",
+      "review_audio_download_it": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": true,
+      "rights_review_note": "Eccezioni alla licenza EU 2025 per 3 brani musicali: A Window to Your World, Don't Look Through My Sight, Break of Dawn.",
+      "review_next_step": "Chiarire i diritti musicali e verificare separatamente la traccia audio IT."
     },
     {
       "id": "52ace8329e6b771eda",
@@ -1204,10 +1241,17 @@
       "italian_audio_candidate": true,
       "italian_audio_in_player_verified": true,
       "italian_audio_download_option_verified": true,
-      "audio_evidence": "Browser UI: LANGUAGE > Italiano; Downloads > Audio > Italiano (IT), 29/10/2026",
+      "audio_evidence": "Verifica del player istituzionale e menu italiano: https://audiovisual.ec.europa.eu/en/media/video/I-294336",
       "language_probe_version": 3,
       "duration_label": "15:49",
-      "editorial_topic": "istituzioni"
+      "editorial_topic": "istituzioni",
+      "rights_review_status": "RIGHTS_AND_SYNC_PENDING",
+      "status_for_live": "NOT_APPROVED",
+      "review_audio_player_it": "CONFIRMED",
+      "review_audio_download_it": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": false,
+      "rights_review_note": "Il tab Conditions of use cita © European Union 2026 e avvisa di possibili restrizioni ulteriori; non elenca eccezioni specifiche.",
+      "review_next_step": "Verificare e ottenere legalmente audio italiano, prova sincronizzazione, licenza del file e crediti."
     },
     {
       "id": "df8b3399f61bf8b606",
@@ -1218,7 +1262,7 @@
       "published_at": "2026-07-28",
       "language_hint": "und",
       "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
+      "italian_audio_download_option_verified": true,
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
@@ -1231,7 +1275,14 @@
       "language_probe_version": 3,
       "provenance": "Elenco Languages della scheda ufficiale UE; audio/diritti da verificare",
       "duration_label": "02:25",
-      "editorial_topic": "salute"
+      "editorial_topic": "salute",
+      "rights_review_status": "THIRD_PARTY_RIGHTS_HOLD",
+      "status_for_live": "BLOCKED",
+      "review_audio_player_it": "NOT_AVAILABLE",
+      "review_audio_download_it": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": true,
+      "rights_review_note": "Eccezioni alla licenza EU 2026: musica Sparse Transactions (Jack Pierce) e immagini Artlist/Motion Array.",
+      "review_next_step": "Chiarire i diritti su musica e immagini; verificare file audio IT download separato."
     },
     {
       "id": "6055e41b852b8e44b2",
@@ -1241,9 +1292,9 @@
       "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-288034",
       "published_at": "2025-07-01",
       "language_hint": "und",
-      "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
-      "audio_evidence": "",
+      "italian_audio_in_player_verified": true,
+      "italian_audio_download_option_verified": true,
+      "audio_evidence": "Verifica del player istituzionale e menu italiano: https://audiovisual.ec.europa.eu/en/media/video/I-288034",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
@@ -1255,7 +1306,14 @@
       "language_probe_version": 3,
       "provenance": "Elenco Languages della scheda ufficiale UE; audio/diritti da verificare",
       "duration_label": "03:59",
-      "editorial_topic": "immigrazione e lavoro"
+      "editorial_topic": "immigrazione e lavoro",
+      "rights_review_status": "THIRD_PARTY_RIGHTS_HOLD",
+      "status_for_live": "BLOCKED",
+      "review_audio_player_it": "CONFIRMED",
+      "review_audio_download_it": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": true,
+      "rights_review_note": "Eccezioni alla licenza EU 2025 per 3 brani musicali: A Window to Your World, Don't Look Through My Sight, Break of Dawn.",
+      "review_next_step": "Chiarire i diritti musicali e verificare separatamente la traccia audio IT."
     },
     {
       "id": "52ace8329e6b771eda",
