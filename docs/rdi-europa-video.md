@@ -205,3 +205,60 @@ Se la verifica è inconcludente, il contenuto resta
 automaticamente italiano. Solo la presenza esplicita di "Italiano"
 nell'elenco `Languages` rende il video un *candidato*, mai un
 filmato autorizzato.
+
+## Verifiche audio e diritti del 29 ottobre 2026
+
+Le verifiche manuali sul portale audiovisivo UE sono registrate in
+`data/europa-video-rights-review.json`. Questo file è separato
+dal monitor automatico e viene applicato anche al palinsesto di prova.
+
+- **I-294336 — conferenza sulla coesione (2026):** nel lettore è
+  selezionabile `LANGUAGE > Italiano`; nel menu
+  `Downloads > Audio` compare Italiano. Il tab `Conditions of use`
+  riporta copyright UE 2026 e un avviso di possibili restrizioni
+  aggiuntive, senza eccezioni esplicitate. Stato:
+  `RIGHTS_AND_SYNC_PENDING`, **non approvato**.
+- **I-288034 — Working Side by Side (2025):** italiano selezionabile
+  nel lettore; nel download esiste l'opzione IT, ma il file relativo
+  non è ancora stato ottenuto e verificato. La scheda elenca eccezioni
+  di diritti per tre brani musicali: stato
+  `THIRD_PARTY_RIGHTS_HOLD`, **bloccato**.
+- **I-293523 — video sulle malattie trasmesse dalle zanzare (2026):**
+  nel lettore non era presente una traccia audio italiana selezionabile,
+  ma `Downloads > Audio` include l'italiano. La scheda indica
+  musica e immagini di terzi (Artlist e Motion Array): stato
+  `THIRD_PARTY_RIGHTS_HOLD`, **bloccato**.
+
+In tutti e tre i casi, una **opzione linguistica** non dimostra che il
+file IT scaricato corrisponda alla lingua richiesta; prima di
+trasmettere bisogna controllare il contenuto audio del file, i tempi,
+le condizioni di riutilizzo e le eccezioni.
+
+La pagina `europa-video.html` mostra la distinzione fra una traccia
+italiana verificata nel lettore, un'opzione di download indicata e un
+filmato bloccato per diritti di terzi. Lo scheduler
+`build_schedule()` rifiuta le schede con
+`status_for_live: BLOCKED` anche se si inserisce per errore un
+record approvato nel file `data/europa-video-approved.json`.
+
+## Prova FFmpeg con audio reale sintetico, senza broadcasting
+
+Workflow manuale e su aggiornamenti:
+`.github/workflows/europa-av-verify.yml`. Installa FFmpeg e testa
+una breve scena sintetica: audio originale a 330 Hz, italiano di
+prova a 880 Hz. Il test verifica che l'uscita contenga la traccia
+sostitutiva a 880 Hz anziché la voce originale. Il workflow non
+ottiene chiavi RTMP, non scarica contenuti delle istituzioni e non
+attiva la diretta radio.
+
+Controllo del 29/10/2026: test FFmpeg **superato**, inclusa la prova
+con il file MP4 sintetico effettivamente generato. Non sostituisce il
+collaudo dell'allineamento dei **veri** file istituzionali.
+
+I 15 filmati elencati nel catalogo sono schede con "Italiano"
+indicato, **non** 15 file già ascoltati o licenziati; includono
+materiali storici che non devono essere presentati come notizie nuove.
+
+Fonti di condizioni generali:
+https://audiovisual.ec.europa.eu/en/conditions-of-use
+e la scheda `Conditions of use` di ciascun filmato.
