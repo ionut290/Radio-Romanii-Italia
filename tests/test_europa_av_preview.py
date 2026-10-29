@@ -3,6 +3,10 @@
 from pathlib import Path
 import sys
 import unittest
+import shutil
+import subprocess
+import tempfile
+import wave
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from prepare_europa_av_preview import build_command
@@ -27,6 +31,52 @@ class LocalItalianAudioPreview(unittest.TestCase):
         self.assertIn("-itsoffset", cmd)
         self.assertIn("-n", cmd)
         self.assertNotIn("rtmp://", " ".join(cmd))
+
+    @unittest.skipUnless(shutil.which("ffmpeg") and shutil.which("ffprobe"), "FFmpeg mancante")
+    def test_real_local_mix_uses_italian_audio_only(self):
+        """Il tono 880 Hz IT sostituisce il tono 330 Hz originale."""
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            original = root / "original.mp4"
+            italian = root / "italiano.wav"
+            output = root / "preview.mp4"
+            original_cmd = [
+                "ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+                "-f", "lavfi", "-i", "color=c=blue:s=160x90:r=15:d=2",
+                "-f", "lavfi", "-i", "sine=frequency=330:duration=2",
+                "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac",
+                "-shortest", str(original),
+            ]
+            it_cmd = [
+                "ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+                "-f", "lavfi", "-i", "sine=frequency=880:sample_rate=44100:duration=2",
+                "-c:a", "pcm_s16le", str(italian),
+            ]
+            subprocess.run(original_cmd, check=True, timeout=20)
+            subprocess.run(it_cmd, check=True, timeout=20)
+            cmd = build_command(
+                {"audio_mode": "separate_it", "audio_offset_ms": 0},
+                original, italian, output,
+                (2.0, self.vs, 2.0, self.ass),
+            )
+            subprocess.run(cmd, check=True, timeout=30)
+            self.assertTrue(output.stat().st_size > 1000)
+            output_audio = root / "out.wav"
+            subprocess.run(
+                ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y",
+                 "-i", str(output), "-vn", "-ac", "1", "-ar", "44100",
+                 "-c:a", "pcm_s16le", str(output_audio)], check=True, timeout=20
+            )
+            with wave.open(str(output_audio), "rb") as wf:
+                frames = wf.readframes(wf.getnframes())
+                rate = wf.getframerate()
+            # Frequenza media stimata in una regione senza silenzi.
+            import array
+            sig = array.array("h")
+            sig.frombytes(frames)
+            start, end = int(rate * .35), int(rate * 1.35)
+            changes = sum(1 for a,b in zip(sig[start:end], sig[start+1:end+1]) if a <= 0 < b)
+            self.assertTrue(800 <= changes <= 960, f"IT 880 Hz non presente: {changes} cicli")
 
     def test_wrong_duration_fails_closed(self):
         item = {"audio_mode": "separate_it", "audio_offset_ms": 0}
