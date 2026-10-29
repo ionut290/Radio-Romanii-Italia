@@ -51,6 +51,30 @@ class EuropaCatalogTests(unittest.TestCase):
         self.assertEqual(data[0]["source_id"], "parlamento_europeo")
         self.assertFalse(data[0]["diritti_verificati"])
 
+    def test_italian_language_metadata_is_explicit(self):
+        example = (b"<html><body><h1>Italian speech requested</h1>"
+                   b"<section>Media information ID I-294336 Date 15/09/2026 "
+                   b"Languages Original English Italiano "
+                   b"Personalities Jack Chambers Raffaele Fitto</section></body></html>")
+        declared, available = mod.declared_language_versions(example)
+        self.assertTrue(available)
+        self.assertEqual(declared, "Original English Italiano")
+
+    def test_italy_title_and_italian_site_are_not_audio(self):
+        bad = (b"<h1>Italy talks of Italian policy</h1><section>"
+               b"Languages Original English francais Category Clip</section>")
+        declared, available = mod.declared_language_versions(bad)
+        self.assertFalse(available)
+        self.assertEqual(declared, "Original English francais")
+        self.assertEqual(mod.declared_language_versions(b"<h1>Italia</h1>"), ("", False))
+
+    def test_italian_reference_is_pending_review(self):
+        samples = mod.official_italian_examples(NOW)
+        self.assertEqual(len(samples), 1)
+        self.assertTrue(samples[0]["italian_version_available"])
+        self.assertFalse(samples[0]["audio_italiano_verificato"])
+        self.assertFalse(mod.eligible_video(samples[0], NOW))
+
     def test_host_does_not_trust_lookalikes(self):
         self.assertFalse(mod.page_allowed("https://audiovisual.ec.europa.eu.evil.example/en/media/video/I-42"))
         self.assertFalse(mod.page_allowed("http://audiovisual.ec.europa.eu/en/media/video/I-42"))
