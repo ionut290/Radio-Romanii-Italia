@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-29T02:04:50.359528+00:00",
+  "news_updated_at": "2026-10-29T02:07:01.651722+00:00",
   "editorial_updated_at": "2026-10-29T01:49:25.903357+01:00",
-  "translations_updated_at": "2026-10-29T01:50:25.795528+00:00",
+  "translations_updated_at": "2026-10-29T02:04:50.645508+00:00",
   "feed_total": 75,
-  "feed_extended_400": 11,
-  "feed_missing_body": 64,
+  "feed_extended_400": 12,
+  "feed_missing_body": 63,
   "feed_short_body": 0,
   "editorial_total": 36,
   "archived_editorials": 74,
   "translation_records": 43,
-  "pending_total": 106,
+  "pending_total": 105,
   "pending_filtered_out": 319,
-  "editorial_verde": 16,
+  "editorial_verde": 17,
   "editorial_galben": 42,
-  "editorial_rosu": 48,
+  "editorial_rosu": 47,
   "pending": [
     {
       "title": "70 de hoți români au dat lovitură după lovitură pe șantiere din Germania, de unde au furat cabluri... - StiriDiaspora",
@@ -53,16 +53,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato non ancora completato; ricerca fonti necessaria",
-      "attempts": 0
-    },
-    {
-      "title": "Almeno 68 morti nell'incidente ferroviario a Toledo Tre italiane disperse",
-      "category": "",
-      "published": "2026-10-28T22:03:56+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/almeno-68-morti-nellincidente-ferroviario-a-toledo-tre-italiane-disperse_3124daf4-1c75-4126-a99f-4356a4740361.html",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato mancante o inferiore a 350 parole; consultare fonte originale e riscontri",
       "attempts": 0
     },
     {
@@ -614,6 +604,16 @@
       "status": "roșu",
       "reason": "Approfondimento verificato mancante; verificare fonte originale e riscontri indipendenti",
       "attempts": 0
+    },
+    {
+      "title": "Opt poliţişti au fost condamnaţi pentru că au bătut şi torturat doi tineri în București, în... - StiriDiaspora",
+      "category": "",
+      "published": "2026-10-27T12:08:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQY09JcjVQTUVlTzFxRi0tbk9QZVNMSklCRENtQXM0eTdOOHp1SktJOGtWN19KbVFnMFFTYXlqMldkWnptazd1NTlRLVZFcHZxeUFlRnFSTkpYdHRIeHlUckVjTEktWWZKZm1tSjlMUXNieWVWbU5zUnE1M3hCU0dhbXM0VzQ3dFlkWmlOV2plN1puT19HUnlUc05YemtjYjY0Zi1LTnhZeUZSUXJZX1hnS01nMzA5NjVnQzJhd1FQOEVzUEYzR2VrbzNIU3NqU0tHLWtNUXdreDIta0xxQWpGM2lB0gHnAUFVX3lxTE1HTUw2S0dKMU1JeEVJM3VnclBtb2JsTUF3ejh4Uk1HdC1LMXV6ZTRCWk81cDltS1VoNlpWeE1NTWxGSHhqTlRxUkozYnRGUTQxclZRc1NXNFN3ZnpTUVJib2lvVEhYZi1TeGluV2haUEV",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato ancora da redigere: fonti indipendenti da consultare.",
+      "attempts": 0
     }
   ],
   "recent_news": [
@@ -677,8 +677,8 @@
       "published": "2026-10-28T22:03:56+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/almeno-68-morti-nellincidente-ferroviario-a-toledo-tre-italiane-disperse_3124daf4-1c75-4126-a99f-4356a4740361.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 549
     },
     {
       "title": "Eurovision 2027: Canada va participa în premieră la concursul muzical organizat la Burgas, în Bulgaria",
@@ -996,6 +996,15 @@
       "words": 0
     },
     {
+      "title": "România pierde bani din PNRR și cere Comisiei Europene o abordare mai flexibilă la îndeplinirea jaloanelor - Realitatea.NET",
+      "category": "România",
+      "published": "2026-10-28T15:56:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOaVF1UlhFS3ozX25MeVBzMG1sZHlnMHBNYTVqSGJkTEM0blNLeVh1LUNRSmh3WTBsT25seWktWmNLQmt1Q0Q2OU13NTJqeW9lN1pyUUU4QklTdVhYVFNrNm1NcTJNSGUyanQtellPNXZKcjk1VzFvdm9sdmlnU1VBM3BZTUNpbktlMHRsZHA3Q0ZRMjJNdVg4ejBzbVpzZU5oMHYzUmR6T3BWRUI2YUZ2MWlkcXg0WEJhRjdrNnJNYy1wZ2hsZk5ITmRRbVVfQjNseE1hNVh0a1d1QVpPZmZUQUg2ZXdHeV9JaHM4?oc=5",
+      "source": "Realitatea.NET",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Migranți, Mattarella: „Salvarea vieților pe mare este o valoare fondatoare a marinei italiene” - Gazeta Românească Italia",
       "category": "Diaspora",
       "published": "2026-10-28T15:38:29+00:00",
@@ -1246,15 +1255,6 @@
       "source": "StiriDiaspora",
       "status": "verde",
       "words": 422
-    },
-    {
-      "title": "Grupul Clever Media, proprietarul Prima TV, a semnat achiziția Kanal D de la Doğan Media - Monden.ro",
-      "category": "România",
-      "published": "2026-10-27T11:05:22+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRnN2QjZFOUFYMFNBRk9oQ0JjTDNNUmxkVHJoSUt5RjNjZk1qMHRUV1Y5cU0wczFDa0QxY3pDZG8zNC1STEQzMXpHaHg0LTFrV0VXMzltNEtXWFZiY19RcVBWT3VuTnVRLVY2OHB4aFI1X3N1S1I3VV9ZUW5NNXFRQnZTcV9zajhFcW0wVkRLTjNUME1VN1ducUhPTGpZOW92dDlhcWV4cWYxZTg1UGNUbmVXaw?oc=5",
-      "source": "Monden.ro",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "70 de hoți români au dat lovitură după lovitură pe șantiere din Germania, de unde au furat cabluri... - StiriDiaspora",
