@@ -27,7 +27,7 @@ export function validateLandscape(item){
   if(kind==="video"){
     if(license!=="https://www.pexels.com/license/" && license!=="https://www.pexels.com/it-it/license/")return null;
     if(!safeLandscapeURL(src,"video")||!safeLandscapeURL(item.poster,"poster"))return null;
-    if(!/^https:\/\/www\.pexels\.com\/video\/[-a-z0-9]+\/\d+\/$/.test(source))return null;
+    if(!/^https:\/\/www\.pexels\.com\/video\/[a-z0-9-]+-\d+\/$/.test(source))return null;
   }else if(kind==="image"){
     if(license!=="https://www.nasa.gov/nasa-brand-center/images-and-media/")return null;
     if(!safeLandscapeURL(src,"nasa")||src!==item.poster)return null;
