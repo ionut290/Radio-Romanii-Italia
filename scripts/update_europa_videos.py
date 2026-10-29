@@ -259,7 +259,7 @@ def declared_language_versions(blob: bytes) -> tuple[str, bool]:
     parser.feed(blob.decode("utf-8", errors="replace"))
     visible = " ".join(parser.text)
     m = re.search(
-        r"\bLanguages\s+(.{1,180}?)(?=\s+(?:Category|Tags|Location|Personalities|Institution|Views|Related media)\b|$)",
+        r"\bLanguages\s+(?=(?:Original|Italiano|Italian|English|Deutsch|fran[cç]ais|Nederlands|español|suomi|Portugu[eê]s|polski|română)\b)(.{1,180}?)(?=\s+(?:See more|Category|Tags|Location|Personalities|Institution|Views|Related media)\b|$)",
         visible, re.I
     )
     if not m:
@@ -309,7 +309,7 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
         if urlparse(item.get("source_url", "")).hostname != "audiovisual.ec.europa.eu":
             continue
         checked = item.get("language_checked_at", "")
-        if checked and item.get("language_probe_version") == 2:
+        if checked and item.get("language_probe_version") == 3:
             try:
                 stamp = dt.datetime.fromisoformat(checked.replace("Z", "+00:00"))
                 ttl = dt.timedelta(days=14 if item.get("language_status") in
@@ -335,7 +335,7 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
             item["italian_version_available"] = False
             item["language_error"] = str(exc)[:110]
         item["language_checked_at"] = now.isoformat()
-        item["language_probe_version"] = 2
+        item["language_probe_version"] = 3
     return count
 
 
