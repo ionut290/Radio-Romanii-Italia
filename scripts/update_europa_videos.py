@@ -109,6 +109,9 @@ def candidate(source: dict, title: str, url: str, published: str = ""):
         "source_url": link,
         "published_at": published,
         "language_hint": "it" if "/it/" in urlparse(link).path else "und",
+        "italian_audio_in_player_verified": False,
+        "italian_audio_download_option_verified": False,
+        "audio_evidence": "",
         "audio_italiano_verificato": False,
         "diritti_verificati": False,
         "status": "DA_VERIFICARE",
@@ -287,6 +290,7 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
             language_list, has_it = declared_language_versions(fetch(item["source_url"]))
             item["languages_declared"] = language_list
             item["italian_version_available"] = has_it
+            item["italian_audio_candidate"] = has_it
             item["language_status"] = ("VERSIONE_IT_INDICATA" if has_it else "ITALIANO_NON_LISTATO" if language_list else "LINGUA_NON_LEGGIBILE")
         except Exception as exc:
             item["language_status"] = "METADATI_NON_DISPONIBILI"
@@ -314,7 +318,11 @@ def official_italian_examples(now: dt.datetime) -> list[dict]:
         "italian_version_available": True,
         "language_status": "VERSIONE_IT_INDICATA",
         "language_checked_at": "2026-10-29T12:00:00+00:00",
-        "provenance": "Scheda ufficiale AV UE, 29/10/2026; ascolto e licenza da verificare",
+        "provenance": "Scheda ufficiale AV UE, 29/10/2026; audio selezionabile verificato nel player e nel menu Download, diritti da verificare",
+        "italian_audio_candidate": True,
+        "italian_audio_in_player_verified": True,
+        "italian_audio_download_option_verified": True,
+        "audio_evidence": "Browser UI: LANGUAGE > Italiano; Downloads > Audio > Italiano (IT), 29/10/2026",
     })
     return [example]
 
@@ -328,6 +336,8 @@ def eligible_video(item: dict, now: dt.datetime) -> bool:
         item.get("diritti_verificati") is True,
         item.get("musica_e_terzi_verificati") is True,
         item.get("video_completo") is True,
+        item.get("audio_track_language") == "it",
+        item.get("audio_sync_verified") is True,
         item.get("source_id") in {s["id"] for s in SOURCES},
         isinstance(item.get("title"), str) and len(item["title"].strip()) >= 7,
         isinstance(item.get("reviewed_by"), str) and bool(item["reviewed_by"].strip()),
@@ -336,9 +346,25 @@ def eligible_video(item: dict, now: dt.datetime) -> bool:
         isinstance(item.get("media_url"), str) and item["media_url"].startswith("https://"),
         isinstance(item.get("source_url"), str) and page_allowed(item["source_url"]),
         isinstance(item.get("rights_url"), str) and page_allowed(item["rights_url"]),
-        isinstance(item.get("duration_seconds"), int) and 15 <= item["duration_seconds"] <= 900,
+        isinstance(item.get("duration_seconds"), int) and 15 <= item["duration_seconds"] <= 1800,
     )
     if not all(checks):
+        return False
+    # Mai prendere per default l'audio originale. La modalità italiana
+    # deve essere esplicita: traccia interna verificata o file italiano separato.
+    mode = item.get("audio_mode")
+    if mode == "separate_it":
+        if not (isinstance(item.get("audio_url"), str)
+                and item["audio_url"].startswith("https://")
+                and item.get("original_audio_muted") is True
+                and isinstance(item.get("audio_offset_ms"), int)
+                and -5000 <= item["audio_offset_ms"] <= 5000):
+            return False
+    elif mode == "embedded_it":
+        if not (isinstance(item.get("audio_stream_index"), int)
+                and 0 <= item["audio_stream_index"] <= 15):
+            return False
+    else:
         return False
     try:
         if dt.datetime.fromisoformat(item["reviewed_at"].replace("Z", "+00:00")).tzinfo is None:
@@ -407,7 +433,7 @@ def main():
                 old = retained.get(item["id"], {})
                 # La nuova acquisizione aggiorna titolo/data ma NON cancella
                 # la verifica delle lingue effettuata nelle esecuzioni precedenti.
-                for key in ("languages_declared", "italian_version_available", "language_status", "language_checked_at", "language_error", "provenance"):
+                for key in ("languages_declared", "italian_version_available", "italian_audio_candidate", "italian_audio_in_player_verified", "italian_audio_download_option_verified", "audio_evidence", "language_status", "language_checked_at", "language_error", "provenance"):
                     if key in old:
                         item[key] = old[key]
                 retained[item["id"]] = item
