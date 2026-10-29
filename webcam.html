@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d254a">
+<title>Webcam-uri din România și Italia | Radio Românii din Italia</title>
+<meta name="description" content="Privește imagini actualizate din orașe din România și Italia în timp ce asculți Radio Românii din Italia.">
+<link rel="icon" href="./RADIO-LOGO.png">
+<style>
+:root{color-scheme:light;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f7fc;color:#102851}
+header{background:linear-gradient(128deg,#0c2a58,#145bbc);color:#fff;padding:25px max(18px,calc((100vw - 1000px)/2));}
+header .brand{display:flex;gap:12px;align-items:center;font-size:14px;font-weight:700;letter-spacing:.03em;color:#d6e6ff}
+header .brand img{width:43px;height:43px;border-radius:50%;object-fit:cover;background:white}
+header h1{font-size:clamp(25px,4vw,38px);margin:14px 0 5px}
+header p{max-width:700px;line-height:1.5;margin:0;color:#d9e7fb;font-size:14px}
+main{max-width:1030px;margin:auto;padding:20px 16px 45px}
+.note{display:flex;gap:10px;background:#e9f2ff;border:1px solid #cbdffa;border-radius:14px;padding:13px 15px;color:#274c80;font-size:13px;line-height:1.5;margin-bottom:17px}
+.group{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#547198;margin:18px 0 9px}
+.choices{display:flex;gap:8px;flex-wrap:wrap}
+.choice{appearance:none;border:1px solid #cfdbeb;background:white;border-radius:999px;padding:11px 16px;color:#1c4777;font:700 13px inherit;font-weight:700;font-size:13px;cursor:pointer;transition:background .15s}
+.choice[aria-pressed="true"]{color:white;background:#1264c9;border-color:#1264c9;box-shadow:0 3px 10px #1252ac35}
+.choice:focus-visible,a:focus-visible{outline:3px solid #ffca4e;outline-offset:3px}
+.card{margin:18px 0 0;overflow:hidden;border-radius:18px;background:white;border:1px solid #dbe5f1;box-shadow:0 12px 30px #12315e0e}
+.card-head{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:.08em;color:#1b6ec6;text-transform:uppercase}
+h2{font-size:clamp(17px,3vw,23px);margin:4px 0}
+.location{font-size:13px;color:#657a98;margin:0}
+.source-link{display:inline-block;background:#e8f2ff;color:#115fbd;padding:10px 13px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:800}
+.frame-wrap{background:#0e192c;padding:8px}
+.frame-wrap iframe{display:block;width:100%;height:clamp(250px,60vw,565px);border:0;border-radius:8px;background:#101d34}
+.card-foot{padding:13px 17px;color:#5f718a;font-size:12px;line-height:1.5}
+footer{margin:24px 0 0;text-align:center;font-size:12px;line-height:1.7;color:#6d7e94}
+footer a{color:#1264c9}
+.back{color:white;text-decoration:underline;text-underline-offset:3px;font-size:12px;margin-left:auto}
+html.embedded .back{display:none}
+@media(max-width:600px){header{padding:15px 15px 20px}main{padding:12px 11px 35px}.frame-wrap{padding:4px}.frame-wrap iframe{height:290px}.card-head{padding:13px}.source-link{font-size:12px}.choice{padding:10px 14px}}
+</style>
+</head>
+<body>
+<header>
+<div class="brand"><img src="./RADIO-LOGO.png" alt=""><span>RADIO ROMÂNII DIN ITALIA</span><a class="back" href="./index.html">← Radio</a></div>
+<h1>🌍 Orașele noastre, în imagini</h1>
+<p>O fereastră către România și Italia. Ascultă radioul și descoperă cum arată orașele de acasă și de aici.</p>
+</header>
+<main>
+<div class="note"><span aria-hidden="true">ℹ️</span><span><strong>Imagini actualizate, nu transmisie video continuă.</strong> Webcam-urile Windy afișează imagini periodice și reluări timelapse, conform disponibilității sursei. Unele camere pot fi temporar offline.</span></div>
+<div class="group">🇷🇴 România</div>
+<div class="choices" role="group" aria-label="Alege oraș din România">
+<button class="choice" type="button" aria-pressed="true" data-camera="bucuresti">București</button>
+<button class="choice" type="button" aria-pressed="false" data-camera="brasov">Brașov</button>
+</div>
+<div class="group">🇮🇹 Italia</div>
+<div class="choices" role="group" aria-label="Alege oraș din Italia">
+<button class="choice" type="button" aria-pressed="false" data-camera="roma">Roma</button>
+<button class="choice" type="button" aria-pressed="false" data-camera="bologna">Bologna</button>
+</div>
+<section class="card" aria-labelledby="camera-title">
+<div class="card-head">
+<div><span class="eyebrow" id="camera-country">🇷🇴 România</span><h2 id="camera-title">București</h2><p class="location" id="camera-location">Piața Unirii · Bulevardul Unirii</p></div>
+<a id="camera-source" class="source-link" href="https://www.windy.com/webcams/1793907437" target="_blank" rel="noopener noreferrer">Vezi pe Windy ↗</a>
+</div>
+<div class="frame-wrap">
+<iframe id="camera-frame" src="https://webcams.windy.com/webcams/public/embed/player/1793907437/day" title="Webcam București – Piața Unirii, imagini actualizate prin Windy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+<div class="card-foot" id="camera-description">Imagini de la camera din Piața Unirii. Selectează alt oraș pentru a schimba vederea.</div>
+</section>
+<footer>Camere furnizate de <a href="https://www.windy.com/" target="_blank" rel="noopener noreferrer">Windy.com</a> · <a href="https://www.windy.com/webcams/add" target="_blank" rel="noopener noreferrer">Adaugă o cameră</a><br>Imaginile aparțin operatorilor camerelor. RDI nu le copiază, nu le stochează și nu le retransmite.</footer>
+</main>
+<script>
+"use strict";
+if(window.top!==window.self)document.documentElement.classList.add("embedded");
+const cameras={
+  bucuresti:{id:"1793907437",city:"București",country:"🇷🇴 România",place:"Piața Unirii · Bulevardul Unirii"},
+  brasov:{id:"1793910742",city:"Brașov",country:"🇷🇴 România",place:"Centrul istoric · Piața Sfatului"},
+  roma:{id:"1600351836",city:"Roma",country:"🇮🇹 Italia",place:"Centro storico · Piazza Venezia"},
+  bologna:{id:"1454628812",city:"Bologna",country:"🇮🇹 Italia",place:"Zona Ospedale Maggiore"}
+};
+const frame=document.getElementById("camera-frame");
+function chooseCamera(key){
+  const cam=cameras[key];if(!cam)return;
+  document.querySelectorAll("[data-camera]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.camera===key)));
+  document.getElementById("camera-country").textContent=cam.country;
+  document.getElementById("camera-title").textContent=cam.city;
+  document.getElementById("camera-location").textContent=cam.place;
+  document.getElementById("camera-description").textContent="Imagini periodice / timelapse din "+cam.city+". Dacă playerul nu este disponibil, deschide camera pe site-ul sursei.";
+  const href="https://www.windy.com/webcams/"+cam.id;
+  document.getElementById("camera-source").href=href;
+  frame.title="Webcam "+cam.city+" – "+cam.place+" (Windy, imagini actualizate)";
+  const url="https://webcams.windy.com/webcams/public/embed/player/"+cam.id+"/day";
+  if(frame.src!==url)frame.src=url;
+}
+document.querySelectorAll("[data-camera]").forEach(b=>b.addEventListener("click",()=>chooseCamera(b.dataset.camera)));
+</script>
+</body></html>
