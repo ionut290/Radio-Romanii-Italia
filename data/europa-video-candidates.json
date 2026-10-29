@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T20:04:21.804841+00:00",
+  "updated_at": "2026-10-29T23:34:06.340330+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -367,9 +367,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original English français",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -388,9 +388,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "English",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -409,9 +409,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -430,9 +430,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "English français Deutsch",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -451,9 +451,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "English français Deutsch",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -472,9 +472,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "English",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -493,9 +493,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "Original",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -514,9 +514,9 @@
       "status": "DA_VERIFICARE",
       "languages_declared": "English",
       "italian_version_available": false,
+      "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-10-29T20:04:21.804841+00:00",
-      "italian_audio_candidate": false,
       "language_probe_version": 3
     },
     {
@@ -537,7 +537,8 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "9e7a02a634c3962cd8",
@@ -553,11 +554,12 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "English français Deutsch See more",
+      "languages_declared": "English français Deutsch",
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "f63a1e21ef0e42f74c",
@@ -577,7 +579,8 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "74f22496c98837571d",
@@ -597,7 +600,8 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "6225193634a48a23aa",
@@ -617,7 +621,8 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "18b3687a8b801e94c0",
@@ -637,7 +642,8 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "071f3312458b42f799",
@@ -657,7 +663,8 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "b372fe21bba47bc3a9",
@@ -677,7 +684,8 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:40:30.727630+00:00"
+      "language_checked_at": "2026-10-29T23:34:06.340330+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "5b7c66db6a80404553",
