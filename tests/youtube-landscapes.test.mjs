@@ -59,10 +59,11 @@ test("RDI live page includes silent visuals only and respects priority overlays"
  assert.match(script,/video\.volume=0/);
  assert.match(script,/window\.rdiSpotActive\|\|window\.rdiGeoActive/);
  assert.match(script,/window\.rdiLandscapeBreak=/);
+ assert.match(script,/configReady\.then/);
  assert.match(css,/body\.rdi-spot-active #rdiLandscapes/);
  assert.match(css,/body\.rdi-geo-active #rdiLandscapes/);
  assert.match(script,/IMAGINI DE ARHIVĂ/);
  assert.doesNotMatch(script,/new Audio\(|audio\.play\(|\.volume=1/);
- assert.equal(build.build,"20261029-italy-romania-scenes-1");
+ assert.equal(build.build,"20261029-italy-romania-scenes-2");
  assert.match(page,new RegExp(build.build));
 });
