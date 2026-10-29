@@ -86,12 +86,16 @@ class EuropaCatalogTests(unittest.TestCase):
 
     def test_italian_reference_is_pending_review(self):
         samples = mod.official_italian_examples(NOW)
-        self.assertEqual(len(samples), 1)
-        self.assertTrue(samples[0]["italian_version_available"])
-        self.assertTrue(samples[0]["italian_audio_in_player_verified"])
-        self.assertTrue(samples[0]["italian_audio_download_option_verified"])
-        self.assertFalse(samples[0]["audio_italiano_verificato"])
-        self.assertFalse(mod.eligible_video(samples[0], NOW))
+        self.assertGreaterEqual(len(samples), 12)
+        self.assertEqual(len({x["source_url"] for x in samples}), len(samples))
+        self.assertTrue(all(x["italian_version_available"] for x in samples))
+        self.assertTrue(all(not x["audio_italiano_verificato"] for x in samples))
+        featured = next(x for x in samples if "I-294336" in x["source_url"])
+        self.assertTrue(featured["italian_audio_in_player_verified"])
+        self.assertTrue(featured["italian_audio_download_option_verified"])
+        self.assertFalse(mod.eligible_video(featured, NOW))
+        self.assertTrue(any("2025" in x["published_at"] for x in samples))
+        self.assertTrue(any("2026" in x["published_at"] for x in samples))
 
     def test_separate_italian_audio_requires_explicit_sync(self):
         self.assertTrue(mod.official_italian_examples(NOW)[0]["italian_audio_download_option_verified"])
