@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-28T23:59:57.603920+00:00",
-  "editorial_updated_at": "2026-10-28T22:59:55Z",
-  "translations_updated_at": "2026-10-28T23:03:39.855621+00:00",
-  "feed_total": 73,
-  "feed_extended_400": 9,
-  "feed_missing_body": 64,
+  "news_updated_at": "2026-10-29T01:05:33.145036+00:00",
+  "editorial_updated_at": "2026-10-29T01:49:25.903357+01:00",
+  "translations_updated_at": "2026-10-28T23:59:56.053313+00:00",
+  "feed_total": 77,
+  "feed_extended_400": 10,
+  "feed_missing_body": 67,
   "feed_short_body": 0,
-  "editorial_total": 34,
-  "archived_editorials": 70,
-  "translation_records": 37,
+  "editorial_total": 36,
+  "archived_editorials": 74,
+  "translation_records": 42,
   "pending_total": 102,
-  "pending_filtered_out": 316,
-  "editorial_verde": 15,
-  "editorial_galben": 43,
-  "editorial_rosu": 45,
+  "pending_filtered_out": 315,
+  "editorial_verde": 16,
+  "editorial_galben": 44,
+  "editorial_rosu": 49,
   "pending": [
     {
       "title": "70 de hoți români au dat lovitură după lovitură pe șantiere din Germania, de unde au furat cabluri... - StiriDiaspora",
@@ -618,6 +618,15 @@
   ],
   "recent_news": [
     {
+      "title": "Elezioni in Israele, il blocco di Netanyahu avanti di 5 seggi. La palla nelle mani di Herzog",
+      "category": "Italia",
+      "published": "2026-10-29T00:01:24+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/elezioni-in-israele-il-blocco-di-netanyahu-avanti-di-5-seggi.-la-palla-nelle-mani-di-herzog_61d49ed4-29f3-40c8-abb7-de226e1432dc.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Prof lo interroga, studente 14enne gli frattura il naso a pugni",
       "category": "Italia",
       "published": "2026-10-28T22:55:11+00:00",
@@ -744,15 +753,6 @@
       "words": 0
     },
     {
-      "title": "Elezioni in Israele, il blocco di Netanyahu avanti di 5 seggi. La palla nelle mani di Herzog",
-      "category": "Italia",
-      "published": "2026-10-28T20:40:40+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/28/elezioni-in-israele-il-blocco-di-netanyahu-avanti-di-5-seggi.-la-palla-nelle-mani-di-herzog_61d49ed4-29f3-40c8-abb7-de226e1432dc.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Ordinul care ar fi dus la accidentul feroviar din Spania. Ce dezvăluie înregistrările audio ale mecanicilor de locomotivă",
       "category": "România",
       "published": "2026-10-28T20:37:44+00:00",
@@ -785,8 +785,8 @@
       "published": "2026-10-28T20:28:32+00:00",
       "url": "https://www.digi24.ro/stiri/economie/consumatori/transgaz-sistemul-de-transport-al-gazelor-naturale-este-stabil-si-pregatit-pentru-sezonul-rece-ce-grad-de-umplere-au-depozitele-4013121",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 485
     },
     {
       "title": "Bucureștiul se pregătește de sărbători: 6 milioane de luminițe vor transforma Capitala. Când se deschide Târgul de Crăciun",
@@ -931,6 +931,24 @@
       "source": "ANSA",
       "status": "verde",
       "words": 527
+    },
+    {
+      "title": "Călin Georgescu rămâne în arest încă 30 de zile. Judecătorii au invocat riscul de a părăsi țara și discuțiile despre azil politic în Italia - Oficiul de Știri",
+      "category": "România",
+      "published": "2026-10-28T18:46:20+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNNzQwbGJ5YXRIcW4wYUNGLXhSdURxVTFxallyS2lzcjllUkNORGJkUGEzcy03WTVvYTNpckRaT2Y4SUM5WXlzck1mNDZBTGl4eWdmUHZiMm9Gdmh0VFFvWWZlSEw0UDlsMk93YVdUdkc1OWh2NXo5UFBvU0pyNTZkUXNHVjVNOFZUdWQxbkd3bUdQU1lCREtVUjJ2NnBVbDlxUDViRm5odS05OEpCOGlxaHEyYnlLc2hPMGtfX2hmZWtWY1VQLU1PelNwZXk4VlJGM3plV1JPeU5JUU1NdzJLeUF0V2FFQTZmd3pFZkpPNEhXNWgwaHBz?oc=5",
+      "source": "Oficiul de Știri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Durere fără margini pentru doi părinți români din Italia: copilul lor s-a stins din viață pe patul de spital, după o viață marcată de operații - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-28T18:33:17+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOcUlROXhKdkRueXI3STBvd1h4d3YyQXhKcWNOSTJRZ0xVTjlBVFIxRHdBRlRvbFMyX2Q5aDJWZXlTRjlNYmJCU2dUVUpvek83OXhDaWY2YnA4b2tZQ0hSNXpHQURORVNSc2xJSUgxcE9pcFlWZlF3TUVqV3ZPSFVnQVQ2WVNNSUd5SnBuR2hhLXZNT25UQ1BYejVpNDVuOVctVG5YNTJMZ0l4ZktkdXFGV015N3hqSFduVExrZHdFZy1wNFRPa1BtQ3IyS0hhR3dyYndSSW1VNXgwUXRacDl2dlc5U0NWZGVwUWFlWWJiVHBmaEpjR2pB?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Dal pancreas artificiale al caldo estremo, le nuove sfide del diabete in gravidanza",
@@ -1113,6 +1131,15 @@
       "words": 0
     },
     {
+      "title": "Tichetele de masă ar putea crește la circa 50 de lei pe zi - Ziarul Național",
+      "category": "România",
+      "published": "2026-10-28T07:35:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSG9IQ1p1cGdhYWNSZlpNSktsaEQtc0hwbm9pTDhETTNHRnpVRFFTTGNZdlR4S0hZWGF3LXJkb0c3VDc1OXQ5Sjl5UEhwR1J5QnN6cG5teHhDYkc4UlNCQWVSdm1IbE9pcFRoRVRNSG9pX0hzTHQyaktnbWpWTTkxaTZpM2RGZG1QQTZmZVFCekVXNms1dlpXTDdtWWpaMlMzM28zYg?oc=5",
+      "source": "Ziarul Național",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Restructurare masivă la Microsoft: 25% dintre angajați invitați să plece voluntar - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-28T06:45:00+00:00",
@@ -1219,6 +1246,15 @@
       "source": "StiriDiaspora",
       "status": "verde",
       "words": 422
+    },
+    {
+      "title": "Grupul Clever Media, proprietarul Prima TV, a semnat achiziția Kanal D de la Doğan Media - Monden.ro",
+      "category": "România",
+      "published": "2026-10-27T11:05:22+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRnN2QjZFOUFYMFNBRk9oQ0JjTDNNUmxkVHJoSUt5RjNjZk1qMHRUV1Y5cU0wczFDa0QxY3pDZG8zNC1STEQzMXpHaHg0LTFrV0VXMzltNEtXWFZiY19RcVBWT3VuTnVRLVY2OHB4aFI1X3N1S1I3VV9ZUW5NNXFRQnZTcV9zajhFcW0wVkRLTjNUME1VN1ducUhPTGpZOW92dDlhcWV4cWYxZTg1UGNUbmVXaw?oc=5",
+      "source": "Monden.ro",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Tragedia sul lavoro a Valtopina, vittima un ragazzo di 20 anni - RaiNews",
