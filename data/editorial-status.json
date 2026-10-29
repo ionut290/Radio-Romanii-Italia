@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-29T19:00:35.665461+00:00",
-  "editorial_updated_at": "2026-10-29T16:00:26.758Z",
+  "news_updated_at": "2026-10-29T19:01:23.420531+00:00",
+  "editorial_updated_at": "2026-10-29T19:04:00Z",
   "translations_updated_at": "2026-10-29T18:59:05.072658+00:00",
-  "feed_total": 95,
-  "feed_extended_400": 9,
-  "feed_missing_body": 86,
+  "feed_total": 90,
+  "feed_extended_400": 10,
+  "feed_missing_body": 80,
   "feed_short_body": 0,
-  "editorial_total": 29,
+  "editorial_total": 30,
   "archived_editorials": 81,
   "translation_records": 37,
-  "pending_total": 124,
+  "pending_total": 123,
   "pending_filtered_out": 310,
-  "editorial_verde": 14,
+  "editorial_verde": 16,
   "editorial_galben": 43,
-  "editorial_rosu": 62,
+  "editorial_rosu": 56,
   "pending": [
     {
       "title": "Alegeri cu rezultat complicat în Israel: Eisenkot şi Netanyahu nu au majoritate și amândoi vor să... - StiriDiaspora",
@@ -233,16 +233,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato assente o breve; ricerca e fonti da completare",
-      "attempts": 0
-    },
-    {
-      "title": "Decretul Flussi, anomalia îngrijitorilor: aproape 80% dintre cereri privesc bărbați, deși sectorul este feminin - Gazeta Românească Italia",
-      "category": "",
-      "published": "2026-10-29T11:51:22+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUWxOLWVkcldtb1FhYldQREY2elRBMFo3LU45eTR1SXBJb1dlZG1zcWVESGNOVGVsWWs0THFNRXowUzJROHoyczZkaERCTmt5TmRMV2NIUmhJVnJrVTRzeGphTlh0bUpnUTRESlZHdGNYMHVMbHViMzJzVjFzVjJMLUI3LVlLdldvUjVITHRudFVVQ0ZEZjNVdTlBSXVuT3ZHbGduNlFUclBkejJjdGlPNWFxTjNEZlNnS1N0QndzcW1mOWFyUDN0UUprWnhSUW1KSXhIdU9jajd1WU5oT3ltbWFJc2FONF92Ym5CVlNfbWJ5eGVv?oc=5",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato da completare: testo RSS breve, ricerca delle fonti necessaria.",
       "attempts": 0
     },
     {
@@ -614,9 +604,28 @@
       "status": "roșu",
       "reason": "Approfondimento verificato da completare: testo RSS breve, ricerca delle fonti necessaria.",
       "attempts": 0
+    },
+    {
+      "title": "Manovra, scintille in maggioranza sulle pensioni. L'opposizione: 'Sei miliardi di una tantum'",
+      "category": "",
+      "published": "2026-10-29T15:39:29+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/10/29/manovra-scintille-in-maggioranza-sulle-pensioni.-lopposizione-sei-miliardi-di-una-tantum_b2dabd79-7a26-4357-8767-9d6e322c5baf.html",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato da completare: testo RSS breve, ricerca delle fonti necessaria.",
+      "attempts": 0
     }
   ],
   "recent_news": [
+    {
+      "title": "Badantă din Italia, cere 40.000 de euro de la bătrânul pe care l-a îngrijit: „Am lucrat cinci ani la negru!” El o acuză de furt - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-29T18:58:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWWprT2JiRmlBNjQtbjBMYlJWU0tlcVdhVjA3NjJBdnRubE0zc1hWaDYzWE1aMmRGeS1CcHpDdDR4Q2kxNjFYNm9XNGI2dkNndUZZTDNVZGplNHRwYTFRWGJDOVJjU1pxb3hSMnczeFdXOWhlRXQ2R21YNGl5ZTdsbDhNVGgtTGF1V2Jtc3JnQ2NCV2ljcUZTRFF3OUlhTWFYU2RySl9fZUp6TTNPZ2ZkTUFHcFYzOVVWLTAySXM4M2NLV3pzMUNfWEwxa3dfZ0s4NkJhTFhfN2FrZUw5VGY0?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
     {
       "title": "Serie A: in campo Frosinone-Lecce 3-0 DIRETTA",
       "category": "Italia",
@@ -852,64 +861,10 @@
       "words": 0
     },
     {
-      "title": "Articole cu tagul: Samsung Electronics - StiriDiaspora",
+      "title": "Articole despre Cum Funcționează Avatarele AI în Universități - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-29T16:40:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5MZWlESENmTG5GdVdBazBPb1BZNHpzWXY0cXBEOGI3cVNiYll2UFRmQ0VKUHh0VG80Ym53Z2IxeDhzVG1OYnNFc3REb0dDTEJ2XzZpSU5pTDhnd0dOSkFSSTdmOWh3S2ExQkE?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Articole cu tagul: magneziu și antibiotice - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T16:40:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5WMF84ekQxY0ZKdmFwQjVjeDNPdVNhLUFiMzBoU3Z6MWpzT1NnNUJOMEFhb09hMUl3QjdHRzRwMTBpd3F5c0hHMEE5OGJVeTA2UWJ4OXI3OWhJT0lONzl4TG5lWVYxbVFRaGY2ZjE1bw?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Articole cu tagul: centre de date - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T16:40:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE52dEhVU1FRQ1dDbXF4YnpOeVk0WmFwWlowaktpRk9XZjJEanFJVXBUMlVaVWdCcFlYLTQ3MEI3QVkyQ1dBMUZsbnRBRHJXVWVQU2ZHcXNYbEtqNXo1anBuOXRaYw?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Articole cu tagul: accident Urda - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T16:40:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1Pa2RGYm94UEtlVXE4SnB3TGpPQ1JES0lRWjJpMk15X3I1Z0x1RjE0Vm5wZHdrWlJRZG9ZMW1Hc1pHSXlxVGFUYjFIaS1Ya2xLdEo5Y3RnRFlJZm9SVDJqRzVB?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Articole cu tagul: Universitatea din Geneva - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T16:38:52+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1VMlRJeUt6SWo5V0QyUFVwMWtSd1NCbmNnQ0NBZ19abE1DaVRmVkJYakVZaEhPdzdRV0NySl9aa0c2dGZIMXNLbnc3cUZoellVaWxiNWRIMzJFNy1EWDRvS2hTNThVRXNMNzRIbFpEUks?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Articole cu tagul: lipsă zinc - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T16:38:50+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBIUkNQSEZ5S2Nvb1JsdWxvb25hdzhxT250TDByWmlVWG83LV93R0pYdUlfblc1UEwxY3JFMTZzU3NTejNBMXJtalZRdl9ZUFJlbGdSNC0tcm9tWGtnQnc?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Articole cu tagul: prevenirea demenței - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T16:38:50+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Pc2M0alRxQVV1S1V0TU9iVklYVk1RRHJaT2pnb1ppSi14c0lhTUhnRzFxLVJJdm14V0xwUlR2RWJjNDRUajZfUl81TjZHRjV2QVlWRUZZMTNoR1p3X3YtcXNrQzhodTZDSkE?oc=5",
+      "published": "2026-10-29T16:38:42+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaUM4UHV6eDRKRDQzOGZnTzhGVktVbTJUS2V4RERsa0tHMjRwLU55ZWlBYlhDT09aaVVvSGtOdmZ6c0pzazZndk1UdmZycjA4dmh0dHExS2N5R1ctVFNLcmhiNHZpR29EemZ6c1RIWnpYb0YzLUo0cndqdG8tM3daRTdFLW1Id2tIM05mZQ?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -996,15 +951,6 @@
       "words": 0
     },
     {
-      "title": "”Construim Moldova”. 19 proiecte strategice, finanțate prin Planul de Creștere al UE. Premierul Tofan: O țară europeană nu se declară, dar se construiește - RFI",
-      "category": "România",
-      "published": "2026-10-29T15:56:46+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQTUhweWFtT2xya0lDWE14Qk12UjdzSXJaTlBSZndOZjVyejhRRENWVjNIZjFtQ0p0YnlhaG9HanNscDdOM0VjNTBIc1BFNVhHZDJLemQtbG9WN1IxUXU3ZlJtd2RlT1FxaWVsb1dkNEIzMU1nc2M4R3hScERGX2QxOXNFcm9mRTFMOUJzcWdDRnlTQVFpQmJHYkxDZzgycFNIM0l2VkczeE1QMzZxRWxZdlpnWENXLVNLcnE0SzdnQUZmSjdUalEyb0JKUzBjNDRScXJGaE1KSktSeUh6YXZ6ZGNtczM4T2tyYS1vMkRnTHdPZTBUSnVFVFJPSzVqUTBKRkhRN2xqd3otSi1GMDhRSG9KS1Q1U1lGVFNCMDgzRmJjM3prbnlfZjFoMjRXTU5WVFRqYm9LVDZqMFNTaW95R3lvcTY2dGFpOUVrNA?oc=5",
-      "source": "RFI",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Lagarde lascia la Bce: \"So d'aver svolto un buon lavoro. Non resto neutrale col voto in Francia\" - RaiNews",
       "category": "Italia",
       "published": "2026-10-29T15:38:00+00:00",
@@ -1046,15 +992,6 @@
       "published": "2026-10-29T15:01:53+00:00",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBtd1lZQzdBT2ZVMHRrYzJydC00OUxobjlrLUpKM2M5WEp0S205T3Y5SmlDOEV0QmtFemRnWjZoOTNDZGoycm9LUEZYZ2ZMTGpYTnNEWjhVNTdRUmI5ZVFNalQyT1dfT1NZVERXUWFYYnF0dw?oc=5",
       "source": "Sky TG24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cum va fi împărțit bugetul la rectificare. Ministrul Finanțelor anunță prioritățile Guvernului - Realitatea.NET",
-      "category": "România",
-      "published": "2026-10-29T14:55:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNWjlEajRfaENRNGVVZnZobTQzZ1Y1bDQ2WV9DdHgyUWlqcVg5blU5WjdWNzJXVGFBTHA2TFBqWkJSbW0yVVJfQVE1bXFLeHpvTjRpeldyTGVLVldZRWhWYk93N1FRYXhMbnN1UTlFWHNkLTR0TGVVdHRULTMyOFBXQWhQVGdJeUszamlIN0ZfblloOE1vbFdQci00M3FHenJzeThPZ291RkJlMWVyeWkyZWY3aFBNVldGYW9BVVY4WVMyRDFMTExEeEtqbnFiUGFqQTgxeXlCY0xUZw?oc=5",
-      "source": "Realitatea.NET",
       "status": "roșu",
       "words": 0
     },
@@ -1122,6 +1059,15 @@
       "words": 0
     },
     {
+      "title": "Samsung raportează o creștere istorica de 783% a profitului operațional, impulsionată de tehnologia... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-29T13:49:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONGxJM1UzTV9xMW0zekJzbU4tSjg4WFhWQUdrZzhIbm8tcnJUTHFQUlBpWi12YXNzNzg3RXVnZlFwdkRNUmQxdmVMd1MyMWpNbXhISUVMYUVfQ2Rhc1owdS1XdTFLMWtoTzlBX09FcUctSnV6dUs2MEdiY2Q5N01RTXhFSDk2WmtxVzVpT0pSVDZ3RVh5ZUh0MjVjamJlNVN0MmZEdXFYYWFJMXRBcVNsQdIBtgFBVV95cUxNUjZaWURlNWh5Sjl2ZEV4WnQyckFVMm9RRkIyMk1zcGtLR1NHWS1zQjZqa0xCQmVubVdyN1lQbW5rS3d0bnJHMjIxWVRXWFZxY0E0ZlpxVzFlRndsbjhCM3BMQlM5WFprUFk5MS1LcVpFeGtHZ241OGNmN21BSHMya012T2hhOUhpMTVRWVZSanRuUUkxeGhjdmlEUXZxNFJ2YTZ",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Sănătatea FM - De la \"pare că nu aude\" la selectivitate alimentară și fascinație pentru lumini. Semnele autismului explicate de psihologul Sanda Gligu - RFI",
       "category": "România",
       "published": "2026-10-29T13:45:31+00:00",
@@ -1145,6 +1091,15 @@
       "published": "2026-10-29T12:20:52+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcEh3VFpPWDZNQVVNckdUU2l3N0VzMjBjVUtZa2FBdnExZ2Q0ZkFlSXF2Y1NxR1NpbjhLQW15ZkJjMzVzeEQxallTa1VGRVBNODluMVlIaUpqdHZVNEFNbU1ZaXlqWDNKbl9jS2lDeHotaERwWF92Nm9VaDdDLUFTT2paUHI2Sk5nVU92S2ZWS3EzUVlJSFg1SVM4aWNfZ1BQZWU1b01oakRpaURLcjNRcHRxdUx6NVE5MWhKTDRkaDk?oc=5",
       "source": "RFI",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Swipe News, o nouă platformă românească pentru consumul de știri online - www.goldring.ro",
+      "category": "România",
+      "published": "2026-10-29T12:15:17+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPc0F5UDlnS0lmMjVxOWI1eXd1ci15YXhackpmODlCNnM0TE5fRlN4UjRpX0FtcXNtc1NxdURWZFBrSWQ1N0EwSHY3VkNKSDlOZWowZmEwWUxJS1l4QWtBRzF0a29faWpSRzVwV25iLTNGN194Qlg2dWdRbkYxR1FPaFBBX0JSM2xsVmZhODNRRlhianlvX2Mya2N1cWF6eHVfMDVIeQ?oc=5",
+      "source": "www.goldring.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1181,8 +1136,8 @@
       "published": "2026-10-29T11:51:22+00:00",
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUWxOLWVkcldtb1FhYldQREY2elRBMFo3LU45eTR1SXBJb1dlZG1zcWVESGNOVGVsWWs0THFNRXowUzJROHoyczZkaERCTmt5TmRMV2NIUmhJVnJrVTRzeGphTlh0bUpnUTRESlZHdGNYMHVMbHViMzJzVjFzVjJMLUI3LVlLdldvUjVITHRudFVVQ0ZEZjNVdTlBSXVuT3ZHbGduNlFUclBkejJjdGlPNWFxTjNEZlNnS1N0QndzcW1mOWFyUDN0UUprWnhSUW1KSXhIdU9jajd1WU5oT3ltbWFJc2FONF92Ym5CVlNfbWJ5eGVv?oc=5",
       "source": "Gazeta Românească Italia",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 482
     },
     {
       "title": "Prima visita agli asteroidi di Giove, li ha raggiunti la sonda Lucy    VIDEO",
@@ -1192,24 +1147,6 @@
       "source": "ANSA",
       "status": "verde",
       "words": 457
-    },
-    {
-      "title": "Știrile zilei, dintr-un gest: Swipe News schimbă felul în care citim presa online - Antena 3",
-      "category": "România",
-      "published": "2026-10-29T11:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNX0c1VFliX3RWeFhqVHkxb2pVR0lyS2VURHhkQ3NZcU1CYi1aYTByTXp6WVBZSm1FY3M3MVBHTmRCN3dNdUhOVEhpcXVtM3FxMGV1TlJfQkJibDExVVMwbkpvVnN6VWdqeHZ3QUdabE5GUXpPTzRlTXFWeTZqek9sMEJjeGFfd2R5TWdZd1FYbWd5RTA3OTNGR3ZmZVNQbGRsM3RiLThSRmdCN21qT0xTNURFTWZnY19jZHfSAboBQVVfeXFMTV9HNVRZYl90VnhYalR5MW9qVUdJcktlVER4ZENzWXFNQmItWmEwck16ellQWUptRWNzNzFQR05kQjd3TXVITlRIaXF1bTNxcTBldU5SX0JCYmwxMVVTMG5Kb1ZzelVnanh2d0FHWmxORlF6T080ZU1xVnk2anpPbDBCY3hhX3dkeU1nWXdRWG1neUUwNzkzRkd",
-      "source": "Antena 3",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Alexandru Rogobete propune parteneriate public-private în sănătate. România are 41 de fabrici de medicamente - IasiTV Life",
-      "category": "România",
-      "published": "2026-10-29T10:59:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPS1BOVlE5Ql9wQjNseEJFRk5sX3JlelpFY056MHRZcFR3ZHdaMVd5OEIxcjRYZVFfM2NDS1ZQYUJDbGhQR2V4bXJvMU5WSDRCNUVXVDVHR0NoQ3JSUnY0R0xoRUpaRWdGbkN2RlBnWjM0TGV0N203dUltaTZnLWdFZnpBbUd6bUI5S2dIZWVzbmx5dFQtczJWQ0NXU1ZpbjQtZXBQQlJjWDFISjZRcWloV0dGN2tMclY4ZEt3cV9LcGdlZkZfd1BNRU9NeldCZmt0Wmc?oc=5",
-      "source": "IasiTV Life",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Lavoro, a settembre 7mila occupati in meno. Torna a crescere la quota di chi cerca un impiego - La Stampa",
@@ -1262,6 +1199,15 @@
       "published": "2026-10-29T09:40:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOTER5WGhBbUhKX2hGWXVWLURKMDAzTnBUa2Y5MnhKSHVQR2VCdXY5c1R2WjVXNGJQRC1Rc1piaDNoOVJ5MWtabElPQkl6SGtrYnp1UVhnS1FIcHBtUGUwMFZYT08zcVlkZFFhS0xZaFl6N0dVNjBueElUX19EQXFNazNjYVFvYW9yQ2NWMkRfWHFyYU90RE5VVndXekVDZ29fTjJibHhucTNsZlJla0dBNzRtZ3VNSW9uc3Y4S3BPWURJUVVJbDQ3OHM5SnBsWWFJRUkxYU04R1NoYlHSAeABQVVfeXFMUHlJTWR0T2ktamNaMi1DTFpwWFVPZGRGdW1iallXSmk5eTA3bHN5Q29LbWZiV3UyLUlDM0hBMVVmSnJRNThRZHBZdVJDR0hBM0tweXdPQ1NRMU9JZGc2eVNGZU9EVmpwLXRRb3BfalNqeDlBcVdRNFB",
       "source": "Virgilio",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Șofer român de camion, condamnat la patru ani de închisoare în Franța pentru trafic de droguri. În... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-29T09:21:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPNldZai1MUHNvcF9mc2t5dW5lQmU5U0lXd3dWc3lpY0hYRmczMDFqWHVlUWdUTHNSSUxqVFpEVkZtUF9Qc0hyV3Z4Y28tdW1HUzlTeGx3WlJmTGprRFowbHl0Z2pPRENKMDMxYmpDa25YalFtMkw2eVdaOHNYT3pOZHo0Y2s4ZXFFejRVWDgwZjV4cTRBTmhXZnBkZEc5c2hxV2VLd1d6SEs3akg4aU9YbWVfRzlVVWRvN0FqNkZveVJRdXpjZEpCVFNRVVhBZEFWcHFTcHRsSWRPNjhTRjVHMjNjX2xpdk81a3lKVnhTTjFVRjFDa25BVEp5dHpOQWVCQXhVWWtTZnhXVnPSAZACQVVfeXFMTUdfLXd6dUJCbzF4Q0pfeWRfZml6SjZEUkV5eFFNMDdKN2ZhYWk1WC1vNDJaZVMyNEpOVjBvaEwyeGoybi1sODh",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1365,15 +1311,6 @@
       "words": 549
     },
     {
-      "title": "Călin Georgescu rămâne în arest încă 30 de zile. Judecătorii au invocat riscul de a părăsi țara și discuțiile despre azil politic în Italia - Oficiul de Știri",
-      "category": "România",
-      "published": "2026-10-28T18:46:20+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNNzQwbGJ5YXRIcW4wYUNGLXhSdURxVTFxallyS2lzcjllUkNORGJkUGEzcy03WTVvYTNpckRaT2Y4SUM5WXlzck1mNDZBTGl4eWdmUHZiMm9Gdmh0VFFvWWZlSEw0UDlsMk93YVdUdkc1OWh2NXo5UFBvU0pyNTZkUXNHVjVNOFZUdWQxbkd3bUdQU1lCREtVUjJ2NnBVbDlxUDViRm5odS05OEpCOGlxaHEyYnlLc2hPMGtfX2hmZWtWY1VQLU1PelNwZXk4VlJGM3plV1JPeU5JUU1NdzJLeUF0V2FFQTZmd3pFZkpPNEhXNWgwaHBz?oc=5",
-      "source": "Oficiul de Știri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Durere fără margini pentru doi părinți români din Italia: copilul lor s-a stins din viață pe patul de spital, după o viață marcată de operații - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-28T18:33:17+00:00",
@@ -1392,20 +1329,20 @@
       "words": 0
     },
     {
-      "title": "Migranți, Mattarella: „Salvarea vieților pe mare este o valoare fondatoare a marinei italiene” - Gazeta Românească Italia",
+      "title": "Imigrația în Italia, peste 5,5 milioane de rezidenți străini: Dosarul IDOS 2026, portretul unei țări în schimbare - Gazeta Românească Italia",
       "category": "Diaspora",
-      "published": "2026-10-28T15:38:29+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPOXJNVWxjQ0ZhTUJZcGM0aFZwU2g5b21KVWVtUnJlN1JOOG5EazgwUkZZdFF4dERnUXV3VHp1Uk4zbE1xamd6OHhCQ0doZ0xkTEdsX3V0NnY4TVFyYWptYjE2cFdObHJNSzNUSldrR3U4aTVaLVp6Q1RTcnhHamI0bU1GbC16ekJRbXRJSG1VRmpCaXluTlpzdUNZUE9WZHRXQXpBS1gzdlF3U3RtMS15NDFKQlp6cl9TMDZrX2hVdXRfNjBSSWpTSEpfZDNCNTZyRlpDXw?oc=5",
+      "published": "2026-10-28T15:39:38+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPdEVKLUVVcTlpcm9BelRYUUJaUkxoaVdSTl9rbXlYdldYNGxXck9CRGN4RlU4bndKeEt5aE5NLVRtOW1TdlZoUTVDeEhKQXFZcW9UTS1sdWwtdUJpbjYwdnZ3ZmgzdUd3Y0I4UVBNVEdPck9mRHBTcUZQOUo1VkgwNmJpa3dBSzd4SDRMcVhXNzFEQjV6R1JnX0NOamQzRWs0TmtxSTltT014cDdyX3lqQWstWGFFSWlPVzFiVm9yWUtaYXNhaUp2bzg1M1RzaTd6OG53MlRvcHV3T1huWHgxeDhCeVVhX1RaMDAtN29zOHVEZw?oc=5",
       "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "CSM a comparat salariile magistraților cu cele din UE. Ce arată însă comparația directă cu salariul mediu net pe economie - Stirile ProTV",
-      "category": "România",
-      "published": "2026-10-28T15:33:27+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNDEtLXpyVVllcW16VG53UFRFUVV2VnY3MXhJN052SDBXNXJKVjRidEdaM0VZaEE0UGNlcE4wMlR1TEh0dHo2dTRaRjB5WDY2cTVQMERyTVFGTmxmRnlDMU9RZnlxdDRoZ1NQLUVicW5oeU9uZmg3ZzVxZWZ1ejhJU0Nrdm1TWHBMc051UHhsYzBFemFuM2VVbEVWZkVwN1M0N19KOWhKTUxfUlJOVHREdGFVYmZBSUxrUS0wZ0VyamFnVmEwbkFVY3JISFoxT2hKc3ZjdQ?oc=5",
-      "source": "Stirile ProTV",
+      "title": "Migranți, Mattarella: „Salvarea vieților pe mare este o valoare fondatoare a marinei italiene” - Gazeta Românească Italia",
+      "category": "Diaspora",
+      "published": "2026-10-28T15:38:29+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPOXJNVWxjQ0ZhTUJZcGM0aFZwU2g5b21KVWVtUnJlN1JOOG5EazgwUkZZdFF4dERnUXV3VHp1Uk4zbE1xamd6OHhCQ0doZ0xkTEdsX3V0NnY4TVFyYWptYjE2cFdObHJNSzNUSldrR3U4aTVaLVp6Q1RTcnhHamI0bU1GbC16ekJRbXRJSG1VRmpCaXluTlpzdUNZUE9WZHRXQXpBS1gzdlF3U3RtMS15NDFKQlp6cl9TMDZrX2hVdXRfNjBSSWpTSEpfZDNCNTZyRlpDXw?oc=5",
+      "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
     },
@@ -1424,6 +1361,24 @@
       "published": "2026-10-28T13:55:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQWmVfSjFCRVRCR0U5elg1VnhoLVRsWEF6ODdkREd2cGF3ZV9QZTBrT3V2aDlvUXZfM2hkdHVWZmp3cVFwcUY1ZXlMNHdWNi1VbVdZbUxPUEpxQnlPUWI5VHVYRl9zLXBzTUZSVUFEQW9EdDF1V3dqNFQxakUyeFl4YnRFNUpMOHZSbFBJVnFMeVB0VUQxTGgxT0JCcE0?oc=5",
       "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Barometrul diasporei: 56% dintre români au legătură cu diaspora. 60% dintre cei plecați trimit bani... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-28T13:01:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUk43REI4R0lOWXFKdXF1QmM0SUl3ZXNKUjJqVzI5UnNoM05BMGZVMlVvM2VhN0NmVzdZZlcxdHZ6cU1GeUVpQUxYUmxVaW9TLTZ2LU9YUGVBbldoSkwtcDBQWkxySVVESHd1T3FZaUllVDE0ckdsVF91OUhNQmM2NUVmN0NkQXZIUE9FY21ybWZIemNORXlzUWptNjEzZWF3UjIxMVEzLUhobHJVOURoQ0ZJM2N5WVRRcG5Wc0I0dzNsRjNsbmc3VmVGbmwwc3JwLXB3YXhmSXg5UdIB3wFBVV95cUxNNjd0dVBGNUx5TzdrZDJDZXd1WjdfMG9jMWZxV2w5S3Iwb0JFa2RBS0pheHY1YlllRTA4b0tyYWpCRTFObHZ4SnM1a0daclRrRVdlN2ZlWGN6QmJTQnRTdTlibkxoUjdBbVpsR1FhdGI3LU4xX21LTVd",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nicuşor Dan, mesaj după accidentul feroviar din Spania: \"România este solidară cu Spania şi poporul spaniol\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-28T12:36:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNVUZpbm0zenI4YnFFMWdRU2ZuY3NNdmszZGExdHhfZEg1UndFVzJPWjFBUm5Sc0ZmczBIX3RqdVUzdVFtWF9KVi1GQ0FyNVU3VnhEaWFzX0VraDh5Wi11RjRPTjJvVDk1OHhSU3FHSkplSFpDZVF0TlpPbms2Tl9PNFBNU3FseFQtOVBJZklWbmxBZkU2Q3V5NnFIdEk5SURUOG9KaURNMXdRbXd4bXhsWkhKMm1aSmhDQW9Fc042OGYtY01jU0E2aTN6YzEtRm9fcWtScEhWRU8zVTRyQ3c?oc=5",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
