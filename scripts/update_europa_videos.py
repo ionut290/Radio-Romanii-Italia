@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data/europa-video-candidates.json"
 APPROVALS = ROOT / "data/europa-video-approved.json"
 PLAYOUT = ROOT / "data/europa-video-playout.json"
+RIGHTS_REVIEWS = ROOT / "data/europa-video-rights-review.json"
 ROME = ZoneInfo("Europe/Rome")
 SOURCES = [
     {
@@ -439,9 +440,28 @@ def eligible_video(item: dict, now: dt.datetime) -> bool:
     return True
 
 
+def review_index() -> dict[str, dict]:
+    """Solo prove editoriali collegate alla scheda ufficiale UE, mai a URL arbitrari."""
+    data = read_json(RIGHTS_REVIEWS, {"items": []})
+    rows = data.get("items", []) if isinstance(data, dict) else []
+    if not isinstance(rows, list):
+        raise ValueError("Video rights review: items non valido")
+    return {
+        row["source_url"]: row for row in rows
+        if isinstance(row, dict) and isinstance(row.get("source_url"), str)
+        and page_allowed(row["source_url"])
+    }
+
+
+def has_rights_hold(item: dict, reviews: dict[str, dict]) -> bool:
+    record = reviews.get(item.get("source_url", ""), {})
+    return record.get("status_for_live") == "BLOCKED" or record.get("review_status") == "THIRD_PARTY_RIGHTS_HOLD"
+
+
 def build_schedule(approved: list[dict], now: dt.datetime) -> dict:
     # Elenco solo per la futura regia. Non comanda AzuraCast né FFmpeg.
-    valid = [x for x in approved if eligible_video(x, now)]
+    reviews = review_index()
+    valid = [x for x in approved if eligible_video(x, now) and not has_rights_hold(x, reviews)]
     valid.sort(key=lambda x: (x["source_id"], x["source_url"]))
     days = []
     local_now = now.astimezone(ROME)
@@ -507,6 +527,27 @@ def main():
             diagnostics.append({"source": source["id"], "status": "error", "reason": str(exc)[:160]})
     items = sorted(retained.values(), key=lambda x: (x.get("published_at") or "", x.get("id") or ""), reverse=True)[:150]
     language_checks = annotate_languages(items, now)
+    reviews = review_index()
+    for item in items:
+        review = reviews.get(item.get("source_url", ""))
+        if review:
+            item["rights_review_status"] = review.get("review_status", "NEEDS_RIGHTS_REVIEW")
+            item["status_for_live"] = review.get("status_for_live", "NOT_APPROVED")
+            item["review_audio_player_it"] = review.get("italian_player_audio", "UNKNOWN")
+            item["review_audio_download_it"] = review.get("italian_download_audio", "UNKNOWN")
+            item["third_party_warning"] = review.get("third_party_warning", False)
+            item["rights_review_note"] = review.get("rights_note", "")
+            item["review_next_step"] = review.get("next_step", "")
+            # Solo una verifica diretta del player conferma questa opzione.
+            if review.get("italian_player_audio") == "CONFIRMED":
+                item["italian_audio_in_player_verified"] = True
+                item["audio_evidence"] = "Verifica del player istituzionale e menu italiano: " + review.get("source_url", "")
+            elif review.get("italian_player_audio") == "NOT_AVAILABLE":
+                item["italian_audio_in_player_verified"] = False
+            # Un menu Download non equivale a un file AAC verificato.
+            item["italian_audio_download_option_verified"] = (
+                review.get("italian_download_audio") == "OPTION_VISIBLE_FILE_UNTESTED"
+            )
     italian_versions = [x for x in items if x.get("italian_version_available") is True]
     catalog = {
         "schema_version": 1,
