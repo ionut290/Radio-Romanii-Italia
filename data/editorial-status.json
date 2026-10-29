@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-29T07:04:04.843166+00:00",
+  "news_updated_at": "2026-10-29T07:29:25.868529+00:00",
   "editorial_updated_at": "2026-10-29T07:58:17.742999+01:00",
-  "translations_updated_at": "2026-10-29T07:02:19.930478+00:00",
+  "translations_updated_at": "2026-10-29T07:04:05.317634+00:00",
   "feed_total": 78,
-  "feed_extended_400": 12,
-  "feed_missing_body": 66,
+  "feed_extended_400": 13,
+  "feed_missing_body": 65,
   "feed_short_body": 0,
   "editorial_total": 38,
   "archived_editorials": 78,
-  "translation_records": 41,
+  "translation_records": 37,
   "pending_total": 105,
   "pending_filtered_out": 302,
-  "editorial_verde": 16,
+  "editorial_verde": 17,
   "editorial_galben": 47,
-  "editorial_rosu": 47,
+  "editorial_rosu": 46,
   "pending": [
     {
       "title": "70 de hoți români au dat lovitură după lovitură pe șantiere din Germania, de unde au furat cabluri... - StiriDiaspora",
@@ -618,12 +618,39 @@
   ],
   "recent_news": [
     {
+      "title": "Incendiu la aeroportul Otopeni. Focul ar fi fost pus intenționat de o femeie",
+      "category": "România",
+      "published": "2026-10-29T07:27:49+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/incendiu-la-aeroportul-otopeni-focul-ar-fi-fost-pus-intentionat-de-o-femeie-4013357",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "După ce a fugit în SUA, Flavio Bolsonaro se proclamă „liderul Braziliei”",
+      "category": "România",
+      "published": "2026-10-29T07:04:32+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/dupa-ce-a-fugit-in-sua-flavio-bolsonaro-se-proclama-liderul-braziliei-4013323",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Avertismentul Anthropic: Daunele provocate de AI ar putea fi mai mari decât pot plăti companiile de asigurări",
       "category": "România",
       "published": "2026-10-29T07:02:03+00:00",
       "url": "https://www.digi24.ro/stiri/externe/avertismentul-anthropic-daunele-provocate-de-ai-ar-putea-fi-mai-mari-decat-pot-plati-companiile-de-asigurari-4013325",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "PRIME PAGINE | Il blocco di Netanyahu avanti di 5 seggi, in Israele verso il governo di unità",
+      "category": "Italia",
+      "published": "2026-10-29T07:00:59+00:00",
+      "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/29/prime-pagine-il-blocco-di-netanyahu-avanti-di-5-seggi-in-israele-verso-il-governo-di-unita_81dea0c5-ccfe-4709-88ac-28372c65cff4.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -686,15 +713,6 @@
       "published": "2026-10-29T06:21:44+00:00",
       "url": "https://www.digi24.ro/digistoria/digistoria-cele-mai-importante-evenimente-petrecute-pe-29-octombrie-2-4013265",
       "source": "Digi24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Video economia: guarda gli ultimi video e notizie - Libero",
-      "category": "Italia",
-      "published": "2026-10-29T06:00:25+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1LVgxaDI2MldfY2pncjl5TjYyX0l2V05LY1ZBY2Fjc0FwRlF6OGtDNFp2SHlrTnN3OTc1Z3dLQW5vV3U2TV9zd2FHUjQ?oc=5",
-      "source": "Libero",
       "status": "roșu",
       "words": 0
     },
@@ -780,28 +798,19 @@
       "words": 529
     },
     {
-      "title": "Cine va conduce Israelul după alegeri: Patru scenarii pentru formarea noului guvern",
-      "category": "România",
-      "published": "2026-10-29T05:00:21+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/cine-va-conduce-israelul-dupa-alegeri-patru-scenarii-pentru-formarea-noului-guvern-4012447",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cât trebuie să câștigi pentru a trăi confortabil în Europa. Diferență uriașă între România și țara cu cel mai scump cost al vieții",
-      "category": "România",
-      "published": "2026-10-29T05:00:14+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/cat-trebuie-sa-castigi-pentru-a-trai-confortabil-in-europa-diferenta-uriasa-intre-romania-si-tara-cu-cel-mai-scump-cost-al-vietii-4011705",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Scioperi del 30 ottobre: l’Italia si ferma, ecco i dettagli e i motivi della protesta - la Repubblica",
       "category": "Italia",
       "published": "2026-10-29T04:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQenhybzBxZHZ4ZUh4VDhIa0FiVldjWll2dVNoMzBLZExzb2NQckJXd19FdVRzZzZ0SVM1THI1dldweTlsaTFMaVd2UEpHQ3NaSDRvUTdSNnpJNEdHVVUtWWF4ZW0zeEZRaHZoUHBzVlhYRWFZdkZURFB5UE1GV2tQMFd5bmF1bERSdU5JMGZXc1hOc2t1TzJUbXZxeng1VzQyQnkwQXlwbm9UOUU3SkdaVmxvTXY3QmlfekhlUE93?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Lunedì di scadenze per il Fisco: il 2 novembre il termine per modello Redditi e rimborso Iva - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-29T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUnByc1pOVW5OVGt0TG5SX19fRFBoal9LSFNiR1E0QXhEQkJQLU96M25pWmd2Q0RjT0Rtellac2g0UV93X2ZvbGlDekh1S1A2Skt6YXJwbnl0UWkwbTlkZVhiMjU3clVScmRFeGdxUmxIYkdjN0lhYU5uQVJKeXEzM2FmNW90cWtfdGVTVFgxNGRYRElSYkQzU1FQV01DTm9KeHgtZG14ZmFmTk5aRldQMlV4aWU5b0JxTERZaFRHUG5kenhFUlk2SnQ5bw?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -814,15 +823,6 @@
       "source": "ANSA",
       "status": "verde",
       "words": 491
-    },
-    {
-      "title": "Notizie di Padova ore 23: gli aggiornamenti del 28 ottobre - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-28T23:00:32+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pNzBEdHJOTnIxYlRtLU1rQW1uT1pNOU5LZ25PU0ppUlVkSU8xMS1RbFNGMHhndjlLTHZ1eDRudHpXaXJCN19ueHI3dThNblVyc1hLeFVMdndmR1JoSlhJWkdhM3l6OWYyeG50ZjlEazk?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Prof lo interroga, studente 14enne gli frattura il naso a pugni",
@@ -987,6 +987,15 @@
       "words": 0
     },
     {
+      "title": "Caporalato e crisi climatica: due formidabili moltiplicatori dello sfruttamento dei lavoratori - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-28T18:38:57+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxObmVPcWl3UGdNNi1DNjZoX2FCRjJhM3FYaHVtbC10NzhIdmE4dl9xcE1BM2xtQXhDdS1fVXB4YmVWNWI2dUxGdWFWN3VBNFZNVFEyRE9SakhXWkxPQkx4R1RKLV85ckpxRXpoR2h3Z3ZMcll0WUlhUTVLLWNDODg2SWtiUWhVekNzUmFCTXFUUGFtLTZOY2JnOEwxTkZxSDVzZ2F0UHdJOXR4Y2dVNjVKTjc5ck1SMlZkdm1ESHRTcnNvZGhkWEticVo3dVhId2dDUmM2aGJrQmxpNUloSm0xOENacV81RDNLZ1ZRWnF6T2xrN3NWbHhuaGRpS3AxN2JQSnfSAYcCQVVfeXFMUDJOcmFhanE4MlBheklmcXlSZ1pPaE5TcmJYbHRUTENHTm9uLTE1ZEFnbnVLdXJjN0M0cmdhYS1tUHBzTEhGb0otS0FhSS1YbTh",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Durere fără margini pentru doi părinți români din Italia: copilul lor s-a stins din viață pe patul de spital, după o viață marcată de operații - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-28T18:33:17+00:00",
@@ -1005,11 +1014,20 @@
       "words": 0
     },
     {
-      "title": "FDF di Oppeano verso la cessazione, accordo per 58 lavoratori: esodi e sostegno al reimpiego - Padova24Ore",
+      "title": "Riforma pensioni 2027: quali proposte entrano in Manovra - PMI.it",
       "category": "Italia",
-      "published": "2026-10-28T17:27:46+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQdjJmdDZULUpmWFl0QUkzSnREU0VGQ1RaZkptVHdxYUk4NFY1eGFLbnpKci14NDF5RWVrMTJTWlI3QmdMb2RSdFJ1T1RZTFp3Z2c1eU9PVnFOWE1lOVlsN19SUk5DNDhFRmt3T045eHZ5a1RRS05HcE9aZFFmZUhCZ01aYw?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-10-28T16:42:39+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNZ1owNkR3Q3JKQzhldmlhX1VLVUE1elVuOWttbkx0MkJ0U3VvNUdrd1NfRWF2aFF4am5QdEVGeGRJc2gxMElQdFlKX0REaXhIRXNrQ1ZKOHZ2M2FSdXczLWVkTHZlRUE5RDROUjNEdEs0QlJtbVRySlh6U29hWHA4WDZXaWNnbmJSWXc?oc=5",
+      "source": "PMI.it",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Auto, arrivano le targhe personalizzate: via libera nella manovra. Meloni: “Ci si potrà sbizzarrire” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-28T16:28:58+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPd05RVDMzNDFQeUJSam5oTnNGRUVzQXlrLTlYbzFnS1lXY0gzZzY2a1NfczZpb2xBNXoxSDhzcF9JSWNsWWU2WGhHanp0NE1KcnJCb096YlVqUlVUY3VFRmtsaGl0SXdvSFBTaFA3ZUdjN05rLXFzWlJrQWNfUGpHdXpyR2RRZkhjR3ZrT2RDeUVPei1iWjNvSzdaak9fb0MyOVkxTmhn?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1019,15 +1037,6 @@
       "published": "2026-10-28T16:27:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQRnlrRzBTRDNwa1NBZUJZTW8wSFpKMHp5UUE0OG9HZTJxN0t6ek1zeVFOcTI5VHRQNXNRMUtPRFBtaDg3eU9LMkhRN1VSWHo2QTJwUWpmbG42NzdoVU11QlpuV2lQOVNmRFRtcjhQYTlXeHpSV2txOS1KTWJFZ0tPajVjU2I1SU8wNXVjNU9RZEVpZnQtb2RwNF84RXpmR0xxb1R3eDRLa2pKM3BOMk9EWXdmRG9TSGpzNjhjOUV5TndSZXBGTVpIUkVYWWQxWEpo?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Megliadino San Vitale, rotatoria tra Sp 32 e Sp 18: approvato il progetto da 950mila euro - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-28T16:27:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNNC1qWmtrZkttSk9qakhSMTVFYjJRWnQtMzduN010bjJlejVPTjdJb090Nk5KNUI5ZTAzRi1faTlKUTJZNms2czJyVmtGN0h5UUYteGRBd3AyR3ZyMm5KOEJoV1RuSEc2V0o4Y2RDQzc0dUdYNDdIRF8tUTNPaDJ1WHEweEdOZzNSWTVN?oc=5",
-      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1068,11 +1077,11 @@
       "words": 0
     },
     {
-      "title": "Stati generali dell’economia e del lavoro, Livorno chiama a raccolta imprese e istituzioni per disegnare il futuro - LivornoToday",
+      "title": "Italia economia n° 43 del 28 ottobre 2026 - Touchpoint News",
       "category": "Italia",
-      "published": "2026-10-28T13:50:58+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWlRkLS1YQU04ejFORU1IZC1veVFaU0JfVS1lcS04T1gwMFB1dy1RenF3cmtxZ0dULV91R3J6Uk9wNGoyWmgta25kOUltLWRKNzNZOHNFc3oyT0ZCQ3Vwb3lKa01qRnNXbEM0X0JXeFBwWFM1VXdMTUhEVUtHSDNjVFZMSGJJZ0JfUlhmQ29UUTg0Nms?oc=5",
-      "source": "LivornoToday",
+      "published": "2026-10-28T13:09:44+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVTk3RVF0d3NmM3RjNHo4NnlGWHNKbl9kVjFWa19rNFhidEcyb0RSbEx5NXROVGlsOHRBV0JuLU4wNVhEMEN3eUVjcmdsY3NISUh1QWR2Rml0SmV6bFhJamFEdFZfVVk3SUV3T0huS2VPSnR2WmN0TkxTbHdrcDgwWEU2dldYUzg?oc=5",
+      "source": "Touchpoint News",
       "status": "roșu",
       "words": 0
     },
@@ -1086,15 +1095,6 @@
       "words": 0
     },
     {
-      "title": "Italia economia n° 43 del 28 ottobre 2026 - news-24.it",
-      "category": "Italia",
-      "published": "2026-10-28T12:32:15+00:00",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5CNkVNYnUyWXV1MmFzOWx1bDNoVkdYWno1dTl2S2pwbDVRV1pQaEJVd1FrbV9hOWpYbThDMGlZbGp6dklWeTRYLWkwTndNRGZBdkRGcDY0Nk5scnI0VHZNWGl5QnYwdVlMTG05RkxLancxQQ?oc=5",
-      "source": "news-24.it",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Peste 100 de muncitori străini exploatați în Italia, după ce au plătit până la 12.000 de euro pentru a lucra în Italia - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-28T12:28:55+00:00",
@@ -1104,47 +1104,11 @@
       "words": 452
     },
     {
-      "title": "Career Day CNA a Padova: oltre 500 studenti incontrano 44 imprese alla Fiera, colloqui al via - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-28T12:24:08+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNd1A3UHlhdGhJRXlaM3VwRkdjTVZ6VndOSmJhbEJjSEI4M2hJSG9hNG9IRk1RY0pLX1poMVhsekI2aUFJT0ZVN3IwTEljTnpEdTVxa2huMEpUSXItOG9KdmN5NVd1VE9QQVhRM29hUHZWZDhkOWVoV0ZDbTctZVI3Y1AtZzg?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cultura a Padova, la filiera vale quasi 2 miliardi: musei e turismo trainano l’economia - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-28T12:02:27+00:00",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE15MWxmNXVpSlptSk1kaFB0OUlXX3ZzcDFaU3docFZkNUxPemZ3MFRhV0RINzUyWmNXZFV0X2pzWXI0YWFoT1JnSlc5eUNaWE8yVkRvRDR3cnZYQ25ESkZvR2R4THAzNTBqQ2pCeGtR?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Incertezza alla Knesset, ma Usa e Israele preparano i nuovi strike contro l'Iran",
-      "category": "Italia",
-      "published": "2026-10-28T11:59:48+00:00",
-      "url": "https://www.ansa.it/sito/podcast/in_diretta_dal_mondo/2026/10/28/incertezza-alla-knesset-ma-usa-e-israele-preparano-i-nuovi-strike-contro-liran_996c9f17-cdae-404a-9f46-ac2a0f7ed061.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Decizie unică în Franța: Șampania produsă din recolta din 2026 va putea avea un conţinut de alcool... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-28T10:58:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNS05xaUlEc0xpTHA4N1p5MFA4c0UxTmhGT2JyMDNsQzYwQnBubm9jM2pvSEE0Wm15UXNDXzFhSVZoZGRuNm02SUJ5MGhWNGFnY2ViV1FqZngxeERxMUI2dHhaRW1uNmlDTGFtSHkwMmNDeUtiZXJuTEJpWmtzcWdVQ2Eyc0FkN1FMbC0tdWlVOG1SSW1qRkFiLWJoajJVcmZMdF92VHotbG82S1VEWFRfSnVPR0hIZTBlQ2Ztak9ZbW5icFhmekZpWGVhUlpRaXZlYVBsUWc3MDFSaUZzRDlGMi1MdHPSAeoBQVVfeXFMTTJ2MXlhUUJPbVJ6MnpOUkU2NkNNRXBES2daUUV2UldHTDllaEt5RmlfaVBlOEJJOC01SERoRjNDRnlsTS1sM3EwdUt0RUNrVTAzT3ZGb1pOeXFzOHVPbWlEUzdRUl85RW01NE9OVV8",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "VIDEO| L’Usb scende in piazza contro riarmo e carovita: \"I soldi vadano a salari e servizi, non all'economia di guerra\" - IlPescara",
-      "category": "Italia",
-      "published": "2026-10-28T10:02:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMmRKTkJmdUtRS0dfel9JYmNXZHBkU2V4QUxibUhQbVAzQ1FlTVB6bDdLUW5Vb0dmTFZhNmF1bVhRWGtCRGQ2dVVhS0VDMzBPOWRpX1BfTUNyVnpnR0tDNGo2LVFUWEo4a3JfZ2lzRUtERjI4NHlDOWxuTENqM3ZKQndIVk1DTFM1dUhHUUFoRmtUNUprdGFjRw?oc=5",
-      "source": "IlPescara",
       "status": "roșu",
       "words": 0
     },
@@ -1158,29 +1122,11 @@
       "words": 0
     },
     {
-      "title": "Pensione anticipata a 64 anni, l'ipotesi del governo: chi potrebbe beneficiarne, quanto si perde sull'assegno e cosa cambia nel 2027 - Corriere della Sera",
+      "title": "Lombardia ai vertici per lavoro giovani adulti e valore aggiunto, con terziario milanese primo in Italia - La Gazzetta del Mezzogiorno",
       "category": "Italia",
-      "published": "2026-10-28T09:32:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxQVHVBUWVFSWZ2S2ZSLTZZOG9vckpuNS1MNEUtZDdraDQ2dUdFQURTZkNaTi16ZUgzQTdYd3g3c2pLOHI1OE1DYllNTGJoUnNzXzFMOEZkNjNaRHNzNFZHT0h5QjdmLWRfUFNQMEtIaXYxMHNUd3VDdmZQVWZHRUs4cnVYUHJBT1o4bkMyeVBoZDJsME4tUmNOam5Hd1NzODIyY1dzcThzNDBBc2NSaFA3UUloZmVHTWh5b2xaX1A4QkFUb3NCanlJNXdKdkpkcDVNME9jT3pldjZsWTFSWDg1S2d1ZFRwYnVETWFIUXBZVk1xUVhYU2ItU2djdlNBVllJSmpQSENySXlvZ05LR3c0SnVMejBYQU1xaFdBR2EzMWx0b1pYdVFmOTZNUnNFalnSAbQCQVVfeXFMTjNHRWlOQkt2ZUgyei1lV05EOXJ0R1ZuZExtbGJ",
-      "source": "Corriere della Sera",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Sabati Ecologici all’Arcella: il 31 ottobre raccolta gratuita di ingombranti ed elettronica - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-28T09:17:45+00:00",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5ZNHdWMk9RT2M0Vk1pWUpHYnNWdmhkQ3BmNTZ1R2hSaC04Wl9JbmtSaFFjdmJXZkxyWDhUZHN1WGtRRUhkS1Y4UGpuMURSTGhJTzdaRXpsel9ibkJ0eHF0dXg4TjJqRUpFUnNqM0trdVpoZjRSbGhv?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Lombardia ai vertici per lavoro giovani adulti e valore aggiunto, con terziario milanese primo in Italia - Il Sannio Quotidiano",
-      "category": "Italia",
-      "published": "2026-10-28T08:33:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOMHZ6MXozSXVWSlF0NnpnQlpzZFI0a2JFOGthWndVTjcwVS0zUHp5YVo0ZXRWVTFoVFVhWjc5QzRmRmJVdTlsSFBaTnRJdHl6aE9aZlhtbnktVFVBc2JuczRvUmVDbTE3ejZfakJOS280bFFyZk1PZlZsRktnNVdQeGw3OHRudXhOR3N1QjhXcXdyRi0yel93TTF5MWk5OE9qRmlsTF92WGRiMmlCaTBXbnVNdzZncUI1b1h2VmREMWdXSDlWZDBlUmtFYk1tVnJVZ25lOHYwVzIwZlpxZkszS0NHTnRKUQ?oc=5",
-      "source": "Il Sannio Quotidiano",
+      "published": "2026-10-28T08:50:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQQmx6VEZrTGJ3b21BRE52TjB1OTZzMjdnWkE1cThkdEM2Rm9vWWk2akh3VWFMdUJ2SnloREJKQkZENWVsMVFRQ2lxd29SVkZjT2l6RXFHR0xwUUdRU216SF9pTzRUVkFLSEJ2VkVveFNMTWFyZlFKZjJIQjhQZ2lfQVk5UTB2NnhpZjNzcDg5TDJzajdhOGdsenh1dTVBUWFkVDZ2eVJBc2JwSE1nVHpVWXdJb2xxcm1DZ2ZmSERZVE91STEyeTlmTTRseGxRQWFuaUVIdVI4c29vWVN1UXBGY2R5RDZYRUI5bW5fRnI1YjFqMG8wMzhJNUd0RjhQdXfSAf4BQVVfeXFMTy1VdG5VOUVCRVNKcU16NFl3QWJkNnFxWWJzbzBJeVM3YXlORE1YbFoxV044MzJPVkl5OWtBY1FOZVlMNDNkYU1XdGNiOUZOWnRFSnZ",
+      "source": "La Gazzetta del Mezzogiorno",
       "status": "roșu",
       "words": 0
     },
@@ -1230,11 +1176,29 @@
       "words": 0
     },
     {
+      "title": "Manovra, è corsa alla flat tax. Mini prelievi per giovani, partite Iva e tredicesime - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-28T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQbEs3Z3loWnB5dUgyaWFkRU53bGJqWnE0TEVZbXlGZnpsY25jRjlsZzMtUzN6cjA4d0hKaXU0MFRGRGpDd2E3dHlXQnhOX0V6SjJVTGs2andFWmlVcFByOVBBNy1rVnpoRExkTW1NdjZob2NlaWp6QTBQMFF5RHpUZ29uLXhoLTBOQTlCa25SQ3Y4a1c2LTBVQXlaWXJmY3dl?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Român din Italia, condamnat la ani grei de închisoare pentru crimă. A plâns la citirea sentinței - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-27T17:36:35+00:00",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQMjhlN1J1RnRaTngwVjhIdDhmRmZlOUVpak9GM0JiZV93TTJVZklab2ZnUFJib1l4eGRyanRvdDVDX1VwSTZDNnQzcmx2RUJKeWhZUm9HZlVob1E1Si1Pb3k5c3lOa0p6WElhdzhqVGRodVNCakQxSUhzbEtMdmVkUG9vdlozU2NlbC1WNDkyako2dW4tTjlKWTg3UWViMlRvWkNCUTd0WnZIUHVBZE01THZSUDlzWGt4ZHc?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "ex Ilva, iniziato incontro Governo-sindacati su futuro Taranto - Borsa Italiana",
+      "category": "Italia",
+      "published": "2026-10-27T16:31:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMmlWSVRnOGVUb2gzUEFjU0RVU1VLamFEYzFVVXhIdThESFVvUVRzZFdVb2NRRnFTRmpNcmFMRmktQmhxUHdHNmZXdXRJWXVPZkhfOEFIZUlaX01XR01UUXhhTldhVE9WMmw5RVpDQzRxZWFNY1JrMmRKcm5JYnR6UllsRnFLZDEzQVVWb1NaMDgybU1RWjBOclFxLUJUdzBhWE12SlJCekZqd2VIS3c3TFE2SnNnZDFYNTk4QnlLUUxWLWlfTmJ0Z2E2UE5KXzA5czBSYUtRcHJHVVEzaUs4?oc=5",
+      "source": "Borsa Italiana",
       "status": "roșu",
       "words": 0
     },
@@ -1293,6 +1257,24 @@
       "words": 0
     },
     {
+      "title": "Liberi professionisti: 93% forfettari ferma lavoro per non superare \"effetto soglia\" - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-27T12:34:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMlZXUkMyMktPbDFnbnlfSW82VExCN2N1X0dHbUdiN1JVR2c4Tm5nbGlDZ3dnNWR0N3A1eDlDU29oOTlaQU1UUkJPVHUwZVprRGhkYWVDMEJvOXlTQXdBZTJWaTNueXZmNTltLUl3d2wxSUhUNEtSLVM2YXpGOUhILW5OX3RxaTYtRmZsd212SlRTRWlnZFhFZW5UNDRKbkNwVVhOX0w4N3dKazFUclJUajhJTFBUZjVDTFpLb2tFX05aVmdNSUN2eXh3d3V0Qy05VHRoemRZVQ?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ex Ilva, sindacati di Genova al tavolo con il governo - RaiNews",
+      "category": "Italia",
+      "published": "2026-10-27T12:13:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQNGs3aDhrbkNGNWt5NjdxVjRJXzFBc21vMlk3dGVtVTkxTXZSVXF0QlVvcDd3ZTR0UDBwMUs1dFFVeGRZMFItREF5d2g2ZTFLOTBpZnY0ZVpjWDlxSmNUQTAyUTZPTGZ6Z3NBQXVRanhpNWZZTFBMTXgtZmVPbjc5ZFpOX3huTHpmYTZNbzh0Rkd3UlFZbGd6OEhBLWgxYWd4Y2FoVjdVTkwzRFViemVHZ0E5eERWZ3drMHEyak4xS1NXX0xxdVdmTEdtZHhhakQ4bVNhdVlhaF8wWGvSAeABQVVfeXFMUGFoMFpKd2VkT2thMHdCcGYzcmQ5OGhYaGxTMUNORXNCR2NfTlEyZXRNVl8xcFFJdW9IU1VKRjhvRUExTFZjQ2FORjNzbzQ2X1R5UERjcGJQcTRMS2pQWURaM1NVWjhBUUlCVjVjMldyT19acXgxaDV",
+      "source": "RaiNews",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Opt poliţişti au fost condamnaţi pentru că au bătut şi torturat doi tineri în București, în... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-27T12:08:00+00:00",
@@ -1302,11 +1284,29 @@
       "words": 0
     },
     {
+      "title": "Tragedia sul lavoro a Valtopina, vittima un ragazzo di 20 anni - RaiNews",
+      "category": "Italia",
+      "published": "2026-10-27T09:51:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaWxsUnlSc1oxY0dkZzNETDlRWGJ5TzY2dWhMdzY5eXV3eXFIZmc5MDROYjBEajctRDRlczJWZnk5V3c0S19uOWwzOXhJbzJqQl9QS053a21PUklwRTE3emc2V2NWVnFIRjRaU0dFZTV2Z2N6eHZSS1hNOTNlcVJEMURfZFAzYWs1Smp5Ym9MLUZ4Nng2WlVHa0N3R1FuT1FsdUJ5SjF1RVhpX1l2UWFaVEpCWGNtbUdJQ2ZEVHF2WHR6Vllick53MjYtbXJEQzVmSDltX251cjd3bmF5TGhCUjUtckV3Sm5jbVHSAe8BQVVfeXFMTUpYcTJiMHJMWmI3WnpnMVp5R1NNSlMzTkhRTjZmQ0JpSEszYl9JdmY4Ul9ETy1hNmZsNUwzcGVKdHhEcktjcXJVV1FqU2lwQjZ1ZGczUm4zU2lVYmFpMXRJR2l6Vk5oVjl",
+      "source": "RaiNews",
+      "status": "verde",
+      "words": 447
+    },
+    {
       "title": "70 de hoți români au dat lovitură după lovitură pe șantiere din Germania, de unde au furat cabluri... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-27T09:43:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOU1RsSmRDZ2hlc205MWZmVVlKNHYzVFViV0hzMGtwVWJwdWZCM1N3eW5vMkFGMnpuSm5XRlpBRS1oMGh4MV9lYVFHbkxFRjc3VENOWVY1cllfOHhCVGxQS3VoRVR2YzcxNmladXRBS1I4YkY4ZE5jNDJaNExqczd1aFdPXzl4OEVKdmFzM2ZRSTEtSzBOdEZETlQ3VWdRdnFNT1BzcThBa1p2UUlMNlQwcEhxc3pRSjlCd1dvN0hVRS1oY1dGQWxUNFNyS3NXMTAxNG1IczNiN0ZsVjBuRjd1ZzM1a3U2VzlxSS1TZXBqYk5CaTV3WnZIMG81UFV3eUNqS0HSAYcCQVVfeXFMTkRiT2JKcTBIME9Ea3k0S0xzdlFKRjBZaXU2b3pYbTVCbFJfM0dMSjhWNVdoMmRLcTBMQk1HWjF4dmd4UGlYbDZ2SVE2RDd0eGt",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Microsoft vuole tagliare 60mila dipendenti, un quarto della forza lavoro: \"Soldi da investire nell'AI\" - Il Fatto Quotidiano",
+      "category": "Italia",
+      "published": "2026-10-27T09:37:56+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ2dXUmZGQWdZQ0pfZ3l6Z3VqNmZndjFQc0tFMkdJSks4MF9VYUtua2syZnBtTmZXOWY2SHRPS1poM3VHVUhmR1dZaU5vR1hJb3NGS3pSdDJraG9LMGU0R1RFTTVpdWwzWWtuMmZoVGZQQ1c4NTYyY1FWeVpJd28xSUlva1VCUFg5MzZzTnMwVnVBd2UxT1I5Wm1waVhMLW5RZnNja3ItN3UxTFM4azVQeUZ5Nk1yVndCYmZrbjM2eHlCbWhCcU5WZzl0dU9sZkEw?oc=5",
+      "source": "Il Fatto Quotidiano",
       "status": "roșu",
       "words": 0
     },
@@ -1321,6 +1321,17 @@
     }
   ],
   "radio_briefs": [
+    {
+      "title": "Tragedia sul lavoro a Valtopina, vittima un ragazzo di 20 anni - RaiNews",
+      "category": "Italia",
+      "published": "2026-10-27T09:51:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaWxsUnlSc1oxY0dkZzNETDlRWGJ5TzY2dWhMdzY5eXV3eXFIZmc5MDROYjBEajctRDRlczJWZnk5V3c0S19uOWwzOXhJbzJqQl9QS053a21PUklwRTE3emc2V2NWVnFIRjRaU0dFZTV2Z2N6eHZSS1hNOTNlcVJEMURfZFAzYWs1Smp5Ym9MLUZ4Nng2WlVHa0N3R1FuT1FsdUJ5SjF1RVhpX1l2UWFaVEpCWGNtbUdJQ2ZEVHF2WHR6Vllick53MjYtbXJEQzVmSDltX251cjd3bmF5TGhCUjUtckV3Sm5jbVHSAe8BQVVfeXFMTUpYcTJiMHJMWmI3WnpnMVp5R1NNSlMzTkhRTjZmQ0JpSEszYl9JdmY4Ul9ETy1hNmZsNUwzcGVKdHhEcktjcXJVV1FqU2lwQjZ1ZGczUm4zU2lVYmFpMXRJR2l6Vk5oVjl",
+      "source": "RaiNews",
+      "status": "verde",
+      "words": 447,
+      "intro": "Rogert Ajdini, operaio di origine albanese residente a Trevi, è morto martedì 27 ottobre 2026 mentre lavorava in un cantiere stradale a Valtopina, in provincia di Perugia.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
     {
       "title": "Cinci români, prinși în Italia cu 3 tone de cupru furat de pe șantierul unei conducte de gaze - StiriDiaspora",
       "category": "Diaspora",
@@ -1364,17 +1375,6 @@
       "words": 436,
       "intro": "La 27 octombrie 2026, provincia Bolzano a anunțat prezentarea locală a Dossier Statistico Immigrazione 2026, raportul IDOS despre migrație și integrare în Italia.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Belgrad: atac cu cuțite asupra unui jandarm la ambasada Israelului; agresorul a murit, iar autoritățile investighează un posibil act terorist",
-      "category": "Știri din redacție",
-      "published": "2026-10-28T00:15:00+01:00",
-      "url": "https://apnews.com/article/5b6d28dc67b691d73b4ee6e4eae760e1",
-      "source": "Reuters / Associated Press / RTS",
-      "status": "verde",
-      "words": 500,
-      "intro": "Un jandarm a fost rănit ușor într-un atac cu două cuțite lângă Ambasada Israelului din Belgrad, iar agresorul a murit după ce agentul a tras asupra sa.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     }
   ]
 }
