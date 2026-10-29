@@ -7,6 +7,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_europa_videos.py'
+      - 'scripts/prepare_europa_av_preview.py'
+      - 'tests/test_europa_av_preview.py'
       - 'tests/test_europa_videos.py'
       - 'data/europa-video-approved.json'
       - '.github/workflows/europa-videos.yml'
@@ -27,7 +29,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test sicurezza, parser e fuso orario
-        run: python -m unittest discover -s tests -p 'test_europa_videos.py' -v
+        run: python -m unittest discover -s tests -p 'test_europa*.py' -v
       - name: Aggiorna candidate e palinsesto solo preparatorio
         run: python scripts/update_europa_videos.py
       - name: Impedisci attivazioni live accidentali
