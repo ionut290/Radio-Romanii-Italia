@@ -217,7 +217,10 @@ def build_schedule(approved: list[dict], now: dt.datetime) -> dict:
     valid = [x for x in approved if eligible_video(x, now)]
     valid.sort(key=lambda x: (x["source_id"], x["source_url"]))
     days = []
-    today = now.astimezone(ROME).date()
+    local_now = now.astimezone(ROME)
+    today = local_now.date()
+    if local_now.time() >= dt.time(18, 0):
+        today += dt.timedelta(days=1)
     for offset in range(8):
         day = today + dt.timedelta(days=offset)
         pick = valid[(day.toordinal() - dt.date(2026, 1, 1).toordinal()) % len(valid)] if valid else None
@@ -268,13 +271,19 @@ def main():
         "items": items,
         "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze.",
     }
+    if previous.get("items") == catalog["items"] and previous.get("sources") == catalog["sources"]:
+        catalog["updated_at"] = previous.get("updated_at") or catalog["updated_at"]
     # Mai sovrascrivere le approvazioni umane dal processo automatico.
     approvals = read_json(APPROVALS, {"schema_version": 1, "items": []})
     if not isinstance(approvals.get("items"), list):
         raise ValueError("data/europa-video-approved.json: items non è un elenco")
+    schedule = build_schedule(approvals["items"], now)
+    old_schedule = read_json(PLAYOUT, {})
+    if old_schedule.get("ready_videos") == schedule["ready_videos"] and old_schedule.get("daily_schedule") == schedule["daily_schedule"]:
+        schedule["generated_at"] = old_schedule.get("generated_at") or schedule["generated_at"]
     write_json(CATALOG, catalog)
-    write_json(PLAYOUT, build_schedule(approvals["items"], now))
-    print(json.dumps({"sources": diagnostics, "candidates": len(items), "approved": len(build_schedule(approvals["items"], now)["ready_videos"]), "live_enabled": False}, ensure_ascii=False))
+    write_json(PLAYOUT, schedule)
+    print(json.dumps({"sources": diagnostics, "candidates": len(items), "approved": len(schedule["ready_videos"]), "live_enabled": False}, ensure_ascii=False))
     if not success_count:
         print("ATTENZIONE: fonti non raggiungibili; conservati i candidati precedenti.")
 
