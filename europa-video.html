@@ -35,7 +35,7 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
 <div class="caution"><strong>Attenzione:</strong> questi video riportano <em>Italiano</em> tra le lingue della scheda ufficiale. Non tutti hanno una traccia già ascoltata o il permesso di ritrasmissione. I video d'archivio NON sono notizie nuove. Nessuno entra in diretta senza verifica editoriale e collaudo audio/video.</div>
 <div class="stats"><div class="stat"><b id="total">–</b><span>Video con italiano indicato</span></div>
 <div class="stat"><b id="sources">–</b><span>Altri video senza italiano confermato</span></div>
-<div class="stat"><b id="ready">–</b><span>Video pronti per la regia di prova</span></div></div>
+<div class="stat"><b id="reviewed">–</b><span>Schede audio e diritti esaminate</span></div><div class="stat"><b id="ready">–</b><span>Video pronti per la regia di prova</span></div></div>
 <p id="updated" class="small" aria-live="polite">Lettura catalogo…</p>
 <h2>Prossimo spazio quotidiano · ore 18:00 (Italia)</h2><div id="slot" class="card">Palinsesto non ancora disponibile.</div>
 <h2>Video con opzione italiana · archivio e attualità</h2>
@@ -59,10 +59,22 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
    const source=document.createElement('div');source.className='source';source.textContent=x.source||'Istituzione UE';
    const title=document.createElement('h3');title.textContent=x.title||'Video senza titolo';
    const date=document.createElement('p');date.textContent=x.published_at?'Pubblicato: '+x.published_at.slice(0,10)+(x.editorial_topic?' · '+x.editorial_topic:'')+(x.duration_label?' · '+x.duration_label:''):'Archivio storico · data da confermare';
-   const warning=document.createElement('p');warning.textContent=(x.italian_audio_in_player_verified===true?'Italiano selezionabile nel lettore verificato. ':'Italiano indicato nella scheda UE. ')+'Ascolto del file e diritti di ritrasmissione ancora da approvare.';
+   const warning=document.createElement('p');
+   if(x.status_for_live==='BLOCKED'){
+     warning.textContent='Diritti di terzi da chiarire: NON utilizzare in diretta.';
+     warning.style.color='#ffbdbd';
+   }else if(x.review_audio_player_it==='CONFIRMED'){
+     warning.textContent='Audio italiano verificato nel lettore. File e diritti ancora da approvare.';
+   }else if(x.review_audio_player_it==='NOT_AVAILABLE'&&x.review_audio_download_it==='OPTION_VISIBLE_FILE_UNTESTED'){
+     warning.textContent='Italiano disponibile come scelta nel download audio, non nel lettore; file ancora da verificare.';
+   }else{
+     warning.textContent='Italiano elencato nella scheda ufficiale; traccia e diritti ancora da verificare.';
+   }
+   const rights=document.createElement('p');
+   rights.textContent=x.rights_review_note?'Diritti: '+x.rights_review_note:'Diritti del singolo filmato: non ancora verificati.';
    const link=document.createElement('a');
    try{const url=new URL(x.source_url);if(url.protocol==='https:'&&/(^|\.)(europarl\.europa\.eu|audiovisual\.ec\.europa\.eu)$/.test(url.hostname)){link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Apri video nella fonte ufficiale'} }catch{}
-   card.append(source,title,date,warning);if(link.href)card.append(link);
+   card.append(source,title,date,warning,rights);if(link.href)card.append(link);
    results.append(card)
   }
  };
@@ -75,6 +87,7 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
   items=(Array.isArray(ca.italian_versions)?ca.italian_versions:[]).filter(x=>x.italian_version_available===true);
   $('total').textContent=items.length;
   $('sources').textContent=Math.max(0,(Array.isArray(ca.items)?ca.items.length:0)-items.length);
+  $('reviewed').textContent=items.filter(x=>!!x.rights_review_status).length;
   $('ready').textContent=Array.isArray(pl.ready_videos)?pl.ready_videos.length:0;
   $('updated').textContent=ca.updated_at?'Ultimo aggiornamento catalogo: '+new Date(ca.updated_at).toLocaleString('it-IT',{timeZone:'Europe/Rome'})+' · ora italiana':'Monitoraggio non ancora eseguito.';
   const slot=Array.isArray(pl.daily_schedule)?pl.daily_schedule[0]:null;
