@@ -6,3 +6,4 @@
 #rdi-webcam-close:focus-visible,#home-webcam-open:focus-visible{outline:3px solid #ffca45;outline-offset:3px}
 html:not(.youtube-news) .home-quick-links #home-webcam-open{background:#1769b7;color:#fff!important}
 @media(max-width:420px){#rdi-webcam-close{padding:9px 13px;font-size:11px}}
+\nbody.rdi-webcam-open{overflow:hidden}\n.rdi-webcam-teaser{display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap;margin:-4px 0 15px;padding:8px 12px;border-radius:12px;background:#eff6ff;color:#1c477c;font-size:12px;font-weight:700}\n.rdi-webcam-teaser a{color:#1165c7;text-decoration:none;font-weight:800}\n.rdi-webcam-teaser a:hover{text-decoration:underline}\n
