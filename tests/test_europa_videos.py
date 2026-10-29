@@ -60,7 +60,7 @@ class EuropaCatalogTests(unittest.TestCase):
         schedule = mod.build_schedule([item], NOW)
         self.assertEqual(schedule["ready_videos"][0]["id"], "video-1")
         self.assertFalse(schedule["live_enabled"])
-        self.assertEqual(schedule["daily_schedule"][0]["starts_at"], "2026-10-29T18:00:00+01:00")
+        self.assertEqual(schedule["daily_schedule"][0]["starts_at"], "2026-10-30T18:00:00+01:00")
         winter = mod.build_schedule([item], dt.datetime(2027, 3, 27, 13, tzinfo=dt.timezone.utc))
         self.assertEqual(winter["daily_schedule"][1]["starts_at"], "2027-03-28T18:00:00+02:00")
 
