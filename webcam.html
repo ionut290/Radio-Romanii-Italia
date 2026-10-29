@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0d254a">
-<title>Webcam-uri din România și Italia | Radio Românii din Italia</title>
-<meta name="description" content="Privește imagini actualizate din orașe din România și Italia în timp ce asculți Radio Românii din Italia.">
+<title>Webcam-uri orașe România, Italia și Europa | RDI</title>
+<meta name="description" content="Găsește orașe și webcam-uri din România, Italia, Moldova și Europa. Camerele Windy se văd fără a întrerupe radioul.">
 <link rel="icon" href="./RADIO-LOGO.png">
 <style>
 :root{color-scheme:light;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
@@ -37,61 +37,79 @@ footer a{color:#1264c9}
 .back{color:white;text-decoration:underline;text-underline-offset:3px;font-size:12px;margin-left:auto}
 html.embedded .back{display:none}
 @media(max-width:600px){header{padding:15px 15px 20px}main{padding:12px 11px 35px}.frame-wrap{padding:4px}.frame-wrap iframe{height:290px}.card-head{padding:13px}.source-link{font-size:12px}.choice{padding:10px 14px}}
+
+/* RDI: large webcam city directory */
+.webcam-discovery{background:#fff;border:1px solid #d9e5f6;border-radius:18px;padding:17px;box-shadow:0 8px 30px #183b6910}
+.webcam-toolbar{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.webcam-toolbar strong{font-size:19px;color:#0b3264}.webcam-toolbar p{margin:5px 0 10px;max-width:640px;font-size:13px;color:#637a98;line-height:1.55}
+.webcam-searchbar{margin:8px 0 10px}.webcam-searchbar label{display:block;font-size:12px;font-weight:800;color:#315580;margin-bottom:5px}
+.webcam-input-row{display:flex;gap:9px}.webcam-input-row input{flex:1;min-width:0;padding:12px 14px;border:1px solid #ccd9ea;border-radius:12px;font:15px system-ui;background:#fbfdff;color:#1b365a}
+.webcam-input-row button{border:0;border-radius:11px;padding:9px 13px;color:#215993;background:#e9f3ff;font-weight:800;cursor:pointer}
+.webcam-filters{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.webcam-filters label{display:flex;gap:8px;align-items:center;flex:1;min-width:210px;font-size:12px;font-weight:700;color:#40618a}
+.webcam-filters select{min-width:0;flex:1;padding:10px;border:1px solid #d5e0f0;border-radius:10px;background:white;color:#1a4373;font-size:13px}
+.webcam-stats{font-size:12px;color:#537395;margin:12px 0}
+.webcam-city-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:9px;max-height:660px;overflow:auto;padding:2px;scrollbar-color:#a5c5e5 transparent}
+.webcam-city{appearance:none;border:1px solid #dce5f1;border-radius:12px;background:#f9fbff;min-height:81px;text-align:left;padding:9px 11px;color:#123965;cursor:pointer;display:flex;flex-direction:column;gap:3px}
+.webcam-city strong{font-size:13px;line-height:1.25}.webcam-city small{font-size:10px;color:#647b99;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100%}
+.webcam-city-type{color:#657d96;font-size:10px;font-weight:700;margin-top:auto}
+.webcam-city[aria-pressed=true]{background:#e8f2ff;border:2px solid #1264c9;padding:8px 10px}
+.webcam-city[aria-pressed=true] .webcam-city-type{color:#125ebb}
+.webcam-more{display:block;margin:14px auto 0;background:#1566c5;border:0;color:#fff;font-weight:800;padding:11px 18px;border-radius:11px;cursor:pointer}
+.webcam-more[hidden],.webcam-empty[hidden],#webcam-no-embed[hidden],#camera-viewer[hidden],#camera-source[hidden]{display:none!important}
+.webcam-empty{color:#6b7e98;font-size:13px}
+.webcam-player{margin-top:18px;scroll-margin-top:15px}
+.camera-status{font-size:11px;color:#1464bc;margin:8px 0 0;font-weight:800}
+.webcam-camera-choice{display:flex;flex-wrap:wrap;gap:7px;padding:0 16px 13px}
+.webcam-camera-choice:empty{display:none}
+.webcam-camera-btn{background:#eaf3ff;color:#155dba;border:1px solid #d8e7f8;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:700;cursor:pointer}
+.webcam-camera-btn[aria-pressed=true]{background:#166bce;color:#fff}
+.webcam-no-embed{padding:25px 20px;color:#153d6c;background:#eef6ff;line-height:1.5}
+.webcam-no-embed p{font-size:13px;color:#506c8d}
+.webcam-no-embed a,.card-foot a{color:#1365c3;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.webcam-no-embed a{display:inline-block;padding:9px 0}
+.card-foot p{margin:0 0 10px}
+.webcam-romanian-source{font-size:12px;color:#526f95;margin:17px 4px}.webcam-romanian-source a{color:#156bc3}
+@media(max-width:540px){.webcam-discovery{padding:12px}.webcam-city-list{grid-template-columns:repeat(2,minmax(0,1fr));max-height:480px;gap:7px}.webcam-city{padding:8px;min-height:75px}.webcam-city[aria-pressed=true]{padding:7px}.webcam-city strong{font-size:12px}.webcam-filters{gap:7px}.webcam-filters label{min-width:100%;justify-content:space-between}.webcam-filters select{max-width:70%}.webcam-toolbar .source-link{font-size:12px}.webcam-input-row button{padding:8px 9px}}
 </style>
 </head>
 <body>
 <header>
 <div class="brand"><img src="./RADIO-LOGO.png" alt=""><span>RADIO ROMÂNII DIN ITALIA</span><a class="back" href="./index.html">← Radio</a></div>
 <h1>🌍 Orașele noastre, în imagini</h1>
-<p>O fereastră către România și Italia. Ascultă radioul și descoperă cum arată orașele de acasă și de aici.</p>
+<p>Explorează orașe din România, Italia și Europa. Vezi imaginile camerelor publice Windy acolo unde playerul este disponibil, fără a opri radioul.</p>
 </header>
 <main>
 <div class="note"><span aria-hidden="true">ℹ️</span><span><strong>Imagini actualizate, nu transmisie video continuă.</strong> Webcam-urile Windy afișează imagini periodice și reluări timelapse, conform disponibilității sursei. Unele camere pot fi temporar offline.</span></div>
-<div class="group">🇷🇴 România</div>
-<div class="choices" role="group" aria-label="Alege oraș din România">
-<button class="choice" type="button" aria-pressed="true" data-camera="bucuresti">București</button>
-<button class="choice" type="button" aria-pressed="false" data-camera="brasov">Brașov</button>
+<section class="webcam-discovery" aria-label="Catalog webcam">
+<div class="webcam-toolbar">
+  <div><strong>🌎 Descoperă orașele</strong><p>Caută după localitate, județ sau regiune. Camerele verificate se pot vedea aici; pentru celelalte locuri oferim o căutare externă.</p></div>
+  <a id="webcam-world" class="source-link" target="_blank" rel="noopener noreferrer">Toate camerele Windy ↗</a>
 </div>
-<div class="group">🇮🇹 Italia</div>
-<div class="choices" role="group" aria-label="Alege oraș din Italia">
-<button class="choice" type="button" aria-pressed="false" data-camera="roma">Roma</button>
-<button class="choice" type="button" aria-pressed="false" data-camera="bologna">Bologna</button>
+<div class="webcam-searchbar"><label for="webcam-search">Caută orașe</label><div class="webcam-input-row"><input id="webcam-search" type="search" autocomplete="off" placeholder="Ex. Timișoara, Napoli, Paris, Cluj…" aria-label="Caută orașe și regiuni"><button id="webcam-clear" type="button">Resetează</button></div></div>
+<div class="webcam-filters">
+<label>Țară <select id="webcam-country"><option value="all">Toate țările</option><option value="RO">🇷🇴 România</option><option value="IT">🇮🇹 Italia</option><option value="MD">🇲🇩 Moldova</option><option value="EU">🌍 Alte orașe europene</option></select></label>
+<label>Afișează <select id="webcam-view"><option value="all">Toate localitățile</option><option value="embedded">Numai camerele disponibile</option></select></label>
 </div>
-<section class="card" aria-labelledby="camera-title">
-<div class="card-head">
-<div><span class="eyebrow" id="camera-country">🇷🇴 România</span><h2 id="camera-title">București</h2><p class="location" id="camera-location">Piața Unirii · Bulevardul Unirii</p></div>
-<a id="camera-source" class="source-link" href="https://www.windy.com/webcams/1793907437" target="_blank" rel="noopener noreferrer">Vezi pe Windy ↗</a>
-</div>
-<div class="frame-wrap">
-<iframe id="camera-frame" src="https://webcams.windy.com/webcams/public/embed/player/1793907437/day" title="Webcam București – Piața Unirii, imagini actualizate prin Windy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-</div>
-<div class="card-foot" id="camera-description">Imagini de la camera din Piața Unirii. Selectează alt oraș pentru a schimba vederea.</div>
+<p id="webcam-stats" class="webcam-stats" role="status">Se încarcă localitățile…</p>
+<div id="webcam-city-list" class="webcam-city-list" aria-label="Selectează orașul"></div>
+<p id="webcam-empty" class="webcam-empty" hidden>Nu am găsit localități pentru această căutare.</p>
+<button id="webcam-more" class="webcam-more" type="button" hidden>Mai multe localități</button>
 </section>
+<section class="card webcam-player" aria-labelledby="camera-title">
+<div class="card-head">
+<div><span class="eyebrow" id="camera-country">🇷🇴 România · București</span><h2 id="camera-title">București</h2><p class="location" id="camera-location">Piața Unirii · Bulevardul Unirii</p><p class="camera-status" id="webcam-active-status">Player Windy · imagini actualizate / timelapse</p></div>
+<a id="camera-source" class="source-link" href="https://www.windy.com/webcams/1793907437" target="_blank" rel="noopener noreferrer">Vezi camera pe Windy ↗</a>
+</div>
+<div id="webcam-camera-choice" class="webcam-camera-choice"></div>
+<div class="frame-wrap" id="camera-viewer">
+<iframe id="camera-frame" src="https://webcams.windy.com/webcams/public/embed/player/1793907437/day" title="Webcam București – Piața Unirii, imagini periodice prin Windy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</div>
+<div class="webcam-no-embed" id="webcam-no-embed" hidden><strong>🔎 Caută o cameră din acest oraș</strong><p>Nu avem încă un player public verificat pentru acest oraș. Poți căuta pe site-urile camerelor, fără să afișăm o transmisie inexistentă.</p><a id="webcam-no-embed-link" target="_blank" rel="noopener noreferrer">Caută webcam ↗</a></div>
+<div class="card-foot"><p id="camera-description">Imagini periodice și timelapse de la un operator terț.</p><a id="webcam-discover" target="_blank" rel="noopener noreferrer">Alte webcam-uri din acest oraș ↗</a></div>
+</section>
+<p class="webcam-romanian-source">🇷🇴 Poți explora și <a id="webcam-romania-all" target="_blank" rel="noopener noreferrer">catalogul WebcamRomania</a> pentru alte camere din România.</p>
 <footer>Camere furnizate de <a href="https://www.windy.com/" target="_blank" rel="noopener noreferrer">Windy.com</a> · <a href="https://www.windy.com/webcams/add" target="_blank" rel="noopener noreferrer">Adaugă o cameră</a><br>Imaginile aparțin operatorilor camerelor. RDI nu le copiază, nu le stochează și nu le retransmite.</footer>
 </main>
-<script>
-"use strict";
-if(window.top!==window.self)document.documentElement.classList.add("embedded");
-const cameras={
-  bucuresti:{id:"1793907437",city:"București",country:"🇷🇴 România",place:"Piața Unirii · Bulevardul Unirii"},
-  brasov:{id:"1793910742",city:"Brașov",country:"🇷🇴 România",place:"Centrul istoric · Piața Sfatului"},
-  roma:{id:"1600351836",city:"Roma",country:"🇮🇹 Italia",place:"Centro storico · Piazza Venezia"},
-  bologna:{id:"1454628812",city:"Bologna",country:"🇮🇹 Italia",place:"Zona Ospedale Maggiore"}
-};
-const frame=document.getElementById("camera-frame");
-function chooseCamera(key){
-  const cam=cameras[key];if(!cam)return;
-  document.querySelectorAll("[data-camera]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.camera===key)));
-  document.getElementById("camera-country").textContent=cam.country;
-  document.getElementById("camera-title").textContent=cam.city;
-  document.getElementById("camera-location").textContent=cam.place;
-  document.getElementById("camera-description").textContent="Imagini periodice / timelapse din "+cam.city+". Dacă playerul nu este disponibil, deschide camera pe site-ul sursei.";
-  const href="https://www.windy.com/webcams/"+cam.id;
-  document.getElementById("camera-source").href=href;
-  frame.title="Webcam "+cam.city+" – "+cam.place+" (Windy, imagini actualizate)";
-  const url="https://webcams.windy.com/webcams/public/embed/player/"+cam.id+"/day";
-  if(frame.src!==url)frame.src=url;
-}
-document.querySelectorAll("[data-camera]").forEach(b=>b.addEventListener("click",()=>chooseCamera(b.dataset.camera)));
-</script>
+<script defer src="./webcam-catalog.js?v=20261029-extended"></script>
 </body></html>
