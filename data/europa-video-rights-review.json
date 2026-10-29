@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-29",
+  "description": "Verifiche delle schede ufficiali: non sono licenze o autorizzazioni automatiche.",
+  "items": [
+    {
+      "media_id": "I-294336",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-294336",
+      "review_status": "RIGHTS_AND_SYNC_PENDING",
+      "italian_player_audio": "CONFIRMED",
+      "italian_download_audio": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": false,
+      "status_for_live": "NOT_APPROVED",
+      "rights_note": "Il tab Conditions of use cita © European Union 2026 e avvisa di possibili restrizioni ulteriori; non elenca eccezioni specifiche.",
+      "next_step": "Verificare e ottenere legalmente audio italiano, prova sincronizzazione, licenza del file e crediti."
+    },
+    {
+      "media_id": "I-288034",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-288034",
+      "review_status": "THIRD_PARTY_RIGHTS_HOLD",
+      "italian_player_audio": "CONFIRMED",
+      "italian_download_audio": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": true,
+      "status_for_live": "BLOCKED",
+      "rights_note": "Eccezioni alla licenza EU 2025 per 3 brani musicali: A Window to Your World, Don't Look Through My Sight, Break of Dawn.",
+      "next_step": "Chiarire i diritti musicali e verificare separatamente la traccia audio IT."
+    },
+    {
+      "media_id": "I-293523",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-293523",
+      "review_status": "THIRD_PARTY_RIGHTS_HOLD",
+      "italian_player_audio": "NOT_AVAILABLE",
+      "italian_download_audio": "OPTION_VISIBLE_FILE_UNTESTED",
+      "third_party_warning": true,
+      "status_for_live": "BLOCKED",
+      "rights_note": "Eccezioni alla licenza EU 2026: musica Sparse Transactions (Jack Pierce) e immagini Artlist/Motion Array.",
+      "next_step": "Chiarire i diritti su musica e immagini; verificare file audio IT download separato."
+    }
+  ]
+}
