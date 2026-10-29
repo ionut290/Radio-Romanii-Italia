@@ -254,14 +254,14 @@ def declared_language_versions(blob: bytes) -> tuple[str, bool]:
     parser.feed(blob.decode("utf-8", errors="replace"))
     visible = " ".join(parser.text)
     m = re.search(
-        r"\\bLanguages\\s+(.{1,180}?)(?=\\s+(?:Category|Tags|Location|Personalities|Institution|Views|Related media)\\b|$)",
+        r"\bLanguages\s+(.{1,180}?)(?=\s+(?:Category|Tags|Location|Personalities|Institution|Views|Related media)\b|$)",
         visible, re.I
     )
     if not m:
         return "", False
     declared = m.group(1).strip()
     # 'Italy' in una descrizione, 'IT' nel percorso URL, o 'Original' non sono prove.
-    available = bool(re.search(r"\\b(?:Italiano|Italian|Italien)\\b", declared, re.I))
+    available = bool(re.search(r"\b(?:Italiano|Italian|Italien)\b", declared, re.I))
     return declared[:160], available
 
 
