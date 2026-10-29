@@ -1,10 +1,25 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-28T23:05:20.221428Z",
+  "updated_at": "2026-10-29T00:10:55.739168Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
-  "items": []
+  "items": [
+    {
+      "id": "geo-3592ff75fc562fce",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Exporting Gas to Global Markets, Challenges and Future Perspectives",
+      "summary": "",
+      "source": "Modern Diplomacy",
+      "published": "2026-10-28T23:00:49Z",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQY1pjTTNaT1FBTVFhT0tHUFI2aGY4X01PVnlSdTFQTlNQMW1zVFpUQXQ1UmFiQWlZT3dsR051ekxBUWFtcnFfNlF2Mml6cXloUVVZT1FSMmFYUFhWY0JxRzhWb3lyWDg3R1VGcWRLSEYtd0Nzd2FZbHdkM0hFSmc0N2xtdk5BNExOQ29Rck9kbW9OZ1B6bXY2bzNlMmV1N1hvbjBSSExoaFM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Exportul de gaze pe piețele globale, provocări și perspective de viitor",
+      "title_it": "Esportazione del gas verso i mercati globali, sfide e prospettive future",
+      "translation_status": "machine_translation"
+    }
+  ]
 }
