@@ -340,30 +340,52 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
 
 
 def official_italian_examples(now: dt.datetime) -> list[dict]:
-    """Esempio recente con lingua IT esplicitamente indicata nella scheda.
+    """Schede archivio UE con 'Italiano' indicato nelle lingue ufficiali.
 
-    Scheda verificata il 29/10/2026; non equivale ad aver ascoltato
-    la traccia, verificato la licenza o scaricato un MP4.
+    È un insieme di candidate editoriali, NON materiale già autorizzato.
+    L'inclusione non prova che il file italiano sia scaricabile o che i
+    diritti consentano la ritrasmissione. Le date storiche restano visibili.
     """
+    archive = read_json(ROOT / "data/europa-video-italian-archive.json", {"items": []})
+    entries = archive.get("items", []) if isinstance(archive, dict) else []
+    if not isinstance(entries, list):
+        raise ValueError("Archivio video italiano invalido")
+    out = []
     source = SOURCES[1]
-    example = candidate(
-        source,
-        "Informal meeting of ministers responsible for Cohesion Policy – press conference",
-        "https://audiovisual.ec.europa.eu/en/media/video/I-294336",
-        "2026-09-15",
-    )
-    example.update({
-        "languages_declared": "Original English Italiano",
-        "italian_version_available": True,
-        "language_status": "VERSIONE_IT_INDICATA",
-        "language_checked_at": "2026-10-29T12:00:00+00:00",
-        "provenance": "Scheda ufficiale AV UE, 29/10/2026; audio selezionabile verificato nel player e nel menu Download, diritti da verificare",
-        "italian_audio_candidate": True,
-        "italian_audio_in_player_verified": True,
-        "italian_audio_download_option_verified": True,
-        "audio_evidence": "Browser UI: LANGUAGE > Italiano; Downloads > Audio > Italiano (IT), 29/10/2026",
-    })
-    return [example]
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+        url = entry.get("source_url", "")
+        if not isinstance(url, str) or urlparse(url).hostname != "audiovisual.ec.europa.eu":
+            continue
+        declared = str(entry.get("languages_declared", ""))[:160]
+        if not re.search(r"\\bItaliano\\b", declared, re.I):
+            continue
+        item = candidate(source, str(entry.get("title", "")), url, str(entry.get("published_at", "")))
+        if not item:
+            continue
+        item.update({
+            "languages_declared": declared,
+            "italian_version_available": True,
+            "italian_audio_candidate": True,
+            "language_status": "VERSIONE_IT_INDICATA",
+            "language_checked_at": entry.get("verified_metadata_on", "2026-10-29") + "T12:00:00+00:00",
+            "language_probe_version": 3,
+            "provenance": "Elenco Languages della scheda ufficiale UE; audio/diritti da verificare",
+            "duration_label": entry.get("duration", ""),
+            "editorial_topic": entry.get("topic", ""),
+        })
+        if "/I-294336" in url:
+            # Verifica manuale reale effettuata nel lettore e Download.
+            # Non è una licenza o un playout approvato.
+            item.update({
+                "italian_audio_in_player_verified": True,
+                "italian_audio_download_option_verified": True,
+                "audio_evidence": "Browser UI: LANGUAGE > Italiano; Downloads > Audio > Italiano (IT), 29/10/2026",
+                "provenance": "LANGUAGE e Download verificati il 29/10/2026; diritti e sincronizzazione da verificare",
+            })
+        out.append(item)
+    return out
 
 
 def eligible_video(item: dict, now: dt.datetime) -> bool:
@@ -456,15 +478,10 @@ def main():
     # Esempi metadati certi: non approvati per la diretta e riconfermati alla scadenza.
     for item in official_italian_examples(now):
         old = retained.get(item["id"], {})
-        # Il controllo del player del 29/10 ha verificato un audio italiano
-        # selezionabile e un'opzione di download audio IT, NON i diritti.
-        # Registrarlo anche nel catalogo già creato nei run precedenti.
+        # Riutilizza i metadati linguistici già verificati nelle pagine UE,
+        # senza mai promuovere automaticamente il video a "approvato".
         if old:
-            old.update({key: item[key] for key in (
-                "italian_version_available", "italian_audio_candidate",
-                "italian_audio_in_player_verified",
-                "italian_audio_download_option_verified", "audio_evidence",
-                "provenance")})
+            old.update(item)
             retained[item["id"]] = old
         else:
             retained[item["id"]] = item
@@ -481,7 +498,7 @@ def main():
                 old = retained.get(item["id"], {})
                 # La nuova acquisizione aggiorna titolo/data ma NON cancella
                 # la verifica delle lingue effettuata nelle esecuzioni precedenti.
-                for key in ("languages_declared", "italian_version_available", "italian_audio_candidate", "italian_audio_in_player_verified", "italian_audio_download_option_verified", "audio_evidence", "language_status", "language_checked_at", "language_probe_version", "language_error", "provenance"):
+                for key in ("languages_declared", "italian_version_available", "italian_audio_candidate", "italian_audio_in_player_verified", "italian_audio_download_option_verified", "audio_evidence", "language_status", "language_checked_at", "language_probe_version", "language_error", "provenance", "editorial_topic", "duration_label"):
                     if key in old:
                         item[key] = old[key]
                 retained[item["id"]] = item
