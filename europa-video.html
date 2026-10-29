@@ -93,7 +93,7 @@ footer{border-top:1px solid #304761;text-align:center;padding:25px;color:#b0c1d7
     const a=document.createElement('a');
     try{
       const url=new URL(x.source_url);
-      if(url.protocol==='https:'&&/(^|\\.)(europarl\\.europa\\.eu|audiovisual\\.ec\\.europa\\.eu)$/.test(url.hostname)){
+      if(url.protocol==='https:'&&/(^|\.)(europarl\.europa\.eu|audiovisual\.ec\.europa\.eu)$/.test(url.hostname)){
         a.href=url.href;a.textContent='Apri la scheda ufficiale';a.target='_blank';a.rel='noopener noreferrer';
       }
     }catch{}
