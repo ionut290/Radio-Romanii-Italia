@@ -31,10 +31,10 @@ jobs:
           ffprobe -version | head -1
       - name: Verifica condizioni e anteprima tecnica senza creare file
         run: python scripts/europa_real_av_staging.py --id I-294336
-      - name: Crea solo 12 secondi di prova privata, senza streaming
+      - name: Crea 35 secondi di parlato italiano da 00:45, senza streaming
         run: |
           mkdir -p /tmp/rdi-europa
-          python scripts/europa_real_av_staging.py --id I-294336 --execute --output /tmp/rdi-europa/europa-italiano-preview.mp4
+          python scripts/europa_real_av_staging.py --id I-294336 --start 45 --seconds 35 --execute --output /tmp/rdi-europa/europa-italiano-voce.mp4
       - name: Verifica che il programma della radio non sia stato modificato
         run: |
           python - <<'PY'
@@ -48,9 +48,9 @@ jobs:
       - name: Salva anteprima di prova per verifica redazionale, non pubblicarla sul sito
         uses: actions/upload-artifact@v4
         with:
-          name: rdi-europa-prima-prova-it
+          name: rdi-europa-prova-parlato-it
           path: |
-            /tmp/rdi-europa/europa-italiano-preview.mp4
-            /tmp/rdi-europa/europa-italiano-preview.json
+            /tmp/rdi-europa/europa-italiano-voce.mp4
+            /tmp/rdi-europa/europa-italiano-voce.json
           retention-days: 3
           if-no-files-found: error
