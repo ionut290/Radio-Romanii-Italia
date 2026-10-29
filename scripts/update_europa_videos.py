@@ -223,6 +223,102 @@ def parse_listing(blob: bytes, source: dict) -> list[dict]:
     return parser.items
 
 
+class PlainMetadata(HTMLParser):
+    """Legge soltanto le etichette visibili nella scheda del portale AV UE."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.text = []
+        self.omit = 0
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {"script", "style", "noscript"}:
+            self.omit += 1
+
+    def handle_endtag(self, tag):
+        if tag in {"script", "style", "noscript"} and self.omit:
+            self.omit -= 1
+
+    def handle_data(self, data):
+        if not self.omit and data.strip():
+            self.text.append(clean(data))
+
+
+def declared_language_versions(blob: bytes) -> tuple[str, bool]:
+    """Italiano deve comparire nella riga 'Languages', non nel titolo/descrizione.
+
+    Non restituisce una convalida della voce: 'Italiano' può indicare
+    la disponibilità di una traccia da scegliere o scaricare.
+    """
+    parser = PlainMetadata()
+    parser.feed(blob.decode("utf-8", errors="replace"))
+    visible = " ".join(parser.text)
+    m = re.search(
+        r"\\bLanguages\\s+(.{1,180}?)(?=\\s+(?:Category|Tags|Location|Personalities|Institution|Views|Related media)\\b|$)",
+        visible, re.I
+    )
+    if not m:
+        return "", False
+    declared = m.group(1).strip()
+    # 'Italy' in una descrizione, 'IT' nel percorso URL, o 'Original' non sono prove.
+    available = bool(re.search(r"\\b(?:Italiano|Italian|Italien)\\b", declared, re.I))
+    return declared[:160], available
+
+
+def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> int:
+    """Controllo graduale delle versioni linguistiche; massimo 8 HTTP per run."""
+    count = 0
+    candidates = sorted(items, key=lambda x: x.get("published_at") or "", reverse=True)
+    for item in candidates:
+        if count >= limit:
+            break
+        if urlparse(item.get("source_url", "")).hostname != "audiovisual.ec.europa.eu":
+            continue
+        checked = item.get("language_checked_at", "")
+        if checked:
+            try:
+                stamp = dt.datetime.fromisoformat(checked.replace("Z", "+00:00"))
+                if stamp.tzinfo and now - stamp < dt.timedelta(days=14):
+                    continue
+            except ValueError:
+                pass
+        count += 1
+        try:
+            language_list, has_it = declared_language_versions(fetch(item["source_url"]))
+            item["languages_declared"] = language_list
+            item["italian_version_available"] = has_it
+            item["language_status"] = "VERSIONE_IT_INDICATA" if has_it else "ITALIANO_NON_CONFERMATO"
+        except Exception as exc:
+            item["language_status"] = "METADATI_NON_DISPONIBILI"
+            item["italian_version_available"] = False
+            item["language_error"] = str(exc)[:110]
+        item["language_checked_at"] = now.isoformat()
+    return count
+
+
+def official_italian_examples(now: dt.datetime) -> list[dict]:
+    """Esempio recente con lingua IT esplicitamente indicata nella scheda.
+
+    Scheda verificata il 29/10/2026; non equivale ad aver ascoltato
+    la traccia, verificato la licenza o scaricato un MP4.
+    """
+    source = SOURCES[1]
+    example = candidate(
+        source,
+        "Informal meeting of ministers responsible for Cohesion Policy – press conference",
+        "https://audiovisual.ec.europa.eu/en/media/video/I-294336",
+        "2026-09-15",
+    )
+    example.update({
+        "languages_declared": "Original English Italiano",
+        "italian_version_available": True,
+        "language_status": "VERSIONE_IT_INDICATA",
+        "language_checked_at": "2026-10-29T12:00:00+00:00",
+        "provenance": "Scheda ufficiale AV UE, 29/10/2026; ascolto e licenza da verificare",
+    })
+    return [example]
+
+
 def eligible_video(item: dict, now: dt.datetime) -> bool:
     if not isinstance(item, dict):
         return False
@@ -292,6 +388,12 @@ def main():
     now = dt.datetime.now(dt.timezone.utc)
     previous = read_json(CATALOG, {})
     retained = {x["id"]: x for x in previous.get("items", []) if isinstance(x, dict) and x.get("id")}
+    # Esempi metadati certi: non approvati per la diretta e riconfermati alla scadenza.
+    for item in official_italian_examples(now):
+        old = retained.get(item["id"], {})
+        if old.get("language_checked_at"):
+            continue
+        retained[item["id"]] = item
     diagnostics = []
     success_count = 0
     for source in SOURCES:
@@ -307,15 +409,19 @@ def main():
         except Exception as exc:
             diagnostics.append({"source": source["id"], "status": "error", "reason": str(exc)[:160]})
     items = sorted(retained.values(), key=lambda x: (x.get("published_at") or "", x.get("id") or ""), reverse=True)[:150]
+    language_checks = annotate_languages(items, now)
+    italian_versions = [x for x in items if x.get("italian_version_available") is True]
     catalog = {
         "schema_version": 1,
         "updated_at": now.isoformat(),
         "success_sources": success_count,
         "sources": diagnostics,
         "items": items,
+        "italian_versions": italian_versions,
+        "language_checks_this_run": language_checks,
         "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze.",
     }
-    if previous.get("items") == catalog["items"] and previous.get("sources") == catalog["sources"]:
+    if previous.get("items") == catalog["items"] and previous.get("sources") == catalog["sources"] and previous.get("italian_versions") == catalog["italian_versions"]:
         catalog["updated_at"] = previous.get("updated_at") or catalog["updated_at"]
     # Mai sovrascrivere le approvazioni umane dal processo automatico.
     approvals = read_json(APPROVALS, {"schema_version": 1, "items": []})
@@ -327,7 +433,7 @@ def main():
         schedule["generated_at"] = old_schedule.get("generated_at") or schedule["generated_at"]
     write_json(CATALOG, catalog)
     write_json(PLAYOUT, schedule)
-    print(json.dumps({"sources": diagnostics, "candidates": len(items), "approved": len(schedule["ready_videos"]), "live_enabled": False}, ensure_ascii=False))
+    print(json.dumps({"sources": diagnostics, "candidates": len(items), "italian_versions_listed": len(italian_versions), "metadata_checks": language_checks, "approved": len(schedule["ready_videos"]), "live_enabled": False}, ensure_ascii=False))
     if not success_count:
         print("ATTENZIONE: fonti non raggiungibili; conservati i candidati precedenti.")
 
