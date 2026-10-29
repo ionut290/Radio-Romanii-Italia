@@ -108,15 +108,54 @@ def candidate(source: dict, title: str, url: str, published: str = ""):
         "title": title,
         "source_url": link,
         "published_at": published,
-        "language_hint": "it" if source["type"] == "rss" else "und",
+        "language_hint": "it" if "/it/" in urlparse(link).path else "und",
         "audio_italiano_verificato": False,
         "diritti_verificati": False,
         "status": "DA_VERIFICARE",
     }
 
 
+class LenientRSS(HTMLParser):
+    """Fallback per feed che includono HTML non escapato nelle descrizioni."""
+
+    def __init__(self, source: dict):
+        super().__init__(convert_charrefs=True)
+        self.source = source
+        self.current = None
+        self.field = None
+        self.items = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag == "item":
+            self.current = {}
+            self.field = None
+        elif self.current is not None and tag in {"title", "link", "pubdate"}:
+            self.field = tag
+            self.current.setdefault(tag, "")
+
+    def handle_data(self, data):
+        if self.current is not None and self.field is not None:
+            self.current[self.field] += data
+
+    def handle_endtag(self, tag):
+        if tag == "item" and self.current is not None:
+            x = self.current
+            item = candidate(self.source, x.get("title", ""), x.get("link", ""), iso_date(x.get("pubdate", "")))
+            if item:
+                self.items.append(item)
+            self.current = None
+            self.field = None
+        elif tag == self.field:
+            self.field = None
+
+
 def parse_rss(blob: bytes, source: dict) -> list[dict]:
-    root = ET.fromstring(blob)
+    try:
+        root = ET.fromstring(blob)
+    except ET.ParseError:
+        parser = LenientRSS(source)
+        parser.feed(blob.decode("utf-8", errors="replace"))
+        return parser.items
     items = []
     for item in root.findall(".//item"):
         title = item.findtext("title") or ""
