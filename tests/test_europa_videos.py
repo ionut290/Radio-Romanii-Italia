@@ -72,8 +72,36 @@ class EuropaCatalogTests(unittest.TestCase):
         samples = mod.official_italian_examples(NOW)
         self.assertEqual(len(samples), 1)
         self.assertTrue(samples[0]["italian_version_available"])
+        self.assertTrue(samples[0]["italian_audio_in_player_verified"])
+        self.assertTrue(samples[0]["italian_audio_download_option_verified"])
         self.assertFalse(samples[0]["audio_italiano_verificato"])
         self.assertFalse(mod.eligible_video(samples[0], NOW))
+
+    def test_separate_italian_audio_requires_explicit_sync(self):
+        self.assertTrue(mod.official_italian_examples(NOW)[0]["italian_audio_download_option_verified"])
+        data = {
+            "approved": True, "audio_italiano_verificato": True, "diritti_verificati": True,
+            "musica_e_terzi_verificati": True, "video_completo": True,
+            "audio_track_language": "it", "audio_sync_verified": True,
+            "source_id": "commissione_europea", "title": "Conferenza stampa sul diritto europeo",
+            "reviewed_by": "RDI", "reviewed_at": "2026-10-29T12:00:00+01:00",
+            "credit": "European Union", "media_url": "https://audiovisual.ec.europa.eu/video.mp4",
+            "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-294336",
+            "rights_url": "https://audiovisual.ec.europa.eu/en/conditions-of-use",
+            "duration_seconds": 949, "audio_mode": "separate_it",
+            "audio_url": "https://audiovisual.ec.europa.eu/it.aac",
+            "original_audio_muted": True, "audio_offset_ms": 0,
+        }
+        self.assertTrue(mod.eligible_video(data, NOW))
+        data["original_audio_muted"] = False
+        self.assertFalse(mod.eligible_video(data, NOW))
+        data["original_audio_muted"] = True
+        data["audio_offset_ms"] = 7000
+        self.assertFalse(mod.eligible_video(data, NOW))
+        data["audio_offset_ms"] = 0
+        data["audio_sync_verified"] = False
+        self.assertFalse(mod.eligible_video(data, NOW))
+
 
     def test_host_does_not_trust_lookalikes(self):
         self.assertFalse(mod.page_allowed("https://audiovisual.ec.europa.eu.evil.example/en/media/video/I-42"))
@@ -94,13 +122,22 @@ class EuropaCatalogTests(unittest.TestCase):
             rights_url="https://audiovisual.ec.europa.eu/en/conditions-of-use",
             duration_seconds=125, approved=True, audio_italiano_verificato=True,
             diritti_verificati=True, musica_e_terzi_verificati=True,
-            video_completo=True, reviewed_by="RDI", reviewed_at="2026-10-29T11:00:00+01:00",
+            video_completo=True, audio_track_language="it", audio_sync_verified=True,
+            audio_mode="embedded_it", audio_stream_index=1,
+            reviewed_by="RDI", reviewed_at="2026-10-29T11:00:00+01:00",
             credit="© European Union, 2026, CC BY 4.0",
         )
         self.assertTrue(mod.eligible_video(item, NOW))
         item["musica_e_terzi_verificati"] = False
         self.assertFalse(mod.eligible_video(item, NOW))
         item["musica_e_terzi_verificati"] = True
+        item["audio_mode"] = "separate_it"
+        self.assertFalse(mod.eligible_video(item, NOW))
+        item["audio_url"] = "https://audiovisual.ec.europa.eu/italiano.aac"
+        item["original_audio_muted"] = True
+        item["audio_offset_ms"] = 0
+        self.assertTrue(mod.eligible_video(item, NOW))
+        item["audio_mode"] = "embedded_it"
         schedule = mod.build_schedule([item], NOW)
         self.assertEqual(schedule["ready_videos"][0]["id"], "video-1")
         self.assertFalse(schedule["live_enabled"])
