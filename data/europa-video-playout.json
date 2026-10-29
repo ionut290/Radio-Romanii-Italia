@@ -1,11 +1,60 @@
 {
   "schema_version": 1,
-  "generated_at": null,
+  "generated_at": "2026-10-29T19:17:39.369742+00:00",
   "live_enabled": false,
   "playback_mode": "STAGING_ONLY",
   "timezone": "Europe/Rome",
   "daily_time": "18:00",
   "ready_videos": [],
-  "daily_schedule": [],
-  "note": "La regia live non è ancora collegata. Nessuna trasmissione automatica."
+  "daily_schedule": [
+    {
+      "date": "2026-10-30",
+      "starts_at": "2026-10-30T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-10-31",
+      "starts_at": "2026-10-31T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-11-01",
+      "starts_at": "2026-11-01T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-11-02",
+      "starts_at": "2026-11-02T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-11-03",
+      "starts_at": "2026-11-03T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-11-04",
+      "starts_at": "2026-11-04T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-11-05",
+      "starts_at": "2026-11-05T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-11-06",
+      "starts_at": "2026-11-06T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    }
+  ],
+  "note": "Richiede regia AV con switch audio+video. Non usare come playlist live finché non collaudata."
 }
