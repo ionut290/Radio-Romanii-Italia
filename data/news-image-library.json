@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "description": "Copertine fotografiche illustrative per le notizie senza fotografia della fonte. L’assegnazione evita riusi nello stesso feed.",
+  "categories": {
+    "community": [
+      {
+        "image": "./editorial-images/ai-community-rdi.jpg",
+        "description": "Comunità e vita quotidiana in Italia",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-comunita-volontari.jpg",
+        "description": "Volontari a un evento di quartiere",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      }
+    ],
+    "institution": [
+      {
+        "image": "./editorial-images/ai-consular-rdi.jpg",
+        "description": "Servizi consolari e istituzioni",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-consolato-sportello.jpg",
+        "description": "Sportello di servizio consolare",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/israel-election.jpg",
+        "description": "Elezioni e negoziati parlamentari Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      },
+      {
+        "image": "./editorial-images/news-covers/brazil-politics.jpg",
+        "description": "Politica e opposizione in Brasile Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      }
+    ],
+    "finance": [
+      {
+        "image": "./editorial-images/ai-economy-rdi.jpg",
+        "description": "Economia e bilancio",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/italy-budget-2027.jpg",
+        "description": "Documenti di bilancio e finanza pubblica Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-economia-panificio.jpg",
+        "description": "Piccola impresa e conti aziendali",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      }
+    ],
+    "health": [
+      {
+        "image": "./editorial-images/ai-health-rdi.jpg",
+        "description": "Servizi sanitari e famiglia",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/nursing-recruitment-arges.jpg",
+        "description": "Personale infermieristico e opportunità di lavoro Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-salute-farmacia.jpg",
+        "description": "Farmacista al banco consiglia una cliente",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": true
+      }
+    ],
+    "education": [
+      {
+        "image": "./editorial-images/news-covers/school-safety.jpg",
+        "description": "Scuola e sicurezza Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-educazione-corso-lingua.jpg",
+        "description": "Corso di lingua per adulti",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-scuola-preparazione.jpg",
+        "description": "Insegnante prepara un’aula per le lezioni",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": true
+      }
+    ],
+    "travel": [
+      {
+        "image": "./editorial-images/ai-travel-rdi.jpg",
+        "description": "Viaggi e mobilità",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/italy-national-strike.jpg",
+        "description": "Sciopero e trasporto pubblico Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      },
+      {
+        "image": "./editorial-images/news-covers/toledo-rail-investigation.jpg",
+        "description": "Indagine su incidente ferroviario Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-trasporti-stazione.jpg",
+        "description": "Viaggiatori in stazione ferroviaria",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      }
+    ],
+    "workers": [
+      {
+        "image": "./editorial-images/ai-workers-rdi.jpg",
+        "description": "Lavoro e diritti dei lavoratori",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-lavoro-sicurezza.jpg",
+        "description": "Sicurezza sul posto di lavoro",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      }
+    ],
+    "environment": [
+      {
+        "image": "./editorial-images/news-covers/rdi-ambiente-fiume.jpg",
+        "description": "Volontari per la pulizia di un fiume",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-meteo-pioggia.jpg",
+        "description": "Pioggia e condizioni meteorologiche",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      }
+    ],
+    "technology": [
+      {
+        "image": "./editorial-images/news-covers/rdi-tecnologia-digitale.jpg",
+        "description": "Servizi digitali e tecnologia",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-servizi-digitali.jpg",
+        "description": "Uso di servizi pubblici digitali",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": true
+      }
+    ],
+    "sports": [
+      {
+        "image": "./editorial-images/news-covers/serie-a-table.jpg",
+        "description": "Calcio e competizioni sportive Copertina legata alla notizia specifica; non riutilizzare per altri articoli.",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": false
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-sport-amatoriale.jpg",
+        "description": "Partita di calcio amatoriale, scena sportiva riutilizzabile",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": true
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-sport-pallavolo.jpg",
+        "description": "Partita amatoriale di pallavolo",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": true
+      }
+    ],
+    "justice": [
+      {
+        "image": "./editorial-images/news-covers/rdi-giustizia-tribunale.jpg",
+        "description": "Giustizia e attività giudiziaria",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento."
+      },
+      {
+        "image": "./editorial-images/news-covers/rdi-giustizia-assistenza-legale.jpg",
+        "description": "Colloquio di assistenza legale",
+        "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+        "reusable": true
+      }
+    ]
+  }
+}

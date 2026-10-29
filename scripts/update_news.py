@@ -293,7 +293,8 @@ for item in items:
 from news_details import enrich_items
 enrich_items(items)
 from news_illustrations import fill_missing_images
-# Existing source imagery has priority; generate branded vector illustrations only when missing.
+# Preserve publisher imagery; otherwise draw a distinct cover from the categorized photo bank,
+# with a unique SVG fallback when no relevant unused photo remains.
 fill_missing_images(items)
 output.write_text(json.dumps({
     "updated_at": now.isoformat(), "items": items

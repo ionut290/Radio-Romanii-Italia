@@ -1,6 +1,8 @@
-"""Genera illustrazioni editoriali SVG RDI per le notizie senza immagini.
+"""Assegna immagini RDI alle notizie e crea fallback editoriali unici.
 
-Nessuna API a pagamento. Non sono fotografie né immagini prodotte da un modello IA.
+Le foto illustrative provengono dalla libreria classificata in data/news-image-library.json.
+Quando non è disponibile una foto fonte o una copertina libera e pertinente, genera un SVG
+unico per l'articolo. Le immagini IA sono sempre dichiarate come illustrative.
 """
 import hashlib
 import html
@@ -26,18 +28,27 @@ AI_IMAGE_BY_TOPIC = {
     "institution": "consular",
     "education": "community",
     "justice": "workers",
+    "workers": "workers",
+    "environment": "travel",
+    "technology": "community",
+    "sports": "community",
     "weather": "travel",
     "general": "community",
 }
 
 TOPICS = [
     (("meteo", "ploi", "ploaie", "vreme", "tempo", "allerta"), "weather"),
+    (("ambiente", "ambient", "clima", "climate", "rifiut", "riciclo", "forest", "inquin", "ecolog"), "environment"),
     (("sanit", "medic", "spital", "salute", "ospedal"), "health"),
+    (("sport", "calcio", "serie a", "football", "partita", "squadra", "campionato", "coppa", "champions league", "scudetto"), "sports"),
+    (("tecnolog", "technology", "digit", "intelligenza artificiale", "intelligenţa artificială", "software", "cyber", "anthropic", "microsoft"), "technology"),
     (("scuol", "școal", "scoal", "student", "universit", "educa"), "education"),
-    (("aeroport", "volo", "zbor", "viagg", "calator", "călător"), "travel"),
+    (("aeroport", "volo", "zbor", "viagg", "calator", "călător", "tren", "ferov", "scioper", "strike", "transport"), "travel"),
     (("econom", "fisc", "tax", "preț", "pret", "ban", "euro", "stipend", "pensi"), "finance"),
-    (("poliz", "carabin", "incident", "arest", "poliț", "polit"), "justice"),
+    (("lavor", "worker", "muncitor", "muncă", "munca", "sindac", "angaja", "salari"), "workers"),
+    (("poliz", "carabin", "incident", "arest", "poliț", "bodycam", "tribunal", "giudice", "condann", "omicid", "aggression", "aggressione"), "justice"),
     (("consulat", "ambasad", "document", "passaport", "pașaport"), "institution"),
+    (("elezion", "election", "parlament", "govern", "guvern", "ministro", "minister", "politic", "israel", "brasile", "brazil", "knesset"), "institution"),
     (("famil", "diaspor", "român", "român", "comunit", "migrant"), "community"),
 ]
 
@@ -55,7 +66,9 @@ def is_armed_conflict(item):
 def topic_for(item):
     if is_armed_conflict(item):
         return "conflict"
-    combined = (item.get("title", "") + " " + item.get("category", "")).casefold()
+    combined = " ".join(str(item.get(key) or "") for key in ("title", "summary", "category")).casefold()
+    if re.search(r"\b(?:milan|juventus|inter|lazio|napoli|fiorentina|atalanta)\b", combined):
+        return "sports"
     for needles, topic in TOPICS:
         if any(needle in combined for needle in needles):
             return topic
@@ -109,10 +122,32 @@ def fill_missing_images(items):
     """
     OUT.mkdir(parents=True, exist_ok=True)
     assignment_file = Path(__file__).resolve().parents[1] / "data" / "news-cover-assignments.json"
+    library_file = Path(__file__).resolve().parents[1] / "data" / "news-image-library.json"
     try:
         assignments = json.loads(assignment_file.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         assignments = {}
+    try:
+        library = json.loads(library_file.read_text(encoding="utf-8")).get("categories", {})
+    except (OSError, json.JSONDecodeError, AttributeError):
+        library = {}
+    library_by_path = {
+        entry.get("image"): entry
+        for entries in library.values() if isinstance(entries, list)
+        for entry in entries if isinstance(entry, dict) and entry.get("image")
+    }
+    used_library_covers = {
+        str(item.get("image")) for item in items
+        if str(item.get("image") or "") in library_by_path
+    }
+    for item in items:
+        identity = str(item.get("url") or item.get("title") or "")
+        assignment = assignments.get(identity)
+        image = str(item.get("image") or "")
+        if assignment and (not image or "./editorial-images/ai-" in image
+                           or (image.endswith(".svg") and "editorial-images/" in image)):
+            if assignment.get("image") in library_by_path:
+                used_library_covers.add(assignment["image"])
     used = set()
     count = 0
     for item in items:
@@ -133,16 +168,33 @@ def fill_missing_images(items):
             or "./editorial-images/ai-" in existing_image
             or (existing_image.endswith(".svg") and "editorial-images/" in existing_image)
         )
-        if assignment and is_generic_image:
-            cover = assignment.get("image")
-            if cover:
-                item["image"] = cover
-                item["fallbackImage"] = cover
-                item["imageType"] = "ai-editorial-photo"
-                item["image_credit"] = assignment.get(
-                    "credit",
-                    "Copertă fotorealistă generată cu IA; imagine de context, nu fotografia evenimentului.",
-                )
+        cover = assignment.get("image") if assignment else None
+        if cover and (is_generic_image or existing_image == cover):
+            cover_info = library_by_path.get(cover, assignment)
+        elif is_generic_image:
+            topic = topic_for(item)
+            topic = {"weather": "environment", "general": "community"}.get(topic, topic)
+            candidates = [entry for entry in library.get(topic, []) if entry.get("reusable", True)]
+            start = int(digest, 16) % max(1, len(candidates))
+            cover_info = None
+            for offset in range(len(candidates)):
+                candidate = candidates[(start + offset) % len(candidates)]
+                if candidate.get("image") not in used_library_covers:
+                    cover_info = candidate
+                    cover = candidate["image"]
+                    break
+        else:
+            cover_info = None
+        if cover and cover_info and (is_generic_image or existing_image == cover):
+            item["image"] = cover
+            item["fallbackImage"] = cover
+            item["imageType"] = "ai-editorial-photo"
+            item["image_credit"] = cover_info.get(
+                "credit",
+                "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+            )
+            item["imageAttribution"] = item["image_credit"]
+            used_library_covers.add(cover)
         if not item.get("image"):
             category = str(item.get("category") or "").casefold()
             topic = topic_for(item)
@@ -155,6 +207,16 @@ def fill_missing_images(items):
                 item["image"] = f"./editorial-images/ai-{image_key}-rdi.jpg"
                 item["imageType"] = "ai-editorial-illustration"
                 item["imageAttribution"] = "Ilustrație editorială generată pentru Radio Românii din Italia (nu este fotografie a evenimentului)"
+    active_assignments = {}
+    for item in items:
+        identity = str(item.get("url") or "")
+        image = str(item.get("image") or "")
+        if identity and item.get("imageType") == "ai-editorial-photo" and image in library_by_path:
+            active_assignments[identity] = {
+                "image": image,
+                "credit": item.get("image_credit") or library_by_path[image].get("credit", ""),
+            }
+    assignment_file.write_text(json.dumps(active_assignments, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     for path in OUT.glob("rdi-auto-*.svg"):
         if path.name not in used:
             path.unlink()
