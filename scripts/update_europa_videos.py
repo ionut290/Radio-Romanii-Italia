@@ -404,6 +404,12 @@ def main():
                 raise ValueError("nessun collegamento video rilevato: il formato della fonte potrebbe essere cambiato")
             success_count += 1
             for item in found:
+                old = retained.get(item["id"], {})
+                # La nuova acquisizione aggiorna titolo/data ma NON cancella
+                # la verifica delle lingue effettuata nelle esecuzioni precedenti.
+                for key in ("languages_declared", "italian_version_available", "language_status", "language_checked_at", "language_error", "provenance"):
+                    if key in old:
+                        item[key] = old[key]
                 retained[item["id"]] = item
             diagnostics.append({"source": source["id"], "status": "ok", "found": len(found)})
         except Exception as exc:
