@@ -287,7 +287,7 @@ def annotate_languages(items: list[dict], now: dt.datetime, limit: int = 8) -> i
             language_list, has_it = declared_language_versions(fetch(item["source_url"]))
             item["languages_declared"] = language_list
             item["italian_version_available"] = has_it
-            item["language_status"] = "VERSIONE_IT_INDICATA" if has_it else "ITALIANO_NON_CONFERMATO"
+            item["language_status"] = ("VERSIONE_IT_INDICATA" if has_it else "ITALIANO_NON_LISTATO" if language_list else "LINGUA_NON_LEGGIBILE")
         except Exception as exc:
             item["language_status"] = "METADATI_NON_DISPONIBILI"
             item["italian_version_available"] = False
