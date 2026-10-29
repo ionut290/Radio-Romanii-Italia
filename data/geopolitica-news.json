@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-29T09:30:51.661469Z",
+  "updated_at": "2026-10-29T09:45:25.349803Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-1e4212ea05c80a64",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Taiwan sounds alarm over Chinese warships across vast stretch of regional waters",
+      "summary": "",
+      "source": "Latest news from Azerbaijan",
+      "published": "2026-10-29T09:38:24Z",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTGM3QlU2SWtCN2l5bUFKQm1acGszdVVDd3ozYWVNUEtBMWhHR0N4d3NUMDJ2LXROdWtnUTYtcGJSM1N5U3pyRjVzRmMwZXV1THcxSkFQRGdEcHBsSk9EVlZjOVZTTEVFMnBfS2E4ZEtUeC1MOU54TDgwSk1zM3VZNW9ib2dRTkNER3lDLW5PSGlrQVdramxCUzc1eW1TMlZiclc4?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Taiwanul sună de alarmă cu privire la navele de război chineze în întinderea vastă a apelor regionale",
+      "title_it": "Taiwan lancia l’allarme per le navi da guerra cinesi in vaste distese di acque regionali",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-2656c279333e079a",
       "category": "conflicte",
@@ -22,14 +36,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-bc87f6d4d47fb80c",
+      "id": "geo-81bc98441bbb9af3",
       "category": "securitate",
       "region": "asia",
       "title": "Taiwan says vast Chinese armada of 50 vessels spotted near island",
       "summary": "",
-      "source": "The Independent",
-      "published": "2026-10-29T08:52:00Z",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbHgxcnEtMU1OZ3hpMWZVVzdtaXo3OXhRMjVja1VjX2ZfMlFMbExMVEdTV0FEbmN0WmNZRlBxRFpjQVNEYUZVYi1qTGs3ZTNncVNyalprNzk1U1NiS3l4c19Jc011V0VTdkNvQ2haOGpZX0MtbzM5c1BOdzl1cXNRa0gzc3VHaEpJaGx3MGFkU0puazdEV3c?oc=5",
+      "source": "Yahoo News UK",
+      "published": "2026-10-29T08:52:54Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5DWXY4ZVNUT1BIRGgtT2lQUWNETzk1aHZYREo1eHptb3JUX3k4QjQ0bFpfaHpzQkp1dERhbWJzREljYWF3RUF0NXhYNTNfR3l0N1BMVUdGalFjdE5pV1pqbGs4Nm1tUUl1cUQ4X2xmNlBGVHFQV2o3dnJPMHg?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Taiwan spune că o vastă armată chineză de 50 de nave a fost reperată în apropierea insulei",
       "title_it": "Taiwan afferma che una vasta armata cinese di 50 navi è stata avvistata vicino all'isola",
@@ -92,6 +106,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-14a065564ba41961",
+      "category": "europa",
+      "region": "europa",
+      "title": "Il caso Ceuta e il corto circuito dell’Europa sui migranti",
+      "summary": "",
+      "source": "www.lavitadelpopolo.it",
+      "published": "2026-10-29T07:44:49Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNRW95aHBzdkdxUFRsSzJEek9mdXBscWVPMmxfb21YOG5ZVTNpaVhtNjBIMDZqWFF4UkFLMndqenQ0ZEpTUUlxQU5kU1diY212UTlOYjZIVWZVeUVqOEZ5TVpyQThrSTgxelZKWXBSMjJuODFGNGgtb2o0cnhobWZkczBwVU1IaVE3ajdsNlJuMmJCN2tHcG1XZnRIcUJ2X2JLQkE3Q0ktdkNHWHZrRWZhSmR3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cazul Ceuta și scurtcircuitul european asupra migranților",
+      "title_it": "Il caso Ceuta e il corto circuito dell’Europa sui migranti",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-b14ae9660efe533f",
       "category": "diplomatie",
       "region": "americi",
@@ -106,28 +134,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-5c3a86e751c902d9",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "The situation 1681 – October 28, 2026",
-      "summary": "",
-      "source": "Spartanat",
-      "published": "2026-10-29T07:10:41Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE41T3N2MUg3enRTTlk3cGhlM3FJeWZiRWN0TDlaTDJOOEtFekJ0bzktZk1sdWpQNjV3R1RFTjRHbWQ0Qk91XzVWNDlqbFZYbDI3enZDclQ3R01VOVYySHZSa1UwbW5DT1lNSnZ3?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Situația 1681 – 28 octombrie 2026",
-      "title_it": "La situazione 1681 – 28 ottobre 2026",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-835bb2cf87a6f28d",
+      "id": "geo-c6370252487db86b",
       "category": "conflicte",
       "region": "orient",
       "title": "Trump appoints Biden-era official to Gaza Board of Peace",
       "summary": "",
       "source": "Middle East Monitor",
       "published": "2026-10-29T07:10:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQSHRnWjdUN1p3WFdsTTFVdzcwVzB2akltSG53Q0YzLUZlZ2JJUGJhc3RwTWc1ajJLeHQ2UEZCTUlzTDRmNnhwMjZtTFdIeTFYcWlPOXFQd3ZRd2tiVDhNdktQUXBUczJXTzNoamxSdE5mRm5kcUozZjMxemNjck55bWpmQVc1Z2gwSlpodlNPUEhmY2d4QzRRSXVYS2lGRy1tU0E?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUVBhajAwbzBqejBoZ0RXNFlIX2RqTUdna1c4Z2NnSzNyUUNISFM1S0dQT1AzQXd1NW1LZ0ladVVMS01EczRJX1NoRk9DUTl4SFhMdVBzR3pzdm9ROU1RMkxMMVZ6TmcxakNpODc3NE5XNEtkOGRBLUlMT0JsRFNZalVCOUdEOVc1aUM4QldTbWw4QmJER2RzVTIya2V3Y2NMYldLemRocw?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Trump numește un oficial din epoca Biden în Consiliul de pace din Gaza",
       "title_it": "Trump nomina un funzionario dell’era Biden al Gaza Board of Peace",
@@ -187,20 +201,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "SUA apelează la Singapore pentru a avansa discuțiile-cadru de apărare cu ASEAN anul viitor",
       "title_it": "Gli Stati Uniti si rivolgono a Singapore per portare avanti i colloqui sul quadro di difesa con l’ASEAN l’anno prossimo",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-dfa0685071a548ff",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Shringla hits back at Congress over Russian Oil remarks, calls it a ‘False Narrative’",
-      "summary": "",
-      "source": "The Economic Times",
-      "published": "2026-10-29T06:49:06Z",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPRXVlVHd0VG9Ybkx6N2poR3A2dWNPa1BncVlCVE1hWHVuR1lNbXFJdTJLUzk1cld3THpJRlF5dE9WWE91cHg3OGVJYmF5bWFEVXctVFNQbUYxOFd3ZmstNDFaWFh6S3hCcmV2QVRYQVU3MzdoSG9TQ0JpckZBczRTeFp6MmFqaVJkYlJhbHBxMHFhb0JtTWF5QTByZUdEUGN1RHMwcnBXTUJLSHREckJkR1Z6T3NZVXJQVVVPc0ZKcU1DZ0RSS1FaVVE2OWpMQy12YzZDQlJqeUxUcnJEREHSAeMBQVVfeXFMTkRqT1d2ZVNldS1IeUJqQlZja0JsT3NpVXFwUFp5TnRKcF9aNWdidkV3dllCSlltdEhKY1hZdUxtRnNEOFRXSVRvSnVBS0N5aDM3UWtKeWNsY1JSUzhfdDd6V3JFTVU1cHZzLXRzNWNpOGJBNTVaMmZodWdadW51eEJKeFBHSkJjRVNTNXFWaFNrS2VKUU4weER6QjEzUWg1WWJOc0RTY19iQzZaYlV3NGZodFlSUmRFY1Qyc29kdGVDbTlweVhKRmZDYUZDeGtwZFM2UVBsbnJMREZBSTV4d1FhWHc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Shringla răspunde la Congres în legătură cu remarcile petrolului rusesc, numește asta o „povestire falsă”",
-      "title_it": "Shringla risponde al Congresso sulle osservazioni sul petrolio russo, definendole una “falsa narrativa”",
       "translation_status": "machine_translation"
     },
     {
@@ -330,20 +330,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-496a9d230be6d479",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Taiwan flags ‘obvious’ threat from 50 Chinese vessels in wide sweep of waters",
-      "summary": "",
-      "source": "The Straits Times",
-      "published": "2026-10-29T02:26:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPREFRUDkwMFVEbjZ5Mnd6b1hfMmY0SWlSQlE5SU14WFV0SmlOeDRoeFZjMnhNOXRfOEVCc2gzQnB3NjRIcTNYdkV4cWk5WGNqRWxiaXYzZHI4MlBqakNicTJmVmJFcURiMmFKREh4TGxOWFNNY2JmbUc2cS1lcUdfNExMX3JJUHA0U0toT05YT0FsZC1xOHVERWFuRkV3M0hjR25iWnlmTm1QNjJlTXdDTnpzUUZqMGZ0YzJN?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Taiwan subliniază o amenințare „evidentă” din partea a 50 de nave chineze aflate într-o zonă largă de ape",
-      "title_it": "Taiwan segnala una minaccia “evidente” da parte di 50 navi cinesi in un’ampia distesa d’acque",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-d15a16c5bae5f6c3",
       "category": "securitate",
       "region": "asia",
@@ -425,34 +411,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ar putea președintele Chinei Xi să intermediaze un summit între președintele SUA Trump și liderul nord-coreean Kim? Seul vede deschiderea, experții americani sunt sceptici",
       "title_it": "Il presidente cinese Xi potrebbe mediare un vertice tra il presidente degli Stati Uniti Trump e il leader nordcoreano Kim? Seoul vede l'apertura, gli esperti americani sono scettici",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-d4fb2f281e06a6e9",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Netherlands Pledges €500M in Military Aid as UK Plans £10B in Ukraine Support.",
-      "summary": "",
-      "source": "Ukraine Business News",
-      "published": "2026-10-29T00:16:08Z",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVGY0eHZmRXJrblpJTW9uRGZaWW9vNnZaRHFrX0pjR3FKX1hBUTQ5czlBck95Zl9OZ3FhZmQyV1JWLVd4RkszOFAtZlJPeU94OUdHeXBYZGN4TUxYS2lXRTlqemRqbDItMm55Z3Vvc3liUGw1RnRvdTNrVDMxZGoxWmRiUDB1LTlsSmNIaHJkYS1sT210bjJ2U1Zn0gGiAUFVX3lxTE9mbHN0QUlORUZ1SzE1N01vbUFSY3dHMFN0M3Y2NjlFT2VmMnFGV3kwMUZQVTFrRVlKYXZkMUpJUmZhY2pPTG0zZTlUQmY5a0YwV29BNWRvMjI1OFo5ckxxZmkwYy1XOXJITkZCSnJzeXNSY1UtNnVsSlZZdURoN3R5MXQzMlJQZklTT3hSNE04eXNqV0E3QWNKeEhuTnpfSHBnQQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Țările de Jos promite ajutor militar în valoare de 500 de milioane de euro, deoarece Marea Britanie plănuiește 10 miliarde de lire sterline în sprijinul Ucrainei.",
-      "title_it": "I Paesi Bassi promettono 500 milioni di euro in aiuti militari mentre il Regno Unito prevede 10 miliardi di sterline per il sostegno all’Ucraina.",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-1674ae16c8e57a3c",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Ukraine Eyes November Peace Talks as Russia Rejects Donbas Concessions.",
-      "summary": "",
-      "source": "Ukraine Business News",
-      "published": "2026-10-29T00:16:05Z",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMkNNRDlHYlZiNEJqMk5BZ1FEYWRmYlB1ZDNfOXpSR21RSlk1UVgwYVFWdG1SR18xTVEwOEVNUmItajhFVE1yUkFaREFlZG1XaWJCNGEtSTZKbzhlM1pkVkNKWlVqeDJ6SE9kUGR3Z2UyWVgydUxFNm5rdkRhT21oandkaGpleTRNUElYQVVfb2VmQdIBmgFBVV95cUxQcXZOTTJybDk1Q2VidFhCd3FJLThiZ1gxVUVHcnA1enF6djhXakp4WXozbVZjVGJvMmpyamRZbm9haUtueDNiaTRscTd1ajlYQ21vTWlOOUk1by1sU0tiX1ZNUGt0Z2dQSU9oMlhPMmM2SFBfcm9QaHBZZGtVUDlHamxESU5IaE4za3BHNmVVWVFHVjdFSEZpcTVR?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ucraina urmărește discuțiile de pace din noiembrie, în timp ce Rusia respinge concesiunile Donbasului.",
-      "title_it": "L’Ucraina punta sui colloqui di pace di novembre mentre la Russia rifiuta le concessioni al Donbass.",
       "translation_status": "machine_translation"
     },
     {
