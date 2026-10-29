@@ -1,0 +1,62 @@
+name: RDI Europa - Monitor video istituzionali (non trasmette)
+on:
+  schedule:
+    - cron: '8,38 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_europa_videos.py'
+      - 'tests/test_europa_videos.py'
+      - 'data/europa-video-approved.json'
+      - '.github/workflows/europa-videos.yml'
+permissions:
+  contents: write
+concurrency:
+  group: rdi-europa-videos
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test sicurezza, parser e fuso orario
+        run: python -m unittest discover -s tests -p 'test_europa_videos.py' -v
+      - name: Aggiorna candidate e palinsesto solo preparatorio
+        run: python scripts/update_europa_videos.py
+      - name: Impedisci attivazioni live accidentali
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('data/europa-video-playout.json').read_text())
+          assert p['live_enabled'] is False
+          assert p['playback_mode']=='STAGING_ONLY'
+          print('Verificato: nessun invio a FFmpeg / AzuraCast / YouTube')
+          PY
+      - name: Pubblica il catalogo aggiornato (non modifica la diretta)
+        run: |
+          set -e
+          if [ -z "$(git status --porcelain -- data/europa-video-candidates.json data/europa-video-playout.json)" ]; then
+            echo 'Nessun cambiamento nella lista.'
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/europa-video-candidates.json data/europa-video-playout.json
+          git commit -m "RDI Europa: aggiorna candidati video istituzionali"
+          for attempt in 1 2 3 4; do
+            if git pull --rebase -X ours origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep $((3 * attempt))
+          done
+          echo 'Pubblicazione catalogo non riuscita; nessuna modifica ai live.'
+          exit 1
