@@ -128,6 +128,21 @@ class EuropaCatalogTests(unittest.TestCase):
         self.assertFalse(mod.page_allowed("http://audiovisual.ec.europa.eu/en/media/video/I-42"))
         self.assertTrue(mod.page_allowed("https://audiovisual.ec.europa.eu/en/media/video/I-42"))
 
+    def test_rights_hold_blocks_even_an_otherwise_approved_video(self):
+        reviews = mod.review_index()
+        self.assertTrue(mod.has_rights_hold(
+            {"source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-288034"}, reviews))
+        self.assertTrue(mod.has_rights_hold(
+            {"source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-293523"}, reviews))
+        self.assertFalse(mod.has_rights_hold(
+            {"source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-294336"}, reviews))
+
+    def test_rights_reviews_are_not_approvals(self):
+        reviews = mod.review_index()
+        self.assertEqual(reviews["https://audiovisual.ec.europa.eu/en/media/video/I-288034"]["status_for_live"], "BLOCKED")
+        self.assertEqual(reviews["https://audiovisual.ec.europa.eu/en/media/video/I-293523"]["italian_player_audio"], "NOT_AVAILABLE")
+        self.assertEqual(reviews["https://audiovisual.ec.europa.eu/en/media/video/I-294336"]["italian_player_audio"], "CONFIRMED")
+
     def test_no_approvals_means_no_program(self):
         schedule = mod.build_schedule([], NOW)
         self.assertFalse(schedule["live_enabled"])
