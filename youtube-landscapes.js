@@ -111,13 +111,23 @@ import {parseLandscapeConfig,landscapeDue} from "./youtube-landscapes-core.mjs";
     startIfDue,stop,
     get state(){return {active,eligible:cfg.items.length,completed,cursor,enabled:cfg.enabled};}
   };
-  refresh();setInterval(refresh,300000);
+  const configReady=refresh();setInterval(refresh,300000);
   if(demo){
-    // Only explicit preview URL; never changes the public rotation settings.
-    window.addEventListener("load",()=>setTimeout(()=>{
+    // Wait for the actual JSON configuration, not for a racing "load" event.
+    // Diagnostic status exists only on the explicit preview URL.
+    const status=document.createElement("div");
+    status.id="rdiLandscapePreviewStatus";
+    status.style.cssText="position:absolute;bottom:84px;right:8px;z-index:30;background:#091b32;color:#fff;padding:5px 9px;font-size:11px";
+    stage.append(status);
+    status.textContent="Landscape preview: loading";
+    configReady.then(()=>{
+      status.textContent="Landscape preview: "+(cfg.enabled?cfg.items.length+" assets ready":"no valid assets");
       if(cfg.enabled&&!active&&!window.rdiGeoActive&&!window.rdiSpotActive){
-        show(cfg.items[0],cfg.duration,null);
+        const param=new URLSearchParams(location.search);
+        const chosen=cfg.items.find(x=>x.id===param.get("landscape_id"))||cfg.items[0];
+        const started=show(chosen,cfg.duration,null);
+        status.textContent=started?"Landscape preview: "+chosen.id:"Landscape preview: busy";
       }
-    },1500),{once:true});
+    });
   }
 })();
