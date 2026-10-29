@@ -262,3 +262,49 @@ materiali storici che non devono essere presentati come notizie nuove.
 Fonti di condizioni generali:
 https://audiovisual.ec.europa.eu/en/conditions-of-use
 e la scheda `Conditions of use` di ciascun filmato.
+
+## 29 ottobre 2026 — collaudo su file ufficiali reali
+
+Primo collaudo riuscito su un **vero** video UE, non sui precedenti
+file sintetici. La scheda ufficiale
+`https://audiovisual.ec.europa.eu/en/media/video/I-294336`
+contiene nel menu `Downloads` un MP4 originale (INT) e un file
+audio italiano distinto (IT). Gli indirizzi pubblici esatti sono
+conservati in `data/europa-real-av-staging.json`, senza credenziali
+né chiavi.
+
+Il workflow `.github/workflows/europa-real-av-staging.yml`
+ha generato una prima anteprima interna di **12 secondi** con
+FFmpeg, verificata mediante ffprobe:
+
+- video H.264, audio AAC marcato `ita`, durata 12,00 secondi;
+- solo il video originale `0:v:0` e la sorgente audio italiana
+  `1:a:0`; l'audio originale non è nell'output;
+- l'anteprima è stata salvata come *artifact* di GitHub Actions
+  (run 40947234571), retention 3 giorni; non sul sito pubblico;
+- `live_enabled` è rimasto `false` e AzuraCast non è stato toccato.
+
+Questa prova dimostra **compatibilità tecnica dei file** e corretto
+aggancio della traccia IT. Non certifica da sola che ogni frase
+riprodotta sia in italiano, che le due tracce siano perfettamente
+sincronizzate per tutta la conferenza, né costituisce autorizzazione
+legale alla ritrasmissione.
+
+È previsto un estratto più avanti nella conferenza per consentire
+l'ascolto della voce italiana: eseguirlo sempre in modo separato dal
+live pubblico e verificare espressamente il risultato.
+
+### Condizioni da rispettare prima di andare in onda
+
+Le condizioni generali del portale:
+https://audiovisual.ec.europa.eu/en/conditions-of-use
+prevedono la licenza CC BY 4.0 per i materiali sui quali l'UE
+possiede i diritti, attribuzione e indicazione delle modifiche.
+Rimangono esclusi o soggetti ad autorizzazione separata i diritti
+di terzi, musica, opere incorporate e diritti delle persone
+identificabili. Occorre verificare il filmato completo, le eventuali
+eccezioni della singola scheda e le politiche del canale di
+distribuzione prima del playout RDI.
+
+**Non pubblicare automaticamente un estratto audiovisivo solo perché
+il workflow di prova ha prodotto un MP4.**
