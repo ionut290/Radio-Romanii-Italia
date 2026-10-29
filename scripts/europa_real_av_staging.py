@@ -16,7 +16,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data/europa-real-av-staging.json"
 REVIEWS = ROOT / "data/europa-video-rights-review.json"
-SECONDS = 12
+DEFAULT_SECONDS = 12
 
 def load(path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -58,15 +58,15 @@ def probe(path: Path):
                           "-of", "json", str(path)], check=True, capture_output=True, text=True, timeout=35)
     return json.loads(out.stdout)
 
-def command(record: dict, output: Path):
+def command(record: dict, output: Path, start: int, seconds: int):
     # -map excludes the original video's audio and uses only the IT track.
     return [
         "ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "warning",
-        "-rw_timeout", "20000000", "-t", str(SECONDS), "-i", record["original_video_url"],
-        "-rw_timeout", "20000000", "-t", str(SECONDS), "-i", record["italian_audio_url"],
+        "-rw_timeout", "20000000", "-ss", str(start), "-t", str(seconds), "-i", record["original_video_url"],
+        "-rw_timeout", "20000000", "-ss", str(start), "-t", str(seconds), "-i", record["italian_audio_url"],
         "-map", "0:v:0", "-map", "1:a:0",
         "-vf", "scale=960:-2",
-        "-t", str(SECONDS), "-c:v", "libx264", "-preset", "veryfast",
+        "-t", str(seconds), "-c:v", "libx264", "-preset", "veryfast",
         "-crf", "27", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "128k", "-ar", "48000",
         "-metadata:s:a:0", "language=ita",
@@ -77,36 +77,40 @@ def main():
     parser = argparse.ArgumentParser(description="Solo preview tecnica RDI Europa; NO LIVE")
     parser.add_argument("--id", default="I-294336")
     parser.add_argument("--output", type=Path, default=Path("/tmp/rdi-europa-it-anteprima.mp4"))
+    parser.add_argument("--start", type=int, default=0, help="Secondo iniziale del filmato")
+    parser.add_argument("--seconds", type=int, default=DEFAULT_SECONDS, help="Lunghezza anteprima, al massimo 45 secondi")
     parser.add_argument("--execute", action="store_true")
     args = parser.parse_args()
     if args.id != "I-294336":
         parser.error("Solo il caso I-294336 è stato verificato per questa prova")
     record = verify_record(args.id)
+    if args.start < 0 or args.start > 600 or args.seconds < 8 or args.seconds > 45 or args.start + args.seconds > record["expected_duration_seconds"]:
+        parser.error("Selezione anteprima fuori dai limiti del filmato")
     out = args.output.resolve()
     if out.exists() or out.suffix.lower() != ".mp4":
         parser.error("L'output deve essere un nuovo file MP4")
     if not args.execute:
         print(json.dumps({
-            "status": "DRY_RUN", "seconds": SECONDS, "source": record["source_url"],
+            "status": "DRY_RUN", "seconds": args.seconds, "start_seconds": args.start, "source": record["source_url"],
             "language": "Italiano", "rights": "NOT_APPROVED",
             "av_command": "FFmpeg mappa soltanto 0:v:0 e 1:a:0; radio live non modificata",
         }, ensure_ascii=False))
         return
     out.parent.mkdir(parents=True, exist_ok=True)
     try:
-        proc = subprocess.run(command(record, out), check=True, capture_output=True,
+        proc = subprocess.run(command(record, out, args.start, args.seconds), check=True, capture_output=True,
                               text=True, timeout=240)
         details = probe(out)
         streams = details.get("streams", [])
         videos = [s for s in streams if s.get("codec_type") == "video"]
         audios = [s for s in streams if s.get("codec_type") == "audio"]
         seconds = float(details.get("format", {}).get("duration",0))
-        if len(videos) != 1 or len(audios) != 1 or not 8 <= seconds <= 13:
+        if len(videos) != 1 or len(audios) != 1 or not args.seconds - 1 <= seconds <= args.seconds + 1:
             raise ValueError(f"Preview AV non valida: video={len(videos)}, audio={len(audios)}, sec={seconds}")
         if audios[0].get("tags",{}).get("language") != "ita":
             raise ValueError("La traccia di output non è marcata come italiana")
         stats = {"status":"PREVIEW_CREATED_NOT_BROADCAST","video_id":args.id,
-                 "duration_seconds":round(seconds,2),"video_codec":videos[0].get("codec_name"),
+                 "duration_seconds":round(seconds,2),"source_start_seconds":args.start,"video_codec":videos[0].get("codec_name"),
                  "audio_codec":audios[0].get("codec_name"),"audio_language_tag":"ita",
                  "audio_from":"IT CDN file option (content must still be listened to)",
                  "original_video_audio_excluded": True,
