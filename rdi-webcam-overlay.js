@@ -1,10 +1,10 @@
 /* Open the city webcam gallery over the homepage so the radio audio element keeps playing. */
 (()=>{'use strict';
-const link=document.getElementById('home-webcam-open');
+const links=document.querySelectorAll('.rdi-webcam-launch');
 const overlay=document.getElementById('rdi-webcam-view');
 const frame=document.getElementById('rdi-webcam-frame');
 const close=document.getElementById('rdi-webcam-close');
-if(!link||!overlay||!frame||!close)return;
+if(!links.length||!overlay||!frame||!close)return;
 let returnFocus=null;
 function show(e){
  if(e)e.preventDefault();
@@ -22,7 +22,7 @@ function hide(){
  frame.src='about:blank';
  if(returnFocus&&typeof returnFocus.focus==='function')returnFocus.focus();
 }
-link.addEventListener('click',show);
+links.forEach(link=>link.addEventListener('click',show));
 close.addEventListener('click',hide);
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))hide()});
 window.addEventListener('message',e=>{if(e.origin===location.origin&&e.source===frame.contentWindow&&e.data&&e.data.type==='rdi:webcam:close')hide()});
