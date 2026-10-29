@@ -108,3 +108,17 @@ Parlamento: https://multimedia.europarl.europa.eu/it
 I diritti indicati possono escludere opere di terzi e richiedere credits o
 autorizzazioni aggiuntive. La disponibilità gratuita NON significa licenza
 universale per ritrasmettere su piattaforme commerciali.
+
+## Risultato della prima esecuzione (29/10/2026)
+
+Il workflow ha superato i test e ha acquisito 40 candidati dal portale
+audiovisivo della Commissione. Il feed RSS diretto del Parlamento europeo
+non ha fornito voci XML leggibili al runner GitHub: la diagnostica ne
+segnala l'errore; non si considera attiva quella fonte finché il problema
+non sarà risolto. Alcuni servizi espressamente classificati `EP News`
+presenti sul portale audiovisivo UE sono riconosciuti come candidati
+del Parlamento (sempre senza attribuire automaticamente audio italiano
+o autorizzazioni di ritrasmissione).
+
+Nessuno di questi candidati è attualmente pronto per il playout: la
+libreria di approvazioni è vuota e la diretta RDI resta invariata.
