@@ -35,7 +35,7 @@ SCENES = {
     "pharmacy": (r"\b(farmaci|farmacie|farmacia|farmacii|farmacist|medicinali)\w*", r"\b(farmacist|farmacia)\w*"),
     "hospital": (r"\b(ospedal|spital|ricover|sanitar|infermier|asistent medical)\w*", r"\b(ospedal|infermier|personale sanitario)\w*"),
     "physiotherapy": (r"\b(fisioterap|riabilitaz|recuperare medicala)\w*", r"\b(fisioterap)\w*"),
-    "elder_care": (r"\b(anziani|anziano|asistenta batrani|assistenza domiciliare|badant|ingrijire la domiciliu)\w*", r"\b(anziano|anziana|assistenza domiciliare)\w*"),
+    "elder_care": (r"\b(asistenta batrani|assistenza domiciliare|assistenza agli anziani|cura degli anziani|badant|ingrijire la domiciliu)\w*", r"\b(anziano|anziana|assistenza domiciliare)\w*"),
     "train": (r"\b(treno|treni|feroviar|ferrovi|trenurile|trenul|trenuri|stazione ferroviaria)\w*", r"\b(treno|ferroviar|banchina ferroviaria|stazione ferroviaria)\w*"),
     "bus": (r"\b(autobus|bus urbano|trasporto pubblico locale|autobuz|autobuze)\b", r"\b(autobus|autobuz)\w*"),
     "airport": (r"\b(aeroporto|aeroport|terminal aeroportual|aeroportuar)\w*", r"\b(aeroport|terminal aeroportuale)\w*"),
@@ -87,6 +87,9 @@ def choose_relevant_photo(item, library, already_used):
     summary = fold(item.get("summary"))[:350]
     if not title or SENSITIVE.search(title + " " + summary):
         return None
+    # A generic university/office scene is not a depiction of AI avatars.
+    if re.search(r"\b(avatar\w*|intelligenza artificiale|inteligenta artificiala|artificial intelligence|chatgpt)\b", title):
+        return None
 
     title_subjects = {
         key for key, (story, _photo) in SCENES.items()
@@ -128,6 +131,8 @@ def choose_relevant_photo(item, library, already_used):
             score = sum(5 + (2 if tag in summary_subjects else 0) for tag in shared)
             # Prefer scenes with few competing unrelated subjects.
             score -= len(photo_subjects - title_subjects)
+            if "football" in shared and re.search(r"\b(partita|partida|match|gol|serie a|campionato)\b", title):
+                score += 3 if "partita" in description else -2 if "allenamento" in description else 0
             options.append((score, filename, entry))
     if not options:
         return None
