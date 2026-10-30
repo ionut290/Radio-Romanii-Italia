@@ -1,0 +1,108 @@
+name: RDI - Classificatore generi AST, 100 brani (solo lettura)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_music_genre_ai.py'
+      - 'tests/test_rdi_music_genre_ai.py'
+      - 'oracle/install-rdi-music-genre.sh'
+      - 'oracle/rdi-music-genre-analyze.service'
+      - 'oracle/rdi-music-genre-analyze.timer'
+      - '.github/workflows/rdi-music-genre.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-music-dj-deploy
+  cancel-in-progress: false
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Testa conservativamente la classificazione specializzata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/rdi_music_genre_ai.py scripts/rdi_music_dj.py
+          python -m unittest discover -s tests -p 'test_rdi_music_genre_ai.py' -v
+          bash -n oracle/install-rdi-music-genre.sh
+      - name: Ottieni modello BSD-3-Clause e verifica hash di integrità
+        shell: bash
+        run: |
+          set -euo pipefail
+          REV='7f313d5'
+          BASE="https://huggingface.co/onnx-community/ast-finetuned-gtzan-ONNX/resolve/$REV"
+          mkdir -p models/ast-preprocessor
+          curl --fail --location --silent --show-error --retry 3 --max-time 210 \
+            "$BASE/onnx/model_q4.onnx" -o models/ast-gtzan-q4.onnx
+          echo 'e065d352521c32bf9ddda62c3b4aa9effab003533c0f0b367befaa7b68b0cd51  models/ast-gtzan-q4.onnx' | sha256sum -c -
+          curl --fail --location --silent --show-error --retry 2 --max-time 45 \
+            "$BASE/preprocessor_config.json" \
+            -o models/ast-preprocessor/preprocessor_config.json
+          python - <<'PY'
+          import json
+          with open("models/ast-preprocessor/preprocessor_config.json") as f: cfg=json.load(f)
+          assert cfg["feature_extractor_type"]=="ASTFeatureExtractor"
+          assert cfg["sampling_rate"]==16000
+          assert cfg["num_mel_bins"]==128
+          print("AST_GENRE_MODEL_HASH_AND_CONFIG=VERIFIED")
+          PY
+      - name: Configura connessione protetta a Oracle
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"; test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Installa classificatore e prova realmente modello su CPU ARM64
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-genre-ai-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          [[ "$STAGE" =~ ^/tmp/rdi-genre-ai-[0-9]+-[0-9]+$ ]]
+          sshx(){ ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "$@"; }
+          scpx(){ scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "$@"; }
+          sshx "$REMOTE" "install -d -m 700 '$STAGE/oracle' '$STAGE/scripts' '$STAGE/models/ast-preprocessor'"
+          cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scpx scripts/rdi_music_genre_ai.py scripts/rdi_music_dj.py scripts/rdi-music-dj.html \
+            "$REMOTE:$STAGE/scripts/"
+          scpx oracle/install-rdi-music-genre.sh oracle/rdi-music-genre-analyze.service \
+            oracle/rdi-music-genre-analyze.timer "$REMOTE:$STAGE/oracle/"
+          scpx models/ast-gtzan-q4.onnx "$REMOTE:$STAGE/models/"
+          scpx models/ast-preprocessor/preprocessor_config.json "$REMOTE:$STAGE/models/ast-preprocessor/"
+          sshx "$REMOTE" "sudo -n bash '$STAGE/oracle/install-rdi-music-genre.sh'"
+          sshx "$REMOTE" 'set -e; \
+            systemctl is-active --quiet rdi-music-genre-analyze.timer; \
+            systemctl is-active --quiet rdi-music-dj-web.service; \
+            curl -fsS --max-time 8 http://127.0.0.1:8788/api/report \
+              | python3 -c '\''import sys,json;d=json.load(sys.stdin);assert d["read_only"] and d["playlist_writes"]==0;print("GENRE_ORACLE_PRIVATE_REPORT=READY");print("YAMNET_SAMPLE_DONE="+str(d.get("ai_sample_done",0)))'\'''
+      - name: Avvia la classificazione sperimentale dei 100 brani senza scrivere playlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            -o ConnectTimeout=15 ubuntu@129.151.255.41 \
+            'sudo -n systemctl start --no-block rdi-music-genre-analyze.service && \
+             sudo -n systemctl is-active --quiet rdi-music-genre-analyze.timer && \
+             echo AST_GENRE_100_SAMPLE_STARTED=true && \
+             echo RADIO_PLAYLIST_WRITES=false'
