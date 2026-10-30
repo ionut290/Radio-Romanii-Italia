@@ -114,7 +114,7 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
     rhythm = "track_rhythm" in tables
     tags = "track_tags" in tables
     ai = "track_ai" in tables
-    specialist = "track_gtzan" in tables
+    specialist = "track_gtzan" in tables and ai
     q = """SELECT t.path,t.size,t.modified,t.rms,t.peak,
         {feat} AS integrated_lufs,{dyn} AS loudness_range,
         {bpm} AS bpm_candidate,{beat} AS beat_score,
@@ -148,7 +148,7 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
       join_f="LEFT JOIN track_features f ON f.path=t.path AND f.size=t.size AND f.modified=t.modified" if feature else "",
       join_r="LEFT JOIN track_rhythm r ON r.path=t.path AND r.size=t.size AND r.modified=t.modified" if rhythm else "",
       join_g="LEFT JOIN track_tags g ON g.path=t.path AND g.size=t.size AND g.modified=t.modified" if tags else "",
-      join_ai="LEFT JOIN track_ai a ON a.path=t.path AND a.size=t.size AND a.modified=t.modified" if ai else "",
+      join_ai="LEFT JOIN track_ai a ON a.path=t.path" if ai else "",
       join_gtzan="LEFT JOIN track_gtzan z ON z.path=t.path AND z.size=a.size AND z.modified=a.modified" if specialist and ai else "",
     )
     return db.execute(q).fetchall()
