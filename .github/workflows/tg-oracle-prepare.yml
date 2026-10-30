@@ -3,7 +3,7 @@ name: RDI - Preconfigura playlist TG delle 18 (disattivata e vuota)
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/tg-oracle-prepare.yml']
+    paths: ['.github/workflows/tg-oracle-prepare.yml', 'scripts/deploy-tg-sera-oracle.py']
   workflow_dispatch:
 
 permissions:
