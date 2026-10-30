@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T15:59:25.530Z",
+  "updated_at": "2026-10-30T01:58:58Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "RDI redazione assistita IA, verifica fonti 2026-10-29",
   "items": [
@@ -366,7 +366,7 @@
     {
       "id": "rdi-france-trappes-la-verriere-20261023",
       "date": "2026-10-23",
-      "reported_on": "2026-10-26",
+      "reported_on": "2026-10-29",
       "country": "Franța",
       "country_code": "FR",
       "place": "Trappes și La Verrière, Yvelines",
@@ -377,11 +377,11 @@
       "status": "reported",
       "killed": 1,
       "injured": 7,
-      "actor": "Un bărbat de 39 de ani arestat; motivul rasist și calificarea teroristă sunt investigate de Parchetul național antiterorist francez",
+      "actor": "Suspectul a recunoscut, potrivit procurorului francez la 29 octombrie, alegerea victimelor percepute ca musulmane sau de origine africană; neagă intenția teroristă; acuzații fără verdict definitiv.",
       "title_ro": "Franța: atac armat la Trappes și La Verrière, un mort și șapte răniți",
       "title_it": "Francia: sparatoria a Trappes e La Verrière, un morto e sette feriti",
-      "description_ro": "Atacul din 23 octombrie de la Trappes și La Verrière a provocat un mort și șapte răniți (patru grav și trei ușor), conform bilanțului actualizat comunicat de procurorul antiterorist Olivier Christen la 26 octombrie și relatat de Le Monde. Bilanțul inițial de cinci răniți a fost revizuit. Parchetul investighează faptele sub încadrare teroristă și circumstanță agravantă rasistă; suspectul contestă mobilul rasist, iar vinovăția nu este stabilită prin hotărâre judecătorească. Bilanț provizoriu, fără autor în rândul victimelor.",
-      "description_it": "L'attacco del 23 ottobre a Trappes e La Verrière ha causato un morto e sette feriti (quattro gravi e tre lievi), secondo il bilancio aggiornato comunicato il 26 ottobre dal procuratore antiterrorismo Olivier Christen e riportato da Le Monde. Il dato iniziale di cinque feriti è stato rivisto. La procura indaga con qualificazione terroristica e aggravante razzista; l'indagato nega il movente razzista e non esiste una condanna. Bilancio provvisorio, aggressore escluso dalle vittime.",
+      "description_ro": "Atacul armat din 23 octombrie 2026 la Trappes și La Verrière a provocat un mort și șapte răniți, conform bilanțului prezentat de procurorul antiterorist francez. La 29 octombrie, procurorul a declarat că suspectul a recunoscut că a ales persoane pe care le percepea ca musulmane sau de origine africană, dar a negat intenția teroristă. Acuzațiile sunt cercetate în justiție; nu există o condamnare definitivă. Marcaj aproximativ la nivel de localitate, fără locații exacte.",
+      "description_it": "La sparatoria del 23 ottobre 2026 a Trappes e La Verrière ha causato un morto e sette feriti secondo il bilancio della procura antiterrorismo francese. Il 29 ottobre il procuratore ha riferito che l'indagato ha ammesso di avere scelto persone percepite come musulmane o di origine africana, pur negando l'intento terroristico. Le accuse sono ancora oggetto del procedimento giudiziario; nessuna condanna definitiva. Posizione approssimativa della zona, non dei luoghi esatti.",
       "sources": [
         {
           "name": "Reuters, 23 ottobre 2026",
@@ -398,8 +398,21 @@
         {
           "name": "Le Monde, conferenza del procuratore antiterrorismo, 26 ottobre 2026",
           "url": "https://www.lemonde.fr/societe/article/2026/10/26/attentat-de-trappes-la-garde-a-vue-de-kevin-t-a-repris-lundi-apres-un-nouvel-examen-psychiatrique_6800828_3224.html"
+        },
+        {
+          "name": "EFE, 29 ottobre 2026",
+          "url": "https://efe.com/english/latest-news/2026-10-29/trappes-gunman-targeted-muslims-carried-far-right-emblems/"
+        },
+        {
+          "name": "Associated Press, 29 ottobre 2026",
+          "url": "https://apnews.com/article/6673d6b8680d9d278ab4d35456dca5a2"
+        },
+        {
+          "name": "Le Monde, 29 ottobre 2026",
+          "url": "https://www.lemonde.fr/en/france/article/2026/10/29/trappes-shooting-suspect-charged-with-premeditated-and-attempted-terrorist-murder-admits-to-targeting-people-of-muslim-or-african-appearance_6766960_7.html"
         }
-      ]
+      ],
+      "rdi_article_id": "rdi-20261030-trappes-ancheta-motiv-rasist"
     },
     {
       "id": "rdi-iordania-karak-20261023",
