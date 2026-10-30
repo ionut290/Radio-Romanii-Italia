@@ -231,8 +231,10 @@ def main():
     items = data.get("items", [])
     for item in items:
         if item.get("date") == today.isoformat():
-            print("Pensiero del giorno già presente:", today.isoformat())
-            return
+            existing_image = ROOT / str(item.get("image", "")).removeprefix("./")
+            if existing_image.suffix.lower() == ".jpg" and existing_image.is_file() and existing_image.stat().st_size > 10000:
+                print("Pensiero e fotografia del giorno già pubblicati:", today.isoformat())
+                return
     history = [str(x.get("quote", "")) for x in items if x.get("quote")]
     thought = api_thought(today, history) or fallback_thought(today)
     published = now.replace(hour=8, minute=0, second=0, microsecond=0)
