@@ -34,6 +34,25 @@ def merge(clips: list[Path], out: Path, title: str) -> None:
                     str(out)], check=True)
 
 
+def section_boundaries(spoken: str, paragraphs: list[str]) -> list[float]:
+    """Approximate per-part visual timing by actual spoken word proportions.
+
+    Audio timeline remains measured precisely from the speech clip; the four
+    subheadings are informational cues, never used to claim frame sync.
+    """
+    words = [max(1, len(p.split())) for p in paragraphs]
+    lead = max(0, len(spoken.split()) - sum(words))
+    words[0] += lead
+    total = max(1, sum(words))
+    elapsed = 0
+    cuts = []
+    for count in words:
+        elapsed += count
+        cuts.append(round(elapsed / total, 4))
+    cuts[-1] = 1.0
+    return cuts
+
+
 def produce(folder: Path) -> dict:
     manifest = folder / "manifest.json"
     data = json.loads(manifest.read_text(encoding="utf-8"))
@@ -80,6 +99,8 @@ def produce(folder: Path) -> dict:
                 "id": article["id"], "title": article["title"],
                 "category": article["category"], "kicker": article["kicker"],
                 "summary": article["paragraphs"][0][:550],
+                "sections": [p[:600] for p in article["paragraphs"]],
+                "section_ends": section_boundaries(segment["text"], article["paragraphs"]),
                 "image": article["image"], "image_notice": article["image_notice"],
                 "source_name": article["source_name"],
                 "source_url": article["source_url"],
