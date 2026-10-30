@@ -51,13 +51,21 @@ def _eligible(t):
         return False
     try:
         duration=float(t["duration_seconds"])
+    except (ValueError,TypeError,KeyError):
+        return False
+    return math.isfinite(duration) and 60<=duration<=720
+
+
+def _schedulable(t):
+    if not _eligible(t):
+        return False
+    try:
         bpm=float(t["bpm_candidate"])
         conf=float(t["beat_confidence"])
         lufs=float(t["lufs"])
     except (ValueError,TypeError,KeyError):
         return False
-    return (math.isfinite(duration) and 60<=duration<=720 and
-            math.isfinite(bpm) and 45<=bpm<=205 and
+    return (math.isfinite(bpm) and 45<=bpm<=205 and
             math.isfinite(conf) and conf>=0.32 and
             math.isfinite(lufs) and -50<lufs<-4)
 
@@ -129,7 +137,10 @@ def simulate(catalogue,day=None):
         raise ValueError("Invalid DJ music catalogue")
     fresh=catalogue.get("live_index_verified") is True
     bank=_bank(catalogue["tracks"]) if fresh else []
-    rotated=_daily_order(bank,day)
+    # Every validated song enters the bank immediately, even when its
+    # finer rhythm/genre classification is still being calculated.
+    playable=[tr for tr in bank if _schedulable(tr)]
+    rotated=_daily_order(playable,day)
     used=set()
     recent=[]
     blocks=[]
@@ -169,7 +180,8 @@ def simulate(catalogue,day=None):
     pool=[{"id":tr["id"],"title":tr["title"],
            "artist":tr.get("artist") or "",
            "durata_reale_secondi":tr["duration_seconds"],
-           "nuovo_brano":bool(tr.get("newly_added",False))}
+           "nuovo_brano":bool(tr.get("newly_added",False)),
+           "analisi_audio_completa":_schedulable(tr)}
           for tr in bank]
     short=sum(x["minuti_non_riempiti"] for x in blocks)
     return {
@@ -179,6 +191,8 @@ def simulate(catalogue,day=None):
       "automatic_broadcast_enabled":False,"ready_for_live":False,
       "live_index_verified":fresh,
       "pool_tracks_total":len(pool),
+      "pool_ready_for_rotation":len(playable),
+      "pool_waiting_for_analysis":len(pool)-len(playable),
       "pool_tracks":pool,
       "pool_excluded_from_today":len(pool)-len(used),
       "new_tracks_in_pool":sum(bool(x["nuovo_brano"]) for x in pool),
