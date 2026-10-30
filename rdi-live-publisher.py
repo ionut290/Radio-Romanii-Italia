@@ -22,9 +22,6 @@ MAX_MEDIA_BYTES = 20 * 1024 * 1024
 ROME = ZoneInfo("Europe/Rome")
 MEDIA_EXTENSIONS = {
     "photo": {".jpg", ".jpeg", ".png", ".webp"},
-    "video": {".mp4", ".webm", ".m4v", ".mov"},
-    "audio": {".mp3", ".m4a", ".ogg", ".oga", ".opus", ".wav", ".webm"},
-    "voice": {".mp3", ".m4a", ".ogg", ".oga", ".opus", ".wav", ".webm"},
 }
 
 
