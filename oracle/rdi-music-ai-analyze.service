@@ -14,7 +14,7 @@ Environment=OMP_NUM_THREADS=1
 Environment=OPENBLAS_NUM_THREADS=1
 WorkingDirectory=/opt/rdi-music-dj
 ExecStart=/opt/rdi-music-dj/ai-venv/bin/python /opt/rdi-music-dj/rdi_music_ai.py --limit 100 --sample-size 100
-ExecStartPost=+/usr/bin/runuser -u ubuntu -- /usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py report
+ExecStartPost=+/usr/sbin/runuser -u ubuntu -- /usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py report
 Nice=18
 IOSchedulingClass=idle
 CPUQuota=35%
