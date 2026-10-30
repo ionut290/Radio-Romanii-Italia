@@ -115,7 +115,7 @@
     makeCards();layer.hidden=false;pending=false;
     const windowBox=layer.querySelector(".rdi-listener-message-window");
     const distance=Math.max(0,list.scrollHeight-windowBox.clientHeight);
-    const duration=Math.max(9000,Math.min(60000,9000+Math.max(0,items.length-5)*850));
+    const duration=Math.max(9000,9000+Math.max(0,items.length-5)*850);
     if(distance>0){
       requestAnimationFrame(()=>requestAnimationFrame(()=>{
         if(active){
