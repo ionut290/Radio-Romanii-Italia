@@ -14,9 +14,9 @@ NOW = dt.datetime(2026, 10, 30, 16, 25, tzinfo=ROME)
 
 
 def article(n=1, **extra):
-    item = {
+    titles = ["Festival cinematografico dei registi romeni a Roma",\n              "Contratti agricoli e tutela dei lavoratori nella campagna",\n              "Nuovi collegamenti ferroviari fra regioni italiane",\n              "Scuole bilingui e programmi culturali per i giovani",\n              "Servizi di assistenza sanitaria per le famiglie",\n              "Iniziative economiche e mercati nelle province"]\n    item = {
         "id": f"test-story-{n}", "category": "Diaspora",
-        "title": f"Un importante incontro per la comunità romena nel comune numero {n}",
+        "title": titles[(n - 1) % len(titles)],
         "body": "Testo documentato di origine italiana su fatti, contesto e conseguenze. " * 26,
         "summary": "Due fonti riferiscono l'iniziativa.",
         "url": f"https://rdi.example.org/news/{n}",
