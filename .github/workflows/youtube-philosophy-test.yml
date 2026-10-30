@@ -1,0 +1,30 @@
+name: RDI - Test calendario filosofico YouTube
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'youtube-philosophy*'
+      - 'youtube-news.html'
+      - 'tests/youtube-philosophy.test.mjs'
+      - '.github/workflows/youtube-philosophy-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test-calendar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run philosophy calendar regression
+        run: node --test tests/youtube-philosophy.test.mjs
+      - name: Check live integration
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'youtube-philosophy.js' youtube-news.html
+          grep -q 'rdiPhilosophyBreak?.startIfDue' youtube-news.html
+          grep -q 'youtube-philosophy.css' youtube-news.html
