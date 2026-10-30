@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """RDI audio inventory: read-only media inspection, cached in SQLite."""
 import argparse
+import os
 import datetime as dt
 import pathlib
 import re
@@ -17,7 +18,8 @@ def run(args, timeout):
     return subprocess.run(args, capture_output=True, check=True, timeout=timeout)
 
 def inventory():
-    data = run(["sudo", "-n", "find", MEDIA, "-type", "f", "-print0"], 45).stdout
+    prefix=[] if os.geteuid()==0 else ["sudo","-n"]
+    data = run(prefix+["find", MEDIA, "-type", "f", "-print0"], 45).stdout
     for raw in data.split(b"\0"):
         if not raw:
             continue
@@ -30,7 +32,8 @@ def inventory():
         yield str(path)
 
 def analyze(path):
-    p = run(["sudo", "-n", "nice", "-n", "15", "ffmpeg", "-nostdin",
+    prefix=[] if os.geteuid()==0 else ["sudo","-n"]
+    p = run(prefix+["nice", "-n", "15", "ffmpeg", "-nostdin",
              "-hide_banner", "-nostats", "-threads", "1", "-t", "25",
              "-i", path, "-vn", "-af", "volumedetect", "-f", "null", "-"], 100)
     output = p.stderr.decode("utf-8", "replace")
@@ -55,7 +58,8 @@ def main():
             break
         try:
             # Ask root to read metadata; the volume is private to Docker.
-            result = run(["sudo", "-n", "stat", "-c", "%s %Y", "--", path], 10)
+            prefix=[] if os.geteuid()==0 else ["sudo","-n"]
+            result = run(prefix+["stat", "-c", "%s %Y", "--", path], 10)
             size, modified = (int(x) for x in result.stdout.split())
             previous = conn.execute("SELECT size,modified FROM tracks WHERE path=?", (path,)).fetchone()
             if previous and previous == (size, float(modified)):
