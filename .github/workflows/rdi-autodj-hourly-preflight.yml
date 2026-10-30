@@ -1,0 +1,43 @@
+name: RDI - Verifica automatica fasce DJ (solo lettura)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_autodj_hourly_preflight.py'
+      - 'config/rdi-autodj-hourly-staging.json'
+      - '.github/workflows/rdi-autodj-hourly-preflight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate program
+        run: python -m py_compile scripts/rdi_autodj_hourly_preflight.py
+      - name: Establish pinned SSH identity
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 ~/.ssh
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > ~/.ssh/id_rdi
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_rdi ~/.ssh/known_hosts
+      - name: Run read-only check on Oracle
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST="/tmp/rdi-autodj-hourly-$GITHUB_RUN_ID"
+          ssh -i ~/.ssh/id_rdi -o BatchMode=yes -o StrictHostKeyChecking=yes ubuntu@129.151.255.41 "install -d -m 700 '$DEST/config' '$DEST/scripts'"
+          scp -i ~/.ssh/id_rdi -o BatchMode=yes -o StrictHostKeyChecking=yes config/rdi-autodj-hourly-staging.json ubuntu@129.151.255.41:"$DEST/config/"
+          scp -i ~/.ssh/id_rdi -o BatchMode=yes -o StrictHostKeyChecking=yes scripts/rdi_autodj_hourly_preflight.py ubuntu@129.151.255.41:"$DEST/scripts/"
+          ssh -i ~/.ssh/id_rdi -o BatchMode=yes -o StrictHostKeyChecking=yes ubuntu@129.151.255.41 "python3 '$DEST/scripts/rdi_autodj_hourly_preflight.py'; rm -rf -- '$DEST'"
