@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "timezone": "Europe/Rome",
+  "status": "staging_not_on_air",
+  "fallback_playlist_id": 25,
+  "minimum_verified_catalogue": 400,
+  "minimum_coverage_percent": 98,
+  "minimum_verified_genre_share_percent": 75,
+  "do_not_modify": ["existing playlists", "scheduled news", "jingles", "advertising", "live streams"],
+  "rotation": {
+    "daily_order_changes": true,
+    "avoid_repeats": true,
+    "include_new_verified_uploads": true
+  },
+  "bands": [
+    {"id":"night_00_07","from":"00:00","to":"07:00","theme":"relax","energy_priority":["tranquilla","media"],"genre_priority":["jazz_lounge","acoustic","classical"],"fallback":true},
+    {"id":"morning_07_10","from":"07:00","to":"10:00","theme":"risveglio","energy_priority":["media","tranquilla"],"genre_priority":["pop","acoustic"],"fallback":true},
+    {"id":"day_10_13","from":"10:00","to":"13:00","theme":"urban_pop","energy_priority":["media","ritmata"],"genre_priority":["urban","pop"],"fallback":true},
+    {"id":"afternoon_13_18","from":"13:00","to":"18:00","theme":"dance_energia","energy_priority":["ritmata","media"],"genre_priority":["dance","urban"],"fallback":true},
+    {"id":"evening_18_21","from":"18:00","to":"21:00","theme":"melodica","energy_priority":["media","tranquilla"],"genre_priority":["pop","acoustic"],"fallback":true},
+    {"id":"late_21_24","from":"21:00","to":"24:00","theme":"soft_romantica","energy_priority":["tranquilla","media"],"genre_priority":["acoustic","jazz_lounge"],"fallback":true}
+  ]
+}
