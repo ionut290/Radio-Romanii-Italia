@@ -1,0 +1,48 @@
+name: RDI - Preconfigura playlist TG delle 18 (disattivata e vuota)
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/tg-oracle-prepare.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare-disabled:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Crea solamente playlist dedicata, vuota e non attiva su AzuraCast
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/deploy-tg-sera-oracle.py
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf %s "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-tg-safe-prepare-${GITHUB_RUN_ID}"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup() {
+            ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+              "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true
+          }
+          trap cleanup EXIT
+          scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            scripts/deploy-tg-sera-oracle.py scripts/deploy-geopolitica-oracle.py \
+            scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            "$REMOTE" \
+            "sudo -n python3 '$STAGE/deploy-tg-sera-oracle.py' prepare-disabled --php-helper '$STAGE/rdi-geopolitica-auth.php'"
+          echo "Playlist esclusiva TG creata DISATTIVATA, con ZERO contenuti in onda."
