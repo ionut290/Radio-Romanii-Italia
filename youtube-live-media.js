@@ -1,4 +1,4 @@
-/* RDI: play only editor-approved Telegram audio, photos and videos. */
+/* RDI: display only editor-approved Telegram photos. */
 (()=> {
   "use strict";
   const stage=document.getElementById("stage");
@@ -59,7 +59,7 @@
     try{localStorage.setItem(key,"1")}catch(_){}
   }
   function validMedia(item){
-    if(!item||!["photo","video","audio"].includes(item.type)||
+    if(!item||!["photo"].includes(item.type)||
       typeof item.id!=="string"||typeof item.url!=="string")return false;
     try{
       const url=new URL(item.url);
