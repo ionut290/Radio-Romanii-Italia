@@ -15,7 +15,7 @@
       '<div class="rdi-weather-subtitle">Condizioni attuali nelle città · scorrono da destra verso sinistra</div>' +
       '<div class="rdi-weather-country"><div class="rdi-weather-country-head">ITALIA <span>AGGIORNAMENTO AUTOMATICO</span></div><div class="rdi-weather-city-window"><div class="rdi-weather-city-track" id="rdiWeatherItaly"></div></div></div>' +
       '<div class="rdi-weather-country"><div class="rdi-weather-country-head">ROMANIA <span>AGGIORNAMENTO AUTOMATICO</span></div><div class="rdi-weather-city-window"><div class="rdi-weather-city-track" id="rdiWeatherRomania"></div></div></div>' +
-      '<div class="rdi-weather-source" id="rdiWeatherSource">Dati meteo: Open-Meteo · orario dell’ultimo aggiornamento in sovraimpressione</div>' +
+      '<div class="rdi-weather-source" id="rdiWeatherSource">Fonte: Open-Meteo (CC BY 4.0) · aggiornamento</div>' +
     '</section>' +
     '<section class="rdi-weather-radar" aria-label="Mappa radar ufficiale">' +
       '<iframe id="rdiWeatherRadar" title="Mappa radar meteorologico" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>' +
@@ -69,8 +69,16 @@
     const value=Number(city.temperature);
     temp.textContent=Number.isFinite(value)?Math.round(value)+"°":"—";
     const condition=document.createElement("span");
+    condition.className="rdi-weather-condition";
     condition.textContent=weatherIcon(city.weatherCode)+" "+(city.description||weatherText(city.weatherCode));
+    const forecast=document.createElement("span");
+    forecast.className="rdi-weather-forecast";
+    const min=Number(city.minTemperature),max=Number(city.maxTemperature),rain=Number(city.precipitationProbability);
+    const range=Number.isFinite(min)&&Number.isFinite(max)?"Oggi "+Math.round(min)+"°–"+Math.round(max)+"°":"";
+    const rainText=Number.isFinite(rain)?"Pioggia "+Math.round(rain)+"%":"";
+    forecast.textContent=[range,rainText].filter(Boolean).join(" · ");
     card.append(name,temp,condition);
+    if(forecast.textContent)card.append(forecast);
     return card;
   }
   function fillTrack(track,cities){
@@ -87,7 +95,7 @@
     fillTrack(italyTrack,cities.filter(x=>x.country==="Italia"));
     fillTrack(romaniaTrack,cities.filter(x=>x.country==="Romania"));
     const time=Number(data?.updatedAt);
-    $("rdiWeatherSource").textContent="Dati meteo: Open-Meteo · aggiornato "+(Number.isFinite(time)?
+    $("rdiWeatherSource").textContent="Fonte: Open-Meteo (CC BY 4.0) · aggiornato "+(Number.isFinite(time)?
       new Intl.DateTimeFormat("it-IT",{timeZone:"Europe/Rome",hour:"2-digit",minute:"2-digit"}).format(new Date(time))+" ora italiana":
       "orario non disponibile");
   }
