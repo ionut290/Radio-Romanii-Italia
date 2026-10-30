@@ -51,7 +51,7 @@ def run(client, apply):
         if not isinstance(sch,list) or len(sch)!=1:
             raise RuntimeError("Schedule missing/ambiguous "+str(pid))
         item=sch[0]
-        if not isinstance(item,dict) or clock(item.get("start_time"))!=start or clock(item.get("end_time"))!=(("23:59") if end=="24:00" else end):
+        if not isinstance(item,dict) or clock(item.get("start_time"))!=start or clock(item.get("end_time"))!=(("00:00") if end=="24:00" else end):
             raise RuntimeError("Actual schedule differs "+str(pid)+": "+repr(sch))
         # Empty days is the expected all-days scheduling created by staging.
         if item.get("days") not in ([],None):
