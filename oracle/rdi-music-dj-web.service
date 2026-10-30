@@ -1,0 +1,24 @@
+[Unit]
+Description=RDI DJ private read-only dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+Environment=HOME=/home/ubuntu
+WorkingDirectory=/opt/rdi-music-dj
+ExecStart=/usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py serve
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+MemoryMax=130M
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
