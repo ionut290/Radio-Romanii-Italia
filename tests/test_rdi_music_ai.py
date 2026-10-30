@@ -2,10 +2,12 @@
 import importlib.util
 from pathlib import Path
 import sqlite3
+import sys
 import tempfile
 import unittest
 
 ROOT=Path(__file__).resolve().parents[1]/"scripts"
+sys.path.insert(0,str(ROOT))
 spec=importlib.util.spec_from_file_location("rdi_music_ai",ROOT/"rdi_music_ai.py")
 m=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m)
