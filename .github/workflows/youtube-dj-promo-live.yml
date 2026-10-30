@@ -1,0 +1,36 @@
+name: RDI - Attiva grafica DJ nel live YouTube
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/youtube-dj-promo-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Configura SSH verso Oracle
+        env:
+          KEY: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          install -d -m 700 "$HOME/.ssh"
+          printf %s "$KEY" | tr -d '[:space:]' | base64 -d > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null
+      - name: Controlla pubblicazione e ricarica pagina video, senza riavviare audio
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE="ubuntu@129.151.255.41"
+          SSH=(ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=18 -o ServerAliveInterval=5 -o ServerAliveCountMax=3)
+          "${SSH[@]}" "$REMOTE" 'set -eu; before=$(pgrep -x ffmpeg | sort); test -n "$before"; echo "VIDEO_ENCODER_RUNNING=YES";             for part in youtube-dj-promo.js youtube-dj-promo.css youtube-dj-promo-core.mjs data/youtube-dj-promo.json editorial-images/rdi-dj-programmazione-live.svg; do               curl -fsS --max-time 8 -o /dev/null "https://radioromanii.duckdns.org/$part" || exit 12; done;             curl -fsS --max-time 8 "https://radioromanii.duckdns.org/youtube-news.html" | grep -q "youtube-dj-promo.js" || exit 13;             echo "PROMO_ASSETS_ON_PUBLIC_SITE=YES";             env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+r; sleep 3;             after=$(pgrep -x ffmpeg | sort); test "$before" = "$after";             echo "YOUTUBE_PROMO_PAGE_RELOADED=YES"; echo "FFMPEG_AUDIO_PROCESS_UNCHANGED=YES"'
