@@ -17,8 +17,12 @@ systemctl daemon-reload
 systemctl enable --now rdi-music-ingest.timer
 systemctl is-active --quiet rdi-music-ingest.timer
 # Perform first synchronous scan of live station media.
-systemctl start rdi-music-ingest.service
-systemctl is-failed --quiet rdi-music-ingest.service && exit 1 || true
+if ! systemctl start rdi-music-ingest.service; then
+  journalctl -u rdi-music-ingest.service --no-pager -n 45 |
+     grep -E 'Traceback|Error|error|Exception|RuntimeError|sqlite3|Syntax|Permission|Failed|code=|line [0-9]' |
+     tail -25 || true
+  exit 1
+fi
 systemctl restart rdi-music-dj-web.service
 systemctl is-active --quiet rdi-music-dj-web.service
 for try in $(seq 1 20); do
