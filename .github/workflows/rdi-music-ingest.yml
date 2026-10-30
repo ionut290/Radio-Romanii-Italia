@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/rdi_music_ingest.py'
+      - 'scripts/rdi_music_scan.py'
+      - 'scripts/rdi_music_rhythm.py'
       - 'scripts/rdi_music_rotation.py'
       - 'scripts/rdi_music_dj.py'
       - 'scripts/rdi-music-dj.html'
@@ -38,7 +40,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile scripts/rdi_music_ingest.py scripts/rdi_music_rotation.py scripts/rdi_music_dj.py
+          python -m py_compile scripts/rdi_music_ingest.py scripts/rdi_music_rotation.py scripts/rdi_music_dj.py scripts/rdi_music_scan.py scripts/rdi_music_rhythm.py
           python -m unittest discover -s tests -p 'test_rdi_music_ingest.py' -v
           python -m unittest discover -s tests -p 'test_rdi_music_rotation.py' -v
           python -m unittest discover -s tests -p 'test_rdi_music_dj.py' -v
@@ -69,7 +71,7 @@ jobs:
           sshx "$REMOTE" "install -d -m 700 '$STAGE/scripts' '$STAGE/oracle'"
           cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
           trap cleanup EXIT
-          scpx scripts/rdi_music_ingest.py scripts/rdi_music_rotation.py \
+          scpx scripts/rdi_music_ingest.py scripts/rdi_music_scan.py scripts/rdi_music_rhythm.py scripts/rdi_music_rotation.py \
             scripts/rdi_music_dj.py scripts/rdi-music-dj.html "$REMOTE:$STAGE/scripts/"
           scpx oracle/install-rdi-music-ingest.sh oracle/rdi-music-ingest.service \
             oracle/rdi-music-ingest.timer "$REMOTE:$STAGE/oracle/"
