@@ -33,37 +33,33 @@ MAX_OUTPUT_BYTES = 35_000_000
 
 
 def inventory() -> list[tuple[str,int,float]]:
-    # Root-owned Docker volume, but the only command is read-only find.
-    cmd=["sudo","-n","find",scan.MEDIA,"-type","f",
-         "-printf","%p\\0%s\\0%T@\\0"]
-    proc=subprocess.run(cmd,capture_output=True,timeout=120,check=True)
-    data=proc.stdout
-    if len(data)>MAX_OUTPUT_BYTES:
-        raise RuntimeError("Station music inventory unexpectedly large")
-    fields=data.split(b"\0")
-    if fields[-1]!=b"":
-        raise RuntimeError("Invalid NUL-terminated inventory")
-    fields.pop()
-    if len(fields)%3:
-        raise RuntimeError("Incomplete station inventory")
+    # Reuse EXACTLY the existing, verified Oracle sudo command:
+    # sudo -n find MEDIA -type f -print0. The sudo policy may deny -printf.
     result=[]
-    prefix=str(Path(scan.MEDIA))+"/"
-    for i in range(0,len(fields),3):
-        path=fields[i].decode("utf-8","surrogateescape")
-        if not path.startswith(prefix):
-            continue
+    files=list(scan.inventory())
+    if not files:
+        raise RuntimeError("Empty station library; no live inventory overwrite")
+    if len(files)>MAX_LIBRARY_ENTRIES:
+        raise RuntimeError("Too many music files for safe snapshot")
+    for path in files:
         if Path(path).suffix.lower() not in AUDIO_EXTENSIONS or dj.excluded(path):
             continue
         try:
-            size=int(fields[i+1])
-            stamp=float(fields[i+2])
-        except ValueError:
+            stat=subprocess.run(
+                ["sudo","-n","stat","-c","%s %Y","--",path],
+                capture_output=True,text=True,timeout=10,check=False)
+            if stat.returncode:
+                continue
+            fields=stat.stdout.strip().split()
+            if len(fields)!=2:
+                continue
+            size=int(fields[0])
+            modified=float(fields[1])
+            if size<20000 or not math.isfinite(modified):
+                continue
+            result.append((path,size,modified))
+        except (OSError,ValueError,subprocess.TimeoutExpired):
             continue
-        if size<20000 or not math.isfinite(stamp):
-            continue
-        result.append((path,size,stamp))
-    if len(result)>MAX_LIBRARY_ENTRIES:
-        raise RuntimeError("Too many station files for safe snapshot")
     return result
 
 
