@@ -8,6 +8,7 @@ import argparse
 import array
 import datetime as dt
 import math
+import os
 import pathlib
 import sqlite3
 import subprocess
@@ -18,7 +19,8 @@ RATE = 8000
 HOP = 800  # 100ms; 10 envelope points/second
 
 def estimate(path):
-    command = ["sudo", "-n", "nice", "-n", "15", "ffmpeg",
+    prefix=[] if os.geteuid()==0 else ["sudo","-n"]
+    command = prefix+["nice", "-n", "15", "ffmpeg",
                "-nostdin", "-v", "error", "-threads", "1",
                "-t", "45", "-i", path, "-vn", "-ac", "1", "-ar", str(RATE),
                "-f", "s16le", "-acodec", "pcm_s16le", "-"]
