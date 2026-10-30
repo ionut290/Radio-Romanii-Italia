@@ -76,15 +76,13 @@ def _genre(tr):
     return "sconosciuto"
 
 def _bank(tracks):
-    # Every unique, verified, indexed track enters the bank, regardless of
-    # whether it can fit in today's 24-hour demonstration.
+    # A title is NOT a unique recording. Mureka exports may have equal names
+    # but different versions, and two artists may use the same song title.
+    # Admit every real, duration-verified file once by its stable file ID.
+    # Only true content hashes could safely remove duplicates of recordings.
     valid=[x for x in tracks if _eligible(x)]
     selected={}
-    used_titles=set()
     for tr in sorted(valid,key=lambda x:x["id"]):
-        key=_title_key(tr["title"])
-        if key in used_titles:continue
-        used_titles.add(key)
         selected[tr["id"]]=tr
     return list(selected.values())
 
