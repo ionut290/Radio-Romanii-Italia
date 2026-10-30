@@ -8,16 +8,16 @@
   layer.id = "rdiEveningTg";
   layer.hidden = true;
   layer.setAttribute("aria-label", "TG RDI della sera in diretta");
-  layer.innerHTML = '<div class="rdi-tg-bg"><img class="rdi-tg-photo" alt=""></div><div class="rdi-tg-shade"></div><div class="rdi-tg-header"><div class="rdi-tg-brand">RADIO ROMÂNII DIN ITALIA</div><div class="rdi-tg-live">TG DELLE 18</div></div><div class="rdi-tg-content"><div class="rdi-tg-kicker"></div><h1 class="rdi-tg-title"></h1><p class="rdi-tg-summary"></p></div><div class="rdi-tg-footer"><div><div class="rdi-tg-source"></div><div class="rdi-tg-notice"></div></div><span class="rdi-tg-count"></span></div><div class="rdi-tg-progress"></div>';
+  layer.innerHTML = '<div class="rdi-tg-bg"><img class="rdi-tg-photo" alt=""><video class="rdi-tg-footage" muted playsinline preload="none" aria-label="Video autorizzato di repertorio"></video></div><div class="rdi-tg-shade"></div><div class="rdi-tg-header"><div class="rdi-tg-brand">RADIO ROMÂNII DIN ITALIA</div><div class="rdi-tg-live">TG DELLE 18</div></div><div class="rdi-tg-content"><div class="rdi-tg-kicker"></div><h1 class="rdi-tg-title"></h1><p class="rdi-tg-summary"></p></div><div class="rdi-tg-footer"><div><div class="rdi-tg-source"></div><div class="rdi-tg-notice"></div></div><span class="rdi-tg-count"></span></div><div class="rdi-tg-progress"></div>';
   document.getElementById("stage").append(layer);
   const $ = s => layer.querySelector(s);
-  const photo = $(".rdi-tg-photo"), kicker = $(".rdi-tg-kicker"),
+  const photo = $(".rdi-tg-photo"), footage = $(".rdi-tg-footage"), kicker = $(".rdi-tg-kicker"),
     title = $(".rdi-tg-title"), summary = $(".rdi-tg-summary"),
     source = $(".rdi-tg-source"), notice = $(".rdi-tg-notice"),
     count = $(".rdi-tg-count"), progress = $(".rdi-tg-progress");
   let edition = "", manifest = null, pending = "", lastSeen = 0,
     playedAt = 0, startAt = 0, duration = 0, sceneIndex = -1, sectionIndex = -1,
-    lockedUntil = 0;
+    lockedUntil = 0, videoStartedFor = -1;
   const headings = ["IL FATTO", "IL CONTESTO", "LE CONSEGUENZE", "GLI SVILUPPI"];
   const clean = text => String(text || "").replace(/\s+/g, " ").trim();
   const editionFrom = np => {
@@ -25,11 +25,55 @@
     const match = s.match(/RDI[\s_-]*TG[\s_-]*SERA[\s_-]*IT[\s_-]*(20\d{6})/i);
     return match ? match[1] : "";
   };
+  /* The video's own audio is NEVER part of the live: AzuraCast supplies audio.
+     Only clips explicitly cleared in the TG manifest may load. */
+  footage.muted = true;
+  footage.defaultMuted = true;
+  footage.volume = 0;
+  footage.playsInline = true;
+  footage.controls = false;
+  function stopFootage() {
+    footage.pause();
+    footage.classList.remove("is-visible");
+    footage.removeAttribute("src");
+    footage.load();
+  }
+  function validFootage(v) {
+    if (!v || !["repertory", "event"].includes(v.kind) || !v.audio_muted ||
+        !v.credit || !v.notice || !v.source_url || !Number.isFinite(v.seconds) ||
+        v.seconds < 5 || v.seconds > 18 || typeof v.src !== "string") return false;
+    try {
+      const u = new URL(v.src);
+      if (u.protocol !== "https:" || !/\\.(mp4|webm)$/i.test(u.pathname) || u.username || u.password) return false;
+      if (v.kind === "repertory") return u.hostname === "videos.pexels.com";
+      return !/(^localhost$|^127\\.|^10\\.|^192\\.168\\.|^youtube\\.com$|^youtu\\.be$)/i.test(u.hostname);
+    } catch (_) { return false; }
+  }
+  function startFootage(v, at) {
+    if (!validFootage(v)) return;
+    const secondsFromStory = at - Number(currentSceneStart);
+    if (secondsFromStory < 0 || secondsFromStory >= v.seconds || window.rdiSpotActive) return;
+    stopFootage();
+    footage.muted = true; footage.defaultMuted = true; footage.volume = 0;
+    footage.onplaying = () => {
+      footage.muted = true; footage.volume = 0;
+      if (!window.rdiSpotActive && currentSceneIndex === videoStartedFor)
+        footage.classList.add("is-visible");
+    };
+    footage.onerror = () => stopFootage();
+    footage.src = v.src;
+    footage.load();
+    // Clip is not a voice source; never block the news if autoplay is denied.
+    footage.play().catch(() => stopFootage());
+  }
+  let currentSceneStart = 0, currentSceneIndex = -1;
   function hide() {
     window.rdiTgActive = false;
     layer.hidden = true;
     document.body.classList.remove("rdi-tg-active");
     sceneIndex = -1; sectionIndex = -1; manifest = null;
+    videoStartedFor = -1; currentSceneIndex = -1;
+    stopFootage();
     photo.removeAttribute("src"); photo.classList.remove("is-visible");
     if (!window.rdiSpotActive && !window.rdiGeoActive) window.rdiResumeNews?.();
   }
@@ -122,6 +166,10 @@
     if (i === -1) i = at < scenes[0].start_seconds ? 0 : scenes.length - 1;
     const current = scenes[i];
     if (sceneIndex !== i) {
+      stopFootage();
+      videoStartedFor = -1;
+      currentSceneIndex = i;
+      currentSceneStart = current.start_seconds;
       sceneIndex = i; sectionIndex = -1; show();
       const story = current.kind === "story";
       layer.classList.toggle("rdi-tg-story", story);
@@ -138,12 +186,25 @@
         title.textContent = clean(current.title);
         source.textContent = clean(current.source_name);
         notice.textContent = clean(current.image_notice);
+        if (validFootage(current.video) && at - current.start_seconds < current.video.seconds) {
+          videoStartedFor = i;
+          notice.textContent = clean(current.video.notice);
+          startFootage(current.video, at);
+        }
         const number = scenes.slice(0, i + 1).filter(s => s.kind === "story").length;
         count.textContent = "SERVIZIO " + number + " / " + scenes.filter(s => s.kind === "story").length;
         setPhoto(current.image, current.image_notice);
       }
     }
     if (current.kind === "story") {
+      if (window.rdiSpotActive) {
+        if (footage.classList.contains("is-visible")) stopFootage();
+      } else if (videoStartedFor === i && (!validFootage(current.video) ||
+                 at - current.start_seconds >= current.video.seconds)) {
+        stopFootage();
+        videoStartedFor = -1;
+        notice.textContent = clean(current.image_notice);
+      }
       const segments = Array.isArray(current.sections) && current.sections.length === 4 ? current.sections : null;
       const fractions = Array.isArray(current.section_ends) && current.section_ends.length === 4 ? current.section_ends : [.3,.55,.78,1];
       const fraction = (at - current.start_seconds) / Math.max(1, current.end_seconds - current.start_seconds);
