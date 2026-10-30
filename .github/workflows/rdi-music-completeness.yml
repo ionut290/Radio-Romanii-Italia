@@ -2,7 +2,7 @@ name: RDI - Controllo completezza catalogo musicale
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/rdi-music-completeness.yml']
+    paths: ['.github/workflows/rdi-music-completeness.yml', 'scripts/rdi_music_completeness_audit.py']
   workflow_dispatch:
 permissions:
   contents: read
