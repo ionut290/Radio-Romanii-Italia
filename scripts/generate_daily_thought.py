@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Create one original daily reflection and its shareable RDI artwork."""
+import base64
 import datetime as dt
 import html
 import json
@@ -187,6 +188,42 @@ def svg_card(day, quote, title):
 </svg>
 '''
 
+
+def api_photo(day, quote):
+    if not API_KEY:
+        raise SystemExit("OPENAI_API_KEY richiesto per generare la fotografia quotidiana")
+    prompt = (
+        "Create one original, photorealistic editorial photograph for a thoughtful Italian-Romanian community radio. "
+        "Translate the meaning of this short philosophical reflection into a visually clear, human scene: "
+        + quote
+        + ". Natural candid moment, authentic people and setting, thoughtful but not sentimental, "
+        "cinematic natural light, documentary photography, realistic anatomy and details. "
+        "Wide horizontal composition suitable for a 16:9 broadcast crop. "
+        "No words, lettering, captions, signs, logos, watermarks, borders, or graphic overlays."
+    )
+    payload = {
+        "model": os.environ.get("OPENAI_IMAGE_MODEL", "gpt-image-2"),
+        "prompt": prompt,
+        "size": "1536x1024",
+        "quality": "medium",
+        "output_format": "jpeg",
+    }
+    request = urllib.request.Request(
+        "https://api.openai.com/v1/images/generations",
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        method="POST",
+        headers={"Content-Type": "application/json", "Authorization": "Bearer " + API_KEY},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=240) as response:
+            result = json.loads(response.read())
+        image = base64.b64decode(result["data"][0]["b64_json"], validate=True)
+        if len(image) < 10000 or not image.startswith(bytes.fromhex("ffd8ff")):
+            raise ValueError("Il risultato non è un JPEG valido")
+        return image
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        raise SystemExit("Generazione della fotografia quotidiana non riuscita: " + str(exc)[:180])
+
 def main():
     now = dt.datetime.now(TZ)
     today = now.date()
@@ -200,7 +237,8 @@ def main():
     thought = api_thought(today, history) or fallback_thought(today)
     published = now.replace(hour=8, minute=0, second=0, microsecond=0)
     ident = "pensiero-" + today.strftime("%Y%m%d")
-    image = Path("editorial-images/daily-thought") / (today.isoformat() + ".svg")
+    image = Path("editorial-images/daily-thought") / (today.isoformat() + ".jpg")
+    image_bytes = api_photo(today, thought["quote"])
     item = {
         "id": ident,
         "daily_thought": True,
@@ -213,7 +251,7 @@ def main():
         "source": "Pensiero originale RDI",
         "byline": "Rubrica quotidiana · Radio Românii din Italia",
         "image": "./" + image.as_posix(),
-        "imageType": "editorial-illustration",
+        "imageType": "photorealistic-ai-generated",
         "image_credit": "Pensiero e immagine originali RDI",
         "date": today.isoformat(),
     }
@@ -222,7 +260,11 @@ def main():
     data["updated_at"] = now.isoformat()
     DATA.parent.mkdir(parents=True, exist_ok=True)
     ART_DIR.mkdir(parents=True, exist_ok=True)
-    (ROOT / image).write_text(svg_card(today, thought["quote"], thought["title"]), encoding="utf-8")
+    (ROOT / image).write_bytes(image_bytes)
+    # Remove older photos only after today's replacement was generated and written.
+    for old_image in ART_DIR.iterdir():
+        if old_image.is_file() and old_image != ROOT / image:
+            old_image.unlink()
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Pensiero quotidiano pronto:", today.isoformat(), "|", thought["quote"])
 
