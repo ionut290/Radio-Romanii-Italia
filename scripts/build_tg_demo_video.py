@@ -167,22 +167,55 @@ def ffmpeg(*args):
     subprocess.run(cmd,check=True)
 
 def approved_rome_footage(article):
-    """Re-use only the reviewed RDI archive clip, never embedded publisher media."""
+    """Save approved RDI footage before decoding. Never stream publisher embeds."""
     match=select_video({"title_original":article["title"],
                         "source_url":article.get("url","")})
     if not match or match["kind"]!="repertory" or match.get("audio_muted") is not True:
         return None,None
     source=match["src"]
     path=OUT/"repertory-rome-muted.mp4"
+    downloaded=OUT/"licensed-source-rome.mp4"
+    from urllib.parse import urlparse
+    urls=[source]
+    # For the reviewed Pexels clip, the official free-download link provides
+    # the canonical actual asset (a separate file ID can be used for each resolution).
+    m=__import__("re").search(r"/video/[^/]*-(\\d+)/?$",match["source_url"])
+    if m:
+        urls.append("https://www.pexels.com/download/video/"+m.group(1)+"/")
     try:
+        for url in urls:
+            try:
+                req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0","Accept":"video/mp4,*/*"})
+                with urllib.request.urlopen(req,timeout=24) as response:
+                    final=urlparse(response.url)
+                    if final.scheme!="https" or final.hostname!="videos.pexels.com":
+                        raise ValueError("Unexpected video origin")
+                    if "video/" not in response.headers.get("Content-Type","").lower() and not final.path.endswith(".mp4"):
+                        raise ValueError("Not a video")
+                    size=0
+                    with downloaded.open("wb") as out:
+                        while True:
+                            chunk=response.read(256*1024)
+                            if not chunk:break
+                            size+=len(chunk)
+                            if size>85_000_000: raise ValueError("Clip larger than 85MB")
+                            out.write(chunk)
+                if downloaded.stat().st_size>30_000:
+                    print("Pexels source verified, bytes:",downloaded.stat().st_size)
+                    break
+            except Exception as e:
+                print("Pexels file unavailable:",type(e).__name__,str(e)[:110])
+                downloaded.unlink(missing_ok=True)
+                continue
+        if not downloaded.exists():
+            raise ValueError("No accessible public licensed Pexels download")
         exe=imageio_ffmpeg.get_ffmpeg_exe()
         cmd=[exe,"-hide_banner","-loglevel","error","-y",
-             "-rw_timeout","8000000",
-             "-i",source,
+             "-i",str(downloaded),
              "-t",str(match["seconds"]),"-an",
              "-vf","fps=15,scale=520:310:force_original_aspect_ratio=increase,crop=520:310,format=yuv420p",
              "-c:v","libx264","-preset","ultrafast","-crf","28","-movflags","+faststart",str(path)]
-        subprocess.run(cmd,check=True,timeout=105,capture_output=True,text=True)
+        subprocess.run(cmd,check=True,timeout=90,capture_output=True,text=True)
         if path.stat().st_size<20000: raise ValueError("Empty video clip")
         print("Licensed RDI b-roll:",match["video_id"],"silent seconds",match["seconds"])
         return path,match
@@ -191,6 +224,8 @@ def approved_rome_footage(article):
         print("Repertory footage unavailable; photo fallback",type(exc).__name__,str(message)[-450:])
         path.unlink(missing_ok=True)
         return None,None
+    finally:
+        downloaded.unlink(missing_ok=True)
 
 
 def main():
