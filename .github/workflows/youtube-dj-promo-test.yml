@@ -11,6 +11,7 @@ on:
       - 'editorial-images/rdi-dj-programmazione-live.svg'
       - 'data/youtube-dj-promo.json'
       - 'tests/youtube-dj-promo.test.mjs'
+      - 'tests/youtube-spots.test.mjs'
       - '.github/workflows/youtube-dj-promo-test.yml'
   workflow_dispatch:
 
