@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'youtube-weather.js', 'youtube-weather.css', 'youtube-live/visual-relay.sh', 'data/romanians-italy.json']
+    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'youtube-weather.js', 'youtube-weather.css', 'youtube-live/visual-relay.sh', 'youtube-live/radar-autoplay.py', 'data/romanians-italy.json']
 
 permissions:
   contents: read
@@ -28,7 +28,7 @@ jobs:
           set -euo pipefail
           for attempt in {1..24}; do
             ready=true
-            for file in youtube-news.html youtube-geopolitica.js youtube-geopolitica.css youtube-tg-sera.js youtube-tg-sera.css youtube-camera-breaks.js youtube-camera-core.mjs youtube-camera-breaks.css data/youtube-camera-breaks.json data/youtube-build.json youtube-spots.js youtube-spots-core.js youtube-spots.css data/spot-campaigns.json youtube-extras.js data/romanians-italy.json; do
+            for file in youtube-news.html youtube-geopolitica.js youtube-geopolitica.css youtube-tg-sera.js youtube-tg-sera.css youtube-camera-breaks.js youtube-camera-core.mjs youtube-camera-breaks.css data/youtube-camera-breaks.json data/youtube-build.json youtube-spots.js youtube-spots-core.js youtube-spots.css data/spot-campaigns.json youtube-extras.js youtube-weather.js youtube-weather.css data/romanians-italy.json; do
               expected=$(sha256sum "$file" | cut -d ' ' -f 1)
               if ! curl --fail --silent --show-error --max-time 5 \
                 "https://radioromanii.duckdns.org/${file}?v=${GITHUB_SHA}" \
@@ -66,13 +66,13 @@ jobs:
         run: |
           set -euo pipefail
           scp -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
-            youtube-live/visual-relay.sh ubuntu@129.151.255.41:/tmp/radio-youtube-visual.sh
+            youtube-live/visual-relay.sh youtube-live/radar-autoplay.py ubuntu@129.151.255.41:/tmp/
           ssh -i "$HOME/.ssh/id_rdi" \
             -o StrictHostKeyChecking=yes \
             -o BatchMode=yes \
             -o ConnectTimeout=12 \
             ubuntu@129.151.255.41 \
-            'set -e; sudo install -m 700 /tmp/radio-youtube-visual.sh /usr/local/sbin/radio-youtube-visual; rm -f /tmp/radio-youtube-visual.sh; pgrep -x ffmpeg >/dev/null; if pgrep -u ubuntu -f chromium >/dev/null; then env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+q; sleep 3; fi; PROFILE=$(mktemp -d /home/ubuntu/radio-youtube-browser-webgl.XXXXXXXX); nohup env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority /snap/bin/chromium --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble --autoplay-policy=user-gesture-required --window-size=1280,720 --window-position=0,0 --kiosk https://radioromanii.duckdns.org/youtube-news.html >/tmp/radio-youtube-chromium-webgl.log 2>&1 </dev/null & echo $! >/tmp/rdi-chromium-webgl.pid; sleep 8; pgrep -u ubuntu -f chromium >/dev/null; echo "Browser riaperto con WebGL; FFmpeg non riavviato."'
+            'set -e; sudo install -m 700 /tmp/visual-relay.sh /usr/local/sbin/radio-youtube-visual; sudo install -m 700 /tmp/radar-autoplay.py /usr/local/sbin/rdi-radar-autoplay.py; rm -f /tmp/visual-relay.sh /tmp/radar-autoplay.py; pgrep -x ffmpeg >/dev/null; if pgrep -u ubuntu -f chromium >/dev/null; then env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+q; sleep 3; fi; PROFILE=$(mktemp -d /home/ubuntu/radio-youtube-browser-webgl.XXXXXXXX); nohup env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority /snap/bin/chromium --remote-debugging-address=127.0.0.1 --remote-debugging-port=9222 --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble --autoplay-policy=user-gesture-required --window-size=1280,720 --window-position=0,0 --kiosk https://radioromanii.duckdns.org/youtube-news.html >/tmp/radio-youtube-chromium-webgl.log 2>&1 </dev/null & echo $! >/tmp/rdi-chromium-webgl.pid; sleep 8; pgrep -u ubuntu -f chromium >/dev/null; nohup sudo -n python3 /usr/local/sbin/rdi-radar-autoplay.py >/tmp/rdi-radar-autoplay.log 2>&1 </dev/null & echo "Browser riaperto con WebGL e radar animato; FFmpeg non riavviato."'
       - name: Ricarica Chromium senza riavviare la diretta
         run: |
           ssh -i "$HOME/.ssh/id_rdi" \
