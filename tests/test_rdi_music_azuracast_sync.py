@@ -99,12 +99,18 @@ class SyncSafetyTests(TestCase):
   self.assertTrue(client.playlist["is_enabled"])
   self.assertEqual(len([x for x in client.calls if x[0]=="PUT"]),1)
 
- def test_do_not_sync_when_playlist_already_live(self):
+ def test_new_uploads_sync_while_playlist_is_live_without_disabling_it(self):
   client=Client(n=500)
   client.playlist["is_enabled"]=True
   with patch.object(m,"plan",return_value=fake_plan(client,client.playlist)):
-   with self.assertRaises(RuntimeError):
+   with patch.object(m,"snapshot",return_value=None):
     m.run(client,"sync",limit=40)
+  self.assertTrue(client.playlist["is_enabled"])
+  for i in range(40):
+   self.assertEqual(m.ids(client.files[f"song-{i}.mp3"]["playlists"]),
+                    {77,13 if i%2 else 19})
+  self.assertFalse(any(method=="PUT" and path=="/station/1/playlist/77"
+                       for method,path,_ in client.calls))
 
  def test_ambiguous_playlist_is_refused(self):
   client=Client()
