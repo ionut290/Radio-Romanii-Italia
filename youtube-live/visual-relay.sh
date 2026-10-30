@@ -12,7 +12,9 @@ PROFILE=$(runuser -u ubuntu -- mktemp -d /home/ubuntu/radio-youtube-browser.XXXX
 cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || true; rm -rf "$PROFILE"; }
 trap cleanup EXIT INT TERM
 sleep 2
-runuser -u ubuntu -- /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
+# WebGL is required by the official DPC radar iframe. Xvfb has no physical GPU, so use Chromium's software renderer.
+runuser -u ubuntu -- /snap/bin/chromium --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader \
+  --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking \
   --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO \
   --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble \
   --autoplay-policy=user-gesture-required --window-size=1280,720 \
