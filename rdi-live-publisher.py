@@ -116,7 +116,7 @@ def main():
         mode="w", encoding="utf-8", dir=OUTPUT.parent, prefix=".rdi-live-", delete=False
     ) as stream:
         json.dump(payload, stream, ensure_ascii=False, separators=(",", ":"))
-        stream.write("\\n")
+        stream.write("\n")
         temp_name = stream.name
     os.chmod(temp_name, 0o644)
     os.replace(temp_name, OUTPUT)
