@@ -43,6 +43,19 @@ class PhotoMatchingTests(unittest.TestCase):
         self.lib["sports"][1]["reusable"] = False
         self.assertIsNone(self.get("Serie A Fiorentina-Atalanta, spettacolo e gol"))
 
+    def test_fire_at_airport_does_not_get_a_travel_or_police_photo(self):
+        self.assertIsNone(self.get("Incendiu pe Aeroportul Otopeni. O femeie a fost reținută de poliție"))
+
+    def test_child_death_does_not_get_hospital_stock_photo(self):
+        self.assertIsNone(self.get("Un copil român s-a stins din viață pe patul de spital"))
+
+    def test_voluntary_layoffs_are_not_volunteering(self):
+        self.lib["community"] = [
+            {"image": "./editorial-images/news-covers/volontari.jpg",
+             "description": "Volontari per la pulizia di un fiume"}
+        ]
+        self.assertIsNone(self.get("Microsoft: angajați invitați să plece voluntar"))
+
     def test_no_repeat_photo(self):
         used = {"./editorial-images/news-covers/calcio.jpg"}
         self.assertIsNone(choose_relevant_photo({"title": "Serie A Fiorentina-Atalanta"}, self.lib, used))
