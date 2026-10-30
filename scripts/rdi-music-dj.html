@@ -53,11 +53,14 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <div class="head"><h2>Simulazione DJ · Rotazione delle 24 ore</h2><span class="tag">NON IN ONDA</span></div>
 <p id="rotation-note">Creazione di una giornata musicale di prova con brani unici e controlli sulle ripetizioni. Nessuna modifica ad AzuraCast.</p>
 <div class="rotation-stats">
-<span id="rotation-count">Brani: —</span>
+<span id="rotation-pool">Catalogo verificato: —</span>
+<span id="rotation-count">In programma oggi: —</span>
+<span id="rotation-unused">In rotazione nei prossimi giorni: —</span>
+<span id="rotation-new">Nuove canzoni: —</span>
 <span id="rotation-repeat">Ripetizioni: —</span>
 <span id="rotation-gaps">Brani mancanti: —</span>
 </div>
-<div class="rotation-alert">La simulazione usa una <b>durata ipotetica di 3 minuti e 30 secondi</b> per brano. Le fasce non sostituiscono i notiziari, spot, jingle e dirette già programmati su AzuraCast. I generi stimati dall'IA non sono ancora considerati verificati.</div>
+<div class="rotation-alert">Il catalogo comprende <b>tutti i brani analizzati, esistenti e con durata verificata</b>, anche quando non possono essere riprodotti oggi. L'ordine cambia ogni giorno, recuperando nei giorni successivi i brani non selezionati. Restano intatti notiziari, spot, jingle e dirette di AzuraCast; il DJ è ancora in sola simulazione.</div>
 <div class="rotation-grid" id="rotation-blocks"></div>
 <div class="toolbar"><button type="button" id="export-dry-run" onclick="saveDryRun()" disabled>Esporta piano di prova (JSON)</button><span class="muted">Nessuna playlist viene importata o modificata.</span></div>
 </section>
@@ -98,18 +101,21 @@ function showRotation(plan){
   el("export-dry-run").disabled=true;
   return;
  }
- el("rotation-count").textContent="Brani diversi: "+plan.total_unique_tracks;
+ el("rotation-pool").textContent="Catalogo verificato: "+(plan.pool_tracks_total||0);
+ el("rotation-count").textContent="In programma oggi: "+plan.total_unique_tracks;
+ el("rotation-unused").textContent="Per giorni successivi: "+(plan.pool_excluded_from_today||0);
+ el("rotation-new").textContent="Nuovi brani analizzati: "+(plan.new_tracks_in_pool||0);
  el("rotation-repeat").textContent="Ripetizioni brano: "+plan.duplicate_tracks;
- el("rotation-gaps").textContent="Brani mancanti (stime): "+plan.missing_tracks_estimated;
+ el("rotation-gaps").textContent="Minuti non coperti (simulazione): "+plan.missing_tracks_estimated;
  el("rotation-note").textContent=plan.full_draft?
-  "Piano completo sulla base di durate simulate. Nessuna decisione passa automaticamente ad AzuraCast.":
-  "Piano parziale: alcuni blocchi non dispongono di abbastanza candidati verificati. Non utilizzabile per la diretta.";
+  "Le durate reali permettono un piano continuo di prova, ma NON è ancora pubblicato su AzuraCast.":
+  "Catalogo verificato; restano spazi o brani da analizzare. Non utilizzabile per la diretta.";
  const group=el("rotation-blocks");group.replaceChildren();
  for(const block of plan.blocks||[]){
   const card=document.createElement("section");card.className="rotation-card";
   const h=document.createElement("h3");h.textContent=block.dalle+"–"+block.alle+" · "+block.label;card.append(h);
   const p=document.createElement("p");
-  p.textContent=block.brani_proposti+" / "+block.brani_richiesti_stimati+" brani di prova · copertura "+block.copertura_percento+"%";
+  p.textContent=block.brani_proposti+" brani · copertura teorica "+block.copertura_percento+"%";
   card.append(p);
   const ol=document.createElement("ol");
   for(const tr of (block.brani||[]).slice(0,5)){
