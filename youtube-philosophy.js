@@ -61,7 +61,7 @@ async function update(){
   const item=dayData();
   if(!item){readyImage="";return}
   const url=String(item.image||"");
-  if(!/^\\/(?!\\/)[a-zA-Z0-9/_-]+\\.(jpg|jpeg|webp|png)$/i.test(url)){readyImage="";return;}
+  if(!url.startsWith("/")||url.startsWith("//")||!/^[a-zA-Z0-9/_-]+[.](jpg|jpeg|webp|png)$/i.test(url.slice(1))){readyImage="";return;}
   const preload=new Image();
   preload.onload=()=>{if(dayData()?.image===url){readyImage=url;if(preview&&paint(dayData()))layer.hidden=false}};
   preload.onerror=()=>{if(readyImage===url)readyImage=""};
