@@ -13,6 +13,7 @@ cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || tru
 trap cleanup EXIT INT TERM
 sleep 2
 # WebGL is required by the official DPC radar iframe. Xvfb has no physical GPU, so use Chromium's software renderer.
+# The browser refresh workflow also installs this script before opening the weather page.
 runuser -u ubuntu -- /snap/bin/chromium --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader \
   --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking \
   --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO \
