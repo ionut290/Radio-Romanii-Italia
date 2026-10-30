@@ -90,6 +90,7 @@ def reconcile(db: sqlite3.Connection, files:list[tuple[str,int,float]]) -> dict:
     now=dt.datetime.now(dt.timezone.utc).isoformat()
     with db:
         old_count=db.execute("SELECT COUNT(*) FROM track_live_index").fetchone()[0]
+        first_seen=now if old_count else "1970-01-01T00:00:00+00:00"
         db.executemany("""INSERT INTO track_live_index(
             path,size,modified,duration_seconds,first_seen,last_seen
         ) VALUES(?,?,?,NULL,?,?)
@@ -98,7 +99,7 @@ def reconcile(db: sqlite3.Connection, files:list[tuple[str,int,float]]) -> dict:
                  AND abs(modified-excluded.modified)<2
                  THEN duration_seconds ELSE NULL END,
             size=excluded.size,modified=excluded.modified,last_seen=excluded.last_seen""",
-            ((path,size,modified,now,now) for path,size,modified in files))
+            ((path,size,modified,first_seen,now) for path,size,modified in files))
         # Remove ONLY entries from the *live availability* view. Preserve every
         # historic audio/AI analysis in its own separate table for auditing.
         gone=db.execute("DELETE FROM track_live_index WHERE last_seen!=?",(now,)).rowcount
