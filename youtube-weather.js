@@ -35,7 +35,11 @@
       url:"https://www.meteoromania.ro/anm2/radarm/radar.index.php"}
   };
   let active=false,cityTimer=null,finishTimer=null,priorityTimer=null;
-  let finishCallback=null,lastDisplayedUpdate="",previousDisplayedUpdate="",nextRadarCountry="IT",revision=0;
+  function loadNextRadarCountry(){
+    try{return localStorage.getItem("rdiNextRadarCountry")==="RO"?"RO":"IT";}
+    catch(e){return "IT";}
+  }
+  let finishCallback=null,lastDisplayedUpdate="",previousDisplayedUpdate="",nextRadarCountry=loadNextRadarCountry();
 
   function weatherIcon(code){
     const n=Number(code);
@@ -147,6 +151,7 @@
     lastDisplayedUpdate=stamp;
     activeCountry=nextRadarCountry;
     nextRadarCountry=nextRadarCountry==="IT"?"RO":"IT";
+    try{localStorage.setItem("rdiNextRadarCountry",nextRadarCountry);}catch(e){/* Continue the live if storage is disabled. */}
     window.rdiPauseNews?.();
     active=true;window.rdiWeatherActive=true;finishCallback=next;
     document.body.classList.add("rdi-weather-active");layer.hidden=false;
