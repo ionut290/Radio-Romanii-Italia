@@ -56,7 +56,8 @@ class RotationTests(unittest.TestCase):
   p=rot.simulate(x)
   self.assertEqual(p["pool_tracks_total"],8)
   self.assertEqual(p["pool_waiting_for_analysis"],1)
-  self.assertEqual(p["total_unique_tracks"],7)
+  self.assertEqual(p["pool_audio_profiled"],7)
+  self.assertEqual(p["total_unique_tracks"],8)
 
  def test_live_index_is_mandatory(self):
   x=catalog(10);x["live_index_verified"]=False
@@ -70,7 +71,8 @@ class RotationTests(unittest.TestCase):
   p=rot.simulate(x,"2026-10-30")
   self.assertEqual(p["pool_tracks_total"],414)
   self.assertEqual(p["pool_waiting_for_analysis"],1)
-  self.assertEqual(p["pool_ready_for_rotation"],413)
+  self.assertEqual(p["pool_ready_for_rotation"],414)
+  self.assertEqual(p["pool_audio_profiled"],413)
   self.assertFalse(next(t for t in p["pool_tracks"] if t["id"]==x["tracks"][100]["id"])["analisi_audio_completa"])
 
  def test_new_music_auto_joins_when_indexed_and_analyzed(self):
