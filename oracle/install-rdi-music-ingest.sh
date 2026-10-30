@@ -6,6 +6,8 @@ SRC="$(cd "$(dirname "$0")/.." && pwd)"
 APP=/opt/rdi-music-dj
 install -d -m 755 "$APP"
 install -m 644 "$SRC/scripts/rdi_music_ingest.py" "$APP/rdi_music_ingest.py"
+install -m 644 "$SRC/scripts/rdi_music_scan.py" "$APP/rdi_music_scan.py"
+install -m 644 "$SRC/scripts/rdi_music_rhythm.py" "$APP/rdi_music_rhythm.py"
 install -m 644 "$SRC/scripts/rdi_music_rotation.py" "$APP/rdi_music_rotation.py"
 install -m 644 "$SRC/scripts/rdi_music_dj.py" "$APP/rdi_music_dj.py"
 install -m 644 "$SRC/scripts/rdi-music-dj.html" "$APP/rdi-music-dj.html"
