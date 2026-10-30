@@ -10,8 +10,8 @@ layer.hidden=true;
 layer.setAttribute("aria-label","Radio Românii din Italia: anteprima fasce musicali");
 const image=document.createElement("img");
 image.alt="Programmazione oraria musicale RDI: relax, risveglio, urban e pop, energia, melodie, relax. Anteprima.";
-image.src="./editorial-images/rdi-dj-programmazione-live.svg";
 image.decoding="async";
+image.src="./editorial-images/rdi-dj-programmazione-live.svg";
 const progress=document.createElement("div");
 progress.className="rdi-dj-promo-progress";
 layer.append(image,progress);
@@ -80,7 +80,8 @@ async function loadConfig(){
  }
 }
 image.addEventListener("load",()=>{preloaded=true});
-image.addEventListener("error",()=>{preloaded=false;end(false)});
+image.addEventListener("error",()=>{preloaded=false;end(true)});
+preloaded=Boolean(image.complete && image.naturalWidth>0);
 window.rdiDjPromoBreak={startIfDue,stop:()=>end(false),
  get state(){return {active,cardsSince,lastShownAt,config,preloaded}}};
 const ready=loadConfig();
