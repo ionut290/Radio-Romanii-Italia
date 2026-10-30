@@ -6,6 +6,10 @@ on:
       - 'youtube-philosophy*'
       - 'youtube-news.html'
       - 'tests/youtube-philosophy.test.mjs'
+      - 'tests/calendario-filosofico-publishing.test.mjs'
+      - 'data/calendario-filosofico-*.json'
+      - 'calendario-filosofico.html'
+      - 'calendario-filosofico/**'
       - '.github/workflows/youtube-philosophy-test.yml'
   workflow_dispatch:
 permissions:
@@ -20,7 +24,7 @@ jobs:
         with:
           node-version: '22'
       - name: Run philosophy calendar regression
-        run: node --test tests/youtube-philosophy.test.mjs
+        run: node --test tests/youtube-philosophy.test.mjs tests/calendario-filosofico-publishing.test.mjs
       - name: Check live integration
         shell: bash
         run: |
