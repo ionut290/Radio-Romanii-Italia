@@ -1,0 +1,59 @@
+name: RDI - Video prova TG delle 18
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_tg_demo_video.py'
+      - '.github/workflows/tg-video-demo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-tg-video-demo
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica il generatore video
+        run: python -m py_compile scripts/build_tg_demo_video.py
+      - name: Installa voce femminile e strumenti video
+        run: python -m pip install --disable-pip-version-check "edge-tts>=7,<8" "Pillow>=11,<13" "imageio-ffmpeg>=0.5,<1" "mutagen>=1.47,<2"
+      - name: Crea video prova RDI, senza pubblicarlo
+        timeout-minutes: 16
+        run: python scripts/build_tg_demo_video.py
+      - name: Verifica MP4
+        run: |
+          test -s demo-output/RDI-TG-18-VIDEO-PROVA.mp4
+          test -s demo-output/metadata.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          meta=json.loads(Path("demo-output/metadata.json").read_text())
+          assert meta["type"]=="demo_not_for_broadcast"
+          assert meta["voice"]=="it-IT-ElsaNeural"
+          assert len(meta["scenes"])==5
+          assert meta["duration_seconds"]>55
+          print("TG preview:",meta["duration_seconds"],"secondi, video",meta["video"])
+          PY
+      - name: Consegna MP4 dimostrativo da scaricare
+        uses: actions/upload-artifact@v4
+        with:
+          name: RDI-TG-delle-18-VIDEO-PROVA
+          path: |
+            demo-output/RDI-TG-18-VIDEO-PROVA.mp4
+            demo-output/metadata.json
+            demo-output/scene-01.jpg
+          retention-days: 14
+          if-no-files-found: error
+      - name: Conferma che nessuna trasmissione è stata toccata
+        run: echo "Video salvato solo negli artifact del workflow; nessuna modifica al live, AzuraCast o YouTube."
