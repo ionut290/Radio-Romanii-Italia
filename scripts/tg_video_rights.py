@@ -119,7 +119,7 @@ def exact_event_clip(story: dict, clips: object) -> dict | None:
         # No video references claiming to be the event without matching source URL.
         return {
             "src": record["src"], "kind": "event", "video_id": str(record.get("id") or ""),
-            "seconds": safe_duration(record.get("max_seconds")),
+            "seconds": safe_duration(record.get("max_seconds")), "audio_muted": True,
             "notice": "VIDEO DELL'EVENTO · " + str(record["credit"])[:100],
             "credit": record["credit"], "source_url": record["license_reference"],
         }
@@ -150,7 +150,7 @@ def select_video(story: dict, registry: dict | None = None, landscapes: dict | N
             continue
         return {
             "src": media["src"], "kind": "repertory", "video_id": rule.get("id", ""),
-            "seconds": safe_duration(rule.get("max_seconds")),
+            "seconds": safe_duration(rule.get("max_seconds")), "audio_muted": True,
             "notice": "IMMAGINI DI REPERTORIO · " + str(media["credit"])[:100],
             "credit": media["credit"], "source_url": media["source_url"],
             "license_url": media["license_url"],
