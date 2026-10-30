@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-10-30T13:45:06.190256+00:00",
-  "editorial_updated_at": "2026-10-30T08:01:33.498058+01:00",
-  "translations_updated_at": "2026-10-30T13:38:28.520487+00:00",
-  "feed_total": 91,
+  "news_updated_at": "2026-10-30T14:07:07.192771+00:00",
+  "editorial_updated_at": "2026-10-30T15:02:06.945492+01:00",
+  "translations_updated_at": "2026-10-30T13:45:07.542727+00:00",
+  "feed_total": 95,
   "feed_extended_400": 10,
-  "feed_missing_body": 81,
+  "feed_missing_body": 85,
   "feed_short_body": 0,
-  "editorial_total": 30,
-  "archived_editorials": 95,
-  "translation_records": 36,
+  "editorial_total": 27,
+  "archived_editorials": 97,
+  "translation_records": 43,
   "pending_total": 112,
   "pending_filtered_out": 301,
-  "editorial_verde": 18,
+  "editorial_verde": 16,
   "editorial_galben": 39,
-  "editorial_rosu": 59,
+  "editorial_rosu": 62,
   "pending": [
     {
       "title": "Alexandru Rogobete propune parteneriate public-private în sănătate. România are 41 de fabrici de medicamente - IasiTV Life",
@@ -618,13 +618,40 @@
   ],
   "recent_news": [
     {
+      "title": "Grindeanu, despre prima rectificare bugetară: „Statul trebuie să își onoreze obligațiile pentru asigurarea serviciilor esențiale”",
+      "category": "România",
+      "published": "2026-10-30T13:56:14+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/grindeanu-despre-prima-rectificare-bugetara-statul-trebuie-sa-isi-onoreze-obligatiile-pentru-asigurarea-serviciilor-esentiale-4015453",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Guvernul a aprobat prima rectificare din 2026. Nazare anunță că România mai are de atras 70 de miliarde de lei în opt săptămâni",
       "category": "România",
-      "published": "2026-10-30T13:44:09+00:00",
+      "published": "2026-10-30T13:49:46+00:00",
       "url": "https://www.digi24.ro/stiri/economie/guvernul-a-aprobat-prima-rectificare-din-2026-nazare-anunta-ca-romania-mai-are-de-atras-70-de-miliarde-de-lei-in-opt-saptamani-4014881",
       "source": "Digi24",
       "status": "galben",
       "words": 0
+    },
+    {
+      "title": "Guvernul a aprobat un set de măsuri pentru finanțarea localităților, deblocarea plăților și continuarea investițiilor publice",
+      "category": "România",
+      "published": "2026-10-30T13:47:53+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/guvernul-a-aprobat-un-set-de-masuri-pentru-finantarea-localitatilor-deblocarea-platilor-si-continuarea-investitiilor-publice-4015437",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Sciopero generale e cortei in tutta Italia. Scontri a Torino, cariche in Piazza Castello",
+      "category": "Italia",
+      "published": "2026-10-30T13:45:01+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia.-scontri-a-torino-cariche-in-piazza-castello_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 524
     },
     {
       "title": "Rogobete anunță o suplimentare de 8,3 miliarde de lei pentru Sănătate, după rectificarea bugetară. Unde vor ajunge banii",
@@ -645,12 +672,12 @@
       "words": 0
     },
     {
-      "title": "Sciopero generale e cortei in tutta Italia. Scontri a Torino, cariche in Piazza Castello",
+      "title": "Elicottero caduto, la Procura Militare di Roma avvia un'indagine",
       "category": "Italia",
-      "published": "2026-10-30T13:31:39+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia.-scontri-a-torino-cariche-in-piazza-castello_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html",
+      "published": "2026-10-30T13:33:18+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-la-procura-militare-di-roma-avvia-unindagine_d00f82f4-ad02-4306-ab7c-446cbf8f0f99.html",
       "source": "ANSA",
-      "status": "roșu",
+      "status": "galben",
       "words": 0
     },
     {
@@ -807,6 +834,15 @@
       "words": 0
     },
     {
+      "title": "Auto, la Cina spinge giù i conti di Audi: -87% di utile. L’ad Döllner: “Riduciamo i costi” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-30T12:22:37+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQLWNqSWtMSHltRWp6SWItT2dwVkNha2ZsZU56UjRiLS1FMUlfWVZVTnJLWWxDXy1DaXBBUjhmbXJWTXJlUHJ3MzR2Vzl6NHRtaDA1RFZqVjctcTNQODJsRjZydW9fOFAzNXBiWC1xT3NUMjdXU2J5WFNmOFM1d3Z0Z0pMT1dwOWx1ZXJITEgzVnVGaEtzc0ZseVk3N21xa1FzXzQwWXdkdnYtWFlZM2lob2hLTQ?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "L'Italia festeggia il calo della Cassa Integrazione, ma Torino vive su un pianeta a parte: il paradosso di Mirafiori e dei dati INPS - Torino Cronaca",
       "category": "Italia",
       "published": "2026-10-30T12:20:01+00:00",
@@ -897,24 +933,6 @@
       "words": 0
     },
     {
-      "title": "11 ani de la Colectiv. Slujbe de pomenire, lumânări și flori în faţa fostului club, în memoria celor 65 de tineri morți în incendiu",
-      "category": "România",
-      "published": "2026-10-30T11:16:46+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/11-ani-de-la-colectiv-slujbe-de-pomenire-lumanari-si-flori-in-fata-fostului-club-in-memoria-celor-65-de-tineri-morti-in-incendiu-4015109",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 506
-    },
-    {
-      "title": "Elicottero caduto, la Procura Militare di Roma avvia un'indagine",
-      "category": "Italia",
-      "published": "2026-10-30T11:09:25+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-la-procura-militare-di-roma-avvia-unindagine_d00f82f4-ad02-4306-ab7c-446cbf8f0f99.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Il pilota, lo specialista, la sergente: chi erano le vittime",
       "category": "Italia",
       "published": "2026-10-30T11:03:57+00:00",
@@ -933,15 +951,6 @@
       "words": 0
     },
     {
-      "title": "Ionel Bogdan (PNL), replică la acuzațiile social-democraților privind deficitul bugetar: „Cifrele nu mint. PSD, da”",
-      "category": "România",
-      "published": "2026-10-30T10:59:34+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/ionel-bogdan-pnl-replica-la-acuzatiile-social-democratilor-privind-deficitul-bugetar-cifrele-nu-mint-psd-da-4015083",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Mattarella: \"Il tenore di vita dei cittadini aggredito da inflazione e salari che non crescono\"",
       "category": "Italia",
       "published": "2026-10-30T10:40:55+00:00",
@@ -951,10 +960,10 @@
       "words": 536
     },
     {
-      "title": "L’economia italiana si ferma: Pil a crescita zero nel terzo trimestre - la Repubblica",
+      "title": "L’economia italiana si ferma: Pil a crescita zero nel terzo trimestre. Schizza l’inflazione: +5,4% - la Repubblica",
       "category": "Italia",
       "published": "2026-10-30T09:15:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPaV9OOGlVRm5XakdDTl8zd0xjYl9CVkRTX1hxTWxmd1hodEp5ald1TFFNVTlNa2JIbkd3X1FTOEI0bVVOclpzMHg0TzVCRkhsdFEzenhpdmtheWNvdXNYT2RSUnFxeWpHa0VOY1dpaGVLRDh6S2FtS0pYUkVjaDZ5akszam5JYW9oM09CWElGbXZlSWNWRXVxTGZteWF2YTF3SmUwU0pCU08?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNQzRBN3hMdy1Ja3FPd0hiclNEOWMtMUhCYm5rdndKNHV5bGVCUS10UjNVN3p1QW5rMmNhMF9xS2xPYWZ1VzlaVkFzc3JGX3I2eDd5UTM0RDdhcktjQXhfZUdIZ1pfWG5LRk10SWpLNHE3VzVuemlLclhzazdsSWhyNGhXUk54eDA5cUhIUE0tTV9iSlhvLTJuSkV3SHpqR1lGQVFr?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -983,15 +992,6 @@
       "published": "2026-10-30T07:41:22+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/novaya-gazeta-chiude-in-russia-uccisi-dalle-autorita-e-dai-servizi_0c2601cb-d24c-46cd-a108-bfb2980c08dc.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Fostul premier francez, Edouard Philippe, audiat de judecători pentru suspiciuni de deturnare de fonduri... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-30T07:16:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQ09uRzRBRXRXYjFtbmxlaHExckNYRWtBb1ZCUTdZNk9UOEM0cUg2VlRTbHJSNTVlRm5GbGg3QURoeWFnZUxpZFRrQmE2d1hBZjYxcVZKamNBbTR3cXZvd0d5TEQyck44Z3lhU21rS1R6THpDS1dEQWZCaUJxb1BKVU1GX053M3poYjlxRThlZ29hRFVVS3Y3N3ZsR2dBSWR0YlBmdVBMbnBaVWl5UHpVVGhqbWFRWk1jOFptVUd3NXlGcnhDZzhxZFhieV9CVmdUVFBDcEdPbEFGUVEtc09YTmlpWGRHQdIB6wFBVV95cUxNNWdEQkR3Rmd4MjBKUU1tQzdiZjVoYVF5ZGt3RV9sY0NhcDFyZngtY3pPVkQ2ZTdzSV9MdDUyTEFvenBQQk14emRNTWxKWTM3MTNBTUpUQnF5a2RMbm1kV3VsZ0tWd2JHYnNHNmh",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1041,6 +1041,15 @@
       "words": 0
     },
     {
+      "title": "Ministerul Finanțelor a publicat proiectul de rectificare bugetară. Ce bani sunt prevăzuți pentru Sănătate - Observator News",
+      "category": "România",
+      "published": "2026-10-29T19:10:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQdDdxMTUzbXZMdFBzWmRJbjhMY2p0bkwwbWFINE1uNGFNemgzUzNHVHlOMDNZblUxb2N0UWhtLTlsU2wtWS1oUE0yLWx2cGZQWE9WbkNVWDVtaHlsX2g1b0U0UjZmNEswbS1ETzhFOFZISC1qV2gyOU84aGZsQWttMUcxdW1jVi1FLW1hNGVqSzhQcmhpYW5BX01SSFRuS1JPXzBadmlHZ1VuMlFRZW5ma1J0X1hZZng3LWxJSWw0RGsycENOcTZiY3RIcVdPV2tmMVp4aTNZMmZ4SmhFMTlfaDJyamxKR3M?oc=5",
+      "source": "Observator News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Prima rectificare bugetară din 2026: Sănătatea și administrațiile locale, principalele bugete pe plus - Newsweek România",
       "category": "România",
       "published": "2026-10-29T19:08:32+00:00",
@@ -1077,10 +1086,37 @@
       "words": 0
     },
     {
-      "title": "Articole cu tagul: deficit caloric - StiriDiaspora",
+      "title": "Articole cu tagul: sedentarism - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-29T16:40:40+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BYTJNSGRvUkk0RXRNX3R1V3JMMnh6Y2lWWmFlLW14MlFVelNoalFNc2lfekxOLUxQWGgwU3NrMm10VlQ3VWNYX3lIcEdaemJkWGo5SmxvM29uOHJDdXNXZDJ6Vjc?oc=5",
+      "published": "2026-10-29T16:40:41+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5CdE1rdVMzUlpJOFd6Tlc5aHFVNWE5b25XeE5ZVl9ScXBaa2UxbkctVjllQTA5OGxYMkRlU2xVLUl1cHpfYkFiMTFOTGR3YXlSbzdXTTUycTNwT2tQekxV?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: JAMA Psychiatry - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-29T16:38:51+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9weFNKZ1FlMFVsRHdzWjQ1bkNYeDVPbjE1Q0VLd1NOYUtvbVlGbDJiU241Rnl1cWdqenFscHhYVUpQV2lyX2RERmp1emJyNVVTQ2lDbXM1R3dJMDV0Qk1RNlBHc3Y?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: agricultură intensivă - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-29T16:38:49+00:00",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5qY0FLZ0dxLVVjUWMyamFjVTZIaVJTVHA1aGF3SUQ4dm9ScFJ6aW82WGt4STBrRkdPdnNLU3JJWkJ5Q3ZqUThtb29NV1FUOF9rVGx4TXpJRE9tY0w1QTNPeEZyM0RMQTE0NFhmWg?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: Harvard Business School avatare - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-29T16:38:41+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBxM29jZk50UllBVWVEbk5ZcXlKdFkwRmlGWXR1cDFyNk0wUV95N1VySXdVVDBobjhVbV9IMk96TGM0WjJVMk9yVW8yQ0I1UXZqUTQ3M0dQYTdMMTBwek5EVHFodDhoVmNtbTh5SExibVJjUXlZSXpQSVBn?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1199,6 +1235,15 @@
       "published": "2026-10-29T11:53:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOMmZvTHVFbWlseDAwaFFWY3gyZWpYaHVOb2hNc1JGX0FwWnJ3bWt0MU1NNmREYkxCc0dYbDczdkFrcHllM1lPa3ZSWTNtRFV4M24tRmRxZWF0OU80RXNuOVhDT2F1dGxaRjFWbG9LdGZvV0VXUmR2U3BlSHZuVTlON2RHUjB4SDlrWl9paW1QdEg1Yy1kYTd1R293Q3N5Ni12dXpHek5tRmhJcEQ3R28xa1dkQ0x1ek90WE1yLS1RWHdsb25jZFNNUHRTLWNBTEXSAdQBQVVfeXFMTzhiRU1iNC1RUjBXdUpHTTg2ZVVHOFpacjNjLUxNa04tNmdXOTVNZmZydElFQ3FWNmNTb1V2eEo0blRKZTA3dkVwUXFmS0dfYnFETWcxcm00YldwclRqZFlIc0laYVl2WjhBWGdKTVFVREY1OGdaUXYtSUNIdnZDLWtvWGE",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Migranți. Frontex, Cecilia Strada împotriva reformei UE: „Nu vrem un ICE european” - Gazeta Românească Italia",
+      "category": "Diaspora",
+      "published": "2026-10-29T11:52:07+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNd29BcV96bzZMX0dLNE00NEZNUmxVUUpJUTJFZVluX3IweXRZdG1qVUJDbS1seDFOMGFRQWZ6ZnJxRVZMelRtS1kyaTRRbmg2NkVWWE9RellqMWF4X0pRQ3N5V3dsQ1lMV2N6bWhMWnB4TnRadUxhU3JVbmtodTZpX1dqRnYxZmptZVZtWlc0T09GRHN4ekx3VThwT0xiU1ZUZkpDT29kMHNGcUZaQV8zeTNlQllnRFczNnJ3TDFCYkNQQU5JcDF0enpMbGlpY2M?oc=5",
+      "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
     },
@@ -1426,29 +1471,9 @@
       "source": "Stirile ProTV",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Sănătatea FM - Psihologul Bianca Pescaru, despre imaturitatea emoțională din spatele lui \"Nu mă mai certa!\" - RFI",
-      "category": "România",
-      "published": "2026-10-28T13:57:20+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOMTF6eDcwOWgxdmJycUcyenVvMzlqQklrbjdzWU80NVRWak9rb2p1RWZuYnN5TEtMSUFJaDJDck5wa0RhMVF3ZVl2VXpfWDFOczRDc1Qybm5scGI4TVo2Z05IcUdoYkQya2Q2LXl1VTNyTWdtdi1GZnhBR2s2VTAwTzNYS2c3c3ZTMTdfRmF6ZFJKcldERFVuQ0JIWmtWaXBSSXBGdEd2UTJOVzRKSXVGel9ucmRsLTNmTkhfM1NoTUY5M1BzWFpVTXRlaVp3bVRoaHRET0lXQkxiNXRVR2c2ak9vanhUdkNIM2tpR3dsY0dJX3Q4TTQwQ3JmeHI?oc=5",
-      "source": "RFI",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
-    {
-      "title": "Un preot din Italia a venit cu un grup de enoriași în România ca să vadă cum arată țara de unde vin badantele lor - Antena 3",
-      "category": "Diaspora",
-      "published": "2026-10-28T11:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQekhyUmRtRXZVYVdFZXQ2NV9FaDFmc0loN2luOUdybDNUb0djeXZCYVR6R2gtdzZpVl9zODVpellwbDU0bzVLYjRuSWd3VHlKX1FYSjVHNXUwNEdaaEhwdUJCWmVxNmo5Z3hPMFVSbm5leTB6bGtUOVhoTXlwM3Y2VEdBVHZ1VDFSR3NwcWc5cGZqQ25TNS1KY3BRSmNoQklXeWk2ZXZRMm9SS24xc09jaHJBaFNHWDBGY3R6ZmZzS1RJRnlCOWg1Z2N2R2J1cXdSeHl6S0R1R1RWWENtSWZnZVpFTWZfQVVTZzgtU3ZhNXhyNDl5M0pfQdIB5wFBVV95cUxPUnhlRUdRSjFzWVFPWWdsT0FNMFFTOHB2dzg2ZUM4aWJWeC1vWmFkSGdWdzFBNXo1dHF3VVl2QUdKQzdiSjg3U0J4TC1uUnlwMXYzN3JqQ1U1RlZ",
-      "source": "Antena 3",
-      "status": "verde",
-      "words": 455,
-      "intro": "Un preot român care slujește în Valle d’Aosta, Marian Benchea, a organizat o călătorie în România pentru treisprezece credincioși italieni.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
     {
       "title": "Avertisment pentru românii care merg în Italia: Se anunță grevă națională, avioanele și trenurile vor fi afectate - Antena 3",
       "category": "Știri consulare",
@@ -1492,6 +1517,17 @@
       "words": 549,
       "intro": "Ministerul Afacerilor Externe al României a emis la 28 octombrie 2026 o atenționare pentru cetățenii aflați în Italia sau care intenționează să călătorească acolo.",
       "question": "Ce trebuie verificat sau făcut concret de către românii din Italia?"
+    },
+    {
+      "title": "La Cesena, sărbătoarea comunității românești intră într-o dispută politică locală: ce este confirmat",
+      "category": "Diaspora",
+      "published": "2026-10-28T22:59:55Z",
+      "url": "https://www.ilrestodelcarlino.it/cesena/cronaca/festa-della-comunita-rumena-una-fe5ce253",
+      "source": "Il Resto del Carlino — Cesena",
+      "status": "verde",
+      "words": 509,
+      "intro": "La Cesena, în regiunea italiană Emilia-Romagna, o sărbătoare a comunității ortodoxe românești a devenit, în octombrie 2026, subiectul unei dispute între reprezentanți ai administrației locale și ai opoziției.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
 }
