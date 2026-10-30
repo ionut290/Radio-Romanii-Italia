@@ -1,0 +1,25 @@
+[Unit]
+Description=RDI: update live music inventory and analyze new AzuraCast uploads
+After=docker.service
+ConditionPathExists=/opt/rdi-music-dj/rdi_music_ingest.py
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+Environment=HOME=/home/ubuntu
+WorkingDirectory=/opt/rdi-music-dj
+ExecStart=/usr/bin/python3 /opt/rdi-music-dj/rdi_music_ingest.py --new-limit 3 --duration-limit 25 --feature-limit 2
+ExecStartPost=/usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py report
+Nice=17
+IOSchedulingClass=idle
+CPUQuota=30%
+MemoryMax=460M
+TimeoutStartSec=15min
+UMask=0077
+NoNewPrivileges=false
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictNamespaces=true
