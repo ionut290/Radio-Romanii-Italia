@@ -10,14 +10,11 @@ Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
 PROFILE=/home/ubuntu/radio-youtube-browser
 install -d -o ubuntu -g ubuntu -m 700 "$PROFILE"
-cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" "${AUTOPLAY_PID:-}" 2>/dev/null || true; }
+cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || true; }
 trap cleanup EXIT INT TERM
 sleep 2
-# WebGL is required by the official Italy and Romania radar iframes. Xvfb has no physical GPU, so use Chromium's software renderer.
-# The browser refresh workflow also installs this script before opening the weather page.
-# Restarting Chromium alone preserves the active FFmpeg audio relay.
-runuser -u ubuntu -- /snap/bin/chromium --remote-debugging-address=127.0.0.1 --remote-debugging-port=9222 --remote-allow-origins=http://127.0.0.1 --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader \
-  --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking \
+# Browser refreshes preserve the active FFmpeg audio relay.
+runuser -u ubuntu -- /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
   --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO \
   --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble \
   --autoplay-policy=user-gesture-required --window-size=1280,720 \
@@ -28,11 +25,6 @@ if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; th
   echo "Chromium not running: stopping visual relay so operator can restore blue relay" >&2
   tail -n 15 /tmp/radio-youtube-chromium.log >&2 || true
   exit 1
-fi
-# Keep the official Italian radar animation playing whenever its iframe is visible.
-if [[ -x /usr/local/sbin/rdi-radar-autoplay.py ]]; then
-  python3 /usr/local/sbin/rdi-radar-autoplay.py >/tmp/rdi-radar-autoplay.log 2>&1 &
-  AUTOPLAY_PID=$!
 fi
 # The dedicated youtube-news.html cycles through news cards automatically.
 # Do not inject keyboard commands or navigate to login/community pages.
