@@ -182,6 +182,88 @@ def complete_audio(db,path,size,modified):
     return True
 
 
+def fast_metadata(db: sqlite3.Connection, limit: int) -> tuple[int,int,int]:
+    """Index many playable files quickly WITHOUT decoding music.
+
+    No RMS, beat or genre model is required to enter the safe rotation bank.
+    Full musical classification continues gradually in the existing workers.
+    A persistent retry gate prevents one corrupted MP3 blocking later files.
+    """
+    if limit <= 0:
+        return 0, 0, 0
+    db.execute("""CREATE TABLE IF NOT EXISTS track_metadata_failures (
+        path TEXT PRIMARY KEY,size INTEGER,modified REAL,
+        last_attempt TEXT NOT NULL,attempts INTEGER NOT NULL DEFAULT 1
+    )""")
+    db.commit()
+    earliest=(dt.datetime.now(dt.timezone.utc)-dt.timedelta(hours=6)).isoformat()
+    candidates=db.execute("""SELECT l.path,l.size,l.modified
+        FROM track_live_index l
+        LEFT JOIN tracks t ON l.path=t.path
+        LEFT JOIN track_tags g ON l.path=g.path
+        LEFT JOIN track_metadata_failures e ON l.path=e.path
+        WHERE (l.duration_seconds IS NULL
+          OR t.path IS NULL OR t.size!=l.size OR abs(t.modified-l.modified)>2
+          OR g.path IS NULL OR g.size!=l.size OR abs(g.modified-l.modified)>2)
+          AND (e.path IS NULL OR e.size!=l.size OR
+              abs(e.modified-l.modified)>2 OR e.last_attempt<?)
+        ORDER BY
+          CASE WHEN l.first_seen > '2000-01-01' THEN 0 ELSE 1 END,
+          l.modified DESC, l.path ASC
+        LIMIT ?""",(earliest,min(limit,1000))).fetchall()
+    analyzed=0
+    failed=0
+    duration_valid=0
+    for path,size,modified in candidates:
+        timestamp=dt.datetime.now(dt.timezone.utc).isoformat()
+        try:
+            duration,genre,title,artist=media_details(path)
+            with db:
+                # Preserve prior RMS/peak only for unchanged content. No
+                # unexpected writes to AzuraCast or to station media.
+                db.execute("""INSERT INTO tracks
+                    (path,size,modified,rms,peak,category,analyzed_at)
+                    VALUES(?,?,?,NULL,NULL,'metadati_verificati',?)
+                    ON CONFLICT(path) DO UPDATE SET
+                        rms=CASE WHEN tracks.size=excluded.size AND
+                            abs(tracks.modified-excluded.modified)<2
+                            THEN tracks.rms ELSE NULL END,
+                        peak=CASE WHEN tracks.size=excluded.size AND
+                            abs(tracks.modified-excluded.modified)<2
+                            THEN tracks.peak ELSE NULL END,
+                        size=excluded.size,modified=excluded.modified,
+                        analyzed_at=excluded.analyzed_at""",
+                    (path,size,modified,timestamp))
+                db.execute("""INSERT INTO track_tags
+                    (path,size,modified,genre,title,artist,analyzed_at)
+                    VALUES(?,?,?,?,?,?,?)
+                    ON CONFLICT(path) DO UPDATE SET
+                        size=excluded.size,modified=excluded.modified,
+                        genre=excluded.genre,title=excluded.title,
+                        artist=excluded.artist,analyzed_at=excluded.analyzed_at""",
+                    (path,size,modified,genre,title,artist,timestamp))
+                db.execute("""UPDATE track_live_index SET duration_seconds=?
+                    WHERE path=? AND size=? AND abs(modified-?)<2""",
+                    (duration,path,size,modified))
+                db.execute("DELETE FROM track_metadata_failures WHERE path=?",(path,))
+            analyzed+=1
+            duration_valid+=1
+        except (OSError,ValueError,TypeError,subprocess.SubprocessError):
+            failed+=1
+            with db:
+                db.execute("""INSERT INTO track_metadata_failures
+                    (path,size,modified,last_attempt,attempts)
+                    VALUES(?,?,?,?,1)
+                    ON CONFLICT(path) DO UPDATE SET
+                    size=excluded.size,modified=excluded.modified,
+                    last_attempt=excluded.last_attempt,
+                    attempts=CASE WHEN track_metadata_failures.size=excluded.size
+                       AND abs(track_metadata_failures.modified-excluded.modified)<2
+                       THEN track_metadata_failures.attempts+1 ELSE 1 END""",
+                    (path,size,modified,timestamp))
+    return analyzed,failed,duration_valid
+
+
 def analyze_new(db: sqlite3.Connection, limit:int) -> tuple[int,int,int]:
     # Fast new song first: mtime DESC prioritizes freshly uploaded media.
     candidates=db.execute("""SELECT l.path,l.size,l.modified,l.duration_seconds
@@ -262,9 +344,10 @@ def probe_missing_durations(db: sqlite3.Connection, limit: int) -> tuple[int,int
 
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("--new-limit",type=int,default=4)
-    p.add_argument("--duration-limit",type=int,default=12)
+    p.add_argument("--new-limit",type=int,default=2)
+    p.add_argument("--duration-limit",type=int,default=0)
     p.add_argument("--feature-limit",type=int,default=2)
+    p.add_argument("--metadata-limit",type=int,default=500)
     args=p.parse_args()
     DB.parent.mkdir(parents=True,exist_ok=True)
     files=inventory()
@@ -272,6 +355,9 @@ def main():
     try:
         changes=reconcile(db,files)
         feature_tables(db)
+        # First, fast-track ALL current music into the bank using one ffprobe
+        # per file (no wave decoding). New uploads are sorted first.
+        fast_added,fast_failed,_=fast_metadata(db,max(0,min(args.metadata_limit,1000)))
         added,fail,new_ready=analyze_new(db,max(0,min(args.new_limit,12)))
         measured,duration_fail=probe_missing_durations(db,max(0,min(args.duration_limit,25)))
         # Backfill audio features for already inventoried, valid on-disk
@@ -300,6 +386,8 @@ def main():
            ON t.path=l.path AND t.size=l.size AND abs(t.modified-l.modified)<2
            WHERE l.duration_seconds>=60 AND l.duration_seconds<=720""").fetchone()[0]
         # Printed summary has no paths, account IDs or artist names.
+        print("RDI_BULK_METADATA_ADDED="+str(fast_added))
+        print("RDI_BULK_METADATA_FAILED="+str(fast_failed))
         print("RDI_NEW_MUSIC_LIVE_FILES="+str(changes["live_total"]))
         print("RDI_NEW_MUSIC_NEWLY_VISIBLE="+str(changes["newly_visible"]))
         print("RDI_NEW_MUSIC_MISSING="+str(changes["no_longer_present"]))
