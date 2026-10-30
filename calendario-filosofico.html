@@ -3,14 +3,13 @@ const el=id=>document.getElementById(id);
 const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 async function refresh(){
 try{
- const req=await Promise.all([fetch('./data/calendario-filosofico-oggi.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null),fetch('./data/calendario-filosofico-2026.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null)]);
- const current=req[0]?.ok?await req[0].json():null;
- const archive=req[1]?.ok?await req[1].json():null;
- const item=(current?.date===today()?current:null)||(archive?.days||[]).find(x=>x.date===today());
+ const response=await fetch('./data/daily-thought.json?t='+Date.now(),{cache:'no-store'});
+ const archive=response.ok?await response.json():null;
+ const item=(archive?.items||[]).find(x=>x.date===today()&&typeof x.summary==='string'&&typeof x.image==='string');
  if(!item){el('quote').textContent='La riflessione di oggi non è ancora disponibile';el('photo').hidden=true;return;}
- el('quote').textContent=item.quote;el('date').textContent=new Intl.DateTimeFormat('it-IT',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'}).format(new Date(item.date+'T12:00:00Z'));
+ el('quote').textContent=item.summary;el('date').textContent=new Intl.DateTimeFormat('it-IT',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'}).format(new Date(item.date+'T12:00:00Z'));
  const url=String(item.image||'');
- if(url.startsWith('/')&&!url.startsWith('//')&&/^[a-zA-Z0-9/_-]+[.](jpg|jpeg|webp|png)$/i.test(url.slice(1))){el('photo').src=url;el('photo').hidden=false;el('photo').onerror=()=>el('photo').hidden=true}else el('photo').hidden=true;
+ if(/^(?:\/(?!\/)|\.\/(?!\/))[a-zA-Z0-9/_-]+\.(jpg|jpeg|webp|png|svg)$/i.test(url)){el('photo').src=url;el('photo').hidden=false;el('photo').onerror=()=>el('photo').hidden=true}else el('photo').hidden=true;
 }catch(e){console.warn(e)}
 }
 refresh();setInterval(refresh,15*60*1000);
