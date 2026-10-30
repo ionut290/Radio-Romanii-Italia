@@ -57,8 +57,9 @@ def inventory() -> list[tuple[str,int,float]]:
         if Path(path).suffix.lower() not in AUDIO_EXTENSIONS or dj.excluded(path):
             continue
         try:
+            prefix=[] if os.geteuid()==0 else ["sudo","-n"]
             stat=subprocess.run(
-                ["sudo","-n","stat","-c","%s %Y","--",path],
+                prefix+["stat","-c","%s %Y","--",path],
                 capture_output=True,text=True,timeout=10,check=False)
             if stat.returncode:
                 continue
@@ -118,8 +119,9 @@ def reconcile(db: sqlite3.Connection, files:list[tuple[str,int,float]]) -> dict:
 
 
 def media_details(path:str) -> tuple[float,str,str,str]:
+    prefix=[] if os.geteuid()==0 else ["sudo","-n"]
     proc=subprocess.run(
-        ["sudo","-n","ffprobe","-v","error",
+        prefix+["ffprobe","-v","error",
          "-show_entries","format=duration:format_tags=title,artist,genre",
          "-of","json",path],
         capture_output=True,text=True,timeout=20,check=True)
@@ -133,7 +135,8 @@ def media_details(path:str) -> tuple[float,str,str,str]:
 
 
 def measure_loudness(path):
-    cmd=["sudo","-n","nice","-n","15","ffmpeg","-nostdin",
+    prefix=[] if os.geteuid()==0 else ["sudo","-n"]
+    cmd=prefix+["nice","-n","15","ffmpeg","-nostdin",
          "-hide_banner","-nostats","-threads","1","-t","30",
          "-i",path,"-af","ebur128=peak=true","-f","null","-"]
     proc=subprocess.run(cmd,capture_output=True,text=True,timeout=80,check=True)
