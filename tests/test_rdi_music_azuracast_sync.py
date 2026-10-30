@@ -106,9 +106,12 @@ class SyncSafetyTests(TestCase):
    with patch.object(m,"snapshot",return_value=None):
     m.run(client,"sync",limit=40)
   self.assertTrue(client.playlist["is_enabled"])
-  for i in range(40):
-   self.assertEqual(m.ids(client.files[f"song-{i}.mp3"]["playlists"]),
-                    {77,13 if i%2 else 19})
+  linked=0
+  for i in range(500):
+   present=m.ids(client.files[f"song-{i}.mp3"]["playlists"])
+   self.assertIn(13 if i%2 else 19,present)
+   linked+=int(77 in present)
+  self.assertEqual(linked,40)
   self.assertFalse(any(method=="PUT" and path=="/station/1/playlist/77"
                        for method,path,_ in client.calls))
 
