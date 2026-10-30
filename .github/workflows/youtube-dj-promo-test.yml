@@ -34,5 +34,5 @@ jobs:
           set -euo pipefail
           node -e 'const f=require("./data/youtube-dj-promo.json");if(!f.enabled||f.durationSeconds!==16||f.minMinutesBetween!==30)process.exit(1)'
           grep -q 'ANTEPRIMA' editorial-images/rdi-dj-programmazione-live.svg
-          grep -q '20261030-dj-promo-1' youtube-news.html
+          grep -q 'youtube-dj-promo.js' youtube-news.html
           echo 'RDI_YOUTUBE_DJ_PROMO=TESTED'
