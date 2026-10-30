@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="title desc">
+<title id="title">Radio Românii din Italia - anteprima della programmazione oraria</title>
+<desc id="desc">Sei fasce musicali dalla mezzanotte alle 24: relax, risveglio, urban e pop, energia, melodie, relax. Programmazione oraria in preparazione.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#05122d"/><stop offset=".44" stop-color="#093463"/><stop offset="1" stop-color="#050d21"/></linearGradient>
+ <radialGradient id="aura"><stop stop-color="#0688ca" stop-opacity=".58"/><stop offset="1" stop-color="#0688ca" stop-opacity="0"/></radialGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122f5a" stop-opacity=".96"/><stop offset="1" stop-color="#061830" stop-opacity=".98"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1"><stop stop-color="#ffe68c"/><stop offset=".55" stop-color="#f4b72b"/><stop offset="1" stop-color="#fff4bb"/></linearGradient>
+ <linearGradient id="cyan" x1="0" y1="0" x2="1"><stop stop-color="#e6faff"/><stop offset=".5" stop-color="#33dbff"/><stop offset="1" stop-color="#c4f7ff"/></linearGradient>
+ <linearGradient id="row" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#11345e"/><stop offset="1" stop-color="#0a1a38"/></linearGradient>
+ <filter id="shadow" x="-25%" width="150%" y="-25%" height="150%"><feGaussianBlur stdDeviation="8"/></filter>
+ <filter id="soft" x="-15%" y="-50%" height="200%" width="130%"><feGaussianBlur stdDeviation="2.4"/></filter>
+ <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#58bce8" opacity=".15"/></pattern>
+</defs>
+<rect width="1280" height="720" fill="url(#bg)"/>
+<ellipse cx="345" cy="200" rx="550" ry="290" fill="url(#aura)"/>
+<ellipse cx="1210" cy="480" rx="410" ry="400" fill="url(#aura)"/>
+<rect width="1280" height="720" fill="url(#dots)"/>
+<path d="M0 151L1280 40M0 177L1280 66M0 640L1280 530" stroke="#34a4e4" stroke-width="2" opacity=".14"/>
+<!-- Elegant Rome and Romania / Italy broadcasting motifs -->
+<g opacity=".24" stroke="#a7dbff" fill="none" stroke-width="2">
+ <path d="M18 183H235M46 180V113M211 180V113M44 111C45 34 213 35 214 111M71 112V176M96 112V176M121 112V176M146 112V176M171 112V176M196 112V176"/>
+ <path d="M996 164H1235M1038 164V95H1190V164M1017 95H1212M1115 95V40M1090 164V115Q1115 84 1140 115V164"/>
+</g>
+<!-- Radio logo and visualizer -->
+<circle cx="72" cy="61" r="40" fill="#102a54" stroke="#20c9ff" stroke-width="3"/>
+<path d="M72 35a16 16 0 0 0-16 16v15a16 16 0 0 0 32 0V51a16 16 0 0 0-16-16Zm-27 24v9a27 27 0 0 0 54 0v-9M72 95v11M54 107h36" fill="none" stroke="#f6fbff" stroke-width="5" stroke-linecap="round"/>
+<path d="M41 104A67 67 0 0 0 104 91" stroke="#f5d22b" stroke-width="6" fill="none"/><path d="M48 111A75 75 0 0 0 111 89" stroke="#dd3346" stroke-width="4" fill="none"/>
+<text x="127" y="57" fill="#fff" font-family="Arial,sans-serif" font-size="38" font-weight="900">Radio Românii din Italia</text>
+<text x="129" y="87" fill="#9cdeff" font-family="Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="3">ITALIA · ROMÂNIA · COMUNITÀ</text>
+<g stroke="#25cfff" stroke-width="3" opacity=".65"><path d="M703 45v19M713 35v38M723 22v65M733 37v34M743 30v47M753 47v16M763 37v35M773 24v61M783 40v24M793 46v15"/></g>
+<rect x="1096" y="27" width="145" height="48" rx="9" fill="#6e1221" stroke="#f54b61" stroke-width="2"/>
+<text x="1168" y="59" fill="#fff" text-anchor="middle" font-family="Arial,sans-serif" font-size="23" font-weight="900">● ON AIR</text>
+<!-- Hero -->
+<rect x="47" y="128" width="1186" height="85" rx="16" fill="#091b38" stroke="#0e9fdb" stroke-width="3"/>
+<rect x="49" y="130" width="1182" height="81" rx="14" stroke="#50d9f2" fill="none" opacity=".3"/>
+<text x="640" y="181" text-anchor="middle" fill="url(#cyan)" font-family="Arial,sans-serif" font-size="46" font-weight="900" letter-spacing="1.2">DJ INTELLIGENTE · RADIO RDI</text>
+<!-- Main schedule panel -->
+<rect x="46" y="232" width="1188" height="386" rx="18" fill="url(#glass)" stroke="#f9c94b" stroke-width="3"/>
+<text x="640" y="282" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" letter-spacing="1" font-weight="900" fill="url(#gold)">PROGRAMMAZIONE ORARIA</text>
+<g font-family="Arial,sans-serif" font-weight="800">
+ <rect x="69" y="306" width="555" height="77" rx="11" fill="url(#row)" stroke="#25c6ff" stroke-width="2"/>
+ <text x="91" y="355" font-size="31" fill="#9cd9ff">☾</text><text x="143" y="353" font-size="25" fill="white">00:00–07:00</text><text x="421" y="353" font-size="26" fill="#6ee9ff">Relax</text>
+ <rect x="650" y="306" width="563" height="77" rx="11" fill="url(#row)" stroke="#25c6ff" stroke-width="2"/>
+ <text x="677" y="354" font-size="32" fill="#a4fa86">✦</text><text x="729" y="353" font-size="25" fill="white">13:00–18:00</text><text x="1004" y="353" font-size="27" fill="#9ff27d">Energia</text>
+ <rect x="69" y="397" width="555" height="77" rx="11" fill="url(#row)" stroke="#25c6ff" stroke-width="2"/>
+ <text x="90" y="445" font-size="30" fill="#ffd46a">☀</text><text x="143" y="443" font-size="25" fill="white">07:00–10:00</text><text x="421" y="443" font-size="25" fill="#ffd97d">Risveglio</text>
+ <rect x="650" y="397" width="563" height="77" rx="11" fill="url(#row)" stroke="#25c6ff" stroke-width="2"/>
+ <text x="675" y="445" font-size="32" fill="#ff8c9d">♫</text><text x="729" y="443" font-size="25" fill="white">18:00–21:00</text><text x="1005" y="443" font-size="26" fill="#ff9fb3">Melodie</text>
+ <rect x="69" y="488" width="555" height="77" rx="11" fill="url(#row)" stroke="#25c6ff" stroke-width="2"/>
+ <text x="90" y="536" font-size="32" fill="#ff82ea">▥</text><text x="143" y="534" font-size="25" fill="white">10:00–13:00</text><text x="421" y="534" font-size="24" fill="#ffa8f2">Urban e Pop</text>
+ <rect x="650" y="488" width="563" height="77" rx="11" fill="url(#row)" stroke="#25c6ff" stroke-width="2"/>
+ <text x="677" y="535" font-size="30" fill="#9cd9ff">☾</text><text x="729" y="534" font-size="25" fill="white">21:00–00:00</text><text x="1005" y="534" font-size="26" fill="#6ee9ff">Relax</text>
+</g>
+<text x="641" y="597" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="1.8" fill="#d7ebf8">MUSICA 24/7   •   PIÙ VARIETÀ   •   NUOVI BRANI AUTOMATICI</text>
+<rect x="46" y="628" width="1188" height="73" rx="11" fill="#061629" stroke="#23c7f8" stroke-width="2"/>
+<text x="640" y="658" text-anchor="middle" fill="#ffdc6a" font-family="Arial,sans-serif" font-size="21" font-weight="900" letter-spacing="1.6">ANTEPRIMA · FASCE MUSICALI IN PREPARAZIONE</text>
+<text x="640" y="685" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="16" font-weight="700">Radio Românii din Italia · Acasă, oriunde ai fi!</text>
+</svg>
