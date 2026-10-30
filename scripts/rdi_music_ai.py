@@ -13,6 +13,7 @@ import datetime as dt
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import sqlite3
 import subprocess
@@ -108,7 +109,8 @@ def decisions(event_scores:dict[str,float]) -> dict:
 def extract(path:str, offset:int, ffmpeg="ffmpeg"):
     # Paths come ONLY from local SQLite inventory, not from web or user URLs.
     # sudo permits reading station Docker media, not modifying it.
-    cmd=["sudo","-n","nice","-n","15",ffmpeg,"-nostdin","-v","error",
+    prefix=[] if os.geteuid()==0 else ["sudo","-n"]
+    cmd=prefix+["nice","-n","15",ffmpeg,"-nostdin","-v","error",
          "-threads","1","-ss",str(offset),"-t",str(SECONDS),
          "-i",path,"-vn","-ac","1","-ar",str(RATE),
          "-f","f32le","-acodec","pcm_f32le","-"]
@@ -185,7 +187,8 @@ def run(limit=100,sample_size=100):
             inspected+=1
             path,size,modified=candidate
             try:
-                stat=subprocess.run(["sudo","-n","stat","-c","%s %Y","--",path],
+                prefix=[] if os.geteuid()==0 else ["sudo","-n"]
+                stat=subprocess.run(prefix+["stat","-c","%s %Y","--",path],
                                     capture_output=True,text=True,timeout=8,check=False)
                 if stat.returncode:
                     continue
