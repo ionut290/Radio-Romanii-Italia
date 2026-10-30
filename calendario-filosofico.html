@@ -1,0 +1,17 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calendario Filosofico RDI</title><style>body{margin:0;background:#102436;color:#fff;font-family:Georgia,serif}header,footer{text-align:center;padding:22px}a{color:#f9d9a2}main{min-height:75vh;display:grid;place-items:center;padding:15px}.card{position:relative;width:min(1200px,100%);aspect-ratio:16/9;background:#203c54;overflow:hidden;border-radius:14px;display:grid;place-items:center}.card img{position:absolute;width:100%;height:100%;object-fit:cover}.veil{position:absolute;inset:0;background:linear-gradient(90deg,#f4e9dbe8,#f4e9dbac)}.copy{position:relative;color:#20384a;text-align:center;padding:6%;max-width:900px}h1{font-size:clamp(24px,3vw,43px)}blockquote{font-size:clamp(24px,3.5vw,48px);font-weight:bold;font-style:italic;line-height:1.25}.date{font-size:23px}@media(max-width:650px){.card{aspect-ratio:4/5}}</style></head><body><header><a href="/">RADIO ROMÂNII DIN ITALIA</a></header><main><div class="card"><img id="photo" alt="Fotografia filosofica del giorno"><div class="veil"></div><div class="copy"><h1>CALENDARIO FILOSOFICO</h1><p class="date" id="date"></p><blockquote id="quote">Il pensiero del giorno</blockquote><p>Riflessione originale RDI</p></div></div></main><footer>Un pensiero nuovo ogni giorno · Radio Românii din Italia</footer><script>
+const el=id=>document.getElementById(id);
+const today=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+async function refresh(){
+try{
+ const req=await Promise.all([fetch('./data/calendario-filosofico-oggi.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null),fetch('./data/calendario-filosofico-2026.json?t='+Date.now(),{cache:'no-store'}).catch(()=>null)]);
+ const current=req[0]?.ok?await req[0].json():null;
+ const archive=req[1]?.ok?await req[1].json():null;
+ const item=(current?.date===today()?current:null)||(archive?.days||[]).find(x=>x.date===today());
+ if(!item){el('quote').textContent='La riflessione di oggi non è ancora disponibile';el('photo').hidden=true;return;}
+ el('quote').textContent=item.quote;el('date').textContent=new Intl.DateTimeFormat('it-IT',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'}).format(new Date(item.date+'T12:00:00Z'));
+ const url=String(item.image||'');
+ if(url.startsWith('/')&&!url.startsWith('//')&&/^[a-zA-Z0-9/_-]+[.](jpg|jpeg|webp|png)$/i.test(url.slice(1))){el('photo').src=url;el('photo').hidden=false;el('photo').onerror=()=>el('photo').hidden=true}else el('photo').hidden=true;
+}catch(e){console.warn(e)}
+}
+refresh();setInterval(refresh,15*60*1000);
+</script></body></html>
