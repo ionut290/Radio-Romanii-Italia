@@ -146,7 +146,11 @@
     photo.classList.remove("is-visible");
     photo.onerror = () => {photo.classList.remove("is-visible");photo.removeAttribute("src");};
     photo.onload = () => photo.classList.add("is-visible");
-    if (typeof url === "string" && /^\.\/editorial-images\/[a-z0-9/_-]+\.(?:jpg|png|webp|svg)$/i.test(url)) {
+    const local = typeof url === "string" &&
+      /^\.\/editorial-images\/[a-z0-9/_-]+\.(?:jpg|png|webp|svg)$/i.test(url);
+    const reviewedPexelsPoster = typeof url === "string" &&
+      /^https:\/\/images\.pexels\.com\/videos\/[a-z0-9/_.-]+\.(?:jpg|jpeg|webp)(?:\?[a-z0-9=&%-]+)?$/i.test(url);
+    if (local || reviewedPexelsPoster) {
       photo.alt = text;
       photo.src = url;
     } else {
@@ -193,7 +197,12 @@
         }
         const number = scenes.slice(0, i + 1).filter(s => s.kind === "story").length;
         count.textContent = "SERVIZIO " + number + " / " + scenes.filter(s => s.kind === "story").length;
-        setPhoto(current.image, current.image_notice);
+        // If the article has no local photo, keep the licensed, relevant
+        // Pexels poster on-screen once the short muted clip has ended.
+        const contextualPoster = validFootage(current.video) ? current.video.poster : "";
+        const chosenPhoto = current.image || contextualPoster || "";
+        setPhoto(chosenPhoto, chosenPhoto === contextualPoster && contextualPoster
+          ? current.video.notice : current.image_notice);
       }
     }
     if (current.kind === "story") {
@@ -203,7 +212,8 @@
                  at - current.start_seconds >= current.video.seconds)) {
         stopFootage();
         videoStartedFor = -1;
-        notice.textContent = clean(current.image_notice);
+        notice.textContent = clean(!current.image && current.video?.poster
+          ? current.video.notice : current.image_notice);
       }
       const segments = Array.isArray(current.sections) && current.sections.length === 4 ? current.sections : null;
       const fractions = Array.isArray(current.section_ends) && current.section_ends.length === 4 ? current.section_ends : [.3,.55,.78,1];
