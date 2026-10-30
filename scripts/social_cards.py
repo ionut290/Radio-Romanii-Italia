@@ -201,6 +201,14 @@ def generate_card(item, ident, portrait=False, title=None, refresh=False, lang=N
     src = str(item.get("image") or "")
     size = (1080, 1350) if portrait else (1200, 630)
     width, height = size
+    if item.get("daily_thought") and src.lower().split("?")[0].endswith(".svg"):
+        photo = source_image(src)
+        if photo is not None:
+            artwork = ImageOps.contain(photo, size, method=Image.Resampling.LANCZOS)
+            canvas = Image.new("RGB", size, (7, 22, 40))
+            canvas.paste(artwork, ((width - artwork.width) // 2, (height - artwork.height) // 2))
+            canvas.save(dest, "JPEG", quality=88, optimize=True, subsampling=0)
+            return dest
     headline = str(title or item.get("title") or "")
     subject = identify_subject(item, headline, lang)
     fingerprint = "rdi-subject-v1:" + hashlib.sha256(
