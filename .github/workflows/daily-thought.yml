@@ -1,0 +1,57 @@
+name: RDI - Pensiero originale del giorno
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_daily_thought.py'
+      - '.github/workflows/daily-thought.yml'
+  schedule:
+    - cron: '15 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rdi-daily-thought
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Crea il pensiero e la card grafica
+        env:
+          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          OPENAI_THOUGHT_MODEL: gpt-4.1-mini
+        run: python scripts/generate_daily_thought.py
+      - name: Pubblica il contenuto del giorno
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- data/daily-thought.json editorial-images/daily-thought/)" ]; then
+            echo "Il pensiero di oggi è già pubblicato."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/daily-thought.json editorial-images/daily-thought/
+          git commit -m "RDI: pubblica il pensiero del giorno"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase -X ours origin main && git push origin HEAD:main; then
+              echo "Pensiero e immagine pubblicati."
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep "$((attempt * 3))"
+          done
+          echo "::error::Il pensiero è stato generato ma non è stato possibile pubblicarlo."
+          exit 1
