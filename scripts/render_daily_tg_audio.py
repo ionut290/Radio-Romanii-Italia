@@ -102,6 +102,9 @@ def produce(folder: Path) -> dict:
                 "sections": [p[:600] for p in article["paragraphs"]],
                 "section_ends": section_boundaries(segment["text"], article["paragraphs"]),
                 "image": article["image"], "image_notice": article["image_notice"],
+                # Only videos from the separately reviewed rights registry enter
+                # the public timeline. No arbitrary embedded article players.
+                "video": article.get("video"),
                 "source_name": article["source_name"],
                 "source_url": article["source_url"],
             })
