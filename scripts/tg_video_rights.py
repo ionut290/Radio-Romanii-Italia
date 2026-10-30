@@ -22,10 +22,10 @@ LANDSCAPE_PATH = ROOT / "data/youtube-landscapes.json"
 # Do not make an unrelated generic stock clip appear to depict an actual death,
 # accident, crime, war, medical emergency, or other serious incident.
 SENSITIVE = re.compile(
-    r"\\b(?:mort[eoia]|deces|decedat|ucis|ucidere|omor|omicid|crim[aăe]|"
+    r"\b(?:mort[eoia]|deces|decedat|ucis|ucidere|omor|omicid|crim[aăe]|"
     r"accident|traged|incend|explozi|explos|violent|atac|ranit|r[aă]ni|"
     r"spitalizat|deced|r[aă]zboi|razboi|bombard|r[aă]pire|rapire|"
-    r"stupr|violenz|femminicid|cadaver|disparut|disparit)\\b",
+    r"stupr|violenz|femminicid|cadaver|disparut|disparit)\b",
     flags=re.IGNORECASE
 )
 SILENT_VIDEO_MAX_SECONDS = 18
@@ -58,7 +58,7 @@ def safe_media_url(value: object) -> bool:
             return False
         except ValueError:
             pass
-        return bool(re.search(r"\\.(?:mp4|webm)$", u.path, re.IGNORECASE))
+        return bool(re.search(r"\.(?:mp4|webm)$", u.path, re.IGNORECASE))
     except ValueError:
         return False
 
