@@ -7,14 +7,14 @@ TARGET=/opt/rdi-music-dj
 USER_HOME=/home/ubuntu/rdi-music
 install -d -m 755 "$TARGET"
 install -d -o ubuntu -g ubuntu -m 700 "$USER_HOME"
-for name in rdi_music_scan.py rdi_music_rhythm.py rdi_music_features.py rdi_music_preview.py rdi_music_dj.py; do
+for name in rdi_music_scan.py rdi_music_rhythm.py rdi_music_features.py rdi_music_preview.py rdi_music_dj.py rdi_music_rotation.py; do
   install -m 644 "$SOURCE/scripts/$name" "$TARGET/$name"
 done
 install -m 644 "$SOURCE/scripts/rdi-music-dj.html" "$TARGET/rdi-music-dj.html"
 install -m 644 "$SOURCE/oracle/rdi-music-dj-analyze.service" /etc/systemd/system/rdi-music-dj-analyze.service
 install -m 644 "$SOURCE/oracle/rdi-music-dj-analyze.timer" /etc/systemd/system/rdi-music-dj-analyze.timer
 install -m 644 "$SOURCE/oracle/rdi-music-dj-web.service" /etc/systemd/system/rdi-music-dj-web.service
-python3 -m py_compile "$TARGET/"rdi_music_{scan,rhythm,features,preview,dj}.py
+python3 -m py_compile "$TARGET/"rdi_music_{scan,rhythm,features,preview,dj,rotation}.py
 # The report builder uses an existing SQLite database if present; initially empty is fine.
 runuser -u ubuntu -- env HOME=/home/ubuntu python3 "$TARGET/rdi_music_dj.py" report
 systemctl daemon-reload
@@ -40,6 +40,8 @@ if [[ "$ready" != "true" ]]; then
   exit 1
 fi
 python3 -c 'import json;x=json.load(open("/tmp/rdi-dj-install-report.json"));assert x["read_only"] and x["playlist_writes"]==0 and x["schema_version"]==1;print("DJ_REPORT=PRIVATE_READ_ONLY");print("DJ_EXISTING_TRACKS=",x["total_music"])'
+curl -fsS --max-time 18 http://127.0.0.1:8788/api/rotation |
+  python3 -c 'import json,sys;x=json.load(sys.stdin);assert x["read_only"] and x["playlist_writes"]==0 and x["ready_for_live"] is False and x["covers_all_24h_in_blocks"] and x["duplicate_tracks"]==0;print("DJ_ROTATION_SHADOW=VERIFIED");print("DJ_SIMULATED_UNIQUE_TRACKS="+str(x["total_unique_tracks"]));print("DJ_SIMULATED_MISSING_TRACKS="+str(x["missing_tracks_estimated"]))'
 curl -fsS --max-time 8 http://127.0.0.1:8788/ | grep -q 'DJ intelligente'
 rm -f /tmp/rdi-dj-install-report.json
 echo "RDI_DJ_DASHBOARD=http://127.0.0.1:8788 (SSH port-forward required)"
