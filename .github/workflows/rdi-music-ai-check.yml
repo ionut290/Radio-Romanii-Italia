@@ -71,3 +71,34 @@ jobs:
           ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
             -o ConnectTimeout=15 ubuntu@129.151.255.41 \
             'python3 /tmp/rdi_music_ai_diagnose.py; rm -f /tmp/rdi_music_ai_diagnose.py'
+      - name: Controllo risultati classificatore generi AST sul campione originale
+        shell: bash
+        run: |
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
+            -o ConnectTimeout=15 ubuntu@129.151.255.41 'python3 - <<'\''PY'\''
+          import pathlib,sqlite3,json,subprocess
+          db=sqlite3.connect(f"file:{pathlib.Path.home()}/rdi-music/music.db?mode=ro",uri=True)
+          exists=db.execute("SELECT name FROM sqlite_master WHERE name=?",("track_gtzan",)).fetchone()
+          if exists:
+              total=db.execute("SELECT COUNT(*) FROM track_gtzan").fetchone()[0]
+              genres=db.execute("SELECT candidate,count(*) FROM track_gtzan GROUP BY candidate ORDER BY count(*) DESC").fetchall()
+              verified=db.execute("SELECT genre,count(*) FROM track_gtzan WHERE genre!=? GROUP BY genre ORDER BY count(*) DESC",("non_identificato",)).fetchall()
+              print("AST_GENRE_ANALYZED="+str(total))
+              print("AST_GENRE_CANDIDATES="+json.dumps(dict(genres),ensure_ascii=False))
+              print("AST_GENRE_CONFIDENT="+json.dumps(dict(verified),ensure_ascii=False))
+          else:
+              print("AST_GENRE_ANALYZED=0")
+          db.close()
+          unit=subprocess.run(["systemctl","show","rdi-music-genre-analyze.service",
+            "--property=ActiveState,Result,ExecMainStatus,MemoryCurrent",
+            "--no-pager"],capture_output=True,text=True)
+          for line in unit.stdout.splitlines():
+              if line.startswith(("ActiveState=","Result=","ExecMainStatus=","MemoryCurrent=")):
+                  print("GENRE_SERVICE_"+line)
+          rp=pathlib.Path.home()/"rdi-music/dj-report.json"
+          if rp.exists():
+              dat=json.loads(rp.read_text())
+              print("DJ_REPORT_GTZA_ANALYZED="+str(dat.get("genre_pilot_done",0)))
+              print("DJ_REPORT_100_SAMPLE="+str(dat.get("ai_sample_done",0)))
+              print("DJ_PLAYLIST_WRITES="+str(dat.get("playlist_writes")))
+          PY'
