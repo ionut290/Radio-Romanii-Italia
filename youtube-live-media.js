@@ -85,7 +85,7 @@
   function priorityActive(){
     return window.rdiSpotActive||window.rdiGeoActive||window.rdiTgActive||
       window.rdiWeatherActive||window.rdiDjPromoActive||window.rdiPhilosophyActive||
-      window.rdiCameraActive||window.rdiLandscapeActive||window.rdiListenerMessageActive;
+      window.rdiCameraActive||window.rdiLandscapeActive;
   }
   function cleanupPlayer(){
     for(const player of content.querySelectorAll("audio,video")){
