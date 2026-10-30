@@ -85,8 +85,10 @@ class RotationTests(unittest.TestCase):
   b=track(2,title="same song_168870015074306")
   p=rot.simulate({"read_only":True,"playlist_writes":0,
      "live_index_verified":True,"tracks":[a,b]})
-  self.assertEqual(p["pool_tracks_total"],1)
-  self.assertEqual(p["duplicate_titles"],0)
+  # Two recordings may legitimately share a title; keep both.
+  self.assertEqual(p["pool_tracks_total"],2)
+  self.assertEqual(p["total_unique_tracks"],2)
+  self.assertEqual(p["duplicate_tracks"],0)
 
  def test_only_verified_metadata_genre_is_reported(self):
   x=catalog(1)
