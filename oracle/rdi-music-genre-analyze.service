@@ -1,0 +1,32 @@
+[Unit]
+Description=RDI specialist genre recognition GTZAN ONNX (100-song trial)
+After=docker.service rdi-music-ai-analyze.service
+ConditionPathExists=/opt/rdi-music-dj/models/ast-gtzan-q4.onnx
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+Environment=HOME=/home/ubuntu
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+WorkingDirectory=/opt/rdi-music-dj
+ExecStart=/opt/rdi-music-dj/ai-venv/bin/python /opt/rdi-music-dj/rdi_music_genre_ai.py --limit 100
+ExecStartPost=+/usr/sbin/runuser -u ubuntu -- /usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py report
+Nice=19
+IOSchedulingClass=idle
+CPUQuota=30%
+MemoryMax=1350M
+TimeoutStartSec=100min
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/ubuntu/rdi-music
+PrivateNetwork=true
+PrivateDevices=true
+CapabilityBoundingSet=CAP_DAC_OVERRIDE CAP_DAC_READ_SEARCH
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictNamespaces=true
+UMask=0077
