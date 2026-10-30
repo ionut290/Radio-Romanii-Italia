@@ -341,6 +341,39 @@ def auto_cycle(client,batch_limit=150):
             print("DJ_DAILY_SHUFFLE_DATE="+today,flush=True)
     print("DJ_AUTO_STATUS=LIVE_WITH_EXISTING_GENRE_PLAYLISTS_PRESERVED",flush=True)
 
+def publish_public_status(client):
+    """Sanitized operational snapshot for the private DJ dashboard only."""
+    import os
+    import pwd
+    ours=find_playlist(client)
+    if not ours:
+        data={"playlist_exists":False,"enabled":False,"songs":0}
+    else:
+        pid=validate_ours(ours)
+        info=plan(client,ours)
+        data={
+            "playlist_exists":True,"playlist_id":pid,
+            "enabled":bool(ours.get("is_enabled")),
+            "songs":info["already_linked"],
+            "verified_total":info["verified_total"],
+            "still_to_link":info["to_link"],
+            "paused":(STATE/"paused").exists(),
+            "on_air_order":"azuracast_shuffle",
+            "simulated_daily_order_is_not_on_air":True,
+        }
+    data.update({"schema_version":1,"updated_at":dt.datetime.now(dt.timezone.utc).isoformat(),
+                 "source":"azuracast_api_verified","music_playlist_only":True})
+    out=Path("/home/ubuntu/rdi-music/autodj-public-status.json")
+    out.parent.mkdir(parents=True,exist_ok=True)
+    temp=out.with_suffix(".json.tmp")
+    temp.write_text(json.dumps(data,ensure_ascii=False,sort_keys=True))
+    temp.chmod(0o644)
+    nobody=pwd.getpwnam("ubuntu")
+    os.chown(temp,nobody.pw_uid,nobody.pw_gid)
+    temp.replace(out)
+    print("DJ_DASHBOARD_STATUS="+("ENABLED" if data["enabled"] else "DISABLED"),
+          "TRACKS="+str(data.get("songs",0)),flush=True)
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("command",choices=("status","prepare","sync","enable","disable","reshuffle","auto","resume"))
@@ -359,6 +392,8 @@ def main():
             auto_cycle(client,args.limit)
         else:
             run(client,args.command,args.limit)
+        # Never display a guessed on-air state; refresh from AzuraCast itself.
+        publish_public_status(client)
     finally:
         if token:backend.azura_php(helper,"revoke",token.split(":",1)[0])
 
