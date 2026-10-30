@@ -175,14 +175,31 @@ def run(limit=100,sample_size=100):
     db=sqlite3.connect(DB,timeout=20)
     try:
         init(db)
-        # The database is an inventory cache. Oracle's live AzuraCast media
-        # folder can differ after deletions/moves; only real current files qualify.
-        from rdi_music_scan import inventory
-        present=set(inventory())
-        selected=sample_paths(db,sample_size,live_paths=present)
+        # Oracle's media container moved some of the old root inventory; do
+        # NOT rely on a cached Docker volume path. Probe paths directly with
+        # sudo stat, like the existing RDI scanner, and select 100 real files.
+        ordered=sample_paths(db,100000)
+        selected=[]
+        inspected=0
+        for candidate in ordered:
+            inspected+=1
+            path,size,modified=candidate
+            try:
+                stat=subprocess.run(["sudo","-n","stat","-c","%s %Y","--",path],
+                                    capture_output=True,text=True,timeout=8,check=False)
+                if stat.returncode:
+                    continue
+                fields=stat.stdout.strip().split()
+                if len(fields)!=2 or int(fields[0])!=int(size):
+                    continue
+                selected.append(candidate)
+                if len(selected)>=sample_size:
+                    break
+            except (OSError,subprocess.TimeoutExpired,ValueError):
+                continue
         if not selected:
-            raise RuntimeError("No current local audio files overlap the cached inventory")
-        print("AI_LIVE_LIBRARY_FILES="+str(len(present)),flush=True)
+            raise RuntimeError("No real audio tracks remain at their inventoried file paths")
+        print("AI_CACHED_PATHS_INSPECTED="+str(inspected),flush=True)
         print("AI_SAMPLE_CURRENT_FILES="+str(len(selected)),flush=True)
         analyzed=0
         skipped=0
