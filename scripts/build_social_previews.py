@@ -68,7 +68,7 @@ translations = json.loads(translations_file.read_text(encoding="utf-8")).get("it
 details_path = ROOT / "data" / "news-summaries.json"
 expanded = json.loads(details_path.read_text(encoding="utf-8")).get("items", {}) if details_path.exists() else {}
 articles = {}
-for filename in ("news.json", "editorial.json"):
+for filename in ("news.json", "editorial.json", "data/daily-thought.json"):
     path = ROOT / filename
     if not path.exists():
         continue
