@@ -54,3 +54,9 @@ jobs:
               print("DJ_REPORT_AI_SAMPLE_DONE="+str(r.get("ai_sample_done",0)))
               print("DJ_REPORT_PLAYLIST_WRITES="+str(r.get("playlist_writes")))
           PY'
+      - name: Diagnostica errori servizio IA senza aprire i file musicali
+        shell: bash
+        run: |
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
+            -o ConnectTimeout=15 ubuntu@129.151.255.41 \
+            "sudo -n journalctl -u rdi-music-ai-analyze.service -n 55 --no-pager | grep -E 'Traceback|Error|error|Exception|AI_SAMPLE|No such file|Permission|failed|Failed|line [0-9]|ExecStart|code=exited|ModuleNotFound' | tail -30 || true"
