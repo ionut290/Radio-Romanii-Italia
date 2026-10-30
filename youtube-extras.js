@@ -45,13 +45,40 @@ async function loadRomanianPopulation(){
  }catch{romanianPopulation="";}
 }
 loadRomanianPopulation();setInterval(loadRomanianPopulation,86400000);
-const cities=[["Roma",41.90,12.50],["Milano",45.46,9.19],["Bologna",44.49,11.34],["Torino",45.07,7.69],["Napoli",40.85,14.27]];
+const cities=[
+ ["Italia","Roma",41.90,12.50],["Italia","Milano",45.46,9.19],["Italia","Bologna",44.49,11.34],
+ ["Italia","Torino",45.07,7.69],["Italia","Napoli",40.85,14.27],["Italia","Firenze",43.77,11.25],
+ ["Italia","Venezia",45.44,12.32],["Italia","Palermo",38.12,13.36],["Italia","Bari",41.12,16.87],
+ ["Italia","Genova",44.41,8.95],["Italia","Trieste",45.65,13.78],["Italia","Cagliari",39.22,9.12],
+ ["Romania","București",44.43,26.10],["Romania","Timișoara",45.75,21.21],["Romania","Cluj-Napoca",46.77,23.62],
+ ["Romania","Iași",47.16,27.60],["Romania","Constanța",44.16,28.63],["Romania","Brașov",45.64,25.59],
+ ["Romania","Sibiu",45.80,24.13],["Romania","Craiova",44.33,23.79],["Romania","Oradea",47.05,21.92],
+ ["Romania","Suceava",47.65,26.26],["Romania","Arad",46.19,21.31],["Romania","Baia Mare",47.66,23.58]
+];
+function weatherCondition(code){
+ const n=Number(code);
+ if(n===0)return "sereno";
+ if([1,2].includes(n))return "parzialmente nuvoloso";
+ if(n===3)return "nuvoloso";
+ if([45,48].includes(n))return "nebbia";
+ if([51,53,55,56,57].includes(n))return "pioviggine";
+ if([61,63,65,66,67,80,81,82].includes(n))return "pioggia";
+ if([71,73,75,77,85,86].includes(n))return "neve";
+ if([95,96,99].includes(n))return "temporale";
+ return "variabile";
+}
 async function loadWeather(){
  try{
-  const u="https://api.open-meteo.com/v1/forecast?latitude="+cities.map(c=>c[1]).join(",")+"&longitude="+cities.map(c=>c[2]).join(",")+"&current=temperature_2m&timezone=Europe%2FRome";
+  const u="https://api.open-meteo.com/v1/forecast?latitude="+cities.map(c=>c[2]).join(",")+"&longitude="+cities.map(c=>c[3]).join(",")+"&current=temperature_2m,weather_code&daily=temperature_2m_min,temperature_2m_max,precipitation_probability_max&forecast_days=1&timezone=auto";
   const response=await fetch(u,{signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error("weather");
   const data=await response.json();const arr=Array.isArray(data)?data:[data];
-  weather=cities.map((c,i)=>{const temp=Number(arr[i]?.current?.temperature_2m);return Number.isFinite(temp)?c[0]+" "+Math.round(temp)+"°C":""}).filter(Boolean).join("  ·  ");
+  const cityData=cities.map((c,i)=>{
+   const current=arr[i]?.current,temp=Number(current?.temperature_2m),code=Number(current?.weather_code);
+   return Number.isFinite(temp)?{country:c[0],name:c[1],temperature:temp,weatherCode:code,description:weatherCondition(code),minTemperature:arr[i]?.daily?.temperature_2m_min?.[0]==null?null:Number(arr[i].daily.temperature_2m_min[0]),maxTemperature:arr[i]?.daily?.temperature_2m_max?.[0]==null?null:Number(arr[i].daily.temperature_2m_max[0]),precipitationProbability:arr[i]?.daily?.precipitation_probability_max?.[0]==null?null:Number(arr[i].daily.precipitation_probability_max[0])}:null;
+  }).filter(Boolean);
+  window.rdiWeatherSnapshot={cities:cityData,updatedAt:Date.now()};
+  window.dispatchEvent(new CustomEvent("rdi:weather-update",{detail:window.rdiWeatherSnapshot}));
+  weather=cityData.map(c=>c.name+" "+Math.round(c.temperature)+"°C").join("  ·  ");
  }catch{weather=""}
 }
 loadWeather();setInterval(loadWeather,900000);

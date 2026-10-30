@@ -31,7 +31,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
  0%,100%{background:#80242b;box-shadow:0 0 0 rgba(229,52,57,0)}
  50%{background:#f13b40;box-shadow:0 0 18px rgba(229,52,57,.65)}
 }
-</style><link rel="stylesheet" href="./youtube-geopolitica.css?v=20261027-1"><link rel="stylesheet" href="./youtube-tg-sera.css?v=20261030-footage-1"><link rel="stylesheet" href="./youtube-camera-breaks.css?v=20261029-city-1"><link rel="stylesheet" href="./youtube-landscapes.css?v=20261029-italy-romania-2"></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div><div id="rdiClock" aria-label="Ora Italiei"><span id="rdiClockTime">--:--</span><span id="rdiClockDate">ITALIA</span></div>
+</style><link rel="stylesheet" href="./youtube-geopolitica.css?v=20261027-1"><link rel="stylesheet" href="./youtube-tg-sera.css?v=20261030-footage-1"><link rel="stylesheet" href="./youtube-camera-breaks.css?v=20261029-city-1"><link rel="stylesheet" href="./youtube-landscapes.css?v=20261029-italy-romania-2"><link rel="stylesheet" href="./youtube-weather.css?v=20261030-weather-1"></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div><div id="rdiClock" aria-label="Ora Italiei"><span id="rdiClockTime">--:--</span><span id="rdiClockDate">ITALIA</span></div>
 <div id="appQr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;margin=6&amp;data=https%3A%2F%2Fradioromanii.duckdns.org%2F" alt="Cod QR aplicație RDI" onerror="this.style.display='none'"><span>APLICAȚIA RDI</span></div>
 <div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div></div><div id="copy"><div id="category">ȘTIRI</div><h1 id="headline">Se încarcă știrile...</h1><p id="summary">Actualizări din România, Italia și diaspora românească.</p><div id="source">Radio Românii din Italia</div></div></div>
 <div id="rdiExtras" hidden><span id="rdiExtraLabel"></span><span id="rdiExtraValue"></span></div><div id="progress"></div><div id="ticker"><div id="tickerLabel">ACTUALITATE</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • Acasă, oriunde ai fi! • Știri, muzică și comunitate</div></div></div>
@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261030-tg-sera-footage-2';
+const RDI_YOUTUBE_BUILD='20261030-weather-interlude-1';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -110,7 +110,7 @@ function tvExcerpt(value,limit=160){
  return cut.slice(0,space>limit*.6?space:cut.length).trimEnd()+'…';
 }
 function show(){
- if(!stories.length||window.rdiSpotActive||window.rdiGeoActive||window.rdiTgActive)return;
+ if(!stories.length||window.rdiSpotActive||window.rdiGeoActive||window.rdiTgActive||window.rdiWeatherActive)return;
  if(window.rdiCameraActive||window.rdiLandscapeActive)return;
  const x=stories[index%stories.length];
  $('category').textContent=x.category||'Actualitate';
@@ -148,7 +148,7 @@ window.rdiPauseNews=function(){
  if(tickerAnimation){tickerAnimation.cancel();tickerAnimation=null;}
 };
 window.rdiResumeNews=function(){
- if(window.rdiGeoActive||window.rdiTgActive)return;
+ if(window.rdiGeoActive||window.rdiTgActive||window.rdiWeatherActive)return;
  if(stories.length)show();
  else load();
 };
@@ -175,6 +175,8 @@ function startTicker(brief=false){
  nextTimer=setTimeout(()=>{
   if(ticket!==sequence||!stories.length)return;
   const nextNews=()=>{index=(index+1)%stories.length;show();};
+  // A fresh meteo update gets one 60-second visual slot between news cards.
+  if(window.rdiWeatherBreak?.startIfDue(nextNews))return;
   // A licensed city camera replaces one 30-second news card, never audio or ads.
   if(window.rdiCameraBreak?.startIfDue(nextNews))return;
   if(window.rdiLandscapeBreak?.startIfDue(nextNews))return;
@@ -182,4 +184,4 @@ function startTicker(brief=false){
  },cardDuration);
 }
 load();setInterval(load,300000);
-</script><script type="module" src="./youtube-camera-breaks.js?v=20261029-city-1"></script><script type="module" src="./youtube-landscapes.js?v=20261029-italy-romania-3"></script><script type="module" src="./youtube-extras.js?v=20261025-census-1"></script><script type="module" src="./youtube-spots.js?v=20261025-enable-spots-1"></script><script defer src="./youtube-geopolitica.js?v=20261027-1"></script><script defer src="./youtube-tg-sera.js?v=20261030-footage-2"></script></body></html>
+</script><script type="module" src="./youtube-camera-breaks.js?v=20261029-city-1"></script><script type="module" src="./youtube-landscapes.js?v=20261029-italy-romania-3"></script><script type="module" src="./youtube-extras.js?v=20261025-census-1"></script><script type="module" src="./youtube-weather.js?v=20261030-weather-1"></script><script type="module" src="./youtube-spots.js?v=20261025-enable-spots-1"></script><script defer src="./youtube-geopolitica.js?v=20261027-1"></script><script defer src="./youtube-tg-sera.js?v=20261030-footage-2"></script></body></html>
