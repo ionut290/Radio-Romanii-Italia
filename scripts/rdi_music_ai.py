@@ -190,9 +190,15 @@ def run(limit=100,sample_size=100):
                 if stat.returncode:
                     continue
                 fields=stat.stdout.strip().split()
-                if len(fields)!=2 or int(fields[0])!=int(size):
+                if len(fields)!=2:
                     continue
-                selected.append(candidate)
+                current_size=int(fields[0])
+                current_modified=float(fields[1])
+                if current_size<20000:
+                    continue
+                # Inventoried size and mtime can be old after media migration:
+                # trust stat for these existing local files, never the cache.
+                selected.append((path,current_size,current_modified))
                 if len(selected)>=sample_size:
                     break
             except (OSError,subprocess.TimeoutExpired,ValueError):
