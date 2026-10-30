@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T02:55:06.708959+00:00",
+  "updated_at": "2026-10-30T09:54:52.201506+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -15,6 +15,27 @@
     }
   ],
   "items": [
+    {
+      "id": "ca191f967062d69d21",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "EU-Canada Summit in Montreal, Canada",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297021",
+      "published_at": "2026-10-30",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-10-30T09:54:52.201506+00:00",
+      "language_probe_version": 3
+    },
     {
       "id": "d9db375d15322ab78d",
       "source_id": "commissione_europea",
@@ -1620,6 +1641,6 @@
       "editorial_topic": "ambiente - archivio"
     }
   ],
-  "language_checks_this_run": 8,
+  "language_checks_this_run": 1,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
