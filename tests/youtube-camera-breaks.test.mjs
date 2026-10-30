@@ -42,7 +42,7 @@ test('YouTube visual broadcast integrates camera breaks while preserving spot an
  assert.match(page,/href="\.\/youtube-camera-breaks\.css\?v=/);
  assert.match(page,/window\.rdiCameraBreak\?\.startIfDue\(nextNews\)/);
  assert.match(page,/window\.rdiCameraBreak\?\.stop\(\)/);
- assert.match(page,/if\(!stories\.length\|\|window\.rdiSpotActive\|\|window\.rdiGeoActive\|\|window\.rdiTgActive\)return/);
+ assert.match(page,/if\(!stories\.length\|\|window\.rdiSpotActive\|\|window\.rdiGeoActive\|\|window\.rdiTgActive\|\|window\.rdiWeatherActive\)return/);
  assert.match(script,/window\.rdiGeoActive\|\|window\.rdiSpotActive/);
  assert.match(script,/document\.body\.classList\.remove\('rdi-camera-active'\)/);
  assert.match(script,/if\(demo\)/);
