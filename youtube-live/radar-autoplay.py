@@ -69,7 +69,9 @@ class DevToolsSocket:
             raise ConnectionError("DevTools rejected the WebSocket connection.")
         self.rx.extend(remainder)
         self.next_id = 1
-        self.contexts: dict[str, int] = {}
+        self.contexts: dict[tuple[str | None, str], int] = {}
+        self.targets: dict[str, dict] = {}
+        self.enabled_sessions: set[str] = set()
         self.fragments = bytearray()
 
     def close(self) -> None:
@@ -142,21 +144,34 @@ class DevToolsSocket:
     def _record_context_event(self, message: dict) -> None:
         method = message.get("method")
         params = message.get("params", {})
+        session_id = message.get("sessionId")
         if method == "Runtime.executionContextCreated":
             context = params.get("context", {})
             aux = context.get("auxData", {})
             if aux.get("isDefault") and aux.get("frameId"):
-                self.contexts[aux["frameId"]] = context["id"]
+                self.contexts[(session_id, aux["frameId"])] = context["id"]
         elif method == "Runtime.executionContextDestroyed":
             context_id = params.get("executionContextId")
-            self.contexts = {frame: cid for frame, cid in self.contexts.items() if cid != context_id}
+            self.contexts = {key: cid for key, cid in self.contexts.items() if cid != context_id}
         elif method == "Runtime.executionContextsCleared":
-            self.contexts.clear()
+            self.contexts = {key: cid for key, cid in self.contexts.items() if key[0] != session_id}
+        elif method == "Target.attachedToTarget":
+            child_session = params.get("sessionId")
+            if child_session:
+                self.targets[child_session] = params.get("targetInfo", {})
+        elif method == "Target.detachedFromTarget":
+            child_session = params.get("sessionId")
+            self.targets.pop(child_session, None)
+            self.enabled_sessions.discard(child_session)
+            self.contexts = {key: cid for key, cid in self.contexts.items() if key[0] != child_session}
 
-    def call(self, method: str, params: dict | None = None) -> dict:
+    def call(self, method: str, params: dict | None = None, session_id: str | None = None) -> dict:
         request_id = self.next_id
         self.next_id += 1
-        body = json.dumps({"id": request_id, "method": method, "params": params or {}}).encode("utf-8")
+        message = {"id": request_id, "method": method, "params": params or {}}
+        if session_id:
+            message["sessionId"] = session_id
+        body = json.dumps(message).encode("utf-8")
         self._send_frame(0x1, body)
         while True:
             message = self._next_message()
@@ -165,13 +180,15 @@ class DevToolsSocket:
                     raise RuntimeError(message["error"].get("message", "DevTools command failed."))
                 return message.get("result", {})
 
-    def evaluate(self, context_id: int, expression: str):
-        result = self.call("Runtime.evaluate", {
-            "contextId": context_id,
+    def evaluate(self, context_id: int | None, expression: str, session_id: str | None = None):
+        params = {
             "expression": expression,
             "returnByValue": True,
             "awaitPromise": True,
-        })
+        }
+        if context_id is not None:
+            params["contextId"] = context_id
+        result = self.call("Runtime.evaluate", params, session_id)
         if result.get("exceptionDetails"):
             return None
         return result.get("result", {}).get("value")
@@ -211,18 +228,29 @@ def main() -> None:
                 connection = DevToolsSocket(target["webSocketDebuggerUrl"])
                 connection.call("Page.enable")
                 connection.call("Runtime.enable")
+                connection.call("Target.setDiscoverTargets", {"discover": True})
+                connection.call("Target.setAutoAttach", {
+                    "autoAttach": True,
+                    "waitForDebuggerOnStart": False,
+                    "flatten": True,
+                })
                 print("Connected to the live browser.", flush=True)
+
+            for session_id, target_info in list(connection.targets.items()):
+                if str(target_info.get("url", "")).startswith(ITALY_RADAR_PREFIX) and session_id not in connection.enabled_sessions:
+                    connection.call("Runtime.enable", {}, session_id)
+                    connection.enabled_sessions.add(session_id)
 
             tree = connection.call("Page.getFrameTree").get("frameTree", {})
             urls: dict[str, str] = {}
             frame_urls(tree, urls)
             main_id = next((fid for fid, url in urls.items() if url.startswith(MAIN_PAGE_PREFIX)), None)
-            if not main_id or main_id not in connection.contexts:
+            if not main_id or (None, main_id) not in connection.contexts:
                 time.sleep(2)
                 continue
 
             state = connection.evaluate(
-                connection.contexts[main_id],
+                connection.contexts[(None, main_id)],
                 "(() => ({active: !!window.rdiWeatherActive, src: document.getElementById('rdiWeatherRadar')?.src || ''}))()",
             )
             if not isinstance(state, dict) or not state.get("active") or not str(state.get("src", "")).startswith(ITALY_RADAR_PREFIX):
@@ -231,14 +259,26 @@ def main() -> None:
                 continue
 
             for frame_id, url in urls.items():
-                if url.startswith(ITALY_RADAR_PREFIX) and frame_id in connection.contexts:
-                    result = connection.evaluate(
-                        connection.contexts[frame_id],
-                        "(() => { const b=document.querySelector('#play'); if(!b)return 'loading';"
-                        " if(!b.classList.contains('pause')){b.click();return 'started';} return 'playing'; })()",
-                    )
-                    if result in {"started", "playing"} and result != last_state:
-                        print("Italy radar animation " + result + ".", flush=True)
+                if not url.startswith(ITALY_RADAR_PREFIX):
+                    continue
+                expression = (
+                    "(() => { const b=document.querySelector('#play'); if(!b)return 'loading';"
+                    " if(!b.classList.contains('pause')){b.click();return 'started';} return 'playing'; })()"
+                )
+                matching_sessions = [
+                    sid for sid, info in connection.targets.items()
+                    if str(info.get("url", "")).startswith(ITALY_RADAR_PREFIX)
+                ]
+                if matching_sessions:
+                    for session_id in matching_sessions:
+                        result = connection.evaluate(None, expression, session_id)
+                        if result == "started" and result != last_state:
+                            print("Italy radar animation started.", flush=True)
+                            last_state = result
+                elif (None, frame_id) in connection.contexts:
+                    result = connection.evaluate(connection.contexts[(None, frame_id)], expression)
+                    if result == "started" and result != last_state:
+                        print("Italy radar animation started.", flush=True)
                         last_state = result
             time.sleep(2)
         except KeyboardInterrupt:
