@@ -1,0 +1,12 @@
+[Unit]
+Description=Continue low-priority AI music sample if incomplete, no playlist changes
+
+[Timer]
+OnBootSec=12min
+OnUnitInactiveSec=6h
+RandomizedDelaySec=3min
+AccuracySec=60s
+Unit=rdi-music-ai-analyze.service
+
+[Install]
+WantedBy=timers.target
