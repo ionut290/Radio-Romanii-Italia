@@ -122,8 +122,8 @@ def eligible(item: dict, cutoff: dt.datetime) -> dict | None:
         # Publisher images are not automatically licensed for YouTube broadcast.
         "visual": (str(item.get("image")) if item.get("imageType") == "ai-editorial-photo"
                    else str(item.get("fallbackImage") or "")),
-        "visual_notice": ("Fotografia illustrativa" if item.get("imageType") == "ai-editorial-photo"
-                          else "Illustrazione editoriale, non ripresa dei fatti"),
+        "visual_notice": ("Immagine illustrativa generata con IA, non fotografia dell’evento" if item.get("imageType") == "ai-editorial-photo"
+                          else "Grafica editoriale illustrativa, non ripresa dei fatti"),
     }
 
 
