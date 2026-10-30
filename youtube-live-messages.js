@@ -26,7 +26,7 @@
     '.rdi-listener-message-kicker{margin:clamp(18px,3vh,30px) 0 16px;color:#ffdc82;font-size:clamp(15px,1.8vw,22px);font-weight:900;letter-spacing:.12em;text-align:center}' +
     '.rdi-listener-message-window{position:relative;flex:1;min-height:0;overflow:hidden;mask-image:linear-gradient(to bottom,transparent,#000 3%,#000 97%,transparent)}' +
     '.rdi-listener-message-list{display:flex;flex-direction:column;gap:12px;will-change:transform}' +
-    '.rdi-listener-message-item{flex:none;min-height:86px;padding:15px 20px;border:1px solid #456787;border-left:5px solid #e2b957;border-radius:12px;background:linear-gradient(100deg,#173859,#102944);font-size:clamp(17px,2vw,25px);font-weight:700;line-height:1.3;white-space:pre-wrap;overflow-wrap:anywhere;display:flex;align-items:center}' +
+    '.rdi-listener-message-item{flex:none;min-height:76px;padding:15px 20px;border:1px solid #456787;border-left:5px solid #e2b957;border-radius:12px;background:linear-gradient(100deg,#173859,#102944);font-size:clamp(17px,2vw,25px);font-weight:700;line-height:1.3;white-space:pre-wrap;overflow-wrap:anywhere;display:flex;align-items:center}' +
     '.rdi-listener-message-footer{padding-top:15px;color:#c2d4e7;font-size:clamp(12px,1.3vw,16px);text-align:center}' +
     '.rdi-listener-message-progress{position:absolute;bottom:0;left:0;height:5px;width:0;background:#f0c05b}' +
     '@media(max-width:700px){.rdi-listener-message-card{height:90vh;width:94vw;padding:16px}.rdi-listener-message-header{font-size:12px}.rdi-listener-message-item{min-height:72px;padding:12px;font-size:clamp(16px,4vw,21px)}}';
@@ -64,6 +64,7 @@
         item&&item.type==="text"&&typeof item.id==="string"&&
         typeof item.text==="string"&&item.text.trim().length>0
       ):[];
+      items.sort((a,b)=>Date.parse(b.date||0)-Date.parse(a.date||0));
 
       // New messages queue one short bulletin. The same list can be shown
       // again at most once an hour while the channel remains quiet.
