@@ -63,7 +63,7 @@ jobs:
             exit 1
           fi
       - name: Aggiorna Chromium e riapre solo il browser con WebGL
-        if: github.event_name == 'push' && contains(github.event.head_commit.modified, 'youtube-live/visual-relay.sh')
+        if: github.event_name == 'push' && contains(toJSON(github.event.commits), 'youtube-live/visual-relay.sh')
         run: |
           set -euo pipefail
           scp -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \\
