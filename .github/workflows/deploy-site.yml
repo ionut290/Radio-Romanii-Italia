@@ -30,6 +30,7 @@ jobs:
           node --check harta-atacurilor.js
           node --check geopolitica.js
           node --check youtube-tg-sera.js
+          python -m unittest discover -s tests -p 'test_tg_video_rights.py' -v
           node --check rdi-featured-core.mjs
           node --check youtube-landscapes-core.mjs
           node --input-type=module --check < youtube-landscapes.js
