@@ -52,7 +52,11 @@ RATE=16000
 def model_integrity(model=MODEL):
     if not model.exists() or not 10_000_000<=model.stat().st_size<=26_000_000:
         raise RuntimeError("Missing or unexpected YAMNet ONNX model")
-    digest=hashlib.file_digest(model.open("rb"),"sha256").hexdigest()
+    hasher=hashlib.sha256()
+    with model.open("rb") as fp:
+        for block in iter(lambda:fp.read(1024*1024),b""):
+            hasher.update(block)
+    digest=hasher.hexdigest()
     if digest!=MODEL_SHA256:
         raise RuntimeError("YAMNet model SHA256 mismatch")
     return digest
