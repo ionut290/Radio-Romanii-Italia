@@ -1,0 +1,81 @@
+name: RDI - Integra nuove canzoni nel DJ (solo catalogo)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_music_ingest.py'
+      - 'scripts/rdi_music_rotation.py'
+      - 'scripts/rdi_music_dj.py'
+      - 'scripts/rdi-music-dj.html'
+      - 'tests/test_rdi_music_ingest.py'
+      - 'oracle/install-rdi-music-ingest.sh'
+      - 'oracle/rdi-music-ingest.service'
+      - 'oracle/rdi-music-ingest.timer'
+      - '.github/workflows/rdi-music-ingest.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-music-dj-deploy
+  cancel-in-progress: false
+
+jobs:
+  local-inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Testa indice live, nuovi brani e rotazione completa
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/rdi_music_ingest.py scripts/rdi_music_rotation.py scripts/rdi_music_dj.py
+          python -m unittest discover -s tests -p 'test_rdi_music_ingest.py' -v
+          python -m unittest discover -s tests -p 'test_rdi_music_rotation.py' -v
+          python -m unittest discover -s tests -p 'test_rdi_music_dj.py' -v
+          bash -n oracle/install-rdi-music-ingest.sh
+      - name: Connessione sicura al server Oracle
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Installa scansione automatica privata AzuraCast ogni 15 minuti
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-music-ingest-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          [[ "$STAGE" =~ ^/tmp/rdi-music-ingest-[0-9]+-[0-9]+$ ]]
+          sshx(){ ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "$@"; }
+          scpx(){ scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "$@"; }
+          sshx "$REMOTE" "install -d -m 700 '$STAGE/scripts' '$STAGE/oracle'"
+          cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scpx scripts/rdi_music_ingest.py scripts/rdi_music_rotation.py \
+            scripts/rdi_music_dj.py scripts/rdi-music-dj.html "$REMOTE:$STAGE/scripts/"
+          scpx oracle/install-rdi-music-ingest.sh oracle/rdi-music-ingest.service \
+            oracle/rdi-music-ingest.timer "$REMOTE:$STAGE/oracle/"
+          sshx "$REMOTE" "sudo -n bash '$STAGE/oracle/install-rdi-music-ingest.sh'"
+          sshx "$REMOTE" 'set -e; \
+            systemctl is-active --quiet rdi-music-ingest.timer; \
+            systemctl is-active --quiet rdi-music-dj-web.service; \
+            curl -fsS --max-time 18 http://127.0.0.1:8788/api/rotation \
+              | python3 -c '\''import json,sys;x=json.load(sys.stdin);assert x["read_only"] and x["playlist_writes"]==0 and not x["ready_for_live"] and x["live_index_verified"];print("RDI_INGEST_VALIDATED=YES");print("RDI_ROTATION_BANK="+str(x["pool_tracks_total"]));print("RDI_DAILY_SELECTION="+str(x["total_unique_tracks"]));print("RDI_NEW_TRACKS="+str(x["new_tracks_in_pool"]))'\'''
