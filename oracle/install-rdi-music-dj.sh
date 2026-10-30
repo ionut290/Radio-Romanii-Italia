@@ -23,9 +23,25 @@ systemctl enable rdi-music-dj-web.service
 systemctl restart rdi-music-dj-web.service
 systemctl is-active --quiet rdi-music-dj-analyze.timer
 systemctl is-active --quiet rdi-music-dj-web.service
-curl -fsS --max-time 8 http://127.0.0.1:8788/api/report |
-  python3 -c 'import json,sys;x=json.load(sys.stdin);assert x["read_only"] and x["playlist_writes"]==0 and x["schema_version"]==1;print("DJ_REPORT=PRIVATE_READ_ONLY");print("DJ_EXISTING_TRACKS=",x["total_music"])'
+# Wait until the loopback HTTP listener is bound. systemctl may report
+# "active" while the process is still importing its modules.
+ready=false
+for attempt in $(seq 1 20); do
+  if curl -fsS --max-time 3 http://127.0.0.1:8788/api/report -o /tmp/rdi-dj-install-report.json 2>/dev/null; then
+    ready=true
+    break
+  fi
+  sleep 1
+done
+if [[ "$ready" != "true" ]]; then
+  systemctl status rdi-music-dj-web.service --no-pager -l || true
+  journalctl -u rdi-music-dj-web.service --no-pager -n 18 || true
+  echo "RDI_DJ_WEB_BOOT_ERROR" >&2
+  exit 1
+fi
+python3 -c 'import json;x=json.load(open("/tmp/rdi-dj-install-report.json"));assert x["read_only"] and x["playlist_writes"]==0 and x["schema_version"]==1;print("DJ_REPORT=PRIVATE_READ_ONLY");print("DJ_EXISTING_TRACKS=",x["total_music"])'
 curl -fsS --max-time 8 http://127.0.0.1:8788/ | grep -q 'DJ intelligente'
+rm -f /tmp/rdi-dj-install-report.json
 echo "RDI_DJ_DASHBOARD=http://127.0.0.1:8788 (SSH port-forward required)"
 echo "RDI_DJ_TIMER=ACTIVE"
 echo "RDI_DJ_MODE=SHADOW_NO_PLAYLIST_CHANGES"
