@@ -56,4 +56,39 @@ class ReadOnlyDJTests(unittest.TestCase):
             finally:
                 dj.DB=old
 
+
+    def test_live_ai_joins_categorize_without_modifying_playlists(self):
+        with tempfile.TemporaryDirectory() as temp:
+            old=dj.DB
+            dj.DB=Path(temp)/"music.db"
+            con=sqlite3.connect(dj.DB)
+            con.execute("CREATE TABLE tracks(path TEXT PRIMARY KEY,size INTEGER,modified REAL,rms REAL,peak REAL,category TEXT,analyzed_at TEXT)")
+            con.execute("INSERT INTO tracks VALUES(?,?,?,?,?,?,?)",
+                        ("/music/song.mp3",10,20,-12,-1,"","2026-10-30"))
+            con.execute("""CREATE TABLE track_ai(path TEXT PRIMARY KEY,size INTEGER,modified REAL,model_id TEXT,
+                genre_ai TEXT,genre_score REAL,voice_ai TEXT,voice_score REAL,music_score REAL,
+                top_events TEXT,analyzed_at TEXT)""")
+            con.execute("INSERT INTO track_ai VALUES(?,?,?,?,?,?,?,?,?,?,?)",
+                ("/music/song.mp3",18,21,"yamnet-google-v1-audiomagic-f25b741",
+                "non_identificato",0.08,"strumentale_probabile",0.02,0.8,"[]","2026-10-30"))
+            con.execute("""CREATE TABLE track_gtzan(path TEXT PRIMARY KEY,size INTEGER,modified REAL,
+                model_id TEXT,genre TEXT,candidate TEXT,score REAL,
+                alternative TEXT,margin REAL,analyzed_at TEXT)""")
+            con.execute("INSERT INTO track_gtzan VALUES(?,?,?,?,?,?,?,?,?,?)",
+                ("/music/song.mp3",18,21,"ast-gtzan-onnx-q4-7f313d5",
+                 "pop","pop",0.84,"disco",0.51,"2026-10-30"))
+            con.commit();con.close()
+            try:
+                result=dj.report()
+                self.assertEqual(result["ai_sample_done"],1)
+                self.assertEqual(result["genre_pilot_done"],1)
+                self.assertEqual(result["genre_pilot_confident"],1)
+                self.assertEqual(result["tracks"][0]["genre"],"pop")
+                self.assertEqual(result["tracks"][0]["genre_source"],"ast_gtzan_ai_stima")
+                self.assertEqual(result["tracks"][0]["voice"],"strumentale_probabile")
+                self.assertFalse(result["tracks"][0]["ready_for_autodj"])
+                self.assertEqual(result["playlist_writes"],0)
+            finally:
+                dj.DB=old
+
 if __name__=="__main__":unittest.main()
