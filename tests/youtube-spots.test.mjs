@@ -12,7 +12,7 @@ test('broadcast loads the spot overlay and pauses the news while advertising',()
   assert.match(page,/src="\.\/youtube-spots\.js\?v=[^"]+"/);
   assert.match(page,/window\.rdiPauseNews=function/);
   assert.match(page,/window\.rdiResumeNews=function/);
-  assert.match(page,/if\(!stories\.length\|\|window\.rdiSpotActive\|\|window\.rdiGeoActive\)return/);
+  assert.match(page,/if\(!stories\.length\|\|window\.rdiSpotActive\|\|window\.rdiGeoActive\|\|window\.rdiTgActive\)return/);
   assert.match(spots,/window\.rdiPauseNews\?\.\(\)/);
   assert.match(spots,/window\.rdiResumeNews\?\.\(\)/);
 });
