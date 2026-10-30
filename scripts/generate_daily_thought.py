@@ -191,7 +191,8 @@ def svg_card(day, quote, title):
 
 def api_photo(day, quote):
     if not API_KEY:
-        raise SystemExit("OPENAI_API_KEY richiesto per generare la fotografia quotidiana")
+        print("OPENAI_API_KEY non configurata: uso la grafica illustrata di riserva.")
+        return None
     prompt = (
         "Create one original, photorealistic editorial photograph for a thoughtful Italian-Romanian community radio. "
         "Translate the meaning of this short philosophical reflection into a visually clear, human scene: "
@@ -222,7 +223,8 @@ def api_photo(day, quote):
             raise ValueError("Il risultato non è un JPEG valido")
         return image
     except (OSError, ValueError, KeyError, TypeError) as exc:
-        raise SystemExit("Generazione della fotografia quotidiana non riuscita: " + str(exc)[:180])
+        print("Foto realistica non disponibile; uso la grafica illustrata:", str(exc)[:180])
+        return None
 
 def main():
     now = dt.datetime.now(TZ)
@@ -239,8 +241,8 @@ def main():
     thought = api_thought(today, history) or fallback_thought(today)
     published = now.replace(hour=8, minute=0, second=0, microsecond=0)
     ident = "pensiero-" + today.strftime("%Y%m%d")
-    image = Path("editorial-images/daily-thought") / (today.isoformat() + ".jpg")
     image_bytes = api_photo(today, thought["quote"])
+    image = Path("editorial-images/daily-thought") / (today.isoformat() + (".jpg" if image_bytes else ".svg"))
     item = {
         "id": ident,
         "daily_thought": True,
@@ -253,7 +255,7 @@ def main():
         "source": "Pensiero originale RDI",
         "byline": "Rubrica quotidiana · Radio Românii din Italia",
         "image": "./" + image.as_posix(),
-        "imageType": "photorealistic-ai-generated",
+        "imageType": "photorealistic-ai-generated" if image_bytes else "editorial-illustration",
         "image_credit": "Pensiero e immagine originali RDI",
         "date": today.isoformat(),
     }
@@ -262,8 +264,11 @@ def main():
     data["updated_at"] = now.isoformat()
     DATA.parent.mkdir(parents=True, exist_ok=True)
     ART_DIR.mkdir(parents=True, exist_ok=True)
-    (ROOT / image).write_bytes(image_bytes)
-    # Remove older photos only after today's replacement was generated and written.
+    if image_bytes:
+        (ROOT / image).write_bytes(image_bytes)
+    else:
+        (ROOT / image).write_text(svg_card(today, thought["quote"], thought["title"]), encoding="utf-8")
+    # Remove older assets only after today's replacement was generated and written.
     for old_image in ART_DIR.iterdir():
         if old_image.is_file() and old_image != ROOT / image:
             old_image.unlink()
