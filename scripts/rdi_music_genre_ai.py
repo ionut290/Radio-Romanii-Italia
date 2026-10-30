@@ -94,8 +94,7 @@ def current_samples(db, sample_size):
 def run(limit=100):
     verify_model()
     import onnxruntime as ort
-    from transformers import ASTFeatureExtractor
-    feature=ASTFeatureExtractor.from_pretrained(str(PREPROCESSOR),local_files_only=True)
+    from rdi_ast_fbank import ast_features
     opts=ort.SessionOptions()
     opts.intra_op_num_threads=1
     opts.inter_op_num_threads=1
@@ -123,7 +122,7 @@ def run(limit=100):
                 break
             try:
                 audio=decode(path)
-                inputs=feature(audio,sampling_rate=16000,return_tensors="np")["input_values"]
+                inputs=ast_features(audio,PREPROCESSOR/"preprocessor_config.json")
                 if inputs.shape!=(1,1024,128):
                     raise ValueError("Incorrect AST audio feature shape")
                 scores=model.run(None,{input_name:inputs.astype("float32")})[0]
