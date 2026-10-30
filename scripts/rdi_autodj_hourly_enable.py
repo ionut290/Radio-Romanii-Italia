@@ -18,8 +18,18 @@ EXPECTED=[(26,"night_00_07","00:00","07:00",294),
  (31,"late_21_24","21:00","24:00",294)]
 
 def clock(value):
-    if not isinstance(value,str):return None
-    return value[:5] if len(value)>=5 else None
+    """AzuraCast can represent schedule times as fractional hours."""
+    if isinstance(value,bool):return None
+    if isinstance(value,(int,float)):
+        minutes=round(float(value)*60)
+        if minutes<0 or minutes>1440:return None
+        return f"{minutes//60:02d}:{minutes%60:02d}"
+    if isinstance(value,str):
+        if len(value)>=5 and value[2]==":":
+            return value[:5]
+        try:return clock(float(value))
+        except ValueError:return None
+    return None
 
 def run(client, apply):
     rows=client.call("GET","/station/1/playlists")
