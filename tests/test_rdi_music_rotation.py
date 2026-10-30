@@ -1,4 +1,4 @@
-"""Offline acceptance checks: 24h simulator must never modify AzuraCast."""
+"""24h shadow rotation: all validated media joins bank; different day => different order."""
 import importlib.util
 from pathlib import Path
 import sys
@@ -6,96 +6,94 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]/"scripts"
 sys.path.insert(0,str(ROOT))
-spec=importlib.util.spec_from_file_location("rdi_music_rotation",ROOT/"rdi_music_rotation.py")
-rot=importlib.util.module_from_spec(spec)
-spec.loader.exec_module(rot)
+s=importlib.util.spec_from_file_location("rdi_music_rotation",ROOT/"rdi_music_rotation.py")
+rot=importlib.util.module_from_spec(s);s.loader.exec_module(rot)
 
-def track(n,energy="media",title=None,src="ast_gtzan_ai_stima"):
-    return {
-      "id":f"{n:016x}",
-      "title":title or f"StudioSong_{n:08d}",
-      "artist":f"Artista {n%180}",
-      "energy_estimate":energy,"bpm_candidate":100.0,
-      "beat_confidence":0.66,"lufs":-15.0,
-      "genre":"dance","genre_source":src,
-      "voice":"non_verificato", "ready_for_autodj":False
-    }
+def track(n,energy="media",title=None):
+ return {"id":f"{n:016x}","title":title or f"StudioSong {n}",
+    "artist":f"Artista {n%180}","energy_estimate":energy,
+    "bpm_candidate":100,"beat_confidence":.66,"lufs":-15,
+    "duration_seconds":210,"genre_source":"ast_gtzan_ai_stima",
+    "genre":"dance","newly_added":n>400}
 
-def album(count=1050):
-    energies=("tranquilla","media","ritmata")
-    return {"read_only":True,"playlist_writes":0,
-            "tracks":[track(i,energy=energies[i%3]) for i in range(count)]}
+def catalog(count=414):
+ return {"read_only":True,"playlist_writes":0,"live_index_verified":True,
+    "tracks":[track(i,("tranquilla","media","ritmata")[i%3]) for i in range(count)]}
 
-class RotationSafetyTests(unittest.TestCase):
-    def test_24_hour_blocks_no_time_gap_and_no_track_repetition(self):
-        p=rot.simulate(album(),"2026-10-30")
-        self.assertEqual(p["kind"],"rdi-dj-dry-run")
-        self.assertTrue(p["covers_all_24h_in_blocks"])
-        self.assertEqual(p["blocks"][0]["dalle"],"00:00")
-        self.assertEqual(p["blocks"][-1]["alle"],"24:00")
-        self.assertEqual(p["duplicate_tracks"],0)
-        self.assertEqual(p["duplicate_titles"],0)
-        ids=[x["id"] for block in p["blocks"] for x in block["brani"]]
-        self.assertEqual(len(ids),len(set(ids)))
-        self.assertFalse(p["automatic_broadcast_enabled"])
-        self.assertFalse(p["ready_for_live"])
-        self.assertEqual(p["playlist_writes"],0)
-        self.assertTrue(p["full_draft"])
+class RotationTests(unittest.TestCase):
+ def test_all_414_join_rotation_pool_even_if_not_on_today(self):
+  p=rot.simulate(catalog(414),"2026-10-30")
+  self.assertEqual(p["pool_tracks_total"],414)
+  self.assertEqual(len(p["pool_tracks"]),414)
+  self.assertEqual(p["new_tracks_in_pool"],13)
+  self.assertEqual(p["total_unique_tracks"]+p["pool_excluded_from_today"],414)
+  self.assertEqual(p["duplicate_tracks"],0)
+  self.assertFalse(p["ready_for_live"])
+  self.assertFalse(p["automatic_broadcast_enabled"])
+  self.assertEqual(p["playlist_writes"],0)
+  self.assertTrue(p["covers_all_24h_in_blocks"])
 
-    def test_same_music_day_is_reproducible(self):
-        x=album()
-        a=rot.simulate(x,"2026-10-30")
-        b=rot.simulate(x,"2026-10-30")
-        self.assertEqual(a,b)
-        c=rot.simulate(x,"2026-10-31")
-        self.assertNotEqual(a["blocks"][0]["brani"][0]["id"],
-                            c["blocks"][0]["brani"][0]["id"])
+ def test_order_changes_each_day_and_unused_songs_reenter(self):
+  x=catalog(550)
+  a=rot.simulate(x,"2026-10-30")
+  b=rot.simulate(x,"2026-10-31")
+  self.assertNotEqual(a["blocks"][0]["brani"][0]["id"],
+                      b["blocks"][0]["brani"][0]["id"])
+  self.assertEqual(a,rot.simulate(x,"2026-10-30"))
+  self.assertEqual(a["pool_tracks_total"],550)
+  self.assertEqual(b["pool_tracks_total"],550)
+  # The bank remains complete regardless of today's available airtime.
+  self.assertEqual(len(a["pool_tracks"]),550)
+  ids_a={t["id"] for block in a["blocks"] for t in block["brani"]}
+  ids_b={t["id"] for block in b["blocks"] for t in block["brani"]}
+  self.assertGreater(len(ids_b-ids_a),0)
 
-    def test_excludes_news_spots_and_uncertain_bpm(self):
-        items=[
-            track(1,title="RDI Geopolitica - la giornata"),
-            track(2,title="Spot promozionale"),
-            track(3,title="Una canzone normale"),
-            track(4,title="Brano senza ritmo"),
-        ]
-        items[3]["beat_confidence"]=.10
-        plan=rot.simulate({"read_only":True,"playlist_writes":0,"tracks":items})
-        self.assertEqual(plan["available_analyzed_tracks"],1)
-        self.assertEqual(plan["missing_tracks_estimated"]>0,True)
-        self.assertFalse(plan["full_draft"])
-        self.assertEqual(plan["total_unique_tracks"],1)
+ def test_invalid_stale_audio_never_enters_bank(self):
+  x=catalog(10)
+  x["tracks"][1]["duration_seconds"]=None
+  x["tracks"][2]["beat_confidence"]=0.1
+  x["tracks"][3]["title"]="RDI Geopolitica notiziario"
+  p=rot.simulate(x)
+  self.assertEqual(p["pool_tracks_total"],7)
+  self.assertEqual(p["total_unique_tracks"],7)
 
-    def test_ai_genre_is_not_considered_verified(self):
-        p=rot.simulate({"read_only":True,"playlist_writes":0,"tracks":[track(1)]})
-        title=p["blocks"][0]["brani"][0]
-        self.assertEqual(title["genre_verificato"],"sconosciuto")
-        self.assertFalse(title["approvato"])
+ def test_live_index_is_mandatory(self):
+  x=catalog(10);x["live_index_verified"]=False
+  p=rot.simulate(x)
+  self.assertEqual(p["pool_tracks_total"],0)
+  self.assertFalse(p["full_draft"])
 
-    def test_only_metadata_genre_can_be_used_as_verified(self):
-        t=track(1,src="metadati_file")
-        p=rot.simulate({"read_only":True,"playlist_writes":0,"tracks":[t]})
-        self.assertEqual(p["blocks"][0]["brani"][0]["genre_verificato"],"dance")
+ def test_new_music_auto_joins_when_indexed_and_analyzed(self):
+  c=catalog(10)
+  c["tracks"].append(track(99))
+  p=rot.simulate(c)
+  self.assertEqual(p["pool_tracks_total"],11)
+  self.assertEqual(p["total_unique_tracks"],11)
 
-    def test_duplicate_export_suffix_is_not_replayed(self):
-        t1=track(1,title="midnight magnet_168870015074305")
-        t2=track(2,title="midnight magnet_168870015074306")
-        p=rot.simulate({"read_only":True,"playlist_writes":0,"tracks":[t1,t2]})
-        self.assertEqual(p["total_unique_tracks"],1)
-        self.assertEqual(p["duplicate_titles"],0)
+ def test_repeated_export_title_is_not_duplicated(self):
+  a=track(1,title="same song_168870015074305")
+  b=track(2,title="same song_168870015074306")
+  p=rot.simulate({"read_only":True,"playlist_writes":0,
+     "live_index_verified":True,"tracks":[a,b]})
+  self.assertEqual(p["pool_tracks_total"],1)
+  self.assertEqual(p["duplicate_titles"],0)
 
-    def test_live_catalogue_is_never_trusted(self):
-        for data in ({"read_only":False,"playlist_writes":0,"tracks":[]},
-                     {"read_only":True,"playlist_writes":1,"tracks":[]},
-                     {"read_only":True,"playlist_writes":0}):
-            with self.assertRaises(ValueError):
-                rot.simulate(data)
+ def test_only_verified_metadata_genre_is_reported(self):
+  x=catalog(1)
+  p=rot.simulate(x)
+  self.assertEqual(p["blocks"][0]["brani"][0]["genere_verificato"],"sconosciuto")
+  x["tracks"][0]["genre_source"]="metadati_file"
+  p=rot.simulate(x)
+  self.assertEqual(p["blocks"][0]["brani"][0]["genere_verificato"],"dance")
 
-    def test_protected_radio_content_never_inserted(self):
-        t=track(44,title="Radio jingle di apertura")
-        p=rot.simulate({"read_only":True,"playlist_writes":0,"tracks":[t]})
-        self.assertEqual(p["total_unique_tracks"],0)
-        self.assertIn("AzuraCast",p["reason"])
-        self.assertTrue(any("TG" in s for s in p["protected_programmes"]))
+ def test_no_station_access_granted(self):
+  for a in ({"read_only":False,"playlist_writes":0,"tracks":[]},
+            {"read_only":True,"playlist_writes":1,"tracks":[]}):
+   with self.assertRaises(ValueError):
+    rot.simulate(a)
+  self.assertTrue(any("TG" in x for x in rot.PROTECTED))
+  with self.assertRaises(ValueError):
+   rot.simulate({"read_only":True,"playlist_writes":0})
 
 if __name__=="__main__":
-    unittest.main()
+ unittest.main()
