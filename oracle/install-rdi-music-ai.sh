@@ -50,7 +50,22 @@ systemctl is-active --quiet rdi-music-ai-analyze.timer
 runuser -u ubuntu -- env HOME=/home/ubuntu python3 "$APP/rdi_music_dj.py" report >/dev/null
 systemctl restart rdi-music-dj-web.service
 systemctl is-active --quiet rdi-music-dj-web.service
-curl -fsS --max-time 9 http://127.0.0.1:8788/api/report |
- python3 -c 'import sys,json;d=json.load(sys.stdin); assert d["read_only"] and d["playlist_writes"] == 0 and d["ai_sample_target"]==100; print("RDI_DJ_AI_DASHBOARD=READY")'
+ready=false
+for attempt in $(seq 1 25); do
+  if curl -fsS --max-time 4 http://127.0.0.1:8788/api/report \
+      -o /tmp/rdi-dj-ai-install-report.json 2>/dev/null; then
+    ready=true
+    break
+  fi
+  sleep 1
+done
+if [[ "$ready" != true ]]; then
+  systemctl status rdi-music-dj-web.service --no-pager -l || true
+  journalctl -u rdi-music-dj-web.service -n 18 --no-pager || true
+  echo "RDI_AI_WEB_NOT_READY" >&2
+  exit 1
+fi
+python3 -c 'import sys,json;d=json.load(open("/tmp/rdi-dj-ai-install-report.json")); assert d["read_only"] and d["playlist_writes"] == 0 and d["ai_sample_target"]==100; print("RDI_DJ_AI_DASHBOARD=READY")'
+rm -f /tmp/rdi-dj-ai-install-report.json
 echo "RDI_DJ_AI_MODEL=YAMNET_ONNX_APACHE_2"
 echo "RDI_DJ_AI_PLAYLIST_WRITES=ZERO"
