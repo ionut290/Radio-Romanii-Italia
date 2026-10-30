@@ -5,12 +5,14 @@ on:
     branches: [main]
     paths:
       - 'scripts/rdi_music_dj.py'
+      - 'scripts/rdi_music_rotation.py'
       - 'scripts/rdi-music-dj.html'
       - 'scripts/rdi_music_scan.py'
       - 'scripts/rdi_music_rhythm.py'
       - 'scripts/rdi_music_features.py'
       - 'scripts/rdi_music_preview.py'
       - 'tests/test_rdi_music_dj.py'
+      - 'tests/test_rdi_music_rotation.py'
       - 'oracle/install-rdi-music-dj.sh'
       - 'oracle/rdi-music-dj-analyze.service'
       - 'oracle/rdi-music-dj-analyze.timer'
@@ -42,8 +44,9 @@ jobs:
         run: |
           set -euo pipefail
           python -m py_compile scripts/rdi_music_dj.py scripts/rdi_music_scan.py \
-            scripts/rdi_music_rhythm.py scripts/rdi_music_features.py scripts/rdi_music_preview.py
+            scripts/rdi_music_rhythm.py scripts/rdi_music_features.py scripts/rdi_music_preview.py scripts/rdi_music_rotation.py
           python -m unittest discover -s tests -p 'test_rdi_music_dj.py' -v
+          python -m unittest discover -s tests -p 'test_rdi_music_rotation.py' -v
           bash -n oracle/install-rdi-music-dj.sh
       - name: Connetti Oracle senza esporre chiavi
         env:
@@ -71,7 +74,7 @@ jobs:
           sshx "$REMOTE" "install -d -m 700 '$STAGE/scripts' '$STAGE/oracle'"
           cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
           trap cleanup EXIT
-          scpx scripts/rdi_music_dj.py scripts/rdi-music-dj.html \
+          scpx scripts/rdi_music_dj.py scripts/rdi_music_rotation.py scripts/rdi-music-dj.html \
             scripts/rdi_music_scan.py scripts/rdi_music_rhythm.py \
             scripts/rdi_music_features.py scripts/rdi_music_preview.py \
             "$REMOTE:$STAGE/scripts/"
@@ -84,3 +87,7 @@ jobs:
             systemctl is-active --quiet rdi-music-dj-analyze.timer; \
             curl -fsS --max-time 7 http://127.0.0.1:8788/api/report \
               | python3 -c '\''import json,sys;d=json.load(sys.stdin);assert d["read_only"] and d["playlist_writes"]==0;print("ORACLE_DJ_DEPLOY=SUCCESS");print("DJ_MUSIC_TRACKS="+str(d["total_music"]));print("DJ_PROPOSALS="+str(sum(map(len,d["slots"].values()))))'\'''
+
+          sshx "$REMOTE" 'set -e; \
+            curl -fsS --max-time 24 http://127.0.0.1:8788/api/rotation \
+              | python3 -c '\''import json,sys;d=json.load(sys.stdin);assert d["read_only"] and d["playlist_writes"]==0 and not d["ready_for_live"] and d["covers_all_24h_in_blocks"] and d["duplicate_tracks"]==0;print("RDI_DJ_24H_SHADOW=PASSED");print("RDI_DJ_UNIQUE="+str(d["total_unique_tracks"]));print("RDI_DJ_GAPS="+str(d["missing_tracks_estimated"]))'\'''
