@@ -12,7 +12,6 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y chromium-browser xvfb xdotool 
 # Some Ubuntu releases ship chromium as snap and wrapper.
 command -v chromium >/dev/null || { echo "chromium executable not found; visual mode not installed."; exit 1; }
 install -m 700 "$(dirname "$0")/visual-relay.sh" /usr/local/sbin/radio-youtube-visual
-install -m 700 "$(dirname "$0")/radar-autoplay.py" /usr/local/sbin/rdi-radar-autoplay.py
 cat > /etc/systemd/system/radio-youtube-visual.service <<'SERVICE'
 [Unit]
 Description=Radio Romanii din Italia YouTube browser capture
