@@ -5,6 +5,15 @@
 :root{color-scheme:dark;--bg:#0b1120;--card:#19263c;--line:#344563;--fg:#eef5ff;--muted:#a9bad1;--cyan:#73dcff;--gold:#e9cb83}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px/1.5 system-ui,Segoe UI,sans-serif;color:var(--fg)}
 main{max-width:1220px;margin:auto;padding:24px 18px 56px}header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+#rotation-note{margin:8px 0 14px;color:var(--muted);font-size:13px}
+.rotation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:16px 0}
+.rotation-card{border:1px solid var(--line);border-radius:12px;background:#111d30;padding:15px}
+.rotation-card h3{margin:0 0 6px;font-size:15px;color:var(--gold)}
+.rotation-card p{margin:0 0 9px;font-size:12px}
+.rotation-card ol{padding-left:22px;margin:8px 0}
+.rotation-card li{font-size:12px;padding:3px 0;overflow-wrap:anywhere}
+.rotation-stats{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--cyan)}
+.rotation-alert{padding:10px 12px;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:9px;font-size:13px;margin:12px 0}
 h1{font-size:clamp(25px,4vw,38px);margin:5px 0}h2{font-size:18px;margin:0 0 12px}
 p,.muted{color:var(--muted)}.kicker{font-weight:800;color:var(--cyan);letter-spacing:.16em;text-transform:uppercase;font-size:12px}
 .notice,.card{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px}
@@ -40,6 +49,18 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <div class="stat"><b id="n-genre-specialist">—</b><span>brani passati al classificatore di generi / 100</span></div>
 <div class="stat"><b id="n-genre-confident">—</b><span>generi suggeriti con punteggio sufficiente</span></div></div>
 <p id="status" role="status">Caricamento dati…</p>
+<section class="card" aria-live="polite" style="margin:0 0 20px">
+<div class="head"><h2>Simulazione DJ · Rotazione delle 24 ore</h2><span class="tag">NON IN ONDA</span></div>
+<p id="rotation-note">Creazione di una giornata musicale di prova con brani unici e controlli sulle ripetizioni. Nessuna modifica ad AzuraCast.</p>
+<div class="rotation-stats">
+<span id="rotation-count">Brani: —</span>
+<span id="rotation-repeat">Ripetizioni: —</span>
+<span id="rotation-gaps">Brani mancanti: —</span>
+</div>
+<div class="rotation-alert">La simulazione usa una <b>durata ipotetica di 3 minuti e 30 secondi</b> per brano. Le fasce non sostituiscono i notiziari, spot, jingle e dirette già programmati su AzuraCast. I generi stimati dall'IA non sono ancora considerati verificati.</div>
+<div class="rotation-grid" id="rotation-blocks"></div>
+<div class="toolbar"><button type="button" id="export-dry-run" onclick="saveDryRun()" disabled>Esporta piano di prova (JSON)</button><span class="muted">Nessuna playlist viene importata o modificata.</span></div>
+</section>
 <h2>Programmazione suggerita</h2>
 <div class="schedules" id="slots"></div>
 <div class="card"><h2>Catalogo analizzato</h2>
@@ -50,7 +71,7 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <p><small>Dashboard accessibile solo attraverso il collegamento privato SSH. Per il campione IA si usano YAMNet ONNX (Apache 2.0; etichette AudioSet CC BY 4.0) e, separatamente, AST-GTZAN ONNX (BSD 3-Clause). I punteggi non sono certezze; i generi sono suggerimenti da verificare. I dati vengono aggiornati gradualmente per non sovraccaricare Oracle.</small></p>
 </main>
 <script>
-let state={tracks:[],slots:{}};
+let state={tracks:[],slots:{}}, dryRun=null;
 const el=id=>document.getElementById(id);
 function cell(tr,txt,cls){const td=document.createElement("td");td.textContent=txt||"—";if(cls)td.className=cls;tr.append(td)}
 function draw(){
@@ -69,6 +90,44 @@ function draw(){
    cell(tr,x.voice.replace(/_/g," "));
    body.append(tr)
  }
+}
+function showRotation(plan){
+ dryRun=plan;
+ if(!plan||plan.read_only!==true||plan.playlist_writes!==0||plan.ready_for_live!==false){
+  el("rotation-note").textContent="La verifica di sicurezza della simulazione non è riuscita.";
+  el("export-dry-run").disabled=true;
+  return;
+ }
+ el("rotation-count").textContent="Brani diversi: "+plan.total_unique_tracks;
+ el("rotation-repeat").textContent="Ripetizioni brano: "+plan.duplicate_tracks;
+ el("rotation-gaps").textContent="Brani mancanti (stime): "+plan.missing_tracks_estimated;
+ el("rotation-note").textContent=plan.full_draft?
+  "Piano completo sulla base di durate simulate. Nessuna decisione passa automaticamente ad AzuraCast.":
+  "Piano parziale: alcuni blocchi non dispongono di abbastanza candidati verificati. Non utilizzabile per la diretta.";
+ const group=el("rotation-blocks");group.replaceChildren();
+ for(const block of plan.blocks||[]){
+  const card=document.createElement("section");card.className="rotation-card";
+  const h=document.createElement("h3");h.textContent=block.dalle+"–"+block.alle+" · "+block.label;card.append(h);
+  const p=document.createElement("p");
+  p.textContent=block.brani_proposti+" / "+block.brani_richiesti_stimati+" brani di prova · copertura "+block.copertura_percento+"%";
+  card.append(p);
+  const ol=document.createElement("ol");
+  for(const tr of (block.brani||[]).slice(0,5)){
+   const li=document.createElement("li");
+   li.textContent=tr.orario_indicativo+" · "+tr.title;
+   ol.append(li);
+  }
+  card.append(ol);group.append(card);
+ }
+ el("export-dry-run").disabled=false;
+}
+function saveDryRun(){
+ if(!dryRun||dryRun.read_only!==true||dryRun.ready_for_live!==false)return;
+ const blob=new Blob([JSON.stringify(dryRun,null,2)],{type:"application/json"});
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement("a");
+ a.href=url;a.download="RDI-DJ-SIMULAZIONE-"+dryRun.date+".json";
+ a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 function showSlots(){
  const slots=el("slots");slots.replaceChildren();
@@ -106,6 +165,14 @@ async function refresh(){
   el("n-genre-confident").textContent=data.genre_pilot_confident||0;
   el("status").textContent="Ultimo controllo: "+new Date(data.updated_at).toLocaleString("it-IT")+" · "+data.status.replace(/_/g," ")+" · Zero modifiche alle playlist";
   showSlots();draw();
+  try{
+   const sim=await fetch("/api/rotation",{cache:"no-store"});
+   if(!sim.ok)throw Error("HTTP "+sim.status);
+   showRotation(await sim.json());
+  }catch(e){
+   el("rotation-note").textContent="Simulazione non disponibile: "+e.message;
+   el("export-dry-run").disabled=true;
+  }
  }catch(e){el("status").textContent="Dati ancora non disponibili: "+e.message}
 }
 refresh();
