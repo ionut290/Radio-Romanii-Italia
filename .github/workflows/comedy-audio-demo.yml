@@ -27,22 +27,22 @@ jobs:
         run: python scripts/render_comedy_audio_demo.py
       - name: Verifica file MP3 e voci
         run: |
-          test -s demo-output/RDI-Pronto-RDI-prova.mp3
+          test -s demo-output/RDI-Pronto-RDI-prova-v2.mp3
           python - <<'PY'
           import json
           from pathlib import Path
           data=json.loads(Path("demo-output/metadata.json").read_text())
           assert data["duration_seconds"] >= 60
           assert data["fiction_notice"].startswith("Telefonata simulata")
-          assert data["host_voice"] == "it-IT-ElsaNeural"
+          assert data["host_voice"] == "it-IT-IsabellaNeural"
           print("Prova pronta:",data["duration_seconds"],"secondi")
           PY
       - name: Conserva la prova, senza trasmetterla
         uses: actions/upload-artifact@v4
         with:
-          name: RDI-Pronto-RDI-prova-audio
+          name: RDI-Pronto-RDI-prova-audio-v2
           path: |
-            demo-output/RDI-Pronto-RDI-prova.mp3
+            demo-output/RDI-Pronto-RDI-prova-v2.mp3
             demo-output/metadata.json
           retention-days: 14
           if-no-files-found: error
