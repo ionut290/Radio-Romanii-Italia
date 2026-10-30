@@ -20,6 +20,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from mutagen.mp3 import MP3
 import imageio_ffmpeg
 import edge_tts
+from tg_video_rights import select_video
 
 ROOT=Path(__file__).resolve().parent.parent
 OUT=ROOT / "demo-output"
@@ -165,12 +166,39 @@ def ffmpeg(*args):
     cmd=[imageio_ffmpeg.get_ffmpeg_exe(),"-hide_banner","-loglevel","error","-y",*map(str,args)]
     subprocess.run(cmd,check=True)
 
+def approved_rome_footage(article):
+    """Re-use only the reviewed RDI archive clip, never embedded publisher media."""
+    match=select_video({"title_original":article["title"],
+                        "source_url":article.get("url","")})
+    if not match or match["kind"]!="repertory" or match.get("audio_muted") is not True:
+        return None,None
+    source=match["src"]
+    path=OUT/"repertory-rome-muted.mp4"
+    try:
+        exe=imageio_ffmpeg.get_ffmpeg_exe()
+        cmd=[exe,"-hide_banner","-loglevel","error","-y",
+             "-rw_timeout","8000000",
+             "-i",source,
+             "-t",str(match["seconds"]),"-an",
+             "-vf","fps=15,scale=520:310:force_original_aspect_ratio=increase,crop=520:310,format=yuv420p",
+             "-c:v","libx264","-preset","ultrafast","-crf","28","-movflags","+faststart",str(path)]
+        subprocess.run(cmd,check=True,timeout=105)
+        if path.stat().st_size<20000: raise ValueError("Empty video clip")
+        print("Licensed RDI b-roll:",match["video_id"],"silent seconds",match["seconds"])
+        return path,match
+    except Exception as exc:
+        print("Repertory footage unavailable; photo fallback",type(exc).__name__)
+        path.unlink(missing_ok=True)
+        return None,None
+
+
 def main():
     OUT.mkdir(exist_ok=True,parents=True)
     article=next((item for item in json.loads((ROOT/"editorial.json").read_text(encoding="utf-8"))["items"] if item.get("id")==STORY_ID),None)
     if not article or len(article.get("body",""))<1500 or len(article.get("source_urls",[]))<3:
         raise RuntimeError("The editorially documented Rome article is not present; stop demo")
     photo=get_rome()
+    footage,footage_record=approved_rome_footage(article)
     parts=[]
     timing=[]
     elapsed=0.0
@@ -183,11 +211,24 @@ def main():
         still=base.with_suffix(".jpg")
         generate_slide(scene,i,photo,sec).save(still,quality=94,subsampling=0)
         video=base.with_suffix(".mp4")
-        ffmpeg("-loop","1","-framerate","15","-i",still,"-i",voice,
-               "-t",f"{sec:.3f}","-vf","scale=1280:720:flags=lanczos,format=yuv420p",
-               "-c:v","libx264","-preset","veryfast","-b:v","1250k",
-               "-c:a","aac","-b:a","128k","-ar","44100","-ac","2",
-               "-r","15","-movflags","+faststart","-shortest",video)
+        if footage is not None and scene["kind"]=="fact":
+            # A licensed, silent 14-second Pexels inset appears only with the
+            # matching Rome cinema story; original reporter audio never enters.
+            ffmpeg("-loop","1","-framerate","15","-i",still,
+                   "-i",footage,"-i",voice,
+                   "-t",f"{sec:.3f}",
+                   "-filter_complex",
+                   "[0:v][1:v]overlay=700:215:enable='lt(t,14)':shortest=0:eof_action=pass,format=yuv420p[v]",
+                   "-map","[v]","-map","2:a:0",
+                   "-c:v","libx264","-preset","veryfast","-b:v","1500k",
+                   "-c:a","aac","-b:a","128k","-ar","44100","-ac","2",
+                   "-r","15","-movflags","+faststart","-shortest",video)
+        else:
+            ffmpeg("-loop","1","-framerate","15","-i",still,"-i",voice,
+                   "-t",f"{sec:.3f}","-vf","scale=1280:720:flags=lanczos,format=yuv420p",
+                   "-c:v","libx264","-preset","veryfast","-b:v","1250k",
+                   "-c:a","aac","-b:a","128k","-ar","44100","-ac","2",
+                   "-r","15","-movflags","+faststart","-shortest",video)
         parts.append(video)
         timing.append({"part":scene["kind"],"start_seconds":round(elapsed,2),"end_seconds":round(elapsed+sec,2)})
         elapsed+=sec
@@ -205,6 +246,9 @@ def main():
         "editorial_sources":article["source_urls"],
         "visual_source":"Florian Delée / Pexels via data/youtube-landscapes.json",
         "visual_notice":"Roma, immagini di repertorio; non fotogrammi del film",
+        "moving_video": footage_record is not None,
+        "moving_video_seconds": 14 if footage_record else 0,
+        "licensed_video_id": footage_record["video_id"] if footage_record else None,
         "duration_seconds":round(elapsed,1),"scenes":timing,"video":target.name
     }
     (OUT/"metadata.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
