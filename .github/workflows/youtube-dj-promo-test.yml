@@ -1,0 +1,37 @@
+name: RDI - Test promo DJ nel live YouTube
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'youtube-dj-promo.js'
+      - 'youtube-dj-promo-core.mjs'
+      - 'youtube-dj-promo.css'
+      - 'youtube-news.html'
+      - 'editorial-images/rdi-dj-programmazione-live.svg'
+      - 'data/youtube-dj-promo.json'
+      - 'tests/youtube-dj-promo.test.mjs'
+      - '.github/workflows/youtube-dj-promo-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  promo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test scheduler promo, precedenza notiziari e assenza audio
+        run: node --test tests/youtube-dj-promo.test.mjs tests/youtube-spots.test.mjs
+      - name: Controlla pubblicazione grafica e intervalli
+        run: |
+          set -euo pipefail
+          node -e 'const f=require("./data/youtube-dj-promo.json");if(!f.enabled||f.durationSeconds!==16||f.minMinutesBetween!==30)process.exit(1)'
+          grep -q 'ANTEPRIMA' editorial-images/rdi-dj-programmazione-live.svg
+          grep -q '20261030-dj-promo-1' youtube-news.html
+          echo 'RDI_YOUTUBE_DJ_PROMO=TESTED'
