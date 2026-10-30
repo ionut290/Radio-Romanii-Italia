@@ -1,0 +1,111 @@
+name: RDI - IA musicale YAMNet (100 brani, solo ascolto)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_music_ai.py'
+      - 'tests/test_rdi_music_ai.py'
+      - 'oracle/install-rdi-music-ai.sh'
+      - 'oracle/rdi-music-ai-analyze.service'
+      - 'oracle/rdi-music-ai-analyze.timer'
+      - '.github/workflows/rdi-music-ai.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-music-dj-deploy
+  cancel-in-progress: false
+
+jobs:
+  install-ai:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testa campione, classificazione prudente e blocco contenuti non musicali
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/rdi_music_ai.py scripts/rdi_music_dj.py
+          python -m unittest discover -s tests -p 'test_rdi_music_ai.py' -v
+          python -m unittest discover -s tests -p 'test_rdi_music_dj.py' -v
+          bash -n oracle/install-rdi-music-ai.sh
+      - name: Ottieni modello Apache-2.0 da revisione immutabile e verifica SHA256
+        shell: bash
+        run: |
+          set -euo pipefail
+          REV="f25b741c2f0bdc6d7e6db24b5fddda23347dbafd"
+          BASE="https://huggingface.co/audiomagic/yamnet-onnx/resolve/$REV"
+          mkdir -p models
+          curl --fail --location --silent --show-error --retry 3 --max-time 150 \
+            "$BASE/yamnet.onnx" -o models/yamnet.onnx
+          echo 'd3835ffbbd4a1bb3e777f0ca217b5007907f5171dd5d17c4236b95b2af8f908e  models/yamnet.onnx' | sha256sum -c -
+          curl --fail --location --silent --show-error --retry 2 --max-time 45 \
+            "$BASE/yamnet_class_map.csv" -o models/yamnet_class_map.csv
+          curl --fail --location --silent --show-error --retry 2 --max-time 45 \
+            "$BASE/LICENSE" -o models/LICENSE
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          with Path('models/yamnet_class_map.csv').open(newline='') as fp:
+              names={int(row['index']):row['display_name'] for row in csv.DictReader(fp)}
+          assert len(names)==521 and names[0]=='Speech' and names[24]=='Singing'
+          assert names[211]=='Pop music' and names[212]=='Hip hop music'
+          print('OFFICIAL_YAMNET_CLASSES=521')
+          print('OFFICIAL_MODEL_SHA256=VERIFIED')
+          PY
+      - name: Configura accesso SSH Oracle senza esporre chiavi
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Installa il riconoscitore e verifica esecuzione CPU su Oracle
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-music-ai-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          [[ "$STAGE" =~ ^/tmp/rdi-music-ai-[0-9]+-[0-9]+$ ]]
+          sshx(){ ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=15 "$@"; }
+          scpx(){ scp -q -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=15 "$@"; }
+          sshx "$REMOTE" "install -d -m 700 '$STAGE/oracle' '$STAGE/scripts' '$STAGE/models'"
+          cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scpx scripts/rdi_music_ai.py scripts/rdi_music_dj.py scripts/rdi-music-dj.html "$REMOTE:$STAGE/scripts/"
+          scpx oracle/install-rdi-music-ai.sh oracle/rdi-music-ai-analyze.service \
+            oracle/rdi-music-ai-analyze.timer "$REMOTE:$STAGE/oracle/"
+          scpx models/yamnet.onnx models/yamnet_class_map.csv models/LICENSE "$REMOTE:$STAGE/models/"
+          sshx "$REMOTE" "sudo -n bash '$STAGE/oracle/install-rdi-music-ai.sh'"
+          sshx "$REMOTE" 'set -e; \
+            systemctl is-active --quiet rdi-music-ai-analyze.timer; \
+            systemctl is-active --quiet rdi-music-dj-web.service; \
+            curl -fsS --max-time 10 http://127.0.0.1:8788/api/report \
+              | python3 -c '\''import sys,json;x=json.load(sys.stdin);assert x["read_only"] and x["playlist_writes"]==0 and x["ai_sample_target"]==100;print("YAMNET_ORACLE_INSTALLED=true");print("CURRENT_AI_ANALYZED="+str(x["ai_sample_done"]))'\'''
+      - name: Avvia l'analisi progressiva del campione senza toccare la diretta
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=15 \
+            ubuntu@129.151.255.41 \
+            'set -e; sudo -n systemctl start --no-block rdi-music-ai-analyze.service; \
+            sudo -n systemctl is-active --quiet rdi-music-ai-analyze.timer; \
+            echo RDI_AI_100_SAMPLE_LAUNCHED=true; \
+            echo RDI_STATION_PLAYLISTS_MODIFIED=false'
