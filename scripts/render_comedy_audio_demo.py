@@ -33,7 +33,7 @@ TURNS = [
 
 async def main() -> None:
     clips: list[Path] = []
-    voices = set(await edge_tts.list_voices())
+    voices = await edge_tts.list_voices()
     available = {v.get("ShortName") for v in voices}
     for voice in (HOST, CALLER):
         if voice not in available:
