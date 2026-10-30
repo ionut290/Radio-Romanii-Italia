@@ -8,8 +8,9 @@ SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/youtube-news.html}"
 # Browser image is decorative; audio comes only from the AzuraCast MP3 source.
 Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
-PROFILE=$(runuser -u ubuntu -- mktemp -d /home/ubuntu/radio-youtube-browser.XXXXXXXX)
-cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" "${AUTOPLAY_PID:-}" 2>/dev/null || true; rm -rf "$PROFILE"; }
+PROFILE=/home/ubuntu/radio-youtube-browser
+install -d -o ubuntu -g ubuntu -m 700 "$PROFILE"
+cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" "${AUTOPLAY_PID:-}" 2>/dev/null || true; true; }
 trap cleanup EXIT INT TERM
 sleep 2
 # WebGL is required by the official Italy and Romania radar iframes. Xvfb has no physical GPU, so use Chromium's software renderer.
