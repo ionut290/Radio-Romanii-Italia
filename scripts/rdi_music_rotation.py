@@ -137,7 +137,12 @@ def simulate(catalogue,day=None):
     bank=_bank(catalogue["tracks"]) if fresh else []
     # Every validated song enters the bank immediately, even when its
     # finer rhythm/genre classification is still being calculated.
-    playable=[tr for tr in bank if _schedulable(tr)]
+    # For a SHADOW playlist, existing playable audio and a verified duration
+    # are enough. A missing BPM must NOT hide a real song forever.
+    # Energy/genre guesses only influence sorting when available; they never
+    # authorize an actual on-air playlist change.
+    playable=list(bank)
+    profiled_count=sum(_schedulable(tr) for tr in bank)
     rotated=_daily_order(playable,day)
     used=set()
     recent=[]
@@ -190,7 +195,8 @@ def simulate(catalogue,day=None):
       "live_index_verified":fresh,
       "pool_tracks_total":len(pool),
       "pool_ready_for_rotation":len(playable),
-      "pool_waiting_for_analysis":len(pool)-len(playable),
+      "pool_audio_profiled":profiled_count,
+      "pool_waiting_for_analysis":len(pool)-profiled_count,
       "pool_tracks":pool,
       "pool_excluded_from_today":len(pool)-len(used),
       "new_tracks_in_pool":sum(bool(x["nuovo_brano"]) for x in pool),
