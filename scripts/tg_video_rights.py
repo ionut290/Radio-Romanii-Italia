@@ -25,7 +25,7 @@ SENSITIVE = re.compile(
     r"\b(?:mort[eoia]|deces|decedat|ucis|ucidere|omor|omicid|crim[aăe]|"
     r"accident|traged|incend|explozi|explos|violent|atac|ranit|r[aă]ni|"
     r"spitalizat|deced|r[aă]zboi|razboi|bombard|r[aă]pire|rapire|"
-    r"stupr|violenz|femminicid|cadaver|disparut|disparit)\b",
+    r"stupr|violenz|femminicid|cadaver|disparut|disparit)\w*",
     flags=re.IGNORECASE
 )
 SILENT_VIDEO_MAX_SECONDS = 18
