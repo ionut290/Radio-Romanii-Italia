@@ -147,11 +147,14 @@ def init(db):
         music_score REAL,top_events TEXT,analyzed_at TEXT)""")
     db.commit()
 
-def sample_paths(db, sample_size=100):
+def sample_paths(db, sample_size=100, live_paths=None):
     # Deterministic pseudo-random sample, independent of filenames and time.
+    # Restricting to a freshly enumerated live library prevents stale paths from
+    # the previously cached SQLite scan producing 100 failed FFmpeg attempts.
     from rdi_music_dj import excluded
     raw=db.execute("SELECT path,size,modified FROM tracks").fetchall()
-    filtered=[x for x in raw if not excluded(x[0])]
+    filtered=[x for x in raw if not excluded(x[0]) and
+              (live_paths is None or x[0] in live_paths)]
     return sorted(filtered,key=lambda x:hashlib.sha256(x[0].encode("utf-8","surrogateescape")).hexdigest())[:sample_size]
 
 def run(limit=100,sample_size=100):
@@ -172,7 +175,15 @@ def run(limit=100,sample_size=100):
     db=sqlite3.connect(DB,timeout=20)
     try:
         init(db)
-        selected=sample_paths(db,sample_size)
+        # The database is an inventory cache. Oracle's live AzuraCast media
+        # folder can differ after deletions/moves; only real current files qualify.
+        from rdi_music_scan import inventory
+        present=set(inventory())
+        selected=sample_paths(db,sample_size,live_paths=present)
+        if not selected:
+            raise RuntimeError("No current local audio files overlap the cached inventory")
+        print("AI_LIVE_LIBRARY_FILES="+str(len(present)),flush=True)
+        print("AI_SAMPLE_CURRENT_FILES="+str(len(selected)),flush=True)
         analyzed=0
         skipped=0
         failed=0
