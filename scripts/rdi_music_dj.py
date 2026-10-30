@@ -141,15 +141,17 @@ def metadata_scan(db: sqlite3.Connection, limit: int) -> int:
          genre TEXT, title TEXT, artist TEXT, analyzed_at TEXT)""")
     db.commit()
     tracked=0
+    attempts=0
     for path,size,modified in db.execute(
         "SELECT path,size,modified FROM tracks ORDER BY analyzed_at DESC").fetchall():
-        if tracked >= limit:
+        if tracked >= limit or attempts >= max(8,limit*4):
             break
         if excluded(path):
             continue
         old=db.execute("SELECT size,modified FROM track_tags WHERE path=?",(path,)).fetchone()
         if old==(size,modified):
             continue
+        attempts+=1
         try:
             proc=subprocess.run(
                 ["sudo","-n","nice","-n","15","ffprobe","-v","error",
