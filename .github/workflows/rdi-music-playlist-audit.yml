@@ -2,7 +2,7 @@ name: RDI - Audit sola lettura playlist AutoDJ
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/rdi-music-playlist-audit.yml']
+    paths: ['.github/workflows/rdi-music-playlist-audit.yml', 'scripts/rdi_music_playlist_inspect.py']
   workflow_dispatch:
 permissions:
   contents: read
