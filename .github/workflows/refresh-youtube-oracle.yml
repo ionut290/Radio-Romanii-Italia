@@ -63,6 +63,7 @@ jobs:
             exit 1
           fi
       - name: Aggiorna Chromium e riapre solo il browser con WebGL
+        if: github.event_name == 'push'
         run: |
           set -euo pipefail
           scp -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
@@ -74,6 +75,7 @@ jobs:
             ubuntu@129.151.255.41 \
             'set -e; sudo install -m 700 /tmp/visual-relay.sh /usr/local/sbin/radio-youtube-visual; sudo install -m 700 /tmp/radar-autoplay.py /usr/local/sbin/rdi-radar-autoplay.py; rm -f /tmp/visual-relay.sh /tmp/radar-autoplay.py; pgrep -x ffmpeg >/dev/null; if pgrep -u ubuntu -f chromium >/dev/null; then env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+q; sleep 3; fi; PROFILE=/home/ubuntu/radio-youtube-browser; mkdir -p "$PROFILE"; nohup env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority /snap/bin/chromium --remote-debugging-address=127.0.0.1 --remote-debugging-port=9222 --remote-allow-origins=http://127.0.0.1 --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble --autoplay-policy=user-gesture-required --window-size=1280,720 --window-position=0,0 --kiosk https://radioromanii.duckdns.org/youtube-news.html >/tmp/radio-youtube-chromium-webgl.log 2>&1 </dev/null & echo $! >/tmp/rdi-chromium-webgl.pid; sleep 8; pgrep -u ubuntu -f chromium >/dev/null; nohup sudo -n python3 /usr/local/sbin/rdi-radar-autoplay.py >/tmp/rdi-radar-autoplay.log 2>&1 </dev/null & echo "Browser riaperto con WebGL e radar animato; FFmpeg non riavviato."'
       - name: Ricarica Chromium senza riavviare la diretta
+        if: github.event_name == 'workflow_dispatch'
         run: |
           ssh -i "$HOME/.ssh/id_rdi" \
             -o StrictHostKeyChecking=yes \
