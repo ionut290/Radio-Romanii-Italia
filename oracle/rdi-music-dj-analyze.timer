@@ -1,0 +1,12 @@
+[Unit]
+Description=Continue bounded RDI DJ music analysis automatically
+
+[Timer]
+OnBootSec=4min
+OnUnitInactiveSec=30min
+RandomizedDelaySec=2min
+AccuracySec=60s
+Unit=rdi-music-dj-analyze.service
+
+[Install]
+WantedBy=timers.target
