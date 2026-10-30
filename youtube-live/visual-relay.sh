@@ -12,7 +12,7 @@ PROFILE=$(runuser -u ubuntu -- mktemp -d /home/ubuntu/radio-youtube-browser.XXXX
 cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || true; rm -rf "$PROFILE"; }
 trap cleanup EXIT INT TERM
 sleep 2
-# WebGL is required by the official DPC radar iframe. Xvfb has no physical GPU, so use Chromium's software renderer.
+# WebGL is required by the official Italy and Romania radar iframes. Xvfb has no physical GPU, so use Chromium's software renderer.
 # The browser refresh workflow also installs this script before opening the weather page.
 runuser -u ubuntu -- /snap/bin/chromium --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader \
   --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking \
