@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T01:58:58Z",
+  "updated_at": "2026-10-30T11:04:04Z",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "RDI redazione assistita IA, verifica fonti 2026-10-29",
   "items": [
@@ -15,15 +15,15 @@
       "status": "reported",
       "country": "Ucraina",
       "country_code": "UA",
-      "killed": 14,
+      "killed": 15,
       "injured": 14,
       "attacker_killed": null,
-      "casualty_note_ro": "Cel puțin 14 persoane ucise și 14 rănite, potrivit actualizării autorităților regionale din 29 octombrie 2026, preluate de Euronews și DW. Bilanț provizoriu; autorii uciși nu sunt incluși.",
-      "casualty_note_it": "Almeno 14 persone uccise e 14 ferite secondo l'aggiornamento delle autorità regionali del 29 ottobre 2026, ripreso da Euronews e DW. Bilancio provvisorio; eventuali aggressori uccisi non sono conteggiati.",
-      "title_ro": "Dnipro: dronă asupra gării, cel puțin 14 morți și 14 răniți",
-      "title_it": "Dnipro: drone sulla stazione ferroviaria, almeno 14 morti e 14 feriti",
-      "description_ro": "La 29 octombrie 2026, o dronă cu propulsie reactivă a lovit un peron din gara Dnipro, unde se afla un tren de călători, potrivit Ukrzaliznytsia și poliției ucrainene. Autoritățile regionale au raportat ulterior cel puțin 14 morți și 14 răniți. Ucraina atribuie lovitura Rusiei; responsabilitățile individuale și intenția nu sunt stabilite de o anchetă independentă prezentată de RDI. Punctul indică orașul, nu infrastructura afectată.",
-      "description_it": "Il 29 ottobre 2026 un drone a propulsione a reazione ha colpito un binario della stazione di Dnipro, dove si trovava un treno passeggeri, secondo Ukrzaliznytsia e la polizia ucraina. Le autorità regionali hanno successivamente riferito almeno 14 morti e 14 feriti. L'Ucraina attribuisce l'attacco alla Russia; responsabilità individuali e intenzionalità non sono accertate da un'indagine indipendente presentata da RDI. Il punto indica la città, non l'infrastruttura colpita.",
+      "casualty_note_ro": "Cel puțin 15 persoane decedate, potrivit actualizării din 30 octombrie 2026 a guvernatorului regional, relatată de Ukrainska Pravda: un bărbat de 40 de ani rănit anterior a murit la spital. Inițial au fost raportate 14 persoane rănite, inclusiv cea decedată ulterior; cele două cifre nu trebuie însumate ca victime distincte. Bilanț provizoriu; autorii uciși nu sunt incluși.",
+      "casualty_note_it": "Almeno 15 persone decedute secondo l'aggiornamento del 30 ottobre 2026 del governatore regionale, riportato da Ukrainska Pravda: un uomo di 40 anni, ferito nell'attacco, è morto in ospedale. Inizialmente erano stati segnalati 14 feriti, compreso l'uomo successivamente deceduto; i due numeri non vanno sommati come persone distinte. Bilancio provvisorio; gli eventuali autori uccisi non sono inclusi.",
+      "title_ro": "Dnipro: dronă asupra gării, cel puțin 15 morți",
+      "title_it": "Dnipro: drone sulla stazione ferroviaria, almeno 15 morti",
+      "description_ro": "La 29 octombrie 2026, o dronă cu propulsie reactivă a lovit un peron din gara Dnipro, unde se afla un tren de călători, potrivit Ukrzaliznytsia și poliției ucrainene. Autoritățile regionale au raportat ulterior cel puțin 15 morți la 30 octombrie, după decesul la spital al unei persoane rănite; inițial fuseseră raportate 14 persoane rănite. Ucraina atribuie lovitura Rusiei; responsabilitățile individuale și intenția nu sunt stabilite de o anchetă independentă prezentată de RDI. Punctul indică orașul, nu infrastructura afectată.",
+      "description_it": "Il 29 ottobre 2026 un drone a propulsione a reazione ha colpito un binario della stazione di Dnipro, dove si trovava un treno passeggeri, secondo Ukrzaliznytsia e la polizia ucraina. Le autorità regionali hanno successivamente riferito almeno 15 morti al 30 ottobre, dopo il decesso in ospedale di un ferito; inizialmente erano stati segnalati 14 feriti. L'Ucraina attribuisce l'attacco alla Russia; responsabilità individuali e intenzionalità non sono accertate da un'indagine indipendente presentata da RDI. Il punto indica la città, non l'infrastruttura colpita.",
       "actor": "Attacco attribuito dalle autorità ucraine alle forze russe; accertamento indipendente delle responsabilità individuali non disponibile.",
       "sources": [
         {
@@ -41,6 +41,10 @@
         {
           "name": "Deutsche Welle, 29 ottobre 2026",
           "url": "https://amp.dw.com/uk/rf-vdarila-po-vokzalu-u-dnipri-vze-14-zagiblih-u-vazkomu-stani-ditina/a-79794196"
+        },
+        {
+          "name": "Ukrainska Pravda, 30 ottobre 2026; aggiornamento attribuito al governatore Oleksandr Hanzha",
+          "url": "https://www.pravda.com.ua/news/2026/10/30/8060394/"
         }
       ],
       "rdi_article_id": "rdi-20261029-dnipro-gara-atac-civili",
