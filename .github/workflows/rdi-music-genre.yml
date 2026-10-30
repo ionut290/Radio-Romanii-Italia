@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/rdi_music_genre_ai.py'
+      - 'scripts/rdi_ast_fbank.py'
       - 'tests/test_rdi_music_genre_ai.py'
       - 'oracle/install-rdi-music-genre.sh'
       - 'oracle/rdi-music-genre-analyze.service'
@@ -36,7 +37,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --disable-pip-version-check --only-binary=:all: 'numpy>=1.24,<2' >/dev/null
-          python -m py_compile scripts/rdi_music_genre_ai.py scripts/rdi_music_dj.py
+          python -m py_compile scripts/rdi_music_genre_ai.py scripts/rdi_ast_fbank.py scripts/rdi_music_dj.py
           python -m unittest discover -s tests -p 'test_rdi_music_genre_ai.py' -v
           bash -n oracle/install-rdi-music-genre.sh
       - name: Ottieni modello BSD-3-Clause e verifica hash di integrità
@@ -85,7 +86,7 @@ jobs:
           sshx "$REMOTE" "install -d -m 700 '$STAGE/oracle' '$STAGE/scripts' '$STAGE/models/ast-preprocessor'"
           cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
           trap cleanup EXIT
-          scpx scripts/rdi_music_genre_ai.py scripts/rdi_music_dj.py scripts/rdi-music-dj.html \
+          scpx scripts/rdi_music_genre_ai.py scripts/rdi_ast_fbank.py scripts/rdi_music_dj.py scripts/rdi-music-dj.html \
             "$REMOTE:$STAGE/scripts/"
           scpx oracle/install-rdi-music-genre.sh oracle/rdi-music-genre-analyze.service \
             oracle/rdi-music-genre-analyze.timer "$REMOTE:$STAGE/oracle/"
