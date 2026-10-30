@@ -15,7 +15,7 @@
 .rdi-weather-city{flex:0 0 150px;min-height:92px;padding:4px 16px;border-left:2px solid #55a9bb;display:grid;grid-template-columns:1fr auto;align-content:center;align-items:baseline;gap:2px 8px}
 .rdi-weather-city strong{font-size:17px;font-weight:700;white-space:nowrap}
 .rdi-weather-city b{font-size:27px;line-height:1.1}
-.rdi-weather-city span{grid-column:1/-1;color:#c1cfda;font-size:13px;white-space:nowrap}
+.rdi-weather-city span{grid-column:1/-1;color:#c1cfda;font-size:13px;white-space:nowrap}.rdi-weather-city .rdi-weather-forecast{color:#91a8b8;font-size:11px}
 @keyframes rdi-weather-scroll{to{transform:translateX(-50%)}}
 .rdi-weather-source{margin:auto 48px 18px;color:#b1c1ce;font-size:12px}
 .rdi-weather-radar{position:absolute;inset:0;background:#071629}
