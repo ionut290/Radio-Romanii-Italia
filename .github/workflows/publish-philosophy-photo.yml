@@ -1,0 +1,37 @@
+name: RDI - Pubblica foto del calendario
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'calendario-filosofico/**/*.jpg'
+      - 'scripts/publish_philosophy_photo.py'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: rdi-calendar-photo-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Check and publish today's photo
+        shell: bash
+        run: |
+          set -euo pipefail
+          TODAY=$(TZ=Europe/Rome date +%F)
+          if [ ! -f "calendario-filosofico/${TODAY:0:4}/${TODAY}.jpg" ]; then
+            echo "No original photograph for today; pointer not modified."
+            exit 0
+          fi
+          python3 scripts/publish_philosophy_photo.py "$TODAY"
+          git config user.name 'rdi-calendar-bot'
+          git config user.email 'rdi-calendar-bot@users.noreply.github.com'
+          git add data/calendario-filosofico-oggi.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish RDI philosophy photo for $TODAY"
+            git push
+          fi
