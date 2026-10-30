@@ -74,7 +74,7 @@ async function loadWeather(){
   const data=await response.json();const arr=Array.isArray(data)?data:[data];
   const cityData=cities.map((c,i)=>{
    const current=arr[i]?.current,temp=Number(current?.temperature_2m),code=Number(current?.weather_code);
-   return Number.isFinite(temp)?{country:c[0],name:c[1],temperature:temp,weatherCode:code,description:weatherCondition(code),minTemperature:Number(arr[i]?.daily?.temperature_2m_min?.[0]),maxTemperature:Number(arr[i]?.daily?.temperature_2m_max?.[0]),precipitationProbability:Number(arr[i]?.daily?.precipitation_probability_max?.[0])}:null;
+   return Number.isFinite(temp)?{country:c[0],name:c[1],temperature:temp,weatherCode:code,description:weatherCondition(code),minTemperature:arr[i]?.daily?.temperature_2m_min?.[0]==null?null:Number(arr[i].daily.temperature_2m_min[0]),maxTemperature:arr[i]?.daily?.temperature_2m_max?.[0]==null?null:Number(arr[i].daily.temperature_2m_max[0]),precipitationProbability:arr[i]?.daily?.precipitation_probability_max?.[0]==null?null:Number(arr[i].daily.precipitation_probability_max[0])}:null;
   }).filter(Boolean);
   window.rdiWeatherSnapshot={cities:cityData,updatedAt:Date.now()};
   window.dispatchEvent(new CustomEvent("rdi:weather-update",{detail:window.rdiWeatherSnapshot}));
