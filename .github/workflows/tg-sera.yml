@@ -1,0 +1,100 @@
+name: RDI - TG delle 18 con approfondimenti (anteprima sicura)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_daily_tg.py'
+      - 'scripts/render_daily_tg_audio.py'
+      - 'tests/test_daily_tg.py'
+      - '.github/workflows/tg-sera.yml'
+  schedule:
+    # Both UTC variants; Europe/Rome gate below handles daylight saving.
+    - cron: '20 14,15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-daily-evening-tg
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica sintassi, orario Italia, selezione notizie e diritti immagini
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/build_daily_tg.py scripts/render_daily_tg_audio.py
+          python -m unittest discover -s tests -p 'test_daily_tg.py' -v
+      - name: Seleziona notizie approfondite pubblicate entro le 16
+        run: python scripts/build_daily_tg.py --preview --output /tmp/rdi-tg-sera
+      - name: Conserva lista fonti per la redazione
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-tg-sera-fonti
+          path: /tmp/rdi-tg-sera/source-preview.json
+          retention-days: 7
+      - name: Verifica che l'orario locale sia 16:20
+        id: window
+        shell: bash
+        run: |
+          set -euo pipefail
+          current="$(TZ=Europe/Rome date +%H)"
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$current" = "16" ]; then
+            echo 'run=true' >> "$GITHUB_OUTPUT"
+            echo "TG programmato per l'edizione delle 18:00 (fuso Europe/Rome)."
+          else
+            echo 'run=false' >> "$GITHUB_OUTPUT"
+            echo "Solo anteprima/test: nessuna produzione automatica fuori dalla finestra delle 16."
+          fi
+      - name: Redigi TG italiano con approfondimenti e fonti verificabili
+        id: draft
+        if: steps.window.outputs.run == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        run: |
+          set +e
+          python scripts/build_daily_tg.py --output /tmp/rdi-tg-sera
+          status=$?
+          set -e
+          if [ "$status" -eq 2 ]; then
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo "Non ci sono abbastanza notizie adeguatamente documentate: niente TG inventato."
+            exit 0
+          fi
+          if [ "$status" -ne 0 ]; then exit "$status"; fi
+          echo 'ready=true' >> "$GITHUB_OUTPUT"
+      - name: Installa voce sintetica e FFmpeg
+        if: steps.draft.outputs.ready == 'true'
+        run: |
+          python -m pip install --disable-pip-version-check "edge-tts>=7,<8" "imageio-ffmpeg>=0.5,<1" "mutagen>=1.47,<2"
+      - name: Prepara voce femminile e cronologia delle scene video
+        if: steps.draft.outputs.ready == 'true'
+        run: python scripts/render_daily_tg_audio.py --folder /tmp/rdi-tg-sera
+      - name: Archivia MP3, testo giornalistico, fonti e scene
+        if: steps.draft.outputs.ready == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-tg-sera-edizione-italiana
+          path: |
+            /tmp/rdi-tg-sera/RDI-TG-SERA-IT-*.mp3
+            /tmp/rdi-tg-sera/manifest.json
+            /tmp/rdi-tg-sera/tg-script.txt
+            /tmp/rdi-tg-sera/tv-timing.json
+          retention-days: 7
+          if-no-files-found: error
+      - name: Verifica sicurezza della programmazione
+        if: steps.draft.outputs.ready == 'true'
+        run: |
+          echo "TG preparato. Questa versione NON modifica AzuraCast e NON interviene nel live YouTube."
+          echo "La messa in onda automatica sarà abilitata solo dopo verifica dell'edizione e della sincronizzazione."
