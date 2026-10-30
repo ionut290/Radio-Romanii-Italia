@@ -3,7 +3,7 @@ name: RDI - Verifica capacità palinsesto per fasce AzuraCast
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/rdi-music-hourly-inspect.yml']
+    paths: ['.github/workflows/rdi-music-hourly-inspect.yml', 'scripts/rdi_music_hourly_inspect.py']
   workflow_dispatch:
 
 permissions:
