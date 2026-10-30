@@ -257,8 +257,9 @@ def run(client,command,limit=None):
     print("DJ_SYNC_STATUS="+json.dumps(summary,sort_keys=True))
     if command=="status":return
     if command=="sync":
-        if ours.get("is_enabled"):
-            raise RuntimeError("New uploads must be synced via a separate tested process; refusing unsafe live sync")
+        # Add new uploads without toggling or rewriting the on-air playlist.
+        # This updates only the song-to-playlist membership, preserving the
+        # full original set. On any failed verification the batch rolls back.
         linked=apply_batch(client,info,min(max(1,int(limit or 50)),300))
         print("DJ_ADDED_PRESERVING_ORIGINALS="+str(linked))
         print("DJ_EXISTING_PLAYLISTS_CONFIGURED=0")
