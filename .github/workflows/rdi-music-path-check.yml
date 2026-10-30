@@ -5,21 +5,28 @@ on:
     branches: [main]
     paths: ['.github/workflows/rdi-music-path-check.yml']
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   inspect:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Diagnostica sola lettura
+      - uses: actions/checkout@v4
+      - name: Diagnostica read-only sul server
         env:
           K: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
           H: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
         run: |
           set -euo pipefail
           mkdir -p ~/.ssh
-          printf %s "$K" | base64 -d > ~/.ssh/id_rdi
-          printf '%s\n' "$H" > ~/.ssh/known_hosts
+          printf %s "$K" | tr -d '[:space:]' | base64 -d > ~/.ssh/id_rdi
+          printf '%s\n' "$H" | tr -d '\r' > ~/.ssh/known_hosts
           chmod 600 ~/.ssh/id_rdi ~/.ssh/known_hosts
-          ssh -i ~/.ssh/id_rdi -o BatchMode=yes -o StrictHostKeyChecking=yes ubuntu@129.151.255.41 "python3 -c 'import os,subprocess; p="/var/lib/docker/volumes/azuracast_station_data/_data/radio-romanii-italia/media"; print("PATH_EXISTS",os.path.isdir(p)); r=subprocess.run(["sudo","-n","find",p,"-type","f","-print0"],capture_output=True); print("FIND_EXIT",r.returncode); print("FIND_ERROR_TYPE", "path_missing" if b"No such file" in r.stderr else "sudo_or_other" if r.returncode else "none"); print("FIND_FILES",r.stdout.count(bytes([0]))); v=subprocess.run(["sudo","-n","docker","volume","inspect","azuracast_station_data"],capture_output=True); print("VOLUME_INSPECT_EXIT",v.returncode); print("VOLUME_MOUNT",(__import__("json").loads(v.stdout)[0].get("Mountpoint") if v.returncode==0 else "unavailable"))'"
+          scp -q -i ~/.ssh/id_rdi -o BatchMode=yes -o StrictHostKeyChecking=yes \
+              scripts/rdi_music_path_diagnose.py ubuntu@129.151.255.41:/tmp/rdi_music_path_diagnose.py
+          ssh -i ~/.ssh/id_rdi -o BatchMode=yes -o StrictHostKeyChecking=yes \
+              ubuntu@129.151.255.41 'python3 /tmp/rdi_music_path_diagnose.py; rm -f /tmp/rdi_music_path_diagnose.py'
