@@ -7,6 +7,8 @@
 .rdi-tg-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 80% 30%,#315482 0%,#0b1c35 70%);display:flex;align-items:center;justify-content:center}
 .rdi-tg-photo{display:none;width:100%;height:100%;object-fit:cover;opacity:.83}
 .rdi-tg-photo.is-visible{display:block}
+.rdi-tg-footage{display:none;width:100%;height:100%;object-fit:cover;position:absolute;inset:0;pointer-events:none;background:#091729}
+.rdi-tg-footage.is-visible{display:block}
 .rdi-tg-shade{position:absolute;inset:0;background:linear-gradient(90deg,#061427f5 0%,#06182deb 30%,#061a30ad 60%,#0614296e 100%),linear-gradient(0deg,#061223eb,transparent 38%)}
 .rdi-tg-header{position:absolute;left:36px;right:36px;top:25px;display:flex;justify-content:space-between;align-items:center;gap:24px}
 .rdi-tg-brand{color:#dfedff;font-size:19px;font-weight:900;letter-spacing:2.5px}
