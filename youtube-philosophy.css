@@ -1,0 +1,14 @@
+#rdiPhilosophy{--ph-hue:205;--ph-sun-x:50%;position:absolute;inset:0;z-index:11;display:grid;grid-template-columns:46% 54%;background:#07192c;color:#fff;overflow:hidden;pointer-events:none;font-family:Georgia,serif}
+#rdiPhilosophy[hidden]{display:none!important}
+.rdi-philosophy-art{position:relative;background:linear-gradient(145deg,hsl(var(--ph-hue) 38% 20%),#07182c 75%);overflow:hidden}
+.rdi-philosophy-art:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(125deg,transparent 0 30px,#fff1 31px,#fff0 33px);opacity:.34}
+.rdi-philosophy-sun{position:absolute;top:18%;left:var(--ph-sun-x);width:220px;height:220px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffebbc,#f5b66f 63%,#dd8953);box-shadow:0 0 100px #ffcd7960}
+.rdi-philosophy-orbit{position:absolute;top:9%;left:12%;width:480px;height:480px;border:2px solid #f8dfa852;border-radius:50%;transform:rotate(-25deg)}
+.rdi-philosophy-mountain{position:absolute;bottom:-10%;left:-10%;width:120%;height:57%;background:linear-gradient(145deg,#183a55,#091d30);clip-path:polygon(0 72%,18% 35%,30% 59%,53% 10%,70% 47%,87% 28%,100% 62%,100% 100%,0 100%)}
+.rdi-philosophy-copy{display:flex;flex-direction:column;justify-content:center;gap:22px;padding:7%;background:radial-gradient(circle at 100% 0,#243954,#101d32 66%)}
+.rdi-philosophy-eyebrow{font:800 18px Arial,sans-serif;letter-spacing:2px;color:#f2d28b;margin:0}
+.rdi-philosophy-date{font:600 25px Arial,sans-serif;color:#d5e3f0;margin:0;text-transform:capitalize}
+.rdi-philosophy-quote{font:bold clamp(30px,3.2vw,52px)/1.18 Georgia,serif;border:0;padding:0;margin:10px 0;color:white}
+.rdi-philosophy-credit{font:16px Arial,sans-serif;color:#bed0df;margin:0}
+.rdi-philosophy-progress{position:absolute;bottom:0;left:0;width:0;height:6px;background:#eec77e}
+body.rdi-philosophy-active #rdiExtras{visibility:hidden}
