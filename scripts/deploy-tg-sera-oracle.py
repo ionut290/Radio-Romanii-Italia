@@ -278,9 +278,12 @@ def prepare_disabled(client) -> None:
         raise ValueError("Disabled station setup is restricted to before 15:00 Italy time")
     existing=find_playlist(client)
     if existing is not None:
-        if existing.get("is_enabled"):
-            raise ValueError("Existing on-air TG playlist cannot be changed by setup")
-        print("RDI_TG_EMPTY_PLAYLIST=ALREADY_EXISTS")
+        if existing.get("is_enabled") or int(existing.get("num_songs") or 0) != 0:
+            raise ValueError("Only an empty and disabled dedicated playlist may be preconfigured")
+        configured=configure(client,existing,now.date().isoformat())
+        if configured.get("is_enabled") or int(configured.get("num_songs") or 0) != 0:
+            raise ValueError("Empty TG playlist became active or populated; refusing setup")
+        print("RDI_TG_EMPTY_PLAYLIST=UPDATED_DISABLED")
         return
     day=now.date().isoformat()
     # A new playlist is disabled: zero songs and no live broadcast.
