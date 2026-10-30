@@ -37,7 +37,12 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <header><div><div class="kicker">Radio Românii din Italia</div><h1>DJ intelligente · Analisi musicale</h1>
 <p>Ritmo, energia, generi dichiarati e proposte di rotazione per orario.</p></div>
 <button onclick="refresh()">Aggiorna dati</button></header>
-<div class="notice"><b>Modalità osservazione.</b> Nessuna modifica a playlist, musica o diretta. I BPM e l'energia sono stime. Il modello YAMNet ONNX (AudioSet) stima soprattutto la presenza della voce; il classificatore specializzato AST-GTZAN propone solo 10 generi generali (blues, classica, country, disco, hip-hop, jazz, metal, pop, reggae e rock). Nessuno dei due identifica con certezza tutti i sottogeneri moderni. Le proposte richiedono revisione.</div>
+<div class="notice"><b>Analisi musicale in sola lettura.</b> Il DJ AzuraCast usa una playlist separata, con stato verificato qui sotto. I BPM e l'energia sono stime. Il modello YAMNet ONNX (AudioSet) stima soprattutto la presenza della voce; il classificatore specializzato AST-GTZAN propone solo 10 generi generali (blues, classica, country, disco, hip-hop, jazz, metal, pop, reggae e rock). Nessuno dei due identifica con certezza tutti i sottogeneri moderni. Le proposte richiedono revisione.</div>
+<section class="card" aria-live="polite" style="margin:0 0 20px">
+  <div class="head"><h2>AzuraCast · DJ intelligente in onda</h2><span class="tag" id="autodj-badge">Verifica stato…</span></div>
+  <p id="autodj-summary">Lettura dello stato effettivo della playlist AzuraCast.</p>
+  <p class="muted">Le playlist originali, gli spot e gli appuntamenti editoriali rimangono gestiti da AzuraCast. L'ordine di trasmissione reale usa lo shuffle di AzuraCast; la simulazione sottostante è solo una proposta, non il palinsesto effettivo.</p>
+</section>
 <div class="grid">
 <div class="stat"><b id="n-all">—</b><span>brani musicali censiti</span></div>
 <div class="stat"><b id="n-audio">—</b><span>con analisi audio utilizzabile</span></div>
@@ -50,8 +55,8 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <div class="stat"><b id="n-genre-confident">—</b><span>generi suggeriti con punteggio sufficiente</span></div></div>
 <p id="status" role="status">Caricamento dati…</p>
 <section class="card" aria-live="polite" style="margin:0 0 20px">
-<div class="head"><h2>Simulazione DJ · Rotazione delle 24 ore</h2><span class="tag">NON IN ONDA</span></div>
-<p id="rotation-note">Creazione di una giornata musicale di prova con brani unici e controlli sulle ripetizioni. Nessuna modifica ad AzuraCast.</p>
+<div class="head"><h2>Simulazione DJ · Rotazione delle 24 ore</h2><span class="tag">PIANO DI PROVA</span></div>
+<p id="rotation-note">Il piano del giorno è indicativo, separato dalla playlist attiva e dal suo ordine shuffle AzuraCast.</p>
 <div class="rotation-stats">
 <span id="rotation-pool">Catalogo verificato: —</span>
 <span id="rotation-count">In programma oggi: —</span>
@@ -60,7 +65,7 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <span id="rotation-repeat">Ripetizioni: —</span>
 <span id="rotation-gaps">Brani mancanti: —</span>
 </div>
-<div class="rotation-alert">Il catalogo comprende <b>tutti i brani analizzati, esistenti e con durata verificata</b>, anche quando non possono essere riprodotti oggi. L'ordine cambia ogni giorno, recuperando nei giorni successivi i brani non selezionati. Restano intatti notiziari, spot, jingle e dirette di AzuraCast; il DJ è ancora in sola simulazione.</div>
+<div class="rotation-alert">Il catalogo comprende <b>tutti i brani analizzati, esistenti e con durata verificata</b>, anche quando non possono essere riprodotti oggi. L'ordine cambia ogni giorno, recuperando nei giorni successivi i brani non selezionati. Restano intatti notiziari, spot, jingle e dirette di AzuraCast; questa tabella è una simulazione, mentre la playlist AzuraCast dedicata può essere attiva.</div>
 <div class="rotation-grid" id="rotation-blocks"></div>
 <div class="toolbar"><button type="button" id="export-dry-run" onclick="saveDryRun()" disabled>Esporta piano di prova (JSON)</button><span class="muted">Nessuna playlist viene importata o modificata.</span></div>
 </section>
@@ -108,7 +113,7 @@ function showRotation(plan){
  el("rotation-repeat").textContent="Ripetizioni brano: "+plan.duplicate_tracks;
  el("rotation-gaps").textContent="Minuti non coperti (simulazione): "+plan.missing_tracks_estimated;
  el("rotation-note").textContent=plan.full_draft?
-  "Le durate reali permettono un piano continuo di prova, ma NON è ancora pubblicato su AzuraCast.":
+  "Le durate reali consentono una simulazione continua. L'ordine proposto NON coincide necessariamente con quello in onda su AzuraCast.":
   "Catalogo verificato; restano spazi o brani da analizzare. Non utilizzabile per la diretta.";
  const group=el("rotation-blocks");group.replaceChildren();
  for(const block of plan.blocks||[]){
@@ -134,6 +139,35 @@ function saveDryRun(){
  const a=document.createElement("a");
  a.href=url;a.download="RDI-DJ-SIMULAZIONE-"+dryRun.date+".json";
  a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+async function showAutoDJ(){
+ try{
+  const res=await fetch("/api/autodj",{cache:"no-store"});
+  if(!res.ok)throw Error("Stato non disponibile");
+  const state=await res.json();
+  if(state.source!=="azuracast_api_verified"||!state.updated_at){
+   el("autodj-badge").textContent="Non verificato";
+   el("autodj-summary").textContent="Stato della diretta non ancora sincronizzato dal server.";
+   return;
+  }
+  const age=Date.now()-Date.parse(state.updated_at);
+  const stale=!Number.isFinite(age)||age>90*60*1000||age< -5*60*1000;
+  if(stale){
+   el("autodj-badge").textContent="Controllo scaduto";
+   el("autodj-summary").textContent="Ultimo controllo troppo vecchio. Non è possibile confermare lo stato attuale della playlist.";
+  }else{
+   el("autodj-badge").textContent=state.enabled?"Attiva":"Disattivata";
+   el("autodj-summary").textContent=
+      "Playlist "+(state.playlist_id||"—")+" · "+
+      (state.songs||0)+" brani collegati su "+(state.verified_total||0)+
+      " verificati · mancanti "+(state.still_to_link||0)+
+      (state.paused?" · automazione sospesa":"")+
+      " · controllo "+new Date(state.updated_at).toLocaleString("it-IT");
+  }
+ }catch(e){
+  el("autodj-badge").textContent="Non verificato";
+  el("autodj-summary").textContent=e.message;
+ }
 }
 function showSlots(){
  const slots=el("slots");slots.replaceChildren();
@@ -169,7 +203,8 @@ async function refresh(){
   el("n-ai-voice").textContent=data.ai_voice_suggested||0;
   el("n-genre-specialist").textContent=(data.genre_pilot_done||0)+" / "+(data.genre_pilot_target||100);
   el("n-genre-confident").textContent=data.genre_pilot_confident||0;
-  el("status").textContent="Ultimo controllo: "+new Date(data.updated_at).toLocaleString("it-IT")+" · "+data.status.replace(/_/g," ")+" · Zero modifiche alle playlist";
+  el("status").textContent="Ultima analisi: "+new Date(data.updated_at).toLocaleString("it-IT")+" · "+data.status.replace(/_/g," ")+" · Catalogo in sola lettura";
+  await showAutoDJ();
   showSlots();draw();
   try{
    const sim=await fetch("/api/rotation",{cache:"no-store"});
