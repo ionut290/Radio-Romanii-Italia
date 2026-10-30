@@ -245,6 +245,10 @@ def run(client,command,limit=None):
         return
     pid=validate_ours(ours)
     if command=="disable":
+        STATE.mkdir(parents=True,exist_ok=True,mode=0o700)
+        paused=STATE/"paused"
+        paused.write_text("manual rollback - do not auto-enable\n")
+        paused.chmod(0o600)
         if ours.get("is_enabled"):
             client.call("PUT",f"/station/1/playlist/{pid}",{"is_enabled":False})
         if find_playlist(client).get("is_enabled"):
@@ -265,6 +269,8 @@ def run(client,command,limit=None):
         print("DJ_EXISTING_PLAYLISTS_CONFIGURED=0")
         return
     if command=="enable":
+        if (STATE/"paused").exists():
+            raise RuntimeError("AutoDJ disabled by rollback; resume explicitly")
         if ours.get("is_enabled"):
             print("DJ_ALREADY_ENABLED=true")
             return
@@ -290,6 +296,9 @@ def run(client,command,limit=None):
 
 def auto_cycle(client,batch_limit=150):
     """Resumable first activation and continuing new-song synchronization."""
+    if (STATE/"paused").exists():
+        print("DJ_AUTO_STATUS=PAUSED_BY_OPERATOR",flush=True)
+        return
     playlist=find_playlist(client)
     if playlist is None:
         run(client,"prepare")
@@ -334,7 +343,7 @@ def auto_cycle(client,batch_limit=150):
 
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("command",choices=("status","prepare","sync","enable","disable","reshuffle","auto"))
+    p.add_argument("command",choices=("status","prepare","sync","enable","disable","reshuffle","auto","resume"))
     p.add_argument("--limit",type=int,default=150)
     p.add_argument("--php-helper",required=True)
     args=p.parse_args()
@@ -343,7 +352,10 @@ def main():
     try:
         token=backend.azura_php(helper,"create")
         client=backend.Client(token)
-        if args.command=="auto":
+        if args.command=="resume":
+            (STATE/"paused").unlink(missing_ok=True)
+            auto_cycle(client,args.limit)
+        elif args.command=="auto":
             auto_cycle(client,args.limit)
         else:
             run(client,args.command,args.limit)
