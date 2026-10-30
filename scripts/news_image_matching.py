@@ -25,7 +25,7 @@ SCENES = {
     "parliament": (r"\b(parlament|parlamento|camera dei deputati|senato|senat|seduta parlamentare)\w*", r"\b(parlament|aula parlamentare)\w*"),
     "civic_service": (r"\b(comune|municipio|primaria|sportello comunale|anagrafe|servizi comunali)\b", r"\b(comunal|municipio|sportello pubblico)\w*"),
     "community_event": (r"\b(festa di quartiere|festival comunit|evento associativ|asociati|associazion|intalnire comunit)\w*", r"\b(evento|festa|associativ|associazion|incontro)\w*"),
-    "volunteering": (r"\b(volontar|voluntar|volontariato|solidariet|donazion|ajutoare umanitar)\w*", r"\b(volontari|solidale|donazioni)\w*"),
+    "volunteering": (r"\b(volontari|volontarie|volontariato|voluntariat|voluntari|voluntarii|voluntarilor|volunteering)\w*", r"\b(volontari|solidale|donazioni)\w*"),
     "food_aid": (r"\b(pacchi alimentar|banco alimentar|dispensa solidale|aiuti alimentar|donazioni alimentari)\w*", r"\b(pacchi alimentari|dispensa solidale|generi alimentari)\b"),
     "language_school": (r"\b(corso di italiano|corsi di lingua|lingua italiana|invata italiana|cursuri de italiana|cursuri de limba)\b", r"\b(lingua italiana|italiano|corso di lingua)\b"),
     "university": (r"\b(universit|facultat|ateneo|studenti universitari)\w*", r"\b(universitar|universit)\w*"),
@@ -71,7 +71,7 @@ SENSITIVE = re.compile(
     r"bombard\w*|atac\w* armat\w*|attacc\w* armat\w*|"
     r"guerra|razboi|armed conflict|sparator\w*|teroris\w*|"
     r"arrestat\w*|arestat\w*|omicid\w*|assassinat\w*|"
-    r"disastr\w*|strage|masacr\w*)\b"
+    r"disastr\w*|strage|masacr\w*|deces\w*|murit|a murit|stins din viata|"\n    r"incendi\w*|retinut\w*|retinuta|arestat\w*|furt\w*|furto|scompar\w*|"\n    r"abus\w*|aggress\w*|violenz\w*)\b"
 )
 
 
