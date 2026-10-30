@@ -1,4 +1,4 @@
-name: RDI - TG delle 18 con approfondimenti (anteprima sicura)
+name: RDI - TG delle 18 con video autorizzati (produzione e radio)
 
 on:
   push:
@@ -12,6 +12,8 @@ on:
       - 'data/youtube-landscapes.json'
       - 'tests/test_tg_video_rights.py'
       - 'scripts/render_daily_tg_audio.py'
+      - 'scripts/deploy-tg-sera-oracle.py'
+      - 'tests/test_deploy_tg_oracle.py'
       - 'tests/test_daily_tg.py'
       - '.github/workflows/tg-sera.yml'
   schedule:
@@ -20,7 +22,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: rdi-daily-evening-tg
@@ -32,6 +34,10 @@ jobs:
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -39,7 +45,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python -m py_compile scripts/build_daily_tg.py scripts/tg_video_rights.py scripts/render_daily_tg_audio.py
+          python -m py_compile scripts/build_daily_tg.py scripts/tg_video_rights.py scripts/render_daily_tg_audio.py scripts/deploy-tg-sera-oracle.py
+          python -m unittest discover -s tests -p 'test_deploy_tg_oracle.py' -v
           python -m unittest discover -s tests -p 'test_tg_video_rights.py' -v
           python -m unittest discover -s tests -p 'test_tg_video_discovery.py' -v
           python -m unittest discover -s tests -p 'test_daily_tg.py' -v
@@ -114,8 +121,91 @@ jobs:
             /tmp/rdi-tg-sera/tv-timing.json
           retention-days: 7
           if-no-files-found: error
-      - name: Verifica sicurezza della programmazione
-        if: steps.draft.outputs.ready == 'true'
+      - name: Pubblica la cronologia TV nel sito PRIMA dell'invio audio
+        if: steps.draft.outputs.ready == 'true' && github.event_name == 'schedule'
+        shell: bash
         run: |
-          echo "TG preparato. Questa versione NON modifica AzuraCast e NON interviene nel live YouTube."
-          echo "La messa in onda automatica sarà abilitata solo dopo verifica dell'edizione e della sincronizzazione."
+          set -euo pipefail
+          edition="$(python -c 'import json; print(json.load(open("/tmp/rdi-tg-sera/manifest.json"))["edition_id"])')"
+          [[ "$edition" =~ ^20[0-9]{6}$ ]] || { echo "::error::Edizione TG non valida"; exit 1; }
+          install -d data/tg-sera
+          cp /tmp/rdi-tg-sera/tv-timing.json "data/tg-sera/${edition}.json"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "data/tg-sera/${edition}.json"
+          if ! git diff --cached --quiet; then
+            git commit -m "RDI: cronologia TV TG sera ${edition} (video autorizzati)"
+            for attempt in 1 2 3 4 5; do
+              if git pull --rebase -X ours origin main && git push origin HEAD:main; then break; fi
+              git rebase --abort || true
+              if [ "$attempt" -eq 5 ]; then echo "::error::Non è stato possibile pubblicare la timeline TV"; exit 1; fi
+              sleep "$((attempt * 3))"
+            done
+          fi
+          echo "TIMELINE_GITHUB=${edition}.json"
+
+      - name: Verifica che la cronologia TV sia effettivamente online
+        if: steps.draft.outputs.ready == 'true' && github.event_name == 'schedule'
+        shell: bash
+        run: |
+          set -euo pipefail
+          edition="$(python -c 'import json; print(json.load(open("/tmp/rdi-tg-sera/manifest.json"))["edition_id"])')"
+          expected="$(sha256sum /tmp/rdi-tg-sera/tv-timing.json | cut -d ' ' -f 1)"
+          for attempt in {1..45}; do
+            if curl --fail --silent --show-error --max-time 12 \
+              "https://radioromanii.duckdns.org/data/tg-sera/${edition}.json?check=${GITHUB_RUN_ID}-${attempt}" \
+              -o /tmp/rdi-tg-tv-live.json; then
+              actual="$(sha256sum /tmp/rdi-tg-tv-live.json | cut -d ' ' -f 1)"
+              if [ "$actual" = "$expected" ]; then
+                echo "VIDEO_TIMING_PUBLICATION=VERIFIED"
+                exit 0
+              fi
+            fi
+            sleep 8
+          done
+          echo "::error::La cronologia TV non è accessibile: niente TG in onda per evitare immagini desincronizzate."
+          exit 1
+
+      - name: Trasferisci SOLO il TG del giorno ad AzuraCast Oracle alle ore 18
+        if: steps.draft.outputs.ready == 'true' && github.event_name == 'schedule'
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo "::error::Manca la chiave Oracle"; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Mancano le impronte Oracle"; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-tg-sera-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+            "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup() {
+            ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 \
+              "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true
+          }
+          trap cleanup EXIT
+          edition="$(python -c 'import json; print(json.load(open("/tmp/rdi-tg-sera/manifest.json"))["edition_id"])')"
+          [[ "$edition" =~ ^20[0-9]{6}$ ]] || { echo "::error::Edizione non valida"; exit 1; }
+          mp3="/tmp/rdi-tg-sera/RDI-TG-SERA-IT-${edition}.mp3"
+          test -s "$mp3"
+          scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            scripts/deploy-tg-sera-oracle.py scripts/deploy-geopolitica-oracle.py \
+            scripts/rdi-geopolitica-auth.php \
+            "$mp3" /tmp/rdi-tg-sera/manifest.json /tmp/rdi-tg-sera/tv-timing.json \
+            "$REMOTE:$STAGE/"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 \
+            "$REMOTE" \
+            "sudo -n python3 '$STAGE/deploy-tg-sera-oracle.py' apply --manifest '$STAGE/manifest.json' --mp3 '$STAGE/RDI-TG-SERA-IT-${edition}.mp3' --tv '$STAGE/tv-timing.json' --php-helper '$STAGE/rdi-geopolitica-auth.php'"
+          echo "TG programmato in una playlist esclusiva e datata alle 18:00 ora italiana."
+          echo "Avvio effettivo soggetto ai tempi di commutazione AutoDJ; la grafica segue il now-playing reale."
+
+      - name: Nessuna vecchia puntata quando mancano notizie verificabili
+        if: steps.window.outputs.run == 'true' && steps.draft.outputs.ready != 'true'
+        run: |
+          echo "Nessun TG pubblicato: la playlist è limitata alla data della propria edizione e non potrà ripetere la puntata precedente."
