@@ -113,12 +113,16 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
     feature = "track_features" in tables
     rhythm = "track_rhythm" in tables
     tags = "track_tags" in tables
+    ai = "track_ai" in tables
     q = """SELECT t.path,t.size,t.modified,t.rms,t.peak,
         {feat} AS integrated_lufs,{dyn} AS loudness_range,
         {bpm} AS bpm_candidate,{beat} AS beat_score,
-        {genre} AS genre_tag,{title} AS title_tag,{artist} AS artist_tag
+        {genre} AS genre_tag,{title} AS title_tag,{artist} AS artist_tag,
+        {ai_genre} AS ai_genre,{ai_score} AS ai_genre_score,
+        {ai_voice} AS ai_voice,{ai_vscore} AS ai_voice_score,
+        {ai_events} AS ai_events,{ai_model} AS ai_model
         FROM tracks t
-        {join_f} {join_r} {join_g}
+        {join_f} {join_r} {join_g} {join_ai}
         ORDER BY t.analyzed_at DESC"""
     q = q.format(
       feat="f.integrated_lufs" if feature else "NULL",
@@ -128,9 +132,16 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
       genre="g.genre" if tags else "NULL",
       title="g.title" if tags else "NULL",
       artist="g.artist" if tags else "NULL",
+      ai_genre="a.genre_ai" if ai else "NULL",
+      ai_score="a.genre_score" if ai else "NULL",
+      ai_voice="a.voice_ai" if ai else "NULL",
+      ai_vscore="a.voice_score" if ai else "NULL",
+      ai_events="a.top_events" if ai else "NULL",
+      ai_model="a.model_id" if ai else "NULL",
       join_f="LEFT JOIN track_features f ON f.path=t.path AND f.size=t.size AND f.modified=t.modified" if feature else "",
       join_r="LEFT JOIN track_rhythm r ON r.path=t.path AND r.size=t.size AND r.modified=t.modified" if rhythm else "",
       join_g="LEFT JOIN track_tags g ON g.path=t.path AND g.size=t.size AND g.modified=t.modified" if tags else "",
+      join_ai="LEFT JOIN track_ai a ON a.path=t.path AND a.size=t.size AND a.modified=t.modified" if ai else "",
     )
     return db.execute(q).fetchall()
 
@@ -184,6 +195,7 @@ def report() -> dict:
     empty={"schema_version":1,"updated_at":now,"mode":"osservazione_senza_modifiche",
       "read_only":True,"playlist_writes":0,"total_inventoried":0,"total_music":0,
       "complete_audio_features":0,"with_genre_metadata":0,"voice_marked":0,
+      "ai_sample_target":100,"ai_sample_done":0,"ai_genre_suggested":0,"ai_voice_suggested":0,
       "status":"attesa_scansione","slots":{k:[] for k in SLOTS},"tracks":[]}
     if not DB.is_file():
         return empty
@@ -201,6 +213,26 @@ def report() -> dict:
         item=classify(row["genre_tag"] or "",title,
             row["bpm_candidate"],row["beat_score"],
             row["integrated_lufs"],row["loudness_range"])
+        if row["ai_model"] == "yamnet-google-v1-audiomagic-f25b741":
+            stats["ai_done"] += 1
+            if row["ai_genre"] not in (None,"non_identificato"):
+                stats["ai_genre"] += 1
+                if item["genre"] == "non_identificato":
+                    item["genre"] = row["ai_genre"]
+                    item["genre_source"] = "yamnet_onnx_stima_audio"
+            if row["ai_voice"] not in (None,"non_verificato"):
+                stats["ai_voice"] += 1
+                if item["voice"] == "non_verificato":
+                    item["voice"] = row["ai_voice"]
+            item["ai_model"] = row["ai_model"]
+            item["ai_genre_score"] = row["ai_genre_score"]
+            item["ai_voice_score"] = row["ai_voice_score"]
+            try:
+                item["ai_top_events"] = json.loads(row["ai_events"] or "[]")[:5]
+            except (ValueError, TypeError):
+                item["ai_top_events"] = []
+        else:
+            item["ai_model"] = None
         item["id"]=hashlib.sha256(row["path"].encode("utf-8","surrogateescape")).hexdigest()[:16]
         item["title"]=title
         item["artist"]=str(row["artist_tag"] or "")[:90]
@@ -220,10 +252,12 @@ def report() -> dict:
     empty.update({"total_inventoried":len(rows),"total_music":len(tracks),
         "complete_audio_features":stats["complete"],
         "with_genre_metadata":stats["genre"],"voice_marked":stats["voice"],
+        "ai_sample_target":100,"ai_sample_done":stats["ai_done"],
+        "ai_genre_suggested":stats["ai_genre"],"ai_voice_suggested":stats["ai_voice"],
         "status":"proposte_disponibili" if stats["complete"] else "analisi_in_corso",
         "slots":{k:slots[k] for k in SLOTS},
         # Full track details are private to Oracle loopback.
-        "tracks":tracks[:500]})
+        "tracks":tracks[:2000]})
     return empty
 
 
