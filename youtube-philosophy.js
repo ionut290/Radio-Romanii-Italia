@@ -18,7 +18,7 @@ function paint(item){
  date.textContent=new Intl.DateTimeFormat("it-IT",{year:"numeric",month:"long",day:"numeric",timeZone:"UTC"}).format(new Date(item.date+"T12:00:00Z"));
  // Image is already hosted by RDI. Escape URL before using a CSS property.
  const url=String(item.image||"");
- if(!/^\/(?!\/)[a-zA-Z0-9/_-]+\.(jpg|jpeg|webp|png|svg)$/i.test(url))return false;
+ if(!/^(?:\/(?!\/)|\.\/(?!\/))[a-zA-Z0-9/_-]+\.(jpg|jpeg|webp|png|svg)$/i.test(url))return false;
  photo.style.backgroundImage='url("'+url+'")';
  return true;
 }
