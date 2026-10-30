@@ -52,10 +52,10 @@ export function calendarCard(d=new Date()){
  const day=Math.floor((Date.UTC(f.year,f.month-1,f.day)-Date.UTC(year,0,1))/86400000);
  // Co-prime 137 with 365 and 366: stable permutation across days; short phrases vary
  // alongside a distinct editorial theme and graphic palette.
- const n=(day*137+year*23)%THOUGHTS.length;
- const title=THEMES[(day*7+year)%THEMES.length];
+ const n=(day*137+year*23)%(THOUGHTS.length*THEMES.length);
+ const title=THEMES[Math.floor(n/THOUGHTS.length)];
  const dateLabel=new Intl.DateTimeFormat("it-IT",{timeZone:"Europe/Rome",day:"numeric",month:"long",year:"numeric"}).format(d);
- return {dateLabel,quote:THOUGHTS[n],theme:title,hue:((day*37)%240)+145,sunX:20+(day*17)%60,day};
+ return {dateLabel,quote:THEMES[Math.floor(n/THOUGHTS.length)]+". "+THOUGHTS[n%THOUGHTS.length],theme:title,hue:((day*37)%240)+145,sunX:20+(day*17)%60,day};
 }
 export function shouldShow({cards,lastShownAt,now}){
  return cards>=8 && (!lastShownAt||now-lastShownAt>=45*60000);
