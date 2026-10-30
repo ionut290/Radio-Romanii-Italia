@@ -36,7 +36,19 @@ def inventory() -> list[tuple[str,int,float]]:
     # Reuse EXACTLY the existing, verified Oracle sudo command:
     # sudo -n find MEDIA -type f -print0. The sudo policy may deny -printf.
     result=[]
-    files=list(scan.inventory())
+    try:
+        files=list(scan.inventory())
+    except subprocess.CalledProcessError as exc:
+        details=(exc.stderr or b"").decode("utf-8","replace").lower()
+        flags={
+          "sudo_failure": "sudo:" in details,
+          "password_required": "password" in details,
+          "permission_denied": "permission" in details or "not permitted" in details,
+          "path_missing": "no such file" in details or "cannot access" in details,
+          "systemd_restricted": "setuid" in details or "effective uid" in details,
+        }
+        print("RDI_INGEST_READ_ERROR_FLAGS="+json.dumps(flags),file=sys.stderr)
+        raise RuntimeError("Oracle systemd cannot access read-only music directory") from None
     if not files:
         raise RuntimeError("Empty station library; no live inventory overwrite")
     if len(files)>MAX_LIBRARY_ENTRIES:
