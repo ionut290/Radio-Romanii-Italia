@@ -56,6 +56,20 @@ class PhotoMatchingTests(unittest.TestCase):
         ]
         self.assertIsNone(self.get("Microsoft: angajați invitați să plece voluntar"))
 
+    def test_health_voucher_for_pensioners_not_elder_care(self):
+        self.lib["health"] = [
+            {"image": "./editorial-images/news-covers/elderly.jpg",
+             "description": "Operatrice di assistenza domiciliare aiuta un anziano"}
+        ]
+        self.assertIsNone(self.get("Manovra, agli anziani un voucher per la sanità"))
+
+    def test_ai_avatars_in_university_not_library_students(self):
+        self.lib["education"] = [
+            {"image": "./editorial-images/news-covers/library.jpg",
+             "description": "Studenti studiano in una biblioteca universitaria"}
+        ]
+        self.assertIsNone(self.get("Università: avatare AI per insegnare agli studenti"))
+
     def test_no_repeat_photo(self):
         used = {"./editorial-images/news-covers/calcio.jpg"}
         self.assertIsNone(choose_relevant_photo({"title": "Serie A Fiorentina-Atalanta"}, self.lib, used))
