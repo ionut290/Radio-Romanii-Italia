@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'youtube-weather.js', 'youtube-weather.css', 'youtube-dj-promo.js', 'youtube-dj-promo-core.mjs', 'youtube-dj-promo.css', 'data/youtube-dj-promo.json', 'editorial-images/rdi-dj-programmazione-live.svg', 'youtube-live/visual-relay.sh', 'data/romanians-italy.json', '.github/workflows/refresh-youtube-oracle.yml']
+    paths: ['youtube-news.html', 'youtube-philosophy.js', 'youtube-philosophy-core.mjs', 'youtube-philosophy.css', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'youtube-weather.js', 'youtube-weather.css', 'youtube-dj-promo.js', 'youtube-dj-promo-core.mjs', 'youtube-dj-promo.css', 'data/youtube-dj-promo.json', 'editorial-images/rdi-dj-programmazione-live.svg', 'youtube-live/visual-relay.sh', 'data/romanians-italy.json', '.github/workflows/refresh-youtube-oracle.yml']
 
 permissions:
   contents: read
