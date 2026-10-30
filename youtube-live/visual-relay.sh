@@ -9,7 +9,7 @@ SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/youtube-news.html}"
 Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
 PROFILE=$(runuser -u ubuntu -- mktemp -d /home/ubuntu/radio-youtube-browser.XXXXXXXX)
-cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || true; rm -rf "$PROFILE"; }
+cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" "${AUTOPLAY_PID:-}" 2>/dev/null || true; rm -rf "$PROFILE"; }
 trap cleanup EXIT INT TERM
 sleep 2
 # WebGL is required by the official Italy and Romania radar iframes. Xvfb has no physical GPU, so use Chromium's software renderer.
@@ -27,6 +27,11 @@ if ! pgrep -u ubuntu -f "/snap/chromium|/usr/lib/chromium|chrome" >/dev/null; th
   echo "Chromium not running: stopping visual relay so operator can restore blue relay" >&2
   tail -n 15 /tmp/radio-youtube-chromium.log >&2 || true
   exit 1
+fi
+# Keep the official Italian radar animation playing whenever its iframe is visible.
+if [[ -x /usr/local/sbin/rdi-radar-autoplay.py ]]; then
+  python3 /usr/local/sbin/rdi-radar-autoplay.py >/tmp/rdi-radar-autoplay.log 2>&1 &
+  AUTOPLAY_PID=$!
 fi
 # The dedicated youtube-news.html cycles through news cards automatically.
 # Do not inject keyboard commands or navigate to login/community pages.
