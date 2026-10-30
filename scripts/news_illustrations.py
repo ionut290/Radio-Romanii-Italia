@@ -98,108 +98,103 @@ def make_svg(item):
 </svg>'''
 
 def fill_missing_images(items):
-    """Assign a permanent RDI fallback to every story.
+    """Use a real publisher image or a subject-matched local photo.
 
-    Publisher photos remain the preferred image.  The local editorial SVG is
-    also prepared for items that already have a remote photo, because some
-    publishers block hotlinking or remove a photo after publication.
+    No random category photo, no inherited stale assignment, no stock photo
+    presented as the photograph of a fatal or breaking-news event.
     """
+    from news_image_matching import choose_relevant_photo
+
     OUT.mkdir(parents=True, exist_ok=True)
     assignment_file = Path(__file__).resolve().parents[1] / "data" / "news-cover-assignments.json"
     library_file = Path(__file__).resolve().parents[1] / "data" / "news-image-library.json"
     try:
-        assignments = json.loads(assignment_file.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        assignments = {}
-    try:
         library = json.loads(library_file.read_text(encoding="utf-8")).get("categories", {})
     except (OSError, json.JSONDecodeError, AttributeError):
         library = {}
+
     library_by_path = {
         entry.get("image"): entry
         for entries in library.values() if isinstance(entries, list)
         for entry in entries if isinstance(entry, dict) and entry.get("image")
     }
-    used_library_covers = {
-        str(item.get("image")) for item in items
-        if str(item.get("image") or "") in library_by_path
-    }
-    for item in items:
-        identity = str(item.get("url") or item.get("title") or "")
-        assignment = assignments.get(identity)
-        image = str(item.get("image") or "")
-        if assignment and (not image or "./editorial-images/ai-" in image
-                           or (image.endswith(".svg") and "editorial-images/" in image)):
-            if assignment.get("image") in library_by_path:
-                used_library_covers.add(assignment["image"])
-    used = set()
-    count = 0
+    used_photos = set()
+    used_svgs = set()
+    assignments = {}
+    generated = 0
+    selected_photos = 0
+    source_photos = 0
+
     for item in items:
         identity = str(item.get("url") or item.get("title") or "")
         digest = hashlib.sha256(identity.encode("utf-8")).hexdigest()[:20]
-        path = OUT / f"rdi-auto-v2-{digest}.svg"
-        rendered = make_svg(item)
-        if not path.exists() or path.read_text(encoding="utf-8") != rendered:
-            path.write_text(rendered, encoding="utf-8")
-            count += 1
-        used.add(path.name)
-        fallback = "./" + path.as_posix()
-        item["fallbackImage"] = fallback
-        assignment = assignments.get(identity)
-        existing_image = str(item.get("image") or "")
-        is_generic_image = (
-            not existing_image
-            or "./editorial-images/ai-" in existing_image
-            or (existing_image.endswith(".svg") and "editorial-images/" in existing_image)
+        svg_path = OUT / f"rdi-auto-v2-{digest}.svg"
+        svg_content = make_svg(item)
+        if not svg_path.exists() or svg_path.read_text(encoding="utf-8") != svg_content:
+            svg_path.write_text(svg_content, encoding="utf-8")
+            generated += 1
+        used_svgs.add(svg_path.name)
+        svg_fallback = "./" + svg_path.as_posix()
+
+        existing = str(item.get("image") or "")
+        # Editorial AI photos may survive in imported, verified stories. They
+        # must be re-evaluated, not mistaken for true publisher imagery.
+        machine_assigned = (
+            item.get("imageType") in ("ai-editorial-photo", "editorial-illustration")
+            or existing in library_by_path
+            or existing.startswith("./editorial-images/ai-")
+            or existing.startswith("./editorial-images/news-covers/")
+            or existing.startswith("./editorial-images/rdi-auto-")
+            or existing == "./editorial-images/rdi-conflict-editorial.svg"
         )
-        cover = assignment.get("image") if assignment else None
-        if cover and (is_generic_image or existing_image == cover):
-            cover_info = library_by_path.get(cover, assignment)
-        elif is_generic_image:
-            topic = topic_for(item)
-            topic = {"weather": "environment", "general": "community"}.get(topic, topic)
-            candidates = [entry for entry in library.get(topic, []) if entry.get("reusable", True)]
-            start = int(digest, 16) % max(1, len(candidates))
-            cover_info = None
-            for offset in range(len(candidates)):
-                candidate = candidates[(start + offset) % len(candidates)]
-                if candidate.get("image") not in used_library_covers:
-                    cover_info = candidate
-                    cover = candidate["image"]
-                    break
-        else:
-            cover_info = None
-        if cover and cover_info and (is_generic_image or existing_image == cover):
-            item["image"] = cover
-            item["fallbackImage"] = cover
+        item["fallbackImage"] = svg_fallback
+        if existing and not machine_assigned:
+            # The publisher's own image (or a separately curated editorial
+            # image) has precedence over any generic stock photography.
+            source_photos += 1
+            continue
+
+        for key in ("image_credit", "imageAttribution", "imageType"):
+            item.pop(key, None)
+        selected = choose_relevant_photo(item, library, used_photos)
+        if selected is not None:
+            photo = selected["image"]
+            used_photos.add(photo)
+            selected_photos += 1
+            item["image"] = photo
             item["imageType"] = "ai-editorial-photo"
-            item["image_credit"] = cover_info.get(
+            credit = selected.get(
                 "credit",
-                "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+                "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell'evento.",
             )
-            item["imageAttribution"] = item["image_credit"]
-            used_library_covers.add(cover)
-        if not item.get("image") or (is_generic_image and not cover):
-            topic = topic_for(item)
-            if topic == "conflict":
-                item["image"] = "./editorial-images/rdi-conflict-editorial.svg"
-                item["imageType"] = "editorial-illustration"
-                item["imageAttribution"] = "Ilustrație editorială RDI. Nu este fotografia evenimentului."
-            else:
-                item["image"] = fallback
-                item["imageType"] = "editorial-illustration"
-                item["imageAttribution"] = "Illustrazione editoriale RDI unica per questo articolo; non è una fotografia dell’evento."
-    active_assignments = {}
-    for item in items:
-        identity = str(item.get("url") or "")
-        image = str(item.get("image") or "")
-        if identity and item.get("imageType") == "ai-editorial-photo" and image in library_by_path:
-            active_assignments[identity] = {
-                "image": image,
-                "credit": item.get("image_credit") or library_by_path[image].get("credit", ""),
-            }
-    assignment_file.write_text(json.dumps(active_assignments, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    for path in OUT.glob("rdi-auto-*.svg"):
-        if path.name not in used:
-            path.unlink()
-    print(f"Ilustrații RDI noi: {count}; copii de siguranță active: {len(used)}")
+            item["image_credit"] = credit
+            item["imageAttribution"] = credit
+            if item.get("url"):
+                assignments[item["url"]] = {
+                    "image": photo,
+                    "credit": credit,
+                    "matched_description": selected.get("description", ""),
+                    "selection": "subject-matched-v3",
+                }
+        else:
+            item["image"] = svg_fallback
+            item["imageType"] = "editorial-illustration"
+            item["imageAttribution"] = (
+                "Illustrazione editoriale RDI, non fotografia dell'evento."
+            )
+
+    # Rebuild cache only from checked subjects: the old hash-derived mappings
+    # may contain off-topic pairings and must never influence future runs.
+    assignment_file.write_text(
+        json.dumps(assignments, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    for svg_path in OUT.glob("rdi-auto-*.svg"):
+        if svg_path.name not in used_svgs:
+            svg_path.unlink()
+    print(
+        f"Immagini RDI: {source_photos} da fonte, "
+        f"{selected_photos} foto di contesto pertinenti, "
+        f"{len(items) - source_photos - selected_photos} copertine neutrali; "
+        f"{generated} SVG aggiornati."
+    )
