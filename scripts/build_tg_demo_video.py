@@ -182,12 +182,13 @@ def approved_rome_footage(article):
              "-t",str(match["seconds"]),"-an",
              "-vf","fps=15,scale=520:310:force_original_aspect_ratio=increase,crop=520:310,format=yuv420p",
              "-c:v","libx264","-preset","ultrafast","-crf","28","-movflags","+faststart",str(path)]
-        subprocess.run(cmd,check=True,timeout=105)
+        subprocess.run(cmd,check=True,timeout=105,capture_output=True,text=True)
         if path.stat().st_size<20000: raise ValueError("Empty video clip")
         print("Licensed RDI b-roll:",match["video_id"],"silent seconds",match["seconds"])
         return path,match
     except Exception as exc:
-        print("Repertory footage unavailable; photo fallback",type(exc).__name__)
+        message=getattr(exc,"stderr","") or str(exc)
+        print("Repertory footage unavailable; photo fallback",type(exc).__name__,str(message)[-450:])
         path.unlink(missing_ok=True)
         return None,None
 
