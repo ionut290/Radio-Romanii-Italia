@@ -1,0 +1,6 @@
+#rdiDjPromo{position:absolute;inset:0;z-index:14;background:#06172c;overflow:hidden;box-sizing:border-box}
+#rdiDjPromo[hidden]{display:none}
+#rdiDjPromo img{position:absolute;width:100%;height:100%;object-fit:fill;inset:0}
+.rdi-dj-promo-progress{position:absolute;bottom:0;left:0;width:0;height:5px;background:#f4c34a;z-index:2}
+.rdi-dj-promo-active #panel,.rdi-dj-promo-active #ticker,
+.rdi-dj-promo-active #rdiExtras,.rdi-dj-promo-active #progress{visibility:hidden}
