@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-10-30T20:59:54.873805+00:00",
+  "news_updated_at": "2026-10-30T21:00:30.439205+00:00",
   "editorial_updated_at": "2026-10-30T20:15:20.193236+01:00",
   "translations_updated_at": "2026-10-30T19:59:17.918403+00:00",
   "feed_total": 93,
-  "feed_extended_400": 4,
-  "feed_missing_body": 89,
+  "feed_extended_400": 5,
+  "feed_missing_body": 88,
   "feed_short_body": 0,
   "editorial_total": 24,
   "archived_editorials": 100,
   "translation_records": 38,
-  "pending_total": 74,
+  "pending_total": 73,
   "pending_filtered_out": 101,
-  "editorial_verde": 11,
-  "editorial_galben": 41,
+  "editorial_verde": 12,
+  "editorial_galben": 40,
   "editorial_rosu": 61,
   "pending": [
     {
@@ -486,16 +486,6 @@
       "attempts": 0
     },
     {
-      "title": "Ministerul Culturii solicită TNB să transmită explicit măsurile interne de prevenire şi combatere a hărţuirii la locul de muncă",
-      "category": "",
-      "published": "2026-10-30T19:51:48+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/ministerul-culturii-solicita-tnb-sa-transmita-explicit-masurile-interne-de-prevenire-si-combatere-a-hartuirii-la-locul-de-munca-4015899",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato da completare: testo o fonti insufficienti",
-      "attempts": 0
-    },
-    {
       "title": "Pensione anticipata a 64 anni, la proposta della Lega per la Manovra divide il governo - Sky TG24",
       "category": "",
       "published": "2026-10-30T09:08:44+00:00",
@@ -610,6 +600,16 @@
       "category": "",
       "published": "2026-10-30T08:07:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQX1NtbS1zRFhvMF9MZTlSbXhvRkczMmJnaGxuTmdlZzN5Q1FRVnBNaEpJVGtwSWgxWW8xOVh5YWFoS1hoNjI5MnktX2ZkRDdDdmpVTWhuNFpHR0VXRXpMTV9XRy1jZ3RqcXZyY1BwMXBoNmxLdnUwcHlsQmsybTBORi1HTlgwaVVvWFIxM05DYmZtSWdaeHk1QU9hRzJJNm9qRF9nRDZydTB0TU9HUFZiMVhxR2xnc3o2dVRSLXBvdGE0VU9GMXdMZXlGSWZOeVJpeHhYWjVPaktYQmJLejFOejU3UWQ1S1VOMm9wUENnYzQ2OFRsNGFmNW9zRE0tdHUwR0tCanZudXZqemttdkE?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato da completare: testo o fonti insufficienti",
+      "attempts": 0
+    },
+    {
+      "title": "Românii din Italia, invitați la o discuție despre drepturile la muncă și detașarea transnațională pe 29 octombrie",
+      "category": "",
+      "published": "2026-10-29T04:58:26+01:00",
+      "url": "https://www.govserv.org/IT/Rome/674908129247857/Ambasada-Rom%C3%A2niei-%C3%AEn-Italia---Ambasciata-di-Romania-in-Italia",
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato da completare: testo o fonti insufficienti",
@@ -749,8 +749,8 @@
       "published": "2026-10-30T19:51:48+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/ministerul-culturii-solicita-tnb-sa-transmita-explicit-masurile-interne-de-prevenire-si-combatere-a-hartuirii-la-locul-de-munca-4015899",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 474
     },
     {
       "title": "'Israele rischia la paralisi', scatta il risiko delle coalizioni",
@@ -852,21 +852,30 @@
       "words": 0
     },
     {
-      "title": "Delegazione gambiana a Padova per l’affido - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T18:35:39+00:00",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9oZnZYamlobGh4bU9aWWxHVTA3UFdJcnJuNHBfUS1OWXZGb0R2Y1pOUXlEU1BOdHBVcTdQbjRFVWhSOHV3aHdLdFFZc29ReTc3SllnbnAxWlptUDk2VVJQNEhvaXJXOGV6NUZmUDllbw?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Catastrofa feroviară din Spania schimbă datele războiului politic pe frontul alegerilor anticipate de luna viitoare",
       "category": "România",
       "published": "2026-10-30T18:32:04+00:00",
       "url": "https://www.digi24.ro/stiri/externe/catastrofa-feroviara-din-spania-schimba-datele-razboiului-politic-pe-frontul-alegerilor-anticipate-de-luna-viitoare-4015833",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Galleria Comelico, nuovi lavori e passaggi notturni sospesi - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-10-30T18:17:36+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOSWkyWDFoeklsVFp6NkxNeGZfcDd3WXZVNFlKRGNYTGZEaF9JZUtVSmtTNkVzOGFVemNyYkdkaWVwLUJXbWpDanRJaTRXS2pVRERQV2VjaEdXSktMOEJyX1ZQMW54YVpkVjR3cllxOFB1OGQ5STdZZXJvdzZDMDNzRXM3M09kM0Z4Ml9Hdw?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Sciopero generale e cortei. Dai portuali agli studenti contro caro vita e guerre - RaiNews",
+      "category": "Italia",
+      "published": "2026-10-30T18:10:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNWC1fbWNkTDZ1UURQTHpqVmNJblgwTTUwREx5WEg3d1VhbE0zZlR4T3FtWlV3d0N2eDgwUEdzeXQ3a2xudlF2N2U1bXJtWUJfSVVfYWxXdHdxczd5Y3JUNEtoaWxPdmZHNTVHdHYtNkE0bHRJdWpKTXhjNFZPcUN5YkVMYkt5SHozVDdRN015eWFOeTJCN1Bkb2k3elh2d0RnYmFRUlVUSTkxVVVNZ1Z2bVloMWw2SWxCLVRiZ0xsVEhLSlFfYzZqM1hGaVA4aUlMbEIxeXlwejAtcmg4djV6blpFUnFVYWhsOVRkSkNsa2w3M0NVcVp3NkpSVkkzVVVidU930gGIAkFVX3lxTFBMdXFuaEpEYzlzdWR0alpldThTUmlYYUcyRUFhaUdNMXc2X2t2NjIycWJ0UGNWcWxRN1ZLVklrMnFKaGtVVkRUZDZzMmU3UjN",
+      "source": "RaiNews",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -987,15 +996,6 @@
       "words": 0
     },
     {
-      "title": "Comunitățile românești din Italia, în prim plan. Caravana Mass-Media Radio LU & Jurnalit a ajuns la... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-30T14:06:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNGVzR1VkMUt0bGlWU1ZiNjM2WWc5R0VIZ2ItMlBvR1pTR0VxeGsxeEV0OW1DSFlpZlYya19ld0pxc1BuaHdSWVpOTjZ1ek5hYzhkLUotWGt4WEkzSFptMUJySmRqbUw1NTc2bWg3T0FIMEFGWmpiQm1DMWZPMDhKd2k4MkhCQmpaNHVuRnFCUkZFWkl3emRRNmJOeGhhN1gzZ2hIdS1DLVpicHdENC02dEcxOFIxZkJTOTdQUEpsZ2xLYVhFU1NMZXpsUjFoYTNoNm1jZFYzanRuUdIB3wFBVV95cUxNUUt2Yk5RUml2bjdqc1ozMF9TOUc1VXp1eF8zNU9fcHZpdkRLNTJGZUd4SHFEdEpsQzNiOGtLcnRoYjk2eVk3SHp4Vjhqa3RkRWhDM0QzeDRDMmpLcDR4SnVBdFI2cEZzbDFmOHJWMFR4VmFaRmEyZlR",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Guvernul prelungește reducerea accizei până în februarie 2027. Motorina, mai ieftină cu până la 85 de bani pe litru - Oficiul de Știri",
       "category": "România",
       "published": "2026-10-30T13:34:34+00:00",
@@ -1017,7 +1017,7 @@
       "title": "Unul dintre cei mai căutați infractori din România, arestat în Alicante. Costa Blanca, destinație... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-30T13:18:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNMUFlOXNBbHVNVC1yZGFGVmN4VkZkVnZ2bEs2anlvLWQ0RzJMV0VzWlQwYVUxamZ2RVdwbGdnQUtqZ3JGOHVYTHNzd2gtWEdTUS1FWEk5VlNwWlBSVE5JU211blZhRll2R3ZQbURzZ1VhdDM0MFhfXzJpTUNMaUZXdHNNWklUVEYzM092QmUzZkd1V2lWUGYyWklXcnZ6SVUxRTVzbV9SSnlwYkZKV0FEZm5tQTNIUngyM0FpTHVocXpGOHdJaFJSc2Z5Q0hHMmFZNkNWQ1Y3aEkydGN0YkhSbFlRSUloUVk3YTVjTS04Mmdkd0lhc1HSAfYBQVVfeXFMTTFBZTlzQWx1TVQtcmRhRlZjeFZGZFZ2dmxLNmp5by1kNEcyTFdFc1pUMGFVMWpmdkVXcGxnZ0FLamdyRjh1WExzc3doLVhHU1EtRVhJOVZTcFpQUlR",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOdW9PdFRkWll4bEN6dDRURjU0MnJqcFJtdFZweW42QzVRZkczWFZRSTl3Yy1FZWswVTlKME11M1lxLXBlQUtUVXloNnNCNi1FVDhWOXhnUnd5UUdmU1BYa05PMDYwdmVLVEVDS2RTSHVQeUhjWWtqNmNWcGtybmVpRjNydUlLSUdjNElUWGRZRG1NZHQzUGhmWE9yaHh2X25INGNwR1EwY2xKSnlFX0xXY1FsS3YwWWlVRUhGejQzakFEb3lNbXZJUnpEZjlJUEdCYVVJUXU0MGdGRURfNEhDQ0VzNXNnRkNUcF9TQjVvMkHSAfYBQVVfeXFMTTFBZTlzQWx1TVQtcmRhRlZjeFZGZFZ2dmxLNmp5by1kNEcyTFdFc1pUMGFVMWpmdkVXcGxnZ0FLamdyRjh1WExzc3doLVhHU1EtRVhJOVZTcFpQUlROSVNtdW5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1055,15 +1055,6 @@
       "published": "2026-10-30T12:35:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWXF3enpfR0hkaUpZdFVpYk9xMHN4bjM4OWhfelJMTlVLSGk5dENkYkVZMm9qX0dGTmkxdWIyUmxETWtRSDkwUEpCWEJINnA4V2Z4QnhiNngwbDNHWmQ1T2JEWU5kNUpGY2s1VXBnbnI5QWQ4dFQ0UGJ1NlcxS0lyWDZTbXhtVkR3ZXc?oc=5",
       "source": "iDevice.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "L'Italia festeggia il calo della Cassa Integrazione, ma Torino vive su un pianeta a parte: il paradosso di Mirafiori e dei dati INPS - Torino Cronaca",
-      "category": "Italia",
-      "published": "2026-10-30T12:20:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQcWx4RGNUd2R4UnpZaE50R1M0d1pkSks3LVVubTZlamxsWUFuTDFFZFRsOURUOFQ1eXFNMUwxWWtxZDhwd1dpNUFoMmxwRDJKeDVDa0ZtMEpveHFaNzdWb0FYR0stS2pWTndzYS1jbUJSOGFQOTlQWXRXQU9CTWtpeG13Qk04X0tNWlFQa0piLVlCZFprd2V4T1ktNFM5anpzSVlpQTEzckRvTG9TLUE2QmNlSnZ6Zy12T0xUeFNjVDMwMUJVa252Y2VIRGI2c3dmbmNLSndLbHdDbjdmQ21DU25qamtieUdRa0ZQa3FRQTUxdFcxZzRUYTItR1M3TU5pVnFJVmc3VjRINndIUHhDb0NXQQ?oc=5",
-      "source": "Torino Cronaca",
       "status": "roșu",
       "words": 0
     },
@@ -1239,6 +1230,15 @@
       "words": 0
     },
     {
+      "title": "Fostul premier francez, Edouard Philippe, audiat de judecători pentru suspiciuni de deturnare de fonduri... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-30T07:16:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQ09uRzRBRXRXYjFtbmxlaHExckNYRWtBb1ZCUTdZNk9UOEM0cUg2VlRTbHJSNTVlRm5GbGg3QURoeWFnZUxpZFRrQmE2d1hBZjYxcVZKamNBbTR3cXZvd0d5TEQyck44Z3lhU21rS1R6THpDS1dEQWZCaUJxb1BKVU1GX053M3poYjlxRThlZ29hRFVVS3Y3N3ZsR2dBSWR0YlBmdVBMbnBaVWl5UHpVVGhqbWFRWk1jOFptVUd3NXlGcnhDZzhxZFhieV9CVmdUVFBDcEdPbEFGUVEtc09YTmlpWGRHQdIB6wFBVV95cUxNNWdEQkR3Rmd4MjBKUU1tQzdiZjVoYVF5ZGt3RV9sY0NhcDFyZngtY3pPVkQ2ZTdzSV9MdDUyTEFvenBQQk14emRNTWxKWTM3MTNBTUpUQnF5a2RMbm1kV3VsZ0tWd2JHYnNHNmh",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Ex Ilva, il day after di Taranto. Che succede ora? - Buonasera24",
       "category": "Italia",
       "published": "2026-10-30T06:37:26+00:00",
@@ -1293,10 +1293,10 @@
       "words": 0
     },
     {
-      "title": "Articole cu tagul: Harvard Business School avatare - StiriDiaspora",
+      "title": "Articole cu tagul: deficit caloric - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-29T16:38:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBxM29jZk50UllBVWVEbk5ZcXlKdFkwRmlGWXR1cDFyNk0wUV95N1VySXdVVDBobjhVbV9IMk96TGM0WjJVMk9yVW8yQ0I1UXZqUTQ3M0dQYTdMMTBwek5EVHFodDhoVmNtbTh5SExibVJjUXlZSXpQSVBn?oc=5",
+      "published": "2026-10-29T16:40:40+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BYTJNSGRvUkk0RXRNX3R1V3JMMnh6Y2lWWmFlLW14MlFVelNoalFNc2lfekxOLUxQWGgwU3NrMm10VlQ3VWNYX3lIcEdaemJkWGo5SmxvM29uOHJDdXNXZDJ6Vjc?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1368,7 +1368,7 @@
       "title": "Migranți. Frontex, Cecilia Strada împotriva reformei UE: „Nu vrem un ICE european” - Gazeta Românească Italia",
       "category": "Diaspora",
       "published": "2026-10-29T11:52:07+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUVFFSU9YWGVCUTcwcjNvS1F5NGo3RnBINjBTVXp6VXhici1pbnFTWDloV3VLZEdiNjYySUsycWhQbUpEcHZiLV9HWUJmajBEYmQwWjRhQnhOSmpBQ19Cal9FSENjem9tNXVNWHlPQmx5VjFwazNPVU5sc3VqdXBzSzVzWlRLTEJ2bkxTZ29wT3lqTTBKblhocGQ3S2FUeXZ0ZXN0aTRoREtwcks5dDdiSzI1NXdESnE5Qk9IZmxtelJlVjA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNd29BcV96bzZMX0dLNE00NEZNUmxVUUpJUTJFZVluX3IweXRZdG1qVUJDbS1seDFOMGFRQWZ6ZnJxRVZMelRtS1kyaTRRbmg2NkVWWE9RellqMWF4X0pRQ3N5V3dsQ1lMV2N6bWhMWnB4TnRadUxhU3JVbmtodTZpX1dqRnYxZmptZVZtWlc0T09GRHN4ekx3VThwT0xiU1ZUZkpDT29kMHNGcUZaQV8zeTNlQllnRFczNnJ3TDFCYkNQQU5JcDF0enpMbGlpY2M?oc=5",
       "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
