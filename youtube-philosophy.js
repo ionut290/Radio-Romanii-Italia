@@ -11,7 +11,7 @@ let days=[],current=null,readyImage="",active=false,done=null,timeout=null,watch
 const today=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
 const blocked=()=>["rdiSpotActive","rdiGeoActive","rdiTgActive","rdiWeatherActive","rdiCameraActive","rdiLandscapeActive","rdiDjPromoActive"].some(k=>window[k]);
 const preview=new URLSearchParams(location.search).get("rdi_philosophy_preview")==="1";
-function dayData(){return (current&&current.date===today()?current:null)||days.find(x=>x.date===today())||null}
+function dayData(){return current&&current.date===today()?current:null}
 function paint(item){
  if(!item)return false;
  quote.textContent=item.quote;
@@ -52,16 +52,15 @@ function startIfDue(next){
 }
 async function update(){
  try{
-  const [primary,fallback]=await Promise.all([
-   fetch("./data/calendario-filosofico-oggi.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null),
-   fetch("./data/calendario-filosofico-2026.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)
-  ]);
-  current=primary&&typeof primary.date==="string"&&typeof primary.quote==="string"&&typeof primary.image==="string"?primary:null;
-  days=Array.isArray(fallback?.days)?fallback.days:[];
+  const response=await fetch("./data/daily-thought.json?v="+Date.now(),{cache:"no-store"});
+  const archive=response.ok?await response.json():null;
+  const item=Array.isArray(archive?.items)?archive.items.find(x=>x.date===today()&&typeof x.summary==="string"&&typeof x.image==="string"):null;
+  current=item?{date:item.date,quote:item.summary,image:item.image}:null;
+  days=[];
   const item=dayData();
   if(!item){readyImage="";return}
   const url=String(item.image||"");
-  if(!url.startsWith("/")||url.startsWith("//")||!/^[a-zA-Z0-9/_-]+[.](jpg|jpeg|webp|png)$/i.test(url.slice(1))){readyImage="";return;}
+  if(!/^(?:\\/(?!\\/)|\\.\\/(?!\\/))[a-zA-Z0-9/_-]+[.](jpg|jpeg|webp|png|svg)$/i.test(url)){readyImage="";return;}
   const preload=new Image();
   preload.onload=()=>{if(dayData()?.image===url){readyImage=url;if(preview&&paint(dayData()))layer.hidden=false}};
   preload.onerror=()=>{if(readyImage===url)readyImage=""};
