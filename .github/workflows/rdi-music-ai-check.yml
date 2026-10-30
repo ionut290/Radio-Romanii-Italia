@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          echo "Verifica del campione YAMNet sui file musicali realmente presenti in Oracle."
+          echo "Controllo del campione YAMNet selezionato con verifica diretta dei file su disco."
           test -n "$SSH_KEY_B64"; test -n "$SSH_KNOWN_HOSTS"
           install -d -m 700 "$HOME/.ssh"
           printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
