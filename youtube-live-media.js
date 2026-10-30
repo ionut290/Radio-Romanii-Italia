@@ -160,7 +160,7 @@
     }));
     if(current.type!=="photo"){
       const play=player.play();
-      if(play&&typeof play.catch==="function")play.catch(()=>finishCurrent());
+      if(play&&typeof play.catch==="function")play.catch(()=>stop(false,false));
     }
   }
   function startIfDue(next){
