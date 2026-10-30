@@ -1,0 +1,27 @@
+name: RDI - Controllo completezza catalogo musicale
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rdi-music-completeness.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - name: Controllo statistico di AzuraCast senza modifica alcuna
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes scripts/rdi_music_completeness_audit.py ubuntu@129.151.255.41:/tmp/rdi_music_completeness_audit.py
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes ubuntu@129.151.255.41 'python3 /tmp/rdi_music_completeness_audit.py; rm -f /tmp/rdi_music_completeness_audit.py'
