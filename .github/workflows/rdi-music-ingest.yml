@@ -11,6 +11,7 @@ on:
       - 'scripts/rdi_music_dj.py'
       - 'scripts/rdi-music-dj.html'
       - 'tests/test_rdi_music_ingest.py'
+      - 'tests/test_rdi_music_rotation.py'
       - 'oracle/install-rdi-music-ingest.sh'
       - 'oracle/rdi-music-ingest.service'
       - 'oracle/rdi-music-ingest.timer'
