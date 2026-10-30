@@ -9,4 +9,4 @@ NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/var/lib/rdi-telegram-live/pending /var/lib/rdi-telegram-live/approved /var/lib/docker/volumes/azuracast_station_data/_data
+ReadWritePaths=/var/lib/rdi-telegram-live/pending /var/lib/rdi-telegram-live/approved /var/lib/docker/volumes/azuracast_station_data/_data /var/lib/docker/volumes/azuracast_station_data/_data/rdi-live-media
