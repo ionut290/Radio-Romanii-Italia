@@ -1,18 +1,12 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T19:17:39.369742+00:00",
+  "generated_at": "2026-10-30T21:27:32.721010+00:00",
   "live_enabled": false,
   "playback_mode": "STAGING_ONLY",
   "timezone": "Europe/Rome",
   "daily_time": "18:00",
   "ready_videos": [],
   "daily_schedule": [
-    {
-      "date": "2026-10-30",
-      "starts_at": "2026-10-30T18:00:00+01:00",
-      "video_id": "",
-      "status": "NESSUN_VIDEO_APPROVATO"
-    },
     {
       "date": "2026-10-31",
       "starts_at": "2026-10-31T18:00:00+01:00",
@@ -52,6 +46,12 @@
     {
       "date": "2026-11-06",
       "starts_at": "2026-11-06T18:00:00+01:00",
+      "video_id": "",
+      "status": "NESSUN_VIDEO_APPROVATO"
+    },
+    {
+      "date": "2026-11-07",
+      "starts_at": "2026-11-07T18:00:00+01:00",
       "video_id": "",
       "status": "NESSUN_VIDEO_APPROVATO"
     }
