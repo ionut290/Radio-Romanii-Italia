@@ -4,7 +4,7 @@ import pathlib
 import subprocess
 import sys
 import sqlite3
-sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent))
+sys.path.insert(0,"/opt/rdi-music-dj")
 import rdi_music_ai as m
 
 db=sqlite3.connect(pathlib.Path.home()/"rdi-music/music.db")
