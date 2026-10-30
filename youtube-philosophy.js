@@ -54,13 +54,13 @@ async function update(){
  try{
   const response=await fetch("./data/daily-thought.json?v="+Date.now(),{cache:"no-store"});
   const archive=response.ok?await response.json():null;
-  const item=Array.isArray(archive?.items)?archive.items.find(x=>x.date===today()&&typeof x.summary==="string"&&typeof x.image==="string"):null;
-  current=item?{date:item.date,quote:item.summary,image:item.image}:null;
-  days=[];
+  const thought=Array.isArray(archive?.items)?archive.items.find(x=>x.date===today()&&typeof x.summary==="string"&&typeof x.image==="string"):null;
+  current=thought?{date:thought.date,quote:thought.summary,image:thought.image}:null;
+  days=current?[current]:[];
   const item=dayData();
   if(!item){readyImage="";return}
   const url=String(item.image||"");
-  if(!/^(?:\\/(?!\\/)|\\.\\/(?!\\/))[a-zA-Z0-9/_-]+[.](jpg|jpeg|webp|png|svg)$/i.test(url)){readyImage="";return;}
+  if(!/^(?:\/(?!\/)|\.\/(?!\/))[a-zA-Z0-9/_-]+\.(jpg|jpeg|webp|png|svg)$/i.test(url)){readyImage="";return;}
   const preload=new Image();
   preload.onload=()=>{if(dayData()?.image===url){readyImage=url;if(preview&&paint(dayData()))layer.hidden=false}};
   preload.onerror=()=>{if(readyImage===url)readyImage=""};
