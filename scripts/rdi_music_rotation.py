@@ -1,211 +1,207 @@
 #!/usr/bin/env python3
-"""RDI Music DJ: safe, deterministic 24-hour SHADOW rotation simulator.
+"""RDI DJ: all verified music joins a shared rotation bank, daily order changes.
 
-Works ONLY with the already-sanitized, read-only /api/report catalogue.
-No AzuraCast API calls, no network, no media mutations, no playlist writes.
-All start times use an explicitly assumed duration of 210 seconds: this is
-a *playlist draft*, not an exact automation schedule. News, hourly bulletins,
-commercials and jingles remain scheduled exclusively by AzuraCast.
+READ-ONLY SHADOW SIMULATION. Reads an authoritative local AzuraCast library
+snapshot and real audio durations. Never uploads, assigns, deletes or plays any
+AzuraCast file. Music broadcasting remains controlled by existing playlists,
+jingles, news and editorial schedules. A bank entry does NOT imply airplay.
 
-The special YAMNet/GTZAN genre hypotheses are never used as trusted facts.
+New analyzed and duration-verified uploads enter the bank without manual
+selection, after the next local inventory/analysis cycle.
 """
 from __future__ import annotations
-
-import collections
 import datetime as dt
 import hashlib
 import json
+import math
 import re
 
-SECONDS_PER_TRACK_ESTIMATE = 210
-MAX_TRACKS = 450
-MIN_CONFIDENT_AUDIO = 20
-# Seven uninterrupted blocks cover all 24h including the former 17-18 gap.
-BLOCKS = (
-    ("notte_00_07", 0, 420, "Notte / relax", ("tranquilla", "media")),
-    ("mattino_07_10", 420, 600, "Risveglio / melodico", ("media", "tranquilla")),
-    ("giorno_10_13", 600, 780, "Urban / pop leggero", ("media", "ritmata")),
-    ("pomeriggio_13_18", 780, 1080, "Pomeriggio / energia", ("ritmata", "media")),
-    ("sera_18_21", 1080, 1260, "Sera / melodico", ("media", "tranquilla")),
-    ("notte_21_24", 1260, 1440, "Notte / lounge", ("tranquilla", "media")),
+SLOT_BLOCKS=(
+ ("notte_00_07",0,420,"Notte / relax",("tranquilla","media","ritmata")),
+ ("mattino_07_10",420,600,"Mattino / melodico",("media","tranquilla","ritmata")),
+ ("giorno_10_13",600,780,"Giorno / urban pop",("media","ritmata","tranquilla")),
+ ("pomeriggio_13_18",780,1080,"Pomeriggio / energia",("ritmata","media","tranquilla")),
+ ("sera_18_21",1080,1260,"Sera / melodico",("media","tranquilla","ritmata")),
+ ("notte_21_24",1260,1440,"Notte / relax",("tranquilla","media","ritmata")),
 )
+# Exposes how many valid song files exist independently of airtime available.
+PROTECTED=("TG delle 18 e notiziari","Jingle e spot di AzuraCast",
+           "Bollettini geopolitici e trasmissioni in diretta")
 
-# This protects AzuraCast's real scheduled appointments; it does NOT assume
-# their exact durations, which can change with the editorial calendar.
-PROTECTED = (
-    "Notiziari ed edizioni straordinarie (compreso il TG delle 18)",
-    "Bollettini geopolitici programmati da AzuraCast",
-    "Jingle, spot, comunicazioni e dirette editoriali",
-)
 
-def _title_key(name: str) -> str:
-    """Collapse exported Mureka-style time suffixes to identify duplicates."""
-    stem = re.sub(r"[_\s-]+(?:1[5-9]\d{8,}|20\d{7,})$", "", str(name or "").strip(), flags=re.I)
-    normalized = re.sub(r"[^a-z0-9]+", " ", stem.casefold()).strip()
-    return normalized
+def _id_sort(seed,token):
+    return hashlib.sha256((seed+"|"+token).encode("utf-8")).digest()
 
-def _stable_hash(day: str, key: str, track_id: str) -> int:
-    return int.from_bytes(
-        hashlib.sha256((day + "|" + key + "|" + track_id).encode("utf-8")).digest()[:8],
-        "big")
+def _title_key(title):
+    # Simple normalized title key, not acoustic deduplication.
+    title=re.sub(r"[_\s-]+(?:1[5-9]\d{8,}|20\d{7,})$","",str(title),flags=re.I)
+    return re.sub(r"[^a-z0-9]+"," ",title.casefold()).strip()
 
-def _minutes(hhmm: str) -> int:
-    hh, mm = map(int, hhmm.split(":"))
-    return hh * 60 + mm
+def _clock(seconds):
+    minutes=seconds//60
+    return f"{minutes//60:02d}:{minutes%60:02d}"
 
-def _clock(total_seconds: int) -> str:
-    minutes = total_seconds // 60
-    return f"{minutes // 60:02d}:{minutes % 60:02d}"
-
-def _eligible(track: dict) -> bool:
+def _eligible(t):
     from rdi_music_dj import excluded
-    if not isinstance(track, dict):
+    if not isinstance(t,dict) or excluded(str(t.get("title",""))+" "+str(t.get("artist",""))):
         return False
-    title = str(track.get("title") or "").strip()
-    ident = str(track.get("id") or "")
-    if not title or not re.fullmatch(r"[a-f0-9]{16}", ident):
+    if not re.fullmatch("[0-9a-f]{16}",str(t.get("id",""))):
         return False
-    if excluded(title) or excluded(track.get("artist") or ""):
-        return False
-    if track.get("energy_estimate") not in {"tranquilla", "media", "ritmata"}:
+    if not _title_key(t.get("title","")):
         return False
     try:
-        bpm = float(track["bpm_candidate"])
-        confidence = float(track["beat_confidence"])
-        lufs = float(track["lufs"])
-    except (KeyError, TypeError, ValueError):
+        duration=float(t["duration_seconds"])
+        bpm=float(t["bpm_candidate"])
+        conf=float(t["beat_confidence"])
+        lufs=float(t["lufs"])
+    except (ValueError,TypeError,KeyError):
         return False
-    if not (45 <= bpm <= 205 and confidence >= .32 and -50 < lufs < -4):
-        return False
-    return True
+    return (math.isfinite(duration) and 60<=duration<=720 and
+            math.isfinite(bpm) and 45<=bpm<=205 and
+            math.isfinite(conf) and conf>=0.32 and
+            math.isfinite(lufs) and -50<lufs<-4)
 
-def _genre(track: dict) -> str:
-    # AI estimates MUST NOT be used as scheduling truth without validation.
-    if track.get("genre_source") == "metadati_file":
-        genre = str(track.get("genre") or "sconosciuto")
-        if genre not in {"non_identificato", ""}:
-            return genre
+def _genre(tr):
+    # AI genres remain estimates and cannot direct the radio unreviewed.
+    if tr.get("genre_source")=="metadati_file":
+        return str(tr.get("genre") or "sconosciuto")
     return "sconosciuto"
 
-def _pick(candidates: list[dict], used: set[str], titles: set[str],
-          recent: list[dict], slot: str, day: str, priority: tuple[str, ...]):
-    best = None
-    best_key = None
-    for tr in candidates:
-        ident=tr["id"]
-        tkey=_title_key(tr["title"])
-        if ident in used or (tkey and tkey in titles):
-            continue
-        artist=str(tr.get("artist") or "").casefold().strip()
-        # Never play the same known artist twice within 6 proposed songs.
-        if artist and any(artist == str(last.get("artist") or "").casefold().strip()
-                          for last in recent[-6:]):
+def _bank(tracks):
+    # Every unique, verified, indexed track enters the bank, regardless of
+    # whether it can fit in today's 24-hour demonstration.
+    valid=[x for x in tracks if _eligible(x)]
+    selected={}
+    used_titles=set()
+    for tr in sorted(valid,key=lambda x:x["id"]):
+        key=_title_key(tr["title"])
+        if key in used_titles:continue
+        used_titles.add(key)
+        selected[tr["id"]]=tr
+    return list(selected.values())
+
+def _daily_order(bank,day):
+    # Daily moving window through the ENTIRE bank, instead of picking the
+    # same popular top-ranked tracks. All bank entries will be encountered
+    # as the calendar advances, including when bank size exceeds one day.
+    ordered=sorted(bank,key=lambda t:_id_sort("rdi-bank-v2",t["id"]))
+    if not ordered:return []
+    # Step 97 rotates the starting point; a coprime step is used when
+    # needed so no subset of a bank is permanently skipped.
+    n=len(ordered)
+    step=97
+    while math.gcd(step,n)!=1:
+        step+=1
+    offset=(dt.date.fromisoformat(day).toordinal()*step)%n
+    return ordered[offset:]+ordered[:offset]
+
+def _pick(queue,used,recent,priorities,room):
+    options=[]
+    recent_artists={str(t.get("artist","")).casefold() for t in recent[-5:]
+                    if str(t.get("artist","")).strip()}
+    for pos,tr in enumerate(queue):
+        if tr["id"] in used or float(tr["duration_seconds"])>room:
             continue
         genre=_genre(tr)
-        # Avoid three consecutive IDENTIFIED genres; unknown isn't a genre.
-        if genre!="sconosciuto" and len(recent)>=2 and all(
-            _genre(last)==genre for last in recent[-2:]):
+        artist=str(tr.get("artist","")).casefold()
+        if artist and artist in recent_artists:continue
+        if genre not in ("","sconosciuto") and len(recent)>=2 and all(
+            _genre(x)==genre for x in recent[-2:]):
             continue
-        energy=tr["energy_estimate"]
-        band=priority.index(energy) if energy in priority else 5
-        # A little variation within a time block is preferable to a full
-        # monotonous run of one energy group.
-        if recent and recent[-1].get("energy_estimate")==energy:
+        energy=tr.get("energy_estimate")
+        band=priorities.index(energy) if energy in priorities else len(priorities)
+        if recent and energy==recent[-1].get("energy_estimate"):
             band+=1
-        rank=_stable_hash(day, slot, ident)
-        key=(band, rank)
-        if best_key is None or key<best_key:
-            best,best_key=tr,key
-    return best
+        # Fairness first across days (position); mild energy preference second
+        # within every ~25-song slice to avoid sacrificing full-library reach.
+        key=(pos//25, band, pos)
+        options.append((key,tr))
+    return min(options,key=lambda x:x[0])[1] if options else None
 
-def simulate(catalogue: dict, day: str = "2026-10-30") -> dict:
+def simulate(catalogue,day=None):
+    if day is None:
+        day=dt.datetime.now(dt.timezone.utc).date().isoformat()
     dt.date.fromisoformat(day)
-    if not isinstance(catalogue, dict) or catalogue.get("read_only") is not True or catalogue.get("playlist_writes")!=0:
-        raise ValueError("Only verified read-only DJ catalogues can be simulated")
+    if (not isinstance(catalogue,dict) or catalogue.get("read_only") is not True or
+        catalogue.get("playlist_writes")!=0):
+        raise ValueError("Only the read-only DJ index is allowed")
     if not isinstance(catalogue.get("tracks"),list):
-        raise ValueError("Missing local DJ audio catalogue")
-    all_tracks=[tr for tr in catalogue["tracks"] if _eligible(tr)]
-    # The original station media inventory can contain deleted/moved files;
-    # this is a draft and must be validated before any future on-air use.
-    used: set[str] = set()
-    used_titles: set[str] = set()
-    recent: list[dict] = []
+        raise ValueError("Invalid DJ music catalogue")
+    fresh=catalogue.get("live_index_verified") is True
+    bank=_bank(catalogue["tracks"]) if fresh else []
+    rotated=_daily_order(bank,day)
+    used=set()
+    recent=[]
     blocks=[]
-    for name,start_min,end_min,label,priorities in BLOCKS:
-        span_seconds=(end_min-start_min)*60
-        required=(span_seconds + SECONDS_PER_TRACK_ESTIMATE-1)//SECONDS_PER_TRACK_ESTIMATE
-        count=0
+    for block_id,start,end,label,priorities in SLOT_BLOCKS:
+        clock=start*60
+        limit=end*60
         tracks=[]
-        for i in range(min(required,MAX_TRACKS)):
-            # Preserve the chosen energy intent per band; fallback energy
-            # classes are allowed only when needed.
-            candidate=_pick(
-                [tr for tr in all_tracks if tr["energy_estimate"] in priorities],
-                used,used_titles,recent,name,day,priorities)
-            if candidate is None:
-                break
-            used.add(candidate["id"])
-            tkey=_title_key(candidate["title"])
-            if tkey:
-                used_titles.add(tkey)
-            recent.append(candidate)
-            estimate=start_min*60+i*SECONDS_PER_TRACK_ESTIMATE
-            # Do not suggest a song starting outside this music block.
-            if estimate>=end_min*60:
-                break
+        while clock<limit and len(tracks)<500:
+            tr=_pick(rotated,used,recent,priorities,limit-clock)
+            if tr is None:break
+            used.add(tr["id"])
+            recent.append(tr)
+            duration=float(tr["duration_seconds"])
             tracks.append({
-                "id":candidate["id"],"title":candidate["title"],
-                "artist":candidate.get("artist") or "",
-                "energy":candidate["energy_estimate"],
-                "genre_verificato":_genre(candidate),
-                "orario_indicativo":_clock(estimate),
-                "durata_assunta_secondi":SECONDS_PER_TRACK_ESTIMATE,
-                "approvato":False
+              "id":tr["id"],"title":tr["title"],"artist":tr.get("artist") or "",
+              "orario_indicativo":_clock(int(clock)),
+              "durata_reale_secondi":round(duration,1),
+              "energia_stimata":tr.get("energy_estimate","non_verificata"),
+              "genere_verificato":_genre(tr),
+              "approvato":False,
             })
-            count+=1
+            clock+=duration
+        covered=clock-start*60
+        target=(end-start)*60
         blocks.append({
-            "id":name,"label":label,
-            "dalle":_clock(start_min*60),
-            "alle":_clock(end_min*60),
-            "minuti":end_min-start_min,
-            "brani_richiesti_stimati":required,
-            "brani_proposti":count,
-            "copertura_percento":round(count/required*100,1) if required else 100,
-            "brani":tracks,
+          "id":block_id,"label":label,
+          "dalle":_clock(start*60),"alle":_clock(end*60),
+          "minuti":end-start,
+          "brani_richiesti_stimati":math.ceil(target/210),
+          "brani_proposti":len(tracks),
+          "copertura_percento":round(100*covered/target,1),
+          "minuti_non_riempiti":round((target-covered)/60,1),
+          "brani":tracks
         })
-    total=sum(b["brani_proposti"] for b in blocks)
-    short=sum(b["brani_richiesti_stimati"]-b["brani_proposti"] for b in blocks)
-    # This intentionally never returns an approval to modify live broadcast.
+    # All playable songs are in this bank even when not selected on this
+    # date; this is not a live AzuraCast playlist.
+    pool=[{"id":tr["id"],"title":tr["title"],
+           "artist":tr.get("artist") or "",
+           "durata_reale_secondi":tr["duration_seconds"],
+           "nuovo_brano":bool(tr.get("newly_added",False))}
+          for tr in bank]
+    short=sum(x["minuti_non_riempiti"] for x in blocks)
     return {
-        "schema_version":1,
-        "kind":"rdi-dj-dry-run",
-        "date":day,
-        "mode":"sola_simulazione",
-        "read_only":True,
-        "playlist_writes":0,
-        "automatic_broadcast_enabled":False,
-        "ready_for_live":False,
-        "reason":"Durate ipotetiche, inventario non convalidato, generi AI da ascoltare e palinsesto AzuraCast protetto.",
-        "duration_note":"Ogni brano è stimato a 3 minuti e 30 secondi: NON sono gli orari reali di trasmissione.",
-        "protected_programmes":list(PROTECTED),
-        "available_analyzed_tracks":len(all_tracks),
-        "total_unique_tracks":total,
-        "duplicate_tracks":total-len(used),
-        "duplicate_titles":total-len(used_titles),
-        "missing_tracks_estimated":short,
-        "covers_all_24h_in_blocks":BLOCKS[0][1]==0 and BLOCKS[-1][2]==1440 and all(
-            BLOCKS[i][2]==BLOCKS[i+1][1] for i in range(len(BLOCKS)-1)),
-        "full_draft":short==0 and len(all_tracks)>=MIN_CONFIDENT_AUDIO,
-        "genre_policy":"solo tag dichiarati; classificazioni IA non verificate escluse dalle decisioni",
-        "blocks":blocks
+      "schema_version":2,"kind":"rdi-dj-dry-run",
+      "date":day,"mode":"solo_simulazione",
+      "read_only":True,"playlist_writes":0,
+      "automatic_broadcast_enabled":False,"ready_for_live":False,
+      "live_index_verified":fresh,
+      "pool_tracks_total":len(pool),
+      "pool_tracks":pool,
+      "pool_excluded_from_today":len(pool)-len(used),
+      "new_tracks_in_pool":sum(bool(x["nuovo_brano"]) for x in pool),
+      "total_unique_tracks":len(used),
+      "duplicate_tracks":0,
+      "duplicate_titles":0,
+      "missing_tracks_estimated":round(short,1),
+      "covers_all_24h_in_blocks":SLOT_BLOCKS[0][1]==0 and
+         SLOT_BLOCKS[-1][2]==1440 and all(
+             SLOT_BLOCKS[i][2]==SLOT_BLOCKS[i+1][1] for i in range(len(SLOT_BLOCKS)-1)),
+      "full_draft":fresh and short<=8,
+      "duration_note":"Usate le durate vere dell'indice AzuraCast; gli orari restano indicativi perché programmi e inserti sono separati.",
+      "reason":"Rotazione sperimentale. Notiziari, jingle e dirette restano sotto il controllo esclusivo di AzuraCast.",
+      "protected_programmes":list(PROTECTED),
+      "genre_policy":"Classificazioni IA non convalidate escluse dalle decisioni",
+      "blocks":blocks,
     }
 
 if __name__=="__main__":
-    import argparse
-    p=argparse.ArgumentParser()
-    p.add_argument("--date",default=dt.datetime.now().date().isoformat())
-    p.add_argument("--input",required=True)
-    a=p.parse_args()
-    catalogue=json.loads(open(a.input,encoding="utf-8").read())
-    plan=simulate(catalogue,a.date)
-    print(json.dumps(plan,ensure_ascii=False,indent=2))
+    import argparse,sys
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--date",default=None)
+    parser.add_argument("--input",required=True)
+    a=parser.parse_args()
+    data=json.loads(open(a.input,encoding="utf-8").read())
+    print(json.dumps(simulate(data,a.date),ensure_ascii=False,indent=2))
