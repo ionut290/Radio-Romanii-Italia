@@ -6,6 +6,8 @@ on:
       - 'data/news-summaries.json'
       - 'news.json'
       - 'editorial.json'
+      - 'data/daily-thought.json'
+      - 'editorial-images/daily-thought/**'
       - 'events-auto.json'
       - 'rdi-sharing.js'
       - 'rdi-sharing.css'
