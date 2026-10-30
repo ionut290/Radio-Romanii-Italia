@@ -7,6 +7,7 @@ APP=/opt/rdi-music-dj
 VENV="$APP/ai-venv"
 install -d -m 755 "$APP/models" "$APP/models/ast-preprocessor"
 install -m 644 "$SRC/scripts/rdi_music_genre_ai.py" "$APP/rdi_music_genre_ai.py"
+install -m 644 "$SRC/scripts/rdi_ast_fbank.py" "$APP/rdi_ast_fbank.py"
 install -m 644 "$SRC/scripts/rdi_music_dj.py" "$APP/rdi_music_dj.py"
 install -m 644 "$SRC/scripts/rdi-music-dj.html" "$APP/rdi-music-dj.html"
 install -m 644 "$SRC/models/ast-gtzan-q4.onnx" "$APP/models/ast-gtzan-q4.onnx"
@@ -19,10 +20,9 @@ import sys,numpy as np
 sys.path.insert(0,"/opt/rdi-music-dj")
 import rdi_music_genre_ai as g
 g.verify_model()
-from transformers import ASTFeatureExtractor
+from rdi_ast_fbank import ast_features
 import onnxruntime as ort
-feature=ASTFeatureExtractor.from_pretrained(str(g.PREPROCESSOR),local_files_only=True)
-vals=feature(np.zeros(32000,dtype=np.float32),sampling_rate=16000,return_tensors="np")["input_values"]
+vals=ast_features(np.zeros(32000,dtype=np.float32),g.PREPROCESSOR/"preprocessor_config.json")
 assert vals.shape==(1,1024,128)
 opts=ort.SessionOptions()
 opts.intra_op_num_threads=1
