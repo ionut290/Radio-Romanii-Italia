@@ -35,6 +35,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python -m pip install --disable-pip-version-check --only-binary=:all: 'numpy>=1.24,<2' >/dev/null
           python -m py_compile scripts/rdi_music_genre_ai.py scripts/rdi_music_dj.py
           python -m unittest discover -s tests -p 'test_rdi_music_genre_ai.py' -v
           bash -n oracle/install-rdi-music-genre.sh
