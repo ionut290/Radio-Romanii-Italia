@@ -1,0 +1,78 @@
+name: RDI - Audit reale brani DJ 24h (lettura soltanto)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_music_rotation_audit.py'
+      - '.github/workflows/rdi-music-rotation-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-rotation-audit
+  cancel-in-progress: false
+
+jobs:
+  real-media:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verifica sorgenti e test senza credenziali radio
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/rdi_music_rotation_audit.py scripts/rdi_music_rotation.py scripts/rdi_music_dj.py
+          python -m unittest discover -s tests -p 'test_rdi_music_rotation.py' -v
+      - name: Verifica file realmente presenti su Oracle e durata reale
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-rotation-check-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          [[ "$STAGE" =~ ^/tmp/rdi-rotation-check-[0-9]+-[0-9]+$ ]]
+          sshx(){ ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "$@"; }
+          scpx(){ scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 "$@"; }
+          sshx "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scpx scripts/rdi_music_rotation_audit.py "$REMOTE:$STAGE/"
+          # Python import path uses the installed DJ modules. No API keys or
+          # radio actions; read-only stat + ffprobe under sudo.
+          date_str=$(TZ=Europe/Rome date +%F)
+          sshx "$REMOTE" "PYTHONPATH=/opt/rdi-music-dj sudo -n env PYTHONPATH=/opt/rdi-music-dj \
+            python3 '$STAGE/rdi_music_rotation_audit.py' --date '$date_str'" \
+            | tee /tmp/rdi-rotation-audit.jsonl
+          python - <<'PY'
+          import json
+          line=next(s for s in open("/tmp/rdi-rotation-audit.jsonl") if s.startswith("RDI_ROTATION_REALITY="))
+          data=json.loads(line.split("=",1)[1])
+          assert data["read_only"] and data["playlist_writes"]==0
+          assert data["ready_for_live"] is False
+          assert data["planned_tracks"]>0
+          print("REAL_AUDIO_AUDIT=COMPLETED")
+          for k in ("planned_tracks","readable_on_disk","missing_or_unreadable",
+                    "inventory_mismatches","valid_real_durations","invalid_durations",
+                    "actual_total_audio_minutes","real_files_support_draft"):
+              print(k.upper()+"="+str(data[k]))
+          for name,v in data["block_durations"].items():
+              print("BLOCK="+name+" "+str(v))
+          PY
