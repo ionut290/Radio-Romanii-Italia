@@ -1,0 +1,12 @@
+[Unit]
+Description=RDI: scan new AzuraCast music every 15 minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitInactiveSec=15min
+RandomizedDelaySec=45s
+AccuracySec=1min
+Unit=rdi-music-ingest.service
+
+[Install]
+WantedBy=timers.target
