@@ -4,7 +4,7 @@ import {shouldShow} from "./youtube-philosophy-core.mjs";
 "use strict";
 const stage=document.getElementById("stage");if(!stage)return;
 const layer=document.createElement("section");layer.id="rdiPhilosophy";layer.hidden=true;layer.setAttribute("aria-label","Calendario Filosofico RDI");
-layer.innerHTML='<div class="rdi-philosophy-photo"></div><div class="rdi-philosophy-shade"></div><div class="rdi-philosophy-copy"><p class="rdi-philosophy-brand">RADIO ROMÂNII DIN ITALIA</p><p class="rdi-philosophy-heading">CALENDARIO FILOSOFICO</p><p class="rdi-philosophy-date"></p><blockquote class="rdi-philosophy-quote"></blockquote><p class="rdi-philosophy-credit">Riflessione originale RDI</p></div><div class="rdi-philosophy-progress"></div>';
+layer.innerHTML='<div class="rdi-philosophy-photo"></div><div class="rdi-philosophy-shade"></div><div class="rdi-philosophy-layout"><div class="rdi-philosophy-mark"><img class="rdi-philosophy-mark-img" src="./RADIO-LOGO.png" alt="Stemma Radio Românii din Italia"><p>La tua radio,<br>sempre con te.</p></div><div class="rdi-philosophy-copy"><p class="rdi-philosophy-date"></p><blockquote class="rdi-philosophy-quote"></blockquote><p class="rdi-philosophy-credit">Pensiero originale RDI</p></div></div><div class="rdi-philosophy-progress"></div>';
 stage.append(layer);
 const photo=layer.querySelector(".rdi-philosophy-photo"),quote=layer.querySelector(".rdi-philosophy-quote"),date=layer.querySelector(".rdi-philosophy-date"),progress=layer.querySelector(".rdi-philosophy-progress");
 let days=[],current=null,readyImage="",active=false,done=null,timeout=null,watch=null,lastShownAt=0,cards=0;
