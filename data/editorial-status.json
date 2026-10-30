@@ -1,30 +1,20 @@
 {
-  "news_updated_at": "2026-10-30T08:03:51.541185+00:00",
+  "news_updated_at": "2026-10-30T08:04:49.503659+00:00",
   "editorial_updated_at": "2026-10-30T08:01:33.498058+01:00",
-  "translations_updated_at": "2026-10-30T07:02:51.113083+00:00",
+  "translations_updated_at": "2026-10-30T08:03:51.001190+00:00",
   "feed_total": 87,
   "feed_extended_400": 16,
   "feed_missing_body": 71,
   "feed_short_body": 0,
   "editorial_total": 30,
   "archived_editorials": 95,
-  "translation_records": 47,
-  "pending_total": 131,
-  "pending_filtered_out": 320,
+  "translation_records": 46,
+  "pending_total": 127,
+  "pending_filtered_out": 321,
   "editorial_verde": 22,
   "editorial_galben": 33,
   "editorial_rosu": 56,
   "pending": [
-    {
-      "title": "Alegeri cu rezultat complicat în Israel: Eisenkot şi Netanyahu nu au majoritate și amândoi vor să... - StiriDiaspora",
-      "category": "",
-      "published": "2026-10-28T07:18:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPd3g0eWUxeXpFbVljdUlkcUstd2xRdkRZYXN5MS1icnRFQTRtY3ptVFo4a1BabjZ0OENFQTdIeGREeU1jMlc1QVdoRFdtVUhrbm9fdGNpYUNFRTFNdC1mN3hWV3VKSENISHhXTE4zVXdvZDBKZnVyVFppRGdRemFNd3VRUTZ5SzJKVHRSVWNFOTVKRmlQanVQZldrQ3JyNkZEQ21Ra1U4VkFEQ0JVR3h3WnJpRkRZYVpRTDFSLUdRLVptSUwtMl9XNG9EVTg5YXVoUk10a1B4aXJMVzRva3k3eFVPbmVsaHhVWkHSAe8BQVVfeXFMTkNWWFRmZXZOZEVRakwwUDViZkxiRTdyZXpUS3JnNlNESHBNclhONmNlS242RzZrYmQxZXFWRTduNGdFOGJZUFlESW1YX2RzWTBtUC1WNndPbjYzcVdEQ0xJcEtNSnhBV20",
-      "source": "",
-      "status": "roșu",
-      "reason": "Fonte Google News da risolvere e articolo originale da verificare",
-      "attempts": 0
-    },
     {
       "title": "Alexandru Rogobete propune parteneriate public-private în sănătate. România are 41 de fabrici de medicamente - IasiTV Life",
       "category": "",
@@ -43,16 +33,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Notizia delle ultime 48 ore senza approfondimento verificato; cercare fonte originale e riscontri indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Aproape 17.500 de instituţii din România au fost notificate cu privire la vulnerabilitatea informatică PHP2Shell. Reacţia Guvernului",
-      "category": "",
-      "published": "2026-10-28T07:43:31+00:00",
-      "url": "https://www.digi24.ro/stiri/sci-tech/lumea-digitala/aproape-17-500-de-institutii-din-romania-au-fost-notificate-cu-privire-la-vulnerabilitatea-informatica-php2shell-reactia-guvernului-4011669",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato non ancora completato; consultare fonte originale e fonti aggiuntive",
       "attempts": 0
     },
     {
@@ -496,6 +476,16 @@
       "attempts": 0
     },
     {
+      "title": "INS: Şomajul a ajuns la 6,3% în septembrie. Aproape unul din trei tineri nu are un loc de muncă",
+      "category": "",
+      "published": "2026-10-30T08:00:37+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/ins-somajul-a-ajuns-la-63-in-septembrie-aproape-unul-din-trei-tineri-nu-are-un-loc-de-munca-4014793",
+      "source": "",
+      "status": "roșu",
+      "reason": "Articolo breve o assente: consultare la fonte originale e verificare i fatti prima dell'approfondimento",
+      "attempts": 0
+    },
+    {
       "title": "Ilva, parola fine. Il diritto alla salute prevale sul lavoro. Il futuro di Taranto appeso a un filo - HuffPost Italia",
       "category": "",
       "published": "2026-10-29T16:35:00+00:00",
@@ -586,16 +576,6 @@
       "attempts": 0
     },
     {
-      "title": "Jandarm atacat în faţa ambasadei Israelului din Belgrad, agresorul a fost ucis. Nivelul de alertă teroristă, ridicat la maximum",
-      "category": "",
-      "published": "2026-10-28T07:48:43+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/jandarm-atacat-in-fata-ambasadei-israelului-din-belgrad-agresorul-a-fost-ucis-nivelul-de-alerta-terorista-ridicat-la-maximum-4011679",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato non ancora completato; consultare fonte originale e fonti aggiuntive",
-      "attempts": 0
-    },
-    {
       "title": "Lagarde lascia la Bce: \"So d'aver svolto un buon lavoro. Non resto neutrale col voto in Francia\" - RaiNews",
       "category": "",
       "published": "2026-10-29T15:38:00+00:00",
@@ -610,6 +590,26 @@
       "category": "",
       "published": "2026-10-29T10:33:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOVRqSzNZWkFlcVl1bVdPVURKTWRtOVdwSzJVU1Y4MDREOWZIc0tVY3U0MTdqQ0NHeEE5azJsWC1FcUFkY2pwaTN2MkVjbTRqckxGV09xd1VVY19GOVE2MmY5TFRQS1FRSWl0eHVHZC1RWC0wb3M4N2Q1S1B2dFhvSGt4elJ3SG1MNEQ0LVlnV1dRbE1OTnBFRGtiTkoyOWxqNUpId3pwNWpzVnFoamV2NmEyQXVmaG1rQWVrLXBGZ3NoRnFtQ0HSAcYBQVVfeXFMTzlUakszWVpBZXFZdW1XT1VESk1kbTlXcEsyVVNWODA0RDlmSHNLVWN1NDE3akNDR3hBOWsybFgtRXFBZGNqcGkzdjJFY200anJMRldPcXdVVWNfRjlRNjJmOUxUUEtRUUlpdHh1R2QtUVgtMG9zODdkNUtQdnRYb0hreHpSd0htTDRENC1",
+      "source": "",
+      "status": "roșu",
+      "reason": "Testo assente o breve; verifica della fonte e approfondimento ancora necessari",
+      "attempts": 0
+    },
+    {
+      "title": "Lidera deputaților USR: PSD şi AUR şi-au dat mâna pe la spate, pentru ca ministrul Nazare să nu spună românilor adevărul în Parlament",
+      "category": "",
+      "published": "2026-10-28T15:18:41+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/lidera-deputatilor-usr-psd-si-aur-si-au-dat-mana-pe-la-spate-pentru-ca-ministrul-nazare-sa-nu-spuna-romanilor-adevarul-in-parlament-4012617",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento da verificare: fonte originale e riscontri indipendenti non ancora consultati per questa voce",
+      "attempts": 0
+    },
+    {
+      "title": "Liderii AUR s-au întâlnit cu mai mulţi ambasadori, cu care au discutat despre starea democraţiei și cazul Călin Georgescu",
+      "category": "",
+      "published": "2026-10-29T12:26:56+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/liderii-aur-s-au-intalnit-cu-mai-multi-ambasadori-cu-care-au-discutat-despre-starea-democratiei-si-cazul-calin-georgescu-4013751",
       "source": "",
       "status": "roșu",
       "reason": "Testo assente o breve; verifica della fonte e approfondimento ancora necessari",
@@ -987,10 +987,10 @@
       "words": 0
     },
     {
-      "title": "Articole cu tagul: Harvard Business School avatare - StiriDiaspora",
+      "title": "Articole cu tagul: deficit caloric - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-29T16:38:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBxM29jZk50UllBVWVEbk5ZcXlKdFkwRmlGWXR1cDFyNk0wUV95N1VySXdVVDBobjhVbV9IMk96TGM0WjJVMk9yVW8yQ0I1UXZqUTQ3M0dQYTdMMTBwek5EVHFodDhoVmNtbTh5SExibVJjUXlZSXpQSVBn?oc=5",
+      "published": "2026-10-29T16:40:40+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BYTJNSGRvUkk0RXRNX3R1V3JMMnh6Y2lWWmFlLW14MlFVelNoalFNc2lfekxOLUxQWGgwU3NrMm10VlQ3VWNYX3lIcEdaemJkWGo5SmxvM29uOHJDdXNXZDJ6Vjc?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
