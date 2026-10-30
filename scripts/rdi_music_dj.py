@@ -14,6 +14,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import re
 import sqlite3
 import subprocess
@@ -327,14 +328,22 @@ class Handler(BaseHTTPRequestHandler):
         elif path=="/api/report":
             target=None
             typ="application/json; charset=utf-8"
+        elif path=="/api/rotation":
+            target="rotation"
+            typ="application/json; charset=utf-8"
         else:
             self.send_error(404)
             return
         try:
             # Read-only, live SQLite report. The progress indicator can update
             # during the 100-song AI scan; no root-owned report rewrite needed.
-            data=(json.dumps(report(),ensure_ascii=False).encode("utf-8")
-                  if target is None else target.read_bytes())
+            if target == "rotation":
+                from rdi_music_rotation import simulate
+                today=dt.datetime.now(ZoneInfo("Europe/Rome")).date().isoformat()
+                data=json.dumps(simulate(report(),today),ensure_ascii=False).encode("utf-8")
+            else:
+                data=(json.dumps(report(),ensure_ascii=False).encode("utf-8")
+                      if target is None else target.read_bytes())
         except (OSError,ValueError,sqlite3.Error,TypeError):
             self.send_error(503)
             return
