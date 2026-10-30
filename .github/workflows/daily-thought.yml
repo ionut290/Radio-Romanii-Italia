@@ -1,13 +1,6 @@
 name: RDI - Pensiero originale del giorno
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/generate_daily_thought.py'
-      - '.github/workflows/daily-thought.yml'
-  schedule:
-    - cron: '15 5 * * *'
   workflow_dispatch:
 
 permissions:
