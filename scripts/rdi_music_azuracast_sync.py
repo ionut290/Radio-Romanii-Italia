@@ -288,9 +288,53 @@ def run(client,command,limit=None):
         return
     raise ValueError("Unexpected command")
 
+def auto_cycle(client,batch_limit=150):
+    """Resumable first activation and continuing new-song synchronization."""
+    playlist=find_playlist(client)
+    if playlist is None:
+        run(client,"prepare")
+    playlist=find_playlist(client)
+    pid=validate_ours(playlist)
+    completed=0
+    for attempt in range(12):
+        info=plan(client,playlist)
+        if info["to_link"]==0:break
+        batch=min(max(1,batch_limit),250)
+        added=apply_batch(client,info,batch)
+        if not added:
+            raise RuntimeError("DJ music sync made no progress")
+        completed+=added
+        # No media/playlist config is ever deleted or unlinked.
+        print("DJ_AUTO_PROGRESS="+str(completed),flush=True)
+    check=plan(client,find_playlist(client))
+    print("DJ_AUTO_LEFT_TO_SYNC="+str(check["to_link"]),flush=True)
+    if check["to_link"]:
+        print("DJ_AUTO_STATUS=CONTINUE_ON_NEXT_RUN",flush=True)
+        return
+    run(client,"enable")
+    # At most one daily reshuffle after the playlist is enabled. If the
+    # installed AzuraCast version lacks this endpoint, shuffle mode still
+    # works and the playlist remains on air without any station reset.
+    today=dt.datetime.now(ROME).date().isoformat()
+    datefile=STATE/"last-daily-shuffle.txt"
+    previous=datefile.read_text().strip() if datefile.exists() else ""
+    if today!=previous:
+        try:
+            run(client,"reshuffle")
+        except RuntimeError:
+            print("DJ_DAILY_RESHUFFLE=NOT_AVAILABLE_IN_CURRENT_AZURACAST",flush=True)
+        else:
+            STATE.mkdir(parents=True,exist_ok=True,mode=0o700)
+            temp=STATE/"last-daily-shuffle.tmp"
+            temp.write_text(today)
+            temp.chmod(0o600)
+            temp.replace(datefile)
+            print("DJ_DAILY_SHUFFLE_DATE="+today,flush=True)
+    print("DJ_AUTO_STATUS=LIVE_WITH_EXISTING_GENRE_PLAYLISTS_PRESERVED",flush=True)
+
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("command",choices=("status","prepare","sync","enable","disable","reshuffle"))
+    p.add_argument("command",choices=("status","prepare","sync","enable","disable","reshuffle","auto"))
     p.add_argument("--limit",type=int,default=150)
     p.add_argument("--php-helper",required=True)
     args=p.parse_args()
@@ -298,7 +342,11 @@ def main():
     token=""
     try:
         token=backend.azura_php(helper,"create")
-        run(backend.Client(token),args.command,args.limit)
+        client=backend.Client(token)
+        if args.command=="auto":
+            auto_cycle(client,args.limit)
+        else:
+            run(client,args.command,args.limit)
     finally:
         if token:backend.azura_php(helper,"revoke",token.split(":",1)[0])
 
