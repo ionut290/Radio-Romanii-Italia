@@ -9,6 +9,7 @@ export DISPLAY="$DISPLAY_NUM"
 # Telegram audio/video is captured by FFmpeg without changing AzuraCast.
 AUDIO_UID=$(id -u ubuntu)
 PULSE_RUNTIME="/run/user/$AUDIO_UID"
+install -d -o ubuntu -g ubuntu -m 700 "$PULSE_RUNTIME"
 PULSE_SERVER_URI="unix:$PULSE_RUNTIME/pulse/native"
 PULSE_COOKIE_FILE="/home/ubuntu/.config/pulse/cookie"
 command -v pulseaudio >/dev/null || { echo "pulseaudio is required for Telegram media audio" >&2; exit 1; }
@@ -22,7 +23,7 @@ if ! runuser -u ubuntu -- env XDG_RUNTIME_DIR="$PULSE_RUNTIME" pactl list short 
   runuser -u ubuntu -- env XDG_RUNTIME_DIR="$PULSE_RUNTIME" pactl load-module module-null-sink sink_name=rdi_telegram_sink rate=44100 channels=2 >/dev/null
 fi
 SITE_URL="${SITE_URL:-https://radioromanii.duckdns.org/youtube-news.html}"
-# Browser image is decorative; audio comes only from the AzuraCast MP3 source.
+# AzuraCast stays the base program; approved Telegram audio is mixed and ducks the music.
 Xvfb "$DISPLAY_NUM" -screen 0 1280x720x24 -nolisten tcp &
 XVFB_PID=$!
 PROFILE=/home/ubuntu/radio-youtube-browser
@@ -31,7 +32,7 @@ cleanup() { kill "$BROWSER_PID" "$XVFB_PID" "${SCROLL_PID:-}" 2>/dev/null || tru
 trap cleanup EXIT INT TERM
 sleep 2
 # Browser refreshes preserve the active FFmpeg audio relay.
-runuser -u ubuntu -- env XDG_RUNTIME_DIR="$PULSE_RUNTIME" PULSE_SINK=rdi_telegram_sink /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
+runuser -u ubuntu -- env XDG_RUNTIME_DIR="$PULSE_RUNTIME" PULSE_SERVER="$PULSE_SERVER_URI" PULSE_SINK=rdi_telegram_sink /snap/bin/chromium --disable-gpu --disable-dev-shm-usage --disable-background-networking \
   --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO \
   --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble \
   --autoplay-policy=no-user-gesture-required --window-size=1280,720 \
