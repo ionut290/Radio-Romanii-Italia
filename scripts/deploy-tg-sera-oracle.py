@@ -141,8 +141,7 @@ def find_playlist(client) -> dict | None:
     record = matching[0] if matching else None
     if record and (record.get("type") != "once_per_hour" or
                    record.get("source") != "songs" or
-                   int(record.get("play_per_hour_minute") or -1) != 0 and
-                   record.get("play_per_hour_minute") != 0):
+                   str(record.get("play_per_hour_minute")) not in {"0", "00"}):
         raise ValueError("Existing name belongs to an unexpected AzuraCast playlist")
     return record
 
@@ -189,7 +188,8 @@ def configure(client, playlist: dict | None, day: str) -> dict:
         # Always rewrite dates to today's date; this is how stale shows are
         # excluded even if tomorrow's GitHub scheduled workflow does not run.
         client.call("PUT", f"/station/1/playlist/{playlist_id}",
-                    {"schedule_items":[expected_schedule(day)],
+                    {"is_enabled":False,
+                     "schedule_items":[expected_schedule(day)],
                      "backend_options":BACKEND_OPTIONS,
                      "play_per_hour_minute":0,
                      "include_in_requests": False,
