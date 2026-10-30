@@ -325,14 +325,17 @@ class Handler(BaseHTTPRequestHandler):
             target=HTML
             typ="text/html; charset=utf-8"
         elif path=="/api/report":
-            target=REPORT
+            target=None
             typ="application/json; charset=utf-8"
         else:
             self.send_error(404)
             return
         try:
-            data=target.read_bytes()
-        except OSError:
+            # Read-only, live SQLite report. The progress indicator can update
+            # during the 100-song AI scan; no root-owned report rewrite needed.
+            data=(json.dumps(report(),ensure_ascii=False).encode("utf-8")
+                  if target is None else target.read_bytes())
+        except (OSError,ValueError,sqlite3.Error,TypeError):
             self.send_error(503)
             return
         self.send_response(200)
