@@ -92,6 +92,17 @@ class RotationTests(unittest.TestCase):
   self.assertEqual(p["total_unique_tracks"],2)
   self.assertEqual(p["duplicate_tracks"],0)
 
+ def test_romanian_chinese_and_non_latin_song_titles_are_supported(self):
+  c=catalog(3)
+  c["tracks"][0]["title"]="Cântec fără sfârșit"
+  c["tracks"][1]["title"]="世界之光"
+  c["tracks"][2]["title"]="Письмо любви"
+  plan=rot.simulate(c,"2026-10-30")
+  self.assertEqual(plan["pool_tracks_total"],3)
+  self.assertEqual(plan["total_unique_tracks"],3)
+  self.assertEqual(rot._title_key("世界之光"),"世界之光")
+  self.assertEqual(rot._title_key("Cântec fără sfârșit"),"cântec fără sfârșit")
+
  def test_only_verified_metadata_genre_is_reported(self):
   x=catalog(1)
   p=rot.simulate(x)
