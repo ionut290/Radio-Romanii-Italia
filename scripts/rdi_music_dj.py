@@ -116,6 +116,7 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
     tags = "track_tags" in tables
     ai = "track_ai" in tables
     specialist = "track_gtzan" in tables and ai
+    live = "track_live_index" in tables
     q = """SELECT t.path,t.size,t.modified,t.rms,t.peak,
         {feat} AS integrated_lufs,{dyn} AS loudness_range,
         {bpm} AS bpm_candidate,{beat} AS beat_score,
@@ -124,9 +125,11 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
         {ai_voice} AS ai_voice,{ai_vscore} AS ai_voice_score,
         {ai_events} AS ai_events,{ai_model} AS ai_model,
         {gtzan_genre} AS gtzan_genre,{gtzan_score} AS gtzan_score,
-        {gtzan_candidate} AS gtzan_candidate,{gtzan_model} AS gtzan_model
+        {gtzan_candidate} AS gtzan_candidate,{gtzan_model} AS gtzan_model,
+        {duration} AS duration_seconds, {first_seen} AS first_seen
         FROM tracks t
-        {join_f} {join_r} {join_g} {join_ai} {join_gtzan}
+        {join_live} {join_f} {join_r} {join_g} {join_ai} {join_gtzan}
+        {where_live}
         ORDER BY t.analyzed_at DESC"""
     q = q.format(
       feat="f.integrated_lufs" if feature else "NULL",
@@ -142,6 +145,12 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
       ai_vscore="a.voice_score" if ai else "NULL",
       ai_events="a.top_events" if ai else "NULL",
       ai_model="a.model_id" if ai else "NULL",
+      duration="l.duration_seconds" if live else "NULL",
+      first_seen="l.first_seen" if live else "NULL",
+      join_live=("INNER JOIN track_live_index l ON l.path=t.path "
+        "AND l.size=t.size AND abs(l.modified-t.modified)<2") if live else "",
+      where_live=("WHERE l.last_seen>=? AND l.duration_seconds>=60 "
+                  "AND l.duration_seconds<=720") if live else "",
       gtzan_genre="z.genre" if specialist else "NULL",
       gtzan_score="z.score" if specialist else "NULL",
       gtzan_candidate="z.candidate" if specialist else "NULL",
@@ -152,6 +161,9 @@ def read_rows(db: sqlite3.Connection) -> list[sqlite3.Row]:
       join_ai="LEFT JOIN track_ai a ON a.path=t.path" if ai else "",
       join_gtzan="LEFT JOIN track_gtzan z ON z.path=t.path AND z.size=a.size AND z.modified=a.modified" if specialist and ai else "",
     )
+    if live:
+        cutoff=(dt.datetime.now(dt.timezone.utc)-dt.timedelta(hours=4)).isoformat()
+        return db.execute(q,(cutoff,)).fetchall()
     return db.execute(q).fetchall()
 
 
@@ -206,12 +218,21 @@ def report() -> dict:
       "complete_audio_features":0,"with_genre_metadata":0,"voice_marked":0,
       "ai_sample_target":100,"ai_sample_done":0,"ai_genre_suggested":0,"ai_voice_suggested":0,
       "genre_pilot_target":100,"genre_pilot_done":0,"genre_pilot_confident":0,
+      "live_index_verified":False,"live_index_updated_at":None,
+      "live_audio_ready_count":0,"recent_new_songs":0,
       "status":"attesa_scansione","slots":{k:[] for k in SLOTS},"tracks":[]}
     if not DB.is_file():
         return empty
     db=sqlite3.connect("file:"+str(DB)+"?mode=ro",uri=True)
     db.row_factory=sqlite3.Row
     rows=read_rows(db)
+    tbl=query_tables(db)
+    has_live="track_live_index" in tbl
+    live_updated_at=(db.execute("SELECT MAX(last_seen) FROM track_live_index").fetchone()[0]
+                     if has_live else None)
+    # A live index is mandatory before simulated decisions can be trusted.
+    fresh=bool(live_updated_at and live_updated_at >=
+        (dt.datetime.now(dt.timezone.utc)-dt.timedelta(hours=4)).isoformat())
     db.close()
     tracks=[]
     slots=collections.defaultdict(list)
@@ -254,6 +275,13 @@ def report() -> dict:
                     item["genre_source"]="ast_gtzan_ai_stima"
         item["id"]=hashlib.sha256(row["path"].encode("utf-8","surrogateescape")).hexdigest()[:16]
         item["title"]=title
+        item["duration_seconds"]=round(float(row["duration_seconds"]),1) if row["duration_seconds"] is not None else None
+        first_seen=row["first_seen"]
+        recently_added=bool(first_seen and first_seen >=
+            (dt.datetime.now(dt.timezone.utc)-dt.timedelta(days=2)).isoformat())
+        item["newly_added"]=recently_added
+        if recently_added:
+            stats["recent_new"]+=1
         item["artist"]=str(row["artist_tag"] or "")[:90]
         item["ready_for_autodj"]=False
         item["reason"]="Revisione musicale necessaria prima di spostare il brano."
@@ -275,6 +303,9 @@ def report() -> dict:
         "ai_genre_suggested":stats["ai_genre"],"ai_voice_suggested":stats["ai_voice"],
         "genre_pilot_target":100,"genre_pilot_done":stats["genre_done"],
         "genre_pilot_confident":stats["genre_confident"],
+        "live_index_verified":fresh,"live_index_updated_at":live_updated_at,
+        "live_audio_ready_count":len(rows) if has_live else 0,
+        "recent_new_songs":stats["recent_new"],
         "status":"proposte_disponibili" if stats["complete"] else "analisi_in_corso",
         "slots":{k:slots[k] for k in SLOTS},
         # Full track details are private to Oracle loopback.
