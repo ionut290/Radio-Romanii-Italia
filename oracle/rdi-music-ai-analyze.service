@@ -5,21 +5,30 @@ ConditionPathExists=/opt/rdi-music-dj/models/yamnet.onnx
 
 [Service]
 Type=oneshot
-User=ubuntu
-Group=ubuntu
+# This model worker needs read access to root-owned Docker station media.
+# A separate, isolated unit is restricted to writing ONLY its SQLite cache.
+User=root
+Group=root
 Environment=HOME=/home/ubuntu
 Environment=OMP_NUM_THREADS=1
 Environment=OPENBLAS_NUM_THREADS=1
 WorkingDirectory=/opt/rdi-music-dj
 ExecStart=/opt/rdi-music-dj/ai-venv/bin/python /opt/rdi-music-dj/rdi_music_ai.py --limit 100 --sample-size 100
-ExecStartPost=/usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py report
+ExecStartPost=+/usr/bin/runuser -u ubuntu -- /usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py report
 Nice=18
 IOSchedulingClass=idle
 CPUQuota=35%
 MemoryMax=900M
 TimeoutStartSec=45min
 UMask=0077
-NoNewPrivileges=false
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/ubuntu/rdi-music
+PrivateNetwork=true
+PrivateDevices=true
+CapabilityBoundingSet=CAP_DAC_OVERRIDE CAP_DAC_READ_SEARCH
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX
 PrivateTmp=true
 ProtectKernelTunables=true
 ProtectControlGroups=true
