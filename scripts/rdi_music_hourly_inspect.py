@@ -11,12 +11,9 @@ token=""
 try:
  token=clientmod.azura_php(helper,"create")
  client=clientmod.Client(token)
- station=client.call("GET","/station/1")
  lists=client.call("GET","/station/1/playlists")
  target=next((p for p in lists if p.get("name")=="RDI DJ Intelligente - Rotazione completa"),None)
  if not target:raise RuntimeError("RDI DJ playlist missing")
- print("STATION_TZ="+str(station.get("timezone") or station.get("time_zone") or "UNKNOWN"))
- print("STATION_AUTODJ="+str(station.get("enable_autodj")))
  print("SAMPLE_PLAYLIST_KEYS="+json.dumps(sorted(target.keys())))
  print("SAMPLE_DJ_LIST="+json.dumps({k:target.get(k) for k in ["id","is_enabled","type","weight","priority","order","schedule_items","avoid_duplicates"]},ensure_ascii=False))
  print("OTHER_PLAYLIST_TOTAL="+str(len(lists)-1))
