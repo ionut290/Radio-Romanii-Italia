@@ -1,0 +1,34 @@
+name: RDI - Audit sola lettura playlist AutoDJ
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rdi-music-playlist-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica attuale gestione playlist senza modifiche alla radio
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/rdi_music_playlist_inspect.py
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-playlist-audit-$GITHUB_RUN_ID"
+          sshx(){ ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$@"; }
+          scpx(){ scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$@"; }
+          sshx "$REMOTE" "install -d -m 700 '$STAGE'"
+          trap 'sshx "$REMOTE" "sudo -n rm -rf -- '\''$STAGE'\''" || true' EXIT
+          scpx scripts/rdi_music_playlist_inspect.py scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
+          sshx "$REMOTE" "sudo -n python3 '$STAGE/rdi_music_playlist_inspect.py' --php-helper '$STAGE/rdi-geopolitica-auth.php'"
