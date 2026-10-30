@@ -71,7 +71,9 @@ SENSITIVE = re.compile(
     r"bombard\w*|atac\w* armat\w*|attacc\w* armat\w*|"
     r"guerra|razboi|armed conflict|sparator\w*|teroris\w*|"
     r"arrestat\w*|arestat\w*|omicid\w*|assassinat\w*|"
-    r"disastr\w*|strage|masacr\w*|deces\w*|murit|a murit|stins din viata|"\n    r"incendi\w*|retinut\w*|retinuta|arestat\w*|furt\w*|furto|scompar\w*|"\n    r"abus\w*|aggress\w*|violenz\w*)\b"
+    r"disastr\w*|strage|masacr\w*|deces\w*|murit|a murit|stins din viata|"
+    r"incendi\w*|retinut\w*|retinuta|arestat\w*|furt\w*|furto|scompar\w*|"
+    r"abus\w*|aggress\w*|violenz\w*)\b"
 )
 
 
