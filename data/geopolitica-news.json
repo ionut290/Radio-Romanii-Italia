@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-30T21:10:38.272277Z",
+  "updated_at": "2026-10-30T22:20:34.611032Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-62a57c35360202af",
+      "category": "securitate",
+      "region": "asia",
+      "title": "China deploys 53 ships near Taiwan, Japan",
+      "summary": "",
+      "source": "Big News Network.com",
+      "published": "2026-10-30T21:51:00Z",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZXE3bkNrVHJISE1xcVdvWHNsaVcxSWdsV0E1WTBYd0xaZTZ4TW9VMWx0aTNzRkFCWGpqbUJfMXJSbkh2ZXpYdFFEWWdtU2x2bERJRFJ2dWVvX0pieU1kU1l2NTFFb1FzWXlUX1ZDZExVY3p5eS1vR3o0eUJzV2NlUDRPMURYSi1EMXBaeVpoNA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "China desfășoară 53 de nave lângă Taiwan, Japonia",
+      "title_it": "La Cina schiera 53 navi vicino a Taiwan, in Giappone",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b887572fdbd5ae27",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Gaza’s next chapter, Abu Dhabi’s blueprint",
+      "summary": "",
+      "source": "نون بوست",
+      "published": "2026-10-30T20:52:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE55MFlTSDJ1UEMzYWRfYzRTdUdRRmxveDF4U2NablB3ZXdQa3Z2bkZ2NDZ0bl84bk9fQnJtZlQtcVlKNTNUSk9ZZnpRY9IBS0FVX3lxTE55MFlTSDJ1UEMzYWRfYzRTdUdRRmxveDF4U2NablB3ZXdQa3Z2bkZ2NDZ0bl84bk9fQnJtZlQtcVlKNTNUSk9ZZnpRYw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Următorul capitol al Gazei, planul Abu Dhabi",
+      "title_it": "Il prossimo capitolo di Gaza, il progetto di Abu Dhabi",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-bc864f564b093eb8",
       "category": "diplomatie",
@@ -16,7 +44,24 @@
       "source": "Eurasia Review",
       "published": "2026-10-30T20:48:54Z",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBtU2hhdmFxWTZEZmZucTh6SmVxMzh1cmNFNm42MVlzNmd3ZGY4dHhaMTFLamMzUWxkdkNxZW5JaWhHSjBYdlRHUzVvUzRva1o5S1Rtb0hzNk1rWDZmcmJ0NEpGNm11VmdjUG0wUDhTNC1xQ01PZ0x0eWZpYzEzYTg?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cercurile concentrice ale Indoneziei – OpEd",
+      "title_it": "I cerchi concentrici dell’Indonesia – OpEd",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-20adb15735533a88",
+      "category": "europa",
+      "region": "europa",
+      "title": "Canada vrea să devină cât mai repede partener al UE, dar Germania se opune vehement",
+      "summary": "",
+      "source": "Realitatea.NET",
+      "published": "2026-10-30T19:17:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNmFVZmk5MXlXZmRESEtkSDQtYmpoa2JDeFNBcEhhN2VfaHA5QnMxaFZFQm4zWVRvUE9ZelFWa2VhcHdWLV8ybzBaMzRQWUtjekpxdXJZanhFeWZFZTUxY01JN1V1STVfZjFHaTFnOVpsdDdvUENnUnByWGNWQ0htRHJGTC1fcm5UdVN6UUVaWGhIdGNnZFZVbDVMV0M2RkFHNHR4aFRMaWtwMDJ5ak1OZE1YaG9NYlV3emtXV25BOGZsMU40bXRLdQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Canada vrea să devină cât mai repede partener al UE, dar Germania se opune vehement",
+      "title_it": "Il Canada vuole diventare il più presto possibile partner dell’UE, ma la Germania si oppone con veemenza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5bb719c35966badf",
@@ -27,20 +72,9 @@
       "source": "Euronews România",
       "published": "2026-10-30T19:13:11Z",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMnlQLW55TnFwc25McEtsR1prTmRXMHZBVzdYQTdrWDhuSjJrT05STFJ5ZFpsWGtsT0tfYklFQWF4UmM4eWFrenBEMjM2bk9TYjRGeXJaTkVYbThUZGJxR3NEaV92ZUxFb1ZaNVNvN0s3a1AwVVBxWlQtYjBNX25YNUIxRm42LXE2MU9HenU0SVlJUHl6Q1hXY1B1NmhZTjRvNDBRN3dILU83RFItVXExbTV3WWM?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-6a7cb43da525fc20",
-      "category": "securitate",
-      "region": "asia",
-      "title": "The Philippines and Taiwan Test the Waters of Partnership",
-      "summary": "",
-      "source": "Defense Security Monitor",
-      "published": "2026-10-30T18:50:23Z",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdUs0aVhITW5kaWYtQW02UVJJQV9MTThCS2xTWl9QZzBmS0I2OGdYMTVrYVpoUXFTaV9RZGpvTUZVMXZ4ZDhoRG45bGIxOTBKRjNRMjR3TldMZUVYaXl2Q2RVZmYySXpDejdFcDh6d3JYSkZ6UE5EVjlkenJlSkN0OV9rcEh2S0p4R3pOTnFrZnZvX0VpMmJwX1ZJM3hHX19UUWhSSUV6ZmRrWGM?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Filipine și Taiwan testează apele parteneriatului",
-      "title_it": "Filippine e Taiwan mettono alla prova le acque del partenariato",
+      "title_ro": "Politicile lui Trump apropie Canada de UE. Bruxelles și Ottawa pregătesc o cooperare fără precedent",
+      "title_it": "Le politiche di Trump avvicinano il Canada all’UE. Bruxelles e Ottawa stanno preparando una cooperazione senza precedenti",
       "translation_status": "machine_translation"
     },
     {
@@ -56,17 +90,6 @@
       "title_ro": "UE și Canada cât mai aproape posibil, pentru a-l îndepărta pe Trump",
       "title_it": "UE e Canada vicini il più possibile, per allontanare Trump",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-d49ccbf94d774b99",
-      "category": "europa",
-      "region": "europa",
-      "title": "Laura Codruța Kovesi își încheie astăzi mandatul la conducerea Parchetului European: „În UE, justiția este în slujba cetățenilor”",
-      "summary": "",
-      "source": "caleaeuropeana.ro",
-      "published": "2026-10-30T17:48:44Z",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNMzYyRU9GeW5Ldm9NTmQzcHl5cGhZdlRyMENDMmRldnhJSVplTmFSMGxTOVVSM19HMzNta2NNTmV0eFJaUmhQSUI2OS1WcW5IUU9jeTRON1hIdThqWlZOS2VVbVRfOG9KcjNyeE5sVW1JYXNEVzU0OExyZVJxQnpFSDBYMXVwOV81ZUU4OTVLc0FSUjdLS1poV3VyTUg3c01LYjNYcTdvUmdHRV9vSE40QVZMWnNTODlqaXg2aVZpQ1lTd0tTaFZDSmZkQ0ExcEpWSVRiNUtpYUZ1alpfVFJ6eVFhVkVkNjEwT2JVMw?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-f8f05a4258d777aa",
@@ -112,7 +135,7 @@
     },
     {
       "id": "geo-b2a1150d9c4c2ca3",
-      "category": "securitate",
+      "category": "diplomatie",
       "region": "asia",
       "title": "Japan-Taiwan Relations Enter ‘Deep Waters.’ Will They Sink or Swim?",
       "summary": "",
@@ -133,7 +156,10 @@
       "source": "EnergyNow",
       "published": "2026-10-30T17:37:44Z",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5tVXgyME1wRS1TY04zZnJHOWZtOHRPZ3BBMkF2LVo1SU5tNVZhdUVBaWdKek1KWmJpdWU1SVpGNTFQNW1FdXp4dmNqbXRTUTRhREJMQVYzZ29xZDlXMk5PUGFuVk51by15TXpuUEtQMmo1a1JW?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Șase schimbări care guvernează politica climatică în Canada - Vezi-le aici",
+      "title_it": "Sei cambiamenti che regolano la politica climatica in Canada: guardali qui",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-61970142cff7aa21",
@@ -150,17 +176,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-e0ec6d164520ea45",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "G20 'family photo' cancelled after protests over presence of Russian minister",
-      "summary": "",
-      "source": "BBC",
-      "published": "2026-10-30T17:25:20Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02ajAxeVY1dDNMbWRXMWR4Sy1FU0lWTFIwaUpVWGh4QzN4b25QZWlObVlFTHE4Ny1fcU5ScWRLX3RpdjlGVEJOdTUxYzJrV2kyTk9faWFSMHk0WTQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-042a5d5c3b7a35f7",
       "category": "europa",
       "region": "europa",
@@ -175,6 +190,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-a2ef4e6401481d98",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "G20 'family photo' cancelled after protests over presence of Russian minister",
+      "summary": "",
+      "source": "BBC",
+      "published": "2026-10-30T17:08:12Z",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1nNFJJVHVBcVlKWWZHMFV5c2dXUkIteUNjN0RvNnpjbWh0NmhTQXdYNFBhdFFVTDY1d3hISFd5OXNqbER5VTFFNVI1b25uT3lrTDE3YkZvaHQ0LTJvX1E?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Fotografia de familie” a G20 a fost anulată după protestele împotriva prezenței ministrului rus",
+      "title_it": "Cancellata la \"foto di famiglia\" del G20 dopo le proteste per la presenza del ministro russo",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-10fe76ed08a57b06",
       "category": "energie",
       "region": "global",
@@ -186,34 +215,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Cum se compară șocul aprovizionării cu petrol și gaz din războiul din Iran cu perturbările din trecut",
       "title_it": "Come lo shock della fornitura di petrolio e gas causato dalla guerra in Iran si confronta con le interruzioni del passato",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-d37d39322de8358a",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Navigating the India-US-China Triangle Through Kautilyan Statecraft",
-      "summary": "",
-      "source": "orfonline.org",
-      "published": "2026-10-30T16:53:58Z",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQcHBUVFRSQjNGSGlSendsRG16Y1VwOERLWkRIaTZQajhSWEJZNERfekhjNWQ5dlVyN3VnbUhUR2t2Q3ROT2ZLaFRnNWhPcGxMU3FEMl9ER3gyTWg4LW1sZWhhblZHeVdVWXA5Qk5KOG00anhtS2tOd2VYNVNLdnY1WHlNdF80QXl1RVVNNjR5X1ltaHJQZWxDcDdxM0JnaEhqeDFndkJRZ2w1dw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Navigarea triunghiului India-SUA-China prin Kautilyan Statecraft",
-      "title_it": "Navigare nel triangolo India-Stati Uniti-Cina attraverso Kautilyan Statecraft",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-451ab7b230e0e602",
-      "category": "europa",
-      "region": "europa",
-      "title": "Ue e Canada firmano la nuova \"Alleanza per il futuro\"",
-      "summary": "",
-      "source": "SWI swissinfo.ch",
-      "published": "2026-10-30T16:50:31Z",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQV0Jpel9GcU91OHpxUHJ0NnpucUdKYUpaRDFId2hoS1lKRDJiTVFkMTkyYXo0MGZpNmJtSDRPaElKbkhaNnBxcGxjeVJDcFFVdHMtOGdXdzBJaU8yWi1WZGtXZVViRWFSdVlWeWZxUTdidkY1Q21PMU14SDBiNU8yX2lxVllmWVQtXzhwOTlucnpSTlZ2VUdQZll0Yw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE și Canada semnează o nouă „Alianță pentru viitor”",
-      "title_it": "Ue e Canada firmano la nuova \"Alleanza per il futuro\"",
       "translation_status": "machine_translation"
     },
     {
@@ -267,7 +268,10 @@
       "source": "Spectrum News",
       "published": "2026-10-30T15:32:00Z",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPNDh5NDIxY1N4UEg5WFpqbVFCYU1aZF9KUmNDbE5hVjN0Y2dFb1lSWWpuQng5d2xmakpHY2FneXNCRzhra3lrREZpM1FQSVBnX3FPSEVCa000SnVLa05BWEp2ZWxTT0NHelNFdVNScXhZSzBEa0JnNVhPbV9sTHVlZUx1SjdkdjM4MzVnMGZJZzg2ZU9XTzRmU1JsNGQxT0ZMMEh4dDA0WEhiVHYxZUFHUG1BcVJIZTRxdmN4ZVoxMXBkUkVobDJHOWpxY2RGdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA renunță la fotografia G20 după ce diplomații europeni se opun că sunt fotografiați cu rusul Lavrov la Atlanta",
+      "title_it": "Gli Stati Uniti cancellano la foto del G20 dopo che i diplomatici europei si sono opposti a farsi fotografare con il russo Lavrov ad Atlanta",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-85cf4e44566e0236",
@@ -278,7 +282,10 @@
       "source": "Equiti Global",
       "published": "2026-10-30T15:30:24Z",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMHlRWThucEl4UVpPdXozMGxsaUw2VDFESzAxR2s1enFJRlpDNUw1aXJBSnZTUjJ5WkhuWjl2VS1QY1RESlVJNjIyZ3d1OUtmOWNnWmExVF9ESFJfUFA3QWN3cU03aXRncTJhczc3bUxIZlJCVEJXbXVKTEdwRS1DaWljUGxTTnA4dVFaQ3dhRkxvUXg2Qkx5Y1pqUnc3bzM3M2c?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Kevin Warsh nu dă niciun semnal al ratei din octombrie, pe măsură ce înăsprirea globală se accelerează",
+      "title_it": "Kevin Warsh non fornisce alcun segnale sul tasso di ottobre mentre la stretta globale accelera",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-64c143cfe8ff4af0",
@@ -309,31 +316,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-8eeb39988de72141",
+      "id": "geo-36468e89b835c5ea",
       "category": "conflicte",
       "region": "orient",
       "title": "Three tankers strike mines and catch fire in Strait of Hormuz, Iran claims, and other Mideast news",
       "summary": "",
-      "source": "AOL.co.uk",
+      "source": "Idaho State Journal",
       "published": "2026-10-30T15:12:57Z",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZnRmRlR1VEdNS0ZnNi15dUplbC1VMTV1Vk02ZUJGeUM4Y2FTTTYwN2wtX1IxNFd1cmxPZFdvT0NqX3duWFJfVU5uRzdkbkZuMXRtd3dkR2l4cXIwUkhqbHpBWXNCSy1IeUZSVXNfNDRWblkxV0RSRXJXWjlzZU15Tjg5LVdlRGlt?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPOXFFb0tkNDhIMV9PSk8zZ1hVTkFKTHd6NUhVUDdnMWU0OG9yMlplekZWaFJROGlHaDFpMHYtVC1zOW1ZeGpRdjh3YUp5R212eEU0MUFIYzZHc3J6ZERDblVrZWJhRXBRNTZ2eFlmWGoyT2dDSjhlcjNZUG5fWXQ2bHpOc051dEVZOEtsRlF0Q0NBdFZucDNuNFlsZDJUdEU5SEU0bmdoZkdpSXNSNjR1SzJNTWN3cm5nRGYxNWgtSlhPRDByekFJNzhkcHhLdy1WSkxHZTNoQW1oYmZuY3V4SUphMEdseHc5MV9NOHJPcDM0clFYcUN3SC1YVEM0RmRUallZOUZvMTRNR2lvM3c?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Trei tancuri lovesc mine și iau foc în strâmtoarea Ormuz, susține Iranul și alte știri din Orientul Mijlociu",
       "title_it": "Tre petroliere colpiscono mine e prendono fuoco nello stretto di Hormuz, afferma l'Iran e altre notizie dal Medio Oriente",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-e406158b800dbf14",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "India’s China+1 Dilemma: It May Need China to Depend Less on China",
-      "summary": "",
-      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
-      "published": "2026-10-30T15:05:30Z",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPbUwzMXV4b3RRQXpkTEV4VVNnVHJXaUZsZmUzSFphdHYyUVBzOENWQVRYb1RrNHRMRFJfQlBPR2k2VGE2bmxOMDJxUTJaS2JyTGNJeGFfQlRwZUw3QU4xaDlFWUpkWHU3alRzdU11SXFhal9mUlJlTTh5bWUtbHFqLXRXQlZJREFEMm1CRlMyLXBkdEszNnYyOUpNMFQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Dilema China+1 a Indiei: poate avea nevoie ca China să depindă mai puțin de China",
-      "title_it": "Il dilemma Cina+1 dell’India: potrebbe essere necessario che la Cina dipenda meno dalla Cina",
       "translation_status": "machine_translation"
     },
     {
@@ -345,7 +338,10 @@
       "source": "24 Канал",
       "published": "2026-10-30T15:00:00Z",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVUF0Y3lnSkpkR2ZMaTBfLXZQSUhTSkFyb21xczEzcTJ6LXVNa1ZqU3EyZW1WckpNeHl3V1I1N2FHTmVSNkcxUHMzNEwzSlI2TF9saUNBZ1lBNFVtSWljZ3d2R0VNbjF6SklLZGxTYjlWNXc3NmU2S2tMV0VkZFJtRDZSb1dmUVlqcGNfODlmVzNrMUVIRWRkdVp3RTFIY2lwbXJ1cUUwWUhzam8?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Efectul Melania: cum prima doamnă a Statelor Unite și-a eclipsat soțul în cursa pentru Premiul Nobel pentru Pace",
+      "title_it": "L'effetto Melania: come la First Lady degli Stati Uniti ha superato il marito nella corsa al Premio Nobel per la Pace",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-4d52f97ef1be3a7a",
@@ -362,31 +358,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-3318fa739c3f3f55",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Taiwan warns of ‘obvious’ threat as 50 Chinese vessels sweep surrounding waters",
-      "summary": "",
-      "source": "www.daily-sun.com",
-      "published": "2026-10-30T14:26:32Z",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPM0hwdjAwWFd5TnpRVWstUzVFNVI5RVdZS1hUdVhFSkxLdGZzazdEaGFIM2pmNkpBNE5zSVhQNHVINEo0dEdTcDV0Z3pManQwcXM4Uk1QX0JObFhlczl4Y1dTSHFEQ2NFUkU4OUxrVXlSQnN3S1lmdjkyM0dtNDNLdXlEbzU1QVliLTFZb1RlNjkzMlRpbUxET2xIUi1uaXdfaEtfSGNhUy0wdWFIbE11UF9jbnNPS1hfcm5sMWFGUVMwNlU?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Taiwan avertizează asupra unei amenințări „evidente”, în timp ce 50 de nave chineze mătură apele din jur",
-      "title_it": "Taiwan avverte di una minaccia “evidente” mentre 50 navi cinesi spazzano le acque circostanti",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-00a6e5bc520172db",
+      "id": "geo-b4443b0a1d9cbe5d",
       "category": "europa",
       "region": "europa",
-      "title": "L'UE e il Canada stanno rafforzando la loro alleanza di fronte all'impatto delle politiche del presidente Trump.",
+      "title": "Comisia Europeană înființează grupul „preparEU”, care va pregăti Europa pentru dezastre și situații de criză",
       "summary": "",
-      "source": "Vietnam.vn",
-      "published": "2026-10-30T14:02:02Z",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOdDRidGxscGM1SzVfd1k3SWViUW93VjdUSGV6Nm5sNVdidXZTWGlCcUxkT3B4RFVLWGU4R2wzclVGbVcxT0d2YmdHenQ4b2Y5T2twdkRBV1hJZzVNV0Q1ZFo2elZLM183bTZxQ2pOa2N6YmFVQllKSUFOU193cDFsT0tQLVQwdnBob0NVQzRkcmZRZlZIS3pLbkZVd0QyV0x0RFU1aWw2YjV4SzBwZGc?oc=5",
+      "source": "Mediafax",
+      "published": "2026-10-30T14:29:36Z",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOQ0xFeEhVcXJHUnZ2MkJyMkFVTHFERVVldEM2a091M18ycnpIdVVmWnMyYzN2ekpKNFFCWDk2d1Q0S19oelJSU2d5bW9jOFU2bE1WQW90am14ZlRTT0ZkMlcyWm53dnFaV2UtdVNwQUY2djBjdXZBSXBpeFJ3SGE4ZW9Zc0VkeTlDZUZyQlpLRWNSa0hnVHFHakJudTFIU2s0S1dvQm5VaDRYeEJqbDFCQzNQUi1RYXFWMmJyM1lEUTNpTzNrQjB4OGJYbWJSY2hqVWFFSTN5TGI0eGREVE1V0gHkAUFVX3lxTE0zcENwMjZoYkE2bHdTQi1nd29NcGFYU00wRzdId0NJbmR6MWNiLUxIb0R5SThiaEtKcFJZcTVZSUVxWkVfaF8zcTBNbHh4Vjc3N1dFMEI2cnR3LWtBUGgtQWtNRVdsQndTNERkZE0zS05KQkxYMm8ycWJ4VXQzSFMyRXpQd04yTFJON0xiWHAwV1dZZ1lucmZYRUtDMFpJbHFqZ2JEVHpyQkhTUGVwYTVMTTVmR3EweEV0eHlKbUZ5bEJZUGVLRjVmc1VZME5jZ0VfeUwwcHpNZTFfdGFZWXZONVVBUw?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "UE și Canada își consolidează alianța în fața impactului politicilor președintelui Trump.",
-      "title_it": "L'UE e il Canada stanno rafforzando la loro alleanza di fronte all'impatto delle politiche del presidente Trump.",
+      "title_ro": "Comisia Europeană înființează grupul „preparEU”, care va pregăti Europa pentru dezastre și situații de criză",
+      "title_it": "La Commissione europea sta istituendo il gruppo “preparEU”, che preparerà l’Europa alle catastrofi e alle situazioni di crisi",
       "translation_status": "machine_translation"
     },
     {
@@ -398,7 +380,10 @@
       "source": "Messenger-Inquirer",
       "published": "2026-10-30T13:51:53Z",
       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQdGRxTXpNenRkNnNOSzRtSHhIZy1wWVNCZzRmYlQtbWc5UWJ4UmZNLXFlLVo5dDNaaEVZem9Ca0laYVZJaUszSUFoY3RzRldJTnhnQU5BVUZwRlNpOGRac1pHTEE4Tk8tZmE0QkppNHgwY0JRSF9OdEFvcHh2bUJVOENPQjlxMkxnQ1dqQkkwWnF5XzFwSnR6c29KYkRhS0luMjhROElwR2RBZVZZR3hqa3F5WktWdE5tSko0ZGxJYWlJWERPWWw1Q0d2enI0OWtwRmpJY2dnODZ2eFpYSWJvVDRLZHNKcjVVRUhzTmZPbHhVVjBaZGF2eEplRmM3RDVic0xrNEhkdW9faS1WLTU0cFpzYw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Divergențele profunde dintre diplomații G20, inclusiv din China și Rusia, determină SUA să renunțe la planul foto de grup",
+      "title_it": "Profonde spaccature tra i diplomatici del G20, compresi Cina e Russia, spingono gli Stati Uniti ad abbandonare il piano delle foto di gruppo",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-7078184022db0f4e",
@@ -437,7 +422,10 @@
       "source": "Latin Times",
       "published": "2026-10-30T13:37:48Z",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQRHd4UGxTVHIwb3FqbHJBTmZIc3hhTWdyMHUxclN3ZU1ONU43MmVUTFdJTnhEOWlQeVc5NGRJLU10MlZXd3ZTSU03dTIyM0hOMFd2QmNzVkJWTFZxdjdkVXJ5YjlVbTliTEwtZEl2aEpBQWpiTl8yU3pNcFJ3eHA2MTd4Q2o?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "O dronă rusă a ucis 14 în gara Dnipro, în timp ce Zelensky dezvăluie acordul Trump-Putin Diesel",
+      "title_it": "Drone russo uccide 14 persone alla stazione ferroviaria di Dnipro mentre Zelenskyj critica l’accordo Trump-Putin sul diesel",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a525dc84b3b1c06e",
@@ -468,6 +456,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-f7f9520bf0e671bf",
+      "category": "europa",
+      "region": "europa",
+      "title": "Limiti al potere di Ursula von der Leyen",
+      "summary": "",
+      "source": "Vietnam.vn",
+      "published": "2026-10-30T12:44:44Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1UUUsyYlo0a2NuUDdVSWxSR3BRSThnX1k5eDNzaElJdm9zdzBuQnZmYVBIdFhrelhwdzVrOEpSc0xxd3daNkRmTDNrWDNBSG12cHF2RFBMS1hqR1BjVHMxdVQzS2ZsdW9GN2dHampNbnlZRWtDV2tHRXBQZ2M?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Limitele puterii lui Ursula von der Leyen",
+      "title_it": "Limiti al potere di Ursula von der Leyen",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-e533283cd3f5c519",
       "category": "economie",
       "region": "global",
@@ -479,6 +481,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "FMI încheie un acord cu Gambia privind ECF și revizuirile Facilității de Reziliență",
       "title_it": "Il FMI raggiunge un accordo con il Gambia sull’ECF e sulle revisioni del Resilience Facility",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d418d4d5f263b726",
+      "category": "europa",
+      "region": "europa",
+      "title": "L'UE esprime il suo rammarico per la morte di quattro militari italiani in un sinistro aereo in Bosnia e sostiene Roma",
+      "summary": "",
+      "source": "Demócrata",
+      "published": "2026-10-30T12:32:34Z",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOM2NaQzBZVTdRc2lNaW5Xc3RHV1NoQmMwMVlNSzNXWlJ1MzZpMTdYcFNzV2VXV0dOTUl6Z1pJWmFoUWIxRzJkTDRWLTNoNmYxS09fX2Q3aWlDRWdkNE9uSG90aC05TF9qOWRSZC01Vk51OVpnQjhzT3JjeEtMeDJsS29pYVFOYXNjN1RwdWVUQmNJalcyVHI3dzc3ZGdCTktZcEdPSU43UVZoRUVmMm0xQXRxakh5d0U3WHhMRWJ6NUg1MDBCU1FnMUtTYkxwQUtwbnBQNlRHakVESUNaNWh2TjJJUGR0VGFfUkVyZUNLc1Z5SGdB0gH6AUFVX3lxTE9QQmE0UUI2MlEzN1J6M05JbTRQWFNnb0hzb3hYdkRTTnJNYXlSM3FoS0pFUTgtcm9VakxfMVZpd1NzRmJrVTRVTUFERFZFM2pndlNvZlE0YjlBQ193cFI3cllla1NqcTRISWxUUDktRkdtOE9YNlFBamR1a2tyNVVWcm1Gd3JYR3g5d2t3UHhjUGZBNHBsMWtuMUkzcGcwYXZpM1F6clptcE9wVUZnTFJmZGprcXotUF9CR3lRMXREYUlyWTFyenphaDNZZ1hRSm5JdlhWZUdNM25lQmh3dlNmd1lPaDlCd3R2cVFGcmNZY0Zld2R3cDNpV2c?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE își exprimă regretul pentru moartea a patru soldați italieni într-un accident aerian în Bosnia și sprijină Roma",
+      "title_it": "L'UE esprime il suo rammarico per la morte di quattro militari italiani in un sinistro aereo in Bosnia e sostiene Roma",
       "translation_status": "machine_translation"
     },
     {
@@ -538,17 +554,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-65584ebad98b032e",
+      "id": "geo-cd453e7f60d5b6b2",
       "category": "conflicte",
       "region": "orient",
-      "title": "Saudi Arabia says drone intercepted near Islam’s holiest city, and other Mideast news",
+      "title": "Saudi Arabia says drone intercepted near Islam's holiest city, and other Mideast news",
       "summary": "",
-      "source": "WTOP News",
+      "source": "WDBO",
       "published": "2026-10-30T12:10:02Z",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOOTZJLUJvc3hxeUxZQURnNzFWQWRPM3daVkdvaXl3Zmd5WmFOeW1kQVROQ0Zhbjd2em0tbzhuUXdWOEx3ZVpSX2s0Yk8xTUhjdnJQZjM0bE0taXJ4bG0xa2V0SV9NWFZyN1Nja2gyek1ma2ZJdDdpMXdkTUFYcnlDOVVGV2hOc19yS05CdmdsRHU5MDdUZk44T2VoWjJLbURIRE9CZTFmeE1JRHZ3Z0c5Q1d2YkF2SzRXcEE?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPbE1kdWdPaU1pRnl4NUJoU1d4emRYRUcxWUhnU3lBdWcxOC10cmdzLVFaTkoxSWVIcFlKdVFpekR5b2VKc0xpY216STBYbmZ5akZxTUdzNXpiVmhwekhwNlZOZU54aFZ6YVBqczdLa1JFNHNleG5UUlpRVzhkRXVFUWFVUdIBlwFBVV95cUxPNXBGLUYyNVAxWnlfVmduRE1sYlRPOFQzTV9mWk82TzZRSm1jOFdWTWdoenN3RExkb1k4UHNGbWd0ZG5ndnJFRDlDcS1XZkJ0bzlJZTBxd08tdU5IZjFoU09RNHVWMEhUa1N4eE9sZmlMUm1rXzNwR29wZEpLUDFENVVZWDJiSEtEX2hJdm1MdWN1Z00yWjZJ?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Arabia Saudită spune că dronă a fost interceptată în apropierea celui mai sfânt oraș al Islamului și alte știri din Orientul Mijlociu",
-      "title_it": "L’Arabia Saudita afferma che un drone è stato intercettato vicino alla città più santa dell’Islam e altre notizie dal Medio Oriente",
+      "title_it": "L'Arabia Saudita afferma che un drone è stato intercettato vicino alla città più santa dell'Islam e altre notizie dal Medio Oriente",
       "translation_status": "machine_translation"
     },
     {
@@ -574,7 +590,10 @@
       "source": "Uacrisis.org",
       "published": "2026-10-30T11:25:25Z",
       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFByVlp2OWRpRFZLTmFOUEVXdXdTWkhvSU9JcDNsNmZfRVh0dmpRTWp1Xzc1YUc3TGhieTZ4aFJBemhieWpCWm41VlBVdlFJUdIBTkFVX3lxTFByVlp2OWRpRFZLTmFOUEVXdXdTWkhvSU9JcDNsNmZfRVh0dmpRTWp1Xzc1YUc3TGhieTZ4aFJBemhieWpCWm41VlBVdlFJUQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Breviar săptămânal. Ucraina rezistă invaziei Rusiei. Zilele 1.706-1.710",
+      "title_it": "Raccolta settimanale. L’Ucraina resiste all’invasione russa. Giorni 1.706-1.710",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d3eb9e1d5144679d",
@@ -588,20 +607,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "SUA cântăresc noile lovituri ale Iranului în timp ce Vance se întinde: Este războiul sau un acord mai aproape?",
       "title_it": "Gli Stati Uniti valutano i nuovi attacchi contro l’Iran mentre Vance interviene: è più vicina la guerra o un accordo?",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-2c9985d7f3aab75e",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Freight rates diverge as security threats and strike risks persist",
-      "summary": "",
-      "source": "Daily Cargo News",
-      "published": "2026-10-30T10:40:13Z",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORTVKS001RDE2M2xrRmxTcjVmazZPVXZxM2VRRWZLVVdRQmZIbS1SUnJCcXVaS003TzNZZmFvZ1FjVFJSUzdtWk1tSlVUMTIxcXo5YkhtXzg0a20zQWFidUFTeno0bGlIcUJSeTJ1X2dCRXVmSnMtTmRPUU9SU2o3ZWNRY1RtRnRwLTBOUHZHcGpxcm92dzdhbXhpQjd1d9IBrgFBVV95cUxQaU83OVBIWFdxSTJuNl93N0xJblFQa0stUl8za2JMMUY1YjdLaXNRbzVaYkdTeXFLNlpQSEdvT3pWUVdfSFRxUXJSTFgxSUJWN2ZocHh4TlZBSW1ZUWloWmpVa0U2ZjZWOEcwcm5xS2tnS1RPYmZTV1N6a2pSS0w0LTItLUJ1Y3JURkhTdHBLY0lRSElXNjhscnlxeFVIend5NVhLSmJZeEQzWktQYmc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Tarifele de transport variază pe măsură ce persistă amenințările de securitate și riscurile de grevă",
-      "title_it": "Le tariffe di trasporto divergono poiché le minacce alla sicurezza e i rischi di sciopero persistono",
       "translation_status": "machine_translation"
     },
     {
@@ -683,31 +688,37 @@
       "source": "- IMEMC News",
       "published": "2026-10-30T09:48:05Z",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSHVpMzgwaHhZazNBbHBXMUM1blBHSklMRmp3cE1qQUgzZFR1MEgxVTNWendWZWNPem5EQklWV2QzZjR6LWhGWXRqeFA0QjFRVDVoUTkzZjlsY1pCTVlyTkVGU2Q1N29QZjlOX3dEZnNWRFd1NlVGaEQwUzljYW9YalhlRDFLazZ4?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Atacurile israeliene rănesc palestinieni și distrug casele din Gaza",
+      "title_it": "Gli attacchi israeliani feriscono i palestinesi e distruggono le case di Gaza",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2f45b91ccfeb0dcc",
+      "id": "geo-224b0d82fb051966",
       "category": "securitate",
       "region": "europa",
       "title": "The Greenland ‘Moment’",
       "summary": "",
-      "source": "https://politicsuk.com/",
+      "source": "www.politicsuk.com",
       "published": "2026-10-30T09:35:35Z",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4wVE5JM0xsY01RMEN1ZmoxcTN5dzhOMHgxYUlCTjBvai1CQUlaTnhGaURHbWp4Qk5KdWdPdjROQU5MRW1yMDAwTmhIQUo3OXhDX3JCSF9jVVZlbzNDQ3c?oc=5",
-      "review_status": "external_headline_unverified"
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUEdBZHU5OVYtcmtMZ1BqQ2luX2stY1paYmtZYlI3dTN2MFZNWS1nRXpabm5PZmFfZTdibEFLcTJzMGp2TF9LdkNnbGw1eFZCX1FLX1o4ODZBeHNNSXNMWElmRDJQUzFLTkE4M2NSM19Odl9aSlBIdzljTzN5a0JYY1l5TDdJSVNzaC0xbzFmcUxVUXNZblJiQ2p6cUk3VERpdF9Kbk9KQlZzMTc5UThTZVpoNHlLbFNU?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Momentul” din Groenlanda",
+      "title_it": "Il “momento” della Groenlandia",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-a62a2f22cbf4c225",
-      "category": "conflicte",
-      "region": "africa",
-      "title": "Africa Media Review for October 29, 2026",
+      "id": "geo-b86f71d694f23631",
+      "category": "europa",
+      "region": "europa",
+      "title": "Nouă ne convin republicanii, vrem-nuvrem: O victorie a democraților în alegerile de la jumătatea mandatului din SUA ar putea afecta negativ Europa",
       "summary": "",
-      "source": "Africa Center for Strategic Studies",
-      "published": "2026-10-30T09:10:02Z",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQUVdMSEJlZEpSMURYX1VUc2p5aGJZcFotMTJIQXgzYWJwaVUtc2VEcEdTdThCbUtLLW1abG83alpaV3dCQzBkd2JpaXJBYm1sOG1xMXRRS0pZd2VPb0hUZUY4dUdLYXIza1oxckUyMGJwcy1IaWFQaEk2UE14NWJHM0JhbUNva25nREh5SQ?oc=5",
+      "source": "ZIUAnews.ro",
+      "published": "2026-10-30T08:37:00Z",
+      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxORDhvNnZuRk9hVnA0Q1VZVTVVNE5LRGJqUGkybkx5MGxUaWI0cktHc1RnSnhoejAydUNwLVFQWk5hVXlmRGtMZlNELWpDcXYxVlhaMktvRXBVVWt5bkJsUllTZ19obnk0LTZRUGNUeHpPakROY2FHQ2dwNWxfLUdHZWVrOFgwTmYtdWVrU0p2NU1DQTQ2c05ZUmJoQzlmTS1vWWFXcGN5X2tidC1WdTlSQ3FFTUx5dWhiTlR5dlBqdTdXTW8zODNiY2Nib0ZGQmJtMUFlVGZRTnlyRXQ4Q2trcDZCUl94N0J4WUVyRy13ZFlXQjllV09UdlJwMHhMV0N6UldGVmZYT1FqS1dzOXhxeGVB?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Africa Media Review pentru 29 octombrie 2026",
-      "title_it": "Africa Media Review del 29 ottobre 2026",
+      "title_ro": "Nouă ne convin republicanii, vrem-nuvrem: O victorie a democraților în alegerile de la jumătatea mandatului din SUA ar putea afecta negativ Europa",
+      "title_it": "I repubblicani sono d’accordo con noi, noi vogliamo: una vittoria democratica alle elezioni di medio termine americane potrebbe avere un impatto negativo sull’Europa",
       "translation_status": "machine_translation"
     },
     {
@@ -739,15 +750,18 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2afbc08c56d6a621",
-      "category": "europa",
-      "region": "europa",
-      "title": "COMECE reunește Ordinariatele Militare din Europa pentru un dialog cu UE și NATO privind rolul Europei în arhitectura globală a păcii",
+      "id": "geo-ba5656eaf0ad4e8b",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Trump Says Vance Sent Letter To Iran To 'Help' With Medicine",
       "summary": "",
-      "source": "Episcopia Greco Catolica - Oradea",
-      "published": "2026-10-30T08:22:58Z",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOdUg4U21DOFVObzNYdmlsMWhUY3BKQ3RRZGVNbk1nVHpCX25xTC1FQWhzMV9raGgtc0EwdGZhdFJWN3FDTU82NEwtaEVTMFJ4YzJNdm1zY05kMVo0eGtFSW03TTA4NGFXSThDbTBRN2RBdHR5dU9Nc19IczlpM1ZlaDRFQVZoN1BXZjFyem9VWEswSWh2UzdORGdvSnVQVWxRRXBQZE1PaGxpUDhVOUNZdHhQREh0UlRJMWR4ODdqS3RTWU00WnZKNWhUNW9KXzhsNEZBSnlsUVZhcVh1NTdDd3lZWnA0V1JaMFN1LV9RYU1hTG1fVnd4Qg?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "Radio Free Europe/Radio Liberty",
+      "published": "2026-10-30T08:13:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9OeTc1VE5lcEx0QzNhVlh6TnBVZUhfdi1MR0xZQnJOLWo2U3dHb09ucVhPNXctSTFXNTF6R3EwZEJXSl96SF9zS2FPUWFwcHpHeFVMaGtUckZiaGIydHc1SFMwT3U1R1h5WnMtY2RGUkdtYm1jV2VUMWFB?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump spune că Vance a trimis o scrisoare Iranului pentru a „ajuta” cu medicamente",
+      "title_it": "Trump afferma che Vance ha inviato una lettera all'Iran per \"aiutarlo\" con la medicina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-8e1f6ebcab2ddf23",
@@ -792,15 +806,43 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-3e37f35329fa9ade",
+      "id": "geo-0a3bf89f73e41a79",
       "category": "europa",
       "region": "europa",
-      "title": "CE vrea reguli comune pentru accesul copiilor la rețelele sociale și cere statelor UE să amâne timp de un an interdicțiile naționale",
+      "title": "Nella campagna elettorale spagnola non si parla di Ue… ed è una cattiva notizia",
       "summary": "",
-      "source": "Antena 3",
-      "published": "2026-10-30T07:08:00Z",
-      "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQTllmOC01R0F6WE54dzVEeFZZU0p0M1hUSVk0UnRzMUxwY2tCWU9jRG9kSTM1bUdia3pyZS1PWUNSS2h4bFpWaG11RmVSLXlRSTVuUGRMeVFGOWV0NlBDalhJMVVUeVJZLUc1UmVvazV1UV90TGRTWUtLdXJvU0JIRzVXUUpXX2dsTDc1d2xwM05tM1lnWG4zRmNZdm5aV1BKc1ExbHRqVE1VY2pWeHRTOTY4dkctSnVEQWhUejZlRkdiY0RtSkhQeGx3ZWxUS0s3aHQtLWQ2d210R3gwakg4TjF0SzVGWnVPQnJrZVlsOGhRY1ZwVjYxSjA5MWJFYUxzT2ZKUzNaLU1fNEJVYmduRnZ3R1FTSklGSmgzQlV30gGAAkFVX3lxTFBWRUplaTl4UjI3Zk5TYkluQ2VtVndBMjRPc1Bac284azR4bXpsR3ExaWZydS1DQUhtU1FtQ2hxWmphYUtVMWZpVm1ONjc5QnhYeDNoWkRLWkliR05UVUpHZE1SM2I5Y3haMVhSNS1aWmZkZlRqWWJUQV9abWhmby1fNncwTDg0OHpPdjEyMmF1RVkyREhySU9oclhBS3F3dVdyclAtV05RUjRtRDhTZUFEWjhpVnc0MDdzcnFoWkNHb3VFT2d2WWZQYnI4R1RCOHhrRHBTSk5WM2FveURPclFuamJnNm9MUFR3cHl2WTdWTHdLNS1nRUgycVppcVdFVW0?oc=5",
+      "source": "Il Mattinale Europeo | David Carretta",
+      "published": "2026-10-30T06:30:59Z",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPd0xJcndUVDAyV1MzWHlFeF9EUm0xa2ZBZWxkcmZNNG9mTW90LTJob2lrbFBBRVM5a2EzWlplZ2JpbjlvS3hTTGk3eE5TaDhNUW82V1g2aUwybmZNNjE1SGVyY2tZTVY2SnBwZlVoV2c4WWJVS2JSX0lHc3BNTmdCRkstdzN5eGp2REdvSDZlMEtMVUNINEVaVmNMUlUwMnpITWduakFtelIyY1pja1ZLZmFxb3QtZXdPWDVMTHN4QS1RaGxFU1dXSF84RDg0alZVZEM4STl3?oc=5",
       "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-ce86f1874c461038",
+      "category": "securitate",
+      "region": "europa",
+      "title": "NATO’s Mediterranean Posture",
+      "summary": "",
+      "source": "trendsgroup.org",
+      "published": "2026-10-30T06:00:33Z",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zUE01eEFwaGZ0WHJwalBNb3NvNExLcE5aYU9RaDRDYjFPc21pWG05d0JEazJpQzFKNk5kRVFpUFB5aXBCeFhDbDFDb2NibTZLQVhsd25FNDlJYW5ZcGdYZ2RrY0hvVE9JMTZCaw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Postura mediteraneeană a NATO",
+      "title_it": "La postura mediterranea della NATO",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-a166399ca9afcf58",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Why Is the Pentagon Asking European Allies to Tone Down Their Warnings About Russia?",
+      "summary": "",
+      "source": "Modern Diplomacy",
+      "published": "2026-10-30T05:26:10Z",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQQkxFNkpfUnhiQ2VaV0lvY1Z6WEcwdzlUN1Q4OG9TVGhVMUh6bTdKSHk1TWJjX19jY0VvZG9zMTFDSVk1TzMwSGc1MU1CcnBLUy1qNVBmY2dmcXJYTVpMTFZyNXdhd0dCUy02SGJmbFRfbGNtYUhhdGN1ejc0VVZIckNVMFJEZWRpNEdQcjBDWE1qekhlc2FlNHpja29ZLVMxQklldi11Q3U4SFZKUjVWakI3bHRsZ0x2YWE3RGJFWQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce le cere Pentagonul aliaților europeni să-și diminueze avertismentele despre Rusia?",
+      "title_it": "Perché il Pentagono chiede agli alleati europei di attenuare i loro avvertimenti sulla Russia?",
+      "translation_status": "machine_translation"
     }
   ]
 }
