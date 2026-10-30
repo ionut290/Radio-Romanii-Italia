@@ -1,0 +1,86 @@
+name: RDI - DJ intelligente Oracle (analisi e pannello privato)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_music_dj.py'
+      - 'scripts/rdi-music-dj.html'
+      - 'scripts/rdi_music_scan.py'
+      - 'scripts/rdi_music_rhythm.py'
+      - 'scripts/rdi_music_features.py'
+      - 'scripts/rdi_music_preview.py'
+      - 'tests/test_rdi_music_dj.py'
+      - 'oracle/install-rdi-music-dj.sh'
+      - 'oracle/rdi-music-dj-analyze.service'
+      - 'oracle/rdi-music-dj-analyze.timer'
+      - 'oracle/rdi-music-dj-web.service'
+      - '.github/workflows/rdi-music-dj.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-music-dj-deploy
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Controlla classificazioni, file non musicali e assenza modifiche alle playlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/rdi_music_dj.py scripts/rdi_music_scan.py \
+            scripts/rdi_music_rhythm.py scripts/rdi_music_features.py scripts/rdi_music_preview.py
+          python -m unittest discover -s tests -p 'test_rdi_music_dj.py' -v
+          bash -n oracle/install-rdi-music-dj.sh
+      - name: Connetti Oracle senza esporre chiavi
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo "::error::Manca RDI_ORACLE_SSH_KEY_B64"; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Mancano le impronte Oracle"; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Installa il DJ in modalità osservazione senza toccare AzuraCast
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-music-dj-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          [[ "$STAGE" =~ ^/tmp/rdi-music-dj-[0-9]+-[0-9]+$ ]]
+          sshx(){ ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 "$@"; }
+          scpx(){ scp -q -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 "$@"; }
+          sshx "$REMOTE" "install -d -m 700 '$STAGE/scripts' '$STAGE/oracle'"
+          cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scpx scripts/rdi_music_dj.py scripts/rdi-music-dj.html \
+            scripts/rdi_music_scan.py scripts/rdi_music_rhythm.py \
+            scripts/rdi_music_features.py scripts/rdi_music_preview.py \
+            "$REMOTE:$STAGE/scripts/"
+          scpx oracle/install-rdi-music-dj.sh oracle/rdi-music-dj-analyze.service \
+            oracle/rdi-music-dj-analyze.timer oracle/rdi-music-dj-web.service \
+            "$REMOTE:$STAGE/oracle/"
+          sshx "$REMOTE" "sudo -n bash '$STAGE/oracle/install-rdi-music-dj.sh'"
+          sshx "$REMOTE" 'set -e; \
+            systemctl is-active --quiet rdi-music-dj-web.service; \
+            systemctl is-active --quiet rdi-music-dj-analyze.timer; \
+            curl -fsS --max-time 7 http://127.0.0.1:8788/api/report \
+              | python3 -c '\''import json,sys;d=json.load(sys.stdin);assert d["read_only"] and d["playlist_writes"]==0;print("ORACLE_DJ_DEPLOY=SUCCESS");print("DJ_MUSIC_TRACKS="+str(d["total_music"]));print("DJ_PROPOSALS="+str(sum(map(len,d["slots"].values()))))'\'''
