@@ -1,0 +1,45 @@
+name: RDI - Prepara sei playlist orarie disattivate su Oracle
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_autodj_hourly_stage.py'
+      - '.github/workflows/rdi-autodj-hourly-stage.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rdi-hourly-stage
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 29
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m py_compile scripts/rdi_autodj_hourly_stage.py
+      - name: Secure SSH
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"; test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 ~/.ssh
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > ~/.ssh/id_rdi
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_rdi ~/.ssh/known_hosts
+      - name: Validate and stage only disabled hourly playlists
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          SSH="ssh -i $HOME/.ssh/id_rdi -o StrictHostKeyChecking=yes -o BatchMode=yes"
+          SCP="scp -i $HOME/.ssh/id_rdi -o StrictHostKeyChecking=yes -o BatchMode=yes"
+          STAGE="/tmp/rdi-hourly-$GITHUB_RUN_ID"
+          $SSH "$REMOTE" "install -d -m 700 '$STAGE'"
+          $SCP scripts/rdi_autodj_hourly_stage.py config/rdi-autodj-hourly-staging.json "$REMOTE:$STAGE/"
+          $SSH "$REMOTE" "sudo -n install -m 600 '$STAGE/rdi_autodj_hourly_stage.py' /opt/rdi-music-dj/rdi_autodj_hourly_stage.py; sudo -n install -m 600 '$STAGE/rdi-autodj-hourly-staging.json' /opt/rdi-music-dj/rdi-autodj-hourly-staging.json; sudo -n rm -rf '$STAGE'; sudo -n flock -w 60 /run/lock/rdi-dj-sync.lock python3 /opt/rdi-music-dj/rdi_autodj_hourly_stage.py audit --php-helper /opt/rdi-music-dj/rdi-geopolitica-auth.php"
+          $SSH "$REMOTE" "sudo -n flock -w 60 /run/lock/rdi-dj-sync.lock python3 /opt/rdi-music-dj/rdi_autodj_hourly_stage.py prepare --php-helper /opt/rdi-music-dj/rdi-geopolitica-auth.php"
+          echo 'RDI_HOURLY_PLAYLISTS_STAGED_DISABLED=true'
