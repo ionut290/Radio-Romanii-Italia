@@ -23,6 +23,7 @@ import sys
 HOME = Path.home() / "rdi-music"
 DB = HOME / "music.db"
 REPORT = HOME / "dj-report.json"
+AUTODJ_STATUS = HOME / "autodj-public-status.json"
 HTML = Path(__file__).resolve().parent / "rdi-music-dj.html"
 ROOT = Path(__file__).resolve().parent
 EXCLUDE = (
@@ -362,13 +363,20 @@ class Handler(BaseHTTPRequestHandler):
         elif path=="/api/rotation":
             target="rotation"
             typ="application/json; charset=utf-8"
+        elif path=="/api/autodj":
+            target="autodj"
+            typ="application/json; charset=utf-8"
         else:
             self.send_error(404)
             return
         try:
             # Read-only, live SQLite report. The progress indicator can update
             # during the 100-song AI scan; no root-owned report rewrite needed.
-            if target == "rotation":
+            if target == "autodj":
+                data=(AUTODJ_STATUS.read_bytes() if AUTODJ_STATUS.is_file()
+                      else json.dumps({"schema_version":1,"source":"not_yet_verified",
+                                       "enabled":False}).encode("utf-8"))
+            elif target == "rotation":
                 from rdi_music_rotation import simulate
                 today=dt.datetime.now(ZoneInfo("Europe/Rome")).date().isoformat()
                 data=json.dumps(simulate(report(),today),ensure_ascii=False).encode("utf-8")
