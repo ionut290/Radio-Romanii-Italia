@@ -199,6 +199,10 @@ def generate_card(item, ident, portrait=False, title=None, refresh=False, lang=N
     suffix = "-facebook.jpg" if portrait else "-social.jpg"
     dest = OUT / (ident + suffix)
     src = str(item.get("image") or "")
+    # RDI's migration analysis uses an original illustration for social cards:
+    # the source RSS photo is third-party licensed press photography.
+    if str(item.get("url") or "") == "https://www.digi24.ro/stiri/actualitate/social/pentru-al-patrulea-an-consecutiv-in-romania-s-au-intors-mai-multi-romani-decat-au-plecat-4015003":
+        src = "./editorial-images/rdi-migration-return-2026.svg"
     size = (1080, 1350) if portrait else (1200, 630)
     width, height = size
     if item.get("daily_thought") and src.lower().split("?")[0].endswith(".svg"):
