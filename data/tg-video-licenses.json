@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "purpose": "Catalogo di clip TV per il TG RDI delle 18: autorizzazione esplicita e corrispondenza semantica. Non equivale a licenza di qualsiasi video presente nell'articolo.",
+  "event_clips": [],
+  "repertory_clips": [
+    {
+      "id": "rome-cinema-context",
+      "landscape_id": "it-roma-pexels",
+      "all_terms": [
+        [
+          "roma",
+          "rome",
+          "romano",
+          "romana"
+        ],
+        [
+          "film",
+          "cinema",
+          "cinematograf",
+          "festival",
+          "proiezion"
+        ]
+      ],
+      "max_seconds": 14,
+      "context": "Riprese aeree della città di Roma: NON del festival e NON del film"
+    },
+    {
+      "id": "bucegi-context",
+      "landscape_id": "ro-bucegi-pexels",
+      "all_terms": [
+        [
+          "bucegi",
+          "bucégi"
+        ]
+      ],
+      "max_seconds": 14,
+      "context": "Monti Bucegi, immagini di repertorio; NON l'evento"
+    },
+    {
+      "id": "dolomiti-context",
+      "landscape_id": "it-dolomiti-pexels",
+      "all_terms": [
+        [
+          "dolomit",
+          "seceda"
+        ]
+      ],
+      "max_seconds": 14,
+      "context": "Dolomiti, immagini di repertorio; NON l'evento"
+    },
+    {
+      "id": "rupea-context",
+      "landscape_id": "ro-rupea-pexels",
+      "all_terms": [
+        [
+          "rupea",
+          "cetatea rupea"
+        ]
+      ],
+      "max_seconds": 14,
+      "context": "Fortezza di Rupea, immagini di repertorio; NON l'evento"
+    }
+  ]
+}
