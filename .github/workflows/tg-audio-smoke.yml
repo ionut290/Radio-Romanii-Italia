@@ -1,0 +1,37 @@
+name: RDI - Collaudo completo audio e sincronizzazione TG 18 (non in onda)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tests/smoke_tg_full_audio.py'
+      - '.github/workflows/tg-audio-smoke.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica sintassi
+        run: python -m py_compile scripts/render_daily_tg_audio.py scripts/render_geopolitica_audio.py tests/smoke_tg_full_audio.py
+      - name: Installa il motore voce RDI e FFmpeg
+        run: python -m pip install --disable-pip-version-check "edge-tts>=7,<8" "imageio-ffmpeg>=0.5,<1" "mutagen>=1.47,<2"
+      - name: Genera una vera prova di voce e cronologia (senza notizie reali)
+        run: python tests/smoke_tg_full_audio.py
+      - name: Consegna soltanto rapporti tecnici, non un TG trasmissibile
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-tg-simulazione-tecnica
+          path: |
+            /tmp/rdi-tg-technical-audio-smoke/tv-timing.json
+            /tmp/rdi-tg-technical-audio-smoke/manifest.json
+          retention-days: 3
+          if-no-files-found: error
