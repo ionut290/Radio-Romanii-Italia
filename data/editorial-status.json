@@ -1,9 +1,9 @@
 {
-  "news_updated_at": "2026-10-30T07:22:21.767727+00:00",
+  "news_updated_at": "2026-10-30T08:03:51.541185+00:00",
   "editorial_updated_at": "2026-10-30T08:01:33.498058+01:00",
   "translations_updated_at": "2026-10-30T07:02:51.113083+00:00",
-  "feed_total": 86,
-  "feed_extended_400": 15,
+  "feed_total": 87,
+  "feed_extended_400": 16,
   "feed_missing_body": 71,
   "feed_short_body": 0,
   "editorial_total": 30,
@@ -11,9 +11,9 @@
   "translation_records": 47,
   "pending_total": 131,
   "pending_filtered_out": 320,
-  "editorial_verde": 21,
-  "editorial_galben": 34,
-  "editorial_rosu": 54,
+  "editorial_verde": 22,
+  "editorial_galben": 33,
+  "editorial_rosu": 56,
   "pending": [
     {
       "title": "Alegeri cu rezultat complicat în Israel: Eisenkot şi Netanyahu nu au majoritate și amândoi vor să... - StiriDiaspora",
@@ -618,6 +618,96 @@
   ],
   "recent_news": [
     {
+      "title": "Cum a ajuns „croaziera fără sfârșit” să se încheie brusc într-un port din Cambodgia. „Eu sunt personajul negativ din această poveste”",
+      "category": "România",
+      "published": "2026-10-30T08:02:06+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/cum-a-ajuns-croaziera-fara-sfarsit-sa-se-incheie-brusc-intr-un-port-din-cambodgia-eu-sunt-personajul-negativ-din-aceasta-poveste-4013935",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "INS: Şomajul a ajuns la 6,3% în septembrie. Aproape unul din trei tineri nu are un loc de muncă",
+      "category": "România",
+      "published": "2026-10-30T08:00:37+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/ins-somajul-a-ajuns-la-63-in-septembrie-aproape-unul-din-trei-tineri-nu-are-un-loc-de-munca-4014793",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Nu e deloc amuzant.” Angajatul unui supermarket din SUA a primit donații de 250.000 de dolari după ce a fost hărţuit de un influencer",
+      "category": "România",
+      "published": "2026-10-30T07:58:35+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/nu-e-deloc-amuzant-angajatul-unui-supermarket-din-sua-a-primit-donatii-de-250-000-de-dolari-dupa-ce-a-fost-hartuit-de-un-influencer-4014715",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Oggi sciopero e cortei. Chi scende in piazza e dove, la mappa del venerdì nero",
+      "category": "Italia",
+      "published": "2026-10-30T07:52:06+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/chi-scende-in-piazza-e-dove-la-mappa-del-venerdi-nero_1b7b41a3-a291-47a9-9049-e83060ee87f8.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "\"L'Ucraina ha sospeso gli attacchi alle raffinerie russe su pressione degli Usa\"",
+      "category": "Italia",
+      "published": "2026-10-30T07:43:04+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/lucraina-ha-sospeso-gli-attacchi-alle-raffinerie-russe-su-pressione-degli-usa_623c1d5d-5e2b-4889-b998-15a94f0bf25c.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Novaya Gazeta chiude in Russia: 'Uccisi dalle autorità e dai servizi'",
+      "category": "Italia",
+      "published": "2026-10-30T07:41:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/novaya-gazeta-chiude-in-russia-uccisi-dalle-autorita-e-dai-servizi_0c2601cb-d24c-46cd-a108-bfb2980c08dc.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Sindicaliştii feroviari critică rectificarea bugetară şi îi invită pe guvernanţi în trenul Bucureşti-Satu Mare: „Vedeţi condiţiile”",
+      "category": "România",
+      "published": "2026-10-30T07:36:06+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/sindicalistii-feroviari-critica-rectificarea-bugetara-si-ii-invita-pe-guvernanti-in-trenul-bucuresti-satu-mare-vedeti-conditiile-4014755",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cât ar putea pierde economia românească din cauza amânării rectificării bugetare",
+      "category": "România",
+      "published": "2026-10-30T07:32:29+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/cat-ar-putea-pierde-economia-romaneasca-din-cauza-amanarii-rectificarii-bugetare-analiza-4013761",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 426
+    },
+    {
+      "title": "Sisma 2016, in Umbria conclusi 2.625 cantieri privati su 4.054 avviati",
+      "category": "Italia",
+      "published": "2026-10-30T07:29:19+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/29/sisma-2016-in-umbria-conclusi-2.625-cantieri-privati-su-4.054-avviati_60770237-6db3-45cc-b0c9-51947dad3d2e.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Laura Kovesi îşi încheie azi mandatul la conducerea Parchetului European. Anchete cu un prejudiciu total de peste 67 de miliarde euro",
+      "category": "România",
+      "published": "2026-10-30T07:23:50+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/laura-kovesi-isi-incheie-azi-mandatul-la-conducerea-parchetului-european-anchete-cu-un-prejudiciu-total-de-peste-67-de-miliarde-euro-4014733",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Rezultatele finale ale alegerilor din Israel: Partidul lui Netanyahu pierde teren, iar formarea guvernului devine o provocare",
       "category": "România",
       "published": "2026-10-30T07:13:46+00:00",
@@ -632,17 +722,8 @@
       "published": "2026-10-30T07:09:31+00:00",
       "url": "https://www.digi24.ro/stiri/externe/coreea-de-nord-testeaza-drone-de-atac-kim-jong-un-cere-superioritate-absoluta-in-tehnologie-pacea-e-garantata-doar-prin-forta-4014735",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "„Nu e deloc amuzant.” Angajatul unui supermarket din SUA a primit donații de 250.000 de dolari după ce a fost hărţuit de un influencer",
-      "category": "România",
-      "published": "2026-10-30T07:07:48+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/nu-e-deloc-amuzant-angajatul-unui-supermarket-din-sua-a-primit-donatii-de-250-000-de-dolari-dupa-ce-a-fost-hartuit-de-un-influencer-4014715",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 515
     },
     {
       "title": "Weekend al freddo, temperature in picchiata e maltempo - Idealista",
@@ -650,6 +731,15 @@
       "published": "2026-10-30T07:05:01+00:00",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPb0IwQnJUc3ZlaGN0a3E3d2EzLXJHZW1GOGplUGZ5NmpuaWJnWWNneWtmNXAwUFl5M2tHRjdndXdrTzVsM3dLam92dk1GLWNvNDdxVnBuNTdrT1dMbnE0ZFQzMUFEZkdrWVAwcjJpbFk0RUJmRDZraHhER1lQVDR3LXFqcnUyRGd3OE53bnlaMlEyWDM2QW5VOGJ2czBfdWpfNzRkdk92YzY5MWcyOTRuWU9yVmXSAboBQVVfeXFMTWE1UEJianA4SEZPczB5TUl3WGVIM2xRQTdpUzNVeFYtcndiLTl1ZkNrbzU4Wm9oWUdNdWlacnUteUlycVZhcDhyckl3N3ZuYXhZRVRlMEhfSkZOV3pPczRmVUg5Y2F2bzJDdnBOYWZERFpLWGQ1Ml9UYlJ6bzhyWmROOEcxTkRuaERJSE1zZzRYTTRWVDItMEtMbjI0UGN",
       "source": "Idealista",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "PRIME PAGINE | Elicottero italiano cade in Bosnia, quattro militari morti",
+      "category": "Italia",
+      "published": "2026-10-30T06:51:29+00:00",
+      "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/30/prime-pagine-elicottero-italiano-cade-in-bosnia-quattro-militari-morti_9347e08b-ab1c-415c-984b-595a1e366a1b.html",
+      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -669,15 +759,6 @@
       "url": "https://www.digi24.ro/stiri/externe/xi-jinping-continua-epurarile-in-randul-functionarilor-de-rang-inalt-ce-il-infurie-pe-presedintele-chinei-4014699",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "\"L'Ucraina ha sospeso gli attacchi alle raffinerie russe su pressione degli Usa\"",
-      "category": "Italia",
-      "published": "2026-10-30T06:39:20+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/lucraina-ha-sospeso-gli-attacchi-alle-raffinerie-russe-su-pressione-degli-usa_623c1d5d-5e2b-4889-b998-15a94f0bf25c.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -705,15 +786,6 @@
       "url": "https://www.digi24.ro/stiri/accident-grav-pe-valea-oltului-doua-femei-au-murit-dupa-ce-o-masina-s-a-izbit-de-un-tir-si-a-fost-proiectata-intr-un-alt-autoturism-4014679",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Allerta sicurezza per oggi, il Viminale 'isoleremo i violenti'",
-      "category": "Italia",
-      "published": "2026-10-30T06:15:19+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/allerta-sicurezza-per-oggi-il-viminale-isoleremo-i-violenti-_99d186a2-8b27-442f-b637-bc226fa79102.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -753,28 +825,10 @@
       "words": 582
     },
     {
-      "title": "Cât ar putea pierde economia românească din cauza amânării rectificării bugetare (analiză)",
-      "category": "România",
-      "published": "2026-10-30T05:00:53+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/cat-ar-putea-pierde-economia-romaneasca-din-cauza-amanarii-rectificarii-bugetare-analiza-4013761",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 426
-    },
-    {
       "title": "Ce se întâmplă în organism după doar 30 de minute de saună. Descoperirea surprinzătoare a cercetătorilor despre sistemul imunitar",
       "category": "România",
       "published": "2026-10-30T05:00:48+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/sanatate/ce-se-intampla-in-organism-dupa-doar-30-de-minute-de-sauna-descoperirea-surprinzatoare-a-cercetatorilor-despre-sistemul-imunitar-4014189",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cum a ajuns „croaziera fără sfârșit” să se încheie brusc într-un port din Cambodgia. „Eu sunt personajul negativ din această poveste”",
-      "category": "România",
-      "published": "2026-10-30T05:00:40+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/cum-a-ajuns-croaziera-fara-sfarsit-sa-se-incheie-brusc-intr-un-port-din-cambodgia-eu-sunt-personajul-negativ-din-aceasta-poveste-4013935",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -798,38 +852,20 @@
       "words": 0
     },
     {
-      "title": "Ți-au apărut fisuri în pereți după renovările vecinului? Cine plătește reparațiile și când poți cere despăgubiri",
-      "category": "România",
-      "published": "2026-10-30T05:00:23+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/ti-au-aparut-fisuri-in-pereti-dupa-renovarile-vecinului-cine-plateste-reparatiile-si-cand-poti-cere-despagubiri-4014001",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Câte analize gratuite poți face cu un singur bilet de trimitere. Cât de des le poate recomanda medicul",
-      "category": "România",
-      "published": "2026-10-30T05:00:23+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/cate-analize-gratuite-poti-face-cu-un-singur-bilet-de-trimitere-cat-de-des-le-poate-recomanda-medicul-4013757",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Unde poți arunca mobila veche și deșeurile voluminoase. Ce greșeală îți poate aduce o amendă de până la 45.000 de lei",
-      "category": "România",
-      "published": "2026-10-30T05:00:18+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/unde-poti-arunca-mobila-veche-si-deseurile-voluminoase-ce-greseala-iti-poate-aduce-o-amenda-de-pana-la-45-000-de-lei-4013973",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Economia reală - O rectificare bugetară plictisitoare, dar care transmite câteva mesaje - RFI",
       "category": "România",
       "published": "2026-10-30T04:48:37+00:00",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNV1dQNkdkSDk1d1RtLTBESEdGbjZxZnk1SGJwUl9NcGdBVHltQTVDalcxRDNlWlhMR1psSEY1THhCb2MxajNWbFVYc25oSC10Q3puVzVNVTZ4SmdvbWMwYjZyTGhIREZfQ051Snd6OHlFSHI1Y1pxWTN3WDhVay1Yc1h4Yk5uOGN0bFVpTXRURFpjNVdPaG1QUkdhbG5XM3pyaU5xb0JFMk4teVgtQnhPS2lqUWQyemZnYUd5d0hBQ2lhdHNfXzZyTHdMRnNBN21ELUtIQllSUFQ?oc=5",
       "source": "RFI",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Da 8 a 41 euro al mese: quanto vale il taglio Irpef e chi ne beneficia di più - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-30T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNTjE3TzdNTF96NElIdDZkSC1xQUlnOEVPbUpoM1Q5MkNCajhrUGFKNkkyVnlVUnh4VDZyZnJ5a215RUxEQkF3TUp4UmFNeXVZbTRUc2h3RXZOVWY0RFdjenk1OE5TRlUycUY0bnlJZHViajF2dmJndFFIVTExRXFhYmpac2Ewb05VM052S3hTb0laaE9mN1REWmhSQjhBNmgtNVI4aEw1bUVUeGNuVlhQMjVzakFlcDM5bEJxTXVSd0NoRGVmUWwyVUwzcEtNcEpXNFRB?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -841,15 +877,6 @@
       "source": "ANSA",
       "status": "verde",
       "words": 443
-    },
-    {
-      "title": "Serie A: Fiorentina-Atalanta, spettacolo e gol ma solo un punto a testa",
-      "category": "Italia",
-      "published": "2026-10-29T22:16:23+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/29/serie-a-fiorentina-atalanta-spettacolo-e-gol-ma-solo-un-punto-a-testa_46e940ce-e50c-4281-93c6-ee8668230411.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Altri 5 italiani fermati in Cisgiordania, la Farnesina chiede il rilascio",
@@ -913,6 +940,15 @@
       "source": "ANSA",
       "status": "verde",
       "words": 481
+    },
+    {
+      "title": "Prima rectificare bugetară din 2026: Sănătatea și administrațiile locale, principalele bugete pe plus - Newsweek România",
+      "category": "România",
+      "published": "2026-10-29T19:08:32+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQenBIbExzRTZWeS1wTXpXamZUY2dycEx6b3lUQlR5YVpPLVFLemQzamU2SmNQNVAwUW8yU01MaFhmN2o5bE0wbk1Sa190LUxVMmt3LTVrbm9FMnB3OE9NVTVPSDFjbGxsbkMyRV9iQm1ZWm8tVzFlM3JIRE5tVFFJOTA5VDZmdkhPREFWaFdzVXpobE54TUdadUx1Zk1PcExoaExfTEFYVHNEMEs5amQzM3BBZw?oc=5",
+      "source": "Newsweek România",
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Badantă din Italia, cere 40.000 de euro de la bătrânul pe care l-a îngrijit: „Am lucrat cinci ani la negru!” El o acuză de furt - Rotalianul – Revista românului din Italia",
@@ -1010,15 +1046,6 @@
       "published": "2026-10-29T14:34:11+00:00",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOaGxBT2I3bW1IUF9HalRoeDlLMmJUallWZXJ4YzZjWWdaVWk0ZkxIajlmdWJvSDRwbmcyckQtTWRodVlkMTlXM09kMHVWTFdkRlFUckxwLXp5Q3NXMEZVa05EWHJ3WU8tYkhYSDkya3lGTm5nNDZzLWU2anBjdjBvVDVjVEVqM09ycFMwdkNPZm55dEtfVTFNNXlfMjFna0dtTW8wdVV5NmFncFM4Vm01dE1PNWZhb0FyN0VTLWhWOVFtVTNYT2ZldDhvTWZsV1VvbzRKaVpsVWo3aklNQmk5RzJjMFdZZXlaM2tCQ2xsNlg5TGc?oc=5",
       "source": "Stirile ProTV",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "La storia nell'armadio | Alla scoperta dei colori: il blu",
-      "category": "Italia",
-      "published": "2026-10-29T14:33:41+00:00",
-      "url": "https://www.ansa.it/sito/podcast/la-storia-nell-armadio/2026/10/29/blu_4abfd2b8-269a-4f19-bb53-9eab46a32bf7.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -1329,15 +1356,6 @@
       "words": 0
     },
     {
-      "title": "Italia economia n° 43 del 28 ottobre 2026 - Touchpoint News",
-      "category": "Italia",
-      "published": "2026-10-28T13:09:44+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOVTk3RVF0d3NmM3RjNHo4NnlGWHNKbl9kVjFWa19rNFhidEcyb0RSbEx5NXROVGlsOHRBV0JuLU4wNVhEMEN3eUVjcmdsY3NISUh1QWR2Rml0SmV6bFhJamFEdFZfVVk3SUV3T0huS2VPSnR2WmN0TkxTbHdrcDgwWEU2dldYUzg?oc=5",
-      "source": "Touchpoint News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Barometrul diasporei: 56% dintre români au legătură cu diaspora. 60% dintre cei plecați trimit bani... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-28T13:01:00+00:00",
@@ -1378,15 +1396,6 @@
       "category": "Diaspora",
       "published": "2026-10-28T08:26:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQNW01dG1nUDhCbTlsMUVBUEFOOXpQTHBGM2ZCUGkxVkJmbnQtSEV5d2RGVlp6alNVNGUteHFpT05ITjRfc01GVlJFbXU5dW14enA5MTRsTDVOQlFwRTZDQkh2ZDdibFcyQVZHVUV5aDgzMWRna1ZjS2oyTlZiT3MwYlFzWFJoanZacERESldDV3dFTDBwSGxYdGVySXNvclAxRXM3QlNzV0plc3EyMEJxRVEyZGZlR1pIZy1Qa1NLVW5jSXBmSkFDeF82UVFCeXk1OUxlWTFTVdIB3AFBVV95cUxPSFFYS0RqcUwzRXI1dERpZDhsVlFOU0YyWHVPb1MtZFdQOTVVaGtILVRQdWV0ZHBlZTZVT3BsQnd6Y0gxMjBNaFNhb0hsTy1BUm5Ga2dYUFltU0Y0ZktKQ3VxNkVGNE5JQkU1NnhNZ2dzRnFVcC1qQ09yczR",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Primarul Romei spune că nu va adopta o taxă de intrare pentru turişti în centrul orașului - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-28T07:50:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNeHQ4SEh3LXh1NGhoTkVlVUpDdVpodk9CUHFuamFEd3dBSDJJR21kVkNETXNQTjVCNkprbEhSWXg2eEZuVXJRTnFUa1VLaXNLYmlSQzcydVp5R1V4bFFsNnIya181Zy1HWUgwa2NWSWxSNzA5blZOeEZoT0VxWjBoZ21UYTdLUWgwMWhhdm1LQmM5NzFkNGpKMHVHa1l4dkJQaW5ZbGY5OHVVbzB6TlBzNThSLUNMSmc4ckJCSDE0UG10TEZfSWd0eGJR0gHPAUFVX3lxTE84VXpXeFJ1R3dPT0tHWXJyaTBxSnp1ZUlJLUtxNFl3TF83V01pd1JaY1Y4RHQtNkF2bnRjR29KRUh2clQ3T3JGYUpHSzlsTVQtUTNIbVAxaUh0TUdSQ2FvWmhmcE1md0FRTGg0ZllTQ2xkUDBXNUNxWi1DMFRLYUVsTkc1eFFYQnp",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
