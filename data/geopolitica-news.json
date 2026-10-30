@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-30T01:49:05.199839Z",
+  "updated_at": "2026-10-30T02:50:52.483388Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,18 +8,26 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
-      "id": "geo-78aabb2de770fc89",
+      "id": "geo-ff4fd33ecd80eb42",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Japan and U.S. co-produce AMRAAMs as alliance deepens, Korea loses ground",
+      "summary": "",
+      "source": "Chosunbiz",
+      "published": "2026-10-30T01:26:00Z",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQb1pVNUVkU1UwSmR4VlZyRDRINHFPUmRVRHV2SElCMVMwVkphRzJWWXc0a2xtYXlBcU83QnU2R01BeWh1Mld2ZUJmNDVRT0RhNXRPN19aSU5DZkJaS2I3MVlodmx1M0VRMjN6NHZraFNCaFgxaFFLNWhWWjJ4Qm1kaDdfNFhOX3hULXRBMXlfZGE5SHNaTDV1UFRscmHSAZwBQVVfeXFMUG9aVTVFZFNVMEpkeFZWckQ0SDRxT1JkVUR1dkhJQjFTMFZKYUcyVll3NGtsbWF5QXFPN0J1NkdNQXlodTJXdmVCZjQ1UU9EYTV0TzdfWklOQ2ZCWktiNzFZaHZsdTNFUTIzejR2a2hTQmhYMWhRSzVoVloyeEJtZGg3XzRYTl94VC10QTF5X2RhOUhzWkw1dVBUbHJh?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-df756a1db661cc9a",
       "category": "diplomatie",
       "region": "americi",
-      "title": "South Korean, U.S. and Japanese Foreign Ministers to Meet in U.S. on G20 Sidelines; Korean Peninsula Talks on Agenda?",
+      "title": "Why did North Korean leader Kim Jong-un visit China’s Dandong?",
       "summary": "",
-      "source": "아시아경제",
-      "published": "2026-10-30T01:28:22Z",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBqeFR2SmJUTy1IOHBQVTRsamNlaHNCTHh0emZaOU5NbVR2aHp2cERQZ2QyTHpsZmVjaVNLWFFpUWpORTdBRkFtQWVDRWRtUk9nNzROa0lJUS1IdUM5b1A2VnN1NmxOMVFpQkdXbWUyTDlnc3N6d0FSTU1Qc0Y?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Miniștrii de externe din Coreea de Sud, SUA și Japonia se vor întâlni în SUA pe marginea G20; Discuții despre Peninsula Coreeană pe agendă?",
-      "title_it": "I ministri degli Esteri di Corea del Sud, Stati Uniti e Giappone si incontreranno negli Stati Uniti a margine del G20; I colloqui sulla penisola coreana sono all'ordine del giorno?",
-      "translation_status": "machine_translation"
+      "source": "Asia News Network",
+      "published": "2026-10-30T01:21:03Z",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOSWNFVkcxNUpHZEF6Ui1KLU05YmJtOE8zblpMcGh5dF9zZ1ZTUkxFSkdDR2lhbENoWkVFRDBLeEhIOXduaG9Rb194Yi1ORmhQOG9YMEFJcWN6aDlXUHAwbFlCVV93X2ZVTUVJVHU3bmJOeUdVMHNOcmlaSWoyeDM3QXdnR3JzbTVKY1RUNmhrRQ?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-057a0462857e4df3",
@@ -36,6 +44,17 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-ba5656eaf0ad4e8b",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Trump Says Vance Sent Letter To Iran To 'Help' With Medicine",
+      "summary": "",
+      "source": "Radio Free Europe/Radio Liberty",
+      "published": "2026-10-30T00:59:33Z",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9OeTc1VE5lcEx0QzNhVlh6TnBVZUhfdi1MR0xZQnJOLWo2U3dHb09ucVhPNXctSTFXNTF6R3EwZEJXSl96SF9zS2FPUWFwcHpHeFVMaGtUckZiaGIydHc1SFMwT3U1R1h5WnMtY2RGUkdtYm1jV2VUMWFB?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-5cd387099dd91217",
       "category": "clima",
       "region": "global",
@@ -48,6 +67,17 @@
       "title_ro": "De la angajamente la acțiune: Taiwan și lumea creând împreună soluții climatice",
       "title_it": "Dagli impegni all’azione: Taiwan e il mondo creano insieme soluzioni climatiche",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b14ae9660efe533f",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "EU-Canada summit, 29-30 October 2026",
+      "summary": "",
+      "source": "Council, European Union",
+      "published": "2026-10-30T00:27:02Z",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNajFveDZxbUNudU9iS2RuOGozdWhDc19VaV80eWU3SGFTTmN0QTlUUEd2TlNqUWNMOUQ4cERtNXBwWmhmdUk2SGFYTlpvcHRFS3FMbEtIUV9fcGZMUlVtTjhseE1ueDF0anY3ckFQSHl0NnoycFFVWXpVUmdqWkNlR0NfQTE5QQ?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-6cd804644a0d1e9f",
