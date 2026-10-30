@@ -14,14 +14,14 @@ test("2026 daily calendar covers Oct 30 through Dec 31 without duplicates",()=>{
 });
 test("current pointer is valid, and image exists in repository",()=>{
  const d=read("data/calendario-filosofico-oggi.json");
- assert.match(d.date,/^\\d{4}-\\d{2}-\\d{2}$/);
+ assert.match(d.date,/^\d{4}-\d{2}-\d{2}$/);
  assert.ok(d.quote?.length>12);
- assert.match(d.image,/^\\/(?!\\/)[a-zA-Z0-9/_-]+\\.(png|jpg|jpeg|webp)$/i);
+ assert.match(d.image,/^\/(?!\/)[a-zA-Z0-9/_-]+\.(png|jpg|jpeg|webp)$/i);
  assert.equal(fs.existsSync(path.join(root,d.image.slice(1))),true);
 });
 test("each daily fallback photo is present; never use an unresolvable path",()=>{
  for(const d of read("data/calendario-filosofico-2026.json").days) {
-   assert.match(d.image,/^\\/(?!\\/)[a-zA-Z0-9/_-]+\\.(png|jpg|jpeg|webp)$/i);
+   assert.match(d.image,/^\/(?!\/)[a-zA-Z0-9/_-]+\.(png|jpg|jpeg|webp)$/i);
    assert.equal(fs.existsSync(path.join(root,d.image.slice(1))),true,d.date);
  }
 });
