@@ -54,6 +54,11 @@ class AudioModelPolicyTests(unittest.TestCase):
             self.assertEqual(len(a),100)
             self.assertEqual(a,m.sample_paths(db,100))
             self.assertFalse(any("/spot/" in x[0] or "Geopolitica" in x[0] for x in a))
+            live={f"/radio/track-{n}.mp3" for n in range(100)}
+            matched=m.sample_paths(db,100,live_paths=live)
+            self.assertEqual(len(matched),100)
+            self.assertTrue(all(x[0] in live for x in matched))
+            self.assertEqual(m.sample_paths(db,100,live_paths=set()),[])
             db.close()
 
 if __name__=="__main__":
