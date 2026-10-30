@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'youtube-weather.js', 'youtube-weather.css', 'youtube-dj-promo.js', 'youtube-dj-promo-core.mjs', 'youtube-dj-promo.css', 'data/youtube-dj-promo.json', 'editorial-images/rdi-dj-programmazione-live.svg', 'youtube-live/visual-relay.sh', 'data/romanians-italy.json']
+    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'youtube-weather.js', 'youtube-weather.css', 'youtube-dj-promo.js', 'youtube-dj-promo-core.mjs', 'youtube-dj-promo.css', 'data/youtube-dj-promo.json', 'editorial-images/rdi-dj-programmazione-live.svg', 'youtube-live/visual-relay.sh', 'data/romanians-italy.json', '.github/workflows/refresh-youtube-oracle.yml']
 
 permissions:
   contents: read
@@ -26,15 +26,25 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Verify only the page and assets needed to show the city forecast.
+          # Unrelated live modules must not prevent radar cleanup.
           for attempt in {1..24}; do
             ready=true
-            for file in youtube-news.html youtube-geopolitica.js youtube-geopolitica.css youtube-tg-sera.js youtube-tg-sera.css youtube-camera-breaks.js youtube-camera-core.mjs youtube-camera-breaks.css data/youtube-camera-breaks.json data/youtube-build.json youtube-spots.js youtube-spots-core.js youtube-spots.css data/spot-campaigns.json youtube-extras.js youtube-weather.js youtube-weather.css youtube-dj-promo.js youtube-dj-promo-core.mjs youtube-dj-promo.css data/youtube-dj-promo.json editorial-images/rdi-dj-programmazione-live.svg data/romanians-italy.json; do
+            for file in youtube-news.html youtube-weather.js youtube-weather.css data/youtube-build.json; do
               expected=$(sha256sum "$file" | cut -d ' ' -f 1)
               if ! curl --fail --silent --show-error --max-time 5 \
                 "https://radioromanii.duckdns.org/${file}?v=${GITHUB_SHA}" \
-                -o /tmp/rdi-youtube-published; then ready=false; break; fi
+                -o /tmp/rdi-youtube-published; then
+                echo "File non ancora pubblicato: $file"
+                ready=false
+                break
+              fi
               actual=$(sha256sum /tmp/rdi-youtube-published | cut -d ' ' -f 1)
-              if [ "$actual" != "$expected" ]; then ready=false; break; fi
+              if [ "$actual" != "$expected" ]; then
+                echo "Contenuto non ancora aggiornato: $file (atteso ${expected:0:12}, ricevuto ${actual:0:12})"
+                ready=false
+                break
+              fi
             done
             if [ "$ready" = true ]; then exit 0; fi
             sleep 5
