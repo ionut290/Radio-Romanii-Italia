@@ -6,6 +6,8 @@ on:
     paths:
       - 'scripts/build_daily_tg.py'
       - 'scripts/tg_video_rights.py'
+      - 'scripts/discover_tg_article_videos.py'
+      - 'tests/test_tg_video_discovery.py'
       - 'data/tg-video-licenses.json'
       - 'data/youtube-landscapes.json'
       - 'tests/test_tg_video_rights.py'
@@ -39,9 +41,23 @@ jobs:
           set -euo pipefail
           python -m py_compile scripts/build_daily_tg.py scripts/tg_video_rights.py scripts/render_daily_tg_audio.py
           python -m unittest discover -s tests -p 'test_tg_video_rights.py' -v
+          python -m unittest discover -s tests -p 'test_tg_video_discovery.py' -v
           python -m unittest discover -s tests -p 'test_daily_tg.py' -v
       - name: Seleziona notizie approfondite pubblicate entro le 16
         run: python scripts/build_daily_tg.py --preview --output /tmp/rdi-tg-sera
+      - name: Individua eventuali video degli articoli, solo per verifica licenze
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        shell: bash
+        run: |
+          python scripts/discover_tg_article_videos.py --preview /tmp/rdi-tg-sera/source-preview.json --output /tmp/rdi-tg-sera/publisher-video-candidates.json
+      - name: Conserva video candidati NON autorizzati per revisione
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-tg-sera-video-da-verificare
+          path: /tmp/rdi-tg-sera/publisher-video-candidates.json
+          retention-days: 7
+          if-no-files-found: error
       - name: Conserva lista fonti per la redazione
         uses: actions/upload-artifact@v4
         with:
