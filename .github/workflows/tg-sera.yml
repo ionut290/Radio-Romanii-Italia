@@ -50,6 +50,17 @@ jobs:
           python -m unittest discover -s tests -p 'test_tg_video_rights.py' -v
           python -m unittest discover -s tests -p 'test_tg_video_discovery.py' -v
           python -m unittest discover -s tests -p 'test_daily_tg.py' -v
+      - name: Verifica disponibilità delle credenziali editoriali senza rivelarle
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        run: |
+          if [ -n "$OPENAI_API_KEY" ]; then
+            echo "RDI_TG_EDITORIAL_KEY_CONFIGURED=true"
+          else
+            echo "RDI_TG_EDITORIAL_KEY_CONFIGURED=false"
+            echo "::warning::Manca OPENAI_API_KEY: la redazione del TG sarà saltata finché non viene configurata."
+          fi
       - name: Seleziona notizie approfondite pubblicate entro le 16
         run: python scripts/build_daily_tg.py --preview --output /tmp/rdi-tg-sera
       - name: Individua eventuali video degli articoli, solo per verifica licenze
