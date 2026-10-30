@@ -1,0 +1,56 @@
+name: RDI - Controllo avanzamento IA musicale (solo lettura)
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rdi-music-ai-check.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Controlla avanzamento locale senza leggere o copiare i brani
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"; test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
+            -o ConnectTimeout=15 ubuntu@129.151.255.41 'python3 - <<'\''PY'\''
+          import json,pathlib,sqlite3,subprocess
+          dbpath=pathlib.Path.home()/"rdi-music/music.db"
+          db=sqlite3.connect(f"file:{dbpath}?mode=ro",uri=True)
+          valid=db.execute("SELECT name FROM sqlite_master WHERE type='\'table\'' AND name='\'track_ai\''").fetchone()
+          if valid:
+              count=db.execute("SELECT COUNT(*) FROM track_ai").fetchone()[0]
+              print("AI_MODEL_ROWS_ANALYZED="+str(count))
+              for field in ("genre_ai","voice_ai"):
+                  rows=db.execute("SELECT "+field+",count(*) FROM track_ai GROUP BY "+field+" ORDER BY count(*) DESC").fetchall()
+                  print("AI_"+field.upper()+"_COUNTS="+json.dumps(dict(rows),ensure_ascii=False))
+          else:
+              print("AI_MODEL_ROWS_ANALYZED=0")
+          db.close()
+          unit=subprocess.run(["systemctl","show","rdi-music-ai-analyze.service",
+              "--property=ActiveState,Result,ExecMainStatus,CPUUsageNSec,MemoryCurrent",
+              "--no-pager"],capture_output=True,text=True)
+          for line in unit.stdout.splitlines():
+              if line.startswith(("ActiveState=","Result=","ExecMainStatus=","MemoryCurrent=")):
+                  print("AI_SERVICE_"+line)
+          rep=pathlib.Path.home()/"rdi-music/dj-report.json"
+          if rep.is_file():
+              r=json.loads(rep.read_text(encoding="utf-8"))
+              print("DJ_REPORT_AI_SAMPLE_DONE="+str(r.get("ai_sample_done",0)))
+              print("DJ_REPORT_PLAYLIST_WRITES="+str(r.get("playlist_writes")))
+          PY'
