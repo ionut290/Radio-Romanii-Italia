@@ -30,7 +30,7 @@ jobs:
           python-version: '3.12'
       - name: Crea il pensiero e la card grafica
         env:
-          OPENAI_API_KEY: \${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_THOUGHT_MODEL: gpt-4.1-mini
         run: python scripts/generate_daily_thought.py
       - name: Pubblica il contenuto del giorno
