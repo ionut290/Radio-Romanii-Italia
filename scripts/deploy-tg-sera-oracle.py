@@ -271,9 +271,32 @@ def activate(client, edition_path: Path, mp3_path: Path, tv_path: Path) -> None:
     print("RDI_TG_TV_TIMING_VERIFIED=true")
 
 
+def prepare_disabled(client) -> None:
+    """Create an EMPTY, disabled dedicated TG playlist without touching the live."""
+    now=dt.datetime.now(ROME)
+    if not 0 <= now.hour < 15:
+        raise ValueError("Disabled station setup is restricted to before 15:00 Italy time")
+    existing=find_playlist(client)
+    if existing is not None:
+        if existing.get("is_enabled"):
+            raise ValueError("Existing on-air TG playlist cannot be changed by setup")
+        print("RDI_TG_EMPTY_PLAYLIST=ALREADY_EXISTS")
+        return
+    day=now.date().isoformat()
+    # A new playlist is disabled: zero songs and no live broadcast.
+    client.call("POST","/station/1/playlists",plan_for(day))
+    record=find_playlist(client)
+    if not record or bool(record.get("is_enabled")) or not verify_schedule(record.get("schedule_items"),day):
+        raise RuntimeError("Empty TG playlist setup not persisted safely")
+    if int(record.get("num_songs") or 0) != 0:
+        raise RuntimeError("New TG playlist was unexpectedly populated")
+    print("RDI_TG_EMPTY_PLAYLIST=CREATED_DISABLED")
+    print("RDI_TG_EMPTY_PLAYLIST_ID="+str(record["id"]))
+
+
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("action",choices=["inspect","apply"])
+    p.add_argument("action",choices=["inspect","apply","prepare-disabled"])
     p.add_argument("--manifest")
     p.add_argument("--mp3")
     p.add_argument("--tv")
@@ -290,7 +313,9 @@ def main():
     try:
         token=backend.azura_php(helper,"create")
         client=backend.Client(token)
-        if args.action=="inspect":
+        if args.action=="prepare-disabled":
+            prepare_disabled(client)
+        elif args.action=="inspect":
             record=find_playlist(client)
             print("RDI_TG_PLAYLIST_EXISTS="+str(bool(record)).lower())
             if record:
