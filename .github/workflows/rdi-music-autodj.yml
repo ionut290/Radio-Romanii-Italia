@@ -1,0 +1,93 @@
+name: RDI - DJ intelligente AzuraCast, sincronizzazione sicura
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rdi_music_azuracast_sync.py'
+      - 'tests/test_rdi_music_azuracast_sync.py'
+      - '.github/workflows/rdi-music-autodj.yml'
+  schedule:
+    - cron: '11,41 * * * *'
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: "auto / status / disable / resume"
+        type: choice
+        required: true
+        default: status
+        options:
+          - status
+          - auto
+          - disable
+          - resume
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-music-autodj-live
+  cancel-in-progress: false
+
+jobs:
+  guarded:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regression test no deletion, original memberships preserved, rollback and activation safety
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/rdi_music_azuracast_sync.py
+          python -m unittest discover -s tests -p 'test_rdi_music_azuracast_sync.py' -v
+          python -m unittest discover -s tests -p 'test_rdi_music_rotation.py' -v
+      - name: Prepare securely pinned Oracle SSH connection
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 12 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Install guarded AutoDJ sync (the only writer to the dedicated music playlist)
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE="ubuntu@129.151.255.41"
+          STAGE="/tmp/rdi-dj-autodj-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          [[ "$STAGE" =~ ^/tmp/rdi-dj-autodj-[0-9]+-[0-9]+$ ]]
+          sshx(){ ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=15 "$@"; }
+          scpx(){ scp -q -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=15 "$@"; }
+          sshx "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup(){ sshx "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scpx scripts/rdi_music_azuracast_sync.py scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
+          sshx "$REMOTE" "set -e; \
+            sudo -n install -m 600 -o root -g root '$STAGE/rdi_music_azuracast_sync.py' /opt/rdi-music-dj/rdi_music_azuracast_sync.py; \
+            sudo -n install -m 600 -o root -g root '$STAGE/deploy-geopolitica-oracle.py' /opt/rdi-music-dj/deploy-geopolitica-oracle.py; \
+            sudo -n install -m 600 -o root -g root '$STAGE/rdi-geopolitica-auth.php' /opt/rdi-music-dj/rdi-geopolitica-auth.php; \
+            sudo -n python3 -m py_compile /opt/rdi-music-dj/rdi_music_azuracast_sync.py"
+          MODE="auto"
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+             MODE="${{ github.event.inputs.operation || 'status' }}"
+          fi
+          case "$MODE" in auto|resume|status|disable) ;; *) exit 1;; esac
+          echo "RDI_AUTO_DJ_REQUESTED_OPERATION=$MODE"
+          # The lock excludes overlapping GitHub runs and manual Oracle invocations.
+          sshx "$REMOTE" "sudo -n flock -w 30 /run/lock/rdi-dj-sync.lock \
+            python3 /opt/rdi-music-dj/rdi_music_azuracast_sync.py '$MODE' \
+            --limit 150 --php-helper /opt/rdi-music-dj/rdi-geopolitica-auth.php"
+          echo "RDI_AUTO_DJ_OPERATION_COMPLETED=$MODE"
