@@ -1,5 +1,4 @@
-/* RDI YouTube weather interlude: data from the existing weather refresh,
-   followed by one full-screen official radar map. Audio and news sources are untouched. */
+/* RDI YouTube weather interlude: city forecasts from the existing weather refresh. Audio and news sources are untouched. */
 (()=> {
   "use strict";
   const stage=document.getElementById("stage");
@@ -7,7 +6,7 @@
   const layer=document.createElement("section");
   layer.id="rdiWeatherOverlay";
   layer.hidden=true;
-  layer.setAttribute("aria-label","Rubrica meteo RDI: città e radar");
+  layer.setAttribute("aria-label","Rubrica meteo RDI: città");
   layer.innerHTML=
     '<section class="rdi-weather-view" aria-label="Meteo delle città">' +
       '<header class="rdi-weather-header"><div class="rdi-weather-brand">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA<small>METEO PER LA COMUNITÀ</small></div><span class="rdi-weather-pill">METEO</span></header>' +
@@ -17,29 +16,14 @@
       '<div class="rdi-weather-country"><div class="rdi-weather-country-head">ROMANIA <span>AGGIORNAMENTO AUTOMATICO</span></div><div class="rdi-weather-city-window"><div class="rdi-weather-city-track" id="rdiWeatherRomania"></div></div></div>' +
       '<div class="rdi-weather-source" id="rdiWeatherSource">Fonte: Open-Meteo (CC BY 4.0) · aggiornamento</div>' +
     '</section>' +
-    '<section class="rdi-weather-radar" aria-label="Mappa radar ufficiale">' +
-      '<iframe id="rdiWeatherRadar" title="Mappa radar meteorologico" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen"></iframe>' +
-      '<div class="rdi-weather-radar-head"><strong class="rdi-weather-radar-title" id="rdiWeatherRadarTitle"></strong><span class="rdi-weather-radar-credit" id="rdiWeatherRadarCredit"></span></div>' +
-      '<div class="rdi-weather-radar-foot" id="rdiWeatherRadarTime"></div>' +
-    '</section>' +
     '<div class="rdi-weather-progress" id="rdiWeatherProgress"></div>';
   stage.append(layer);
   const $=id=>document.getElementById(id);
   const italyTrack=$("rdiWeatherItaly"),romaniaTrack=$("rdiWeatherRomania");
-  const frame=$("rdiWeatherRadar"),progress=$("rdiWeatherProgress");
-  const CITY_SECONDS=30,RADAR_SECONDS=30;
-  const radarSources={
-    IT:{title:"RADAR METEO · ITALIA",credit:"Fonte: Radar-DPC · Protezione Civile",
-      url:"https://radar.protezionecivile.it/"},
-    RO:{title:"RADAR METEO · ROMANIA",credit:"Fonte: Administrația Națională de Meteorologie (ANM)",
-      url:"https://www.meteoromania.ro/anm2/radarm/radar.index.php"}
-  };
+  const progress=$("rdiWeatherProgress");
+  const CITY_SECONDS=60;
   let active=false,cityTimer=null,finishTimer=null,priorityTimer=null;
-  function loadNextRadarCountry(){
-    try{return localStorage.getItem("rdiNextRadarCountry")==="RO"?"RO":"IT";}
-    catch(e){return "IT";}
-  }
-  let finishCallback=null,lastDisplayedUpdate="",previousDisplayedUpdate="",nextRadarCountry=loadNextRadarCountry();
+  let finishCallback=null,lastDisplayedUpdate="",previousDisplayedUpdate="";
 
   function weatherIcon(code){
     const n=Number(code);
@@ -111,24 +95,10 @@
     }));
   }
   function showCityView(data){
-    layer.classList.remove("rdi-weather-radar-active");
     layer.classList.add("rdi-weather-city-active");
-    $("rdiWeatherRadar").src="about:blank";
     renderCities(data);
-    setProgress(CITY_SECONDS+RADAR_SECONDS);
-    cityTimer=setTimeout(()=>showRadarView(),CITY_SECONDS*1000);
+    setProgress(CITY_SECONDS);
   }
-  function showRadarView(){
-    if(!active)return;
-    const radar=radarSources[activeCountry];
-    layer.classList.remove("rdi-weather-city-active");
-    layer.classList.add("rdi-weather-radar-active");
-    $("rdiWeatherRadarTitle").textContent=radar.title;
-    $("rdiWeatherRadarCredit").textContent=radar.credit;
-    $("rdiWeatherRadarTime").textContent="Mappa radar ufficiale · schermata visiva senza audio";
-    frame.src=radar.url;
-  }
-  let activeCountry="IT";
   function stop(resume=true){
     if(!active)return;
     clearTimeout(cityTimer);clearTimeout(finishTimer);clearInterval(priorityTimer);
@@ -136,9 +106,9 @@
     const callback=finishCallback;finishCallback=null;
     if(!resume)lastDisplayedUpdate=previousDisplayedUpdate;
     active=false;window.rdiWeatherActive=false;
-    layer.hidden=true;layer.classList.remove("rdi-weather-city-active","rdi-weather-radar-active");
+    layer.hidden=true;layer.classList.remove("rdi-weather-city-active");
     document.body.classList.remove("rdi-weather-active");
-    frame.src="about:blank";progress.style.transition="none";progress.style.width="0%";
+    progress.style.transition="none";progress.style.width="0%";
     if(resume&&!window.rdiSpotActive&&!window.rdiGeoActive&&!window.rdiTgActive&&typeof callback==="function")callback();
   }
   function startIfDue(next){
@@ -149,14 +119,11 @@
     if(!stamp||stamp===lastDisplayedUpdate)return false;
     previousDisplayedUpdate=lastDisplayedUpdate;
     lastDisplayedUpdate=stamp;
-    activeCountry=nextRadarCountry;
-    nextRadarCountry=nextRadarCountry==="IT"?"RO":"IT";
-    try{localStorage.setItem("rdiNextRadarCountry",nextRadarCountry);}catch(e){/* Continue the live if storage is disabled. */}
     window.rdiPauseNews?.();
     active=true;window.rdiWeatherActive=true;finishCallback=next;
     document.body.classList.add("rdi-weather-active");layer.hidden=false;
     showCityView(data);
-    finishTimer=setTimeout(()=>stop(true),(CITY_SECONDS+RADAR_SECONDS)*1000);
+    finishTimer=setTimeout(()=>stop(true),CITY_SECONDS*1000);
     priorityTimer=setInterval(()=>{
       if(window.rdiSpotActive||window.rdiGeoActive||window.rdiTgActive)stop(false);
     },500);
@@ -168,5 +135,5 @@
       window.rdiWeatherSnapshot=data;
   });
   if(window.rdiWeatherSnapshot)renderCities(window.rdiWeatherSnapshot);
-  window.rdiWeatherBreak={startIfDue,stop,get state(){return {active,lastDisplayedUpdate,nextRadarCountry};}};
+  window.rdiWeatherBreak={startIfDue,stop,get state(){return {active,lastDisplayedUpdate};}};
 })();
