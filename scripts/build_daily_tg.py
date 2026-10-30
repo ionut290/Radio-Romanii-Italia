@@ -17,6 +17,9 @@ import urllib.error
 import urllib.request
 from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from tg_video_rights import resolve_for_stories
 
 ROOT = Path(__file__).resolve().parent.parent
 ROME = ZoneInfo("Europe/Rome")
@@ -145,6 +148,10 @@ def select_stories(now: dt.datetime, items: list[dict]) -> list[dict]:
         represented[item["category"]] = represented.get(item["category"], 0) + 1
         if len(chosen) == MAX_STORIES:
             break
+    # Licensed event clips first, then narrowly matched RDI-verified b-roll.
+    # Candidate publisher embeds never enter the TG without recorded rights.
+    for story, video in zip(chosen, resolve_for_stories(chosen)):
+        story["video"] = video
     return chosen
 
 
@@ -220,6 +227,7 @@ def validate_script(raw: dict, selected: list[dict]) -> list[dict]:
             "title": title, "kicker": kicker,
             "paragraphs": sections, "image": src["visual"],
             "image_notice": src["visual_notice"],
+            "video": src.get("video"),
             "source_name": src["source_name"],
             "source_url": src["source_url"],
             "sources": src["source_urls"],
