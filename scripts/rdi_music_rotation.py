@@ -15,6 +15,7 @@ import hashlib
 import json
 import math
 import re
+import unicodedata
 
 SLOT_BLOCKS=(
  ("notte_00_07",0,420,"Notte / relax",("tranquilla","media","ritmata")),
@@ -35,7 +36,10 @@ def _id_sort(seed,token):
 def _title_key(title):
     # Simple normalized title key, not acoustic deduplication.
     title=re.sub(r"[_\s-]+(?:1[5-9]\d{8,}|20\d{7,})$","",str(title),flags=re.I)
-    return re.sub(r"[^a-z0-9]+"," ",title.casefold()).strip()
+    title=unicodedata.normalize("NFKC",title).casefold()
+    # Unicode-aware tokenization preserves Romanian ă/ș/ț, Cyrillic, Greek,
+    # Arabic, CJK and other genuine music titles. ASCII-only dropped 46 songs.
+    return re.sub(r"[\W_]+"," ",title,flags=re.UNICODE).strip()
 
 def _clock(seconds):
     minutes=seconds//60
