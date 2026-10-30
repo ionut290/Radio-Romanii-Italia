@@ -1,0 +1,22 @@
+[Unit]
+Description=RDI DJ intelligent music scan (low priority, read-only AzuraCast)
+After=docker.service
+ConditionPathExists=/opt/rdi-music-dj/rdi_music_dj.py
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+Environment=HOME=/home/ubuntu
+WorkingDirectory=/opt/rdi-music-dj
+ExecStart=/usr/bin/python3 /opt/rdi-music-dj/rdi_music_dj.py run --limit 3
+Nice=15
+IOSchedulingClass=idle
+CPUQuota=45%
+MemoryMax=480M
+TimeoutStartSec=20min
+UMask=0077
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictNamespaces=true
