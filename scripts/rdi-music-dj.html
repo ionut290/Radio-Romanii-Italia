@@ -1,0 +1,100 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>RDI · DJ intelligente</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1120;--card:#19263c;--line:#344563;--fg:#eef5ff;--muted:#a9bad1;--cyan:#73dcff;--gold:#e9cb83}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:15px/1.5 system-ui,Segoe UI,sans-serif;color:var(--fg)}
+main{max-width:1220px;margin:auto;padding:24px 18px 56px}header{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+h1{font-size:clamp(25px,4vw,38px);margin:5px 0}h2{font-size:18px;margin:0 0 12px}
+p,.muted{color:var(--muted)}.kicker{font-weight:800;color:var(--cyan);letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+.notice,.card{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px}
+.notice{margin:18px 0;border-left:4px solid var(--gold)}.notice b{color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:11px;margin:15px 0 20px}
+.stat{border:1px solid var(--line);border-radius:11px;padding:13px;background:#111d30}
+.stat b{display:block;font-size:27px;color:var(--cyan)}.stat span{font-size:12px;color:var(--muted)}
+.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:16px 0}
+button,select,input{color:var(--fg);background:#172a42;border:1px solid #4a668a;border-radius:8px;padding:10px;font:inherit}
+button{cursor:pointer}button:hover{background:#203958}
+.schedules{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:15px 0 25px}
+.slot{border:1px solid var(--line);border-radius:12px;padding:15px;background:var(--card)}
+.slot .time{font-size:19px;color:var(--gold);font-weight:800}
+.slot .count{color:var(--muted);font-size:12px}
+.slot ol{padding-left:18px;margin:12px 0 0}.slot li{margin:6px 0;overflow-wrap:anywhere}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:10px 7px;text-align:left}
+th{color:var(--muted)}tr:hover{background:#20304a}.scroll{overflow:auto;max-height:700px}
+small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;background:#273b56;white-space:nowrap}
+#status{font-size:13px;color:var(--muted)}.table-title{max-width:270px;min-width:175px;overflow-wrap:anywhere}
+</style></head><body><main>
+<header><div><div class="kicker">Radio Românii din Italia</div><h1>DJ intelligente · Analisi musicale</h1>
+<p>Ritmo, energia, generi dichiarati e proposte di rotazione per orario.</p></div>
+<button onclick="refresh()">Aggiorna dati</button></header>
+<div class="notice"><b>Modalità osservazione.</b> Il sistema NON modifica playlist o musica di AzuraCast. I BPM e l'energia sono stime; genere e presenza della voce sono mostrati solo quando dichiarati nei metadati, non dedotti con certezza dall'ascolto. Ogni proposta richiede revisione.</div>
+<div class="grid">
+<div class="stat"><b id="n-all">—</b><span>brani musicali censiti</span></div>
+<div class="stat"><b id="n-audio">—</b><span>con analisi audio utilizzabile</span></div>
+<div class="stat"><b id="n-genre">—</b><span>con genere dichiarato</span></div>
+<div class="stat"><b id="n-voice">—</b><span>con voce/strumentale dichiarato</span></div></div>
+<p id="status" role="status">Caricamento dati…</p>
+<h2>Programmazione suggerita</h2>
+<div class="schedules" id="slots"></div>
+<div class="card"><h2>Catalogo analizzato</h2>
+<div class="toolbar"><input id="find" placeholder="Cerca titolo o artista" aria-label="Cerca" oninput="draw()">
+<select id="energy" aria-label="Filtra energia" onchange="draw()"><option value="">Qualsiasi energia</option><option value="ritmata">Ritmata</option><option value="media">Media</option><option value="tranquilla">Tranquilla</option><option value="non_verificata">Da analizzare</option></select>
+<select id="voice" aria-label="Filtra voce" onchange="draw()"><option value="">Voci e strumentali</option><option value="strumentale_dichiarato">Strumentali dichiarati</option><option value="cantato_dichiarato">Cantati dichiarati</option><option value="non_verificato">Voce non verificata</option></select></div>
+<div class="scroll"><table><thead><tr><th>Brano</th><th>Genere (tag)</th><th>BPM stimati</th><th>Energia</th><th>Voce</th></tr></thead><tbody id="music"></tbody></table></div></div>
+<p><small>Dashboard accessibile solo attraverso il collegamento privato SSH. Le classificazioni non indicano l'uso di modelli di riconoscimento vocale o del genere musicale. I dati vengono aggiornati gradualmente per non sovraccaricare Oracle.</small></p>
+</main>
+<script>
+let state={tracks:[],slots:{}};
+const el=id=>document.getElementById(id);
+function cell(tr,txt,cls){const td=document.createElement("td");td.textContent=txt||"—";if(cls)td.className=cls;tr.append(td)}
+function draw(){
+ const q=el("find").value.toLocaleLowerCase("it"),e=el("energy").value,v=el("voice").value;
+ const rows=state.tracks.filter(x=>(!q||(x.title+" "+x.artist).toLocaleLowerCase("it").includes(q))
+   &&(!e||x.energy_estimate===e)&&(!v||x.voice===v)).slice(0,250);
+ const body=el("music");body.replaceChildren();
+ for(const x of rows){
+   const tr=document.createElement("tr");
+   cell(tr,x.title+(x.artist?" · "+x.artist:""),"table-title");
+   cell(tr,x.genre==="non_identificato"?"Non disponibile":x.genre.replace(/_/g," "));
+   cell(tr,x.bpm_candidate==null?"Da verificare":String(x.bpm_candidate));
+   cell(tr,x.energy_estimate.replace(/_/g," "));
+   cell(tr,x.voice.replace(/_/g," "));
+   body.append(tr)
+ }
+}
+function showSlots(){
+ const slots=el("slots");slots.replaceChildren();
+ const byId=Object.fromEntries(state.tracks.map(t=>[t.id,t]));
+ const labels={mattino_07_10:"07:00–10:00 · Risveglio",giorno_10_13:"10:00–13:00 · Urban e pop",pomeriggio_13_17:"13:00–17:00 · Energia",sera_18_21:"18:00–21:00 · Melodie",notte_21_07:"21:00–07:00 · Relax"};
+ for(const [key,label] of Object.entries(labels)){
+   const box=document.createElement("section");box.className="slot";
+   const head=document.createElement("div");head.className="time";head.textContent=label;box.append(head);
+   const ids=state.slots[key]||[];
+   const n=document.createElement("div");n.className="count";n.textContent=ids.length+" candidati · non assegnati";box.append(n);
+   const ol=document.createElement("ol");
+   for(const id of ids.slice(0,6)){
+     const t=byId[id];if(!t)continue;
+     const li=document.createElement("li");li.textContent=t.title;
+     ol.append(li)
+   }
+   if(!ol.children.length){const note=document.createElement("small");note.textContent="In attesa di analisi audio affidabile";box.append(note)}
+   box.append(ol);slots.append(box)
+ }
+}
+async function refresh(){
+ try{
+  const r=await fetch("/api/report",{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);
+  const data=await r.json();
+  if(data.schema_version!==1||data.read_only!==true||data.playlist_writes!==0)throw Error("Report non verificato");
+  state=data;
+  el("n-all").textContent=data.total_music;
+  el("n-audio").textContent=data.complete_audio_features;
+  el("n-genre").textContent=data.with_genre_metadata;
+  el("n-voice").textContent=data.voice_marked;
+  el("status").textContent="Ultimo controllo: "+new Date(data.updated_at).toLocaleString("it-IT")+" · "+data.status.replace(/_/g," ")+" · Zero modifiche alle playlist";
+  showSlots();draw();
+ }catch(e){el("status").textContent="Dati ancora non disponibili: "+e.message}
+}
+refresh();
+</script></body></html>
