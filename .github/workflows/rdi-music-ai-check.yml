@@ -60,3 +60,13 @@ jobs:
           ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
             -o ConnectTimeout=15 ubuntu@129.151.255.41 \
             "sudo -n journalctl -u rdi-music-ai-analyze.service -n 55 --no-pager | grep -E 'Traceback|Error|error|Exception|AI_SAMPLE|No such file|Permission|failed|Failed|line [0-9]|ExecStart|code=exited|ModuleNotFound' | tail -30 || true"
+      - uses: actions/checkout@v4
+      - name: Diagnostica lettura su quattro brani reali, senza nomi nei log
+        shell: bash
+        run: |
+          set -euo pipefail
+          scp -q -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
+            scripts/rdi_music_ai_diagnose.py ubuntu@129.151.255.41:/tmp/rdi_music_ai_diagnose.py
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \
+            -o ConnectTimeout=15 ubuntu@129.151.255.41 \
+            'python3 /tmp/rdi_music_ai_diagnose.py; rm -f /tmp/rdi_music_ai_diagnose.py'
