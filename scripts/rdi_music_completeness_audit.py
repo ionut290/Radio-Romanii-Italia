@@ -12,7 +12,7 @@ import sys
 from zoneinfo import ZoneInfo
 sys.path.insert(0,"/opt/rdi-music-dj")
 import rdi_music_dj as dj
-from rdi_music_rotation import simulate
+from rdi_music_rotation import simulate, _eligible, _title_key
 
 dbpath=Path.home()/"rdi-music"/"music.db"
 db=sqlite3.connect("file:"+str(dbpath)+"?mode=ro",uri=True)
@@ -40,6 +40,18 @@ b=simulate(rep,(today+dt.timedelta(days=1)).isoformat())
 first=lambda p:[s["id"] for block in p["blocks"] for s in block["brani"]]
 ids_today=first(a)
 ids_tomorrow=first(b)
+from collections import Counter
+reasons=Counter()
+for tr in rep["tracks"]:
+    if _eligible(tr):
+        reasons["eligible"]+=1
+    elif dj.excluded(str(tr.get("title",""))+" "+str(tr.get("artist",""))):
+        reasons["nonmusical_title_or_artist"]+=1
+    elif not _title_key(tr.get("title","")):
+        reasons["empty_normalized_title"]+=1
+    else:
+        reasons["other"]+=1
+data["bank_exclusion_reasons"]=dict(reasons)
 data.update({
   "report_tracks":rep["total_music"],
   "catalogue_bank":a["pool_tracks_total"],
