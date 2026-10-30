@@ -9072,8 +9072,8 @@
       "category": "diplomatie",
       "region": "asia",
       "source_url": "https://www.reuters.com/world/china/north-koreas-kim-jong-un-arrives-dandong-china-yonhap-says-2026-10-24/",
-      "source_name": "Asia News Network (riscontri Reuters, AP, Yonhap)",
-      "source_published": "2026-10-30T01:21:03Z",
+      "source_name": "Reuters (fatti confermati da AP e Yonhap; titolo feed Asia News Network)",
+      "source_published": "2026-10-24T00:00:00Z",
       "editorial_status": "ai_assisted_unreviewed",
       "source_urls": [
         "https://www.reuters.com/world/china/north-koreas-kim-jong-un-arrives-dandong-china-yonhap-says-2026-10-24/",
@@ -9082,7 +9082,7 @@
         "https://en.yna.co.kr/view/AEN20261025000300315",
         "https://www.theguardian.com/world/2026/oct/24/north-korea-new-yalu-river-bridge-russia-china"
       ],
-      "verification_note": "Feed Asia News Network via Google News; URL editore non verificato. Fatti ricostruiti tramite Reuters, AP, Yonhap; data dell'evento 24 ottobre distinta dalla pubblicazione RSS del 30 ottobre. Nessun vertice Trump-Kim confermato.",
+      "verification_note": "Fonte del feed Asia News Network non risolta all'editore; evento realmente avvenuto il 24 ottobre, documentato da Reuters, AP e Yonhap. source_published si riferisce al servizio Reuters del 24 ottobre; feed_published conserva la data RSS del 30 ottobre. Nessun vertice Trump-Kim confermato.",
       "it": {
         "title": "Perché Kim Jong-un è andato a Dandong: il nuovo ponte con la Cina tra commercio, memoria e diplomazia",
         "lead": "Il viaggio di Kim Jong-un nella città cinese di Dandong, avvenuto il 24 ottobre 2026 e confermato il giorno seguente dai media statali nordcoreani, è stato breve ma carico di significati. Il leader di Pyongyang ha attraversato il nuovo ponte sul fiume Yalu, ha visitato un memoriale della guerra di Corea e ha incontrato Wang Huning, uno dei principali dirigenti cinesi. Reuters, Associated Press e Yonhap concordano sui fatti principali. Le ragioni strategiche del viaggio richiedono invece cautela: l'apertura di un'infrastruttura commerciale e il richiamo all'alleanza storica sono documentati, mentre un eventuale collegamento diretto a negoziati con Washington rimane un'interpretazione.",
@@ -9166,7 +9166,8 @@
           }
         ],
         "conclusion": "Analiză RDI: semnificația cea mai bine documentată a vizitei este combinația dintre logistică, memorie istorică și reafirmarea legăturii politice cu Beijingul. Podul a fost deschis, călătoria a avut loc, iar întâlnirea cu Wang Huning este confirmată. Rămân de măsurat efectele asupra volumului comerțului, implicațiile pentru regimul sancțiunilor și influența asupra dialogului cu Washingtonul. Următoarele verificări utile vor privi datele comerciale, eventualele acorduri publicate și anunțurile diplomatice oficiale. Un gest simbolic important nu trebuie confundat cu dovada unor negocieri de pace deja stabilite."
-      }
+      },
+      "feed_published": "2026-10-30T01:21:03Z"
     }
   },
   "updated_at": "2026-10-30T02:58:58+01:00"
