@@ -33,9 +33,28 @@ def audit(client):
             "schedule_count":len(p.get("schedule_items") or []),
             "weight":p.get("weight")
         })
+    # Read the station media catalogue without changing its associations.
+    media=client.call("GET","/station/1/files")
+    if not isinstance(media,list):
+        raise ValueError("Station media API did not return an inspectable list")
+    aggregate={"total_files":len(media),"unassigned":0,"assigned":0,
+               "multiple_playlists":0,"unknown_assignments":0}
+    for row in media:
+        if not isinstance(row,dict):
+            continue
+        refs=row.get("playlists")
+        if refs is None or not isinstance(refs,list):
+            aggregate["unknown_assignments"]+=1
+        elif not refs:
+            aggregate["unassigned"]+=1
+        else:
+            aggregate["assigned"]+=1
+            if len(refs)>1:
+                aggregate["multiple_playlists"]+=1
     return {"playlist_count":len(items),"active_count":sum(bool(p.get("enabled")) for p in report),
             "general_playlists":[p for p in report if p.get("type")=="default"],
             "protected_playlists":[p for p in report if p.get("type")!="default"],
+            "media_assignments":aggregate,
             "read_only":True,"playlist_writes":0}
 
 def main():
