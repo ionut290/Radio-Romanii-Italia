@@ -7,11 +7,11 @@ const layer=document.createElement("section");layer.id="rdiPhilosophy";layer.hid
 layer.innerHTML='<div class="rdi-philosophy-photo"></div><div class="rdi-philosophy-shade"></div><div class="rdi-philosophy-copy"><p class="rdi-philosophy-brand">RADIO ROMÂNII DIN ITALIA</p><p class="rdi-philosophy-heading">CALENDARIO FILOSOFICO</p><p class="rdi-philosophy-date"></p><blockquote class="rdi-philosophy-quote"></blockquote><p class="rdi-philosophy-credit">Riflessione originale RDI</p></div><div class="rdi-philosophy-progress"></div>';
 stage.append(layer);
 const photo=layer.querySelector(".rdi-philosophy-photo"),quote=layer.querySelector(".rdi-philosophy-quote"),date=layer.querySelector(".rdi-philosophy-date"),progress=layer.querySelector(".rdi-philosophy-progress");
-let days=[],active=false,done=null,timeout=null,watch=null,lastShownAt=0,cards=0;
+let days=[],current=null,readyImage="",active=false,done=null,timeout=null,watch=null,lastShownAt=0,cards=0;
 const today=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
 const blocked=()=>["rdiSpotActive","rdiGeoActive","rdiTgActive","rdiWeatherActive","rdiCameraActive","rdiLandscapeActive","rdiDjPromoActive"].some(k=>window[k]);
 const preview=new URLSearchParams(location.search).get("rdi_philosophy_preview")==="1";
-function dayData(){return days.find(x=>x.date===today())||null}
+function dayData(){return (current&&current.date===today()?current:null)||days.find(x=>x.date===today())||null}
 function paint(item){
  if(!item)return false;
  quote.textContent=item.quote;
@@ -41,8 +41,7 @@ function startIfDue(next){
  if(!shouldShow({cards,lastShownAt,now:Date.now()}))return false;
  const item=dayData();
  if(!item||!paint(item))return false;
- const image=new Image();image.onload=()=>{};image.src=item.image;
- if(!image.complete||!image.naturalWidth)return false;
+ if(readyImage!==item.image)return false;
  active=true;window.rdiPhilosophyActive=true;lastShownAt=Date.now();cards=0;done=next;
  window.rdiPauseNews?.();
  layer.hidden=false;progress.style.transition="none";progress.style.width="0%";
@@ -53,13 +52,23 @@ function startIfDue(next){
 }
 async function update(){
  try{
-  const response=await fetch("./data/calendario-filosofico-2026.json?v="+Date.now(),{cache:"no-store"});
-  if(!response.ok)throw Error("calendar unavailable");
-  const data=await response.json();
-  days=Array.isArray(data.days)?data.days:[];
-  if(preview){const item=dayData();if(item&&paint(item))layer.hidden=false;}
- }catch(e){console.warn("RDI philosophy unavailable",e);}
+  const [primary,fallback]=await Promise.all([
+   fetch("./data/calendario-filosofico-oggi.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null),
+   fetch("./data/calendario-filosofico-2026.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null)
+  ]);
+  current=primary&&typeof primary.date==="string"&&typeof primary.quote==="string"&&typeof primary.image==="string"?primary:null;
+  days=Array.isArray(fallback?.days)?fallback.days:[];
+  const item=dayData();
+  if(!item){readyImage="";return}
+  const url=String(item.image||"");
+  if(!/^\\/(?!\\/)[a-zA-Z0-9/_-]+\\.(jpg|jpeg|webp|png)$/i.test(url)){readyImage="";return;}
+  const preload=new Image();
+  preload.onload=()=>{if(dayData()?.image===url){readyImage=url;if(preview&&paint(dayData()))layer.hidden=false}};
+  preload.onerror=()=>{if(readyImage===url)readyImage=""};
+  preload.src=url;
+ }catch(e){console.warn("RDI philosophy unavailable",e)}
 }
+
 window.rdiPhilosophyBreak={startIfDue,stop:()=>end(false),get state(){return {active,date:today(),loaded:days.length}}};
 update();setInterval(update,15*60*1000);
 })();
