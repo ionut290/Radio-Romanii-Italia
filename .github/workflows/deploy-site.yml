@@ -29,6 +29,7 @@ jobs:
         run: |
           node --check harta-atacurilor.js
           node --check geopolitica.js
+          node --check youtube-tg-sera.js
           node --check rdi-featured-core.mjs
           node --check youtube-landscapes-core.mjs
           node --input-type=module --check < youtube-landscapes.js
