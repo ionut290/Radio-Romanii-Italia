@@ -154,6 +154,9 @@ def select_video(story: dict, registry: dict | None = None, landscapes: dict | N
             "notice": "IMMAGINI DI REPERTORIO · " + str(media["credit"])[:100],
             "credit": media["credit"], "source_url": media["source_url"],
             "license_url": media["license_url"],
+            "poster": (media.get("poster") if isinstance(media.get("poster"), str)
+                       and media["poster"].startswith("https://images.pexels.com/videos/")
+                       else ""),
         }
     return None
 
