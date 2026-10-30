@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261030-philosophy-1';
+const RDI_YOUTUBE_BUILD='20261030-telegram-live-1';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -182,8 +182,9 @@ function startTicker(brief=false){
   // A licensed city camera replaces one 30-second news card, never audio or ads.
   if(window.rdiCameraBreak?.startIfDue(nextNews))return;
   if(window.rdiLandscapeBreak?.startIfDue(nextNews))return;
+  if(window.rdiListenerMessageBreak?.startIfDue(nextNews))return;
   nextNews();
  },cardDuration);
 }
 load();setInterval(load,300000);
-</script><script type="module" src="./youtube-philosophy.js?v=20261030-2"></script><script type="module" src="./youtube-dj-promo.js?v=20261030-dj-1"></script><script type="module" src="./youtube-camera-breaks.js?v=20261029-city-1"></script><script type="module" src="./youtube-landscapes.js?v=20261029-italy-romania-3"></script><script type="module" src="./youtube-extras.js?v=20261025-census-1"></script><script type="module" src="./youtube-weather.js?v=20261030-weather-4"></script><script type="module" src="./youtube-spots.js?v=20261025-enable-spots-1"></script><script defer src="./youtube-geopolitica.js?v=20261027-1"></script><script defer src="./youtube-tg-sera.js?v=20261030-footage-2"></script></body></html>
+</script><script type="module" src="./youtube-philosophy.js?v=20261030-2"></script><script type="module" src="./youtube-dj-promo.js?v=20261030-dj-1"></script><script type="module" src="./youtube-camera-breaks.js?v=20261029-city-1"></script><script type="module" src="./youtube-landscapes.js?v=20261029-italy-romania-3"></script><script type="module" src="./youtube-extras.js?v=20261025-census-1"></script><script type="module" src="./youtube-weather.js?v=20261030-weather-4"></script><script type="module" src="./youtube-spots.js?v=20261025-enable-spots-1"></script><script defer src="./youtube-geopolitica.js?v=20261027-1"></script><script defer src="./youtube-tg-sera.js?v=20261030-footage-2"></script><script defer src="./youtube-live-messages.js?v=20261030-live-messages-1"></script></body></html>
