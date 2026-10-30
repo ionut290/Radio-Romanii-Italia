@@ -28,12 +28,15 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <header><div><div class="kicker">Radio Românii din Italia</div><h1>DJ intelligente · Analisi musicale</h1>
 <p>Ritmo, energia, generi dichiarati e proposte di rotazione per orario.</p></div>
 <button onclick="refresh()">Aggiorna dati</button></header>
-<div class="notice"><b>Modalità osservazione.</b> Il sistema NON modifica playlist o musica di AzuraCast. I BPM e l'energia sono stime; genere e presenza della voce sono mostrati solo quando dichiarati nei metadati, non dedotti con certezza dall'ascolto. Ogni proposta richiede revisione.</div>
+<div class="notice"><b>Modalità osservazione.</b> Nessuna modifica a playlist, musica o diretta. I BPM e l'energia sono stime. La classificazione YAMNet ONNX (AudioSet) sul campione di 100 brani suggerisce generi musicali ampi e possibile presenza della voce; non riconosce con certezza tutti i sottogeneri né identifica sempre un brano strumentale. Le proposte richiedono revisione.</div>
 <div class="grid">
 <div class="stat"><b id="n-all">—</b><span>brani musicali censiti</span></div>
 <div class="stat"><b id="n-audio">—</b><span>con analisi audio utilizzabile</span></div>
 <div class="stat"><b id="n-genre">—</b><span>con genere dichiarato</span></div>
-<div class="stat"><b id="n-voice">—</b><span>con voce/strumentale dichiarato</span></div></div>
+<div class="stat"><b id="n-voice">—</b><span>con voce/strumentale dichiarato</span></div>
+<div class="stat"><b id="n-ai">—</b><span>analizzati con IA / 100</span></div>
+<div class="stat"><b id="n-ai-genre">—</b><span>con genere AI suggerito</span></div>
+<div class="stat"><b id="n-ai-voice">—</b><span>con voce AI suggerita</span></div></div>
 <p id="status" role="status">Caricamento dati…</p>
 <h2>Programmazione suggerita</h2>
 <div class="schedules" id="slots"></div>
@@ -41,8 +44,8 @@ small{color:var(--muted)}.tag{font-size:11px;padding:2px 7px;border-radius:8px;b
 <div class="toolbar"><input id="find" placeholder="Cerca titolo o artista" aria-label="Cerca" oninput="draw()">
 <select id="energy" aria-label="Filtra energia" onchange="draw()"><option value="">Qualsiasi energia</option><option value="ritmata">Ritmata</option><option value="media">Media</option><option value="tranquilla">Tranquilla</option><option value="non_verificata">Da analizzare</option></select>
 <select id="voice" aria-label="Filtra voce" onchange="draw()"><option value="">Voci e strumentali</option><option value="strumentale_dichiarato">Strumentali dichiarati</option><option value="cantato_dichiarato">Cantati dichiarati</option><option value="non_verificato">Voce non verificata</option></select></div>
-<div class="scroll"><table><thead><tr><th>Brano</th><th>Genere (tag)</th><th>BPM stimati</th><th>Energia</th><th>Voce</th></tr></thead><tbody id="music"></tbody></table></div></div>
-<p><small>Dashboard accessibile solo attraverso il collegamento privato SSH. Le classificazioni non indicano l'uso di modelli di riconoscimento vocale o del genere musicale. I dati vengono aggiornati gradualmente per non sovraccaricare Oracle.</small></p>
+<div class="scroll"><table><thead><tr><th>Brano</th><th>Genere / fonte</th><th>BPM stimati</th><th>Energia</th><th>Voce</th></tr></thead><tbody id="music"></tbody></table></div></div>
+<p><small>Dashboard accessibile solo attraverso il collegamento privato SSH. Per il campione AI è usato Google YAMNet in formato ONNX (Apache 2.0; etichette AudioSet CC BY 4.0): le probabilità non equivalgono a una certezza. I dati vengono aggiornati gradualmente per non sovraccaricare Oracle.</small></p>
 </main>
 <script>
 let state={tracks:[],slots:{}};
@@ -56,7 +59,9 @@ function draw(){
  for(const x of rows){
    const tr=document.createElement("tr");
    cell(tr,x.title+(x.artist?" · "+x.artist:""),"table-title");
-   cell(tr,x.genre==="non_identificato"?"Non disponibile":x.genre.replace(/_/g," "));
+   const genre=x.genre==="non_identificato"?"Non disponibile":x.genre.replace(/_/g," ");
+   const method=x.genre_source==="yamnet_onnx_stima_audio"?" · IA (stima)":x.genre_source==="metadati_file"?" · tag":"";
+   cell(tr,genre+method);
    cell(tr,x.bpm_candidate==null?"Da verificare":String(x.bpm_candidate));
    cell(tr,x.energy_estimate.replace(/_/g," "));
    cell(tr,x.voice.replace(/_/g," "));
@@ -92,6 +97,9 @@ async function refresh(){
   el("n-audio").textContent=data.complete_audio_features;
   el("n-genre").textContent=data.with_genre_metadata;
   el("n-voice").textContent=data.voice_marked;
+  el("n-ai").textContent=(data.ai_sample_done||0)+" / "+(data.ai_sample_target||100);
+  el("n-ai-genre").textContent=data.ai_genre_suggested||0;
+  el("n-ai-voice").textContent=data.ai_voice_suggested||0;
   el("status").textContent="Ultimo controllo: "+new Date(data.updated_at).toLocaleString("it-IT")+" · "+data.status.replace(/_/g," ")+" · Zero modifiche alle playlist";
   showSlots();draw();
  }catch(e){el("status").textContent="Dati ancora non disponibili: "+e.message}
