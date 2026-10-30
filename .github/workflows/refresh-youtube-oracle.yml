@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'data/romanians-italy.json']
+    paths: ['youtube-news.html', 'youtube-spots*.js', 'youtube-spots.css', 'youtube-geopolitica.js', 'youtube-geopolitica.css', 'youtube-tg-sera.js', 'youtube-tg-sera.css', 'youtube-camera-breaks.js', 'youtube-camera-core.mjs', 'youtube-camera-breaks.css', 'data/youtube-camera-breaks.json', 'data/youtube-build.json', 'data/spot-campaigns.json', 'spot-images/**', 'youtube-extras.js', 'youtube-weather.js', 'youtube-weather.css', 'youtube-live/visual-relay.sh', 'data/romanians-italy.json']
 
 permissions:
   contents: read
@@ -62,6 +62,18 @@ jobs:
             echo '::error::La chiave privata decodificata non è leggibile da OpenSSH Linux o è protetta da passphrase.'
             exit 1
           fi
+      - name: Aggiorna Chromium e riapre solo il browser con WebGL
+        if: github.event_name == 'push' && contains(github.event.head_commit.modified, 'youtube-live/visual-relay.sh')
+        run: |
+          set -euo pipefail
+          scp -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes \\
+            youtube-live/visual-relay.sh ubuntu@129.151.255.41:/tmp/radio-youtube-visual.sh
+          ssh -i "$HOME/.ssh/id_rdi" \\
+            -o StrictHostKeyChecking=yes \\
+            -o BatchMode=yes \\
+            -o ConnectTimeout=12 \\
+            ubuntu@129.151.255.41 \\
+            'set -e; sudo install -m 700 /tmp/radio-youtube-visual.sh /usr/local/sbin/radio-youtube-visual; rm -f /tmp/radio-youtube-visual.sh; pgrep -x ffmpeg >/dev/null; if pgrep -u ubuntu -f chromium >/dev/null; then env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+q; sleep 3; fi; PROFILE=$(runuser -u ubuntu -- mktemp -d /home/ubuntu/radio-youtube-browser-webgl.XXXXXXXX); runuser -u ubuntu -- env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority /snap/bin/chromium --enable-webgl --ignore-gpu-blocklist --enable-unsafe-swiftshader --use-gl=angle --use-angle=swiftshader --disable-dev-shm-usage --disable-background-networking --disable-translate --disable-features=Translate,TranslateUI --lang=ro-RO --user-data-dir="$PROFILE" --no-first-run --disable-session-crashed-bubble --autoplay-policy=user-gesture-required --window-size=1280,720 --window-position=0,0 --kiosk https://radioromanii.duckdns.org/youtube-news.html >/tmp/radio-youtube-chromium-webgl.log 2>&1 & echo $! >/tmp/rdi-chromium-webgl.pid; sleep 8; pgrep -u ubuntu -f chromium >/dev/null; echo "Browser riaperto con WebGL; FFmpeg non riavviato."'
       - name: Ricarica Chromium senza riavviare la diretta
         run: |
           ssh -i "$HOME/.ssh/id_rdi" \
