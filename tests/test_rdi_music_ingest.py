@@ -1,6 +1,7 @@
 """Safe and resumable live AzuraCast inventory reconciler tests."""
 import importlib.util
 from pathlib import Path
+from unittest.mock import patch
 import sqlite3
 import sys
 import tempfile
@@ -54,6 +55,37 @@ class ImportTests(unittest.TestCase):
    db.commit()
    mod.reconcile(db,[("/music/song.mp3",333000,3.0)])
    self.assertIsNone(db.execute("SELECT duration_seconds FROM track_live_index").fetchone()[0])
+   db.close()
+
+
+ def test_fast_import_uses_metadata_only_and_includes_all_songs(self):
+  with tempfile.TemporaryDirectory() as temp:
+   db=sqlite3.connect(Path(temp)/"a.db")
+   items=[(f"/music/song-{i}.mp3",200000+i,100.0+i) for i in range(414)]
+   mod.reconcile(db,items)
+   with patch.object(mod,"media_details",side_effect=lambda p:(210.0,"Pop","Song","Artist")) as ffprobe:
+    counts=mod.fast_metadata(db,500)
+   self.assertEqual(counts,(414,0,414))
+   self.assertEqual(ffprobe.call_count,414)
+   self.assertEqual(db.execute("SELECT COUNT(*) FROM tracks").fetchone()[0],414)
+   self.assertEqual(db.execute("SELECT COUNT(*) FROM track_live_index WHERE duration_seconds=210").fetchone()[0],414)
+   self.assertEqual(db.execute("SELECT COUNT(*) FROM track_tags WHERE genre='Pop'").fetchone()[0],414)
+   self.assertIsNone(db.execute("SELECT rms FROM tracks LIMIT 1").fetchone()[0])
+   self.assertEqual(mod.fast_metadata(db,500),(0,0,0))
+   db.close()
+
+ def test_fast_import_backoff_skips_broken_file_without_blocking_others(self):
+  with tempfile.TemporaryDirectory() as temp:
+   db=sqlite3.connect(Path(temp)/"a.db")
+   mod.reconcile(db,[(f"/music/track-{i}.mp3",250000+i,i+1.) for i in range(10)])
+   def simulate(path):
+    if path.endswith("track-9.mp3"):
+     raise ValueError("corrupt")
+    return (220., "Jazz", "Title", "Band")
+   with patch.object(mod,"media_details",side_effect=simulate):
+    self.assertEqual(mod.fast_metadata(db,12),(9,1,9))
+    self.assertEqual(mod.fast_metadata(db,12),(0,0,0))
+   self.assertEqual(db.execute("SELECT COUNT(*) FROM track_metadata_failures").fetchone()[0],1)
    db.close()
 
 if __name__=="__main__":
