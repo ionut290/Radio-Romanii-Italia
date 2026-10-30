@@ -30,7 +30,7 @@
   const CITY_SECONDS=30,RADAR_SECONDS=30;
   const radarSources={
     IT:{title:"RADAR METEO · ITALIA",credit:"Fonte: Radar-DPC · Protezione Civile",
-      url:"https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/"},
+      url:"https://radar.protezionecivile.it/"},
     RO:{title:"RADAR METEO · ROMANIA",credit:"Fonte: Administrația Națională de Meteorologie (ANM)",
       url:"https://www.meteoromania.ro/anm2/radarm/radar.index.php"}
   };
