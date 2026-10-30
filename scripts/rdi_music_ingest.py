@@ -23,6 +23,8 @@ from zoneinfo import ZoneInfo
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import rdi_music_dj as dj
 import rdi_music_scan as scan
+import rdi_music_rhythm as rhythm
+import re
 
 DB = Path.home() / "rdi-music" / "music.db"
 AUDIO_EXTENSIONS = {".mp3",".wav",".flac",".m4a",".ogg",".aac"}
@@ -122,7 +124,54 @@ def media_details(path:str) -> tuple[float,str,str,str]:
     return duration,tags.get("genre","")[:120],tags.get("title","")[:200],tags.get("artist","")[:200]
 
 
-def analyze_new(db: sqlite3.Connection, limit:int) -> tuple[int,int]:
+def measure_loudness(path):
+    cmd=["sudo","-n","nice","-n","15","ffmpeg","-nostdin",
+         "-hide_banner","-nostats","-threads","1","-t","30",
+         "-i",path,"-af","ebur128=peak=true","-f","null","-"]
+    proc=subprocess.run(cmd,capture_output=True,text=True,timeout=80,check=True)
+    summary=proc.stderr.rsplit("Summary:",1)[-1]
+    loud=re.search(r"I:\s*(-?[0-9.]+) LUFS",summary)
+    spread=re.search(r"LRA:\s*([0-9.]+) LU",summary)
+    if not loud or not spread:
+        raise ValueError("LUFS and dynamic measurements not available")
+    return float(loud.group(1)),float(spread.group(1))
+
+def feature_tables(db):
+    db.execute("""CREATE TABLE IF NOT EXISTS track_features (
+      path TEXT PRIMARY KEY,size INTEGER,modified REAL,
+      integrated_lufs REAL,loudness_range REAL,rms_db REAL,
+      peak_db REAL,analyzed_at TEXT)""")
+    db.execute("""CREATE TABLE IF NOT EXISTS track_rhythm (
+      path TEXT PRIMARY KEY,size INTEGER,modified REAL,
+      bpm_candidate REAL,beat_score REAL,energy_variation REAL,
+      analyzed_at TEXT)""")
+    db.commit()
+
+def complete_audio(db,path,size,modified):
+    # New files are eligible only after BOTH rhythm and loudness succeeded.
+    bpm,beat,variation=rhythm.estimate(path)
+    lufs,spread=measure_loudness(path)
+    if bpm is None or beat<0.32:
+        return False
+    rms,peak=db.execute("SELECT rms,peak FROM tracks WHERE path=?",(path,)).fetchone()
+    now=dt.datetime.now(dt.timezone.utc).isoformat()
+    with db:
+        db.execute("""INSERT INTO track_rhythm VALUES(?,?,?,?,?,?,?)
+           ON CONFLICT(path) DO UPDATE SET size=excluded.size,modified=excluded.modified,
+             bpm_candidate=excluded.bpm_candidate,beat_score=excluded.beat_score,
+             energy_variation=excluded.energy_variation,
+             analyzed_at=excluded.analyzed_at""",
+           (path,size,modified,bpm,beat,variation,now))
+        db.execute("""INSERT INTO track_features VALUES(?,?,?,?,?,?,?,?)
+           ON CONFLICT(path) DO UPDATE SET size=excluded.size,modified=excluded.modified,
+             integrated_lufs=excluded.integrated_lufs,
+             loudness_range=excluded.loudness_range,rms_db=excluded.rms_db,
+             peak_db=excluded.peak_db,analyzed_at=excluded.analyzed_at""",
+           (path,size,modified,lufs,spread,rms,peak,now))
+    return True
+
+
+def analyze_new(db: sqlite3.Connection, limit:int) -> tuple[int,int,int]:
     # Fast new song first: mtime DESC prioritizes freshly uploaded media.
     candidates=db.execute("""SELECT l.path,l.size,l.modified,l.duration_seconds
         FROM track_live_index l LEFT JOIN tracks t ON l.path=t.path
@@ -130,6 +179,7 @@ def analyze_new(db: sqlite3.Connection, limit:int) -> tuple[int,int]:
         ORDER BY l.modified DESC LIMIT ?""",(max(limit*5,20),)).fetchall()
     success=0
     failure=0
+    ready=0
     for path,size,modified,_ in candidates:
         if success>=limit or failure>=max(12,limit*3):
             break
@@ -155,9 +205,16 @@ def analyze_new(db: sqlite3.Connection, limit:int) -> tuple[int,int]:
                     WHERE path=? AND size=? AND abs(modified-?)<2""",
                     (duration,path,size,modified))
             success+=1
+            try:
+                if complete_audio(db,path,size,modified):
+                    ready+=1
+            except (OSError,ValueError,TypeError,subprocess.SubprocessError):
+                # Music stays in inventory but never enters playable bank
+                # until rhythm and loudness succeed on a subsequent cycle.
+                failure+=1
         except (OSError,ValueError,TypeError,subprocess.SubprocessError):
             failure+=1
-    return success,failure
+    return success,failure,ready
 
 
 def probe_missing_durations(db: sqlite3.Connection, limit: int) -> tuple[int,int]:
@@ -195,15 +252,39 @@ def probe_missing_durations(db: sqlite3.Connection, limit: int) -> tuple[int,int
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--new-limit",type=int,default=4)
-    p.add_argument("--duration-limit",type=int,default=10)
+    p.add_argument("--duration-limit",type=int,default=12)
+    p.add_argument("--feature-limit",type=int,default=2)
     args=p.parse_args()
     DB.parent.mkdir(parents=True,exist_ok=True)
     files=inventory()
     db=sqlite3.connect(DB,timeout=35)
     try:
         changes=reconcile(db,files)
-        added,fail=analyze_new(db,max(0,min(args.new_limit,12)))
+        feature_tables(db)
+        added,fail,new_ready=analyze_new(db,max(0,min(args.new_limit,12)))
         measured,duration_fail=probe_missing_durations(db,max(0,min(args.duration_limit,25)))
+        # Backfill audio features for already inventoried, valid on-disk
+        # tracks. This includes new uploads that failed on a prior cycle.
+        pending=db.execute("""SELECT l.path,l.size,l.modified
+            FROM track_live_index l JOIN tracks t ON t.path=l.path
+              AND t.size=l.size AND abs(t.modified-l.modified)<2
+            LEFT JOIN track_rhythm r ON r.path=l.path AND r.size=l.size
+              AND abs(r.modified-l.modified)<2
+            LEFT JOIN track_features f ON f.path=l.path AND f.size=l.size
+              AND abs(f.modified-l.modified)<2
+            WHERE l.duration_seconds BETWEEN 60 AND 720
+              AND (r.path IS NULL OR f.path IS NULL)
+            ORDER BY l.modified DESC LIMIT ?""",
+            (max(8,args.feature_limit*4),)).fetchall()
+        backfilled=0
+        for path,size,modified in pending:
+            if backfilled >= max(0,min(args.feature_limit,6)):
+                break
+            try:
+                if complete_audio(db,path,size,modified):
+                    backfilled+=1
+            except (OSError,ValueError,TypeError,subprocess.SubprocessError):
+                pass
         valid=db.execute("""SELECT COUNT(*) FROM track_live_index l JOIN tracks t
            ON t.path=l.path AND t.size=l.size AND abs(t.modified-l.modified)<2
            WHERE l.duration_seconds>=60 AND l.duration_seconds<=720""").fetchone()[0]
@@ -213,6 +294,7 @@ def main():
         print("RDI_NEW_MUSIC_MISSING="+str(changes["no_longer_present"]))
         print("RDI_NEW_MUSIC_ANALYZED="+str(added))
         print("RDI_NEW_MUSIC_ANALYSIS_ERRORS="+str(fail))
+        print("RDI_NEW_MUSIC_FULLY_ANALYZED="+str(new_ready+backfilled))
         print("RDI_NEW_MUSIC_DURATIONS_MEASURED="+str(measured))
         print("RDI_NEW_MUSIC_DURATIONS_FAILED="+str(duration_fail))
         print("RDI_NEW_MUSIC_READY_WITH_DURATION="+str(valid))
