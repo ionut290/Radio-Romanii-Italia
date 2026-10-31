@@ -2,9 +2,11 @@ name: RDI - Avvisi guasti delle notizie
 on:
   push:
     branches: [main]
-    paths:
-      - 'scripts/rdi_health_alerts.py'
-      - '.github/workflows/rdi-health-alerts.yml'
+  workflow_run:
+    workflows:
+      - 'Anteprime social RDI'
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '13,43 * * * *'
