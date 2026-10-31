@@ -81,12 +81,13 @@ for workflow, (label, maximum) in FLOWS.items():
             print(label + (": ALLARME già segnalato" if failing else ": OK") + f" (ultima riuscita {age} min)")
 
         # GitHub scheduled runs are best-effort and can be silently skipped.
-        # Let the independent health workflow dispatch a safe catch-up run.
+        # The watchdog runs on main pushes, social preview completions and best-effort cron;
+        # launch a catch-up after 25 minutes of stale news, without burst dispatches.
         if workflow == "news.yml" and not active:
-            stale = age is None or age > 45 or (feed_age is not None and feed_age > 60)
+            stale = age is None or age > 25 or (feed_age is not None and feed_age > 25)
             recently_dispatched = any(
                 r.get("event") == "workflow_dispatch"
-                and (NOW - parsed(r["created_at"])).total_seconds() < 40 * 60
+                and (NOW - parsed(r["created_at"])).total_seconds() < 25 * 60
                 for r in runs[:20]
             )
             if stale and not recently_dispatched:
