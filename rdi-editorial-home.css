@@ -42,3 +42,14 @@ html:not(.youtube-news) #news-list>.news-item--daily-thought .news-image-frame--
 @media(max-width:1099px){html:not(.youtube-news) #rdi-featured .rdi-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child{grid-column:1/-1;grid-row:auto}}
 @media(max-width:740px){html:not(.youtube-news) .home-quick-links{grid-template-columns:repeat(2,minmax(0,1fr))}html:not(.youtube-news) #news-list{grid-template-columns:1fr}html:not(.youtube-news) .rdi-heritage-banner{min-height:120px;padding:18px 12px}html:not(.youtube-news) .rdi-heritage-banner p{font-size:9px;letter-spacing:.12em}}
 @media(max-width:480px){html:not(.youtube-news) #rdi-featured .rdi-featured-grid{grid-template-columns:1fr}html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child{grid-column:auto}html:not(.youtube-news) #news-list>.news-item>.news-image{width:38%;min-width:38%}html:not(.youtube-news) #news-list>.news-item h3{font-size:12px}html:not(.youtube-news) .rdi-heritage-banner h2{font-size:22px}}
+
+/* Structure for thumbnail + textual column, preserving attribution labels. */
+html:not(.youtube-news) #news-list>.news-item:not(.news-item--daily-thought){position:relative}
+html:not(.youtube-news) #news-list .news-item-content{display:flex;min-width:0;flex:1;flex-direction:column;align-items:stretch;justify-content:flex-start;padding:8px 10px}
+html:not(.youtube-news) #news-list .news-item-content .news-label{margin:0 0 4px;font-size:10px}
+html:not(.youtube-news) #news-list .news-item-content h3{padding:0;margin:0 0 5px}
+html:not(.youtube-news) #news-list .news-item-content .news-summary{padding:0;margin:0 0 5px}
+html:not(.youtube-news) #news-list .news-item-content .news-meta{margin-top:auto}
+html:not(.youtube-news) #news-list .news-item-content .news-read{padding:4px 0 0}
+html:not(.youtube-news) #news-list>.news-item:not(.news-item--daily-thought)>.ai-image-caption{position:absolute;bottom:3px;left:3px;max-width:33%;padding:2px 4px;background:#09223cde;color:#fff;font-size:9px;line-height:1.2;border-radius:3px}
+html:not(.youtube-news) #news-list>.news-item:not(.news-item--daily-thought)>.news-placeholder{font-size:21px}
