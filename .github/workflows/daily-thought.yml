@@ -32,6 +32,20 @@ jobs:
           python-version: '3.12'
       - name: Prepara la fototeca realistica RDI
         run: python -m pip install --disable-pip-version-check 'pillow>=10,<13'
+      - name: Verifica fotografia reale senza chiavi API
+        run: |
+          python - <<'PY'
+          import datetime as dt, json
+          from pathlib import Path
+          from scripts.generate_daily_thought import planned_thought, curated_photo
+          day = dt.date(2026, 11, 1)
+          thought = planned_thought(day)
+          assert thought and len(thought["quote"]) > 12
+          archive = json.loads(Path("data/daily-thought.json").read_text())
+          picture, source = curated_photo(day, thought["quote"], archive.get("items", []))
+          assert picture[:3] == bytes.fromhex("ffd8ff") and len(picture) > 10000, source
+          print("RDI: fotografia gratuita automatica verificata:", source)
+          PY
       - name: Crea il pensiero e la card grafica
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
