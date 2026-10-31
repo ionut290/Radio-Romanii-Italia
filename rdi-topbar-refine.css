@@ -1,0 +1,20 @@
+/* Slim navigation and Romania–Italy backdrop; homepage only. */
+html:not(.youtube-news) body{background:#f7f9fc}
+html:not(.youtube-news) body>main{position:relative;isolation:isolate}
+html:not(.youtube-news) body>main:before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;height:520px;background:linear-gradient(180deg,rgba(247,249,252,.30),#f7f9fc 100%),url('./RADIO-COVER.jpg') center 38%/cover no-repeat;opacity:.27;pointer-events:none}
+html:not(.youtube-news) .rdi-top{display:flex!important;align-items:center;justify-content:flex-end;gap:12px;margin:0 0 8px!important;padding:4px 6px!important;min-height:52px}
+html:not(.youtube-news) .rdi-top>.rdi-identity{display:none!important}
+html:not(.youtube-news) .rdi-top>.rdi-header-player{flex:1 1 520px;max-width:670px;margin:0!important}
+html:not(.youtube-news) .home-quick-links{display:flex!important;flex-wrap:wrap!important;justify-content:flex-start;gap:6px!important;margin:0 0 10px!important}
+html:not(.youtube-news) .home-quick-links>.home-quick-link{display:inline-flex!important;flex:0 1 auto!important;width:auto!important;min-width:0!important;min-height:30px!important;padding:6px 10px!important;margin:0!important;border-radius:8px!important;border:1px solid #dce6f1!important;box-shadow:none!important;background:#f8faffdf!important;color:#315173!important;font-size:11px!important;font-weight:600!important;white-space:nowrap!important}
+html:not(.youtube-news) .home-quick-links>.home-quick-link:nth-child(2){background:#f8faffdf!important;color:#315173!important}
+html:not(.youtube-news) .home-quick-links>.home-quick-link span{font-size:12px!important;margin-left:6px}
+@media(min-width:850px){
+html:not(.youtube-news) .rdi-top{position:relative;padding-left:510px!important}
+html:not(.youtube-news) .home-quick-links{position:absolute;top:21px;left:clamp(15px,2.8vw,56px);max-width:calc(100% - 790px);z-index:2}
+}
+@media(max-width:849px){
+html:not(.youtube-news) .rdi-top{justify-content:flex-start}
+html:not(.youtube-news) .home-quick-links{position:static;max-width:none}
+}
+@media(max-width:520px){html:not(.youtube-news) .home-quick-links>.home-quick-link{font-size:10px!important;padding:5px 7px!important}html:not(.youtube-news) .rdi-top>.rdi-header-player{flex-basis:100%}}
