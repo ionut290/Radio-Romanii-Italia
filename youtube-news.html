@@ -177,7 +177,9 @@ function startTicker(brief=false){
   const nextNews=()=>{index=(index+1)%stories.length;show();};
   // A fresh meteo update gets one 60-second visual slot between news cards.
   if(window.rdiWeatherBreak?.startIfDue(nextNews))return;
-  // Daily philosophical interlude, visually separate from editorial news.\n  if(window.rdiPhilosophyBreak?.startIfDue(nextNews))return;\n  // RDI's own 16-second static promo appears between stories, never audio.
+  // Daily philosophical interlude, visually separate from editorial news.
+  if(window.rdiPhilosophyBreak?.startIfDue(nextNews))return;
+  // RDI's own 16-second static promo appears between stories, never audio.
   if(window.rdiDjPromoBreak?.startIfDue(nextNews))return;
   // A licensed city camera replaces one 30-second news card, never audio or ads.
   if(window.rdiCameraBreak?.startIfDue(nextNews))return;
