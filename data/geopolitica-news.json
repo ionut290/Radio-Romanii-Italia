@@ -1,12 +1,54 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-31T06:30:38.520351Z",
+  "updated_at": "2026-10-31T07:40:44.301052Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-60eaf6c302c65907",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "The \"misleading ceasefire\" continues in Gaza along with Israeli airstrikes, says Japanese newspaper",
+      "summary": "",
+      "source": "アラブニュース",
+      "published": "2026-10-31T06:53:33Z",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQeU9JN1kxMWlVekhjYXBxOTRRTTFnR3dDQmpzazZCaktLenZSNzdJQ2dXVi1zRHRIN1FSS1N5dnJKRXdONVFFR2tvZVhtbU1RejNHcGt1ZFpVd3dDZjVkSjlQbTJ4d2xvMEk3anJTc0wxLW51SFhVR2pXUi11YTFYNHFuUnJCNG1leHh0Z0RWQmNCYS1URDlLNWJyYTd5WTJ5c3NCWjhRdlBJNGdIeXFvQW9haFJoZEQ2Z1hfNFpnWWpvRndtdl9VQk9tSno1R3JuSWJfWmtHdEEtQTg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Începutul înșelător al focului” continuă în Gaza, alături de atacurile aeriene israeliene, spune ziarul japonez",
+      "title_it": "Il \"cessate il fuoco fuorviante\" continua a Gaza insieme agli attacchi aerei israeliani, afferma il giornale giapponese",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-51ef7d0d0cf9194d",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Taiwan thanks US, Japan, S Korea for supportive comments on strait",
+      "summary": "",
+      "source": "Taiwan News",
+      "published": "2026-10-31T06:36:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBfTFB1cnhYWkZSSWtLX0kySnFfRENRaXRpVUMzNUZsSjZfaGtBZ29EVndRZXV0LVNhdkFXNXBIb3BHMVZOZ3dzdUxrXy14ckpDUG43UDYwcXg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Taiwanul mulțumește SUA, Japoniei, Coreei de Sud pentru comentariile de susținere cu privire la strâmtoare",
+      "title_it": "Taiwan ringrazia Stati Uniti, Giappone e Corea del Sud per i commenti di sostegno sullo stretto",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-fb58078a07ad0819",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "How One Country Became the Unlikely Crossroads of the Global A.I. Boom",
+      "summary": "",
+      "source": "The New York Times",
+      "published": "2026-10-31T06:24:00Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbFo1T3JiWVZZTzRUQ2NlWlBld2lpTEgyTzF4R2lLdjE0ZGlCdmRTeERDVXVLVWU0T0NXS3EyblU1c0Njb1FXanJZTjV5aEhnRFhoZEgzNmt2MmJiM0dKV1FMT18zNTJVSzRhOUFQOXNqMFh2X3VqT0VhSzlVc2dYSQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum o țară a devenit improbabilă răscruce a I.A. Bum",
+      "title_it": "Come un paese è diventato l'improbabile crocevia dell'intelligenza artificiale globale Boom",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-8ad62b6cc79e4e9c",
       "category": "clima",
@@ -16,7 +58,10 @@
       "source": "The Climate Watch",
       "published": "2026-10-31T06:00:27Z",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWFNVUDFmOElJS3dIWC1uWW9uUW14Y1pxNTJhNEhLWDRCaUpYaTVwOFJKYkFNY1Y4ZUlXV0h1eUVrUE1leElHcDB3UGUzTGhzUHRvdmFsX01pWFB0djVpT1JWV3J6eTI3OG11VWN1OVl1ZGZnY3dXN0ItclI4VU1scTdLZUVYQmxuUVVyenk3LVFCZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Descoperire diplomatică: COP17 oferă o înțelegere, nu bani",
+      "title_it": "Svolta diplomatica: la COP17 stabilisce un accordo, non i soldi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-890a7d471ecda8fe",
@@ -27,7 +72,38 @@
       "source": "NewsCord",
       "published": "2026-10-31T05:37:30Z",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPXzJRM1F0ZHpxQUczUVlpTXN3WnJSXzhHMFprYnhZcy10TUxqZ3p5Y0dEazhkWUhrRmVlMUdWUDNUVGpuVFp3blVjRXNscHBYT0NyRFIxNHljRlAzNV9yeUZaSUJOQW9BdmZTSHJIMUNfYnJEODlaTElGWGN4TVhHUC15TGk4R2hTaG5ITUw3T2VWVk1Vd2pNUDNqSmo4czVGeEdKUWplYktfeTZXOURrcy1VajlJT3ZKanREcVRJYlhobGZNYS1wbWVKNVVNRnBnTUk1eUlqSHc5NFE4c3FmQW5YS19uUnI0bVE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Miniștrii de externe G20 omit fotografia de familie din Atlanta, după ce europenii i-au obiectat lui Serghei Lavrov: ce au lăsat afară 12 instituții",
+      "title_it": "I ministri degli Esteri del G20 saltano la foto di famiglia ad Atlanta dopo che gli europei si sono opposti a Sergei Lavrov: cosa hanno lasciato fuori 12 testate giornalistiche",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-39ac1bc372d29d76",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Ecuador Ambassador highlights growing role of Artificial Intelligence in modern diplomacy",
+      "summary": "",
+      "source": "ET Government",
+      "published": "2026-10-31T05:05:47Z",
+      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNS01XS0hmV3hUY1dhOVVlUGNwQlF3RmlydVRLeWt0T1VfWVZ5NDBiZFBqSDR0NDBvczJDZkU5Z05rZEp4UHNzOURPMDNVVHFES2I0eUp1bTV6bVNIcGZPU3NTeUg2NDlhcmFlU0JiUjYzcFd3WlhXUEE1OGFwM1RabEdnMkhSVkNQMUhjdEphNjBKbUl6cUROWEZrS1VYTV92UTBzREgzTEhhellOaFZkVEJucGwwUjFjWVVtejc0THo0TUpvcVpfdGQzNDUyV1FYaFJyaVBtbGRiNS1nMHp2R2hFa1lvSko2U21MTmU0ZV9tT19tTEh1ZWJmRmhrRkxOSDQ1b0ZKV3p0NWtsaE9CNDJVdUVCV0FpUC1VTVF6cWpEcjI1bmw0cnp30gH0AUFVX3lxTFA4N0pwNkxMdHVsQ2YtMVdfWXVqUTNVc0VhZHdDSVRDNWlyXzljbkpsTVVQeWVQYnIzdTFpTy1YS0g4bW5xeDJlSXNpbmdOV3pVaXYzMEZ3QlRpOUQwTWtpUlpZUkhtbmxWVW5qM0dZYjJfSGd6ZkFpZ2dHS3czZUZBaHFaSHRmTHlocWtMUzF3dDVCbVhCbjkycVhuUFBlX2pDTHFhWVVYVzY2WnVCRWZLYzM4QnoyR3lVcFY5TXhUVTFvblc5VXVWTnhKbmNGVUFqS0pzZzZHb0lUcGhTZzdLUFdwT2d2b2hiRnhtcDl5OTA2ajM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ambasadorul Ecuadorului subliniază rolul tot mai mare al inteligenței artificiale în diplomația modernă",
+      "title_it": "L’Ambasciatore dell’Ecuador sottolinea il ruolo crescente dell’Intelligenza Artificiale nella diplomazia moderna",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-e1df578a245148ab",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "2 killed in Russia while Ukraine’s energy infrastructure is targeted and peace talks press on",
+      "summary": "",
+      "source": "https://gnyouth.net/",
+      "published": "2026-10-31T04:53:30Z",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQ3JOakV6X2VpcFk5VE55NEdWSDFVX1V4YXZfQTNHVmM1UUxCN0VTVW5PZ2IxM2Z1dkFTbnJoTnRUR25MZ3B4ZTl2YTY5ZUI1alV3RmNmWUx5eGZ1WW16MG5ZQUlPb3RuejhhcjRNX21GNVUzMnlZVnhqRVZtb1VqdEFzemVxWTdqYV8zWDZjM1VTX2J3T2pWdHloTWQydmZWYzQwdi1SRWx3VWE3WUtjVU1kdw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "2 uciși în Rusia, în timp ce infrastructura energetică a Ucrainei este vizată și discuțiile de pace continuă",
+      "title_it": "2 morti in Russia mentre le infrastrutture energetiche dell’Ucraina vengono prese di mira e i colloqui di pace proseguono",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-04f7dd7d59afa216",
@@ -38,7 +114,10 @@
       "source": "The Guardian",
       "published": "2026-10-31T04:26:00Z",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZHhGSm5DM2JzWkpSOG4wNkUtVW1DTzh5WEEwMl90MHRBbnl4Q3VWY016TkRtN0ZCVFJ6QUJXbkhreWFFblZKVkk5a1k4Q3FEdFo3SFBISnRIMGJSNC1rNFNWaEt4QjZVY3hURHhWOUJCaWt0c2duSFY3MmhmLV9yUk5BeTRDQ1NuWXNoZW4zWE9yeXBadWxSQUl1T1VOVFVZWmhCdTJMNUJtRms?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Briefing de război din Ucraina: Lavrov din Moscova a fost respins la G20 din Atlanta",
+      "title_it": "Briefing sulla guerra in Ucraina: Lavrov di Mosca snobbato al G20 di Atlanta",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-ff51bf4892e897e5",
@@ -49,7 +128,10 @@
       "source": "The Daily Star",
       "published": "2026-10-31T03:48:41Z",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWFlWQzRicnpYbFJzMEZVREYwcVpoNDBtT3k2Q05DaXRiX3ktbmU1X1dhcWxzaER0OEhKenBLMEJXWlhmVExqUjFkUFd4UDdFd1dOY1JYbU9rbXJxaUJVSFJ3SUVjVC1VMlFscDlMcndJN3NPb2ZyZHNBUl9rSWhHWDlFRU15ZGZ6My1XdFNVSVgwVjdDVW1zN3llckhPS25yMUlCODh6dWNhenVfYzlMVjR2OEd1dw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce sindicatele se ridică împotriva FMI și a Băncii Mondiale",
+      "title_it": "Perché i sindacati si stanno sollevando contro il Fondo Monetario Internazionale e la Banca Mondiale",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-3e56fcfa3311fc8b",
@@ -60,18 +142,24 @@
       "source": "DW.com",
       "published": "2026-10-31T02:44:35Z",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxORjV4cmQtOGh4TTVxOU9JQW9RR0VRaXliN2dGTnNwRDVhY3U1cDROWGpHWHRaVHNzSXliN291cTh4RmVXNXNNM0Q5aDE2ZTJjeG5ZMkZMdzVsTEx1YVpKOFRyMy16bU5BMWx3TzNGVkJKN2dGRm8wY1MzSHp1aGVGTmFfc2dBMk9KMjg2YW4tVDFtN0FB0gGUAUFVX3lxTFB0OFJQd1F2V1EwRzh6V0FmbjJEd2V1WkVkNUQ2eVdudFR5LVFxRVU5S2IwTnV4UGp6cTQ2Y040MTl4NjY2OHNCZk5WWnBqaTNzcDh0RkNKMzRFbXFEdFFQSVFGa0ZJQmNYMUFxUGNHbUo5TGdtU2tJQllMUmMxcFFUcTI5UHNmY3Z0VzVZWWp6LUtONk0?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diplomații europeni ocolesc Rusia la întrunirea G20 din SUA",
+      "title_it": "I diplomatici europei evitano la Russia alla riunione del G20 negli Stati Uniti",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-f2ee34fcc1b88630",
+      "id": "geo-ec251866ec0f0183",
       "category": "diplomatie",
       "region": "americi",
-      "title": "Quad ministers meet in Atlanta with leaders’ summit in view",
+      "title": "Rubio welcomes Poland as G20 ‘full participant’, looks to Doral summit",
       "summary": "",
       "source": "The Hawk",
-      "published": "2026-10-31T01:48:40Z",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSnU5ZmNWZVBOUlJ1VmJwaEdJZW5KNTJqa3dqd0JQSG1TUnVWdk5BT1FhNzh4RGRKRmw4eEUyaXp0XzczTl9JaHpyZ2JXbEMzTkVDYjkzdzJmcVZ6Ulk0V2RsdDRUS054eVdsTlZOVFhIUmFqS3NCQUJCaWtCdlhNUHRMXy1JM0dQRmQzTlIwVFBVZFZiYm1B?oc=5",
-      "review_status": "external_headline_unverified"
+      "published": "2026-10-31T01:23:40Z",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQa1E5QzlkZi1PVjFJcnU0bVZXRHF0TVViMlp0Q096ajFVUUFhY3hqYnAzc19MUm1YaEpXcjhOYm9PR0NQTThOYzdCYzhqS0NoakJDcUNDNVJ2RHByWFRiR3h5VFFQd0dEV29palE4aWNDeUdON3JvNmd3ajFDVVZpalZWZkJibG93ZDBCZVFPS2I3NXF6b1ZwbUtRV3luejl3djZj?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rubio salută Polonia ca „participant deplin” al G20, se uită la summit-ul Doral",
+      "title_it": "Rubio accoglie la Polonia come “partecipante a pieno titolo” del G20 e guarda al vertice di Doral",
+      "translation_status": "machine_translation"
     }
   ]
 }
