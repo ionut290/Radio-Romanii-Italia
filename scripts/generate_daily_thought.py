@@ -291,7 +291,7 @@ def curated_photo(day, quote, entries):
     source = max(photos, key=rank)
     try:
         with Image.open(source) as src:
-            photo = ImageOps.fit(src.convert("RGB"), (1536, 1024), method=Image.Resampling.LANCZOS)
+            photo = ImageOps.fit(src.convert("RGB"), (1920, 1080), method=Image.Resampling.LANCZOS)
         photo = ImageEnhance.Color(photo).enhance(0.96)
         photo = ImageEnhance.Contrast(photo).enhance(0.96)
         photo = ImageEnhance.Brightness(photo).enhance(1.03)
@@ -344,7 +344,7 @@ def main():
                 return
     history = [str(x.get("quote", "")) for x in items if x.get("quote")]
     thought = api_thought(today, history) or planned_thought(today) or fallback_thought(today)
-    published = now.replace(hour=5, minute=0, second=0, microsecond=0)
+    published = now.replace(hour=1, minute=0, second=0, microsecond=0)
     ident = "pensiero-" + today.strftime("%Y%m%d")
     # Non eseguire chiamate immagini a pagamento senza consenso esplicito.
     use_ai_images = os.environ.get("RDI_THOUGHT_USE_AI_IMAGES", "0") == "1"
