@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/build_geopolitica_bulletin.py'
+      - 'scripts/deploy-geopolitica-oracle.py'
+      - 'tests/test_geopolitica_api.py'
       - '.github/workflows/geopolitica-radio.yml'
   schedule:
     - cron: '0 * * * *'
@@ -35,6 +37,7 @@ jobs:
           set -euo pipefail
           python -m py_compile scripts/build_geopolitica_bulletin.py scripts/render_geopolitica_audio.py scripts/deploy-geopolitica-oracle.py
           python -m unittest discover -s tests -p 'test_geopolitica_bulletin.py' -v
+          python -m unittest discover -s tests -p 'test_geopolitica_api.py' -v
       - name: Recupera in sola lettura lo storico trasmissioni da Oracle
         env:
           SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
