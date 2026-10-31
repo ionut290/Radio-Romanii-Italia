@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-30T21:27:32.721010+00:00",
+  "updated_at": "2026-10-31T01:01:46.252607+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -658,7 +658,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English Italiano",
+      "italian_version_available": true,
+      "italian_audio_candidate": true,
+      "language_status": "VERSIONE_IT_INDICATA",
+      "language_checked_at": "2026-10-31T01:01:46.252607+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "666e6b84a05c7b5349",
@@ -673,7 +679,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-10-31T01:01:46.252607+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "65637081b12809b45e",
@@ -751,7 +763,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-10-31T01:01:46.252607+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "4b561c7464d3618c17",
@@ -1154,7 +1172,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-10-31T01:01:46.252607+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "c4203bec2621c68d29",
@@ -1656,6 +1680,27 @@
   ],
   "italian_versions": [
     {
+      "id": "b64fc2ece4dd5805a0",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "FLOW: A New European Bauhaus Film (Imperia, Italy)",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296978",
+      "published_at": "2026-10-28",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English Italiano",
+      "italian_version_available": true,
+      "italian_audio_candidate": true,
+      "language_status": "VERSIONE_IT_INDICATA",
+      "language_checked_at": "2026-10-31T01:01:46.252607+00:00",
+      "language_probe_version": 3
+    },
+    {
       "id": "a485abbba7162e8e0f",
       "source_id": "commissione_europea",
       "source": "Commissione europea",
@@ -2037,6 +2082,6 @@
       "editorial_topic": "ambiente - archivio"
     }
   ],
-  "language_checks_this_run": 8,
+  "language_checks_this_run": 4,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
