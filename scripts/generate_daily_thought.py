@@ -346,7 +346,9 @@ def main():
     thought = api_thought(today, history) or planned_thought(today) or fallback_thought(today)
     published = now.replace(hour=5, minute=0, second=0, microsecond=0)
     ident = "pensiero-" + today.strftime("%Y%m%d")
-    image_bytes = api_photo(today, thought["quote"])
+    # Non eseguire chiamate immagini a pagamento senza consenso esplicito.
+    use_ai_images = os.environ.get("RDI_THOUGHT_USE_AI_IMAGES", "0") == "1"
+    image_bytes = api_photo(today, thought["quote"]) if use_ai_images else None
     photo_source = ""
     if not image_bytes:
         image_bytes, photo_source = curated_photo(today, thought["quote"], items)
@@ -374,9 +376,25 @@ def main():
     DATA.parent.mkdir(parents=True, exist_ok=True)
     ART_DIR.mkdir(parents=True, exist_ok=True)
     (ROOT / image).write_bytes(image_bytes)
-    # Remove older assets only after today's replacement was generated and written.
+    # Preserve assets still used by the 90-day news archive or the approved 2026 calendar.
+    # Otherwise future readers and calendar integrity tests would see broken images.
+    protected = {ROOT / image}
+    for archived in items:
+        referenced = str(archived.get("image", "")).removeprefix("./").lstrip("/")
+        if referenced:
+            protected.add(ROOT / referenced)
+    calendar_path = DATA.parent / "calendario-filosofico-2026.json"
+    if calendar_path.is_file():
+        try:
+            calendar = json.loads(calendar_path.read_text(encoding="utf-8"))
+            for entry in calendar.get("days", []):
+                referenced = str(entry.get("image", "")).removeprefix("./").lstrip("/")
+                if referenced:
+                    protected.add(ROOT / referenced)
+        except (OSError, ValueError, TypeError):
+            pass
     for old_image in ART_DIR.iterdir():
-        if old_image.is_file() and old_image != ROOT / image:
+        if old_image.is_file() and old_image not in protected:
             old_image.unlink()
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     pointer = DATA.parent / "calendario-filosofico-oggi.json"
