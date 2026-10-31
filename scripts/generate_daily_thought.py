@@ -226,6 +226,111 @@ def api_photo(day, quote):
         print("Foto realistica non disponibile; uso la grafica illustrata:", str(exc)[:180])
         return None
 
+
+def curated_photo(day, quote, entries):
+    """Create a fresh daily JPEG from RDI's own realistic picture library.
+
+    This is a photo composition (not a newly AI-generated photograph).
+    Photographs are rotated without repeating any in the last 90 entries.
+    """
+    import hashlib
+    import io
+    import re
+    import unicodedata
+    from PIL import Image, ImageEnhance, ImageOps
+
+    gallery = ROOT / "editorial-images" / "news-covers"
+    photos = sorted(gallery.glob("rdi-biblioteca-*.jpg"))
+    if len(photos) < 15:
+        raise RuntimeError("Fototeca RDI insufficiente: pubblicazione della foto annullata")
+    theme_groups = {
+        "ascolt": ["incontro", "genitori", "associazione", "aiuto-smartphone"],
+        "calma": ["ciclismo", "corsa-parco", "cura-parco", "biblioteca-incontro"],
+        "pazien": ["giardiniera", "raccolta-serra", "cura-parco"],
+        "cresc": ["giardiniera", "raccolta-serra", "formazione-professionale"],
+        "tempo": ["ciclismo", "corsa-parco", "corsa", "stazione"],
+        "gentil": ["volontari", "donazioni", "amici-al-parco", "aiuto"],
+        "aiuto": ["volontari", "aiuto-smartphone", "incontro", "donazioni"],
+        "comunit": ["festa-quartiere", "incontro-associazione", "riunione"],
+        "incontr": ["incontro", "amici-al-parco", "mercato-incontro"],
+        "ricomin": ["corsa-parco", "formazione-professionale", "giardiniera"],
+        "radic": ["giardiniera", "raccolta-serra", "cura-parco"],
+        "famigli": ["pranzo-famiglia", "incontro-genitori", "amici-al-parco"],
+        "libert": ["ciclismo", "treno-regionale", "viaggio-aeroporto"],
+        "coragg": ["sicurezza-cantiere", "volontari", "sport"],
+        "silenz": ["biblioteca-incontro", "studio-universitario", "cura-parco"],
+        "speranz": ["volontari", "giardiniera", "formazione"],
+        "scelt": ["viaggiatori-mappa-binari", "formazione", "giardiniera"],
+        "parol": ["corso-lingua-adulti", "insegnante-italiano", "incontro"],
+        "domand": ["lezione-scientifica", "studio-universitario", "biblioteca"],
+        "luce": ["giardiniera", "ciclismo-collina", "cura-parco"],
+        "strad": ["manutenzione-stradale", "ciclismo-collina", "pista-ciclabile"],
+        "amore": ["pranzo-famiglia", "amici-al-parco", "incontro-genitori"],
+    }
+    normalized = unicodedata.normalize("NFKD", quote.lower())
+    normalized = "".join(c for c in normalized if not unicodedata.combining(c))
+    desired = []
+    for key, names in theme_groups.items():
+        if key in normalized:
+            desired.extend(names)
+    used = set()
+    for entry in entries[:90]:
+        source = str(entry.get("photo_source", ""))
+        if source:
+            used.add(source)
+
+    def rank(path):
+        rel = path.relative_to(ROOT).as_posix()
+        name = path.stem.lower()
+        thematic = sum(14 for word in desired if word in name)
+        # Deterministic tie breaker, but a different photo is selected every day.
+        seed = hashlib.sha256((day.isoformat() + ":" + rel).encode("utf-8")).digest()
+        variety = int.from_bytes(seed[:4], "big") / (2 ** 32)
+        return (rel not in used, thematic, variety)
+
+    source = max(photos, key=rank)
+    try:
+        with Image.open(source) as src:
+            photo = ImageOps.fit(src.convert("RGB"), (1536, 1024), method=Image.Resampling.LANCZOS)
+        photo = ImageEnhance.Color(photo).enhance(0.96)
+        photo = ImageEnhance.Contrast(photo).enhance(0.96)
+        photo = ImageEnhance.Brightness(photo).enhance(1.03)
+        output = io.BytesIO()
+        photo.save(output, "JPEG", quality=88, optimize=True, progressive=True)
+        data = output.getvalue()
+        if len(data) < 10000:
+            raise RuntimeError("Fotografia composta troppo piccola")
+        rel = source.relative_to(ROOT).as_posix()
+        print("Fotografia RDI selezionata, non ripetuta:", rel)
+        return data, rel
+    except Exception as exc:
+        raise RuntimeError("Impossibile creare la fotografia RDI: " + str(exc)) from exc
+
+
+def planned_thought(day):
+    """Use the curated RDI philosophical calendar where a quote is already approved."""
+    path = ROOT / "data" / "calendario-filosofico-2026.json"
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        entry = next((x for x in data.get("days", []) if x.get("date") == day.isoformat()), None)
+        quote = str(entry.get("quote", "")).strip() if entry else ""
+        if not quote:
+            return None
+        return {
+            "title": "Pensiero del giorno",
+            "quote": quote,
+            "reflection": (
+                "Ogni giornata offre un'occasione per trasformare questa riflessione in un gesto reale. "
+                "Non occorre cambiare tutto in una volta: possiamo cominciare da una scelta concreta, "
+                "osservando come influisce su di noi e sulle persone che incontriamo."
+            ),
+        }
+    except (ValueError, OSError, TypeError):
+        return None
+
+
 def main():
     now = dt.datetime.now(TZ)
     today = now.date()
@@ -234,16 +339,17 @@ def main():
     for item in items:
         if item.get("date") == today.isoformat():
             existing_image = ROOT / str(item.get("image", "")).removeprefix("./")
-            if existing_image.suffix.lower() == ".jpg" and existing_image.is_file() and existing_image.stat().st_size > 10000:
+            if existing_image.suffix.lower() in (".jpg", ".jpeg", ".png") and existing_image.is_file() and existing_image.stat().st_size > 10000:
                 print("Pensiero e fotografia del giorno già pubblicati:", today.isoformat())
                 return
     history = [str(x.get("quote", "")) for x in items if x.get("quote")]
-    thought = api_thought(today, history) or fallback_thought(today)
+    thought = api_thought(today, history) or planned_thought(today) or fallback_thought(today)
     published = now.replace(hour=5, minute=0, second=0, microsecond=0)
     ident = "pensiero-" + today.strftime("%Y%m%d")
     image_bytes = api_photo(today, thought["quote"])
+    photo_source = ""
     if not image_bytes:
-        raise SystemExit("Fotografia non generata: pubblicazione annullata per evitare immagini di riserva non realistiche.")
+        image_bytes, photo_source = curated_photo(today, thought["quote"], items)
     image = Path("editorial-images/daily-thought") / (today.isoformat() + ".jpg")
     item = {
         "id": ident,
@@ -257,8 +363,9 @@ def main():
         "source": "Pensiero originale RDI",
         "byline": "Rubrica quotidiana · Radio Românii din Italia",
         "image": "./" + image.as_posix(),
-        "imageType": "photorealistic-ai-generated",
-        "image_credit": "Pensiero e immagine generati con IA per RDI",
+        "imageType": "photorealistic-ai-generated" if not photo_source else "rdi-archive-photo-composition",
+        "photo_source": photo_source,
+        "image_credit": "Fotografia generata con IA per RDI" if not photo_source else "Composizione fotografica realizzata con immagini della fototeca RDI",
         "date": today.isoformat(),
     }
     items = [item] + [x for x in items if x.get("date") != today.isoformat()]
