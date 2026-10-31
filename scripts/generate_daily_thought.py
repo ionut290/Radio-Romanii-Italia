@@ -340,6 +340,8 @@ def main():
         if item.get("date") == today.isoformat():
             existing_image = ROOT / str(item.get("image", "")).removeprefix("./")
             if existing_image.suffix.lower() in (".jpg", ".jpeg", ".png") and existing_image.is_file() and existing_image.stat().st_size > 10000:
+                if item.get("imageType") != "photorealistic-ai-generated" and os.environ.get("RDI_ALLOW_ARCHIVE_PHOTO", "0") != "1":
+                    raise SystemExit("RDI: la foto già presente non è attestata come scatto indipendente.")
                 print("Pensiero e fotografia del giorno già pubblicati:", today.isoformat())
                 return
     history = [str(x.get("quote", "")) for x in items if x.get("quote")]
@@ -351,6 +353,8 @@ def main():
     image_bytes = api_photo(today, thought["quote"]) if use_ai_images else None
     photo_source = ""
     if not image_bytes:
+        if os.environ.get("RDI_ALLOW_ARCHIVE_PHOTO", "0") != "1":
+            raise SystemExit("RDI: scatto indipendente non disponibile. Nessuna foto di repertorio pubblicata come nuova.")
         image_bytes, photo_source = curated_photo(today, thought["quote"], items)
     image = Path("editorial-images/daily-thought") / (today.isoformat() + ".jpg")
     item = {
