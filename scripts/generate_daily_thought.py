@@ -239,10 +239,12 @@ def main():
                 return
     history = [str(x.get("quote", "")) for x in items if x.get("quote")]
     thought = api_thought(today, history) or fallback_thought(today)
-    published = now.replace(hour=8, minute=0, second=0, microsecond=0)
+    published = now.replace(hour=5, minute=0, second=0, microsecond=0)
     ident = "pensiero-" + today.strftime("%Y%m%d")
     image_bytes = api_photo(today, thought["quote"])
-    image = Path("editorial-images/daily-thought") / (today.isoformat() + (".jpg" if image_bytes else ".svg"))
+    if not image_bytes:
+        raise SystemExit("Fotografia non generata: pubblicazione annullata per evitare immagini di riserva non realistiche.")
+    image = Path("editorial-images/daily-thought") / (today.isoformat() + ".jpg")
     item = {
         "id": ident,
         "daily_thought": True,
@@ -255,8 +257,8 @@ def main():
         "source": "Pensiero originale RDI",
         "byline": "Rubrica quotidiana · Radio Românii din Italia",
         "image": "./" + image.as_posix(),
-        "imageType": "photorealistic-ai-generated" if image_bytes else "editorial-illustration",
-        "image_credit": "Pensiero e immagine originali RDI",
+        "imageType": "photorealistic-ai-generated",
+        "image_credit": "Pensiero e immagine generati con IA per RDI",
         "date": today.isoformat(),
     }
     items = [item] + [x for x in items if x.get("date") != today.isoformat()]
@@ -264,10 +266,7 @@ def main():
     data["updated_at"] = now.isoformat()
     DATA.parent.mkdir(parents=True, exist_ok=True)
     ART_DIR.mkdir(parents=True, exist_ok=True)
-    if image_bytes:
-        (ROOT / image).write_bytes(image_bytes)
-    else:
-        (ROOT / image).write_text(svg_card(today, thought["quote"], thought["title"]), encoding="utf-8")
+    (ROOT / image).write_bytes(image_bytes)
     # Remove older assets only after today's replacement was generated and written.
     for old_image in ART_DIR.iterdir():
         if old_image.is_file() and old_image != ROOT / image:
