@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-10-31T01:02:14.493077+00:00",
+  "news_updated_at": "2026-10-31T02:03:47.752547+00:00",
   "editorial_updated_at": "2026-10-31T00:39:31.567976+01:00",
-  "translations_updated_at": "2026-10-31T01:01:02.890099+00:00",
+  "translations_updated_at": "2026-10-31T01:02:40.562557+00:00",
   "feed_total": 95,
-  "feed_extended_400": 15,
-  "feed_missing_body": 80,
+  "feed_extended_400": 16,
+  "feed_missing_body": 79,
   "feed_short_body": 0,
   "editorial_total": 25,
   "archived_editorials": 102,
-  "translation_records": 45,
+  "translation_records": 46,
   "pending_total": 78,
-  "pending_filtered_out": 108,
-  "editorial_verde": 20,
-  "editorial_galben": 34,
+  "pending_filtered_out": 107,
+  "editorial_verde": 21,
+  "editorial_galben": 33,
   "editorial_rosu": 61,
   "pending": [
     {
@@ -713,8 +713,8 @@
       "published": "2026-10-30T21:20:55+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/volodimir-zelenski-merge-in-turcia-pentru-discutii-importante-sa-putem-trece-la-formatele-despre-care-se-discuta-de-atata-timp-4015979",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 413
     },
     {
       "title": "Kelemen Hunor ar susține adoptarea Legii salarizării prin asumarea răspunderii Guvernului",
@@ -1185,6 +1185,15 @@
       "words": 0
     },
     {
+      "title": "Fostul premier francez, Edouard Philippe, audiat de judecători pentru suspiciuni de deturnare de fonduri... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-30T07:16:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQ09uRzRBRXRXYjFtbmxlaHExckNYRWtBb1ZCUTdZNk9UOEM0cUg2VlRTbHJSNTVlRm5GbGg3QURoeWFnZUxpZFRrQmE2d1hBZjYxcVZKamNBbTR3cXZvd0d5TEQyck44Z3lhU21rS1R6THpDS1dEQWZCaUJxb1BKVU1GX053M3poYjlxRThlZ29hRFVVS3Y3N3ZsR2dBSWR0YlBmdVBMbnBaVWl5UHpVVGhqbWFRWk1jOFptVUd3NXlGcnhDZzhxZFhieV9CVmdUVFBDcEdPbEFGUVEtc09YTmlpWGRHQdIB6wFBVV95cUxNNWdEQkR3Rmd4MjBKUU1tQzdiZjVoYVF5ZGt3RV9sY0NhcDFyZngtY3pPVkQ2ZTdzSV9MdDUyTEFvenBQQk14emRNTWxKWTM3MTNBTUpUQnF5a2RMbm1kV3VsZ0tWd2JHYnNHNmh",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Ex Ilva, il day after di Taranto. Che succede ora? - Buonasera24",
       "category": "Italia",
       "published": "2026-10-30T06:37:26+00:00",
@@ -1199,6 +1208,15 @@
       "published": "2026-10-30T04:48:37+00:00",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNV1dQNkdkSDk1d1RtLTBESEdGbjZxZnk1SGJwUl9NcGdBVHltQTVDalcxRDNlWlhMR1psSEY1THhCb2MxajNWbFVYc25oSC10Q3puVzVNVTZ4SmdvbWMwYjZyTGhIREZfQ051Snd6OHlFSHI1Y1pxWTN3WDhVay1Yc1h4Yk5uOGN0bFVpTXRURFpjNVdPaG1QUkdhbG5XM3pyaU5xb0JFMk4teVgtQnhPS2lqUWQyemZnYUd5d0hBQ2lhdHNfXzZyTHdMRnNBN21ELUtIQllSUFQ?oc=5",
       "source": "RFI",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Targhe personalizzate, arriva il modello americano: costi, tempi e modalità per auto e moto - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-30T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNM3RXQ3pMNk9tTk5xUGxKVGhWd0RudE5YMk51NzBUZUJDeF9FdHo4cktOT1ZjZ1JhOFUwZHNMa2xJQ2pxb3ZYRUtwdHRVWVZ6d1FXQ2Y5WnVla3ZNY2pJZTVvbVJOdDgwZHZQU0dCUklLYlBIcEdCNFFzVi13VGFjLS05ZzdBcXBZX0JuUzdPR0d1VWRJc0RieFotbVAtWGJuTUdkeVlpSzdvQXJzeDN3TFpZOUJKUzQ4UjJLQTNJZ1drMW41ZGdkOE8zSkVwa1NiRW5IQlBydFRCQ3l6MFFPd3VTX2I?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1248,19 +1266,10 @@
       "words": 0
     },
     {
-      "title": "Articole cu tagul: magneziu pentru somn - StiriDiaspora",
+      "title": "Articole cu tagul: deficit caloric - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-29T16:40:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5rZGFkQzhXVldqYnkyOEsxMUh3aWxxbUJTazViTDRUdUFlRWI1TmhhdDBEWk5OU1g0WlEycmxqeGlPU1BDbjZlMnV0MHd3THlPQTIzTHBMYXo5cFRBeEtpak0zN3NDYnVUX0Q0?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Articole cu tagul: Harvard Business School avatare - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T16:38:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBxM29jZk50UllBVWVEbk5ZcXlKdFkwRmlGWXR1cDFyNk0wUV95N1VySXdVVDBobjhVbV9IMk96TGM0WjJVMk9yVW8yQ0I1UXZqUTQ3M0dQYTdMMTBwek5EVHFodDhoVmNtbTh5SExibVJjUXlZSXpQSVBn?oc=5",
+      "published": "2026-10-29T16:40:40+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BYTJNSGRvUkk0RXRNX3R1V3JMMnh6Y2lWWmFlLW14MlFVelNoalFNc2lfekxOLUxQWGgwU3NrMm10VlQ3VWNYX3lIcEdaemJkWGo5SmxvM29uOHJDdXNXZDJ6Vjc?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1298,15 +1307,6 @@
       "published": "2026-10-29T15:16:43+00:00",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOSWwwQVdURW9fWElDQkpYVkRVQzdtcm1EUEcyNUpWU2dOYU9RNlBEVHB0RjlnVWw4eHdRQk1BZDRid3RIYlNieWR1WFRpUHJsNTVDbTZ3eTlYLWRaVGFpWjFIR3lDZFpxQ2RLZWJRTkxzeS1WRlV2alNNTTB2TTNLZmhaWWpOUHdOeDYyX1ZJaDQ3QWE0LUhicUk4OWdzOFU4NmxyOF92N3dvZ3dHNlFkdlI3WDBmbTM2WXgxYkF4NGRXVFFVZklB?oc=5",
       "source": "Oficiul de Știri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Solo quattro italiani su dieci raggiungono la sufficienza in educazione finanziaria e assicurativa - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-29T14:11:50+00:00",
-      "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOZ1RNV0dKQnNFcFRfQXlGWkdQZkgzVE1wZ2hyU2tVRVNPSm94SXhndVRvVlUtUGxUWXUtVERGSFFMWlZGeXlabk1oNTA5SVNjU1ppRzVHSzVOMmFDNkotSTB1emxNV3R6RzI4VDRiOWlpd3ZVakptSjlnRUJ3OWd0TlY5dTFzWHJwS2tKQTZLekktcjVzWHRGT0liMUs2bF9yY3BDQ3NEX2QzTk9BWWFJQjlrU2NQQ3JrRmxJOHlCa3pqTTF5ODBHZTVYM1B3eG41bTN0OEVPOU5qSzRITFg4cEpvcGhsVmw0RWpNQl9LNElDLTB3M19SX2ZDQ1FZV0NCcVBnc01VWWNudU9LYnNVcTJMYzVnNEk?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1377,7 +1377,7 @@
       "title": "Migranți. Frontex, Cecilia Strada împotriva reformei UE: „Nu vrem un ICE european” - Gazeta Românească Italia",
       "category": "Diaspora",
       "published": "2026-10-29T11:52:07+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUVFFSU9YWGVCUTcwcjNvS1F5NGo3RnBINjBTVXp6VXhici1pbnFTWDloV3VLZEdiNjYySUsycWhQbUpEcHZiLV9HWUJmajBEYmQwWjRhQnhOSmpBQ19Cal9FSENjem9tNXVNWHlPQmx5VjFwazNPVU5sc3VqdXBzSzVzWlRLTEJ2bkxTZ29wT3lqTTBKblhocGQ3S2FUeXZ0ZXN0aTRoREtwcks5dDdiSzI1NXdESnE5Qk9IZmxtelJlVjA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNd29BcV96bzZMX0dLNE00NEZNUmxVUUpJUTJFZVluX3IweXRZdG1qVUJDbS1seDFOMGFRQWZ6ZnJxRVZMelRtS1kyaTRRbmg2NkVWWE9RellqMWF4X0pRQ3N5V3dsQ1lMV2N6bWhMWnB4TnRadUxhU3JVbmtodTZpX1dqRnYxZmptZVZtWlc0T09GRHN4ekx3VThwT0xiU1ZUZkpDT29kMHNGcUZaQV8zeTNlQllnRFczNnJ3TDFCYkNQQU5JcDF0enpMbGlpY2M?oc=5",
       "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
@@ -1428,15 +1428,6 @@
       "words": 0
     },
     {
-      "title": "Șofer român de camion, condamnat la patru ani de închisoare în Franța pentru trafic de droguri. În... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-29T09:21:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPNldZai1MUHNvcF9mc2t5dW5lQmU5U0lXd3dWc3lpY0hYRmczMDFqWHVlUWdUTHNSSUxqVFpEVkZtUF9Qc0hyV3Z4Y28tdW1HUzlTeGx3WlJmTGprRFowbHl0Z2pPRENKMDMxYmpDa25YalFtMkw2eVdaOHNYT3pOZHo0Y2s4ZXFFejRVWDgwZjV4cTRBTmhXZnBkZEc5c2hxV2VLd1d6SEs3akg4aU9YbWVfRzlVVWRvN0FqNkZveVJRdXpjZEpCVFNRVVhBZEFWcHFTcHRsSWRPNjhTRjVHMjNjX2xpdk81a3lKVnhTTjFVRjFDa25BVEp5dHpOQWVCQXhVWWtTZnhXVnPSAZACQVVfeXFMTUdfLXd6dUJCbzF4Q0pfeWRfZml6SjZEUkV5eFFNMDdKN2ZhYWk1WC1vNDJaZVMyNEpOVjBvaEwyeGoybi1sODh",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Bani la sănătate, facilități pentru tineri și intervenții pe piața chiriilor. Principalele... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-29T08:12:00+00:00",
@@ -1450,6 +1441,15 @@
       "category": "Diaspora",
       "published": "2026-10-29T07:16:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNXdWSGdSSmtTbjkyd2MwYkJ1RjhrTEVMNVVpalRqUXZETTQ0RG00Qm9ISDdad1V3VXgwbDR4dWNYQ2k0d1JSM3ZFbG9MRW5xV09HZUVYaXpGQUZyNTM1dzNDNklKS296dUVUb3YyODVsaV9aX25qX0NqTy1qQVd6Xzh6SGZvelVJaWUyNmdfOW90NEJDX0dNRzgzNkZ1ejlETFBkbkhQcHpoNnfSAbABQVVfeXFMT0x0Y2l5WTgxRXBjS3R5SnlXakJ1WGZHSU9pYld4MDlYNDVJNm01UF9zY293NEtOMUx6cjRDMktjS2NkVWtfVEh1R1Y3QXYyZ0dkVU8zalVKMC05ZFBLT2RMR3pkMUN6ZzRwd0thRVdYNDE4UWFzWGhrSkQtZjhFSUJFRmFZWjg2RlNpM2J3QTUtU2tTZm41SzFpTW9yUlB1UGw3Q2pIODR",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trei calculatoare din anii '90, la baza defecțiunii care a dus la tragedia din Spania. Decizia \"inexplicabilă\" a operatorului a venit după - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-29T07:03:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRGk2aXlCa3RjdTNMYV9la3czUFRPRXAzZmpzZWt5RGZvYTctY19yYTdpRGlQdm5DcHRnSThfOHJhU01Ed2hJMjJ6OEdlazEwU1QzaWdBem5DRnhVS3plZ2pvaG9HNEgzZVZuRHlYdDFHVS1XWWdXME5sSXBwejdpS2dvN09HSjFuSHM5QjMyaDNrY0hvWHJmaVk1ZjlaZnFaSTdrcl8xd3o2V2s5Q0FULUU1a29Eak5PYVBfNjBkYkhBQQ?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
