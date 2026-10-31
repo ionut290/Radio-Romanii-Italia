@@ -25,3 +25,7 @@ html:not(.youtube-news) .rdi-top>.home-quick-links{position:static!important;dis
 html:not(.youtube-news) .rdi-top>.rdi-header-player{flex:0 1 510px!important;min-width:250px!important;max-width:540px!important}
 @media(min-width:850px){html:not(.youtube-news) .rdi-top{padding-left:8px!important}}
 @media(max-width:1050px){html:not(.youtube-news) .rdi-top{flex-wrap:wrap!important}html:not(.youtube-news) .rdi-top>.home-quick-links{flex-basis:100%!important;order:0!important}html:not(.youtube-news) .rdi-top>.rdi-header-player{order:1!important;flex:1 1 300px!important}html:not(.youtube-news) .rdi-top>#rdi-language-bar{order:2!important}}
+
+/* Hide the promotional panoramic banner on the public homepage. */
+html:not(.youtube-news) #rdi-gold-banner{display:none!important}
+html:not(.youtube-news) .rdi-broadcast-layout{margin:0!important;padding:0!important;min-height:0!important}
