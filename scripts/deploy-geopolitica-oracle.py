@@ -58,8 +58,19 @@ class Client:
         )
         try:
             with urllib.request.urlopen(req, timeout=TIMEOUT_SECONDS) as response:
-                payload = response.read(2_000_000 if method != "POST" else 500_000)
-                return json.loads(payload) if payload else {}
+                # The station media list can exceed 2 MB as the music library grows.
+                # Read a bounded complete response; never silently truncate JSON.
+                limit = (32 * 1024 * 1024 if method == "GET" and path == "/station/1/files"
+                         else 500_000 if method == "POST" else 2_000_000)
+                payload = response.read(limit + 1)
+                if len(payload) > limit:
+                    raise RuntimeError(f"AzuraCast API {path} response exceeds {limit} bytes")
+                try:
+                    return json.loads(payload) if payload else {}
+                except json.JSONDecodeError as error:
+                    raise RuntimeError(
+                        f"AzuraCast API {path} returned invalid JSON ({len(payload)} bytes)"
+                    ) from error
         except urllib.error.HTTPError as error:
             response = error.read(1500).decode("utf-8", "replace")
             raise RuntimeError(f"AzuraCast API {method} {path} HTTP {error.code}: {response[:300]}") from None
