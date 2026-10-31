@@ -1,0 +1,19 @@
+/* RDI slim header radio: public homepage only. Preserve existing stream logic. */
+html:not(.youtube-news) .rdi-top{display:flex;align-items:center;gap:12px}
+html:not(.youtube-news) .rdi-identity{flex:0 1 auto;min-width:185px}
+html:not(.youtube-news) .rdi-header-player{display:flex;align-items:center;gap:9px;flex:1 1 auto;min-width:0;max-width:620px;margin-left:auto;padding:6px 10px;border:1px solid #dbe6f6;border-radius:12px;background:#f2f7ff;color:#0c2857;box-shadow:0 2px 8px #18385b0b}
+html:not(.youtube-news) #rdi-header-toggle{flex:0 0 37px;width:37px;height:37px;border:0;margin:0;padding:0;border-radius:50%;background:#1268d5;color:#fff;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+html:not(.youtube-news) .rdi-header-track{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+html:not(.youtube-news) .rdi-header-track small{font-size:10px;font-weight:800;color:#2369c2;letter-spacing:.07em;white-space:nowrap}
+html:not(.youtube-news) #rdi-now-playing{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px;font-weight:700;line-height:1.25;color:#102c54}
+html:not(.youtube-news) .rdi-header-volume{display:flex;align-items:center;gap:5px;flex:0 0 90px}
+html:not(.youtube-news) .rdi-header-volume input{width:100%;min-width:0;accent-color:#1268d5}
+html:not(.youtube-news) #rdi-header-cast{margin:0;padding:6px 8px;background:#e1ebf8;border:0;border-radius:8px;color:#164477;font-size:11px;cursor:pointer}
+html:not(.youtube-news) .rdi-broadcast-layout>.card.radio-compact{display:none!important}
+@media(max-width:800px){
+html:not(.youtube-news) .rdi-top{flex-wrap:wrap}
+html:not(.youtube-news) .rdi-identity{flex:1}
+html:not(.youtube-news) .rdi-header-player{order:3;width:100%;max-width:none;flex-basis:100%;margin-left:0}
+html:not(.youtube-news) .rdi-header-volume{flex-basis:65px}
+}
+@media(max-width:430px){html:not(.youtube-news) .rdi-header-volume{display:none}html:not(.youtube-news) .rdi-header-track small{font-size:9px}}
