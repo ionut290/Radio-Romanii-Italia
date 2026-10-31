@@ -59,7 +59,11 @@ for workflow, (label, maximum) in FLOWS.items():
             except (urllib.error.URLError, ValueError, KeyError, TypeError) as exc:
                 print("Notizie generali: impossibile verificare il feed pubblico: " + str(exc))
         feed_stale = feed_age is not None and feed_age > 90
-        failing = (age is None or age > maximum or len(recent_failures) >= 2 or feed_stale) and not active
+        unhealthy = age is None or age > maximum or len(recent_failures) >= 2 or feed_stale
+        failing = unhealthy and not active
+        # A running recovery is not proof of restored service: close alerts only
+        # after the last successful run and public feed really are fresh.
+        recovered = not unhealthy
         title = "[RDI Monitor] " + label + " - problema di pubblicazione"
         q = urllib.parse.urlencode({"state": "all", "per_page": 100})
         issues = api("/issues?" + q)
@@ -72,7 +76,7 @@ for workflow, (label, maximum) in FLOWS.items():
             else:
                 api("/issues", "POST", {"title": title, "body": details})
             print(label + ": ALLARME, issue aperta")
-        elif not failing and open_issues:
+        elif recovered and open_issues:
             for issue in open_issues:
                 api("/issues/" + str(issue["number"]) + "/comments", "POST", {"body": "Monitor RDI: esecuzioni nuovamente regolari. Chiusura automatica."})
                 api("/issues/" + str(issue["number"]), "PATCH", {"state": "closed"})
