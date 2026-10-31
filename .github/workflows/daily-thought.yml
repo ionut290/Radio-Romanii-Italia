@@ -1,6 +1,15 @@
 name: RDI - Pensiero originale del giorno
 
 on:
+  # Generazione all'alba in Italia, con secondo passaggio di recupero.
+  schedule:
+    - cron: '41 2 * * *'
+    - cron: '11 4 * * *'
+  # Esegue una verifica/generazione subito quando si aggiorna questo workflow.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-thought.yml'
   workflow_dispatch:
 
 permissions:
@@ -13,7 +22,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
