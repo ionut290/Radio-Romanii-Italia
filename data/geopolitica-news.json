@@ -1,12 +1,68 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-31T10:00:24.744647Z",
+  "updated_at": "2026-10-31T11:09:43.367757Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-6461e708ae78e027",
+      "category": "clima",
+      "region": "global",
+      "title": "Climate Refugees: The notion remains largely taboo",
+      "summary": "",
+      "source": "mronline.org",
+      "published": "2026-10-31T11:01:51Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdGxudEZsa0NMTHN0YlR3Z043UWlmbUprbENKbzdnMWhXTXpkbkN2S1EtWlVRT3RleG44VEl3LXA3VjJLR1Fwb3pDcGlSRUJGOUQ2aXB4U0dJT2tlU1BjenFTN05NZlhxV0o2VnFrOE5YeGFuVjJRVG91NWdvTTZnR2RETktqOUItVWc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Refugiați climatici: Noțiunea rămâne în mare parte tabu",
+      "title_it": "Rifugiati climatici: il concetto rimane in gran parte tabù",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-a0e5fab573fa4239",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Putin Found Trump's Weak Spot: Political Analyst on the Real Purpose of the Mission in Oleshky",
+      "summary": "",
+      "source": "24 Канал",
+      "published": "2026-10-31T11:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdVc3OFhQMndlY3ZtaVN6a283aFRvdE1kMEpjZW5zcS1OUVZfRnNET3d6d1Z3S1pqTktKMkw2NjNYdTNhN3JfOW1OeFp0UG1qdkotZ0dONHNIWmVMTUlaMTAxUklrUk4yZmtTWkt5WnI4Ukk5cFZ5X0FFU0tPRkdsbWV3SzFDZ3plUkE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Putin a găsit punctul slab al lui Trump: un analist politic despre scopul real al misiunii din Oleshky",
+      "title_it": "Putin ha scoperto il punto debole di Trump: l'analista politico sul vero scopo della missione a Oleshky",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-8fa497906ce52fe2",
+      "category": "securitate",
+      "region": "europa",
+      "title": "German companies in the Baltic states + Alabali Radovan in Lebanon",
+      "summary": "",
+      "source": "Table.Briefings",
+      "published": "2026-10-31T10:19:55Z",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWlRoZFBxQ2RtSFVkUkJ2UjN6WkxYcE5ycWFrUUVzY0pqeGNlWjhvNFhvOU0zZElDc3Z3aGtzNXRUNENMS0FBT0c2MXdvMzIxWVFaNkVvcTJNTjl1ay0tbFVQS1NPLTJtdzJfdklWQjVNeUhycWIwWWwzNG1rUjVhZHJQUThjakRNSzJjcUpnVkJjLUtJNUtKZGpLSXV6NTQ3anh3dkl5QWJjWTBvMkFrS1dLdlRaZkZ4WGFfUm1qUQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Companii germane din statele baltice + Alabali Radovan din Liban",
+      "title_it": "Aziende tedesche nei Paesi Baltici + Alabali Radovan in Libano",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ccaa6c0e2de8c676",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Arab states demand response from Iran as fears of wider war dominate Bahrain summit",
+      "summary": "",
+      "source": "Iran International",
+      "published": "2026-10-31T09:45:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9MNHlENnhVYlA4S2N2d1l0V0tRd1ZpNGZ5d1hPVTZCeDg5TURoMDhPVWRqVDNpcVpBbllEV0JJV3J3eEdIeU5mX0VhUWIyalVGS1E?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Statele arabe cer răspuns Iranului, deoarece temerile de război mai larg domină summitul din Bahrain",
+      "title_it": "Gli stati arabi chiedono una risposta all’Iran mentre i timori di una guerra più ampia dominano il vertice del Bahrein",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-2aa254e437d01db8",
       "category": "europa",
@@ -16,7 +72,10 @@
       "source": "Informat.ro",
       "published": "2026-10-31T09:36:26Z",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAxSUMway1MWGtqQmpBZkY4XzZHbUNSR0ZUaHVEM1ZxcWJ6YTlpOXdxX25tZzFacmhVUXFKM0RQVUhtZXB6ZmNmQzJ2UDEtSzdFLXQ2TjJBLXBOR21peWZKUE04Z1NhUER3M2tGRUJmT045X2NHeTM3NmlrOTFDUQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Directorul EUISS propune un negociator european cu mandat comun pentru discuțiile privind Ucraina",
+      "title_it": "Il direttore dell’EUISS propone un negoziatore europeo con un mandato comune per i colloqui sull’Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-18845ef153c1d75a",
@@ -30,6 +89,48 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Manama Dialogue pune accentul pe amenințările de transport maritim",
       "title_it": "Il dialogo di Manama mette al centro l’attenzione sulle minacce legate ai trasporti marittimi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b5362b85e678613d",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "UN Experts Warn of Ongoing Israeli Crimes in Gaza, West Bank...",
+      "summary": "",
+      "source": "Jordan News",
+      "published": "2026-10-31T08:22:42Z",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbkxpcFlxY3JDLUlJNUZjNGJWOWhaOVpmc041ZkQ5Wjd1VjJ5c0diVXlTVWl3aC1ld1ROUGlHcjRjOGZVQnE3NnJwQXNTOTVOMzJnc0dJbll1elVGN2M2dm9LZXVWVjN4NFBzcmRvbnZOQzA4ZTdPZTVuaDdZT0QtNWotSnRVTklfUS1BVURDLV9EbUhxTV92WGtrbzY4cmdpUWNqUmwtdGtPcTdDall3bmx3ZVQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Experții ONU avertizează asupra crimelor israeliene în curs în Gaza, Cisiordania...",
+      "title_it": "Gli esperti delle Nazioni Unite mettono in guardia dai crimini israeliani in corso a Gaza, in Cisgiordania...",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-898b2404cdbd34dd",
+      "category": "securitate",
+      "region": "asia",
+      "title": "US, Japan, South Korea sign Arctic partnership pact in Atlanta",
+      "summary": "",
+      "source": "Yeni Şafak English",
+      "published": "2026-10-31T08:04:08Z",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOU09kZGpqclM5bnJKTzhMeVhHOVNlR1Bwek54amswY2RoMzU2eUhvcUtGRE8tV1dUU2xFSm9XTnBrVkJaTC0yT1RFblc5c000Ynp4OVFxVHp1dnhxZzIyOUNGRUU2VXp3S2NpT2JESGozelJRbEhLc1JPTDZMV1BLdmlYU0N2YWxTUXJLbnRUWHFMdG9SbkZQLXZqLUdOSElK?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA, Japonia și Coreea de Sud semnează un acord de parteneriat cu Arctic la Atlanta",
+      "title_it": "Stati Uniti, Giappone e Corea del Sud firmano ad Atlanta il patto di partenariato artico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2891531e24e27afe",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "The Iran War, US-China Rivalry and India's Strategic Choices",
+      "summary": "",
+      "source": "illustrated Daily News",
+      "published": "2026-10-31T07:27:51Z",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONGxINnU3VUlXa1NEc2QzczRfQTZpaTh6Y1lIeE1Mc0JxOTZ6b1Iyd0tlNllYTjY2MTNWaThPS1p0WmhHWkVkcGVMdWpqZmYyT1N0QkFpR2NVTlRMN3NHeEJSODVwVjYtLUhTMWdzRmQ0TEh1U3pCaGttVkN5YnQ0T1JxcFFCOWdSamlFbkN5Yk5FaGRxUXBqSW9nR1NYX0NJbFN5MEJWS3BuVko1R1ZZ0gGvAUFVX3lxTE40bEg2dTdVSVdrU0RzZDNzNF9BNmlpOHpjWUh4TUxzQnE5NnpvUjJ3S2U2WVhONjYxM1ZpOE9LWnRaaEdaRWRwZUx1ampmZjJPU3RCQWlHY1VOVEw3c0d4QlI4NXBWNi0tSFMxZ3NGZDRMSHVTekJoa21WQ3lidDRPUnFwUUI5Z1JqaUVuQ3liTkVoZHFRcGpJb2dHU1hfQ0lsU3kwQlZLcG5WSjVHVlk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Războiul Iranului, rivalitatea SUA-China și alegerile strategice ale Indiei",
+      "title_it": "La guerra in Iran, la rivalità USA-Cina e le scelte strategiche dell’India",
       "translation_status": "machine_translation"
     },
     {
@@ -75,6 +176,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-fb58078a07ad0819",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "How One Country Became the Unlikely Crossroads of the Global A.I. Boom",
+      "summary": "",
+      "source": "The New York Times",
+      "published": "2026-10-31T06:24:00Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbFo1T3JiWVZZTzRUQ2NlWlBld2lpTEgyTzF4R2lLdjE0ZGlCdmRTeERDVXVLVWU0T0NXS3EyblU1c0Njb1FXanJZTjV5aEhnRFhoZEgzNmt2MmJiM0dKV1FMT18zNTJVSzRhOUFQOXNqMFh2X3VqT0VhSzlVc2dYSQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum o țară a devenit improbabilă răscruce a I.A. Bum",
+      "title_it": "Come un paese è diventato l'improbabile crocevia dell'intelligenza artificiale globale Boom",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-8ad62b6cc79e4e9c",
       "category": "clima",
       "region": "global",
@@ -86,6 +201,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Descoperire diplomatică: COP17 oferă o înțelegere, nu bani",
       "title_it": "Svolta diplomatica: la COP17 stabilisce un accordo, non i soldi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-f8ad8b036f3615cc",
+      "category": "securitate",
+      "region": "asia",
+      "title": "US, Japan and South Korea sign memorandum on the Pacific Arctic — Anadolu Agency",
+      "summary": "",
+      "source": "UA.NEWS",
+      "published": "2026-10-31T05:44:47Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORGJhLVI4OTdsVEtJX2NTSk1kVUU0MHpsTFFUTUEtWnFRM3BZVFNib1NjemVoU2FxUU1Ccnpwck9XamdzRzhCTk03Mlg2MkJBdGNSd0ZOTUhMZC1XT3hDbnJmOFVUZm84X3phYmNMSmYwX01CUEhjWGN5T25DODlXLXVuTkhXcm1ZdDJGQUhhVE5lV3RZVHV0Q3l0eXlsTEFudDNGaWI5UlNIanY3aGxiSzdVbElfc1gxRk9yckgzTnVLTm8?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA, Japonia și Coreea de Sud semnează un memorandum privind Arctica Pacificului – Agenția Anadolu",
+      "title_it": "Stati Uniti, Giappone e Corea del Sud firmano un memorandum sull’Artico Pacifico – Agenzia Anadolu",
       "translation_status": "machine_translation"
     },
     {
@@ -111,7 +240,10 @@
       "source": "www.goldring.ro",
       "published": "2026-10-31T05:00:51Z",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNa25jTWZ0NjRjbXdtdGtHWTJjbnduQkpReUxGdXYycGdXZ2c4YmNJbTBNNzBsZ0FGdFp6a2k1cmZFSG5CdEdRX3lsTS1PLVdBcENGSy1fWEx5ZWNjWnR4R3FxUEdnTERCU0g5RW9hNE14SEItZU9RLUhNczQ3S1dnYnk4OXBVbHFiajhZdVo5bUxXcm5YZTYzaVJSUG9yVlVnU0dwdTdmVExxamc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Tensiuni și temeri în politica de la Bruxelles: Ghidul Politico de Halloween",
+      "title_it": "Tensioni e paure nella politica di Bruxelles: la guida Politico Halloween",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e1df578a245148ab",
@@ -156,6 +288,34 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-16f38e02a6fd0fe4",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Strategic Geography of the Indo-Pacific: Island Chains and Key Chokepoints",
+      "summary": "",
+      "source": "GK Today",
+      "published": "2026-10-31T03:41:53Z",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdkw3RE5TcF9NejM5Q0JhQjVuelJibEdsd3RkMm9wS2dLQkNDY0RYbE5DM3lVd2xaM0FvdTBncTE2Mm1WdjJieTZxZ3J0SldyN0Nzc0E2M0dOQU9EbGt1NFhrVXJfOUJRR2VDMkJMRDNCSEJYN3FXSjhnVjBJZTdxdDUxMEVpNkNvYmJfaDJreGFXMTVLTDJkeTdBVEJ2UQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Geografia strategică a Indo-Pacificului: lanțuri de insule și puncte cheie",
+      "title_it": "Geografia strategica dell'Indo-Pacifico: catene di isole e punti di strozzatura chiave",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-599d14ba4e2fbd33",
+      "category": "securitate",
+      "region": "asia",
+      "title": "US, Japan, South Korea sign Arctic pact",
+      "summary": "",
+      "source": "The Hans India",
+      "published": "2026-10-31T03:30:40Z",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxON2wwS3J4NkRmelRHY1U5dmQxdi1Uc1E5NVpBcEE5R01pM0ltaC1TRGpXdXZQdWliU3J3Si13NEVWX0JUM01kS3lQS0p2Vlc0ZmlnVndWbk95NWNtSnhlaGpDSmF4UjZoNGVNY1B2M3d1ZmhvaHJvSk5tanBuZVdkaURoYmRZZ3pHOHJUa3JiSWUtZmpzb2htdQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA, Japonia, Coreea de Sud semnează pactul arctic",
+      "title_it": "Usa, Giappone e Corea del Sud firmano il patto artico",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-3e56fcfa3311fc8b",
       "category": "diplomatie",
       "region": "americi",
@@ -167,6 +327,48 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Diplomații europeni ocolesc Rusia la întrunirea G20 din SUA",
       "title_it": "I diplomatici europei evitano la Russia alla riunione del G20 negli Stati Uniti",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-befb2886acec7ed3",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Trump Demands New Ukraine President, Says Zelensky Rejected Peace Deals",
+      "summary": "",
+      "source": "LEADERSHIP Newspapers",
+      "published": "2026-10-31T02:34:50Z",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRWJlVVVTYUstWEc3eE0xVnlkRXJlVk5JbV81Vnd6SDhXUjQxd2FGSThxWklmZkc4bXRfcFNfVUtVTDFPQzVBT1NsWnowZkVYQlM2eVQySUNtV2Rzb1A3T05QdVBucDhITkNPaDZ3TGxlaXdITy02eDB5bXJTVmVfdUpIQmtyYkRqR2U5QTRoZzZhekFwWUhGMw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump cere noul președinte al Ucrainei, spune că Zelensky a respins acordurile de pace",
+      "title_it": "Trump chiede un nuovo presidente dell’Ucraina, afferma che Zelenskyj ha rifiutato gli accordi di pace",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-84ef77cf08745bf5",
+      "category": "securitate",
+      "region": "asia",
+      "title": "South Korea, U.S., Japan Reaffirm North Korea Denuclearization Commitment",
+      "summary": "",
+      "source": "조선일보",
+      "published": "2026-10-31T02:33:30Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbHFiY05SNjVjZ2w4dTZRVkxpalNraU1DeE5GUmQtNjFvMDNqZzJDTWFBaXRtQUtLMFpkTGFUVVhmMUxocUFYZ3pka19qRDAtOGdKSDJtN0Mwb0F5Nl9tR2lZV2dvNVY1cmNuNHRucTRkblQ4a25YR3ZILUw3b0tkR1M0ZDZLb0dK?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Coreea de Sud, SUA, Japonia reafirmă angajamentul de denuclearizare al Coreei de Nord",
+      "title_it": "Corea del Sud, Stati Uniti e Giappone riaffermano l’impegno di denuclearizzazione della Corea del Nord",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ec95cc2e46dfaea4",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "How has the ceasefire in Russian-occupied Oleshky been unfolding?",
+      "summary": "",
+      "source": "BBC",
+      "published": "2026-10-30T23:52:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uOUExeDdjQjRzNUNmXzdOYTlkWnYyNFhpaWVPYTFkdFA4QTY1TGdKRXNoUVFwQm84WlpuNU1sNGUtWTU3SUxTSU9fR2JWa3ROYzJNcW9YWlB4SHc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum s-a desfășurat încetarea focului în Oleșki ocupată de ruși?",
+      "title_it": "Come si è svolto il cessate il fuoco nella zona di Oleshky occupata dai russi?",
       "translation_status": "machine_translation"
     }
   ]
