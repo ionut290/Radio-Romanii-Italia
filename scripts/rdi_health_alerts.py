@@ -11,7 +11,7 @@ REPO = os.environ["GITHUB_REPOSITORY"]
 TOKEN = os.environ["GH_TOKEN"]
 API = f"https://api.github.com/repos/{REPO}"
 NOW = dt.datetime.now(dt.timezone.utc)
-FLOWS = {"news.yml": ("Notizie generali", 75), "editorial.yml": ("Editoriali", 180), "events.yml": ("Eventi", 180), "translate-news.yml": ("Traduzioni", 180)}
+FLOWS = {"news.yml": ("Notizie generali", 75), "editorial.yml": ("Editoriali", 180), "events.yml": ("Eventi", 180), "translate-news.yml": ("Traduzioni", 180), "geopolitica-radio.yml": ("Notiziario geopolitico", 150)}
 
 def api(path, method="GET", data=None):
     request = urllib.request.Request(
@@ -33,6 +33,17 @@ def api(path, method="GET", data=None):
 def parsed(value):
     return dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
 
+
+def published_news_age():
+    """Age of the public news feed, not just the last successful workflow run."""
+    request = urllib.request.Request(
+        "https://radioromanii.duckdns.org/news.json",
+        headers={"User-Agent": "RDI-health/1.1", "Cache-Control": "no-cache"},
+    )
+    with urllib.request.urlopen(request, timeout=20) as response:
+        payload = json.load(response)
+    return int((NOW - parsed(payload["updated_at"])).total_seconds() / 60)
+
 for workflow, (label, maximum) in FLOWS.items():
     try:
         runs = api("/actions/workflows/" + workflow + "/runs?per_page=20")["workflow_runs"]
@@ -41,13 +52,20 @@ for workflow, (label, maximum) in FLOWS.items():
         age = int((NOW - last).total_seconds() / 60) if last else None
         recent_failures = [r for r in runs[:3] if r.get("status") == "completed" and r.get("conclusion") in ("failure", "timed_out")]
         active = any(r.get("status") != "completed" and (NOW - parsed(r["created_at"])).total_seconds() < 2400 for r in runs[:5])
-        failing = (age is None or age > maximum or len(recent_failures) >= 2) and not active
+        feed_age = None
+        if workflow == "news.yml":
+            try:
+                feed_age = published_news_age()
+            except (urllib.error.URLError, ValueError, KeyError, TypeError) as exc:
+                print("Notizie generali: impossibile verificare il feed pubblico: " + str(exc))
+        feed_stale = feed_age is not None and feed_age > 90
+        failing = (age is None or age > maximum or len(recent_failures) >= 2 or feed_stale) and not active
         title = "[RDI Monitor] " + label + " - problema di pubblicazione"
         q = urllib.parse.urlencode({"state": "all", "per_page": 100})
         issues = api("/issues?" + q)
         matches = [x for x in issues if x.get("title") == title and "pull_request" not in x]
         open_issues = [x for x in matches if x["state"] == "open"]
-        details = f"Workflow: {workflow}\\nUltima esecuzione riuscita: {last.isoformat() if last else 'non trovata'}\\nMinuti dall'ultima esecuzione riuscita: {age}\\nEsecuzioni fallite nelle ultime tre: {len(recent_failures)}\\nControllo UTC: {NOW.isoformat()}"
+        details = f"Workflow: {workflow}\\nUltima esecuzione riuscita: {last.isoformat() if last else 'non trovata'}\\nMinuti dall'ultima esecuzione riuscita: {age}\\nEta feed pubblico (min): {feed_age}\\nEsecuzioni fallite nelle ultime tre: {len(recent_failures)}\\nControllo UTC: {NOW.isoformat()}"
         if failing and not open_issues:
             if matches:
                 api("/issues/" + str(matches[0]["number"]), "PATCH", {"state": "open", "body": details})
@@ -61,6 +79,21 @@ for workflow, (label, maximum) in FLOWS.items():
             print(label + ": RIPRISTINATO, issue chiusa")
         else:
             print(label + (": ALLARME già segnalato" if failing else ": OK") + f" (ultima riuscita {age} min)")
+
+        # GitHub scheduled runs are best-effort and can be silently skipped.
+        # Let the independent health workflow dispatch a safe catch-up run.
+        if workflow == "news.yml" and not active:
+            stale = age is None or age > 45 or (feed_age is not None and feed_age > 60)
+            recently_dispatched = any(
+                r.get("event") == "workflow_dispatch"
+                and (NOW - parsed(r["created_at"])).total_seconds() < 40 * 60
+                for r in runs[:20]
+            )
+            if stale and not recently_dispatched:
+                api("/actions/workflows/news.yml/dispatches", "POST", {"ref": "main"})
+                print("Notizie generali: RECUPERO AUTOMATICO avviato (workflow_dispatch)")
+            elif stale:
+                print("Notizie generali: recupero gia richiesto o esecuzione ancora in corso")
     except (urllib.error.URLError, ValueError, KeyError, TypeError) as exc:
         print(label + ": errore di monitoraggio: " + str(exc))
         raise
