@@ -33,3 +33,31 @@ html:not(.youtube-news) #rdi-featured{margin:10px 0 22px;color:#142b4b}
 @media(max-width:430px){.rdi-featured-grid{gap:8px}.rdi-featured-story-body{padding:10px}.rdi-featured-story h3{font-size:13px}.rdi-featured-story:first-child h3{font-size:20px}.rdi-featured-excerpt{font-size:11px}.rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/9}.rdi-featured-head h2{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.rdi-featured-story,.rdi-featured-visual img{transition:none}}
 html.youtube-news #rdi-featured{display:none!important}
+
+
+/* Compact editorial refresh: no giant lead image, consistent card heights. */
+@media(min-width:900px){
+html:not(.youtube-news) #rdi-featured .rdi-featured-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child{grid-column:auto}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story .rdi-featured-visual,
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:auto;height:clamp(140px,12vw,185px)}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child h3{font-size:17px}
+}
+@media(min-width:540px) and (max-width:899px){
+html:not(.youtube-news) #rdi-featured .rdi-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child{grid-column:auto}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story .rdi-featured-visual,
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/9;height:auto}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child h3{font-size:16px}
+}
+@media(max-width:539px){
+html:not(.youtube-news) #rdi-featured .rdi-featured-grid{grid-template-columns:minmax(0,1fr);gap:10px}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child{grid-column:auto}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story .rdi-featured-visual,
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child .rdi-featured-visual{aspect-ratio:16/8;max-height:210px}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story:first-child h3{font-size:17px}
+}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story-body{padding:10px 12px;gap:5px}
+html:not(.youtube-news) #rdi-featured .rdi-featured-story h3{line-height:1.3;-webkit-line-clamp:3}
+html:not(.youtube-news) #rdi-featured .rdi-featured-excerpt{font-size:11px;-webkit-line-clamp:2}
+html:not(.youtube-news) #rdi-featured .rdi-featured-head h2{font-size:clamp(19px,2.2vw,24px)}
