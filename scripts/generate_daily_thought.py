@@ -379,6 +379,15 @@ def main():
         if old_image.is_file() and old_image != ROOT / image:
             old_image.unlink()
     DATA.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    pointer = DATA.parent / "calendario-filosofico-oggi.json"
+    pointer.write_text(json.dumps({
+        "date": item["date"],
+        "quote": item["summary"],
+        "image": "/" + image.as_posix(),
+        "reflection": thought["reflection"],
+        "status": "published",
+        "image_source": item["image_credit"],
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("Pensiero quotidiano pronto:", today.isoformat(), "|", thought["quote"])
 
 if __name__ == "__main__":
