@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-10-31T03:06:55.220234+00:00",
+  "news_updated_at": "2026-10-31T03:59:33.202982+00:00",
   "editorial_updated_at": "2026-10-31T00:39:31.567976+01:00",
-  "translations_updated_at": "2026-10-31T02:26:30.962486+00:00",
+  "translations_updated_at": "2026-10-31T03:07:07.754646+00:00",
   "feed_total": 95,
-  "feed_extended_400": 19,
-  "feed_missing_body": 76,
+  "feed_extended_400": 21,
+  "feed_missing_body": 74,
   "feed_short_body": 0,
   "editorial_total": 25,
   "archived_editorials": 102,
-  "translation_records": 45,
+  "translation_records": 46,
   "pending_total": 81,
-  "pending_filtered_out": 108,
-  "editorial_verde": 25,
-  "editorial_galben": 30,
+  "pending_filtered_out": 106,
+  "editorial_verde": 27,
+  "editorial_galben": 28,
   "editorial_rosu": 61,
   "pending": [
     {
@@ -618,15 +618,6 @@
   ],
   "recent_news": [
     {
-      "title": "L’Italia paga i ritardi tedeschi sul metano - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-31T00:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTTRLaDBXUnpXTUt2REdMS3VLanpidjB1ZHZEMTJYUWNnN0hZTXhVeUJuSGxCdll3cnpaZTVuQXB0dEFSTVlKa0FxLTE0RWFIRFYyN2dGSlNTVnFLLVpRREhlaHBMY1R2b1F2NFdWZDU3RjZZeGJ1ZFJMV1phc1dlRURRZWptZG43c0daVFhCVFVVaWpBbjBQb1k1ZEl1TlA0RHNSRmhqblc?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Il Betting online nel 2026: numeri da record e nuove regole in Italia - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-30T23:34:02+00:00",
@@ -794,8 +785,8 @@
       "published": "2026-10-30T20:35:17+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/peste-40-de-persoane-au-fost-evacuate-dintr-un-bloc-din-medias-in-care-a-izbucnit-un-incendiu-4015919",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 507
     },
     {
       "title": "SUA aprobă vânzarea către Ucraina a 500 de rachete Patriot în valoare de 2,1 miliarde de dolari, anunță Departamentul de Stat",
@@ -1149,6 +1140,15 @@
       "words": 0
     },
     {
+      "title": "Luca Niculescu: Vom rezolva în şedinţa de Guvern problemele urgente de finanţare din sănătate - RFI",
+      "category": "România",
+      "published": "2026-10-30T11:18:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQaUowelJvTm90TDhHTDFHWmtFRG1zbEhLeTNpdE5ZYlkwaFl1a3otd3U3VUh0Z2pkMXhpZm5zZ1VkN2stckRBQlRXUW5LeGU3Q3pId2tmWVF5dThuZjdtM0c3V2dHT3VxSFY5UjFKSlFQcG4yckpVLXNjN2N6akJDQmJtdE1JLXZPZUZfRDA4Y29TNFFkam1CMS1zeVBJLTNNd3FIak5VWXpISW9NZUJLRkoxUHljU01rbGFXbXB0enFoTE9WV3hKYkpsakIwZXV0ZTM0dTlvUDdjbV80LVEyemZCdmZ1Z2Ixc2Z2WHEwb3l5MC1scDY4OG9B?oc=5",
+      "source": "RFI",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Luca Niculescu: Vom rezolva în şedinţa de Guvern problemele urgente de finanţare din sănătate / Vom transfera banii necesari pentru comunităţi locale, investiţii în agricultură şi finalizarea proiectelor finanţate prin P",
       "category": "România",
       "published": "2026-10-30T11:00:17+00:00",
@@ -1158,38 +1158,11 @@
       "words": 0
     },
     {
-      "title": "Luca Niculescu, la 11 ani de la tragedia de la Colectiv: ”România mai are multe lucruri de făcut ” - Realitatea.NET",
+      "title": "Valoarea voucherelor de vacanță în România ar putea crește „substanțial”. Ministrul Economiei: „Este o prioritate” - Stirile ProTV",
       "category": "România",
-      "published": "2026-10-30T10:45:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNUHRkSkNiZ29nVXVZVFVPMlpGVlZZbnpjTmtKMkZqOEJLUExFVG5rSjdjVF8xbE1QYk1RZ0ZPRVh5X0d5bGU1MHBsOUU0bUVGd09DQkRTUkRpMmFYNUFmblR1RC1PNG1IRjZfS1Z0WUJaWXBiTThPSDhLTVROU3gxTlNaZlM2d2RFSkxIUkdvTlBrbzRQZkx4MG5uOEd5Z29BU21FNkpLZFRlZVIybnQzMWNKdEZkMWd3RFYzMmswRnVDVXQ0alhiVWl3VWNHUGlyU211ZHhwd0xBQQ?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Nord Est e Francia, a Padova il forum del 3 novembre: quattro filiere e scambi per 15,6 miliardi - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T10:36:40+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA2TlhvZlRuWVctSEZDUGZBcjVQRVVaeFN2MnV6eFBiRi1ISWZOTU45N2N4ckJmOWNfUzJnU0h0MmV5MDNUcHU1MWRpa1dIa1FKejJLR0tJc3hPejYyWE1UVHkyaXkySXpuMk9tQ1F1V2ZnWWowSGxHSm4xMA?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Bonus edilizi e affitti a Padova, UPPI: recuperare gli immobili per aumentare gli alloggi - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T10:33:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBEWnljRVNDQlN2VG1CVG5xbVNUQ1JkbXJuRWV6RGpic2ZDd0hMdjhIWk5GaEY5ekhQSUxMM3pfTEdVUnVZd0lCSWhGV1BNMTMxaEdDbm9MOXItLVJGZERtSXJlUWlqbU41eVJhbTZKSXk2dENkVDlxbFlfclg2Rm8?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Laureati difficili da trovare in Veneto nel 54,5% dei casi: il divario tra studi e lavoro - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T10:26:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPd3paZmEwN2c1dnk2VjI0RGU4cm1iNDNGcGdEb0NUTkg3SlpsMjVYOEFaVjJuV0cwWU02bE9VNGl1aFJIRVZZQ3o5MzhFb29kZU42ZlB6NnlENDc4cUdmRnVIMzFISC12XzY3VU5GOHAtaEh4TXdrZkNRR0JwNXZhdnlDdlQ?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-10-30T10:46:36+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOUURyVzZXaC1TNkU1RWNkTnVzbkxmZHVnd0psX3FZOGREWVpDUEpWVDNVRkpkZDVIdXdtS2tOOXhYb21sOFNhMXYtTWRhdmJZdGNWTDA1RGxwdnZBQi11NHcydWdLM0JKTGdxWUw0WUF4WTF3X1cybHhXaXdEMDFISGpkdk1BSUtaVzFlVWZsQ0VEY0xmU0R6TGUtYW5uQzByZTM0V3lDZ1p4aFM2X1NMQnNTSFhlaHExYURuUkp6azhUdlZIa3NFaVJsMktVcXdGU3BoNlpVSjFMalB3YndqUEhhMkJNRVd1?oc=5",
+      "source": "Stirile ProTV",
       "status": "roșu",
       "words": 0
     },
@@ -1257,6 +1230,15 @@
       "words": 0
     },
     {
+      "title": "Criptomonete, il furto del secolo. Binance bucata per 6,3 miliardi di dollari - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-30T08:40:32+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWWlZaUt6WnpyWWJORGZpUEd3OG00THZlMzNpN1lIdk9Uc3JXNHdoUDRaSkZNeFFMT2UxSFFjN2N3aS1WOFByTFl3TmN0b3E1d3NHcE9rWTJaZ1RKWERtWEpnd1NYWUFLdXdnVjEwVVFqeUNqcUxwVnpENXcxN045ZzFFZDhxdGZyNVBnYkRCN19JaXNLbVUxNUNKN1RlYTZsd1U0TUVTNVJUVkRhOWFrMFgyNlRrQQ?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "La Nasa accelera sul nucleare per l'esplorazione spaziale",
       "category": "Italia",
       "published": "2026-10-30T07:25:30+00:00",
@@ -1266,11 +1248,11 @@
       "words": 0
     },
     {
-      "title": "Fostul premier francez, Edouard Philippe, audiat de judecători pentru suspiciuni de deturnare de fonduri... - StiriDiaspora",
+      "title": "Român dispărut în Italia după ce a plecat de acasă cu mașina. Familia cere ajutor pentri a-l găsi pe Flavius - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
-      "published": "2026-10-30T07:16:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQ09uRzRBRXRXYjFtbmxlaHExckNYRWtBb1ZCUTdZNk9UOEM0cUg2VlRTbHJSNTVlRm5GbGg3QURoeWFnZUxpZFRrQmE2d1hBZjYxcVZKamNBbTR3cXZvd0d5TEQyck44Z3lhU21rS1R6THpDS1dEQWZCaUJxb1BKVU1GX053M3poYjlxRThlZ29hRFVVS3Y3N3ZsR2dBSWR0YlBmdVBMbnBaVWl5UHpVVGhqbWFRWk1jOFptVUd3NXlGcnhDZzhxZFhieV9CVmdUVFBDcEdPbEFGUVEtc09YTmlpWGRHQdIB6wFBVV95cUxNNWdEQkR3Rmd4MjBKUU1tQzdiZjVoYVF5ZGt3RV9sY0NhcDFyZngtY3pPVkQ2ZTdzSV9MdDUyTEFvenBQQk14emRNTWxKWTM3MTNBTUpUQnF5a2RMbm1kV3VsZ0tWd2JHYnNHNmh",
-      "source": "StiriDiaspora",
+      "published": "2026-10-30T05:29:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVWxUNm9zV1FlQnNielZMM1VDRWJsRU1BeEw0MmU3OVMzVFptbUxOYUd3Nk92Q25YUFRtYW42T3hkOUtFTUVkTzVVeXBjMzdMeWg5dzYxQ2ZMYkNOTjJBM3JlcjJtUjRUcnpRcDJGWWp4bkNuaDNqMGprMno5N01yUklPNkdMVXRqeWlpS3RNWWdQLWViQk9Oanl6MjFEMFg0d200UURkRTR5Sy1LM0hVa2Rrc3NrU2c4Sm1LaVE4dzdvZ3BUb1ZiRHNHRQ?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     },
@@ -1329,10 +1311,19 @@
       "words": 0
     },
     {
-      "title": "Articole cu tagul: deficit caloric - StiriDiaspora",
+      "title": "Premierul Luca Niculescu, discuție telefonică cu șeful NATO - RFI",
+      "category": "România",
+      "published": "2026-10-29T16:57:43+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQTY5YkZNdUVVYktoREtDVkVFeGoxbUw2UGozYk9jSTlqN3hLNWtQQkNmVWlIbHJPbjJ1Sm93ZDktRk8xVjdUakNZM0pVSTBDQlV0U0pJWjkzUV9ERjZZT1pNb3gydlBfWkRQTkl6UlBKSC1HUW1DdWJ0NkpYVmluVUJmdy1fcEw3RjF4UXpUbnhJZlZBNEViVjVTR0dRRG81eEs1b0dNbWtORFItWl9oWG50S2hQVXNP?oc=5",
+      "source": "RFI",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: Harvard Business School avatare - StiriDiaspora",
       "category": "Diaspora",
-      "published": "2026-10-29T16:40:40+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BYTJNSGRvUkk0RXRNX3R1V3JMMnh6Y2lWWmFlLW14MlFVelNoalFNc2lfekxOLUxQWGgwU3NrMm10VlQ3VWNYX3lIcEdaemJkWGo5SmxvM29uOHJDdXNXZDJ6Vjc?oc=5",
+      "published": "2026-10-29T16:38:41+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBxM29jZk50UllBVWVEbk5ZcXlKdFkwRmlGWXR1cDFyNk0wUV95N1VySXdVVDBobjhVbV9IMk96TGM0WjJVMk9yVW8yQ0I1UXZqUTQ3M0dQYTdMMTBwek5EVHFodDhoVmNtbTh5SExibVJjUXlZSXpQSVBn?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1377,13 +1368,13 @@
       "title": "Sănătatea FM - De la \"pare că nu aude\" la selectivitate alimentară și fascinație pentru lumini. Semnele autismului explicate de psihologul Sanda Gligu - RFI",
       "category": "România",
       "published": "2026-10-29T13:45:31+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxPS19QbDVBMHlsdlAwb0w3WHBwMEJBWUtFWGM0d21qOGE1dFdwRWVZWlhiZ3FQc1ZWT3BRcUlLbGRNVTU5amRySzRWcjhaX1RrMFFkZm1oWS1kQUwtUWtQZ1hGcUZfWUtXVXA2eE95aVpkWWo4dGgyZkNnR1R1djZQQkFDVEZXTWlpZE1FNTBqYmlKSV9IYmlCQjNHbmc2OXRmU25vOEZsVzlKa1dpUEV1YUhLQzgyblJwb21zYk9lNmJaWXIyWFdhQ054XzZpNnp1OFk4NHRsdk1KUkVSbFBIMGNBcG8wdDltbmVsdGUzTlgwOE5waUlYM1dEWmNJcHJrdlBVY0FjblVTYi02T21EYXNwOU5lV2hId3pIc3N3WmRaZnFsMTY4OHdZTm5WSjRyOGlGaU9sWTh2aXptOWxjTENzTFhpUFFrSTVrVQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQdUFEZGNSN21xeG5nQUZXLUR2Q1N2dkxwNkFTTWRybE1GOEIzN0FMSWJSNTdHSWc0VGx1UEMzcDFndEN6ZzJVZ0thRVp4YmFFbWVud2l2Qm1lTjdqakVESzM4SGpsdWlTMjBXX19lQVJwdEhtNFNTUXFyZERGWEJmRzdpMlZiYjBWMFVpaGhxR21KenhCQ2VRaWJNOXFaX1dEMnJoVzJJQVZWZjVxYmNTdVV6UjNkOFZYSFdEVEhncU5fTTk3ZkVTb3JPM3lKMFNBRlNuYS1SYmEyWWNOTjcydmdsZjY1MmJWYW9lNzNBOVpEcDFwN1RHdkxxZjBFUTNHSEgtaXVkMW9YeGllVTk4ZWduV1V4WHRqTGpndmFKTHNFYjRIQ201Tlg0LXdBT1BTWm5kUFRydWgzbXNMTnc?oc=5",
       "source": "RFI",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Cum ajută Elveția Republica Moldova să se apropie de Europa - RFI",
+      "title": "Swipe News, o nouă platformă românească pentru consumul de știri online - www.goldring.ro",
       "category": "România",
       "published": "2026-10-29T12:15:17+00:00",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPc0F5UDlnS0lmMjVxOWI1eXd1ci15YXhackpmODlCNnM0TE5fRlN4UjRpX0FtcXNtc1NxdURWZFBrSWQ1N0EwSHY3VkNKSDlOZWowZmEwWUxJS1l4QWtBRzF0a29faWpSRzVwV25iLTNGN194Qlg2dWdRbkYxR1FPaFBBX0JSM2xsVmZhODNRRlhianlvX2Mya2N1cWF6eHVfMDVIeQ?oc=5",
@@ -1404,7 +1395,7 @@
       "title": "Migranți. Frontex, Cecilia Strada împotriva reformei UE: „Nu vrem un ICE european” - Gazeta Românească Italia",
       "category": "Diaspora",
       "published": "2026-10-29T11:52:07+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNd29BcV96bzZMX0dLNE00NEZNUmxVUUpJUTJFZVluX3IweXRZdG1qVUJDbS1seDFOMGFRQWZ6ZnJxRVZMelRtS1kyaTRRbmg2NkVWWE9RellqMWF4X0pRQ3N5V3dsQ1lMV2N6bWhMWnB4TnRadUxhU3JVbmtodTZpX1dqRnYxZmptZVZtWlc0T09GRHN4ekx3VThwT0xiU1ZUZkpDT29kMHNGcUZaQV8zeTNlQllnRFczNnJ3TDFCYkNQQU5JcDF0enpMbGlpY2M?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUVFFSU9YWGVCUTcwcjNvS1F5NGo3RnBINjBTVXp6VXhici1pbnFTWDloV3VLZEdiNjYySUsycWhQbUpEcHZiLV9HWUJmajBEYmQwWjRhQnhOSmpBQ19Cal9FSENjem9tNXVNWHlPQmx5VjFwazNPVU5sc3VqdXBzSzVzWlRLTEJ2bkxTZ29wT3lqTTBKblhocGQ3S2FUeXZ0ZXN0aTRoREtwcks5dDdiSzI1NXdESnE5Qk9IZmxtelJlVjA?oc=5",
       "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
@@ -1415,15 +1406,6 @@
       "published": "2026-10-29T11:51:22+00:00",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPOENGOVdSZEgwVGQtcHByY1I5QV82QnBud0huZWVoNzNPeG1kNm80LXFuTWM0bF9CX0FDNWk2MEZRMmtsODFJbHZ5V3FmbkQtYXRqSU9jemdFV19QT3FjVlZ2OGJOSjdSRy0wV2k1TkxlNWpYcGJ0NFo5azZWSlpEWnZKd0N2WV9QODZzUWc4Ql9XaU1zbVE4cTB1R3lZZXV2MFVrYnZtUFhSWl9waTVtRWRJYWV6NmVueUtmbTJaTUNfaEd1eE5hSERIVDl5LW02OEx1SmE5Ql9rQlJNbFF6Mzl5UnhyaGhXYWVHV0ZFcw?oc=5",
       "source": "Gazeta Românească Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Știrile zilei, dintr-un gest: Swipe News schimbă felul în care citim presa online - Antena 3",
-      "category": "România",
-      "published": "2026-10-29T11:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNX0c1VFliX3RWeFhqVHkxb2pVR0lyS2VURHhkQ3NZcU1CYi1aYTByTXp6WVBZSm1FY3M3MVBHTmRCN3dNdUhOVEhpcXVtM3FxMGV1TlJfQkJibDExVVMwbkpvVnN6VWdqeHZ3QUdabE5GUXpPTzRlTXFWeTZqek9sMEJjeGFfd2R5TWdZd1FYbWd5RTA3OTNGR3ZmZVNQbGRsM3RiLThSRmdCN21qT0xTNURFTWZnY19jZHfSAboBQVVfeXFMTV9HNVRZYl90VnhYalR5MW9qVUdJcktlVER4ZENzWXFNQmItWmEwck16ellQWUptRWNzNzFQR05kQjd3TXVITlRIaXF1bTNxcTBldU5SX0JCYmwxMVVTMG5Kb1ZzelVnanh2d0FHWmxORlF6T080ZU1xVnk2anpPbDBCY3hhX3dkeU1nWXdRWG1neUUwNzkzRkd",
-      "source": "Antena 3",
       "status": "roșu",
       "words": 0
     },
