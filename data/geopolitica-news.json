@@ -1,12 +1,23 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-31T08:50:47.062465Z",
+  "updated_at": "2026-10-31T10:00:24.744647Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-2aa254e437d01db8",
+      "category": "europa",
+      "region": "europa",
+      "title": "Il direttore dell’EUISS propone un negoziatore europeo con un mandato comune per i colloqui sull’Ucraina",
+      "summary": "",
+      "source": "Informat.ro",
+      "published": "2026-10-31T09:36:26Z",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAxSUMway1MWGtqQmpBZkY4XzZHbUNSR0ZUaHVEM1ZxcWJ6YTlpOXdxX25tZzFacmhVUXFKM0RQVUhtZXB6ZmNmQzJ2UDEtSzdFLXQ2TjJBLXBOR21peWZKUE04Z1NhUER3M2tGRUJmT045X2NHeTM3NmlrOTFDUQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
     {
       "id": "geo-18845ef153c1d75a",
       "category": "diplomatie",
@@ -19,34 +30,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Manama Dialogue pune accentul pe amenințările de transport maritim",
       "title_it": "Il dialogo di Manama mette al centro l’attenzione sulle minacce legate ai trasporti marittimi",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-898b2404cdbd34dd",
-      "category": "securitate",
-      "region": "asia",
-      "title": "US, Japan, South Korea sign Arctic partnership pact in Atlanta",
-      "summary": "",
-      "source": "Yeni Şafak English",
-      "published": "2026-10-31T08:04:08Z",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOU09kZGpqclM5bnJKTzhMeVhHOVNlR1Bwek54amswY2RoMzU2eUhvcUtGRE8tV1dUU2xFSm9XTnBrVkJaTC0yT1RFblc5c000Ynp4OVFxVHp1dnhxZzIyOUNGRUU2VXp3S2NpT2JESGozelJRbEhLc1JPTDZMV1BLdmlYU0N2YWxTUXJLbnRUWHFMdG9SbkZQLXZqLUdOSElK?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "SUA, Japonia și Coreea de Sud semnează un acord de parteneriat cu Arctic la Atlanta",
-      "title_it": "Stati Uniti, Giappone e Corea del Sud firmano ad Atlanta il patto di partenariato artico",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-3c0dd35d8387b9f7",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "The Iran War, US-China Rivalry and India's Strategic Choices",
-      "summary": "",
-      "source": "illustrated Daily News",
-      "published": "2026-10-31T07:27:51Z",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNcndIX3V5ekN0UFFHMkJockdmR3pfRFAzXzRGMTdJOGlfeHp0TEx3VXdfeUpYVmJWcE50ek55VzhHcXVPMW5NZ0NlNVExVWNqNUZwbkNqMVl6bTZlS1JYa3hIQWI2a1JtY0xkVXExUGVuWm9TTDZ2Ukx3UW9sUkVTMktaWWg1a0ZPc2NqRnVaejlfZzJTOVVIMGxIeF9qOVEtN0tFMGZhdW1fUdIBrwFBVV95cUxONGxINnU3VUlXa1NEc2QzczRfQTZpaTh6Y1lIeE1Mc0JxOTZ6b1Iyd0tlNllYTjY2MTNWaThPS1p0WmhHWkVkcGVMdWpqZmYyT1N0QkFpR2NVTlRMN3NHeEJSODVwVjYtLUhTMWdzRmQ0TEh1U3pCaGttVkN5YnQ0T1JxcFFCOWdSamlFbkN5Yk5FaGRxUXBqSW9nR1NYX0NJbFN5MEJWS3BuVko1R1ZZ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Războiul Iranului, rivalitatea SUA-China și alegerile strategice ale Indiei",
-      "title_it": "La guerra in Iran, la rivalità USA-Cina e le scelte strategiche dell’India",
       "translation_status": "machine_translation"
     },
     {
@@ -92,20 +75,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-e117b08439cda4e4",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Poland in a foreign place: Zakharova responded to Sikorsky after attacks on Lavrov",
-      "summary": "",
-      "source": "EADaily",
-      "published": "2026-10-31T06:15:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPYVNxZC04dG1SSGRwS2lrZWFvcW5URmUxRHZOU0lJbm5sN2FIWEZOcV85czFQWG9ReGUtRHM3bmswSzFwQUkxd0xEU1ZlVDdoUWZUOFptZEUzOWpqeTJpS2M0T0g0a3pXY084WnRlQlNZOFByclR4ZE56eVJwMGRIRGlJajBqUkNxeHB3ZU1MejBrMk1sQ09zZUVmdVNpMHZoNFkzMjBhblE0N0RhMEdaSWdMYkc4cVRweW54Z3FfV1fSAcABQVVfeXFMT2FTcWQtOHRtUkhkcEtpa2Vhb3FuVEZlMUR2TlNJSW5ubDdhSFhGTnFfOXMxUFhvUXhlLURzN25rMEsxcEFJMXdMRFNWZVQ3aFFmVDhabWRFMzlqankyaUtjNE9INGt6V2NPOFp0ZUJTWThQcnJUeGROenlScDBkSERpSWowalJDcXhwd2VNTHowazJNbENPc2VFZnVTaTB2aDRZMzIwYW5RNDdEYTBHWklnTGJHOHFUcHlueGdxX1dX?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Polonia într-un loc străin: Zakharova i-a răspuns lui Sikorsky după atacurile asupra lui Lavrov",
-      "title_it": "Polonia all'estero: Zakharova ha risposto a Sikorsky dopo gli attacchi a Lavrov",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-8ad62b6cc79e4e9c",
       "category": "clima",
       "region": "global",
@@ -117,20 +86,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Descoperire diplomatică: COP17 oferă o înțelegere, nu bani",
       "title_it": "Svolta diplomatica: la COP17 stabilisce un accordo, non i soldi",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f8ad8b036f3615cc",
-      "category": "securitate",
-      "region": "asia",
-      "title": "US, Japan and South Korea sign memorandum on the Pacific Arctic — Anadolu Agency",
-      "summary": "",
-      "source": "UA.NEWS",
-      "published": "2026-10-31T05:44:47Z",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORGJhLVI4OTdsVEtJX2NTSk1kVUU0MHpsTFFUTUEtWnFRM3BZVFNib1NjemVoU2FxUU1Ccnpwck9XamdzRzhCTk03Mlg2MkJBdGNSd0ZOTUhMZC1XT3hDbnJmOFVUZm84X3phYmNMSmYwX01CUEhjWGN5T25DODlXLXVuTkhXcm1ZdDJGQUhhVE5lV3RZVHV0Q3l0eXlsTEFudDNGaWI5UlNIanY3aGxiSzdVbElfc1gxRk9yckgzTnVLTm8?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "SUA, Japonia și Coreea de Sud semnează un memorandum privind Arctica Pacificului – Agenția Anadolu",
-      "title_it": "Stati Uniti, Giappone e Corea del Sud firmano un memorandum sull’Artico Pacifico – Agenzia Anadolu",
       "translation_status": "machine_translation"
     },
     {
@@ -146,6 +101,17 @@
       "title_ro": "Miniștrii de externe G20 omit fotografia de familie din Atlanta, după ce europenii i-au obiectat lui Serghei Lavrov: ce au lăsat afară 12 instituții",
       "title_it": "I ministri degli Esteri del G20 saltano la foto di famiglia ad Atlanta dopo che gli europei si sono opposti a Sergei Lavrov: cosa hanno lasciato fuori 12 testate giornalistiche",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-a0611389e8f40c2e",
+      "category": "europa",
+      "region": "europa",
+      "title": "Tensiuni și temeri în politica de la Bruxelles: Ghidul Politico de Halloween",
+      "summary": "",
+      "source": "www.goldring.ro",
+      "published": "2026-10-31T05:00:51Z",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNa25jTWZ0NjRjbXdtdGtHWTJjbnduQkpReUxGdXYycGdXZ2c4YmNJbTBNNzBsZ0FGdFp6a2k1cmZFSG5CdEdRX3lsTS1PLVdBcENGSy1fWEx5ZWNjWnR4R3FxUEdnTERCU0g5RW9hNE14SEItZU9RLUhNczQ3S1dnYnk4OXBVbHFiajhZdVo5bUxXcm5YZTYzaVJSUG9yVlVnU0dwdTdmVExxamc?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-e1df578a245148ab",
@@ -190,34 +156,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-16f38e02a6fd0fe4",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Strategic Geography of the Indo-Pacific: Island Chains and Key Chokepoints",
-      "summary": "",
-      "source": "GK Today",
-      "published": "2026-10-31T03:41:53Z",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdkw3RE5TcF9NejM5Q0JhQjVuelJibEdsd3RkMm9wS2dLQkNDY0RYbE5DM3lVd2xaM0FvdTBncTE2Mm1WdjJieTZxZ3J0SldyN0Nzc0E2M0dOQU9EbGt1NFhrVXJfOUJRR2VDMkJMRDNCSEJYN3FXSjhnVjBJZTdxdDUxMEVpNkNvYmJfaDJreGFXMTVLTDJkeTdBVEJ2UQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Geografia strategică a Indo-Pacificului: lanțuri de insule și puncte cheie",
-      "title_it": "Geografia strategica dell'Indo-Pacifico: catene di isole e punti di strozzatura chiave",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-599d14ba4e2fbd33",
-      "category": "securitate",
-      "region": "asia",
-      "title": "US, Japan, South Korea sign Arctic pact",
-      "summary": "",
-      "source": "The Hans India",
-      "published": "2026-10-31T03:30:40Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxON2wwS3J4NkRmelRHY1U5dmQxdi1Uc1E5NVpBcEE5R01pM0ltaC1TRGpXdXZQdWliU3J3Si13NEVWX0JUM01kS3lQS0p2Vlc0ZmlnVndWbk95NWNtSnhlaGpDSmF4UjZoNGVNY1B2M3d1ZmhvaHJvSk5tanBuZVdkaURoYmRZZ3pHOHJUa3JiSWUtZmpzb2htdQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "SUA, Japonia, Coreea de Sud semnează pactul arctic",
-      "title_it": "Usa, Giappone e Corea del Sud firmano il patto artico",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-3e56fcfa3311fc8b",
       "category": "diplomatie",
       "region": "americi",
@@ -229,76 +167,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Diplomații europeni ocolesc Rusia la întrunirea G20 din SUA",
       "title_it": "I diplomatici europei evitano la Russia alla riunione del G20 negli Stati Uniti",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-befb2886acec7ed3",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Trump Demands New Ukraine President, Says Zelensky Rejected Peace Deals",
-      "summary": "",
-      "source": "LEADERSHIP Newspapers",
-      "published": "2026-10-31T02:34:50Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRWJlVVVTYUstWEc3eE0xVnlkRXJlVk5JbV81Vnd6SDhXUjQxd2FGSThxWklmZkc4bXRfcFNfVUtVTDFPQzVBT1NsWnowZkVYQlM2eVQySUNtV2Rzb1A3T05QdVBucDhITkNPaDZ3TGxlaXdITy02eDB5bXJTVmVfdUpIQmtyYkRqR2U5QTRoZzZhekFwWUhGMw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Trump cere noul președinte al Ucrainei, spune că Zelensky a respins acordurile de pace",
-      "title_it": "Trump chiede un nuovo presidente dell’Ucraina, afferma che Zelenskyj ha rifiutato gli accordi di pace",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-84ef77cf08745bf5",
-      "category": "securitate",
-      "region": "asia",
-      "title": "South Korea, U.S., Japan Reaffirm North Korea Denuclearization Commitment",
-      "summary": "",
-      "source": "조선일보",
-      "published": "2026-10-31T02:33:30Z",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbHFiY05SNjVjZ2w4dTZRVkxpalNraU1DeE5GUmQtNjFvMDNqZzJDTWFBaXRtQUtLMFpkTGFUVVhmMUxocUFYZ3pka19qRDAtOGdKSDJtN0Mwb0F5Nl9tR2lZV2dvNVY1cmNuNHRucTRkblQ4a25YR3ZILUw3b0tkR1M0ZDZLb0dK?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Coreea de Sud, SUA, Japonia reafirmă angajamentul de denuclearizare al Coreei de Nord",
-      "title_it": "Corea del Sud, Stati Uniti e Giappone riaffermano l’impegno di denuclearizzazione della Corea del Nord",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-74f32e87bad538c9",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "G20 talks expose deep rift as Russia stays defiant and Rubio engages Moscow",
-      "summary": "",
-      "source": "South China Morning Post",
-      "published": "2026-10-31T01:45:06Z",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOZnByaTAyaHVlVXVDcVRSSHBuNm9kWWhtRTh0U1BYU3BwSUxVWU5kdFB3WkN2cG5ibHhDMWdVUEZKbFhub2ZTV2NPeGJtc25xWjlxUTRQc2pMNmJqZFg5clVyU1oyWHhzVEpvMXVOZG9qTUxpYlVUdHJ3ZzJRTlBib0ZqZEdlMVVJdVJhRWhzSk1oblM5ZHMwbEExNHVMZ1hTU2FBT0lsRDJvSjlXX2g5NGJPeXVOaXEzbEpnV0JnblFra2tERHEyVHhFak1zdjRRZmtYVWd1T3NGMDNEWFV6S0RETE9fRzF0elHSAeoBQVVfeXFMTmZwcmkwMmh1ZVV1Q3FUUkhwbjZvZFlobUU4dFNQWFNwcElMVVlOZHRQd1pDdnBuYmx4QzFnVVBGSmxYbm9mU1djT3hibXNucVo5cVE0UHNqTDZiamRYOXJVclNaMlh4c1RKbzF1TmRvak1MaWJVVHRyd2cyUU5QYm9GamRHZTFVSXVSYUVoc0pNaG5TOWRzMGxBMTR1TGdYU1NhQU9JbEQyb0o5V19oOTRiT3l1TmlxM2xKZ1dCZ25Ra2trRERxMlR4RWpNc3Y0UWZrWFVndU9zRjAzRFhVektERExPX0cxdHpR?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Discuțiile G20 dezvăluie rupturi profunde, în timp ce Rusia rămâne sfidătoare și Rubio se angajează cu Moscova",
-      "title_it": "I colloqui del G20 mettono in luce una profonda spaccatura mentre la Russia rimane ribelle e Rubio impegna Mosca",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-ec251866ec0f0183",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Rubio welcomes Poland as G20 ‘full participant’, looks to Doral summit",
-      "summary": "",
-      "source": "The Hawk",
-      "published": "2026-10-31T01:23:40Z",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQa1E5QzlkZi1PVjFJcnU0bVZXRHF0TVViMlp0Q096ajFVUUFhY3hqYnAzc19MUm1YaEpXcjhOYm9PR0NQTThOYzdCYzhqS0NoakJDcUNDNVJ2RHByWFRiR3h5VFFQd0dEV29palE4aWNDeUdON3JvNmd3ajFDVVZpalZWZkJibG93ZDBCZVFPS2I3NXF6b1ZwbUtRV3luejl3djZj?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Rubio salută Polonia ca „participant deplin” al G20, se uită la summit-ul Doral",
-      "title_it": "Rubio accoglie la Polonia come “partecipante a pieno titolo” del G20 e guarda al vertice di Doral",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-ec95cc2e46dfaea4",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "How has the ceasefire in Russian-occupied Oleshky been unfolding?",
-      "summary": "",
-      "source": "BBC",
-      "published": "2026-10-30T23:31:53Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9uOUExeDdjQjRzNUNmXzdOYTlkWnYyNFhpaWVPYTFkdFA4QTY1TGdKRXNoUVFwQm84WlpuNU1sNGUtWTU3SUxTSU9fR2JWa3ROYzJNcW9YWlB4SHc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Cum s-a desfășurat încetarea focului în Oleșki ocupat de ruși?",
-      "title_it": "Come si è svolto il cessate il fuoco nella zona di Oleshky occupata dai russi?",
       "translation_status": "machine_translation"
     }
   ]
