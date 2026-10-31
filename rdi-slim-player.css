@@ -17,3 +17,10 @@ html:not(.youtube-news) .rdi-header-player{order:3;width:100%;max-width:none;fle
 html:not(.youtube-news) .rdi-header-volume{flex-basis:65px}
 }
 @media(max-width:430px){html:not(.youtube-news) .rdi-header-volume{display:none}html:not(.youtube-news) .rdi-header-track small{font-size:9px}}
+
+/* Collapse former radio panel's layout column; retain promotional banner. */
+html:not(.youtube-news) .rdi-broadcast-layout{display:block!important}
+html:not(.youtube-news) .rdi-broadcast-layout>.radio-brand-hero{width:100%!important;max-width:none!important;height:clamp(145px,16vw,230px)!important;aspect-ratio:auto!important}
+html:not(.youtube-news) .rdi-broadcast-layout>.radio-brand-hero img{width:100%!important;height:100%!important;object-fit:cover!important}
+html:not(.youtube-news) .rdi-broadcast-layout>#pwa-install:not([hidden]){display:inline-flex;margin:6px 0}
+@media(max-width:600px){html:not(.youtube-news) .rdi-broadcast-layout>.radio-brand-hero{height:150px!important}}
