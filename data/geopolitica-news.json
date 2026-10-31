@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-31T21:47:01.676514Z",
+  "updated_at": "2026-10-31T22:02:02.246376Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-cfd2edc4f9319abe",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russia and Ukraine Coordinate Rare Civilian Evacuation From Occupied Ukrainian City",
+      "summary": "",
+      "source": "Latin Times",
+      "published": "2026-10-31T21:54:41Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPQ1hSOWhic2htZk40bElkVHAyblVwR2xlM0FpRmlxcmdLakd1dXVmMXFlbUdxNEpJOEdoQ3I1U1hBX1BoYVJyQTlmWWtJekRGU2VYM3hyWGZLV0dUM0RnTUwxdjNLLTNHTU9NMEN5QURkdl8waDNPQ1JjQ2NNYUpDbTAtR29laWM4b2c?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia și Ucraina coordonează o evacuare civilă rară din orașul ucrainean ocupat",
+      "title_it": "Russia e Ucraina coordinano le rare evacuazioni civili dalla città ucraina occupata",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-a402045acd505ef1",
       "category": "europa",
@@ -19,6 +33,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Bruxelles-ul pregătește un instrument împotriva dependenței de China. Cine va suporta „costul rezilienței”",
       "title_it": "Bruxelles prepara uno strumento contro la dipendenza dalla Cina. Chi sosterrà il “costo della resilienza”",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ac35d46bc3267d40",
+      "category": "europa",
+      "region": "europa",
+      "title": "Criza din Polonia ajunge la Bruxelles. Fostul premier Beata Szydło cere o ședință extraordinară a…",
+      "summary": "",
+      "source": "Gândul",
+      "published": "2026-10-31T20:20:08Z",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNVEx6YXpsTVVWRUVjTTJHTV9fUGtibEs4cEpuUGFvZEk1Njk3dE1MVnRNbE5HcHBiRG5fVUd6SEdNRnBuQzZMLUVpTGNrcFprOGJfTjFsazM2NjFpRW5sa2NZcmEtNHdpTVo1dy1oTEVHcFNGLWJUUW43MWdlb1JBLTdXNlpGQ0pUZ3p3Y1dEZ1Vzb3BLSWYxR2RwcW1NRUZKM2tRRzV0MUPSAa4BQVVfeXFMUFFxbEVmMVFyV18xODB2dS0zM3ZlR3p6Q29pVWpMX1RyQ1pMOTNKSEVzUTRBWWVObmxBWmFRaGJXeG9MNXNCOTJKcDB4eW1lUU5ITVJXQXNnR3JKbjFKRDZnOTd6aXBuMmNKRDNNa0pZcmtaaUl4VVY2am90cXlEZWlNOHZ2LTEwM1ZvblVJWW5vOEJtck1hdEpZS2hid1U0RnVaa2J2WGtiN19fU0RB?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Criza din Polonia ajunge la Bruxelles. Fostul premier Beata Szydło cere o ședință extraordinară a…",
+      "title_it": "La crisi in Polonia arriva a Bruxelles. L'ex primo ministro Beata Szydło chiede una riunione straordinaria dei...",
       "translation_status": "machine_translation"
     },
     {
@@ -50,6 +78,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-02aeee3076d54974",
+      "category": "securitate",
+      "region": "europa",
+      "title": "NATO 3.0: Bulgaria, Romania and Turkey have much to learn from the Scandinavian defense model",
+      "summary": "",
+      "source": "Fakti.bg",
+      "published": "2026-10-31T19:05:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWkV2ODlSNV9RX28zYWtNRHBhaTYzbG9vbmZCY1B3MkR1c0RSTU51SWJMc2dJQkNIZTA0VVlhVHdMeld3R0pUajhQVXVONUdPREN6ZDNsLXVEb0F1Tl8tNGo2MU5uQzlVQlZuVHlfQW5jTUVtX1hwNGQ0N2RHTFc5M2hvNURVby1PeEdFVkQ5ZzBpS1RCU1Z0N3FPY1RRT2o0OEZLT0RsS0xsT0IwaDlnMlFkcnppSXRHZzBGVWluZHFRX0k?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO 3.0: Bulgaria, România și Turcia au multe de învățat din modelul de apărare scandinav",
+      "title_it": "NATO 3.0: Bulgaria, Romania e Turchia hanno molto da imparare dal modello di difesa scandinavo",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-1b5163a63c2b324e",
       "category": "europa",
       "region": "europa",
@@ -75,20 +117,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Quad nu „anti-China”, spune Rubio, fiind primul summit din doi ani stabilit înaintea discuțiilor Trump-Xi",
       "title_it": "Il Quad non è “anti-Cina”, afferma Rubio in occasione del primo vertice in due anni, organizzato prima dei colloqui Trump-Xi",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-ac35d46bc3267d40",
-      "category": "europa",
-      "region": "europa",
-      "title": "Criza din Polonia ajunge la Bruxelles. Fostul premier Beata Szydło cere o ședință extraordinară a…",
-      "summary": "",
-      "source": "Gândul",
-      "published": "2026-10-31T18:41:55Z",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNVEx6YXpsTVVWRUVjTTJHTV9fUGtibEs4cEpuUGFvZEk1Njk3dE1MVnRNbE5HcHBiRG5fVUd6SEdNRnBuQzZMLUVpTGNrcFprOGJfTjFsazM2NjFpRW5sa2NZcmEtNHdpTVo1dy1oTEVHcFNGLWJUUW43MWdlb1JBLTdXNlpGQ0pUZ3p3Y1dEZ1Vzb3BLSWYxR2RwcW1NRUZKM2tRRzV0MUPSAa4BQVVfeXFMUFFxbEVmMVFyV18xODB2dS0zM3ZlR3p6Q29pVWpMX1RyQ1pMOTNKSEVzUTRBWWVObmxBWmFRaGJXeG9MNXNCOTJKcDB4eW1lUU5ITVJXQXNnR3JKbjFKRDZnOTd6aXBuMmNKRDNNa0pZcmtaaUl4VVY2am90cXlEZWlNOHZ2LTEwM1ZvblVJWW5vOEJtck1hdEpZS2hid1U0RnVaa2J2WGtiN19fU0RB?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Criza din Polonia ajunge la Bruxelles. Fostul premier Beata Szydło cere o ședință extraordinară a…",
-      "title_it": "La crisi in Polonia arriva a Bruxelles. L'ex primo ministro Beata Szydło chiede una riunione straordinaria dei...",
       "translation_status": "machine_translation"
     },
     {
@@ -131,6 +159,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Quad anunță 85 de milioane de dolari în asistență AI pentru Indo-Pacific, SUA promite 10 milioane de dolari pentru minerale critice...",
       "title_it": "Quad annuncia 85 milioni di dollari in assistenza AI per l'Indo-Pacifico, gli Stati Uniti si impegnano a donare 10 milioni di dollari per minerali critici...",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-1ea2038ce67f4394",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Quad foreign ministers complete preparations for Manila summit — South China Morning Post",
+      "summary": "",
+      "source": "UA.NEWS",
+      "published": "2026-10-31T16:26:49Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPNEtNQV9yVmxxMnY4Q1NTLWlkLUlWbkpGcGMyQ1gxQmZlcmlCWGFvSVplZ0wxakgzekdQejFRVGJ5SjlMOFA5aHpELVlTcW9lRkQ5dFV2ZUpFQUNCM203aW83cmx0MjY5SFFfeUFCb3lVRmlQcFNQM3Q4WFptR3ppc1RRcTdLWXllRXVXLW5xbU9MRnFZMHlwdzA2TlJ1aWlqek9rcw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Patru miniștri de externe completează pregătirile pentru summitul de la Manila — South China Morning Post",
+      "title_it": "Quattro ministri degli Esteri completano i preparativi per il vertice di Manila – South China Morning Post",
       "translation_status": "machine_translation"
     },
     {
@@ -246,20 +288,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2fe6d1e8b11873fe",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Macklemore closes Free Palestine tour at sold-out London show",
-      "summary": "",
-      "source": "Yeni Şafak English",
-      "published": "2026-10-31T14:30:02Z",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPVWhpSlJab05iNFZxdmlsd1BxbER2RXgtWUZRQzRGWnJIYU9UbXkxOWkwR0dYdnBLX3hiWFY5bFViZmtKVEh1VXEwbWZKYVMxbi1DdkhmYXc5NTFBYkNReGYyelRJaE84SjB5YklfejlMSk9oLVg3TV94NWgzVGZqMDJYS0d1UUhvMnl0TXU0SzN0RmtMQS02X1Jxa0dmbXhLWUE?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Macklemore încheie turneul Free Palestine la un spectacol sold-out din Londra",
-      "title_it": "Macklemore chiude il tour di Free Palestine con uno spettacolo tutto esaurito a Londra",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-42b1ce45be70e23a",
       "category": "securitate",
       "region": "europa",
@@ -285,34 +313,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Gheorghe Piperea acuză Guvernul că îi induce în eroare pe români cu promisiuni și spune că singura șansă de a mai bloca majorarea imensă a impozitelor pe locuințe este instanța",
       "title_it": "Gheorghe Piperea accusa il governo di ingannare i rumeni con promesse e afferma che l'unica possibilità per bloccare l'enorme aumento delle tasse sulla casa è il tribunale",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-838515cfcb5b3209",
-      "category": "securitate",
-      "region": "europa",
-      "title": "\"The Kremlin is counting on the US to weaken\": Filipenko on NATO's ultimatum and Trump's problems",
-      "summary": "",
-      "source": "24 Канал",
-      "published": "2026-10-31T14:03:00Z",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNWmNrNFBCUFVMYU0yYXFLWjd5MzlCc0c3YjJtaVoyUHNBdHl3WDYxZDg2dHFFbTdHZUFVOW9CM0lIQ1Q3bGtvWVY5bklWdzc4Qno5RDlUQVl4MG9MU21OQjFuMlVNMU42Q25NZ2FIUFB0TXRWSEdHSjVxajhVVVQ5bVNQV1lHZTFBTDFpSkJWRnRfb2x6QXc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "„Kremlinul contează pe SUA să slăbească”: Filipenko despre ultimatumul NATO și problemele lui Trump",
-      "title_it": "\"Il Cremlino conta sull'indebolimento degli Usa\": Filipenko sull'ultimatum della Nato e i problemi di Trump",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-4536a86b5875fb07",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Japan, Sweden deepen defense ties as security challenges connect Europe, Indo-Pacific",
-      "summary": "",
-      "source": "Indo-Pacific Defense FORUM",
-      "published": "2026-10-31T14:00:12Z",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWS1XaTd2TlRmTDRROFZCSzJzWFFZemx5Z1h6Q0RLSjgwQWpWQm5rczBDaDFDRWdTYUxzay1iZTVqdng3TXB5VjJNeS1aSllpTE5pbm4zank3UTk1NTIzdjlJOFV4ajU1MjdIOUltVF9KQ01FaGlranlsRVNOaUttUWVWRDVJTDhmTl9HOXJNSF9LYUxfbmw5T1gzckxaMEUxUThjU3ZPR1lpaWExajJNLUlVMTgwRllrUTlB?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Japonia și Suedia adâncesc legăturile de apărare pe măsură ce provocările de securitate leagă Europa, Indo-Pacific",
-      "title_it": "Giappone e Svezia approfondiscono i legami di difesa mentre le sfide alla sicurezza collegano l’Europa e l’Indo-Pacifico",
       "translation_status": "machine_translation"
     },
     {
@@ -358,17 +358,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-9e903611e3c36062",
+      "id": "geo-ca61d147a65b2f57",
       "category": "securitate",
       "region": "europa",
-      "title": "Starmer tells Dublin event Europe can no longer rely on US to 'bankroll' its defence",
+      "title": "Sir Keir Starmer: Europe can't rely on US to 'bankroll' defence, Dublin event told",
       "summary": "",
       "source": "BBC",
-      "published": "2026-10-31T13:20:39Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9VSHJnNk10Y3EyVFBWd0VVSTgwOXVycmVWQ0hiSTN6S3NDclM1Ri1Fa2M1YTFUdF9CaTM0dzhaY1Z5aTM1d3diVzUwSlRtaTgxOHBPcW13WHRydzQ?oc=5",
+      "published": "2026-10-31T13:19:56Z",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1TNlZyeENwUjNoZVV3X3R1ekRsNF9DVS1VUjQ3QjVUbTIyTDY5cHdyVlJnUWJIeUhvOG5YVG0zVnJleW5mSUp0ZnFVajc4NVFvaVBfTlB2NmVXSFNjd2c?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Starmer spune evenimentului de la Dublin, Europa nu se mai poate baza pe SUA pentru a-și „finanța” apărarea",
-      "title_it": "Starmer racconta all'evento di Dublino L'Europa non può più fare affidamento sugli Stati Uniti per “finanziare” la propria difesa",
+      "title_ro": "Sir Keir Starmer: Europa nu se poate baza pe SUA pentru a „finanţa” apărarea, a spus evenimentul de la Dublin",
+      "title_it": "Sir Keir Starmer: L'Europa non può fare affidamento sugli Stati Uniti per “finanziare” la difesa, ha detto l'evento di Dublino",
       "translation_status": "machine_translation"
     },
     {
@@ -526,6 +526,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-b5362b85e678613d",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "UN Experts Warn of Ongoing Israeli Crimes in Gaza, West Bank...",
+      "summary": "",
+      "source": "Jordan News",
+      "published": "2026-10-31T08:28:23Z",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbkxpcFlxY3JDLUlJNUZjNGJWOWhaOVpmc041ZkQ5Wjd1VjJ5c0diVXlTVWl3aC1ld1ROUGlHcjRjOGZVQnE3NnJwQXNTOTVOMzJnc0dJbll1elVGN2M2dm9LZXVWVjN4NFBzcmRvbnZOQzA4ZTdPZTVuaDdZT0QtNWotSnRVTklfUS1BVURDLV9EbUhxTV92WGtrbzY4cmdpUWNqUmwtdGtPcTdDall3bmx3ZVQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Experții ONU avertizează asupra crimelor israeliene în curs în Gaza, Cisiordania...",
+      "title_it": "Gli esperti delle Nazioni Unite mettono in guardia dai crimini israeliani in corso a Gaza, in Cisgiordania...",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-3cf58b44403154ba",
       "category": "energie",
       "region": "global",
@@ -551,6 +565,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "SUA, Japonia și Coreea de Sud semnează un acord de parteneriat cu Arctic la Atlanta",
       "title_it": "Stati Uniti, Giappone e Corea del Sud firmano ad Atlanta il patto di partenariato artico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2891531e24e27afe",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "The Iran War, US-China Rivalry and India's Strategic Choices",
+      "summary": "",
+      "source": "illustrated Daily News",
+      "published": "2026-10-31T07:27:51Z",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONGxINnU3VUlXa1NEc2QzczRfQTZpaTh6Y1lIeE1Mc0JxOTZ6b1Iyd0tlNllYTjY2MTNWaThPS1p0WmhHWkVkcGVMdWpqZmYyT1N0QkFpR2NVTlRMN3NHeEJSODVwVjYtLUhTMWdzRmQ0TEh1U3pCaGttVkN5YnQ0T1JxcFFCOWdSamlFbkN5Yk5FaGRxUXBqSW9nR1NYX0NJbFN5MEJWS3BuVko1R1ZZ0gGvAUFVX3lxTE40bEg2dTdVSVdrU0RzZDNzNF9BNmlpOHpjWUh4TUxzQnE5NnpvUjJ3S2U2WVhONjYxM1ZpOE9LWnRaaEdaRWRwZUx1ampmZjJPU3RCQWlHY1VOVEw3c0d4QlI4NXBWNi0tSFMxZ3NGZDRMSHVTekJoa21WQ3lidDRPUnFwUUI5Z1JqaUVuQ3liTkVoZHFRcGpJb2dHU1hfQ0lsU3kwQlZLcG5WSjVHVlk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Războiul Iranului, rivalitatea SUA-China și alegerile strategice ale Indiei",
+      "title_it": "La guerra in Iran, la rivalità USA-Cina e le scelte strategiche dell’India",
       "translation_status": "machine_translation"
     },
     {
@@ -593,20 +621,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Descoperire diplomatică: COP17 oferă o înțelegere, nu bani",
       "title_it": "Svolta diplomatica: la COP17 stabilisce un accordo, non i soldi",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f8ad8b036f3615cc",
-      "category": "securitate",
-      "region": "asia",
-      "title": "US, Japan and South Korea sign memorandum on the Pacific Arctic — Anadolu Agency",
-      "summary": "",
-      "source": "UA.NEWS",
-      "published": "2026-10-31T05:44:47Z",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxORGJhLVI4OTdsVEtJX2NTSk1kVUU0MHpsTFFUTUEtWnFRM3BZVFNib1NjemVoU2FxUU1Ccnpwck9XamdzRzhCTk03Mlg2MkJBdGNSd0ZOTUhMZC1XT3hDbnJmOFVUZm84X3phYmNMSmYwX01CUEhjWGN5T25DODlXLXVuTkhXcm1ZdDJGQUhhVE5lV3RZVHV0Q3l0eXlsTEFudDNGaWI5UlNIanY3aGxiSzdVbElfc1gxRk9yckgzTnVLTm8?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "SUA, Japonia și Coreea de Sud semnează un memorandum privind Arctica Pacificului – Agenția Anadolu",
-      "title_it": "Stati Uniti, Giappone e Corea del Sud firmano un memorandum sull’Artico Pacifico – Agenzia Anadolu",
       "translation_status": "machine_translation"
     },
     {
@@ -677,62 +691,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Briefing de război din Ucraina: Lavrov din Moscova a fost respins la G20 din Atlanta",
       "title_it": "Briefing sulla guerra in Ucraina: Lavrov di Mosca snobbato al G20 di Atlanta",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-16f38e02a6fd0fe4",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Strategic Geography of the Indo-Pacific: Island Chains and Key Chokepoints",
-      "summary": "",
-      "source": "GK Today",
-      "published": "2026-10-31T03:41:53Z",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOdkw3RE5TcF9NejM5Q0JhQjVuelJibEdsd3RkMm9wS2dLQkNDY0RYbE5DM3lVd2xaM0FvdTBncTE2Mm1WdjJieTZxZ3J0SldyN0Nzc0E2M0dOQU9EbGt1NFhrVXJfOUJRR2VDMkJMRDNCSEJYN3FXSjhnVjBJZTdxdDUxMEVpNkNvYmJfaDJreGFXMTVLTDJkeTdBVEJ2UQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Geografia strategică a Indo-Pacificului: lanțuri de insule și puncte cheie",
-      "title_it": "Geografia strategica dell'Indo-Pacifico: catene di isole e punti di strozzatura chiave",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-599d14ba4e2fbd33",
-      "category": "securitate",
-      "region": "asia",
-      "title": "US, Japan, South Korea sign Arctic pact",
-      "summary": "",
-      "source": "The Hans India",
-      "published": "2026-10-31T03:30:40Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxON2wwS3J4NkRmelRHY1U5dmQxdi1Uc1E5NVpBcEE5R01pM0ltaC1TRGpXdXZQdWliU3J3Si13NEVWX0JUM01kS3lQS0p2Vlc0ZmlnVndWbk95NWNtSnhlaGpDSmF4UjZoNGVNY1B2M3d1ZmhvaHJvSk5tanBuZVdkaURoYmRZZ3pHOHJUa3JiSWUtZmpzb2htdQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "SUA, Japonia, Coreea de Sud semnează pactul arctic",
-      "title_it": "Usa, Giappone e Corea del Sud firmano il patto artico",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-befb2886acec7ed3",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Trump Demands New Ukraine President, Says Zelensky Rejected Peace Deals",
-      "summary": "",
-      "source": "LEADERSHIP Newspapers",
-      "published": "2026-10-31T02:34:50Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRWJlVVVTYUstWEc3eE0xVnlkRXJlVk5JbV81Vnd6SDhXUjQxd2FGSThxWklmZkc4bXRfcFNfVUtVTDFPQzVBT1NsWnowZkVYQlM2eVQySUNtV2Rzb1A3T05QdVBucDhITkNPaDZ3TGxlaXdITy02eDB5bXJTVmVfdUpIQmtyYkRqR2U5QTRoZzZhekFwWUhGMw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Trump cere noul președinte al Ucrainei, spune că Zelensky a respins acordurile de pace",
-      "title_it": "Trump chiede un nuovo presidente dell’Ucraina, afferma che Zelenskyj ha rifiutato gli accordi di pace",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-84ef77cf08745bf5",
-      "category": "securitate",
-      "region": "asia",
-      "title": "South Korea, U.S., Japan Reaffirm North Korea Denuclearization Commitment",
-      "summary": "",
-      "source": "조선일보",
-      "published": "2026-10-31T02:33:30Z",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQbHFiY05SNjVjZ2w4dTZRVkxpalNraU1DeE5GUmQtNjFvMDNqZzJDTWFBaXRtQUtLMFpkTGFUVVhmMUxocUFYZ3pka19qRDAtOGdKSDJtN0Mwb0F5Nl9tR2lZV2dvNVY1cmNuNHRucTRkblQ4a25YR3ZILUw3b0tkR1M0ZDZLb0dK?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Coreea de Sud, SUA, Japonia reafirmă angajamentul de denuclearizare al Coreei de Nord",
-      "title_it": "Corea del Sud, Stati Uniti e Giappone riaffermano l’impegno di denuclearizzazione della Corea del Nord",
       "translation_status": "machine_translation"
     },
     {
