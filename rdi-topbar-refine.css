@@ -29,3 +29,22 @@ html:not(.youtube-news) .rdi-top>.rdi-header-player{flex:0 1 510px!important;min
 /* Hide the promotional panoramic banner on the public homepage. */
 html:not(.youtube-news) #rdi-gold-banner{display:none!important}
 html:not(.youtube-news) .rdi-broadcast-layout{margin:0!important;padding:0!important;min-height:0!important}
+
+
+/* Two-country photo backdrop, no baked-in text or branding. */
+html:not(.youtube-news) body>main{position:relative!important;isolation:isolate!important}
+html:not(.youtube-news) body>main::before{
+content:""!important;position:absolute!important;inset:0 50% auto 0!important;
+width:50%!important;height:400px!important;z-index:-1!important;pointer-events:none!important;
+opacity:.22!important;
+background-image:linear-gradient(to right,rgba(247,249,252,.12),rgba(247,249,252,.98)),linear-gradient(to bottom,transparent 10%,#f7f9fc 100%),url("https://commons.wikimedia.org/wiki/Special:FilePath/Castle_Bran.jpg?width=1280")!important;
+background-position:center,left top,center 40%!important;background-size:cover,cover,cover!important;background-repeat:no-repeat!important;
+}
+html:not(.youtube-news) body>main::after{
+content:"";position:absolute;inset:0 0 auto 50%;width:50%;height:400px;z-index:-1;pointer-events:none;opacity:.22;
+background-image:linear-gradient(to left,rgba(247,249,252,.12),rgba(247,249,252,.98)),linear-gradient(to bottom,transparent 10%,#f7f9fc 100%),url("https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum.rome.arp.jpg?width=1280");
+background-position:center,left top,center 40%;background-size:cover,cover,cover;background-repeat:no-repeat;
+}
+@media(max-width:650px){
+html:not(.youtube-news) body>main::before,html:not(.youtube-news) body>main::after{height:310px!important;opacity:.17!important}
+}
