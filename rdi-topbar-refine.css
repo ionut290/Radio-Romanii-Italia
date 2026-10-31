@@ -1,7 +1,7 @@
 /* Slim navigation and Romania–Italy backdrop; homepage only. */
 html:not(.youtube-news) body{background:#f7f9fc}
 html:not(.youtube-news) body>main{position:relative;isolation:isolate}
-html:not(.youtube-news) body>main:before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;height:520px;background:linear-gradient(180deg,rgba(247,249,252,.30),#f7f9fc 100%),url('./RADIO-COVER.jpg') center 38%/cover no-repeat;opacity:.27;pointer-events:none}
+html:not(.youtube-news) body>main:before{content:"";position:absolute;z-index:-1;top:0;left:0;right:0;height:520px;background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(247,249,252,.96) 100%),url('./RADIO-COVER.jpg') center 18%/82% auto no-repeat;opacity:.12;pointer-events:none}
 html:not(.youtube-news) .rdi-top{display:flex!important;align-items:center;justify-content:flex-end;gap:12px;margin:0 0 8px!important;padding:4px 6px!important;min-height:52px}
 html:not(.youtube-news) .rdi-top>.rdi-identity{display:none!important}
 html:not(.youtube-news) .rdi-top>.rdi-header-player{flex:1 1 520px;max-width:670px;margin:0!important}
