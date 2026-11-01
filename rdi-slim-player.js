@@ -28,6 +28,16 @@
  miniCast?.addEventListener('click',()=>cast?.click());
  updateButton();
  const endpoint='https://radio-romanii-italia.duckdns.org/api/nowplaying/radio-romanii-italia';
+ const fallbackCover=new URL('./RADIO-LOGO.png',location.href).href;
+ const cover=document.createElement('img');
+ cover.id='rdi-now-playing-cover';
+ cover.alt='Copertina del brano in onda';
+ cover.width=46;cover.height=46;
+ cover.style.cssText='width:46px;height:46px;flex:0 0 46px;object-fit:cover;border-radius:8px;background:#152b46;box-shadow:0 2px 8px #0003';
+ cover.src=fallbackCover;
+ const trackBox=title.closest('.rdi-header-track');
+ if(trackBox){trackBox.style.minWidth='0';trackBox.parentElement?.insertBefore(cover,trackBox);}
+ cover.addEventListener('error',()=>{if(cover.src!==fallbackCover)cover.src=fallbackCover;});
  async function refreshTrack(){
   try{
    const response=await fetch(endpoint,{cache:'no-store',signal:AbortSignal.timeout(7000)});
@@ -40,8 +50,11 @@
    if(!text&&data?.live?.is_live)text=data.live.streamer_name||'Studio Live';
    title.textContent=text||'Radio Românii din Italia · Live 24/7';
    title.title=title.textContent;
+   const art=String(song.art||'').trim();
+   const coverUrl=art.startsWith('https://')?art:fallbackCover;
+   if(cover.src!==coverUrl)cover.src=coverUrl;
    if(text&&'mediaSession'in navigator&&navigator.mediaSession.metadata){
-     navigator.mediaSession.metadata=new MediaMetadata({title:name||text,artist:artist||'Radio Românii din Italia',album:'RDI · Live'});
+     navigator.mediaSession.metadata=new MediaMetadata({title:name||text,artist:artist||'Radio Românii din Italia',album:'RDI · Live',artwork:[{src:coverUrl,sizes:'512x512'}]});
    }
   }catch(_){if(!title.dataset.hasTrack)title.textContent='Radio Românii din Italia · Live 24/7'}
  }
