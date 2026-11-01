@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-01T05:06:10.760714+00:00",
+  "news_updated_at": "2026-11-01T05:07:18.195369+00:00",
   "editorial_updated_at": "2026-11-01T02:01:34.473719+01:00",
-  "translations_updated_at": "2026-11-01T03:58:53.562340+00:00",
-  "feed_total": 76,
+  "translations_updated_at": "2026-11-01T05:05:41.325793+00:00",
+  "feed_total": 78,
   "feed_extended_400": 12,
-  "feed_missing_body": 64,
+  "feed_missing_body": 66,
   "feed_short_body": 0,
   "editorial_total": 23,
   "archived_editorials": 115,
@@ -13,7 +13,7 @@
   "pending_filtered_out": 134,
   "editorial_verde": 16,
   "editorial_galben": 38,
-  "editorial_rosu": 41,
+  "editorial_rosu": 43,
   "pending": [
     {
       "title": "Alertă pentru șoferii care tranzitează Spania. Un român a observat metoda prin care hoții îi... - StiriDiaspora",
@@ -193,6 +193,16 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento originale verificato ancora assente o insufficiente",
+      "attempts": 0
+    },
+    {
+      "title": "Când pot primi proprietarii de locuințe despăgubiri de până la 100.000 de lei. Obligația prevăzută de lege",
+      "category": "",
+      "published": "2026-11-01T05:00:47+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/cand-pot-primi-proprietarii-de-locuinte-despagubiri-de-pana-la-100-000-de-lei-obligatia-prevazuta-de-lege-4015477",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento originale non ancora verificato: fonti da consultare",
       "attempts": 0
     },
     {
@@ -446,6 +456,16 @@
       "attempts": 0
     },
     {
+      "title": "Misterul Sfintei Agnes, inteligența artificială și furtul de opere de artă: cum a găsit poliția italiană un tablou furat acum 20 de ani",
+      "category": "",
+      "published": "2026-11-01T05:00:50+00:00",
+      "url": "https://www.digi24.ro/magazin/timp-liber/cultura/misterul-sfintei-agnes-cum-a-gasit-politia-italiana-ajutata-de-inteligenta-artificiala-un-tablou-furat-in-urma-cu-20-de-ani-4012695",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento originale non ancora verificato: fonti da consultare",
+      "attempts": 0
+    },
+    {
       "title": "O doctoriță româncă, după ce a obținut cetățenia germană: \"Reacțiile oamenilor la pașaportul german nu au fost cum mă așteptam\" - StiriDiaspora",
       "category": "",
       "published": "2026-10-31T18:36:00+00:00",
@@ -594,26 +614,6 @@
       "status": "roșu",
       "reason": "Approfondimento verificato da completare: testo originale breve o fonti da consultare",
       "attempts": 0
-    },
-    {
-      "title": "Răspunsul lui Intotero, întrebată despre revenirea lui Cazan la Apele Române: Înțeleg că e frustrată că nu mai ocupă acest portofoliu",
-      "category": "",
-      "published": "2026-10-30T13:19:58+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/raspunsul-lui-intotero-intrebata-despre-revenirea-lui-cazan-la-apele-romane-inteleg-ca-e-frustrata-ca-nu-mai-ocupa-acest-portofoliu-4015393",
-      "source": "",
-      "status": "roșu",
-      "reason": "Testo integrale verificato assente",
-      "attempts": 0
-    },
-    {
-      "title": "Trafic suspendat la Porțile de Fier I până duminică, 1 noiembrie. Camioanele nu pot intra în România din Serbia. Ce trebuie să știe șoferii - Oficiul de Știri",
-      "category": "",
-      "published": "2026-10-31T15:38:19+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPZmQ2cDg0YkZBeHRHRlV6NDhpVjFJYTNDYk9Db0RXRHhNcldGNzFQWmRJTmJ3NjBDSERhSFpneS1ubXJsbDc0M1pCZ2hkUmY2S0RRRE55aWN2VFdpODYwX0RXcC1KdWF6UGlyaXBUNUcwdUhkYTFxY1BRQkViUk80NkR1LXJ4QUVnRVRvdTNPNHMzU2RUSEJ3Q21FcGZPOG16b2l2ZnFtVTBNVWtkU3hCX0staU1waURTRmFVOHktZl9jYXFiSWFoenFMLXR1dURialQxZGcxQUdicTN4UUVKcGl1M0dxTk9NSE1UVFlxN0FlRE9X?oc=5",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato da completare: testo originale breve o fonti da consultare",
-      "attempts": 0
     }
   ],
   "recent_news": [
@@ -750,7 +750,7 @@
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbGdtalRPbDRVRHZnNV96NVZ5a2QtOHFrenZXNkxzSGh5VXlHbXVxZjE5am4wbmo1NWZOX1Rfb21uMTVKR1dNTGJ2NGVLQktIZDB1Vkh0Nk5nSkZyT1lSU0prQ1VrdTV6RXdlNXlLVXM1UFFkZ3VQOTlBUlFsSGIyYnBkd0FaWXBYVzBjSVhEOUtWcVU2cVRwODc5V0FnM0cwOXBnVDJ6MlJidmVURlhvR3lJYTdIWWxtZmgxekxsV28wcVJVUWVjMkh3?oc=5",
       "source": "la Repubblica",
       "status": "verde",
-      "words": 493
+      "words": 494
     },
     {
       "title": "A Parigi ancora scontri a fine corteo, 'dai casseurs violenza inaudita'",
@@ -1068,6 +1068,15 @@
       "words": 0
     },
     {
+      "title": "Cine este Ioan Nani, omul care a condus Antibiotice Iași aproape 30 de ani. Motivul pentru care s-a retras, de fapt, din funcție - Oficiul de Știri",
+      "category": "România",
+      "published": "2026-10-30T20:42:14+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZ0pRRF9leXJueFFGdjhfU3JOXzdES3NBR1c4VDRWZUVMRThENnRHdUMxR0YySW9hUlVmNVk4eklXZkNQMVk3MTU3VUs3Tm8tWGE5MVpmUUdzY3o5bHJkTlRMRHFqajY0b3VYc0ZjOUpXajFSeEVPalhad2xwcEpFN3Rfd21mLV9rX01EWTRvS0ctVGpfMW9QSVMtLUtNZkZZTWFVV3VjWkE3S2xhbnJRcnA5SHRBY1B6TjhVOEx3YW10RmZsaUM0dmNxNzRYeWZYckVBOExGdE9NY19YZmpaQ2I0d2w?oc=5",
+      "source": "Oficiul de Știri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Manovra, arriva la “exit tax” sulle plusvalenze dei ricchi che lasciano l’Italia - la Repubblica",
       "category": "Italia",
       "published": "2026-10-30T20:37:45+00:00",
@@ -1140,6 +1149,15 @@
       "words": 475
     },
     {
+      "title": "Rectificare bugetară de urgență: miliarde în plus pentru pensii, sănătate și plata datoriilor către firme. PSD anunță deblocarea fondurilor - Realitatea.NET",
+      "category": "România",
+      "published": "2026-10-30T16:55:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOTDExc3pyd3pWb2FIWFNHMzVjMV9YdmQ3YkN5OEVlOHBHX0M0ODNMUWRIbWdYWHdFc283NDNQUnUwYzFUNEp1V0ZGblQ0OVczcWF4UUtZQW1ENGhsbTBuQXA3ZGRDSVk5cmVzSG5DZHd0MkJEcnAyRU9zTmtkc1ZuYVJ3cS1mUGxiclVvVk8tVkNaU2NtYmZDa1lFbllrU0ZqMG9lUTJzZUNkWWQzazFGckZZM3dxelVYX0NVVWhWOURfUlJNMXlXZlpEQkw1RV9aYzdmdWVRU1k1cFNFNlpkN29YX2gzaGpwdG51bXdlelFhREwtOE4yTVFkclVHM0o2LVk1RXlNVURuTm9WaGlaOG5oYw?oc=5",
+      "source": "Realitatea.NET",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Credit Agricole Italia, l’utile nei nove mesi supera 1,5 miliardi - la Repubblica",
       "category": "Italia",
       "published": "2026-10-30T14:18:29+00:00",
@@ -1181,6 +1199,15 @@
       "published": "2026-10-30T13:11:18+00:00",
       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQNmxBdmFiWTNJQ3E3RVYxLVVRenFYdVRDcDNFUlpRQksya3NxZXFJdWwzbm9ZREg4OXkyUHRtbHNZRFRqR2JuRTM4eWFLNVJlSEllTmhENzRWcGZTT01BRWp2bGQ3UnpnWHFhU0VDamhUd3M2cU9qWjFYczZ0d2lnNEU5S0g1WFY4eVg1RGdPcTBRcnJOa081OE0yMEhBcDRQc0ZkalVLNXpIaDNSTUtxNFFzLVY2ZUNtckowTGlUaFdNZm1LRzV2T1lnUHpBN0VGaFRFeHR6NlBMUGhZZW9mTTZuZ2J5Nm1WRFB3SzRrSlZ3aTJXcTQ1MUdhN0Q2aHFR0gGLAkFVX3lxTFBHaURsSENuZEdPdF9lX1ExNGM0YkdnMjdDdFVFMGgtY1NyQmlhNUFraktTMjRHd0NDNDdWbUF1Nk5pcjFZYURwa0NsOXlfaFhza1B",
       "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nazare: Astăzi am făcut o rectificare bugetară credibilă şi serioasă. A doua, până la finalul lui noiembrie - News.ro",
+      "category": "România",
+      "published": "2026-10-30T12:57:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOUXJFbjRMOEtncVYwWG5UU0xBY3gxcEZaRlZERXVSMVpXcGdxTW1fX0ItaEI5S0FJOFZYS0FvQkJHME5vRWJoMDlYc2FvdnBKX3NLVFp3YUljNDdOLS1PYjF5TDBlc2otZ2I2U0g1ZlZHVjBYWUxONVV6UnEwOHVkSFRMSmdtNXFnalNZSENINTViNVQtMWZ0Rlo1SWhOOFpBR2hidmJmMGIwSVFyOUlTbmpWa0dGVTU3ekNiQ1JyOFI5ZHpwMWZ6SVlsSG5tSXZ2ajVzZnhSZ1p4bWM2am5kTEt6dFozVlJHU21oZWxwY1Z1aG1P?oc=5",
+      "source": "News.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1239,15 +1266,6 @@
       "words": 0
     },
     {
-      "title": "Valoarea voucherelor de vacanță în România ar putea crește „substanțial”. Ministrul Economiei: „Este o prioritate” - Stirile ProTV",
-      "category": "România",
-      "published": "2026-10-30T10:46:36+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOUURyVzZXaC1TNkU1RWNkTnVzbkxmZHVnd0psX3FZOGREWVpDUEpWVDNVRkpkZDVIdXdtS2tOOXhYb21sOFNhMXYtTWRhdmJZdGNWTDA1RGxwdnZBQi11NHcydWdLM0JKTGdxWUw0WUF4WTF3X1cybHhXaXdEMDFISGpkdk1BSUtaVzFlVWZsQ0VEY0xmU0R6TGUtYW5uQzByZTM0V3lDZ1p4aFM2X1NMQnNTSFhlaHExYURuUkp6azhUdlZIa3NFaVJsMktVcXdGU3BoNlpVSjFMalB3YndqUEhhMkJNRVd1?oc=5",
-      "source": "Stirile ProTV",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "RO-Alert în Sălaj şi Cluj: trei copii cu vârste între 11 şi 13 ani au dispărut - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-30T09:57:00+00:00",
@@ -1289,6 +1307,15 @@
       "published": "2026-10-30T08:36:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxORE1weVlEVjZ6dlFMWmozb21xVnhMVEM3UDBFOVNLT0k1N1hEOWJPMllYeHA3cm9NNWdySW03UEpwV2NyZjJkUHFONkx6U1BvUnpiWlVUdWdEdkVXRElyWnNoMWlRQ1VyNXJ4c0xoQ1UtTmVjNGVSNEd0akwwYnZacmJsRGFQLWJVV01hbU82UHNKZkcyZGNLVm9ySUhFZkpqLWFWMkFWRml1NUFEVk9BM1BIa2hSSFhPQnBzdUZxQl9oWi1yM0k1aDZMdVU1N2xHTUgw0gHYAUFVX3lxTE5ybzBUZjFFWTA0d0dwQ0FVbURnRk1kdnUyU2tseEx1dkc5RGhyUkw1YjJIRTVTN2lWZ3hMSnU5TWp5T1luVXlwY0FRMXRhWVgwR2lIYWRzRGM4QzRsQzJSUVBRRG14RjR5eUh6MkE4allxLXNUYV82NHVhVEVQbGd",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "România riscă să piardă fonduri europene. Mihai Ghigiu: \"Trebuie clarificate ultimele două cereri de plată din PNRR până pe 6 noiembrie\" - Realitatea.NET",
+      "category": "România",
+      "published": "2026-10-30T08:07:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQX1NtbS1zRFhvMF9MZTlSbXhvRkczMmJnaGxuTmdlZzN5Q1FRVnBNaEpJVGtwSWgxWW8xOVh5YWFoS1hoNjI5MnktX2ZkRDdDdmpVTWhuNFpHR0VXRXpMTV9XRy1jZ3RqcXZyY1BwMXBoNmxLdnUwcHlsQmsybTBORi1HTlgwaVVvWFIxM05DYmZtSWdaeHk1QU9hRzJJNm9qRF9nRDZydTB0TU9HUFZiMVhxR2xnc3o2dVRSLXBvdGE0VU9GMXdMZXlGSWZOeVJpeHhYWjVPaktYQmJLejFOejU3UWQ1S1VOMm9wUENnYzQ2OFRsNGFmNW9zRE0tdHUwR0tCanZudXZqemttdkE?oc=5",
+      "source": "Realitatea.NET",
       "status": "roșu",
       "words": 0
     },
