@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-31T04:04:50+01:00",
+  "updated_at": "2026-11-01T01:00:20+01:00",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
-  "reviewed_by": "RDI redazione assistita IA, verifica fonti 2026-10-31",
+  "reviewed_by": "RDI redazione assistita IA, verifica fonti 2026-11-01",
   "items": [
     {
       "id": "rdi-ukraine-dnipro-railway-20261029",
@@ -554,6 +554,81 @@
         {
           "name": "El Financiero, 30 ottobre 2026",
           "url": "https://elfinanciero-elfinanciero-prod.cdn.arcpublishing.com/estados/2026/10/30/violencia-alcanza-otro-restaurante-asesinan-a-dos-hombres-en-mazatlan/"
+        }
+      ]
+    },
+    {
+      "id": "rdi-us-fairfield-20261030",
+      "date": "2026-10-30",
+      "reported_on": "2026-10-31",
+      "country": "Statele Unite",
+      "country_code": "US",
+      "place": "Fairfield, California (poziție aproximativă la nivel de oraș)",
+      "lat": 38.2494,
+      "long": -122.04,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": 1,
+      "injured": 6,
+      "attacker_killed": null,
+      "actor": "Suspect neidentificat public la 31 octombrie; poliția a descris atacul drept țintit, fără a confirma un motiv.",
+      "title_ro": "California: un mort și șase răniți într-un atac armat la un magazin din Fairfield",
+      "title_it": "California: un morto e sei feriti in una sparatoria a Fairfield",
+      "description_ro": "La 30 octombrie 2026, în jurul orei 20:30 locale, un atac armat într-un magazin Spirit Halloween din Fairfield a provocat moartea unei persoane și rănirea altor șase, potrivit poliției citate de AP. Cel puțin trei răniți erau în stare critică în comunicările inițiale. Autorul și motivul nu erau confirmați public la 31 octombrie. Nu există o atribuire teroristă verificată. Punctul indică doar orașul, nu magazinul.",
+      "description_it": "Il 30 ottobre 2026, intorno alle 20:30 locali, una sparatoria in un negozio Spirit Halloween di Fairfield ha causato un morto e sei feriti, secondo la polizia citata da AP. Almeno tre feriti risultavano in condizioni critiche nelle prime comunicazioni. Responsabile e movente non erano confermati pubblicamente al 31 ottobre. Nessuna attribuzione terroristica verificata. Il punto indica solo la città.",
+      "casualty_note_ro": "Un deces și șase persoane rănite, potrivit poliției din Fairfield, citată de Associated Press la 31 octombrie 2026. Bilanț provizoriu; autorii uciși nu sunt incluși.",
+      "casualty_note_it": "Un morto e sei feriti secondo la polizia di Fairfield citata dall'Associated Press il 31 ottobre 2026. Bilancio provvisorio; eventuali autori uccisi non inclusi.",
+      "sources": [
+        {
+          "name": "Associated Press, 31 ottobre 2026",
+          "url": "https://apnews.com/article/c531ed034832fa0558a246b18334f5bd"
+        },
+        {
+          "name": "San Francisco Chronicle, 31 ottobre 2026",
+          "url": "https://www.sfchronicle.com/crime/article/fairfield-shooting-spirit-halloween-store-22504100.php"
+        },
+        {
+          "name": "ANSA, 31 ottobre 2026",
+          "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/sparatoria-in-un-negozio-di-articoli-per-halloween-in-california-un-morto-e-6-feriti_a818bde0-cbba-42a9-b1c3-d439cf07ae5e.html"
+        }
+      ],
+      "rdi_article_id": "rdi-20261030-fairfield-california-atac-armat"
+    },
+    {
+      "id": "rdi-colombia-la-sierra-peaje-20261031",
+      "date": "2026-10-31",
+      "reported_on": "2026-10-31",
+      "country": "Columbia",
+      "country_code": "CO",
+      "place": "La Sierra, departamentul Cauca (poziție aproximativă la nivel de municipiu)",
+      "lat": 2.18,
+      "long": -76.76,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": null,
+      "injured": null,
+      "attacker_killed": null,
+      "actor": "Responsabilii nu au fost identificați independent. Unele autorități au atribuit preliminar atacul unei structuri disidente FARC; atribuirea nu este prezentată drept fapt stabilit.",
+      "title_ro": "Columbia: explozie la un punct de taxare pe șoseaua Panamericană din Cauca",
+      "title_it": "Colombia: esplosione al casello El Mango sulla Panamericana, nel Cauca",
+      "description_ro": "În dimineața de 31 octombrie 2026, o motocicletă despre care presa locală relatează că ar fi transportat explozivi a fost detonată în zona punctului de taxare El Mango, în municipiul La Sierra, Cauca. Infobae, Vanguardia și El Universal au relatat pagube materiale și întreruperea temporară a circulației. Primele relatări nu au indicat răniți sau morți, dar nu oferă un bilanț final verificat; de aceea valorile rămân necunoscute. Nu există atribuire definitivă. Marcajul arată doar municipiul.",
+      "description_it": "La mattina del 31 ottobre 2026 una motocicletta che, secondo la stampa locale, trasportava esplosivi è stata fatta detonare nell'area del casello El Mango, nel comune di La Sierra, Cauca. Infobae, Vanguardia ed El Universal riferiscono danni materiali e interruzione temporanea della circolazione. I primi resoconti non segnalavano vittime, ma non costituiscono un bilancio definitivo; i valori restano quindi sconosciuti. Responsabilità non accertate. Il punto indica solo il comune.",
+      "casualty_note_ro": "La 31 octombrie presa locală nu raporta persoane decedate sau rănite, însă bilanțul final nu era confirmat; câmpurile rămân null, nu zero.",
+      "casualty_note_it": "Al 31 ottobre la stampa locale non segnalava morti o feriti, ma il bilancio definitivo non era confermato; i campi restano null, non zero.",
+      "sources": [
+        {
+          "name": "Infobae Colombia, 31 ottobre 2026",
+          "url": "https://www.infobae.com/colombia/2026/10/31/moto-con-explosivos-detono-en-un-peaje-de-la-via-panamericana-esto-se-sabe/"
+        },
+        {
+          "name": "Vanguardia, 31 ottobre 2026",
+          "url": "https://www.vanguardia.com/colombia/2026/10/31/motocicleta-con-explosivos-fue-detonada-en-un-peaje-de-la-via-panamericana/"
+        },
+        {
+          "name": "El Universal, 31 ottobre 2026",
+          "url": "https://www.eluniversal.com.co/colombia/2026/10/31/nuevo-atentado-con-motobomba-sacude-el-sector-del-peaje-el-mango-cauca/"
         }
       ]
     }
