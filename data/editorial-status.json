@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-01T16:41:30.461689+00:00",
+  "news_updated_at": "2026-11-01T17:04:18.441485+00:00",
   "editorial_updated_at": "2026-11-01T17:02:47+01:00",
   "translations_updated_at": "2026-11-01T16:26:30.283412+00:00",
-  "feed_total": 69,
-  "feed_extended_400": 9,
-  "feed_missing_body": 60,
+  "feed_total": 68,
+  "feed_extended_400": 11,
+  "feed_missing_body": 57,
   "feed_short_body": 0,
   "editorial_total": 22,
   "archived_editorials": 121,
   "translation_records": 39,
   "pending_total": 53,
   "pending_filtered_out": 156,
-  "editorial_verde": 10,
-  "editorial_galben": 36,
-  "editorial_rosu": 39,
+  "editorial_verde": 12,
+  "editorial_galben": 35,
+  "editorial_rosu": 37,
   "pending": [
     {
       "title": "Alertă pentru șoferii care tranzitează Spania. Un român a observat metoda prin care hoții îi... - StiriDiaspora",
@@ -548,21 +548,66 @@
   ],
   "recent_news": [
     {
+      "title": "Manovra: Con la flessibilità Ue aiuti all'energia, per le imprese scatta un vincolo green",
+      "category": "Italia",
+      "published": "2026-11-01T17:01:53+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/01/manovra-bonus-giorgetti-confermato-piu-soldi-in-busta-paga-a-chi-rinvia_20031262-e476-45eb-82ee-0356dd37c56f.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 506
+    },
+    {
+      "title": "Serie A: Lecce-Genoa in campo DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-01T16:57:27+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/01/serie-a-lecce-genoa-in-campo-alle-18-diretta_b2147e23-8617-4f35-ad2f-ab6163c437bb.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "După 25 de ani în Italia, un român vrea să se întoarcă definitiv acasă, dar îl cuprinde teama: „Parcă îmi vine să renunț”. Ce sfaturi a primit - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-01T16:55:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOd1pqUlZJYTFTYWgyOTJrcUxQc1o0SXhhTFAtR2Yzc21yUVVCZ01kNF95bFN6dWxhNlVwZVlMWllWRDM0WWx6UGx0T3FORnRrNEh5VjNUOVFxMHVJSUZMYXdkcldTdktnR2pFRU9VMXFpZEZLdm15cnZtc0QtbkJfUURyem5TbXRiTl9wQUM2RThJbmthcEp3X0M4MS1xcUlwV3NGbzdqN3llM1NFQXlDQXA2ZnJKR3JxVF9LV3FzcjU3clVhTGFiOGt0d2VDczZhbTJ0Nnc1RXdYVU5abFBGaGlNZzQzMWk5RE1FTTg2QWVmQQ?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Mașini în flăcări, victime, anchete, procese peste tot pe glob. Ce se întâmplă când nici șoferii, nici salvatorii nu pot deschide ușile",
+      "category": "România",
+      "published": "2026-11-01T16:53:12+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/auto/masini-in-flacari-victime-anchete-procese-peste-tot-pe-glob-ce-se-intampla-cand-nici-soferii-nici-salvatorii-nu-pot-deschide-usile-4011273",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Rezultate LOTO - Duminică, 1 noiembrie 2026. Numerele extrase și premiile puse în joc de Loteria Română",
+      "category": "România",
+      "published": "2026-11-01T16:52:06+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/rezultate-loto-duminica-1-noiembrie-2026-numerele-extrase-si-premiile-puse-in-joc-de-loteria-romana-4015829",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Trovata morta in piscina nel Comasco, arrestato l'ex marito",
+      "category": "Italia",
+      "published": "2026-11-01T16:39:00+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/morta-nella-piscina-di-casa-nel-comasco-arrestato-lex-marito_4ca017c1-3daa-4120-b2ad-789d90ed8fb7.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Un bărbat din Vâlcea a ajuns în arest după ce şi-a bătut soţia şi fiul şi i-a ameninţat pe poliţiştii veniţi să aplaneze scandalul",
       "category": "România",
       "published": "2026-11-01T16:31:19+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/evenimente/un-barbat-din-valcea-a-ajuns-in-arest-dupa-ce-si-a-batut-sotia-si-fiul-si-i-a-amenintat-pe-politistii-veniti-sa-aplaneze-scandalul-4017335",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Serie A: La Lazio capolista solitaria, Cagliari battuto in rimonta",
-      "category": "Italia",
-      "published": "2026-11-01T16:30:34+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/01/serie-a-la-lazio-capolista-solitaria-cagliari-battuto-in-rimonta_4b330203-a3e7-49f6-9d1a-deb5ae5300a4.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -589,17 +634,8 @@
       "published": "2026-11-01T16:10:02+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/atacurile-rusesti-au-lasat-sute-de-mii-de-familii-fara-curent-in-ucraina-zelenski-intensitatea-loviturilor-este-extrem-de-mare-4017317",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Manovra: Con la flessibilità Ue aiuti all'energia, per le imprese scatta un vincolo green",
-      "category": "Italia",
-      "published": "2026-11-01T16:05:40+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/01/manovra-bonus-giorgetti-confermato-piu-soldi-in-busta-paga-a-chi-rinvia_20031262-e476-45eb-82ee-0356dd37c56f.html",
-      "source": "ANSA",
       "status": "verde",
-      "words": 506
+      "words": 489
     },
     {
       "title": "Marius Balo, care a stat 8 ani în detenţie în China, anunţă că intră în greva foamei pentru o altă româncă închisă în această țară",
@@ -740,7 +776,7 @@
       "title": "Una manovra economica che guarda a famiglie lavoro e nuove generazioni - La Gazzetta del Mezzogiorno",
       "category": "Italia",
       "published": "2026-11-01T14:10:58+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOeFMtMjgtbkQ1LUlvQkdOTHNlUW9BNTlMcEZDQ2F2Q2ViWm9rYURST3k0QXZYVW11MWZGazMzVmdYTUJFT2t3cm1iMGNzR292ZHJRSzRGa25kdDhhcHhsTFdCbGliSVRybDI0MUtSWHluUTE3YWtkT1ZURFAyMGdpNVJDS2dVbnFiNDVnYmNCVFFScm5YSXl6YmVtQUw0eDlnbU1adVJGdFRic3NQelk2dTF1YTBXOUFraU83QU9WMHZhZ2Jpd3dKZE5UWDNsX0RzaDQ2Q9IB1AFBVV95cUxOeFMtMjgtbkQ1LUlvQkdOTHNlUW9BNTlMcEZDQ2F2Q2ViWm9rYURST3k0QXZYVW11MWZGazMzVmdYTUJFT2t3cm1iMGNzR292ZHJRSzRGa25kdDhhcHhsTFdCbGliSVRybDI0MUtSWHluUTE3YWtkT1ZURFAyMGd",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZVRhZUhnZFJfbTN4eTBEN0VMMDNucVN0NHhtRWpWdHI5VXNoZXo1RThqczRoUDNlMFR3T3RRWTJfSWhoc3c2YjY2REM1dGhGWlVUdmtNZzhfZWVQR3dJX1J3MUpvRDBlLVJ0dlNQeUZOdHV2ZmFnZ240M053ejNadW16ajBycGJzVWlIeklpWnRHTDJuUzc1V3FjeFhEVEg2d29fdmdMWnhvVDFQSDlzcGRCdVZyTkV1MW1TcmdydDRjOC1MOUFOdEQ5VFFKYzJ4T25pNmxR0gHUAUFVX3lxTE54Uy0yOC1uRDUtSW9CR05Mc2VRb0E1OUxwRkNDYXZDZWJab2thRFJPeTRBdlhVbXUxZkZrMzNWZ1hNQkVPa3dybWIwY3NHb3ZkclFLNEZrbmR0OGFweGxMV0JsaWJJVHJsMjQxS1JYeW5RMTdha2RPVlREUDI",
       "source": "La Gazzetta del Mezzogiorno",
       "status": "roșu",
       "words": 0
@@ -777,15 +813,6 @@
       "category": "România",
       "published": "2026-11-01T13:24:28+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/al-treilea-copil-disparut-in-salaj-gasit-alaturi-de-un-barbat-de-43-de-ani-dgaspc-va-demara-o-ancheta-sociala-4017175",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cine conduce, de fapt, Guvernul? Valeriu Stoica: „Luca Niculescu e un mediator”. Ce soartă ar putea avea PSD până în 2028",
-      "category": "România",
-      "published": "2026-11-01T13:15:41+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/cine-conduce-de-fapt-guvernul-valeriu-stoica-luca-niculescu-e-un-mediator-ce-soarta-ar-putea-avea-psd-pana-in-2028-4016005",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -831,15 +858,6 @@
       "category": "România",
       "published": "2026-11-01T12:35:03+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/jandarmeria-dezminte-informatiile-despre-un-luptator-mma-de-18-ani-care-s-ar-fi-batut-cu-trei-jandarmi-de-unde-a-pornit-totul-4017163",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Criza politică din Polonia: reacție a Comisiei Europene. Premierul Tusk s-a adresat polonezilor",
-      "category": "România",
-      "published": "2026-11-01T12:25:08+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/criza-politica-din-poloniei-reactie-a-comisiei-europene-premierul-tusk-s-a-adresat-polonezilor-4017149",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -899,24 +917,6 @@
       "words": 0
     },
     {
-      "title": "Rubano, la Croce Rossa torna al mercato di Sarmeola: il 7 novembre prevenzione gratuita - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-11-01T09:47:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9BUmZUSTMzU3BxWjRKUWswRnkyRTQ5VXBiZzJXT2JsQ3N4LVpGRm1zcFBtel90YWZHcDNVUXp6M2VPcnh5V3RDb05VU1NfUjhPR3Qtd1paeFFqUTVUdUloa3FvanZCaHJyRTBfZnlkb1o0TkJJUlVr?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Morta nella piscina di casa nel Comasco, arrestato l'ex marito",
-      "category": "Italia",
-      "published": "2026-11-01T09:17:31+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/morta-nella-piscina-di-casa-nel-comasco-arrestato-lex-marito_4ca017c1-3daa-4120-b2ad-789d90ed8fb7.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "La parata di Halloween, New York 'invasa' da maschere e musica",
       "category": "Italia",
       "published": "2026-11-01T09:06:12+00:00",
@@ -935,11 +935,11 @@
       "words": 0
     },
     {
-      "title": "Padova, verde alla Stanga: via Venezia cambia con 15 alberi e 450 metri quadrati di aiuola - Padova24Ore",
+      "title": "Il Piemonte si svuota di giovani. Ogni giorno sei in meno e il futuro fa paura - Giornale La Voce",
       "category": "Italia",
-      "published": "2026-11-01T08:49:56+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0wTGI3djZmRjlHYkNpNFpXZGFuek9RN01hNEpZSWJPb2RpOWFmenVoeUxYTEtSVFUxNjIxRHdzaFR5ai0xVXNLZnpYazNyNmZ1NFdFc2Fnc1JlWEZIakwybVNvUEZTLXJq?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-11-01T08:46:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWFE1alYweWYxWXdBTFVsRjMyd2d2bEpHcm1ZOElpQ2o1VmxzdGJnS0pxQmRnUWdYTmE2TXpLdWlJdVNqU2R1WmIxbkp1NXBoQVpoc3ZPUVlDb04wWVBYN2dHelctakVuR05HbFN6ZVFBaHQyRkNfRW56VGtubVRlZmhRNy1qSFBnTTRqSzY1RjlGVjJqTkxiQlVTZUV6Q1dJRmNSNC1aSTR6dnBDTXhzcmp4RmVZNGcwbnVmc09fUjZhUnFiTjBiTFpKV3NsQTQ?oc=5",
+      "source": "Giornale La Voce",
       "status": "roșu",
       "words": 0
     },
@@ -962,11 +962,11 @@
       "words": 0
     },
     {
-      "title": "Campo Largo e Cavalieri: I quattro dell’Apocalisse di Arnò - Padova24Ore",
+      "title": "Ristrutturazione, ok al 50% per la prima casa. Nessun ecobonus, torna quello elettrodomestici - la Repubblica",
       "category": "Italia",
-      "published": "2026-11-01T07:31:38+00:00",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE04aFBKVTNWZEFGckNvQVhnNnBKbVpaWlJaOVBreTFwYWlabThKQWtsRkVpNG14cF9XQWxnSHlLb3pRSV9jV3dfM0tTX1dPNzA0U3lnT3lCRmtPNjdVX3ZBV2pDeUNPLWZmRy1mSThyRENJXzJZVm5BLUg2UndhTG8?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-11-01T07:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNNUVYVDUtTkNWZ21hMFBiaGhlX2E4ZjJxNzc0T3Z1YWFXWVp5VTdndnJiVGRBYW9uMk5nWkZQLVJqZkFoLVZNRGR0MExENUoyZV95eXdPcmp6NXZrSjBVbFc3cjRmbE0wS0xiaEN6R1R6U085UFpscUV6d3lQMG4tdDU1eGxsNDc2eTFFYVRRbWZmaFl3LUs4OWZnZHMxT0t2T2l0VEhBM2w3emY4djBLVTF1ekZpM2t1cUlCQ1NLUW1uNEJwdXBmejVEdjVhMnlHZXd6dUk4ODZGeGFqRlBKXzZDeGtsX0lGY253Y3BXUExIeHNILVhYdThIYm5kbjRmWGcweA?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -976,6 +976,15 @@
       "published": "2026-11-01T06:48:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVEpOajlTdF9FcUZCTVRLOGg2Vlo1TlFVTUt0TnllalRkV1RxNktRN09EbDB5bGlYR0EyT0g3ZzNjdGhSZGpBT3dKQ1VqbTR4WlRiNmVMcmF3V2E3TG82d2VlZVBRbkJRb2pqaGdlZUZJaUswNmNGeWVRVkEwT0RBZ01pQXdNSG9wcU5va1U0eTRuaXhxSVlKWnI4dUVMQXN0WWJxckxIVHQ4bFJCYUVhMmxJLWdmb2lpWTJEX0NYekvSAcYBQVVfeXFMT0tpQVY3bUpyRDVnenZKTWpjeVRnbUhuelJONXR0OUktR0Y4TnhWNFVtV0tPZE42QlVMN1RQNVE4QkQ5RmFLaGZZUVd3VGZIS0pBaTI5WnQ3MzZfYVVUVExwS2dRSUpPSHdtSmhjTDAzakcyOEtTbmhheWFRNDZPMDMtUGl3SnFqRTh1N01IczdiUG5",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Revista românului din Italia – Pagina 1772 - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-01T05:55:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9DU0pQNHZyaEQzWUR1MDF3RHdRcmxMalFabEg0TTZYamxONWVKTEN3eTRHd0ZTX3RQdWIyOVRFQU1NTGdRUmlzeg?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     },
@@ -998,11 +1007,29 @@
       "words": 462
     },
     {
-      "title": "Notizie di Padova ore 23: moda in calo, verde alla Stanga e derby al Tombolato - Padova24Ore",
+      "title": "Salvini sul Superbollo: \"Il lavoro continua\". Cosa può cambiare - Motor1.com Italia",
       "category": "Italia",
-      "published": "2026-10-31T22:30:15+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBpb2JPSE5kRHk3d0lXdGpMTmhNWkVjbmdSRWhIMWxVSHVQb256LWVMVFFkc2dvN1k0SGF2b1RwRHZGSkx6X09UZDJoMkNvVkwzdThfRUotcF9JSHR6My11WDRUeFFUc3Ywd0NJamRwN1c?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-11-01T02:24:54+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNQ3NBeHAzVXFYbHBtTEhySU1MUW1tSVdLVEtnTnI5MXEtVU9pMzdWRFlNSDhIc3c3M0VGMEk3a0RtaXI0M1ZVLWhDTDFYQXh3eWVsbzgxcVN3dEpfR1NjZEUtX2owaDdPeDJQMGtRRnBVY0xuM21Hckl3bEtEUnFrNg?oc=5",
+      "source": "Motor1.com Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Bettini “Subito i nuovi forni a Taranto o il 30% della nostra industria sparirà” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-01T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbGdtalRPbDRVRHZnNV96NVZ5a2QtOHFrenZXNkxzSGh5VXlHbXVxZjE5am4wbmo1NWZOX1Rfb21uMTVKR1dNTGJ2NGVLQktIZDB1Vkh0Nk5nSkZyT1lSU0prQ1VrdTV6RXdlNXlLVXM1UFFkZ3VQOTlBUlFsSGIyYnBkd0FaWXBYVzBjSVhEOUtWcVU2cVRwODc5V0FnM0cwOXBnVDJ6MlJidmVURlhvR3lJYTdIWWxtZmgxekxsV28wcVJVUWVjMkh3?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 494
+    },
+    {
+      "title": "Pensioni, come cambiano gli importi? Ecco i nuovi assegni del 2027 dopo la stretta sulla rivalutazione - Il Messaggero",
+      "category": "Italia",
+      "published": "2026-10-31T23:12:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPLVBRbWtJWDdtVi1oSjdCS1FtUFRRWUtRcXVtNVVncEh1LWxiVkt5U0NKVVh5WGQ4MUNjQ3I3dU5OdGZFMjNxeFVmWDlxVEptOW9GVGNTQjFmZDVUMC0zX1V5MTZvZDNoV3BJakVvWUF6REhwemtCVFRuOXdBY2RHa3pORkRTSEJfY0ZaTDZkRHNENUw3d3VkUm9nX1lNQjFNSi1GRS03RXFydHpyOGYyTDAtd2F4MnlVUGxhNzJTYnRJNGt3Wm1iR04zS0syNHlqbHfSAdABQVVfeXFMTy1FNXYxVnoyTHY4ektablNJc2FMLVpaWTJGdGlVaVBPaGtLLW1FVlVGVnVwZ2drcHhoZWlZVnhZd0VsTEJaeG5NUkZUSngtRGh3QVV2LU5yRFFVeTJpTC1qVnRQVFpKRlhOTkxuWWhOajAyN0Y1ZDJjNGc5WUM2Q1V",
+      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -1012,15 +1039,6 @@
       "published": "2026-10-31T19:19:39+00:00",
       "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOSWtRT0hWLW1QemY0Qm1samN5SEhaSkdNUFpVcUpOeENqNm93YVJtWFA5R1dDdjRVaDJoQ0VKSWxjbFhKelYzdV9oT0diYmFwaDV5QW00ZUF1cXgwbnZIRzJWMEdUQVM3UHkxaDlZMEJkNXdmcFd4eUxQcnE3T0RDeFZ3aVp2Y1dEeTFLT1RwcUtTZWxWSTVxcElFY0I5M3VLbl9yQkJuNUROalBFQWtVUFFxVzd6NURiVmo3X1NUekZNMFFPcGdmUWl1TTYzdTcyelBEaENESnlzZVkxT2xpbVE5NjhIRWNSN05RZWFjVnNncEdQMkpyMi1FSUR6dEllQmc0?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "O doctoriță româncă, după ce a obținut cetățenia germană: \"Reacțiile oamenilor la pașaportul german nu au fost cum mă așteptam\" - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-31T18:36:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPSTU1MHU5bEY3dGYwN19sUW5jV1hoNnhWTEdHZDZpYTJ5Tm5ETEdGSXBhM2N1S25GTUNZSDBRcmpGNWdTc0tUM1NoYUx6Q3ZlSDBFQnNnakJZNG5xMmVUbWhvRmhvR1VYRmVKMGFnLVZIeWd2bExmYTMzaTlyczJNOURjVVN0cjY3V0ZFMjJ0T1FZeXhpbUZlS0xWeS1GYms4Y2ZuV1Ftc1VhVnAzT3ZfelRqdXptWDlKVzVWUGRBMHRqS0htUVRJbVM0Sk1jRmNSRGVDM01welRwaTBhMElya0JXNXdqLUF1bjZrT2FFTFVSTjg0SnRV?oc=5",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1079,29 +1097,11 @@
       "words": 0
     },
     {
-      "title": "Criza politică din Polonia se amplifică: Ambasadorii polonezi din România și China și-au anunțat... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-10-31T12:10:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOOVVfMHV2VUJDRW9kU3prcm9RRU9KTXdTLTJrd3dsTHFmMGVGMHM2aXVfalFScUl1LU95OXF3cmo5elhDaThMLVpVVmRtanNXZThNWlpHaUk4UFFfZ2RpaGlJR2Y1M1B4aGVnbHJmaTlOMW02Sm0wdFBMdjhkNEN5V19COFRGQzBnQy1FenZsdVY0RFZENlpXd0NCekZOSUVwV0ZvdDlMUHJjSmZjUGtpN3VWaEt3b0FzMEtJMGVrX3d3VkdkcDN4Q3pibng1clFDYU5uc1U4RXZYMWFGS3Zj0gHkAUFVX3lxTE1oWWpKQ2FsWVh2d2NieUZkdDRZdzhaZ0hLQjY1MlFvRzQzQkNRc2toNWhqNndfWVRKWUNRTDdoeTF2NEF4Mm1wbTBXUUZ5YWg4RFJVekxmZDFuZ1ExX1VpTWRmMHQ3U3cyOHRETkdfaXNtWWF",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Coșmarul unei românce din Italia timp de 15 ani: bătăi, gelozie și amenințări cu moartea de la bărbatul cu care trăia - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-31T11:29:25+00:00",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVGR3S3BoRXlDVVpLaks4V0VGcTlFSkctOXQyRUVyWENTbTF2QTVWRTZDelVReFEwVGFoYjJ1LUhuSGhLZWNiUTZUZmJ6OUNTb0xNSjBIbEVTcXNod3VTcEZBZkR3aEtIbWFQY2hmd1VhMkREbmhaWExwZl9aclloNTU0WmU1Mk0zek5aQ2hER3ljc2pNcDJoSmlaYmgzUWQ3YzFmSGJrZnplRXA4bGhPVXB1TW5QY25RTV9kS3FjT1R4QUduUWNaVFpXdW9rM1pjOUY2WktR?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Video economia: guarda gli ultimi video e notizie - Libero",
-      "category": "Italia",
-      "published": "2026-10-31T07:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1LVgxaDI2MldfY2pncjl5TjYyX0l2V05LY1ZBY2Fjc0FwRlF6OGtDNFp2SHlrTnN3OTc1Z3dLQW5vV3U2TV9zd2FHUjQ?oc=5",
-      "source": "Libero",
       "status": "roșu",
       "words": 0
     },
@@ -1115,13 +1115,22 @@
       "words": 0
     },
     {
-      "title": "Il Betting online nel 2026: numeri da record e nuove regole in Italia - Padova24Ore",
+      "title": "L’Italia paga i ritardi tedeschi sul metano - la Repubblica",
       "category": "Italia",
-      "published": "2026-10-30T23:34:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVTM3Q2lGSkJpbHZtX0ZjTnhibnRJU3BwWTVQQ0VrWlA0RDBheEpnQkd5U1RKeDBMd2pCUnVVYkRUZ28xMTBhampjZkwwY09rcURNR1NrYTZmeVJUOWtiY2RTOVNPUmR2NDdmMFdiTGI2Zzlyd216NEJ5TGhwWU5sdnA1d25xYUFxaXRVWFhXVE5WLW83SWlzTXJiYnk?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-10-31T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTTRLaDBXUnpXTUt2REdMS3VLanpidjB1ZHZEMTJYUWNnN0hZTXhVeUJuSGxCdll3cnpaZTVuQXB0dEFSTVlKa0FxLTE0RWFIRFYyN2dGSlNTVnFLLVpRREhlaHBMY1R2b1F2NFdWZDU3RjZZeGJ1ZFJMV1phc1dlRURRZWptZG43c0daVFhCVFVVaWpBbjBQb1k1ZEl1TlA0RHNSRmhqblc?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
+    },
+    {
+      "title": "Badantă româncă din Italia, a ajuns să doarmă în gară după mai bine de două decenii de muncă în această țară - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-30T19:52:42+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVW4wZVRUWlZkYk9XM0NOQzdsaWRLOURKak16Rmd5anYwdllpeDcxOWEyV3B3enRsMWtaeXVZb3RXcWhQMUlGQXZPWjlkQXVpWWV4aW5QWlVKdDhEVHBpOV93bzRJYVM0a3FVbUdDV0FtQUpFLXFQUllabmF0VXBDN3A3R1pJc1NGVHpuRi1JU3QzRFpDbzdiU1Mya3pTMHMySGs2SW5zSXE2Z3BhWkh0MzFhX3lYd21JcHJtQ0xSWlJnSTRzdV9zcFRqdw?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 474
     },
     {
       "title": "Cine câștigă și cine pierde după rectificarea bugetară din 2026. Miliarde în plus pentru pensii și Sănătate, tăieri la Educație, Transporturi și Dezvoltare - Oficiul de Știri",
@@ -1149,24 +1158,6 @@
       "source": "Kanal D Romania",
       "status": "verde",
       "words": 457
-    },
-    {
-      "title": "40 de minute - Guvernul a adoptat prima rectificare bugetară din acest an, cei mai mulți bani merg la Sănătate - RFI",
-      "category": "România",
-      "published": "2026-10-30T16:55:56+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNMTZMN19ONERSVmIwM3ZVazIzeFQ2QjFQTHNLNHNETm56Nkc3RTd6UFVlRWJYNjdHdFJYNk1QanFkUUdGNmJYamFfdEpSMjIwTU9qSlZrVlMxYUlRMXFBZjdrNHFpRGRDYjN5WWFQaHJ3RWx3RUJObEh6NjJCdFRuMjlfUG9UbjNnbncyWGNmdXVWM19oeFZVdmc0UEJteGd4ZWhaWUs5OFoxbWdLb01JOUNrUEZkN2NPSm45YmoxNDJadVo4S3VpZ0JSaEdUa3VTU3ZCd20wcExzbEJBQ041eG5NM2JPekRBeDBrc3pMOFI5a19YSS1CclpSVG1RZw?oc=5",
-      "source": "RFI",
-      "status": "verde",
-      "words": 475
-    },
-    {
-      "title": "Giovani al lavoro a Padova, la sfida ora è la qualità: «Servono prospettive di crescita» - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T16:42:55+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1TYklNYkNwOVJZMGZZcnlNWEJuRnR5Si1vUG9RN0Z2aGRmcHNBN29JUU9XUUVSN0V4X1B2OFBfdVVXdU9tazBvT2dEMU5oc0FuckkxUjVfOFVZZnVNZUdBM0laOUk1QVl4?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
@@ -1182,17 +1173,6 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "40 de minute - Guvernul a adoptat prima rectificare bugetară din acest an, cei mai mulți bani merg la Sănătate - RFI",
-      "category": "România",
-      "published": "2026-10-30T16:55:56+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNMTZMN19ONERSVmIwM3ZVazIzeFQ2QjFQTHNLNHNETm56Nkc3RTd6UFVlRWJYNjdHdFJYNk1QanFkUUdGNmJYamFfdEpSMjIwTU9qSlZrVlMxYUlRMXFBZjdrNHFpRGRDYjN5WWFQaHJ3RWx3RUJObEh6NjJCdFRuMjlfUG9UbjNnbncyWGNmdXVWM19oeFZVdmc0UEJteGd4ZWhaWUs5OFoxbWdLb01JOUNrUEZkN2NPSm45YmoxNDJadVo4S3VpZ0JSaEdUa3VTU3ZCd20wcExzbEJBQ041eG5NM2JPekRBeDBrc3pMOFI5a19YSS1CclpSVG1RZw?oc=5",
-      "source": "RFI",
-      "status": "verde",
-      "words": 475,
-      "intro": "Guvernul României a aprobat vineri, 30 octombrie 2026, prima rectificare bugetară a anului.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
-    },
-    {
       "title": "Avertisment MAE pentru românii care merg în Franța! Sâmbătă sunt așteptate proteste violente în mai... - Kanal D Romania",
       "category": "Știri consulare",
       "published": "2026-10-30T17:17:47+00:00",
@@ -1204,6 +1184,28 @@
       "question": "Ce trebuie verificat sau făcut concret de către românii din Italia?"
     },
     {
+      "title": "Badantă româncă din Italia, a ajuns să doarmă în gară după mai bine de două decenii de muncă în această țară - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-10-30T19:52:42+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOVW4wZVRUWlZkYk9XM0NOQzdsaWRLOURKak16Rmd5anYwdllpeDcxOWEyV3B3enRsMWtaeXVZb3RXcWhQMUlGQXZPWjlkQXVpWWV4aW5QWlVKdDhEVHBpOV93bzRJYVM0a3FVbUdDV0FtQUpFLXFQUllabmF0VXBDN3A3R1pJc1NGVHpuRi1JU3QzRFpDbzdiU1Mya3pTMHMySGs2SW5zSXE2Z3BhWkh0MzFhX3lYd21JcHJtQ0xSWlJnSTRzdV9zcFRqdw?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "verde",
+      "words": 474,
+      "intro": "O femeie română în vârstă de 72 de ani, care a lucrat peste două decenii ca îngrijitoare în zona orașului Trento, a ajuns să petreacă o noapte în gară după încheierea perioadei de găzduire într-un adăpost.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Bettini “Subito i nuovi forni a Taranto o il 30% della nostra industria sparirà” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-01T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbGdtalRPbDRVRHZnNV96NVZ5a2QtOHFrenZXNkxzSGh5VXlHbXVxZjE5am4wbmo1NWZOX1Rfb21uMTVKR1dNTGJ2NGVLQktIZDB1Vkh0Nk5nSkZyT1lSU0prQ1VrdTV6RXdlNXlLVXM1UFFkZ3VQOTlBUlFsSGIyYnBkd0FaWXBYVzBjSVhEOUtWcVU2cVRwODc5V0FnM0cwOXBnVDJ6MlJidmVURlhvR3lJYTdIWWxtZmgxekxsV28wcVJVUWVjMkh3?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 494,
+      "intro": "La crisi dell'ex Ilva di Taranto torna al centro del dibattito industriale dopo la decisione della Corte di Cassazione sul fermo dell'area a caldo.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Atac armat într-un magazin din California: un mort și șase răniți, anchetă în desfășurare",
       "category": "Știri din redacție",
       "published": "2026-11-01T01:00:00+01:00",
@@ -1212,17 +1214,6 @@
       "status": "verde",
       "words": 440,
       "intro": "La 30 octombrie 2026, într-un magazin Spirit Halloween din Fairfield, California, o persoană a murit și șase au fost rănite.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
-    },
-    {
-      "title": "Fringe benefit, con la manovra sale il tetto a 2mila euro per i lavoratori under 31 - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-01T04:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOdWdaUVJZNjQzaF9WdjU0WFVucW5Ua2JIdjFrZXUtdkM0VXdKSHZPcFQyRC1mVWIwR1k2LTRYVjdOdU02NHk3V1NlRXhiTlVYZjlKdW00TEJDTGRkRnJuSVB6ZEZSbnpVdWptVHVLSktXZkt0X3RKdGV2dDZ2bkRicHdXZXJtMk0yaGNxRFhGTHRCT2NMb09FNzdpeFl0TlItcHFleVg4cHFZQXpqVlNJY2xyRGFhcjc3a0dtSThkMFV3RVJUbDlJcF9BRndoM0xmU0M2T0tLSVUtTTNQZWFxV0ZKaGxCUnl6V1pDemZBVFJpYlhjbHVoUDlxTVkyQQ?oc=5",
-      "source": "la Repubblica",
-      "status": "verde",
-      "words": 462,
-      "intro": "La manovra italiana per il 2027 propone di ampliare il trattamento fiscale favorevole dei fringe benefit per i dipendenti più giovani.",
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     }
   ]
