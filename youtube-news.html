@@ -12,18 +12,18 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 #appQr{position:absolute;top:9px;right:216px;left:auto;bottom:auto;z-index:7;background:#fff;color:#13223b;padding:3px;border-radius:6px;text-align:center;width:57px;box-shadow:0 3px 9px #0006}
 #appQr img{display:block;width:51px;height:51px;object-fit:contain}
 #appQr span{display:block;font-size:7px;font-weight:900;margin-top:1px}
-#panel{position:absolute;top:92px;bottom:105px;left:44px;right:44px;display:grid;grid-template-columns:52% 48%;background:#fff;border:1px solid #d9e1eb;border-radius:20px;overflow:hidden;box-shadow:0 16px 52px #0008}
+#panel{position:absolute;top:92px;bottom:78px;left:44px;right:44px;display:grid;grid-template-columns:52% 48%;background:#fff;border:1px solid #d9e1eb;border-radius:20px;overflow:hidden;box-shadow:0 16px 52px #0008}
 #photo{width:100%;height:100%;object-fit:contain;background:linear-gradient(140deg,#1a4c7e,#0a1935)}#photoBox{height:100%;position:relative;overflow:hidden}#fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:130px;background:linear-gradient(135deg,#19365b,#09192d)}
-#copy{padding:32px 37px;display:flex;flex-direction:column;justify-content:center;min-width:0;color:#1e2d42;background:#fff}
-#category{color:#344b68;background:#e9eef5;align-self:flex-start;padding:9px 17px;border-radius:999px;letter-spacing:0;font-weight:800;font-size:19px;text-transform:none;margin-bottom:22px}
-#headline{font-size:clamp(28px,2.6vw,42px);line-height:1.16;margin:0 0 22px;font-weight:900;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
-#summary{font-size:clamp(18px,1.65vw,25px);line-height:1.42;color:#526178;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;margin:0}
-#source{margin-top:18px;font-size:16px;color:#69798b}
-#ticker{position:absolute;bottom:0;left:0;right:0;height:83px;background:#e7eef7;color:#102642;display:flex;align-items:center;overflow:hidden}
-#tickerLabel{height:100%;background:#cf242e;color:white;display:flex;align-items:center;padding:0 30px;font-weight:900;letter-spacing:1px;font-size:21px;flex:none}
-#tickerText{position:absolute;left:0;top:50%;font-size:24px;font-weight:700;white-space:nowrap;width:max-content;max-width:none;overflow:visible;margin:0;line-height:1.2;transform:translate(100vw,-50%);will-change:transform}#tickerLabel{position:relative;z-index:2}
-#rdiExtras{position:absolute;z-index:8;left:44px;right:44px;bottom:106px;width:auto;max-width:none;min-width:0;min-height:52px;padding:8px 13px;background:rgba(7,23,43,.93);border:1px solid #6b8aaa;border-radius:9px;box-shadow:0 4px 14px #0008;pointer-events:none;overflow:hidden}#rdiExtras[hidden]{display:none}#rdiExtraLabel{display:block;color:#ffdf87;font-size:12px;font-weight:900;letter-spacing:1px}#rdiExtraValue{display:block;color:white;font-size:15px;font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;margin-top:3px}
-#progress{height:5px;position:absolute;bottom:83px;left:0;background:#f0c05b;width:0;z-index:10}
+#copy{padding:22px 30px;display:flex;flex-direction:column;justify-content:center;min-width:0;min-height:0;overflow:hidden;color:#1e2d42;background:#fff}
+#category{color:#344b68;background:#e9eef5;align-self:flex-start;padding:9px 17px;border-radius:999px;letter-spacing:0;font-weight:800;font-size:16px;text-transform:none;margin-bottom:12px}
+#headline{font-size:clamp(23px,2.05vw,34px);line-height:1.14;margin:0 0 14px;font-weight:900;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+#summary{font-size:clamp(15px,1.25vw,21px);line-height:1.35;color:#526178;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;margin:0}
+#source{margin-top:10px;font-size:13px;color:#69798b}
+#ticker{position:absolute;bottom:0;left:0;right:0;height:57px;background:#e7eef7;color:#102642;display:flex;align-items:center;overflow:hidden}
+#tickerLabel{height:100%;background:#cf242e;color:white;display:flex;align-items:center;padding:0 20px;font-weight:900;letter-spacing:.5px;font-size:17px;flex:none}
+#tickerText{position:absolute;left:0;top:50%;font-size:18px;font-weight:700;white-space:nowrap;width:max-content;max-width:none;overflow:visible;margin:0;line-height:1.2;transform:translate(100vw,-50%);will-change:transform}#tickerLabel{position:relative;z-index:2}
+#rdiExtras{position:absolute;z-index:8;left:44px;right:44px;bottom:78px;width:auto;max-width:none;min-width:0;min-height:52px;padding:8px 13px;background:rgba(7,23,43,.93);border:1px solid #6b8aaa;border-radius:9px;box-shadow:0 4px 14px #0008;pointer-events:none;overflow:hidden}#rdiExtras[hidden]{display:none}#rdiExtraLabel{display:block;color:#ffdf87;font-size:12px;font-weight:900;letter-spacing:1px}#rdiExtraValue{display:block;color:white;font-size:15px;font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;margin-top:3px}
+#progress{height:5px;position:absolute;bottom:57px;left:0;background:#f0c05b;width:0;z-index:10}
 @media(max-width:800px){#panel{grid-template-columns:45% 55%;left:18px;right:18px}#copy{padding:16px}#headline{font-size:25px}#summary{font-size:16px}#logo{font-size:20px;left:18px}}
 /* Live indicator pulses while its label remains readable. */
 #badge{animation:rdiLivePulse 1.6s ease-in-out infinite}
@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261101-song-art-position-2';
+const RDI_YOUTUBE_BUILD='20261101-readable-news-metadata-3';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -212,7 +212,10 @@ const response=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(7000
 if(!response.ok)throw Error('Now-playing HTTP '+response.status);
 const data=await response.json();
 const song=data?.now_playing?.song||{};
-const track=[song.artist,song.title].filter(Boolean).join(' — ').trim();
+const clean=v=>String(v||'').replace(/\[\s*\d{8,}\s*\]/g,'').replace(/\s+/g,' ').trim();
+const meaningful=v=>v&&!/^(untitled|unknown|unknown artist|unknown title|undefined|null)$/i.test(v)&&!/^\d{8,}$/.test(v);
+const artist=clean(song.artist),title=clean(song.title);
+const track=[meaningful(artist)?artist:'',meaningful(title)?title:''].filter(Boolean).join(' — ');
 name.textContent=track||'Radio Românii din Italia';
 const art=String(song.art||'').trim();
 const next=art.startsWith('https://')?art:fallback;
