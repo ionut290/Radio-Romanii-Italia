@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-31T13:42:35.550306+00:00",
+  "updated_at": "2026-11-01T01:00:20+01:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
@@ -117,13 +117,16 @@
       "place": "",
       "description_en": "Un muerto y 6 heridos en un tiroteo en una tienda de Halloween en California - Infobae",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Infobae",
       "source_url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNcG52ZkRoMlFaUDdGNElpT2VmdnF3NXQteHAtd3ktbHJXTHlfQ2J2UFZJNVJ6TXp0WUpQZUIxSDhCcU5NdGl6X1pEMWxjZE5QOElQS3NGOFctc2JDOGREREx6M0FoNTBPbjVzb3Fxczh0TTBOaDZfcVZKcGNvdnFRYnR4Ynk4Rmg0bV9kNEE1dFZjUG5DODBIbVZuT2VHR0VfXzJOb0IyaVl3REN0dU5YVjFqd1NCN1U3a1pBUWFac2JCTHdzWlHSAeABQVVfeXFMTWRZaV9iMC1GU0tEUFlwMU9IYkVLOWZNekVrOHM1N2tPWnJTMXhIN1V3VXZ3RHRCdXRndnpYNTEtVUs0WUw3anBIN0tZMUVGUkxrdS1xNnluaEh4Tjd1YUZmeEZrZUJJSjFGQWFNM0VsbE83djFHODUwaklOQ3lHWDNkSE9kcDJNT2h1SXRTeUtING9GY05yYTdZWFBYaFJZVHg0ZU9wLU9fTUpkUk5LUnJMaDNjWWhSWlo1dlpxTUIzeXpobWJhaXM4UXFRcDQ3TGExMEhJaU9hdW5CLVNkVkg?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-us-fairfield-20261030",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-e13fa455a0433d3962",
@@ -181,13 +184,16 @@
       "place": "",
       "description_en": "Attacco armato in un negozio di articoli di Halloween in California: una persona è stata uccisa e altre sei sono rimaste ferite - Informat.ro",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_it",
       "source_name": "Google News search / it",
       "publisher": "Informat.ro",
       "source_url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQaXBULXpQV0xJcWRINmljRE1SdnVidS1NS0Z1WnBDYTUwVjdmUEotWW1kTGItcDVyOVhwdGo4YThGQkwyZUt3TElhQmJqb3E0dHFqM3ZhMDN0bUEyRWg5UGhpdng5VTIya1RMWVdsSlpPVXNvUDdNdGdxRlJ1QU01TUM5elozS3RFQXlKbTVlcmJZczdRX092aVg3QVMtS2M?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-us-fairfield-20261030",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-cf1132ffcca2a5ea98",
@@ -213,13 +219,16 @@
       "place": "",
       "description_en": "Nuevo atentado en la vía Panamericana: atacan con motobomba el peaje de El Mango, en Cauca - ELHERALDO.CO",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "ELHERALDO.CO",
       "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNWHhJWXdUSTRzRkJ2ZUNpZXRDdUFzQjdWbVY2OUxqclBJbHQ2b25fU2dUTUl5VVh6RUtGSWJYZFZZcE5XVFJTS2NhYUItUC0xUlNyRU1BazRVQWZ3bnhHaFl6RnpnN1ZRb1R2UVl1TzJ0Mm5DZlI4U3VqejV6azVORzdYOUlaUGdYa0RkMm9MZTk2R0NLeW5VMDV4OXdMQXlWY1lKcVpzRTYyTDBrZVEySUFqX3p2Y3RCR0t2SG80Q1hkcVk?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-la-sierra-peaje-20261031",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-ab2b0bb927b8dcd5ea",
@@ -261,13 +270,16 @@
       "place": "",
       "description_en": "Nuevo atentado con explosivos en Cauca: explotó en peaje de vía Panamericana y cerraron el paso - Pulzo",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Pulzo",
       "source_url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSUFLTXFJa2pLTUdtN2Y4cmJ2aERRQVp4RmFlTlZseUVvcnZRSjlnRkxaVV9TYUwybGl2ZEVEcWZtWWVvX0FBd08xMHNVYWQ0SU9iSkVEaE9MY2Q3THY0eTlvOXQwSUh5YmhBLVBNejdmeXdiaWNaQndESWFqTnJGR25CeDNhQks4dnI5bnpvcTlzZlU5cTRJZGtGdVdZU0w3dDE1WnpNbWHSAa4BQVVfeXFMUDFTZXc3ZXNZMjNyaDV5MFd6d3dvYkJkNGVDT3JlbEpCR1l6d2RETERQcld3SE0zclZBaENVWGJ5SEVsTkRVN3BVZ1FFU0tGWk92QV91UEV3SVFfeDlTLXJIbnhZOWVmNFR3MjRjMzBKYzl1aWZCeExBUlpfaWNyRWYzZl95aGx3empLOGYxY1RkaHNCN0NuYnJXRGdlWms5TG43T3BUUTRRSG5DelJn?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-la-sierra-peaje-20261031",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-9f15dd3666f1026297",
@@ -533,13 +545,16 @@
       "place": "",
       "description_en": "Nuevo atentado con motobomba en peaje de la vía Panamericana, en Cauca: esto se sabe - Noticias Caracol",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Noticias Caracol",
       "source_url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPS1V3Ri1WT1JPVDZEbUtEblJ1Rzl5amY4TUpzYzlUX2M4N2hlOWhvb1hoRmlPMDFnWUUzQkJhS1ZSWHdhZnZZOXpNRVVVenBNWHNYbU5RNF9famQxbWgwRnhYSVVBOXRRZWxPNWJDZWdfU2lRUDBqcHBYQkxwVG5MbUtiTzR3eGU4Q2FkYVhrQUgwVmk3VWZOdlduSVB0M1pVem9jNjBqd1pmTWVCRDhfSG82OHpTUzdCN3JZM2tBNEE5MDVJa29r0gHUAUFVX3lxTE83YTlhcjFSVU56RVg1WmFWa2g3TllEUkVfS0RfZkJhNVpKc1dISmI0NzhpaEVVWGt6WklUT253MHJwS3FjdkJoZ01nRHFiVDZTYXFBSEQ4bndZeC1vaWIzQXVkeHF6NTM2dzNhU0t0YWVhcUwxVGZkVTdhbGp1b0h4R0xCXzZ2ZE1aWFNGdTV3WVpZa3ZlbWpRUEtEYVFiREg0TDN5QkdpU3hhMVlKUHpnRzJURmlIN3RQZk9WUTNXRVBsSHg0SjUwY05TRnAzUnBxa09t?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-la-sierra-peaje-20261031",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-55fdc5643cd896d7b6",
@@ -549,13 +564,16 @@
       "place": "",
       "description_en": "Tensión en la vía Panamericana: se registra nuevo atentado con motobomba al peaje de El Mango - La FM",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "La FM",
       "source_url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOanBjRW1wN3dfMGhfanJSYTBVaVlGZHpKeURyR1FYa01nUENEUjJfaUZUd21Zcm5YNEo3SExvY2RId0g3d002eW9MLVh6MGJCX01CNGtjZUF0OW1hYlh2dXR2aUFPZW1pblIxdDZ0VllTdF9lZ1FWVF9ZYzUzb3QzSFl4Ul9SNjlyRVlTbUJJZTdCUE5TNnA1Z1R1dm5CUTJNaDZpN0ppeEVqSVEwTHYyWEZR0gGyAUFVX3lxTE00QTFOOGVRd2Mxelphbk4wRXpVQTJUbEs0bzduVWg5QXJ5U1o0djljc2cxWmF0bVJ5SnNfVEFVckhMcnMzcllYVUdiTXQ1NEFqZFdsRGtqcmQ4WlhQNzh4dTNTOU1yQ2lkZ3RCdHFab2hINVUxWGVqbGxuZExxMFlsRk9Kai1XdEJYS1E4Q0JGYUhsVG1wZk9WYmJnWUxWcDJMaWpYTC1sZ1lFVndkNElicFE?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-la-sierra-peaje-20261031",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-4c30e4ce5688714bb9",
@@ -597,13 +615,16 @@
       "place": "",
       "description_en": "Ataque armado en una tienda de artículos de Halloween en California: una persona murió y otras seis resultaron heridas - Informat.ro",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Informat.ro",
       "source_url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNbUxrbGFwaERfTDVBcDdfbVNDSkhiLUdsdXhlbklnSGxZb09Bb1JhOEVjUUItalN0czYzVVQwWkpkeUhKRUhhV1pSS29TR0FQRG9feWJfYTVPcW84Z0ZPcjh3NDZRNWJnOE1kSTc0NEVuYkdHNE50XzBHc0RXcUN5eDhMLXQ5SnVwQ3A4VFluQkFtaDNjTEx4UENiU0loMmMyaE16MQ?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-us-fairfield-20261030",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-3bf1608eaa733eb20c",
@@ -613,13 +634,16 @@
       "place": "",
       "description_en": "Nuevo atentado terrorista en Cauca: delincuentes explotaron una motobomba y volaron por segunda vez en un mes el peaje El Mango - Revista Semana",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Revista Semana",
       "source_url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQQ1FUcnZBN01WNGVyWWlsQVBUQm5IVGZqVVVhTTR6cnZ6RjRBdXhHTktEcUY2S2UzV3h4bk5QenVwVDJEYThqcnk4NjE1Rmx0U2c4SzhqenpFQUhNb2VfRVlrSzhhTWxBQzdlc2dsTFZ6WHgxc1FkTUhucm1KaXFucHVvXzAtTHhKVW52UnR2Z25PUWwwZUVkbWhya3hxRGlOXzRYQmN2b0NsR3lzU0xCMmlLQW9BQjQ1aS1zNDZyTlc2ZXVqZElVRnM5N3Q0cnBCRHo5d2ZMMllJdVNsODkxSg?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-la-sierra-peaje-20261031",
+      "reviewed_at": "2026-11-01T01:00:20+01:00",
+      "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
     },
     {
       "id": "lead-3b319b580b09d97254",
