@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-01T03:07:31.463704+00:00",
+  "news_updated_at": "2026-11-01T03:57:57.843632+00:00",
   "editorial_updated_at": "2026-11-01T02:01:34.473719+01:00",
-  "translations_updated_at": "2026-11-01T02:15:24.307129+00:00",
+  "translations_updated_at": "2026-11-01T03:07:31.242380+00:00",
   "feed_total": 82,
-  "feed_extended_400": 10,
-  "feed_missing_body": 72,
+  "feed_extended_400": 11,
+  "feed_missing_body": 71,
   "feed_short_body": 0,
   "editorial_total": 23,
   "archived_editorials": 115,
   "translation_records": 41,
-  "pending_total": 69,
+  "pending_total": 68,
   "pending_filtered_out": 135,
-  "editorial_verde": 14,
-  "editorial_galben": 38,
+  "editorial_verde": 15,
+  "editorial_galben": 37,
   "editorial_rosu": 49,
   "pending": [
     {
@@ -446,16 +446,6 @@
       "attempts": 0
     },
     {
-      "title": "Ministrul Florin Manole spune că nu a avut nicio discuţie pentru eliminarea impozitării pensiilor peste 3.000 de lei",
-      "category": "",
-      "published": "2026-10-31T20:06:12+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/ministrul-florin-manole-spune-ca-nu-a-avut-nicio-discutie-pentru-eliminarea-impozitarii-pensiilor-peste-3-000-de-lei-4016773",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato da completare: testo originale breve o fonti da consultare",
-      "attempts": 0
-    },
-    {
       "title": "O doctoriță româncă, după ce a obținut cetățenia germană: \"Reacțiile oamenilor la pașaportul german nu au fost cum mă așteptam\" - StiriDiaspora",
       "category": "",
       "published": "2026-10-31T18:36:00+00:00",
@@ -614,9 +604,28 @@
       "status": "roșu",
       "reason": "Testo integrale verificato assente",
       "attempts": 0
+    },
+    {
+      "title": "Trafic suspendat la Porțile de Fier I până duminică, 1 noiembrie. Camioanele nu pot intra în România din Serbia. Ce trebuie să știe șoferii - Oficiul de Știri",
+      "category": "",
+      "published": "2026-10-31T15:38:19+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPZmQ2cDg0YkZBeHRHRlV6NDhpVjFJYTNDYk9Db0RXRHhNcldGNzFQWmRJTmJ3NjBDSERhSFpneS1ubXJsbDc0M1pCZ2hkUmY2S0RRRE55aWN2VFdpODYwX0RXcC1KdWF6UGlyaXBUNUcwdUhkYTFxY1BRQkViUk80NkR1LXJ4QUVnRVRvdTNPNHMzU2RUSEJ3Q21FcGZPOG16b2l2ZnFtVTBNVWtkU3hCX0staU1waURTRmFVOHktZl9jYXFiSWFoenFMLXR1dURialQxZGcxQUdicTN4UUVKcGl1M0dxTk9NSE1UVFlxN0FlRE9X?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento verificato da completare: testo originale breve o fonti da consultare",
+      "attempts": 0
     }
   ],
   "recent_news": [
+    {
+      "title": "Bettini “Subito i nuovi forni a Taranto o il 30% della nostra industria sparirà” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-01T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbGdtalRPbDRVRHZnNV96NVZ5a2QtOHFrenZXNkxzSGh5VXlHbXVxZjE5am4wbmo1NWZOX1Rfb21uMTVKR1dNTGJ2NGVLQktIZDB1Vkh0Nk5nSkZyT1lSU0prQ1VrdTV6RXdlNXlLVXM1UFFkZ3VQOTlBUlFsSGIyYnBkd0FaWXBYVzBjSVhEOUtWcVU2cVRwODc5V0FnM0cwOXBnVDJ6MlJidmVURlhvR3lJYTdIWWxtZmgxekxsV28wcVJVUWVjMkh3?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
     {
       "title": "A Parigi ancora scontri a fine corteo, 'dai casseurs violenza inaudita'",
       "category": "Italia",
@@ -650,15 +659,6 @@
       "published": "2026-10-31T23:02:31+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/2026/10/31/f1-hamilton-in-pole-al-suo-fianco-russel.-antonelli-quinto_d44231ac-58ba-4f03-bfb9-8da0eb242644.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Notizie di Padova ore 23: moda in calo, verde alla Stanga e derby al Tombolato - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-31T22:30:15+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBpb2JPSE5kRHk3d0lXdGpMTmhNWkVjbmdSRWhIMWxVSHVQb256LWVMVFFkc2dvN1k0SGF2b1RwRHZGSkx6X09UZDJoMkNvVkwzdThfRUotcF9JSHR6My11WDRUeFFUc3Ywd0NJamRwN1c?oc=5",
-      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -740,8 +740,8 @@
       "published": "2026-10-31T20:06:12+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/social/ministrul-florin-manole-spune-ca-nu-a-avut-nicio-discutie-pentru-eliminarea-impozitarii-pensiilor-peste-3-000-de-lei-4016773",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 463
     },
     {
       "title": "Iran, Khamenei avverte Trump: 'Se ci attaccate risposta senza confini'",
@@ -915,15 +915,6 @@
       "words": 0
     },
     {
-      "title": "Manovra, dalla Cgil alle opposizioni: raffica di critiche. Il sindacato: “Governo su altro pianeta” - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-31T17:24:12+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbGM4cXlmNjM2S2p5VHI2UFZkMHRZYk1DYUlBTHZaNEZMNmpxNUhmZkVwY1ZTb0VBZEp4RVZDdGl2VGVRY255OUdDMHB2SHpleEhSd0otVXlkai1GNDJCLTdnRzJLcG5mcTlOQVYwNzUxTTZRbGlDUnpEZ0Q1dHAwcEYzelBfcUZ2V2gyQWNQOXVLSGNZYmdSaFlGdnBjYWxQRFZXQ0lIdU16NUhub3JrdldKb1lmd2cwZ283UjJldURuVXdwc1JQMWthd1dDZXF2T0c0b0VnMElOTWMxZWtQX2FWVkJfWjVNb0xB?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "USR și-a ales noul Birou Național. Cine sunt vicepreședinții partidului",
       "category": "România",
       "published": "2026-10-31T17:24:07+00:00",
@@ -996,15 +987,6 @@
       "words": 0
     },
     {
-      "title": "Villatora, meno rumore sulla Strada dei Vivai: dopo l’asfalto un punto resta oltre i limiti - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-31T12:28:36+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPLVdDbDVhakhBWWJwb1c4UGJXRmU3TXJvNGxHRXZKY3lCWnhneUZGc21QOE5naERqbTd5MEIyWFQ0Z0xsbHczb3RkTjZrMVlEVlk2RThaNmNwSlQ1ZGtxQjNBaHc5TVVfWDlfUWhOejFYS21iV2U0RnV1cnlaSUxRaFktMHBJaFhhNXdlSFRR?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Meritocrazia Italia al Governo e al Parlamento: la nuova Legge Finanziaria vari misure strutturali su IA, lavoro, debito pubblico e coesione sociale - Agenpress",
       "category": "Italia",
       "published": "2026-10-31T11:58:28+00:00",
@@ -1028,6 +1010,15 @@
       "published": "2026-10-31T11:22:07+00:00",
       "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/10/31/il-principe-degitto-il-musical-e-arrivato-a-roma_2e22b9ad-862e-499f-9182-cf8035a8321c.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Salari al palo e mattone d’oro così i giovani non ce la fanno - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-31T10:00:10+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQ3pCbTRtX1kzZnRHXzBkdlRaZExicDZYWHNOeDF1U1BBZ3RrQlNQb05VVXhmWEFlMU1BTHRpMkJmWHJzbFBZbFZaS2ZJM2lmVGc0NUNKYXpYZzFIRlhHb1FHRW9tSXE2bjRyZ0NyY3A0eUR3b0JHWXM4OXlSMDMxa2ktRXAxVDlBLUozV1JqOVZZN2xrdmRJRzY4dlBEZWdYMFlPNTFfbE1YZFhwU2l4b2dkM1FOcEVCZHVGV3E1TlI?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1068,20 +1059,20 @@
       "words": 0
     },
     {
-      "title": "Il Betting online nel 2026: numeri da record e nuove regole in Italia - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T23:34:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVTM3Q2lGSkJpbHZtX0ZjTnhibnRJU3BwWTVQQ0VrWlA0RDBheEpnQkd5U1RKeDBMd2pCUnVVYkRUZ28xMTBhampjZkwwY09rcURNR1NrYTZmeVJUOWtiY2RTOVNPUmR2NDdmMFdiTGI2Zzlyd216NEJ5TGhwWU5sdnA1d25xYUFxaXRVWFhXVE5WLW83SWlzTXJiYnk?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Cine este Ioan Nani, omul care a condus Antibiotice Iași aproape 30 de ani. Motivul pentru care s-a retras, de fapt, din funcție - Oficiul de Știri",
       "category": "România",
       "published": "2026-10-30T20:42:14+00:00",
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZ0pRRF9leXJueFFGdjhfU3JOXzdES3NBR1c4VDRWZUVMRThENnRHdUMxR0YySW9hUlVmNVk4eklXZkNQMVk3MTU3VUs3Tm8tWGE5MVpmUUdzY3o5bHJkTlRMRHFqajY0b3VYc0ZjOUpXajFSeEVPalhad2xwcEpFN3Rfd21mLV9rX01EWTRvS0ctVGpfMW9QSVMtLUtNZkZZTWFVV3VjWkE3S2xhbnJRcnA5SHRBY1B6TjhVOEx3YW10RmZsaUM0dmNxNzRYeWZYckVBOExGdE9NY19YZmpaQ2I0d2w?oc=5",
       "source": "Oficiul de Știri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Manovra, arriva la “exit tax” sulle plusvalenze dei ricchi che lasciano l’Italia - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-30T20:37:45+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNNGh0TmlVQ29lWmgzeUZBblI3WEVhSENubHVQM0FqZG9BT0NkeUpGQ3BCcGl0QkJjdGRlSVozZmxUSG1UanFUeXQ5Q3VoRllUUGp1ekVuajl0RzdfRnhoQkp3MlNkU1pJd05LVFlPazJPNEl5RGY0NExpdnpXaXZvOHpMX3F4eThvd05uV21VNlJKM2l0YU5NWndXM0llVEFKNVpfSmZaR0txYlB2dmVNc1VxZEZLNUxUUExBWXk1Ui1FbUlZMkthQTlTRnBLMHlkX3VwNTJ1aFQ0NzZOUW4zUkFzQ2VtcnNoWEJPMkQwSlFQUTg1X1E?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1101,6 +1092,15 @@
       "url": "https://www.ansa.it/sito/notizie/cultura/libri/narrativa/2026/10/30/jean-reno-litaliano-me-lo-ha-insegnato-roberto-benigni_54c36b09-4e54-432f-b040-7c01d2af8f4a.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "La truffa del pellet colpisce ancora: attenti agli acquisti online - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-30T18:09:56+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPWXIwMFlPRU55MWdPVHQ0Sk9NeWtzS0VoeFltdF9mRUZOR0x1VUtsWjdpaDBpeGwwQ0ZwQW1oUmZ5Q19WcW5uaTMxUXg2QjRYN3dRZEFxU0diUUthbGw2TEJUWUVsRmhqMnVUV1dqajR0amk2VExxTFZIWl92MFZYQWdvUHVxbFpZdnBBTEpkYjlac3ItT3I1MU9XdW9RdVdpVE52UEY1aVNOcU52YnhUVHE2cHh4ZUNCZ3RWNXJaVEZoLU5SWVU3YWdEUDNncG1UdFIwcHlOUTNiaE5qT0hMQWRRWFB0REI0RmJEYXJyYjIwQzdYRW5BSmluMUhGYkpKOXFzUTExX3FvY0V4ZUVVR1dn?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -1149,11 +1149,11 @@
       "words": 0
     },
     {
-      "title": "Giovani al lavoro a Padova, la sfida ora è la qualità: «Servono prospettive di crescita» - Padova24Ore",
+      "title": "Credit Agricole Italia, l’utile nei nove mesi supera 1,5 miliardi - la Repubblica",
       "category": "Italia",
-      "published": "2026-10-30T16:42:55+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1TYklNYkNwOVJZMGZZcnlNWEJuRnR5Si1vUG9RN0Z2aGRmcHNBN29JUU9XUUVSN0V4X1B2OFBfdVVXdU9tazBvT2dEMU5oc0FuckkxUjVfOFVZZnVNZUdBM0laOUk1QVl4?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-10-30T14:18:29+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNN1JuT20wTFFhMXRlV04zVG1zc0FYZm1NWkh6ZXhkOEYxemNLaDNwcExIUVhVWnNySHVNX3NCM3VvUDNlN2sxajFEQTRpWkc5c2dWeDhHSFVXeG1DVU1vTno2aFlJVEc3RHRaOE04Q2xrbVR5eldMREl1cmM2N2czb1ZOR3lVYnh4MGRGTm5hZnVxN1FTXzVwNnkwQXdDZUZoallOZ1cyWkxHVVZIOS1NVHltNXBYajNnU0hQbXRKUEtvSWs?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1199,6 +1199,15 @@
       "published": "2026-10-30T12:57:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOUXJFbjRMOEtncVYwWG5UU0xBY3gxcEZaRlZERXVSMVpXcGdxTW1fX0ItaEI5S0FJOFZYS0FvQkJHME5vRWJoMDlYc2FvdnBKX3NLVFp3YUljNDdOLS1PYjF5TDBlc2otZ2I2U0g1ZlZHVjBYWUxONVV6UnEwOHVkSFRMSmdtNXFnalNZSENINTViNVQtMWZ0Rlo1SWhOOFpBR2hidmJmMGIwSVFyOUlTbmpWa0dGVTU3ekNiQ1JyOFI5ZHpwMWZ6SVlsSG5tSXZ2ajVzZnhSZ1p4bWM2am5kTEt6dFozVlJHU21oZWxwY1Z1aG1P?oc=5",
       "source": "News.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Auto, la Cina spinge giù i conti di Audi: -87% di utile. L’ad Döllner: “Riduciamo i costi” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-30T12:22:37+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQLWNqSWtMSHltRWp6SWItT2dwVkNha2ZsZU56UjRiLS1FMUlfWVZVTnJLWWxDXy1DaXBBUjhmbXJWTXJlUHJ3MzR2Vzl6NHRtaDA1RFZqVjctcTNQODJsRjZydW9fOFAzNXBiWC1xT3NUMjdXU2J5WFNmOFM1d3Z0Z0pMT1dwOWx1ZXJITEgzVnVGaEtzc0ZseVk3N21xa1FzXzQwWXdkdnYtWFlZM2lob2hLTQ?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1257,15 +1266,6 @@
       "words": 0
     },
     {
-      "title": "Nord Est e Francia, a Padova il forum del 3 novembre: quattro filiere e scambi per 15,6 miliardi - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T10:36:40+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA2TlhvZlRuWVctSEZDUGZBcjVQRVVaeFN2MnV6eFBiRi1ISWZOTU45N2N4ckJmOWNfUzJnU0h0MmV5MDNUcHU1MWRpa1dIa1FKejJLR0tJc3hPejYyWE1UVHkyaXkySXpuMk9tQ1F1V2ZnWWowSGxHSm4xMA?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "RO-Alert în Sălaj şi Cluj: trei copii cu vârste între 11 şi 13 ani au dispărut - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-30T09:57:00+00:00",
@@ -1275,11 +1275,11 @@
       "words": 0
     },
     {
-      "title": "Crédit Agricole, 1,526 miliardi di utile in Italia nei nove mesi: la banca chiude a 708 milioni - Padova24Ore",
+      "title": "Manovra, Giorgetti alle banche: “Siamo sulla stessa barca”. L’allarme di Mattarella sull’inflazione - la Repubblica",
       "category": "Italia",
-      "published": "2026-10-30T09:25:53+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYzNWUktSWDhEZGVuM2x3M1lvRDF2VFNxT1Y5MTFuMGNQVEdvdVFIMW01VFEwYUVMeG1NX3lpaV96aXpMOXFWY21iOGpUbGZrVjlxSzRoTnU3MUczVE5jRnphZ0M1M3VNb05WYlpXcjFCU3NfNTBOQXRIUG5SYTFndg?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-10-30T09:23:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNENTakpsbk92eUV1TTNsX1UyQzF1WDBHQVZqV1ZwRnRzdlpMUmVaWnowUEZ4eXlKYjBmTzMzUlNOS09QMGJWb3Q4WXI0YWdDM21rYm9SV0gzNmJaNVc5Y3dTZkQtX0VnNUowOXdOVmtFenh6Ul9aYl9IdVJZU2N4SUltcG5Zc0w4R0x1OHpzUlk0cDlHN2tqcjMwb0gtVW51TWNYVVd2MWtpdXdWakxmTVVVWUk?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
