@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-01T11:59:57.792371+00:00",
+  "news_updated_at": "2026-11-01T13:04:15.165555+00:00",
   "editorial_updated_at": "2026-11-01T10:00:00+01:00",
-  "translations_updated_at": "2026-11-01T10:59:03.945911+00:00",
-  "feed_total": 68,
-  "feed_extended_400": 10,
-  "feed_missing_body": 58,
+  "translations_updated_at": "2026-11-01T12:00:10.445449+00:00",
+  "feed_total": 72,
+  "feed_extended_400": 8,
+  "feed_missing_body": 64,
   "feed_short_body": 0,
   "editorial_total": 21,
   "archived_editorials": 118,
-  "translation_records": 41,
+  "translation_records": 42,
   "pending_total": 59,
-  "pending_filtered_out": 165,
-  "editorial_verde": 14,
-  "editorial_galben": 32,
-  "editorial_rosu": 39,
+  "pending_filtered_out": 164,
+  "editorial_verde": 12,
+  "editorial_galben": 36,
+  "editorial_rosu": 41,
   "pending": [
     {
       "title": "Alertă pentru șoferii care tranzitează Spania. Un român a observat metoda prin care hoții îi... - StiriDiaspora",
@@ -608,12 +608,120 @@
   ],
   "recent_news": [
     {
-      "title": "Manovra: bonus Giorgetti confermato, più soldi in busta paga a chi rinvia la pensione",
+      "title": "Manovra: bonus confermato, più soldi in busta paga a chi rinvia la pensione",
       "category": "Italia",
-      "published": "2026-11-01T11:52:49+00:00",
+      "published": "2026-11-01T12:53:58+00:00",
       "url": "https://www.ansa.it/sito/notizie/economia/2026/11/01/manovra-bonus-giorgetti-confermato-piu-soldi-in-busta-paga-a-chi-rinvia_20031262-e476-45eb-82ee-0356dd37c56f.html",
       "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "MotoGp: Marc Marquez vince a Sepang ed ipoteca il mondiale",
+      "category": "Italia",
+      "published": "2026-11-01T12:45:57+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/11/01/motogp-marc-marquez-vince-il-gp-della-malesia_08a0a29e-b250-4c87-95a2-04a44eeac9fb.html",
+      "source": "ANSA",
       "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: Como-Venezia in campo 1-0 DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-01T12:40:03+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/01/serie-a-como-venezia-in-campo-alle-12.30-diretta_a920b962-89a5-4f32-b8f3-023f78b59d42.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Românii care fac cinste țării în Italia! În spatele succesului se află Mihai Iordăchescu, plecat de peste două decenii din țară - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-01T12:39:10+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOX09wTU5aNzhGY25BQ2NMUmU4dlRtZVY0SXVwdDJSYjY1UHFHWUkxck1NVUpRNTJIMWU0dDRjS3NCeXFIS3FSSXIwa1pNOEd6Ui02MlE0MXl5c0xBQTJEQTlaSFJlOUpFSXpuT2xWQ29udTBmbThoUUswNVdHb196S2pHQWhiaW5pWE5sN25hQTE1Qkp6UWlIV3NyQlgtV3hnTTRTTGFaN2QyczJVRW8wQXUtVFVEcUFNT055WXJXeVE0RFZGV1pfZm5FR2hURmo0WEhRVGNXNWZPdU1kRjRlSENEUQ?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Elicottero caduto in Bosnia, domani il rientro delle salme in Italia",
+      "category": "Italia",
+      "published": "2026-11-01T12:37:42+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/01/elicottero-caduto-in-bosnia-domani-il-rientro-delle-salme-in-italia_5d34d699-5dfe-4198-bff4-b4a4c9e4c0a9.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Jandarmeria dezminte informațiile despre un luptător MMA de 18 ani care s-ar fi bătut cu trei jandarmi. De unde a pornit totul",
+      "category": "România",
+      "published": "2026-11-01T12:35:03+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/jandarmeria-dezminte-informatiile-despre-un-luptator-mma-de-18-ani-care-s-ar-fi-batut-cu-trei-jandarmi-de-unde-a-pornit-totul-4017163",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cine conduce, de fapt, Guvernul? Valeriu Stoica: „Luca Niculescu e un mediator”. Ce soartă ar putea avea PSD până în 2028",
+      "category": "România",
+      "published": "2026-11-01T12:29:41+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/cine-conduce-de-fapt-guvernul-valeriu-stoica-luca-niculescu-e-un-mediator-ce-soarta-ar-putea-avea-psd-pana-in-2028-4016005",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Criza politică din Polonia: reacție a Comisiei Europene. Premierul Tusk s-a adresat polonezilor",
+      "category": "România",
+      "published": "2026-11-01T12:25:08+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/criza-politica-din-poloniei-reactie-a-comisiei-europene-premierul-tusk-s-a-adresat-polonezilor-4017149",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Fritz cere alegeri parțiale la Primăria Timișoara și la Sectorul 6. „PSD este extrem de creativ când vine vorba de scuze”",
+      "category": "România",
+      "published": "2026-11-01T12:22:03+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/fritz-cere-alegeri-partiale-la-primaria-timisoara-si-la-sectorul-6-psd-este-extrem-de-creativ-cand-vine-vorba-de-scuze-4017147",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Herzog: 'Mercoledì i dati ufficiali del voto, poi al via le consultazioni'",
+      "category": "Italia",
+      "published": "2026-11-01T12:21:10+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/01/herzog-mercoledi-i-dati-ufficiali-del-voto-poi-al-via-le-consultazioni_9aa5e803-daf0-4591-b0c6-ea26ce02a358.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Miruță, despre viitorul imediat al lui Dominic Fritz în fruntea partidului: Cei care aduc subiectul în discuție sunt cei care se tem",
+      "category": "România",
+      "published": "2026-11-01T12:15:02+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/miruta-despre-viitorul-imediat-al-lui-dominic-fritz-in-fruntea-partidului-cei-care-aduc-subiectul-in-discutie-sunt-cei-care-se-tem-4017143",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Fost ministru al Justiției: „Puterea judecătorească are un statut așa de autonom, încât poate influența și viața politică”",
+      "category": "România",
+      "published": "2026-11-01T12:06:14+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/fost-ministru-al-justitiei-puterea-judecatoreasca-are-un-statut-asa-de-autonom-incat-poate-influenta-si-viata-politica-4016009",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Am scăpat din iad”. Mărturii cutremurătoare ale ucrainenilor evacuați dintr-un oraș ocupat de ruși",
+      "category": "România",
+      "published": "2026-11-01T12:05:50+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/am-scapat-din-iad-marturii-cutremuratoare-ale-ucrainenilor-evacuati-dintr-un-oras-ocupat-de-rusi-4017123",
+      "source": "Digi24",
+      "status": "galben",
       "words": 0
     },
     {
@@ -635,24 +743,6 @@
       "words": 0
     },
     {
-      "title": "Serie A: Como-Venezia in campo DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-01T11:36:28+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/01/serie-a-como-venezia-in-campo-alle-12.30-diretta_a920b962-89a5-4f32-b8f3-023f78b59d42.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ministerul Economiei promovează România la BBC prin trei spoturi realizate de Charlie Ottley: ”Mult mai mult decât Dracula” - Realitatea.NET",
-      "category": "România",
-      "published": "2026-11-01T11:36:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNS3NPaTNNRXBzcnpJZVpmVWxzNHBBY2p2a2N0ZEJOc0ZuaEVwbHBuMl9OaERBbFB5MGczMU54R21rS2ZVa0s3STU4QVFfdFpIbHI3YjlsOVRZSUt1MWthOXFnU3RGdUZQWU91X1JhcTNXR1BueE9HMXAtS0hTX00zMDVrblF1UnkwaC1fc2U0UGNQZ3NEak1KQi1JNGZxTGlPdUxhVEt2UHZ1dC1kMTJQYjQtdjUwQlF2ZHlUeC1Tc2hydFFCX1F3SWJyLUt0ZDdiTG5pMm5RczdrcWdnbWd2UlJlQ3JKODhibFpScU40X01ORnZQTG5EODZkNA?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Șofer de ride-sharing, atacat cu un cuțit de un client în București. Suspectul fusese eliberat din închisoare în urmă cu două luni",
       "category": "România",
       "published": "2026-11-01T11:34:18+00:00",
@@ -669,15 +759,6 @@
       "source": "Digi24",
       "status": "galben",
       "words": 0
-    },
-    {
-      "title": "Tennis: Paolini-Errani vincono il torneo di doppio di Tokyo",
-      "category": "Italia",
-      "published": "2026-11-01T11:15:27+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/11/01/tennis-paolini-errani-vincono-il-torneo-di-doppio-di-tokyo_90808306-7d98-4407-9eb6-c81839bac859.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 507
     },
     {
       "title": "Europa se confruntă cu o „furtună perfectă”, avertizează șeful unui gigant german. Ce amenință economia continentului",
@@ -731,24 +812,6 @@
       "url": "https://www.digi24.ro/stiri/economie/transporturi/o-luna-de-la-lansarea-tollro-transportatorii-reclama-persistenta-problemelor-tehnice-sfaturile-cnair-4017071",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Herzog: 'Mercoledì i dati ufficiali del voto, poi al via le consultazioni'",
-      "category": "Italia",
-      "published": "2026-11-01T10:32:56+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/01/herzog-mercoledi-i-dati-ufficiali-del-voto-poi-al-via-le-consultazioni_9aa5e803-daf0-4591-b0c6-ea26ce02a358.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Video economia: guarda gli ultimi video e notizie - Libero",
-      "category": "Italia",
-      "published": "2026-11-01T10:32:09+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1LVgxaDI2MldfY2pncjl5TjYyX0l2V05LY1ZBY2Fjc0FwRlF6OGtDNFp2SHlrTnN3OTc1Z3dLQW5vV3U2TV9zd2FHUjQ?oc=5",
-      "source": "Libero",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -815,15 +878,6 @@
       "words": 0
     },
     {
-      "title": "Salute a Sarmeola: Croce Rossa al mercato il 7 novembre - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-11-01T09:47:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9BUmZUSTMzU3BxWjRKUWswRnkyRTQ5VXBiZzJXT2JsQ3N4LVpGRm1zcFBtel90YWZHcDNVUXp6M2VPcnh5V3RDb05VU1NfUjhPR3Qtd1paeFFqUTVUdUloa3FvanZCaHJyRTBfZnlkb1o0TkJJUlVr?oc=5",
-      "source": "Padova24Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Coreea de Nord anunță testarea unor focoase cu submuniție pentru rachete balistice. Când vrea să le introducă în arsenalul armatei",
       "category": "România",
       "published": "2026-11-01T09:31:46+00:00",
@@ -831,24 +885,6 @@
       "source": "Digi24",
       "status": "verde",
       "words": 464
-    },
-    {
-      "title": "Cât de mult se strică vremea în următoarele zile și unde va ninge abundent: ANM a emis avertizări cod galben și cod portocaliu",
-      "category": "România",
-      "published": "2026-11-01T09:31:01+00:00",
-      "url": "https://www.digi24.ro/meteo/cat-de-mult-se-strica-vremea-in-urmatoarele-zile-si-unde-va-ninge-abundent-anm-a-emis-avertizari-cod-galben-si-cod-portocaliu-4016979",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 436
-    },
-    {
-      "title": "A provocat o singură persoană accidentul feroviar din Spania? Nu ar trebui să fie posibil",
-      "category": "România",
-      "published": "2026-11-01T09:27:48+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/transporturi/a-provocat-o-singura-persoana-accidentul-feroviar-din-spania-nu-ar-trebui-sa-fie-posibil-4017027",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
     },
     {
       "title": "Morta nella piscina di casa nel Comasco, arrestato l'ex marito",
@@ -887,30 +923,12 @@
       "words": 0
     },
     {
-      "title": "Padova, verde alla Stanga: via Venezia cambia con 15 alberi e 450 metri quadrati di aiuola - Padova24Ore",
+      "title": "Il Piemonte si svuota di giovani. Ogni giorno sei in meno e il futuro fa paura - Giornale La Voce",
       "category": "Italia",
-      "published": "2026-11-01T08:49:56+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0wTGI3djZmRjlHYkNpNFpXZGFuek9RN01hNEpZSWJPb2RpOWFmenVoeUxYTEtSVFUxNjIxRHdzaFR5ai0xVXNLZnpYazNyNmZ1NFdFc2Fnc1JlWEZIakwybVNvUEZTLXJq?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-11-01T08:46:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPWFE1alYweWYxWXdBTFVsRjMyd2d2bEpHcm1ZOElpQ2o1VmxzdGJnS0pxQmRnUWdYTmE2TXpLdWlJdVNqU2R1WmIxbkp1NXBoQVpoc3ZPUVlDb04wWVBYN2dHelctakVuR05HbFN6ZVFBaHQyRkNfRW56VGtubVRlZmhRNy1qSFBnTTRqSzY1RjlGVjJqTkxiQlVTZUV6Q1dJRmNSNC1aSTR6dnBDTXhzcmp4RmVZNGcwbnVmc09fUjZhUnFiTjBiTFpKV3NsQTQ?oc=5",
+      "source": "Giornale La Voce",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "MotoGp: Marc Marquez vince a Sepang ed ipoteca il mondiale",
-      "category": "Italia",
-      "published": "2026-11-01T08:47:17+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/11/01/motogp-marc-marquez-vince-il-gp-della-malesia_08a0a29e-b250-4c87-95a2-04a44eeac9fb.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ucraina a lovit rafinăria rusă de la Kstovo. Moscova admite că o „inteprindere industrială” a fost atacată cu drone",
-      "category": "România",
-      "published": "2026-11-01T08:44:29+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ucraina-a-lovit-rafinaria-rusa-de-la-kstovo-moscova-admite-ca-o-inteprindere-industriala-a-fost-atacata-cu-drone-4017017",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -928,24 +946,6 @@
       "published": "2026-11-01T08:33:09+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/11/01/meloni-concentrata-a-chiedere-un-altro-mandato.-il-quirinale-non-e-nei-miei-piani_facdc2e3-865b-4f6a-9977-dec528bb34e0.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Dosarul de la Securitate al lui Eugen Ionescu. Cum a încercat regimul comunist să-l influențeze pe dramaturg: rolul lui Radu Beligan",
-      "category": "România",
-      "published": "2026-11-01T08:32:51+00:00",
-      "url": "https://www.digi24.ro/magazin/timp-liber/cultura/dosarul-de-la-securitate-al-lui-eugen-ionescu-cum-a-incercat-regimul-comunist-sa-l-influenteze-pe-dramaturg-rolul-lui-radu-beligan-4016977",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Meta trece la roboți umanoizi. Primul prototip, construit în doar trei luni alături de o companie chineză",
-      "category": "România",
-      "published": "2026-11-01T08:30:46+00:00",
-      "url": "https://www.digi24.ro/stiri/sci-tech/lumea-digitala/meta-trece-la-roboti-umanoizi-primul-prototip-construit-in-doar-trei-luni-alaturi-de-o-companie-chineza-4016999",
-      "source": "Digi24",
       "status": "galben",
       "words": 0
     },
@@ -968,20 +968,29 @@
       "words": 0
     },
     {
-      "title": "Serbia comemorează tragedia din Novi Sad: 16 morți și 2 ani de proteste care au dus la căderea regimului Vucic",
-      "category": "România",
-      "published": "2026-11-01T07:50:57+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/serbia-comemoreaza-tragedia-din-novi-sad-16-morti-si-2-ani-de-proteste-care-au-dus-la-caderea-regimului-vucic-4016955",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 554
+      "title": "Ristrutturazione, ok al 50% per la prima casa. Nessun ecobonus, torna quello elettrodomestici - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-01T07:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNNUVYVDUtTkNWZ21hMFBiaGhlX2E4ZjJxNzc0T3Z1YWFXWVp5VTdndnJiVGRBYW9uMk5nWkZQLVJqZkFoLVZNRGR0MExENUoyZV95eXdPcmp6NXZrSjBVbFc3cjRmbE0wS0xiaEN6R1R6U085UFpscUV6d3lQMG4tdDU1eGxsNDc2eTFFYVRRbWZmaFl3LUs4OWZnZHMxT0t2T2l0VEhBM2w3emY4djBLVTF1ekZpM2t1cUlCQ1NLUW1uNEJwdXBmejVEdjVhMnlHZXd6dUk4ODZGeGFqRlBKXzZDeGtsX0lGY253Y3BXUExIeHNILVhYdThIYm5kbjRmWGcweA?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
     },
     {
-      "title": "Campo Largo e Cavalieri: I quattro dell’Apocalisse di Arnò - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-11-01T07:31:38+00:00",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE04aFBKVTNWZEFGckNvQVhnNnBKbVpaWlJaOVBreTFwYWlabThKQWtsRkVpNG14cF9XQWxnSHlLb3pRSV9jV3dfM0tTX1dPNzA0U3lnT3lCRmtPNjdVX3ZBV2pDeUNPLWZmRy1mSThyRENJXzJZVm5BLUg2UndhTG8?oc=5",
-      "source": "Padova24Ore",
+      "title": "Revista românului din Italia – Pagina 1772 - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-01T05:55:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9DU0pQNHZyaEQzWUR1MDF3RHdRcmxMalFabEg0TTZYamxONWVKTEN3eTRHd0ZTX3RQdWIyOVRFQU1NTGdRUmlzeg?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "BYD anunță 10–20 de stații de încărcare ultrarapidă în România, la o vizită a vicepreședintei Stella Li - Monden.ro",
+      "category": "România",
+      "published": "2026-11-01T05:34:53+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTDhaWWc0R1JZeEhhaWJGRVBLcnlHYTJQdy1JQ09XdXF0VXNMTnA4QTVBNnBnb01ZQUR2WmIxVTZqcEs4MGNhUVpaTlpOeXJ1bjN6cUZIallhZGkxRGRYejV6LVhZcDJ0Q1ZKZ1NrYXY1VS1UazJaUzc1X3cxWmd5YzU4S0szSXlydG5tUDdxX0ZpV1hQU0JFN3dFZTlPWmQ2SGdfNXhHcnY5dERqcmUtbWNUMi1VdklIYi1TNl9VMWJydmRBUHUyRg?oc=5",
+      "source": "Monden.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1004,11 +1013,11 @@
       "words": 494
     },
     {
-      "title": "Notizie di Padova ore 23: moda in calo, verde alla Stanga e derby al Tombolato - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-31T22:30:15+00:00",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBpb2JPSE5kRHk3d0lXdGpMTmhNWkVjbmdSRWhIMWxVSHVQb256LWVMVFFkc2dvN1k0SGF2b1RwRHZGSkx6X09UZDJoMkNvVkwzdThfRUotcF9JSHR6My11WDRUeFFUc3Ywd0NJamRwN1c?oc=5",
-      "source": "Padova24Ore",
+      "title": "Românii aflați în închisorile din Austria ar putea fi deportați. Austriecii se plâng de presiunea... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-31T20:42:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPTlk2UTJqSUFOYkc0SHVZX2tWMUNEMFRPRTJYSlR0cTNaVWNac3pOX0otWkRRM204RXJVYjM5QmV4d2VZN05YWDA4Q0wtQWRjOUVPdFk4eGNoLU1SNnlkRVByZC1uUW9kNUx4NVJfMjlfSnlpZTJNbHNaUERRZTVwQWh2eFdseGtacHY3NmNFUU5OeVctYjFiQ19WMzBjVTBPbnIxYjZKSlpnY0NlZ2FVTmpBcG9GNGdaR2VWdWFTVzlWUGNEZzBFMFNNUkVFWUtPUGx3Nnk5ekphQk9pTVdZOVpZYzNzeHlt0gHuAUFVX3lxTE1iZnZ5SW9BYjcxYWNPYUZydEZYaDZOWWlxZ1dsRmx6U0Q2dGdGaEhhRTBTOGZ6WjBNRG50eDJSV1IxY1FTUTM2ak9uTVVtYjRaRDRWLUQ3OFppYnkzdWh0YzlHVEZZMm80WTF",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1040,6 +1049,15 @@
       "words": 0
     },
     {
+      "title": "Manovra, dalla Cgil alle opposizioni: raffica di critiche. Il sindacato: “Governo su altro pianeta” - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-31T17:24:12+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbGM4cXlmNjM2S2p5VHI2UFZkMHRZYk1DYUlBTHZaNEZMNmpxNUhmZkVwY1ZTb0VBZEp4RVZDdGl2VGVRY255OUdDMHB2SHpleEhSd0otVXlkai1GNDJCLTdnRzJLcG5mcTlOQVYwNzUxTTZRbGlDUnpEZ0Q1dHAwcEYzelBfcUZ2V2gyQWNQOXVLSGNZYmdSaFlGdnBjYWxQRFZXQ0lIdU16NUhub3JrdldKb1lmd2cwZ283UjJldURuVXdwc1JQMWthd1dDZXF2T0c0b0VnMElOTWMxZWtQX2FWVkJfWjVNb0xB?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "I 90 anni di Dacia Maraini, 'Moravia e Pasolini le persone della mia vita'",
       "category": "Italia",
       "published": "2026-10-31T17:03:48+00:00",
@@ -1058,20 +1076,20 @@
       "words": 0
     },
     {
+      "title": "Eurostat: electricitatea s-a scumpit în România cu 51,6% într-un an, cea mai mare creștere din UE - Monden.ro",
+      "category": "România",
+      "published": "2026-10-31T16:34:14+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeVFQYUtUWUtxeC1QdHVyeEhCeUI2ZUw1UjhVNW1kS2FBeFM5WU9ZWGd4b3YzWlQ4OEx4YWtobUFibEI1R3J5WTMxUnZ6UzBSZ0pvQTFleHlVbnFtaGktVUFaSGZuRTFOVzZpeDctQnVDeTNuWEkyUUFnbUFvN2xzeGp0UlhwZmlxSldkSU5PTXg0SUt6OXpTNGY4X2pOanhJY21HSWFOSThJLUtrZ1ZHZjVialFCT09xTzJqZw?oc=5",
+      "source": "Monden.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Alertă pentru șoferii care tranzitează Spania. Un român a observat metoda prin care hoții îi... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-10-31T15:03:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQS2pNWEZyTkdCOFBpOEQyUk8tNXA2NE5IOWRNd092a3pxelh4MFpRMDhpM0wzdHcybWRVRjFZVWRpVlhtelpyWU04TWUtSDFxMWFWeElvSUJ6d1JQZU80RzBraElYUjJTRURDOHE5TXM2a3VfSmdmNUpjUl9XamJqa0RjVHBoZW1lbnowNlNkRkR1dE93LWlEQzlXS1lkTnI1SVhnNjlpOXNNa2JJdnNtMnpYRG9LMFdTcF9aOTBEUXBRWURRWTNoS2tiY29uUC03eW1YZHVBZWNZRW50d2pfVzM3c0dhUEYxenZzMjg3bXlkQ2Z1ZnJfbNIB_gFBVV95cUxNV1ZXaEVzOFBIbFVma05McGxuWlZabDVFVVZDckxOUzkxYXNFX0pHLW9MWHRFZjdiNGpoNmhJalhPYzhzU2lWYTFJbzc4eUdnOTZ3WC1lVTR2Tnp",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Padova a Catanzaro oggi alle 17:15: Calabro convoca 24 giocatori e chiede continuità - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-31T14:47:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5rb0tLOTN6MmpmLWtPaF81VlR0a0xpMVRRVTk2Yl9KOEkwT2lQakVfMGplbXJ4OVRJT3lxZ1Q3REVRTEZucU9Eak0xTlhJeElwSnU4MFhBcjFzX1VTMDVQS2dnZE05bXU3a20yQzZpWUZtRVluQWc?oc=5",
-      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1094,11 +1112,38 @@
       "words": 0
     },
     {
+      "title": "Criza politică din Polonia se amplifică: Ambasadorii polonezi din România și China și-au anunțat... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-31T12:10:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOOVVfMHV2VUJDRW9kU3prcm9RRU9KTXdTLTJrd3dsTHFmMGVGMHM2aXVfalFScUl1LU95OXF3cmo5elhDaThMLVpVVmRtanNXZThNWlpHaUk4UFFfZ2RpaGlJR2Y1M1B4aGVnbHJmaTlOMW02Sm0wdFBMdjhkNEN5V19COFRGQzBnQy1FenZsdVY0RFZENlpXd0NCekZOSUVwV0ZvdDlMUHJjSmZjUGtpN3VWaEt3b0FzMEtJMGVrX3d3VkdkcDN4Q3pibng1clFDYU5uc1U4RXZYMWFGS3Zj0gHkAUFVX3lxTE1oWWpKQ2FsWVh2d2NieUZkdDRZdzhaZ0hLQjY1MlFvRzQzQkNRc2toNWhqNndfWVRKWUNRTDdoeTF2NEF4Mm1wbTBXUUZ5YWg4RFJVekxmZDFuZ1ExX1VpTWRmMHQ3U3cyOHRETkdfaXNtWWF",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Coșmarul unei românce din Italia timp de 15 ani: bătăi, gelozie și amenințări cu moartea de la bărbatul cu care trăia - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-10-31T11:29:25+00:00",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVGR3S3BoRXlDVVpLaks4V0VGcTlFSkctOXQyRUVyWENTbTF2QTVWRTZDelVReFEwVGFoYjJ1LUhuSGhLZWNiUTZUZmJ6OUNTb0xNSjBIbEVTcXNod3VTcEZBZkR3aEtIbWFQY2hmd1VhMkREbmhaWExwZl9aclloNTU0WmU1Mk0zek5aQ2hER3ljc2pNcDJoSmlaYmgzUWQ3YzFmSGJrZnplRXA4bGhPVXB1TW5QY25RTV9kS3FjT1R4QUduUWNaVFpXdW9rM1pjOUY2WktR?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Manovra, arriva la tassa sui videogiochi: 1.200 euro l’anno per ogni postazione nelle sale LAN - la Repubblica",
+      "category": "Italia",
+      "published": "2026-10-31T10:55:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOcFVWeGd4M2NKX2FKWjJycnFucVljLXA0dmxIMEVYa1RkVGlnbkxROS1QUUNMQkR1R1BqREVibkRaRHFza1ZHQ2VmY1U2Z2Ntdk1lRmJSaU1iS0s0SUVCNXgtNFZJTDNSQ1BlSE45SEtEZXpJNzVhcS1sZzdFSExvZ2RQTmc3Y01LU3ROQWNQbElSS1ExS2lIQlZ3S2xhME8teXhtdDA0Tlhza0hyQjZhTkVB?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Germania și Franța se pregătesc de noi proteste de amploare. Costul vieții scoate oamenii în stradă - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-31T10:33:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdEpSWUhQNDd3TWpKX3FxRWxrd09CZFVBRGp6Q3JvU1hfa3Jjd3A5Y0pXVFpSbUZxSWhiTEZiMmJ6Uk9qdkxNbUVqWFdXeHBCSV9fS3RhWERFWVVFUzZ6cEVjcVppTEFuYzdCam5XUG5BUm55SzFjcC1UZ2QxTHdPQ1Z5U3I3RzhVWG5yc21uTHE3TGlNT1cyTFVRRlVzZlhhTWVYUzROd01fUzZxM3d6VGphWlJ5R2wxZkJyNENoMDJRYUVzaFVDcERBaHpqY0tJQ25kYVBR0gHbAUFVX3lxTE95ZElQYjZNYldtOHFVelJ5Y2FwVzA0N1pFTDhhR3hCazdCWm1OQlhRWjdYcUREZEt3R2RGbnBlVG5zc2lTbDA5V296N1Nlb3NrU3E1NzVjdlFiZ095dl82X3FPbWxuaEdHWlYwbnFDMFdJV1ZKaDJDUVRKVHl",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1112,11 +1157,11 @@
       "words": 0
     },
     {
-      "title": "Il Betting online nel 2026: numeri da record e nuove regole in Italia - Padova24Ore",
-      "category": "Italia",
-      "published": "2026-10-30T23:34:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVTM3Q2lGSkJpbHZtX0ZjTnhibnRJU3BwWTVQQ0VrWlA0RDBheEpnQkd5U1RKeDBMd2pCUnVVYkRUZ28xMTBhampjZkwwY09rcURNR1NrYTZmeVJUOWtiY2RTOVNPUmR2NDdmMFdiTGI2Zzlyd216NEJ5TGhwWU5sdnA1d25xYUFxaXRVWFhXVE5WLW83SWlzTXJiYnk?oc=5",
-      "source": "Padova24Ore",
+      "title": "Cine este Ioan Nani, omul care a condus Antibiotice Iași aproape 30 de ani. Motivul pentru care s-a retras, de fapt, din funcție - Oficiul de Știri",
+      "category": "România",
+      "published": "2026-10-30T20:42:14+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZ0pRRF9leXJueFFGdjhfU3JOXzdES3NBR1c4VDRWZUVMRThENnRHdUMxR0YySW9hUlVmNVk4eklXZkNQMVk3MTU3VUs3Tm8tWGE5MVpmUUdzY3o5bHJkTlRMRHFqajY0b3VYc0ZjOUpXajFSeEVPalhad2xwcEpFN3Rfd21mLV9rX01EWTRvS0ctVGpfMW9QSVMtLUtNZkZZTWFVV3VjWkE3S2xhbnJRcnA5SHRBY1B6TjhVOEx3YW10RmZsaUM0dmNxNzRYeWZYckVBOExGdE9NY19YZmpaQ2I0d2w?oc=5",
+      "source": "Oficiul de Știri",
       "status": "roșu",
       "words": 0
     },
@@ -1137,15 +1182,6 @@
       "source": "Rotalianul – Revista românului din Italia",
       "status": "verde",
       "words": 474
-    },
-    {
-      "title": "Cine câștigă și cine pierde după rectificarea bugetară din 2026. Miliarde în plus pentru pensii și Sănătate, tăieri la Educație, Transporturi și Dezvoltare - Oficiul de Știri",
-      "category": "România",
-      "published": "2026-10-30T18:21:29+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNVG15NXBjdWdKUk9XZzhYWlZscm5iUVFwRzlvbWJtRVc5Um84N3ctUDBNU2Z6Q0wxUFY5NEEwdUc4bUw0UHRFY1JzdWhydExuQzdlclVqRGE0aVl4TUF5X3ZKWVp5NFZWNDBsbmRoajFfdTQxaThUN1RhMHlXdVZEZkhzWVlSRGN1V18xZnV3R3piUy14SDNmN2hjT0dlRXpKcGpGR29CTUwzcDR1MFJjSnJXWDJaamk3c3MtRVk1MS04UENseHdjZ1FfS2FyR1N0bnliZXFEbm90d1dpbDBQSUg0WHVRakREa2VsM2Y1XzF4anVqYTd2VWV3Uk5EaDVaMGx2MUtlQUg3dw?oc=5",
-      "source": "Oficiul de Știri",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Șofer român de TIR ucis în Italia: procurorii cer judecarea colegului său, un conațional. Avocatul inculpatului spune că a fost legitimă apărare - Rotalianul – Revista românului din Italia",
@@ -1175,11 +1211,20 @@
       "words": 475
     },
     {
-      "title": "Giovani al lavoro a Padova, la sfida ora è la qualità: «Servono prospettive di crescita» - Padova24Ore",
+      "title": "România, campioana scumpirilor la energie, în UE. Creștere de 52% în doar o jumătate de an! - Realitatea.NET",
+      "category": "România",
+      "published": "2026-10-30T14:37:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOWFdwQjdtNHdYNHJ3dDFXYXFkZE5vLXE0Mmh3VjJPRGVsU1NUOU1UT2pNb2ZOTG5lRklFWnZYbHcybVJMelAxVTRzMHdsQjdGUlZvMjNMa0tCNmo5U1dqbTRvOVNfUm8wTlpfdjdROHZ0S1Y4RC1wUWVaTW96M1BhTFZmNGh2YndBX2ZjdmJ4aEZremQ5a0FkajBrVl9QM2J3a0NFX1FCcUVwR1VHY21QYVBBeEU2dnBEVWhiby12c3pRLWhrWEdIR2Z2S2FxdTcy?oc=5",
+      "source": "Realitatea.NET",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Credit Agricole Italia, l’utile nei nove mesi supera 1,5 miliardi - la Repubblica",
       "category": "Italia",
-      "published": "2026-10-30T16:42:55+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1TYklNYkNwOVJZMGZZcnlNWEJuRnR5Si1vUG9RN0Z2aGRmcHNBN29JUU9XUUVSN0V4X1B2OFBfdVVXdU9tazBvT2dEMU5oc0FuckkxUjVfOFVZZnVNZUdBM0laOUk1QVl4?oc=5",
-      "source": "Padova24Ore",
+      "published": "2026-10-30T14:18:29+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNN1JuT20wTFFhMXRlV04zVG1zc0FYZm1NWkh6ZXhkOEYxemNLaDNwcExIUVhVWnNySHVNX3NCM3VvUDNlN2sxajFEQTRpWkc5c2dWeDhHSFVXeG1DVU1vTno2aFlJVEc3RHRaOE04Q2xrbVR5eldMREl1cmM2N2czb1ZOR3lVYnh4MGRGTm5hZnVxN1FTXzVwNnkwQXdDZUZoallOZ1cyWkxHVVZIOS1NVHltNXBYajNnU0hQbXRKUEtvSWs?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1191,15 +1236,6 @@
       "source": "StiriDiaspora",
       "status": "verde",
       "words": 479
-    },
-    {
-      "title": "Guvernul prelungește reducerea accizei până în februarie 2027. Motorina, mai ieftină cu până la 85 de bani pe litru - Oficiul de Știri",
-      "category": "România",
-      "published": "2026-10-30T13:34:34+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOWk5wLUIyTmFVeWVONmtfWG1Sd3UtZnh6ZEp3TG9JOVBubWg2dUNwbHczQnBMRWRqOU5NUndpcFJVUUFaLUgzZXAyaFkxZFhncUd5ZjFWeFVueFRjV0NJUEFnekdxZU1paGF6cnkydFg4R2d0TmQtOVRoWmIzY09jM05nMHBhWHp6N2s5dzAwWjA2Wnh2X0oySlRLOUYzNVBKMGEteDVOT09LM1JJeEdlTFRsTDdCT3JZZlVIMjBnczVpb3V0Zzg1bDVYREFfb1dGTnVzMTVn?oc=5",
-      "source": "Oficiul de Știri",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Unul dintre cei mai căutați infractori din România, arestat în Alicante. Costa Blanca, destinație... - StiriDiaspora",
