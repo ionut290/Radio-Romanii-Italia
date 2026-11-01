@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-01T03:06:30.496561+00:00",
+  "news_updated_at": "2026-11-01T03:07:31.463704+00:00",
   "editorial_updated_at": "2026-11-01T02:01:34.473719+01:00",
   "translations_updated_at": "2026-11-01T02:15:24.307129+00:00",
-  "feed_total": 78,
-  "feed_extended_400": 9,
-  "feed_missing_body": 69,
+  "feed_total": 82,
+  "feed_extended_400": 10,
+  "feed_missing_body": 72,
   "feed_short_body": 0,
   "editorial_total": 23,
   "archived_editorials": 115,
   "translation_records": 41,
   "pending_total": 69,
-  "pending_filtered_out": 136,
-  "editorial_verde": 13,
-  "editorial_galben": 39,
-  "editorial_rosu": 45,
+  "pending_filtered_out": 135,
+  "editorial_verde": 14,
+  "editorial_galben": 38,
+  "editorial_rosu": 49,
   "pending": [
     {
       "title": "Alertă pentru șoferii care tranzitează Spania. Un român a observat metoda prin care hoții îi... - StiriDiaspora",
@@ -713,8 +713,8 @@
       "published": "2026-10-31T20:43:44+00:00",
       "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-scontro-sulla-scuola.-banche-ancora-sotto-tiro_ff019702-1b62-4f1a-8c3d-ca9b9e0ad8cb.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 519
     },
     {
       "title": "Florin Manole, espre majorarea salariilor demnitarilor: Pentru a aduce echitate în sistem, va trebui să avem creşteri peste tot",
@@ -831,6 +831,15 @@
       "url": "https://www.digi24.ro/stiri/actualitate/disparitia-celor-trei-frati-in-salaj-un-cioban-ar-fi-vazut-unul-dintre-copii-cu-un-barbat-anchetatorii-iau-in-calcul-rapirea-4016273",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "O doctoriță româncă, după ce a obținut cetățenia germană: \"Reacțiile oamenilor la pașaportul german nu au fost cum mă așteptam\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-31T18:36:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPSTU1MHU5bEY3dGYwN19sUW5jV1hoNnhWTEdHZDZpYTJ5Tm5ETEdGSXBhM2N1S25GTUNZSDBRcmpGNWdTc0tUM1NoYUx6Q3ZlSDBFQnNnakJZNG5xMmVUbWhvRmhvR1VYRmVKMGFnLVZIeWd2bExmYTMzaTlyczJNOURjVVN0cjY3V0ZFMjJ0T1FZeXhpbUZlS0xWeS1GYms4Y2ZuV1Ftc1VhVnAzT3ZfelRqdXptWDlKVzVWUGRBMHRqS0htUVRJbVM0Sk1jRmNSRGVDM01welRwaTBhMElya0JXNXdqLUF1bjZrT2FFTFVSTjg0SnRV?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -1239,6 +1248,15 @@
       "words": 0
     },
     {
+      "title": "Raport preliminar al catastrofei feroviare din Spania: Trenul Renfe circula cu cel puţin 160 km/h în... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-30T10:51:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPbjJpU2hRRHhDUDVNSkMteTFTTG9ub0ZydzFXOHBDUjdhNWZWd3hCSlRDeEY0LUhQRVZWZUY2OVljdEpKYmxvaVM0eHJfMXBYOUNJckRRZWozU3ZHRHRLa0FUZXNvTkxvaXVBSGswYnRGOU9oSXNzX25aZW5nRlBQdGlwbFR5LTNIRnpJRFpYaWJvRTJOb29ERTVjWUVtb0RZaENFbmFhamRKUmpIc0RkWnBiZHNVSTRXemlub092MENzNjlPakF3bjBXYU9SVGgwOW5KYVVsZ2FMSnVvdEExQWVmUFFiOHBYRzY1ZXhVSGpJbDAzaW5J0gH3AUFVX3lxTE9uMmlTaFFEeENQNU1KQy15MVNMb25vRnJ3MVc4cENSN2E1ZlZ3eEJKVEN4RjQtSFBFVlZlRjY5WWN0SkpibG9pUzR4cl8xcFg5Q0lyRFFlajNTdkd",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Nord Est e Francia, a Padova il forum del 3 novembre: quattro filiere e scambi per 15,6 miliardi - Padova24Ore",
       "category": "Italia",
       "published": "2026-10-30T10:36:40+00:00",
@@ -1298,6 +1316,24 @@
       "published": "2026-10-30T08:07:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQX1NtbS1zRFhvMF9MZTlSbXhvRkczMmJnaGxuTmdlZzN5Q1FRVnBNaEpJVGtwSWgxWW8xOVh5YWFoS1hoNjI5MnktX2ZkRDdDdmpVTWhuNFpHR0VXRXpMTV9XRy1jZ3RqcXZyY1BwMXBoNmxLdnUwcHlsQmsybTBORi1HTlgwaVVvWFIxM05DYmZtSWdaeHk1QU9hRzJJNm9qRF9nRDZydTB0TU9HUFZiMVhxR2xnc3o2dVRSLXBvdGE0VU9GMXdMZXlGSWZOeVJpeHhYWjVPaktYQmJLejFOejU3UWQ1S1VOMm9wUENnYzQ2OFRsNGFmNW9zRE0tdHUwR0tCanZudXZqemttdkE?oc=5",
       "source": "Realitatea.NET",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Proteste în Germania. Tinerii se mobilizeaza sub sloganul \"Generația Z preia controlul\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-30T07:39:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPOTY3Ql9MSkxUbkVhMWZ6NVE4NXNGeUxTcFBkMXNYaUhHb0FzWnRIQlNBdVpsMUZRdEVXd2JzV3laVjRnSWFGbGhfOVU4S0Qwa0RPUHFTdzN2ZFFMbWRnTU14eW90WjBMZHRVLTI1bV84ekFfS0lxMmlrM0ZQTzF6aEotcHotTWJaVW5iTlJZSDFOZGNYN3hKV3V1VFEwWHc5UXotdVdOVjlqbldJMXZ6OVpYSkpfUXNLdkV3Z3RjX3d4aFk?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fostul premier francez, Edouard Philippe, audiat de judecători pentru suspiciuni de deturnare de fonduri... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-10-30T07:16:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPQ09uRzRBRXRXYjFtbmxlaHExckNYRWtBb1ZCUTdZNk9UOEM0cUg2VlRTbHJSNTVlRm5GbGg3QURoeWFnZUxpZFRrQmE2d1hBZjYxcVZKamNBbTR3cXZvd0d5TEQyck44Z3lhU21rS1R6THpDS1dEQWZCaUJxb1BKVU1GX053M3poYjlxRThlZ29hRFVVS3Y3N3ZsR2dBSWR0YlBmdVBMbnBaVWl5UHpVVGhqbWFRWk1jOFptVUd3NXlGcnhDZzhxZFhieV9CVmdUVFBDcEdPbEFGUVEtc09YTmlpWGRHQdIB6wFBVV95cUxNNWdEQkR3Rmd4MjBKUU1tQzdiZjVoYVF5ZGt3RV9sY0NhcDFyZngtY3pPVkQ2ZTdzSV9MdDUyTEFvenBQQk14emRNTWxKWTM3MTNBTUpUQnF5a2RMbm1kV3VsZ0tWd2JHYnNHNmh",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
