@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261030-telegram-media-3';
+const RDI_YOUTUBE_BUILD='20261101-song-art-1';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -190,4 +190,35 @@ function startTicker(brief=false){
  },cardDuration);
 }
 load();setInterval(load,300000);
-</script><script type="module" src="./youtube-philosophy.js?v=20261030-2"></script><script type="module" src="./youtube-dj-promo.js?v=20261030-dj-1"></script><script type="module" src="./youtube-camera-breaks.js?v=20261029-city-1"></script><script type="module" src="./youtube-landscapes.js?v=20261029-italy-romania-3"></script><script type="module" src="./youtube-extras.js?v=20261025-census-1"></script><script type="module" src="./youtube-weather.js?v=20261030-weather-4"></script><script type="module" src="./youtube-spots.js?v=20261025-enable-spots-1"></script><script defer src="./youtube-geopolitica.js?v=20261027-1"></script><script defer src="./youtube-tg-sera.js?v=20261030-footage-2"></script><script defer src="./youtube-live-messages.js?v=20261030-telegram-media-2"></script><script defer src="./youtube-live-media.js?v=20261030-telegram-media-3"></script></body></html>
+</script><script type="module" src="./youtube-philosophy.js?v=20261030-2"></script><script type="module" src="./youtube-dj-promo.js?v=20261030-dj-1"></script><script type="module" src="./youtube-camera-breaks.js?v=20261029-city-1"></script><script type="module" src="./youtube-landscapes.js?v=20261029-italy-romania-3"></script><script type="module" src="./youtube-extras.js?v=20261025-census-1"></script><script type="module" src="./youtube-weather.js?v=20261030-weather-4"></script><script type="module" src="./youtube-spots.js?v=20261025-enable-spots-1"></script><script defer src="./youtube-geopolitica.js?v=20261027-1"></script><script defer src="./youtube-tg-sera.js?v=20261030-footage-2"></script><script defer src="./youtube-live-messages.js?v=20261030-telegram-media-2"></script><script defer src="./youtube-live-media.js?v=20261030-telegram-media-3"></script><style>
+/* Small now-playing cover in the existing upper-left broadcast margin. */
+#rdiSongBar{position:absolute;z-index:9;top:55px;left:44px;max-width:510px;height:32px;display:flex;align-items:center;gap:9px;color:#fff;pointer-events:none}
+#rdiSongArt{height:32px;width:32px;object-fit:cover;border-radius:5px;background:#17314d;border:1px solid #7390ac}
+#rdiSongName{max-width:455px;font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 2px 4px #061424}
+</style>
+<script>
+(()=>{'use strict';
+const bar=document.createElement('div');bar.id='rdiSongBar';bar.setAttribute('aria-label','Melodia in onda');
+const image=document.createElement('img');image.id='rdiSongArt';image.alt='Copertina';
+const name=document.createElement('span');name.id='rdiSongName';name.textContent='Radio Românii din Italia';
+bar.append(image,name);document.getElementById('stage').append(bar);
+const fallback=new URL('./RADIO-LOGO.png',location.href).href;
+image.src=fallback;
+image.addEventListener('error',()=>{if(image.src!==fallback)image.src=fallback});
+const url='https://radio-romanii-italia.duckdns.org/api/nowplaying/radio-romanii-italia';
+async function update(){
+try{
+const response=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(7000)});
+if(!response.ok)throw Error('Now-playing HTTP '+response.status);
+const data=await response.json();
+const song=data?.now_playing?.song||{};
+const track=[song.artist,song.title].filter(Boolean).join(' — ').trim();
+name.textContent=track||'Radio Românii din Italia';
+const art=String(song.art||'').trim();
+const next=art.startsWith('https://')?art:fallback;
+if(image.src!==next)image.src=next;
+}catch(e){/* Keep last known artwork during brief API interruptions. */}
+}
+update();setInterval(update,20000);
+})();
+</script></body></html>
