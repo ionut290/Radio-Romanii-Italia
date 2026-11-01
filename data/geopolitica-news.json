@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-01T17:30:46.673631Z",
+  "updated_at": "2026-11-01T18:30:32.176642Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-1b78c47a517a149e",
+      "category": "clima",
+      "region": "global",
+      "title": "Why climate diplomacy matters for Bangladesh",
+      "summary": "",
+      "source": "The Daily Star",
+      "published": "2026-11-01T18:17:16Z",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOSXFCdDZsTDJmaGhjVGl2ekI2TXlNZG5tcDdhVVlhZkxzN2xQZV9RQkFxeXFDMU43SmRKcTFZTmF0MjhVMlRXakEyYk5rQ2RLdl9ZcTF0MnlGVHZlMVhPZ1JnTnBQRWgyUXhiQWVSNmxGZ256b0JlMzdZaTNtSzBvZUZrLXdfNk8wU1hod0FfSmdKckhmZklhNHMxeVlFUWpQTkd0bFNzQVNwQ3ZmVHBGNDg3MDdYQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce este importantă diplomația climatică pentru Bangladesh",
+      "title_it": "Perché la diplomazia climatica è importante per il Bangladesh",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-0f9fa97c16626a20",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Europe’s Security Architecture Will Rest On NATO, The EU, And Ukraine — Expert",
+      "summary": "",
+      "source": "uatv.ua",
+      "published": "2026-11-01T16:39:00Z",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUXQyVGxOMTY5MVdRV1U3QnYxTEFfbXZ2ZWNWSWxGZkV5MEZ3eGRZYmRhRl9GcmdwLXVVOFlyX0NBbG5lRkVsVHlLaGxXYXFoUjhsem1GZXZIbDhSWlJXeEZ5OFkzOHpBTzZGWFNQWlZkZW1VZVBhVTFYM0hxczBhSnp2eFlUbExtejh6aENKZ3pSUDJJOHE2Sjln?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Arhitectura de securitate a Europei se va baza pe NATO, UE și Ucraina – expert",
+      "title_it": "L’architettura di sicurezza dell’Europa poggerà sulla NATO, sull’UE e sull’Ucraina – Esperto",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-cb46b74bfe6a24bf",
       "category": "conflicte",
@@ -22,17 +50,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-c54445ade8f4f8fb",
-      "category": "diplomatie",
+      "id": "geo-e4f6b71e1583d5e1",
+      "category": "securitate",
       "region": "asia",
-      "title": "Sino-American stability?",
+      "title": "US, Japan Criticize North Korea, China; South Korea Remains Silent",
       "summary": "",
-      "source": "The Financial Express",
-      "published": "2026-11-01T15:17:35Z",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE00c3E3ZFJURG9PZGV6dktpbGZUYUFjYWtUMU1aUUx1MEZ6QlVpaTNZSUpXc1FvelYzVUJBVG16ZVg2ZXJsYnBFWmJvaTNqQktNRlNYQzdIU1ZiV0JSdTFoWEZxXzBzX203cnpQM2NtWFNRNWxiTmlDZWlGUHNrUdIBhAFBVV95cUxOdEhpcDJhRVBzdU16WUJsUXA5dkU2Y0Vodk44bFZQbkhic3JiZnRWVVRhOFA2N0xnSHFOUkRueDBHaUtPZGkzbmw5Y0xGNnlWQldMSTJKUFVRX2tNSGl2UnNQVUExR1ZQSWdUT01FY3d5OVlEaFZCZUtuVlZVaVBhMzZERFo?oc=5",
+      "source": "조선일보",
+      "published": "2026-11-01T15:52:07Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNYm15UGlJV2lvQUx0TTV4SkdfeWtqbFdaX2hhYnM3MmNnZ3JNNWZyTWlMN3h3M1poZDMySXBTMXJDTjRES3VqRHIwdDNQTEFrTVU4b3htZ3BHTUdqZncyUWFRNFRmQXNqLXZSamRHemYwa3V0WnVmOF9zRGJheTVETDN0a3RtaGtJ?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Stabilitate chino-americană?",
-      "title_it": "Stabilità sino-americana?",
+      "title_ro": "SUA, Japonia critică Coreea de Nord, China; Coreea de Sud rămâne tăcută",
+      "title_it": "Stati Uniti e Giappone criticano la Corea del Nord e la Cina; La Corea del Sud resta in silenzio",
       "translation_status": "machine_translation"
     },
     {
@@ -78,6 +106,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-16c22b3901f4de5e",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Erdogan and Zelenskyy Push Black Sea Grain Corridor Talks",
+      "summary": "",
+      "source": "SuaraGarut.ID",
+      "published": "2026-11-01T13:45:44Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1UdEVoc0RQb3JySlFZTll2c1VOdnJkQzg0VXhYOUI0WERNdkNxQ3ZXenZpRDBzcGxhWjBReEdPWlV0R01SNy04c0dFNjh6bzRmdGJVMDJqOE1yaG92TFRpVlBhUG5TTHlSRHpvX21nSlhrc0xKOFE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Erdogan și Zelenskyy susțin discuții privind coridorul pentru cereale din Marea Neagră",
+      "title_it": "Erdogan e Zelenskyj spingono i colloqui sul corridoio dei cereali del Mar Nero",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-66c14a51654c015e",
       "category": "conflicte",
       "region": "orient",
@@ -117,20 +159,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Fracturarea unității diplomatice a Europei: Rusia – NATO și noul acord de securitate",
       "title_it": "La frattura dell’unità diplomatica dell’Europa: Russia-NATO e il nuovo patto sulla sicurezza",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-6a8c36625afd8762",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Divided Bulgaria votes in tense presidential runoff",
-      "summary": "",
-      "source": "Yahoo News Singapore",
-      "published": "2026-11-01T12:32:15Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPejUtVno4Z1RyS0JQRGZWejNucERDMzlxSFBuXzEtMU1CYS1NUjg2TVA2YkQ3SmplUDFmdzM3T2lGMUtoZXF5UC1UMmp5aDhBTzE4eVEwT2tLYnFicktQWTZhTGhBZXFoeTlDVHpQbFhJWVhHWXhhNzFOdmZpXzJOWWxMdkNvMzdnRnc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Bulgaria împărțită votează în turul tur al președinției tensionate",
-      "title_it": "Voti divisi in Bulgaria nel teso ballottaggio presidenziale",
       "translation_status": "machine_translation"
     },
     {
@@ -176,8 +204,22 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-1ff7111e92f33f42",
+      "id": "geo-0040a23b58012493",
       "category": "diplomatie",
+      "region": "asia",
+      "title": "Five-month passenger decline streak ends for Asia Pacific airlines in September",
+      "summary": "",
+      "source": "The Bangladesh Monitor",
+      "published": "2026-11-01T11:54:44Z",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOV2F1bXdpUHVGVzlfOGZSLTlRWWpYcVd2cXZzLUVZanhyVGJlQjVPclZrSm5JXzFZNVdVd2lNQTVKUmFnRHdBREdNeVpQbU9FMlFGdjBGRE5ieWlqbG8yNldPdlNSYy01UElzSlNVcldJdmdybUNQVWN2V3JvT3BYazloVXJ3VTVwdDNadnhHODE5ZkI2d3RUbm1Zc0hranhDYUt1aEFNSVc3R1d2NWpmOEhyWVpBZw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Siria de cinci luni de scădere a pasagerilor se încheie pentru companiile aeriene din Asia Pacific în septembrie",
+      "title_it": "La serie di cinque mesi di declino dei passeggeri si conclude a settembre per le compagnie aeree dell'Asia del Pacifico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-1ff7111e92f33f42",
+      "category": "securitate",
       "region": "asia",
       "title": "India-Australia defence ties: Advancing a vital Indo-Pacific partnership",
       "summary": "",
@@ -187,20 +229,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Legăturile de apărare India-Australia: promovarea unui parteneriat vital indo-pacific",
       "title_it": "Legami di difesa tra India e Australia: promozione di una vitale partnership indo-pacifica",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-5b487bdf4512b759",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Trilateral talks between Russia, Ukraine, and the US in early November 2026:",
-      "summary": "",
-      "source": "Vietnam.vn",
-      "published": "2026-11-01T11:20:33Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMVZma3dqX3BZSUhYcldmZXJBZWxBdHJ0azJsc2hGVDJDWWF6aXdMMTNfMXl4QlM5ZVduVThtQVhXTkhSbTdLM3NaTTJweHdoOGExR3BSRUZyZC0yeWszX3JYbUg5dW5NX0dzYkhFcGtHcDAxXzBkOEJkN0JWRnIxQ3g1Z29hSzN3Z3c?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Discuții trilaterale între Rusia, Ucraina și SUA la începutul lunii noiembrie 2026:",
-      "title_it": "Colloqui trilaterali tra Russia, Ucraina e Stati Uniti all'inizio di novembre 2026:",
       "translation_status": "machine_translation"
     },
     {
@@ -215,6 +243,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Cum poate India să gestioneze surplusurile chineze",
       "title_it": "Come l’India può gestire le eccedenze cinesi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-8011d8c5ea896a9b",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Chinese Ships Suspected of Surveying Undersea Cables Near Japan, Philippines",
+      "summary": "",
+      "source": "The Japan News",
+      "published": "2026-11-01T11:01:00Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE82U0F2ZTRmVGtjRmFyS0Q0bFotaTNKcmp1VGZNTG53SlliZklxT2xSb2J3cmxiNU5zcjdxYzVzZDhuQVdNYjNaMUY1RDFFU0g3UlRfQUlLQVFMVUY1ZUNYWTVpYkpQVl9XU1VqVW1oRWswMEhQMEE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Nave chineze suspectate de supraveghere a cablurilor submarine în apropierea Japoniei, Filipine",
+      "title_it": "Navi cinesi sospettate di effettuare rilevamenti su cavi sottomarini vicino al Giappone e nelle Filippine",
       "translation_status": "machine_translation"
     },
     {
@@ -233,7 +275,7 @@
     },
     {
       "id": "geo-9088a299147684c7",
-      "category": "diplomatie",
+      "category": "securitate",
       "region": "asia",
       "title": "Japan’s Economic Diplomacy: A Compass in a Divided World",
       "summary": "",
@@ -302,20 +344,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-12fd68fdf55be95c",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "The situation 1684 – October 31, 2026",
-      "summary": "",
-      "source": "Spartanat",
-      "published": "2026-11-01T07:56:50Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFA1U2pXSUI3YmpiZWx5S1VhOHdjaXNNQ3dsd3NhMy1UcU1RVFlzZjNHNTBEQUI3eVRBU1ZTdFAzTk9YWDljUGZsMUZsampFaDU0VDJ1R3Jwd1MySml3WGJLU0lzQmxKMDVHVVVz?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Situația 1684 – 31 octombrie 2026",
-      "title_it": "La situazione 1684 – 31 ottobre 2026",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-a9d43596563206d2",
       "category": "europa",
       "region": "europa",
@@ -372,6 +400,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-71e53d9a81ad8ca0",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Why is Europe still dependent on the US for defense?",
+      "summary": "",
+      "source": "DW.com",
+      "published": "2026-11-01T06:02:20Z",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObTl3a0NOLU9IS2ZkaVRmMm8tVnd2TXo3X0txM3BUZkRrZnBIbEV4bTRZX2dJdElPbGV3UWJoMHVUMGJvZlJXZ1lpamsxSm1Ba0hDNk1IOVdoUEN3MzdiM0JVUVhVS3hZN2N5czY5bnU3djdmeUg4MjctT1BCWVdDWnFNOE5LT28zdGRyQV9QaWw4dw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce este încă dependentă Europa de SUA pentru apărare?",
+      "title_it": "Perché l’Europa dipende ancora dagli Stati Uniti per la difesa?",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-44b934dd0174d2fd",
       "category": "conflicte",
       "region": "europa",
@@ -400,17 +442,31 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-7207776930a76259",
+      "id": "geo-570f197ca41f4c91",
       "category": "conflicte",
       "region": "europa",
-      "title": "Putin cites chance of peace deal but says Ukrainian aviation warning makes it harder",
+      "title": "Keep civilian ships out of it: Erdogan warns Russia and Ukraine over Black Sea attacks",
       "summary": "",
-      "source": "DD News",
-      "published": "2026-11-01T03:19:06Z",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPYXQwUW1iZ0MxSncyNlJCT1NLdkRCUFRVbFZoY2tjdm5kRWRORXR1Tl9xVnMtRHZxSVJYNDVkZVJNclc0VGFqbFhCZ0dqbEVHdTFOSUFFY29ycmcyaHFwOEd2TXVsYUJtX0ZTM0p5MXBuZmpJb21qdDBtTG1vZHRGRDliSmFadk9tbXdKZHJJOXVVLV9WeDg2Rk9pbW5lTGFNa0xpVXllNUM1VTVFVVpF?oc=5",
+      "source": "Newswav",
+      "published": "2026-11-01T04:36:14Z",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOcTNjMG9NUU15VEREUWhuVFdId1J4RktPMXJkZ09GQVB3Q3k3cXRlYjY5dnRfTzc0UmozV0ZDODhUQmZmREJ3OWRaM2lsa2ZGemppdUFfWWhVZXRlQkwzVW1wbHVoTGcxSG1ybXhrUWtNSjlPWGZOVXZzWk94bXdhTkRWM3YxNHNlcU56eG40Mkc1WWxCMkxuLVRVOFBXVDVlUWRReUtSMEFULTlnRzBNOUZZZEdBNFU?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Putin citează șansa unui acord de pace, dar spune că avertismentul aviației ucrainene îngreunează acest lucru",
-      "title_it": "Putin cita la possibilità di un accordo di pace, ma afferma che l’allarme sull’aviazione ucraina rende il tutto più difficile",
+      "title_ro": "Țineți navele civile departe de ea: Erdogan avertizează Rusia și Ucraina cu privire la atacurile de la Marea Neagră",
+      "title_it": "Tenere fuori le navi civili: Erdogan avverte Russia e Ucraina sugli attacchi nel Mar Nero",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-3c212d7d31674526",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Japan, U.S., Australia, India take aim at China's economic policies",
+      "summary": "",
+      "source": "Japan Wire by Kyodo News",
+      "published": "2026-11-01T02:22:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xQlUwUEYwbWhHNkp3OFNhNjVucEpyT2Y5SmlCcjNnVTQwX3M3US1zTW1VZlhlbGhkOTlKSzVoZXhzbUtDZlZHS3h3Qm9GTHRFQXNpMGxXaDNuQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Japonia, SUA, Australia, India vizează politicile economice ale Chinei",
+      "title_it": "Giappone, Stati Uniti, Australia e India prendono di mira le politiche economiche della Cina",
       "translation_status": "machine_translation"
     },
     {
