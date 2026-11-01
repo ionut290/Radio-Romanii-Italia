@@ -29,7 +29,7 @@ async function loadNowPlaying(){
   let current=[artist,title].filter(Boolean).join(" — ");
   if(!current)current=clean(info?.text);
   // Avoid showing identifiers or a generic placeholder as a track.
-  song=/[A-Za-zÀ-ÿ]{2,}/.test(current)?limitText(current,90):"";
+  song=/[A-Za-zÀ-ÿ]{2,}/.test(current)&&!/^\s*(untitled|unknown|unknown artist|unknown title)(\s*(\[.*\])?)?\s*$/i.test(current)?limitText(current,90):"";
  }catch{song=""}
 }
 loadNowPlaying();setInterval(loadNowPlaying,30000);
