@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-02T22:03:40.214780+00:00",
+  "news_updated_at": "2026-11-02T23:07:52.749955+00:00",
   "editorial_updated_at": "2026-11-02T20:05:00+01:00",
-  "translations_updated_at": "2026-11-02T22:02:21.367669+00:00",
-  "feed_total": 85,
-  "feed_extended_400": 9,
-  "feed_missing_body": 76,
+  "translations_updated_at": "2026-11-02T22:03:40.149504+00:00",
+  "feed_total": 86,
+  "feed_extended_400": 11,
+  "feed_missing_body": 75,
   "feed_short_body": 0,
   "editorial_total": 21,
   "archived_editorials": 136,
-  "translation_records": 46,
-  "pending_total": 96,
+  "translation_records": 45,
+  "pending_total": 95,
   "pending_filtered_out": 270,
-  "editorial_verde": 14,
-  "editorial_galben": 35,
-  "editorial_rosu": 52,
+  "editorial_verde": 16,
+  "editorial_galben": 34,
+  "editorial_rosu": 53,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -133,16 +133,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento verificato da completare: testo assente o breve; consultare fonti originali e indipendenti",
-      "attempts": 0
-    },
-    {
-      "title": "Atenţionare MAE pentru românii care vor să călătorească în Grecia",
-      "category": "",
-      "published": "2026-11-02T20:56:54+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/atentionare-mae-pentru-romanii-care-vor-sa-calatoreasca-in-grecia-3-4019047",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato ancora mancante o non sufficiente; ricerca delle fonti originali da completare",
       "attempts": 0
     },
     {
@@ -614,9 +604,28 @@
       "status": "roșu",
       "reason": "Approfondimento da verificare: fonte originale e contesto da consultare; testo insufficiente o non revisionato",
       "attempts": 0
+    },
+    {
+      "title": "Pensioni, piccolo contributo per chi resta a lavoro. Stangata sulle rivalutazioni - la Repubblica",
+      "category": "",
+      "published": "2026-11-01T10:50:53+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQXzJEemdxaVRHU1pZY0FjZUpYTE9FVlJ5SDlTNGZRQ1gyMGFBVjRTTS1qS01Rd1kyZTVVVk1FNS1tOGtuT2huY0FTWDI1UTZHRTdhTks1TGd6RzU4N3dfV0hZRGZtYTA0UmpoWUVpQ1hRUGJ1RGk1aGVLRzhxTjd2alA5cWRDQ083bGM2bnh5RDBnQXN1Z2NlbW9SLUhraUlPWm9wTDJQY0lIMGRUZTlmd055ZUxwRmw0VFpqV1JTTGRRUHU3N01ZbnltM19oR295OHdXdXd2NXluVGNyNXFfQnlzWlVvbHBrWkhKcl9YOTJfbWl2ZGItUjUtNA?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Approfondimento da verificare: testo integrale non disponibile o insufficiente",
+      "attempts": 0
     }
   ],
   "recent_news": [
+    {
+      "title": "L'Atalanta crolla in casa con il Parma, la curva contesta Sarri e calciatori",
+      "category": "Italia",
+      "published": "2026-11-02T22:30:05+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/02/serie-a-disfatta-atalanta-il-parma-si-impone-3-0-a-bergamo_9516fa2b-9f6b-4ebd-8d9d-a26e11e997e8.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
     {
       "title": "Știri Jurnalul din 03 Noiembrie 2026 - Jurnalul",
       "category": "România",
@@ -633,15 +642,6 @@
       "url": "https://www.digi24.ro/stiri/actualitate/politica/kelemen-dupa-botezul-de-lux-al-copilului-lui-simonis-am-ramas-perplex-nu-e-cazul-sa-te-afisezi-atat-de-arogant-fata-de-toata-tara-4019061",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Serie A: disfatta Atalanta, il Parma si impone 3-0 a Bergamo",
-      "category": "Italia",
-      "published": "2026-11-02T21:39:51+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/02/serie-a-disfatta-atalanta-il-parma-si-impone-3-0-a-bergamo_9516fa2b-9f6b-4ebd-8d9d-a26e11e997e8.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -668,8 +668,8 @@
       "published": "2026-11-02T20:56:54+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/atentionare-mae-pentru-romanii-care-vor-sa-calatoreasca-in-grecia-3-4019047",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 510
     },
     {
       "title": "Donald Trump, în discursul de final de campanie: „Sunt cele mai importante alegeri din viaţa noastră”",
@@ -762,15 +762,6 @@
       "words": 0
     },
     {
-      "title": "Sardegna, Aeroitalia vuole abbandonare tre rotte per Roma e Milano: è scontro sugli aiuti pubblici - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T19:41:12+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMUFsTGFoMk1JVDdDS1BzdkdLUFlNRDZzSk9fS3ktYXRpQmYyUkJGMzRLXzNuUzllVEVpQWcwLWhBaUlSeDJHUWZ2bHFtcUs0TEVWaGlTanY3cXhfUGhVQXQyOW80OUd4UEFUY255Vk9wcjBNNklMQ21hWXR2a0I1RzZPRmlYdXNvaU94UExnVE1IYXc4Yml5YXVxOWFKUEdUZ0w4ZVJoYzRVdHNrZWo4eGxwVkQ4ZXUzSDJEV2VoakRpOWM?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "FI apre a mini-ritocchi sulle pensioni. Ma è rebus coperture",
       "category": "Italia",
       "published": "2026-11-02T19:24:29+00:00",
@@ -798,11 +789,11 @@
       "words": 0
     },
     {
-      "title": "Ex Ilva, investimenti fuori scala la cordata italiana verso il ritiro - la Repubblica",
+      "title": "Borse di studio Banca d’Italia 2026: sette opportunità per laureati, domanda entro il 20 novembre - UniversiNet Magazine",
       "category": "Italia",
-      "published": "2026-11-02T19:03:10+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOUFhKeTVqb0JyQkE0U093NWlhY25zN3VNR2UxRDhFM3F0Z2dna29DbHA2S1pDNW1oYjgxRlRDM0xWUm5nRFBKcHlYY2IyRlZsZS1UaHRtY2xiMGRuc3NNc0lqNWpsdThPNVNwYUtEVGNrZGJPOUN4cjhrOHh4dEd4SXJvQmd2aWNTanBySlVvdEJ3WFQzZWJyVVFJMU5tSFBkcEZyakhtVnNhU1VJdWRkOG5wWTB6aktuNlEtOVlHOUtlZ29WS1phdUowNDRERElic0txYlZIVjVWZldrNjhIZ2VlQQ?oc=5",
-      "source": "la Repubblica",
+      "published": "2026-11-02T19:15:39+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSzlmWWhuQ1ZUX2tOY3Z6WEdqeTBxNHhIcFVwWENnek5BX3ZseC0xbkVReUc5QWdfU2ZZcEdJdFBFT05HbmVwR0NnajhOVFNHam13TFd5LUxENFZzdGdnQ280NlJwTjZ2dUNTZkJuU3hJWkZqeEZ2Y0dpdkFZRlpUTkluSEdPMk1aVHc?oc=5",
+      "source": "UniversiNet Magazine",
       "status": "roșu",
       "words": 0
     },
@@ -933,11 +924,20 @@
       "words": 0
     },
     {
-      "title": "Economia ennese, Petralia (Cisl): «La crescita c’è, ma non si traduce in lavoro. Adesso servono le scelte» - Radio Luce",
+      "title": "Padova fa il pieno al concorso 50&Più: tre Libellule d’Argento - Padova24Ore",
       "category": "Italia",
-      "published": "2026-11-02T16:57:28+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPRHI4bGp2bkhqRXpsbW1GdmlyTEZJNGJWbHdBUVdBLUF1Wl9nUjhwaklmOFdYbXdMbXBpSjFFY2dzZXBBUEdHc0d0ZkNxaHVOWjZNLTFDT0NfWHNncXhBTTFKV0pvb2lUUjhINlcwRkY5b29kVWJYYldKRU45VVFrNUV3RmF0TmxPZTQ3anV0UTBaMllCUU14V1F3bTE4SkdtakpteDBZc1ZMSDUtcVNQQ1I5Y2RSRXl1UmgwZ2lYcmtvcmpzWThpWE9pMWF4OVE?oc=5",
-      "source": "Radio Luce",
+      "published": "2026-11-02T16:56:42+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNMmJYRXR2LVZQSGpUeFpnQVMtTmRrUmJsMmtzVzlIVVFCZUg5QVd6dHlTMU5za2ZZRkxEbE1wTlFHclhydHNPSlJEeDdXYWhWa1pRckJpYVRwa3pmdnl6NzdZRHpOYkF4Nmhrbzg5am95OWZSWEpYNVZhRGVZNFE3ZF9aTm80Zi03LVhNZ2RTTUU?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Din familia de romi vătraşi, la medicină. Povestea dr. Ioan Cristian Irimescu, la DC News şi... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-02T16:49:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOTmJLTXRnVHRtZU1POVQ5UHRTMWpfSGRiTkN6VG9DTXNSZ093Z3JmaG9DZjRrVlRGN05kc0tUdWFZRGF4Q3BiaEI5UEJnc1llbHhXazZ6TjZMVUZxT1pFV1FFREVVMktaMVg4Q1hFRGdLWnI2cnlPdWNma1hmM0I0NHdWU2FVUzR3a3QtRzlybnBkUW5oNkFWSWdWU1h1QVRjem92ci0zaU9vb2Q0ZVFCb24wUExLcEE5WFJpN3hfSFBZbG1TWmZTU2xNRHRkeWZYMlIyaEdDMlkyM2_SAeABQVVfeXFMTUEzMjZ0OW1TMmdwclBBN2J4N3FVY0RVMk45Q25iVFVGVVpyaFZYLVJJR3l3c2tsODJlYTBzMUUwYU9HTDJtZkFmb2FGMjFoZjEtT3gwMXZWWGJJRG5uRE52eGV5dG14aElldFc4ajB4Y1BzNE5sSHg",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -960,11 +960,20 @@
       "words": 0
     },
     {
-      "title": "Sikorski, 'asse tra russi e destra globale per fake news sui fatti di Varsavia' - ANSA",
+      "title": "Padova, tornano l’oca e i dolci di San Martino: la rassegna APPE coinvolge 57 locali del territorio - Padova24Ore",
       "category": "Italia",
-      "published": "2026-11-02T15:47:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOSEpxeEhmNW0telJkYjM0QkFfN0l4RG5lRUZIQVBYMlpzNEVFUElYc2l1RDR1cmwtQkZIWTNXNm9ZSG5VaHpYazBqem9wNWFzNDlkUWxfWUNxZHRYd1BEUlFGQlE5Q3pXRUsxYmR0NDkxc3hPbFFBZkNVM3JaVUh5YlhqYUpud3ZVU3RMNXN1N3dFTjlMM2ExYmV4MUR4b19hSWoyNXVhWDItMEZJZVlmSDVzRWpmUGp0Rm5KbnA2cTc3YXFHaWd2bmdTUmxyU0QxRHhtVEZ3VUMyT1VDZnVhcnpMV0s3UVNnU2xMeEF2a1JtY1czMU5Sa9IB_gFBVV95cUxNaFZsbE9rNVZOcVVWVF93SUtJalVOOTM2NkczM254M2hLVDA2WVpNMUJBaVBwWHlfMnRidWJ2UmJaZ2R2SFUtVVpTTEhRM00zdlpRMXdzazdKZkd",
-      "source": "ANSA",
+      "published": "2026-11-02T16:17:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9tMjdMTmN4NHc2dXdTbHdrYy10Y3FHdmo2YkI3WlNPYjg3bWxlNk9XVEJYLXR6WUxhVXZjZG14b3VHamJXTFl5c3dOV3FtSk9tRF8waEJXWjZwNVJ6amxkOEtzZjFjdENLb3p0T2FJWEZjVlctZGJnTzFXNEc5QQ?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cadoneghe, il 26 novembre nuova via ai fondatori Parpas e apertura Alì nell’ex area Grosoli - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-02T16:13:34+00:00",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0wbklzczJ3MnJVeFBuN2dmNGxiS0k3Q01FYWxoamliV2dKdTNnOFJ1STVTLVhpMUdVT0dnMmpWZ1ZwMXZpWVlYTUZGYkpHM2ZUZW5Ob0l6SHByNXZUVWp5YzJRQ01EYTBjM3htQUM5S2ZJZVU1dTZPNGFiRWt4TDg?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1001,15 +1010,6 @@
       "published": "2026-11-02T14:09:52+00:00",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNaDJjWngwVVhGZzltRXZHRlAzaEc0OWxtNVNCYlVPcjFGY1N5Z2R2VVlDTDB1M3BQSnFPcjFpVmRVajdfdGszd0NpWGo5RVB2NE5LdHhqa3VRXzlFQ3MyT0ZaYjJYYjBOZEtma1FuLU9ySW4zN1BtWE5VdlU1MG9yVTBrdngycW4tRS1JRmxteV82QlJJTktycENpVi00QQ?oc=5",
       "source": "DB - Non solo Diritto Bancario",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Dove andare a Capodanno 2027, idee per ogni budget, in Italia e in Europa - Idealista",
-      "category": "Italia",
-      "published": "2026-11-02T14:00:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPMnZoVXhzb0ZHdlB3MEpSdVQ1TWJwdnJIT0x1M0NZYjFKTVJKREtXTUNMa0R3M3RYcXJyWTNWbXhtdm0zNC16QWZBZlR6aHlYREQ5R1JwaVBya0pVVXRGajZrOFNLSW5UUVV0ejY3dDJ3OFJUdVU4VW1FWHIzQzZ2VEhtNEo2aUxLQVJuY3N3WXhMZXlhYzRiY0xrTFVHTTl0bTVVWU9UV3FIX1JHR1BJRXVzNHZhTkk4MHlxb2Q4R3kydmhrdHFLeHZMWjNVVU50S0VUVF9MWFMzc2Z50gHiAUFVX3lxTE1nQmJGQ2ZXY3lORkF6ekl5RlBvVTdvSnJNc0VQSkgwTGF2UGExMTF4eDN2cjAybUFDRi1Sb2l6NmdYRWsydEVfYlJCUVFyR1c0Mjd1cW9hUzI3UnJRbnU0WGJaelN0cTlyQmNYVThxaW5BY0QtMWx",
-      "source": "Idealista",
       "status": "roșu",
       "words": 0
     },
@@ -1068,15 +1068,6 @@
       "words": 0
     },
     {
-      "title": "Fiat, non arrivano le centraline, produzione Pandina e 500 a singhiozzo - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T12:51:18+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZlZvYW1sMmFseWt1cjlqb2xYTkVpY1h3VFF5MlR2SFNKSHB1a08yZEVNeHFzcXFJV3gteXJXelZVamRpMzBKRnNpeXpMQzkyVlhlbXB2VFFHSm5IdGJvYXZQUXNJZkpPdmRvVUxLYXJfMlQ1bndpODJVUmxoTFVaanNuUXBEdUhoZXd3bzMzLVJuVFNVeU9yVTN4SDFsc0ZVdFI4OUpjRjhaNm9ld29MSVNrbGFuWVdfSGdlZWtBOXVwZ3VpaGdQUC1pR1p1YUZk?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "„Dansez pentru tine” revine la PRO TV după 14 ani - Observatorul Prahovean",
       "category": "România",
       "published": "2026-11-02T12:41:29+00:00",
@@ -1113,11 +1104,20 @@
       "words": 0
     },
     {
-      "title": "Ia, Angelini (Sensemakers): \"In Italia usata dal 40% degli utenti\" - Touchpoint News",
+      "title": "Terme Euganee, 81mila presenze in meno: allarme per alberghi e negozi - Padova24Ore",
       "category": "Italia",
-      "published": "2026-11-02T11:30:07+00:00",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOemNFVFpmbmJma2dUMi1xMTFSMHFoZGJ5YXZwSnlia3dKaFQ3NVVYQTdFczRVRUxOYnZ5eTd5MUxPMFh6MDRUN2RIVTR2N1pfWHVPeVMxV3MyOHNPVWdJTEllRDVmYno2ZEJEa3dJM1dsYzJCQXd5LTVza08tdmZnV3dMM2RHZGoyeVRXNTFtdXNIeW1TMTYtMndIYjk2cDR0?oc=5",
-      "source": "Touchpoint News",
+      "published": "2026-11-02T11:36:29+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Ra2tSb1kzSkxXcmZxdnhaeHMyMzJoQl92R3pxTW84VVN3TFFraEE3eHlPY1d4MjRwSzl1eERfTm8wTHE1STdKQlh3NGRuUmgxLUhraWZ0Y04tNGVGQ0VEMXowekxuNW1zNWF0OTZCb1g?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fabbricare Cibo a Padova: sette sfide agrifood il 3 e 4 novembre - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-02T11:17:47+00:00",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1NYVdpOGZiMUo0bWE1QjNBcE5sYjh1Sm1XTlJER3RxUkNhUVdZd2k3TkUzSlJCSkJGWkQydEF6M2lCeFRkc1U1bG8zRmpTeWQydTlMdzBkd0gtUG0tZlUtZzFSbDhrSlR4LXFxMTVEYWlmdUZvRWlr?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1149,20 +1149,29 @@
       "words": 0
     },
     {
-      "title": "Concorso INPS Funzionari Laureati PECS 1.695 posti - Esiti della prova preselettiva e preparazione alla prova scritta - Concorsando.it",
+      "title": "FORLI’: Primo Festival dell’Economia Sociale, attesi ministri e Zuppi - Teleromagna",
       "category": "Italia",
-      "published": "2026-11-02T10:38:31+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE00dUQyMXRPSGlxLUtMUHVXWlpoV3ZEOF9udGl3WkJHQXNnb3RxVkNfWm9UNDZoU0YxTWhjdXZORk9GZHZwd3lXeXhYN3dRYjVpeGtzS3RjVzJmNm42VnFSZWFlMGJZNXBycy1lNGROaWRxNEJfYUs4MzFpbw?oc=5",
-      "source": "Concorsando.it",
+      "published": "2026-11-02T10:52:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMGp5V0tvTGtFbjZZVDFEeWQyN2VCT2cwTWxvV1dLRl9KeERDSnBvWm5VdEVGZnBRSmZqdHMzc0N5QkdCM0hqUmpNZ0w1QkxKX2FQU1IxX05NS0ZuZ05mMXh0UEEyUTdoYkJwREpJVGlzTUNPLXV0YUZVMkV6TnFpSGlsbFlXTU04SlVUUnlDd1BSWWl3ZWFPdmQ2WWhfWlpMRmM2WWxaU3Z1NWZteGJvcTVTTFJNTFJGcXppVy1n?oc=5",
+      "source": "Teleromagna",
       "status": "roșu",
       "words": 0
     },
     {
       "title": "Siderurgia: una vicenda di ordinaria follia italiana - Buonasera24",
       "category": "Italia",
-      "published": "2026-11-02T10:11:10+00:00",
+      "published": "2026-11-02T10:10:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNci1TWlFXNGZsQnZabndlRWtrMGhQV19kXy1tZ05FZnlWZHlscUY4RE5xR3J4ODNXVEF2dEl3Wnh5ZF93NF9jUXVBZ1A5NGVyaGRxSW5TMzMzUm1mbmU2QUtqZ2ZjSmlNZldvRjJxZHFiaTVhOGtnZ25tN0ZjRDFzdWM5dndhWkhnMk1PX1dzcUw1N0JlZU9DRTFGMTNNalAyanNCdHRn?oc=5",
       "source": "Buonasera24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Notizie di Padova ore 10: ladro inseguito, arresto al Portello e memoria del Sir3 - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-02T10:00:40+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CcTRETW5wM0liS2huNWUwV2tWVjFTZ0RzVFkyWjdGRWc0WTVIZ1FJWXd6R0VNWUJvcndOc3diOUFOTFlLTERwRHlyMjlPc2s3Nk9VWHlfeFQxcnhIVzJqSlNyNzVkUl9PRkJGR1ZxX1A?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1172,6 +1181,15 @@
       "published": "2026-11-02T08:38:56+00:00",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVy1SdEVTZnBVejFUcXJLakFNc2VUNkpHVHRzMXhPQTlJUVRDc0xHMklsN0NrWnZLN0xQMzdCQlVXNGZmMlh0WklOcnVNOXg4LXRpTXkxbkpmM1ZHSHd3ZVFKYUw1a29qenc5QWFQVW5pVFY0MTlmOElqVXp5d2VZRGpFM2w5TXhpRDVfc2VuMEtXc25mdHpiS0kySmJzMkMyM2RjTkZoRmUydlNrQWV5Y3Yxaw?oc=5",
       "source": "Agerpres",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Esuberi a Konecta, \"Italia domani\" propone un \"progetto di riqualificazione professionale rivolto ai lavoratori interessati\" - Spazio Aperto Salento",
+      "category": "Italia",
+      "published": "2026-11-02T08:30:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPUmJsOTJHU0NzaU41Q1JFcXlBUk5XaU5VTDhVeUlXUUJrcnhjZ0VvVVBCRDVqdWNBc2Mxd0JFcUV2aGtvdGcyS0pyTHZ5SmxxV1JjbU9wZE5hM1c2UzFHU3RQN0xUTVRiVURHd0pYdEVuZGYtSnFldWZreWFZVkFSbzhrMGNiY0NNQmVBSlluRlpCbFJUQ2ZiZFpEdWxfU0hnZzQzOGhhQ05WODdlT1pDSlF4TTE5WFhQdHhuZU5DVTgtblotZkVvbXZBVjFsSG93dUxvamp4MDF3b0xTdjhoZ29nRDZDYnZpU1dTdk9jYlVWQQ?oc=5",
+      "source": "Spazio Aperto Salento",
       "status": "roșu",
       "words": 0
     },
@@ -1194,15 +1212,6 @@
       "words": 0
     },
     {
-      "title": "Il raffinatore di Busalla: “Settore ai margini, ora paghiamo il conto” - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T07:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWUYySUFKOWRNQjRKU0w3MHFMZ3YwSF9Za1NiZ1pnY2F1UHJXX1Z3WlNUaVVveUhvQlNvRDFWYlp0Um5qX0h1Rkt3NGhNSDk5ZGhlQUNheHRaVXJUM3JSaVNiWl9Ic0JDdFFJZEozdTItQ2NQbTZ1WllBdHhoc0w2ajk0QXJLdUl3X2JLTG5lSW9qYXN1RFI3endGMV9ZS2x0UzNjM3RUMzdMMUZZZ2xDMnZPNEVHRHd3?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "La nuova vita di Banca Mps ricominciada Intesa - la Repubblica",
       "category": "Italia",
       "published": "2026-11-02T07:00:00+00:00",
@@ -1219,6 +1228,15 @@
       "source": "iDevice.ro",
       "status": "roșu",
       "words": 0
+    },
+    {
+      "title": "Pensionati che lavorano: guida al cumulo tra pensione e redditi - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-02T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNYy0xSHV5VU1qS3k2dUs0MWxCbzEyM0hwaFFackUtcUNsWFVZY19kaU1XTGh4aFFCaTVTY3pWZ19EVHJPVjZXZ0JGQXpnRzk5WHJObXF6akl0Z2tubVRVSllJb3J0WUdlSnRYNnFOQVBvWkh2MWRMSEs4NzJ6VkMzM1FJZlM4VFdzRlhwbDNuZVF4MDQ4anFPVjBGcV9FanRmRjFfNWh0QW9PcldWNEhOai1fSDRmek9oWXBoNUtqQzc2LThkSmpmcUpYZjhsMG12RnNHd25UcEFxa2EyVFVqV1lySQ?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 496
     },
     {
       "title": "Articole cu tagul: ucis - StiriDiaspora",
@@ -1280,15 +1298,6 @@
       "published": "2026-11-01T14:56:14+00:00",
       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOSWZVNjlVdjNBVjdiUHRrVTdkNndVT0FZd2xPbnJTVV9ySzhLSDliT1lyYkpuaThVcnNsQkQtOHR1YXVUYW1ja1I1akpCZ2tvd2ppZ3VUczhEUjNDUzhDZTgyMC1jdFdjenZuUVY1V1FQdFlvNzVsYjI4cVJBNWRGUkxYb3BRNV9OZFJldWF0Q05mWV9zdWVuaGd5SzJzMUJfR0hCR05JVHRNeWRsV3d4YTUtbzRqOUt6T1hiOEhsRmpQOG0tUGlEdk9ZT1J2MWFnU1Z1VVdSVDNUNmVLeUxvN1FUMEN4NmtWS3pSRExXdldKUkRMM3VWck5R?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il focus dei mercati su Midterm: tre scenari dopo il voto. Big tech e banche alla prova dei conti - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-01T14:30:03+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQX2xjZFlKQV9CRks1aTRDTGdSbjFYc3R5WFBHdklJdS11eFVhd25Qc3BmOFI1QlVnWVJuanppaFRFM21Yb2dia1BpcTQ1YmJmdzNUb2x1TEs2ZmJlcUJrRzBQMkV3OWJBb1Niai1oNHdYMVMzM0l0djRETE05bklFbWdzRHNLQ2R6NVVkY1lpdWRXbVRJYVJYZHF3TFA2NmU5MHNBcmE4ZXJJWE0xUlViWlZiY0t2SmxlbWg0Um10TmxVX2hXaUFTXzNPeUwtQ2RLUDZKN2pNRHMwV0d5eGtSMi1RZ0FCSFJVYVZaekZ3?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
