@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-02T19:01:50.738410+00:00",
+  "news_updated_at": "2026-11-02T19:03:00.751046+00:00",
   "editorial_updated_at": "2026-11-02T16:38:16.384072+01:00",
   "translations_updated_at": "2026-11-02T18:08:43.117871+00:00",
-  "feed_total": 83,
-  "feed_extended_400": 3,
-  "feed_missing_body": 80,
+  "feed_total": 78,
+  "feed_extended_400": 7,
+  "feed_missing_body": 71,
   "feed_short_body": 0,
   "editorial_total": 20,
   "archived_editorials": 136,
   "translation_records": 43,
   "pending_total": 84,
-  "pending_filtered_out": 266,
-  "editorial_verde": 7,
-  "editorial_galben": 36,
-  "editorial_rosu": 51,
+  "pending_filtered_out": 264,
+  "editorial_verde": 11,
+  "editorial_galben": 34,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -758,8 +758,8 @@
       "published": "2026-11-02T18:01:27+00:00",
       "url": "https://www.digi24.ro/stiri/economie/agricultura/20-de-euro-pentru-fiecare-porc-crescut-in-gospodarie-tanczos-barna-anunta-ajutoare-pentru-crescatori-proiect-4018889",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 478
     },
     {
       "title": "FIFA i-ar fi plătit impozitele lui Gianni Infantino în valoare de milioane de dolari în Statele Unite (NYT)",
@@ -821,8 +821,8 @@
       "published": "2026-11-02T17:26:42+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/sri-si-administratia-pentru-securitatea-transporturilor-din-sua-vor-face-schimb-de-informatii-privind-securitatea-aviatiei-civile-4018859",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 453
     },
     {
       "title": "Anunțul lui Alexandru Rogobete privind examenul de rezidenţiat. Sunt 9.969 de candidaţi pentru 5.483 de locuri",
@@ -876,6 +876,33 @@
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/kimi-antonelli-campione-del-mondo-in-pole-positon-anche-nel-presepe_d4d29c0c-d9a8-4fe4-9529-d1385bed37ac.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Dolci di San Martino e oca: a Padova la rassegna APPE - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-02T16:17:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9tMjdMTmN4NHc2dXdTbHdrYy10Y3FHdmo2YkI3WlNPYjg3bWxlNk9XVEJYLXR6WUxhVXZjZG14b3VHamJXTFl5c3dOV3FtSk9tRF8waEJXWjZwNVJ6amxkOEtzZjFjdENLb3p0T2FJWEZjVlctZGJnTzFXNEc5QQ?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cadoneghe, il 26 novembre nuova via ai fondatori Parpas e apertura Alì nell’ex area Grosoli - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-02T16:13:34+00:00",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0wbklzczJ3MnJVeFBuN2dmNGxiS0k3Q01FYWxoamliV2dKdTNnOFJ1STVTLVhpMUdVT0dnMmpWZ1ZwMXZpWVlYTUZGYkpHM2ZUZW5Ob0l6SHByNXZUVWp5YzJRQ01EYTBjM3htQUM5S2ZJZVU1dTZPNGFiRWt4TDg?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Borse di studio Banca d’Italia 2026: sette opportunità per laureati, domanda entro il 20 novembre - UniversiNet Magazine",
+      "category": "Italia",
+      "published": "2026-11-02T15:57:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSzlmWWhuQ1ZUX2tOY3Z6WEdqeTBxNHhIcFVwWENnek5BX3ZseC0xbkVReUc5QWdfU2ZZcEdJdFBFT05HbmVwR0NnajhOVFNHam13TFd5LUxENFZzdGdnQ280NlJwTjZ2dUNTZkJuU3hJWkZqeEZ2Y0dpdkFZRlpUTkluSEdPMk1aVHc?oc=5",
+      "source": "UniversiNet Magazine",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -1005,38 +1032,11 @@
       "words": 0
     },
     {
-      "title": "Fiat, non arrivano le centraline, produzione Pandina e 500 a singhiozzo - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T12:51:18+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZlZvYW1sMmFseWt1cjlqb2xYTkVpY1h3VFF5MlR2SFNKSHB1a08yZEVNeHFzcXFJV3gteXJXelZVamRpMzBKRnNpeXpMQzkyVlhlbXB2VFFHSm5IdGJvYXZQUXNJZkpPdmRvVUxLYXJfMlQ1bndpODJVUmxoTFVaanNuUXBEdUhoZXd3bzMzLVJuVFNVeU9yVTN4SDFsc0ZVdFI4OUpjRjhaNm9ld29MSVNrbGFuWVdfSGdlZWtBOXVwZ3VpaGdQUC1pR1p1YUZk?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "„Dansez pentru tine” revine la PRO TV după 14 ani - Observatorul Prahovean",
-      "category": "România",
-      "published": "2026-11-02T12:41:29+00:00",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLUl6ZUltN1ozZTVtWFhCd3pDemMzUTN5SFh0Z3ZRYmNjVGlKakZjTEdONGlaaUVEeEdxMlUtYXNQZm9QYW5pLTJIMEhvZHY5SWQzZVZseVJ2c1lPaUdiX2U5RWpHNnZDNzBRWGQzRWkyRi1HVFFKTTFGUVozZC1hSWpUTEw4cXpxQTA0VlNoLV9YME5KT01EQTNn?oc=5",
-      "source": "Observatorul Prahovean",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ciclon puternic în Italia: Alerte meteo în șapte regiuni, furtuni violente și rafale de vânt de... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-02T12:23:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNbEl1WFdwWUZxanp0UTZ2dlhrWDBJcWI4bzZrN3plUjdFaWo3YWZFb19LTG0zdUVZRGtHRUE4aFBqM1A0NWE4dXFtNl9UXzBmekJhNk5SdTRYcXM2ektIUGZxcjhNUmlDR1J1S2lUdzFzcmUzNGthcl9MYWl2YW9DOTlPNDRURVNoN2R6bDExaldsd1UyUm1ZT09wQ0trQTJRUTFIejl1RGZWSDJJVXNMRE9naUtOUk1rNW1zZlB4VFdEQXNCZERuTTN0VTFPUzlNaGtiVzFFUDdRQWlOSEotajFFS19ZbXF4Z09mVUYtaGVHeEphSVhRSUQxYlpSM2ttQXlFTVF5UWM3RVVnOVhFek5hcThrOHhUeGfSAZ8CQVVfeXFMUGRJNnhaeEltZDZfcHdjWENYZ0VWX2RVa0o1b3R4dGMzX2JUOTlLOUVhUTBtXzdIWVh",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ce încredere au cititorii Observatorului Prahovean în Guvernul Niculescu. Rezultatele sondajului - Observatorul Prahovean",
-      "category": "România",
-      "published": "2026-11-02T12:07:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZV9Fbi1VSDlXUDVXWHlXTW5GQWJSbm9XclJkT3M2akVGOEVrSmgtYU9qU0VGWGJlY1J3U2ZmbHV1NGdONHJ1Q2ZTN1c5Ykd2UE5PUzRYNHZDMEJHSTdObllueVVDSld1UXI2UGNqM0pNUzJJbU43c3BCbWswOF84dmdFUW1faVZUSTJaUmpjOUQtb2tJbnFubzloZEJNZmJyQlJHZW5PdWNua0FqVmdTZUNscDZOTFdaVmNGZkhBaktwQWdVeERMdm5BWm1SanUxYzJOWHplWHQ?oc=5",
-      "source": "Observatorul Prahovean",
       "status": "roșu",
       "words": 0
     },
@@ -1050,29 +1050,20 @@
       "words": 0
     },
     {
-      "title": "Cnpr forum, riattivare l’ascensore sociale per i giovani - la Repubblica",
+      "title": "Terme Euganee, 81mila presenze in meno: allarme per alberghi e negozi - Padova24Ore",
       "category": "Italia",
-      "published": "2026-11-02T11:37:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPVlBpeDFDcHpaUmt0WWl3ZktNcHdOVjY0dHdCaDJJQkJpaG4wcW12bGJWY0xkaW83cnBKdlF1MFlaS2tGR1VTQ0ZiYm16YjQyQmoydUlDNXNod042SFlxNUlsSWg4RzBpQ3dfVTR2QzJIcVh1aldLaklreTVBMHVJbDczb1hhYW9nZmZhZG9jOXdzVnBwZWdYMXcwTXh6Y3Q5OHlWZWJ5UXN5RkJ5M3BWYVJQVzlndmpnbk9V?oc=5",
-      "source": "la Repubblica",
+      "published": "2026-11-02T11:36:29+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Ra2tSb1kzSkxXcmZxdnhaeHMyMzJoQl92R3pxTW84VVN3TFFraEE3eHlPY1d4MjRwSzl1eERfTm8wTHE1STdKQlh3NGRuUmgxLUhraWZ0Y04tNGVGQ0VEMXowekxuNW1zNWF0OTZCb1g?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Ia, Angelini (Sensemakers): \"In Italia usata dal 40% degli utenti\" - Touchpoint News",
+      "title": "Fabbricare Cibo a Padova: sette sfide agrifood il 3 e 4 novembre - Padova24Ore",
       "category": "Italia",
-      "published": "2026-11-02T11:30:07+00:00",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOemNFVFpmbmJma2dUMi1xMTFSMHFoZGJ5YXZwSnlia3dKaFQ3NVVYQTdFczRVRUxOYnZ5eTd5MUxPMFh6MDRUN2RIVTR2N1pfWHVPeVMxV3MyOHNPVWdJTEllRDVmYno2ZEJEa3dJM1dsYzJCQXd5LTVza08tdmZnV3dMM2RHZGoyeVRXNTFtdXNIeW1TMTYtMndIYjk2cDR0?oc=5",
-      "source": "Touchpoint News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "România și Moldova, prima achiziție militară comună prin SAFE: 62 de camioane IVECO pentru Chișinău - Monden.ro",
-      "category": "România",
-      "published": "2026-11-02T11:08:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ0Fud3hpNzhuWE5IT2pGMFhUSC0xTUNUS0JzSXpycU5YS2ZSZmxWaS1taDBMLUJ2SnJzSnhmam9majlTY2QzR20zMzBUOTVZaWhQR3M0UGRYeFVQREJERk5pNXFOejBTeTI3MEt3Ui1NVG1wSmdBVEVNeXJNVDh2N09ibHlmWTFaOWN4X3hMTHY0Q2JCX2NsT2diWFB5OHVsMjFxMnpSZDlrZTRoLS1YdEFWamI3ZjlSNzRuT2pKNGpkdw?oc=5",
-      "source": "Monden.ro",
+      "published": "2026-11-02T11:17:47+00:00",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1NYVdpOGZiMUo0bWE1QjNBcE5sYjh1Sm1XTlJER3RxUkNhUVdZd2k3TkUzSlJCSkJGWkQydEF6M2lCeFRkc1U1bG8zRmpTeWQydTlMdzBkd0gtUG0tZlUtZzFSbDhrSlR4LXFxMTVEYWlmdUZvRWlr?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1095,11 +1086,11 @@
       "words": 0
     },
     {
-      "title": "Concorso INPS Funzionari Laureati PECS 1.695 posti - Esiti della prova preselettiva e preparazione alla prova scritta - Concorsando.it",
+      "title": "FORLI’: Primo Festival dell’Economia Sociale, attesi ministri e Zuppi - Teleromagna",
       "category": "Italia",
-      "published": "2026-11-02T10:38:31+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE00dUQyMXRPSGlxLUtMUHVXWlpoV3ZEOF9udGl3WkJHQXNnb3RxVkNfWm9UNDZoU0YxTWhjdXZORk9GZHZwd3lXeXhYN3dRYjVpeGtzS3RjVzJmNm42VnFSZWFlMGJZNXBycy1lNGROaWRxNEJfYUs4MzFpbw?oc=5",
-      "source": "Concorsando.it",
+      "published": "2026-11-02T10:52:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMGp5V0tvTGtFbjZZVDFEeWQyN2VCT2cwTWxvV1dLRl9KeERDSnBvWm5VdEVGZnBRSmZqdHMzc0N5QkdCM0hqUmpNZ0w1QkxKX2FQU1IxX05NS0ZuZ05mMXh0UEEyUTdoYkJwREpJVGlzTUNPLXV0YUZVMkV6TnFpSGlsbFlXTU04SlVUUnlDd1BSWWl3ZWFPdmQ2WWhfWlpMRmM2WWxaU3Z1NWZteGJvcTVTTFJNTFJGcXppVy1n?oc=5",
+      "source": "Teleromagna",
       "status": "roșu",
       "words": 0
     },
@@ -1113,6 +1104,15 @@
       "words": 0
     },
     {
+      "title": "Notizie di Padova ore 10: ladro inseguito, arresto al Portello e memoria del Sir3 - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-02T10:00:40+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CcTRETW5wM0liS2huNWUwV2tWVjFTZ0RzVFkyWjdGRWc0WTVIZ1FJWXd6R0VNWUJvcndOc3diOUFOTFlLTERwRHlyMjlPc2s3Nk9VWHlfeFQxcnhIVzJqSlNyNzVkUl9PRkJGR1ZxX1A?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Comunicat de presă - Consulatul General al României la Munchen - Agerpres",
       "category": "Știri consulare",
       "published": "2026-11-02T08:38:56+00:00",
@@ -1122,11 +1122,11 @@
       "words": 0
     },
     {
-      "title": "România și Republica Moldova, achiziție militară comună prin programul SAFE. Anunțul premierului Luca Niculescu - Realitatea.NET",
-      "category": "România",
-      "published": "2026-11-02T08:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOTGxDSHhrZjdPbFd5T3NzSGFNOHVaWmNvc25SS09Dbzk2Qm9UQmhXejBPZHZncTQ3QXlyUEVYQWJiZl9LQVZVNlYwbEM4N29WWkJwYUxyUnpyaXR4bjdNU3hlNmN0QVhhenp3VVVHbXc4TFlKa0lpdVhaSkZnaGRSTk03SU50ZnkydnNla0lSSUlJVk50UmJnRWpCWlJIQ21mdldnSGpkQk9XLWxiWlE2ZGRXeEM3aThtYUlpQm9qT2xhYV9yVFNYZXpiZ29oemkyY2lwUTdBcDljc3ZTZHRoazlfeHlGOGU1NHRDcmRrU3hjVmdOTy1zbjBqVUs1bmYzb0czSDVPWDdrdw?oc=5",
-      "source": "Realitatea.NET",
+      "title": "Esuberi a Konecta, \"Italia domani\" propone un \"progetto di riqualificazione professionale rivolto ai lavoratori interessati\" - Spazio Aperto Salento",
+      "category": "Italia",
+      "published": "2026-11-02T08:30:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPUmJsOTJHU0NzaU41Q1JFcXlBUk5XaU5VTDhVeUlXUUJrcnhjZ0VvVVBCRDVqdWNBc2Mxd0JFcUV2aGtvdGcyS0pyTHZ5SmxxV1JjbU9wZE5hM1c2UzFHU3RQN0xUTVRiVURHd0pYdEVuZGYtSnFldWZreWFZVkFSbzhrMGNiY0NNQmVBSlluRlpCbFJUQ2ZiZFpEdWxfU0hnZzQzOGhhQ05WODdlT1pDSlF4TTE5WFhQdHhuZU5DVTgtblotZkVvbXZBVjFsSG93dUxvamp4MDF3b0xTdjhoZ29nRDZDYnZpU1dTdk9jYlVWQQ?oc=5",
+      "source": "Spazio Aperto Salento",
       "status": "roșu",
       "words": 0
     },
@@ -1140,56 +1140,11 @@
       "words": 0
     },
     {
-      "title": "Il raffinatore di Busalla: “Settore ai margini, ora paghiamo il conto” - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T07:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWUYySUFKOWRNQjRKU0w3MHFMZ3YwSF9Za1NiZ1pnY2F1UHJXX1Z3WlNUaVVveUhvQlNvRDFWYlp0Um5qX0h1Rkt3NGhNSDk5ZGhlQUNheHRaVXJUM3JSaVNiWl9Ic0JDdFFJZEozdTItQ2NQbTZ1WllBdHhoc0w2ajk0QXJLdUl3X2JLTG5lSW9qYXN1RFI3endGMV9ZS2x0UzNjM3RUMzdMMUZZZ2xDMnZPNEVHRHd3?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "La nuova vita di Banca Mps ricominciada Intesa - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T07:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbTNMMk5pWktuZV82Q1p3U3htbjlvWjRrMDN4Z1VkTkF2bU1Td2pzd2xpMEZkUUQ1MXZjX0RReFdhczZVN1h1clBFUUZoX1VhMXBSbXVFMG5xeTJrdlVIX3NUb3pCbTd5Nm5GcURZVVZTWTRhLXJrY1BDVEtfWjVzYnRQSW5waW5SaVoxdnRZRlo3eENnMFA1SzNMeVdSTHpxU2c?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Chimica sull’orlo di una crisi esistenziale - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T07:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWWdmZ3pLeThGcVVTVlR6enlBTkZUcUV2MjFaaHNCT2JnRWNmeHpSWHRWd285SEFFbGVzUkpiUnV4LXF3amlkbDZmbFpBeTNGNGF2d2xjQ2t1OUtkdm1qcU00WTh5TTMzZjcyazFyWFN6WG9iUmx2dDNIVVM0dUloRXljbldFTWhpZllKZjRoYTVaSG5VQUtKeVZOcVJQUE1RQnprLVJpNzc?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "La casa è un diritto non solo un investimento. La sfida di città più accessibili - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T07:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNSW5ueWJGWWI5V255cDNsbm1kNUdlNEFuS2xXc0otSWZsTzA1eGNlU0hEcjE5WENRb1ctWDJKbG1zOFY1Yzk3b3l6NlNmNHpCVkpfOF9ucW1Fd0IyN0l3TnlkVWx2Y0pFeG1CZjhPelBMWm9RMzVabkdNaXllZWxCVGlwTm52eW1iRkJ0Z1ROcTlwekMxblRaV3A4bjV1OThZMkM1UDgxMWkxczlPQXpGVU9wUWRZMHRpRmt0TWRFVnV6ekFaTDE5NDhFcXNzWTBZZWlVVmNVbDU?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Buletinul Vremii din România, ce Fenomene Meteo Severe sunt Aduse în Atenție de ANM pentru România - iDevice.ro",
       "category": "România",
       "published": "2026-11-02T06:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOblQ0bGhrRDNhUWc1LW1jQ01ta3cydVZ0clRRRlV5MllRV3NlcmhjVkZ3MWRTSjRXQ3daaEQxZU9ubEs4eFN4S0ZKbUktTjlYR1A1bkxXM25NaVY4Ymk3Tlc4cjc0ZjNHd1lCdjExQ1NBNGdQVF9aMzl2N1MtYXhvYzFTZEdpSGk5Y284NkRydUVaTmtSbnpwMnNWeXBpNVA4NWJzM3JNQktVcVJ3?oc=5",
       "source": "iDevice.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Debito pubblico al test degli investitori esteri. Che hanno Btp per 967 miliardi - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-02T06:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNcllZSjZRN3FPZ3Y1RXAxSlpVeTNLMk1Dc3FBQmxMRjlOQkdZUDBxSWxSMXdGUlBubkZQTFRDU2p1ZGJnV0VpbU9EbkJKcm9HZ2hzVjM3UFF1Ujk2Qk9ZUjZhN1J3YzdleHAwU1JJX1VVRTJPdWFDTjBfSTBQV1RwbGQycXFhbjdGeDNiMG1XbERFTjMycnVULXh3UjBVRXU3NkdRcFRZYTY5QmhJU0lnS01qMVpXRzBQWk1sUGxDOHdnTlQwTWd1cDF0UkU?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1203,10 +1158,28 @@
       "words": 0
     },
     {
+      "title": "Pensionati che lavorano: guida al cumulo tra pensione e redditi - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-02T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNYy0xSHV5VU1qS3k2dUs0MWxCbzEyM0hwaFFackUtcUNsWFVZY19kaU1XTGh4aFFCaTVTY3pWZ19EVHJPVjZXZ0JGQXpnRzk5WHJObXF6akl0Z2tubVRVSllJb3J0WUdlSnRYNnFOQVBvWkh2MWRMSEs4NzJ6VkMzM1FJZlM4VFdzRlhwbDNuZVF4MDQ4anFPVjBGcV9FanRmRjFfNWh0QW9PcldWNEhOai1fSDRmek9oWXBoNUtqQzc2LThkSmpmcUpYZjhsMG12RnNHd25UcEFxa2EyVFVqV1lySQ?oc=5",
+      "source": "la Repubblica",
+      "status": "verde",
+      "words": 496
+    },
+    {
       "title": "Articole cu tagul: ucis - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-01T23:39:07+00:00",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE43emFRbjR1U1hPWDBhTUY1RjdyOURvS0dHVTZkalBjVWZWV2FHM2VVWW1WSFh5NElrR1ByQ2Jtb1pIaFV0VlVZdDczWVRobFB3a0ZVRTdXZw?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: psg - istanbul bb - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-01T22:51:32+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9NQWxWenJwU2pxR3NCY2JyVklYMFpRNGx3cFJqTUNWLXRkU2NRX0w5anp4aFY5eC1yUXJMenNmTGQ0a3cxYXlTV29qaFQ4Z0FCdEN1UlJHODNNVTAyLTVYb0xVSm4?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1293,15 +1266,6 @@
       "words": 0
     },
     {
-      "title": "Federația „Sănătatea” oferă șapte burse pentru studenții la medicină - logos-pres.md",
-      "category": "România",
-      "published": "2026-11-01T11:00:11+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYktUdjJwOVNqQlpQZm9PTjBIdzdpU2lxNEFEeDZRT0YwM0RKZWpUQ0QxWUhrSU90OVJLNlZfQ3pKYjZUdUZEWC1zRTlENnRFTjZlVWc1bjdSbXhzMF92dE1VRENoZTNPdWw3bC1uNTlYdDJPNi1OaEdOQU5HX1lOMVNlUUo3TDRxX2VWd0NqbTlUamI1MFhpc3JjUWFtcWwzeUxaaU1SNkhfWkF3Ml9ZdVhWcTY1a3JQTkRyNGl6OXZHV0dLcjZocEFSZw?oc=5",
-      "source": "logos-pres.md",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Pensioni, piccolo contributo per chi resta al lavoro. Stangata sulle rivalutazioni - la Repubblica",
       "category": "Italia",
       "published": "2026-11-01T10:50:53+00:00",
@@ -1352,15 +1316,6 @@
       "published": "2026-11-01T05:55:59+00:00",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9DU0pQNHZyaEQzWUR1MDF3RHdRcmxMalFabEg0TTZYamxONWVKTEN3eTRHd0ZTX3RQdWIyOVRFQU1NTGdRUmlzeg?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "BYD anunță 10–20 de stații de încărcare ultrarapidă în România, la o vizită a vicepreședintei Stella Li - Monden.ro",
-      "category": "România",
-      "published": "2026-11-01T05:34:53+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTDhaWWc0R1JZeEhhaWJGRVBLcnlHYTJQdy1JQ09XdXF0VXNMTnA4QTVBNnBnb01ZQUR2WmIxVTZqcEs4MGNhUVpaTlpOeXJ1bjN6cUZIallhZGkxRGRYejV6LVhZcDJ0Q1ZKZ1NrYXY1VS1UazJaUzc1X3cxWmd5YzU4S0szSXlydG5tUDdxX0ZpV1hQU0JFN3dFZTlPWmQ2SGdfNXhHcnY5dERqcmUtbWNUMi1VdklIYi1TNl9VMWJydmRBUHUyRg?oc=5",
-      "source": "Monden.ro",
       "status": "roșu",
       "words": 0
     },
