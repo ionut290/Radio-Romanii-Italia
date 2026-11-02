@@ -1,9 +1,47 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-01T01:00:20+01:00",
+  "updated_at": "2026-11-02T02:00:00+01:00",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
-  "reviewed_by": "RDI redazione assistita IA, verifica fonti 2026-11-01",
+  "reviewed_by": "RDI redazione assistita IA, verifica fonti 2026-11-02",
   "items": [
+    {
+      "id": "rdi-france-paris-molotov-20261031",
+      "date": "2026-10-31",
+      "reported_on": "2026-11-01",
+      "country": "Franța",
+      "country_code": "FR",
+      "place": "Paris, Franța (poziție aproximativă la nivel de oraș)",
+      "lat": 48.8566,
+      "long": 2.3522,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": null,
+      "injured": 1,
+      "attacker_killed": null,
+      "actor": "Autorii nu erau identificați public în sursele consultate la 1 noiembrie 2026. Nicio motivație teroristă sau religioasă verificată.",
+      "title_ro": "Paris: dispozitive incendiare împotriva jandarmilor în timpul protestelor",
+      "title_it": "Parigi: ordigni incendiari contro i gendarmi durante le proteste",
+      "description_ro": "La 31 octombrie 2026, în timpul manifestațiilor din Paris, dispozitive incendiare au fost aruncate spre jandarmi și polițiști. AFP și ANSA relatează rănirea unui agent; parchetul a deschis la 1 noiembrie o anchetă pentru tentativă de omor asupra unor persoane cu autoritate publică. Nu există atribuire teroristă verificată; marcajul indică doar orașul.",
+      "description_it": "Il 31 ottobre 2026, durante le manifestazioni a Parigi, sono stati lanciati ordigni incendiari verso gendarmi e poliziotti. AFP e ANSA riferiscono il ferimento di un agente; il 1° novembre la procura ha aperto un'inchiesta per tentato omicidio contro pubblici ufficiali. Nessuna matrice terroristica accertata; il punto indica soltanto la città.",
+      "casualty_note_ro": "Cel puțin un agent rănit, cu arsuri inclusiv de gradul al doilea potrivit AFP. Nu este disponibil un bilanț medical definitiv. Numărul persoanelor decedate nu este confirmat separat; autorii uciși nu sunt incluși.",
+      "casualty_note_it": "Almeno un agente ferito, con ustioni anche di secondo grado secondo AFP. Bilancio medico definitivo non disponibile. Decessi non confermati separatamente; eventuali aggressori uccisi non inclusi.",
+      "sources": [
+        {
+          "name": "AFP, 1 novembre 2026",
+          "url": "https://www.afp.com/en/france-opens-attempted-murder-probe-over-petrol-bomb-attacks-security-forces"
+        },
+        {
+          "name": "ANSA, 1 novembre 2026",
+          "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/01/molotov-contro-gendarmi-procura-parigi-apre-fascicolo-per-tentato-omicidio_3bd5f644-60ea-4f2c-a41e-fea5b01144ca.html"
+        },
+        {
+          "name": "The Guardian, 1 novembre 2026",
+          "url": "https://www.theguardian.com/world/2026/nov/01/petrol-bomb-thrown-at-french-riot-police"
+        }
+      ],
+      "rdi_article_id": "rdi-20261031-paris-molotov-gendarmi"
+    },
     {
       "id": "rdi-ukraine-dnipro-railway-20261029",
       "date": "2026-10-29",
