@@ -15,3 +15,41 @@
 #oriflame-resume-radio{margin-top:16px;color:#28533b;background:none;border:0;padding:6px 0;cursor:pointer;text-decoration:underline;font:inherit;font-size:14px}
 #oriflame-resume-radio[hidden]{display:none}
 @media(max-width:600px){.rdi-oriflame{grid-template-columns:1fr;padding:22px;gap:22px;margin:20px 0;border-radius:18px}.rdi-oriflame-media{max-width:260px;width:100%;margin:auto}.rdi-oriflame-media video{max-height:420px}.rdi-oriflame-copy h2{font-size:32px}.rdi-oriflame-actions{flex-direction:column}.rdi-oriflame-copy p{font-size:16px}}
+
+
+/* 30-day branded placement: countdown above, full-height vertical video at left. */
+.rdi-oriflame{display:block;grid-template-columns:none;gap:0;padding:0;border-radius:24px;margin:26px 0;scroll-margin-top:120px}
+.rdi-ad-ribbon{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:17px 28px;background:#173b35;color:#fff}
+.rdi-ad-ribbon>div{display:flex;flex-direction:column;gap:6px}
+.rdi-ad-ribbon small{font-size:11px;font-weight:800;letter-spacing:1.4px;color:#f7d695}
+.rdi-ad-ribbon strong{font-size:clamp(18px,2.6vw,27px);font-weight:850;line-height:1.2;color:#fff}
+.rdi-ad-counter{display:inline-block;padding:12px 16px;border:1px solid #7a9c8d;border-radius:13px;background:#255649;color:#fff;font-size:15px;font-weight:650;white-space:nowrap}
+.rdi-ad-counter b{font-size:clamp(23px,3vw,31px);color:#ffe6a8}
+.rdi-oriflame-layout{display:grid;grid-template-columns:minmax(0,43%) minmax(0,57%);align-items:stretch;width:100%}
+.rdi-oriflame-layout .rdi-oriflame-media{min-width:0;width:100%;max-width:none;margin:0;background:#132d29;position:relative;text-align:initial;aspect-ratio:9/16;align-self:stretch}
+.rdi-oriflame-layout .rdi-oriflame-media video{display:block;width:100%;height:100%;max-height:none;min-height:100%;aspect-ratio:9/16;object-fit:cover;border-radius:0;box-shadow:none;background:#132d29}
+.rdi-oriflame-layout .rdi-oriflame-copy{padding:clamp(24px,4vw,46px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-width:0}
+.rdi-oriflame-layout .rdi-oriflame-copy h2{margin:15px 0 19px}
+.rdi-oriflame-layout .rdi-oriflame-copy p{max-width:490px}
+.rdi-oriflame-layout .rdi-ad-video-caption{display:block;margin:-7px 0 19px;color:#627565;font-size:12px}
+.rdi-ad-vacant .rdi-ad-vacancy-inner{padding:clamp(25px,5vw,52px);background:linear-gradient(115deg,#fff,#f1f7f0);text-align:center}
+.rdi-ad-vacancy-inner small{color:#857047;font-size:12px;font-weight:850;letter-spacing:1px}
+.rdi-ad-vacancy-inner h2{font-size:clamp(24px,3.7vw,39px);line-height:1.15;color:#244d36;margin:14px 0}
+.rdi-ad-vacancy-inner p{font-size:17px;color:#506452}
+.rdi-ad-vacancy-inner .rdi-oriflame-actions{justify-content:center;margin-top:20px}
+.rdi-ad-archive-card{padding:17px}
+.rdi-ad-archive-card .rdi-ad-archive-video{display:block;width:100%;max-height:400px;aspect-ratio:9/16;object-fit:contain;background:#132d29;border-radius:13px}
+.rdi-ad-archive-card .news-label{margin-top:14px}
+.rdi-ad-archive-card .rdi-oriflame-actions{margin-top:16px}
+.rdi-ad-empty{padding:24px 8px;color:#dae2ed}
+@media(max-width:700px){
+ .rdi-oriflame{display:block;padding:0;border-radius:18px;overflow:hidden}
+ .rdi-ad-ribbon{align-items:flex-start;gap:12px;padding:17px 19px}
+ .rdi-ad-counter{font-size:13px;padding:8px 12px}
+ .rdi-oriflame-layout{display:grid;grid-template-columns:1fr;gap:0}
+ .rdi-oriflame-layout .rdi-oriflame-media{width:100%;max-width:440px;margin:0 auto;aspect-ratio:9/16}
+ .rdi-oriflame-layout .rdi-oriflame-media video{width:100%;height:100%;max-height:none;min-height:100%;object-fit:cover;border-radius:0}
+ .rdi-oriflame-layout .rdi-oriflame-copy{padding:25px 21px 29px;max-width:none}
+ .rdi-oriflame-layout .rdi-oriflame-copy h2{font-size:31px}
+ .rdi-oriflame-layout .rdi-oriflame-actions{width:100%}
+}
