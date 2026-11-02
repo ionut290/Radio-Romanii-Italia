@@ -109,3 +109,11 @@
 .rdi-ad-dialog-info .rdi-oriflame-actions{flex-direction:row}
 .rdi-ad-dialog-info .rdi-oriflame-actions a{font-size:12px;padding:9px}
 }
+
+
+/* Native sharing in compact card and expanded advertisement */
+.rdi-ad-share{display:inline-flex;align-items:center;justify-content:center;min-height:32px;padding:8px 11px;border:1px solid #a72466;border-radius:10px;background:#fff;color:#962255;font-size:12px;font-weight:750;line-height:1.2;cursor:pointer}
+.rdi-ad-share:hover{background:#fff0f7}
+.rdi-ad-share:focus-visible{outline:3px solid #a72466;outline-offset:2px}
+.rdi-ad-dialog-info .rdi-ad-share{min-height:42px}
+@media(max-width:700px){.rdi-ad-compact-actions .rdi-ad-share{min-height:27px;padding:6px 8px;font-size:10px}.rdi-ad-dialog-info .rdi-ad-share{font-size:12px}}
