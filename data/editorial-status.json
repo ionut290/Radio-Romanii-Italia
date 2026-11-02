@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-02T00:10:30.212346+00:00",
+  "news_updated_at": "2026-11-02T00:11:33.399667+00:00",
   "editorial_updated_at": "2026-11-02T01:03:32+01:00",
-  "translations_updated_at": "2026-11-02T00:08:19.936372+00:00",
+  "translations_updated_at": "2026-11-02T00:10:31.833523+00:00",
   "feed_total": 69,
-  "feed_extended_400": 7,
-  "feed_missing_body": 62,
+  "feed_extended_400": 9,
+  "feed_missing_body": 60,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 129,
-  "translation_records": 38,
-  "pending_total": 52,
-  "pending_filtered_out": 163,
-  "editorial_verde": 9,
-  "editorial_galben": 32,
-  "editorial_rosu": 41,
+  "translation_records": 37,
+  "pending_total": 56,
+  "pending_filtered_out": 168,
+  "editorial_verde": 10,
+  "editorial_galben": 31,
+  "editorial_rosu": 40,
   "pending": [
     {
       "title": "Accident aviatic în Florida: un avion privat cu 9 persoane la bord s-a prăbușit într-un cartier rezidențial",
@@ -772,8 +772,8 @@
       "published": "2026-11-01T19:49:31+00:00",
       "url": "https://www.ansa.it/sito/notizie/economia/2026/11/01/manovra-stretta-sugli-aumenti-degli-stipendi-dei-magistrati-rivisti-i-criteri_20031262-e476-45eb-82ee-0356dd37c56f.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 522
     },
     {
       "title": "I dem aumentano il vantaggio. Trump: 'Se vincono loro sarò Mr Veto'",
@@ -844,6 +844,15 @@
       "published": "2026-11-01T18:21:35+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQSTdRTmg0RGVFWmV0bEh2NkdqaTBVNGVxOUpzYjRWM0hhTHljYzZNNWg3aVdqRkFXVWY0N05xdmtUbW03cmpoUEszX1dab0ZMT2ZRUlR5SDhlZE94MUYwSGR5NDJwUlE1UnpMeXlFSWdFM1h4YVhsZ19Lc25uYXpCcDI0alZOelotQXVvbG43N0Z4b0JPR3pheWhYUEtoaXk2MEdtZTZNOExETmFZOVpGLWhqU2NzMzZIX0hlZ2VxMk1pUQ?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Padova, Pollini chiuso per un guasto elettrico: annullati concerto e prova del 3 novembre - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-01T18:20:36+00:00",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5Ua25QTEotS0NGNWI5Szk5M0lTQTJ3M29KX1lEOEljZm53aXFRa0wxdlp3VkVFbEZFVUtIbmF6RS1jWDFfVWVDTWczUHl4Si1UYWJaZi05cUpLS0R6clBrS2J1anIxRTM2bFp6WWxiQmRTS1hiX2IwVVJ1VDZ0QQ?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1082,15 +1091,6 @@
       "words": 0
     },
     {
-      "title": "Il settore dei ricambi auto offre lavoro - Motor1.com Italia",
-      "category": "Italia",
-      "published": "2026-11-01T05:40:23+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0wZktsN0gyVF9KdDdLNHhwTXY3M1FSRHZCdk9EUnhUWkdxclhoUWZMcW5ROEgwTmo3YUROLUlVMkdrRDVhWW5HSFhQdlZBR1dHMGF2cjV0ZVptMlIyR2Vic3BGVkRBaWlHbG8wdlhMdDNBdFB0MEtJSFZB?oc=5",
-      "source": "Motor1.com Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Fringe benefit, con la manovra sale il tetto a 2mila euro per i lavoratori under 31 - la Repubblica",
       "category": "Italia",
       "published": "2026-11-01T04:00:00+00:00",
@@ -1132,15 +1132,6 @@
       "published": "2026-10-31T17:51:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOSE5oaDJVR0lhS3dfTkxOMHJzRWRmdl9ZQ0E4ZWR5TkhFQjVjRzJ0d05RQmxZZG80Zm5ZSWVjSmVQVnNuQ2JxdDN0Wk5pMGVsNjBVZjZiWVdqUUVQb1B6UFJzd2lvczdDeE9BaGRGbzgwRzRzRDVqQUt1bVZCVV9VbWR6NEVQZmRVY0dFYTZGY3F4MElURm92aVdDYldYVWpOYTJkQ2ZGWFVRYW84QjZ0akZOVk1McXBqcGJiaTViYW95M2xEY1I0bkZmcnFnVGVQVTBfQzZMcGNQa1F3YmcxeDh0MjV4ZFRzLVYxVjJrWVpiUdIB9wFBVV95cUxPTTI1NVNFNXFXYzczdXpRRW5DZDRhU1VQR0ZHcFEweTdwUXRVS1V4SXVhVW45WEZ5elRHWTBvSG1teENVU1pUY0V0LV9zN0ZGbkZLZ2V0bHdVU0VQRTBLeU1",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Manovra, dalla Cgil alle opposizioni: raffica di critiche. Il sindacato: “Governo su altro pianeta” - la Repubblica",
-      "category": "Italia",
-      "published": "2026-10-31T17:24:12+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQbGM4cXlmNjM2S2p5VHI2UFZkMHRZYk1DYUlBTHZaNEZMNmpxNUhmZkVwY1ZTb0VBZEp4RVZDdGl2VGVRY255OUdDMHB2SHpleEhSd0otVXlkai1GNDJCLTdnRzJLcG5mcTlOQVYwNzUxTTZRbGlDUnpEZ0Q1dHAwcEYzelBfcUZ2V2gyQWNQOXVLSGNZYmdSaFlGdnBjYWxQRFZXQ0lIdU16NUhub3JrdldKb1lmd2cwZ283UjJldURuVXdwc1JQMWthd1dDZXF2T0c0b0VnMElOTWMxZWtQX2FWVkJfWjVNb0xB?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1255,17 +1246,6 @@
     },
     {
       "title": "Cât timp poți conduce în Italia o mașină înmatriculată în România după ce îți stabilești… - Mediafax",
-      "category": "Diaspora",
-      "published": "2026-11-01T05:46:22+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOamEtZXc5azlqWVJRRmUyOXR3aUYxN3VNY2hoX0lCbjk1WGoyMmw3TnhsbXRUV1pkX2lTb04wM3dXRDVpSFZJLVVseHEwcXg5MjFDTkFaUmJveVZza1NUcUZmWmRZZ19SLWdGa2Q5UGx0bjJxektCUGp3NkR5RkFvSHdPczRnN2hPZUxGQ3UxRnVNdWhtSGsta19IY013MG51QVF3VzFINDdSS3JvaG1nZUZPaUhHZUhZTG81QUNVZnUzaFVKdENEb0ZJZ2gwVHE5SmN0UUV0NEVKd0Z0ZmFvNWJNM2wzaXQzbTVKeDNZQUY1a0xuT0E3RERrNV80bzBtWXo3VzlaRlVydmx6a2EwZHVkTdIBkwJBVV95cUxOamEtZXc5azlqWVJRRmUyOXR3aUYxN3VNY2hoX0lCbjk1WGoyMmw3TnhsbXRUV1pkX2lTb04wM3d",
-      "source": "Mediafax",
-      "status": "verde",
-      "words": 553,
-      "intro": "Rezidența în Italia schimbă obligațiile pentru mașinile înmatriculate în România: proprietarul are, ca regulă, trei luni pentru înmatriculare.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Italia, îngrijirea la domiciliu și decretul Flussi: cifrele contestate de Filcams și ce trebuie să știe românii",
       "category": "Diaspora",
       "published": "2026-11-01T05:46:22+00:00",
       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxOamEtZXc5azlqWVJRRmUyOXR3aUYxN3VNY2hoX0lCbjk1WGoyMmw3TnhsbXRUV1pkX2lTb04wM3dXRDVpSFZJLVVseHEwcXg5MjFDTkFaUmJveVZza1NUcUZmWmRZZ19SLWdGa2Q5UGx0bjJxektCUGp3NkR5RkFvSHdPczRnN2hPZUxGQ3UxRnVNdWhtSGsta19IY013MG51QVF3VzFINDdSS3JvaG1nZUZPaUhHZUhZTG81QUNVZnUzaFVKdENEb0ZJZ2gwVHE5SmN0UUV0NEVKd0Z0ZmFvNWJNM2wzaXQzbTVKeDNZQUY1a0xuT0E3RERrNV80bzBtWXo3VzlaRlVydmx6a2EwZHVkTdIBkwJBVV95cUxOamEtZXc5azlqWVJRRmUyOXR3aUYxN3VNY2hoX0lCbjk1WGoyMmw3TnhsbXRUV1pkX2lTb04wM3d",
