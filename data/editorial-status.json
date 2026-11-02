@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-02T03:01:10.863523+00:00",
+  "news_updated_at": "2026-11-02T03:57:54.385293+00:00",
   "editorial_updated_at": "2026-11-02T02:00:00+01:00",
-  "translations_updated_at": "2026-11-02T02:05:22.139048+00:00",
-  "feed_total": 74,
+  "translations_updated_at": "2026-11-02T03:00:13.682146+00:00",
+  "feed_total": 69,
   "feed_extended_400": 17,
-  "feed_missing_body": 57,
+  "feed_missing_body": 52,
   "feed_short_body": 0,
   "editorial_total": 20,
   "archived_editorials": 129,
-  "translation_records": 36,
+  "translation_records": 39,
   "pending_total": 53,
   "pending_filtered_out": 163,
   "editorial_verde": 18,
   "editorial_galben": 24,
-  "editorial_rosu": 43,
+  "editorial_rosu": 38,
   "pending": [
     {
       "title": "Alertă pentru șoferii care tranzitează Spania. Un român a observat metoda prin care hoții îi... - StiriDiaspora",
@@ -548,6 +548,15 @@
   ],
   "recent_news": [
     {
+      "title": "Articole cu tagul: ucis - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-01T23:39:07+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE43emFRbjR1U1hPWDBhTUY1RjdyOURvS0dHVTZkalBjVWZWV2FHM2VVWW1WSFh5NElrR1ByQ2Jtb1pIaFV0VlVZdDczWVRobFB3a0ZVRTdXZw?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "F1: Antonelli fa la storia in Messico, è campione del mondo 73 anni dopo Ascari",
       "category": "Italia",
       "published": "2026-11-01T23:35:54+00:00",
@@ -863,15 +872,6 @@
       "words": 503
     },
     {
-      "title": "PNL cere PSD retragerea sprijinului politic lui Aurelian Bădulescu - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-01T17:26:54+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNT1dRMWZYTlNCRVlMMklWRGswRGhfNVR0b055elZ3Mm1KdmN3MFJCbVl3eDJ0d3oxNWUzTzFrRGlGdlFDYXRYOVJzeG1FMThxWHJtWjgtTUFpd1NyODgxUHVVZXNYVlVHbURIOGFoTTJsY1UxWVQwZHloM0F0SlJ1c0NqQk9oQTd2RmM4QnAyNGJRSUtocmh4N2tlQS15ZzJacnZidEJqVjdpTnBERVg1U9IBsAFBVV95cUxNT1dRMWZYTlNCRVlMMklWRGswRGhfNVR0b055elZ3Mm1KdmN3MFJCbVl3eDJ0d3oxNWUzTzFrRGlGdlFDYXRYOVJzeG1FMThxWHJtWjgtTUFpd1NyODgxUHVVZXNYVlVHbURIOGFoTTJsY1UxWVQwZHloM0F0SlJ1c0NqQk9oQTd2RmM4QnAyNGJRSUtocmh4N2tlQS15ZzJacnZ",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Un român din Italia vrea să se întoarcă definitiv acasă, dar îl cuprinde teama: „Parcă îmi vine să renunț”. Ce sfaturi a primit - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-01T16:55:59+00:00",
@@ -881,38 +881,11 @@
       "words": 0
     },
     {
-      "title": "A0 Nord: lotul 3 va fi deschis doar după îndeplinirea condițiilor de siguranță, anunță CNAIR - Substantial.ro",
-      "category": "România",
-      "published": "2026-11-01T16:16:31+00:00",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbXMySHdVQV9HMFpxS3dMRGNCemV3TzFLdWhOci0yMzV4aXNUQzZ4M19WSlFIQWdrWE1VdDFFOUFqQjN1alMxNUhlMjBpWnVkUHk1alJTZVo2c2pibGRRT2dhNk9CVXVBR3pCU1N3Umt5NVdvRFZ0dXJDMkROQWhoeGlFTXMzcXZzSmZheHFmWllQUjFhOGF3NFFnTi13UGxHV05lY0FycW5PT05YM19uRjVTV0E?oc=5",
-      "source": "Substantial.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ana Maria Păcuraru: Peste 51 de milioane de americani au votat deja. Ce spun prognozele - Realitatea.NET",
-      "category": "România",
-      "published": "2026-11-01T16:14:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUlZ0b3lrOGNXenc1cVlibFFiUjk0Z19MZTRyMEZKOFdTcE4xcGU2YjdWSW5rcktfMmNqLWQxTm5iRFNyR2pCdWhNNHltSGgzM3Uzbm5RTHY5R3JBQk8yWW1WX21rSVduQnZldGVrYVVBT2N6QXI4N1JXc0lNZTBPdXliWXkxVmEzUVlDUFBBY3d0UTItYXU2dGZaM1gxbnZ0cmxrdXRWemkzdldYdktaQmFLVQ?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Româncă de negăsit după ce a plecat din Italia cu fiica sa! A demisionat de la serviciu și l-a mințit pe tatăl fetiței că pleacă într-o vacanță - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-01T14:56:14+00:00",
       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOSWZVNjlVdjNBVjdiUHRrVTdkNndVT0FZd2xPbnJTVV9ySzhLSDliT1lyYkpuaThVcnNsQkQtOHR1YXVUYW1ja1I1akpCZ2tvd2ppZ3VUczhEUjNDUzhDZTgyMC1jdFdjenZuUVY1V1FQdFlvNzVsYjI4cVJBNWRGUkxYb3BRNV9OZFJldWF0Q05mWV9zdWVuaGd5SzJzMUJfR0hCR05JVHRNeWRsV3d4YTUtbzRqOUt6T1hiOEhsRmpQOG0tUGlEdk9ZT1J2MWFnU1Z1VVdSVDNUNmVLeUxvN1FUMEN4NmtWS3pSRExXdldKUkRMM3VWck5R?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Manovra 2027, arrivano 358 milioni per i lavoratori in crisi. Ma all'ex Ilva ne vanno pochissimi - Giornale La Voce",
-      "category": "Italia",
-      "published": "2026-11-01T14:48:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxORThZU0Z3Wjk0ZDhUNnA0djg3Y1Bjd1B3NTlFYVEzaVhrcnRaSUhLUU5mbV9zejVPWlpXMWNoRnBNRmxJd2gzWGI5VllTelFCdnROOXl4akJ3eTNYSnpZWUYtMGJnTWx2WGE3N3AyazJZSGIxUXVMTWw2ejQwYVVuNHFRY044NmVJcUdfQldfRl9ka1N2YlpXU24yTTRQRHFIZE5DNXNiTUVETnVERG93cF9kTTNIb09uUy10T1MwSjdzM0pTQ3VWZWttLWxqb1dzLV80YVBQc3FMdTFIbkJZWUpCX2lqUQ?oc=5",
-      "source": "Giornale La Voce",
       "status": "roșu",
       "words": 0
     },
@@ -1088,15 +1061,6 @@
       "words": 0
     },
     {
-      "title": "BYD anunță 10–20 de stații de încărcare ultrarapidă în România, la o vizită a vicepreședintei Stella Li - Monden.ro",
-      "category": "România",
-      "published": "2026-11-01T05:34:53+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTDhaWWc0R1JZeEhhaWJGRVBLcnlHYTJQdy1JQ09XdXF0VXNMTnA4QTVBNnBnb01ZQUR2WmIxVTZqcEs4MGNhUVpaTlpOeXJ1bjN6cUZIallhZGkxRGRYejV6LVhZcDJ0Q1ZKZ1NrYXY1VS1UazJaUzc1X3cxWmd5YzU4S0szSXlydG5tUDdxX0ZpV1hQU0JFN3dFZTlPWmQ2SGdfNXhHcnY5dERqcmUtbWNUMi1VdklIYi1TNl9VMWJydmRBUHUyRg?oc=5",
-      "source": "Monden.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Fringe benefit, con la manovra sale il tetto a 2mila euro per i lavoratori under 31 - la Repubblica",
       "category": "Italia",
       "published": "2026-11-01T04:00:00+00:00",
@@ -1165,15 +1129,6 @@
       "published": "2026-10-31T16:54:01+00:00",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdDB4T3JMbWg5VWplMVJRbmQwME55UGh4M3pncklodkNhcDVZRGxvaTA0Y2FmV3R0LWQzTXNLSjh6cTNVbHlxYnNRWlg1ZHRYMEJHWTZFWnFPS0FOenQwekstQXVKcDl3WGhoUjMyMWNGelFqTkN0Ynd6eGhvZzk1b1RWUHFlZXBHdmxFOE9lanlpWXdKY0c0dEhvZkI4Y3BWLVExeUZkU3lraWFLZ2NaY2ZpUl96ZUJVN2c?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Eurostat: electricitatea s-a scumpit în România cu 51,6% într-un an, cea mai mare creștere din UE - Monden.ro",
-      "category": "România",
-      "published": "2026-10-31T16:34:14+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeVFQYUtUWUtxeC1QdHVyeEhCeUI2ZUw1UjhVNW1kS2FBeFM5WU9ZWGd4b3YzWlQ4OEx4YWtobUFibEI1R3J5WTMxUnZ6UzBSZ0pvQTFleHlVbnFtaGktVUFaSGZuRTFOVzZpeDctQnVDeTNuWEkyUUFnbUFvN2xzeGp0UlhwZmlxSldkSU5PTXg0SUt6OXpTNGY4X2pOanhJY21HSWFOSThJLUtrZ1ZHZjVialFCT09xTzJqZw?oc=5",
-      "source": "Monden.ro",
       "status": "roșu",
       "words": 0
     },
