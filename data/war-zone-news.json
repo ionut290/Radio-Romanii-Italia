@@ -1,9 +1,41 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-27T04:04:49Z",
+  "updated_at": "2026-11-02T18:00:27+01:00",
   "notice_ro": "Știri din zone de conflict publicate azi și verificate editorial. Data publicării nu este automat data incidentului. Pozițiile sunt aproximative și nu indică ținte militare.",
   "notice_it": "Notizie dalle zone di conflitto pubblicate oggi e verificate editorialmente. La data di pubblicazione non coincide necessariamente con quella degli eventi. Posizioni solo indicative, senza obiettivi militari.",
   "items": [
+    {
+      "id": "war-gaza-strikes-20261102",
+      "published_date": "2026-11-02",
+      "event_date": "2026-11-02",
+      "region": "Gaza",
+      "place": "Fâșia Gaza, teritorii palestiniene",
+      "lat": 31.43,
+      "long": 34.37,
+      "precision": "approx_region",
+      "title_ro": "Gaza: cel puțin patru morți în lovituri israeliene, potrivit personalului medical",
+      "title_it": "Gaza: almeno quattro morti in attacchi israeliani, secondo i sanitari",
+      "summary_ro": "Potrivit Reuters și personalului medical din Gaza, loviturile israeliene din 2 noiembrie au provocat cel puțin patru decese în Khan Younis, Al-Mussadar și cartierul Tel Al-Hawa. Armata israeliană a declarat că a vizat militanți palestinieni, fără detalii suficiente pentru verificarea independentă a identității. Bilanțul este provizoriu și atribuit sursei.",
+      "summary_it": "Secondo Reuters e il personale sanitario di Gaza, gli attacchi israeliani del 2 novembre hanno provocato almeno quattro morti tra Khan Younis, Al-Mussadar e il quartiere Tel Al-Hawa. L'esercito israeliano ha dichiarato di aver preso di mira militanti palestinesi, senza dettagli sufficienti per verificarne indipendentemente l'identità. Bilancio provvisorio e attribuito alla fonte.",
+      "source_name": "Reuters",
+      "source_url": "https://www.reuters.com/world/middle-east/israeli-strikes-kill-three-people-gaza-medics-say-2026-11-02/"
+    },
+    {
+      "id": "war-oleshky-truce-20261102",
+      "published_date": "2026-11-02",
+      "event_date": "2026-11-01",
+      "region": "Ucraina",
+      "place": "Oleșkî, regiunea Herson, Ucraina",
+      "lat": 46.62,
+      "long": 32.72,
+      "precision": "approx_city",
+      "title_ro": "Oleșkî: armistițiul local s-a încheiat; Kievul acuză regrupări militare ruse",
+      "title_it": "Oleshky: conclusa la tregua locale; Kyiv accusa Mosca di aver rafforzato le posizioni",
+      "summary_ro": "Reuters relatează că pauza umanitară de șase zile din zona Oleșkî s-a încheiat la 1 noiembrie. Melania Trump a afirmat că aproape 800 de persoane au fost evacuate. Statul Major ucrainean acuză forțele ruse că au folosit pauza pentru regrupare; Kremlinul a spus că nu deține informații concrete despre aceste mișcări. Acuzațiile nu sunt verificate independent de RDI.",
+      "summary_it": "Reuters riferisce che la tregua umanitaria di sei giorni nell'area di Oleshky è terminata il 1° novembre. Melania Trump ha dichiarato che sono state evacuate quasi 800 persone. Lo Stato maggiore ucraino accusa le forze russe di essersi riorganizzate durante la pausa; il Cremlino ha detto di non disporre di informazioni specifiche. Le accuse non sono verificate autonomamente da RDI.",
+      "source_name": "Reuters",
+      "source_url": "https://www.reuters.com/world/europe/ukraine-says-russia-used-oleshky-ceasefire-reinforce-positions-2026-11-02/"
+    },
     {
       "id": "war-kyiv-explosions-20261027",
       "published_date": "2026-10-27",
