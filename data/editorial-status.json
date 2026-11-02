@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-02T17:08:47.011887+00:00",
+  "news_updated_at": "2026-11-02T17:25:18.145196+00:00",
   "editorial_updated_at": "2026-11-02T16:38:16.384072+01:00",
-  "translations_updated_at": "2026-11-02T17:04:02.037599+00:00",
-  "feed_total": 83,
-  "feed_extended_400": 8,
-  "feed_missing_body": 75,
+  "translations_updated_at": "2026-11-02T17:06:26.436897+00:00",
+  "feed_total": 77,
+  "feed_extended_400": 7,
+  "feed_missing_body": 70,
   "feed_short_body": 0,
   "editorial_total": 20,
   "archived_editorials": 136,
-  "translation_records": 36,
+  "translation_records": 39,
   "pending_total": 84,
   "pending_filtered_out": 246,
-  "editorial_verde": 12,
-  "editorial_galben": 34,
-  "editorial_rosu": 50,
+  "editorial_verde": 11,
+  "editorial_galben": 35,
+  "editorial_rosu": 43,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -618,11 +618,47 @@
   ],
   "recent_news": [
     {
+      "title": "Ondata di attacchi hacker contro i supermercati di mezza Europa",
+      "category": "Italia",
+      "published": "2026-11-02T17:19:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/02/ondata-di-attacchi-hacker-contro-i-supermercati-di-mezza-europa_5e6f0b27-05c9-468a-9004-087167137119.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Un judecător a anulat procedura judiciară împotriva unor foşti oficiali FBI care au fost acuzați că au mințit în cazul Hunter Biden",
+      "category": "România",
+      "published": "2026-11-02T17:13:29+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/un-judecator-a-anulat-procedura-judiciara-impotriva-unor-fosti-oficiali-fbi-care-au-fost-acuzati-ca-au-mintit-in-cazul-hunter-biden-4018847",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "++ Violati sigilli della casa in cui è stata uccisa Pamela Genini ++",
+      "category": "Italia",
+      "published": "2026-11-02T17:13:01+00:00",
+      "url": "https://www.ansa.it/sito/notizie/flash/2026/11/02/violati-sigilli-della-casa-in-cui-e-stata-uccisa-pamela-genini_45d443cc-13ac-43e9-bd2f-e26684174d67.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Creșterea salariului minim, în discuție la Guvern. Dumitru Costin (BNS): „Nu este o nebunie din capul liderilor de sindicat”",
       "category": "România",
       "published": "2026-11-02T17:05:56+00:00",
       "url": "https://www.digi24.ro/stiri/economie/cresterea-salariului-minim-in-discutie-la-guvern-dumitru-costin-bns-nu-este-o-nebunie-din-capul-liderilor-de-sindicat-4018833",
       "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "La strage di Crans-Montana. Moretti in aula, la rabbia delle famiglie",
+      "category": "Italia",
+      "published": "2026-11-02T17:05:08+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/la-strage-di-crans-montana.-moretti-in-aula-la-rabbia-delle-famiglie_b354f421-f01c-4386-aa3b-e80e1c456b2a.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -634,6 +670,15 @@
       "source": "Digi24",
       "status": "galben",
       "words": 0
+    },
+    {
+      "title": "È morta Nadia Santini, chef tre stelle Michelin",
+      "category": "Italia",
+      "published": "2026-11-02T16:59:44+00:00",
+      "url": "https://www.ansa.it/canale_terraegusto/notizie/regioni/lombardia/2026/11/02/e-morta-nadia-santini-chef-tre-stelle-michelin-aveva-73-anni_7f59752d-0032-4379-8cde-b3a50b526d64.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 483
     },
     {
       "title": "Ministrul Dezvoltării: Doar 40% din populaţia României are acces la reţeaua de gaze naturale",
@@ -659,6 +704,15 @@
       "published": "2026-11-02T16:52:37+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/justitie/ministrul-justitiei-s-a-intalnit-cu-lideri-sindicali-pentru-discutii-privind-plata-restantelor-salariale-ale-magistratilor-4018819",
       "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Kimi Antonelli campione del mondo in pole positon anche nel presepe napoletano",
+      "category": "Italia",
+      "published": "2026-11-02T16:48:32+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/kimi-antonelli-campione-del-mondo-in-pole-positon-anche-nel-presepe_d4d29c0c-d9a8-4fe4-9529-d1385bed37ac.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -726,13 +780,13 @@
       "words": 0
     },
     {
-      "title": "È morta Nadia Santini, chef tre stelle Michelin",
+      "title": "Serie A: Sassuolo-Fiorentina in campo alle 18.30 DIRETTA",
       "category": "Italia",
-      "published": "2026-11-02T15:40:22+00:00",
-      "url": "https://www.ansa.it/canale_terraegusto/notizie/regioni/lombardia/2026/11/02/e-morta-nadia-santini-chef-tre-stelle-michelin-aveva-73-anni_7f59752d-0032-4379-8cde-b3a50b526d64.html",
+      "published": "2026-11-02T15:43:53+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/02/serie-a-sassuolo-fiorentina-in-campo-alle-18.30-diretta_0cfec97d-7c28-414a-bc64-e7eca2c0f53c.html",
       "source": "ANSA",
-      "status": "verde",
-      "words": 483
+      "status": "roșu",
+      "words": 0
     },
     {
       "title": "Steve Ellis, solistul trupei Love Affair şi interpretul piesei „Everlasting Love”, a murit la 76 de ani",
@@ -816,28 +870,10 @@
       "words": 0
     },
     {
-      "title": "Un angajat al unei firme de conținut pentru adulți este anchetat după ce ar fi direcționat 270.000 de dolari în contul propriu",
-      "category": "România",
-      "published": "2026-11-02T15:07:04+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/un-angajat-al-unei-firme-de-continut-pentru-adulti-este-anchetat-dupa-ce-ar-fi-directionat-270-000-de-dolari-in-contul-propriu-4018635",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Ucraina, Melania Trump: 'Evacuati da Oleshky in 800'. Hackerate le app di allarme aereo, Russia e Ucraina al buio",
       "category": "Italia",
       "published": "2026-11-02T15:03:38+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/ucraina-melania-trump-evacuati-da-oleshky-in-800.-hackerate-le-app-di-allarme-aereo_5d7684f7-539f-4f2e-b683-fa74199e5046.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ondata di attacchi hacker contro i supermercati di mezza Europa",
-      "category": "Italia",
-      "published": "2026-11-02T15:02:00+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/02/ondata-di-attacchi-hacker-contro-i-supermercati-di-mezza-europa_5e6f0b27-05c9-468a-9004-087167137119.html",
       "source": "ANSA",
       "status": "galben",
       "words": 0
@@ -850,15 +886,6 @@
       "source": "ANSA",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Le salme dei militari in Italia: a Ciampino anche Mattarella e Meloni, camera ardente al Celio",
-      "category": "Italia",
-      "published": "2026-11-02T14:59:05+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/atterrato-a-ciampino-laereo-con-le-salme-dei-militari-morti-in-bosnia_5d34d699-5dfe-4198-bff4-b4a4c9e4c0a9.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 492
     },
     {
       "title": "Roots, museo delle radici a Ballarò: Invitalia approva investimento da 1,27 milioni - PalermoToday",
@@ -884,15 +911,6 @@
       "published": "2026-11-02T14:09:52+00:00",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNaDJjWngwVVhGZzltRXZHRlAzaEc0OWxtNVNCYlVPcjFGY1N5Z2R2VVlDTDB1M3BQSnFPcjFpVmRVajdfdGszd0NpWGo5RVB2NE5LdHhqa3VRXzlFQ3MyT0ZaYjJYYjBOZEtma1FuLU9ySW4zN1BtWE5VdlU1MG9yVTBrdngycW4tRS1JRmxteV82QlJJTktycENpVi00QQ?oc=5",
       "source": "DB - Non solo Diritto Bancario",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Offerta di lavoro in Valsusa: la filiale Synergie Italia di Susa ricerca operaio/a di produzione - miscelazione - L'Agenda News",
-      "category": "Italia",
-      "published": "2026-11-02T14:00:09+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOcTlGVE43RmpPMFdoY0NlMHJBaDA2T3ozd3M0NWhRODQ1ODlHY0xJdXpJd3BnTDdYODZtWEdIVE5WRFBOZ1YwMjY3eWo3WHNTcGlFaDBFclVsSmJZT3Z0WGExQlVSZHpiMkRTM1BsdEozakR5YmVJM2FFUUpURG9tVnRFUWFoMlJCWTlBSE1xYUVGdm5WeTRFOExMV05DRGk4OU43bzFGaWxzOFplblRBN1NOZ2pTdTJFODBITmxuQXB2a3pRcWM4aVFwdTYxeGpxYTN6QllR?oc=5",
-      "source": "L'Agenda News",
       "status": "roșu",
       "words": 0
     },
@@ -933,15 +951,6 @@
       "words": 0
     },
     {
-      "title": "Crans-Montana, oggi l'interrogatorio di Jacques Moretti sono presenti anche alcuni feriti",
-      "category": "Italia",
-      "published": "2026-11-02T13:09:35+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/02/crans-montana-oggi-linterrogatorio-di-jacques-moretti-sono-presenti-anche-alcuni_b354f421-f01c-4386-aa3b-e80e1c456b2a.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Sostenibilità a marcia indietro, meta 2030 si allontana",
       "category": "Italia",
       "published": "2026-11-02T13:00:05+00:00",
@@ -969,15 +978,6 @@
       "words": 0
     },
     {
-      "title": "„Dansez pentru tine” revine la PRO TV după 14 ani - Observatorul Prahovean",
-      "category": "România",
-      "published": "2026-11-02T12:41:29+00:00",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLUl6ZUltN1ozZTVtWFhCd3pDemMzUTN5SFh0Z3ZRYmNjVGlKakZjTEdONGlaaUVEeEdxMlUtYXNQZm9QYW5pLTJIMEhvZHY5SWQzZVZseVJ2c1lPaUdiX2U5RWpHNnZDNzBRWGQzRWkyRi1HVFFKTTFGUVozZC1hSWpUTEw4cXpxQTA0VlNoLV9YME5KT01EQTNn?oc=5",
-      "source": "Observatorul Prahovean",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
       "category": "Italia",
       "published": "2026-11-02T12:40:12+00:00",
@@ -996,24 +996,6 @@
       "words": 0
     },
     {
-      "title": "Ce încredere au cititorii Observatorului Prahovean în Guvernul Niculescu. Rezultatele sondajului - Observatorul Prahovean",
-      "category": "România",
-      "published": "2026-11-02T12:07:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZV9Fbi1VSDlXUDVXWHlXTW5GQWJSbm9XclJkT3M2akVGOEVrSmgtYU9qU0VGWGJlY1J3U2ZmbHV1NGdONHJ1Q2ZTN1c5Ykd2UE5PUzRYNHZDMEJHSTdObllueVVDSld1UXI2UGNqM0pNUzJJbU43c3BCbWswOF84dmdFUW1faVZUSTJaUmpjOUQtb2tJbnFubzloZEJNZmJyQlJHZW5PdWNua0FqVmdTZUNscDZOTFdaVmNGZkhBaktwQWdVeERMdm5BWm1SanUxYzJOWHplWHQ?oc=5",
-      "source": "Observatorul Prahovean",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Kimi Antonelli campione del mondo ora è anche sul presepe napoletano",
-      "category": "Italia",
-      "published": "2026-11-02T12:04:33+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/kimi-antonelli-campione-del-mondo-ora-e-anche-sul-presepe-napoletano_d4d29c0c-d9a8-4fe4-9529-d1385bed37ac.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Il sommerso pesa meno sul PIL, ma il lavoro irregolare torna a crescere - Il Bo Live",
       "category": "Italia",
       "published": "2026-11-02T12:00:00+00:00",
@@ -1023,29 +1005,11 @@
       "words": 0
     },
     {
-      "title": "Aereo privato precipita nel sud della Florida, il momento dell'impatto",
-      "category": "Italia",
-      "published": "2026-11-02T11:50:31+00:00",
-      "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/02/aereo-privato-precipita-nel-sud-della-florida-il-momento-dellimpatto_10403121-e8d3-467d-91f5-3b7e96003dc4.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ia, Angelini (Sensemakers): \"In Italia usata dal 40% degli utenti\" - Touchpoint News",
       "category": "Italia",
       "published": "2026-11-02T11:30:07+00:00",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOemNFVFpmbmJma2dUMi1xMTFSMHFoZGJ5YXZwSnlia3dKaFQ3NVVYQTdFczRVRUxOYnZ5eTd5MUxPMFh6MDRUN2RIVTR2N1pfWHVPeVMxV3MyOHNPVWdJTEllRDVmYno2ZEJEa3dJM1dsYzJCQXd5LTVza08tdmZnV3dMM2RHZGoyeVRXNTFtdXNIeW1TMTYtMndIYjk2cDR0?oc=5",
       "source": "Touchpoint News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "România și Moldova, prima achiziție militară comună prin SAFE: 62 de camioane IVECO pentru Chișinău - Monden.ro",
-      "category": "România",
-      "published": "2026-11-02T11:08:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ0Fud3hpNzhuWE5IT2pGMFhUSC0xTUNUS0JzSXpycU5YS2ZSZmxWaS1taDBMLUJ2SnJzSnhmam9majlTY2QzR20zMzBUOTVZaWhQR3M0UGRYeFVQREJERk5pNXFOejBTeTI3MEt3Ui1NVG1wSmdBVEVNeXJNVDh2N09ibHlmWTFaOWN4X3hMTHY0Q2JCX2NsT2diWFB5OHVsMjFxMnpSZDlrZTRoLS1YdEFWamI3ZjlSNzRuT2pKNGpkdw?oc=5",
-      "source": "Monden.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1239,15 +1203,6 @@
       "words": 0
     },
     {
-      "title": "Federația „Sănătatea” oferă șapte burse pentru studenții la medicină - logos-pres.md",
-      "category": "România",
-      "published": "2026-11-01T11:00:11+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYktUdjJwOVNqQlpQZm9PTjBIdzdpU2lxNEFEeDZRT0YwM0RKZWpUQ0QxWUhrSU90OVJLNlZfQ3pKYjZUdUZEWC1zRTlENnRFTjZlVWc1bjdSbXhzMF92dE1VRENoZTNPdWw3bC1uNTlYdDJPNi1OaEdOQU5HX1lOMVNlUUo3TDRxX2VWd0NqbTlUamI1MFhpc3JjUWFtcWwzeUxaaU1SNkhfWkF3Ml9ZdVhWcTY1a3JQTkRyNGl6OXZHV0dLcjZocEFSZw?oc=5",
-      "source": "logos-pres.md",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Pensioni, piccolo contributo per chi resta al lavoro. Stangata sulle rivalutazioni - la Repubblica",
       "category": "Italia",
       "published": "2026-11-01T10:50:53+00:00",
@@ -1298,15 +1253,6 @@
       "published": "2026-11-01T05:55:59+00:00",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9DU0pQNHZyaEQzWUR1MDF3RHdRcmxMalFabEg0TTZYamxONWVKTEN3eTRHd0ZTX3RQdWIyOVRFQU1NTGdRUmlzeg?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "BYD anunță 10–20 de stații de încărcare ultrarapidă în România, la o vizită a vicepreședintei Stella Li - Monden.ro",
-      "category": "România",
-      "published": "2026-11-01T05:34:53+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTDhaWWc0R1JZeEhhaWJGRVBLcnlHYTJQdy1JQ09XdXF0VXNMTnA4QTVBNnBnb01ZQUR2WmIxVTZqcEs4MGNhUVpaTlpOeXJ1bjN6cUZIallhZGkxRGRYejV6LVhZcDJ0Q1ZKZ1NrYXY1VS1UazJaUzc1X3cxWmd5YzU4S0szSXlydG5tUDdxX0ZpV1hQU0JFN3dFZTlPWmQ2SGdfNXhHcnY5dERqcmUtbWNUMi1VdklIYi1TNl9VMWJydmRBUHUyRg?oc=5",
-      "source": "Monden.ro",
       "status": "roșu",
       "words": 0
     },
