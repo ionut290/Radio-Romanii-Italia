@@ -2,6 +2,26 @@
   "version": 1,
   "campaigns": [
     {
+      "id": "oriflame",
+      "title": "Oriflame Italia",
+      "matchAny": [
+        "oriflame",
+        "magda niculae"
+      ],
+      "video": "https://cdn.creativeclaw.co/u/d1fc9b13/videos/b9240cfe-512d-4d8c-93db-2aaf0a44d9a6.mp4",
+      "videoText": "Profumi • Make-up • Cura della pelle\n\nMagda Niculae\nDirettrice di vendita\n\nScopri prodotti e opportunità.",
+      "footer": "329 118 4717",
+      "website": "Chiama o scrivi su WhatsApp\nMagda ti aspetta.",
+      "sceneSeconds": 8.5,
+      "scenes": [
+        {
+          "image": "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2fProducts%2f47511%2f47511_1.png&MediaId=19156172&Version=1",
+          "title": "Oriflame Italia",
+          "text": "Magda Niculae • 329 118 4717"
+        }
+      ]
+    },
+    {
       "id": "ghid",
       "title": "Ghidul Românilor din Italia",
       "matchAny": [

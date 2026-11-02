@@ -7,11 +7,14 @@ const origin='https://radio-romanii-italia.duckdns.org';
 const endpoint=origin+'/api/nowplaying/'+station;
 const realtimeUrl='wss://radio-romanii-italia.duckdns.org/api/live/nowplaying/websocket';
 const style=document.createElement('link');
-style.rel='stylesheet';style.href='./youtube-spots.css?v=20261024-1';document.head.append(style);
+style.rel='stylesheet';style.href='./youtube-spots.css?v=20261102-oriflame-live-1';document.head.append(style);
 const box=document.createElement('section');
 box.id='rdiSpot';box.hidden=true;box.setAttribute('aria-label','Publicitate în direct');
 box.innerHTML='<div class="spot-photo"></div><div class="spot-shade"></div><div class="spot-copy"><div class="spot-label">PUBLICITATE · RDI</div><h1></h1><p></p></div><div class="spot-footer"><strong></strong><span></span></div><div class="spot-count"></div>';
 document.getElementById('stage').append(box);
+const video=document.createElement('video');video.className='spot-video';video.muted=true;video.playsInline=true;video.preload='metadata';video.hidden=true;box.prepend(video);
+let videoSource='',videoFailed=false;
+video.addEventListener('error',()=>{videoFailed=true;video.hidden=true;box.classList.remove('spot-video-mode');lastFrame='';});
 const photo=box.querySelector('.spot-photo'),heading=box.querySelector('h1'),copy=box.querySelector('p');
 let config=null,active=null,armed=null,lastFrame='',nowPlaying=null;
 let lastSuccess=0,lastSeenPlayedAt=0,lastFinishedStart=0,received=0;
@@ -37,6 +40,7 @@ function preload(campaign){
 function stop(completed=false){
  if(!active)return;
  if(completed&&active.playedAt>0)lastFinishedStart=active.playedAt;
+ video.pause();video.hidden=true;box.classList.remove('spot-video-mode');
  active=null;nowPlaying=null;lastFrame='';window.rdiSpotActive=false;
  box.hidden=true;document.body.classList.remove('rdi-spot-active');
  const badge=document.getElementById('badge');if(badge)badge.textContent='● ȘTIRI LIVE';
@@ -45,7 +49,8 @@ function stop(completed=false){
 function start(campaign,trackId,playedAt,duration,predicted=false){
  const wasActive=Boolean(active);
  active={...campaign,trackId,key:normalize(campaign.title),playedAt,duration,predicted};
- nowPlaying=null;lastFrame='';
+ nowPlaying=null;lastFrame='';videoFailed=false;
+ if(campaign.video&&videoSource!==campaign.video){videoSource=campaign.video;video.src=campaign.video;video.load();}
  if(!wasActive){window.rdiSpotActive=true;window.rdiPauseNews?.();}
  document.body.classList.add('rdi-spot-active');box.hidden=false;
  photo.style.backgroundImage='none'; // Never show the previous advert while an image loads.
@@ -67,6 +72,20 @@ function render(){
  // Never leave an image on screen after the declared spot duration.
  if(duration>0&&elapsed>=duration){stop(true);armed=null;return;}
  if(!active.predicted&&performance.now()-lastSuccess>15000){stop();return;}
+ if(active.video&&!videoFailed){
+  box.classList.add('spot-video-mode');box.classList.remove('spot-poster');
+  box.dataset.campaign=active.id;video.hidden=false;
+  heading.textContent=active.title;copy.textContent=active.videoText||'';
+  box.querySelector('.spot-footer strong').textContent=active.footer||'';
+  box.querySelector('.spot-footer span').textContent=active.website||'';
+  box.querySelector('.spot-count').textContent='';
+  if(video.readyState>=1){
+   const target=Math.min(elapsed,Math.max(0,video.duration-.1));
+   if(Number.isFinite(target)&&Math.abs(video.currentTime-target)>1)video.currentTime=target;
+   if(video.paused&&!video.ended)video.play().catch(()=>{videoFailed=true;video.hidden=true;box.classList.remove('spot-video-mode');lastFrame='';});
+  }
+  return;
+ }
  const timed=duration>0&&active.scenes.length
   ?{...active,sceneSeconds:duration/active.scenes.length}:active;
  const {scene,index}=sceneAt(timed,elapsed);

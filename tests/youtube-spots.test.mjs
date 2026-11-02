@@ -34,3 +34,18 @@ test('new ad audio automatically receives nine branded scenes',()=>{
   assert.equal(campaign?.id,'automatic');
   assert.equal(campaign.scenes.length,9);
 });
+
+test('Oriflame ad uses its video and contact, while ordinary Oriflame music is ignored',()=>{
+ const song={title:'Spot Oriflame Italia - Magda Niculae',text:'RDI - Spot Oriflame Italia - Magda Niculae'};
+ const campaign=selectCampaign({playlist:'spot',song},config);
+ assert.equal(campaign.id,'oriflame');
+ assert.match(campaign.video,/^https:\/\//);
+ assert.equal(campaign.footer,'329 118 4717');
+ assert.equal(selectCampaign({playlist:'rock',song:{title:'Oriflame',text:'Oriflame'}},config),null);
+});
+
+test('campaign video is muted and synchronized to radio elapsed time',()=>{
+ assert.match(spots,/video\.muted=true/);
+ assert.match(spots,/Math\.abs\(video\.currentTime-target\)>1/);
+ assert.match(spots,/video\.pause\(\);video\.hidden=true/);
+});

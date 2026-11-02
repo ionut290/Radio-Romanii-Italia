@@ -1,0 +1,57 @@
+name: RDI - Inserisci spot Oriflame nel live
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/oriflame-live.yml'
+      - 'scripts/deploy-oriflame-live.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rdi-oriflame-live
+  cancel-in-progress: false
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test grafica e riconoscimento spot
+        run: |
+          node --input-type=module --check < youtube-spots.js
+          node --test tests/youtube-spots.test.mjs
+          python3 -m py_compile scripts/deploy-oriflame-live.py
+      - name: Connessione Oracle esistente
+        env:
+          KEY: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$KEY"; test -n "$HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf %s "$KEY" | tr -d '[:space:]' | base64 -d > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null
+      - name: Attendi grafica pubblica e inserisci audio nella rotazione esistente
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          STAGE="/tmp/rdi-oriflame-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          SSH=(ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=18 -o ServerAliveInterval=5 -o ServerAliveCountMax=3)
+          SCP=(scp -q -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=18)
+          ready=0
+          for attempt in {1..24}; do
+            if curl -fsS --max-time 15 "https://radioromanii.duckdns.org/data/spot-campaigns.json?oriflame=$GITHUB_RUN_ID" | python3 -c 'import json,sys;x=json.load(sys.stdin);assert any(c.get("id")=="oriflame" and c.get("video") for c in x["campaigns"])'; then ready=1; break; fi
+            sleep 10
+          done
+          test "$ready" = 1
+          "${SSH[@]}" "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup(){ "${SSH[@]}" "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          "${SCP[@]}" scripts/deploy-oriflame-live.py scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
+          "${SSH[@]}" "$REMOTE" "sudo -n python3 '$STAGE/deploy-oriflame-live.py'"
+          "${SSH[@]}" "$REMOTE" 'set -eu; before=$(pgrep -x ffmpeg | sort); test -n "$before"; env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+r; sleep 3; after=$(pgrep -x ffmpeg | sort); test "$before" = "$after"; echo ORIFLAME_VIDEO_PAGE_RELOADED=YES; echo FFMPEG_AUDIO_PROCESS_UNCHANGED=YES'

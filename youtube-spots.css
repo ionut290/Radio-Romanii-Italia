@@ -18,3 +18,16 @@
 #rdiSpot[data-campaign="automatic"][data-scene="2"],#rdiSpot[data-campaign="automatic"][data-scene="5"],#rdiSpot[data-campaign="automatic"][data-scene="8"]{background:radial-gradient(ellipse at 20% 20%,#274c73,#07182d 70%)}
 #rdiSpot[data-campaign="automatic"].spot-poster .spot-copy,#rdiSpot[data-campaign="automatic"].spot-poster .spot-shade,#rdiSpot[data-campaign="automatic"].spot-poster .spot-footer{display:block}
 @media(max-width:800px){#rdiSpot{left:18px;right:18px}.spot-copy{left:24px;width:50%}.spot-copy h1{font-size:28px}.spot-copy p{font-size:18px}.spot-footer{left:24px;right:24px}}
+
+/* Portrait campaign video with readable contact panel on the horizontal live. */
+#rdiSpot.spot-video-mode{inset:0;border:0;border-radius:0;background:#fff;color:#233e30;z-index:30}
+.spot-video{position:absolute;left:0;top:0;width:44%;height:100%;object-fit:contain;background:#fff}
+.spot-video[hidden]{display:none}
+.spot-video-mode .spot-photo,.spot-video-mode .spot-shade,.spot-video-mode .spot-count{display:none}
+.spot-video-mode .spot-copy{left:48%;top:13%;width:47%;text-shadow:none}
+.spot-video-mode .spot-label{color:#9b793b;font-size:17px;margin-bottom:24px}
+.spot-video-mode .spot-copy h1{font-size:48px;color:#234c36}
+.spot-video-mode .spot-copy p{white-space:pre-line;font-size:28px;color:#4b5c50;line-height:1.5}
+.spot-video-mode .spot-footer{left:48%;right:5%;bottom:13%;border-color:#c9ab69}
+.spot-video-mode .spot-footer strong{font-size:40px;color:#215b3c}
+.spot-video-mode .spot-footer span{font-size:24px;color:#425b49;white-space:pre-line}
