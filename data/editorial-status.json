@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-02T06:07:45.114556+00:00",
+  "news_updated_at": "2026-11-02T06:09:28.923739+00:00",
   "editorial_updated_at": "2026-11-02T06:52:11.631470+01:00",
-  "translations_updated_at": "2026-11-02T05:08:45.476473+00:00",
-  "feed_total": 71,
+  "translations_updated_at": "2026-11-02T06:07:46.089303+00:00",
+  "feed_total": 76,
   "feed_extended_400": 15,
-  "feed_missing_body": 56,
+  "feed_missing_body": 61,
   "feed_short_body": 0,
   "editorial_total": 21,
   "archived_editorials": 132,
-  "translation_records": 44,
+  "translation_records": 39,
   "pending_total": 53,
-  "pending_filtered_out": 161,
-  "editorial_verde": 16,
-  "editorial_galben": 28,
-  "editorial_rosu": 39,
+  "pending_filtered_out": 160,
+  "editorial_verde": 15,
+  "editorial_galben": 29,
+  "editorial_rosu": 43,
   "pending": [
     {
       "title": "Alertă pentru șoferii care tranzitează Spania. Un român a observat metoda prin care hoții îi... - StiriDiaspora",
@@ -580,8 +580,8 @@
       "published": "2026-11-02T05:36:13+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/deciziile-surpriza-ale-washingtonului-ce-risca-europa-daca-isi-joaca-toate-cartile-pe-rezultatul-alegerilor-intermediare-din-sua-4009499",
       "source": "Digi24",
-      "status": "verde",
-      "words": 478
+      "status": "galben",
+      "words": 0
     },
     {
       "title": "Digistoria – cele mai importante evenimente petrecute pe 2 noiembrie",
@@ -688,8 +688,8 @@
       "published": "2026-11-01T22:03:43+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/2026/11/01/lazio-prima-da-sola-dopo-16-anni-inter-a-3.-la-juve-riparte_e791a174-9074-4c6a-af26-0fb5654e6a13.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 467
     },
     {
       "title": "Accident aviatic în Florida: un avion privat cu 9 persoane la bord s-a prăbușit într-un cartier rezidențial",
@@ -899,6 +899,24 @@
       "words": 0
     },
     {
+      "title": "A0 Nord: lotul 3 va fi deschis doar după îndeplinirea condițiilor de siguranță, anunță CNAIR - Substantial.ro",
+      "category": "România",
+      "published": "2026-11-01T16:16:31+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbXMySHdVQV9HMFpxS3dMRGNCemV3TzFLdWhOci0yMzV4aXNUQzZ4M19WSlFIQWdrWE1VdDFFOUFqQjN1alMxNUhlMjBpWnVkUHk1alJTZVo2c2pibGRRT2dhNk9CVXVBR3pCU1N3Umt5NVdvRFZ0dXJDMkROQWhoeGlFTXMzcXZzSmZheHFmWllQUjFhOGF3NFFnTi13UGxHV05lY0FycW5PT05YM19uRjVTV0E?oc=5",
+      "source": "Substantial.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ana Maria Păcuraru: Peste 51 de milioane de americani au votat deja. Ce spun prognozele - Realitatea.NET",
+      "category": "România",
+      "published": "2026-11-01T16:14:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUlZ0b3lrOGNXenc1cVlibFFiUjk0Z19MZTRyMEZKOFdTcE4xcGU2YjdWSW5rcktfMmNqLWQxTm5iRFNyR2pCdWhNNHltSGgzM3Uzbm5RTHY5R3JBQk8yWW1WX21rSVduQnZldGVrYVVBT2N6QXI4N1JXc0lNZTBPdXliWXkxVmEzUVlDUFBBY3d0UTItYXU2dGZaM1gxbnZ0cmxrdXRWemkzdldYdktaQmFLVQ?oc=5",
+      "source": "Realitatea.NET",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Meteo a Padova, lunedì nuvoloso e generalmente asciutto: ARPAV conferma nel bollettino delle 16 - Padova24Ore",
       "category": "Italia",
       "published": "2026-11-01T15:47:51+00:00",
@@ -940,6 +958,15 @@
       "published": "2026-11-01T12:19:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQWEllQlZSSVV3Y1I4cUd4aGQ3ZndGd24zZ3N6M0lDclpUdUNnWTJtV3ZlTUVBMnU0SUlTZF9CSWRzaE9nMFRKYS1Mckc1WExzN1hLaHhfRlI5S3ZjSkJaZmNuSzRtREd4Si1fZDNCWVNtaHVteHlMcmFxcTRWMU5lSS1xRXJIcF8wYVhDM05fNVc2bDByYllKamM2X3NXNDJtelBjek5QYlY2YnNLTXdiMy0xN2pRLTJ5WWx3cFRBOE00UWNjM2dBc0ZVUzhJN21Zb0lzbWhvNWlTTXRHMzZNS0xYckhUSXfSAewBQVVfeXFMTmRRaVNLZFVSbzBkQ080MnQtQUR6Si1BTXVtN0JtbFo3NWxqUEl0QzNzMnMzMjUyWDZ4ZnVxbmowUms5S2Y4aUdtNnpHZkpnUjM0bmdDREZyenBXQWRKc04ycGtvaGxfamFLOTN",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Federația „Sănătatea” oferă șapte burse pentru studenții la medicină - logos-pres.md",
+      "category": "România",
+      "published": "2026-11-01T11:00:11+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYktUdjJwOVNqQlpQZm9PTjBIdzdpU2lxNEFEeDZRT0YwM0RKZWpUQ0QxWUhrSU90OVJLNlZfQ3pKYjZUdUZEWC1zRTlENnRFTjZlVWc1bjdSbXhzMF92dE1VRENoZTNPdWw3bC1uNTlYdDJPNi1OaEdOQU5HX1lOMVNlUUo3TDRxX2VWd0NqbTlUamI1MFhpc3JjUWFtcWwzeUxaaU1SNkhfWkF3Ml9ZdVhWcTY1a3JQTkRyNGl6OXZHV0dLcjZocEFSZw?oc=5",
+      "source": "logos-pres.md",
       "status": "roșu",
       "words": 0
     },
@@ -1070,6 +1097,15 @@
       "words": 0
     },
     {
+      "title": "BYD anunță 10–20 de stații de încărcare ultrarapidă în România, la o vizită a vicepreședintei Stella Li - Monden.ro",
+      "category": "România",
+      "published": "2026-11-01T05:34:53+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTDhaWWc0R1JZeEhhaWJGRVBLcnlHYTJQdy1JQ09XdXF0VXNMTnA4QTVBNnBnb01ZQUR2WmIxVTZqcEs4MGNhUVpaTlpOeXJ1bjN6cUZIallhZGkxRGRYejV6LVhZcDJ0Q1ZKZ1NrYXY1VS1UazJaUzc1X3cxWmd5YzU4S0szSXlydG5tUDdxX0ZpV1hQU0JFN3dFZTlPWmQ2SGdfNXhHcnY5dERqcmUtbWNUMi1VdklIYi1TNl9VMWJydmRBUHUyRg?oc=5",
+      "source": "Monden.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Fringe benefit, con la manovra sale il tetto a 2mila euro per i lavoratori under 31 - la Repubblica",
       "category": "Italia",
       "published": "2026-11-01T04:00:00+00:00",
@@ -1138,6 +1174,15 @@
       "published": "2026-10-31T16:54:01+00:00",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdDB4T3JMbWg5VWplMVJRbmQwME55UGh4M3pncklodkNhcDVZRGxvaTA0Y2FmV3R0LWQzTXNLSjh6cTNVbHlxYnNRWlg1ZHRYMEJHWTZFWnFPS0FOenQwekstQXVKcDl3WGhoUjMyMWNGelFqTkN0Ynd6eGhvZzk1b1RWUHFlZXBHdmxFOE9lanlpWXdKY0c0dEhvZkI4Y3BWLVExeUZkU3lraWFLZ2NaY2ZpUl96ZUJVN2c?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Eurostat: electricitatea s-a scumpit în România cu 51,6% într-un an, cea mai mare creștere din UE - Monden.ro",
+      "category": "România",
+      "published": "2026-10-31T16:34:14+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeVFQYUtUWUtxeC1QdHVyeEhCeUI2ZUw1UjhVNW1kS2FBeFM5WU9ZWGd4b3YzWlQ4OEx4YWtobUFibEI1R3J5WTMxUnZ6UzBSZ0pvQTFleHlVbnFtaGktVUFaSGZuRTFOVzZpeDctQnVDeTNuWEkyUUFnbUFvN2xzeGp0UlhwZmlxSldkSU5PTXg0SUt6OXpTNGY4X2pOanhJY21HSWFOSThJLUtrZ1ZHZjVialFCT09xTzJqZw?oc=5",
+      "source": "Monden.ro",
       "status": "roșu",
       "words": 0
     },
