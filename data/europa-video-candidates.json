@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-02T09:56:09.185425+00:00",
+  "updated_at": "2026-11-02T20:18:50.013543+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -15,6 +15,27 @@
     }
   ],
   "items": [
+    {
+      "id": "5be17d87f7ecc1d0a0",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "High Representative / Vice-President Kaja KALLAS receives the Secretary of State for Defence of Great Britain and Northern Ireland Security and defence dialogue, Wes STREETING",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296955",
+      "published_at": "2026-11-02",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-02T20:18:50.013543+00:00",
+      "language_probe_version": 3
+    },
     {
       "id": "cfff78f1103f358aec",
       "source_id": "commissione_europea",
@@ -2082,6 +2103,6 @@
       "editorial_topic": "ambiente - archivio"
     }
   ],
-  "language_checks_this_run": 0,
+  "language_checks_this_run": 1,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
