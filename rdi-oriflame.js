@@ -37,7 +37,7 @@
   section.id='oriflame';section.className='rdi-oriflame';section.lang='it';
   section.dataset.campaign=ad.id;section.dataset.placement='active';
   section.setAttribute('aria-labelledby','oriflame-title');
-  section.innerHTML=`<div class="rdi-ad-compact"><button class="rdi-ad-preview" type="button" aria-label="Guarda la pubblicità di Magda a schermo intero"><img class="rdi-ad-thumb" alt="Anteprima prodotti Oriflame" loading="lazy"><span class="rdi-ad-play" aria-hidden="true">▶</span></button><div class="rdi-ad-details"><small class="rdi-oriflame-label">PUBBLICITÀ · R.D.I.</small><h2 id="oriflame-title"></h2><span class="rdi-ad-description"></span><div class="rdi-ad-compact-actions"><button class="rdi-ad-watch" type="button">▶ Guarda la pubblicità</button><a class="rdi-oriflame-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="rdi-ad-offer"><strong>Questo spazio potrebbe essere anche tuo!</strong><span class="rdi-ad-counter">Ancora <b id="rdi-ad-days"></b> <span id="rdi-ad-days-unit">giorni</span> in evidenza</span></div></div><dialog class="rdi-ad-dialog" aria-label="Pubblicità Oriflame con Magda"><div class="rdi-ad-dialog-inner"><button type="button" class="rdi-ad-close" aria-label="Chiudi la pubblicità">✕</button><div class="rdi-ad-dialog-video"><video id="oriflame-video" aria-label="Spot pubblicitario Oriflame Italia" playsinline preload="none"></video></div><div class="rdi-ad-dialog-info"><h3>Scopri Oriflame con Magda</h3><p class="rdi-oriflame-person"><strong></strong> · <span></span></p><div class="rdi-oriflame-actions"><a class="rdi-oriflame-whatsapp" target="_blank" rel="noopener noreferrer">Scrivi su WhatsApp</a><a class="rdi-oriflame-phone">Chiama Magda</a></div><button id="oriflame-resume-radio" type="button" hidden>↩ Torna alla radio</button></div></div></dialog>`;
+  section.innerHTML=`<div class="rdi-ad-compact"><button class="rdi-ad-preview" type="button" aria-label="Guarda la pubblicità di Magda a schermo intero"><img class="rdi-ad-thumb" alt="Anteprima prodotti Oriflame" loading="lazy"><span class="rdi-ad-play" aria-hidden="true">▶</span></button><div class="rdi-ad-details"><small class="rdi-oriflame-label">PUBBLICITÀ · R.D.I.</small><h2 id="oriflame-title"></h2><span class="rdi-ad-description"></span><div class="rdi-ad-compact-actions"><button class="rdi-ad-watch" type="button">▶ Guarda la pubblicità</button><a class="rdi-oriflame-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a><button type="button" class="rdi-ad-share">↗ Condividi</button></div></div><div class="rdi-ad-offer"><strong>Questo spazio potrebbe essere anche tuo!</strong><span class="rdi-ad-counter">Ancora <b id="rdi-ad-days"></b> <span id="rdi-ad-days-unit">giorni</span> in evidenza</span></div></div><dialog class="rdi-ad-dialog" aria-label="Pubblicità Oriflame con Magda"><div class="rdi-ad-dialog-inner"><button type="button" class="rdi-ad-close" aria-label="Chiudi la pubblicità">✕</button><div class="rdi-ad-dialog-video"><video id="oriflame-video" aria-label="Spot pubblicitario Oriflame Italia" playsinline preload="none"></video></div><div class="rdi-ad-dialog-info"><h3>Scopri Oriflame con Magda</h3><p class="rdi-oriflame-person"><strong></strong> · <span></span></p><div class="rdi-oriflame-actions"><a class="rdi-oriflame-whatsapp" target="_blank" rel="noopener noreferrer">Scrivi su WhatsApp</a><a class="rdi-oriflame-phone">Chiama Magda</a><button type="button" class="rdi-ad-share">↗ Condividi pubblicità</button></div><button id="oriflame-resume-radio" type="button" hidden>↩ Torna alla radio</button></div></div></dialog>`;
   section.querySelector('h2').textContent=advertised(ad);
   section.querySelector('.rdi-ad-description').textContent=ad.description||'';
   section.querySelector('.rdi-ad-thumb').src=ad.poster||'./RADIO-COVER.jpg';
@@ -53,6 +53,21 @@
   section.querySelector('.rdi-ad-preview').addEventListener('click',open);
   section.querySelector('.rdi-ad-watch').addEventListener('click',open);
   section.querySelector('.rdi-ad-close').addEventListener('click',close);
+  const shareUrl=new URL(window.location.pathname,window.location.origin);
+  shareUrl.hash='oriflame';
+  const shareText='Scopri Oriflame con Magda Niculae su R.D.I. – Radio Românii din Italia. Guarda lo spot e condividilo!';
+  const share=async()=>{
+   const payload={title:'Oriflame con Magda · R.D.I.',text:shareText,url:shareUrl.href};
+   if(navigator.share){
+    try{await navigator.share(payload);return;}catch(e){if(e.name==='AbortError')return;}
+   }
+   const full=shareText+' '+shareUrl.href;
+   if(navigator.clipboard?.writeText){
+    try{await navigator.clipboard.writeText(full);window.alert('Link della pubblicità copiato!');return;}catch(e){}
+   }
+   window.prompt('Copia il link della pubblicità RDI:',shareUrl.href);
+  };
+  section.querySelectorAll('.rdi-ad-share').forEach(b=>b.addEventListener('click',share));
   dialog.addEventListener('click',e=>{if(e.target===dialog)close();});
   dialog.addEventListener('close',()=>video.pause());
   manageSound(video,section.querySelector('#oriflame-resume-radio'));
