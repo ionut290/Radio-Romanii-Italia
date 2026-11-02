@@ -1,9 +1,55 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-02T02:00:00+01:00",
+  "updated_at": "2026-11-02T20:05:00+01:00",
   "scope": "Incidente documentate da fonti giornalistiche. Selezione editoriale non esaustiva; non equivale a tutti gli attacchi mondiali. Coordinate approssimate al centro dell'area pubblicamente identificata.",
   "reviewed_by": "RDI redazione assistita IA, verifica fonti 2026-11-02",
   "items": [
+    {
+      "id": "rdi-colombia-planadas-tolima-20261101",
+      "date": "2026-11-01",
+      "reported_on": "2026-11-02",
+      "country": "Columbia",
+      "country_code": "CO",
+      "place": "Planadas, Tolima (poziție aproximativă la nivel de oraș)",
+      "lat": 3.197,
+      "long": -75.645,
+      "precision": "approx_city",
+      "type": "attack",
+      "status": "reported",
+      "killed": 4,
+      "injured": 17,
+      "attacker_killed": null,
+      "actor": "Guvernatoarea Tolima a atribuit atacul unor disidenți FARC; atribuirea nu este confirmată independent și nu reprezintă o condamnare judiciară.",
+      "title_ro": "Columbia: patru morți după o explozie la Planadas, Tolima",
+      "title_it": "Colombia: quattro morti in un'esplosione a Planadas, Tolima",
+      "description_ro": "În noaptea de 1 noiembrie 2026, o explozie a avariat locuințe și un centru medical în Planadas. Guvernatoarea a confirmat patru decese, inclusiv al unui copil de două luni. Noticias Caracol a raportat 17 răniți; alte relatări au indicat aproximativ 15. Autorii și mecanismul complet sunt încă investigați. Punctul marchează doar orașul.",
+      "description_it": "Nella notte del 1° novembre 2026 un'esplosione ha danneggiato abitazioni e una struttura sanitaria a Planadas. La governatrice ha confermato quattro morti, fra cui una bambina di due mesi. Noticias Caracol ha riportato 17 feriti; altre fonti circa 15. Autori e dinamica completa sono ancora oggetto di indagine. Il punto indica soltanto la città.",
+      "casualty_note_ro": "Bilanț provizoriu: 4 decese confirmate de guvernatoare; 17 răniți raportați de Noticias Caracol citând spitalul, față de aproximativ 15 în alte surse. Nu există un bilanț final. Autorii uciși nu sunt incluși.",
+      "casualty_note_it": "Bilancio provvisorio: 4 morti confermati dalla governatrice; 17 feriti secondo Noticias Caracol citando l'ospedale, contro circa 15 in altre fonti. Nessun bilancio definitivo. Eventuali aggressori uccisi non inclusi.",
+      "sources": [
+        {
+          "name": "EFE / Noticias SIN, 2 novembre 2026",
+          "url": "https://noticiassin.com/mundo/america/2026/11/02/un-ataque-con-drones-y-explosivos-en-colombia-deja-cuatro-muertos-entre-ellos-un-bebe-2160381/"
+        },
+        {
+          "name": "Noticias Caracol, 2 novembre 2026",
+          "url": "https://www.noticiascaracol.com/colombia/atentado-con-explosivos-en-planadas-tolima-dejo-cuatro-muertos-entre-ellos-una-bebe-de-dos-meses-rg10"
+        },
+        {
+          "name": "Caracol Radio, 2 novembre 2026",
+          "url": "https://caracol.com.co/2026/11/02/planadas-se-encuentra-de-luto-alcalde-juan-camilo-hueje-rechaza-atentado-terrorista/"
+        },
+        {
+          "name": "La FM, 2 novembre 2026",
+          "url": "https://www.lafm.com.co/orden-publico/atentado-planadas-tolima-cuatro-muertos-bebe-volqueta-bomba-hospital-destruido-415885"
+        },
+        {
+          "name": "Agencia Periodismo Investigativo, 2 novembre 2026",
+          "url": "https://www.agenciapi.co/noticia/regiones/atentado-en-planadas-tolima-deja-cuatro-muertos-entre-ellos-una-bebe-de-dos-meses"
+        }
+      ],
+      "rdi_article_id": "rdi-20261101-planadas-tolima-explozie"
+    },
     {
       "id": "rdi-france-paris-molotov-20261031",
       "date": "2026-10-31",

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-02T17:09:53.862066+00:00",
+  "updated_at": "2026-11-02T20:05:00+01:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
@@ -628,13 +628,16 @@
       "place": "",
       "description_en": "Atentado en Planadas, Tolima: video muestra el momento exacto en el que detonó una volqueta con explosivos y dejó cuatro muertos, entre ellos, una bebé de dos meses - Infobae",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Infobae",
       "source_url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxQMG93M1lmT2xTc29Dd2hjZFJTSnVzNUU0T2J5SS1ZUWlzeDNjaE9wck9jLVp6THBjTXRTOTlOeEU1UV9lTmhOYnZQSE5UYndCcF9oOGVlNjhkdHhjYm12Q3NvLWNfYldwendFc29WNTY0TWpaM3hUOFFjNVJHcG5jU2RCc2g5VEEwN3o5M3dmRWZESXUwSHhjeHRfYV9MMTdiek53ckpqeDJad2ZwZFNmNy14MjFLRmZqOTBLZk84UkNnQ0NuNVpwR2hhVmotOERIT0JkZUlzNDN1QVlFTmExY1FQMW1RaWhYN2FubUZWQTQ5YzZPbXVfclNiYXNweTNuNEVfd1ZlM1J2cFF4dm9FVHctTHVVREktSTNETVRlaXoxaGZ2blZ2RWdIWkdBZ9IByAJBVV95cUxQNlJVM0twaXhCY1FWSkRSVENhejlmMVdSYlBBUGZoLWtmNmhoRTlERE45UXYtbWJGaUNIcHlWZmk1dXdXQklvSVhFcktiQWFZZEdZM2ZOcklsd005RFgwRkV1WF9PWXpSeFM1cUpBSTlaSGNEeGpEeGNRRkpuTTVUYmdBVWtlN3JLZEJjbE5VNjl1UlhOTl9VWFFnMHAtM3F1N2lzeHFJR3N2SF8zTy10YUZmUEtUNUI5YWVmS2VuVWg5Y1Y5QzAzZkpLRlFvRXhWNlhPLWlIVkNEWHFIUFJNZENOWFI4ekVvSlp5UFJvMmktbWVoV2N3NFJmTGJZM1hPN0d3Q2htOG5RR3hoTHhnVWF4Ujc2ZEp6N2NwaE0wNFRrOVZaVlhmd000MTVUUEdLN2pHbGRUYmZYU0FqU1lvaGZLb0thNzVX?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-f374470853d4ce8773",
@@ -692,13 +695,16 @@
       "place": "",
       "description_en": "Atentado con explosivos en Tolima causó cuatro muertes, daños en viviendas y en el hospital del municipio - La Patria",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "La Patria",
       "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeXBkQ1VQOG16Mkl5RE1mdWFNeC1HTTRqaEdlR0x6OS1YWG5ield5NGlEbHowSGNJb3FBbko5X3l0RWRSS1d4NElyZEFBRk1NLTlpMDlQMXlPWW1aUUxKWHhFMUJyRkI0YXVtVE9laUpJd2lIY2d5a29DMW5vNUdHSS0zNkVzcW5aeUtYM0UwdmhXZC16Ynkxd1hIN2NvbGloSVZGVFpMdVp4OW5MMDJfTndPX1BwRzQ?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-e854b2de02e90ccfa3",
@@ -804,13 +810,16 @@
       "place": "",
       "description_en": "Revelan video del momento exacto del atentado en Planadas, Tolima: explosivos impactaron contra un hospital y varias viviendas - Revista Semana",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Revista Semana",
       "source_url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNY1BaVWVCcDh2RnRTSUtqMXFaOWRGZHdwa3pKMzE0SnhCQlRzVk41OWlnNmh3U3hLOTlKZmhNcmtrTi13cmowd2xoQXBCc1lHQ0doUmw0ZE91aFQ0ZzdUZGw3X1U0Rm5CcHJrc1EzTHdXLTB1dnVZU1VGalJjQWJHQmNsaUdmN21HdlE5LWF1M21rc3lyOUM0Ql9NMEJrRkFxbzQyUktrSkx4bzRHU0JvRDVSVzhKa2lVLVB3bFk0N1FxaGpvbFQ2bENNY0QtU0NaU2x2NU1iMmFjSlNuLTdUR09QaTZmZk1qT3RkMnRhWUFOT2tWLWxBaE9iRjM1elJQ?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-d371737fa5d050d966",
@@ -884,13 +893,16 @@
       "place": "",
       "description_en": "Al menos cuatro muertos, entre ellos un bebé, en un atentado en Planadas (Colombia) - Cadena SER",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Cadena SER",
       "source_url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNYkw0ZmlJQ3hiV2U2OTc5ZEs2ZE1mQmtTdEctVERLV1hld3dQaDlrUVBldVJubXdrb2xTZlEwM0pFdEtIa3FELV9SN0RPMDM1cjdYSC02cWZTMTdsbXNQZ05IVEs5OHB4ZDZGQkhPdXZ1cWlhcllQZFJ1NXJhZUUyLWp5TUdEd1M2SHpwbEJGVEZlTWRWbkdqbEd1VXBYVFlBYzNkX01wYmhEcUh1OHpfOWw3RG9GNlA1SnR5b0NBSXA5NlhqSG0yRHJRTl95d9IB4gFBVV95cUxOS0JqYUpqdEVJOWVyVjYyTm12UU1kRldsTU5BSlFfTUI1VUVSS3ZKdG5JVEwwMzY3d3dyQjlRRVRjejZFeFNlNEs5Zm5WZXNkQzBLQ3RFcmNNZlJDaEk3cmtaVnhWQm5McUpwOFl6LV8xSXF0RmxZTkZYY3FOelJjT3dLWDJBeXo2S0dfaUhCb2N0ZjJDdElieUpETDFWaHlJZktBUnNJcjgtZ3NhRmZxYW0tMTlMNzd6bm5KblhaVHBxLTE3UWFUN08wVndIVmZ0MEVwVjliYkstSVYzNjhBejZB?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-cfd53a33d49ee4040a",
@@ -964,13 +976,16 @@
       "place": "",
       "description_en": "Fuerzas Militares intensifican operaciones en Tolima tras atentado terrorista en Planadas - Revista Semana",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Revista Semana",
       "source_url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOVm1FWGkzSzhCOFVWc0FDQnctb2ZnY3h4aFVfQ2k3QUs0NkhWY1BRekFNMmljUW5lNTYyQmlQS3V5ZjBqQ19FZFYtX0tzQjh5VHJnN3BRcVZ0cVpiVFJqMzhyZ1Flejkzdm1tYTlvQjZZN3BPOVA1WlBwTzZaZVFRdG9sZmx0blhTSmdCcExzQlhHemM2YlJtZF9rS0pkZnVVMjJSWm5ucEstY3luWEhFTHZEY2t1UERqaFd6Z3dtZGUwX0UxVE5XbFhHbFNyN0VFbnc?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-b3ab946b07b0acdbf3",
@@ -980,13 +995,16 @@
       "place": "",
       "description_en": "Entre lágrimas un habitante de Planadas, Tolima pide apoyo tras atentado que dejó 4 muertos - Caracol Radio",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Caracol Radio",
       "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQbUxGeXlVM0s4SEFhclhDWmdxOXlQZnlCd2ZLYzFyNllHY1drUjZobkpaeWlhUjlaZFZlcTZqUzFzTTR3UVYwM0h2aVR2dGFMSll6SGpJSi1iRU5ZQkZEbjJaRXlGTHRLZHF4MlNTbW1TWkVwQWRfQ3EzXzBQNmVqSTlicjNaZ2VaZkZseWVEMzZ0Tm1EYUpLTFM3NmItcUV6LXFvOXRrY2JONnRMM3p1bUFDeEJYVGVsaGIxemctREN5cjTSAdcBQVVfeXFMUEZJNEFwT0o0YWdNdGtoU3h3aGxtdEY0VTc1R05GTkFuNFhiSWxfSzB1bGtCS0VDdWVTUVlGRzNRMWlOSEtZMFkzWXZCLWFIMUh4RjZMSGhreDE2a3RkaHd3WE91YzNWY3JQbDZtcEtPYXNVdk92WndPcDVwVmVVRlplMUltRGxDUk1SQzR0RGJrRWtST1NmM0w3Wkc0c1hST0lkeHRtc0VFa2JtWkN6Y2Mya1Q3ZkpTLU0tTkZsWmpPQnFvY3RUZlpmWXBtQUItTGdDaE5iTm8?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-b2b66b373e753348e3",
@@ -1108,13 +1126,16 @@
       "place": "",
       "description_en": "Atentado en Planadas, Tolima, habría sido perpetrado con drones bomba y una volqueta cargada de explosivos en inmediaciones de una base militar - El Tiempo",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "El Tiempo",
       "source_url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxNTnBBVnhCOEJYckQtWFBDRUZTMk1Cc3pLSWZGblRydXM1TEp1Vzd6dHh6TkpoWnRNVVBOOVF6dElSNjZjOE5Ya2VzTS1lWUFMazIwWDNIU2p1amRic180emw0SnZjRGtJUDNkLW9JRHpybXVHQXo5dGxJZ1hRaXNMWmZjRXBXTnNNaDUyV2hEZGhBTllHUnAwZndDcWgwZVZ4dm1IOEhob01Dc1VQQVJTT2tKTGdpalU4MVMwZm45UTNkSHkzMl9wbGpzWGVabHg4SzFwNENpYmF0bzd0N0FjLXkyUGpFNkRwZHF4Ml9sQy1NU2s5SE90SXotYUh2ejFpblFoeFFKM2Z6SWdVQ21tbmFxaC1BU0JYSDJheG1MM3R1UVhD0gGqAkFVX3lxTE5makJlYkdXNUNtTWw3SnUxazNlby0tUWdxbXRoUVFaME9TZm9adUIySTRLbTVia1lKX0dtakMyOHVnSU5oNEl5Q09nVmNSdV9nWU9ZbDVXTXpzSWZrUkhYekl6dHZBcjZ3WHR4S0YwSV9Kd0VKWHh3WUlDTVlOczdTQUJqN3NoT1dkeDZLQVBqakwxZHQ3c1l5dmR5N2NSX0ZwVjNuWGJEUEtLQ1ZaYWJwUGNseHdzTkJLUkN3R2p2NjY3dksyNkhfeGk0V1kzUmQ2cEc5Mzh1dkhQTkRqWXJ2bHRHX3BnVGJWd0V6OGNnbzZ0dFJhUXRpVmIzRWJ0M3NWWlltU09tZW9ZQkNZS1g4MW15dTZaZVo5eFZiTk9SUlRVSTNPb0ZYa2c?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-a03c6bff15996d5c3a",
@@ -1140,13 +1161,16 @@
       "place": "",
       "description_en": "Atentado con explosivos en Planadas: Fuerzas Militares buscan a los responsables y apoyan a las víctimas.🔗 Encuentre el link de la noticia en el primer comentario 🗞️ - Facebook",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Facebook",
       "source_url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNTUluTGtCeFhuOThjQmF6ZC1zcUY1MkpoeFBZNUtYSWhRMW5aVlN0eWJlellhak9IOUppMl85VkdGTVZRVTNyMWthUVQzMjYwbnpCWnprQWtnOVBCaFFoV2YxM0lFSUNuRzRuYXRJR3BIRFRSc1ZUOU1CT09ES3prTGYybWRpMUxDbllSYVJtV0tsU1ZhYl9tYndPV3g1MjN2a1M2R0NjLVFvQ3dHQ2NOLVhTOWN5UTlOTmx1WmVvVHpfU05FaXBoRDFJMXdpT2ZVczNrWUNPVEtudi0tWk56QzRn?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-91a31e397449f0b57a",
@@ -1588,13 +1612,16 @@
       "place": "",
       "description_en": "El grito de una madre que perdió a su bebé tras el atentado en Tolima - Kienyke",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Kienyke",
       "source_url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQbjdlb0JsWXV1VGtBVUZmTDg5VmRPS0ViODl1eWlwZnRUUlBxS0g0MGk3UWZIN3Bla1J5ZFpjOFVuRi01QTAzcWxjRkRDOFhtYjN3LXk4Mi1DYVBzMndtU1FRWFZfTDluTVBNZDhPdndJZUJpYWY5aDV2bnMtZ2xPNXpPd3lBQTVXX29EYjF2SlBHTzg?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-52051510d7e05b026b",
@@ -1620,13 +1647,16 @@
       "place": "",
       "description_en": "MinSalud hace llamado urgente tras atentado en Planadas, Tolima: “Es inaceptable” - Revista Semana",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Revista Semana",
       "source_url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbmxvc1EwcEFoOTdwT1M4ek5YdDZHLVFFalRrc2RjUjFnOTkyeXhvQVZMLUJpYXNiaHlxS05NUEh0M0xlanNMTGNuMzg1WF9HdzlzNTVnVEx1cDdCTlB3VGRnU01tSHFmZmNXUzhWVTZrbUtqU3lBWGkzaHpTZTNoUHR2YUJHZDRHT2ltR1lrMGZXd19HQWJ0M3hxdzFWSkhWbkhmMDhaakE5b3VWdWk2Ym9qV3RVTzQ3YjBLOWpSRWJyTTQ?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-482c56a50bb18cc6dc",
@@ -1684,13 +1714,16 @@
       "place": "",
       "description_en": "Atentado en Planadas, Tolima, deja cuatro personas muertas: entre las víctimas hay una bebé de dos meses - Revista Semana",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Revista Semana",
       "source_url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQaWY3dFdpLVk1Sjd0TG5iU1BGYXNnTmZzczJRd3pRN0ZvMFYwMF9yeV9vVTktTGpVdmdHTE82QmYxT2NqY0NWeGZENFE5RXNlWXJXVHRxUzRfRlB2VEo1WDhDdjRVNElxMFpNSkNGU1JHOUI1c0s4QXFKbHVSQUZkYnFPV1lrazRaTXJlZi15WGdwdUt4QnFuUXFTc0VKSlY4TEVWdzBDV3FWV3VHN3hWODRSekVxOFBhNG8wNi13WF9ieGU3RndvZDE2UlZXU2pZRWljVmdLUV9SMVRKZEdsZGZn?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-3b85492d49daeb2b2a",
@@ -1796,13 +1829,16 @@
       "place": "",
       "description_en": "Atentado en Planadas, Tolima, deja cuatro muertos. Gobernadora alerta sobre nuevos ataques - El Espectador",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "El Espectador",
       "source_url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWTNaYWNZZmNHVkUxTFYzdGZfb3U3QnlhakJHcEYzdFJxMzdpWHlaUUhpY2FGNGRoN1hEYnRpeDVISFgzanpCWGNSM0g2VVJpdnR6M1JTUHI0Ykl5eFdLdjN6UXBNZ3NqS1V5MEljMUwtZmxtak9RV0k4VnhsWmpTM0Q2SkFTa1I0T3hPWTJsRdIBowFBVV95cUxQOGhsdmt0cnI4Q3ZvSnhzZjJCSnNrYXBpdlZvUnkxMnk1M05sQTlDNUg2aE90cTNwUUIwd0YxMnVmd2JIZ0RwbUhfNmVEQVVOamxid2JZMW4wZ01FSmc2OXY0NWc0NFg3VGxLUUpGMVBfODQ5amVGdGZGbm9tZ3kyaV9kWnlUMG50V2xfTzhPLVN2NVY4Nzlzd0x3TGJScFVSdkJJ?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-23bdd974167ff57f87",
@@ -1876,13 +1912,16 @@
       "place": "",
       "description_en": "Una bebé de dos meses entre los cuatro muertos que dejó atentado en Planadas, Tolima - La Opinión Cúcuta",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "La Opinión Cúcuta",
       "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaGdZOU5pWFN4ZHBGZTZQdmpITW8wQzFUMENaVG1zQXh2dXJkTHVpUFhrYzVpOUppSDNEVnhvWVNRY3p1amtKR0RMck0yLVlJM0RlZmZSWUZfR0ZHQ1pZMm5ScERsRUxUZlhnZm9jUlhQZURuS0JJUTgwVlhCdlpBM2I1cS1ORnBLODZBNWFvWWlBaWdxOGcwU0hWaVN2Ti1BUEwxZk9CXzV3VHlyVUsyeEk0RQ?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-187c4683b448163b90",
@@ -1908,13 +1947,16 @@
       "place": "",
       "description_en": "Atentado con volqueta bomba en Planadas, Tolima, deja cuatro muertos en balance preliminar: entre las víctimas hay una bebé - Infobae",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Infobae",
       "source_url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOd2kycDRiaEdFODlhTEdIWXYtYWJpLVUyU0FpRDQxUWQ0aWE5dU9BaGF0REVNR2JiMVh0UDVoVkdrV0VuQk5ZYlg0ZjJqY0pSZkRYUUIwSXZEWkxtTm5vOFdRYXlKd29SM0VJaTFmMVVHUmdjdDIzTGZmQi1hLXNrWnUyX2Uxd1J5TDRTRDlacnlhRjRTNUZ1T004bkJqb0VhRHVGYjNaTVZDVW9YX201c0tIb3BmZ1ItREVaLTVzWkxlcGJZV3Nlajh2cHJoZmZwSDg2ZV83cFV1ZnZ5Y1N6VVAwMzUwSFphdXp1SVQzMWZJS1c5OXpLbNIBkwJBVV95cUxPdnNjQ1Y5OWtlM0tpTlQ5d1pOSjhOdEN0d0d2M0d5aG14UnhRZk16V2VXNHJWUThxMTg3WndLOHFublV5YUR0RENlVV9mUXRSdWpobWlVZU5WQTVTbno4WXBvbVJyN18wcm8zbWdfNl9uRkRyTUJQZ0UyLS1mcFlZZHcteEpWcmdkcUJ6eUR0RWZzVldGOUpZSUxENVRXVUVOUHU2VmlvWlprWkh6bjhJbl83X1V0dDBKQXByZTVCSndWeEZCM21rX2pyZVdoUEM4alk3U19rMm14aDdjTXJzemJZUG1DajlEMVctVUVlY2hwdTRSZndQSnBRM0NUalIxa1JKckhWNzRMRGZyZ3phRFYzNA?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-14d952639c7b0cb638",
@@ -1924,13 +1966,16 @@
       "place": "",
       "description_en": "Explosión en Planadas, Tolima: Juliana Olaya, deportista y madre, entre las víctimas del atentado cerca a base militar - Pulzo",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Pulzo",
       "source_url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQYlRKbGpaZDFfNjVaZ3BLR1Jaczlqb0V1ZzI1V0J4TmVMaXEzMkI5c3k2VGM4SGxrZm1saWtfQjNmakVKWHpzbFNXc2x6LXdCenpJNUViQzMxNE5nR0RrREUzVGRlQ3kxZElUVjN4d3BsVjEzdEk0c1JuQmQyd3BhSHFqV3RubWZWaWItTzN4SFB2NktKNV96UE9jSVAwckw5VjNnX3ZUVC1RT21UZExnRWI2VzVzZ9IBuwFBVV95cUxPYmlCSXRWU2tyQmg4TlJjNjZwc05Ub05lQnNyYlcxU3ZISTlvX2RESll0UUl4YUxRemxJZlhvZzd2WkptREROMFFyZ21ORTUycGdoRUlEQmRySGdpZEFKZWU0eEpNc29IWlB3cldTc2UyUHowTGFLY01VdzFxWmZoa0VsemVKaDZ0Y1B4N2o2SndrLTFjV1VOa1RZR3RoTU5FNnB5dmRybHRzQmVFbTIxZlMyTVNXVjE3RlZz?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-142a42313c12242af2",
@@ -1988,13 +2033,16 @@
       "place": "",
       "description_en": "Video muestra el momento exacto del atentado en Planadas, Tolima: volqueta con explosivos estalló y dejó cuatro muertos, entre ellos una bebé - El Tiempo",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "El Tiempo",
       "source_url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQakhXU2s1V1ZSb295VklWemRkeEJXeXRCSXhwZmJacldGX2pjdV9xUVhsX3phSjlOWTNJSDRpS0RLRE04b0hKSnJOVjh0QUFnaXQ0V2NJbkszTHEtbkY0UjhpQTJ6SkxpQkJQWXdhWU9qZ1g2U05FaUJyemVGVDdPcFV6LU9xUkdmY2J0R0ptdDNEWU5aRVlsWTVDOGlCNTd1Y21NYnQ0WmJ4bWlIdXkwZFE0ZjU5MlppNFY1c3BzZk9QVDkwTkdKUVhwVFFraTR2VUJtNHpGaXE4RVhDazUyb1VrQmJuUXhyZVZQcDlCeVN3Tk1PS3U3SUY3M1UwNWRXcTRCOHl0b244UTBwMmlfRTJWeHM5OEpRcU5mZkQwWk3SAaYCQVVfeXFMT09lbXdxVUxXNWw4TDROalJyNU1oRFFOTEJTLVVSRlk3YzJrdTZmZnI5RUpxbE50cHNOSmZFU18xVFRhVFZlRU5jcEJJdngyMlNnTzJKamVkNzVUYXAwaWlNME1QLU10R2ZENzBiSWRWLWFlaGlYd01XXzVVMTlGQUo0Um9qMWNFZ1FQZHlkdzh0aGt1RXVscXhzaXlOeUpwRnNFV0M1Zkg2dFNrWmY0REQ4Z3JkbDNVM2JKNDRyeVQwNlZmelZ1UENJLTVYX25aVWM2WmNBREtLZjB4cVBteXJzZGkxU0pPUG0yVi1GWi1HSWFSRzZKZGxoT2NUQmNIZlJ2eng2UkV1b1dPTDdjRXFzR2xXSHBOY0tlTy1HSVBIRlh4MEtn?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-0d207f17d20b17f268",
@@ -2036,13 +2084,16 @@
       "place": "",
       "description_en": "“El terrorismo no puede arrodillar a Colombia”: Procurador Eljach tras atentado en Tolima - LA RAZÓN.CO",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "LA RAZÓN.CO",
       "source_url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZ1hQXzJRLUN5ZVVhdlNSSVBjQWVYdUlJNmtVLU9JUDFzTS0yVTBweEp3M1o2clNxOEZPUFltcGZkN3UzTUxYRmFxeGtiQzFoYW1OSDNIYzMxZ3VXVFRkOGlPbXduYU1ta2JWUXR6Q3NWRzRrZDE4THo2MEJYRE1Fd1JVYkk4eE1CWVpfeGNrbWM4eXJ2WVY1ZEd4WExkakwwSHhoVUk0SENmQQ?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-0339f2a67b9f832e98",
@@ -2052,13 +2103,16 @@
       "place": "",
       "description_en": "Así amaneció Planadas, Tolima, tras el atentado con explosivos que dejó cuatro muertos y 17 heridos: la volqueta utilizada en el ataque quedó destruida - Infobae",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_es",
       "source_name": "Google News search / es",
       "publisher": "Infobae",
       "source_url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOdDZLMFBjRUlkdVQzTFlpd1VQSEMxLW1HV0RkbVY0ZGkwa1FNVUpBNUhJX1cxVTVNdkFjR2tNcFJOQnZqU3pWY2RNb1ZPaU92VUxncy01aVREUnRmcWh6dFJURXY0R1hET3lUZjJ3SjZSRHY0M2lFT2FxUjNIZXBMV3h3ckhzZWNDdjJ0RnpmN3dvOUVpeXQxbVo4cGN4Z3Z5cGcwTndicVZGYUs0R0NlYTVuU0o3d1lvbk15RVZGbnBqWGRnaDJIVDBYZlFVUElzQ0d5REVXQUNqRTdvQm9MVDlaYVJXLV9MZUZLUVZGT1Q0NjVlNXFCbjJfY3FIRTFGWkJjNVlqWkJ5VFZXVlBHOHh6eXpUalM1NXZ1cGpR0gG4AkFVX3lxTE1sYWhXczFDa3lsczZHYjVUcWJnNC1GTWtPQkx3ZExUcmhTRUJlQ3dBcEFNOHVkVl95QVJETXhrR1BrRU56blJxdXhuRktRalYwRnhpcFMtTGZyaEtFYkw3cG5IcHVzazc5YzFndmthQ0xIbHoyX1h3ajU0N18teVVVZFVhRDdKaVM5Y095c3FrMWxia2ktZkQtMW1QODJ6aWF0TlYxVkY5bzlrVVlxbGdURnZybUhKMFpWLVJIX1ZuNlhDSkhrRTdocE9HN1pTdlU0Rkt0Y1dTUTdnSUUyS1VERS1DYnR3T0wzWjJodU1lVmpXOUE2TndtNDFraXJ6VGwtRmpRVnFrQVNuME9jME5ySGFuTmxfWTVWN2RZNWh3QnZjYmNfMDhLUndvM2hDckVnOTkzczdWTg?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "monitor_id": "rdi-colombia-planadas-tolima-20261101",
+      "reviewed_at": "2026-11-02T20:05:00+01:00",
+      "review_note": "Episodio Planadas 1 novembre verificato con EFE, Noticias Caracol, Caracol Radio, La FM. Bilanci provvisori discordanti; attribuzione non giudiziaria."
     },
     {
       "id": "lead-fdd809ebf47b03d3e9",
