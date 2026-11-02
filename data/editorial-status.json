@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-02T11:59:32.301585+00:00",
+  "news_updated_at": "2026-11-02T12:01:25.123294+00:00",
   "editorial_updated_at": "2026-11-02T06:52:11.631470+01:00",
-  "translations_updated_at": "2026-11-02T11:02:12.878620+00:00",
-  "feed_total": 77,
-  "feed_extended_400": 5,
-  "feed_missing_body": 72,
+  "translations_updated_at": "2026-11-02T11:59:43.220122+00:00",
+  "feed_total": 76,
+  "feed_extended_400": 6,
+  "feed_missing_body": 70,
   "feed_short_body": 0,
   "editorial_total": 21,
   "archived_editorials": 132,
-  "translation_records": 37,
+  "translation_records": 40,
   "pending_total": 71,
-  "pending_filtered_out": 196,
-  "editorial_verde": 9,
+  "pending_filtered_out": 206,
+  "editorial_verde": 10,
   "editorial_galben": 33,
-  "editorial_rosu": 48,
+  "editorial_rosu": 46,
   "pending": [
     {
       "title": "A un italiano uno degli oscar per la neurobiologia",
@@ -66,6 +66,16 @@
       "attempts": 0
     },
     {
+      "title": "Articole cu tagul: liviu plesoianu - StiriDiaspora",
+      "category": "",
+      "published": "2026-11-01T22:01:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpVkZ4WHMxbElhUC1tVHpRcUxBQmpJaDZra0x3amtYWGh0b3lJLUQ0NFVtV1Y1U0tZWWdTN2F5R2JId3VpUFUtNl8xMWIwc1prQmtaRWo0akk3SmlSV0l1ajdrR1dyQQ?oc=5",
+      "source": "",
+      "status": "roșu",
+      "reason": "Testo originale assente o inferiore a 400 parole; fonti da verificare",
+      "attempts": 0
+    },
+    {
       "title": "BYD anunță 10–20 de stații de încărcare ultrarapidă în România, la o vizită a vicepreședintei Stella Li - Monden.ro",
       "category": "",
       "published": "2026-11-01T05:34:53+00:00",
@@ -103,16 +113,6 @@
       "source": "",
       "status": "roșu",
       "reason": "Approfondimento originale e verificato ancora da completare: testo inferiore a 400 parole o fonti non documentate",
-      "attempts": 0
-    },
-    {
-      "title": "Coșmarul unei românce din Italia timp de 15 ani: bătăi, gelozie și amenințări cu moartea de la bărbatul cu care trăia - Rotalianul – Revista românului din Italia",
-      "category": "",
-      "published": "2026-10-31T11:29:25+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVGR3S3BoRXlDVVpLaks4V0VGcTlFSkctOXQyRUVyWENTbTF2QTVWRTZDelVReFEwVGFoYjJ1LUhuSGhLZWNiUTZUZmJ6OUNTb0xNSjBIbEVTcXNod3VTcEZBZkR3aEtIbWFQY2hmd1VhMkREbmhaWExwZl9aclloNTU0WmU1Mk0zek5aQ2hER3ljc2pNcDJoSmlaYmgzUWQ3YzFmSGJrZnplRXA4bGhPVXB1TW5QY25RTV9kS3FjT1R4QUduUWNaVFpXdW9rM1pjOUY2WktR?oc=5",
-      "source": "",
-      "status": "roșu",
-      "reason": "Approfondimento verificato da completare: testo originale breve o fonti da consultare",
       "attempts": 0
     },
     {
@@ -834,20 +834,20 @@
       "words": 0
     },
     {
-      "title": "Consulenti del lavoro, a Vicenza un corso universitario su bilanci, revisione e sostenibilità delle imprese - TViWeb",
-      "category": "Italia",
-      "published": "2026-11-02T10:29:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPR2VlUWVtRmZwTkZIZjViZGs0ZDNWeWtRQWVYNE5xSkpSXzdPLWhMRVFYQ0tIcVV5ZmZHbFBiVVlCSlVzcFdPakVOVVRrWldnUzdTeWgzRmV1eU5jcFRKMDhKSHh3T2pkT2MxMnhVelFuVG45bmtpaHJ1RU9KVElDNFhJU3FOSDMya2luY3BGdUZPckp5RkJGME1pLUJCdlJfT1lMTlUwNHVqWTg3cUdvUzd5cXBEaHhTWkw5di01MGtCOWNvcnEw?oc=5",
-      "source": "TViWeb",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "„Călin Georgescu este un ventriloc. O combinație între desene animate și Ion Antonescu”, susține Mihai Demetriade, cercetător CNSAS",
       "category": "România",
       "published": "2026-11-02T10:27:12+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/calin-georgescu-este-un-ventriloc-o-combinatie-intre-desene-animate-si-ion-antonescu-sustine-mihai-demetriade-cercetator-cnsas-4017887",
       "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "I Grandi Maestri al Piccolo Teatro: Caravaggio il 3 novembre - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-02T10:25:53+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRUVoUDFiTmRfbmR4Yi0wNHZFQTJRNTdEUkJiSkZLdXZ1SnVDbGZtcTRXRnJqVmVGbUs0d3Y2MnZSbDcxWTlmYXZWSnNFbUNRMkM1bXp1TFRDbUdqLWJEczEwZUNaamwxcGlyTElTZUhNLUQxQXhoeUJrd1hJTndwM2pUTUJWVHQ4?oc=5",
+      "source": "Padova24Ore",
       "status": "roșu",
       "words": 0
     },
@@ -1039,15 +1039,6 @@
       "source": "la Repubblica",
       "status": "verde",
       "words": 496
-    },
-    {
-      "title": "Articole cu tagul: liviu plesoianu - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-01T22:01:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpVkZ4WHMxbElhUC1tVHpRcUxBQmpJaDZra0x3amtYWGh0b3lJLUQ0NFVtV1Y1U0tZWWdTN2F5R2JId3VpUFUtNl8xMWIwc1prQmtaRWo0akk3SmlSV0l1ajdrR1dyQQ?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
     },
     {
       "title": "Protestele de Halloween din Germania și Franța, marcate de violențe și arestări - StiriDiaspora",
