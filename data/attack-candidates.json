@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-01T14:19:26.720219+00:00",
+  "updated_at": "2026-11-02T02:00:00+01:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
@@ -274,13 +274,16 @@
       "place": "",
       "description_en": "France opens attempted murder probe after petrol bomb attack on police - TheReport.live",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_en",
       "source_name": "Google News search / en",
       "publisher": "TheReport.live",
       "source_url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYWJ0d0xuamFfb09CRDZ2QXRaa0N6M1BCQmdUZGJqZ2hlTDVBX2pmd25xUmNSS1NHQV9aellLcVBXd0NDRzlQMUhlY3FqalNYUXhzdTMxSThWRnlSVWMzd1REQWU0ZDl0NDM2T1VWQ2ptTnI4VTVaRDN0aGxLaFFuVEJyVXVXVDBpUlVwRXByMlNjWDBKYko3QlZpTlA1U2pIckRLa3poQjVjZU1PcDNZbW1Tbw?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "incident_id": "rdi-france-paris-molotov-20261031",
+      "reviewed_at": "2026-11-02T02:00:00+01:00",
+      "review_note": "Notizie duplicate del caso Parigi del 31 ottobre; fonti AFP, ANSA, Guardian. Nessuna attribuzione terroristica."
     },
     {
       "id": "lead-e814f0c9d018d0b0a0",
@@ -504,13 +507,16 @@
       "place": "",
       "description_en": "France probes petrol bomb attack on security forces - Breakingthenews.net",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_en",
       "source_name": "Google News search / en",
       "publisher": "Breakingthenews.net",
       "source_url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPODh5THR4Y3pna3dwNFhVbmNnVXF2cEpjeFZ3amZfMlJ2TXVnckJ4VmNFWGtQN09wNVBHRjBGeG9Wa0JfWFZ2LTVvQlk1cUVFWjFmUTFzOGtFUHdTb1FNSjE4emlHeGNLS0l0Z0VjdXc4bzBIMkVDTGc1YWItSGhCTVd5b3h6b0Nva2dwWHhLdW12c2lhRnlSRHNfNHU?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "incident_id": "rdi-france-paris-molotov-20261031",
+      "reviewed_at": "2026-11-02T02:00:00+01:00",
+      "review_note": "Notizie duplicate del caso Parigi del 31 ottobre; fonti AFP, ANSA, Guardian. Nessuna attribuzione terroristica."
     },
     {
       "id": "lead-a8970d3ee0ef5ef251",
@@ -609,13 +615,16 @@
       "place": "",
       "description_en": "France launches ‘attempted murder’ probe after petrol bomb attack on security forces - Arab News",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_en",
       "source_name": "Google News search / en",
       "publisher": "Arab News",
       "source_url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQdHdwTlpHQjZnaV9wNGRYcHJCTkxLMFNaV0tEakhoLWp2cWFNSmtzdG41cEZkeEJkSWtRQWdhZ0FVZHZVT3RFNHJVNDVpcXBpVjNqSVk1dGxIU0lWUldVT2NDRW9MVDJTS0NleUl6VUhjaGNUQVBYRGw1Vm5BWlplR3BwVUdlM0lpT095Rm9oV2hqVHZ3ZEdUT08ySzZtM0N0MXhyWm9pMWs1V3hmSS1VNlZ2c1Rxc3BxdlhPa3NB?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "incident_id": "rdi-france-paris-molotov-20261031",
+      "reviewed_at": "2026-11-02T02:00:00+01:00",
+      "review_note": "Notizie duplicate del caso Parigi del 31 ottobre; fonti AFP, ANSA, Guardian. Nessuna attribuzione terroristica."
     },
     {
       "id": "lead-8e75a0e39349933082",
@@ -708,13 +717,16 @@
       "place": "",
       "description_en": "France Opens Attempted Murder Probe After Petrol Bomb Attack - Head Topics",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_en",
       "source_name": "Google News search / en",
       "publisher": "Head Topics",
       "source_url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPc0dhQ2s4eVFaT3A4QlZueEIxWjVhZDRrX0JiVlRTQWdFTGJWM2NnYnRvYnpIYXhJRTFBZWdzbTdvS21yVDFoV19YclBMdTJST0Z3RE9JV0F3U2NWZG5qODBySC1objNCeWtpc2RqNW9KaF8yOXlpeU5pdmVUcl9fNEx1MTYyT1BCRXA5NE84QW4wTDVobTNuNE5pNnpjVDg1bkE?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "incident_id": "rdi-france-paris-molotov-20261031",
+      "reviewed_at": "2026-11-02T02:00:00+01:00",
+      "review_note": "Notizie duplicate del caso Parigi del 31 ottobre; fonti AFP, ANSA, Guardian. Nessuna attribuzione terroristica."
     },
     {
       "id": "lead-67f08060b8380eecc7",
@@ -724,13 +736,16 @@
       "place": "",
       "description_en": "France launches 'attempted murder' probe after petrol bomb attack on security forces - LBCI Lebanon",
       "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
+      "review_state": "verified_published",
       "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
       "source_id": "google_news_en",
       "source_name": "Google News search / en",
       "publisher": "LBCI Lebanon",
       "source_url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOT184YUxwd2htUzhYVGROTk44a1FtYWpBWXV2QlBoYlJYQU1nR1RrWV83T0V3ZlZSb2xEc280VHVCdjZDdUxPbEt1aDU1V29vd3hjZDBwck5ob0tRRFFEYnRJaHVmeVoyUlZ4SlFpRUFDSTM3aTZNOXBWcjFlNW1UUGowcEhzWjFVMWR4TU9WZVBDZjk3WU5jRTFBQnhJZ3BDdGJ2V3VPY09FSXNoZU82SHk4UnFSRnJOTll1SA?oc=5",
-      "event_date_confirmed": false
+      "event_date_confirmed": false,
+      "incident_id": "rdi-france-paris-molotov-20261031",
+      "reviewed_at": "2026-11-02T02:00:00+01:00",
+      "review_note": "Notizie duplicate del caso Parigi del 31 ottobre; fonti AFP, ANSA, Guardian. Nessuna attribuzione terroristica."
     },
     {
       "id": "lead-64457ed0e7a5ccf8e2",
