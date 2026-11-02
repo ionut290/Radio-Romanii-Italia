@@ -1,12 +1,67 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-02T08:40:40.000057Z",
+  "updated_at": "2026-11-02T09:50:43.293412Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-56d00bceb7d869ec",
+      "category": "energie",
+      "region": "global",
+      "title": "REGIONAL REPORT: MIDDLE EAST",
+      "summary": "",
+      "source": "World Oil",
+      "published": "2026-11-02T09:14:03Z",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcXprWjJCQzVEUTk3MlhZd3VVXzAxNy0zX2VEV0FiSWJkRENtQjBkdE4ycjRZcE9xX1BHTi10cVdtLXplNjdCRUhyaU41Zm9tMHpoU3oxN0tFbnpZTEJFMEROZ2hfMnJLUGZ3UjBGQ3VZcjN4ZXZRWThjMWo0NmtwVXM1MlNxaXp0bzcyaw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-2549f33162b84772",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Israeli fire kills 4 Palestinians in Gaza amid ceasefire violations",
+      "summary": "",
+      "source": "Yeni Şafak English",
+      "published": "2026-11-02T09:02:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObUQ0VXVrSUItUTlfejlsZUoxZFVBeXFzalBic0VMZFpyRXQtQVhkVVRteVFQQm9zT2pQcWhwUmw4VHdjem11c3QxZ1hhYlliMTNSVFpLVXA4ZmR5enNOWkRSMUQyekxwX0tZMGZMdHVpTWdlOUt3a2RNWkwxQjFBSDB2eVBNb2wtUUlqajljR3ZNUnJJTXpMOUJkX0pyYVFkeUFnNjduM2JOdw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-4b6278fe4ef18dec",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Saudi-led coalition intercepts Houthi ballistic missile",
+      "summary": "",
+      "source": "Yeni Şafak English",
+      "published": "2026-11-02T09:01:53Z",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOR20yTUhXS3hwNjVQVWxYMWZ5R2hDUVkxelk2RW9sd19odWhJc05sbDNUN2VjbmlfMzJVaWdXX19aWDlPX1BJUVd2VzlCUEJxSHdGVDdma3NGTmRFdEs2MzBOeEczRUhMd1BQbWdTaHNIaDV3bXQ0ams1ejRQdm9ONUkzY25ibHluaDVFQ3hkZEdqSkxoWTVlZHFB?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-84606fc39a581d14",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Outline of Comprehensive Taiwan-Japan Economic Agreement Emerges, Five Areas Included, Signing as Early as Year-End",
+      "summary": "",
+      "source": "BigGo Finance",
+      "published": "2026-11-02T08:31:50Z",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA3VV96bnlXcHRZLTlKS3RDMl9FUEhmdU9EcXF6VDFOMXNMaTdVNzBCOWtDUnhtMUhGbzBFalhWd1h2MVhhLUFJTHI0UVpqSmFRVDBMR2k4Z1R6a09YVmpDZmliNWFMQVFFNWNhbndDeWxtaWU5eVE?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-688e9218f8e37dd8",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Algeria seeks stronger energy, textile, shipbuilding ties with Bangladesh",
+      "summary": "",
+      "source": "The Bangladesh Monitor",
+      "published": "2026-11-02T08:16:18Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOb1dIY2E5cWFBMUlhY3hyZE1aWG1qRTlkY2lnakhxRmFlZFNEdDRJSGFKY0dJTmI4aldQNU5nZTdkSWp2SlVYalhaWHpKdHJoMjdqRGEwaW9xMVd4ZGZkLXk1ZG4tNTg4bVY2c0w3UW5VYnF1TVpxNjVzOU5tZnpsbHk2UXlKc1NlQjI3MHN0cWxTZlQzeE1KS3RFMUY5ZktDS2lEUmFIVERKcm44YmJxbw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
     {
       "id": "geo-637b1adc63e88ef1",
       "category": "diplomatie",
@@ -16,17 +71,6 @@
       "source": "Demócrata",
       "published": "2026-11-02T07:58:32Z",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcFZ4RERWNE96VVUwaVZpS2JWUXFUWEVtQUpXejlLUmNoMGg0Nk9lSjUtNExzaDFoMzNBZzNGYkpkajNsUk1ZX3U0eDBacUptMXM1VWtPSkkzT2ZMMHZCSzhoYkZDMzlBSktRRlJFLVRNWnk4WXJVMXg1Ml9XOUJkcWZ3VlpTcFFwM20wejRWR083a1I1SF9lSUJUQkNaSy04YlNDdUtiSEtEazlkZGlIamp1dm9sNnZfYWRad3UxSHVwaUhuZ0I2aks5RU9zNUxkVXlGZtIB2gFBVV95cUxOLWs1ZFp0dXBZSTFxZnZSMXhyanlLMlExNm9vMS0yZFAySmpZUExNeGdGTDdwaHN1Yjg4UmRZS2FUTENSOVVQUm1QbTNScTNZYkQ4LUtFQ01PemNWb2xEQ0czRldiN1J0MEc0dXd3ZHdMaXB5OE83U0hLY1RKT0hoaVBpOWg4UmZ4MldqNENkdG44cHdXWV9obDFiMmRma0w5OUpSdjhlM18wN3pxcGJxYXVteU1Sb3U0RFk3Q1MzMkZrbHBCRk5yYnRWLXJSQmRKeFFESW9NcDMxUQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-19dbfb9159e7fc49",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Arab League demands international probe into Gaza prisoner torture",
-      "summary": "",
-      "source": "Yeni Şafak English",
-      "published": "2026-11-02T07:52:09Z",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOREE2Tm5rVE1ZVlBqS1FjYzh2UVVTSk5FeHh5MmlvOTBqRlIwZVNkVlFxWGZpbUhRb2pscEtOQVIwVTBaYmhNQUVkYVZKMktYNU44NnJsa3lxdHNYZ1Z4RXRhUzNteGF6ZjdvOEczYnZZckNCcHBfNFBGNUxpT1FMd0FnUzk0NFNIWUM4OGNtLUg5WEc2T1dWT3dvRGx2QmFQUkFtMkdfbWU?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -52,14 +96,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-0580d2b0e2e4ebd4",
+      "id": "geo-c9e1dc30b3827508",
       "category": "europa",
       "region": "europa",
-      "title": "Polonia, crisi del Tribunale costituzionale a Varsavia: Tusk invoca lo stato di diritto",
+      "title": "In Bulgaria vince la filorussa Yotova, ma nei seggi deserti trionfa l’astensione",
       "summary": "",
-      "source": "Euronews.com",
-      "published": "2026-11-02T07:33:56Z",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWm8xVnJpMFpTSEUzYldaUTdnUGtOUWZudjh2SmR6dEVxV0hndW5TdFQtdU1OTFBJSTBnSk1DN0YzTzlTQVBxYS1ZMjduOFdpZjhVQV9xOGlBSHpuc3FraDQzUFdGOTZmTmE5ZnEyeHVLMWtIUVhRVjQ5d0ROOFRDa3F5QVNHYXZHNWFfZWZiOEh6MGNBRVV1NTRMR2JMMHdvMjFxQ0JfYWVaUUFYZ205UmI3N0pab3JQQlU5Sg?oc=5",
+      "source": "QuiBrescia",
+      "published": "2026-11-02T07:34:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPdGEtTVJoUVRBbUF1TndmblU3NldpM0dFZWJRZWFfcTg4X3lkUjFkdk5EOHpnUXNydWgxY2JXcVJjT1NaZE1KcW9zd19WeEV5Vi03bkYzczRiOTROTFZXSjY3Y0R1Q3ZmUFlLTTBMRDdFcGVBTzlKeGFQcWdKOEd6QlNuUjdMa2lXTzJNaEkzbi1uanBvZWlsWHJxSFpNSVFkZ1MzZ0FMbk5MbUN6NHpDTWstdTI1U0NxNkcwVkRYNXBQdG5IV1lqeDl3?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -71,6 +115,17 @@
       "source": "Euronews.com",
       "published": "2026-11-02T07:33:56Z",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTWhIblhXNldjdjg2SzFpQUJRQi1QYlVLR0ZfSDBDelJoblozcEdpaFY4WGtDZlIyaDRnNjVtMXlGdDQ3Z1hYdEpWSTdqSTBGLTduZzM2MXhGZ2xqbmc5azB3R0gtbmtzVklnNXZUWUVDYkh5VmgtVWxoR2tCRDR0bzZ5cFBBT3gxajZXWmtQZHNqcm1VdVVZRWtTd2M5OFR2R2QwbjJlTjdNSURIWVlRTVBsTG1QUQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-0580d2b0e2e4ebd4",
+      "category": "europa",
+      "region": "europa",
+      "title": "Polonia, crisi del Tribunale costituzionale a Varsavia: Tusk invoca lo stato di diritto",
+      "summary": "",
+      "source": "Euronews.com",
+      "published": "2026-11-02T07:33:56Z",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWm8xVnJpMFpTSEUzYldaUTdnUGtOUWZudjh2SmR6dEVxV0hndW5TdFQtdU1OTFBJSTBnSk1DN0YzTzlTQVBxYS1ZMjduOFdpZjhVQV9xOGlBSHpuc3FraDQzUFdGOTZmTmE5ZnEyeHVLMWtIUVhRVjQ5d0ROOFRDa3F5QVNHYXZHNWFfZWZiOEh6MGNBRVV1NTRMR2JMMHdvMjFxQ0JfYWVaUUFYZ205UmI3N0pab3JQQlU5Sg?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -140,14 +195,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-06e0134215da1f12",
+      "id": "geo-5698710bdcf3b543",
       "category": "europa",
       "region": "europa",
       "title": "Polonia: il golpe contro Tusk, lo Stato di diritto e l'Ue",
       "summary": "",
       "source": "Il Mattinale Europeo | David Carretta",
       "published": "2026-11-02T06:31:25Z",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9PbFRXNl8zTU1UcWZzMWtmNy1mSjJfSDBBZUIwcnViTEpfTVhhRWh4eTVIMVlGeWJISWM2TC1sN2N3ZHVJYXgtOHNrOUlvaGtmN2UxWkoxX0tZSXJyYkhCQVdleU4ybExjSWs2X2ZYVU9SVy1JbVBZRG5IcDQ5dXc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPbVYwVEdzR2RnZDhWM0xNT3VfWmlpbkp5Mmg1cTFkXzN4UTZidjRjdEwzNldneU1oYzJNa2lGcHpEWjZ6c3NzVG9pdGg1SkRfY3JEeWZWRnRZT0JQcEEwUkZTQmJUZDdpU2R2aThMQVhSaHRMZ2tPMWtVeGhUY2J3UTZTN3U0SXhXT3RXMjBNYm5hbUZEYUtueDFoc3RNeWpxUWNYa01Hd0JySExVNDliTDRwSWFZRmIyT2dXUlhBdDRrRl9mSnowbDFlb0QzNjFQeGFfc3ByaU1OQQ?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -195,14 +250,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-7260ff794e367f7d",
+      "id": "geo-f1359b61e65cae00",
       "category": "securitate",
       "region": "europa",
       "title": "Politico: NATO fears new Trump pressure after election ᐉ News from Fakti.bg - World",
       "summary": "",
       "source": "Fakti.bg",
       "published": "2026-11-02T04:05:00Z",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPdV82Nnk5RGlYNU5HNXpLWDkyLS1PZ2I1X3NBUjZlSGt4ZHlpM3ZJY0NNWEVCVExETGg0VUthVkVBbThyTl9Wd2I2U2dxR3lrNmZYa2M0dzROWjByVk13LWZvVkg5X2ZZSWxYYlFHWHpOdmt1UFU3cjV5WnJhNGY1RHNna1R1RC1BQ3BUVDAyVzlLQXZKZU5Hby1XWGN4UVRn?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNRkNiUVg5SnJJajZiQWF3UUV1MG83TDlkb1NpSUZjZnpzd0dONGJhOUlnUVNTX1pTM1YwbVhiUkVnNDhPeFcyZHRoNGJLdVA1dDVoU21rX3g0UVBEbDB0MnduQjlkb1hMb004RzBuTlUwWnZhelpsa1J4cUMxcUNWTktuVU1VWWdXRzRXenpYNlRIODlObUdDZlBydw?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -242,6 +297,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-b1bdb0aaf473d4f4",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "From traffic curbs to tree planting, Shenzhen’s Apec plans enter final phase",
+      "summary": "",
+      "source": "South China Morning Post",
+      "published": "2026-11-02T02:00:10Z",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQOVFvcUFFX09CR2FkSm1aUVI0d0xkTjJZcExTM0pXNVR4bTJ4OGNjdkpwc2Uyc0x6ZHJIUld3b25qVDY3LTNLdlFUNEFNVVk4T0kyakpPa0pDdEt0aTFEcjdlZlU0RzZnTG9aVzg3TEpaaXgzRWpvSzR4VktxcV9YQmNlLU5WdkEzeUdzM2FDcmNjWjczRWZ0Z3RnSnFQVm4yUUdSSS1WZHRRN0RacTZyYXdUVERjWEVkc2otWlV0dVFCYXdiT1dnaldVRURqeTMzLUHSAdIBQVVfeXFMUDlRb3FBRV9PQkdhZEptWlFSNHdMZE4yWXBMUzNKVzVUeG0yeDhjY3ZKcHNlMnNMemRySFJXd29ualQ2Ny0zS3ZRVDRBTVVZOE9JMmpKT2tKQ3RLdGkxRHI3ZWZVNEc2Z0xvWlc4N0xKWml4M0Vqb0s0eFZLcXFfWEJjZS1OVnZBM3lHczNhQ3JjY1o3M0VmdGd0Z0pxUFZuMlFHUkktVmR0UTdEWnE2cmF3VFREY1hFZHNqLVpVdHVRQmF3Yk9XZ2pXVUVEankzMy1B?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-1732d522f5b664db",
       "category": "diplomatie",
       "region": "asia",
@@ -264,6 +330,28 @@
       "source": "Malaysia Sun",
       "published": "2026-11-02T01:02:00Z",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNaGpyUldzTEUyeklQc3pBdmxzX04zVjlfTFRoRHY1UU5Jbl9zUXFIQTFYSkRBa0s3aHVaVldNTkJkZi1lRG5PRGVaSmFELWRWUTdRNDVFWHUzeFJuRXZjR1ktRHY4N3BveVhCeHdWLXBYYUxGVGZpeUl5WWhqQzY4RTFFOWlBYVVNSGp3OTdDQTZpVS05eUNyekZKVXFUenp0ZXlnOHVzd29yLVhEcFdtNG5UMXc3YmVTUzVaVy1HRmptTnRlMk5FOWwzaThOM3Jt?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-3b9d7b7bceda915a",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Ukraine Resumes Strikes on Russian Refineries, Targeting Three Plants in Three Days.",
+      "summary": "",
+      "source": "Ukraine Business News",
+      "published": "2026-11-02T00:12:42Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTkFlVHFnUGFOQXhvOXA5Mk9RTjhoZlNlQmc4U3VZc2V1bkFLNFlMSjd2c0h2bkwwbEF1NzJVMUdmaUQ1MGlnUDQyT2NSLVU3OWdqbXYwNkgyNEVDWDgySDl3c0FTY0h3VVRSQkRCdVUzckZ5NXRuYUh1ZTdDLWhrS0U5Yk0yT01oWTA2RFJRekZrOWhpMFoxUmxXbmFVS05fRVHSAaoBQVVfeXFMT1lpa01pWWRMWVlKMnNSaUMyYWxEZXhwWmVzMkFybE1QRC1CUjRMbExFM2VvNzAzSUwyQlF5aC15S0t6bndHQm5Scm5YM1ZzTHYtSXl3MUl2N1dLVVdya1ZHWk5YMUdzeC1BdmZaRFFnNk4tZDc2a3lFQVA1cGtyeF96ZXBXSmNvYzFSWTkzTll3X2FucWY4cXEtZnF5MzB2OVBNLTVYZEZ2a0E?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-703ebae2d3e711df",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Government Steps Up Follow-Up Support to Turn Summit Economic Diplomacy Gains into Exports and Orders",
+      "summary": "",
+      "source": "아시아경제",
+      "published": "2026-11-01T23:55:01Z",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE50ZHBETDQ2bmF0NkhxTTV3SEkwOFUteUZqTXNLWXZJZ2ZTSEpCNlBnNlpBRXRjTWlRdGhnXzFyazNzdkZGNVlxUWs0SXFYdm43V2h6aGJfUUFZMGh5VWU4aUVraVM?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
