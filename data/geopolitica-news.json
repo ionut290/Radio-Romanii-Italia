@@ -1,10 +1,53 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-03T23:00:27.972939Z",
+  "updated_at": "2026-11-03T23:36:55.045058Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
-  "items": []
+  "items": [
+    {
+      "id": "geo-35d55d761317016c",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Ukraine War: Germany's Merz Doubts Russia is Serious About a Truce",
+      "summary": "",
+      "source": "Tempo.co English",
+      "published": "2026-11-03T23:20:03Z",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZUxiQWVfd3NUN0IzZXJfUGpKVDhQdllTbElZNVdPTTgxYXpkWmdUM0VEZkc3TDRsYzJQdk03aVVGbFR0LWp5RGVvb1NMcnpTX1hWWklqblFoeFBrN3dQbWtrZDFpaVk5d1EtY0NjV09heHQ0NUZfNzhjVkd1VjNqRE5MX0NVS2ZsSkZlb1h2ZGJUNXFSQ0RlcTVqYndFQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Războiul din Ucraina: Merz din Germania se îndoiește că Rusia este serioasă cu privire la un armistițiu",
+      "title_it": "Guerra in Ucraina: il tedesco Merz dubita che la Russia faccia sul serio una tregua",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-f3085ee84f4b5be3",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Russia considers a peaceful and united Europe its enemy and is preparing for confrontation – Zelenskyy",
+      "summary": "",
+      "source": "Українські Національні Новини (УНН)",
+      "published": "2026-11-03T23:17:31Z",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPd3A0aUNmSkR5dG5UTWRtaEhHZXBDUlFfRU4wa1FwSy1YZFFuNHg0d1B0OGRNOUplc2VxUVVRMEJPV2ZtYkpTZzhLdTBxQko2VEF5STdZVWMwbDRRemtJS0oyMTB3bUlSOWVsbmdoWF9ZZkZMV0N2bE8wcVJFQ1daVHc3ZGszMnBJTkJwTW81R0RmUGpTM2dlRVVqcUhBUDBqWUo3SFVINzBZVW1ZNUdFZEZUemlQTXo4UlhwUFp4TGbSAb8BQVVfeXFMTzhOc0l0N0FJS3lEcC1yZ0RsU0VCaTQxVkdKQm9HTWpJdmdNNVdzaDFUWnZDUEtEZkVwaEMzeEpxV2pfV0FidU9wLXpiUXYzWDZ3VnlhZjdfTHF5djBVeHJIcTVvQVhWWWREdVpIdUpjbjREYnJBZG9UbzBTbExESXV0ZzVfbjcwTjNBLVp0MVlwc0xEZUJJSTk4X3lkNGFfa25BWVlGaEtZNGthdC1RZlJQVWpkcWZjV1RpQkhBQUk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia consideră o Europă pașnică și unită inamicul său și se pregătește de confruntare – Zelenskyy",
+      "title_it": "La Russia considera un’Europa pacifica e unita il suo nemico e si prepara allo scontro – Zelenskyy",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4013489540ecbc4a",
+      "category": "europa",
+      "region": "europa",
+      "title": "Europa pessimista, comunque vada Trump è un problema",
+      "summary": "",
+      "source": "il manifesto",
+      "published": "2026-11-03T23:05:31Z",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9qZWNWc3pBTXRVRFRaQkJ1RkMtUVhYcC1rbUgtX0dYYV9yMlFFRmIzYmZkN2pER2ZmTXpheDM2X3JxU2FiaG5WYW9KMjNvdXFxc0RfaHN3Y1AzZXRDMkxmTDJHcVlZTUY3SDVXank1TEsxUmpxMmdUSjNQZUpXVkk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Europa pesimistă, orice s-ar întâmpla Trump este o problemă",
+      "title_it": "Europa pessimista, comunque vada Trump è un problema",
+      "translation_status": "machine_translation"
+    }
+  ]
 }
