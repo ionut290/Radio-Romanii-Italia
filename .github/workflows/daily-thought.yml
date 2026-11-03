@@ -1,11 +1,13 @@
 name: RDI - Pensiero originale del giorno
 
 on:
-  # Il vero scatto si genera nella Task ChatGPT esistente delle 01:00 italiane.
-  # GitHub verifica alle 02:30 Europe/Rome, gestendo automaticamente l'ora legale.
+  # Pubblicazione autonoma alle 02:30 italiane e recupero alle 06:30.
+  # Entrambe le fasce gestiscono automaticamente ora solare/legale.
   schedule:
     - cron: '30 0 * * *'
     - cron: '30 1 * * *'
+    - cron: '30 4 * * *'
+    - cron: '30 5 * * *'
   workflow_dispatch:
 
 permissions:
@@ -32,7 +34,7 @@ jobs:
           fi
           HOUR=$(TZ=Europe/Rome date +%H)
           echo "Ora italiana: $(TZ=Europe/Rome date '+%F %T %Z')"
-          if [ "$HOUR" = 02 ]; then
+          if [ "$HOUR" = 02 ] || [ "$HOUR" = 06 ]; then
             echo "execute=true" >> "$GITHUB_OUTPUT"
           else
             echo "execute=false" >> "$GITHUB_OUTPUT"
@@ -46,38 +48,19 @@ jobs:
         if: steps.ora.outputs.execute == 'true'
         with:
           python-version: '3.12'
-      - name: Verifica scatto indipendente pubblicato da ChatGPT
-        if: github.event_name == 'schedule' && steps.ora.outputs.execute == 'true'
-        shell: bash
-        run: |
-          python - <<'PY'
-          import datetime as dt, json
-          from pathlib import Path
-          from zoneinfo import ZoneInfo
-          today=dt.datetime.now(ZoneInfo("Europe/Rome")).date().isoformat()
-          data=json.loads(Path("data/daily-thought.json").read_text(encoding="utf-8"))
-          entry=next((x for x in data.get("items",[]) if x.get("date")==today),None)
-          assert entry, "Nessun pensiero del giorno creato da ChatGPT"
-          assert entry.get("imageType")=="photorealistic-ai-generated" and not entry.get("photo_source"), "La foto non risulta uno scatto IA indipendente"
-          path=Path(str(entry.get("image","")).removeprefix("./").lstrip("/"))
-          assert str(path).startswith("editorial-images/daily-thought/"), "Percorso immagine imprevisto"
-          assert path.is_file() and path.stat().st_size>10000, "File immagine originale assente"
-          assert path.read_bytes()[:3]==bytes.fromhex("ffd8ff"), "Il file non e' un JPEG valido"
-          pointer=json.loads(Path("data/calendario-filosofico-oggi.json").read_text(encoding="utf-8"))
-          assert pointer.get("date")==today and pointer.get("image")=="/"+path.as_posix(), "Puntatore del calendario non aggiornato"
-          print("RDI: scatto indipendente del giorno verificato",today,path)
-          PY
       - name: Prepara la fototeca realistica RDI
-        if: github.event_name == 'workflow_dispatch' && steps.ora.outputs.execute == 'true'
+        if: steps.ora.outputs.execute == 'true'
         run: python -m pip install --disable-pip-version-check 'pillow>=10,<13'
-      - name: Crea il pensiero e la card grafica
-        if: github.event_name == 'workflow_dispatch' && steps.ora.outputs.execute == 'true'
+      - name: Genera il pensiero quotidiano se manca
+        if: steps.ora.outputs.execute == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_THOUGHT_MODEL: gpt-4.1-mini
+          RDI_ALLOW_ARCHIVE_PHOTO: '1'
+          RDI_THOUGHT_USE_AI_IMAGES: '0'
         run: python scripts/generate_daily_thought.py
       - name: Pubblica il contenuto del giorno
-        if: github.event_name == 'workflow_dispatch' && steps.ora.outputs.execute == 'true'
+        if: steps.ora.outputs.execute == 'true'
         shell: bash
         run: |
           set -euo pipefail
