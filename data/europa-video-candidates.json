@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T17:48:46.529470+00:00",
+  "updated_at": "2026-11-03T23:15:34.110421+00:00",
   "success_sources": 1,
   "sources": [
     {
       "source": "parlamento_europeo",
       "status": "error",
-      "reason": "HTTP Error 403: Forbidden"
+      "reason": "<urlopen error [Errno -3] Temporary failure in name resolution>"
     },
     {
       "source": "commissione_europea",
@@ -15,6 +15,27 @@
     }
   ],
   "items": [
+    {
+      "id": "ff66ac3b42162cc7f3",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "EP Women’s Leadership Shaping the Change and Inspiring the Next Generation of Leaders",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296821",
+      "published_at": "2026-11-03",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-03T23:15:34.110421+00:00",
+      "language_probe_version": 3
+    },
     {
       "id": "fd72d94f98e688fd1e",
       "source_id": "commissione_europea",
@@ -55,6 +76,27 @@
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-11-03T10:04:23.926355+00:00",
+      "language_probe_version": 3
+    },
+    {
+      "id": "c3ef642395c30fa32a",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "European Commissioner Hadja LAHBIB at the European Civil Protection Forum 2026",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297005",
+      "published_at": "2026-11-03",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-03T23:15:34.110421+00:00",
       "language_probe_version": 3
     },
     {
@@ -2334,6 +2376,6 @@
       "editorial_topic": "ambiente - archivio"
     }
   ],
-  "language_checks_this_run": 7,
+  "language_checks_this_run": 2,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
