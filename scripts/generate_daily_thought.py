@@ -318,14 +318,17 @@ def planned_thought(day):
         quote = str(entry.get("quote", "")).strip() if entry else ""
         if not quote:
             return None
-        return {
-            "title": "Pensiero del giorno",
-            "quote": quote,
-            "reflection": (
+        reflection = str(entry.get("reflection", "")).strip()
+        if len(reflection) < 50:
+            reflection = (
                 "Ogni giornata offre un'occasione per trasformare questa riflessione in un gesto reale. "
                 "Non occorre cambiare tutto in una volta: possiamo cominciare da una scelta concreta, "
                 "osservando come influisce su di noi e sulle persone che incontriamo."
-            ),
+            )
+        return {
+            "title": "Pensiero del " + day.strftime("%d/%m"),
+            "quote": quote,
+            "reflection": reflection,
         }
     except (ValueError, OSError, TypeError):
         return None
@@ -344,9 +347,9 @@ def main():
                     raise SystemExit("RDI: la foto già presente non è attestata come scatto indipendente.")
                 print("Pensiero e fotografia del giorno già pubblicati:", today.isoformat())
                 return
-    history = [str(x.get("quote", "")) for x in items if x.get("quote")]
-    thought = api_thought(today, history) or planned_thought(today) or fallback_thought(today)
-    published = now.replace(hour=1, minute=0, second=0, microsecond=0)
+    history = [str(x.get("summary") or x.get("quote") or "") for x in items]
+    thought = planned_thought(today) or api_thought(today, history) or fallback_thought(today)
+    published = now
     ident = "pensiero-" + today.strftime("%Y%m%d")
     # Non eseguire chiamate immagini a pagamento senza consenso esplicito.
     use_ai_images = os.environ.get("RDI_THOUGHT_USE_AI_IMAGES", "0") == "1"
