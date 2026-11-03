@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-02T20:18:50.013543+00:00",
+  "updated_at": "2026-11-03T10:04:23.926355+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -15,6 +15,90 @@
     }
   ],
   "items": [
+    {
+      "id": "d65bb462f91f2e7aa9",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "Court of Justice of the European Union",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296873",
+      "published_at": "2026-11-03",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-03T10:04:23.926355+00:00",
+      "language_probe_version": 3
+    },
+    {
+      "id": "b0082b88ffc43cb9fb",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "Court of Justice of the European Union",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296871",
+      "published_at": "2026-11-03",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-03T10:04:23.926355+00:00",
+      "language_probe_version": 3
+    },
+    {
+      "id": "542e2469687fa147e0",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "European Commissioner Hadja LAHBIB at the European Civil Protection Forum 2026",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296712",
+      "published_at": "2026-11-03",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-03T10:04:23.926355+00:00",
+      "language_probe_version": 3
+    },
+    {
+      "id": "41a1e2d7fe0c3cb12b",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "European Commission President Ursula von der LEYEN at the WINWIN – Brussels Summit 2026",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296713",
+      "published_at": "2026-11-03",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-03T10:04:23.926355+00:00",
+      "language_probe_version": 3
+    },
     {
       "id": "5be17d87f7ecc1d0a0",
       "source_id": "commissione_europea",
@@ -2103,6 +2187,6 @@
       "editorial_topic": "ambiente - archivio"
     }
   ],
-  "language_checks_this_run": 0,
+  "language_checks_this_run": 4,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
