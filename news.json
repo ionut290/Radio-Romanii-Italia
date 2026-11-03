@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T00:03:23.341948+00:00",
+  "updated_at": "2026-11-03T00:04:49.249385+00:00",
   "items": [
     {
       "category": "Italia",
@@ -233,6 +233,15 @@
       "summary": "Şase magazine din România aparţinând aceluiaşi lanţ comercial au fost vizate de un posibil atac informatic în noaptea de 2 noiembrie, după ce echipamentele frigorifice au înregistrat brusc temperaturi neobişnuit de ridicate. Incidentul a fost raportat specialiştilor în securitate informatică, relatează News.ro.",
       "image": "https://s.iw.ro/gateway/g/ZmlsZVNvdXJjZT1odHRwJTNBJTJGJTJG/c3RvcmFnZTA4dHJhbnNjb2Rlci5yY3Mt/cmRzLnJvJTJGc3RvcmFnZSUyRjIwMjYl/MkYxMSUyRjAyJTJGMzA0MTQ5OV8zMDQx/NDk5X2F0YWMtY2liZXJuZXRpYy1oYWNr/ZXItZ2V0dHlpbWFnZXMuanBnJmhhc2g9/NTM3MmI1MzE2OGEyZDI0MTJmN2NmYWI1MmFkYTU3Yjc=.jpg",
       "source_tier": "news",
+      "body": "Șase magazine din România, aparținând aceluiași lanț comercial, au înregistrat în noaptea de 2 noiembrie 2026 creșteri neobișnuite ale temperaturii în echipamentele frigorifice. Incidentul a fost raportat Directoratului Național de Securitate Cibernetică (DNSC) drept posibil atac informatic. Cuvântul „posibil” este esențial: la momentul relatărilor consultate nu exista o concluzie publică definitivă a investigației și nici o atribuire verificată a unei persoane sau grupări.\n\nPotrivit declarațiilor directorului DNSC, Dan Cîmpean, reproduse de Digi24 dintr-un interviu pentru Libertatea, valorile anormale au apărut în jurul orei 1:30, dar problema a fost observată abia spre ora 8:00. Controlerele care gestionau instalațiile frigorifice erau conectate prin routere GSM cu adrese IP fixe, puteau fi accesate direct din internet și utilizau versiuni vechi de software. Aceste detalii explică de ce specialiștii examinează ipoteza unei intervenții externe, însă nu demonstrează singure cine a provocat modificările.\n\nNumele lanțului comercial și localitățile celor șase magazine nu au fost făcute publice în informațiile verificate. Nu există nici un bilanț confirmat al produselor compromise în România. Creșterea temperaturii într-un frigider sau congelator poate pune în pericol păstrarea alimentelor, dar nu trebuie transformată automat într-o cifră despre pierderi materiale ori despre produse ajunse la consumatori. Aceste consecințe necesită verificări distincte ale operatorilor și autorităților competente.\n\nCazul românesc a fost semnalat în aceeași zi cu probleme similare din mai multe țări europene. Digi24 a relatat incidente în Belgia, Luxemburg, Suedia, Irlanda, Țările de Jos, Estonia și Finlanda, citând relatări ale BBC și ale altor publicații. În Belgia și Luxemburg au fost afectate instalații ale unor magazine Ahold Delhaize, potrivit declarațiilor companiei reproduse în presă. Existența mai multor incidente apropiate în timp nu dovedește, de la sine, un singur autor sau un mecanism identic în toate țările.\n\nÎn Italia, Agenția pentru Securitate Cibernetică Națională (ACN) a anunțat la 2 noiembrie că a primit o notificare de incident de la o companie toscană din sectorul alimentației colective și a identificat un atac asupra unei firme emiliene producătoare de alimente congelate, încă nenotificat formal. ANSA a relatat că agenția și-a intensificat monitorizarea și a cerut verificarea sistemelor industriale expuse pe internet. Aceste cazuri sunt distincte de cele șase magazine românești și nu trebuie adunate într-un bilanț comun fără criterii clare.\n\nACN a recomandat separarea sistemelor de control frigorific de rețelele accesibile public, protejarea conexiunilor de la distanță prin autentificare multifactor și actualizarea echipamentelor depășite. Recomandările sunt adresate în primul rând companiilor și administratorilor tehnici. Ele arată că securitatea alimentară depinde și de infrastructura digitală, nu numai de transport și de alimentarea cu energie.\n\nAnaliza RDI: episodul evidențiază vulnerabilitatea unor instalații industriale conectate la internet, dar investigația românească trebuie să stabilească separat dacă a existat o intruziune, ce sisteme au fost afectate și ce pagube au rezultat. Până la apariția unor constatări oficiale, formularea corectă rămâne „incident suspectat de natură cibernetică”, fără atribuiri speculative și fără bilanțuri inventate.",
+      "extended_summary": true,
+      "content_language": "ro",
+      "source_urls": [
+        "https://www.digi24.ro/stiri/actualitate/posibil-atac-cibernetic-la-6-magazine-din-romania-apartinand-aceluiasi-lant-comercial-precizarile-dnsc-4018979",
+        "https://informat.ro/en/current-affairs/six-stores-in-romania-targeted-in-possible-cyberattack-146445",
+        "https://videoembed.ansa.it/sito/notizie/cronaca/2026/11/02/attacchi-hacker-ai-supermercati-alert-agenzia-cyber-in-italia_6a838d5b-aef2-48ac-b082-37c487819ded.html",
+        "https://www.theguardian.com/technology/2026/nov/02/europe-supermarket-fridges-freezers-who-hacking-why"
+      ],
       "fallbackImage": "./editorial-images/rdi-auto-v2-ffa70625a8ff664c6a34.svg"
     },
     {
@@ -713,19 +722,6 @@
       "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
     },
     {
-      "category": "România",
-      "title": "„Dansez pentru tine” revine la PRO TV după 14 ani - Observatorul Prahovean",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLUl6ZUltN1ozZTVtWFhCd3pDemMzUTN5SFh0Z3ZRYmNjVGlKakZjTEdONGlaaUVEeEdxMlUtYXNQZm9QYW5pLTJIMEhvZHY5SWQzZVZseVJ2c1lPaUdiX2U5RWpHNnZDNzBRWGQzRWkyRi1HVFFKTTFGUVozZC1hSWpUTEw4cXpxQTA0VlNoLV9YME5KT01EQTNn?oc=5",
-      "source": "Observatorul Prahovean",
-      "published": "2026-11-02T12:41:29+00:00",
-      "summary": "",
-      "image": "./editorial-images/rdi-auto-v2-b5fc7b80e97645dd5a1c.svg",
-      "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-b5fc7b80e97645dd5a1c.svg",
-      "imageType": "editorial-illustration",
-      "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
-    },
-    {
       "category": "Diaspora",
       "title": "Ciclon puternic în Italia: Alerte meteo în șapte regiuni, furtuni violente și rafale de vânt de... - StiriDiaspora",
       "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNbEl1WFdwWUZxanp0UTZ2dlhrWDBJcWI4bzZrN3plUjdFaWo3YWZFb19LTG0zdUVZRGtHRUE4aFBqM1A0NWE4dXFtNl9UXzBmekJhNk5SdTRYcXM2ektIUGZxcjhNUmlDR1J1S2lUdzFzcmUzNGthcl9MYWl2YW9DOTlPNDRURVNoN2R6bDExaldsd1UyUm1ZT09wQ0trQTJRUTFIejl1RGZWSDJJVXNMRE9naUtOUk1rNW1zZlB4VFdEQXNCZERuTTN0VTFPUzlNaGtiVzFFUDdRQWlOSEotajFFS19ZbXF4Z09mVUYtaGVHeEphSVhRSUQxYlpSM2ttQXlFTVF5UWM3RVVnOVhFek5hcThrOHhUeGfSAZ8CQVVfeXFMUGRJNnhaeEltZDZfcHdjWENYZ0VWX2RVa0o1b3R4dGMzX2JUOTlLOUVhUTBtXzdIWVhNeFdXNDNHZG5XOFphS2ptMk9Db2RzYzhpbl82T2RXanlTUWRnUWJYbC1tcTEwVHBrYmthNEc5RkxwVnhrcW5vVDIxS2Z1ZHZTQ1ZUTEtkSDFZOGJwd3I1bWxueDR1dTgwQm1DbE1YU0d0V0VMLVV0LW90bEQzZV9FN1ppV2ZUNmF1dVRKZ3RCMkpyUTF3TzRqaWlENUhFSXRDWkthZUVhemNKY1ljYldJRl95Vm1XMzFXek1JTjJuR0NfckgtZ0QxbnFETktDeDdTWGFSenZHVGxNQVh0TVQwZ2t0UlRtVjJkbm5DZkE?oc=5",
@@ -735,19 +731,6 @@
       "image": "./editorial-images/rdi-auto-v2-168c4cd38f3411e550ca.svg",
       "source_tier": "community",
       "fallbackImage": "./editorial-images/rdi-auto-v2-168c4cd38f3411e550ca.svg",
-      "imageType": "editorial-illustration",
-      "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
-    },
-    {
-      "category": "România",
-      "title": "Ce încredere au cititorii Observatorului Prahovean în Guvernul Niculescu. Rezultatele sondajului - Observatorul Prahovean",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZV9Fbi1VSDlXUDVXWHlXTW5GQWJSbm9XclJkT3M2akVGOEVrSmgtYU9qU0VGWGJlY1J3U2ZmbHV1NGdONHJ1Q2ZTN1c5Ykd2UE5PUzRYNHZDMEJHSTdObllueVVDSld1UXI2UGNqM0pNUzJJbU43c3BCbWswOF84dmdFUW1faVZUSTJaUmpjOUQtb2tJbnFubzloZEJNZmJyQlJHZW5PdWNua0FqVmdTZUNscDZOTFdaVmNGZkhBaktwQWdVeERMdm5BWm1SanUxYzJOWHplWHQ?oc=5",
-      "source": "Observatorul Prahovean",
-      "published": "2026-11-02T12:07:33+00:00",
-      "summary": "",
-      "image": "./editorial-images/rdi-auto-v2-ee64aa8f728a62674fa8.svg",
-      "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-ee64aa8f728a62674fa8.svg",
       "imageType": "editorial-illustration",
       "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
     },
@@ -787,19 +770,6 @@
       "image": "./editorial-images/rdi-auto-v2-24105009de1b85aa04ea.svg",
       "source_tier": "news",
       "fallbackImage": "./editorial-images/rdi-auto-v2-24105009de1b85aa04ea.svg",
-      "imageType": "editorial-illustration",
-      "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
-    },
-    {
-      "category": "România",
-      "title": "România și Moldova, prima achiziție militară comună prin SAFE: 62 de camioane IVECO pentru Chișinău - Monden.ro",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ0Fud3hpNzhuWE5IT2pGMFhUSC0xTUNUS0JzSXpycU5YS2ZSZmxWaS1taDBMLUJ2SnJzSnhmam9majlTY2QzR20zMzBUOTVZaWhQR3M0UGRYeFVQREJERk5pNXFOejBTeTI3MEt3Ui1NVG1wSmdBVEVNeXJNVDh2N09ibHlmWTFaOWN4X3hMTHY0Q2JCX2NsT2diWFB5OHVsMjFxMnpSZDlrZTRoLS1YdEFWamI3ZjlSNzRuT2pKNGpkdw?oc=5",
-      "source": "Monden.ro",
-      "published": "2026-11-02T11:08:04+00:00",
-      "summary": "",
-      "image": "./editorial-images/rdi-auto-v2-64dca9be8ece1914d142.svg",
-      "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-64dca9be8ece1914d142.svg",
       "imageType": "editorial-illustration",
       "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
     },
@@ -891,19 +861,6 @@
       "image": "./editorial-images/rdi-auto-v2-31a9fb93ae6bd6c24129.svg",
       "source_tier": "news",
       "fallbackImage": "./editorial-images/rdi-auto-v2-31a9fb93ae6bd6c24129.svg",
-      "imageType": "editorial-illustration",
-      "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
-    },
-    {
-      "category": "România",
-      "title": "România și Republica Moldova, achiziție militară comună prin programul SAFE. Anunțul premierului Luca Niculescu - Realitatea.NET",
-      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOTGxDSHhrZjdPbFd5T3NzSGFNOHVaWmNvc25SS09Dbzk2Qm9UQmhXejBPZHZncTQ3QXlyUEVYQWJiZl9LQVZVNlYwbEM4N29WWkJwYUxyUnpyaXR4bjdNU3hlNmN0QVhhenp3VVVHbXc4TFlKa0lpdVhaSkZnaGRSTk03SU50ZnkydnNla0lSSUlJVk50UmJnRWpCWlJIQ21mdldnSGpkQk9XLWxiWlE2ZGRXeEM3aThtYUlpQm9qT2xhYV9yVFNYZXpiZ29oemkyY2lwUTdBcDljc3ZTZHRoazlfeHlGOGU1NHRDcmRrU3hjVmdOTy1zbjBqVUs1bmYzb0czSDVPWDdrdw?oc=5",
-      "source": "Realitatea.NET",
-      "published": "2026-11-02T08:00:00+00:00",
-      "summary": "",
-      "image": "./editorial-images/rdi-auto-v2-a4eafe30a774cb7dfb81.svg",
-      "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-a4eafe30a774cb7dfb81.svg",
       "imageType": "editorial-illustration",
       "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
     },
@@ -1089,19 +1046,6 @@
       "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
     },
     {
-      "category": "România",
-      "title": "Federația „Sănătatea” oferă șapte burse pentru studenții la medicină - logos-pres.md",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYktUdjJwOVNqQlpQZm9PTjBIdzdpU2lxNEFEeDZRT0YwM0RKZWpUQ0QxWUhrSU90OVJLNlZfQ3pKYjZUdUZEWC1zRTlENnRFTjZlVWc1bjdSbXhzMF92dE1VRENoZTNPdWw3bC1uNTlYdDJPNi1OaEdOQU5HX1lOMVNlUUo3TDRxX2VWd0NqbTlUamI1MFhpc3JjUWFtcWwzeUxaaU1SNkhfWkF3Ml9ZdVhWcTY1a3JQTkRyNGl6OXZHV0dLcjZocEFSZw?oc=5",
-      "source": "logos-pres.md",
-      "published": "2026-11-01T11:00:11+00:00",
-      "summary": "",
-      "image": "./editorial-images/rdi-auto-v2-0c23eec9103f2470891e.svg",
-      "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-0c23eec9103f2470891e.svg",
-      "imageType": "editorial-illustration",
-      "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
-    },
-    {
       "category": "Italia",
       "title": "Pensioni, piccolo contributo per chi resta al lavoro. Stangata sulle rivalutazioni - la Repubblica",
       "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQXzJEemdxaVRHU1pZY0FjZUpYTE9FVlJ5SDlTNGZRQ1gyMGFBVjRTTS1qS01Rd1kyZTVVVk1FNS1tOGtuT2huY0FTWDI1UTZHRTdhTks1TGd6RzU4N3dfV0hZRGZtYTA0UmpoWUVpQ1hRUGJ1RGk1aGVLRzhxTjd2alA5cWRDQ083bGM2bnh5RDBnQXN1Z2NlbW9SLUhraUlPWm9wTDJQY0lIMGRUZTlmd055ZUxwRmw0VFpqV1JTTGRRUHU3N01ZbnltM19oR295OHdXdXd2NXluVGNyNXFfQnlzWlVvbHBrWkhKcl9YOTJfbWl2ZGItUjUtNA?oc=5",
@@ -1199,19 +1143,6 @@
       "image": "./editorial-images/rdi-auto-v2-ff37065c38e02c06ad50.svg",
       "source_tier": "community",
       "fallbackImage": "./editorial-images/rdi-auto-v2-ff37065c38e02c06ad50.svg",
-      "imageType": "editorial-illustration",
-      "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
-    },
-    {
-      "category": "România",
-      "title": "BYD anunță 10–20 de stații de încărcare ultrarapidă în România, la o vizită a vicepreședintei Stella Li - Monden.ro",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTDhaWWc0R1JZeEhhaWJGRVBLcnlHYTJQdy1JQ09XdXF0VXNMTnA4QTVBNnBnb01ZQUR2WmIxVTZqcEs4MGNhUVpaTlpOeXJ1bjN6cUZIallhZGkxRGRYejV6LVhZcDJ0Q1ZKZ1NrYXY1VS1UazJaUzc1X3cxWmd5YzU4S0szSXlydG5tUDdxX0ZpV1hQU0JFN3dFZTlPWmQ2SGdfNXhHcnY5dERqcmUtbWNUMi1VdklIYi1TNl9VMWJydmRBUHUyRg?oc=5",
-      "source": "Monden.ro",
-      "published": "2026-11-01T05:34:53+00:00",
-      "summary": "",
-      "image": "./editorial-images/rdi-auto-v2-b04290ff5beaaa9b2476.svg",
-      "source_tier": "news",
-      "fallbackImage": "./editorial-images/rdi-auto-v2-b04290ff5beaaa9b2476.svg",
       "imageType": "editorial-illustration",
       "imageAttribution": "Illustrazione editoriale RDI, non fotografia dell'evento."
     }
