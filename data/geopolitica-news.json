@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-03T02:35:07.470791Z",
+  "updated_at": "2026-11-03T03:40:28.647719Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-26e3fb689af2cd56",
+      "category": "clima",
+      "region": "global",
+      "title": "From commitments to action: Taiwan and the world creating climate solutions together",
+      "summary": "",
+      "source": "SKNVibes",
+      "published": "2026-11-03T03:33:49Z",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9JY2JxMkJHbDN1bExkMzRzUzRUcGN2RktodEFPOEZ6XzNndW4yVDBvSXZLd0dKYmVzTDFNMXVGM3VGMGRqY0NNbGRNUXV4aWhkWEV2VVZkRDhTNTNvTzE3eVlR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De la angajamente la acțiune: Taiwan și lumea creând împreună soluții climatice",
+      "title_it": "Dagli impegni all’azione: Taiwan e il mondo creano insieme soluzioni climatiche",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-3a2374024a1b5155",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Could the European force guarantee Ukraine's security without American troops?",
+      "summary": "",
+      "source": "Latest news from Azerbaijan",
+      "published": "2026-11-03T02:38:24Z",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbmRTSlJPamtKX2QtNGJjdGNCOXZPbm5MTklUX01RRFloNnkxSXBETXozaHVVcWZRRkZLbVg0ZkNzYUNBalZjWWRqTktIa2dPbUVmMWJUMTlZZ0dQZWE2ZVptMXpXcVhQeTNfTlhfdHUxOXdCRHAzbVljeVFmeDJXN0hKcVhBd1FrTXBlN25oSW9FdnVpWDh3NjhpMVVkWWc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ar putea forța europeană să garanteze securitatea Ucrainei fără trupele americane?",
+      "title_it": "La forza europea potrebbe garantire la sicurezza dell’Ucraina senza le truppe americane?",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-8f5c7796230f383e",
       "category": "conflicte",
@@ -16,18 +44,10 @@
       "source": "IDN-InDepthNews",
       "published": "2026-11-03T02:34:34Z",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYjhZUjhXVVVqUGpvUU9jYzNjZjFfTmFKbGZvM1R5NGMtVmNGSVZFVDFVN1hZaDhUbElLS0Y0X29jV1NmbXpCUnpTRkxEdEN4RktxQV9DUXc1VGpxWFk1U0tES0JmTl92TTJ2d0hWdFBjSFlZb3RDU3dSVDJleE5GRnlQZzZ6NWdZcVlYdnlkYnd4RWc?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-64f7f2af0dbd112e",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Israeli strikes kill five Palestinians in Gaza",
-      "summary": "",
-      "source": "Dawn",
-      "published": "2026-11-03T02:08:02Z",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOY19SMWRLUlFxMVUtcDBKSnNRNzUwUVhscUxMMks3N1VnNjVuNEpSTE5Ld01oSXhMZGMwd2Q3VjJHaURhSGNyRXdkWDc5eFZLU0VWNFVqWndRYXpCeVN1ckdXTnRoaGFiYmVxSmJLM2dEenhjcElfY3pqS1NDbkFua05JNzRHLVk?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Încetarea focului din Gaza îi lasă pe palestinieni prinși în spatele unei linii în mișcare",
+      "title_it": "Il cessate il fuoco di Gaza lascia i palestinesi intrappolati dietro una linea mobile",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-af98679e1e1a39dd",
@@ -38,7 +58,10 @@
       "source": "The Crescent-News",
       "published": "2026-11-03T02:00:00Z",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOdUhCc2s2Z1k2ZnQ1ZVpEQWFrM3puaVVnaDVOckRjcmptcV9Za0pTTFA5WGNhSnEwQnZLRDlubXNrWm1oUnFvMGdyeFVuTUR5Rk5NQlNrMFRtMHdicWVjVVFmd3FvZmxJN3ZlTEtwNzFmd1o5YVJMTlBFeVRXYm1YMFRuSXFDQ0QyOVhTWGdQaHRJZXBHMHhORDZwNjlVOGtRUkxPYzVhQ1V6N01zOExMNXU0TGRhYXNVTUFwT3RqMi14NXVEMFhyamJWRVk3dmZJVGlOY29OMEFfczBHcC1nb1UtX1FLQmpnc2M4MkJaVQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Arthur Cyr - Președintele Braziliei „Lula” câștigă al patrulea mandat",
+      "title_it": "Arthur Cyr - Il presidente del Brasile 'Lula' vince il quarto mandato",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-37bd6aa0fe1f2c76",
@@ -49,7 +72,24 @@
       "source": "Asia News Network",
       "published": "2026-11-03T01:16:39Z",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZXZGZ0VjVmR6TkVnME55eG1JZV9zcjYtV0ljemVPckNWUTBmMHNTQ0YyV1J5TjFQemhobnlJS2RZeDNMV3RhZzBZMkJQbHowV1EwMWFZc2pHM3plOUNsN1hucVBfVFJVbzhNUXBKTzRsWFhHa2JwRUFGUmwyX2F2VTNqOHJDQThPODF3TVhwQndTc1RnMFEwR05GMWdEcG0xQWstRVBLTQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Critica SUA la adresa Chinei din Marea Galbenă dezvăluie diviziunea strategică cu Seul: expert",
+      "title_it": "Le critiche statunitensi alla Cina nel Mar Giallo mettono in luce la divisione strategica con Seoul: esperto",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-5c553fd91bd8203b",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russian Bombing Kills 26 at Ukraine Humanitarian Aid Center",
+      "summary": "",
+      "source": "SuaraGarut.ID",
+      "published": "2026-11-03T01:09:11Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5FYUU5YWJlNlZwVlRiYlBsd3JablhON0lWdUc5QVNFWnJzV1lPNS1yc0o2NUNlWUpPbWx0VWNtaHQ3YXVETE1Sdkt4Rmxmc0tLNFBMU2tGaWlmUHAwb0RrZE4wemgzeUxySW4w?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Un atentat rusesc a ucis 26 de persoane la Centrul de ajutor umanitar din Ucraina",
+      "title_it": "Bombardamento russo uccide 26 persone nel centro di aiuti umanitari dell'Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-fd4f77b73a6bd77c",
@@ -60,7 +100,10 @@
       "source": "The Business Times",
       "published": "2026-11-03T01:00:00Z",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOV2xHejhNRTFtYklPbEYtYl9FeFZlSktRNTR1a0w3YUxlMmtFRXhITGN6T2J0OHAtZHF6WVBxaGN6ZnVTWExTSm5uNU42ZFg0Nm9IU0JlRWswbFdySmgwenkzRG5JTDl0TjZnV040SEVtTklaTDNfWENlM09ObzdZMnlhY19MUFh6eEROZDNEMjZjemhQSE9VSFFrT3ZGZk5NRW9JVG5URERJRVVQSkFqWkd2S0M1TkhIa05zVGMtMEQwMmU5SmVRMHZFWGdfLVVQaDRqWm94aE9HeW15MDVLRW5QY3ppNWRD?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Coreea de Nord spune că acuzațiile SUA care o leagă de furtul Binance sunt „retorică absurdă”, spune KCNA",
+      "title_it": "La Corea del Nord afferma che le accuse degli Stati Uniti che la collegano alla rapina di Binance sono \"retorica assurda\", afferma KCNA",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-7ed6bf3e94530d7a",
@@ -71,7 +114,24 @@
       "source": "Eurasia Review",
       "published": "2026-11-03T00:35:43Z",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQNWZ6Mk5ESjdOZmxod2xqV1FTWmUyck13RXM0YnFWTzJPTi1PcG42OXpqTVAtVWhPbkU1VEVVbTVnTEdiRUIxeVJ1aFlJZ29JckhjdXJRMmp1VVgwN0RjTElhdU9NSGVuUVJubGx1bzlCM3BfczdBVTZJTmtSM243VmNCZFVxVk9ZVEl4Sm5PbWNkMXNPMVo3WDVFZkJDdHVQcjV1X085aXllNkRwWWNmQXB2ZlNUQ2o1STNz?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Shield Of The Americas își propune să perturbe rețelele criminale transnaționale – Analiză",
+      "title_it": "Shield Of The Americas mira a smantellare le reti criminali transnazionali – Analisi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-268fa653492f0c23",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Ukraine Expands Role in EU and NATO Defense Innovation Programs.",
+      "summary": "",
+      "source": "Ukraine Business News",
+      "published": "2026-11-03T00:09:26Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQa0t1b3BESVVWQ2ZrU1ZWSEpRQW1kcnd6SF96YnJ3VXVJYVAtQV9WOVJYemMtYnhuWGNwQzVZYmRWYl9wT2FhdVBBMWVtdDhJX19XOUdKX3ZmX294WDRtMmY5SVpkZk5nSk9vUWw4TG5ycE50Q19GZWxSdGZLRjFrQ3ZjaGRUdFhk0gGQAUFVX3lxTE44blk5X3RsVnZwdGM5XzhSTHBUXzJjdnNHczZnbW4wb2Q1bjhOcXJHYjFBVmFTZENZd0ljakZhOXF3SF9LN3A4Ni1aMGVpNWtnWGh0U05QeUdESEFSMHMwNEtKTTRhZzM1X29ORlFNblk5N1hoQXhzSWlzNzVWY0wwRWVQelVuZDBhdlRWYkkzOQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ucraina își extinde rolul în programele de inovare în domeniul apărării ale UE și NATO.",
+      "title_it": "L’Ucraina amplia il suo ruolo nei programmi di innovazione della difesa dell’UE e della NATO.",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-56d00bceb7d869ec",
@@ -138,7 +198,10 @@
       "source": "SupplyChainBrain",
       "published": "2026-11-02T23:13:22Z",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOZzdTUU03bkZ4TnVfQVFreFZGc3JQQ1I3UjNJSTlPSEYtSVZPblBPWXVwMENnWUlFOEZqZDFCcG1DOUJSeVJPZVBRd0ZUMVktSzBZb0dhM0lTWk9Fa1RsS29kblBKSFZ5ZGM1ODFMOE5MX3E2RWZabG9rVURCckJLQkx6OUlHYngtWVl5a1JxZjRyRE82VDlxaw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Comerț global, tarife și agilitate transfrontalieră",
+      "title_it": "Commercio globale, tariffe e agilità transfrontaliera",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-eaa0668b4710a63f",
@@ -149,7 +212,10 @@
       "source": "Drop Site News",
       "published": "2026-11-02T23:01:27Z",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQW1FNmp0Smp2bktrSW1ZS2swQXlma1pCajh1bkJrTURrZ2N6eEstU1FsSy0yYkpTckFOdlJpY0x6NE1ybGd1LXdBVVJPTXlVVzhNaGIySEs2eEF1cEt2czZ5RVJOYW1JMEhJMUJBRUNucHQ0dzMyNFlEcjhEWDZ3bmY3dGpyS3lESTFFbUFKbkE5NU5KQzVPdEZkYkp5WFYzWDFIRTJZMURmRjR0ZDVsSkNmYW1WellOdlp2UFdlRl9NZ0xRR0cxSngtNjRxSkNJaEg4?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Acesta este catastrofal”: Gaza lovită puternic de reducerile de alimente ale ONU și de lipsa ajutorului umanitar",
+      "title_it": "\"Questo è catastrofico\": Gaza colpita duramente dai tagli alimentari delle Nazioni Unite e dalla mancanza di aiuti umanitari",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-3632b4010e06817c",
