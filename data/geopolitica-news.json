@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-03T07:00:48.966108Z",
+  "updated_at": "2026-11-03T08:10:44.638512Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,25 +8,102 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
+      "id": "geo-1f6bd023e6933981",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31: Will countries finally deliver on past promises?",
+      "summary": "",
+      "source": "www.resilience.org",
+      "published": "2026-11-03T08:08:24Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQajVxRF8xYmVMZ2lXOUc2bDVsSFAtUWZLUU41SWlBTXgyekYwX1k0VGkyakVtUWF3WjFodHlTQWVKSjgzdkc1MGJsdzZLdGRJLXA5dTlaVUdpNlBtVmNhZkYybnA4NFE4NWlJVnFaZEVCNHdLSnFrX2ZrZ2xNNzlKTTlNUHkybU9yMUphYjhnMWExbGM5dmZOVkJDVXlpd21SS2c?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-0568faa8fa030b9b",
+      "category": "securitate",
+      "region": "asia",
+      "title": "China's cable-cutting threat reaches Taiwan and the Philippines",
+      "summary": "",
+      "source": "Nikkei Asia",
+      "published": "2026-11-03T08:05:00Z",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVTQzT3kxVmMtak9FMGI2bmhlVnFuUkpqUnZtWVE1SFRnaG93UVlOU3ZWQklTRDlqcTFJYTZOQXB1UnkxRHVOSDctN1ZJLTFxVElQeGtFaTRGcXJMZTQ1RGVIM2lXWWNxa3EzWTRNWS1FRWhjZ25BNUY3WnVmeFE3TEFLbi1OZzNQVEhOUFVPaDZ6ZlVaYV81NGVpUQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-d61678d2741af222",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "UN envoy meets Cyprus leaders ahead of critical November 9 trilateral summit",
+      "summary": "",
+      "source": "streamlinefeed.co.ke",
+      "published": "2026-11-03T07:39:14Z",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMWpSb2dTcHE0Uk5nUFpWendvRWFWcTF4UlpLV19xZzB2NllJTWRhS2pNLTFXd0RUalNTOVlRVXNrZG1YNzA5dC1ObkFiQ0VmR2pSamxBUWtBMEpQSHJJRXVUN3ZMYkFmbmhGMWtSMnNIa2NZZ0ttd1Y4NllYa1RhZ1NScWRPVGhsRXBMUm1zWEpzTlpDMXBxLXR2MDZfQWJDUFZfejFGQzRCNlhIdGNJ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-77f420dee9a0ca2d",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russian bombing on Ukrainian aid center kills 26 in Zaporizhzhia region",
+      "summary": "",
+      "source": "Daily Times",
+      "published": "2026-11-03T07:31:34Z",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWDhscU9laEhQblRiQzl1T0NaWDFrVFNmcXlMdm1fVWNDLUNtRmU2cjI1R3lQYVBjZTRoVm16YWJZMDRyMXJqazJuTTlXR0FsbHBLZXV6OFphVk1rczJwZU9OLXFmcHlBN29NajFIaXp2eG9tQ0dFSUVfVzdSeXo1dFZlSUFBd01fSHR4R0hpRzY2aEpXWmhiRnhUY2x0Q0dtNFJabVlNelpydw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-381eef4926ad38d0",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russian strike kills 26 people at aid centre in Ukraine, Kyiv says",
+      "summary": "",
+      "source": "People Daily",
+      "published": "2026-11-03T07:22:47Z",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNUVOUU92ZjBjODliak9tWVVFUktVSHNOblV0S1c5NjV6cmFpQ0xGdTRBQlVNaV9WRE5lalR5QklIeTZmNUlWUkhVVldoVFF3cUdCeWZVd3BCVWpRQ1VtX3NRSkhKSnVJMkJ0WHZyWEdEQ2FZbjc2UVNLQnRRcEltUlJqSGE5WTJ5UjBZMG1ES3kyRXhFbG1fWDBzVFh3Nlk?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-bc3ce9ab054d9320",
       "category": "securitate",
       "region": "europa",
       "title": "War widens in the Black Sea in a test of NATO red lines",
       "summary": "",
       "source": "WTVB",
-      "published": "2026-11-03T06:59:05Z",
+      "published": "2026-11-03T07:18:24Z",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQMlJnUjNvOGF5RXBnOFJqSkdHT05YS0lGZmdPQmgxdDZQaDVqQ0ZQUVN0OFNHVWNzaGZBM3pKa3pBWXFzYmtTb3I4OVpqdDdDbFBaVjBlbDdNX2VmckVtaTNkWExSOFpaWnNodEgzT0gxazJsTS1MdEI4NzJ0X0lyUmViNFpqQzR4Yjh3aUswdw?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-1927cdadc344b5bd",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "North Korea rejects US allegation over Binance crypto heist",
+      "id": "geo-7efcf67a82324da8",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Gaza documents 5,989 Israeli ceasefire violations since truce took effect",
       "summary": "",
-      "source": "Central Oregon Daily",
-      "published": "2026-11-03T06:26:15Z",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNMHBuR1ltOEx6cEdrYzNtcUVudDg2c2pCOHVUVFV0ZU1xaDZmNlVqR29DSjkyWUxDVmhLcERzVEZMcEo4dGZZQUxCTEZlR0xneUplYUxYaUpaU2ZKYWZrNmVWel9XNXQ1RkRmdUVITGhKNHNlUmhDaC1wMVRDM1ZnLUs1V0lZZE1nYUVPRmRKX2NQck5Ta0FaZ3hTSE91dDlSNWVSYURKUHJtVlc4QmtLSXBGSHNpRlBoYV9yeTYzUUxPQ3REWkZBUWJscTVacVJHWWhVRUVtUzlWZW12WDFVeEQ5MTV6bkVUWV96MDdwaw?oc=5",
+      "source": "ABNA English",
+      "published": "2026-11-03T07:13:00Z",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNM0xBT0JHaFJVQXAwQW5fd3Y3aGZLNnhMNlAyTjBGTzRfbTgtdnZtRkR3SzA2TEI2dUs3U2tJTERNRC1oT29ETGtxc1JrT0tsaTRkeGQ5SVRpSmlPTk92ZDNEZWI2T0RYU20zQ2EwbmtlTERQWmQ5ZEtNYjNhQUxHWExIMVFnVmtxMGpGRnhVcmJTdUZYMGZaUTdCd1M?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-e5b2eab4e23b7568",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russian bombing kills 26 people at aid center in southern Ukraine",
+      "summary": "",
+      "source": "Saudi Gazette",
+      "published": "2026-11-03T07:12:00Z",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZDlDa1Z3VW50aThrYjRCWFB1dGR3NTlrd1dLVVlXQmwyU09jNFlMNFR4eHV6R0FtT19JeXhRMHh0YjhkbnM1ZkhtZHBzODQ1cjJ4bzVVemEwUVp0bVdMN0pkM095WkVKeFZlWWNZcGxvYnctRjBkTTNqS1l6TjN2MmFFdVRVRGdPZFZWeFZOX3JTVWx1emgwbDhobmZ3eC1ONUxpdzVuSWV1dE1qZW1XVG1ici0?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-f53b2a7b1deab768",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "The Pitfalls of Thailand’s ‘Bamboo Diplomacy’",
+      "summary": "",
+      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "published": "2026-11-03T06:33:45Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZ2JvVk53X3BpZWs4MzItOVhvUDRZbDF2ajZfanJxX0xrano5b2JEcVpUZ21HWkk5eUU0ZEF0WlQ1bllDUmpaUHlLRjJ2TjZRTjhielhBeFV6d0V6Mk50SzN4UnlkcDQtR0EwbklzSTJ3LW5IRmdhNEZoQjNpUEJMbg?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -41,6 +118,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-9e65f961211f2395",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Foreign policy: BBM’s or Gibo’s turf?",
+      "summary": "",
+      "source": "OpinYon News",
+      "published": "2026-11-03T06:04:16Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1mZXFrMml6X01RMkZMT3NWM2NTQ1AzWlh6SVhoQzNSZmZKa3pxUVZ1RjdsVU9MaWRfTFhudTFwYk1teTUwdTRuVE9aenVxXzVheDlSVFh1U0t0WG9iS2JraDNPQnJFblJIUHZFQk5NeW8?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-4be0b3fe754ccd0a",
       "category": "securitate",
       "region": "europa",
@@ -49,31 +137,6 @@
       "source": "Small Wars Journal",
       "published": "2026-11-03T06:03:35Z",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTDlPTFRRSW82VWV4TVA3SFZ6Y25mZzFveUo1X19nZ1d1U28wT2ZyVllEZnJNd0ZzNzlPUGxNcG92cFZCWUtLMmxVTzU5YXVxcDlCUWd2YkV5TE9LeWJpX3FhR2ZIQ2k1UGRqandaVkx1aGNENVFnTDNLVEtQc2ZObkFpNUlrYzg?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-56d00bceb7d869ec",
-      "category": "energie",
-      "region": "global",
-      "title": "REGIONAL REPORT: MIDDLE EAST",
-      "summary": "",
-      "source": "World Oil",
-      "published": "2026-11-03T06:02:58Z",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcXprWjJCQzVEUTk3MlhZd3VVXzAxNy0zX2VEV0FiSWJkRENtQjBkdE4ycjRZcE9xX1BHTi10cVdtLXplNjdCRUhyaU41Zm9tMHpoU3oxN0tFbnpZTEJFMEROZ2hfMnJLUGZ3UjBGQ3VZcjN4ZXZRWThjMWo0NmtwVXM1MlNxaXp0bzcyaw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "RAPORT REGIONAL: ORIENTUL MIJLOCIU",
-      "title_it": "RAPPORTO REGIONALE: MEDIO ORIENTE",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-cb555352d460d302",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "What Azerbaijan Brings To G20 Table Goes Beyond Its Economic Weight",
-      "summary": "",
-      "source": "Menafn",
-      "published": "2026-11-03T05:35:19Z",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOOUJabVF6YVQxaUZ4WVR5blZQWGVHQk1PRlg0M0hPajJzRW5BT1JkS1J4WHZKQ1drNkFKNlBuWHM4NzE1Y1p5ZmVmbmE2ZG9aMVhXVmJNOUNVSTItZVNrek1XYVBlamdUQ3pqNS16ZVZzMlJBUW9tRTJRT3VobEpDQUM5YnloMzcxbElCUmxaUFplcXBIZVR5c2EzUUNFUQ?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -110,6 +173,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-34541c9b9e88a68a",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "South Africa and Russia: assessing long-term national interests beyond summit diplomacy",
+      "summary": "",
+      "source": "thenational.co.za",
+      "published": "2026-11-03T04:43:14Z",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUEoyTkdDRnJFZ0hsV09wcFFUeDlSTnM4OVlrRGtHazdnc1ZXclJOTlZWWVhPR29sSUlzRFV4bzlOUk9pR0lmWmk5RF9VOUk0UEIwYVZIMGRPTEhUNVhuUWFZVVl3eE9NQ1RkSHRZZW8wUzU0NUFSOURoSkVGSU1BNURScHhDWWhvQWY1YXRWVVFrSDFwcS00aDdYSjY2QldqQktybXBmM3YtQm5PdkhrTkk4Mkl5YmFpVWg0RTJEcXpvX0R4V09EWTlnY1o?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-22f5ba5636350284",
       "category": "securitate",
       "region": "asia",
@@ -121,14 +195,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-88ef0dc0571c1755",
+      "id": "geo-85904a44e190d9bd",
       "category": "diplomatie",
       "region": "americi",
-      "title": "North Korea denies involvement in $6 bil. Binance crypto platform heist",
+      "title": "What Azerbaijan brings to G20 table goes beyond its economic weight",
       "summary": "",
-      "source": "毎日新聞",
-      "published": "2026-11-03T04:27:49Z",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE92aFZPSjB4QzMxUjZ0MkhHUEh4YjI0TVFsSFY3Q3oxU3VROS0wUjNzZ2VDSXVzcmhsRks5b0laZkZDaFNxNjk0UzdLX0hUS1VNeDdZZk5PbF9GeWdNSGlaYTdWS1Bnb2E2RGRyVUEzd2R1S1E?oc=5",
+      "source": "AzerNews",
+      "published": "2026-11-03T04:30:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9hclhBUk10alJEYkphN2RXVEtLX3l1T2NvS053c3prZVp6ZU9Ya0FIVS05cFd4NjFhUHpSTjB2Y0dURmJGbGF0Y0pzVXRXcGRBVDAyV0ZUdw?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -229,14 +303,25 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-5c553fd91bd8203b",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Russian Bombing Kills 26 at Ukraine Humanitarian Aid Center",
+      "id": "geo-37bd6aa0fe1f2c76",
+      "category": "securitate",
+      "region": "asia",
+      "title": "US criticism of China in Yellow Sea exposes strategic divide with Seoul: expert",
       "summary": "",
-      "source": "SuaraGarut.ID",
-      "published": "2026-11-03T01:09:11Z",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5FYUU5YWJlNlZwVlRiYlBsd3JablhON0lWdUc5QVNFWnJzV1lPNS1yc0o2NUNlWUpPbWx0VWNtaHQ3YXVETE1Sdkt4Rmxmc0tLNFBMU2tGaWlmUHAwb0RrZE4wemgzeUxySW4w?oc=5",
+      "source": "Asia News Network",
+      "published": "2026-11-03T01:16:39Z",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZXZGZ0VjVmR6TkVnME55eG1JZV9zcjYtV0ljemVPckNWUTBmMHNTQ0YyV1J5TjFQemhobnlJS2RZeDNMV3RhZzBZMkJQbHowV1EwMWFZc2pHM3plOUNsN1hucVBfVFJVbzhNUXBKTzRsWFhHa2JwRUFGUmwyX2F2VTNqOHJDQThPODF3TVhwQndTc1RnMFEwR05GMWdEcG0xQWstRVBLTQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-fd4f77b73a6bd77c",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "North Korea says US allegations linking it to Binance heist are ‘absurd rhetoric’, KCNA says",
+      "summary": "",
+      "source": "The Business Times",
+      "published": "2026-11-03T01:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOV2xHejhNRTFtYklPbEYtYl9FeFZlSktRNTR1a0w3YUxlMmtFRXhITGN6T2J0OHAtZHF6WVBxaGN6ZnVTWExTSm5uNU42ZFg0Nm9IU0JlRWswbFdySmgwenkzRG5JTDl0TjZnV040SEVtTklaTDNfWENlM09ObzdZMnlhY19MUFh6eEROZDNEMjZjemhQSE9VSFFrT3ZGZk5NRW9JVG5URERJRVVQSkFqWkd2S0M1TkhIa05zVGMtMEQwMmU5SmVRMHZFWGdfLVVQaDRqWm94aE9HeW15MDVLRW5QY3ppNWRD?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -344,17 +429,6 @@
       "title_ro": "Comerț global, tarife și agilitate transfrontalieră",
       "title_it": "Commercio globale, tariffe e agilità transfrontaliera",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-eaa0668b4710a63f",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "\"This is Catastrophic\": Gaza Hit Hard by UN Food Cuts and Lack of Humanitarian Aid",
-      "summary": "",
-      "source": "Drop Site News",
-      "published": "2026-11-02T23:01:27Z",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOQW1FNmp0Smp2bktrSW1ZS2swQXlma1pCajh1bkJrTURrZ2N6eEstU1FsSy0yYkpTckFOdlJpY0x6NE1ybGd1LXdBVVJPTXlVVzhNaGIySEs2eEF1cEt2czZ5RVJOYW1JMEhJMUJBRUNucHQ0dzMyNFlEcjhEWDZ3bmY3dGpyS3lESTFFbUFKbkE5NU5KQzVPdEZkYkp5WFYzWDFIRTJZMURmRjR0ZDVsSkNmYW1WellOdlp2UFdlRl9NZ0xRR0cxSngtNjRxSkNJaEg4?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-3632b4010e06817c",
