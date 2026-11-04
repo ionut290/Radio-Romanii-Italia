@@ -1,0 +1,18 @@
+[Unit]
+Description=RDI AI Music submission backend
+After=network.target
+[Service]
+Type=simple
+User=rdi-ai
+Group=rdi-ai
+WorkingDirectory=/opt/rdi-ai-music-api
+EnvironmentFile=/etc/rdi-ai-music.env
+ExecStart=/opt/rdi-ai-music-api/.venv/bin/gunicorn --workers 2 --bind 127.0.0.1:8766 --timeout 90 app:app
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/rdi-ai-music
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
