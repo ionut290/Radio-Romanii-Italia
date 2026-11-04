@@ -29,6 +29,7 @@
  updateButton();
  const endpoint='https://radio-romanii-italia.duckdns.org/api/nowplaying/radio-romanii-italia';
  const fallbackCover=new URL('./RADIO-LOGO.png',location.href).href;
+ const cleanTrackText=value=>String(value||'').replace(/\s*[([{]\s*(?:[A-Za-z]{1,6}[-_ ]?)?\d{6,}[A-Za-z0-9_-]*\s*[)\]}]\s*/g,' ').replace(/\s{2,}/g,' ').trim();
  const cover=document.createElement('img');
  cover.id='rdi-now-playing-cover';
  cover.alt='Copertina del brano in onda';
@@ -44,14 +45,14 @@
    if(!response.ok)throw Error('HTTP '+response.status);
    const data=await response.json();
    const song=data?.now_playing?.song||{};
-   const artist=String(song.artist||'').trim();
-   const name=String(song.title||'').trim();
-   let text=(artist&&name)?artist+' — '+name:(name||song.text||'');
+   const artist=cleanTrackText(song.artist);
+   const name=cleanTrackText(song.title);
+   let text=(artist&&name)?artist+' — '+name:(name||cleanTrackText(song.text)||'');
    if(!text&&data?.live?.is_live)text=data.live.streamer_name||'Studio Live';
    title.textContent=text||'Radio Românii din Italia · Live 24/7';
    title.title=title.textContent;
    const art=String(song.art||'').trim();
-   const coverUrl=art.startsWith('https://')?art:fallbackCover;
+   const coverUrl=art.startsWith('https://')&&art!==fallbackCover?art:fallbackCover;
    if(cover.src!==coverUrl)cover.src=coverUrl;
    if(text&&'mediaSession'in navigator&&navigator.mediaSession.metadata){
      navigator.mediaSession.metadata=new MediaMetadata({title:name||text,artist:artist||'Radio Românii din Italia',album:'RDI · Live',artwork:[{src:coverUrl,sizes:'512x512'}]});
