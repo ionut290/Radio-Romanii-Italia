@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-04T00:55:52.853444+00:00",
-  "editorial_updated_at": "2026-11-03T21:56:38.486276+01:00",
-  "translations_updated_at": "2026-11-03T21:04:27.814044+00:00",
+  "news_updated_at": "2026-11-04T01:27:13.923755+00:00",
+  "editorial_updated_at": "2026-11-04T02:16:16.414948+01:00",
+  "translations_updated_at": "2026-11-04T01:25:25.955229+00:00",
   "feed_total": 78,
   "feed_extended_400": 0,
   "feed_missing_body": 78,
   "feed_short_body": 0,
-  "editorial_total": 18,
-  "archived_editorials": 148,
-  "translation_records": 11,
+  "editorial_total": 19,
+  "archived_editorials": 151,
+  "translation_records": 15,
   "pending_total": 94,
   "pending_filtered_out": 268,
   "editorial_verde": 2,
-  "editorial_galben": 40,
-  "editorial_rosu": 51,
+  "editorial_galben": 43,
+  "editorial_rosu": 50,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -618,12 +618,21 @@
   ],
   "recent_news": [
     {
-      "title": "Alegeri SUA 2026: Americanii votează pentru Congres, într-un test crucial pentru Trump. La ce oră vor fi anunțate primele rezultate",
+      "title": "Alegeri SUA 2026: Americanii votează pentru Congres, într-un test crucial pentru Trump. Au început să apară primele rezultate",
       "category": "România",
-      "published": "2026-11-04T00:54:51+00:00",
+      "published": "2026-11-04T01:07:25+00:00",
       "url": "https://www.digi24.ro/stiri/externe/alegeri-cruciale-in-sua-scrutinul-de-la-jumatatea-mandatului-reprezinta-un-test-major-pentru-donald-trump-4019093",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Midterm, le proiezioni di Decision Desk HQ: 'Il dem Ossoff mantiene il suo seggio per il Senato in Georgia' - LA DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-04T00:57:11+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-le-proiezioni-di-decision-desk-hq-il-dem-ossoff-mantiene-il-suo-seggio-per_cac22026-2d64-44b0-8b5f-ee46bcd00316.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -636,30 +645,21 @@
       "words": 0
     },
     {
-      "title": "Midterm, primi seggi chiudono in Indiana e Kentucky - LA DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-03T23:50:44+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/i-primi-seggi-per-le-midterm-chiudono-in-indiana-e-kentucky.-i-repubblicani-vincono-a-guamla_cac22026-2d64-44b0-8b5f-ee46bcd00316.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "De ce sunt nemulțumiți americanii. Un sondaj NBC News dezvăluie imaginea votului la alegerile intermediare - Realitatea.NET",
-      "category": "România",
-      "published": "2026-11-03T23:15:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQV2FkYjNSVEk1ZEp1dnNKUEtPa2FjUEpNZEFQZk56emJZZU0weUpGd0pnZUtTUjJwNG1QT1VURlZCNzNSRVlTdnFCWWtrSXZNMFVsam9CYlhkUzBLSzJsNENFd0dwcUJxMkw2aV9uQXFQdGhuSzVSWkJZSTduR0VFdjB5QWVvZDhQRENNQzhIRmZyUE9qNEhCTjQ5eHNjNHVHZ1ZGczNzUkczMVFEaHJ1U0F1aDE3YUsxbk5QN256QUhLeUFLcUZXSmlXNXdtLXl3aEh1RG1Yb0lhS1pnc19VYXdjc3hfaUxZRlBERWZLc043VVcyYW1iamFB?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Il Manchester United ribalta tutto e batte la Roma 3-2. L'Inter vince 3-0 sul campo del Feyenoord CRONACA e FOTO",
       "category": "Italia",
       "published": "2026-11-03T22:30:56+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/03/il-manchester-united-ribalta-tutto-e-batte-la-roma-3-2.-linter-vince-3-0-sul-campo_f4486b8c-c4ad-47f6-9339-1c5b0b649554.html",
       "source": "ANSA",
       "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trupele britanice vor avea dreptul să riposteze în cazul în care Rusia va ataca misiunea din Ucraina (Sky News)",
+      "category": "România",
+      "published": "2026-11-03T22:23:49+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/trupele-britanice-vor-avea-dreptul-sa-riposteze-in-cazul-in-care-rusia-va-ataca-misiunea-din-ucraina-sky-news-4020609",
+      "source": "Digi24",
+      "status": "galben",
       "words": 0
     },
     {
@@ -1050,15 +1050,6 @@
       "words": 0
     },
     {
-      "title": "Anche l'Italia non è stata risparmiata dal nuovo attacco a frigoriferi e congelatori - Corriere del Ticino",
-      "category": "Italia",
-      "published": "2026-11-03T12:01:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQaVJ6ZGNLbS1wNGh2NWpOakt3X0NuTUZEdFlrcnJaQVJRaWt5SHczTDM0N2xUZTN5RFZXVTRnZTNtUmFLNmMyZXlvSk50ZGEyZkpRV29JNU95T1lNdUVqUlp2ZFFheHV3UDY0d0tySE93WjYwUW9EYWdlMnhfb0x3YnhESVVFd0Exa1NuejNGMmlsWFVsb2gtbFhoeko5YW5uSGRBbm5EdFdZYWVnNF9qT21TOXM?oc=5",
-      "source": "Corriere del Ticino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Reacția ministrului Muncii după studiul BNS privind salariul minim. Ce spune Florin Manole despre creșterea salariilor - Stirile ProTV",
       "category": "România",
       "published": "2026-11-03T11:48:46+00:00",
@@ -1140,6 +1131,15 @@
       "words": 0
     },
     {
+      "title": "Vigonza, alle scuole paritarie 285mila euro l’anno e altri 23mila per sostegno e inclusione - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-03T10:17:44+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdjdwSi0wRWxIbzMwaElYYk5hZ1RvT3Y5SkpfMkZxWkdWOGRlUjd2Mmd3SWtiZExHUHBzX29MeG96OV9kbU9keDRjSUMyc0RSbUFFVF9lNDE3MEhzVjI4VmNJZzFIeHFlV1pld1JPeVNZcjgyOUZidjZkU25YUEdvMUxmRzF0aXc?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Voce dei draghi, Stefania D’Urso in mostra a Selvazzano - Padova24Ore",
       "category": "Italia",
       "published": "2026-11-03T09:19:27+00:00",
@@ -1153,6 +1153,15 @@
       "category": "Diaspora",
       "published": "2026-11-03T09:14:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPa3AzZzdHSWFOOGtrMUE4S0J6UWlpYnpRSjI3TUtLNllGaTRvdG5RRXhNN1Q0Yzlyd2ZKaFl6eHU3UlVWNVBOYUVxNXBsSDFlWm5JdHVEbTB3akYzdXNDclJwR1VaVDMzcjBkbjh0U3hvYUtiUlZZemJ6LThERHRDT3NLY3pxSkZLSnhuckVqS09ZVjNfdWR4WnA1Qko0OVh6VTR0S1VtbDl0S0hWSzhBS3EydlF3X0VvUFp4NHVFNnhNMnpaQXJVNGIwSGM2RU5jQlYyTzRWejh1bC05aWNZX3paUDVPcFFycUYydkoyazlfcTdPZUFRQmNaNXlVdW5PVlBmTlU1bnVTMV9UMkxuZDdtRVdla21rMXlvN0dkcVJWeDJkbTJzZXJoMUk?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: ucis - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-03T08:09:54+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBvaGQyUTBhZ25CblgtakhmTHlYVkRNR1JHYXZiMUQ4RzE3SHJFZXQyVDdJQ3F2aU5jN3kzbkU2a24xdmR1bDFiWnlKN0Y2bWJlXzRHcm42bw?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1190,15 +1199,6 @@
       "published": "2026-11-03T06:12:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1qdDhFU3plbndfU3FMNGpKQkdfNWRMZXFtQzNmZk1MUzZrbWJTTXRzLWlFcHNLNHc5Tk1VdHk5V3BONFNQWWNJQWxQMmZNN1loN2lBWVZnYzZ3VmszUjhrejN3Q2ZrTWpOb2pQSmdGYkhaaXRXS2oxQUNVckxyUQ?oc=5",
       "source": "Sky TG24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Donald Trump amână cu 75 de zile aplicarea legii de interzicere a reţelei sociale TikTok - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T03:27:45+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQnhWQTdaX1JZUlRaYXQtMWZDSWhrZDc1UGpGOWFEbEJubEI1YXpiRFg5LVRsQWp1RjA1aEYzTC1NM0R5ZUEzUDdTeXVOd0ozWG95TTIzempjUWNYMThwQmRaSldCZlh6R1FlNG9hZVFPamxOMGNOU184UDNSenlmVlM1cVF6UWtHVGRXNWxMa3hEU29rZlZhdDVHblFJMThnU1F5MjFpaTFTMVNrX2pUdUZjeXpYZFhMdHVPa0h0WC1EVEdQalNEUE1DV2kyQdIBzgFBVV95cUxOQnhWQTdaX1JZUlRaYXQtMWZDSWhrZDc1UGpGOWFEbEJubEI1YXpiRFg5LVRsQWp1RjA1aEYzTC1NM0R5ZUEzUDdTeXVOd0ozWG95TTIzempjUWNYMThwQmRaSldCZlh6R1FlNG9hZVFPamxOMGNOU184UDNSenlmVlM1cVF",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1344,17 +1344,6 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "„Ce să faci în România? Mergi la Budapesta?”. Cum le-a închis gura un italian celor… - Mediafax",
-      "category": "Diaspora",
-      "published": "2026-11-02T01:13:59+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNal9CUEZvZXNLdWpWcmYxQzVBNkpHaUh1a1JFQS11bjVSYlN4RVY5Y1RKYUo2YV9hc3QwS1NuVERUZUNBMlgtMmU0M1BfaHQ4S1hDRXNDQldBV3BqM3VSbS1QZUtFZzlXNkVXRGE1ZGNPaWJCQW9wQjluWmM5ZUZndjNqNG5HOU50blJ4ME0xR3RDa1FIdWFfWm81Qmw5dUZpYXV2WnVaLWt4MlNNSzI2blZyTGc0cmNBT1pRSkltTTl6Z3JOMGpvOXNXTUktQmxLRUh4MtIB2gFBVV95cUxOOHRMMm16Wlo5QTVCeVM5UVJFTlJVQzJINm9zTHp0QU10VDZfMzlnRGlqcE91QUpUd3lfbnRwNHd2ZzdQaGxKbFU3WUU5b1gwTU96U3VMSF9GLXdjODNfbE5oY0RHcld6QXlGWHpnQjJxNDN0UWRkbEFIMG0yZDB",
-      "source": "Mediafax",
-      "status": "galben",
-      "words": 16,
-      "intro": "„Ce să faci în România?",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
       "title": "Familie de români, implicată într-un accident mortal în Italia. Doliu în familia Gogonel - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-02T07:48:00+00:00",
@@ -1374,6 +1363,17 @@
       "status": "galben",
       "words": 18,
       "intro": "Român de 38 de ani, mort într-un accident grav produs în Italia.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Doi frați români, într-un accident grav în Italia: Petru a murit la 38 de ani, Vasile este în stare gravă - Stiripesurse",
+      "category": "Diaspora",
+      "published": "2026-11-02T12:42:44+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOMVJKR2gwUUZzR2NRd3I5Z1V3NlZyazU0eVNTT3ZNbnI0WTFQOUk3X0s5NTVSTjFjVk50TkdyUHNrcG1QcW5xcjZ2SnI4LXJZVWItUVZrOTUtcVhlYzFMajFZWWpIaGl5T1lnejJTRGN3azN5OE8xZmtpdEtfZHpvUGRfNHVTVW5SZ01EcWdUaUpLVUk4bWRVejlvaV9POTRfZ2twNDBGV2FYMlZlRDZpXzNEeVNlbWlqQVRvRzV2YlVQQTVvTlpMU25vTmJMUTktUHJMOQ?oc=5",
+      "source": "Stiripesurse",
+      "status": "galben",
+      "words": 21,
+      "intro": "Doi frați români, într-un accident grav în Italia: Petru a murit la 38 de ani, Vasile este în stare gravă Stiripesurse",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
