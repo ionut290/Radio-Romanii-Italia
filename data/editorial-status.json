@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-04T00:10:00.811008+00:00",
+  "news_updated_at": "2026-11-04T00:54:12.488570+00:00",
   "editorial_updated_at": "2026-11-03T21:56:38.486276+01:00",
   "translations_updated_at": "2026-11-03T21:04:27.814044+00:00",
-  "feed_total": 78,
+  "feed_total": 75,
   "feed_extended_400": 0,
-  "feed_missing_body": 78,
+  "feed_missing_body": 75,
   "feed_short_body": 0,
   "editorial_total": 18,
   "archived_editorials": 148,
@@ -13,7 +13,7 @@
   "pending_filtered_out": 268,
   "editorial_verde": 2,
   "editorial_galben": 40,
-  "editorial_rosu": 51,
+  "editorial_rosu": 48,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -618,21 +618,30 @@
   ],
   "recent_news": [
     {
+      "title": "Alegeri SUA 2026: Americanii votează pentru Congres, într-un test crucial pentru Trump. La ce oră vor fi anunțate primele rezultate",
+      "category": "România",
+      "published": "2026-11-04T00:41:24+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/alegeri-cruciale-in-sua-scrutinul-de-la-jumatatea-mandatului-reprezinta-un-test-major-pentru-donald-trump-4019093",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Digital Value, Maximo Ibarra al vertice per il rilancio - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-04T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQLU5mdnZvSzNha2huZ2Y3RTdoMndoTkNGQUtLaTNKeWFzbU1uTmpmLTF6MUZhOWdRamZpdlFaSnM0MTkyT1NDRjFJeHRydl96TXBOSWVUZ2dxRkstVzMwQ25iaDc5eDVONllGOVhteS1xSnlFbGdjaHA0U1Ntdmo0Z2F2Q1pORFktTnc0UTdrWUpGODZUU0dMdG56N0Vxd3J6VXBYLWhTSjRVQVYyaVdnbi1XWkVjRTNLaW5qWFF2Zw?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "I Benetton cedono le terre in Argentina per 200 milioni - la Repubblica",
       "category": "Italia",
       "published": "2026-11-04T00:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZTdPbHc4amd6Wkh0ZWNLeEZYMFlPVlE3aDRhcG95MmE5Zmk0UDZIM2FTWHIzSjg4SVBjQ3ZQSG1qUVFsRlFKWkVBb25KWWdMVFFYbnJBb2doWHRiNWxvMmxaZTZiaTg1SEJkWnJPcUdPVHEwd1BnaWlKdUxMTDZ0UUR1cmxEX3d3M1g3NFV5MTdvMEpwUm5lc0Y0YjN5cTM0YzFEdmNwcEtESlhHZlJV?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Alegeri SUA 2026: Americanii votează pentru Congres, într-un test crucial pentru Trump. La ce oră vor fi anunțate primele rezultate",
-      "category": "România",
-      "published": "2026-11-03T23:56:20+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/alegeri-cruciale-in-sua-scrutinul-de-la-jumatatea-mandatului-reprezinta-un-test-major-pentru-donald-trump-4019093",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -951,6 +960,15 @@
       "words": 0
     },
     {
+      "title": "Atenționare MAE pentru românii care călătoresc în Italia! Ce se întâmplă cu zborurile - Kanal D Romania",
+      "category": "Știri consulare",
+      "published": "2026-11-03T15:38:34+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNczZlQkdiOWZiV0dVMXF1UlhCM1lCU3JaTUhJTGFkeU1hM1hRQlRRZzl0cUJzNkpzRFV1YThzeHFpZjhydUFaa291UElhWmx2cmxaZlN4aFBVeHZoejNlTTRkeXJOS2ozeGkwcVNUM3dUZlprQlozWTFzbkJpcWlGbWpkTmFHVEhUSnBJM2dkdWREOUZzcEhibjRuQzFPTmVscHFPZFNuYWpNbFpkdzZWcl9QX01PQQ?oc=5",
+      "source": "Kanal D Romania",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Român arestat în Spania, pentru uciderea unei femei de 53 de ani în Austria. A înjunghiat-o și a... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-03T15:32:00+00:00",
@@ -1028,15 +1046,6 @@
       "published": "2026-11-03T12:47:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOYlNFR1dRUWstdDVMNVNjSUNxU0pzV1kwbG5BQ2gteGVoeFBkcVBrUWc0Zk9XRkFyQzUzYzVEb0pLMHRRcjBiNFhFZE1zNzNuLUw5cFFjRG9TWUFNa1NJQzhPNGFzSmtsNmNmWmJmNDNkUHc2a0lMTTU3VmlxODd2TG56cGxsaEs5YWVYb09EQUx6OUJtRFNwOWRWS2ZHMm8xVTV1bVBVM0pDVG1GejUyV3JLeU4wN0lsU3RNb3ZiNV9RZlE3d2NzdVliMDJEemM3OTVyN3V0YXhIR1NPZDA1SENUUQ?oc=5",
       "source": "Borsa Italiana",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Concorso MAECI Segretari di Legazione 2026 da 35 posti: prova orale in corso e integrazione alla commissione - Concorsando.it",
-      "category": "Italia",
-      "published": "2026-11-03T12:31:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYU40NUlLQnI2T0pERDU3clk3ZmhrZzk5NGw4ajlRdnh6QWR0QUlaM0I3M2dvaU1JNEhDWFZWZDZaNjhoSHhudnc1MnUwM2JMLVo4OFpDX1ZxVVkwWEp1NDl0bllNMkN5d21HVzlDM2pEZGRKMlZJOFd4WkpWUHRWUQ?oc=5",
-      "source": "Concorsando.it",
       "status": "roșu",
       "words": 0
     },
@@ -1248,15 +1257,6 @@
       "words": 0
     },
     {
-      "title": "Visteria țării se golește văzând cu ochii. BNR a rămas fără 1,5 miliarde de euro, în doar o lună - Realitatea.NET",
-      "category": "România",
-      "published": "2026-11-02T14:17:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNek1qVndsZEFaem1qTG0wOHFlTXNoX2tfRXh4dksxNE8ydm9udFBQdEV2UXBRZ1lxTzdKOUNXMzVQbHR5T2N0dmpMSUpxNnZmbzFSUnZqT0F0QWlOZXRrV1VRMzlxNWdjV2xtQXREUk5OVVpIbzlTVEFscTI1cmhSM3Z0N0lzbjdoYzBzdVRuVVRDUVpHNzV6QmlsOHNwU25SVmhtYTA4V1prNXc5R0FrR1Z3YUlmYUNmdkZrUmlkeVRFZU44RlpaT3BPTDdhS3lORlFHWW9CVXZzUQ?oc=5",
-      "source": "Realitatea.NET",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ciclon puternic în Italia: Alerte meteo în șapte regiuni, furtuni violente și rafale de vânt de... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-02T12:23:00+00:00",
@@ -1266,29 +1266,11 @@
       "words": 0
     },
     {
-      "title": "Ce încredere au cititorii Observatorului Prahovean în Guvernul Niculescu. Rezultatele sondajului - Observatorul Prahovean",
-      "category": "România",
-      "published": "2026-11-02T12:07:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZV9Fbi1VSDlXUDVXWHlXTW5GQWJSbm9XclJkT3M2akVGOEVrSmgtYU9qU0VGWGJlY1J3U2ZmbHV1NGdONHJ1Q2ZTN1c5Ykd2UE5PUzRYNHZDMEJHSTdObllueVVDSld1UXI2UGNqM0pNUzJJbU43c3BCbWswOF84dmdFUW1faVZUSTJaUmpjOUQtb2tJbnFubzloZEJNZmJyQlJHZW5PdWNua0FqVmdTZUNscDZOTFdaVmNGZkhBaktwQWdVeERMdm5BWm1SanUxYzJOWHplWHQ?oc=5",
-      "source": "Observatorul Prahovean",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Il sommerso pesa meno sul PIL, ma il lavoro irregolare torna a crescere - Il Bo Live",
       "category": "Italia",
       "published": "2026-11-02T12:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxObFNMU2JiVXYyTEdaMGpDcFVsc3BLX0ZOTjBlazFvYWxtcDRnaU5zdS1XaVFqd01oQUp4N1NKcHdKX19JSHZPRXgtUk9xU3VoNEtENDNEN1ktdjRCRXdDcHJiWFBFSHJfQXdFM25ycVgyU1hiaU45TTQtNlVCalM0ZkVwUWYtMDQ0U0dmT2tfbw?oc=5",
       "source": "Il Bo Live",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "România și Moldova, prima achiziție militară comună prin SAFE: 62 de camioane IVECO pentru Chișinău - Monden.ro",
-      "category": "România",
-      "published": "2026-11-02T11:08:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNZ0Fud3hpNzhuWE5IT2pGMFhUSC0xTUNUS0JzSXpycU5YS2ZSZmxWaS1taDBMLUJ2SnJzSnhmam9majlTY2QzR20zMzBUOTVZaWhQR3M0UGRYeFVQREJERk5pNXFOejBTeTI3MEt3Ui1NVG1wSmdBVEVNeXJNVDh2N09ibHlmWTFaOWN4X3hMTHY0Q2JCX2NsT2diWFB5OHVsMjFxMnpSZDlrZTRoLS1YdEFWamI3ZjlSNzRuT2pKNGpkdw?oc=5",
-      "source": "Monden.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1307,15 +1289,6 @@
       "published": "2026-11-02T07:48:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbVBHNUN4ekxDeXBiaUhidTdncnJkNE5IeWhSOTdfZFV6aVJUQlJYRFJpZ0VvbEhIcVRLalR3aWN1cGxQYmgzUjY3RGpGS1AwUW4xRVB0Rk5uY2NMMll4OGNmbmVKdV9aV2F2S1JUd0Y4SXhUZTNESmpaQkJXczRmRG43Y3pkaXpUMG5OcElVTWxKcVVnbngyQUQzd2txRmdSMDZ5cUlUOHV2UXRWSUhiS002RG1VR3BsTFNteF80Nm5keXdJUFHSAcsBQVVfeXFMTWU3ZlVabXdRNTlTU2Mza2xSbDJqQ083VlBwR1Nrc0VneUt1am4tclpZWFdxNGhwd2VzTm4ycW53SmFGNm94RWxDMDRLYlI4TkdxM3ljRkUtX1B2SkRrN2dfSHFpc0pfWFItVGVMbm9GYjBBUDJuTVF5azhONldmWElJcFFYTlhQd2J3ZC1",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Buletinul Vremii din România, ce Fenomene Meteo Severe sunt Aduse în Atenție de ANM pentru România - iDevice.ro",
-      "category": "România",
-      "published": "2026-11-02T06:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOblQ0bGhrRDNhUWc1LW1jQ01ta3cydVZ0clRRRlV5MllRV3NlcmhjVkZ3MWRTSjRXQ3daaEQxZU9ubEs4eFN4S0ZKbUktTjlYR1A1bkxXM25NaVY4Ymk3Tlc4cjc0ZjNHd1lCdjExQ1NBNGdQVF9aMzl2N1MtYXhvYzFTZEdpSGk5Y284NkRydUVaTmtSbnpwMnNWeXBpNVA4NWJzM3JNQktVcVJ3?oc=5",
-      "source": "iDevice.ro",
       "status": "roșu",
       "words": 0
     }
