@@ -1,11 +1,16 @@
 name: RDI - Pensiero originale del giorno
 
 on:
-  # Pubblicazione autonoma alle 01:00 italiane e recupero alle 06:30.
+  # Esegue subito anche quando viene modificata questa pianificazione.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-thought.yml'
+  # Pubblicazione autonoma alle 01:30 italiane e recupero alle 06:30.
   # Entrambe le fasce gestiscono automaticamente ora solare/legale.
   schedule:
-    - cron: '0 23 * * *'
-    - cron: '0 0 * * *'
+    - cron: '30 23 * * *'
+    - cron: '30 0 * * *'
     - cron: '30 4 * * *'
     - cron: '30 5 * * *'
   workflow_dispatch:
