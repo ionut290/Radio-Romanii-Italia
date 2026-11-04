@@ -1,11 +1,11 @@
 name: RDI - Pensiero originale del giorno
 
 on:
-  # Pubblicazione autonoma alle 02:30 italiane e recupero alle 06:30.
+  # Pubblicazione autonoma alle 01:00 italiane e recupero alle 06:30.
   # Entrambe le fasce gestiscono automaticamente ora solare/legale.
   schedule:
-    - cron: '30 0 * * *'
-    - cron: '30 1 * * *'
+    - cron: '0 23 * * *'
+    - cron: '0 0 * * *'
     - cron: '30 4 * * *'
     - cron: '30 5 * * *'
   workflow_dispatch:
@@ -34,11 +34,11 @@ jobs:
           fi
           HOUR=$(TZ=Europe/Rome date +%H)
           echo "Ora italiana: $(TZ=Europe/Rome date '+%F %T %Z')"
-          if [ "$HOUR" = 02 ] || [ "$HOUR" = 06 ]; then
+          if [ "$HOUR" = 01 ] || [ "$HOUR" = 06 ]; then
             echo "execute=true" >> "$GITHUB_OUTPUT"
           else
             echo "execute=false" >> "$GITHUB_OUTPUT"
-            echo "Questo UTC non corrisponde alle 02 italiane; ignoro il passaggio."
+            echo "Questo UTC non corrisponde alle 01 o alle 06 italiane; ignoro il passaggio."
           fi
       - uses: actions/checkout@v4
         if: steps.ora.outputs.execute == 'true'
