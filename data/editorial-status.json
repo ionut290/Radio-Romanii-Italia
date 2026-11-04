@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-04T05:03:13.594237+00:00",
+  "news_updated_at": "2026-11-04T06:03:22.801487+00:00",
   "editorial_updated_at": "2026-11-04T02:16:16.414948+01:00",
   "translations_updated_at": "2026-11-04T01:25:25.955229+00:00",
-  "feed_total": 77,
+  "feed_total": 81,
   "feed_extended_400": 0,
-  "feed_missing_body": 77,
+  "feed_missing_body": 81,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 151,
@@ -13,7 +13,7 @@
   "pending_filtered_out": 268,
   "editorial_verde": 2,
   "editorial_galben": 45,
-  "editorial_rosu": 48,
+  "editorial_rosu": 52,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -618,12 +618,57 @@
   ],
   "recent_news": [
     {
-      "title": "Alegeri SUA 2026: Votul pentru Congres, un test crucial pentru Trump. Democrații ar urma să preia controlul Camerei Reprezentanților",
+      "title": "Situație care riscă să blocheze Justiția: avocații nu-și mai primesc banii. Ministrul Marinescu explică zecile de milioane datorate",
       "category": "România",
-      "published": "2026-11-04T05:02:41+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/alegeri-cruciale-in-sua-scrutinul-de-la-jumatatea-mandatului-reprezinta-un-test-major-pentru-donald-trump-4019093",
+      "published": "2026-11-04T06:01:15+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/situatie-care-risca-sa-blocheze-justitia-avocatii-nu-si-mai-primesc-banii-ministrul-marinescu-explica-zecile-de-milioane-datorate-4020531",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Depozit al magazinului online Ozon, din sudul Rusiei, lovit de o dronă ucraineană",
+      "category": "România",
+      "published": "2026-11-04T05:59:22+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/depozit-al-magazinului-online-ozon-din-sudul-rusiei-lovit-de-o-drona-ucraineana-4020823",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Un remorcher a fost în pericol de scufundare în Marea Neagră. Trei marinari vor fi duși în portul Mangalia, patru au refuzat evacuarea",
+      "category": "România",
+      "published": "2026-11-04T05:54:17+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/un-remorcher-s-a-scufundat-in-marea-neagra-mai-trei-marinari-vor-fi-transportati-catre-portul-mangalia-patru-au-refuzat-evacuarea-4020807",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Traian Băsescu a împlinit 75 de ani. Drumul către cea mai înaltă funcție în stat - Realitatea.NET",
+      "category": "România",
+      "published": "2026-11-04T05:32:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQazJRNWlCV2ZiTXQzUG85ZGxJZVEzMVhPMl96c1ZMNEtpUm10LXpHVHk1eHZOencyS2s0bnU0Z0Rlc2VkakhqV0hXWnBTZlFXRHB3UkktSnM4clY5MnVQemJ2Unprc3VtUWNGZmM3dkc1V3dWMFUyY3NTWl9ZakJfbWlzV1loeWZsckRsSVdoTGhVUVVwbGsyUzZRaE5LODRDVjlBVExSVEc1Z1RiRnZib01kVjVUcDFycS01bDFMbURrUE85WGNr?oc=5",
+      "source": "Realitatea.NET",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Zâmbet sănătos și tehnologie digitală la Clinica Dr. Maleki - Arges Stiri",
+      "category": "România",
+      "published": "2026-11-04T05:28:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNanJtenhaNjl5R1cxSUlkZUJPR3MxUnBfQ2lIV3VvRW54SkppODA4c0VwWGJfUkl6TXByOVZwVk1BZ2VyTGVuQTJubHBMZHB4czNOLVJNTUsyVXNfY1Z4dS1wVHR0cV8yYW9sRVJxV3RTMVhPWlMwREZieXZUTjA4RDl1MjhCTk1KNEd5WTk1RzBIanZ3RGVjMQ?oc=5",
+      "source": "Arges Stiri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Înfrângere majoră pentru Trump în SUA. Democrații câștigă Senatul - Observatorul Prahovean",
+      "category": "România",
+      "published": "2026-11-04T05:02:13+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOR3NkN2JoOVVMN051TjdqU3Znc2dGOUNKWTF6UDR6cjhGR0JyS0JrczJHZ09WNExlXzhYZU03VDZTc1VneU5kb2xEeUdRVVhBdk1ieERjTUg4YTM1bjFmLUFpTmVaVmpITmhYSTVrX0tNODRFbTFPYmlsWTFKQ09BOVU3MFp1RTUzdGZ0NDNnbzBMdm1XVFh5VUZOYXZpb24xR2laNlRJa3I5ZGVXUXJLSG92TFk4V0k?oc=5",
+      "source": "Observatorul Prahovean",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -762,20 +807,11 @@
       "words": 0
     },
     {
-      "title": "Planul Italiei de a introduce o „taxă de ieșire” riscă să-i alunge pe expatriații bogați: „O destinație mult mai puțin populară”",
-      "category": "România",
-      "published": "2026-11-04T05:00:08+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/planul-italiei-de-a-introduce-o-taxa-de-iesire-risca-sa-i-alunge-pe-expatriatii-bogati-o-destinatie-mult-mai-putin-populara-4019809",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Trump se distanțează de rezultatele din alegerile de la jumătatea mandatului. Ce spune despre o colaborare cu democrații",
-      "category": "România",
-      "published": "2026-11-04T04:51:18+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/trump-se-distanteaza-de-rezultatele-din-alegerile-de-la-jumatatea-mandatului-ce-spune-despre-o-colaborare-cu-democratii-4020767",
-      "source": "Digi24",
+      "title": "Midterm, media: 'Ai Dem il Senato, hanno il controllo del Congresso'. Trump: 'Disposto ad accettare i risultati del voto, collaboreremo' - LIVEBLOG",
+      "category": "Italia",
+      "published": "2026-11-04T04:43:24+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-media-ai-dem-il-senato-hanno-il-controllo-del-congresso.-trump-disposto_cac22026-2d64-44b0-8b5f-ee46bcd00316.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -786,15 +822,6 @@
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/03/ondata-di-allarmi-bomba-sui-voli-in-europa-due-anche-a-roma_4c2df309-18bd-49ef-b85c-100697218406.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Midterm, media: 'I dem conquistano la Camera, avanti al Senato'. Trump: 'Disposto ad accettare i risultati del voto, collaboreremo' - LIVEBLOG",
-      "category": "Italia",
-      "published": "2026-11-04T04:25:20+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-media-i-dem-conquistano-la-camera-avanti-al-senato.-trump-disposto-ad-accettare_cac22026-2d64-44b0-8b5f-ee46bcd00316.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -848,15 +875,6 @@
       "published": "2026-11-03T22:30:56+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/03/il-manchester-united-ribalta-tutto-e-batte-la-roma-3-2.-linter-vince-3-0-sul-campo_f4486b8c-c4ad-47f6-9339-1c5b0b649554.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ministrul Transporturilor din Spania şi-a dat demisia - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T21:39:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdjFOeFFLcmZyYXdMRnRxdVE4eFVqMk5BM2ItQTBhU1FDWjFDSHhGcXJ0UHU4SnU5R2JHLVhMM2NQRmQ2NDcxa3JnaVpBQ0pveWRxekhxa2VHYUhfMzFEMFBWc2JrZzdpN3F6WGw2VWFUODFUUnBycWs2Qk55c3E2U2E4NjlnQW9ZVGhaSFUzVTZoa0p6a29URnBn0gGfAUFVX3lxTE4zc2QwaTBBRjJ1V3FZdVh1dUZWMHBKeHBDbFkxbEh2TGQzWkNtNmJ1MDA5VTQwS2xOb1Jfd1ZNT21NLWlxU1lBRXFTc3hwMEZzMFhNZGxqbUFsN0dVMFhZR21UcW9UdXAtdFZ3eS1ZVzJyWmR1RWhMRHRKUWwwb1FBN3hzWnl5bTUzb2U3TjRmUVg3aHItVm5tUS1oVXdNMA?oc=5",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -987,6 +1005,15 @@
       "words": 0
     },
     {
+      "title": "Atenționare MAE pentru românii care călătoresc în Italia! Ce se întâmplă cu zborurile - Kanal D Romania",
+      "category": "Știri consulare",
+      "published": "2026-11-03T15:38:34+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNczZlQkdiOWZiV0dVMXF1UlhCM1lCU3JaTUhJTGFkeU1hM1hRQlRRZzl0cUJzNkpzRFV1YThzeHFpZjhydUFaa291UElhWmx2cmxaZlN4aFBVeHZoejNlTTRkeXJOS2ozeGkwcVNUM3dUZlprQlozWTFzbkJpcWlGbWpkTmFHVEhUSnBJM2dkdWREOUZzcEhibjRuQzFPTmVscHFPZFNuYWpNbFpkdzZWcl9QX01PQQ?oc=5",
+      "source": "Kanal D Romania",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Român arestat în Spania, pentru uciderea unei femei de 53 de ani în Austria. A înjunghiat-o și a... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-03T15:32:00+00:00",
@@ -1010,6 +1037,15 @@
       "published": "2026-11-03T15:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNNU40WnppM3p6V21oS0l2QVk0eUtGc1lKcXBxdEk1RVpGajBNcW4zYzZweW5UenQ1X1k5Z1daOUI4c25IM2QydGlGTDBjUjNWMVJKMWpacUpYM3pMWVdFNFZfeVJxSDVPbk1sRG1CdG94UWVlbDZvc21wN013VUY4NHpSLUk5QnhRY1FOZzUzM3FCSmZzWkhtMmlGTXZPTnE3MkhBdzFGTWJKQ3JVWnFSTDRvVUJHcGhabEtXTVZaU2dSWk1pQU1IUHVfTEpXVnBTZGZyU1lzR08yejF1V3R4XzdvQWhYMTY2NjFTRDNYMm50SjFzeWRpS09Saw?oc=5",
       "source": "Inail",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: chletuilei - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-03T14:15:53+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4wU200V0hfYmZYMDN5bzNMc0prOWlBN0J4bVhFckhfZzdrWFJFLVBlNnkyVlEzWW84M1BsMmcwci1BYWo1d3FLYXMwVnJBM05RQzEwYWwzeXBFN2FzNVE?oc=5",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1073,15 +1109,6 @@
       "published": "2026-11-03T12:47:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOYlNFR1dRUWstdDVMNVNjSUNxU0pzV1kwbG5BQ2gteGVoeFBkcVBrUWc0Zk9XRkFyQzUzYzVEb0pLMHRRcjBiNFhFZE1zNzNuLUw5cFFjRG9TWUFNa1NJQzhPNGFzSmtsNmNmWmJmNDNkUHc2a0lMTTU3VmlxODd2TG56cGxsaEs5YWVYb09EQUx6OUJtRFNwOWRWS2ZHMm8xVTV1bVBVM0pDVG1GejUyV3JLeU4wN0lsU3RNb3ZiNV9RZlE3d2NzdVliMDJEemM3OTVyN3V0YXhIR1NPZDA1SENUUQ?oc=5",
       "source": "Borsa Italiana",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Concorso MAECI Segretari di Legazione 2026 da 35 posti: prova orale in corso e integrazione alla commissione - Concorsando.it",
-      "category": "Italia",
-      "published": "2026-11-03T12:31:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYU40NUlLQnI2T0pERDU3clk3ZmhrZzk5NGw4ajlRdnh6QWR0QUlaM0I3M2dvaU1JNEhDWFZWZDZaNjhoSHhudnc1MnUwM2JMLVo4OFpDX1ZxVVkwWEp1NDl0bllNMkN5d21HVzlDM2pEZGRKMlZJOFd4WkpWUHRWUQ?oc=5",
-      "source": "Concorsando.it",
       "status": "roșu",
       "words": 0
     },
@@ -1176,6 +1203,15 @@
       "words": 0
     },
     {
+      "title": "Articole cu tagul: ucis - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-03T08:09:54+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBvaGQyUTBhZ25CblgtakhmTHlYVkRNR1JHYXZiMUQ4RzE3SHJFZXQyVDdJQ3F2aU5jN3kzbkU2a24xdmR1bDFiWnlKN0Y2bWJlXzRHcm42bw?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Congelatoarele supermarketurilor din Italia și Belgia, transformate în cuptoare. Hackerii le-au... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-03T07:20:00+00:00",
@@ -1208,15 +1244,6 @@
       "published": "2026-11-03T06:12:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1qdDhFU3plbndfU3FMNGpKQkdfNWRMZXFtQzNmZk1MUzZrbWJTTXRzLWlFcHNLNHc5Tk1VdHk5V3BONFNQWWNJQWxQMmZNN1loN2lBWVZnYzZ3VmszUjhrejN3Q2ZrTWpOb2pQSmdGYkhaaXRXS2oxQUNVckxyUQ?oc=5",
       "source": "Sky TG24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Donald Trump amână cu 75 de zile aplicarea legii de interzicere a reţelei sociale TikTok - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T03:27:45+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQnhWQTdaX1JZUlRaYXQtMWZDSWhrZDc1UGpGOWFEbEJubEI1YXpiRFg5LVRsQWp1RjA1aEYzTC1NM0R5ZUEzUDdTeXVOd0ozWG95TTIzempjUWNYMThwQmRaSldCZlh6R1FlNG9hZVFPamxOMGNOU184UDNSenlmVlM1cVF6UWtHVGRXNWxMa3hEU29rZlZhdDVHblFJMThnU1F5MjFpaTFTMVNrX2pUdUZjeXpYZFhMdHVPa0h0WC1EVEdQalNEUE1DV2kyQdIBzgFBVV95cUxOQnhWQTdaX1JZUlRaYXQtMWZDSWhrZDc1UGpGOWFEbEJubEI1YXpiRFg5LVRsQWp1RjA1aEYzTC1NM0R5ZUEzUDdTeXVOd0ozWG95TTIzempjUWNYMThwQmRaSldCZlh6R1FlNG9hZVFPamxOMGNOU184UDNSenlmVlM1cVF",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1280,6 +1307,15 @@
       "published": "2026-11-02T15:58:27+00:00",
       "url": "https://www.ansa.it/native/ansacom/2026/11/02/snam-compie-85-anni-e-punta-sullintegrazione-delle-fonti-per-la-sicurezza-energetica_c89769e7-bcc9-49bc-90e4-4c5663109ca5.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Regno Unito, Urso incontra Reynolds: \"a lavoro per inclusione nel perimetro del Made in Europe\" - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-02T13:51:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQUU05elBoamVsNVZaZENKNDZ1aGZTUXllNGpGSVFHUGhGazZ5a1lXUXJlemotTVpRNFFnV1VrZVlQLUNwbi13RzVyV0ExNGdvc0x2dHBNbVpzZlhsbWJNeG1JZm5qYW5aNEN5QzdDTEg5bWZCLWMwX3V4VUItbEpOVFpqbFhmbTdXVGtpVG11NmhVT0V1TUpTbE5qN3JkakNaVFZLQl9oZUhYRXJpc1NEWnJUOVl3SnNKYVRTNzYzTHRCSVg5el8yaHpMbUtueUVMbDBadS1jYW9sS2s?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
