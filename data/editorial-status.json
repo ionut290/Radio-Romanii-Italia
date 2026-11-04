@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-04T22:15:18.993964+00:00",
-  "editorial_updated_at": "2026-11-04T20:56:24+01:00",
+  "news_updated_at": "2026-11-04T23:36:28.432697+00:00",
+  "editorial_updated_at": "2026-11-05T00:35:05.987195+01:00",
   "translations_updated_at": "2026-11-04T22:14:26.862115+00:00",
-  "feed_total": 82,
+  "feed_total": 67,
   "feed_extended_400": 0,
-  "feed_missing_body": 82,
+  "feed_missing_body": 67,
   "feed_short_body": 0,
   "editorial_total": 20,
-  "archived_editorials": 157,
+  "archived_editorials": 161,
   "translation_records": 10,
   "pending_total": 94,
   "pending_filtered_out": 268,
-  "editorial_verde": 1,
-  "editorial_galben": 44,
-  "editorial_rosu": 53,
+  "editorial_verde": 0,
+  "editorial_galben": 46,
+  "editorial_rosu": 39,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -618,6 +618,15 @@
   ],
   "recent_news": [
     {
+      "title": "Champions: il Como scrive la storia, il Lens annientato 9-1",
+      "category": "Italia",
+      "published": "2026-11-04T22:40:29+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/2026/11/04/ansachampions-il-como-scrive-la-storia-annienta-lens-9-1_e3aefd3a-6981-430b-a834-c8a95ad8671a.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Cu cât propune Ministerul Muncii indexarea pensiilor. Florin Manole: „Sigur că nu sunt suficienţi bani”",
       "category": "România",
       "published": "2026-11-04T22:09:34+00:00",
@@ -632,15 +641,6 @@
       "published": "2026-11-04T22:00:07+00:00",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1oRU1WeUJubDJReFpTVmtGckU2a0pEWFZySkJISU9ERkNhSnI3bmxfd3IzZEZNTkg1TjBVYnNGNTYweUdBVlE?oc=5",
       "source": "Jurnalul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Porto-Napoli 4-1 e Lens-Como 1-9 DIRETTA e FOTO",
-      "category": "Italia",
-      "published": "2026-11-04T21:55:37+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/04/porto-napoli-4-1-e-lens-como-1-9-diretta-e-foto_227c0020-d394-4c34-9c89-543f4de64fae.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -798,6 +798,15 @@
       "words": 0
     },
     {
+      "title": "Cinque incidenti mortali sul lavoro in un solo giorno - RaiNews",
+      "category": "Italia",
+      "published": "2026-11-04T20:23:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOWXBqSFo1aGlVWHVQNVlvZmtJVDgxMDN4b3AxZmg3MlF3WGNpQll3QUY0Uzh4Rk1OdUNRSmFtNUJvWF9qWmZBWWtUTUJHeTJvajNack4tdnpuNGFJMjJMUU1LR3BSa1dxVWJUMmEtb291X3RydHlTN0w2MEx1bVpZRGVqaGVpY3hKam85TXBiSXVVaUhWWGJfSmtDMTgxUzVtQXVCamZjWVhpVHc0SGVQX093dmpzeHBVN2xLbU00TE9tZ2xYMDBHa3dhalZILXpPTjBVZVNuWFlRNHB2SUppQjV4ellJYXdXaEFtQTJHZ3pEZXfSAfgBQVVfeXFMUG1DSFB2Snd4ZXhQdWxDckstTGloNGFnTWlEZVJfemM4SVRlQmZCdURZeEZxQXZEMU5vUnJGT29TWGVqQ01uMTlaQmZFS2JXQ1M2V29yTk9ueFRuVnk3Q2p",
+      "source": "RaiNews",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Ce a făcut Trump în prima dimineață după ce republicanii au pierdut alegerile",
       "category": "România",
       "published": "2026-11-04T20:20:59+00:00",
@@ -861,15 +870,6 @@
       "words": 0
     },
     {
-      "title": "MAE, reacție după acuzațiile liderei partidului AfD la adresa românilor din Germania - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-04T19:10:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQVZMOW12a0gxMUVocHFHdVdxcmpnS1dQazBGT0VvRUZ1TkZHWFZ6ZlYwSTFKU3M3YUd5eHBDeXRhbTdXdldWb3FoN0hrdVdTZV9ZaEJBQWhkNk0zV3BsbmdKZ1VvX0pTeVZFN05CdjVIUmp4bGtldzdVZTJRZXlEaHdCMUl5d25hOVVockxUcE1SNkdMNUdzdzRTU3g1azF5SDVkUUJjSTRrblZPNG9MTWVraWRvS29xOFFTTGxnbG9zd9IBxwFBVV95cUxQSEd2RXNlNFZuaFNLMTJ2ZEhEZGNwUi1Jbm1lbUwzcEVMRnY2NEJnWFRCTVVKakpaQUw4Q3hZbEVsdHowM0k4Z0p6STNCS216S2lWWmJWcElaV2xJYmstVS1VRmstSGxKYU41bDEtWGxjSlhBWXJPQXVUQTVxVXdYYXRZM3JLa2FWMEVaZTVHV3E",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Luca Niculescu a numit noi secretari de stat în șapte ministere",
       "category": "România",
       "published": "2026-11-04T18:57:08+00:00",
@@ -915,29 +915,11 @@
       "words": 0
     },
     {
-      "title": "Negocierile pentru procurorul șef european, funcție vizată de Kovesi, se AMÂNĂ - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-04T16:14:50+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNXVrYXdqeVphQjFpVUtmb05nbllfdnlPZ0hjU2l4ZU1xajk0QlZ4SW92ZWFIMDFBMTF4aW1YM2p4YlY1YkRhWk5KVjdVX21aemFyMFEwRmMxdng0Y3l6UVZBU1dneHh2ZmlPV2RhVC0zaEN5cG9fWDVFQW45ay0zcHhaMXBTdVRheUxnQWlGY2JIN0dVVG1kREtDazVMby1pd0pWNG5qZVk4Vmp0M1FjT2laQkdzYnlZU1I4bNIBvAFBVV95cUxQNXVrYXdqeVphQjFpVUtmb05nbllfdnlPZ0hjU2l4ZU1xajk0QlZ4SW92ZWFIMDFBMTF4aW1YM2p4YlY1YkRhWk5KVjdVX21aemFyMFEwRmMxdng0Y3l6UVZBU1dneHh2ZmlPV2RhVC0zaEN5cG9fWDVFQW45ay0zcHhaMXBTdVRheUxnQWlGY2JIN0dVVG1",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Românce ucise sau bătute în Italia. Poveștile din spatele violenței care distruge familii - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-04T16:06:08+00:00",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUzdnWlBZV29QTDJ2S0NKV19GM1dnSHNsU3pqa0k2NGMtWGU3WjVfWVF1X05hMEFZbExwZEtkcU1PblhKVW1ySGRBS0l3Q3NkWW13d25MSDYzejRXNkV3MGU0dklWeEd2UV9lZE1pYnZLMGgxeVhlV05sNUVOQXdyN1phTGlQcVYxWWNKS1l5TDRGNzBTaVR1eVgyb0FVQktycVdsMFQ1c2VscW9saTBQX1hR?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Procesoare diferite pentru Samsung GALAXY S27 în Europa, spre Dezamăgirea Multor Fani - iDevice.ro",
-      "category": "România",
-      "published": "2026-11-04T15:29:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcHdsMkNqWEI3REdqOUpXb2hQY3B6ME1nX0RTeUZ1ZWZCdXg3T0YzSlJoMDBMdzJmSm1QbkE0SG81UTRJSENaUFEwdTJseHVua1BEV2NyMVdTSkQtLXZKbHJ3NzFSX01BSFdKOGRoUUtYVTdQX1g3X1pna0ZWSkhKX3pUdW1JcU5lNzlDWlg4WFRTVnBFNjVwNXVpbVdYS0FrWUNkV0VhUjdmdFJTZ2U1Tw?oc=5",
-      "source": "iDevice.ro",
       "status": "roșu",
       "words": 0
     },
@@ -996,29 +978,11 @@
       "words": 0
     },
     {
-      "title": "Român de 19 ani, care păcălea angajații unor companii, prins la granița Italiei. Un alt român,... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-04T12:16:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQSTlrY2pHY0JlMkxsWHo1ZUxEVHpNM2FDQkFnUE0wUEMyaHlTVktoVUphSHRZLWN6czBKQk5KbUJhM0E3RWktbzAtUElWd0UxNy1qRC0wTWl5R1A5b1V4WEtkOVFicW9oandiUXpXZGp2a0RqT0FkYVc2a2N2aHlhV0hkWFJMZFZNQnlNMFRwcnZRMm9PZGhLeW9lTnZEcU96cWxQMFY0VC1uV2xNVEJiY29xZFNqci1jM3BDMEdBOFh3NW1VVGhYaUdsX0RaNHVmcVd1ckUwRTd1VjlLLTNBZExlemNlWm1Id3Q4T3BqZ0tDcWRrZ0luazgtcUlwZmt1Sk55SUN30gGLAkFVX3lxTE9rdUVENFJaRkxTdGVCSFBOLWpnWVFmUjBjQk4yeFBMLVhmaE4zcktNV2R0TE9xaUhLcHBWem9FeWJiYlZkWjJCWTJPNWF",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Midterm, il messaggio dell'America a Trump",
       "category": "Italia",
       "published": "2026-11-04T11:26:31+00:00",
       "url": "https://www.ansa.it/sito/podcast/in_diretta_dal_mondo/2026/11/04/midterm-il-messaggio-dellamerica-a-trump_9efe960a-5a2e-413b-8615-d21d5f9285ce.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Denise Rifai schimbă din nou televiziunea: \"Vă promit multe seri frumoase\" - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-04T11:23:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNYzIyd2hMVlktVTBnV196RVFrN25weDZrSG5oMHBFdDNkN2VQaHJ4TjF5S01aY1pMajJlX2J0Q0JtemFoak9UUW1xOTNKWVN2am84Rm81UFJIT1RHMHhJZVRwSXdKNVV6eUw2XzFmaHQ2UUdvMmZJbnFPNDdiVFlwYTlzaXpXc1NzMzZTQzlCUWR1RFo0U0ZoTVpwVUtIWFpobkhEYk5IZG83N05SSENJY0hn?oc=5",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1041,15 +1005,6 @@
       "words": 0
     },
     {
-      "title": "Prețuri exorbitante în Munții Dolomiți din Italia. Cât a ajuns să coste o vacanță la un hotel... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-04T10:33:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOX0V4aWtZWFJORHI0R0EwOWIteEtaVENzME16NWNDSlN0djRid2I1R2FDLXZNLThEb2c0SVp4OFN6YjNEMXlGVzBnRW4xY3BMWGx1Vk5RdjZBX00wQVl4VUEtSllZTXpRM01VWDFVMXBMaW5tS1UyblhZZE4yS3pVSzRxSjE4OFdXU2s0NUEwLU5BbFBCTkJwZ19CemhwUnZFaEMwZ1N5UjhLa1NSWXJKQ2ctSFBVWnJnY19YR3FiMEhkT1dXeTh0LXlMT0loNW8yUzdpa1N1NDFTQdIB3wFBVV95cUxQZEp1U1lpbFBmWVVHRThLdXF5QUtwMWFzeGNNeUl6a0EwZTV2YUxYdk5SeVpsaGlfcF9faW1pMjlGQXJGQmRoREN3ekZZYjBOekZCSmdDZkZxcmI3T2t6VHJ1X2lRMmR6UHl5Wi0xSzg4S0RFaFZucjV",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Papà e figlio poliziotti, per un giorno al lavoro insieme a Orio al Serio: Luca va in pensione, Valerio è al debutto come agente - Il Giorno",
       "category": "Italia",
       "published": "2026-11-04T10:30:36+00:00",
@@ -1064,24 +1019,6 @@
       "published": "2026-11-04T10:30:16+00:00",
       "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWjcyWnBhcDdRNkxBNHdhTUc5V2RvS29LWmx6Q1lzTXBlSVpzMmVDNy0zbHpPdXBmX3hjd3dPbUhTaUdDTHFyNEJVNzYtb3QxbXFrT2pybnpxT2N4NWRGRWlQa2szSm1qQ0h1ZEdTUG0ydUpKaEZZQUxTZ0VZS2E0UHNqM0xwbFlIWmFZQnF1QzM?oc=5",
       "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Român, arestat în Italia. Când a văzut poliția a încercat să se ascundă printre mașini - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-04T10:09:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOUUl2VmZHZEVhc0k1UG1GZHdFRDhSc0ZYLTlVMDNYb2t5aTRwbjFhQTlEZ3JQSmg2Vk1rR3h3LTRvTTBIUm5Nc21BX0ZyMS1leVo0R25TTThJX1pGeUFWTTVMYVpvMmVnd3IyS2F3ckd1TkMzNGJlOUtXXzlSSUtmZlN0QnQ4ZHQ5ZDM4MHg0cDJ1aWNnMTdLNm54Tm5TSVM4UFR2aVBBMG5lc3pwaVFFbWM1cEdjenJmRFBQNlFWU0RZX0HSAcgBQVVfeXFMUHdaVl80MVVuZXJhV1p0dDQ2ZzQ4a2NEcldZSUkxblZlZnQ5d2owMXdZZGhuNmVoeHBYMzVvUW1uR1phQzgzc1U0dFRPaFFYaFhSOTJkNElUZ0cySWM2bVg0ekZtbWlLQk02VU8zZU93LTgzRnFZMURiMlc4VU1Ca2J3eG9VYTBkTTlFckdHb3N",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "L’onda dem su Trump ora fa tremare Big Tech: i colossi temono una stretta sui data center - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-04T09:22:35+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUzkzODlPbTdUa29hRWxDY0xZcTdPY19qQnVQZ0tobnJQa1BOdHlHMERuZldvT3pMaUpuWmlRYk1YbW14SmZVUG5uQnprajFVcXVwdGRCQmliSWU0NV9PNUdKNXVfQjFsTlRTOTF4WFM3NWFUR0Z2dGJPbVE5TndseWUxSWloekFpNFRXN1hleXVRNDlyWVY1MXhTY3V5UFJGTDZwbmhVYmt3RHNGdkJaR3NEYw?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1140,15 +1077,6 @@
       "words": 0
     },
     {
-      "title": "Intelligenza artificiale ed elettrificazione degli edifici come motore di sostenibilità - Idealista",
-      "category": "Italia",
-      "published": "2026-11-04T07:00:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMlozWXgzU2N3ak41T1ZkdDM0eG9LbjNKdXpnUEJpcUJNQ0NLYk1ueVhZaU9WTEd0S3hlSTNGS3hiTndrUnZkeFFEaHRZMTdXYXlnSURmd0JkT2xvNVJSMDN4NnlWRDRqVGdXWG5BRGp0Y3N1ejRNOHM2bEphcTZ3bzZjOC00Tl9ackQxdHBNTFhMRllxT0hhS09iVDZ1WnZaVGpKNWtNa3BZVU1BNnJrVzF1Sk9SUFU5UVE3S1dGaE9hTWItWmJJSTAtSkhiSEd4V2tKTWNhdkVTU2xmdVBJ0gHkAUFVX3lxTE5xeVZ3c085T0dCRGJ6bVM0ZmMwN0h5cEVENlktTUExNVB5WnJEa1Bvd3UxSEJlOEtwRERicXNXWDNpMkdNVHRtS3VhU1NlT09EU0M1eEFXRkRmWGlxcXUzQ2lhbkg2aFpLeXBNaG5tRk5QcVc",
-      "source": "Idealista",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Midterm, si vota anche dallo spazio",
       "category": "Italia",
       "published": "2026-11-04T06:34:56+00:00",
@@ -1190,6 +1118,15 @@
       "published": "2026-11-04T04:31:51+00:00",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQXdaWEROUllFNzY2c3BOUEFkTV9aMWZUTXk0UHhZcGVyeW5aZEtQckdwR2l1QjZNWXFCU2FhMnN5ZHBKRm9KcExKMHdBdXRWUTNyZUtYR24yc2tWdlM0SXNGQXJBdGlSVWQ4V3lTOXp1TVpEOU9aR09FMURpZ0U4dGdvakR1STBldzRXSw?oc=5",
       "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Concorsi, stop al maxi bando della Difesa: tutto da rifare per la selezione di 1.100 assistenti - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-04T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcGR4WlNLcVZncXBmMkUxT3ZGTlFZaEhLZnNKSHRKUVM1U3Q0VUNxZmU5TXBBSG5SVHA3Nl9sSldOcGxiNDVXbk1MSnkwOGFiZnNTSXJ1YWlQd1Z6OFdHSnplbDlTSzNqS29ONVhnRjZUZy1OQTJ1WldxQkxvWl9kdjRIQjVaQ0g0Zi1ocEVFYWlycHdmWnVfcENFNWxJaUJKQm12cGZaQWxtczUzNGtkVkQwNEwyNmJ0UFhLbWRpNWp4SkR2TlE?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1239,15 +1176,6 @@
       "words": 0
     },
     {
-      "title": "Român arestat în Spania, pentru uciderea unei femei de 53 de ani în Austria. A înjunghiat-o și a... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T15:32:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQelpzQlY2ZmlLcDRpbnlFSFNRUl9Hb09PdG82ck5pNXU3X3ZMa0FNSmkycDJDbTAzOFFFNkNsclVWR05kMV90UUpXU2RJTi1IZEVkd21zVFk4SDRWQVpiME5LU0NVWlByRzNHVmlZYkwzeENDLUVDVkw4NmNvSm53R2ZfQmY4cVVSck9zZXE5SkRyNVdidFF0WFc1aUdQckVheHVmbVZ0bE9FeGk0cFh1NEZESnl4Vk1xMzZLMTBRQzh6cnBlSEN2V3paYTRmY1hxM1VKM3luNy00TG16bTF5NUE4VlFzd3dpNk93T2pR0gHzAUFVX3lxTFAyYWFjUFI4cWhVWVFrbHAwWmNyVzBuR2xlSFQ4Y1ZDYnZVUXpyMTgtZjl1cHdGU2YzMkFlYkh3QnE2WkFFVGNiZGVWNmZzR2dILUt3dVhOVXRLZnVyNDdYV3YxQkx",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Denunce di infortuni e malattie professionali, i dati Inail di settembre - Inail",
       "category": "Drepturile muncitorilor",
       "published": "2026-11-03T15:00:00+00:00",
@@ -1266,29 +1194,11 @@
       "words": 0
     },
     {
-      "title": "Iranul amenință că va ataca bazele americane din România și alte cinci țări europene - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T13:01:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPX0tPdnhqVmRqZ3FuU0prcFdiNGV6WVkwN01Kc2t4VzdFQUw3ZnIzaU5LQlptX2FrZ1FCZEFqTWIwVHplRzdmczFqcEg4UW9WSG5CVXVkVzFmMk5ab19zdlVwakI3bjhDNmF0WDBBQlFOU3FjUGp6SFNVazNWX0ZHb0YxZEdpRDRqUG9mbmVKVUhQaW1ZRzl5ZzZ4OVZLUW5BVzQycS1KUE01dEp6UjR2eFlzeUdRUjBBdDJ4U3ZIRXBPeVXSAcgBQVVfeXFMT3VqRk1ZNzVnMkQtMS0wTTZlTjZhTXNpLTdnZFk1dWdSRnVXWUhseG5HZnlPalBBWjJUei1hU2RKLVRpTnpFTHo0a0szMi1sZDNDdTVlOHRSNGVneTNRdFktWEtxWWpPOGR2Rk9PVGlUUVpzekpaLUctcV9qQkRwdzdHMS1BdU5hT2lEVWp3RGh",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Decreto bollette bis, Pichetto: \"uffici al lavoro sul ribaltamento\" - Borsa Italiana",
       "category": "Italia",
       "published": "2026-11-03T12:47:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOYlNFR1dRUWstdDVMNVNjSUNxU0pzV1kwbG5BQ2gteGVoeFBkcVBrUWc0Zk9XRkFyQzUzYzVEb0pLMHRRcjBiNFhFZE1zNzNuLUw5cFFjRG9TWUFNa1NJQzhPNGFzSmtsNmNmWmJmNDNkUHc2a0lMTTU3VmlxODd2TG56cGxsaEs5YWVYb09EQUx6OUJtRFNwOWRWS2ZHMm8xVTV1bVBVM0pDVG1GejUyV3JLeU4wN0lsU3RNb3ZiNV9RZlE3d2NzdVliMDJEemM3OTVyN3V0YXhIR1NPZDA1SENUUQ?oc=5",
       "source": "Borsa Italiana",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "A început bătălia pentru voturile românilor din Italia. Roberto Vannacci a vorbit în limba română... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T12:23:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQZXRjUmRlOWRtb1Z0ZVU1NnBnR0F3SmpfWUUySUJEY3BYRG5VYWVEWHB5dnlWaUhFZzBsWTNnUTdOdHNhSlNrblVvSlc4a1JIcGZrV2dtQWZtRmFwUE43Y1dJOGxXLTZlRFdfYi0xQU5XRm0xT3ZhaU51ZlI2NDdLUXpRa2dKUnZPd0tjVUdrbGVDRzJnUl9NcmZ0cTczZVB4ZjJTckUtdVg3ejQzWXl1WVlibE51QVlUNUc5N1lqN3RDVGlPOWdTWGx3UjJ0Z192X1FNTEw2U0hBelVsVmhrVVh3bVU3al9sMzZmcU1LRnh6bFlqZHBFa9IB_gFBVV95cUxPZ214c0xtWHFmZEs0RElJWFE1ZEljMFQ2MjFYWmhjOTNSQ0RXdnozMV9ONURTekVQcWtuNFZIVUtWTGFydXh6azNTQVoyLVAxNFJucGFsUlN0c1J",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1309,87 +1219,9 @@
       "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Fotbalistul Jesus de Miguel a murit la 30 de ani, după o ciocnire cu portarul echipei adverse - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T10:58:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNV0hjazlZMExCNzR4Q19ObkNrWDVOeDUySEpfd3lKVWdSVmpxTTE0YXdEVXRJUkk0bHNGQmVjbk9Zd1hQYTNIeWlqNXk2RGNVX0JHYU9zV0RGTVZoTGR4clE0OHRUcEVSa2dNbjlWTjVmVU9hYWVOMjRGOXRuS2duMVp6YTJaVGdWNVF4SEtCS01wNmJnaEh0M09oNHR4ZmpNLUJpZkxmLXZ4R0RrU3lsdmwyT1ZQMUV0UHRWME9DZEdidVNYVHphQWV0ZnNDQdIB0wFBVV95cUxOaFVWMGlhd0syLVFFbzNqWXVBTk1lM19vLXBQb2VjeVB4Rk9WR0RIOHpJZFFHSW41SHBpdE1lWGt2U19FZU1vdG82a1V3b2FzNlFkUGd0YUVOZzNVelFHQjZVQXNpd3lKYlZEaWhETkQ3S09VRnVjVmFMZ2hRN0dkUDFSbVc",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Alertă cu bombă în 271 de școli din Italia. Sute de elevi evacuați la Roma. Mărturia unui român pentru ȘtiriDiaspora: \"Copiii au ieșit din clase fără geci și rechizite\" - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T09:14:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxPa3AzZzdHSWFOOGtrMUE4S0J6UWlpYnpRSjI3TUtLNllGaTRvdG5RRXhNN1Q0Yzlyd2ZKaFl6eHU3UlVWNVBOYUVxNXBsSDFlWm5JdHVEbTB3akYzdXNDclJwR1VaVDMzcjBkbjh0U3hvYUtiUlZZemJ6LThERHRDT3NLY3pxSkZLSnhuckVqS09ZVjNfdWR4WnA1Qko0OVh6VTR0S1VtbDl0S0hWSzhBS3EydlF3X0VvUFp4NHVFNnhNMnpaQXJVNGIwSGM2RU5jQlYyTzRWejh1bC05aWNZX3paUDVPcFFycUYydkoyazlfcTdPZUFRQmNaNXlVdW5PVlBmTlU1bnVTMV9UMkxuZDdtRVdla21rMXlvN0dkcVJWeDJkbTJzZXJoMUk?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Congelatoarele supermarketurilor din Italia și Belgia, transformate în cuptoare. Hackerii le-au... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T07:20:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxPQmlNdkZmdklNNGdjWXB2bFNoaHYyRWdvZ2ZvRjQ4bmFPbmd0TDBxTlJrUmVoQmh4alBBT3BNZ1VncHF0LW5LdGdBWFh5QzF0U2RvQXRLNW03Z0JsUW1yN0pERVg0LTV6MkpoQVh5R1lQZXNnbERNY0RFTGEtek9TS01yZ2pwR2hXR25LUjFrRC04TXVjM0RUNFU5SllhX1RPS3N4bW05bjlSN2V4MXFJdzNlLVBfbGFnR2xoQUJObzBxUlI5MFYtRnNPMGVOd2lKeDFxZ2FXUnRDal92dlYzTTd6ZUFCUGZLVlpfUVQtRmFWZDEtUkEwd1N0UzJvU09PbV9TRWxqTjN5eUxRR2fSAZMCQVVfeXFMT2RJRHU0OWR6VC1udWtYUmg0WXEtUGJmWG96Tlo5NDhpOGRqc2ZDZy1tdVVOdllnUlJHWllFc2p1N3FvWFV",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Documentarul despre românii din Germania care încasează ajutoare sociale și își fac vile în țară produce valuri la nemți: \"Fac și 3000 euro pe lună\" - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T06:55:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPVVE4a01LS0gwb2ZxTzBjcmpldkxtcG9VOUpUX3BfLVhrX215OFBJLVFvOGtPWjNNdGI4SVBJX3dVTUQ4RGMwYm1Oc2tDS3pkdEd4RHNaRkR1RTVyX2UtZzJZZEpESHhtUm9iVFJSZ0pKRF9sRk5rb2FPQWJsQW5UUGh6Q1l5a1ZZWUxRQU5URlJmcDZMYnIxZ0lTcW0yN0VwMEtXcjhRRVJQa1RnR3BQWlhseVBxalAwT0lseWZnR1NEeURndDZmelQyN1ZIVjVGeXJnV3dkOVdKcW04a0U1bEw1SkVRZXNfLTdTT2lFNTF1VWxvbHhXRVpCbGk1M1kxanI5Y1Rqd3pLMHhhSkliOEp1Q0U?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Donald Trump amână cu 75 de zile aplicarea legii de interzicere a reţelei sociale TikTok - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T03:27:45+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOQnhWQTdaX1JZUlRaYXQtMWZDSWhrZDc1UGpGOWFEbEJubEI1YXpiRFg5LVRsQWp1RjA1aEYzTC1NM0R5ZUEzUDdTeXVOd0ozWG95TTIzempjUWNYMThwQmRaSldCZlh6R1FlNG9hZVFPamxOMGNOU184UDNSenlmVlM1cVF6UWtHVGRXNWxMa3hEU29rZlZhdDVHblFJMThnU1F5MjFpaTFTMVNrX2pUdUZjeXpYZFhMdHVPa0h0WC1EVEdQalNEUE1DV2kyQdIBzgFBVV95cUxOQnhWQTdaX1JZUlRaYXQtMWZDSWhrZDc1UGpGOWFEbEJubEI1YXpiRFg5LVRsQWp1RjA1aEYzTC1NM0R5ZUEzUDdTeXVOd0ozWG95TTIzempjUWNYMThwQmRaSldCZlh6R1FlNG9hZVFPamxOMGNOU184UDNSenlmVlM1cVF",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
-    {
-      "title": "Crotone: cetățean român dus într-un centru de repatriere după încălcarea unei interdicții de intrare",
-      "category": "Diaspora",
-      "published": "2026-11-02T17:30:00+00:00",
-      "url": "https://ilcirotano.it/2026/11/01/crotone-viola-il-divieto-di-reingresso-in-italia-cittadino-rumeno-accompagnato-al-c-p-r-e-nuova-espulsione-per-dieci-anni/",
-      "source": "Comunicat Questura di Crotone / ilCirotano / CrotoneOk",
-      "status": "verde",
-      "words": 447,
-      "intro": "Un român de 41 de ani a fost transferat de poliția italiană la centrul din Palazzo San Gervasio, după ce autoritățile din Crotone au constatat că revenise în Italia în perioada unei interdicții de intrare.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Român interzis în Italia din 2023, prins la Crotone. A fost expulzat din nou, de această dată pe o... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-02T17:30:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOdzdkTThuY2I4dnV6c3l3R0czV3NvWG8yTlduTFRtaEtpT3RVbjVfNDZrTEQwa2RCNmhpYXpCRFBLN1NKQS1hTTVUdVdzaU55aWJWU0ZHeEloTl9oVHhkTnBDMC1KMFJwdF9QZjkxTXZsM0g1TFV4VXJoZ05vdDlhRFMwVDgwOG9XczRlRFp3SGVpODhUTTlzenpqRlpXQmEtU3hfTHBJZ3ZjblhDcHFEZ2cyOVFtYno1Q2J4dkNiNno5eDdoYm1LeTMwNFpvTUhTQkZxbE9CTWVDeFZhMURVT1g0dmlyVWlDTXhEczROZ9IB9AFBVV95cUxPa3NxbG5ncGFTcDBxX2xOTjVqR3N6MEZ2WFRuelhtNEVqWlAxZ0R6Uk1ralNEZkdCZ0tzMzlXZ04tQVdFT0ZmUVJvVVpPd2tkdVFzcnlDb1dyNVQwQmlGa3dNc0V",
-      "source": "StiriDiaspora",
-      "status": "galben",
-      "words": 20,
-      "intro": "Român interzis în Italia din 2023, prins la Crotone.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Un român a fost reținut în Italia după ce a încălcat interdicția de reintrare impusă în urma expulzării sale - Informat.ro",
-      "category": "Diaspora",
-      "published": "2026-11-02T17:48:22+00:00",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbDR3UldaZ2ZoQVFyTkZmdG5vZU5SLXU5c3FTblRISWFLRE9KUklFOHpLd05oNzRfRzR6NFptRi14MlpyYmRSRHBOMTA3d1k3cVMtdklZNnZXT2o2OG1fNzRYcG92R21YZ3FoZDhwRGlVbVdGUmRPWlVHelVoSTk0Q25fVlBLUHZTdXVOUVkxbUFiaFc3amlEVg?oc=5",
-      "source": "Informat.ro",
-      "status": "galben",
-      "words": 20,
-      "intro": "Un român a fost reținut în Italia după ce a încălcat interdicția de reintrare impusă în urma expulzării sale Informat.ro",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
     {
       "title": "Românii s-au specializat în Italia în furtul de kiwi / O fermă din nordul țării a fost prădată de două ori în câteva zile - G4Media",
       "category": "Diaspora",
@@ -1410,6 +1242,39 @@
       "status": "galben",
       "words": 18,
       "intro": "Atac cu târnăcopul în Italia: un român de 65 de ani, îngrijitor, amenințat în noaptea de Halloween www.goldring.ro",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Furturi de kiwi în Italia: Români surprinși în timpul prădării unei ferme - www.goldring.ro",
+      "category": "Diaspora",
+      "published": "2026-11-03T09:12:20+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNV3FOUjNzT1JnMWd2cVRjRHRET1ZFT3RPS3dJaC1wSjdOcU5PMFBrV3VJNmZpVTl4ZkFROVh3dFBEaVBGRjVSLUhJeWxjZDN1M0dwaWRxVl9rYUUwTGhuNkxxMnVLc1VDUGpqTnpWd1lNUlUxNTJ0bDVDQUl0SHBUckVaMUdHd1YxNmNLclJwRjNkQXRzN2d3a01IcHl3MjhYWTZmZ0lwMA?oc=5",
+      "source": "www.goldring.ro",
+      "status": "galben",
+      "words": 13,
+      "intro": "Furturi de kiwi în Italia: Români surprinși în timpul prădării unei ferme www.goldring.ro",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Liderul de extremă dreapta Roberto Vannacci despre românii din Italia și experiența sa din România - www.goldring.ro",
+      "category": "Diaspora",
+      "published": "2026-11-03T09:12:21+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRHdFWkE0QVJZQVlIeGVST29pSUY2cktHb181bnJRcm0xWWd3VG50SUtQNG4yNnk4cmVXRVd5MEJjczNISkIyY211b2J3YVZIOXAya0dHZDFHQWdram9NRk5sQlBSWlRDdWFJTGJ6NkRfQk4xUlZ3Wk5NTWFrdkdVanY5SGRtcUttamZXUW51WEs1Z05Yc3BrWFc1TzNUdU42NE1oY2lMU3FOUkxobTJ3V3M5cFFVU3I3RGp0c0NuY3kxeVY2MW80cUNR?oc=5",
+      "source": "www.goldring.ro",
+      "status": "galben",
+      "words": 16,
+      "intro": "Liderul de extremă dreapta Roberto Vannacci despre românii din Italia și experiența sa din România www.goldring.ro",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Alertă cu bombă în 271 de școli din Italia. Sute de elevi evacuați la Roma. Mărturia unui român pentru ȘtiriDiaspora: \"Copiii au ieșit din clase fără geci și rechizite\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-03T09:14:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPLU9SamR2U1hLOUUwNFhGRmdQRTdCaWp3QmNzT2JWWVFVR2ZGN3hwU3ljOUZhUEt3M1FrMEw2M05DWEtYTTlWTEh4NS1ONURsOGREaTNnSWM5UEdndFN1b20weTNiRV94T2dSNG5FLWJyaDltTmo5X1Q5bmV5dzllTnVQZXFKV18tZkEzVUdUOHZ2T2ZuN1FfbGFtc2ttd3lIazZaN3REWlFJTXVZZ29sUU9HNTR0VjVJMmRPMnA2Q2RKd202bUlUaHhwdDZXZnF5OW1SM0IyV1BwNXA5Y1FGVFFjMW9BS1Y1VXlKM0VQek8xSkx2ZWQ5dWhhYU1FTHllR1REWWJWdDY4SXFtc2ctLVN6R1lySGdsOHNfZ0xlV3BlMEw5cmhyVWxEMjN5Qk9Sa3c?oc=5",
+      "source": "StiriDiaspora",
+      "status": "galben",
+      "words": 30,
+      "intro": "Alertă cu bombă în 271 de școli din Italia.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
