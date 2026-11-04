@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03T23:15:34.110421+00:00",
+  "updated_at": "2026-11-04T03:12:53.025089+00:00",
   "success_sources": 1,
   "sources": [
     {
       "source": "parlamento_europeo",
       "status": "error",
-      "reason": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+      "reason": "HTTP Error 403: Forbidden"
     },
     {
       "source": "commissione_europea",
@@ -2376,6 +2376,6 @@
       "editorial_topic": "ambiente - archivio"
     }
   ],
-  "language_checks_this_run": 2,
+  "language_checks_this_run": 0,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
