@@ -1,0 +1,32 @@
+name: Check RDI Spotlight browser scripts
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'spotlight-ai.html'
+      - 'redactie-ai-music.html'
+      - '.github/workflows/check-spotlight-ui.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check embedded page JavaScript syntax
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for name in ("spotlight-ai.html", "redactie-ai-music.html"):
+              content=Path(name).read_text(encoding="utf-8")
+              assert content.count("<script>")==1
+              assert content.count("</script>")==1
+              javascript=content.split("<script>",1)[1].split("</script>",1)[0]
+              Path("/tmp/"+name+".mjs").write_text(javascript,encoding="utf-8")
+          PY
+          node --check /tmp/spotlight-ai.html.mjs
+          node --check /tmp/redactie-ai-music.html.mjs
