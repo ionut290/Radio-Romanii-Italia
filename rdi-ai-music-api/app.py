@@ -9,6 +9,9 @@ FILES=ROOT/"uploads"
 DB=ROOT/"submissions.sqlite3"
 MAX_MB=int(os.environ.get("RDI_AI_MAX_MB","30"))
 ADMIN_TOKEN=os.environ.get("RDI_AI_ADMIN_TOKEN","")
+# Browser origins are exact matches; keep the API private until the reverse proxy is secured.
+PUBLIC_ORIGIN=os.environ.get("RDI_AI_PUBLIC_ORIGIN","https://radioromanii.duckdns.org").rstrip("/")
+ALLOWED_ORIGINS={PUBLIC_ORIGIN}
 app=Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"]=MAX_MB*1024*1024+128*1024
 ALLOWED_EXT={".mp3",".wav",".flac",".m4a",".ogg"}
@@ -38,8 +41,26 @@ def valid_link(url):
     from urllib.parse import urlsplit
     p=urlsplit(url)
     return p.scheme=="https" and bool(p.hostname) and not p.username and not p.password
+@app.before_request
+def check_browser_origin():
+    # Forms and admin calls may be cross-origin because the public site runs on
+    # GitHub Pages and the API will run on the Oracle/AzuraCast HTTPS host.
+    # Requests without Origin (for example curl and internal jobs) are permitted.
+    origin=request.headers.get("Origin")
+    if origin and origin not in ALLOWED_ORIGINS:
+        abort(403)
+    if request.method=="OPTIONS":
+        return "",204
+
 @app.after_request
 def response_headers(r):
+    origin=request.headers.get("Origin")
+    if origin in ALLOWED_ORIGINS:
+        r.headers["Access-Control-Allow-Origin"]=origin
+        r.headers["Access-Control-Allow-Methods"]="GET, POST, OPTIONS"
+        r.headers["Access-Control-Allow-Headers"]="Authorization, Content-Type"
+        r.headers["Access-Control-Max-Age"]="600"
+        r.headers["Vary"]="Origin"
     r.headers["Cache-Control"]="no-store"
     r.headers["X-Content-Type-Options"]="nosniff"
     r.headers["Referrer-Policy"]="no-referrer"
