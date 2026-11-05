@@ -99,6 +99,8 @@ def submit():
         if suffix not in ALLOWED_EXT:
             return jsonify(error="Unsupported audio extension"),400
         stored=sid+suffix
+        # First-ever upload must work even before a database read has initialized storage.
+        FILES.mkdir(parents=True, exist_ok=True)
         location=FILES/stored
         size=0
         try:
