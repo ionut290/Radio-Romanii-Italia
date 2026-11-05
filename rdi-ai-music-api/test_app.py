@@ -203,6 +203,29 @@ class SubmissionTests(unittest.TestCase):
         self.assertEqual(tracks[without]["audio_preview"],0)
         self.assertEqual(tracks[with_consent]["audio_preview"],1)
 
+    def test_editor_can_enable_and_revoke_public_play_only_with_consent(self):
+        fields=self.data(link="",spotlight_consent="no")
+        fields["audio"]=(io.BytesIO(b"test-audio"),"track.mp3")
+        sid=self.client.post("/api/ai-music/submissions",data=fields,headers=self.origin).json["id"]
+        endpoint=f"/api/ai-music/admin/submissions/{sid}/spotlight-consent"
+        public_audio=f"/api/ai-music/spotlight/{sid}/audio"
+        self.assertEqual(self.client.post(endpoint,json={"enabled":True,"artist_permission_confirmed":True}).status_code,401)
+        self.assertEqual(self.client.post(endpoint,headers=self.admin,json={"enabled":True,"artist_permission_confirmed":True}).status_code,400)
+        with patch.object(service.subprocess,"run") as probe:
+            probe.return_value.returncode=0
+            probe.return_value.stdout="codec_type=audio"
+            self.assertEqual(self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",headers=self.admin,json={"status":"approved"}).status_code,200)
+        self.assertEqual(self.client.post(endpoint,headers=self.admin,json={"enabled":True}).status_code,400)
+        self.assertEqual(self.client.get(public_audio).status_code,404)
+        result=self.client.post(endpoint,headers=self.admin,json={"enabled":True,"artist_permission_confirmed":True})
+        self.assertEqual(result.status_code,200)
+        self.assertEqual(self.client.get(public_audio).status_code,200)
+        self.assertEqual(self.client.post(endpoint,headers=self.admin,json={"enabled":False}).status_code,200)
+        self.assertEqual(self.client.get(public_audio).status_code,404)
+        with service.db() as con:
+            val=con.execute("SELECT spotlight_consent FROM submissions WHERE id=?",(sid,)).fetchone()[0]
+        self.assertEqual(val,0)
+
     def test_spotlight_vote_requires_origin_and_valid_uuid(self):
         sid = self.post().json["id"]
         self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
