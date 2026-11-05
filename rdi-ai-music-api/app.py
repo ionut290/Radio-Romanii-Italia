@@ -151,7 +151,7 @@ def submit():
 def list_submissions():
     admin()
     with db() as con:
-        rows=con.execute("SELECT id,created_at,artist,email,title,platform,link,notes,file_name,status,reviewed_at,reviewed_note FROM submissions ORDER BY created_at DESC LIMIT 300").fetchall()
+        rows=con.execute("SELECT id,created_at,artist,email,title,platform,link,notes,file_name,status,reviewed_at,reviewed_note,spotlight_consent FROM submissions ORDER BY created_at DESC LIMIT 300").fetchall()
     return jsonify(submissions=[dict(row) for row in rows])
 @app.get("/api/ai-music/admin/submissions/<sid>/audio")
 def audio(sid):
@@ -182,6 +182,25 @@ def review(sid):
                 return jsonify(error="ffprobe unavailable or timed out"),503
         con.execute("UPDATE submissions SET status=?,reviewed_at=?,reviewed_note=? WHERE id=?",(status,now(),note,sid))
     return jsonify(ok=True,status=status)
+
+@app.post("/api/ai-music/admin/submissions/<sid>/spotlight-consent")
+def update_spotlight_consent(sid):
+    """Editors record verified artist consent; never infer it from radio approval."""
+    admin()
+    data=request.get_json(silent=True)
+    if not isinstance(data,dict) or type(data.get("enabled")) is not bool:
+        return jsonify(error="Explicit enabled true/false required"),400
+    enabled=data["enabled"]
+    if enabled and data.get("artist_permission_confirmed") is not True:
+        return jsonify(error="Confirm the artist explicitly authorized public playback"),400
+    with db() as con:
+        row=con.execute("SELECT stored_name,status FROM submissions WHERE id=?",(sid,)).fetchone()
+        if not row:
+            abort(404)
+        if enabled and (not row["stored_name"] or row["status"]!="approved"):
+            return jsonify(error="An approved uploaded audio file is required"),400
+        con.execute("UPDATE submissions SET spotlight_consent=? WHERE id=?",(int(enabled),sid))
+    return jsonify(ok=True,spotlight_consent=int(enabled))
 
 @app.get("/api/ai-music/spotlight")
 def spotlight():
