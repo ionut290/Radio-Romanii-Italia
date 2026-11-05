@@ -1,5 +1,5 @@
 """RDI AI MUSIC moderation API. Run behind HTTPS and a same-origin /api/ai-music/ reverse proxy."""
-import os, sqlite3, secrets, hmac, subprocess, uuid, time, hashlib
+import os, sqlite3, secrets, hmac, subprocess, uuid, time, hashlib, base64
 from datetime import datetime, timezone
 from pathlib import Path
 from flask import Flask, request, jsonify, send_file, abort
@@ -51,14 +51,104 @@ def db():
     columns={row["name"] for row in con.execute("PRAGMA table_info(submissions)").fetchall()}
     if "spotlight_consent" not in columns:
         con.execute("ALTER TABLE submissions ADD COLUMN spotlight_consent INTEGER NOT NULL DEFAULT 0")
+    con.execute("CREATE TABLE IF NOT EXISTS admin_settings (setting TEXT PRIMARY KEY, value TEXT NOT NULL)")
+    con.execute("CREATE TABLE IF NOT EXISTS admin_sessions (session_hash TEXT PRIMARY KEY, expires_at INTEGER NOT NULL)")
+    con.execute("CREATE TABLE IF NOT EXISTS admin_login_attempts (ip_key TEXT NOT NULL, created_at INTEGER NOT NULL)")
+    con.execute("CREATE INDEX IF NOT EXISTS admin_login_attempts_ip ON admin_login_attempts(ip_key,created_at)")
     con.commit()
     return con
 def now():
     return datetime.now(timezone.utc).isoformat()
 def admin():
     supplied=request.headers.get("Authorization","")
-    if not ADMIN_TOKEN or not hmac.compare_digest(supplied,"Bearer "+ADMIN_TOKEN):
+    if not supplied.startswith("Bearer ") or not ADMIN_TOKEN:
         abort(401)
+    credential=supplied[7:]
+    # Existing machine/admin token remains supported for migration and backend jobs.
+    if hmac.compare_digest(credential,ADMIN_TOKEN):
+        return
+    digest=hashlib.sha256(credential.encode()).hexdigest()
+    with db() as con:
+        row=con.execute("SELECT expires_at FROM admin_sessions WHERE session_hash=?",(digest,)).fetchone()
+    if not row or row["expires_at"]<int(time.time()):
+        abort(401)
+
+def password_digest(password,salt):
+    return hashlib.pbkdf2_hmac("sha256",password.encode(),bytes.fromhex(salt),400000).hex()
+
+@app.get("/api/ai-music/admin/auth-status")
+def admin_auth_status():
+    with db() as con:
+        exists=con.execute("SELECT 1 FROM admin_settings WHERE setting='password_hash'").fetchone()
+    return jsonify(password_configured=bool(exists))
+
+@app.post("/api/ai-music/admin/setup-password")
+def admin_setup_password():
+    if request.content_length and request.content_length>4096:
+        return jsonify(error="Request too large"),413
+    data=request.get_json(silent=True)
+    if not isinstance(data,dict):
+        return jsonify(error="Invalid request"),400
+    old_token=data.get("current_token")
+    password=data.get("password")
+    if not ADMIN_TOKEN or not isinstance(old_token,str) or not hmac.compare_digest(old_token,ADMIN_TOKEN):
+        return jsonify(error="Administrator verification failed"),401
+    if not isinstance(password,str) or len(password)<12 or len(password)>128:
+        return jsonify(error="Use a password of 12-128 characters"),400
+    salt=secrets.token_hex(16)
+    digest=password_digest(password,salt)
+    with db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        existing=con.execute("SELECT 1 FROM admin_settings WHERE setting='password_hash'").fetchone()
+        if existing:
+            return jsonify(error="Password already configured"),409
+        con.execute("INSERT INTO admin_settings(setting,value) VALUES ('password_salt',?)",(salt,))
+        con.execute("INSERT INTO admin_settings(setting,value) VALUES ('password_hash',?)",(digest,))
+        con.commit()
+    return jsonify(ok=True),201
+
+@app.post("/api/ai-music/admin/login")
+def admin_login():
+    if request.content_length and request.content_length>4096:
+        return jsonify(error="Request too large"),413
+    data=request.get_json(silent=True)
+    if not isinstance(data,dict) or not isinstance(data.get("password"),str):
+        return jsonify(error="Password required"),400
+    password=data["password"]
+    if len(password)>128:
+        return jsonify(error="Invalid credentials"),401
+    current=int(time.time())
+    key=rate_key()
+    con=db()
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        con.execute("DELETE FROM admin_login_attempts WHERE created_at<?",(current-900,))
+        attempts=con.execute("SELECT COUNT(*) FROM admin_login_attempts WHERE ip_key=?",(key,)).fetchone()[0]
+        if attempts>=5:
+            return jsonify(error="Too many attempts. Retry in 15 minutes"),429
+        con.execute("INSERT INTO admin_login_attempts(ip_key,created_at) VALUES (?,?)",(key,current))
+        con.commit()
+        entries=dict(con.execute("SELECT setting,value FROM admin_settings WHERE setting IN ('password_salt','password_hash')").fetchall())
+    finally:
+        con.close()
+    if not entries.get("password_hash") or not entries.get("password_salt"):
+        return jsonify(error="Password setup required"),409
+    digest=password_digest(password,entries["password_salt"])
+    if not hmac.compare_digest(digest,entries["password_hash"]):
+        return jsonify(error="Invalid credentials"),401
+    session=secrets.token_urlsafe(32)
+    expires=current+12*3600
+    with db() as con:
+        con.execute("INSERT INTO admin_sessions(session_hash,expires_at) VALUES (?,?)",(hashlib.sha256(session.encode()).hexdigest(),expires))
+    return jsonify(ok=True,session=session,expires_at=expires)
+
+@app.post("/api/ai-music/admin/logout")
+def admin_logout():
+    supplied=request.headers.get("Authorization","")
+    if supplied.startswith("Bearer "):
+        with db() as con:
+            con.execute("DELETE FROM admin_sessions WHERE session_hash=?",(hashlib.sha256(supplied[7:].encode()).hexdigest(),))
+    return jsonify(ok=True)
 def clamp(value,limit):
     return str(value or "").strip()[:limit]
 def valid_link(url):
