@@ -34,14 +34,62 @@ main::after{left:auto;right:1%;top:70%;animation-delay:-10s;animation-duration:2
 .comment-line p{margin:5px 0 0;overflow-wrap:anywhere;white-space:pre-wrap}
 .comment-feedback{color:#ffd27c;min-height:20px;margin:4px 0 10px}
 @media(max-width:650px){.comment-form{grid-template-columns:1fr}.comment-form button{width:100%}.comments-panel{padding:12px}.track{column-gap:9px}.votebox{grid-column:2;flex-direction:row;flex-wrap:wrap}.vote{width:auto;flex:1}.comment-toggle{flex:1}main::before,main::after{letter-spacing:8vw}}
+
+/* Spotlight premium layout: musical hero, top three podium and 20-item pages */
+main{max-width:1140px}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:220px;padding:35px 24px 36px 0}
+.hero:before{content:"";position:absolute;inset:0 0 0 27%;z-index:-1;background:radial-gradient(ellipse at 72% 46%,#187ed56b,transparent 62%);pointer-events:none}
+.hero h1{margin:5px 0 14px;text-shadow:0 0 22px #70b8ff35}
+.hero .lead{max-width:640px}
+.hero-art{position:absolute;right:3%;top:0;font-size:clamp(95px,13vw,180px);line-height:1;transform:rotate(-12deg);filter:drop-shadow(0 0 20px #f7c15f99);opacity:.94;z-index:-1;pointer-events:none}
+.hero-art:after{content:"♫ ♪";display:block;font-size:32px;letter-spacing:25px;color:#ffd783;animation:notesFloat 9s ease-in-out infinite alternate}
+.links a{background:#0d2646ca;border-color:#d8a959;box-shadow:0 0 18px #f7b94715}
+.notice{border:1px solid #5c8cbd;border-left:4px solid #f5c669;border-radius:14px;background:#102c4dcc}
+.summary{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:19px;font-weight:700;color:#ffe1a0}
+.summary strong{color:#fff}
+.tracks{gap:10px}
+.track{grid-template-columns:52px 1fr auto;border-radius:15px;padding:13px 17px;gap:12px;align-items:center}
+.track:nth-child(-n+3){min-height:108px;padding:18px 20px}
+.track:nth-child(n+4) h2{font-size:17px}
+.track:nth-child(n+4) p{font-size:13px}
+.track:nth-child(n+4) .position{font-size:22px}
+.track .position{font-size:26px}
+.track:nth-child(1) .position:before{content:"👑 ";font-size:20px}
+.track:nth-child(2) .position:before{content:"🥈 ";font-size:17px}
+.track:nth-child(3) .position:before{content:"🥉 ";font-size:17px}
+.track .listen{margin:5px 0}.track .votes{font-size:13px}.track .votebox{flex-direction:row;align-items:center}
+.track .votebox button{min-width:90px;padding:10px 12px}
+.track .votebox .vote{background:linear-gradient(130deg,#ffe08e,#f5ba4f);box-shadow:0 4px 14px #ffc85c20}
+.pager{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin:26px 0 18px}
+.pager button,.playall{border:1px solid #d6a959;background:#133253;color:#ffe1a0;font:inherit;font-weight:750;border-radius:12px;padding:11px 17px;cursor:pointer}
+.pager button:disabled{opacity:.38;cursor:not-allowed}
+.pager .page-info{min-width:120px;text-align:center}
+.player-bar{border:1px solid #d9a94a;background:linear-gradient(125deg,#102e53,#142a4a);border-radius:18px;box-shadow:0 0 22px #f7ca7231;padding:13px 16px;display:flex;align-items:center;flex-wrap:wrap;gap:13px;margin:14px 0}
+.player-bar audio{width:min(100%,330px);flex:1 1 240px}
+.player-bar .player-label{font-weight:750;color:#ffdc8c;flex:1 1 200px}
+.player-bar button{border:1px solid #e8bf6b;border-radius:10px;background:#f5c669;color:#11263d;padding:9px 14px;font:inherit;font-weight:750;cursor:pointer}
+.player-note{font-size:12px;color:#c5d7ec;width:100%}
+.admin-link{display:inline-block;border-radius:12px;border:1px solid #638dbd;color:#bddbff;padding:10px 14px;text-decoration:none;font-weight:700}
+.comments-panel{box-shadow:inset 0 0 20px #0a1c43}
+@media(max-width:820px){.hero-art{opacity:.28;right:-16px}.hero{min-height:0;padding:20px 0}.track{grid-template-columns:38px minmax(0,1fr);gap:8px}.track .votebox{grid-column:2;justify-content:flex-start}.track:nth-child(-n+3){min-height:0;padding:15px}.track .votebox button{min-width:0}.track:nth-child(n+4) .votebox{flex-wrap:wrap}.summary{font-size:17px}}
 </style></head><body><main>
 <header><a href="./index.html">← Radio Românii din Italia</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></header>
+<section class="hero"><div class="hero-art" aria-hidden="true">🎧</div>
 <h1>RDI AI MUSIC <span>Spotlight</span></h1><p class="lead" id="intro"></p>
-<nav class="links"><a href="./artisti-ai.html" id="submitLink"></a><a href="./index.html" id="radioLink"></a></nav>
+<nav class="links"><a href="./artisti-ai.html" id="submitLink"></a><a href="./index.html" id="radioLink"></a><a href="./redactie-ai-music.html" class="admin-link" id="adminLink">🔐 Redazione</a></nav>
+</section>
 <section class="notice" id="notice"></section>
-<div class="summary"><strong id="heading"></strong> · <span id="count"></span></div>
+<div class="summary">🏆 <strong id="heading"></strong> · <span id="count"></span></div>
+<div class="player-bar">
+ <button id="play-all" type="button">▶ Play All</button>
+ <button id="player-stop" type="button">■ Stop</button>
+ <span class="player-label" id="player-label">🎵 Ascolta tutti i brani disponibili</span>
+ <audio id="playlist-player" controls preload="none"></audio>
+ <span class="player-note" id="player-note">La riproduzione continua include i file autorizzati; i link esterni non possono essere riprodotti automaticamente.</span>
+</div>
 <p class="status" id="status" role="status" aria-live="polite"></p>
 <div class="tracks" id="tracks"></div>
+<nav class="pager" aria-label="Pagine classifica"><button id="page-prev" type="button">← Precedente</button><span class="page-info" id="page-info">Pagina 1</span><button id="page-next" type="button">Successiva →</button></nav>
 <footer>Radio Românii din Italia · RDI AI MUSIC Spotlight</footer>
 </main><script>
 "use strict";
