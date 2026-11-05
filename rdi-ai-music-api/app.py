@@ -42,6 +42,12 @@ def db():
       ip_key TEXT NOT NULL, created_at INTEGER NOT NULL,
       PRIMARY KEY(submission_id,voter_key))""")
     con.execute("CREATE INDEX IF NOT EXISTS spotlight_votes_by_ip ON spotlight_votes(ip_key,created_at)")
+    con.execute("""CREATE TABLE IF NOT EXISTS spotlight_comments (
+      id TEXT PRIMARY KEY, submission_id TEXT NOT NULL, nickname TEXT NOT NULL,
+      body TEXT NOT NULL, created_at TEXT NOT NULL, created_epoch INTEGER NOT NULL,
+      ip_key TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'visible')""")
+    con.execute("CREATE INDEX IF NOT EXISTS spotlight_comments_by_track ON spotlight_comments(submission_id,status,created_epoch)")
+    con.execute("CREATE INDEX IF NOT EXISTS spotlight_comments_by_ip ON spotlight_comments(ip_key,created_epoch)")
     columns={row["name"] for row in con.execute("PRAGMA table_info(submissions)").fetchall()}
     if "spotlight_consent" not in columns:
         con.execute("ALTER TABLE submissions ADD COLUMN spotlight_consent INTEGER NOT NULL DEFAULT 0")
@@ -275,6 +281,85 @@ def spotlight_vote(sid):
     finally:
         con.close()
     return jsonify(ok=True,votes=votes),201
+
+
+@app.get("/api/ai-music/spotlight/<sid>/comments")
+def spotlight_comments(sid):
+    """Only public comments on approved tracks; no private commenter metadata."""
+    with db() as con:
+        approved=con.execute("SELECT 1 FROM submissions WHERE id=? AND status='approved'",(sid,)).fetchone()
+        if not approved:
+            return jsonify(error="Track unavailable"),404
+        rows=con.execute("""SELECT id,nickname,body,created_at FROM spotlight_comments
+            WHERE submission_id=? AND status='visible'
+            ORDER BY created_epoch DESC,id DESC LIMIT 100""",(sid,)).fetchall()
+    return jsonify(comments=[dict(row) for row in rows])
+
+@app.post("/api/ai-music/spotlight/<sid>/comments")
+def add_spotlight_comment(sid):
+    """Public community comments with short limits and persistent IP rate limiting."""
+    if request.headers.get("Origin")!=PUBLIC_ORIGIN:
+        return jsonify(error="Comments must be submitted from the RDI website"),403
+    if request.content_length and request.content_length>4096:
+        return jsonify(error="Comment too large"),413
+    data=request.get_json(silent=True)
+    if not isinstance(data,dict):
+        return jsonify(error="JSON required"),400
+    if data.get("website"):
+        return jsonify(ok=True),202
+    nickname=data.get("nickname")
+    body=data.get("body")
+    if not isinstance(nickname,str) or not isinstance(body,str):
+        return jsonify(error="Name and comment are required"),400
+    nickname=nickname.strip()
+    body=body.strip()
+    if not (2<=len(nickname)<=40) or not (3<=len(body)<=500):
+        return jsonify(error="Name must be 2-40 characters and comment 3-500 characters"),400
+    if any(ord(c)<32 and c not in "\\n\\t" for c in nickname+body):
+        return jsonify(error="Invalid characters"),400
+    if "http://" in body.lower() or "https://" in body.lower() or "www." in body.lower():
+        return jsonify(error="Links are not allowed in comments"),400
+    ip_key=rate_key()
+    current=int(time.time())
+    cid=uuid.uuid4().hex
+    con=db()
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        approved=con.execute("SELECT 1 FROM submissions WHERE id=? AND status='approved'",(sid,)).fetchone()
+        if not approved:
+            return jsonify(error="Track unavailable"),404
+        last=con.execute("SELECT MAX(created_epoch) FROM spotlight_comments WHERE ip_key=?",(ip_key,)).fetchone()[0]
+        if last is not None and current-last<60:
+            return jsonify(error="Please wait one minute before commenting again"),429
+        recent=con.execute("SELECT COUNT(*) FROM spotlight_comments WHERE ip_key=? AND created_epoch>=?",(ip_key,current-86400)).fetchone()[0]
+        if recent>=10:
+            return jsonify(error="Daily comment limit reached"),429
+        con.execute("""INSERT INTO spotlight_comments
+            (id,submission_id,nickname,body,created_at,created_epoch,ip_key,status)
+            VALUES (?,?,?,?,?,?,?,'visible')""",
+            (cid,sid,nickname,body,now(),current,ip_key))
+        con.commit()
+    finally:
+        con.close()
+    return jsonify(ok=True,id=cid),201
+
+@app.get("/api/ai-music/admin/spotlight/comments")
+def admin_spotlight_comments():
+    admin()
+    with db() as con:
+        rows=con.execute("""SELECT c.id,c.submission_id,c.nickname,c.body,c.created_at,
+            c.status,s.title FROM spotlight_comments c JOIN submissions s ON s.id=c.submission_id
+            ORDER BY c.created_epoch DESC LIMIT 300""").fetchall()
+    return jsonify(comments=[dict(row) for row in rows])
+
+@app.post("/api/ai-music/admin/spotlight/comments/<cid>/hide")
+def admin_hide_spotlight_comment(cid):
+    admin()
+    with db() as con:
+        result=con.execute("UPDATE spotlight_comments SET status='hidden' WHERE id=?",(cid,))
+        if result.rowcount==0:
+            abort(404)
+    return jsonify(ok=True)
 
 @app.get("/api/ai-music/health")
 def health():
