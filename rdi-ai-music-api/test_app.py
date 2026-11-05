@@ -173,6 +173,36 @@ class SubmissionTests(unittest.TestCase):
         for secret in ("email", "notes", "stored_name", "file_name", "reviewed_note"):
             self.assertNotIn(secret, track)
 
+    def test_audio_spotlight_preview_requires_explicit_opt_in(self):
+        audio_bytes=b"audio-test-payload"
+        def make_upload(consent):
+            fields=self.data(link="",spotlight_consent=consent)
+            fields["audio"]=(io.BytesIO(audio_bytes),"example.mp3")
+            return self.client.post("/api/ai-music/submissions",data=fields,headers=self.origin).json["id"]
+        without=make_upload("no")
+        with_consent=make_upload("yes")
+        for sid in (without,with_consent):
+            with patch.object(service.subprocess,"run") as probe:
+                probe.return_value.returncode=0
+                probe.return_value.stdout="codec_type=audio"
+                response=self.client.post(
+                    f"/api/ai-music/admin/submissions/{sid}/review",
+                    headers=self.admin,json={"status":"approved"})
+                self.assertEqual(response.status_code,200)
+        no_consent_url=f"/api/ai-music/spotlight/{without}/audio"
+        consent_url=f"/api/ai-music/spotlight/{with_consent}/audio"
+        self.assertEqual(self.client.get(no_consent_url).status_code,404)
+        response=self.client.get(consent_url)
+        try:
+            self.assertEqual(response.status_code,200)
+            self.assertEqual(response.data,audio_bytes)
+            self.assertEqual(response.headers["Content-Disposition"],"inline")
+        finally:
+            response.close()
+        tracks={t["id"]:t for t in self.client.get("/api/ai-music/spotlight").json["tracks"]}
+        self.assertEqual(tracks[without]["audio_preview"],0)
+        self.assertEqual(tracks[with_consent]["audio_preview"],1)
+
     def test_spotlight_vote_requires_origin_and_valid_uuid(self):
         sid = self.post().json["id"]
         self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
