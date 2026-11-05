@@ -101,11 +101,19 @@ en:{intro:"Listen to AI songs approved by our editors, vote for your favorites a
 };
 const $=id=>document.getElementById(id);
 let language=localStorage.getItem("rdi-language")||"it";if(!strings[language])language="it";$("lang").value=language;
+let page=1,total=0,totalPages=1,playQueue=[],playIndex=-1;
 let allTracks=[],voted=new Set(JSON.parse(localStorage.getItem("rdi-spotlight-voted")||"[]"));
 let visitor=localStorage.getItem("rdi-spotlight-visitor");
 if(!visitor || !/^[0-9a-f-]{36}$/i.test(visitor)){visitor=crypto.randomUUID();localStorage.setItem("rdi-spotlight-visitor",visitor)}
 function t(k){return strings[language][k]}
-function translate(){document.documentElement.lang=language;$("intro").textContent=t("intro");$("submitLink").textContent=t("submit");$("radioLink").textContent=t("radio");$("notice").textContent=t("notice");$("heading").textContent=t("heading");render()}
+function translate(){document.documentElement.lang=language;
+$("adminLink").textContent=({it:"🔐 Redazione",ro:"🔐 Redacție",en:"🔐 Editorial login"})[language];
+$("page-prev").textContent=({it:"← Precedente",ro:"← Anterioară",en:"← Previous"})[language];
+$("page-next").textContent=({it:"Successiva →",ro:"Următoarea →",en:"Next →"})[language];
+$("play-all").textContent=({it:"▶ Play All",ro:"▶ Redă toate",en:"▶ Play All"})[language];
+$("player-stop").textContent=({it:"■ Stop",ro:"■ Oprește",en:"■ Stop"})[language];
+$("player-note").textContent=({it:"La riproduzione continua include solo i file audio autorizzati. I link esterni non sono riproducibili automaticamente.",ro:"Redarea continuă include doar fișierele audio autorizate. Linkurile externe nu pot fi redate automat.",en:"Continuous playback includes only approved and consented audio files. External music links cannot be autoplayed."})[language];
+$("intro").textContent=t("intro");$("submitLink").textContent=t("submit");$("radioLink").textContent=t("radio");$("notice").textContent=t("notice");$("heading").textContent=t("heading");render()}
 $("lang").onchange=()=>{language=$("lang").value;localStorage.setItem("rdi-language",language);translate()};
 function node(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x}
 function safeLink(url){try{const u=new URL(url);return u.protocol==="https:"&&!u.username&&!u.password?u.href:null}catch{return null}}
@@ -161,11 +169,13 @@ function buildComments(track){
  return panel;
 }
 function render(){
- const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=Math.min(allTracks.length,20)+" "+t("songs");
+ const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=total+" "+t("songs");
+ $("page-info").textContent=({it:"Pagina ",ro:"Pagina ",en:"Page "})[language]+page+" / "+totalPages;
+ $("page-prev").disabled=page<=1;$("page-next").disabled=page>=totalPages;
  if(!allTracks.length){wrap.append(node("p","empty",t("empty")));return}
- allTracks.slice(0,20).forEach((track,i)=>{
+ allTracks.forEach((track,i)=>{
   const card=node("article","track");
-  card.append(node("div","position","#"+(i+1)));
+  card.append(node("div","position","#"+((page-1)*20+i+1)));
   const info=node("div");
  const title=node("h2");const openTitle=node("button","track-title",track.title);openTitle.type="button";openTitle.setAttribute("aria-expanded",String(expandedTrackId===track.id));title.append(openTitle);
  info.append(title,node("p","",track.artist+" · "+track.platform));
@@ -191,6 +201,27 @@ function render(){
   wrap.append(card);
  })
 }
-async function load(){$("status").textContent=t("loading");try{const response=await fetch(API+"/spotlight",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();allTracks=Array.isArray(data.tracks)?data.tracks:[];$("status").textContent="";render()}catch(e){$("status").textContent=t("error");allTracks=[];$("tracks").replaceChildren()}}
-translate();load();
+async function load(){$("status").textContent=t("loading");try{const response=await fetch(API+"/spotlight?page="+page,{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();allTracks=Array.isArray(data.tracks)?data.tracks:[];total=Number(data.total)||0;totalPages=Math.max(1,Number(data.total_pages)||1);if(page>totalPages){page=totalPages;return load()}$("status").textContent="";render()}catch(e){$("status").textContent=t("error");allTracks=[];$("tracks").replaceChildren()}}
+$("page-prev").onclick=()=>{if(page>1){page--;expandedTrackId=null;load();$("heading").scrollIntoView({behavior:"smooth",block:"start"})}};
+$("page-next").onclick=()=>{if(page<totalPages){page++;expandedTrackId=null;load();$("heading").scrollIntoView({behavior:"smooth",block:"start"})}};
+const playlistAudio=$("playlist-player");
+async function prepareQueue(){
+ try{const response=await fetch(API+"/spotlight/playlist",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();playQueue=Array.isArray(data.tracks)?data.tracks:[];return playQueue}catch(e){playQueue=[];return []}
+}
+function playAt(index){
+ if(index<0||index>=playQueue.length){playIndex=-1;playlistAudio.pause();playlistAudio.removeAttribute("src");playlistAudio.load();$("player-label").textContent="🎵 Playlist terminata";return}
+ playIndex=index;const item=playQueue[index];playlistAudio.src=API+"/spotlight/"+encodeURIComponent(item.id)+"/audio";
+ $("player-label").textContent="🎶 "+item.title+" · "+item.artist+" ("+(index+1)+"/"+playQueue.length+")";
+ const result=playlistAudio.play();if(result&&result.catch)result.catch(()=>{$("player-label").textContent="▶ Premi Play nel lettore per iniziare · "+item.title});
+}
+playlistAudio.onended=()=>playAt(playIndex+1);
+playlistAudio.onerror=()=>{if(playIndex>=0&&playIndex+1<playQueue.length)playAt(playIndex+1)};
+$("play-all").onclick=async()=>{
+ $("player-label").textContent="🎵 Preparazione playlist…";
+ if(!playQueue.length)await prepareQueue();
+ if(!playQueue.length){$("player-label").textContent=({it:"Nessun file audio autorizzato per Play All",ro:"Nu există fișiere autorizate pentru redare",en:"No consented audio files available for Play All"})[language];return}
+ playAt(0)
+};
+$("player-stop").onclick=()=>{playlistAudio.pause();playIndex=-1;playlistAudio.removeAttribute("src");playlistAudio.load();$("player-label").textContent="■ Stop"};
+translate();load();prepareQueue();
 </script></body></html>
