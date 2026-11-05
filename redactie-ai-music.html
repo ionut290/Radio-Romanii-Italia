@@ -1,7 +1,30 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>RDI AI MUSIC | Redazione</title><style>*{box-sizing:border-box}body{margin:0;background:#0b1424;color:#f5f7fc;font:16px system-ui}main{max-width:1100px;padding:24px;margin:auto}h1{margin:0;color:#f2c66c}.card{background:#17273c;border:1px solid #3b536d;border-radius:16px;padding:18px;margin:16px 0;overflow-wrap:anywhere}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}input,textarea{width:100%;padding:10px;margin:8px 0;background:#0b1726;color:white;border:1px solid #71829b;border-radius:9px}button{cursor:pointer;padding:11px 15px;background:#f2c66c;border:0;border-radius:9px;font-weight:700;margin:5px 5px 5px 0;color:#172536}button.secondary{background:#d5deed}button.danger{background:#f19c9c}small,p{color:#c4d0e0}a{color:#f2c66c}.chip{font-size:12px;background:#384d66;border-radius:50px;padding:4px 8px}.actions{display:flex;flex-wrap:wrap;gap:4px}nav{display:flex;align-items:center;justify-content:space-between;gap:15px}</style></head><body><main><nav><h1>RDI AI MUSIC · Redazione</h1><a href="./index.html">← Radio</a></nav><p>Area privata: candidature ricevute e revisione manuale. I brani approvati non vengono trasmessi automaticamente.</p><section class="card"><label for="token">Token amministratore (non salvato sul sito)</label><input id="token" type="password" autocomplete="off" placeholder="Token amministratore" aria-label="Token amministratore"><button id="load">Carica candidature</button><button class="secondary" id="clear">Cancella token</button><p id="status" role="status" aria-live="polite"></p></section><section class="card"><h2>💬 Moderazione commenti Spotlight</h2><p>Controlla i commenti pubblicati e nascondi quelli non appropriati.</p><button id="load-comments" class="secondary">Carica commenti</button><p id="comments-status" role="status"></p><div id="comments-items"></div></section><section id="items" class="grid"></section></main><script>
-let token='';const $=id=>document.getElementById(id);const status=s=>$('status').textContent=s;const el=(tag,txt)=>{const n=document.createElement(tag);n.textContent=txt??'';return n};
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>RDI AI MUSIC | Redazione</title><style>*{box-sizing:border-box}body{margin:0;background:#0b1424;color:#f5f7fc;font:16px system-ui}main{max-width:1100px;padding:24px;margin:auto}h1{margin:0;color:#f2c66c}.card{background:#17273c;border:1px solid #3b536d;border-radius:16px;padding:18px;margin:16px 0;overflow-wrap:anywhere}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}input,textarea{width:100%;padding:10px;margin:8px 0;background:#0b1726;color:white;border:1px solid #71829b;border-radius:9px}button{cursor:pointer;padding:11px 15px;background:#f2c66c;border:0;border-radius:9px;font-weight:700;margin:5px 5px 5px 0;color:#172536}button.secondary{background:#d5deed}button.danger{background:#f19c9c}small,p{color:#c4d0e0}a{color:#f2c66c}.chip{font-size:12px;background:#384d66;border-radius:50px;padding:4px 8px}.actions{display:flex;flex-wrap:wrap;gap:4px}nav{display:flex;align-items:center;justify-content:space-between;gap:15px}</style></head><body><main><nav><h1>RDI AI MUSIC · Redazione</h1><a href="./index.html">← Radio</a></nav><p>Area privata: candidature ricevute e revisione manuale. I brani approvati non vengono trasmessi automaticamente.</p><section class="card">
+<h2>🔐 Accesso alla redazione</h2>
+<div id="setup-area" hidden>
+ <p>Prima configurazione: inserisci il precedente token una sola volta per impostare la tua password. Dopo userai esclusivamente la password.</p>
+ <label for="token">Token attuale (solo per la prima configurazione)</label>
+ <input id="token" type="password" autocomplete="off" placeholder="Token amministratore attuale">
+ <label for="setup-password">Nuova password (almeno 12 caratteri)</label>
+ <input id="setup-password" type="password" autocomplete="new-password" placeholder="Crea o genera una password">
+ <button id="generate-password" type="button" class="secondary">🎲 Genera password sicura</button>
+ <button id="reveal-password" type="button" class="secondary">👁 Mostra / nascondi</button>
+ <button id="setup-submit" type="button">Salva password</button>
+ <p><small>Conservala nel tuo gestore password. Non inserirla in chat.</small></p>
+</div>
+<div id="login-area" hidden>
+ <label for="login-password">Password amministratore</label>
+ <input id="login-password" type="password" autocomplete="current-password" placeholder="La tua password">
+ <button id="login-submit" type="button">🔓 Accedi</button>
+</div>
+<div id="work-controls" hidden>
+ <p>✅ Accesso effettuato. La sessione dura fino a 12 ore.</p>
+ <button id="load" type="button">Carica candidature</button>
+ <button id="clear" type="button" class="secondary">🚪 Esci</button>
+</div>
+<p id="status" role="status" aria-live="polite"></p></section><section class="card"><h2>💬 Moderazione commenti Spotlight</h2><p>Controlla i commenti pubblicati e nascondi quelli non appropriati.</p><button id="load-comments" class="secondary">Carica commenti</button><p id="comments-status" role="status"></p><div id="comments-items"></div></section><section id="items" class="grid"></section></main><script>
+let token=sessionStorage.getItem('rdi-editor-session')||'';const $=id=>document.getElementById(id);const status=s=>$('status').textContent=s;const el=(tag,txt)=>{const n=document.createElement(tag);n.textContent=txt??'';return n};
 async function api(path,opt={}){const r=await fetch('https://radio-romanii-italia.duckdns.org/api/ai-music/admin/'+path,{...opt,credentials:'omit',headers:{Authorization:'Bearer '+token,...(opt.headers||{})},cache:'no-store'});if(!r.ok){let msg=r.status+' HTTP error';try{msg=(await r.json()).error||msg}catch{}throw Error(msg)}return r}
-async function load(){token=$('token').value.trim();if(!token){status('Inserisci il token amministratore');return}status('Caricamento…');try{const payload=await (await api('submissions')).json();render(payload.submissions||[]);status('Candidature: '+payload.submissions.length)}catch(e){status('Errore: '+e.message)}}
+async function load(){if(!token){status('Effettua prima l’accesso con la password');return}status('Caricamento…');try{const payload=await (await api('submissions')).json();render(payload.submissions||[]);status('Candidature: '+payload.submissions.length)}catch(e){status('Errore: '+e.message)}}
 function render(items){$('items').replaceChildren();if(!items.length){$('items').append(el('p','Nessuna candidatura presente.'));return}
 for(const it of items){const c=el('article');c.className='card';const heading=el('h2',it.title+' · '+it.artist);const chip=el('span',it.status);chip.className='chip';c.append(heading,chip,el('p',it.platform+' · '+new Date(it.created_at).toLocaleString('it-IT')));const mail=el('p','Contatto: '+it.email);c.append(mail);if(it.link){const a=el('a','Apri link brano');a.href=it.link;a.target='_blank';a.rel='noopener noreferrer';c.append(a)}if(it.file_name){const download=el('button','Scarica audio: '+it.file_name);download.className='secondary';download.onclick=async()=>{try{const b=await (await api('submissions/'+encodeURIComponent(it.id)+'/audio')).blob();const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=it.file_name;a.click();setTimeout(()=>URL.revokeObjectURL(u),30000)}catch(e){status(e.message)}};c.append(download);
 const permission=el('div');permission.style.cssText='margin-top:14px;padding:12px;background:#233b55;border-radius:10px';
@@ -18,8 +41,7 @@ if(it.spotlight_consent){const disable=el('button','Disattiva Play pubblico');di
 c.append(permission)
 }if(it.notes)c.append(el('p','Note artista: '+it.notes));const comment=el('textarea');comment.rows=2;comment.placeholder='Nota redazionale (facoltativa)';comment.value=it.reviewed_note||'';c.append(comment);const actions=el('div');actions.className='actions';for(const [value,label,klass] of [['approved','Approva',''],['rejected','Rifiuta','danger'],['pending','Rimetti in attesa','secondary']]){const b=el('button',label);b.className=klass;b.onclick=async()=>{b.disabled=true;try{await api('submissions/'+encodeURIComponent(it.id)+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:value,note:comment.value})});status('Candidatura aggiornata');await load()}catch(e){status('Errore: '+e.message)}finally{b.disabled=false}};actions.append(b)}c.append(actions);$('items').append(c)}}
 async function loadComments(){
- token=$('token').value.trim();
- if(!token){$('comments-status').textContent="Inserisci il token amministratore";return}
+ if(!token){$('comments-status').textContent="Effettua prima l’accesso con la password";return}
  $('comments-status').textContent="Caricamento commenti…";
  try{
   const payload=await (await api('spotlight/comments')).json();
@@ -35,6 +57,64 @@ async function loadComments(){
   }
  }catch(e){$('comments-status').textContent='Errore: '+e.message}
 }
+
+const AUTH='https://radio-romanii-italia.duckdns.org/api/ai-music/admin/';
+function showAuth(){
+ $('setup-area').hidden=true;$('login-area').hidden=!!token;$('work-controls').hidden=!token;
+ if(token){$('login-area').hidden=true}
+}
+async function checkAuth(){
+ showAuth();
+ if(token){try{await api('submissions');status('Accesso amministratore attivo');return}catch(e){token='';sessionStorage.removeItem('rdi-editor-session')}}
+ try{
+  const r=await fetch(AUTH+'auth-status',{cache:'no-store'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  const data=await r.json();
+  $('setup-area').hidden=!!data.password_configured;
+  $('login-area').hidden=!data.password_configured;
+  $('work-controls').hidden=true;
+ }catch(e){status('Impossibile verificare la configurazione: '+e.message)}
+}
+$('generate-password').onclick=()=>{
+ const values=new Uint8Array(24);crypto.getRandomValues(values);
+ const chars='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%';
+ $('setup-password').value=Array.from(values,n=>chars[n%chars.length]).join('');
+ $('setup-password').type='text';status('Password generata. Copiala e conservala in modo sicuro prima di salvarla.');
+};
+$('reveal-password').onclick=()=>{$('setup-password').type=$('setup-password').type==='password'?'text':'password'};
+$('setup-submit').onclick=async()=>{
+ const current_token=$('token').value.trim(),password=$('setup-password').value;
+ if(!current_token||password.length<12){status('Inserisci il token attuale e una password di almeno 12 caratteri');return}
+ $('setup-submit').disabled=true;
+ try{
+  const r=await fetch(AUTH+'setup-password',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({current_token,password}),credentials:'omit'});
+  const data=await r.json().catch(()=>({}));
+  if(!r.ok)throw Error(data.error||'HTTP '+r.status);
+  $('token').value='';$('setup-password').value='';$('setup-area').hidden=true;$('login-area').hidden=false;status('Password salvata. Ora accedi con la tua nuova password.')
+ }catch(e){status('Configurazione non riuscita: '+e.message)}
+ finally{$('setup-submit').disabled=false}
+};
+async function passwordLogin(){
+ $('login-submit').disabled=true;
+ try{
+  const password=$('login-password').value;
+  const r=await fetch(AUTH+'login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password}),credentials:'omit'});
+  const data=await r.json().catch(()=>({});
+  if(!r.ok)throw Error(data.error||'HTTP '+r.status);
+  token=data.session;sessionStorage.setItem('rdi-editor-session',token);
+  $('login-password').value='';showAuth();status('Accesso riuscito');await load()
+ }catch(e){status('Accesso non riuscito: '+e.message)}
+ finally{$('login-submit').disabled=false}
+}
+$('login-submit').onclick=passwordLogin;
+$('login-password').addEventListener('keydown',e=>{if(e.key==='Enter')passwordLogin()});
 $('load-comments').onclick=loadComments;
-$('load').onclick=load;$('clear').onclick=()=>{token='';$('token').value='';$('items').replaceChildren();status('Token cancellato')};$('token').addEventListener('keydown',e=>{if(e.key==='Enter')load()});
+$('load').onclick=load;
+$('clear').onclick=async()=>{
+ const prior=token;token='';sessionStorage.removeItem('rdi-editor-session');
+ $('items').replaceChildren();$('comments-items').replaceChildren();showAuth();
+ try{await fetch(AUTH+'logout',{method:'POST',headers:{Authorization:'Bearer '+prior},credentials:'omit'})}catch(e){}
+ status('Sessione terminata')
+};
+checkAuth();
 </script></body></html>
