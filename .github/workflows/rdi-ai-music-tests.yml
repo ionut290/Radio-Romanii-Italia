@@ -38,5 +38,7 @@ jobs:
           headers=$(mktemp)
           status=$(curl --silent --show-error --output /dev/null --dump-header "$headers" --write-out '%{http_code}' --max-time 20 -X OPTIONS -H 'Origin: https://radioromanii.duckdns.org' "$api/submissions")
           test "$status" = 204 || { echo "Expected preflight 204, got $status"; exit 1; }
-          grep -Eiq '^access-control-allow-origin: https://radioromanii\.duckdns\.org\r?$' "$headers" || { echo "CORS origin missing"; cat "$headers"; exit 1; }
+          tr -d '\\r' < "$headers" | grep -Eiq '^access-control-allow-origin: https://radioromanii[.]duckdns[.]org
+          echo "Public API health, admin guard and cross-origin access: OK"
+ || { echo "CORS origin missing"; cat "$headers"; exit 1; }
           echo "Public API health, admin guard and cross-origin access: OK"
