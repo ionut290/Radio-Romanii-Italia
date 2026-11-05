@@ -42,6 +42,9 @@ def db():
       ip_key TEXT NOT NULL, created_at INTEGER NOT NULL,
       PRIMARY KEY(submission_id,voter_key))""")
     con.execute("CREATE INDEX IF NOT EXISTS spotlight_votes_by_ip ON spotlight_votes(ip_key,created_at)")
+    columns={row["name"] for row in con.execute("PRAGMA table_info(submissions)").fetchall()}
+    if "spotlight_consent" not in columns:
+        con.execute("ALTER TABLE submissions ADD COLUMN spotlight_consent INTEGER NOT NULL DEFAULT 0")
     con.commit()
     return con
 def now():
@@ -98,6 +101,7 @@ def submit():
     platform=clamp(request.form.get("platform"),60)
     link=clamp(request.form.get("link"),1500)
     notes=clamp(request.form.get("notes"),800)
+    spotlight_consent=int(request.form.get("spotlight_consent")=="yes")
     if not artist or not title or not email or "@" not in email or not platform:
         return jsonify(error="Required fields missing"),400
     if link and not valid_link(link):
@@ -135,8 +139,8 @@ def submit():
             return jsonify(error=str(exc)),400
     try:
         with db() as con:
-            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name) VALUES (?,?,?,?,?,?,?,?,?,?)",
-              (sid,now(),artist,email,title,platform,link,notes,original,stored))
+            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name,spotlight_consent) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+              (sid,now(),artist,email,title,platform,link,notes,original,stored,spotlight_consent))
     except Exception:
         if stored:(FILES/stored).unlink(missing_ok=True)
         raise
@@ -185,6 +189,7 @@ def spotlight():
     with db() as con:
         rows=con.execute("""
           SELECT s.id,s.artist,s.title,s.platform,s.link,s.created_at,
+                 CASE WHEN s.spotlight_consent=1 AND s.stored_name IS NOT NULL THEN 1 ELSE 0 END AS audio_preview,
                  COUNT(v.submission_id) AS votes
           FROM submissions AS s
           LEFT JOIN spotlight_votes AS v ON v.submission_id=s.id
@@ -193,6 +198,23 @@ def spotlight():
           ORDER BY votes DESC,s.created_at DESC LIMIT 200
         """).fetchall()
     return jsonify(tracks=[dict(row) for row in rows])
+
+
+@app.get("/api/ai-music/spotlight/<sid>/audio")
+def spotlight_audio(sid):
+    """Public listen-only preview if the submitter consented and editors approved."""
+    with db() as con:
+        row=con.execute("SELECT stored_name FROM submissions WHERE id=? AND status='approved' AND spotlight_consent=1",(sid,)).fetchone()
+    if not row or not row["stored_name"]:
+        abort(404)
+    path=FILES/row["stored_name"]
+    if not path.is_file():
+        abort(404)
+    mime={".mp3":"audio/mpeg",".wav":"audio/wav",".flac":"audio/flac",".m4a":"audio/mp4",".ogg":"audio/ogg"}.get(path.suffix.lower(),"application/octet-stream")
+    response=send_file(path,mimetype=mime,conditional=True)
+    response.headers["Content-Disposition"]="inline"
+    response.headers["X-Content-Type-Options"]="nosniff"
+    return response
 
 @app.post("/api/ai-music/spotlight/<sid>/vote")
 def spotlight_vote(sid):
