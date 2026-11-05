@@ -301,7 +301,13 @@ def update_spotlight_consent(sid):
 @app.get("/api/ai-music/spotlight")
 def spotlight():
     """Public ranking. Never expose submitter email, notes or private file paths."""
+    try:
+        page=max(1,min(int(request.args.get("page","1")),100000))
+    except ValueError:
+        page=1
+    per_page=20
     with db() as con:
+        total=con.execute("SELECT COUNT(*) FROM submissions WHERE status='approved'").fetchone()[0]
         rows=con.execute("""
           SELECT s.id,s.artist,s.title,s.platform,s.link,s.created_at,
                  CASE WHEN s.spotlight_consent=1 AND s.stored_name IS NOT NULL THEN 1 ELSE 0 END AS audio_preview,
@@ -310,10 +316,22 @@ def spotlight():
           LEFT JOIN spotlight_votes AS v ON v.submission_id=s.id
           WHERE s.status='approved'
           GROUP BY s.id
-          ORDER BY votes DESC,s.created_at DESC LIMIT 200
+          ORDER BY votes DESC,s.created_at DESC LIMIT ? OFFSET ?
+        """,(per_page,(page-1)*per_page)).fetchall()
+    return jsonify(tracks=[dict(row) for row in rows],page=page,per_page=per_page,total=total,total_pages=max(1,(total+per_page-1)//per_page))
+
+
+@app.get("/api/ai-music/spotlight/playlist")
+def spotlight_playlist():
+    """Public queue of approved, consented uploaded audio only."""
+    with db() as con:
+        rows=con.execute("""
+          SELECT s.id,s.title,s.artist FROM submissions s
+          LEFT JOIN spotlight_votes v ON v.submission_id=s.id
+          WHERE s.status='approved' AND s.spotlight_consent=1 AND s.stored_name IS NOT NULL
+          GROUP BY s.id ORDER BY COUNT(v.submission_id) DESC,s.created_at DESC LIMIT 1000
         """).fetchall()
     return jsonify(tracks=[dict(row) for row in rows])
-
 
 @app.get("/api/ai-music/spotlight/<sid>/audio")
 def spotlight_audio(sid):
