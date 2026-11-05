@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1630"><meta name="description" content="RDI AI MUSIC Spotlight: ascolta e vota i brani AI approvati dalla redazione.">
+<title>RDI AI MUSIC Spotlight | Radio Românii din Italia</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 95% 0%,#304b72,#0a1425 67%);color:#f4f7ff;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1050px;margin:0 auto;padding:22px 18px 70px}a{color:#ffd27c}header{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}h1{font-size:clamp(33px,6vw,57px);line-height:1.08;margin:42px 0 12px}h1 span{color:#ffd17a}.lead{font-size:18px;color:#cad8e9;max-width:750px}.links{display:flex;gap:12px;flex-wrap:wrap}.links a{border:1px solid #6d85a8;border-radius:12px;padding:10px 14px;text-decoration:none}.summary{margin:24px 0 16px;color:#c2d5ec}.tracks{display:grid;gap:14px}.track{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:16px;padding:20px;background:#172a45;border:1px solid #445b7b;border-radius:20px;box-shadow:0 6px 18px #0002}.position{font-size:29px;font-weight:900;color:#f5ca6d}.track h2{margin:0;font-size:22px}.track p{margin:4px 0 10px;color:#c0d0e5}.listen{margin:10px 0}.listen audio{width:min(100%,420px);display:block}.votes{font-weight:800;color:#f9d181}.vote{cursor:pointer;border:0;border-radius:12px;padding:13px 21px;background:#f5c669;color:#192942;font-size:16px;font-weight:800;min-width:112px}.vote:disabled{cursor:not-allowed;background:#758399;color:#e3eaf5}.hint{font-size:12px;color:#b4c6de}.notice{background:#203551;padding:16px;border-left:4px solid #f5c669;border-radius:6px;margin:26px 0}.status{min-height:23px;color:#f9cf82}.empty{padding:28px;border-radius:16px;background:#172a45}footer{margin-top:34px;color:#bdcce0}select{padding:9px 12px;border-radius:10px;border:1px solid #7289a8;background:#10233b;color:white;font:inherit}@media(max-width:620px){.track{grid-template-columns:43px minmax(0,1fr);gap:10px;padding:15px}.track .votebox{grid-column:2}.vote{width:100%}h1{margin-top:26px}}button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+</style></head><body><main>
+<header><a href="./index.html">← Radio Românii din Italia</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></header>
+<h1>RDI AI MUSIC <span>Spotlight</span></h1><p class="lead" id="intro"></p>
+<nav class="links"><a href="./artisti-ai.html" id="submitLink"></a><a href="./index.html" id="radioLink"></a></nav>
+<section class="notice" id="notice"></section>
+<div class="summary"><strong id="heading"></strong> · <span id="count"></span></div>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+<div class="tracks" id="tracks"></div>
+<footer>Radio Românii din Italia · RDI AI MUSIC Spotlight</footer>
+</main><script>
+"use strict";
+const API="https://radio-romanii-italia.duckdns.org/api/ai-music";
+const strings={
+it:{intro:"Ascolta le canzoni AI selezionate dalla redazione, vota quelle che ami e scopri la classifica della community.",submit:"Proponi un brano",radio:"Ascolta la radio",notice:"In classifica compaiono solo brani approvati. Ogni browser può votare una volta per brano. I voti sono indicativi e soggetti a controlli anti-abuso. L'approvazione e i voti non garantiscono la messa in onda.",heading:"Classifica pubblica",songs:"brani",votes:"voti",vote:"Vota",voted:"Hai votato",listen:"Ascolta il brano",listenExternal:"Ascolta sulla piattaforma",noPreview:"Anteprima non disponibile: per i file audio serve il consenso dell'artista.",loading:"Caricamento classifica…",empty:"Non ci sono ancora brani approvati in classifica.",error:"Impossibile caricare la classifica. Riprova più tardi.",thanks:"Voto registrato!",duplicate:"Hai già votato questo brano.",limited:"Troppi voti da questa connessione. Riprova domani.",failed:"Voto non riuscito."},
+ro:{intro:"Ascultă piesele AI aprobate de redacție, votează-ți preferatele și urmărește clasamentul comunității.",submit:"Trimite o piesă",radio:"Ascultă radioul",notice:"Apar doar piesele aprobate. Fiecare browser poate vota o singură dată pentru fiecare piesă. Voturile sunt orientative și sunt verificate împotriva abuzurilor. Voturile nu garantează difuzarea.",heading:"Clasament public",songs:"piese",votes:"voturi",vote:"Votează",voted:"Ai votat",listen:"Ascultă piesa",listenExternal:"Ascultă pe platformă",noPreview:"Previzualizare indisponibilă: pentru fișiere este necesar acordul artistului.",loading:"Se încarcă clasamentul…",empty:"Nu există încă piese aprobate în clasament.",error:"Clasamentul nu poate fi încărcat. Revino mai târziu.",thanks:"Votul a fost înregistrat!",duplicate:"Ai votat deja această piesă.",limited:"Prea multe voturi de la această conexiune. Revino mâine.",failed:"Vot nereușit."},
+en:{intro:"Listen to AI songs approved by our editors, vote for your favorites and explore the community chart.",submit:"Submit a track",radio:"Listen to the radio",notice:"Only approved songs appear. Each browser can vote once per song. Votes are indicative and subject to abuse controls; votes do not guarantee airplay.",heading:"Public chart",songs:"tracks",votes:"votes",vote:"Vote",voted:"Voted",listen:"Listen to the track",listenExternal:"Listen on platform",noPreview:"No preview available: uploaded audio requires the artist's permission.",loading:"Loading chart…",empty:"No approved songs are in the chart yet.",error:"Unable to load the chart. Please retry later.",thanks:"Vote registered!",duplicate:"You already voted for this track.",limited:"Too many votes from this connection. Try tomorrow.",failed:"Vote failed."}
+};
+const $=id=>document.getElementById(id);
+let language=localStorage.getItem("rdi-language")||"it";if(!strings[language])language="it";$("lang").value=language;
+let allTracks=[],voted=new Set(JSON.parse(localStorage.getItem("rdi-spotlight-voted")||"[]"));
+let visitor=localStorage.getItem("rdi-spotlight-visitor");
+if(!visitor || !/^[0-9a-f-]{36}$/i.test(visitor)){visitor=crypto.randomUUID();localStorage.setItem("rdi-spotlight-visitor",visitor)}
+function t(k){return strings[language][k]}
+function translate(){document.documentElement.lang=language;$("intro").textContent=t("intro");$("submitLink").textContent=t("submit");$("radioLink").textContent=t("radio");$("notice").textContent=t("notice");$("heading").textContent=t("heading");render()}
+$("lang").onchange=()=>{language=$("lang").value;localStorage.setItem("rdi-language",language);translate()};
+function node(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x}
+function safeLink(url){try{const u=new URL(url);return u.protocol==="https:"&&!u.username&&!u.password?u.href:null}catch{return null}}
+function render(){
+ const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=allTracks.length+" "+t("songs");
+ if(!allTracks.length){wrap.append(node("p","empty",t("empty")));return}
+ allTracks.forEach((track,i)=>{
+  const card=node("article","track");
+  card.append(node("div","position","#"+(i+1)));
+  const info=node("div");info.append(node("h2","",track.title),node("p","",track.artist+" · "+track.platform));
+  const preview=node("div","listen");
+  if(track.audio_preview){
+   const player=node("audio");player.controls=true;player.preload="none";player.setAttribute("aria-label",t("listen"));player.src=API+"/spotlight/"+encodeURIComponent(track.id)+"/audio";preview.append(player);
+  }else if(safeLink(track.link)){
+   const link=node("a","",t("listenExternal"));link.href=safeLink(track.link);link.target="_blank";link.rel="noopener noreferrer";preview.append(link)
+  }else{preview.append(node("span","hint",t("noPreview")))}
+  info.append(preview,node("div","votes",Number(track.votes).toLocaleString(language)+" "+t("votes")));
+  const buttons=node("div","votebox");const vote=node("button","vote",voted.has(track.id)?t("voted"):t("vote"));vote.disabled=voted.has(track.id);vote.type="button";
+  vote.onclick=async()=>{vote.disabled=true;const prior=vote.textContent;vote.textContent="…";
+   try{const resp=await fetch(API+"/spotlight/"+encodeURIComponent(track.id)+"/vote",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({visitor}),credentials:"omit"});const data=await resp.json().catch(()=>({}));
+    if(resp.status===201||resp.status===409){voted.add(track.id);localStorage.setItem("rdi-spotlight-voted",JSON.stringify([...voted]));$("status").textContent=resp.status===201?t("thanks"):t("duplicate");await load();return}
+    $("status").textContent=resp.status===429?t("limited"):(data.error||t("failed"));
+   }catch(e){$("status").textContent=t("failed")}vote.disabled=voted.has(track.id);vote.textContent=voted.has(track.id)?t("voted"):prior};
+  buttons.append(vote);card.append(info,buttons);wrap.append(card);
+ })
+}
+async function load(){$("status").textContent=t("loading");try{const response=await fetch(API+"/spotlight",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();allTracks=Array.isArray(data.tracks)?data.tracks:[];$("status").textContent="";render()}catch(e){$("status").textContent=t("error");allTracks=[];$("tracks").replaceChildren()}}
+translate();load();
+</script></body></html>
