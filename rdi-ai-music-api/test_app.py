@@ -286,6 +286,22 @@ class SubmissionTests(unittest.TestCase):
         self.assertEqual(self.client.post(f"/api/ai-music/admin/spotlight/comments/{cid}/hide",headers=self.admin).status_code,200)
         self.assertEqual(self.client.get(path).json["comments"],[])
 
+    def test_spotlight_pagination_and_playlist_consent(self):
+        for i in range(23):
+            sid=self.post(title=f"Song {i}").json["id"]
+            self.assertEqual(self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
+                headers=self.admin,json={"status":"approved"}).status_code,200)
+        first=self.client.get("/api/ai-music/spotlight?page=1").json
+        second=self.client.get("/api/ai-music/spotlight?page=2").json
+        self.assertEqual(first["total"],23)
+        self.assertEqual(first["total_pages"],2)
+        self.assertEqual(len(first["tracks"]),20)
+        self.assertEqual(len(second["tracks"]),3)
+        self.assertEqual(set(t["id"] for t in first["tracks"]) &
+                         set(t["id"] for t in second["tracks"]),set())
+        self.assertEqual(self.client.get("/api/ai-music/spotlight/playlist").json["tracks"],[])
+        self.assertEqual(self.client.get("/api/ai-music/spotlight?page=garbage").status_code,200)
+
     def test_spotlight_vote_requires_origin_and_valid_uuid(self):
         sid = self.post().json["id"]
         self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
