@@ -4,6 +4,36 @@
 <title>RDI AI MUSIC Spotlight | Radio Românii din Italia</title>
 <style>
 :root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 95% 0%,#304b72,#0a1425 67%);color:#f4f7ff;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1050px;margin:0 auto;padding:22px 18px 70px}a{color:#ffd27c}header{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}h1{font-size:clamp(33px,6vw,57px);line-height:1.08;margin:42px 0 12px}h1 span{color:#ffd17a}.lead{font-size:18px;color:#cad8e9;max-width:750px}.links{display:flex;gap:12px;flex-wrap:wrap}.links a{border:1px solid #6d85a8;border-radius:12px;padding:10px 14px;text-decoration:none}.summary{margin:24px 0 16px;color:#c2d5ec}.tracks{display:grid;gap:14px}.track{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:16px;padding:20px;background:#172a45;border:1px solid #445b7b;border-radius:20px;box-shadow:0 6px 18px #0002}.position{font-size:29px;font-weight:900;color:#f5ca6d}.track h2{margin:0;font-size:22px}.track p{margin:4px 0 10px;color:#c0d0e5}.listen{margin:10px 0}.listen audio{width:min(100%,420px);display:block}.votes{font-weight:800;color:#f9d181}.vote{cursor:pointer;border:0;border-radius:12px;padding:13px 21px;background:#f5c669;color:#192942;font-size:16px;font-weight:800;min-width:112px}.vote:disabled{cursor:not-allowed;background:#758399;color:#e3eaf5}.hint{font-size:12px;color:#b4c6de}.notice{background:#203551;padding:16px;border-left:4px solid #f5c669;border-radius:6px;margin:26px 0}.status{min-height:23px;color:#f9cf82}.empty{padding:28px;border-radius:16px;background:#172a45}footer{margin-top:34px;color:#bdcce0}select{padding:9px 12px;border-radius:10px;border:1px solid #7289a8;background:#10233b;color:white;font:inherit}@media(max-width:620px){.track{grid-template-columns:43px minmax(0,1fr);gap:10px;padding:15px}.track .votebox{grid-column:2}.vote{width:100%}h1{margin-top:26px}}button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
+ 
+/* Animated musical atmosphere and compact, accessible community comments */
+body{background:radial-gradient(ellipse at 85% -5%,#245ea2 0%,transparent 48%),radial-gradient(circle at 0% 47%,#132f60 0%,transparent 48%),linear-gradient(145deg,#07152c,#10274a 48%,#071126);background-attachment:fixed}
+main{position:relative;isolation:isolate}
+main::before,main::after{content:"♫ ♪ ♬ ♩  ♫";position:fixed;z-index:-1;font-size:clamp(32px,4vw,58px);white-space:pre;letter-spacing:7vw;color:#ffcf6b3b;pointer-events:none;text-shadow:0 0 24px #ffd17b66;animation:notesFloat 22s ease-in-out infinite alternate;left:2%;top:18%;transform:rotate(-16deg)}
+main::after{left:auto;right:1%;top:70%;animation-delay:-10s;animation-duration:29s;color:#8fd5ff48}
+@keyframes notesFloat{0%{transform:translateY(20px) rotate(-14deg);opacity:.25}50%{opacity:.8}100%{transform:translateY(-95px) rotate(12deg);opacity:.4}}
+@media(prefers-reduced-motion:reduce){main::before,main::after{animation:none}}
+.track{position:relative;transition:border-color .2s,box-shadow .2s;background:linear-gradient(120deg,#152b49ee,#11233fef);border-color:#46698f}
+.track:nth-child(1){border-color:#dfb65d;box-shadow:0 0 28px #eeb85833}.track:nth-child(2){border-color:#a3c4e5}.track:nth-child(3){border-color:#c38a5e}
+.track.open{border-color:#ffd377;box-shadow:0 0 24px #f1ba6f29}
+.track h2{margin:0}
+.track-title{font:inherit;text-align:left;padding:0;color:#f9fbff;background:none;border:0;cursor:pointer;font-weight:800}
+.track-title:hover{text-decoration:underline;color:#ffd27c}
+.votebox{display:flex;flex-direction:column;gap:9px}
+.comment-toggle{background:#253e61;border:1px solid #7d9bbd;color:#f4f7fd;border-radius:11px;padding:10px;cursor:pointer;font-weight:700;white-space:nowrap}
+.comment-toggle:hover{background:#335980}
+.comments-panel{grid-column:1 / -1;padding:15px 16px 17px;border-top:1px solid #6985a455;margin-top:5px;background:#09203c8c;border-radius:12px}
+.comments-title{color:#ffd27c;font-size:17px;font-weight:800;margin-bottom:12px}
+.comment-form{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr) auto;gap:8px;margin-bottom:15px}
+.comment-form input,.comment-form textarea{background:#0a1b32;border:1px solid #6886aa;color:white;font:inherit;border-radius:10px;padding:11px;min-width:0}
+.comment-form textarea{resize:vertical;min-height:45px;max-height:110px}
+.comment-form button{background:#f5c669;border:0;border-radius:10px;color:#102340;font-weight:800;padding:9px 15px;cursor:pointer}
+.comment-form button:disabled{opacity:.5;cursor:default}
+.comment-list{display:grid;gap:9px}
+.comment-line{background:#193552;border:1px solid #395b7b;border-radius:11px;padding:11px 13px}
+.comment-line strong{color:#ffe29c}.comment-line time{color:#abc1db;font-size:12px;margin-left:8px}
+.comment-line p{margin:5px 0 0;overflow-wrap:anywhere;white-space:pre-wrap}
+.comment-feedback{color:#ffd27c;min-height:20px;margin:4px 0 10px}
+@media(max-width:650px){.comment-form{grid-template-columns:1fr}.comment-form button{width:100%}.comments-panel{padding:12px}.track{column-gap:9px}.votebox{grid-column:2;flex-direction:row;flex-wrap:wrap}.vote{width:auto;flex:1}.comment-toggle{flex:1}main::before,main::after{letter-spacing:8vw}}
 </style></head><body><main>
 <header><a href="./index.html">← Radio Românii din Italia</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></header>
 <h1>RDI AI MUSIC <span>Spotlight</span></h1><p class="lead" id="intro"></p>
@@ -31,27 +61,86 @@ function translate(){document.documentElement.lang=language;$("intro").textConte
 $("lang").onchange=()=>{language=$("lang").value;localStorage.setItem("rdi-language",language);translate()};
 function node(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x}
 function safeLink(url){try{const u=new URL(url);return u.protocol==="https:"&&!u.username&&!u.password?u.href:null}catch{return null}}
+let expandedTrackId=null;
+const commentText={
+ it:{show:"💬 Commenti",hide:"▲ Chiudi commenti",comments:"💬 Commenti della community",no:"Ancora nessun commento. Scrivi il primo!",name:"Il tuo nome",write:"Scrivi un commento…",send:"✉ Invia",sent:"Commento pubblicato!",slow:"Attendi almeno un minuto prima di scrivere di nuovo.",problem:"Commenti temporaneamente non disponibili.",limit:"Usa un nome da 2 a 40 caratteri e un commento da 3 a 500 caratteri."},
+ ro:{show:"💬 Comentarii",hide:"▲ Închide comentariile",comments:"💬 Comentariile comunității",no:"Încă nu există comentarii. Scrie primul!",name:"Numele tău",write:"Scrie un comentariu…",send:"✉ Trimite",sent:"Comentariu publicat!",slow:"Așteaptă cel puțin un minut înainte de a comenta din nou.",problem:"Comentariile nu sunt disponibile momentan.",limit:"Numele trebuie să aibă 2-40 de caractere, iar comentariul 3-500."},
+ en:{show:"💬 Comments",hide:"▲ Close comments",comments:"💬 Community comments",no:"No comments yet. Be the first!",name:"Your name",write:"Write a comment…",send:"✉ Send",sent:"Comment published!",slow:"Please wait at least one minute before commenting again.",problem:"Comments are temporarily unavailable.",limit:"Use a 2-40 character name and a 3-500 character comment."}
+};
+function ct(k){return commentText[language][k]}
+async function showComments(track,panel){
+ const list=panel.querySelector(".comment-list");
+ list.replaceChildren();
+ try{
+  const response=await fetch(API+"/spotlight/"+encodeURIComponent(track.id)+"/comments",{cache:"no-store",credentials:"omit"});
+  if(!response.ok)throw Error(String(response.status));
+  const data=await response.json();
+  if(!data.comments.length)list.append(node("p","hint",ct("no")));
+  for(const item of data.comments){
+   const line=node("div","comment-line");
+   const name=node("strong","",item.nickname);
+   const date=node("time","",new Date(item.created_at).toLocaleString(language,{dateStyle:"short",timeStyle:"short"}));
+   line.append(name,date,node("p","",item.body));list.append(line);
+  }
+ }catch(e){list.append(node("p","hint",ct("problem")))}
+}
+function buildComments(track){
+ const panel=node("section","comments-panel");panel.setAttribute("aria-label",ct("comments"));
+ panel.append(node("div","comments-title",ct("comments")+" · "+track.title));
+ const form=node("form","comment-form");
+ const name=node("input");name.type="text";name.minLength=2;name.maxLength=40;name.required=true;name.placeholder=ct("name");name.setAttribute("aria-label",ct("name"));
+ const body=node("textarea");body.minLength=3;body.maxLength=500;body.required=true;body.placeholder=ct("write");body.setAttribute("aria-label",ct("write"));
+ const send=node("button","",ct("send"));send.type="submit";
+ const feedback=node("div","comment-feedback");feedback.setAttribute("role","status");
+ const list=node("div","comment-list");
+ form.append(name,body,send);panel.append(form,feedback,list);
+ form.onsubmit=async e=>{
+  e.preventDefault();
+  const nickname=name.value.trim(),message=body.value.trim();
+  if(nickname.length<2||nickname.length>40||message.length<3||message.length>500){feedback.textContent=ct("limit");return}
+  send.disabled=true;
+  try{
+   const res=await fetch(API+"/spotlight/"+encodeURIComponent(track.id)+"/comments",{
+    method:"POST",headers:{"Content-Type":"application/json"},credentials:"omit",
+    body:JSON.stringify({nickname,body:message})});
+   if(res.status===201){body.value="";feedback.textContent=ct("sent");await showComments(track,panel)}
+   else if(res.status===429){feedback.textContent=ct("slow")}
+   else{const result=await res.json().catch(()=>({}));feedback.textContent=result.error||ct("problem")}
+  }catch(e){feedback.textContent=ct("problem")}
+  finally{send.disabled=false}
+ };
+ showComments(track,panel);
+ return panel;
+}
 function render(){
- const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=allTracks.length+" "+t("songs");
+ const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=Math.min(allTracks.length,20)+" "+t("songs");
  if(!allTracks.length){wrap.append(node("p","empty",t("empty")));return}
- allTracks.forEach((track,i)=>{
+ allTracks.slice(0,20).forEach((track,i)=>{
   const card=node("article","track");
   card.append(node("div","position","#"+(i+1)));
-  const info=node("div");info.append(node("h2","",track.title),node("p","",track.artist+" · "+track.platform));
+  const info=node("div");
+ const title=node("h2");const openTitle=node("button","track-title",track.title);openTitle.type="button";openTitle.setAttribute("aria-expanded",String(expandedTrackId===track.id));title.append(openTitle);
+ info.append(title,node("p","",track.artist+" · "+track.platform));
   const preview=node("div","listen");
   if(track.audio_preview){
    const player=node("audio");player.controls=true;player.preload="none";player.setAttribute("aria-label",t("listen"));player.src=API+"/spotlight/"+encodeURIComponent(track.id)+"/audio";preview.append(player);
   }else if(safeLink(track.link)){
    const link=node("a","",t("listenExternal"));link.href=safeLink(track.link);link.target="_blank";link.rel="noopener noreferrer";preview.append(link)
   }else{preview.append(node("span","hint",t("noPreview")))}
-  info.append(preview,node("div","votes",Number(track.votes).toLocaleString(language)+" "+t("votes")));
-  const buttons=node("div","votebox");const vote=node("button","vote",voted.has(track.id)?t("voted"):t("vote"));vote.disabled=voted.has(track.id);vote.type="button";
+  info.append(preview,node("div","votes","🔥 "+Number(track.votes).toLocaleString(language)+" "+t("votes")));
+  const buttons=node("div","votebox");const vote=node("button","vote",voted.has(track.id)?"✅ "+t("voted"):"👍 "+t("vote"));vote.disabled=voted.has(track.id);vote.type="button";
   vote.onclick=async()=>{vote.disabled=true;const prior=vote.textContent;vote.textContent="…";
    try{const resp=await fetch(API+"/spotlight/"+encodeURIComponent(track.id)+"/vote",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({visitor}),credentials:"omit"});const data=await resp.json().catch(()=>({}));
     if(resp.status===201||resp.status===409){voted.add(track.id);localStorage.setItem("rdi-spotlight-voted",JSON.stringify([...voted]));$("status").textContent=resp.status===201?t("thanks"):t("duplicate");await load();return}
     $("status").textContent=resp.status===429?t("limited"):(data.error||t("failed"));
-   }catch(e){$("status").textContent=t("failed")}vote.disabled=voted.has(track.id);vote.textContent=voted.has(track.id)?t("voted"):prior};
-  buttons.append(vote);card.append(info,buttons);wrap.append(card);
+   }catch(e){$("status").textContent=t("failed")}vote.disabled=voted.has(track.id);vote.textContent=voted.has(track.id)?"✅ "+t("voted"):prior};
+  const commentsButton=node("button","comment-toggle",expandedTrackId===track.id?ct("hide"):ct("show"));
+  commentsButton.type="button";commentsButton.setAttribute("aria-expanded",String(expandedTrackId===track.id));
+  const toggle=()=>{expandedTrackId=expandedTrackId===track.id?null:track.id;render()};
+  openTitle.onclick=toggle;commentsButton.onclick=toggle;
+  buttons.append(commentsButton,vote);card.append(info,buttons);
+  if(expandedTrackId===track.id){card.classList.add("open");card.append(buildComments(track))}
+  wrap.append(card);
  })
 }
 async function load(){$("status").textContent=t("loading");try{const response=await fetch(API+"/spotlight",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();allTracks=Array.isArray(data.tracks)?data.tracks:[];$("status").textContent="";render()}catch(e){$("status").textContent=t("error");allTracks=[];$("tracks").replaceChildren()}}
