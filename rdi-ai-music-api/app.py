@@ -1,5 +1,5 @@
 """RDI AI MUSIC moderation API. Run behind HTTPS and a same-origin /api/ai-music/ reverse proxy."""
-import os, sqlite3, secrets, hmac, subprocess, uuid, time
+import os, sqlite3, secrets, hmac, subprocess, uuid, time, hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 from flask import Flask, request, jsonify, send_file, abort
@@ -15,7 +15,14 @@ ALLOWED_ORIGINS={PUBLIC_ORIGIN}
 app=Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"]=MAX_MB*1024*1024+128*1024
 ALLOWED_EXT={".mp3",".wav",".flac",".m4a",".ogg"}
-RATE={}
+RATE_WINDOW_SECONDS=3600
+RATE_MAX=6
+
+def rate_key():
+    # Nginx MUST overwrite X-Real-IP; otherwise all requests via Unix socket share one IP.
+    ip=request.headers.get("X-Real-IP") or request.remote_addr or "unknown"
+    salt=ADMIN_TOKEN or "rdi-ai-music"
+    return hmac.new(salt.encode(),ip.encode(),hashlib.sha256).hexdigest()
 def db():
     ROOT.mkdir(parents=True,exist_ok=True)
     FILES.mkdir(parents=True,exist_ok=True)
@@ -27,6 +34,8 @@ def db():
       link TEXT NOT NULL, notes TEXT NOT NULL, file_name TEXT,
       stored_name TEXT, status TEXT NOT NULL DEFAULT 'pending',
       reviewed_at TEXT, reviewed_note TEXT NOT NULL DEFAULT '')""")
+    con.execute("CREATE TABLE IF NOT EXISTS rate_events (ip_key TEXT NOT NULL, created_at INTEGER NOT NULL)")
+    con.execute("CREATE INDEX IF NOT EXISTS rate_events_by_ip ON rate_events(ip_key, created_at)")
     con.commit()
     return con
 def now():
@@ -68,11 +77,13 @@ def response_headers(r):
 @app.post("/api/ai-music/submissions")
 def submit():
     # Server must be behind HTTPS, with trusted proxy enforcing request limits.
-    ip=request.remote_addr or "unknown"
-    current=time.monotonic()
-    RATE[ip]=[v for v in RATE.get(ip,[]) if current-v<3600]
-    if len(RATE[ip])>=6:
-        return jsonify(error="Too many submissions. Retry later."),429
+    ip_key=rate_key()
+    current=int(time.time())
+    with db() as con:
+        con.execute("DELETE FROM rate_events WHERE created_at<?",(current-RATE_WINDOW_SECONDS,))
+        hits=con.execute("SELECT COUNT(*) FROM rate_events WHERE ip_key=? AND created_at>=?",(ip_key,current-RATE_WINDOW_SECONDS)).fetchone()[0]
+        if hits>=RATE_MAX:
+            return jsonify(error="Too many submissions. Retry later."),429
     if request.form.get("website"):  # honeypot
         return jsonify(ok=True),202
     artist=clamp(request.form.get("artist"),100)
@@ -123,7 +134,8 @@ def submit():
     except Exception:
         if stored:(FILES/stored).unlink(missing_ok=True)
         raise
-    RATE[ip].append(current)
+    with db() as con:
+        con.execute("INSERT INTO rate_events (ip_key,created_at) VALUES (?,?)",(ip_key,current))
     return jsonify(ok=True,id=sid,status="pending"),201
 @app.get("/api/ai-music/admin/submissions")
 def list_submissions():
