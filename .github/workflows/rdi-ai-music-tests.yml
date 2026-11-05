@@ -38,7 +38,10 @@ jobs:
           headers=$(mktemp)
           status=$(curl --silent --show-error --output /dev/null --dump-header "$headers" --write-out '%{http_code}' --max-time 20 -X OPTIONS -H 'Origin: https://radioromanii.duckdns.org' "$api/submissions")
           test "$status" = 204 || { echo "Expected preflight 204, got $status"; exit 1; }
-          tr -d '\\r' < "$headers" | grep -Eiq '^access-control-allow-origin: https://radioromanii[.]duckdns[.]org
-          echo "Public API health, admin guard and cross-origin access: OK"
- || { echo "CORS origin missing"; cat "$headers"; exit 1; }
+          python3 - "$headers" <<'PY'
+          import sys
+          with open(sys.argv[1], encoding="utf-8") as stream:
+              lines = [line.strip().lower() for line in stream]
+          assert "access-control-allow-origin: https://radioromanii.duckdns.org" in lines, "CORS origin missing"
+          PY
           echo "Public API health, admin guard and cross-origin access: OK"
