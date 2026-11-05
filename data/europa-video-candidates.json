@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-04T18:52:04.274271+00:00",
+  "updated_at": "2026-11-05T00:20:30.835009+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -301,7 +301,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-05T00:20:30.835009+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "ff66ac3b42162cc7f3",
@@ -2685,6 +2691,6 @@
       "editorial_topic": "ambiente - archivio"
     }
   ],
-  "language_checks_this_run": 8,
+  "language_checks_this_run": 1,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
