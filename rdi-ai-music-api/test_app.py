@@ -115,7 +115,7 @@ class SubmissionTests(unittest.TestCase):
             data=fields,
             headers=self.origin,
         )
-        self.assertEqual(response.status_code, 201)
+        self.assertEqual(response.status_code, 201, response.get_json())
         sid = response.json["id"]
         private_url = f"/api/ai-music/admin/submissions/{sid}/audio"
         self.assertEqual(self.client.get(private_url).status_code, 401)
