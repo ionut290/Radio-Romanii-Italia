@@ -22,7 +22,6 @@ class SubmissionTests(unittest.TestCase):
             patch.object(service, "FILES", self.root / "uploads"),
             patch.object(service, "DB", self.root / "submissions.sqlite3"),
             patch.object(service, "ADMIN_TOKEN", "unit-test-admin-token"),
-            patch.object(service, "RATE", {}),
         ]
         for p in self.patches:
             p.start()
@@ -132,6 +131,13 @@ class SubmissionTests(unittest.TestCase):
                 json={"status": "approved"},
             )
         self.assertEqual(review.status_code, 400)
+
+    def test_rate_limit_persists_across_requests(self):
+        for _ in range(6):
+            self.assertEqual(self.post().status_code, 201)
+        self.assertEqual(self.post().status_code, 429)
+        with service.db() as con:
+            self.assertEqual(con.execute("SELECT COUNT(*) FROM rate_events").fetchone()[0], 6)
 
     def test_review_is_explicit(self):
         sid = self.post().json["id"]
