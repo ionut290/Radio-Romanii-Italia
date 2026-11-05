@@ -23,3 +23,20 @@ jobs:
       - name: Test in temporary isolated database
         working-directory: rdi-ai-music-api
         run: python -m unittest discover -s . -p 'test_*.py' -v
+
+  production-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify live API health, admin protection and browser CORS
+        shell: bash
+        run: |
+          set -euo pipefail
+          api="https://radio-romanii-italia.duckdns.org/api/ai-music"
+          curl --fail --silent --show-error --retry 2 --max-time 20 "$api/health" | python3 -c 'import json,sys; assert json.load(sys.stdin)["ok"] is True'
+          admin_status=$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' --max-time 20 "$api/admin/submissions")
+          test "$admin_status" = 401 || { echo "Expected admin 401, got $admin_status"; exit 1; }
+          headers=$(mktemp)
+          status=$(curl --silent --show-error --output /dev/null --dump-header "$headers" --write-out '%{http_code}' --max-time 20 -X OPTIONS -H 'Origin: https://radioromanii.duckdns.org' "$api/submissions")
+          test "$status" = 204 || { echo "Expected preflight 204, got $status"; exit 1; }
+          grep -Eiq '^access-control-allow-origin: https://radioromanii\.duckdns\.org\r?$' "$headers" || { echo "CORS origin missing"; cat "$headers"; exit 1; }
+          echo "Public API health, admin guard and cross-origin access: OK"
