@@ -287,10 +287,11 @@ class SubmissionTests(unittest.TestCase):
         self.assertEqual(self.client.get(path).json["comments"],[])
 
     def test_spotlight_pagination_and_playlist_consent(self):
-        for i in range(23):
-            sid=self.post(title=f"Song {i}").json["id"]
-            self.assertEqual(self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
-                headers=self.admin,json={"status":"approved"}).status_code,200)
+        with patch.object(service,"RATE_MAX",100):
+            for i in range(23):
+                sid=self.post(title=f"Song {i}").json["id"]
+                self.assertEqual(self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
+                    headers=self.admin,json={"status":"approved"}).status_code,200)
         first=self.client.get("/api/ai-music/spotlight?page=1").json
         second=self.client.get("/api/ai-music/spotlight?page=2").json
         self.assertEqual(first["total"],23)
