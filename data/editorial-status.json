@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-05T22:23:56.709617+00:00",
+  "news_updated_at": "2026-11-05T22:47:13.581420+00:00",
   "editorial_updated_at": "2026-11-05T22:56:06.707504+01:00",
   "translations_updated_at": "2026-11-05T21:05:45.942795+00:00",
-  "feed_total": 73,
+  "feed_total": 74,
   "feed_extended_400": 0,
-  "feed_missing_body": 73,
+  "feed_missing_body": 74,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 172,
@@ -12,7 +12,7 @@
   "pending_total": 129,
   "pending_filtered_out": 304,
   "editorial_verde": 5,
-  "editorial_galben": 41,
+  "editorial_galben": 42,
   "editorial_rosu": 45,
   "pending": [
     {
@@ -618,6 +618,24 @@
   ],
   "recent_news": [
     {
+      "title": "Trump anunță că s-a întâlnit la Casa Albă cu trimisul lui Putin. Și spune că lucrează „la un acord care ar putea include toată Europa”",
+      "category": "România",
+      "published": "2026-11-05T22:31:36+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/trump-anunta-ca-s-a-intalnit-la-casa-alba-cu-trimisul-lui-putin-si-spune-ca-lucreaza-la-un-acord-care-ar-putea-include-toata-europa-4024065",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "La Juve batte l'Az Alkmaar con brivido finale. Cade il Milan, a San Siro vince il Ferencvaros",
+      "category": "Italia",
+      "published": "2026-11-05T22:27:20+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/05/la-juve-batte-laz-alkmaar-con-brivido-finale.-cade-il-milan-a-san_696fefa0-f035-411d-b3dc-5d940994dce9.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Conference League: Universitatea Craiova a învins Egnatia şi este pe locul 8 în grupă. Programul oltenilor în continuare",
       "category": "România",
       "published": "2026-11-05T22:09:08+00:00",
@@ -632,15 +650,6 @@
       "published": "2026-11-05T22:01:52+00:00",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9IV2Rqd1UwZUFDRmNiczR0VXVDQkNLdFZmODNJSmFfSVdBdS14OWViWHN2NVhiM0E4cDlDWEpzNy1LRmRUWHc?oc=5",
       "source": "Jurnalul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Europa League: la Juventus vince 2-1 sul campo dell'Az Alkmaar CRONACA e FOTO",
-      "category": "Italia",
-      "published": "2026-11-05T22:01:00+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/05/europa-league-la-juventus-vince-2-1-sul-campo-dellaz-alkmaar-cronaca-e-foto_696fefa0-f035-411d-b3dc-5d940994dce9.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -861,15 +870,6 @@
       "words": 0
     },
     {
-      "title": "NATO a lansat o platformă de tip e-commerce, unde țările membre pot cumpăra sisteme antidronă. Cât costă echipamentele",
-      "category": "România",
-      "published": "2026-11-05T18:41:35+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/nato-a-lansat-o-platforma-de-tip-e-commerce-unde-tarile-membre-pot-cumpara-sisteme-antidrona-cat-costa-echipamentele-4023833",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Edilizia in legno: in Italia un comparto da 4,8 miliardi di euro e 15mila occupati - la Repubblica",
       "category": "Italia",
       "published": "2026-11-05T18:40:00+00:00",
@@ -938,6 +938,15 @@
       "published": "2026-11-05T17:21:14+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/05/schiaffi-e-percosse-ai-bambini-di-un-asilo-arrestata-la-direttrice_75c51ff0-b603-467d-b611-4dcf696a02e8.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Dulciuri, conserve, ulei, mezeluri și 8 kg de cannabis. Pachetul primit din Spania de un român l-a... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-05T17:19:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOVGpjd1NhcmI4NXNJQi1jT1pJRDY5T19abGpXU2RoMU85eDZMXzRiWXk5TDY2UnBMV1RqLURoajZINnRmV2w1WVRFWkxYZlFmWEkxWVZBMzNMTVkxVS1WYWM1UTZWeDdhMmYxTTNoM1RtamVSVjVfOTNXRUNLSmZSOEcycTlYbVZxandUWmN0LXIxeUZtdmt6TjU3WWhiZ19XWVlxOF84OXJHMzZJMklaaWEwd01kdU9oRk5FcGtMekdvRFRHT3hnVWI3eW1VVUxnaDVEOXBjcTh1YlVSd2lWRWJhRjliOFdsX1EwckVDNURHLU3SAfgBQVVfeXFMUGI0Z0x5bEVRSkVwcXR6dFdBTG85MjNDdTY2ZHI2cHhEb3VHREJpOFpJbjVVNnBod3JrcWozckNfWV9MZ3p1dGxfeWlKb0UzSW5SWF9ZNVFCNmFYQjFYWE0",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
