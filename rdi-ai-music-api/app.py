@@ -17,6 +17,7 @@ app.config["MAX_CONTENT_LENGTH"]=MAX_MB*1024*1024+128*1024
 ALLOWED_EXT={".mp3",".wav",".flac",".m4a",".ogg"}
 RATE_WINDOW_SECONDS=3600
 RATE_MAX=6
+VOTE_IP_DAILY_MAX=30
 
 def rate_key():
     # Nginx MUST overwrite X-Real-IP; otherwise all requests via Unix socket share one IP.
@@ -36,6 +37,11 @@ def db():
       reviewed_at TEXT, reviewed_note TEXT NOT NULL DEFAULT '')""")
     con.execute("CREATE TABLE IF NOT EXISTS rate_events (ip_key TEXT NOT NULL, created_at INTEGER NOT NULL)")
     con.execute("CREATE INDEX IF NOT EXISTS rate_events_by_ip ON rate_events(ip_key, created_at)")
+    con.execute("""CREATE TABLE IF NOT EXISTS spotlight_votes (
+      submission_id TEXT NOT NULL, voter_key TEXT NOT NULL,
+      ip_key TEXT NOT NULL, created_at INTEGER NOT NULL,
+      PRIMARY KEY(submission_id,voter_key))""")
+    con.execute("CREATE INDEX IF NOT EXISTS spotlight_votes_by_ip ON spotlight_votes(ip_key,created_at)")
     con.commit()
     return con
 def now():
@@ -172,6 +178,63 @@ def review(sid):
                 return jsonify(error="ffprobe unavailable or timed out"),503
         con.execute("UPDATE submissions SET status=?,reviewed_at=?,reviewed_note=? WHERE id=?",(status,now(),note,sid))
     return jsonify(ok=True,status=status)
+
+@app.get("/api/ai-music/spotlight")
+def spotlight():
+    """Public ranking. Never expose submitter email, notes or private file paths."""
+    with db() as con:
+        rows=con.execute("""
+          SELECT s.id,s.artist,s.title,s.platform,s.link,s.created_at,
+                 COUNT(v.submission_id) AS votes
+          FROM submissions AS s
+          LEFT JOIN spotlight_votes AS v ON v.submission_id=s.id
+          WHERE s.status='approved'
+          GROUP BY s.id
+          ORDER BY votes DESC,s.created_at DESC LIMIT 200
+        """).fetchall()
+    return jsonify(tracks=[dict(row) for row in rows])
+
+@app.post("/api/ai-music/spotlight/<sid>/vote")
+def spotlight_vote(sid):
+    """One vote per browser identity and approved track, plus per-IP daily cap."""
+    if request.headers.get("Origin")!=PUBLIC_ORIGIN:
+        return jsonify(error="Voting is available on the RDI website only"),403
+    data=request.get_json(silent=True)
+    if not isinstance(data,dict):
+        return jsonify(error="JSON body required"),400
+    visitor=data.get("visitor")
+    if not isinstance(visitor,str) or len(visitor)!=36:
+        return jsonify(error="Invalid visitor ID"),400
+    try:
+        visitor_uuid=uuid.UUID(visitor)
+        if str(visitor_uuid)!=visitor.lower() or visitor_uuid.version!=4:
+            raise ValueError()
+    except (ValueError,AttributeError):
+        return jsonify(error="Invalid visitor ID"),400
+    if not ADMIN_TOKEN:
+        return jsonify(error="Voting temporarily unavailable"),503
+    voter_key=hmac.new(ADMIN_TOKEN.encode(),visitor.lower().encode(),hashlib.sha256).hexdigest()
+    ip_key=rate_key()
+    current=int(time.time())
+    con=db()
+    try:
+        con.execute("BEGIN IMMEDIATE")
+        approved=con.execute("SELECT 1 FROM submissions WHERE id=? AND status='approved'",(sid,)).fetchone()
+        if not approved:
+            return jsonify(error="Track unavailable"),404
+        existing=con.execute("SELECT 1 FROM spotlight_votes WHERE submission_id=? AND voter_key=?",(sid,voter_key)).fetchone()
+        if existing:
+            return jsonify(error="Already voted for this track"),409
+        recent=con.execute("SELECT COUNT(*) FROM spotlight_votes WHERE ip_key=? AND created_at>=?",(ip_key,current-86400)).fetchone()[0]
+        if recent>=VOTE_IP_DAILY_MAX:
+            return jsonify(error="Daily vote limit reached"),429
+        con.execute("INSERT INTO spotlight_votes(submission_id,voter_key,ip_key,created_at) VALUES (?,?,?,?)",(sid,voter_key,ip_key,current))
+        con.commit()
+        votes=con.execute("SELECT COUNT(*) FROM spotlight_votes WHERE submission_id=?",(sid,)).fetchone()[0]
+    finally:
+        con.close()
+    return jsonify(ok=True,votes=votes),201
+
 @app.get("/api/ai-music/health")
 def health():
     return jsonify(ok=True,service="rdi-ai-music")
