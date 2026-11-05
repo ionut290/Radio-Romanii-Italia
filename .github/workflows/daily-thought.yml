@@ -59,9 +59,9 @@ jobs:
       - name: Genera il pensiero quotidiano se manca
         if: steps.ora.outputs.execute == 'true'
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_THOUGHT_MODEL: gpt-4.1-mini
-          RDI_ALLOW_ARCHIVE_PHOTO: '1'
+          # Non utilizzare servizi a pagamento né fotografie riciclate.
+          # La pubblicazione richiede un vero asset originale fornito al repository.
+          RDI_ALLOW_ARCHIVE_PHOTO: '0'
           RDI_THOUGHT_USE_AI_IMAGES: '0'
         run: python scripts/generate_daily_thought.py
       - name: Pubblica il contenuto del giorno
