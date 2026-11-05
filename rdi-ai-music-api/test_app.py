@@ -226,6 +226,30 @@ class SubmissionTests(unittest.TestCase):
             val=con.execute("SELECT spotlight_consent FROM submissions WHERE id=?",(sid,)).fetchone()[0]
         self.assertEqual(val,0)
 
+    def test_comments_open_under_approved_track_only_and_hide(self):
+        pending=self.post(title="Pending").json["id"]
+        approved=self.post(title="Approved").json["id"]
+        self.client.post(f"/api/ai-music/admin/submissions/{approved}/review",
+                         headers=self.admin,json={"status":"approved"})
+        path=f"/api/ai-music/spotlight/{approved}/comments"
+        self.assertEqual(self.client.get(f"/api/ai-music/spotlight/{pending}/comments").status_code,404)
+        self.assertEqual(self.client.post(path,json={"nickname":"Ana","body":"Bellissima canzone!"}).status_code,403)
+        self.assertEqual(self.client.post(path,headers=self.origin,json={"nickname":"A","body":"x"}).status_code,400)
+        self.assertEqual(self.client.post(path,headers=self.origin,json={"nickname":"Ana","body":"https://spam.example"}).status_code,400)
+        with patch.object(service.time,"time",return_value=1800000000):
+            result=self.client.post(path,headers=self.origin,json={"nickname":"Ana","body":"Bellissima canzone!"})
+        self.assertEqual(result.status_code,201,result.get_json())
+        cid=result.json["id"]
+        comments=self.client.get(path).json["comments"]
+        self.assertEqual(len(comments),1)
+        self.assertEqual(comments[0]["nickname"],"Ana")
+        self.assertNotIn("ip_key",comments[0])
+        with patch.object(service.time,"time",return_value=1800000010):
+            self.assertEqual(self.client.post(path,headers=self.origin,json={"nickname":"Bello","body":"Un altro commento"}).status_code,429)
+        self.assertEqual(self.client.post(f"/api/ai-music/admin/spotlight/comments/{cid}/hide").status_code,401)
+        self.assertEqual(self.client.post(f"/api/ai-music/admin/spotlight/comments/{cid}/hide",headers=self.admin).status_code,200)
+        self.assertEqual(self.client.get(path).json["comments"],[])
+
     def test_spotlight_vote_requires_origin_and_valid_uuid(self):
         sid = self.post().json["id"]
         self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
