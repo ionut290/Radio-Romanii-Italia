@@ -155,6 +155,57 @@ class SubmissionTests(unittest.TestCase):
         ).json["submissions"]
         self.assertEqual(records[0]["status"], "approved")
 
+    def test_spotlight_only_approved_and_private_data_hidden(self):
+        pending = self.post(title="Pending").json["id"]
+        approved = self.post(title="Approved", email="secret@example.org", notes="private note").json["id"]
+        review = self.client.post(
+            f"/api/ai-music/admin/submissions/{approved}/review",
+            headers=self.admin, json={"status": "approved"},
+        )
+        self.assertEqual(review.status_code, 200)
+        resp = self.client.get("/api/ai-music/spotlight", headers=self.origin)
+        self.assertEqual(resp.status_code, 200)
+        self.assertEqual(len(resp.json["tracks"]), 1)
+        track = resp.json["tracks"][0]
+        self.assertEqual(track["id"], approved)
+        self.assertNotEqual(track["id"], pending)
+        self.assertEqual(track["votes"], 0)
+        for secret in ("email", "notes", "stored_name", "file_name", "reviewed_note"):
+            self.assertNotIn(secret, track)
+
+    def test_spotlight_vote_requires_origin_and_valid_uuid(self):
+        sid = self.post().json["id"]
+        self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
+                         headers=self.admin, json={"status": "approved"})
+        vote_url = f"/api/ai-music/spotlight/{sid}/vote"
+        visitor = "be9fbcf6-eafd-49b9-8431-2be1f99a62c5"
+        self.assertEqual(self.client.post(vote_url, json={"visitor": visitor}).status_code, 403)
+        self.assertEqual(self.client.post(vote_url, headers=self.origin,
+                                          json={"visitor": "no"}).status_code, 400)
+        self.assertEqual(self.client.post(vote_url, headers=self.origin,
+                                          json={"visitor": visitor}).status_code, 201)
+        self.assertEqual(self.client.post(vote_url, headers=self.origin,
+                                          json={"visitor": visitor}).status_code, 409)
+        self.assertEqual(self.client.get("/api/ai-music/spotlight").json["tracks"][0]["votes"], 1)
+
+    def test_spotlight_vote_rejected_for_pending_and_rate_limited(self):
+        import uuid
+        pending = self.post(title="Pending").json["id"]
+        approved = self.post(title="Approved").json["id"]
+        self.client.post(f"/api/ai-music/admin/submissions/{approved}/review",
+                         headers=self.admin, json={"status": "approved"})
+        self.assertEqual(self.client.post(
+            f"/api/ai-music/spotlight/{pending}/vote", headers=self.origin,
+            json={"visitor": str(uuid.uuid4())}).status_code, 404)
+        with patch.object(service, "VOTE_IP_DAILY_MAX", 2):
+            for _ in range(2):
+                self.assertEqual(self.client.post(
+                    f"/api/ai-music/spotlight/{approved}/vote", headers=self.origin,
+                    json={"visitor": str(uuid.uuid4())}).status_code, 201)
+            self.assertEqual(self.client.post(
+                f"/api/ai-music/spotlight/{approved}/vote", headers=self.origin,
+                json={"visitor": str(uuid.uuid4())}).status_code, 429)
+
 
 if __name__ == "__main__":
     unittest.main()
