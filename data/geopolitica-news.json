@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-05T13:40:44.445471Z",
+  "updated_at": "2026-11-05T14:50:45.219240Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-ef463eca942ee07f",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "France, US clash over G7 effort on AI safety",
+      "summary": "",
+      "source": "POLITICO.eu",
+      "published": "2026-11-05T14:37:00Z",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBONWxqMkhWZVVQd19WS1Fwd1MtM0tJel9CNXdBam1WeGdFOEhPNk93VGw0WHZrQ2FfZzJjZU9feVV3dzQwN1hWdllBRTBLdFJJb3JsZGliamlRMHo1TU5uS1VleXMxU2FkSjVGWDBNckxKX1hOTTFKcQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Franța și SUA se confruntă cu efortul G7 privind siguranța AI",
+      "title_it": "Francia e Stati Uniti si scontrano sugli sforzi del G7 sulla sicurezza dell’intelligenza artificiale",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-5dfc98ba05e56f86",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russia and Ukraine trade airstrikes as reconstruction and security talks resume in Brussels",
+      "summary": "",
+      "source": "The New Indian Express",
+      "published": "2026-11-05T13:36:19Z",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPUnAxRmZfdzduYlAwQUl0U2liV2JFRlhwN3piWnFvNk1QMjJoZE44SFNNMzdNWlNmdDRFbDQxTDltY05XRkVuYTNYVFNxY0R1UngtWGlwVG9HMlV6UERtOWkyMm0yeFc0STJTbmZZMVFFUW1RMFhXaHB3VXdpaVFyR09ENklkb0piOXA5MlZ3Y3RjTnJsWUVKTzFLVm02Q2Y5bnE0REszc1l1Mk5IYXctdThlcG1NRDJxOUFRRi02UEZveVoxUmpsMXl1cERGU2FSU2JvZG5CZVlNQdIB5wFBVV95cUxPLUFoTnVCd2tLLWdIS2FOUDVDS24xQ0pCbHBzWGlOQjc2V0I5S1gycVgtQTBIeTF2QVFLazVaRER1STBoVTVhMWhoMFpsTDdkcGh0TTBqU245ZmdvMVlSeTloVEg5M05mRUo4c01zS1d3ZXZHcnVBbEFjNHBjenVZc18tdW1pOTFQVW9MYlBXVDl3OHp5Q2ltN3RBcXFvQ3dBZXBsOFBNZDBtZzZFd1ZPUkhPUzhQOHZoUmdYT21XTExEdzFKdWs1QVk2OVB2V3B5YzI2Z196RWNQdFpjYWhnVHd0bU1ycjg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia și Ucraina comercializează atacuri aeriene pe măsură ce discuțiile privind reconstrucția și securitatea se reiau la Bruxelles",
+      "title_it": "Russia e Ucraina lanciano attacchi aerei commerciali mentre riprendono i colloqui sulla ricostruzione e sulla sicurezza a Bruxelles",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-22dbe6f6a9cd19e2",
       "category": "diplomatie",
@@ -78,20 +106,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-a6e627120dab690c",
-      "category": "europa",
-      "region": "europa",
-      "title": "Meloni a Costa: l'Europa sia unita sull'Ucraina per la credibilità",
-      "summary": "",
-      "source": "Blasting News",
-      "published": "2026-11-05T12:21:11Z",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc1JLVjhfS3BSc2NNUE9kb2l2YVhfLThQald6VUZWR2NGM0daX1QtbmFVa2VqQWEwdERnM0Y0YWk3R3hMeTZlSFZJTzdMbjA5OHBYYnJKdWs3RTcyM1VjTEZjdkZaeVRhdkdCa1FpRjAzd3Y5R1p0a2RVSjVWMHFXaXVmNURwb25TX25wNGZBVWdUT2hQQk1wMkFNWmE0ME0wNHFQZU1oVjlkSDZiUGNEN2JEWmg1b0dfSy05Y3VB?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Meloni a Costa: Europa trebuie să fie unită cu Ucraina pentru credibilitate",
-      "title_it": "Meloni a Costa: l'Europa sia unita sull'Ucraina per la credibilità",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-58575e5c3c3b12d9",
       "category": "clima",
       "region": "global",
@@ -120,17 +134,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-9a42507176997fbb",
-      "category": "securitate",
+      "id": "geo-3bf79fe47ae6f2d6",
+      "category": "europa",
       "region": "europa",
-      "title": "A Weakened Trump, but an Uncertain Atlantic Alliance",
+      "title": "Guerra in Ucraina: La Corte dell'UE conferma le misure restrittive imposte al Registro Marittimo Russo",
       "summary": "",
-      "source": "IOL",
-      "published": "2026-11-05T11:35:11Z",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPQXU4Q3J5R0xSZENROHhrR1JrVXZVa1ZrLTlDMklBb3dBU0JaZEZZSXBMYV82MnBwYkVhMV9PSmdPNF9sNjFXbzRSa0ZrZV84cTlHNUNhaFNuSFotWnhDeko3UHpOTTlKbV9uTTVqQmVXWU9mMnBTTjRYOGJ1bHRSQjV1S0hKNE12WHdTRG5qQ2g5d1VHRmo4?oc=5",
+      "source": "Il Nautilus",
+      "published": "2026-11-05T10:51:21Z",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNOFUxQUhiM2xfWlNlejl5aEgxZUhiMEk5ZXBCTzVDUXlCNzZJRUhUMGNRc2RiZFBFSVFvb2JiRklXM2JueWNvRDdIY0dEUEx0dU9QMEVzZjQtNDVTTDJIN29FeFd2VThkMEJnOEw1ZWgyRkpUSDNZczJ0MVctUGRJeUk4MnA1RWgtd25IMzEwNmM3Q0oxMXpwNkszRzJEUUYxdjBVTXBHNEtlYnBIc1NGdU51RDM2QzVJWEJENjBXVi1NYkxCZU1KQWdJR3pfdHhlODdVVDFjYmtoQ3RXRktDS3BvdmdERkI0bkYzTDlB?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Un Trump slăbit, dar o Alianță Atlantică incertă",
-      "title_it": "Un Trump indebolito, ma un’Alleanza Atlantica incerta",
+      "title_ro": "Război în Ucraina: Curtea UE confirmă măsuri restrictive impuse Registrului Maritim al Rusiei",
+      "title_it": "Guerra in Ucraina: La Corte dell'UE conferma le misure restrittive imposte al Registro Marittimo Russo",
       "translation_status": "machine_translation"
     },
     {
@@ -159,6 +173,34 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Consolidarea diplomației climatice din Bangladesh: de la pregătirea pentru COP31 la prioritățile naționale",
       "title_it": "Rafforzare la diplomazia climatica del Bangladesh: dalla preparazione alla COP31 alle priorità nazionali",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-9a42507176997fbb",
+      "category": "securitate",
+      "region": "europa",
+      "title": "A Weakened Trump, but an Uncertain Atlantic Alliance",
+      "summary": "",
+      "source": "IOL",
+      "published": "2026-11-05T10:36:54Z",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPQXU4Q3J5R0xSZENROHhrR1JrVXZVa1ZrLTlDMklBb3dBU0JaZEZZSXBMYV82MnBwYkVhMV9PSmdPNF9sNjFXbzRSa0ZrZV84cTlHNUNhaFNuSFotWnhDeko3UHpOTTlKbV9uTTVqQmVXWU9mMnBTTjRYOGJ1bHRSQjV1S0hKNE12WHdTRG5qQ2g5d1VHRmo4?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Un Trump slăbit, dar o Alianță Atlantică incertă",
+      "title_it": "Un Trump indebolito, ma un’Alleanza Atlantica incerta",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ded121e80e2efdd3",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Global terror: NATO plans strikes deep inside Russia with Tomahawk, ATACMS, Storm Shadow, and Taurus missiles",
+      "summary": "",
+      "source": "Bankingnews",
+      "published": "2026-11-05T10:31:10Z",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9teUNBSU0wTE9rb190SHVkVDV6d3lCWnFNZkxyYm1VcExjb3pRUEJWUFpxNE01N2tmUVU1UnRtektFUzAxX3JKS01jSXo0QTJrM1ExZnUzZS1FZw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Teroarea globală: NATO plănuiește să lovească adânc în interiorul Rusiei cu rachete Tomahawk, ATACMS, Storm Shadow și Taurus",
+      "title_it": "Terrore globale: i piani della NATO colpiscono in profondità la Russia con i missili Tomahawk, ATACMS, Storm Shadow e Taurus",
       "translation_status": "machine_translation"
     },
     {
@@ -260,20 +302,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-f5a03628556326b3",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Global terror: NATO plans strikes deep inside Russia with Tomahawk, ATACMS, Storm Shadow, and Taurus missiles",
-      "summary": "",
-      "source": "Bankingnews",
-      "published": "2026-11-05T10:08:02Z",
-      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPbzdzbm1JbnBTNlNJeXh4WlR2UlJPdUxHUEN1TW52U0haUm1WNlhiTDd2ZE02UDZDUGt6aWVSMGFIbFRtUVJfMVQ0M2NkNlZLNVJyN1I3aUNBcmhmMUNIVGFlWmpyR2ZZVTd2TUE4YURzV1JWczRJQnNlOWpiaTl3RFR3ck10czBRZUJ3ME1MWGYtM2pobi01a05FT1FPQmpscEIwSFN6eWJSRlNPMHB4SnJHUDFUU01OVDhXS1MtYm14MUVlVDNRdEJ3Y0RmTFEwZjZnblZoR3BjY3RTSk9Sd2xNSFRCUlFiZllGTQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Teroarea globală: NATO plănuiește să lovească adânc în interiorul Rusiei cu rachete Tomahawk, ATACMS, Storm Shadow și Taurus",
-      "title_it": "Terrore globale: i piani della NATO colpiscono in profondità la Russia con i missili Tomahawk, ATACMS, Storm Shadow e Taurus",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-9a755c96a858f8c8",
       "category": "securitate",
       "region": "europa",
@@ -355,20 +383,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Recul pe termen mediu al lui Trump ar putea oferi Chinei o pârghie comercială pe termen scurt, dar un viitor mai dificil cu care să se lupte",
       "title_it": "La battuta d’arresto di medio termine di Trump potrebbe dare alla Cina una leva commerciale a breve termine, ma un futuro più difficile con cui confrontarsi",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f2c1815f66795841",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Ambassador Jose Manuel Romualdez said that U.S. President Donald Trump's planned attendance in the ASEAN Summit will push through, saying the region is a \"very important market\" for the U.S. Link to the full story in the comments section. |",
-      "summary": "",
-      "source": "Facebook",
-      "published": "2026-11-05T08:03:03Z",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQb3pKT1hHSWQ4LXU3Z3QwTEwxdEs5UlBPVlh0U2dzbDd4dEw3UE1Jc09UR2JJUHdzcU4wZVFZVUJYUDcxdWN2ZGJNcU1oak5KcjR0SjhNSlp0aFd4VDRicU9obkZObnBKM0t5NFBNQlczdW1FVW5Pa0NKRmZjZTR1RkpVOXBUb1BzTkRCYVJMdnBCV25jaDlrYWtQb1MyeVlfUEV1T1ZtbWpJZTlzRUtNYkwzLXpMVWRCOEh4bUZHRzE3WEZOYlF1R0VBNlhYcHl0ZkVVbDloaw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ambasadorul Jose Manuel Romualdez a spus că prezența preconizată a președintelui SUA, Donald Trump, la Summit-ul ASEAN va continua, declarând că regiunea este o „piață foarte importantă” pentru SUA. Link către povestea completă în secțiunea de comentarii. |",
-      "title_it": "L'ambasciatore Jose Manuel Romualdez ha affermato che la prevista partecipazione del presidente degli Stati Uniti Donald Trump al vertice dell'ASEAN andrà avanti, affermando che la regione è un \"mercato molto importante\" per gli Stati Uniti. Link alla storia c",
       "translation_status": "machine_translation"
     },
     {
@@ -663,6 +677,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "SUA supără Germania, Europa cu invitația Rusiei G20, interzice presa",
       "title_it": "Gli Stati Uniti infastidiscono la Germania, l’Europa con l’invito russo al G20, i divieti alla stampa",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2031139218ce5e8d",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Singapore Participates in APEC Ministerial Meeting Hosted by China",
+      "summary": "",
+      "source": "INDiplomacy",
+      "published": "2026-11-05T02:22:45Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQaHUyY0RKaDF2Y19ZR2pjbzdNV19hSEE5TDduNFpNd2V4TUpSdWlzX3FVSmQ2ek5NMUI3b2dkNWJvTld2dFA1cHNQZXdvVlY3R1R4WkZoVlVQTWFOdVNKRjdMOU9lX0E4Y1JBMnBmeF9HaEZFYUhOa1VrNXN3YUNPTkczLWxwdVo5Rm5mYVN6dHJ6Qkt5dFVxblBwMEg4Ynh6dDNBdA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Singapore participă la reuniunea ministerială APEC găzduită de China",
+      "title_it": "Singapore partecipa alla riunione ministeriale dell'APEC ospitata dalla Cina",
       "translation_status": "machine_translation"
     },
     {
