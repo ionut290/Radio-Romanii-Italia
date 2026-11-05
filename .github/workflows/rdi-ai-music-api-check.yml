@@ -1,0 +1,29 @@
+name: RDI AI MUSIC API tests
+on:
+  push:
+    branches:
+      - feature/rdi-ai-music-submissions
+    paths:
+      - 'rdi-ai-music-api/**'
+      - '.github/workflows/rdi-ai-music-api-check.yml'
+  pull_request:
+    paths:
+      - 'rdi-ai-music-api/**'
+      - '.github/workflows/rdi-ai-music-api-check.yml'
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install test dependencies
+        run: python -m pip install -r rdi-ai-music-api/requirements.txt
+      - name: Run isolated API tests
+        working-directory: rdi-ai-music-api
+        env:
+          RDI_AI_ADMIN_TOKEN: test-token
+        run: python -m unittest discover -s tests -v
