@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-05T08:59:59.575398+00:00",
+  "news_updated_at": "2026-11-05T09:00:40.506940+00:00",
   "editorial_updated_at": "2026-11-05T10:00:00+01:00",
   "translations_updated_at": "2026-11-05T08:03:25.918149+00:00",
-  "feed_total": 73,
+  "feed_total": 75,
   "feed_extended_400": 0,
-  "feed_missing_body": 73,
+  "feed_missing_body": 75,
   "feed_short_body": 0,
   "editorial_total": 23,
   "archived_editorials": 163,
@@ -12,8 +12,8 @@
   "pending_total": 94,
   "pending_filtered_out": 268,
   "editorial_verde": 4,
-  "editorial_galben": 43,
-  "editorial_rosu": 47,
+  "editorial_galben": 42,
+  "editorial_rosu": 50,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -627,6 +627,15 @@
       "words": 0
     },
     {
+      "title": "++ Volo da Dublino a Roma dirottato verso aeroporto francese per allarme bomba ++",
+      "category": "Italia",
+      "published": "2026-11-05T08:51:34+00:00",
+      "url": "https://www.ansa.it/sito/notizie/flash/2026/11/05/volo-da-dublino-a-roma-dirottato-verso-aeroporto-francese-per-allarme-bomba_c97aa399-e32a-4935-973b-6e57a59794f5.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Întâlnire cu ecou la Vatican: Bob Dylan și Papa Leon, schimb de simboluri și versuri despre pace și riscul armelor nucleare",
       "category": "România",
       "published": "2026-11-05T08:51:05+00:00",
@@ -695,15 +704,6 @@
       "published": "2026-11-05T08:33:37+00:00",
       "url": "https://www.digi24.ro/meteo/aer-polar-peste-romania-ploile-se-opresc-dar-temperaturile-scad-sub-zero-grade-in-toata-tara-4022667",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Francia, giornata di sciopero, cortei in 260 città, attesi fino a 700.000 manifestanti",
-      "category": "Italia",
-      "published": "2026-11-05T08:31:05+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/05/francia-giornata-di-sciopero-cortei-in-260-citta-attesi-fino-a-700.000-manifestanti_df510ebe-b004-47ce-9763-a6b8755813ea.html",
-      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -897,15 +897,6 @@
       "words": 0
     },
     {
-      "title": "Femeie de 83 ani, accidentată mortal pe trecerea de pietoni de o autoutilitară condusă de un şofer... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-05T04:15:28+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQaFI5aUI1c3FvcGw0U0NsNERCQ1NwU1JnRnlWZWRPcXlnbGd5TGZWMWxidmd1MENQSHdWNlFqZ0ZnZGRjeGFyTFR2TkpVRmRKV2JKdmctMUZXQnpJM2Fsd3AtUFc5bGZsSk5pZHJwcGRTVmJiTFp1TGpQNHNFMXBnY2czM2UweXdpbGFEOFF0YnQ5cEVjVG1KaHFoeWtnODZaNlhZYU8taUZiVFBWVml2MFJ6ZF9sNWhqNDdzYlJ3Q1Z3VW0yN29YZnlaZEtUSlgzM1ZDZXRWX0xmaUxkRzg0ZmY1WG1veFpJQkJGUmVXLVJjM0RKQkNQcFljRk9iM1Z00gGAAkFVX3lxTFBoUjlpQjVzcW9wbDRTQ2w0REJDU3BTUmdGeVZlZE9xeWdsZ3lMZlYxbGJ2Z3UwQ1BId1Y2UWpnRmdkZGN4YXJMVHZOSlVGZEpXYkp",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "'Gli americani hanno detto no alla guerra', ma Teheran non si illude",
       "category": "Italia",
       "published": "2026-11-04T21:09:27+00:00",
@@ -978,6 +969,15 @@
       "words": 0
     },
     {
+      "title": "Salarii mai mari pentru profesori în 2027: Dascălii cu 25 de ani vechime ar putea ajunge la 9.900 de lei brut. Ce se schimbă pentru debutanți - Oficiul de Știri",
+      "category": "România",
+      "published": "2026-11-04T18:50:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxOUzk2NmNHZXVtM0xfXzBJdFFFdm9VVFc2R0xRZDRmSzRjNDBZcVBBdHgtaC1XMDdzN0plNVlXb2J6anZmS2ltdm96bHZzaFc4dnVYZTI3RnJGTWNrZW9qSnAwYjQ1OFVKZDhoeWRyWHo0MEZYeWU4dEhFaktUS1hxM2l4dDJWci1kZVJEd3ZRNXRhdWFrLU9YUnE1eWlzOE5NYnlXUHVvejNDVF82MlRJM242dmQ0bHlHNlBUNjg4T0JDcUZtdTlLNlRMWE9oWEE2elE2d29wSVN6UUNoeGxuN3FlVTdkU3M2cHRpMzdRQzRLcWVZeDI4cQ?oc=5",
+      "source": "Oficiul de Știri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "A Dacia Maraini il Premio Tonino Guerra 2026",
       "category": "Italia",
       "published": "2026-11-04T17:55:43+00:00",
@@ -1005,6 +1005,15 @@
       "words": 0
     },
     {
+      "title": "Negocierile pentru procurorul șef european, funcție vizată de Kovesi, se AMÂNĂ - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-04T16:14:50+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNXVrYXdqeVphQjFpVUtmb05nbllfdnlPZ0hjU2l4ZU1xajk0QlZ4SW92ZWFIMDFBMTF4aW1YM2p4YlY1YkRhWk5KVjdVX21aemFyMFEwRmMxdng0Y3l6UVZBU1dneHh2ZmlPV2RhVC0zaEN5cG9fWDVFQW45ay0zcHhaMXBTdVRheUxnQWlGY2JIN0dVVG1kREtDazVMby1pd0pWNG5qZVk4Vmp0M1FjT2laQkdzYnlZU1I4bNIBvAFBVV95cUxQNXVrYXdqeVphQjFpVUtmb05nbllfdnlPZ0hjU2l4ZU1xajk0QlZ4SW92ZWFIMDFBMTF4aW1YM2p4YlY1YkRhWk5KVjdVX21aemFyMFEwRmMxdng0Y3l6UVZBU1dneHh2ZmlPV2RhVC0zaEN5cG9fWDVFQW45ay0zcHhaMXBTdVRheUxnQWlGY2JIN0dVVG1",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Românce ucise sau bătute în Italia. Poveștile din spatele violenței care distruge familii - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-04T16:06:08+00:00",
@@ -1019,6 +1028,15 @@
       "published": "2026-11-04T15:22:32+00:00",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOS1JaUFdtVzRFTnVRdVlKYWJEd2lSSkRqUmhSUFpFbTR6XzNGSmFwTVFUbDM5UGhFeFF3RXhIZk5Ca0REZ2hJRkFsU3E5d2RRb3dVUEcyYWpZLW9OZm1UeHJPMjZqVmh5TXRqYUd1QkV5MXRNN09USC01dE5Menl1MWFfdi01RmRBLXFDUkF2Q3ZVcE15NlV3cjJFNzRiZ1dXQ1NpaVNIaGdraV84RHUzNWZNWWttVHhGTjFUbGxCOWpJMnhZcUgtQWdFUlJkMzTSAc4BQVVfeXFMTjZLRkdldGZYcDVpSE1Qb3o2eUxOSlVONVlLNWVtakJIb24xS2c3by1GZ0locXdLTnU3Y2dndWtneEhUd3RzcEN2UjlfZzZLOFcxczctRFVJY0lQcC1ETnR4OHdRU25jSnB4bklKY2txZ3FjMmZHeWNjcUhFUXdTSUp5YmN",
       "source": "Il Mattino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Italia. Bărbatul care a furat o sticluţă cu sângele Papei Ioan Paul al II-lea, identificat - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-04T14:30:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPWkZpY2JoVWJNdVBZTTFTUUNEZmRWWUJYNFBCbENidTBsTzVxSlpRc3RmbkY1ZHpRWHRRdjlYTS10dktuTlF6bEpxM1NWaHdSQjgzNlViV1lGS0FqSVpDaTNTTVhBTUZ3aWszVlQyZF9HQmt1Y2RLYzRIa0x1eElHVzAxSXpfTFVtcHV5dVNHUThpQ0RaMGxnWF84WGNiWGpJMGd2YlhtaVh5blJlRTUxOE5SQ2tlbzgxMGZiUnQ2MFV5bWowdU1qWkhDUDJBZ9IBzgFBVV95cUxPWkZpY2JoVWJNdVBZTTFTUUNEZmRWWUJYNFBCbENidTBsTzVxSlpRc3RmbkY1ZHpRWHRRdjlYTS10dktuTlF6bEpxM1NWaHdSQjgzNlViV1lGS0FqSVpDaTNTTVhBTUZ3aWszVlQyZF9HQmt1Y2RLYzRIa0x1eElHVzAxSXp",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1059,15 +1077,6 @@
       "words": 0
     },
     {
-      "title": "Incidente sul lavoro, muore titolare di una ditta schiacciato da un cancello - Il Resto del Carlino",
-      "category": "Italia",
-      "published": "2026-11-04T10:30:16+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWjcyWnBhcDdRNkxBNHdhTUc5V2RvS29LWmx6Q1lzTXBlSVpzMmVDNy0zbHpPdXBmX3hjd3dPbUhTaUdDTHFyNEJVNzYtb3QxbXFrT2pybnpxT2N4NWRGRWlQa2szSm1qQ0h1ZEdTUG0ydUpKaEZZQUxTZ0VZS2E0UHNqM0xwbFlIWmFZQnF1QzM?oc=5",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Român, arestat în Italia. Când a văzut poliția a încercat să se ascundă printre mașini - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-04T10:09:00+00:00",
@@ -1100,6 +1109,15 @@
       "published": "2026-11-04T07:40:35+00:00",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQbnNkc2tCaUlaVzBHeDZUSFI1RXM5blVCcFVZNFNocDdBcU15Y29nYnp1Nkw5VThMMVg5YkdQLW5YbHlsUGxDRlRtb1JjUXhHMVk4VGthRTNkWmRPZDJIYzF3S0QtcGFyaXZvTTlvY0F0cjRxWVFDTy05UXUxZDY4RUVZV2F5N3AxMXlpR1lB0gGOAUFVX3lxTFBuc2Rza0JpSVpXMEd4NlRIUjVFczluVUJwVVk0U2hwN0FxTXljb2dienU2TDlVOEwxWDliR1AtblhseWxQbENGVG1vUmNReEcxWThUa2FFM2RaZE9kMkhjMXdLRC1wYXJpdm9NOW9jQXRyNHFZUUNPLTlRdTFkNjhFRVlXYXk3cDExeWlHWUE?oc=5",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Intelligenza artificiale ed elettrificazione degli edifici come motore di sostenibilità - Idealista",
+      "category": "Italia",
+      "published": "2026-11-04T07:00:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNMlozWXgzU2N3ak41T1ZkdDM0eG9LbjNKdXpnUEJpcUJNQ0NLYk1ueVhZaU9WTEd0S3hlSTNGS3hiTndrUnZkeFFEaHRZMTdXYXlnSURmd0JkT2xvNVJSMDN4NnlWRDRqVGdXWG5BRGp0Y3N1ejRNOHM2bEphcTZ3bzZjOC00Tl9ackQxdHBNTFhMRllxT0hhS09iVDZ1WnZaVGpKNWtNa3BZVU1BNnJrVzF1Sk9SUFU5UVE3S1dGaE9hTWItWmJJSTAtSkhiSEd4V2tKTWNhdkVTU2xmdVBJ0gHkAUFVX3lxTE5xeVZ3c085T0dCRGJ6bVM0ZmMwN0h5cEVENlktTUExNVB5WnJEa1Bvd3UxSEJlOEtwRERicXNXWDNpMkdNVHRtS3VhU1NlT09EU0M1eEFXRkRmWGlxcXUzQ2lhbkg2aFpLeXBNaG5tRk5QcVc",
+      "source": "Idealista",
       "status": "roșu",
       "words": 0
     },
