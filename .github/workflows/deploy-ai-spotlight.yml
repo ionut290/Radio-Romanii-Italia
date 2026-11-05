@@ -1,0 +1,83 @@
+name: RDI AI MUSIC Spotlight - tests and safe API deployment
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'rdi-ai-music-api/**'
+      - '.github/workflows/deploy-ai-spotlight.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-ai-spotlight-deploy
+  cancel-in-progress: false
+
+jobs:
+  test-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install API test dependency
+        run: python -m pip install 'flask>=3,<4'
+      - name: Run API tests without production credentials
+        working-directory: rdi-ai-music-api
+        run: python -m unittest discover -v
+
+  deploy-api:
+    needs: test-api
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure SSH using existing RDI Oracle secrets
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo 'Missing RDI_ORACLE_SSH_KEY_B64'; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo 'Missing RDI_ORACLE_KNOWN_HOSTS'; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null
+      - name: Transfer new application without touching AzuraCast
+        run: |
+          set -euo pipefail
+          opts="-i $HOME/.ssh/id_rdi -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12"
+          ssh $opts ubuntu@129.151.255.41 'install -d -m 700 /home/ubuntu/.rdi-ai-music-release'
+          scp $opts rdi-ai-music-api/app.py ubuntu@129.151.255.41:/home/ubuntu/.rdi-ai-music-release/app.py
+      - name: Install, restart API only, check HTTPS and automatically roll back on failure
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 ubuntu@129.151.255.41 'sudo -n bash -se' <<'REMOTE'
+          set -euo pipefail
+          APP=/opt/rdi-ai-music-api/app.py
+          NEW=/home/ubuntu/.rdi-ai-music-release/app.py
+          test -s "$NEW"
+          /opt/rdi-ai-music-api/.venv/bin/python -m py_compile "$NEW"
+          BACKUP=$(mktemp /opt/rdi-ai-music-api/app.py.before-spotlight.XXXXXXXX)
+          cp -a "$APP" "$BACKUP"
+          rollback() {
+            echo 'API verification failed: restoring previous version'
+            cp -a "$BACKUP" "$APP"
+            systemctl restart rdi-ai-music
+          }
+          trap rollback ERR
+          install -m 644 "$NEW" "$APP"
+          systemctl restart rdi-ai-music
+          systemctl is-active --quiet rdi-ai-music
+          curl -fsS --retry 3 --retry-delay 2 --max-time 12 https://radio-romanii-italia.duckdns.org/api/ai-music/health | python3 -c 'import json,sys; assert json.load(sys.stdin)["ok"] is True'
+          curl -fsS --max-time 12 https://radio-romanii-italia.duckdns.org/api/ai-music/spotlight | python3 -c 'import json,sys; assert isinstance(json.load(sys.stdin)["tracks"], list)'
+          trap - ERR
+          rm -f "$NEW"
+          echo 'RDI Spotlight backend deployed successfully; AzuraCast untouched.'
+          REMOTE
