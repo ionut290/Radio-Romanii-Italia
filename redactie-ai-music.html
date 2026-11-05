@@ -99,7 +99,7 @@ async function passwordLogin(){
  try{
   const password=$('login-password').value;
   const r=await fetch(AUTH+'login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password}),credentials:'omit'});
-  const data=await r.json().catch(()=>({});
+  const data=await r.json().catch(()=>({}));
   if(!r.ok)throw Error(data.error||'HTTP '+r.status);
   token=data.session;sessionStorage.setItem('rdi-editor-session',token);
   $('login-password').value='';showAuth();status('Accesso riuscito');await load()
