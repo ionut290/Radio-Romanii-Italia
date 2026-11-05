@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-05T04:48:37.623163+00:00",
+  "news_updated_at": "2026-11-05T06:04:42.348635+00:00",
   "editorial_updated_at": "2026-11-05T00:35:05.987195+01:00",
   "translations_updated_at": "2026-11-05T02:33:43.959519+00:00",
-  "feed_total": 80,
+  "feed_total": 83,
   "feed_extended_400": 0,
-  "feed_missing_body": 80,
+  "feed_missing_body": 83,
   "feed_short_body": 0,
   "editorial_total": 20,
   "archived_editorials": 161,
   "translation_records": 17,
   "pending_total": 94,
   "pending_filtered_out": 268,
-  "editorial_verde": 0,
-  "editorial_galben": 46,
-  "editorial_rosu": 51,
+  "editorial_verde": 1,
+  "editorial_galben": 45,
+  "editorial_rosu": 55,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -618,56 +618,200 @@
   ],
   "recent_news": [
     {
+      "title": "„Este un dezastru”: Furie printre republicani după pierderea Congresului. Trump, considerat principalul vinovat",
+      "category": "România",
+      "published": "2026-11-05T05:57:53+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/este-un-dezastru-furie-printre-republicani-dupa-pierderea-congresului-trump-considerat-principalul-vinovat-4022275",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Scuola, formazione e lavoro: \"Il salone dell’orientamento aiuta a fare la scelta giusta\" - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-05T05:51:57+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZF9CazdKQkJ1aU5NVmhmYlI1SVJPVG15LVpIWC1Ia0lBcUp3RHBwY0FnQ0cxbDZudWxkalpYMkVYT0hfbjFRRk1tVFRaSTY3ZV9OX1NFRkVILW16WnJhR3lJa2tKMFpKT3pSZ2x1a3FsOFZiZWhqLWNCMzVTVXF6OWxwRlRKY0NUcHFwSjkxbw?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trump spune că Hegseth „face o treabă bună”, în contextul informațiilor privind viitorul nesigur al acestuia în fruntea Pentagonului",
+      "category": "România",
+      "published": "2026-11-05T05:50:27+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/trump-spune-ca-hegseth-face-o-treaba-buna-in-contextul-informatiilor-privind-viitorul-nesigur-al-acestuia-in-fruntea-pentagonului-4022501",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Exercițiu militar în Coreea de Nord: Phenianul a testat rachete de croazieră cu încărcătură tip cluster",
+      "category": "România",
+      "published": "2026-11-05T05:38:34+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/coreea-de-nord/exercitiu-militar-in-coreea-de-nord-phenianul-a-testat-rachete-de-croaziera-cu-incarcatura-tip-cluster-4022491",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Digistoria - cele mai importante evenimente petrecute pe 5 noiembrie",
+      "category": "România",
+      "published": "2026-11-05T05:30:03+00:00",
+      "url": "https://www.digi24.ro/digistoria/digistoria-cele-mai-importante-evenimente-petrecute-pe-5-noiembrie-3-4022481",
+      "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Inchiesta ricostruzione, dipendenti della EdilNova senza lavoro e stipendio - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-05T05:12:53+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYktzQjVDdnVlX1BjZ3QtaGJ2VE94Y3RickhuV1haSjFMdHFFbEpRRnhVMmRfcExuanFIb0xCWHJxbzFSbm9jVkw5UXZaenFtLXZwVDdXcnZvb1Z5emxiSVhZb2ZMYXh6akpYRms4Z1lFcndmMmdEdzZVc0RoYXAxdWxJQXpnLTdlRWUyOFlUSUNrSE00bUYyZTlFc1UyQXZKbUVxVm9laWhjUQ?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Câteva ore rămase până la Black Friday. Cum încearcă românii să evite capcana promoțiilor false: „Am o strategie”",
+      "category": "România",
+      "published": "2026-11-05T05:00:58+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/cateva-ore-ramase-pana-la-black-friday-cum-incearca-romanii-sa-evite-capcana-promotiilor-false-am-o-strategie-4022289",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Mai poți solicita ajutorul pentru încălzire după ce a început sezonul rece? Din ce lună se acordă sprijinul financiar",
+      "category": "România",
+      "published": "2026-11-05T05:00:57+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/mai-poti-solicita-ajutorul-pentru-incalzire-dupa-ce-a-inceput-sezonul-rece-din-ce-luna-se-acorda-sprijinul-financiar-4021775",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Te poți racorda la conducta de gaze plătită de vecin? Când ai nevoie de acordul lui și ce costuri pot apărea",
+      "category": "România",
+      "published": "2026-11-05T05:00:53+00:00",
+      "url": "https://www.digi24.ro/magazin/stil-de-viata/casa-si-gradina/te-poti-racorda-la-conducta-de-gaze-platita-de-vecin-cand-ai-nevoie-de-acordul-lui-si-ce-costuri-pot-aparea-4021651",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cum a transformat armata de hackeri a lui Kim Coreea de Nord într-un lider mondial în domeniul furturilor de criptomonede",
+      "category": "România",
+      "published": "2026-11-05T05:00:48+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/coreea-de-nord/cum-a-transformat-armata-de-hackeri-a-lui-kim-coreea-de-nord-intr-un-lider-mondial-in-domeniul-furturilor-de-criptomonede-4020907",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Sunt cauciucurile de iarnă obligatorii de la 1 noiembrie? Ce prevede legea și ce marcaj trebuie verificat la anvelopele all season",
+      "category": "România",
+      "published": "2026-11-05T05:00:47+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/auto/sunt-cauciucurile-de-iarna-obligatorii-de-la-1-noiembrie-ce-prevede-legea-si-ce-marcaj-trebuie-verificat-la-anvelopele-all-season-4020051",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Și-a făcut o misiune din a fi un șoc”. După doi ani de unilateralism dominator, noul Congres ar putea tempera impulsurile lui Trump",
+      "category": "România",
+      "published": "2026-11-05T05:00:40+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/si-a-facut-o-misiune-din-a-fi-un-soc-dupa-doi-ani-de-unilateralism-dominator-noul-congres-ar-putea-tempera-impulsurile-lui-trump-4021495",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Când se plătesc pensiile în decembrie 2026. Anunțul Poștei Române înainte de sărbătorile de iarnă",
+      "category": "România",
+      "published": "2026-11-05T05:00:32+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/cand-se-platesc-pensiile-in-decembrie-2026-anuntul-postei-romane-inainte-de-sarbatorile-de-iarna-4021307",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Meserii respectate cândva, uitate astăzi. Ce s-a ales de pantofarii și croitoresele de altădată: „Sunt perioade când nu vine nimeni”",
+      "category": "România",
+      "published": "2026-11-05T05:00:29+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/meserii-respectate-candva-uitate-astazi-ce-s-a-ales-de-pantofarii-si-croitoresele-de-altadata-sunt-perioade-cand-nu-vine-nimeni-4022319",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ucraina pierde aliați-cheie în Congresul SUA, pe măsură ce democrații preiau controlul (analiză Kyiv Post)",
+      "category": "România",
+      "published": "2026-11-05T05:00:25+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ucraina-pierde-aliati-cheie-in-congresul-sua-pe-masura-ce-democratii-preiau-controlul-analiza-kyiv-post-4022245",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Orașul în care radarele fixe, montate acum 10 ani, sunt tot nefuncționale. Viceprimarul acuză: „Nu există voință în cadrul MAI”",
+      "category": "România",
+      "published": "2026-11-05T05:00:21+00:00",
+      "url": "https://www.digi24.ro/stiri/orasul-in-care-radarele-fixe-montate-acum-10-ani-sunt-tot-nefunctionale-viceprimarul-acuza-nu-exista-vointa-in-cadrul-mai-4022427",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Sfârșitul erei Donald Trump? Cum a pierdut președintele SUA controlul asupra electoratului republican",
+      "category": "România",
+      "published": "2026-11-05T05:00:20+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/sfarsitul-erei-donald-trump-cum-a-pierdut-presedintele-sua-controlul-asupra-electoratului-republican-4021347",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Paradox: România devine o țară a imigranților. O treime dintre cei stabiliți în ultimii patru ani aici sunt străini. De unde vin",
+      "category": "România",
+      "published": "2026-11-05T05:00:18+00:00",
+      "url": "https://www.digi24.ro/stiri/paradox-romania-devine-o-tara-a-imigrantilor-o-treime-dintre-cei-stabiliti-in-ultimii-patru-ani-aici-sunt-straini-de-unde-vin-4022365",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Pregătiţi-vă.” 5 aspecte pe care Europa trebuie să le ia în calcul după înfrângerea lui Trump în fața democraţilor",
+      "category": "România",
+      "published": "2026-11-05T05:00:16+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/pregatiti-va-5-aspecte-pe-care-europa-trebuie-sa-le-ia-in-calcul-dupa-infrangerea-lui-trump-in-fata-democratilor-4021967",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Viața mea s-a schimbat”. Povestea unui tânăr din Pakistan care a ajuns să se înroleze în armata rusă și să fie trimis în Ucraina",
+      "category": "România",
+      "published": "2026-11-05T05:00:09+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/viata-mea-s-a-schimbat-povestea-unui-tanar-din-pakistan-care-a-ajuns-sa-se-inroleze-in-armata-rusa-si-sa-fie-trimis-in-ucraina-4021211",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Arte, vita e impegno di Carlo Soricelli. Il pittore che conta i morti sul lavoro - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-05T04:52:54+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZjVhSHY2eTNob2NVOGp3cGM2bmNXcmxLVmRIT1RVSFFGbnFrakxYYmpaU1hJRFl1VWlfdEh5T2FDZ1BZZFFiWmxUME0wbHkxMVF3LXFwemY0WUVGR0laNzVTS1oxOGJiMGtqRnpmaDRaT1lFdE4tZFhMbm5tR084eXNkeUJ3UGs?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Champions: il Como scrive la storia, il Lens annientato 9-1",
       "category": "Italia",
       "published": "2026-11-04T22:40:29+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/2026/11/04/ansachampions-il-como-scrive-la-storia-annienta-lens-9-1_e3aefd3a-6981-430b-a834-c8a95ad8671a.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cu cât propune Ministerul Muncii indexarea pensiilor. Florin Manole: „Sigur că nu sunt suficienţi bani”",
-      "category": "România",
-      "published": "2026-11-04T22:09:34+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/cu-cat-propune-ministerul-muncii-indexarea-pensiilor-florin-manole-sigur-ca-nu-sunt-suficienti-bani-4022423",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Florin Manole anunță o reorganizare a Ministerului Muncii: „Nu o fac pentru că vreau să dau pe cineva afară”",
-      "category": "România",
-      "published": "2026-11-04T21:39:26+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/florin-manole-anunta-o-reorganizare-a-ministerului-muncii-nu-o-fac-pentru-ca-vreau-sa-dau-pe-cineva-afara-4022363",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "MAE a emis o atenționare de călătorie pentru românii care vor să meargă în Franța",
-      "category": "România",
-      "published": "2026-11-04T21:39:23+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mae-a-emis-o-atentionare-de-calatorie-pentru-romanii-care-vor-sa-mearga-in-franta-2-4022373",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Primăria Sectorului 6 vrea să construiască o nouă ieșire spre autostrada A1",
-      "category": "România",
-      "published": "2026-11-04T21:37:04+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/primaria-sectorului-6-vrea-sa-construiasca-o-noua-iesire-spre-autostrada-a1-4022349",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Zelenski a discutat cu emisarii lui Trump înaintea negocierilor trilaterale. „Garanțiile de securitate trebuie să fie de neclintit”",
-      "category": "România",
-      "published": "2026-11-04T21:36:14+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/zelenski-a-discutat-cu-emisarii-lui-trump-inaintea-negocierilor-trilaterale-garantiile-de-securitate-trebuie-sa-fie-de-neclintit-4022323",
-      "source": "Digi24",
       "status": "galben",
       "words": 0
     },
@@ -686,24 +830,6 @@
       "published": "2026-11-04T21:28:55+00:00",
       "url": "https://www.ansa.it/sito/notizie/economia/2026/11/04/i-mercati-brindano-dopo-il-voto-usa-giu-la-difesa-e-rally-di-banche-e-tech_e4cb0902-0e68-4d16-9575-cc40d4484c1a.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Experții OMS recomandă încă două vaccinuri împotriva Ebola: „Ar putea salva vieţi omeneşti”",
-      "category": "România",
-      "published": "2026-11-04T21:23:27+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/expertii-oms-recomanda-inca-doua-vaccinuri-impotriva-ebola-ar-putea-salva-vieti-omenesti-4022337",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "O cisternă încărcată cu acid sulfuric s-a răsturnat pe A1, pe sensul Deva-Sibiu, în zona localităţii Sebeş",
-      "category": "România",
-      "published": "2026-11-04T21:19:02+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/o-cisterna-incarcata-cu-acid-sulfuric-s-a-rasturnat-pe-a1-pe-sensul-deva-sibiu-in-zona-localitatii-sebes-4022341",
-      "source": "Digi24",
       "status": "galben",
       "words": 0
     },
@@ -744,15 +870,6 @@
       "words": 0
     },
     {
-      "title": "Reprezentanții Sanitas s-au întâlnit cu Rogobete. Ce drepturi salariale recuperate şi venituri majorate în 2027 pentru angajații din să",
-      "category": "România",
-      "published": "2026-11-04T20:59:07+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/reprezentantii-sanitas-s-au-intalnit-cu-rogobete-ce-drepturi-salariale-recuperate-si-venituri-majorate-in-2027-pentru-angajatii-din-sa-4022313",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "L'exploit di El Sayed, il primo musulmano al Senato",
       "category": "Italia",
       "published": "2026-11-04T20:50:07+00:00",
@@ -771,47 +888,11 @@
       "words": 0
     },
     {
-      "title": "Părinții care se întorc mai devreme la serviciu ar putea primi salariul și indemnizația integrală. Ce prevede un proiect PNL",
-      "category": "România",
-      "published": "2026-11-04T20:37:10+00:00",
-      "url": "https://www.digi24.ro/stiri/parintii-care-se-intorc-mai-devreme-la-serviciu-ar-putea-primi-salariul-si-indemnizatia-integrala-ce-prevede-un-proiect-pnl-4022299",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Statele Unite au impus sancţiuni împotriva Indiei şi Turciei. Nou avertisment pentru cei care ajută Iranul",
-      "category": "România",
-      "published": "2026-11-04T20:35:04+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/statele-unite-au-impus-sanctiuni-impotriva-indiei-si-turciei-nou-avertisment-pentru-cei-care-ajuta-iranul-4022283",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Cinque incidenti mortali sul lavoro in un solo giorno - RaiNews",
       "category": "Italia",
       "published": "2026-11-04T20:23:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOWXBqSFo1aGlVWHVQNVlvZmtJVDgxMDN4b3AxZmg3MlF3WGNpQll3QUY0Uzh4Rk1OdUNRSmFtNUJvWF9qWmZBWWtUTUJHeTJvajNack4tdnpuNGFJMjJMUU1LR3BSa1dxVWJUMmEtb291X3RydHlTN0w2MEx1bVpZRGVqaGVpY3hKam85TXBiSXVVaUhWWGJfSmtDMTgxUzVtQXVCamZjWVhpVHc0SGVQX093dmpzeHBVN2xLbU00TE9tZ2xYMDBHa3dhalZILXpPTjBVZVNuWFlRNHB2SUppQjV4ellJYXdXaEFtQTJHZ3pEZXfSAfgBQVVfeXFMUG1DSFB2Snd4ZXhQdWxDckstTGloNGFnTWlEZVJfemM4SVRlQmZCdURZeEZxQXZEMU5vUnJGT29TWGVqQ01uMTlaQmZFS2JXQ1M2V29yTk9ueFRuVnk3Q2p",
       "source": "RaiNews",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ce a făcut Trump în prima dimineață după ce republicanii au pierdut alegerile",
-      "category": "România",
-      "published": "2026-11-04T20:20:59+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ce-a-facut-trump-in-prima-dimineata-dupa-ce-republicanii-au-pierdut-alegerile-4022207",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "„Sunt cele mai grele zile din viaţa mea”. Prima declarație publică a portarului care l-a faultat mortal pe fotbalistul Jesus de Miguel",
-      "category": "România",
-      "published": "2026-11-04T20:09:36+00:00",
-      "url": "https://www.digi24.ro/stiri/sport/fotbal/sunt-cele-mai-grele-zile-din-viata-mea-prima-declaratie-publica-a-portarului-care-l-a-faultat-mortal-pe-fotbalistul-jesus-de-miguel-4022263",
-      "source": "Digi24",
       "status": "roșu",
       "words": 0
     },
@@ -825,39 +906,12 @@
       "words": 0
     },
     {
-      "title": "Merz nu crede că Trump îşi va schimba modul de a guverna după alegeri: „De ce ar face asta acum?”",
-      "category": "România",
-      "published": "2026-11-04T19:50:14+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/merz-nu-crede-ca-trump-isi-va-schimba-modul-de-a-guverna-dupa-alegeri-de-ce-ar-face-asta-acum-4022249",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ce spune Donald Trump despre o eventuală procedură de destituire lansată de Partidul Democrat împotriva sa",
-      "category": "România",
-      "published": "2026-11-04T19:48:01+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/ce-spune-donald-trump-despre-o-eventuala-procedura-de-destituire-lansata-de-partidul-democrat-impotriva-sa-4022231",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Acţiunile marilor producători americani de armament au scăzut după victoria democraţilor. Bugetul Pentagonului, sub semnul întrebării",
-      "category": "România",
-      "published": "2026-11-04T19:41:53+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/actiunile-marilor-producatori-americani-de-armament-au-scazut-dupa-victoria-democratilor-bugetul-pentagonului-sub-semnul-intrebarii-4022217",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Prințul Harry și Meghan Markle merg, săptămâna viitoare, la Parlamentul European. Care este motivul vizitei la Bruxelles",
-      "category": "România",
-      "published": "2026-11-04T19:40:38+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/printul-harry-si-meghan-markle-merg-saptamana-viitoare-la-parlamentul-european-care-este-motivul-vizitei-la-bruxelles-4022227",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Revista românului din Italia – Pagina 1773 - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-04T19:59:20+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1UQUVmTkF0c0V6aDlTeDdqSDdnUXczM3RHeVFReHpidlAza3RtS3FtSXRyTEtpRVFSX08yRy1OcEVrdEZqQlNXeg?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -879,21 +933,12 @@
       "words": 0
     },
     {
-      "title": "Luca Niculescu a numit noi secretari de stat în șapte ministere",
-      "category": "România",
-      "published": "2026-11-04T18:57:08+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/luca-niculescu-a-numit-noi-secretari-de-stat-in-sapte-ministere-4022205",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Inflația din zona euro urcă la cel mai ridicat nivel din ultimii trei ani. BCE, sub presiune să majoreze dobânzile",
-      "category": "România",
-      "published": "2026-11-04T18:55:44+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/inflatia-din-zona-euro-urca-la-cel-mai-ridicat-nivel-din-ultimii-trei-ani-bce-sub-presiune-sa-majoreze-dobanzile-4022195",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Avertisment MAE pentru românii care merg în Franța! Sâmbătă sunt așteptate proteste violente în mai multe orașe - Kanal D Romania",
+      "category": "Știri consulare",
+      "published": "2026-11-04T19:02:54+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWVFWMkZjOEVkWjNMdkp1bUdocmVObVVvZnFaeWtyd0N3SXZESUZPdEg1a3l0dm5hd3BncE5NSzgyZl9ELW4weU13RGNuZGxVUnk4OGhmak5aUTd1emxYdjZGcF9nQWpUdXlETzhsNzhMcHZFRmhWbXVtay11WFh2RHdiNUdhXzVVNnZWdjlKd1habC1zYTMtel9GQVIxOHlVUllxZGJNclBKbmRVLXBKX3VVdURZemZfSDlZTWZVZzBtR1ZjMnNRRldvY0pLWW9MVTQwV2t4SDY?oc=5",
+      "source": "Kanal D Romania",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -929,6 +974,15 @@
       "published": "2026-11-04T16:48:48+00:00",
       "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPM3RQTWhzaFplWDBMaGZYS3FJUDVWSjhzVFdiVmdFckk2ZDRPdVpwaG1HZWo3ekxRVlFhT3dKMGhEc3p4SjJzVGs2WnE2ek1iR08zUGwtY0VqVnVIRjAxVlVJREJsUVhENGJoRWhnVmp0bVVxZWk4Rm15bHRTQnJXT1VNSHE2cnVPRDVUSmVkYXZRbVAzLTc2ek42bkV0WVlJSWtTMVRxSFp0bkl5WjBweElPczVkMzhlOXJJYXRnZTRJZ00yRXFncTVVbUNsZlpwT21zbnZWbVlzV0Q3LUtrVkVTbThreExLdExCYS1mMmdZZ0J3NTFVdGZZeS1FOUpBcHdrZE1EZHU1MHd5Rk1mV3YwcE4?oc=5",
       "source": "Oficiul de Știri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Negocierile pentru procurorul șef european, funcție vizată de Kovesi, se AMÂNĂ - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-04T16:14:50+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQNXVrYXdqeVphQjFpVUtmb05nbllfdnlPZ0hjU2l4ZU1xajk0QlZ4SW92ZWFIMDFBMTF4aW1YM2p4YlY1YkRhWk5KVjdVX21aemFyMFEwRmMxdng0Y3l6UVZBU1dneHh2ZmlPV2RhVC0zaEN5cG9fWDVFQW45ay0zcHhaMXBTdVRheUxnQWlGY2JIN0dVVG1kREtDazVMby1pd0pWNG5qZVk4Vmp0M1FjT2laQkdzYnlZU1I4bNIBvAFBVV95cUxQNXVrYXdqeVphQjFpVUtmb05nbllfdnlPZ0hjU2l4ZU1xajk0QlZ4SW92ZWFIMDFBMTF4aW1YM2p4YlY1YkRhWk5KVjdVX21aemFyMFEwRmMxdng0Y3l6UVZBU1dneHh2ZmlPV2RhVC0zaEN5cG9fWDVFQW45ay0zcHhaMXBTdVRheUxnQWlGY2JIN0dVVG1",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1032,15 +1086,6 @@
       "words": 0
     },
     {
-      "title": "Banca d'Italia. In crescita l'economia del Lazio - RaiNews",
-      "category": "Italia",
-      "published": "2026-11-04T10:48:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU1VtOExYX2tIRHNhMXhYTDIyeDhNRDdvdmZ5cWM5NmVTM3lkRjF6NngtNGZjZG1VbXRra2cxUHNyS0tmbHl6b2JuZktJVUg2c1VLckNOM3VxdldTbUo2WlFpWHdjMlV6X0ZNUWNxNHd5a1pkWDdNbGJranJxd2ROWmVJMXU1S1V5SmI3MGdFTjBXWHJRMHhpV21JOUlpTy1KOHJWVDZhdVNpSmpuZEtqWVZKOG9WaGVFbTBGamQwdDjSAcYBQVVfeXFMTWFxc2JvdllBU1A2QlRxaVJhb2lZRlJZZFpCdzZzd3hya3lLR1JsLUVoRnoxWU12RGFMSTJUcEI0MExGQkJ5SUtvRnlmd3pkVWNCTjQ1djBSVzVVckhfUUdFMjFRYTlmQWdiYjlOMDhqSV9EQjloYWJRRzZ6YkYtVHgxLW5LeFlvSzlmU2Jqb3JkTEV",
-      "source": "RaiNews",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Prețuri exorbitante în Munții Dolomiți din Italia. Cât a ajuns să coste o vacanță la un hotel... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-04T10:33:00+00:00",
@@ -1050,38 +1095,11 @@
       "words": 0
     },
     {
-      "title": "Papà e figlio poliziotti, per un giorno al lavoro insieme a Orio al Serio: Luca va in pensione, Valerio è al debutto come agente - Il Giorno",
-      "category": "Italia",
-      "published": "2026-11-04T10:30:36+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZ05XQWxIOXM2STJHTzc1Q0JFcjBhWDZtVHA2aVR4QTFVbUpmZjhFb1RqQkpkU2ExTnBzLUVaS3hFYXJtZVFiTU9CeXBKT09NWDFtS3dqblZvOWJQOTlFZkZKR2Jpbk9FczN0V0ROQVhWZDhubXJvSkFxajdCT3pTdWE5WktDaUdBcm5zY0didw?oc=5",
-      "source": "Il Giorno",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Incidente sul lavoro, muore titolare di una ditta schiacciato da un cancello - Il Resto del Carlino",
-      "category": "Italia",
-      "published": "2026-11-04T10:30:16+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOWjcyWnBhcDdRNkxBNHdhTUc5V2RvS29LWmx6Q1lzTXBlSVpzMmVDNy0zbHpPdXBmX3hjd3dPbUhTaUdDTHFyNEJVNzYtb3QxbXFrT2pybnpxT2N4NWRGRWlQa2szSm1qQ0h1ZEdTUG0ydUpKaEZZQUxTZ0VZS2E0UHNqM0xwbFlIWmFZQnF1QzM?oc=5",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Român, arestat în Italia. Când a văzut poliția a încercat să se ascundă printre mașini - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-04T10:09:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOUUl2VmZHZEVhc0k1UG1GZHdFRDhSc0ZYLTlVMDNYb2t5aTRwbjFhQTlEZ3JQSmg2Vk1rR3h3LTRvTTBIUm5Nc21BX0ZyMS1leVo0R25TTThJX1pGeUFWTTVMYVpvMmVnd3IyS2F3ckd1TkMzNGJlOUtXXzlSSUtmZlN0QnQ4ZHQ5ZDM4MHg0cDJ1aWNnMTdLNm54Tm5TSVM4UFR2aVBBMG5lc3pwaVFFbWM1cEdjenJmRFBQNlFWU0RZX0HSAcgBQVVfeXFMUHdaVl80MVVuZXJhV1p0dDQ2ZzQ4a2NEcldZSUkxblZlZnQ5d2owMXdZZGhuNmVoeHBYMzVvUW1uR1phQzgzc1U0dFRPaFFYaFhSOTJkNElUZ0cySWM2bVg0ekZtbWlLQk02VU8zZU93LTgzRnFZMURiMlc4VU1Ca2J3eG9VYTBkTTlFckdHb3N",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "L’onda dem su Trump ora fa tremare Big Tech: i colossi temono una stretta sui data center - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-04T09:22:35+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUzkzODlPbTdUa29hRWxDY0xZcTdPY19qQnVQZ0tobnJQa1BOdHlHMERuZldvT3pMaUpuWmlRYk1YbW14SmZVUG5uQnprajFVcXVwdGRCQmliSWU0NV9PNUdKNXVfQjFsTlRTOTF4WFM3NWFUR0Z2dGJPbVE5TndseWUxSWloekFpNFRXN1hleXVRNDlyWVY1MXhTY3V5UFJGTDZwbmhVYmt3RHNGdkJaR3NEYw?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1158,15 +1176,6 @@
       "words": 0
     },
     {
-      "title": "Il lavoro che soffre: \"Nei primi tre trimestri cassa integrazione aumentata del 192%\" - Il Resto del Carlino",
-      "category": "Italia",
-      "published": "2026-11-04T06:10:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQOGticF9GUndGdTBjQ0htMGZnZjFFdDMwQjg3MEhsc2ZTQTI4UUhuRUkwTWE3WnZybmdLcGF6eXVaSERnQ1BnWlFPeklYYUFFa1ItcFRvTnN6anFhaktlVV9aZS1RWHk5bUFyNXl1b3NyamlwZmRhZWRoRU5JbWRsX2lfV0N2NkJS?oc=5",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Electrolux, accordo nella notte: salvi i posti di lavoro - La Prealpina",
       "category": "Italia",
       "published": "2026-11-04T05:56:57+00:00",
@@ -1180,6 +1189,24 @@
       "category": "Italia",
       "published": "2026-11-04T04:31:51+00:00",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQXdaWEROUllFNzY2c3BOUEFkTV9aMWZUTXk0UHhZcGVyeW5aZEtQckdwR2l1QjZNWXFCU2FhMnN5ZHBKRm9KcExKMHdBdXRWUTNyZUtYR24yc2tWdlM0SXNGQXJBdGlSVWQ4V3lTOXp1TVpEOU9aR09FMURpZ0U4dGdvakR1STBldzRXSw?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Concorsi, stop al maxi bando della Difesa: tutto da rifare per la selezione di 1.100 assistenti - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-04T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcGR4WlNLcVZncXBmMkUxT3ZGTlFZaEhLZnNKSHRKUVM1U3Q0VUNxZmU5TXBBSG5SVHA3Nl9sSldOcGxiNDVXbk1MSnkwOGFiZnNTSXJ1YWlQd1Z6OFdHSnplbDlTSzNqS29ONVhnRjZUZy1OQTJ1WldxQkxvWl9kdjRIQjVaQ0g0Zi1ocEVFYWlycHdmWnVfcENFNWxJaUJKQm12cGZaQWxtczUzNGtkVkQwNEwyNmJ0UFhLbWRpNWp4SkR2TlE?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Infortunio sul lavoro: Tomassino cade in cantiere e muore dopo 5 giorni di agonia - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-04T02:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcmpQMENjR3B2VXhQQVhPUmIxa0EzLXpudmdMRUFrOThHT3hLczhFUE9Jd3NCUDRTREhCNTZaTjAtQ3I0OTVvRVJCX0V0Q0hwZzZlSEt1dTUxR0hVY1N4TXBQSjYxLXo1amtYRTREZ0VJNXVOWkZpU2dWSlE1bFdKUTdFOXNNa05jV3VKZ1RnVzlmdw?oc=5",
       "source": "Il Resto del Carlino",
       "status": "roșu",
       "words": 0
@@ -1340,6 +1367,17 @@
   ],
   "radio_briefs": [
     {
+      "title": "Un muncitor român a murit într-o navă aflată în construcție în Italia - Informat.ro",
+      "category": "Diaspora",
+      "published": "2026-11-04T20:53:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd1hESjFDQUhjT2hMUUdrLVFpeS1leWNWeGd1bWY2TWExR1VjZ2dzMUYwR29GdUVtVXhvNkxabExGZGwxVEtLWTBXdjI5QjEwbDJzVWs2bUVyY0Ntbnc5VDRpbE9rUk1jTFJoMHR0SjlQcDYwVlBPdnZuRjNiRWpfN29iUjlJcmstdDNrMnJzbGxIbHVtR3dEUHpTWjljWXo3SXc?oc=5",
+      "source": "Informat.ro",
+      "status": "verde",
+      "words": 428,
+      "intro": "Un român de 34 de ani a murit pe 4 noiembrie la șantierul naval Fincantieri din Marghera.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
       "title": "Românii s-au specializat în Italia în furtul de kiwi / O fermă din nordul țării a fost prădată de două ori în câteva zile - G4Media",
       "category": "Diaspora",
       "published": "2026-11-03T06:09:25+00:00",
@@ -1381,17 +1419,6 @@
       "status": "galben",
       "words": 16,
       "intro": "Liderul de extremă dreapta Roberto Vannacci despre românii din Italia și experiența sa din România www.goldring.ro",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Alertă cu bombă în 271 de școli din Italia. Sute de elevi evacuați la Roma. Mărturia unui român pentru ȘtiriDiaspora: \"Copiii au ieșit din clase fără geci și rechizite\" - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-03T09:14:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxPLU9SamR2U1hLOUUwNFhGRmdQRTdCaWp3QmNzT2JWWVFVR2ZGN3hwU3ljOUZhUEt3M1FrMEw2M05DWEtYTTlWTEh4NS1ONURsOGREaTNnSWM5UEdndFN1b20weTNiRV94T2dSNG5FLWJyaDltTmo5X1Q5bmV5dzllTnVQZXFKV18tZkEzVUdUOHZ2T2ZuN1FfbGFtc2ttd3lIazZaN3REWlFJTXVZZ29sUU9HNTR0VjVJMmRPMnA2Q2RKd202bUlUaHhwdDZXZnF5OW1SM0IyV1BwNXA5Y1FGVFFjMW9BS1Y1VXlKM0VQek8xSkx2ZWQ5dWhhYU1FTHllR1REWWJWdDY4SXFtc2ctLVN6R1lySGdsOHNfZ0xlV3BlMEw5cmhyVWxEMjN5Qk9Sa3c?oc=5",
-      "source": "StiriDiaspora",
-      "status": "galben",
-      "words": 30,
-      "intro": "Alertă cu bombă în 271 de școli din Italia.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
