@@ -54,6 +54,42 @@ class SubmissionTests(unittest.TestCase):
             headers=self.origin,
         )
 
+    def test_password_setup_login_session_and_logout(self):
+        status=self.client.get("/api/ai-music/admin/auth-status")
+        self.assertEqual(status.json["password_configured"],False)
+        setup="/api/ai-music/admin/setup-password"
+        password="RDI Secure Password! 2026"
+        self.assertEqual(self.client.post(setup,headers=self.origin,
+            json={"current_token":"wrong","password":password}).status_code,401)
+        self.assertEqual(self.client.post(setup,headers=self.origin,
+            json={"current_token":"unit-test-admin-token","password":"short"}).status_code,400)
+        self.assertEqual(self.client.post(setup,headers=self.origin,
+            json={"current_token":"unit-test-admin-token","password":password}).status_code,201)
+        self.assertEqual(self.client.get("/api/ai-music/admin/auth-status").json["password_configured"],True)
+        self.assertEqual(self.client.post(setup,headers=self.origin,
+            json={"current_token":"unit-test-admin-token","password":password}).status_code,409)
+        self.assertEqual(self.client.post("/api/ai-music/admin/login",headers=self.origin,
+            json={"password":"wrong"}).status_code,401)
+        login=self.client.post("/api/ai-music/admin/login",headers=self.origin,
+            json={"password":password})
+        self.assertEqual(login.status_code,200)
+        session=login.json["session"]
+        auth={"Authorization":"Bearer "+session}
+        self.assertEqual(self.client.get("/api/ai-music/admin/submissions",headers=auth).status_code,200)
+        self.assertEqual(self.client.post("/api/ai-music/admin/logout",headers=auth).status_code,200)
+        self.assertEqual(self.client.get("/api/ai-music/admin/submissions",headers=auth).status_code,401)
+        # Existing admin token remains functional for managed migration.
+        self.assertEqual(self.client.get("/api/ai-music/admin/submissions",headers=self.admin).status_code,200)
+
+    def test_login_rejects_bruteforce_attempts(self):
+        self.client.post("/api/ai-music/admin/setup-password",headers=self.origin,
+                         json={"current_token":"unit-test-admin-token","password":"Valid strong password 2026"})
+        for _ in range(5):
+            self.assertEqual(self.client.post("/api/ai-music/admin/login",headers=self.origin,
+                json={"password":"wrong"}).status_code,401)
+        self.assertEqual(self.client.post("/api/ai-music/admin/login",headers=self.origin,
+                json={"password":"Valid strong password 2026"}).status_code,429)
+
     def test_health_is_public(self):
         response = self.client.get("/api/ai-music/health")
         self.assertEqual(response.status_code, 200)
