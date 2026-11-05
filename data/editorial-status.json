@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-05T22:47:13.581420+00:00",
+  "news_updated_at": "2026-11-05T23:06:25.298796+00:00",
   "editorial_updated_at": "2026-11-05T22:56:06.707504+01:00",
   "translations_updated_at": "2026-11-05T21:05:45.942795+00:00",
   "feed_total": 74,
-  "feed_extended_400": 0,
-  "feed_missing_body": 74,
+  "feed_extended_400": 1,
+  "feed_missing_body": 73,
   "feed_short_body": 0,
   "editorial_total": 19,
   "archived_editorials": 172,
   "translation_records": 14,
   "pending_total": 129,
   "pending_filtered_out": 304,
-  "editorial_verde": 5,
-  "editorial_galben": 42,
+  "editorial_verde": 6,
+  "editorial_galben": 41,
   "editorial_rosu": 45,
   "pending": [
     {
@@ -618,13 +618,22 @@
   ],
   "recent_news": [
     {
-      "title": "Trump anunță că s-a întâlnit la Casa Albă cu trimisul lui Putin. Și spune că lucrează „la un acord care ar putea include toată Europa”",
-      "category": "România",
-      "published": "2026-11-05T22:31:36+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/trump-anunta-ca-s-a-intalnit-la-casa-alba-cu-trimisul-lui-putin-si-spune-ca-lucreaza-la-un-acord-care-ar-putea-include-toata-europa-4024065",
-      "source": "Digi24",
+      "title": "Trump non si arrende: 'Le elezioni negli Usa sono truccate'",
+      "category": "Italia",
+      "published": "2026-11-05T22:54:32+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/05/-trump-non-si-arrende-le-elezioni-negli-usa-sono-truccate_f97bbbdf-4ed5-49b4-a42c-7e13e9cdfec8.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
+    },
+    {
+      "title": "Trump anunță că s-a întâlnit la Casa Albă cu trimisul lui Putin. Și spune că lucrează „la un acord care ar putea include toată Europa”",
+      "category": "România",
+      "published": "2026-11-05T22:47:15+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/trump-anunta-ca-s-a-intalnit-la-casa-alba-cu-trimisul-lui-putin-si-spune-ca-lucreaza-la-un-acord-care-ar-putea-include-toata-europa-4024065",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 455
     },
     {
       "title": "La Juve batte l'Az Alkmaar con brivido finale. Cade il Milan, a San Siro vince il Ferencvaros",
@@ -677,15 +686,6 @@
       "published": "2026-11-05T21:35:08+00:00",
       "url": "https://www.digi24.ro/stiri/externe/secretarul-de-stat-marco-rubio-ia-in-considerare-demisia-el-ar-fi-discutat-chestiunea-cu-oficiali-de-la-casa-alba-bloomberg-4024013",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Il partito scarica Hegseth, Rubio guarda al 2028 e pensa all'addio",
-      "category": "Italia",
-      "published": "2026-11-05T21:24:46+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/05/il-partito-scarica-hegseth-rubio-guarda-al-2028-e-pensa-alladdio_41c6d3d5-6a37-40d2-8014-42eb277efc2c.html",
-      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -1248,20 +1248,20 @@
       "words": 0
     },
     {
+      "title": "Papà e figlio poliziotti, per un giorno al lavoro insieme a Orio al Serio: Luca va in pensione, Valerio è al debutto come agente - Il Giorno",
+      "category": "Italia",
+      "published": "2026-11-04T10:30:36+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQZ05XQWxIOXM2STJHTzc1Q0JFcjBhWDZtVHA2aVR4QTFVbUpmZjhFb1RqQkpkU2ExTnBzLUVaS3hFYXJtZVFiTU9CeXBKT09NWDFtS3dqblZvOWJQOTlFZkZKR2Jpbk9FczN0V0ROQVhWZDhubXJvSkFxajdCT3pTdWE5WktDaUdBcm5zY0didw?oc=5",
+      "source": "Il Giorno",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Român, arestat în Italia. Când a văzut poliția a încercat să se ascundă printre mașini - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-04T10:09:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOUUl2VmZHZEVhc0k1UG1GZHdFRDhSc0ZYLTlVMDNYb2t5aTRwbjFhQTlEZ3JQSmg2Vk1rR3h3LTRvTTBIUm5Nc21BX0ZyMS1leVo0R25TTThJX1pGeUFWTTVMYVpvMmVnd3IyS2F3ckd1TkMzNGJlOUtXXzlSSUtmZlN0QnQ4ZHQ5ZDM4MHg0cDJ1aWNnMTdLNm54Tm5TSVM4UFR2aVBBMG5lc3pwaVFFbWM1cEdjenJmRFBQNlFWU0RZX0HSAcgBQVVfeXFMUHdaVl80MVVuZXJhV1p0dDQ2ZzQ4a2NEcldZSUkxblZlZnQ5d2owMXdZZGhuNmVoeHBYMzVvUW1uR1phQzgzc1U0dFRPaFFYaFhSOTJkNElUZ0cySWM2bVg0ekZtbWlLQk02VU8zZU93LTgzRnFZMURiMlc4VU1Ca2J3eG9VYTBkTTlFckdHb3N",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Electrolux, l'accordo nella notte: dimezzati gli esuberi e la fabbrica di Cerreto non chiude - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-04T09:16:38+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPU185UUgxWmRBelFNTmdkYkVpdFQySUxNRm9UT0RLQ2hrZV9RTU1yRVpwVzQtYzlnLWZqYVA2TlFWWl9mOTh4U2NyekNOOUtmZEVFVGZpcXAtaDhXaGc2QUd4dHlkTEVCVGhwLUJfdC1QYTR3bDBoQUI2Ujc0b2ljbXJoTVFkZm5TNGMwdEVwbDU4VTdiVE5PZWJydXlpTVBvd243N3BZS1hvdkI5VDFNTzBrYnVWMkkxVm5jQ0J6Y3VldXoxQjlqbHhrQllXNjVTOVBCRklXc016QzlQRkpEWEhHMEJoTTg?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
