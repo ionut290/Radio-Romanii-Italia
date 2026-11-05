@@ -118,9 +118,11 @@ class SubmissionTests(unittest.TestCase):
         sid = response.json["id"]
         private_url = f"/api/ai-music/admin/submissions/{sid}/audio"
         self.assertEqual(self.client.get(private_url).status_code, 401)
-        self.assertEqual(
-            self.client.get(private_url, headers=self.admin).status_code, 200
-        )
+        response = self.client.get(private_url, headers=self.admin)
+        try:
+            self.assertEqual(response.status_code, 200)
+        finally:
+            response.close()
         # A fake MP3 must not pass audio validation when ffprobe is available.
         with patch.object(service.subprocess, "run") as probe:
             probe.return_value.returncode = 1
