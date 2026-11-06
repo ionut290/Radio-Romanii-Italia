@@ -25,7 +25,7 @@ test("Nuovo build sincronizzato con la ricarica automatica YouTube",()=>{
 });
 
 test("Seleziona solo i fatti della giornata corretta",()=>{
- assert.equal(validStoriaDay(today,"2026-11-07").length,0);
+ assert.equal(validStoriaDay(today,"1900-01-01").length,0);
  assert.equal(validStoriaDay(today,today.date).length,5);
 });
 
