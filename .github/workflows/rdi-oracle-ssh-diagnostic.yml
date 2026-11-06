@@ -13,20 +13,47 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Test senza modifiche al server Oracle
+      - name: Diagnosi pubblica senza modifiche
         shell: bash
         run: |
           set -u
-          echo "Verifico connessione pubblica RDI e porta TCP 22 (nessuna credenziale necessaria)"
-          if curl -sSIL --max-time 10 'https://radio-romanii-italia.duckdns.org/api/nowplaying/radio-romanii-italia' >/dev/null; then
-            echo "API_RADIO_HTTPS=OK"
+          if curl -sSIL --max-time 10 'https://radio-romanii-italia.duckdns.org/api/nowplaying/radio-romanii-italia' >/dev/null; then echo API_RADIO_HTTPS=OK; else echo API_RADIO_HTTPS=FAILED; fi
+          if timeout 10 bash -c 'exec 3<>/dev/tcp/129.151.255.41/22' 2>/dev/null; then echo ORACLE_TCP_22=OPEN; else echo ORACLE_TCP_22=UNREACHABLE; fi
+      - name: Diagnosi SSH senza divulgare le credenziali e senza riavvii
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -uo pipefail
+          if [ -z "${SSH_KEY_B64}" ]; then echo SSH_DIAG=MISSING_KEY_SECRET; exit 0; fi
+          if [ -z "${SSH_KNOWN_HOSTS}" ]; then echo SSH_DIAG=MISSING_HOSTS_SECRET; exit 0; fi
+          mkdir -p "$HOME/.ssh"; chmod 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 -d > "$HOME/.ssh/id_rdi" 2>/dev/null
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          if ! ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1; then echo SSH_DIAG=KEY_INVALID_OR_ENCRYPTED; exit 0; fi
+          set +e
+          timeout 25 ssh -v -i "$HOME/.ssh/id_rdi" \
+            -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o BatchMode=yes \
+            -o ConnectTimeout=10 -o ServerAliveInterval=4 \
+            -o ServerAliveCountMax=2 ubuntu@129.151.255.41 \
+            'printf RDI_REMOTE_LOGIN_OK' > /tmp/rdi-ssh-out 2>/tmp/rdi-ssh-err
+          result=$?
+          set -e
+          if grep -q RDI_REMOTE_LOGIN_OK /tmp/rdi-ssh-out; then echo SSH_DIAG=LOGIN_OK; exit 0; fi
+          if grep -qiE 'permission denied|no more authentication methods' /tmp/rdi-ssh-err; then
+            echo SSH_DIAG=AUTHENTICATION_FAILED
+          elif grep -qiE 'host key verification failed|offending|REMOTE HOST IDENTIFICATION HAS CHANGED' /tmp/rdi-ssh-err; then
+            echo SSH_DIAG=HOST_KEY_MISMATCH
+          elif grep -qiE 'no matching host key type|no matching key exchange' /tmp/rdi-ssh-err; then
+            echo SSH_DIAG=SSH_ALGORITHM_MISMATCH
+          elif grep -qiE 'connection refused' /tmp/rdi-ssh-err; then
+            echo SSH_DIAG=CONNECTION_REFUSED
+          elif grep -qiE 'connection timed out|operation timed out|connection reset|Connection closed|kex_exchange_identification' /tmp/rdi-ssh-err; then
+            echo SSH_DIAG=CONNECTION_INTERRUPTED
           else
-            echo "API_RADIO_HTTPS=FAILED"
+            echo SSH_DIAG=UNKNOWN
           fi
-          if timeout 10 bash -c 'exec 3<>/dev/tcp/129.151.255.41/22' 2>/tmp/rdi-port22-error; then
-            echo "ORACLE_TCP_22=OPEN"
-          else
-            echo "ORACLE_TCP_22=UNREACHABLE"
-            sed -e 's/129\.151\.255\.41/[server]/g' /tmp/rdi-port22-error | head -3 || true
-          fi
-          echo "Diagnostica completa: nessuna modifica alla diretta."
+          echo SSH_EXIT_CODE="$result"
+          echo "Nessuna modifica eseguita."
