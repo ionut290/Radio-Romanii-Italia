@@ -6,6 +6,7 @@ on:
       - 'news.json'
       - 'editorial.json'
       - 'scripts/translate_news.py'
+      - 'scripts/translate_news.py'
       - 'scripts/news_details.py'
       - 'data/news-summaries.json'
       - '.github/workflows/translate-news.yml'
