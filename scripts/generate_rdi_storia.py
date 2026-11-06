@@ -253,20 +253,21 @@ def create(date: dt.date) -> dict:
     if archive_file.exists():
         try:
             saved = json.loads(archive_file.read_text(encoding="utf-8"))
-            if saved.get("status") == "curated":
-                for item in saved.get("events", []):
-                    if not isinstance(item, dict) or not item.get("source"):
-                        continue
-                    saved_title = re.sub(r"\W+", "", str(item.get("title_it", "")).lower())
-                    if any(re.sub(r"\W+", "", str(entry.get("title_it", "")).lower()) == saved_title
-                           for entry, _ in entries):
-                        continue
-                    item = dict(item)
-                    item["country"] = item.get("country") or country_for(
-                        str(item.get("title_it", "")) + " " + str(item.get("text_it", "")))
-                    entries.append((item, None))
-        except (OSError, ValueError, TypeError):
-            pass
+            for item in saved.get("events", []):
+                if not isinstance(item, dict) or not item.get("source"):
+                    continue
+                if not (saved.get("status") == "curated" or item.get("curated")):
+                    continue
+                saved_title = re.sub(r"\W+", "", str(item.get("title_it", "")).lower())
+                if any(re.sub(r"\W+", "", str(entry.get("title_it", "")).lower()) == saved_title
+                       for entry, _ in entries):
+                    continue
+                item = dict(item)
+                item["country"] = item.get("country") or country_for(
+                    str(item.get("title_it", "")) + " " + str(item.get("text_it", "")))
+                entries.append((item, None))
+    except (OSError, ValueError, TypeError):
+        pass
 
     entries.sort(key=lambda pair: (priority(pair[0]), pair[0]["year"]))
     return {
