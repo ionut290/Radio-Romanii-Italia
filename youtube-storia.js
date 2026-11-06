@@ -23,7 +23,8 @@ import {validStoriaDay,storyDue} from "./youtube-storia-core.mjs";
   const preview=new URLSearchParams(location.search).get("rdi_storia_preview")==="1";
   const fmtDay=new Intl.DateTimeFormat("it-IT",{timeZone:"UTC",day:"numeric",month:"long",year:"numeric"});
   const fmtRoDay=new Intl.DateTimeFormat("ro-RO",{timeZone:"UTC",day:"numeric",month:"long",year:"numeric"});
-  const romeDay=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+  const romeParts=new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"});
+  const romeDay=()=>{const p=Object.fromEntries(romeParts.formatToParts(new Date()).filter(x=>x.type!=="literal").map(x=>[x.type,x.value]));return p.year+"-"+p.month+"-"+p.day;};
   const blocked=()=>[
     "rdiSpotActive","rdiGeoActive","rdiTgActive","rdiWeatherActive",
     "rdiCameraActive","rdiLandscapeActive","rdiDjPromoActive",
@@ -73,7 +74,7 @@ import {validStoriaDay,storyDue} from "./youtube-storia-core.mjs";
       progress.style.transition="width "+duration+"ms linear";
       progress.style.width="100%";
     }));
-    timeout=setTimeout(()=>stop(true),duration);
+    if(!preview)timeout=setTimeout(()=>stop(true),duration); // Preview lasts until the user leaves the page.
     watch=setInterval(()=>{if(!preview&&blocked())stop(false)},400);
     return true;
   }
