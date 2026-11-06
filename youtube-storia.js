@@ -22,6 +22,7 @@ import {validStoriaDay,storyDue} from "./youtube-storia-core.mjs";
   const duration=19000;
   const preview=new URLSearchParams(location.search).get("rdi_storia_preview")==="1";
   const fmtDay=new Intl.DateTimeFormat("it-IT",{timeZone:"UTC",day:"numeric",month:"long",year:"numeric"});
+  const fmtRoDay=new Intl.DateTimeFormat("ro-RO",{timeZone:"UTC",day:"numeric",month:"long",year:"numeric"});
   const romeDay=()=>new Intl.DateTimeFormat("en-CA",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
   const blocked=()=>[
     "rdiSpotActive","rdiGeoActive","rdiTgActive","rdiWeatherActive",
@@ -33,7 +34,7 @@ import {validStoriaDay,storyDue} from "./youtube-storia-core.mjs";
 
   function draw(event){
     const today=romeDay();
-    find(".rdi-storia-dateline").textContent="ASTĂZI · "+fmtDay.format(new Date(today+"T12:00:00Z"));
+    find(".rdi-storia-dateline").textContent=(event.language==="ro"?"ASTĂZI · ":"OGGI · ")+(event.language==="ro"?fmtRoDay:fmtDay).format(new Date(today+"T12:00:00Z"));
     find(".rdi-storia-year").textContent=String(event.year);
     find(".rdi-storia-heading").textContent=event.title;
     find(".rdi-storia-summary").textContent=event.summary;
@@ -61,7 +62,7 @@ import {validStoriaDay,storyDue} from "./youtube-storia-core.mjs";
     if(resume && !blocked() && typeof cb==="function")cb();
   }
   function run(event,callback){
-    if(active||blocked())return false;
+    if(active||(blocked()&&!preview))return false;
     draw(event);
     active=true;window.rdiStoriaActive=true;finishCallback=callback;
     window.rdiPauseNews?.();
@@ -73,7 +74,7 @@ import {validStoriaDay,storyDue} from "./youtube-storia-core.mjs";
       progress.style.width="100%";
     }));
     timeout=setTimeout(()=>stop(true),duration);
-    watch=setInterval(()=>{if(blocked())stop(false)},400);
+    watch=setInterval(()=>{if(!preview&&blocked())stop(false)},400);
     return true;
   }
   function startIfDue(next){
