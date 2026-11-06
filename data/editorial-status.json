@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-06T22:06:14.719129+00:00",
-  "editorial_updated_at": "2026-11-06T18:54:15.116725+01:00",
-  "translations_updated_at": "2026-11-06T19:58:18.280185+00:00",
+  "news_updated_at": "2026-11-06T23:02:37.401916+00:00",
+  "editorial_updated_at": "2026-11-07T00:01:11.947322+01:00",
+  "translations_updated_at": "2026-11-06T22:05:11.940634+00:00",
   "feed_total": 75,
   "feed_extended_400": 2,
   "feed_missing_body": 73,
   "feed_short_body": 0,
-  "editorial_total": 21,
-  "archived_editorials": 181,
-  "translation_records": 47,
+  "editorial_total": 20,
+  "archived_editorials": 184,
+  "translation_records": 63,
   "pending_total": 129,
   "pending_filtered_out": 304,
-  "editorial_verde": 6,
-  "editorial_galben": 44,
+  "editorial_verde": 5,
+  "editorial_galben": 46,
   "editorial_rosu": 44,
   "pending": [
     {
@@ -618,29 +618,38 @@
   ],
   "recent_news": [
     {
-      "title": "Știri Jurnalul din 07 Noiembrie 2026 - Jurnalul",
-      "category": "România",
-      "published": "2026-11-06T22:00:03+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5TUzZGWEt0TGNlVl9STW43R21FclVNdDFqd3ZMdFpndm1saTJVX1VBZ1FRbldVT2k4SzR4VUNLVm9sUDlZUUE?oc=5",
-      "source": "Jurnalul",
-      "status": "roșu",
-      "words": 0
+      "title": "Il Papa a Montevideo: 'Fiero di essere americano e di avere votato'",
+      "category": "Italia",
+      "published": "2026-11-06T22:13:30+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/06/il-papa-in-sudamerica-e-atterrato-a-montevideo-benedetti-check-up-mai-avuto-dubbi-su-questo_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 492
     },
     {
-      "title": "Altieri: 'Ritiro la mia disponibilità all'incarico di presidente dell'Anac'",
+      "title": "Scontro tra opposizioni e governo sulla nomina alla presidenza dell'Anac, il leghista Altieri si ritira",
       "category": "Italia",
-      "published": "2026-11-06T21:47:06+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/altieri-ritiro-la-mia-disponibilita-allincarico-di-presidente-dellanac_213db7a9-2dd1-48af-8305-c65f12fa1116.html",
+      "published": "2026-11-06T22:11:14+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/scoppia-il-caso-della-nomina-alla-guida-dellanac-altieri-si-ritira_213db7a9-2dd1-48af-8305-c65f12fa1116.html",
       "source": "ANSA",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Serie A: Venezia batte Udinese 2-1 CRONACA e FOTO",
+      "title": "Il Venezia torna a vincere, 2-1 all'Udinese ultima e in crisi",
       "category": "Italia",
-      "published": "2026-11-06T21:42:39+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/06/serie-a-venezia-batte-udinese-2-1-cronaca-e-foto_b7f53128-638d-409c-a912-b3265c94615c.html",
+      "published": "2026-11-06T22:06:05+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/06/il-venezia-torna-a-vincere-2-1-alludinese-ultima-e-in-crisi_b7f53128-638d-409c-a912-b3265c94615c.html",
       "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Știri Jurnalul din 07 Noiembrie 2026 - Jurnalul",
+      "category": "România",
+      "published": "2026-11-06T22:00:03+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5TUzZGWEt0TGNlVl9STW43R21FclVNdDFqd3ZMdFpndm1saTJVX1VBZ1FRbldVT2k4SzR4VUNLVm9sUDlZUUE?oc=5",
+      "source": "Jurnalul",
       "status": "roșu",
       "words": 0
     },
@@ -688,15 +697,6 @@
       "source": "Digi24",
       "status": "galben",
       "words": 0
-    },
-    {
-      "title": "Il Papa a Montevideo: 'Fiero di essere americano e di avere votato'",
-      "category": "Italia",
-      "published": "2026-11-06T21:05:02+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/06/il-papa-in-sudamerica-e-atterrato-a-montevideo-benedetti-check-up-mai-avuto-dubbi-su-questo_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 492
     },
     {
       "title": "Volodimir Zelenski avertizează că Rusia pregăteşte un atac asupra sectorului energetic şi a podurilor din Ucraina",
@@ -1158,10 +1158,10 @@
       "words": 0
     },
     {
-      "title": "Intesa-Mps, l’Antitrust dice sì ma Generali chiama Bruxelles - la Repubblica",
+      "title": "Le Borse pagano l’incertezza: ondata di vendite su Big Tech - la Repubblica",
       "category": "Italia",
-      "published": "2026-11-06T00:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZVlBNHU3R0tYMnl4NTNRZUZHbjBvMVE1WE5PVFBTU1NnZUszcTdrU3hTTi11R2ZmaUxhTENhRE51anRsSmpHQ2dxODVfc1ota0k3XzJibE9XcWVQNkVWeXgyRUdNUEVOUlZ6ZEsxWWc5WDl5VkwzZ1VpWk5WenpaTmxyQ3BsSnRfMWZHNmZmYlg4bzJUNFRVRmdlZUZpU2JYLWJfSU52UGFEQnJSYmdB?oc=5",
+      "published": "2026-11-05T22:03:29+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOW5IRThLQUt3SVdjMmE0ekptaWZfN25UVEZ4enFCWGZTRVBpYnVoTHRsOHo0WVpYN2RlTG1Tdjlnd1NoVHhNRExtVnNUVmNSaXNjQWhrZmltUkI2clBxVUJVdUtteU8zUlRVTTRVQXUwcUNfNm5DcHpieWJCMzhyQ3U0bnE1aHVadm9MQkkycFBjVzI4ZlFzSFpsZ2gyQ1VhOWdV?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -1295,17 +1295,6 @@
   ],
   "radio_briefs": [
     {
-      "title": "Un muncitor român a murit într-o navă aflată în construcție în Italia - Informat.ro",
-      "category": "Diaspora",
-      "published": "2026-11-04T20:53:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNd1hESjFDQUhjT2hMUUdrLVFpeS1leWNWeGd1bWY2TWExR1VjZ2dzMUYwR29GdUVtVXhvNkxabExGZGwxVEtLWTBXdjI5QjEwbDJzVWs2bUVyY0Ntbnc5VDRpbE9rUk1jTFJoMHR0SjlQcDYwVlBPdnZuRjNiRWpfN29iUjlJcmstdDNrMnJzbGxIbHVtR3dEUHpTWjljWXo3SXc?oc=5",
-      "source": "Informat.ro",
-      "status": "verde",
-      "words": 428,
-      "intro": "Un român de 34 de ani a murit pe 4 noiembrie la șantierul naval Fincantieri din Marghera.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
       "title": "Ajutorul pentru încălzire în România: cererile depuse până pe 20 noiembrie pot acoperi și prima lună",
       "category": "Știri din redacție",
       "published": "2026-11-05T05:00:57+00:00",
@@ -1347,6 +1336,17 @@
       "status": "verde",
       "words": 582,
       "intro": "Il Consiglio dei ministri ha approvato il 28 ottobre 2026 il disegno di legge di bilancio per il 2027, aprendo una nuova discussione sulle pensioni.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
+      "title": "Il Papa a Montevideo: 'Fiero di essere americano e di avere votato'",
+      "category": "Italia",
+      "published": "2026-11-06T22:13:30+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/06/il-papa-in-sudamerica-e-atterrato-a-montevideo-benedetti-check-up-mai-avuto-dubbi-su-questo_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 492,
+      "intro": "Leone: 'Check-up benedetti, mai avuto dubbi su questo viaggio'",
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     }
   ]
