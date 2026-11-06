@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/rdi-storia.yml'
       - 'scripts/generate_rdi_storia.py'
+      - 'scripts/build_storia_shares.py'
   schedule:
     # Pubblicazione del mattino e recupero, in UTC.
     - cron: '45 3 * * *'
@@ -42,17 +43,21 @@ jobs:
           else
             python scripts/generate_rdi_storia.py
           fi
+      - name: Prepara pagine condivisibili su Facebook
+        run: |
+          python -m py_compile scripts/build_storia_shares.py
+          python scripts/build_storia_shares.py
       - name: Pubblica eventi, foto e archivio nel sito
         shell: bash
         run: |
           set -euo pipefail
-          if [ -z "$(git status --porcelain -- data/storia-oggi.json data/storia-archivio/)" ]; then
+          if [ -z "$(git status --porcelain -- data/storia-oggi.json data/storia-archivio/ storia-eventi/)" ]; then
             echo "RDI STORIA del giorno già pubblicato."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- data/storia-oggi.json data/storia-archivio/
+          git add -- data/storia-oggi.json data/storia-archivio/ storia-eventi/
           git commit -m "RDI STORIA: pubblica la storia del giorno"
           for attempt in 1 2 3 4 5; do
             if git pull --rebase origin main && git push origin HEAD:main; then
