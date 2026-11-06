@@ -1,0 +1,63 @@
+name: RDI STORIA - Aggiorna grafica YouTube senza interrompere audio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rdi-storia-live-refresh.yml'
+      - 'youtube-storia.js'
+      - 'youtube-storia.css'
+      - 'youtube-storia-core.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-storia-tv-safe-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Verifica file grafici già pubblicati
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in youtube-news.html youtube-storia.js youtube-storia-core.mjs youtube-storia.css data/storia-oggi.json; do
+            curl --fail --silent --show-error --retry 5 --retry-delay 3 --max-time 12 "https://radioromanii.duckdns.org/$file?v=$GITHUB_SHA" -o /dev/null
+            echo "Disponibile sul sito: $file"
+          done
+      - name: Autenticazione sicura Oracle
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo "::error::Chiave SSH Oracle non configurata"; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Host SSH non configurato"; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Ricarica esclusivamente Chromium RDI senza riavviare FFmpeg
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 -o ServerAliveInterval=5 -o ServerAliveCountMax=2 ubuntu@129.151.255.41 <<'REMOTE'
+          set -euo pipefail
+          before=$(pgrep -x ffmpeg | sort)
+          test -n "$before" || { echo "Errore: FFmpeg non trovato; nessun riavvio eseguito"; exit 1; }
+          pgrep -u ubuntu -f chromium >/dev/null || { echo "Errore: Chromium non trovato; nessun riavvio eseguito"; exit 1; }
+          test -e /home/ubuntu/.Xauthority || { echo "Errore: display X non configurato"; exit 1; }
+          env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+r
+          sleep 5
+          after=$(pgrep -x ffmpeg | sort)
+          test "$before" = "$after" || { echo "::error::FFmpeg non invariato"; exit 1; }
+          pgrep -u ubuntu -f chromium >/dev/null
+          echo "RDI_STORIA_LIVE_REFRESH=OK; FFmpeg invariato, Chromium ricaricato"
+          REMOTE
