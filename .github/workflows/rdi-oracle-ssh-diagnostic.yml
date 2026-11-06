@@ -1,0 +1,32 @@
+name: RDI - Diagnostica connessione Oracle SSH
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rdi-oracle-ssh-diagnostic.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Test senza modifiche al server Oracle
+        shell: bash
+        run: |
+          set -u
+          echo "Verifico connessione pubblica RDI e porta TCP 22 (nessuna credenziale necessaria)"
+          if curl -sSIL --max-time 10 'https://radio-romanii-italia.duckdns.org/api/nowplaying/radio-romanii-italia' >/dev/null; then
+            echo "API_RADIO_HTTPS=OK"
+          else
+            echo "API_RADIO_HTTPS=FAILED"
+          fi
+          if timeout 10 bash -c 'exec 3<>/dev/tcp/129.151.255.41/22' 2>/tmp/rdi-port22-error; then
+            echo "ORACLE_TCP_22=OPEN"
+          else
+            echo "ORACLE_TCP_22=UNREACHABLE"
+            sed -e 's/129\.151\.255\.41/[server]/g' /tmp/rdi-port22-error | head -3 || true
+          fi
+          echo "Diagnostica completa: nessuna modifica alla diretta."
