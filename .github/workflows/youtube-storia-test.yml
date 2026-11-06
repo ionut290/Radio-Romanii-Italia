@@ -1,0 +1,33 @@
+name: RDI STORIA - YouTube Live tests
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'youtube-news.html'
+      - 'youtube-storia.js'
+      - 'youtube-storia.css'
+      - 'youtube-storia-core.mjs'
+      - 'data/storia-oggi.json'
+      - 'data/youtube-build.json'
+      - 'tests/youtube-storia.test.mjs'
+      - '.github/workflows/youtube-storia-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sintassi modulo della storia
+        run: |
+          node --input-type=module --check < youtube-storia.js
+          node --check youtube-storia-core.mjs
+      - name: Verifica rotazione e dati RDI STORIA
+        run: node --test tests/youtube-storia.test.mjs
