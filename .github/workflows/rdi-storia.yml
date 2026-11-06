@@ -59,3 +59,20 @@ jobs:
           done
           echo "::error::Edizione generata ma non pubblicata su GitHub."
           exit 1
+
+      - name: Collaudo automatico della prossima edizione (senza pubblicarla)
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import sys
+          from zoneinfo import ZoneInfo
+          sys.path.insert(0, 'scripts')
+          from generate_rdi_storia import create
+          tomorrow = dt.datetime.now(ZoneInfo('Europe/Rome')).date() + dt.timedelta(days=1)
+          result = create(tomorrow)
+          assert len(result['events']) == 5
+          assert sum(bool(e.get('image')) for e in result['events']) >= 2
+          print('Collaudo riuscito:', tomorrow, ', eventi:', len(result['events']))
+          PY
