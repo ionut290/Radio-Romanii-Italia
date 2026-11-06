@@ -27,8 +27,8 @@ test("phone and small-screen layouts use readable stacked cards",()=>{
   assert.match(css,/overflow-x:clip/);
 });
 
-test("the sponsor banner and the live radio player use one guaranteed aligned desktop row",()=>{
-  assert.match(html,/<div class="rdi-broadcast-layout"[^>]*><div class="radio-brand-hero"/);
+test("the live radio player stays inside the broadcast wrapper on desktop",()=>{
+  assert.match(html,/<div class="rdi-broadcast-layout"[^>]*>[\\s\\S]*?<section class="card radio-compact"/);
   assert.match(html,/<\/audio><\/section><\/div><section id="rdi-featured"/);
   assert.match(css,/\.rdi-broadcast-layout\{[\s\S]*?grid-template-columns:minmax\(0,1\.5fr\) minmax\(365px,\.86fr\)/);
   assert.match(css,/\.rdi-broadcast-layout>\.radio-brand-hero\{[\s\S]*?grid-column:1;\s*grid-row:1;/);
