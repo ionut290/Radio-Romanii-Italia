@@ -88,7 +88,7 @@ def years_match(a: dict, b: dict) -> bool:
 def commons_filename(url: str) -> str | None:
     try:
         parsed = urllib.parse.urlsplit(url)
-        if parsed.scheme != "https" or parsed.hostname != "upload.wikimedia.org":
+        if parsed.scheme != "https" or parsed.hostname not in {"upload.wikimedia.org", "thumb.wikimedia.org"}:
             return None
         parts = urllib.parse.unquote(parsed.path).split("/")
         if "commons" not in parts:
@@ -114,7 +114,7 @@ def free_commons_image(event: dict, metadata_cache: dict) -> dict:
     for page in (event.get("pages") or [])[:4]:
         if not isinstance(page, dict):
             continue
-        thumb = (page.get("thumbnail") or {}).get("source") or (page.get("originalimage") or {}).get("source")
+        thumb = (page.get("originalimage") or {}).get("source") or (page.get("thumbnail") or {}).get("source")
         file = commons_filename(str(thumb or ""))
         if not file:
             continue
@@ -137,7 +137,7 @@ def free_commons_image(event: dict, metadata_cache: dict) -> dict:
         if not license_ok(licence):
             continue
         image_url = info.get("thumburl") or info.get("url")
-        if not image_url or not image_url.startswith("https://upload.wikimedia.org/wikipedia/commons/"):
+        if not image_url or not (urllib.parse.urlsplit(image_url).scheme == "https" and urllib.parse.urlsplit(image_url).hostname in {"upload.wikimedia.org", "thumb.wikimedia.org"} and urllib.parse.urlsplit(image_url).path.startswith("/wikipedia/commons/")):
             continue
         artist = short_text((ext.get("Artist") or {}).get("value") or "Wikimedia Commons", 110)
         file_page = "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(file.replace(" ", "_"), safe="(),._-")
