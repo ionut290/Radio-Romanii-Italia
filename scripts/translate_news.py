@@ -45,6 +45,17 @@ def source_lang(x):
         return "it"
     if any(z in url for z in ("digi24.ro", "mae.ro", "rotalianul.com")) or "digi24" in source:
         return "ro"
+    # Romanian editorial/RSS publishers often use Google News proxy URLs.
+    # Classify only sources with unambiguous Romanian-language publications.
+    romanian_sources = (
+        "antena 3", "mediafax", "adevărul", "adevarul", "știridiaspora",
+        "stiridiaspora", "libertatea", "informat.ro", "monitorul de galati",
+        "monitorul de galați", "capital.ro", "kanal d romania",
+        "orangesport", "gazeta românească", "gazeta romaneasca",
+        "agerpres", "rotalianul",
+    )
+    if any(name in source for name in romanian_sources):
+        return "ro"
     # Unknown-language sources must not be mislabeled or machine-translated without detection.
     return ""
 
@@ -79,7 +90,13 @@ def translate(value, source, target):
     return " ".join(converted)
 
 count = 0
-for key, x in items.items():
+# Prioritize Romanian diaspora/Romania reports missing Italian copy; Italian
+# originals can already appear on the broadcast without translation.
+ordered_items = sorted(items.items(), key=lambda pair: (
+    0 if source_lang(pair[1]) == "ro" else 1,
+    0 if pair[1].get("category") == "Diaspora" else 1,
+))
+for key, x in ordered_items:
     source = source_lang(x)
     if not source:
         continue
@@ -96,7 +113,7 @@ for key, x in items.items():
         continue
     translations[key] = record
     count += 1
-    if count >= 8:
+    if count >= 20:
         break
 translations = {key: val for key, val in translations.items() if key in items}
 CACHE.write_text(json.dumps({"updated_at": now.isoformat(), "items": translations}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
