@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""RDI STORIA: genera cinque efemeridi documentate per la data italiana.
+"""RDI STORIA: genera tutti gli eventi documentati della data italiana.
 
 Fonte primaria: Wikimedia On This Day (Wikipedia).
 Immagini: solo Wikimedia Commons con licenza libera verificata dall'API.
@@ -163,72 +163,117 @@ def page_source(event: dict, lang: str) -> str | None:
     return None
 
 
+def country_for(text: str) -> str:
+    """Classifica la priorità geografica senza escludere gli altri eventi."""
+    value = " " + re.sub(r"\s+", " ", text).lower() + " "
+    italy = (
+        r"\bitalia(?:na|no|ne|ni)?\b", r"\broma(?:no|na|ni|ne)?\b",
+        r"\b(venezia|veneto|milano|torino|napoli|firenze|genova|bologna|"
+        r"palermo|sicilia|sardegna|toscana|piemonte|lombardia|risorgimento|"
+        r"garibaldi|cavour|mussolini|repubblica italiana|stato pontificio)\b",
+    )
+    romania = (
+        r"\bromania\b", r"\bromena?(?:i|e)?\b", r"\brumena?(?:i|e)?\b",
+        r"\b(bucarest|bucharest|transilvania|transilvania|moldavia|valacchia|"
+        r"cluj|timișoara|timisoara|iași|iasi|brasov|brașov|costanza|"
+        r"ceaus[eș]scu|carol i di romania|stefano il grande)\b",
+    )
+    if any(re.search(pattern, value, re.I) for pattern in italy):
+        return "Italia"
+    if any(re.search(pattern, value, re.I) for pattern in romania):
+        return "Romania"
+    return "Mondo"
+
+
+def priority(event: dict) -> int:
+    return {"Italia": 0, "Romania": 1}.get(event.get("country"), 2)
+
+
 def create(date: dt.date) -> dict:
+    # Il feed italiano contiene molti più di cinque fatti: conservarli tutti.
     primary = wikipedia_feed("it", date)
-    language = "it"
-    if len(primary) < 5:
-        primary = wikipedia_feed("en", date)
-        language = "en"
-    if len(primary) < 5:
-        raise RuntimeError("Troppi pochi eventi attendibili dalla fonte Wikipedia.")
+    if not primary:
+        raise RuntimeError("Il feed storico in italiano non è disponibile.")
     romanian = wikipedia_feed("ro", date)
     entries = []
-    used_years = set()
+    seen = set()
     cache = {}
-    # Prefer events with a Commons image that has reusable license metadata.
-    candidates = []
-    for raw in primary[:90]:
+
+    for raw in primary:
         try:
             year = int(raw["year"])
         except (ValueError, TypeError, KeyError):
             continue
-        text = short_text(raw.get("text") or "")
-        if not text or year < 1 or year > date.year:
+        content = short_text(raw.get("text") or "")
+        if not content or year < 1 or year > date.year:
             continue
-        picture = free_commons_image(raw, cache)
-        candidates.append((raw, year, text, picture))
-        if len(candidates) >= 25:
-            break
-    candidates.sort(key=lambda row: (bool(row[3]), len(row[2])), reverse=True)
-    for raw, year, content, picture in candidates:
-        if year in used_years:
-            continue
-        source = page_source(raw, language)
+        source = page_source(raw, "it")
         if not source:
             continue
         title = title_for(raw)
-        item = {
-            "year": year, "category": "Storia",
+        if len(title) < 10 or len(content) < 25:
+            continue
+        # Uno stesso anno può avere più fatti realmente distinti.
+        page_ids = tuple(sorted(p.get("wikibase_item") for p in raw.get("pages", [])
+                                if isinstance(p, dict) and p.get("wikibase_item")))
+        key = (year, page_ids or re.sub(r"\W+", "", content.lower())[:120])
+        if key in seen:
+            continue
+        seen.add(key)
+        country = country_for(title + " " + content)
+        entry = {
+            "year": year,
+            "country": country,
+            "category": "Storia",
             "title_it": title,
             "text_it": content,
             "source": source,
         }
-        if language == "en":
-            # Non etichettare una traduzione inesistente come italiana.
-            item["title_it"] = title
-            item["text_it"] = content
-            item["original_language"] = "en"
-        if language == "it" and romanian:
-            translated = next((r for r in romanian if years_match(raw, r)), None)
-            if translated:
-                item["title_ro"] = title_for(translated)
-                item["text_ro"] = short_text(translated.get("text") or "")
-        item.update(picture)
-        entries.append(item)
-        used_years.add(year)
-        if len(entries) >= 5:
-            break
-    if len(entries) < 5:
-        raise RuntimeError("Meno di cinque eventi unici e con fonte verificabile.")
-    # Non pubblicare cinque contenuti privi di foto.
-    if sum(bool(x.get("image")) for x in entries) < 2:
-        raise RuntimeError("Sono disponibili meno di due immagini con licenza verificata; dati invariati.")
-    entries.sort(key=lambda row: row["year"])
+        if romanian:
+            match = next((other for other in romanian if years_match(raw, other)), None)
+            if match:
+                entry["title_ro"] = title_for(match)
+                entry["text_ro"] = short_text(match.get("text") or "")
+        entries.append((entry, raw))
+
+    if not entries:
+        raise RuntimeError("Nessun evento del giorno con fonte verificabile.")
+
+    # Precedenza agli avvenimenti italiani e romeni, poi al resto del mondo.
+    entries.sort(key=lambda pair: (priority(pair[0]), pair[0]["year"]))
+
+    # Le fotografie sono facoltative: mai eliminare un fatto verificato
+    # perché non possiede un'immagine libera. Limitiamo le chiamate Commons.
+    for entry, raw in entries[:14]:
+        entry.update(free_commons_image(raw, cache))
+
+    # Conserva anche gli articoli curati a mano già pubblicati per la data,
+    # se distinti: non si perde la selezione editoriale originale.
+    archive_file = ARCHIVE / (date.isoformat() + ".json")
+    if archive_file.exists():
+        try:
+            saved = json.loads(archive_file.read_text(encoding="utf-8"))
+            if saved.get("status") == "curated":
+                for item in saved.get("events", []):
+                    if not isinstance(item, dict) or not item.get("source"):
+                        continue
+                    saved_title = re.sub(r"\W+", "", str(item.get("title_it", "")).lower())
+                    if any(re.sub(r"\W+", "", str(entry.get("title_it", "")).lower()) == saved_title
+                           for entry, _ in entries):
+                        continue
+                    item = dict(item)
+                    item["country"] = item.get("country") or country_for(
+                        str(item.get("title_it", "")) + " " + str(item.get("text_it", "")))
+                    entries.append((item, None))
+        except (OSError, ValueError, TypeError):
+            pass
+
+    entries.sort(key=lambda pair: (priority(pair[0]), pair[0]["year"]))
     return {
         "date": date.isoformat(), "editorial": "RDI STORIA", "status": "wikipedia-feed",
-        "language": language, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
-        "attribution": "Testi basati sulla Wikipedia On This Day feed (CC BY-SA); fonte linkata per ogni evento. Immagini Wikimedia Commons con licenza indicata.",
-        "events": entries,
+        "language": "it", "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+        "attribution": "Testi basati sul feed Wikipedia On This Day (CC BY-SA); fonte per ogni evento. Fotografie Wikimedia Commons con licenza indicata, quando disponibili.",
+        "events": [entry for entry, _ in entries],
     }
 
 
