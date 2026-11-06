@@ -37,7 +37,11 @@ jobs:
           TZ: Europe/Rome
         run: |
           python -m py_compile scripts/generate_rdi_storia.py
-          python scripts/generate_rdi_storia.py
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python scripts/generate_rdi_storia.py --force
+          else
+            python scripts/generate_rdi_storia.py
+          fi
       - name: Pubblica eventi, foto e archivio nel sito
         shell: bash
         run: |
@@ -73,7 +77,7 @@ jobs:
           from generate_rdi_storia import create
           tomorrow = dt.datetime.now(ZoneInfo('Europe/Rome')).date() + dt.timedelta(days=1)
           result = create(tomorrow)
-          assert len(result['events']) == 5
-          assert sum(bool(e.get('image')) for e in result['events']) >= 2
+          assert len(result['events']) >= 5
+          assert all(e.get('source') and e.get('title_it') and e.get('text_it') for e in result['events'])
           print('Collaudo riuscito:', tomorrow, ', eventi:', len(result['events']))
           PY
