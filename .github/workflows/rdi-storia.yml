@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/rdi-storia.yml'
+      - 'scripts/generate_rdi_storia.py'
   schedule:
     # Pubblicazione del mattino e recupero, in UTC.
     - cron: '45 3 * * *'
