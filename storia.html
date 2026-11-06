@@ -75,6 +75,10 @@ footer{padding:30px 20px;background:#15273e;color:#dae2ec;text-align:center;font
 footer a{color:#fff}
 @media(max-width:730px){.sitebar-inner{padding:10px 15px}.brand span{max-width:170px;font-size:11px}.backlink{font-size:11px;padding:8px}.hero{padding:43px 0 18px}.hero-mark{top:38px}main{padding:0 15px 50px}.controls{padding:15px}.grid{grid-template-columns:1fr;gap:16px}.story:first-child{display:flex;grid-column:auto}.story:first-child .media{height:240px;min-height:0}.story:first-child .story-year{font-size:38px}.story:first-child h3{font-size:29px}.story-content{padding:21px 20px}.featurebar{flex-wrap:wrap}.featurebar span{margin-left:0}}
 @media(prefers-reduced-motion:no-preference){.story{transition:transform .2s,box-shadow .2s}.story:hover{transform:translateY(-3px);box-shadow:0 17px 40px #453b2520}}
+.story-share{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.story-share a,.story-share button{font:800 13px system-ui,sans-serif;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:11px 14px;border:1px solid #bed0e2;min-height:42px}
+.story-share .facebook-share{background:#1877f2;color:#fff;border-color:#1877f2}
+.story-share .copy-share{background:#f1eadb;color:#203653;border-color:#ded2bc}
 </style>
 </head>
 <body>
@@ -174,7 +178,21 @@ function renderCards(){
   const photoLink=safeUrl(e.image_page,["commons.wikimedia.org"]);
   if(photoLink){const credit=node("div","credit");const a=node("a",null,L().photo+" ↗");a.href=photoLink;a.target="_blank";a.rel="noopener noreferrer";credit.append(a,node("span",null," · "+(e.image_credit||"Wikimedia Commons")+" · "+(e.image_license||"")));refs.append(credit)}
   const note=tr(e,"image_note");if(note)refs.append(node("div","credit",note));
-  body.append(refs);article.append(media,body);holder.append(article);
+  const eventNumber=(dataset?.events||[]).indexOf(e)+1;
+  const eventUrl=new URL("./storia-eventi/"+date+"/"+eventNumber+".html",location.href).href;
+  const sharing=node("div","story-share");
+  const facebook=node("a","facebook-share",lang==="ro"?"f Distribuie pe Facebook":"f Condividi su Facebook");
+  facebook.href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(eventUrl);
+  facebook.target="_blank";facebook.rel="noopener noreferrer";
+  facebook.setAttribute("aria-label",(lang==="ro"?"Distribuie pe Facebook: ":"Condividi su Facebook: ")+tr(e,"title"));
+  const copy=node("button","copy-share",lang==="ro"?"Copiază linkul":"Copia link");
+  copy.type="button";
+  copy.addEventListener("click",async()=>{
+    try{await navigator.clipboard.writeText(eventUrl);copy.textContent=lang==="ro"?"Copiat!":"Copiato!";}
+    catch(err){prompt(lang==="ro"?"Copiază linkul:":"Copia questo link:",eventUrl);}
+  });
+  sharing.append(facebook,copy);
+  body.append(refs,sharing);article.append(media,body);holder.append(article);
  });
 }
 async function loadDate(){
