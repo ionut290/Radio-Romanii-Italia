@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ro" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Radio Românii din Italia — Știri TV</title>
+<html lang="it" translate="no" class="notranslate"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Radio Românii din Italia — Notizie TV</title>
 <style>
 /* The broadcast page must never show the virtual desktop pointer. */
 html,body,body *,body *::before,body *::after{cursor:none!important}
@@ -31,15 +31,15 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
  0%,100%{background:#80242b;box-shadow:0 0 0 rgba(229,52,57,0)}
  50%{background:#f13b40;box-shadow:0 0 18px rgba(229,52,57,.65)}
 }
-</style><link rel="stylesheet" href="./youtube-geopolitica.css?v=20261027-1"><link rel="stylesheet" href="./youtube-tg-sera.css?v=20261030-footage-1"><link rel="stylesheet" href="./youtube-camera-breaks.css?v=20261029-city-1"><link rel="stylesheet" href="./youtube-landscapes.css?v=20261029-italy-romania-2"><link rel="stylesheet" href="./youtube-weather.css?v=20261030-weather-2"><link rel="stylesheet" href="./youtube-dj-promo.css?v=20261030-dj-1"><link rel="stylesheet" href="./youtube-philosophy.css?v=20261030-2"><link rel="stylesheet" href="./youtube-storia.css?v=20261106-storia-tv-1"></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● ȘTIRI LIVE</div><div id="rdiClock" aria-label="Ora Italiei"><span id="rdiClockTime">--:--</span><span id="rdiClockDate">ITALIA</span></div>
-<div id="appQr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;margin=6&amp;data=https%3A%2F%2Fradioromanii.duckdns.org%2F" alt="Cod QR aplicație RDI" onerror="this.style.display='none'"><span>APLICAȚIA RDI</span></div>
-<div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div></div><div id="copy"><div id="category">ȘTIRI</div><h1 id="headline">Se încarcă știrile...</h1><p id="summary">Actualizări din România, Italia și diaspora românească.</p><div id="source">Radio Românii din Italia</div></div></div>
-<div id="rdiExtras" hidden><span id="rdiExtraLabel"></span><span id="rdiExtraValue"></span></div><div id="progress"></div><div id="ticker"><div id="tickerLabel">ACTUALITATE</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • Acasă, oriunde ai fi! • Știri, muzică și comunitate</div></div></div>
+</style><link rel="stylesheet" href="./youtube-geopolitica.css?v=20261027-1"><link rel="stylesheet" href="./youtube-tg-sera.css?v=20261030-footage-1"><link rel="stylesheet" href="./youtube-camera-breaks.css?v=20261029-city-1"><link rel="stylesheet" href="./youtube-landscapes.css?v=20261029-italy-romania-2"><link rel="stylesheet" href="./youtube-weather.css?v=20261030-weather-2"><link rel="stylesheet" href="./youtube-dj-promo.css?v=20261030-dj-1"><link rel="stylesheet" href="./youtube-philosophy.css?v=20261030-2"><link rel="stylesheet" href="./youtube-storia.css?v=20261106-storia-tv-1"></head><body><div id="stage"><div id="logo">🇷🇴 🇮🇹 RADIO ROMÂNII DIN ITALIA</div><div id="badge">● NOTIZIE LIVE</div><div id="rdiClock" aria-label="Ora Italiei"><span id="rdiClockTime">--:--</span><span id="rdiClockDate">ITALIA</span></div>
+<div id="appQr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;margin=6&amp;data=https%3A%2F%2Fradioromanii.duckdns.org%2F" alt="Codice QR app RDI" onerror="this.style.display='none'"><span>APP RDI</span></div>
+<div id="panel"><div id="photoBox"><img id="photo" alt=""><div id="fallback">📰</div></div><div id="copy"><div id="category">NOTIZIE</div><h1 id="headline">Caricamento notizie...</h1><p id="summary">Aggiornamenti dalla Romania, dall’Italia e dalla diaspora romena.</p><div id="source">Radio Românii din Italia</div></div></div>
+<div id="rdiExtras" hidden><span id="rdiExtraLabel"></span><span id="rdiExtraValue"></span></div><div id="progress"></div><div id="ticker"><div id="tickerLabel">ATTUALITÀ</div><div id="tickerText">RADIO ROMÂNII DIN ITALIA • A casa, ovunque tu sia! • Notizie, musica e comunità</div></div></div>
 <script>
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261106-rdi-storia-tv-3';
+const RDI_YOUTUBE_BUILD='20261106-italian-ui-1';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -48,11 +48,16 @@ async function refreshWhenDeployed(){
  }catch(e){/* Keep the broadcast running if GitHub Pages is briefly unavailable. */}
 }
 setInterval(refreshWhenDeployed,60000);
-const clockTimeFmt=new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
-const clockDateFmt=new Intl.DateTimeFormat('ro-RO',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',year:'numeric'});
-function updateRdiClock(){const now=new Date();$('rdiClockTime').textContent=clockTimeFmt.format(now);$('rdiClockDate').textContent=clockDateFmt.format(now)+' · ORA ITALIEI'}
+const clockTimeFmt=new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+const clockDateFmt=new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',year:'numeric'});
+function updateRdiClock(){const now=new Date();$('rdiClockTime').textContent=clockTimeFmt.format(now);$('rdiClockDate').textContent=clockDateFmt.format(now)+' · ORA ITALIANA'}
 updateRdiClock();setInterval(updateRdiClock,1000);
 let stories=[],index=0,started=false,tickerAnimation=null,nextTimer=null,sequence=0,photoTimer=null;
+function italianCategory(value){
+ const raw=String(value||'').trim();
+ const labels={'Actualitate':'Attualità','Știri':'Notizie','Stiri':'Notizie','România':'Romania','Evenimente':'Eventi','Politică':'Politica','Economie':'Economia','Sănătate':'Salute','Educație':'Istruzione','Cultură':'Cultura','Sport':'Sport','Diaspora':'Diaspora','Italia':'Italia','Externe':'Esteri','Internațional':'Internazionale','Internaţional':'Internazionale','Social':'Società','Tehnologie':'Tecnologia'};
+ return labels[raw]||raw||'Attualità';
+}
 function valid(x){return x&&typeof x.title==='string'&&x.title.trim().length>8}
 async function load(){
  try{
@@ -63,8 +68,8 @@ async function load(){
   ]);
   const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   const events=(eventData.events||[]).filter(x=>valid(x)&&(x.endDate||x.date||'')>=today).map(x=>({
-   category:'Evenimente',title:x.title,summary:x.description||[x.city,x.region].filter(Boolean).join(' · '),
-   source:x.source||'Evenimente RDI',published:x.published||x.date||today,
+   category:'Eventi',title:x.title,summary:x.description||[x.city,x.region].filter(Boolean).join(' · '),
+   source:x.source||'Eventi RDI',published:x.published||x.date||today,
    image:x.image||'',url:x.url||'',city:x.city||''
   }));
   // Only today's publications in the Italian timezone enter the YouTube news rotation.
@@ -85,7 +90,7 @@ async function load(){
   // Round-robin among categories so no category or event gets buried behind dozens of headlines.
   const buckets=new Map();
   for(const x of incoming){
-   const category=x.category||'Actualitate';
+   const category=italianCategory(x.category);
    if(!buckets.has(category))buckets.set(category,[]);
    buckets.get(category).push(x);
   }
@@ -99,7 +104,7 @@ async function load(){
    stories=updated;
    if(current){const position=stories.findIndex(x=>x.title===current);index=position>=0?position:0;}
    if(!started){started=true;show();}
-  }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Nu sunt știri publicate astăzi';$('summary').textContent='Revenim cu actualizări din România, Italia și diaspora.';$('category').textContent='ȘTIRI';$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
+  }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Nessuna notizia pubblicata oggi';$('summary').textContent='Torneremo con aggiornamenti da Romania, Italia e diaspora.';$('category').textContent='NOTIZIE';$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
  }catch(e){console.warn('News update failed',e)}
 }
 // YouTube uses a short display excerpt; stored articles and Facebook copies stay complete.
@@ -113,15 +118,15 @@ function show(){
  if(!stories.length||window.rdiSpotActive||window.rdiGeoActive||window.rdiTgActive||window.rdiWeatherActive||window.rdiDjPromoActive||window.rdiPhilosophyActive||window.rdiStoriaActive)return;
  if(window.rdiCameraActive||window.rdiLandscapeActive)return;
  const x=stories[index%stories.length];
- $('category').textContent=x.category||'Actualitate';
+ $('category').textContent=italianCategory(x.category);
  $('headline').textContent=x.title;
  const displaySummary=tvExcerpt(x.summary);
- $('summary').textContent=displaySummary||'Citește mai multe pe site-ul Radio Românii din Italia.';
- $('source').textContent=[x.source||'Radio Românii din Italia',x.published?new Date(x.published).toLocaleDateString('ro-RO'):null].filter(Boolean).join(' • ');
+ $('summary').textContent=displaySummary||'Leggi gli approfondimenti sul sito di Radio Românii din Italia.';
+ $('source').textContent=[x.source||'Radio Românii din Italia',x.published?new Date(x.published).toLocaleDateString('it-IT'):null].filter(Boolean).join(' • ');
  const img=$('photo'),fb=$('fallback');
  img.onload=null;img.onerror=null;img.removeAttribute('src');
  img.style.display='none';fb.style.display='flex';
- fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':x.category==='Evenimente'?'📅':'📰';
+ fb.textContent=x.category==='Italia'?'🇮🇹':x.category==='România'?'🇷🇴':x.category==='Eventi'?'📅':'📰';
  // Publisher photos can block the Chromium instance used for the live stream.
  // Try the original once, then always load the RDI illustration stored with the story.
  const candidates=[x.image,x.fallbackImage].filter(url=>typeof url==='string'&&/^(https:\/\/|\/(?!\/)|\.\/(?!\/))/.test(url));
@@ -200,7 +205,7 @@ load();setInterval(load,300000);
 </style>
 <script>
 (()=>{'use strict';
-const bar=document.createElement('div');bar.id='rdiSongBar';bar.setAttribute('aria-label','Melodia in onda');
+const bar=document.createElement('div');bar.id='rdiSongBar';bar.setAttribute('aria-label','Brano in onda');
 const image=document.createElement('img');image.id='rdiSongArt';image.alt='Copertina';
 const name=document.createElement('span');name.id='rdiSongName';name.textContent='Radio Românii din Italia';
 bar.append(image,name);document.getElementById('stage').append(bar);
