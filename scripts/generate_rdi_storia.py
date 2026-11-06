@@ -266,8 +266,8 @@ def create(date: dt.date) -> dict:
                 item["country"] = item.get("country") or country_for(
                     str(item.get("title_it", "")) + " " + str(item.get("text_it", "")))
                 entries.append((item, None))
-    except (OSError, ValueError, TypeError):
-        pass
+        except (OSError, ValueError, TypeError):
+            pass
 
     entries.sort(key=lambda pair: (priority(pair[0]), pair[0]["year"]))
     return {
