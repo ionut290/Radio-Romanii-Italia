@@ -155,6 +155,38 @@ button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #ffd
 @media(max-width:390px){.track,.track:nth-child(-n+3){grid-template-columns:30px 46px minmax(0,1fr);gap:7px;padding:11px}.cover{width:46px;height:46px}.track .position{font-size:17px}.track .votebox{grid-column:1/-1}.links a{flex-basis:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
+
+/* RDI Spotlight — compact gallery and podium v2 */
+main{max-width:1190px}
+.tracks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;align-items:stretch}
+.track,.track:nth-child(-n+3){grid-column:span 3;display:grid;grid-template-columns:45px 62px minmax(0,1fr);align-content:start;align-items:center;gap:12px;padding:18px;border-radius:18px;min-height:0;max-width:none;background:linear-gradient(143deg,#1a385c,#0c2341);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.track:nth-child(-n+3){grid-column:span 2;grid-template-columns:40px 58px minmax(0,1fr);padding:17px 14px;border-color:#d6b36e75;background:linear-gradient(145deg,#213e60,#102c4f 72%,#0d2545);box-shadow:0 10px 26px #0003}
+.track:nth-child(1){border-color:#ffc96e;box-shadow:0 0 0 1px #ffc96e45,0 12px 30px #efb94c26}
+.track:nth-child(2){border-color:#9bbedc91}
+.track:nth-child(3){border-color:#dcae7c88}
+.track:nth-child(-n+3) .position{font-size:21px;line-height:1.2}
+.track:nth-child(-n+3) .position:before{font-size:19px;margin:0 0 5px}
+.track .position,.track:nth-child(n+4) .position{font-size:23px;line-height:1.1}
+.track .cover,.track:nth-child(-n+3) .cover{width:62px;height:62px;font-size:29px;border-radius:13px;flex:none}
+.track:nth-child(-n+3) .cover{width:58px;height:58px;font-size:27px}
+.track>div:nth-child(3){min-width:0;align-self:center}
+.track h2,.track:nth-child(n+4) h2{font-size:clamp(17px,1.65vw,21px);line-height:1.3;letter-spacing:-.03em;overflow-wrap:anywhere}
+.track p,.track:nth-child(n+4) p{font-size:12px;margin:4px 0 6px}
+.track .listen{margin:5px 0}
+.track .listen audio{width:100%;max-width:325px;height:37px}
+.track .listen a{font-size:12px}
+.track .votes{margin-top:4px;font-size:12px}
+.track .votebox,.track:nth-child(-n+3) .votebox{grid-column:1/-1;display:flex;justify-content:flex-end;align-items:center;gap:9px;flex-wrap:nowrap;margin-top:4px;padding-top:12px;border-top:1px solid #7898b440}
+.track .votebox button,.track:nth-child(-n+3) .votebox button{flex:1 1 0;min-width:0;min-height:39px;padding:8px 8px;font-size:12px;white-space:nowrap}
+.track .votebox .vote:disabled{background:linear-gradient(125deg,#b7a06a,#8b805e);color:#f7f7f4;box-shadow:none}
+.track:hover{transform:translateY(-3px);box-shadow:0 16px 32px #0005}
+.comments-panel{grid-column:1/-1}
+.track.open{border-color:#ffd780}
+@media(min-width:991px){.track:nth-child(-n+3){grid-template-columns:1fr 58px;row-gap:9px}.track:nth-child(-n+3) .position{grid-column:1;grid-row:1}.track:nth-child(-n+3) .cover{grid-column:2;grid-row:1}.track:nth-child(-n+3)>div:nth-child(3){grid-column:1/-1;grid-row:2;align-self:start}.track:nth-child(-n+3) .votebox{grid-row:3}}
+@media(max-width:990px){.tracks{grid-template-columns:repeat(2,minmax(0,1fr))}.track,.track:nth-child(-n+3){grid-column:span 1}.track:nth-child(-n+3){grid-template-columns:40px 58px minmax(0,1fr)}}
+@media(max-width:640px){.tracks{grid-template-columns:minmax(0,1fr);gap:11px}.track,.track:nth-child(-n+3){grid-column:1;grid-template-columns:34px 54px minmax(0,1fr);padding:13px;gap:10px}.track .cover,.track:nth-child(-n+3) .cover{width:54px;height:54px;font-size:24px}.track .position,.track:nth-child(-n+3) .position,.track:nth-child(n+4) .position{font-size:20px}.track .votebox,.track:nth-child(-n+3) .votebox{grid-column:1/-1;flex-wrap:nowrap}.track .votebox button,.track:nth-child(-n+3) .votebox button{font-size:12px}.track .listen audio{max-width:100%}}
+@media(max-width:360px){.track,.track:nth-child(-n+3){grid-template-columns:29px 45px minmax(0,1fr);gap:7px;padding:11px}.track .cover,.track:nth-child(-n+3) .cover{width:45px;height:45px}.track .votebox{grid-column:1/-1}}
+
 </style></head><body><main>
 <header><a href="./index.html">← Radio Românii din Italia</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></header>
 <section class="hero"><div class="hero-art" aria-hidden="true">🎧</div>
