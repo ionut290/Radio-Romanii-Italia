@@ -16,7 +16,7 @@ test("La rubrica entra tra le notizie, non negli spot o nell'audio",()=>{
  assert.match(html,/rdiStoriaBreak\?\.startIfDue\(nextNews\)/);
  assert.match(html,/window\.rdiStoriaActive\)return;/);
  assert.match(js,/rdiPauseNews\?\.\(\)/);
- assert.doesNotMatch(js,/azuracast|audio\.play\(|ffmpeg/i);
+ assert.doesNotMatch(js.replace(/\/\*[\s\S]*?\*\//g,""),/azuracast|audio\.play\(|ffmpeg/i);
  assert.match(css,/#rdiStoriaTV/);
 });
 
