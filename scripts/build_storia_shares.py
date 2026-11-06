@@ -80,6 +80,9 @@ p{{font-size:19px}}.actions{{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
     print(f"RDI STORIA social: {date}, {len(events)} pagine individuali")
 
 def main():
+    # Backfill archive editions too; a shared article keeps its own stable URL.
+    for path in sorted((ROOT / "data/storia-archivio").glob("????-??-??.json")):
+        build(path)
     build(ROOT / "data/storia-oggi.json")
 
 if __name__ == "__main__":
