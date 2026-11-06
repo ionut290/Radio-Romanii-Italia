@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://radioromanii.duckdns.org/storia.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="RDI STORIA — Accadde oggi">
-<meta property="og:description" content="Cinque eventi storici ogni giorno: immagini, racconti, fonti e archivio. Radio Românii din Italia.">
+<meta property="og:description" content="Tutti gli eventi storici documentati del giorno, con priorità a Italia e Romania, immagini e fonti. Radio Românii din Italia.">
 <meta property="og:image" content="https://radioromanii.duckdns.org/RADIO-COVER.jpg">
 <title>RDI STORIA | Accadde oggi — Radio Românii din Italia</title>
 <meta name="description" content="RDI STORIA, l'almanacco storico di Radio Românii din Italia: eventi, fotografie storiche, fonti e archivio giorno per giorno.">
@@ -87,7 +87,7 @@ footer a{color:#fff}
 <div class="hero-mark" aria-hidden="true">⌛</div>
 <div class="eyebrow">RADIO ROMÂNII DIN ITALIA · RUBRICA CULTURALE</div>
 <h1>RDI <em>STORIA</em></h1>
-<p id="tagline">Il passato racconta il presente. Ogni giorno cinque eventi che hanno cambiato il mondo, con immagini, contesto e fonti consultabili.</p>
+<p id="tagline">Il passato racconta il presente. Tutti gli eventi documentati del giorno, con precedenza a Italia e Romania, immagini, contesto e fonti consultabili.</p>
 </section>
 <section class="controls" aria-label="Esplora la storia">
 <div class="control-wrap">
@@ -110,8 +110,8 @@ footer a{color:#fff}
 "use strict";
 const $=id=>document.getElementById(id);
 const labels={
- it:{back:"← Torna alla radio",tagline:"Il passato racconta il presente. Ogni giorno cinque eventi che hanno cambiato il mondo, con immagini, contesto e fonti consultabili.",date:"Scegli una data",today:"Oggi",share:"Condividi ↗",heading:"Accadde oggi",archive:"Archivio RDI STORIA",archiveDesc:"Riscopri le edizioni precedenti della rubrica.",footer:"La memoria del mondo, un giorno alla volta.",listen:"Ascolta la radio in diretta",all:"Tutti",source:"Leggi la fonte",photo:"Fotografia e licenza",illustration:"Immagine illustrativa",items:"eventi",loading:"Caricamento degli eventi storici…",empty:"Non abbiamo ancora pubblicato un'edizione RDI STORIA per questa data.",error:"Contenuti temporaneamente non disponibili. Riprova più tardi.",shared:"Link copiato!",noShare:"Puoi copiare l'indirizzo di questa pagina dal browser."},
- ro:{back:"← Înapoi la radio",tagline:"Trecutul ne ajută să înțelegem prezentul. În fiecare zi, cinci evenimente care au schimbat lumea, cu imagini, context și surse.",date:"Alege data",today:"Astăzi",share:"Distribuie ↗",heading:"S-a întâmplat azi",archive:"Arhiva RDI STORIA",archiveDesc:"Redescoperă edițiile anterioare ale rubricii.",footer:"Memoria lumii, zi după zi.",listen:"Ascultă radioul în direct",all:"Toate",source:"Citește sursa",photo:"Fotografie și licență",illustration:"Imagine ilustrativă",items:"evenimente",loading:"Se încarcă evenimentele istorice…",empty:"Nu am publicat încă o ediție RDI STORIA pentru această dată.",error:"Conținutul nu este disponibil momentan. Încearcă din nou mai târziu.",shared:"Link copiat!",noShare:"Poți copia adresa paginii din browser."}
+ it:{back:"← Torna alla radio",tagline:"Il passato racconta il presente. Tutti gli eventi documentati del giorno, con precedenza a Italia e Romania, immagini, contesto e fonti consultabili.",date:"Scegli una data",today:"Oggi",share:"Condividi ↗",heading:"Accadde oggi",archive:"Archivio RDI STORIA",archiveDesc:"Riscopri le edizioni precedenti della rubrica.",footer:"La memoria del mondo, un giorno alla volta.",listen:"Ascolta la radio in diretta",all:"Tutti",source:"Leggi la fonte",photo:"Fotografia e licenza",illustration:"Immagine illustrativa",items:"eventi",loading:"Caricamento degli eventi storici…",empty:"Non abbiamo ancora pubblicato un'edizione RDI STORIA per questa data.",error:"Contenuti temporaneamente non disponibili. Riprova più tardi.",shared:"Link copiato!",noShare:"Puoi copiare l'indirizzo di questa pagina dal browser."},
+ ro:{back:"← Înapoi la radio",tagline:"Trecutul ne ajută să înțelegem prezentul. Toate evenimentele documentate ale zilei, cu prioritate pentru Italia și România, imagini și surse.",date:"Alege data",today:"Astăzi",share:"Distribuie ↗",heading:"S-a întâmplat azi",archive:"Arhiva RDI STORIA",archiveDesc:"Redescoperă edițiile anterioare ale rubricii.",footer:"Memoria lumii, zi după zi.",listen:"Ascultă radioul în direct",all:"Toate",source:"Citește sursa",photo:"Fotografie și licență",illustration:"Imagine ilustrativă",items:"evenimente",loading:"Se încarcă evenimentele istorice…",empty:"Nu am publicat încă o ediție RDI STORIA pentru această dată.",error:"Conținutul nu este disponibil momentan. Încearcă din nou mai târziu.",shared:"Link copiat!",noShare:"Poți copia adresa paginii din browser."}
 };
 const categoryRo={"Politica":"Politică","Diritti umani":"Drepturile omului","Geopolitica":"Geopolitică","Cronaca":"Evenimente"};
 const qs=new URLSearchParams(location.search);
@@ -148,9 +148,15 @@ function renderFilters(){
   b.addEventListener("click",()=>{filter=cat;renderFilters();renderCards()});holder.append(b);
  });
 }
+function geoPriority(e){
+ const region=String(e.country||"").toLowerCase();
+ if(region==="italia")return 0;
+ if(region==="romania")return 1;
+ return 2;
+}
 function renderCards(){
  const holder=$("stories");holder.replaceChildren();
- const all=(dataset?.events||[]).filter(e=>filter==="*"||e.category===filter);
+ const all=(dataset?.events||[]).filter(e=>filter==="*"||e.category===filter).slice().sort((a,b)=>geoPriority(a)-geoPriority(b)||a.year-b.year);
  if(!all.length){setStatus(L().empty);return}
  setStatus("");
  all.forEach(e=>{
