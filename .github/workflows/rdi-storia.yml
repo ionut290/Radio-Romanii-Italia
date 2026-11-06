@@ -1,0 +1,61 @@
+name: RDI STORIA - Accadde oggi (automatico)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rdi-storia.yml'
+  schedule:
+    # Pubblicazione del mattino e recupero, in UTC.
+    - cron: '45 3 * * *'
+    - cron: '45 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rdi-storia-publish
+  cancel-in-progress: false
+
+jobs:
+  publica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Preleva il sito RDI
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controlla le dipendenze e genera l'edizione odierna
+        env:
+          TZ: Europe/Rome
+        run: |
+          python -m py_compile scripts/generate_rdi_storia.py
+          python scripts/generate_rdi_storia.py
+      - name: Pubblica eventi, foto e archivio nel sito
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- data/storia-oggi.json data/storia-archivio/)" ]; then
+            echo "RDI STORIA del giorno già pubblicato."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/storia-oggi.json data/storia-archivio/
+          git commit -m "RDI STORIA: pubblica la storia del giorno"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "Edizione RDI STORIA pubblicata su GitHub Pages."
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep "$((attempt * 3))"
+          done
+          echo "::error::Edizione generata ma non pubblicata su GitHub."
+          exit 1
