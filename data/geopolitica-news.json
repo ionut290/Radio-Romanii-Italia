@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-06T10:20:25.964482Z",
+  "updated_at": "2026-11-06T11:20:44.258397Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,15 +8,74 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
-      "id": "geo-b058ab55eba0f8d9",
+      "id": "geo-2103e7968ee7dad6",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "State Minister for Foreign Affairs HORII's Visit to Spain",
+      "summary": "",
+      "source": "Ministry of Foreign Affairs of Japan",
+      "published": "2026-11-06T10:33:25Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE04aGdxald2NERZWGd6S2RpNzJtbFRiUmQ0b29HdkVQV0FmcmJzTXA2VVdiYnRYT3BfX1lIUlVCS2ItTlB0RFA3d2p5M2ZWenhhRWNHVDlGQVRZXzhtcWFnZkNyWUJ3M0NIY2UwUmVmeXM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Vizita ministrului de stat al afacerilor externe HORII în Spania",
+      "title_it": "Visita in Spagna del Ministro degli Affari Esteri HORII",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4781c398bba241c6",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "China’s AI chipmakers report first profits, but will the trend continue?",
+      "summary": "",
+      "source": "South China Morning Post",
+      "published": "2026-11-06T10:30:06Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNdXNJcTJaZ1lPdlNDTl9DVk16REJRY2N6UWhVVFI5RWN0aGxDbVlEeFFHdlBXOVU1ZmdWazl1c3hoUENKTEFhQzBhMWtDM0hwTHdhY05mTUFUQ2VrTnF5SW9SdHc2ckJlR2Nta1JvVWR0a0ZrRzgwNDNGMmdxR2VEUXppR0djSmQzUG5YaUhZNkpGNHpvZHVPUUEzaFc3UF9hN1hURTNsT2g0NDNYcVVQcHhR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Producătorii de cipuri AI din China raportează primele profituri, dar va continua tendința?",
+      "title_it": "I produttori cinesi di chip IA riportano i primi profitti, ma il trend continuerà?",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-0d1eeb1bfad8e727",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Kushner promises to develop new European security system with participation of Ukraine and NATO",
+      "summary": "",
+      "source": "Ukrainian News Agency",
+      "published": "2026-11-06T10:23:04Z",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQQ1Q4eUFNTC1ZUlNPRkNkUGgxNEhPUEppMFVueGhYMWFaZEVoMktMQ25MUUFOeklJb3U1N3BuX3JVbVQwLThhVDBmN0dqVzV0U0JDNkRwVFhITUNvME9HelRsNS1vRmdmdl9ucEpqeGVlVzBaelY3VkV4VVR2WVhDc092eTA1bHA1amx1RzBzcUttQ25LWDJ0THhCeF9wWkI2bmpIbjY2RFZhaEEyYTdITG9wamJyckt3bFZ0MGRTbFhtSFM2QW15cVhWb2FhRl85c1BV0gHTAUFVX3lxTFBDVDh5QU1MLVlSU09GQ2RQaDE0SE9QSmkwVW54aFgxYVpkRWgyS0xDbkxRQU56SUlvdTU3cG5fclVtVDAtOGFUMGY3R2pXNXRTQkM2RHBUWEhNQ28wT0d6VGw1LW9GZ2Z2X25wSmp4ZWVXMFp6VjdWRXhVVHZZWENzT3Z5MDVscDVqbHVHMHNxS21DbktYMnRMeEJ4X3BaQjZuakhuNjZEVmFoQTJhN0hMb3BqYnJyS3dsVnQwZFNsWG1IUzZBbXlxWFZvYWFGXzlzUFU?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Kushner promite că va dezvolta un nou sistem de securitate european cu participarea Ucrainei și a NATO",
+      "title_it": "Kushner promette di sviluppare un nuovo sistema di sicurezza europeo con la partecipazione dell'Ucraina e della NATO",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-70bd4006d3e056f1",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Timeline for Russia-Ukraine peace revealed",
+      "summary": "",
+      "source": "TodayPress.tv",
+      "published": "2026-11-06T10:10:00Z",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5lbDhfazVkaDAwOXpLOEtBQ3I1M1Vzci1ST2xNNDZNSms3ZWIwbmxJd245SzJITGp0bFZtM3g2NHhKOEF1a185Ry11TVNES2p1N1NMY1pqaGNfd3J3OXU2LWk3U09CRzBtZEJGS3dVTmkwczZQTU03eTFSN2JLdw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "S-a dezvăluit calendarul pentru pacea dintre Rusia și Ucraina",
+      "title_it": "Rivelata la cronologia della pace tra Russia e Ucraina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-393d5c69c6095cb1",
       "category": "securitate",
       "region": "europa",
       "title": "NATO Seeks ‘Just’ End to Ukraine War as Trump Touts Deal Involving Europe",
       "summary": "",
-      "source": "ASHARQ AL-AWSAT English",
-      "published": "2026-11-06T10:03:51Z",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdHJmRjZNcThZVGlSTVM5NTM1Q241WlZ2Vk1hMmsyRlVwajN1UnJNSDBnemQ1aUwteV9ULW9LclBmMGdfX2pPOWhKTXBlVmZ6Y1Rja2lEZFJsLU96eWpfYWdNRUtqdUlHX0ZiZVdPaVBURDdWazduV2tqYm1neF9FWG16MG1NdWVUazZoSnFCd0M0MHp2cC1xcHVUQkY2V0JBWlgyd0x0T2VnWnI1c0Rkck5ndEVUYk9mUUd6OG5xREUwdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "شبكة تواصل الإخبارية",
+      "published": "2026-11-06T10:03:43Z",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9WLXgzRjRPNTkwbF9KRXM0blMyQjlZVEdRUHR2TW9qU1FJYTdETnk5WE52NjJDMGRMcXBOOGhGQ2Zuc3RKRGZ6YmhvNktsQzNtUkw0?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO caută încheierea „doar” a războiului din Ucraina, în timp ce Trump promovează un acord care implică Europa",
+      "title_it": "La NATO cerca la “giusta” fine della guerra in Ucraina mentre Trump pubblicizza un accordo che coinvolge l’Europa",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d146b5b1b623cc3c",
@@ -27,7 +86,10 @@
       "source": "Anadolu Ajansı",
       "published": "2026-11-06T09:47:40Z",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNLXFLM2E3V014Y1dRT0tONl8yRVNhbVJvRXp0aS1zTlZaV2xXaHc0cG5oVU9tQnJHTXRCOS1xQlJfZ09ZU3RGdndkODY4QkEzalhjMl9vaVZsZVVRZHQyREM3bnYyWHo2Ty1CZE04WE9QVXlwQ3ktSngzbW5sR1MwdEIwRTZQLTJ0SXVKNGtYYmNUUGRvaS1WVlg2UFdpdG1wNU9hTUNISQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "China spune că relațiile cu Japonia se confruntă în continuare cu „dificultăți serioase”",
+      "title_it": "La Cina afferma che i legami con il Giappone devono ancora affrontare “gravi difficoltà”",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-0ba456924db0fd1f",
@@ -38,7 +100,10 @@
       "source": "شفق نيوز",
       "published": "2026-11-06T09:22:54Z",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQS2dxQm9CSU9ZSy1EbmxaNXQ5Yzl1dE10clJJVXM4cXhfaWFZM1NSMUpEWC12YXZVcG9VM2hzaTJoRzJvR0h1d2Rwei04cldtaXFoOGJvWW40Q0Z3enlHMnVLd1VPMEdWenNOdHNZX0RpOWJNR2QtVjNqMVUzSE5vYWM2Z24wbGZvR0E?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ştiri Shafaq..Raiduri israeliene mătură Cisiordania, doi morţi în Gaza",
+      "title_it": "Shafaq News..I raid israeliani spazzano la Cisgiordania, due morti a Gaza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5e5ecd1045791525",
@@ -49,7 +114,10 @@
       "source": "Il Politico Web",
       "published": "2026-11-06T09:22:11Z",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQl83d3lnNEFxM3pwOEZ6amdQTFFPRHhnYUtWMTkwYUZoSGF2VDlPY0Vlc1VZdmh6RnFsbnp4R25ieU9laG9XTTBEeW9ZSFZ6RmNHM1RFV0JpXzBjZ19VS2FpRDIwRGE0ZUZIUWFnUHN0b0xDSE4yRVpyWWtQdU9Fa3dn?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Meloni i-a scris lui Costa: «Să decidem odată pentru totdeauna cine stă la masă». Un singur negociator european pentru Ucraina",
+      "title_it": "Meloni scrive a Costa: «Si decida una volta per tutte chi siede al tavolo». Un solo negoziatore europeo per l’Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-afa6c1b05c0e9005",
@@ -60,7 +128,10 @@
       "source": "Euronews.com",
       "published": "2026-11-06T09:06:34Z",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNdFF5V2FQRDVzVGk2U2hEUlNwbWpJTmVXWlJrQm02bGFKeV9SS1pGX3pjOHJLZVd4ZTdaTFBVTHhBRTczZzNoZmFQS1hmTjVYRXVjcEJhSmc5SV9JbnZMREtSTHY3dzJnRTFGZW9iYkp5UTJBNThIRXlKUE45aWpCTVRtQ0NUN3I1YTZqRFdNNmh0VTdKTE4yb2diOUVkbXhWc0Y1aERDSmNTNkJIRVMySmhSSTNyMFZnYWViSDdMcU9lUEk?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Meloni critică UE divizată și alte știri ale săptămânii",
+      "title_it": "Meloni critica l'UE divisa e le altre notizie della settimana",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-fb16dfe95f9bbb18",
@@ -85,20 +156,37 @@
       "source": "The Tribune",
       "published": "2026-11-06T08:42:15Z",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQSlNCLWFkSG9CMm16bC1HdldsWTBGRkNjLTBUR3Q0RUZna0dYQ0liQmtxRWJaeTY2bGNPLW9GVlZCcjgwLVJ5V08tUlhtdUo0TFdXa04tMElQbllSQTdVSVcxa1l3VndSNDFGazc5dUZTaTA5TlFUQ3UxakZfSmRTbkhYc3hBNjctVnJYbDdpSVZBa1I2ZGJ6cUY5UlV0OHlvdVp0Y1R6a3VDamNCQVRzbjhsNlgwQVF4aUxidHRlNlFWWXd4ejhyYtIByAFBVV95cUxQSlNCLWFkSG9CMm16bC1HdldsWTBGRkNjLTBUR3Q0RUZna0dYQ0liQmtxRWJaeTY2bGNPLW9GVlZCcjgwLVJ5V08tUlhtdUo0TFdXa04tMElQbllSQTdVSVcxa1l3VndSNDFGazc5dUZTaTA5TlFUQ3UxakZfSmRTbkhYc3hBNjctVnJYbDdpSVZBa1I2ZGJ6cUY5UlV0OHlvdVp0Y1R6a3VDamNCQVRzbjhsNlgwQVF4aUxidHRlNlFWWXd4ejhyYg?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "MoS Pabitra Margherita se întâlnește cu FM spaniol, discută despre relațiile bilaterale",
+      "title_it": "Il MoS Pabitra Margherita incontra il ministro spagnolo e discute dei legami bilaterali",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-f2c1815f66795841",
+      "id": "geo-7d83d8e422d5e815",
       "category": "diplomatie",
-      "region": "americi",
-      "title": "Ambassador Jose Manuel Romualdez said that U.S. President Donald Trump's planned attendance in the ASEAN Summit will push through, saying the region is a \"very important market\" for the U.S. Link to the full story in the comments section. |",
+      "region": "global",
+      "title": "Trump courts Kim after midterm blow as allies fear being sidelined | Daily Sabah",
       "summary": "",
-      "source": "Facebook",
-      "published": "2026-11-06T08:33:34Z",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQb3pKT1hHSWQ4LXU3Z3QwTEwxdEs5UlBPVlh0U2dzbDd4dEw3UE1Jc09UR2JJUHdzcU4wZVFZVUJYUDcxdWN2ZGJNcU1oak5KcjR0SjhNSlp0aFd4VDRicU9obkZObnBKM0t5NFBNQlczdW1FVW5Pa0NKRmZjZTR1RkpVOXBUb1BzTkRCYVJMdnBCV25jaDlrYWtQb1MyeVlfUEV1T1ZtbWpJZTlzRUtNYkwzLXpMVWRCOEh4bUZHRzE3WEZOYlF1R0VBNlhYcHl0ZkVVbDloaw?oc=5",
+      "source": "Daily Sabah",
+      "published": "2026-11-06T08:07:00Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUUgxYmF1QmdZdmpsOGdtbk9UVDlYRUhEUXluT011aUdUT1NadEpDM1RUNTdPWVpTa3YweVNwSFg3ZEsxeUk2a3V3bVctMV9nMXc2ZjQ3b2ZMOVBPUlRHcnZhRnlJcUVacV84WWR1VUY4eEtybkRaV3RvOWc4MDVXM3FET3hOWVhLVjdWckljVWVhVm9zSHEwYWs0VWxZcVUtRVB0ek9tSThsSVZOVnlkb2dn0gGyAUFVX3lxTE1RSDFiYXVCZ1l2amw4Z21uT1RUOVhFSERReW5PTXVpR1RPU1p0SkMzVFQ1N09ZWlNrdjB5U3BIWDdkSzF5STZrdXdtVy0xX2cxdzZmNDdvZkw5UE9SVEdydmFGeUlxRVpxXzhZZHVVRjh4S3JuRFpXdG85ZzgwNVczcURPeE5ZWEtWN1ZySWNVZWFWb3NIcTBhazRVbFlxVS1FUHR6T21JOGxJVk5WeWRvZ2c?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Ambasadorul Jose Manuel Romualdez a spus că prezența preconizată a președintelui SUA, Donald Trump, la Summit-ul ASEAN va continua, declarând că regiunea este o „piață foarte importantă” pentru SUA. Link către povestea completă în secțiunea de comentarii. |",
-      "title_it": "L'ambasciatore Jose Manuel Romualdez ha affermato che la prevista partecipazione del presidente degli Stati Uniti Donald Trump al vertice dell'ASEAN andrà avanti, affermando che la regione è un \"mercato molto importante\" per gli Stati Uniti. Link alla storia c",
+      "title_ro": "Trump îl curtează pe Kim după o lovitură de la jumătatea mandatului, deoarece aliații se tem să fie lăsați deoparte | Sabah zilnic",
+      "title_it": "Trump corteggia Kim dopo il duro colpo di metà mandato mentre gli alleati temono di essere messi da parte | Sabato quotidiano",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4710e771dc471325",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Melania Trump calls for lasting Ukraine truce as she hosts Russian and Ukrainian officials",
+      "summary": "",
+      "source": "BBC",
+      "published": "2026-11-06T07:56:19Z",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5xOUtjbGRoaFpDdUgtbU5udm9hd2xhZ2hENkEtWDMyYUdCQnFPaWo2SWhhTl81QTZRSDRDa3pqMUU2cjZGMlZEbUlEbVFpazdLLWVLa3lIdVh3U1k?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Melania Trump cere un armistițiu durabil în Ucraina, în timp ce găzduiește oficiali ruși și ucraineni",
+      "title_it": "Melania Trump chiede una tregua duratura in Ucraina mentre ospita funzionari russi e ucraini",
       "translation_status": "machine_translation"
     },
     {
@@ -110,7 +198,10 @@
       "source": "The New Voice of Ukraine",
       "published": "2026-11-06T07:56:00Z",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNN05pRWJZOHgxVXpkR0pobDlaTWF5V1ZWd0p5UEVoWFpHWVE1bUM5ekZReUc2QmtqZlFaVGNhYzFlRW84WFRrbktoVmUyaFpGZFVMLW9CdVdJRDhlY1RMNUUwRkZRenVhU1JTSzlPa253V2wtcVB0T00zMzRXOUlWYkdRT1ljQzV6Nkota0NnenFncTBka1JOQmNKbWEyNEIweXFaazE3MTlvc0pxTEZoNHNqQ0LSAbABQVVfeXFMUEFPTXhwSTU2THpJRmtzQWlfMDlBS1NHN1Q1MDltaFpxSXRGNERTLVlEbF9TcVlWZTRCZlh2ZlNjUWpCOGYweUxwWkNLWWdnZkJNZE1YZEc0SHA0cEV2WXU0UFIyT3lpYUJYRGhxS3gtY2hHMUNaSG5xSTYtNGpEMDhHZFZfVWFoUVhMbEFaNG16MVU4Y0QzUWRaNUo5eXQ1aEN2NHZFdXVjN1pFRjlROFQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA, Ucraina și Europa elaborează un nou plan de securitate înaintea discuțiilor de pace – Kushner",
+      "title_it": "Stati Uniti, Ucraina ed Europa elaborano un nuovo piano di sicurezza prima dei colloqui di pace – Kushner",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-59c041c1251459a1",
@@ -167,17 +258,6 @@
       "title_ro": "Consiliul NATO-Ucraina poartă discuții de urgență privind apărarea de iarnă",
       "title_it": "Il Consiglio NATO-Ucraina tiene colloqui di emergenza sulla difesa invernale",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-800875fd15c92727",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Russia, Ukraine trade drone strikes; peace talks resume",
-      "summary": "",
-      "source": "Ahmedabad Mirror",
-      "published": "2026-11-06T07:06:25Z",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPR2c3RGY4dzdydkNJb0FqS3l2a3pUaUdTQ2l6d2xvVEVlV3JRQlJTT0Y0bU8zbmFOd2NrMGZDcVZDMVlUSmRINE5CczM1S1Jab1p2STdtVzE5WFJrQnFOUVJwdnRNejdzaURsVVBkWWZ0SVU2MEpFUFl1Y05HbVpuS2VjUVBLa284WFVBWGNCSVdvWE9oUFlYbVBMdmZVckZW?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-1b4f1c4bfb929757",
@@ -286,7 +366,10 @@
       "source": "DW.com",
       "published": "2026-11-06T04:58:53Z",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNY2hHU2czOGRUamdRUjFwNks5M3E4M3pPNFFsSDU1Z3oyUFZ3R3VndXZ6QkRLaldGU0tMeEhvcS1WV000MUZkQ3lidzE0MndtZWV6Z0I2Zl9nazJqdnFqc2hEb0RkOTZyWkNvWF82OWczOUR1UnBJdHJZZWJhZWhfWlp4eFBXNHNP0gGIAUFVX3lxTE1XLWY0XzNCS044aWJ1UmpfZXpMQU13OUV1bGljb2lvQ1dTLWFJT0RRbkNVYjFTS0dwWnV3Mnl5WXRDaTFzWjdvTFRjOTg1azhicmZVWDN3bmRaVUtwTHJ1M1BLaUZiV0t3eUtrSUN4RkVlSV9FTTI4dTZmcFp6NWFsTzF1NnpvZ2M?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Iranul spune că va reveni la încetarea focului dacă SUA o vor face",
+      "title_it": "L’Iran dice che tornerà al cessate il fuoco se gli Stati Uniti lo faranno",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-c77843497264386b",
@@ -303,17 +386,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-6789a95115df6b20",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Kushner Outlines Principles For Possible European Security Agreement",
-      "summary": "",
-      "source": "REFORM.news",
-      "published": "2026-11-06T04:45:55Z",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQlNBZXlWaExBTTBuSjdCVmluNGdZdkRkaDRiYUlpcTMwVzFhRG1vS210cHROUk5pTUlGdGZsVUs0TmF0ZW9HQUIxcHloVDNpS3pkY2k0NFZ5SmRiZGItemJjMEtRWUx4V2FReWJOajFXWm5Bb1lidEd4OUhRWXRjWFFQQ25xTXp1MUl4cEtWcm5mN0otdzhJ0gGcAUFVX3lxTFBJb0ZWblZzajdSZUM0ZlFBMTRDNFg4em9SWDkydzNNSHljTnJWUDZSUEVDUVR2V3V2R0NLS1V0bHJaTnhaX3FNQkRqYTA2dTc2em1NMENBRTNtZWE0blNuSFBHRWY4eElvS24tSU5jOGFMWGpXMmc5d3JLZUJ5R2JleWRvbzhFNzd5ZmxfYkxXa3Z1WkFwUm9neTBoMw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-a4eb5b0e5cf3a0e1",
       "category": "securitate",
       "region": "asia",
@@ -328,16 +400,16 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-b97a745e54b0bbc8",
+      "id": "geo-757e6e2c9ebb179a",
       "category": "diplomatie",
       "region": "global",
       "title": "Trump could woo North Korea after midterm setback, but Kim may not respond",
       "summary": "",
       "source": "The Straits Times",
       "published": "2026-11-06T04:43:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPYUN5dHAzby00NlhqbV9sTEtGUllNYk5hdUtFUzlmYnY0OTdWUUpIdDVsV2xUbmR3WEVudU5CZG5yRnpiRHJHUERYU0ZkVnNFUE9ZcDJwb1dfb2Rjbk5qM2Z5TGEtQVdxX0szZmxlb1lOc1dFUzY0aVlIOHUydEprcFZOTWdBdGlQRXRpQ215azhRMUk1ZWhQdXNsWjJIY2lielFVcnB6YXNiQ2QxTENkT1BKRDQ2QlBY?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcWNnLVd2NlVRajVMVlZ2MDRER3BXV2JvYlNUZllWS210U29uZlBZcm8tYUNVVkw0X1hBbEl1QW1WWEIyeUplbVpPTklCSzBKQ2Q2b0FnaGZ6N1NQYjhqZl94R3lEbVpVUDRrem5QSFkxQlkyUWdSRklvNlJkY19sNGxxVm13MFdEOU9jVXhCMFpQdkZldXBCOTBuekZWekw1LS00aVhLN19JRVZ3Qk5VM1gxcDltOWtvTElwMzVQaFVUbFF0b2FN?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Trump ar putea să atragă Coreea de Nord după un eșec la mijlocul mandatului, dar Kim s-ar putea să nu răspundă",
+      "title_ro": "Trump ar putea curte Coreea de Nord după un eșec la mijlocul mandatului, dar Kim s-ar putea să nu răspundă",
       "title_it": "Trump potrebbe corteggiare la Corea del Nord dopo la battuta d’arresto di medio termine, ma Kim potrebbe non rispondere",
       "translation_status": "machine_translation"
     },
@@ -406,7 +478,10 @@
       "source": "The Washington Post",
       "published": "2026-11-06T03:02:00Z",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQVjJDSVFXTjRQMG1LcGVjOFlhSUo3d3JXTjY1SE44VVFOaGNERmtKVmx6OWo2c19kNXhaTW1JYnJlTzJmbVJRNjZIT1FoV3NpOUVuWlJBaVRaOHVla1lmXy1aNDN0S0ttbmhVYlFnMkFTdU5ZU2pkTTQ0NlhoeDhZVjVxUXlEWGFpTjRha3VHMWZEMFNkU0RJMFduZEQ0cmdJcmZGQmNVZEtRVncxRmcwdkJvRmRxZmpaakVuOXZ3?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump spune că el și Putin sunt aproape de un acord despre Ucraina și „întreaga Europă”",
+      "title_it": "Trump dice che lui e Putin sono vicini a un accordo sull’Ucraina e su “tutta l’Europa”",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-56d00bceb7d869ec",
@@ -417,20 +492,9 @@
       "source": "World Oil",
       "published": "2026-11-06T02:48:13Z",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQcXprWjJCQzVEUTk3MlhZd3VVXzAxNy0zX2VEV0FiSWJkRENtQjBkdE4ycjRZcE9xX1BHTi10cVdtLXplNjdCRUhyaU41Zm9tMHpoU3oxN0tFbnpZTEJFMEROZ2hfMnJLUGZ3UjBGQ3VZcjN4ZXZRWThjMWo0NmtwVXM1MlNxaXp0bzcyaw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-f0ecc551f845720f",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31 faces tough test as climate threats mount",
-      "summary": "",
-      "source": "Free Malaysia Today",
-      "published": "2026-11-06T02:43:13Z",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVnRxLWttU0FmOE8xVTMyNHhIb08tYTlYVVBndTVfUEptOXVjZFpfR1QzQWZRb3JCZjJtaGNPREY0TnFIRkItMmtQdzRNaFFKd3p0QXRobXZRQzByeURIRkd0T092QTdtaFRiUnlqc2tRbk56QkRQMWpvTF9KNC1ObVlmV0VVcGRfbmdMSlhicXRFdDBsRVB6U3NSRFBUY3ZldUcwTlJyUnd6Vlk?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "COP31 se confruntă cu teste grele pe măsură ce amenințările climatice cresc",
-      "title_it": "La COP31 deve affrontare una dura prova mentre le minacce climatiche aumentano",
+      "title_ro": "RAPORT REGIONAL: ORIENTUL MIJLOCIU",
+      "title_it": "RAPPORTO REGIONALE: MEDIO ORIENTE",
       "translation_status": "machine_translation"
     },
     {
@@ -459,6 +523,34 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Summit-ul Ibero-American evidențiază inteligența artificială și acordurile multilaterale",
       "title_it": "Il vertice iberoamericano mette in evidenza l'intelligenza artificiale e gli accordi multilaterali",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-16768c6d2489d120",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31 faces tough test as climate threats mount",
+      "summary": "",
+      "source": "cnhinews.com",
+      "published": "2026-11-06T02:02:19Z",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNcWFfYjRBRjNhTmVRS0xoUkw5cXlaMnRTRjAxMkF4eVBnWFZLYWpQTU5qTUg3cXY0UUNRMTVFa1VyaUZHSGZYT0U0Z1RSbVdXWC1zbFdZZnhFX1h3UmQyQ1ZfWS1ZRzFSWHdYcjlnNEJVSXdOVUhISFZKbEFXUmVSRlQ3SEUzZw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31 se confruntă cu teste grele pe măsură ce amenințările climatice cresc",
+      "title_it": "La COP31 deve affrontare una dura prova mentre le minacce climatiche aumentano",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-95dc4bc828b8608c",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Kushner Outlines Principles For Possible European Security Agreement",
+      "summary": "",
+      "source": "REFORM.news",
+      "published": "2026-11-06T01:45:55Z",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSW9GVm5Wc2o3UmVDNGZRQTE0QzRYOHpvUlg5MnczTUh5Y05yVlA2UlBFQ1FUdld1dkdDS0tVdGxyWk54Wl9xTUJEamEwNnU3NnptTTBDQUUzbWVhNG5TbkhQR0VmOHhJb0tuLUlOYzhhTFhqVzJnOXdyS2VCeUdiZXlkb284RTc3eWZsX2JMV2t2dVpBcFJvZ3kwaDPSAZwBQVVfeXFMUElvRlZuVnNqN1JlQzRmUUExNEM0WDh6b1JYOTJ3M01IeWNOclZQNlJQRUNRVHZXdXZHQ0tLVXRsclpOeFpfcU1CRGphMDZ1NzZ6bU0wQ0FFM21lYTRuU25IUEdFZjh4SW9Lbi1JTmM4YUxYalcyZzl3cktlQnlHYmV5ZG9vOEU3N3lmbF9iTFdrdnVaQXBSb2d5MGgz?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Kushner subliniază principiile pentru un posibil acord european de securitate",
+      "title_it": "Kushner delinea i principi per un possibile accordo europeo sulla sicurezza",
       "translation_status": "machine_translation"
     },
     {
@@ -498,7 +590,10 @@
       "source": "Kyiv Post",
       "published": "2026-11-05T23:59:35Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1TRkljTGN2aTdQZmxrTnBVNHNwT2J6T256bHQza3prRU9hQVZMVkJZSXFZZEdmVUlJWUZ3UUhTb3ZhcjBLSEpiZnFrOA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump se întâlnește cu trimisul rus, nu cu delegația ucraineană",
+      "title_it": "Trump incontra l’inviato russo, non la delegazione ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-29feccda79cb0002",
