@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261106-italian-ui-1';
+const RDI_YOUTUBE_BUILD='20261106-italian-news-2';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -58,13 +58,31 @@ function italianCategory(value){
  const labels={'Actualitate':'Attualità','Știri':'Notizie','Stiri':'Notizie','România':'Romania','Evenimente':'Eventi','Politică':'Politica','Economie':'Economia','Sănătate':'Salute','Educație':'Istruzione','Cultură':'Cultura','Sport':'Sport','Diaspora':'Diaspora','Italia':'Italia','Externe':'Esteri','Internațional':'Internazionale','Internaţional':'Internazionale','Social':'Società','Tehnologie':'Tecnologia'};
  return labels[raw]||raw||'Attualità';
 }
+// Only display verified Italian copy. Never expose untranslated Romanian or English
+// headlines in the TV broadcast. The multilingual website remains unchanged.
+function italianStory(story,translationItems){
+ if(!story||typeof story.title!=='string')return null;
+ const translated=translationItems[story.url]?.it;
+ if(translated&&typeof translated.title==='string'&&translated.title.trim()&&
+    typeof translated.summary==='string'&&translated.summary.trim()){
+  return {...story,title:translated.title,summary:translated.summary};
+ }
+ // Italian editorial providers deliver copy in Italian already.
+ const knownItalianSource=/^(?:ANSA|la Repubblica|Eunews|Diario FVG|Borsa Italiana|PMI\.it)(?:\b|$)/i;
+ if(story.category==='Italia'&&knownItalianSource.test(String(story.source||''))){
+  return story;
+ }
+ if(story.language==='it'&&story.summary&&story.title)return story;
+ return null;
+}
 function valid(x){return x&&typeof x.title==='string'&&x.title.trim().length>8}
 async function load(){
  try{
-  const [news,editorial,eventData]=await Promise.all([
+  const [news,editorial,eventData,translationData]=await Promise.all([
    fetch('./news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
    fetch('./editorial.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
-   fetch('./events-auto.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
+   fetch('./events-auto.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
+   fetch('./news-translations.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
   ]);
   const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   const events=(eventData.events||[]).filter(x=>valid(x)&&(x.endDate||x.date||'')>=today).map(x=>({
@@ -83,7 +101,8 @@ async function load(){
     return !Number.isNaN(stamp.getTime())&&romeDay.format(stamp)===today;
   }
   const seen=new Set();
-  const incoming=[...(editorial.items||[]).filter(publishedToday),...(news.items||[]).filter(publishedToday),...events.filter(publishedToday)].filter(valid).filter(x=>!x.promotion&&!/^(publicitate|pubblicit[aà]|advertising|sponsorizat[ăa]?|promovare|activități și servicii)$/i.test(String(x.category||"").trim())).filter(x=>{
+  const italianItems=[...(editorial.items||[]),...(news.items||[]),...events].map(x=>italianStory(x,translationData.items||{})).filter(Boolean);
+  const incoming=italianItems.filter(publishedToday).filter(valid).filter(x=>!x.promotion&&!/^(publicitate|pubblicit[aà]|advertising|sponsorizat[ăa]?|promovare|activități și servicii)$/i.test(String(x.category||"").trim())).filter(x=>{
    const key=x.category+'|'+x.title.trim().toLocaleLowerCase('ro');
    if(seen.has(key))return false;seen.add(key);return true;
   });
