@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261106-italian-news-2';
+const RDI_YOUTUBE_BUILD='20261106-italian-news-3';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -62,7 +62,7 @@ function italianCategory(value){
 // headlines in the TV broadcast. The multilingual website remains unchanged.
 function italianStory(story,translationItems){
  if(!story||typeof story.title!=='string')return null;
- const translated=translationItems[story.url]?.it;
+ const translated=(translationItems[story.id]||translationItems[story.url])?.it;
  if(translated&&typeof translated.title==='string'&&translated.title.trim()&&
     typeof translated.summary==='string'&&translated.summary.trim()){
   return {...story,title:translated.title,summary:translated.summary};
