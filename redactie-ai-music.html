@@ -60,6 +60,7 @@ c.append(permission)
 if(it.file_name){
  const yt=el('div');yt.style.cssText='margin:12px 0;padding:14px;background:#172e3a;border:1px solid #3b566b;border-radius:12px';
  yt.append(el('strong','📺 Autorizzazione YouTube Live: '+(it.youtube_consent?'confermata':'da confermare')));
+ if(it.youtube_consent){yt.append(el('small','Registrata: '+(it.youtube_consent_at?new Date(it.youtube_consent_at).toLocaleString('it-IT'):'data storica non disponibile')+(it.youtube_consent_version?' · '+it.youtube_consent_version:'')));}
  const label=el('label');label.style.cssText='display:flex;gap:10px;align-items:center;font-size:13px';
  const check=el('input');check.type='checkbox';check.style.cssText='width:auto;flex:none;margin-top:5px';
  label.append(check,el('span',"Confermo di avere il permesso dell'artista per trasmettere il file su YouTube Live e mantenerlo nella registrazione della diretta."));
