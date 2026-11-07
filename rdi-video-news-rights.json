@@ -33,15 +33,26 @@
       "attribution",
       "rights_checked_at",
       "rights_evidence",
-      "approved_for_youtube_live"
+      "approved_for_youtube_live",
+      "audio_language",
+      "audio_language_verified_at",
+      "audio_language_verification_method"
     ],
     "approved_for_youtube_live_required_value": true,
     "check_third_party_music": true,
     "check_identifiable_person_rights": true,
-    "allow_embed_only": false
+    "allow_embed_only": false,
+    "audio_language_required_value": "it",
+    "foreign_source_material_requires_licensed_italian_dubbing": true,
+    "italian_subtitles_do_not_qualify": true
   },
   "broadcast": {
     "enabled": false,
-    "reason": "Nessun singolo filmato ancora controllato e caricato: non iniziare riproduzione automatica."
+    "reason": "Nessun singolo filmato ancora controllato e caricato: non iniziare riproduzione automatica.",
+    "required_audio_language": "it",
+    "allow_foreign_audio": false,
+    "allow_italian_subtitles_only": false,
+    "allow_silent_video_only_with_italian_voiceover": true,
+    "language_verification_required": true
   }
 }
