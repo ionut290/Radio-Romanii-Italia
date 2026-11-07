@@ -119,6 +119,6 @@ loadFirebaseWidgets();
  if(hasNewModule||window.rdiTop3Break)return;
  const style=document.createElement("link");style.rel="stylesheet";
  style.href="./youtube-ai-top3.css?v=20261107-ai-chart-1";document.head.append(style);
- import("./youtube-ai-top3.js?v=20261107-ai-top3-1")
+ import("./youtube-ai-top3.js?v=20261107-audio-only-2")
   .catch(e=>console.warn("RDI Top3 TV not ready, radio uninterrupted:",e));
 })();
