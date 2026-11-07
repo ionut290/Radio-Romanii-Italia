@@ -1,0 +1,73 @@
+name: RDI AI Music Top3 — refresh YouTube graphics safely
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'youtube-ai-top3.js'
+      - 'youtube-ai-top3-core.mjs'
+      - 'youtube-news.html'
+      - '.github/workflows/refresh-rdi-ai-top3-video.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: rdi-ai-music-top3-video-refresh
+  cancel-in-progress: true
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the exact static files to be published by GitHub Pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..125}; do
+            ready=true
+            for file in youtube-news.html youtube-ai-top3.js youtube-ai-top3-core.mjs; do
+              expected=$(sha256sum "$file" | cut -d ' ' -f 1)
+              if ! curl --fail --silent --show-error --max-time 8 -H 'Cache-Control: no-cache' \
+                "https://radioromanii.duckdns.org/$file?live_top3=${GITHUB_SHA}" \
+                -o /tmp/rdi-top3-published; then
+                ready=false;break
+              fi
+              actual=$(sha256sum /tmp/rdi-top3-published | cut -d ' ' -f 1)
+              if [ "$actual" != "$expected" ]; then ready=false;break;fi
+            done
+            if [ "$ready" = true ]; then
+              echo "TOP3_VIDEO_FILES_PUBLISHED=true";exit 0
+            fi
+            sleep 5
+          done
+          echo '::error::YouTube Top3 graphics not yet published; live broadcast unchanged.'
+          exit 1
+      - name: Set up existing Oracle SSH credentials
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/rdi" "$HOME/.ssh/known_hosts"
+      - name: Reload only browser page, never stop FFmpeg, never touch AzuraCast
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 ubuntu@129.151.255.41 'bash -se' <<'REMOTE'
+          set -euo pipefail
+          before=$(pgrep -x ffmpeg | sort)
+          test -n "$before" || { echo 'No active FFmpeg detected: refusing to manipulate video.'; exit 1; }
+          pgrep -u ubuntu -f chromium >/dev/null
+          test -x /usr/bin/xdotool
+          env DISPLAY=:92 XAUTHORITY=/home/ubuntu/.Xauthority xdotool key --clearmodifiers ctrl+r
+          sleep 3
+          after=$(pgrep -x ffmpeg | sort)
+          test "$before" = "$after" || { echo 'Unexpected FFmpeg process change'; exit 1; }
+          echo 'RDI_TOP3_VIDEO_RELOADED=true'
+          echo 'LIVE_FFMPEG_UNCHANGED=true'
+          REMOTE
