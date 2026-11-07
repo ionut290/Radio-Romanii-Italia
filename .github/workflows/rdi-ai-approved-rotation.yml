@@ -1,0 +1,56 @@
+name: RDI AI MUSIC - rotazione AzuraCast dei brani approvati
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/deploy-rdi-ai-approved-rotation.py'
+      - '.github/workflows/rdi-ai-approved-rotation.yml'
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-ai-approved-rotation
+  cancel-in-progress: false
+
+jobs:
+  sync-approved-tracks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica lo script di rotazione
+        run: python -m py_compile scripts/deploy-rdi-ai-approved-rotation.py scripts/deploy-geopolitica-oracle.py
+      - name: Prepara connessione sicura a Oracle
+        env:
+          SSH_KEY_B64: \${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: \${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null
+      - name: Sincronizza solo i brani AI MUSIC approvati
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          opts=(-i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12)
+          STAGE="/tmp/rdi-ai-approved-rotation-\${GITHUB_RUN_ID}-\${GITHUB_RUN_ATTEMPT}"
+          [[ "$STAGE" =~ ^/tmp/rdi-ai-approved-rotation-[0-9]+-[0-9]+$ ]]
+          ssh "\${opts[@]}" "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup() { ssh "\${opts[@]}" "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scp -q "\${opts[@]}" scripts/deploy-rdi-ai-approved-rotation.py scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
+          ssh "\${opts[@]}" "$REMOTE" "sudo -n python3 '$STAGE/deploy-rdi-ai-approved-rotation.py' sync --php-helper '$STAGE/rdi-geopolitica-auth.php'"
