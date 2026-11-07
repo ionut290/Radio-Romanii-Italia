@@ -57,7 +57,9 @@ def safe_edition(mp3,manifest):
     return data
 
 def schedule(day):
-    return [{"start_time":"20:30","end_time":"21:20",
+    # AzuraCast's StationSchedule stores HHMM as an integer (e.g. 2030).
+    # Passing a string such as "20:30" is cast to integer 20 (00:20!).
+    return [{"start_time":2030,"end_time":2120,
        "start_date":day,"end_date":day,"days":[],
        "loop_once":True}]
 
@@ -141,9 +143,11 @@ def main():
         # representations, which can differ from the HH:MM input format.
         print("TOP3_STATION_SCHEDULE="+json.dumps(items,ensure_ascii=False,default=str)[:3000])
         if not any(
-            day in str(item.get("start_date","")) and
-            ("20:30" in str(item.get("start_time","")) or
-             str(item.get("start_time","")) in ("73800","73800.0"))
+            str(item.get("start_date",""))==day
+            and str(item.get("end_date",""))==day
+            and int(item.get("start_time",-1))==2030
+            and int(item.get("end_time",-1))==2120
+            and bool(item.get("loop_once"))
             for item in items
         ):
             raise RuntimeError("Unexpected Top3 broadcast schedule; playlist left disabled")
