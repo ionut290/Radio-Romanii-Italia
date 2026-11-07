@@ -170,6 +170,100 @@ class SubmissionTests(unittest.TestCase):
             )
         self.assertEqual(review.status_code, 400)
 
+    def test_google_member_login_reuses_verified_email_and_existing_tracks(self):
+        # A previously submitted artist must get the SAME RDI identity.
+        old=self.post(title="Earlier submission",email="artist@gmail.com")
+        self.assertEqual(old.status_code,201)
+        nonce="google_nonce_test_1234567890"
+        endpoint="/api/ai-music/auth/google"
+        with patch.object(service,"GOOGLE_AUTH_READY",True), \
+             patch.object(service,"GOOGLE_CLIENT_ID","test.apps.googleusercontent.com"), \
+             patch.object(service,"AUTH_REQUIRED",True), \
+             patch.object(service,"verify_google_credential",
+                 return_value=("artist@gmail.com","google-sub-001","Google Artist")):
+            credentials={"credential":"a"*100,"nonce":nonce}
+            login=self.client.post(endpoint,headers=self.origin,json=credentials)
+            self.assertEqual(login.status_code,200)
+            self.assertTrue(login.json["session"])
+            user=login.json["user"]
+            self.assertEqual(user["email"],"artist@gmail.com")
+            auth={**self.origin,"Authorization":"Bearer "+login.json["session"]}
+            me=self.client.get("/api/ai-music/auth/me",headers=auth)
+            self.assertEqual(me.status_code,200)
+            owned=self.client.get("/api/ai-music/me/submissions",headers=auth)
+            self.assertEqual(owned.status_code,200)
+            self.assertEqual([x["id"] for x in owned.json["submissions"]],[old.json["id"]])
+            uploaded=self.client.post("/api/ai-music/submissions",headers=auth,
+                data=self.data(email="malicious@example.org",title="New Google track"))
+            self.assertEqual(uploaded.status_code,201)
+            with service.db() as con:
+                rows=con.execute("SELECT id,email,user_id FROM submissions ORDER BY created_at").fetchall()
+                self.assertEqual(len(rows),2)
+                self.assertEqual(set(row["email"] for row in rows),{"artist@gmail.com"})
+                self.assertEqual(set(row["user_id"] for row in rows),{user["id"]})
+            second=self.client.post(endpoint,headers=self.origin,json=credentials)
+            self.assertEqual(second.status_code,200)
+            self.assertEqual(second.json["user"]["id"],user["id"])
+            with service.db() as con:
+                self.assertEqual(con.execute("SELECT COUNT(*) FROM music_users").fetchone()[0],1)
+
+    def test_google_login_does_not_link_different_google_account(self):
+        nonce="google_nonce_test_1234567890"
+        endpoint="/api/ai-music/auth/google"
+        credential={"credential":"a"*100,"nonce":nonce}
+        with patch.object(service,"GOOGLE_AUTH_READY",True), \
+             patch.object(service,"GOOGLE_CLIENT_ID","test.apps.googleusercontent.com"), \
+             patch.object(service,"verify_google_credential",
+                 side_effect=[("music@gmail.com","google-sub-001","Artist A"),
+                              ("music@gmail.com","google-sub-002","Artist B")]):
+            self.assertEqual(self.client.post(endpoint,headers=self.origin,json=credential).status_code,200)
+            forbidden=self.client.post(endpoint,headers=self.origin,json=credential)
+            self.assertEqual(forbidden.status_code,409)
+            with service.db() as con:
+                self.assertEqual(con.execute("SELECT COUNT(*) FROM music_users").fetchone()[0],1)
+
+    def test_google_login_off_wrong_origin_bad_token_and_no_code(self):
+        endpoint="/api/ai-music/auth/google"
+        params={"credential":"a"*100,"nonce":"google_nonce_test_1234567890"}
+        self.assertEqual(self.client.post(endpoint,headers=self.origin,json=params).status_code,503)
+        with patch.object(service,"GOOGLE_AUTH_READY",True), \
+             patch.object(service,"verify_google_credential",side_effect=ValueError("Bad token")):
+            self.assertEqual(self.client.post(endpoint,headers={"Origin":"https://wrong.example.org"},
+                json=params).status_code,403)
+            self.assertEqual(self.client.post(endpoint,headers=self.origin,
+                json={"credential":"short","nonce":params["nonce"]}).status_code,400)
+            self.assertEqual(self.client.post(endpoint,headers=self.origin,
+                json={"credential":"a"*100,"nonce":"short"}).status_code,400)
+            self.assertEqual(self.client.post(endpoint,headers=self.origin,json=params).status_code,401)
+
+    def test_google_credential_claims_must_match_google_client_and_nonce(self):
+        import types
+        payload={
+            "iss":"https://accounts.google.com",
+            "aud":"test.apps.googleusercontent.com",
+            "nonce":"nonce_for_test_1234567890",
+            "email_verified":True,
+            "email":"artist@gmail.com",
+            "sub":"google-account-sub-001",
+            "name":"Artist RDI",
+        }
+        fake=types.SimpleNamespace(verify_oauth2_token=lambda *args,**kw:payload.copy())
+        with patch.object(service,"GOOGLE_AUTH_READY",True), \
+             patch.object(service,"GOOGLE_CLIENT_ID","test.apps.googleusercontent.com"), \
+             patch.object(service,"google_id_token",fake), \
+             patch.object(service,"GoogleAuthRequest",return_value=object()):
+            self.assertEqual(service.verify_google_credential("a"*100,payload["nonce"]),
+                             ("artist@gmail.com","google-account-sub-001","Artist RDI"))
+            for k,v in [
+                ("aud","wrong.client.id"),("iss","https://not.google.example"),
+                ("email_verified",False),("nonce","wrong_nonce"),
+                ("email","outside@example.org")]:
+                tampered=payload.copy()
+                tampered[k]=v
+                fake.verify_oauth2_token=lambda *args,**kwargs:tampered.copy()
+                with self.assertRaises(ValueError,msg=k):
+                    service.verify_google_credential("a"*100,payload["nonce"])
+
     def test_email_member_login_and_guarded_actions(self):
         with patch.object(service,"AUTH_MAIL_READY",True), \
              patch.object(service,"AUTH_REQUIRED",True), \
