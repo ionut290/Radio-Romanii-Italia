@@ -16,13 +16,16 @@ ROME=ZoneInfo("Europe/Rome")
 ID=re.compile(r"^[0-9a-f]{32}$")
 
 def run(*args):
-    subprocess.run(args,check=True,stdout=subprocess.DEVNULL,timeout=250)
+    from imageio_ffmpeg import get_ffmpeg_exe
+    command=[get_ffmpeg_exe() if args[0]=="ffmpeg" else args[0],*args[1:]]
+    subprocess.run(command,check=True,stdout=subprocess.DEVNULL,timeout=250)
 
 def probe(path):
-    p=subprocess.run(["ffprobe","-v","error","-show_entries","format=duration",
-         "-of","default=noprint_wrappers=1:nokey=1",str(path)],
-         capture_output=True,text=True,timeout=25,check=True)
-    duration=float(p.stdout.strip())
+    from mutagen import File
+    tag=File(str(path))
+    if tag is None or tag.info is None:
+        raise ValueError("Unsupported original audio format")
+    duration=float(tag.info.length)
     if not 0.2<duration<3600: raise ValueError("Invalid audio duration")
     return duration
 
