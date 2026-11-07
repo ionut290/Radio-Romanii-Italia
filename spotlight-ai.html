@@ -35,37 +35,242 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 @media(max-width:950px){.hero{grid-template-columns:1fr 270px;gap:14px}.hero h1{font-size:50px}.hero .lead{font-size:14px}.record-wrap{height:172px}.vinyl{width:145px;height:145px}.vinyl:before{inset:34px}.vinyl:after{inset:62px}.record-arm{right:-7px}.track{grid-template-columns:35px 60px minmax(0,1fr)}.cover{width:60px;height:60px}.track .votebox{grid-column:3;justify-content:flex-start}.track .comments-panel{grid-column:1/-1}}
 @media(max-width:680px){main{padding:12px 12px 95px}.topbar{border-radius:17px;padding:9px 11px}.brand img{height:35px;width:35px;border-radius:10px}.brand b{font-size:13px}.brand small{font-size:9px}.back-home{display:none}.top-actions select{font-size:12px;padding:8px;min-height:36px}.hero{grid-template-columns:1fr;border-radius:24px;margin:14px 0 28px;padding:25px 19px;gap:18px}.hero h1{font-size:clamp(43px,10vw,61px);margin:19px 0 12px}.eyebrow{font-size:9px;padding:7px 10px}.hero .lead{font-size:14px;line-height:1.65;margin-bottom:18px}.links{gap:7px}.links a{flex:1 1 auto;min-height:43px;font-size:11px;padding:10px 11px}.links a.admin-link{flex:0 0 auto}.hero-meta{margin-top:18px;gap:12px;font-size:9px}.hero-feature{display:grid;grid-template-columns:78px minmax(0,1fr);grid-template-rows:auto auto;align-items:center;gap:4px 13px;padding:12px;border-radius:17px}.feature-top{grid-column:1/-1;font-size:9px}.record-wrap{grid-row:2;grid-column:1;height:82px}.vinyl{width:72px;height:72px;border-width:3px}.vinyl:before{inset:16px;border-width:1px}.vinyl:after{inset:31px;font-size:9px}.record-arm{width:27px;top:19px;right:0;height:5px}.record-glow{width:78px;height:78px;filter:blur(25px)}.feature-track{grid-row:2;grid-column:2;text-align:left}.feature-track h2{font-size:16px;margin:3px 0}.feature-track p{font-size:11px}.feature-track small{font-size:9px}.feature-go{margin:6px 0 0;font-size:10px;padding:6px 10px;display:inline-flex}.stage-header{margin-bottom:13px}.summary{font-size:26px;gap:8px}.stage-mark{display:none}.discovery{display:block;padding:10px;border-radius:16px}.filters{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:4px}.filters::-webkit-scrollbar{display:none}.filters button{flex:none;padding:9px 11px;font-size:11px}.search-area{justify-content:stretch;margin-top:8px}.searchbox{flex:1;min-width:0}.search-area select{max-width:135px}.player-bar{grid-template-columns:38px minmax(0,1fr) auto;grid-template-areas:"ic title controls" "audio audio audio" "note note note";padding:11px;gap:7px 9px;border-radius:16px}.player-icon{height:36px;width:36px;font-size:16px;border-radius:11px}.player-label{font-size:10px}.player-kicker{font-size:9px}.player-actions{gap:4px}.player-actions button{padding:9px 10px;font-size:10px}.player-bar audio{height:32px}.player-note{font-size:9px;line-height:1.4}.tracks{gap:9px}.track{grid-template-columns:28px 51px minmax(0,1fr);gap:8px 10px;padding:12px 10px;border-radius:16px}.track .position{font-size:14px}.track:first-child .position{font-size:17px}.track .cover{width:51px;height:51px;font-size:25px;border-radius:11px}.track h2{font-size:17px}.track-info>p{font-size:11px;margin:3px 0}.track .listen audio{height:31px;max-width:260px}.track .votes{font-size:10px}.track .votebox{grid-column:2/-1;display:flex;justify-content:flex-start;gap:6px}.votebox button{min-height:34px;padding:7px 11px;font-size:11px}.comments-panel{padding:13px 0 3px}.comment-form{grid-template-columns:1fr}.comment-form button{width:100%}.pager button{padding:10px 11px}.notice{margin-top:18px}footer{font-size:10px}}
 @media(max-width:360px){.brand small{display:none}.hero h1{font-size:41px}.links a{font-size:10px;padding:9px}.search-area select{max-width:105px}.player-actions button{padding:8px}}
+
+
+/* RDI AI MUSIC STUDIO — dark music workspace redesign */
+:root{color-scheme:dark;--rdi-cyan:#27d9e3;--rdi-ink:#090b0d;--rdi-panel:#151719;--rdi-border:#292e32;--rdi-white:#f5f7f8;--rdi-gray:#a3afb4}
+body.mureka-rdi{background:#0b0c0e;color:#f5f7f8;font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body.mureka-rdi:before,body.mureka-rdi main:before,body.mureka-rdi main:after{display:none!important}
+body.mureka-rdi a{color:inherit}
+.mureka-rdi .app-sidebar{position:fixed;inset:0 auto 0 0;width:222px;background:#090b0b;border-right:1px solid #272b2d;z-index:30;display:flex;flex-direction:column;padding:20px 13px 15px;overflow-y:auto}
+.mureka-rdi .sidebar-brand{display:flex;align-items:center;gap:11px;text-decoration:none;padding:6px 9px 19px;border-bottom:1px solid #252a2d}
+.mureka-rdi .sidebar-brand img{width:35px;height:35px;object-fit:cover;border-radius:9px}
+.mureka-rdi .sidebar-brand strong{display:block;font-weight:850;font-size:17px;line-height:1.12;letter-spacing:-.04em}
+.mureka-rdi .sidebar-brand strong span{color:#31dbe4}
+.mureka-rdi .sidebar-brand small{display:block;font-size:10px;color:#94a0a6;margin-top:3px}
+.mureka-rdi .side-caption{margin:24px 12px 10px;font-size:10px;color:#75868c;letter-spacing:.14em;font-weight:800}
+.mureka-rdi .side-nav{display:grid;gap:5px}
+.mureka-rdi .side-nav a{display:flex;gap:12px;align-items:center;padding:12px 13px;text-decoration:none;font-size:13px;font-weight:700;color:#c6cdd0;border-radius:11px;transition:.2s background}
+.mureka-rdi .side-nav a:hover,.mureka-rdi .side-nav a:focus-visible{background:#1b2526}
+.mureka-rdi .side-nav a.active{background:#092f32;color:#32e1e9;box-shadow:inset 2px 0 #2be2ec}
+.mureka-rdi .side-ico{font-size:17px;line-height:1;width:20px;text-align:center;color:inherit}
+.mureka-rdi .side-subtitle{margin:27px 12px 10px;font-size:10px;color:#75868c;letter-spacing:.14em;font-weight:800}
+.mureka-rdi .sidebar-spacer{flex:1}
+.mureka-rdi .sidebar-live{display:block;margin:20px 6px 10px;padding:14px 13px;border:1px solid #264344;border-radius:14px;background:#102021;color:#ccd9d8;text-decoration:none}
+.mureka-rdi .live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#28d8c6;box-shadow:0 0 9px #2ad8c68e;margin-right:8px}
+.mureka-rdi .sidebar-live b{display:block;font-size:12px;letter-spacing:.04em}
+.mureka-rdi .sidebar-live small{display:block;font-size:11px;color:#8da7a7;margin-top:5px}
+.mureka-rdi .sidebar-footer{border-top:1px solid #252a2c;margin-top:12px;padding:15px 10px 2px;color:#6c7c82;font-size:10px}
+.mureka-rdi .sidebar-scrim{display:none}
+.mureka-rdi main.app-main{max-width:none;margin:0 0 0 222px;padding:0 0 55px;min-height:100vh;isolation:auto}
+.mureka-rdi .topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;background:#0c0e10f5;border:0;border-bottom:1px solid #292b2e;border-radius:0;padding:12px clamp(18px,2.3vw,40px);box-shadow:none;backdrop-filter:blur(15px)}
+.mureka-rdi .top-crumb{color:#94a0a6;font-size:12px;display:flex;align-items:center;gap:9px}
+.mureka-rdi .top-crumb b{font-weight:800;color:#f0f5f6}
+.mureka-rdi .top-crumb .sep{color:#50636b}
+.mureka-rdi .top-actions{margin-left:auto;display:flex;align-items:center;gap:10px}
+.mureka-rdi .top-live{padding:7px 12px;background:#102b2b;border:1px solid #22514e;border-radius:999px;font-size:11px;color:#74e8dc;font-weight:800;text-decoration:none;white-space:nowrap}
+.mureka-rdi .top-actions select{background:#17191c;border:1px solid #353a3d;color:#f3f6f7;border-radius:10px;padding:9px 10px;min-height:37px;font-size:12px}
+.mureka-rdi .menu-toggle{display:none;background:#1b2022;color:#fff;border:1px solid #343b3e;border-radius:9px;padding:7px 11px;font-size:17px}
+.mureka-rdi .content-wrap{max-width:1540px;margin:0 auto;padding:23px clamp(17px,2.6vw,38px)}
+.mureka-rdi .studio-tabs{display:flex;align-items:center;gap:20px;border-bottom:1px solid #2a2e30;margin-bottom:18px;overflow-x:auto;scrollbar-width:none}
+.mureka-rdi .studio-tabs::-webkit-scrollbar{display:none}
+.mureka-rdi .studio-tabs a{display:inline-block;text-decoration:none;color:#afb7ba;padding:10px 12px 13px;font-size:13px;font-weight:800;white-space:nowrap;border-bottom:2px solid transparent}
+.mureka-rdi .studio-tabs a.active{color:#32e4eb;border-color:#31dfe8}
+.mureka-rdi .studio-tabs a:hover{color:#fff}
+.mureka-rdi .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,.4fr);gap:22px;align-items:center;position:relative;margin:0 0 23px;min-height:0;padding:25px clamp(20px,3vw,40px);overflow:hidden;border:1px solid #31353b;border-radius:20px;background:radial-gradient(circle at 72% -10%,#154c54b0,transparent 44%),linear-gradient(110deg,#172024,#111a1d 52%,#142e30);box-shadow:none}
+.mureka-rdi .hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 89% 22%,#2a8f9b25,transparent 38%);filter:none}
+.mureka-rdi .hero:after{content:none!important}
+.mureka-rdi .hero-copy,.mureka-rdi .hero-feature{position:relative;z-index:1}
+.mureka-rdi .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:0;background:none;border:0;font-size:10px;letter-spacing:.16em;color:#43e2e4}
+.mureka-rdi .eyebrow .pulse{width:7px;height:7px;background:#3de0c9;box-shadow:0 0 0 3px #36e0d02a}
+.mureka-rdi .hero h1{font:850 clamp(31px,4vw,53px)/1.03 Inter,system-ui,sans-serif;letter-spacing:-.06em;margin:12px 0 10px;color:#fafcfd;max-width:none}
+.mureka-rdi .hero h1 em{font-style:normal;background:linear-gradient(90deg,#48f3ed,#18b9d7);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.mureka-rdi .hero .lead{margin:0 0 17px;color:#b8cbce;font-size:clamp(12px,1.05vw,14px);line-height:1.6;max-width:660px}
+.mureka-rdi .links{display:flex;gap:8px;flex-wrap:wrap}
+.mureka-rdi .links a{padding:10px 13px;min-height:38px;border-radius:10px;border:1px solid #374144;background:#22282b;color:#e8f1f3;text-decoration:none;font-size:11px;font-weight:800;box-shadow:none}
+.mureka-rdi .links a.primary{background:#2ed9e0;color:#081a20;border-color:#32e1e8;box-shadow:none}
+.mureka-rdi .links a:hover{transform:none;background:#335154}
+.mureka-rdi .links a.primary:hover{background:#7af5ed}
+.mureka-rdi .hero-meta{display:flex;gap:14px;color:#8da3a8;font-size:10px;margin-top:14px}
+.mureka-rdi .hero-meta i{background:#33dbd1}
+.mureka-rdi .hero-feature{display:grid;grid-template-columns:72px minmax(0,1fr);gap:5px 13px;align-items:center;padding:14px;border:1px solid #4d6366;border-radius:16px;background:#101b1dcf;min-width:0;box-shadow:0 12px 24px #0003;backdrop-filter:blur(8px)}
+.mureka-rdi .feature-top{grid-column:1/-1;color:#4ee9e3;font-size:9px;letter-spacing:.12em}
+.mureka-rdi .feature-top strong{color:#52ebdd;border:1px solid #2a6768}
+.mureka-rdi .record-wrap{grid-row:2;grid-column:1;height:80px}
+.mureka-rdi .vinyl{width:70px;height:70px;border:3px solid #31383c;box-shadow:0 5px 20px #0008;background:repeating-radial-gradient(circle at center,#0b1418 0 3px,#263b3c 3px 4px,#101618 5px 7px)}
+.mureka-rdi .vinyl:before{inset:17px;background:conic-gradient(#2dcbd5,#28516d,#74edd8,#2dcbd5);border-width:1px}
+.mureka-rdi .vinyl:after{inset:29px;background:#0c191a;color:#e3fffc;font-size:10px}
+.mureka-rdi .record-glow{width:72px;height:72px;opacity:.35;background:#39dce5}
+.mureka-rdi .record-arm{width:32px;height:5px;top:20px;right:-1px}
+.mureka-rdi .feature-track{text-align:left;grid-column:2;grid-row:2}
+.mureka-rdi .feature-track small{font-size:9px;color:#95afb6}
+.mureka-rdi .feature-track h2{font-size:16px;color:#fff;white-space:normal;line-height:1.2;margin:4px 0}
+.mureka-rdi .feature-track p{font-size:11px;color:#b1c2c4}
+.mureka-rdi .feature-go{color:#30e2e5;display:inline-flex;margin:6px 0 0;padding:0;border:0;background:none;font-size:10px;max-width:none}
+.mureka-rdi .workspace-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,300px);align-items:start;gap:19px}
+.mureka-rdi .chart-stage{min-width:0;padding:0}
+.mureka-rdi .stage-header{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:0 0 16px}
+.mureka-rdi .kicker{color:#20c9d1;font-size:10px;letter-spacing:.15em;margin:0 0 5px}
+.mureka-rdi .summary{color:#f2f5f7;font-size:clamp(22px,2.4vw,29px);font-weight:850;letter-spacing:-.045em}
+.mureka-rdi .summary .trophy{font-size:22px}
+.mureka-rdi .summary .count{color:#9ab7bc;font-size:11px;background:#1a2427;border:1px solid #304246}
+.mureka-rdi .section-sub{color:#778a90;font-size:11px;margin:6px 0 0}
+.mureka-rdi .stage-mark{background:#171b1c;color:#88a9ae;border:1px solid #2b3335;font-size:10px;white-space:nowrap}
+.mureka-rdi .discovery{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 13px;padding:9px 11px;border:1px solid #262c2e;border-radius:13px;background:#17191b;box-shadow:none}
+.mureka-rdi .filters{display:flex;gap:5px}
+.mureka-rdi .filters button{font-size:11px;padding:9px 10px;border:0;border-radius:8px;color:#a6b0b3;background:transparent}
+.mureka-rdi .filters button.active{background:#093236;color:#38e3e9;box-shadow:inset 0 -2px #31dce6}
+.mureka-rdi .filters button:hover{background:#263237}
+.mureka-rdi .search-area{display:flex;gap:8px;flex:1;justify-content:flex-end}
+.mureka-rdi .searchbox{background:#111315;border:1px solid #30383b;color:#647d82;border-radius:9px;min-width:160px;flex:1 1 130px}
+.mureka-rdi .searchbox input{color:#f4f6f6;font-size:11px}
+.mureka-rdi .search-area select{background:#111315;border:1px solid #30383b;color:#c3cdcf;border-radius:9px;font-size:11px;max-width:130px}
+.mureka-rdi .tracks{display:grid;gap:0;border:1px solid #282d2f;border-radius:14px;overflow:hidden;background:#141617}
+.mureka-rdi .track{display:grid;grid-template-columns:32px 52px minmax(0,1fr) auto;align-items:center;gap:10px;padding:12px 13px;background:#151719!important;border:0!important;border-bottom:1px solid #272c2f!important;border-radius:0;min-height:88px;box-shadow:none!important;transform:none!important;transition:background .16s}
+.mureka-rdi .track:hover,.mureka-rdi .track.open{background:#1c2425!important}
+.mureka-rdi .track:last-child{border-bottom:0!important}
+.mureka-rdi .position{color:#718388!important;font-size:13px!important;text-align:center;font-weight:700}
+.mureka-rdi .track:first-child .position{color:#35dbe1!important}
+.mureka-rdi .cover{width:52px;height:52px;border-radius:9px;border:1px solid #6c878b4d;font-size:23px;background:linear-gradient(145deg,#183f4c,#406583,#22242b)!important;box-shadow:none}
+.mureka-rdi .track:nth-child(5n+2) .cover{background:linear-gradient(145deg,#33476c,#2a7478,#152b37)!important}
+.mureka-rdi .track:nth-child(5n+3) .cover{background:linear-gradient(145deg,#604c82,#2f5662,#163738)!important}
+.mureka-rdi .track:nth-child(5n+4) .cover{background:linear-gradient(145deg,#405264,#298887,#142e3e)!important}
+.mureka-rdi .track:nth-child(5n+5) .cover{background:linear-gradient(145deg,#305655,#39456b,#172e36)!important}
+.mureka-rdi .cover:before{opacity:.08}
+.mureka-rdi .track-info{min-width:0}
+.mureka-rdi .track h2{font-size:14px!important;font-weight:800;line-height:1.2;margin:0;color:#e6eded}
+.mureka-rdi .track-title{color:#edf5f5;text-align:left}
+.mureka-rdi .track-title:hover{color:#41e1e6}
+.mureka-rdi .track-info>p{color:#83989e;font-size:11px;margin:3px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mureka-rdi .listen{margin-top:3px}
+.mureka-rdi .listen audio{width:min(100%,235px);height:29px}
+.mureka-rdi .listen a{color:#41d7dd;font-size:10px}
+.mureka-rdi .hint{font-size:10px;color:#789095}
+.mureka-rdi .votes{color:#82b6b8;font-size:10px;margin-top:4px}
+.mureka-rdi .votebox{display:flex;gap:6px;justify-content:flex-end;align-items:center}
+.mureka-rdi .votebox button{border-radius:8px;min-height:34px;font-size:11px;padding:7px 9px}
+.mureka-rdi .vote{background:#093437;border:1px solid #1d6063;color:#45e0e5;box-shadow:none}
+.mureka-rdi .vote:hover{background:#125358}
+.mureka-rdi .vote:disabled{color:#778f91;background:#232b2d;border:1px solid #334143}
+.mureka-rdi .comment-toggle{background:#232629;border:1px solid #394044;color:#cbd4d6}
+.mureka-rdi .comments-panel{grid-column:1/-1;background:transparent;box-shadow:none;border-top:1px solid #343b3c;padding:13px 0}
+.mureka-rdi .comments-title{color:#50dee3;font-size:13px}
+.mureka-rdi .comment-form input,.mureka-rdi .comment-form textarea{background:#101214;border-color:#3d484a;color:#eef6f5}
+.mureka-rdi .comment-form button{background:#2bd8df;color:#0b191b}
+.mureka-rdi .comment-feedback{color:#47dce1}
+.mureka-rdi .comment-line{background:#202527;border-color:#363e42}
+.mureka-rdi .comment-line strong{color:#55e2e4}
+.mureka-rdi .empty{background:#171b1d;border:0;border-radius:0;color:#a9b8bc}
+.mureka-rdi .pager button{border:1px solid #374143;background:#1a2022;color:#dce5e7}
+.mureka-rdi .pager .page-info{color:#9daeb2}
+.mureka-rdi .notice{background:#141718;border:1px solid #303738;margin:21px 0;border-radius:12px;color:#a5b9bd}
+.mureka-rdi .notice summary{color:#cbd4d7}
+.mureka-rdi .notice summary:before,.mureka-rdi .notice summary:after{color:#2edee4}
+.mureka-rdi .right-rail{position:sticky;top:82px;display:grid;gap:15px;min-width:0}
+.mureka-rdi .player-bar{display:flex;flex-direction:column;align-items:stretch;gap:10px;margin:0;padding:16px;border-radius:15px;border:1px solid #2b3134;background:#17191b;box-shadow:none}
+.mureka-rdi .rail-head{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#e9f1f1;font-size:12px;font-weight:800}
+.mureka-rdi .rail-head small{color:#7f9a9b;font-size:10px;font-weight:700}
+.mureka-rdi .player-visual{width:100%;aspect-ratio:1.6;max-height:180px;display:grid;place-items:center;border-radius:12px;background:radial-gradient(circle at 50% 50%,#286566 0%,#183337 32%,transparent 75%),linear-gradient(130deg,#0d292d,#141c22 57%,#22414a);position:relative;overflow:hidden}
+.mureka-rdi .player-visual:after{content:"RDI • AI MUSIC";position:absolute;bottom:8px;right:10px;font-size:9px;color:#87c2c0;letter-spacing:.13em;font-weight:700}
+.mureka-rdi .player-art{width:118px;height:118px;border-radius:100%;background:repeating-radial-gradient(circle,#111f23 0px 3px,#365d60 4px 5px,#142328 6px 7px);box-shadow:0 8px 25px #0008,0 0 0 5px #7eeef615;position:relative;animation:vinylSpin 15s linear infinite}
+.mureka-rdi .player-art:before{content:"♫";display:grid;place-items:center;position:absolute;inset:37px;border-radius:50%;background:conic-gradient(#31a9b9,#54ede0,#2f697d,#31a9b9);font-size:20px;color:#0a171b;border:5px solid #b2e9e759}
+.mureka-rdi .player-text{text-align:center;min-width:0}
+.mureka-rdi .player-kicker{font-size:9px;letter-spacing:.14em;color:#2ddddf}
+.mureka-rdi .player-label{font-size:12px;font-weight:700;color:#dbe5e6;white-space:normal;line-height:1.4;min-height:22px}
+.mureka-rdi .player-actions{display:grid;grid-template-columns:37px 1fr 1fr 37px;gap:7px}
+.mureka-rdi .player-actions button{padding:10px 7px;background:#292d30;color:#e4eef0;border:1px solid #3b4347;border-radius:9px;font-size:12px}
+.mureka-rdi .player-actions #play-all{background:#28d6de;border-color:#2ed9e1;color:#071b1e;font-weight:900}
+.mureka-rdi .player-actions #player-stop{background:#272a2d;color:#d8e0e1;border-color:#43494c}
+.mureka-rdi .player-actions #player-prev,.mureka-rdi .player-actions #player-next{font-size:14px}
+.mureka-rdi .player-bar audio{width:100%;height:39px;min-width:0;opacity:.95;accent-color:#28d8db}
+.mureka-rdi .player-note{font-size:10px;line-height:1.55;color:#758d92}
+.mureka-rdi .queue-card{background:#151719;border:1px solid #2e3435;border-radius:15px;padding:14px}
+.mureka-rdi .queue-list{display:grid;gap:4px;margin-top:11px;max-height:310px;overflow-y:auto}
+.mureka-rdi .queue-item{width:100%;display:flex;align-items:center;gap:9px;border:1px solid transparent;background:transparent;padding:8px;border-radius:9px;color:#d9e2e2;text-align:left}
+.mureka-rdi .queue-item:hover{background:#253031}
+.mureka-rdi .queue-item.active{background:#12383b;border-color:#27686a}
+.mureka-rdi .queue-number{color:#2de0e6;font-size:11px;width:23px;text-align:center;flex-shrink:0}
+.mureka-rdi .queue-name{min-width:0;flex:1}.mureka-rdi .queue-name b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;font-weight:800}.mureka-rdi .queue-name small{display:block;color:#8da3a8;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mureka-rdi .queue-empty{font-size:11px;color:#80979b;margin-top:12px;line-height:1.6}
+.mureka-rdi .info-card{display:flex;gap:12px;background:#111b1c;border:1px solid #2a3b3e;border-radius:13px;padding:14px;color:#9eb5b7;font-size:11px}
+.mureka-rdi .info-card strong{color:#c5e0df;display:block;font-size:12px;margin-bottom:4px}
+.mureka-rdi .info-card .info-icon{font-size:20px}
+.mureka-rdi footer{font-size:10px;border-top:1px solid #293134;margin-top:30px;padding:20px 0;color:#83979a}
+.mureka-rdi footer a{color:#30d7dc}
+.mureka-rdi .row-play{border:1px solid #225c5b;color:#4be1e4;background:#103236;border-radius:8px;padding:5px 9px;font-size:10px;font-weight:800;cursor:pointer}.mureka-rdi .row-play:hover{background:#20585a}
+@media(max-width:1120px){.mureka-rdi .workspace-grid{grid-template-columns:minmax(0,1fr) 250px;gap:12px}.mureka-rdi .votebox{grid-column:3/-1}.mureka-rdi .track{grid-template-columns:26px 48px minmax(0,1fr)}.mureka-rdi .cover{width:48px;height:48px}.mureka-rdi .right-rail{top:75px}.mureka-rdi .hero{grid-template-columns:minmax(0,1fr) 220px}.mureka-rdi .hero-feature{grid-template-columns:50px minmax(0,1fr)}.mureka-rdi .record-wrap{height:60px}.mureka-rdi .vinyl{width:50px;height:50px}.mureka-rdi .vinyl:before{inset:10px}.mureka-rdi .vinyl:after{inset:20px}.mureka-rdi .record-arm{right:-6px}}
+@media(max-width:840px){.mureka-rdi .workspace-grid{grid-template-columns:1fr}.mureka-rdi .right-rail{position:static;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.mureka-rdi .player-bar{grid-column:1}.mureka-rdi .queue-card{grid-column:2}.mureka-rdi .info-card{grid-column:1/-1}.mureka-rdi .hero{grid-template-columns:1fr}.mureka-rdi .hero-feature{display:none}}
+@media(max-width:700px){.mureka-rdi .app-sidebar{transform:translateX(-105%);transition:transform .2s;box-shadow:0 0 40px #0008}.mureka-rdi.menu-open .app-sidebar{transform:translateX(0)}.mureka-rdi.menu-open .sidebar-scrim{display:block;position:fixed;inset:0;background:#000b;z-index:25}.mureka-rdi main.app-main{margin-left:0}.mureka-rdi .topbar{padding:10px 13px}.mureka-rdi .menu-toggle{display:block}.mureka-rdi .top-crumb{font-size:11px}.mureka-rdi .top-crumb .sep,.mureka-rdi .top-crumb .long{display:none}.mureka-rdi .top-live{font-size:9px;padding:7px 9px}.mureka-rdi .top-actions select{font-size:11px;padding:8px}.mureka-rdi .content-wrap{padding:13px 12px}.mureka-rdi .studio-tabs{margin:0 0 13px;gap:10px}.mureka-rdi .studio-tabs a{font-size:12px;padding:10px 8px}.mureka-rdi .hero{padding:17px;margin-bottom:19px;border-radius:15px}.mureka-rdi .hero h1{font-size:33px;margin:10px 0}.mureka-rdi .hero .lead{font-size:12px}.mureka-rdi .links a{font-size:11px;padding:9px 11px}.mureka-rdi .hero-meta{gap:9px;font-size:9px}.mureka-rdi .summary{font-size:22px}.mureka-rdi .stage-mark{display:none}.mureka-rdi .discovery{padding:8px}.mureka-rdi .filters{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}.mureka-rdi .filters button{white-space:nowrap;font-size:10px}.mureka-rdi .search-area{width:100%}.mureka-rdi .track{grid-template-columns:25px 45px minmax(0,1fr);gap:8px;padding:10px 9px}.mureka-rdi .cover{width:45px;height:45px;font-size:20px}.mureka-rdi .track h2{font-size:13px!important}.mureka-rdi .track-info>p{font-size:10px}.mureka-rdi .votebox{grid-column:2/-1;justify-content:flex-start}.mureka-rdi .right-rail{grid-template-columns:1fr}.mureka-rdi .player-bar,.mureka-rdi .queue-card,.mureka-rdi .info-card{grid-column:1}.mureka-rdi .player-visual{max-height:165px;aspect-ratio:2.3}.mureka-rdi .queue-list{max-height:220px}.mureka-rdi .player-actions{max-width:370px;width:100%;margin:auto}.mureka-rdi .comment-form{grid-template-columns:1fr}.mureka-rdi .comment-form button{width:100%}}
+@media(prefers-reduced-motion:reduce){.mureka-rdi .vinyl,.mureka-rdi .player-art{animation:none}}
+
 </style>
-</head><body><main>
-<header class="topbar">
-  <a class="brand" href="./index.html" aria-label="Radio Românii din Italia - Home"><img src="./RADIO-LOGO.png" alt="" onerror="this.style.display='none'"><span><b>RADIO <strong>ROMÂNII</strong></b><small>DIN ITALIA · AI MUSIC</small></span></a>
-  <div class="top-actions"><a class="back-home" href="./index.html">← Radio RDI</a><select id="lang" aria-label="Lingua"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></div>
+</head><body class="mureka-rdi">
+<div class="app-shell">
+<aside class="app-sidebar" id="app-sidebar" aria-label="Navigazione RDI">
+ <a class="sidebar-brand" href="./index.html"><img src="./RADIO-LOGO.png" alt=""><span><strong>RDI <span>MUSIC</span></strong><small>Radio Românii din Italia</small></span></a>
+ <div class="side-caption" id="side-label">ESPLORA</div>
+ <nav class="side-nav" aria-label="Sezioni">
+  <a href="./index.html"><span class="side-ico">⌂</span><span id="side-home">Home RDI</span></a>
+  <a href="./spotlight-ai.html" class="active" aria-current="page"><span class="side-ico">♫</span><span id="side-chart">Classifica AI Music</span></a>
+  <a href="./artisti-ai.html"><span class="side-ico">⊕</span><span id="side-submit">Proponi un brano</span></a>
+  <a href="#playerPanel"><span class="side-ico">▶</span><span id="side-listen">Ascolta musica</span></a>
+ </nav>
+ <div class="side-subtitle" id="side-tools">STRUMENTI RDI</div>
+ <nav class="side-nav" aria-label="Gestione e community">
+  <a href="./artisti-ai.html"><span class="side-ico">♬</span><span id="side-artist">Artisti AI</span></a>
+  <a href="./redactie-ai-music.html"><span class="side-ico">⚙</span><span id="side-admin">Redazione</span></a>
+  <a href="./index.html"><span class="side-ico">◉</span><span id="side-radio">Radio live</span></a>
+ </nav>
+ <div class="sidebar-spacer"></div>
+ <a class="sidebar-live" href="./index.html"><b><i class="live-dot"></i> RADIO RDI</b><small id="side-live-desc">Ascolta la diretta radio</small></a>
+ <div class="sidebar-footer">© 2026 Radio Românii din Italia</div>
+</aside>
+<div id="sidebar-scrim" class="sidebar-scrim" aria-hidden="true"></div>
+<main class="app-main">
+<header class="topbar"><button type="button" id="menu-toggle" class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="app-sidebar">☰</button>
+ <div class="top-crumb"><span class="long">RDI MUSIC</span><span class="sep">/</span><b>AI MUSIC Spotlight</b></div>
+ <div class="top-actions"><a class="top-live" href="./index.html">● RADIO LIVE</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></div>
 </header>
+<div class="content-wrap">
+<nav class="studio-tabs" aria-label="Navigazione rapida">
+ <a href="#chart" class="active" id="tab-chart">Classifica</a><a href="#playerPanel" id="tab-player">Player</a><a href="./artisti-ai.html" id="tab-artists">Invia brano</a><a href="./redactie-ai-music.html" id="tab-admin">Redazione</a>
+</nav>
 <section class="hero" aria-label="RDI AI MUSIC Spotlight">
- <div class="hero-copy">
-  <div class="eyebrow"><i class="pulse"></i><span id="hero-eyebrow">LA COMMUNITY DELLA MUSICA AI</span></div>
-  <h1>RDI <em>AI MUSIC</em><br>Spotlight<span style="color:#ffdc8c">.</span></h1>
-  <p class="lead" id="intro"></p>
-  <nav class="links"><a class="primary" href="./artisti-ai.html" id="submitLink"></a><a href="./index.html" id="radioLink"></a><a href="./redactie-ai-music.html" class="admin-link" id="adminLink">🔐 Redazione</a></nav>
-  <div class="hero-meta"><span><i></i><span id="hero-proof">Brani approvati dalla redazione</span></span><span>✦ <span id="hero-community">La community sceglie</span></span></div>
- </div>
- <aside class="hero-feature" aria-label="In vetta alla classifica">
-  <div class="feature-top"><span id="feature-label">IN CIMA ALLA CLASSIFICA</span><strong>#1</strong></div>
-  <div class="record-wrap"><div class="record-glow"></div><div class="vinyl" aria-hidden="true"></div><div class="record-arm" aria-hidden="true"></div></div>
-  <div class="feature-track"><small id="feature-kicker">BRANO IN EVIDENZA</small><h2 id="heroTitle">AI MUSIC Spotlight</h2><p id="heroArtist">Radio Românii din Italia</p><a class="feature-go" id="feature-go" href="#tracks">Scopri il brano ↓</a></div>
- </aside>
+ <div class="hero-copy"><div class="eyebrow"><i class="pulse"></i><span id="hero-eyebrow">LA COMMUNITY DELLA MUSICA AI</span></div>
+ <h1>RDI <em>AI MUSIC</em><br>Spotlight<span style="color:#2be3e8">.</span></h1>
+ <p class="lead" id="intro"></p>
+ <nav class="links"><a href="./artisti-ai.html" id="submitLink" class="primary"></a><a href="./index.html" id="radioLink"></a><a href="./redactie-ai-music.html" class="admin-link" id="adminLink">🔐 Redazione</a></nav>
+ <div class="hero-meta"><span><i></i><span id="hero-proof">Brani approvati</span></span><span>✦ <span id="hero-community">La community sceglie</span></span></div></div>
+ <aside class="hero-feature" aria-label="In evidenza"><div class="feature-top"><span id="feature-label">IN CIMA ALLA CLASSIFICA</span><strong>#1</strong></div>
+ <div class="record-wrap"><div class="record-glow"></div><div class="vinyl" aria-hidden="true"></div><div class="record-arm" aria-hidden="true"></div></div>
+ <div class="feature-track"><small id="feature-kicker">BRANO IN EVIDENZA</small><h2 id="heroTitle">AI MUSIC Spotlight</h2><p id="heroArtist">Radio Românii din Italia</p><a class="feature-go" id="feature-go" href="#tracks">Scopri il brano ↓</a></div></aside>
 </section>
+<div class="workspace-grid">
 <section class="chart-stage" id="chart">
- <div class="stage-header"><div><p class="kicker">RDI COMMUNITY CHART</p><h2 class="summary"><span class="trophy">🏆</span><strong id="heading">Classifica pubblica</strong><span class="count" id="count">…</span></h2><p class="section-sub" id="chart-caption">Le canzoni più amate dalla nostra community</p></div><span class="stage-mark" id="stage-mark">✦ 20 brani per pagina</span></div>
+ <header class="stage-header"><div><p class="kicker">MY WORKSPACE · RDI MUSIC</p><h2 class="summary"><span class="trophy">♫</span><strong id="heading">Classifica pubblica</strong><span class="count" id="count">…</span></h2><p class="section-sub" id="chart-caption">Le canzoni più amate dalla nostra community</p></div><span class="stage-mark" id="stage-mark">20 brani per pagina</span></header>
  <div class="discovery"><div class="filters" aria-label="Filtra classifica"><button class="active" type="button" data-view="all" aria-pressed="true" id="view-all">Tutti</button><button type="button" data-view="top" aria-pressed="false" id="view-top">Top 10</button><button type="button" data-view="voted" aria-pressed="false" id="view-voted">Già votati</button><button type="button" data-view="audio" aria-pressed="false" id="view-audio">Con audio</button></div><div class="search-area"><label class="searchbox">⌕ <input type="search" id="song-search" aria-label="Cerca brani" placeholder="Cerca in questa pagina…" autocomplete="off"></label><select id="song-sort" aria-label="Ordina canzoni"><option value="rank">Per classifica</option><option value="az">Titolo A–Z</option></select></div></div>
- <div class="player-bar"><div class="player-icon" aria-hidden="true">♫</div><div class="player-text"><span class="player-kicker" id="player-kicker">PLAYLIST RDI</span><span class="player-label" id="player-label">🎵 Ascolta tutti i brani disponibili</span></div><div class="player-actions"><button id="play-all" type="button">▶ Play All</button><button id="player-stop" type="button">■ Stop</button></div><audio id="playlist-player" controls preload="none"></audio><span class="player-note" id="player-note">La riproduzione continua include solo file autorizzati.</span></div>
  <p class="status" id="status" role="status" aria-live="polite"></p>
  <div class="tracks" id="tracks"></div>
  <nav class="pager" aria-label="Pagine classifica"><button id="page-prev" type="button">← Precedente</button><span class="page-info" id="page-info">Pagina 1</span><button id="page-next" type="button">Successiva →</button></nav>
- <details class="notice"><summary id="notice-title">Come funzionano voti e classifiche?</summary><p id="notice"></p></details>
+ <details class="notice" id="rules"><summary id="notice-title">Come funzionano voti e classifiche?</summary><p id="notice"></p></details>
 </section>
+<aside class="right-rail" aria-label="RDI Player e playlist">
+ <section class="player-bar" id="playerPanel" aria-label="Lettore musicale RDI">
+  <div class="rail-head"><span id="rail-player-title">RDI Player <small>v2.0</small></span><small>● AI Music</small></div>
+  <div class="player-visual"><div class="player-art" aria-hidden="true"></div></div>
+  <div class="player-text"><span class="player-kicker" id="player-kicker">PLAYLIST RDI</span><span class="player-label" id="player-label">🎵 Ascolta tutti i brani disponibili</span></div>
+  <audio id="playlist-player" controls preload="none" aria-label="Riproduzione RDI"></audio>
+  <div class="player-actions"><button id="player-prev" type="button" title="Precedente" aria-label="Brano precedente">⏮</button><button id="play-all" type="button">▶ Play All</button><button id="player-stop" type="button">■ Stop</button><button id="player-next" type="button" title="Successivo" aria-label="Brano successivo">⏭</button></div>
+  <span class="player-note" id="player-note">La riproduzione continua include solo file autorizzati.</span>
+ </section>
+ <section class="queue-card" aria-label="Coda riproduzione"><div class="rail-head"><span id="queue-title">Coda di ascolto</span><small id="queue-total">0</small></div><div class="queue-list" id="queue-list"><p class="queue-empty" id="queue-placeholder">Caricamento playlist…</p></div></section>
+ <section class="info-card"><span class="info-icon">ⓘ</span><div><strong id="info-title">La musica della community</strong><span id="info-body">Ascolta, vota e commenta i brani approvati. Il lettore usa solo file audio autorizzati.</span></div></section>
+</aside>
+</div>
 <footer><span>© 2026 Radio Românii din Italia · RDI AI MUSIC Spotlight</span><a href="./index.html" id="footer-home">Torna alla radio ↗</a></footer>
-</main><script>
+</div>
+</main></div>
+<script>
 "use strict";
 const API="https://radio-romanii-italia.duckdns.org/api/ai-music";
 const strings={
@@ -86,7 +291,15 @@ const uiLocale={
  en:{eyebrow:"THE AI MUSIC COMMUNITY",proof:"Editorially approved tracks",community:"The community decides",feature:"TOP OF THE CHART",featured:"FEATURED TRACK",discover:"Explore the track ↓",caption:"The tracks our community loves most",page:"✦ 20 tracks per page",all:"All tracks",top:"Top 10",voted:"Voted",audio:"With audio",search:"Search this page…",rank:"Chart order",az:"Title A–Z",player:"RDI PLAYLIST",notice:"How do votes and charts work?",home:"Back to radio ↗",noResult:"No tracks match these filters on this page."}
 };
 let currentView="all",searchTerm="",sortMode="rank";
-function translateExtra(){const u=uiLocale[language];const pairs={"hero-eyebrow":"eyebrow","hero-proof":"proof","hero-community":"community","feature-label":"feature","feature-kicker":"featured","feature-go":"discover","chart-caption":"caption","stage-mark":"page","view-all":"all","view-top":"top","view-voted":"voted","view-audio":"audio","player-kicker":"player","notice-title":"notice","footer-home":"home"};Object.entries(pairs).forEach(([id,k])=>$(id).textContent=u[k]);$("song-search").placeholder=u.search;const opts=$("song-sort").options;opts[0].textContent=u.rank;opts[1].textContent=u.az;}
+function translateExtra(){const u=uiLocale[language];
+ const studioLocale={
+ it:{sideLabel:"ESPLORA",home:"Home RDI",chart:"Classifica AI Music",submit:"Proponi un brano",listen:"Ascolta musica",tools:"STRUMENTI RDI",artist:"Artisti AI",admin:"Redazione",radio:"Radio live",live:"Ascolta la diretta radio",tabChart:"Classifica",tabPlayer:"Player",tabArtists:"Invia brano",tabAdmin:"Redazione",queue:"Coda di ascolto",loadingQueue:"Nessun file audio autorizzato disponibile",infoTitle:"La musica della community",infoBody:"Ascolta, vota e commenta i brani approvati. Il lettore usa solo file audio autorizzati."},
+ ro:{sideLabel:"DESCOPERĂ",home:"Acasă RDI",chart:"Clasament AI Music",submit:"Trimite o piesă",listen:"Ascultă muzică",tools:"INSTRUMENTE RDI",artist:"Artiști AI",admin:"Redacție",radio:"Radio live",live:"Ascultă radioul în direct",tabChart:"Clasament",tabPlayer:"Player",tabArtists:"Trimite piesa",tabAdmin:"Redacție",queue:"Lista de redare",loadingQueue:"Nu există fișiere audio autorizate",infoTitle:"Muzica comunității",infoBody:"Ascultă, votează și comentează piesele aprobate. Playerul redă doar fișierele autorizate."},
+ en:{sideLabel:"EXPLORE",home:"RDI Home",chart:"AI Music Chart",submit:"Submit a track",listen:"Listen to music",tools:"RDI TOOLS",artist:"AI Artists",admin:"Editors",radio:"Live Radio",live:"Listen to our radio live",tabChart:"Charts",tabPlayer:"Player",tabArtists:"Submit track",tabAdmin:"Editorial",queue:"Play queue",loadingQueue:"No authorized audio files available",infoTitle:"Music of our community",infoBody:"Listen, vote and comment on approved tracks. The player only plays authorized audio files."}
+ }[language];
+ const sm={"side-label":"sideLabel","side-home":"home","side-chart":"chart","side-submit":"submit","side-listen":"listen","side-tools":"tools","side-artist":"artist","side-admin":"admin","side-radio":"radio","side-live-desc":"live","tab-chart":"tabChart","tab-player":"tabPlayer","tab-artists":"tabArtists","tab-admin":"tabAdmin","queue-title":"queue","info-title":"infoTitle","info-body":"infoBody"};
+ Object.entries(sm).forEach(([id,k])=>$(id).textContent=studioLocale[k]);
+ if(!playQueue.length)$("queue-list").textContent=studioLocale.loadingQueue;const pairs={"hero-eyebrow":"eyebrow","hero-proof":"proof","hero-community":"community","feature-label":"feature","feature-kicker":"featured","feature-go":"discover","chart-caption":"caption","stage-mark":"page","view-all":"all","view-top":"top","view-voted":"voted","view-audio":"audio","player-kicker":"player","notice-title":"notice","footer-home":"home"};Object.entries(pairs).forEach(([id,k])=>$(id).textContent=u[k]);$("song-search").placeholder=u.search;const opts=$("song-sort").options;opts[0].textContent=u.rank;opts[1].textContent=u.az;}
 function translate(){document.documentElement.lang=language;
 $("adminLink").textContent=({it:"🔐 Redazione",ro:"🔐 Redacție",en:"🔐 Editorial login"})[language];
 $("page-prev").textContent=({it:"← Precedente",ro:"← Anterioară",en:"← Previous"})[language];
@@ -170,7 +383,7 @@ function render(){
  info.append(title,node("p","",track.artist+" · "+track.platform));
   const preview=node("div","listen");
   if(track.audio_preview){
-   const player=node("audio");player.controls=true;player.preload="none";player.setAttribute("aria-label",t("listen"));player.src=API+"/spotlight/"+encodeURIComponent(track.id)+"/audio";preview.append(player);
+   const playButton=node("button","row-play","▶ "+t("listen"));playButton.type="button";playButton.setAttribute("aria-label",t("listen")+" — "+track.title);playButton.onclick=()=>playSingle(track);preview.append(playButton);
   }else if(safeLink(track.link)){
    const link=node("a","",t("listenExternal"));link.href=safeLink(track.link);link.target="_blank";link.rel="noopener noreferrer";preview.append(link)
   }else{preview.append(node("span","hint",t("noPreview")))}
@@ -198,13 +411,23 @@ $("page-prev").onclick=()=>{if(page>1){page--;expandedTrackId=null;load();$("hea
 $("page-next").onclick=()=>{if(page<totalPages){page++;expandedTrackId=null;load();$("heading").scrollIntoView({behavior:"smooth",block:"start"})}};
 const playlistAudio=$("playlist-player");
 async function prepareQueue(){
- try{const response=await fetch(API+"/spotlight/playlist",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();playQueue=Array.isArray(data.tracks)?data.tracks:[];return playQueue}catch(e){playQueue=[];return []}
+ try{const response=await fetch(API+"/spotlight/playlist",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();playQueue=Array.isArray(data.tracks)?data.tracks:[];renderQueue();return playQueue}catch(e){playQueue=[];renderQueue();return []}
+}
+function renderQueue(){
+ const root=$("queue-list");root.replaceChildren();$("queue-total").textContent=String(playQueue.length);
+ if(!playQueue.length){root.append(node("p","queue-empty",({it:"Nessun file audio autorizzato disponibile",ro:"Nu există fișiere audio autorizate",en:"No authorized audio files available"})[language]));return}
+ playQueue.forEach((track,i)=>{const btn=node("button","queue-item"+(playIndex===i?" active":""));btn.type="button";btn.setAttribute("aria-label",String(track.title||"Brano")+" — "+String(track.artist||""));btn.append(node("span","queue-number",String(i+1)));const title=node("span","queue-name");title.append(node("b","",track.title||"Brano"),node("small","",track.artist||"Artista"));btn.append(title);btn.onclick=()=>playAt(i);root.append(btn)})
+}
+function playSingle(track){
+ playlistAudio.pause();playIndex=-1;playlistAudio.src=API+"/spotlight/"+encodeURIComponent(track.id)+"/audio";
+ $("player-label").textContent="♫ "+track.title+" · "+track.artist;
+ renderQueue();const p=playlistAudio.play();if(p&&p.catch)p.catch(()=>{$("player-label").textContent="▶ "+track.title+" · "+track.artist});
 }
 function playAt(index){
  if(index<0||index>=playQueue.length){playIndex=-1;playlistAudio.pause();playlistAudio.removeAttribute("src");playlistAudio.load();$("player-label").textContent="🎵 Playlist terminata";return}
  playIndex=index;const item=playQueue[index];playlistAudio.src=API+"/spotlight/"+encodeURIComponent(item.id)+"/audio";
  $("player-label").textContent="🎶 "+item.title+" · "+item.artist+" ("+(index+1)+"/"+playQueue.length+")";
- const result=playlistAudio.play();if(result&&result.catch)result.catch(()=>{$("player-label").textContent="▶ Premi Play nel lettore per iniziare · "+item.title});
+ renderQueue();const result=playlistAudio.play();if(result&&result.catch)result.catch(()=>{$("player-label").textContent="▶ Premi Play nel lettore per iniziare · "+item.title});
 }
 playlistAudio.onended=()=>playAt(playIndex+1);
 playlistAudio.onerror=()=>{if(playIndex>=0&&playIndex+1<playQueue.length)playAt(playIndex+1)};
@@ -214,6 +437,12 @@ $("play-all").onclick=async()=>{
  if(!playQueue.length){$("player-label").textContent=({it:"Nessun file audio autorizzato per Play All",ro:"Nu există fișiere autorizate pentru redare",en:"No consented audio files available for Play All"})[language];return}
  playAt(0)
 };
-$("player-stop").onclick=()=>{playlistAudio.pause();playIndex=-1;playlistAudio.removeAttribute("src");playlistAudio.load();$("player-label").textContent="■ Stop"};
+$("player-stop").onclick=()=>{playlistAudio.pause();playIndex=-1;playlistAudio.removeAttribute("src");playlistAudio.load();$("player-label").textContent="■ Stop";renderQueue()};
+$("player-prev").onclick=()=>{if(playQueue.length)playAt(playIndex>0?playIndex-1:0)};
+$("player-next").onclick=async()=>{if(!playQueue.length)await prepareQueue();if(playQueue.length)playAt(playIndex>=0?(playIndex+1)%playQueue.length:0)};
+const menuButton=$("menu-toggle");const closeMenu=()=>{document.body.classList.remove("menu-open");menuButton.setAttribute("aria-expanded","false")};
+menuButton.onclick=()=>{const open=document.body.classList.toggle("menu-open");menuButton.setAttribute("aria-expanded",String(open))};
+$("sidebar-scrim").onclick=closeMenu;document.querySelectorAll(".app-sidebar a").forEach(a=>a.addEventListener("click",closeMenu));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
 translate();load();prepareQueue();
 </script></body></html>
