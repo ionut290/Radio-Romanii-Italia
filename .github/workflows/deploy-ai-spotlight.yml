@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install API test dependency
-        run: python -m pip install 'flask>=3,<4'
+        run: python -m pip install 'flask>=3,<4' 'google-auth[requests]>=2.30,<3'
       - name: Run API tests without production credentials
         working-directory: rdi-ai-music-api
         run: python -m unittest discover -v
@@ -64,6 +64,12 @@ jobs:
           NEW=/home/ubuntu/.rdi-ai-music-release/app.py
           test -s "$NEW"
           /opt/rdi-ai-music-api/.venv/bin/python -m py_compile "$NEW"
+          /opt/rdi-ai-music-api/.venv/bin/python -m pip install --disable-pip-version-check 'google-auth[requests]>=2.30,<3'
+          /opt/rdi-ai-music-api/.venv/bin/python - <<'PYGOOGLE'
+          from google.oauth2 import id_token
+          from google.auth.transport.requests import Request
+          print('Google OAuth verification library ready.')
+          PYGOOGLE
           BACKUP=$(mktemp /opt/rdi-ai-music-api/app.py.before-spotlight.XXXXXXXX)
           cp -a "$APP" "$BACKUP"
           rollback() {
