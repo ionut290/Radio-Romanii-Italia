@@ -1,32 +1,31 @@
 #!/usr/bin/env python3
-"""Build a credited Italy/Romania visual rotation from the Pexels API.
+"""Build a credited Italy/Romania visual rotation from Wikimedia Commons.
 
-The resulting JSON contains only direct Pexels CDN URLs plus the corresponding
-Pexels asset page and photographer credit.  It intentionally does not download
-or republish stock files: the live page displays the URL returned by the API.
+Commons' public MediaWiki API needs no account or API key.  The script accepts
+only public-domain/CC0/CC BY/CC BY-SA images and keeps the author, licence and
+original file page on every card. It never downloads or republishes media.
 """
 from __future__ import annotations
 
 import argparse
 import datetime as dt
 import json
-import os
 import random
+import re
 import sys
+from html import unescape
 from pathlib import Path
-from urllib.parse import urlencode, urlparse
+from urllib.parse import quote, urlencode, urlparse
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "data" / "youtube-landscapes.json"
-LICENSE = "https://www.pexels.com/license/"
-PHOTO_ENDPOINT = "https://api.pexels.com/v1/search"
-VIDEO_ENDPOINT = "https://api.pexels.com/v1/videos/search"
+COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 MIN_PER_COUNTRY = 5
 
 TOPICS = {
-    "Italia": ["Rome Italy skyline", "Venice Italy canal", "Dolomites Italy", "Tuscany Italy landscape", "Sicily Italy coast", "Italian lake landscape"],
-    "România": ["Bucharest Romania", "Transylvania Romania", "Carpathian Mountains Romania", "Danube Delta Romania", "Romania village landscape", "Romania castle landscape"],
+    "Italia": ["Rome skyline", "Venice canal", "Dolomites landscape", "Tuscany landscape", "Sicily coast", "Italian lakes", "Italian coast", "Milan skyline"],
+    "România": ["Bucharest skyline", "Transylvania landscape", "Carpathian Mountains", "Danube Delta", "Romanian village", "Romania castle", "Sibiu Romania", "Romania coast"],
 }
 
 
@@ -35,14 +34,9 @@ def is_host(url: str, host: str, path_prefix: str) -> bool:
     return parsed.scheme == "https" and parsed.hostname == host and parsed.path.startswith(path_prefix)
 
 
-def pexels_page(url: str, kind: str) -> bool:
-    parsed = urlparse(url)
-    return parsed.scheme == "https" and parsed.hostname == "www.pexels.com" and parsed.path.startswith(f"/{kind}/")
-
-
-def credit(record: dict) -> str:
-    photographer = str(record.get("photographer") or record.get("user", {}).get("name") or "Pexels").strip()
-    return f"{photographer[:110]} / Pexels"
+def clean_html(value: object) -> str:
+    text = re.sub(r"<[^>]+>", " ", str(value or ""))
+    return re.sub(r"\s+", " ", unescape(text)).strip()
 
 
 def title(country: str, topic: str) -> str:
@@ -50,53 +44,43 @@ def title(country: str, topic: str) -> str:
     return f"{short} · {country.upper()}"
 
 
-def photo_item(record: dict, country: str, topic: str, reviewed_on: str) -> dict | None:
-    source = str(record.get("url") or "")
-    image = str((record.get("src") or {}).get("landscape") or "")
-    asset_id = str(record.get("id") or "")
-    if not (asset_id.isdigit() and pexels_page(source, "photo") and is_host(image, "images.pexels.com", "/photos/")):
+def permitted_license(name: str, url: str) -> bool:
+    compact = name.casefold().replace(" ", "")
+    if not (url.startswith("https://creativecommons.org/") or url.startswith("https://commons.wikimedia.org/")):
+        return False
+    if "cc0" in compact or "publicdomain" in compact:
+        return True
+    return compact.startswith("ccby") and "-nc" not in compact and "-nd" not in compact
+
+
+def commons_item(page: dict, country: str, topic: str, reviewed_on: str) -> dict | None:
+    info = (page.get("imageinfo") or [{}])[0]
+    meta = info.get("extmetadata") or {}
+    asset_id = str(page.get("pageid") or "")
+    image = str(info.get("thumburl") or "")
+    filename = str(page.get("title") or "")
+    licence_name = clean_html((meta.get("LicenseShortName") or {}).get("value"))
+    licence_url = str((meta.get("LicenseUrl") or {}).get("value") or "")
+    author = clean_html((meta.get("Artist") or {}).get("value")) or "Wikimedia Commons"
+    if not (asset_id.isdigit() and filename.startswith("File:") and is_host(image, "upload.wikimedia.org", "/")
+            and re.search(r"\.(?:jpe?g|png|webp)$", urlparse(image).path, re.I)
+            and permitted_license(licence_name, licence_url)):
         return None
     return {
-        "id": f"{country[:2].lower()}-photo-{asset_id}", "country": country, "title": title(country, topic),
-        "kind": "photo", "src": image, "poster": image, "source_url": source, "credit": credit(record),
-        "license_url": LICENSE, "audio_muted": True, "editorial_visual": True,
+        "id": f"{country[:2].lower()}-commons-{asset_id}", "country": country, "title": title(country, topic),
+        "kind": "commons", "src": image, "poster": image,
+        "source_url": "https://commons.wikimedia.org/wiki/" + quote(filename.replace(" ", "_"), safe=":_"),
+        "credit": f"{author[:100]} · {licence_name} / Wikimedia Commons", "license_url": licence_url,
+        "audio_muted": True, "editorial_visual": True,
         "rights_reviewed": True, "reviewed_on": reviewed_on,
     }
 
 
-def preferred_video_file(record: dict) -> str | None:
-    candidates = []
-    for item in record.get("video_files") or []:
-        link = str(item.get("link") or "")
-        width, height = item.get("width") or 0, item.get("height") or 0
-        if item.get("file_type") != "video/mp4" or not is_host(link, "videos.pexels.com", "/video-files/"):
-            continue
-        if not isinstance(width, int) or not isinstance(height, int) or width < 960 or height < 540:
-            continue
-        ratio_distance = abs((width / height) - (16 / 9))
-        candidates.append((ratio_distance, -min(width, 1920), link))
-    return min(candidates)[2] if candidates else None
-
-
-def video_item(record: dict, country: str, topic: str, reviewed_on: str) -> dict | None:
-    source = str(record.get("url") or "")
-    asset_id = str(record.get("id") or "")
-    video = preferred_video_file(record)
-    poster = next((str(item.get("picture") or "") for item in record.get("video_pictures") or []
-                   if is_host(str(item.get("picture") or ""), "images.pexels.com", "/videos/")), "")
-    if not (asset_id.isdigit() and pexels_page(source, "video") and video and poster):
-        return None
-    return {
-        "id": f"{country[:2].lower()}-video-{asset_id}", "country": country, "title": title(country, topic),
-        "kind": "video", "src": video, "poster": poster, "source_url": source, "credit": credit(record),
-        "license_url": LICENSE, "audio_muted": True, "editorial_visual": True,
-        "rights_reviewed": True, "reviewed_on": reviewed_on,
-    }
-
-
-def get_json(endpoint: str, key: str, query: str) -> dict:
-    request = Request(f"{endpoint}?{urlencode({'query': query, 'orientation': 'landscape', 'per_page': 3})}",
-                      headers={"Authorization": key, "Accept": "application/json", "User-Agent": "RDI-Live-Visuals/1.0"})
+def get_json(query: str) -> dict:
+    params = {"action": "query", "format": "json", "formatversion": "2", "generator": "search",
+              "gsrsearch": f"{query} filetype:bitmap", "gsrnamespace": "6", "gsrlimit": "12",
+              "prop": "imageinfo", "iiprop": "url|extmetadata", "iiurlwidth": "1280"}
+    request = Request(f"{COMMONS_API}?{urlencode(params)}", headers={"Accept": "application/json", "User-Agent": "RDI-Live-Visuals/1.0"})
     with urlopen(request, timeout=20) as response:
         return json.load(response)
 
@@ -113,18 +97,14 @@ def interleave(by_country: dict[str, list[dict]]) -> list[dict]:
     return result[:20]
 
 
-def build_config(key: str, today: str) -> dict:
+def build_config(today: str) -> dict:
     by_country: dict[str, list[dict]] = {country: [] for country in TOPICS}
     seen: set[str] = set()
     for country, topics in TOPICS.items():
-        for index, topic in enumerate(topics):
-            # One short video per country/topic pair where available; otherwise
-            # Pexels photographs keep the rotation fresh and lightweight.
-            endpoint, converter = (VIDEO_ENDPOINT, video_item) if index < 2 else (PHOTO_ENDPOINT, photo_item)
-            payload = get_json(endpoint, key, topic)
-            records = payload.get("videos") if endpoint == VIDEO_ENDPOINT else payload.get("photos")
-            for record in records or []:
-                item = converter(record, country, topic, today)
+        for topic in topics:
+            payload = get_json(topic)
+            for record in (payload.get("query") or {}).get("pages") or []:
+                item = commons_item(record, country, topic, today)
                 if item and item["id"] not in seen:
                     seen.add(item["id"])
                     by_country[country].append(item)
@@ -136,8 +116,8 @@ def build_config(key: str, today: str) -> dict:
         random.SystemRandom().shuffle(items)
     return {
         "schema_version": 1, "enabled": True, "after_news_cards": 8, "duration_seconds": 16,
-        "description": "Intermezzi Pexels aggiornati automat, con autore e fonte; ordine casuale senza ripetizioni immediate.",
-        "provider": "Pexels API", "provider_url": "https://www.pexels.com/",
+        "description": "Intermezzi Wikimedia Commons aggiornati automat, con autore e licență; ordine casuale senza ripetizioni immediate.",
+        "provider": "Wikimedia Commons API", "provider_url": "https://commons.wikimedia.org/",
         "generated_on": today, "items": interleave(by_country),
     }
 
@@ -147,12 +127,8 @@ def main() -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
-    key = os.environ.get("PEXELS_API_KEY", "").strip()
-    if not key:
-        print("PEXELS_API_KEY is required; no live configuration changed.", file=sys.stderr)
-        return 2
     today = dt.date.today().isoformat()
-    config = build_config(key, today)
+    config = build_config(today)
     text = json.dumps(config, ensure_ascii=False, indent=2) + "\n"
     if args.dry_run:
         print(text)
