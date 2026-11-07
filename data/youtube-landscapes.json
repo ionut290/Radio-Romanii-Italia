@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "enabled": true,
-  "after_news_cards": 4,
-  "duration_seconds": 20,
-  "description": "Intermezzi visivi silenziosi di repertorio tra le notizie della diretta YouTube. Ogni 4 notizie 20 secondi, alternanza Italia/România, NON feed di notizie e NON webcam live.",
+  "after_news_cards": 8,
+  "duration_seconds": 16,
+  "description": "Intermezzi visivi silenziosi di repertorio tra le notizie della diretta YouTube. Ogni 8 notizie 16 secondi, ordine casuale senza ripetizioni immediate, NON feed di notizie e NON webcam live.",
   "items": [
     {
       "id": "it-roma-pexels",
