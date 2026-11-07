@@ -26,7 +26,31 @@ import {parseLandscapeConfig,landscapeDue} from "./youtube-landscapes-core.mjs";
   const credit=layer.querySelector(".rdi-landscape-credit");
   const demo=new URLSearchParams(location.search).get("landscape_preview")==="1";
   let cfg={enabled:false,every:4,duration:20,items:[]};
-  let completed=0,cursor=0,active=false,endTimer=null,resume=null,generation=0;
+  let completed=0,active=false,endTimer=null,resume=null,generation=0;
+  // Do not make the six archive scenes feel like a short loop.  A shuffled
+  // "deck" shows every approved scene once before any can return, including
+  // across the boundary between two decks.
+  let deck=[],lastId="",configSignature="";
+  function shuffleScenes(items){
+    const next=items.slice();
+    for(let i=next.length-1;i>0;i--){
+      const j=Math.floor(Math.random()*(i+1));
+      [next[i],next[j]]=[next[j],next[i]];
+    }
+    // Never let the last visual of one deck be repeated as the first visual
+    // of the next one. This also covers a page reload with an existing deck.
+    if(next.length>1&&next[0].id===lastId){
+      const swapAt=next.findIndex(scene=>scene.id!==lastId);
+      if(swapAt>0)[next[0],next[swapAt]]=[next[swapAt],next[0]];
+    }
+    return next;
+  }
+  function nextScene(){
+    if(!deck.length)deck=shuffleScenes(cfg.items);
+    const scene=deck.shift();
+    lastId=scene.id;
+    return scene;
+  }
   function removeMedia(){
     generation++;
     for(const video of view.querySelectorAll("video")){
@@ -94,7 +118,10 @@ import {parseLandscapeConfig,landscapeDue} from "./youtube-landscapes-core.mjs";
       const response=await fetch("./data/youtube-landscapes.json?ts="+Date.now(),
           {cache:"no-store",signal:AbortSignal.timeout(6000)});
       if(!response.ok)throw Error("config "+response.status);
-      cfg=parseLandscapeConfig(await response.json());
+      const updated=parseLandscapeConfig(await response.json());
+      const signature=updated.items.map(item=>item.id).join("|");
+      if(signature!==configSignature){deck=[];configSignature=signature;}
+      cfg=updated;
     }catch{
       cfg={enabled:false,every:4,duration:20,items:[]};
     }
@@ -103,13 +130,11 @@ import {parseLandscapeConfig,landscapeDue} from "./youtube-landscapes-core.mjs";
     if(active||window.rdiSpotActive||window.rdiGeoActive||window.rdiCameraActive)return false;
     completed++;
     if(!cfg.enabled||!landscapeDue(completed,cfg.every))return false;
-    const item=cfg.items[cursor%cfg.items.length];
-    cursor++;
-    return show(item,cfg.duration,next);
+    return show(nextScene(),cfg.duration,next);
   }
   window.rdiLandscapeBreak={
     startIfDue,stop,
-    get state(){return {active,eligible:cfg.items.length,completed,cursor,enabled:cfg.enabled};}
+    get state(){return {active,eligible:cfg.items.length,completed,remaining:deck.length,enabled:cfg.enabled};}
   };
   const configReady=refresh();setInterval(refresh,300000);
   if(demo){
