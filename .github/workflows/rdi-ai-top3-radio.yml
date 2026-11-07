@@ -1,0 +1,137 @@
+name: RDI AI MUSIC — Top3 radiofonica e YouTube sincronizzati
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-rdi-ai-top3.py'
+      - 'scripts/deploy-rdi-ai-top3-oracle.py'
+      - '.github/workflows/rdi-ai-top3-radio.yml'
+  schedule:
+    # 18:30 in inverno, 19:30 in estate a Roma. Safe cutoff 20:00 local.
+    - cron: '30 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-ai-music-top3-broadcast
+  cancel-in-progress: false
+
+jobs:
+  radio-edition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate radio and TV source code
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/build-rdi-ai-top3.py scripts/deploy-rdi-ai-top3-oracle.py
+          node --test tests/youtube-ai-top3.test.mjs
+          test -s scripts/rdi-geopolitica-auth.php
+      - name: Prepare secure Oracle connection
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+      - name: Register manager-confirmed rights for three existing audio tracks once
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 ubuntu@129.151.255.41 'sudo -n python3 -' <<'PY'
+          import datetime, json, pathlib, sqlite3
+          from zoneinfo import ZoneInfo
+          root=pathlib.Path("/var/lib/rdi-ai-music")
+          marker=root/"top3"/".manager-confirmed-20261107"
+          approved=[
+            ("Draghi di Carta","Dario Germanà"),
+            ("Comme t'aggio aspettato","ionel varga"),
+            ("Le colline di settembre","N.p.L")
+          ]
+          if marker.exists():
+            print("TOP3_CONSENT=previously_registered")
+            raise SystemExit(0)
+          with sqlite3.connect(root/"submissions.sqlite3",timeout=20) as db:
+            db.row_factory=sqlite3.Row
+            records=[]
+            for title,artist in approved:
+              rows=db.execute("""SELECT id,stored_name,youtube_consent FROM submissions
+                  WHERE title=? AND artist=? AND status='approved' AND spotlight_consent=1
+                    AND stored_name IS NOT NULL""",(title,artist)).fetchall()
+              if len(rows)!=1 or not (root/"uploads"/rows[0]["stored_name"]).is_file():
+                raise SystemExit("Missing one unique authorized original audio track: "+title)
+              records.append((rows[0]["id"],title,artist))
+            backup=root/"top3"/"pre-broadcast-consents-20261107.sqlite3"
+            marker.parent.mkdir(parents=True,exist_ok=True)
+            if not backup.exists():
+              with sqlite3.connect(backup) as target: db.backup(target)
+              backup.chmod(0o600)
+            for identifier,title,artist in records:
+              db.execute("UPDATE submissions SET youtube_consent=1 WHERE id=?",(identifier,))
+            db.commit()
+          marker.write_text(json.dumps({"confirmed":"2026-11-07",
+              "source":"RDI operator confirmed broadcast rights before submission",
+              "tracks":[{"id":id_,"title":title,"artist":artist}
+                 for id_,title,artist in records]},ensure_ascii=False,indent=2))
+          marker.chmod(0o600)
+          print("TOP3_CONSENT=recorded_once_for_3_tracks")
+          PY
+      - name: Verify backend supports authorized tracks and on-air timing
+        run: |
+          set -euo pipefail
+          for try_no in {1..24}; do
+            if curl -fsS --max-time 12 --retry 1 https://radio-romanii-italia.duckdns.org/api/ai-music/top3/authorized                 | python3 -c 'import json,sys;x=json.load(sys.stdin);assert x["ready"] and len(x["tracks"])==3' ; then
+              echo "TOP3_BACKEND_READY=true"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::Top3 backend unavailable; leaving the radio unchanged."
+          exit 1
+      - name: Install Italian narration and audio tools
+        run: |
+          python -m pip install --disable-pip-version-check 'edge-tts>=7,<8'
+          ffmpeg -hide_banner -version | head -n 1
+          ffprobe -hide_banner -version | head -n 1
+      - name: Prepare full radio episode with #3 #2 #1 announcements
+        run: python scripts/build-rdi-ai-top3.py --output /tmp/rdi-ai-top3
+      - name: Deliver scheduled episode to Oracle / AzuraCast
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          opts=(-i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12)
+          STAGE="/tmp/rdi-ai-top3-$$-${GITHUB_RUN_ID}"
+          ssh "${opts[@]}" "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup() { ssh "${opts[@]}" "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scp -q "${opts[@]}" scripts/deploy-rdi-ai-top3-oracle.py scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php /tmp/rdi-ai-top3/manifest.json /tmp/rdi-ai-top3/RDI-AI-TOP3-*.mp3 "$REMOTE:$STAGE/"
+          MP3=$(basename /tmp/rdi-ai-top3/RDI-AI-TOP3-*.mp3)
+          ssh "${opts[@]}" "$REMOTE" "sudo -n python3 '$STAGE/deploy-rdi-ai-top3-oracle.py' publish --mp3 '$STAGE/$MP3' --manifest '$STAGE/manifest.json' --api-module '$STAGE/deploy-geopolitica-oracle.py' --php-helper '$STAGE/rdi-geopolitica-auth.php'"
+          echo 'TOP3_ORACLE_BROADCAST_SCHEDULED=true'
+      - name: Confirm timing manifest is public
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..10}; do
+            if curl -fsS --max-time 12 https://radio-romanii-italia.duckdns.org/api/ai-music/top3/live | python3 -c 'import json,sys;v=json.load(sys.stdin);assert v["ready"] and [x["rank"] for x in v["segments"]]==[3,2,1]'; then
+              echo 'TOP3_VIDEO_TIMELINE_READY=true'
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::Audio may be scheduled, but the visual timeline was not confirmed."
+          exit 1
