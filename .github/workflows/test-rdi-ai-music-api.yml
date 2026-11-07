@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install API dependencies
-        run: python -m pip install 'Flask>=3,<4'
+        run: python -m pip install 'Flask>=3,<4' 'google-auth[requests]>=2.30,<3'
       - name: Check Python syntax
         run: python -m py_compile rdi-ai-music-api/app.py rdi-ai-music-api/test_app.py
       - name: Run backend unit tests
