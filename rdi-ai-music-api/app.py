@@ -209,7 +209,7 @@ def response_headers(r):
 
 def music_email(value):
     value=str(value or "").strip().lower()
-    if len(value)>254 or not re.fullmatch(r"[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?\\.[a-z]{2,63}",value):
+    if len(value)>254 or not re.fullmatch(r"[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?\.[a-z]{2,63}",value):
         return None
     if ".." in value or any(part.startswith("-") or part.endswith("-") for part in value.split("@")[-1].split(".")):
         return None
@@ -222,8 +222,8 @@ def send_music_login_email(email,code):
     message["Subject"]="Il tuo codice di accesso RDI AI MUSIC"
     message["From"]=SMTP_FROM
     message["To"]=email
-    message.set_content("Codice di accesso a Radio Românii din Italia AI MUSIC: "+code+"\\n"
-                        "Valido per 10 minuti. Non condividerlo con nessuno.\\n"
+    message.set_content("Codice di accesso a Radio Românii din Italia AI MUSIC: "+code+"\n"
+                        "Valido per 10 minuti. Non condividerlo con nessuno.\n"
                         "Se non lo hai richiesto, ignora questo messaggio.")
     if SMTP_SSL:
         with smtplib.SMTP_SSL(SMTP_HOST,SMTP_PORT,timeout=12,context=ssl.create_default_context()) as smtp:
@@ -313,7 +313,7 @@ def music_auth_verify_code():
     if not isinstance(data,dict): return jsonify(error="JSON required"),400
     email=music_email(data.get("email"))
     code=data.get("code")
-    if not email or not isinstance(code,str) or not re.fullmatch(r"\\d{6}",code):
+    if not email or not isinstance(code,str) or not re.fullmatch(r"\d{6}",code):
         return jsonify(error="Invalid verification code"),400
     current=int(time.time())
     token=secrets.token_urlsafe(36)
@@ -337,6 +337,9 @@ def music_auth_verify_code():
                         (user_id,email,name,now()))
         else:
             user_id=user["id"]
+        # Link legacy submissions to the now-verified email owner.
+        con.execute("UPDATE submissions SET user_id=? WHERE user_id IS NULL AND lower(email)=?",
+                    (user_id,email))
         con.execute("DELETE FROM music_login_codes WHERE email=?",(email,))
         con.execute("INSERT INTO music_user_sessions(session_hash,user_id,expires_at) VALUES(?,?,?)",
                     (hashlib.sha256(token.encode()).hexdigest(),user_id,current+AUTH_SESSION_SECONDS))
