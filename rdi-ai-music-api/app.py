@@ -4,6 +4,14 @@ from email.message import EmailMessage
 from datetime import datetime, timezone
 from pathlib import Path
 from flask import Flask, request, jsonify, send_file, abort
+try:
+    from google.oauth2 import id_token as google_id_token
+    from google.auth.transport.requests import Request as GoogleAuthRequest
+    GOOGLE_AUTH_LIBRARY_READY=True
+except ImportError:
+    google_id_token=None
+    GoogleAuthRequest=None
+    GOOGLE_AUTH_LIBRARY_READY=False
 
 ROOT=Path(os.environ.get("RDI_AI_DATA_DIR","/var/lib/rdi-ai-music")).resolve()
 FILES=ROOT/"uploads"
@@ -31,6 +39,8 @@ SMTP_FROM=os.environ.get("RDI_AI_SMTP_FROM","").strip()
 SMTP_SSL=os.environ.get("RDI_AI_SMTP_SSL","0").lower() in ("1","true","yes")
 AUTH_SECRET=os.environ.get("RDI_AI_AUTH_SECRET","") or ADMIN_TOKEN
 AUTH_MAIL_READY=bool(SMTP_HOST and SMTP_FROM and AUTH_SECRET)
+GOOGLE_CLIENT_ID=os.environ.get("RDI_AI_GOOGLE_CLIENT_ID","").strip()
+GOOGLE_AUTH_READY=bool(GOOGLE_CLIENT_ID and GOOGLE_AUTH_LIBRARY_READY)
 AUTH_SESSION_SECONDS=14*86400
 AUTH_CODE_SECONDS=10*60
 
@@ -74,6 +84,13 @@ def db():
         con.execute("ALTER TABLE submissions ADD COLUMN user_id TEXT DEFAULT NULL")
     con.execute("""CREATE TABLE IF NOT EXISTS music_users (
       id TEXT PRIMARY KEY, email TEXT NOT NULL UNIQUE, display_name TEXT NOT NULL, created_at TEXT NOT NULL)""")
+    user_columns={row["name"] for row in con.execute("PRAGMA table_info(music_users)")}
+    if "google_sub" not in user_columns:
+        con.execute("ALTER TABLE music_users ADD COLUMN google_sub TEXT")
+    con.execute("CREATE UNIQUE INDEX IF NOT EXISTS music_google_sub_unique ON music_users(google_sub)")
+    con.execute("""CREATE TABLE IF NOT EXISTS music_google_login_requests (
+      ip_key TEXT NOT NULL, created_at INTEGER NOT NULL)""")
+    con.execute("CREATE INDEX IF NOT EXISTS music_google_login_by_ip ON music_google_login_requests(ip_key,created_at)")
     con.execute("""CREATE TABLE IF NOT EXISTS music_login_codes (
       email TEXT PRIMARY KEY, code_hash TEXT NOT NULL, display_name TEXT NOT NULL,
       expires_at INTEGER NOT NULL, attempts INTEGER NOT NULL DEFAULT 0)""")
@@ -262,7 +279,110 @@ def require_music_user():
 @app.get("/api/ai-music/auth/config")
 def music_auth_config():
     return jsonify(login_required=AUTH_REQUIRED,email_available=AUTH_MAIL_READY,
+                   google_available=GOOGLE_AUTH_READY,
+                   google_client_id=GOOGLE_CLIENT_ID if GOOGLE_AUTH_READY else None,
+                   providers=["email_code","google"] if GOOGLE_AUTH_READY else ["email_code"],
                    provider="email_code")
+
+
+def verify_google_credential(credential,nonce):
+    """Validate Google's signed ID token, issuer, audience, expiry and nonce."""
+    if not GOOGLE_AUTH_READY:
+        raise RuntimeError("Google login is not configured")
+    try:
+        claims=google_id_token.verify_oauth2_token(
+            credential,GoogleAuthRequest(),GOOGLE_CLIENT_ID)
+    except (ValueError,Exception) as exc:
+        # Do not include token contents in any response or log.
+        raise ValueError("Google identity token could not be verified") from exc
+    if claims.get("iss") not in ("accounts.google.com","https://accounts.google.com"):
+        raise ValueError("Invalid Google token issuer")
+    if claims.get("aud")!=GOOGLE_CLIENT_ID:
+        raise ValueError("Invalid Google token audience")
+    if not hmac.compare_digest(str(claims.get("nonce","")),nonce):
+        raise ValueError("Google login nonce mismatch")
+    if claims.get("email_verified") not in (True,"true"):
+        raise ValueError("Google email is not verified")
+    email=music_email(claims.get("email"))
+    sub=claims.get("sub")
+    if not email or not isinstance(sub,str) or not 5<=len(sub)<=255:
+        raise ValueError("Invalid Google account")
+    # Google is authoritative for Gmail and Google Workspace mailboxes.
+    # Avoid taking over existing email-code accounts using external mailbox
+    # addresses that Google may have verified only once in the past.
+    domain=email.rsplit("@",1)[-1]
+    hosted=claims.get("hd")
+    authoritative=(domain in ("gmail.com","googlemail.com") or
+                   (isinstance(hosted,str) and hosted.lower()==domain))
+    if not authoritative:
+        raise ValueError("Use a Gmail or verified Google Workspace address")
+    return email,sub,clamp(claims.get("name") or claims.get("given_name"),40) or "Artista RDI"
+
+@app.post("/api/ai-music/auth/google")
+def music_auth_google():
+    """Google Identity Services: exchange a VERIFIED ID token for an RDI session."""
+    if request.headers.get("Origin")!=PUBLIC_ORIGIN:
+        return jsonify(error="Please use the RDI website"),403
+    if not GOOGLE_AUTH_READY:
+        return jsonify(error="Google login not configured on RDI"),503
+    if request.content_length and request.content_length>8192:
+        return jsonify(error="Request too large"),413
+    data=request.get_json(silent=True)
+    if not isinstance(data,dict):
+        return jsonify(error="JSON required"),400
+    credential=data.get("credential")
+    nonce=data.get("nonce")
+    if not isinstance(credential,str) or not 50<=len(credential)<=6144:
+        return jsonify(error="Invalid Google credential"),400
+    if not isinstance(nonce,str) or not 20<=len(nonce)<=128 or not re.fullmatch(r"[A-Za-z0-9_-]+",nonce):
+        return jsonify(error="Invalid login request"),400
+    ip_key=rate_key()
+    current=int(time.time())
+    with db() as con:
+        con.execute("DELETE FROM music_google_login_requests WHERE created_at<?",(current-3600,))
+        hits=con.execute("SELECT COUNT(*) FROM music_google_login_requests WHERE ip_key=?",
+                         (ip_key,)).fetchone()[0]
+        if hits>=30:
+            return jsonify(error="Too many login attempts. Please try later."),429
+        con.execute("INSERT INTO music_google_login_requests(ip_key,created_at) VALUES(?,?)",
+                    (ip_key,current))
+    try:
+        email,sub,name=verify_google_credential(credential,nonce)
+    except ValueError as exc:
+        return jsonify(error=str(exc)),401
+    except Exception:
+        app.logger.exception("Google credential verification unavailable")
+        return jsonify(error="Google verification unavailable. Try again later."),503
+    token=secrets.token_urlsafe(36)
+    with db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        account=con.execute("SELECT id,email,google_sub FROM music_users WHERE google_sub=?",
+                            (sub,)).fetchone()
+        if account is not None:
+            user_id=account["id"]
+        else:
+            account=con.execute("SELECT id,email,google_sub FROM music_users WHERE email=?",
+                                (email,)).fetchone()
+            if account is not None and account["google_sub"] not in (None,sub):
+                return jsonify(error="This email belongs to another Google account"),409
+            if account is not None:
+                user_id=account["id"]
+                con.execute("UPDATE music_users SET google_sub=? WHERE id=?",(sub,user_id))
+            else:
+                user_id=uuid.uuid4().hex
+                con.execute("""INSERT INTO music_users(id,email,display_name,created_at,google_sub)
+                            VALUES(?,?,?,?,?)""",(user_id,email,name,now(),sub))
+        # Preserve earlier uploads made using the same verified email address.
+        con.execute("UPDATE submissions SET user_id=? WHERE user_id IS NULL AND lower(email)=?",
+                    (user_id,email))
+        con.execute("INSERT INTO music_user_sessions(session_hash,user_id,expires_at) VALUES(?,?,?)",
+                    (hashlib.sha256(token.encode()).hexdigest(),user_id,
+                     current+AUTH_SESSION_SECONDS))
+        con.execute("DELETE FROM music_user_sessions WHERE expires_at<?",(current,))
+    with db() as con:
+        user=dict(con.execute("SELECT id,email,display_name FROM music_users WHERE id=?",
+                              (user_id,)).fetchone())
+    return jsonify(ok=True,session=token,user=user,expires_in_seconds=AUTH_SESSION_SECONDS),200
 
 @app.post("/api/ai-music/auth/request-code")
 def music_auth_request_code():
