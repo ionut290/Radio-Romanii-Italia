@@ -1,12 +1,54 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-07T11:40:42.068193Z",
+  "updated_at": "2026-11-07T12:50:44.731799Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-47f4372b10092409",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Transactional diplomacy pays back: Democratic probes into Trump are unsettling Islamabad",
+      "summary": "",
+      "source": "Firstpost",
+      "published": "2026-11-07T12:43:20Z",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNYm5UME9NZlZrMkdaWWFhY3FYS3FlcUc0WWkxdVRmbFZlTHZpYmg4N3FHMU1JUlhqV1JpTzdoZ1hlV1Rta0duaXhpcVJtSm1aMTFSQThaSUdiTWdNWlF3NGVUZmxKTmtXSG9oemllaXhSNkZSSEtCQVF4ekdTdlJON2VjUlVKemhoeHNhV0VWUFQ2QXVlYnFvaUkwUVBZejNpYXNwT2hSUnBmblEtbEh0bG1INDVrQ3A3QnlOYVdEWV84dk5ramxCS1BndlB4SU5QbnlnQtIB1AFBVV95cUxNYm5UME9NZlZrMkdaWWFhY3FYS3FlcUc0WWkxdVRmbFZlTHZpYmg4N3FHMU1JUlhqV1JpTzdoZ1hlV1Rta0duaXhpcVJtSm1aMTFSQThaSUdiTWdNWlF3NGVUZmxKTmtXSG9oemllaXhSNkZSSEtCQVF4ekdTdlJON2VjUlVKemhoeHNhV0VWUFQ2QXVlYnFvaUkwUVBZejNpYXNwT2hSUnBmblEtbEh0bG1INDVrQ3A3QnlOYVdEWV84dk5ramxCS1BndlB4SU5QbnlnQg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diplomația tranzacțională dă înapoi: Sondele democrate asupra lui Trump deranjează Islamabad",
+      "title_it": "La diplomazia transazionale ripaga: le indagini democratiche su Trump stanno preoccupando Islamabad",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d86d7324d4ee6a63",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Meloni warns the EU could become irrelevant in Ukraine peace talks without one authorized negotiator",
+      "summary": "",
+      "source": "Latin Times",
+      "published": "2026-11-07T12:30:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPS19pN1Z4c0hpNnU5cEFFY01zQ1p4SHRkSkhJN00yZkVoWk5CZjJHVjVVZGU4LW1lNnJZRmVmdlBOSV83YTMyTGVXRFJGd1hMUVhaak16WmJQRnZ1SGkxZXZ0Q0pNN1VwMVdhdXVqc0VNWF84Z1NXclFtVG9DREdOS2R3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Meloni avertizează că UE ar putea deveni irelevantă în negocierile de pace cu Ucraina fără un negociator autorizat",
+      "title_it": "Meloni avverte che l’UE potrebbe diventare irrilevante nei colloqui di pace in Ucraina senza un negoziatore autorizzato",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-3abb7a905106f64f",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Santos warns against the comfort of silence in Nelson Mandela lecture",
+      "summary": "",
+      "source": "Mail & Guardian",
+      "published": "2026-11-07T12:13:16Z",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQUTA3MU5RT3RIaUg0b2lvWXpQbm41MDhCLVZKWDlscmJWRzBKdTktVFBzNjBDcEZROG9mZ0pmLWVEZWJ2NEZZb1N4alpOYkZDOURiS25KbUwzdUhob202NE05ajhjb1hYWHdTZlBLUTRkb2lGZERqdHllTTJjZEk5c3I5TDRuRWhRSEliMXdBNm5sNVhZ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Santos avertizează împotriva confortului tăcerii în prelegerea lui Nelson Mandela",
+      "title_it": "Santos mette in guardia contro il conforto del silenzio nella conferenza di Nelson Mandela",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-6c6935e0760ab3bd",
       "category": "conflicte",
@@ -16,7 +58,10 @@
       "source": "Citizen Digital",
       "published": "2026-11-07T10:41:15Z",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxON2pJWURaZjN6dTR2MEUzYlpBcjhvTHlCSEJteG5GWks2MDVHVjFYUEM0aEFBUG14UEh1Y09qSlZBdjI2U3pEejlKcld5TFpyeTBJLUZKNlB5N0FPdHJ2VFl1akpyOEN3QzRMQWpNTTJJU195cGlCNjhuWU5pQ0w4eF93eXBGZXpUTkJuY1RsUFF0UXhiTm1lbnZOY1JuNXlTcENhSGxn?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Impulsul comun UA-UE pentru pace în timp ce crizele din Sudan, RDC și Sahel domină discuțiile",
+      "title_it": "La spinta congiunta UA-UE per la pace mentre le crisi del Sudan, della Repubblica Democratica del Congo e del Sahel dominano i colloqui",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-228fef4cc6ac14b0",
@@ -27,7 +72,24 @@
       "source": "The Journal",
       "published": "2026-11-07T10:40:00Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5jeTYyX2JYT1AtbnpRZlRZdWxLMERFLWxUMUJQTWJocGdZYjQ3X0M3UTl4dE0wenNTQ3JaMkpGdTlmNElKTUJJVW11d2VkS05EUHJNSG4xRE9jekNTOFh1NGpKSXc5TFZzRGN4Q3ZUVUI?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Kievul a fost lovit de rachete în timp ce Ucraina se pregătește pentru discuții cu Rusia și SUA",
+      "title_it": "Kiev colpita da missili mentre l'Ucraina si prepara ai colloqui con Russia e Stati Uniti",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-75ee6709d7cc8237",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Storm damages thousands of tents in Gaza, raising fears of humanitarian disaster",
+      "summary": "",
+      "source": "Middle East Monitor",
+      "published": "2026-11-07T10:17:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPLUQ1T1pNNUJlVlJTaF9vUDJzZWxldG4wbWxwVnU1TVVuMGk4NUdMRjBrVjZ4c2VwMi16WjNWNW5mUlllbm81WTNNRmtVZ1FYZmdpa2d3b0RXV3dxZzZORnJ4dE1qU2k0TE1RNUk2a0RobFFwaUZ4aWZuS0JMVHpCVkpvblMzNmNTQ1dEM3I2dnV5NVZqZlZHdUFCaHBIanFfR0FvOFp6d2pqZnEyNDF4YllSX1ZYdThiVER5MFp4cTdRSU3SAcgBQVVfeXFMTnJ4TkpSSUg1MjRrN2IxOEdkbHhkbTlhb0p3eUpjQkE0Tk16bFk3aFdRNHJGdkdYZUNpUHVGZTctWTU5X184TnVJMl96VjBMMDBxRmxtREJCM2FHbmZYVFlHekJ1dlo2bzQ1RU9NVE5wTjA1RWt3N00yclZZY2ptSElRZ1JfeHlyLUV3X1pEQnI4bXJDYjBPRXpiVk5KaGhQZ0o4SHAyb0U5LUNWbkNYTnJhVE9XaVhVZjFlZlZhZXF4QU03Q2lLb3M?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Furtuna dăunează mii de corturi în Gaza, stârnind temeri de dezastre umanitare",
+      "title_it": "La tempesta danneggia migliaia di tende a Gaza, sollevando timori di un disastro umanitario",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-95326480b2b84729",
@@ -94,7 +156,10 @@
       "source": "JournalArta",
       "published": "2026-11-07T08:06:55Z",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOTRtaXczeHVNaHVtMG5GbUh0dGN1Sy10dXo5SEVOcVl5U1Qwc0N3RVFhdEFGQ0RVSHdkRHhTNGpqdVVPdWdFQWl3b3ppSGF4UTBXd0x4OWhhOU5kal91MENZVDNNcHVKTVVLeUNFYVFaYkRoNGJvRmlINS00eVd1cS1rbGRsZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31 se deschide în Turcia pe fondul apelurilor de a reforma regulile consensuale",
+      "title_it": "La COP31 si apre in Turchia tra le richieste di riforma delle regole di consenso",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-b5f794b33f6ae304",
@@ -139,15 +204,18 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-3f470469a9d6ff20",
+      "id": "geo-0d23e4d16e8cc62e",
       "category": "securitate",
       "region": "asia",
       "title": "PM wants constructive ties with China, a year after Taiwan remark anniversary",
       "summary": "",
       "source": "Japan Today",
       "published": "2026-11-07T07:00:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQTc3SmFrdUdpcU5wQ2ZnMTJUcGFhR1h3N2pVUk1FX2FWUEtNblZqelpBRnJUcXYxeGF6U01FS3BpM1pueG1zckJScVFpLXdRWHJQM05TRm1fVHhuaWw2REd6VGRQWUxvZExvNVktdTYtem96V2tIR2dHdVJkMUx5ZGJaS09CUjR3V2xUV2xPVUptT2FHM1YxbU5McVdQQVA1eGZISUhoQnN4SDBqM25FVW5JVFZHaFRn?oc=5",
-      "review_status": "external_headline_unverified"
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPeFlST1BLV093QUlsVGo3YlFvNGxKOGdXQnpYa2k1OHdnMFg1WWVaYWtZV1F4WGZhdklOemZOZWhzRW5WTFg0UGxENklrdDJKaC1JelhTaFZzanNrV1FDbXFNNlV3ZGRBYk9iUkF6ekRDSms0enpKcHRXcDhFWlN5czIxT3JVUjlJUXBQS01CdHZDeWFYd0huVTN6YTNGZmd2NGJCUjJvODhvM29pNzJkV2toempmbUZ6UzVUS2tqdDRtQnJYVWRDTzRNbGlrRms4VTJlTw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Premierul vrea legături constructive cu China, la un an după aniversarea remarcii Taiwanului",
+      "title_it": "Il Primo Ministro vuole legami costruttivi con la Cina, un anno dopo l’anniversario delle celebrazioni di Taiwan",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5a9a37ff45513307",
@@ -158,7 +226,10 @@
       "source": "Outlook India",
       "published": "2026-11-07T06:29:10Z",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRkFqSkhXbHpXaVpBS0c2Zi1rUFFqLVhveGpPTmF2Ujl0Qms2aWlfdUl1VVdCS0xlMGRZSWh0d0xZaTRMaU1rcktlSWt1RUF0aHRranA3NGx1elRmNGVmRks5Z0dZZ1RkR3NHbjFybm9pcVBOc3V1Um8td2l0NXVCSnhYQnR3TlNCWFBJRUZXRmNNaC1wa3RrNWdnTWl4R0hlLUlsWU9WUHhGME1lUUVKdks4emY2VEJqbEHSAccBQVVfeXFMTVNNQUVpRXBnMXJsc3ZnUTF1emg4OWdvMFVDd0dzdW5ZTmFVNS1BMFhpRURyQk5NM0QxRFZnZkQxYUFtSkNtMTcyaXFkUzhIbUFzaDctYUNtVHJycEgyVUxhb1YtV0N2dlpxbjdZMnZhVjJfNDVHSExZZGtIZ0hwZDVpWFFmRWQtcTdZRmVSd1Vkc2RfNGtKdG9heVdVSnNtRmtWLTE0VTZwaTVlbUhnU252RWw0ZGtmTzNjeFJDeHMtaGJWLUhwUQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia lovește Kievul cu rachete balistice, doi răniți înaintea discuțiilor de pace de la Abu Dhabi",
+      "title_it": "La Russia colpisce Kiev con missili balistici, due feriti in vista dei colloqui di pace di Abu Dhabi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-ecf1206899da5d02",
@@ -169,7 +240,10 @@
       "source": "The Climate Watch",
       "published": "2026-11-07T05:51:42Z",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQWtBaEFnZ0sxeUFWVWlhSld6VVdKQk4zU3g1ZWtMR0dNXzRQTWcyV0J6aXZES3UxT1B0NE9SaFJhaGpRRHVFQzhjcTg0bHR6VnlqVC15am11SnRFZGYwSFNMRGgweDZrc1J6RXpXWW1jUlFPWGlFNDEtVTNNVVJrdUt5X09FMmFMbHpxYU1pTUxaNXQ2YjVOVjdNVTc1UTZCcXc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Turcia, Australia se confruntă cu un test de lider în domeniul climatic în privința cărbunelui înainte de COP31",
+      "title_it": "La Turchia e l’Australia devono affrontare un test di leadership climatica sul carbone in vista della COP31",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-7ebfc57981016712",
@@ -242,6 +316,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-353b0c816270114e",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "JD Vance spearheads quiet diplomatic push for new Iran deal: Report",
+      "summary": "",
+      "source": "Big News Network.com",
+      "published": "2026-11-07T03:30:00Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaW9XQVh0WFFXZ19VVU9sMWVzOGxLVWZJSkM1VGl0RWJmc0JWZUJqOFFGVE05ZVlIOFBrVVFlOENYME5BQzlfWlR0Q2l2ekF0WVk5YzNRbjIweGhHbFlVUzY3OTF3SzBuaHJtLTNMUjd0cldyWDBKYURFMU9CV3NpdjFjanI3N25ISGZ5LWtKSEZBekh5b2FmLVpPTHFXbi1TeTluUVR4SVZNMktlNk5lZ3pn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "JD Vance conduce un impuls diplomatic liniştit pentru un nou acord cu Iranul: Raport",
+      "title_it": "JD Vance guida una silenziosa spinta diplomatica per un nuovo accordo con l'Iran: rapporto",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-c9b5c0a27d0e4170",
       "category": "diplomatie",
       "region": "asia",
@@ -250,7 +338,10 @@
       "source": "Global New Light Of Myanmar",
       "published": "2026-11-07T03:20:17Z",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPcVQ4bzk4OVQ4bmlPRWpNeGlHRGxFVkpvWXgtcTNGYWNOQ2FVNWwwaF9td3phR2hHYzh0T3hTeXlBZGw3OUZWZVM0elJxX3c2MnRnS0QwTFV6SmYyS19DcmE4d2d6S1V1OUpFYVFsd2NTZDdEWWJZQnBiOVE2bmhQUC1xZ1ZWOUYzc1lnVlg3R3JrcTdsT2RkN082N2JuNnpWZ0lYTWRTSG43YzVLeEdQTVEyNWplX0JVTXlEdE5jQy04UDVrd2NPbFBpenotVFJhLUtXemd0ZmlaVzdHSzc2SmtxMA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Strategia Myanmar a Statelor Unite către 2030: Implicații pentru investițiile străine directe și dezvoltarea economică națională",
+      "title_it": "La strategia del Myanmar degli Stati Uniti verso il 2030: implicazioni per gli investimenti diretti esteri e lo sviluppo economico nazionale",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-8c1aa0e59bafbf4d",
