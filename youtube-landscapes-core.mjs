@@ -4,7 +4,7 @@
 const ALLOWED_VIDEO = "videos.pexels.com";
 const ALLOWED_POSTER = "images.pexels.com";
 const ALLOWED_NASA = "eol.jsc.nasa.gov";
-const ALLOWED_COMMONS = "upload.wikimedia.org";
+const ALLOWED_COMMONS = new Set(["upload.wikimedia.org","thumb.wikimedia.org"]);
 const countryLabel = new Set(["Italia","România"]);
 const clean = s => typeof s==="string" ? s.trim() : "";
 export function safeLandscapeURL(value,kind) {
@@ -14,7 +14,7 @@ export function safeLandscapeURL(value,kind) {
     if(kind==="video") return u.hostname===ALLOWED_VIDEO && /\/video-files\/\d+\/.+\.mp4$/.test(u.pathname);
     if(kind==="poster") return u.hostname===ALLOWED_POSTER && /\/videos\/\d+\/[^/]+\.jpe?g$/i.test(u.pathname);
     if(kind==="photo") return u.hostname===ALLOWED_POSTER && /\/photos\/\d+\/[^/]+\.jpe?g$/i.test(u.pathname);
-    if(kind==="commons") return u.hostname===ALLOWED_COMMONS && /\/[^/]+\.(?:jpe?g|png|webp)$/i.test(u.pathname);
+    if(kind==="commons") return ALLOWED_COMMONS.has(u.hostname) && /\/[^/]+\.(?:jpe?g|png|webp)$/i.test(u.pathname);
     if(kind==="nasa") return u.hostname===ALLOWED_NASA && /^\/DatabaseImages\/ESC\/large\/ISS\d+\/ISS\d+-E-\d+\.JPG$/i.test(u.pathname);
     return false;
   }catch{return false;}
