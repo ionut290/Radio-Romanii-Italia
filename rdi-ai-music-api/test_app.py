@@ -171,11 +171,27 @@ class SubmissionTests(unittest.TestCase):
         self.assertEqual(review.status_code, 400)
 
     def test_rate_limit_persists_across_requests(self):
-        for _ in range(6):
-            self.assertEqual(self.post().status_code, 201)
-        self.assertEqual(self.post().status_code, 429)
+        # The batch upload UI sends ten separate requests; they must all succeed.
+        self.assertGreaterEqual(service.RATE_MAX, 10)
+        for i in range(service.RATE_MAX):
+            response=self.post(title=f"Track {i+1}")
+            self.assertEqual(response.status_code, 201)
+        rejected=self.post(title="Over the limit")
+        self.assertEqual(rejected.status_code, 429)
+        self.assertIn("Retry-After",rejected.headers)
+        self.assertGreater(int(rejected.headers["Retry-After"]),0)
+        self.assertEqual(rejected.json["retry_after_seconds"],int(rejected.headers["Retry-After"]))
         with service.db() as con:
-            self.assertEqual(con.execute("SELECT COUNT(*) FROM rate_events").fetchone()[0], 6)
+            self.assertEqual(con.execute("SELECT COUNT(*) FROM rate_events").fetchone()[0], service.RATE_MAX)
+
+    def test_six_prior_uploads_leave_room_for_four_more(self):
+        # Reproduce the real-world case: six existing songs, four left to send.
+        for i in range(6):
+            self.assertEqual(self.post(title=f"Already submitted {i+1}").status_code,201)
+        for i in range(4):
+            self.assertEqual(self.post(title=f"Remaining {i+1}").status_code,201)
+        with service.db() as con:
+            self.assertEqual(con.execute("SELECT COUNT(*) FROM submissions").fetchone()[0],10)
 
     def test_review_is_explicit(self):
         sid = self.post().json["id"]
