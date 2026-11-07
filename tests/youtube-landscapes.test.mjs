@@ -36,6 +36,9 @@ test("bad origins, invalid rights and audio fail closed",()=>{
  assert.equal(validateLandscape({...first,country:"France"}),null);
  assert.equal(validateLandscape({...first,license_url:"https://example.com/license"}),null);
  assert.equal(safeLandscapeURL("https://localhost/demo.mp4","video"),false);
+ assert.equal(safeLandscapeURL("https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/View.jpg/1280px-View.jpg","commons"),true);
+ assert.equal(safeLandscapeURL("https://upload.wikimedia.org/wikipedia/commons/a/a1/View.jpg","commons"),true);
+ assert.equal(safeLandscapeURL("https://commons.wikimedia.org/wiki/File:View.jpg","commons"),false);
  assert.equal(parseLandscapeConfig({enabled:true,items:[first]}).enabled,false);
  assert.equal(parseLandscapeConfig({enabled:false,items:config.items}).enabled,false);
 });
