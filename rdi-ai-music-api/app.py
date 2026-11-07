@@ -29,7 +29,8 @@ SMTP_USER=os.environ.get("RDI_AI_SMTP_USER","").strip()
 SMTP_PASSWORD=os.environ.get("RDI_AI_SMTP_PASSWORD","")
 SMTP_FROM=os.environ.get("RDI_AI_SMTP_FROM","").strip()
 SMTP_SSL=os.environ.get("RDI_AI_SMTP_SSL","0").lower() in ("1","true","yes")
-AUTH_MAIL_READY=bool(SMTP_HOST and SMTP_FROM)
+AUTH_SECRET=os.environ.get("RDI_AI_AUTH_SECRET","") or ADMIN_TOKEN
+AUTH_MAIL_READY=bool(SMTP_HOST and SMTP_FROM and AUTH_SECRET)
 AUTH_SESSION_SECONDS=14*86400
 AUTH_CODE_SECONDS=10*60
 
@@ -290,7 +291,7 @@ def music_auth_request_code():
         if (last is not None and current-last<60) or ip_hits>=12 or email_hits>=5:
             return jsonify(error="Too many login attempts. Try again later."),429
         code=f"{secrets.randbelow(1000000):06d}"
-        code_hash=hmac.new((ADMIN_TOKEN or "rdi-code-key").encode(),
+        code_hash=hmac.new(AUTH_SECRET.encode(),
                            (email+":"+code).encode(),hashlib.sha256).hexdigest()
         con.execute("""INSERT OR REPLACE INTO music_login_codes(email,code_hash,display_name,expires_at,attempts)
             VALUES(?,?,?,?,0)""",(email,code_hash,display_name,current+AUTH_CODE_SECONDS))
@@ -322,7 +323,7 @@ def music_auth_verify_code():
         row=con.execute("SELECT * FROM music_login_codes WHERE email=?",(email,)).fetchone()
         if not row or row["expires_at"]<current or row["attempts"]>=5:
             return jsonify(error="Code expired or invalid. Request a new code."),401
-        expected=hmac.new((ADMIN_TOKEN or "rdi-code-key").encode(),
+        expected=hmac.new(AUTH_SECRET.encode(),
                           (email+":"+code).encode(),hashlib.sha256).hexdigest()
         if not hmac.compare_digest(row["code_hash"],expected):
             con.execute("UPDATE music_login_codes SET attempts=attempts+1 WHERE email=?",(email,))
@@ -381,13 +382,19 @@ def submit():
     # Server must be behind HTTPS, with trusted proxy enforcing request limits.
     ip_key=rate_key()
     current=int(time.time())
+    # Verified accounts have their own 12-track quota, while the IP safety cap
+    # prevents unlimited new accounts from sending unlimited files.
+    account_key=hmac.new((AUTH_SECRET or ADMIN_TOKEN).encode(),
+                         ("member:"+user["id"]).encode(),hashlib.sha256).hexdigest() if user else ip_key
     with db() as con:
         con.execute("DELETE FROM rate_events WHERE created_at<?",(current-RATE_WINDOW_SECONDS,))
-        hits=con.execute("SELECT COUNT(*) FROM rate_events WHERE ip_key=? AND created_at>=?",(ip_key,current-RATE_WINDOW_SECONDS)).fetchone()[0]
-        if hits>=RATE_MAX:
+        hits=con.execute("SELECT COUNT(*) FROM rate_events WHERE ip_key=? AND created_at>=?",(account_key,current-RATE_WINDOW_SECONDS)).fetchone()[0]
+        ip_hits=con.execute("SELECT COUNT(*) FROM rate_events WHERE ip_key=? AND created_at>=?",(ip_key,current-RATE_WINDOW_SECONDS)).fetchone()[0] if user else 0
+        if hits>=RATE_MAX or (user and ip_hits>=60):
+            limited_key=ip_key if (user and ip_hits>=60) else account_key
             oldest=con.execute(
                 "SELECT MIN(created_at) FROM rate_events WHERE ip_key=? AND created_at>=?",
-                (ip_key,current-RATE_WINDOW_SECONDS)
+                (limited_key,current-RATE_WINDOW_SECONDS)
             ).fetchone()[0]
             retry_after=max(1,RATE_WINDOW_SECONDS-(current-int(oldest))) if oldest is not None else RATE_WINDOW_SECONDS
             response=jsonify(error="Too many submissions. Retry later.",
@@ -447,7 +454,8 @@ def submit():
         if stored:(FILES/stored).unlink(missing_ok=True)
         raise
     with db() as con:
-        con.execute("INSERT INTO rate_events (ip_key,created_at) VALUES (?,?)",(ip_key,current))
+        con.execute("INSERT INTO rate_events (ip_key,created_at) VALUES (?,?)",(account_key,current))
+        if user: con.execute("INSERT INTO rate_events (ip_key,created_at) VALUES (?,?)",(ip_key,current))
     return jsonify(ok=True,id=sid,status="pending"),201
 @app.get("/api/ai-music/admin/submissions")
 def list_submissions():
