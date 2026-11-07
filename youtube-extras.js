@@ -109,3 +109,16 @@ async function loadFirebaseWidgets(){try{
  },()=>{community=[]});
 }catch(e){console.warn("RDI overlay sources unavailable",e)}}
 loadFirebaseWidgets();
+
+/* Top 3 bootstrap for legacy cached YouTube-news HTML.
+ * Module URLs and core stay versioned; one module instance per document.
+ * Does not enable any browser audio or alter the AzuraCast stream.
+ */
+(()=>{"use strict";
+ const hasNewModule=Array.from(document.scripts).some(s=>String(s.src||"").includes("youtube-ai-top3.js"));
+ if(hasNewModule||window.rdiTop3Break)return;
+ const style=document.createElement("link");style.rel="stylesheet";
+ style.href="./youtube-ai-top3.css?v=20261107-ai-chart-1";document.head.append(style);
+ import("./youtube-ai-top3.js?v=20261107-ai-top3-1")
+  .catch(e=>console.warn("RDI Top3 TV not ready, radio uninterrupted:",e));
+})();
