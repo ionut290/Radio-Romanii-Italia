@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-07T16:47:32.379105Z",
+  "updated_at": "2026-11-07T17:50:32.022559Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-8028657ddf7b272b",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russian missile and drone strikes hit Ukrainian energy infrastructure ahead of peace talks",
+      "summary": "",
+      "source": "AzerNews",
+      "published": "2026-11-07T17:23:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5wOGR1ejJUckdOdVpxdnljUk40S2xLMlRpcHplZ09Sb0hrdWNkOGVvVXhSZWxLU3NWanVYSTZsWjFhOUlOWTJMME53V2xMeFptM1FhRw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Loviturile rusești cu rachete și drone au lovit infrastructura energetică ucraineană înaintea discuțiilor de pace",
+      "title_it": "Attacchi missilistici e droni russi hanno colpito le infrastrutture energetiche ucraine prima dei colloqui di pace",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-e7158e457f078f36",
+      "category": "clima",
+      "region": "global",
+      "title": "UN climate summits face ‘fatigue’ and pleas for reform",
+      "summary": "",
+      "source": "Kuwait Times",
+      "published": "2026-11-07T17:15:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUlZ0aVVRQmpCMUt5cV9ac3lYU1lyaGZjZ0hmeDRwSDR5b1hEODVJS1l0UGx1dkpXY3pncU1aaDlJYXpEd09WeWg5M19Odm1oNWpPRjdlMWdBR3pOMG4xS3ZSWmZRR3hKOVVIT3RFN3MzX3ZhVW5xVms5dkN6aDluX0JFYW1ZOGVLRkVsTWZ2QnpoVVdoMlpDMTA4RlNnakFwU3fSAaYBQVVfeXFMUDVvSHNaOUljMURNMDlCakd3OHkyaHlOUHF2aEdZN3ZpZGNmcC1UNjdzMGNoSHV5OXp4MGt0Tk1oYVZZakxPM1laTjRQcmZuV1U0QTRJQ1FNQVdLOXpTYXhsYlc1Y3hGMjR3MTVzWm1qeG4xbG5vR3RuTUM5RjM0VTBCWUlsOUhCVUdiYlZwU0J6R2VRUHV1ei1GNldtRGxXYmJLaUtWdw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Summiturile ONU privind clima se confruntă cu „oboseală” și pledoarii pentru reformă",
+      "title_it": "I vertici sul clima delle Nazioni Unite devono far fronte alla “stanchezza” e alle richieste di riforma",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-5a8b5fc5877177ff",
       "category": "tehnologie",
@@ -19,6 +47,34 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Cipurile H200 de la Nvidia au ajuns în China prin intermediul companiei Ghost",
       "title_it": "I chip H200 di Nvidia hanno raggiunto la Cina tramite Ghost Company",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-1f946ab2ad4ae40a",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Taiwan Strait peace a priority: IPAC",
+      "summary": "",
+      "source": "Taipei Times",
+      "published": "2026-11-07T16:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8xT3dRTWlWWS10NGpuV1FWOWpielRFZWppS0ZSZ3M5X25LbGlGdmgyM0dIaDQ4SUVDb1k2SmNBZ29TS0xaNFc2LVkwVE5ieDZNT3BVNHdPbUxwRUxaWVlpc2s2M2ZVSFd4elFobUJ2Zld2TnloZWFGcQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Pacea din Strâmtoarea Taiwan o prioritate: IPAC",
+      "title_it": "La pace nello Stretto di Taiwan è una priorità: IPAC",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-167a93a5974d541f",
+      "category": "clima",
+      "region": "global",
+      "title": "Strengthening Bangladesh’s climate diplomacy: From COP31 preparedness to national priorities",
+      "summary": "",
+      "source": "The Business Standard",
+      "published": "2026-11-07T15:48:45Z",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRkVHZl85dW1uVWpJb2c1WFJOb1JseGpXQ2pkQWpScnZacWJVcXZzd2FJMjQ1RDV4aDN1WW51aFFsdE53WHJYVGwwcG8wUVRNcjJlQjdtTG1HVHVBS3c3MmN0VGktaWZGRkgwTkU5dlFpNG1GLU1uUThJOU5xTEJ2SDlSeW1PTDFSTHlQcW5iQWx6N0ZJVHljNEVDQk16aDAycm1jUXVCVm5sZ2h4MmM3UWNoOFA4TUF1ZEhOcmh1S2I?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Consolidarea diplomației climatice din Bangladesh: de la pregătirea pentru COP31 la prioritățile naționale",
+      "title_it": "Rafforzare la diplomazia climatica del Bangladesh: dalla preparazione alla COP31 alle priorità nazionali",
       "translation_status": "machine_translation"
     },
     {
@@ -44,7 +100,10 @@
       "source": "Daily Sabah",
       "published": "2026-11-07T14:45:00Z",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbGZvUHhBTTdFOG9SZ0tsZ1owVWtFWUNHaDFhQzF0WldEUmRYU21OaXVxWUJmeXZ2SkdvRFg2NEVIRVFhVDJHRldrZ25TSWFBMTIxOXJ0blJyYzEzMTMzRkNQQ1hmMmdDRWhvNGRCb2tBWHRXd2xYeDZWc2pYS1hacHRxVHdGd2podEF1ak90NkhhclRJcllGS1hya2F5LXZ1cnfSAaIBQVVfeXFMTWxmb1B4QU03RThvUmdLbGdaMFVrRVlDR2gxYUMxdFpXRFJkWFNtTml1cVlCZnl2dkpHb0RYNjRFSEVRYVQyR0ZXa2duU0lhQTEyMTlydG5ScmMxMzEzM0ZDUENYZjJnQ0VobzRkQm9rQVh0V3dsWHg2VnNqWEtYWnB0cVR3RndqaHRBdWpPdDZIYXJUSXJZRktYcmtheS12dXJ3?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ploi abundente inundă 70.000 de corturi deplasate în Gaza | Sabah zilnic",
+      "title_it": "Forti piogge allagano 70.000 tende sfollate in tutta Gaza | Sabato quotidiano",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a08a1af10f2d423b",
@@ -58,20 +117,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ploile abundente lasă zeci de mii de oameni fără adăpost în Gaza",
       "title_it": "Le forti piogge lasciano decine di migliaia di persone senza riparo a Gaza",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-167a93a5974d541f",
-      "category": "clima",
-      "region": "global",
-      "title": "Strengthening Bangladesh’s climate diplomacy: From COP31 preparedness to national priorities",
-      "summary": "",
-      "source": "The Business Standard",
-      "published": "2026-11-07T14:24:10Z",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRkVHZl85dW1uVWpJb2c1WFJOb1JseGpXQ2pkQWpScnZacWJVcXZzd2FJMjQ1RDV4aDN1WW51aFFsdE53WHJYVGwwcG8wUVRNcjJlQjdtTG1HVHVBS3c3MmN0VGktaWZGRkgwTkU5dlFpNG1GLU1uUThJOU5xTEJ2SDlSeW1PTDFSTHlQcW5iQWx6N0ZJVHljNEVDQk16aDAycm1jUXVCVm5sZ2h4MmM3UWNoOFA4TUF1ZEhOcmh1S2I?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Consolidarea diplomației climatice din Bangladesh: de la pregătirea pentru COP31 la prioritățile naționale",
-      "title_it": "Rafforzare la diplomazia climatica del Bangladesh: dalla preparazione alla COP31 alle priorità nazionali",
       "translation_status": "machine_translation"
     },
     {
@@ -159,13 +204,27 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-2ed0df82f0571195",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Ukraine Prepares for Peace Talks Amidst Russian Missile Strikes in Kyiv",
+      "summary": "",
+      "source": "Ratopati",
+      "published": "2026-11-07T11:33:47Z",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPamY2VUhHMUlFOWNPSVRPcnBIcGNLWUxFYi0teVRzb1pCZ0hnV3A1Wk5GeFV6VDYwMDZ3QUtrY2tTcnRmc3FKQ2JTblJ3SlVHMXl0YUVGQjFaOEFIWmpid09yaW1RY3FPcVVGQkNJUVlWdXBRbDRkM3RYZmx0WUJPZ3JESThiejkwS2NPS0ZHa0RNZksxQmFqVUJucGEzcXFySUJTbmhrX3FQSUhiYnFleTZ1dkNBQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ucraina se pregătește pentru discuții de pace în mijlocul rachetelor rusești la Kiev",
+      "title_it": "L’Ucraina si prepara ai colloqui di pace durante gli attacchi missilistici russi a Kiev",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-6c6935e0760ab3bd",
       "category": "conflicte",
       "region": "africa",
       "title": "AU-EU joint peace push as Sudan, DRC, Sahel crises dominate talks",
       "summary": "",
       "source": "Citizen Digital",
-      "published": "2026-11-07T10:41:15Z",
+      "published": "2026-11-07T10:42:38Z",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxON2pJWURaZjN6dTR2MEUzYlpBcjhvTHlCSEJteG5GWks2MDVHVjFYUEM0aEFBUG14UEh1Y09qSlZBdjI2U3pEejlKcld5TFpyeTBJLUZKNlB5N0FPdHJ2VFl1akpyOEN3QzRMQWpNTTJJU195cGlCNjhuWU5pQ0w4eF93eXBGZXpUTkJuY1RsUFF0UXhiTm1lbnZOY1JuNXlTcENhSGxn?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Impulsul comun UA-UE pentru pace în timp ce crizele din Sudan, RDC și Sahel domină discuțiile",
@@ -195,7 +254,10 @@
       "source": "United News of Bangladesh",
       "published": "2026-11-07T10:20:08Z",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMGpZRlBXQ1A1NzNSM3lfMnFTUXNQYUxIOFZaMU5ibmNpYWJLckh4dnFCbnd2UFNOMVpnX1pMbnRLOVRQdmZxVUZJS1RGbFpnaTFVU2g1VURpNzVuSkoweVdaS21nSlNuUU5sLUZ3NFZDbWFvUmZPNjZPdldhTmhYaXFmVWhxX0VXaWhBQlZMenN5Ym9QQVBOcmxJY2FJWnBCU1hLaA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rachetele rusești au lovit Kievul, rănind 5 înaintea negocierilor de pace",
+      "title_it": "Attacchi missilistici russi hanno colpito Kiev, ferendo 5 persone prima dei colloqui di pace",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-75ee6709d7cc8237",
@@ -209,6 +271,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Furtuna dăunează mii de corturi în Gaza, stârnind temeri de dezastre umanitare",
       "title_it": "La tempesta danneggia migliaia di tende a Gaza, sollevando timori di un disastro umanitario",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-0ce4ba5254b3dec3",
+      "category": "europa",
+      "region": "europa",
+      "title": "Mattarella chiede ai Ventisette un’azione comune nelle crisi e tempi più rapidi per l’allargamento",
+      "summary": "",
+      "source": "Sbircia la Notizia Magazine",
+      "published": "2026-11-07T10:04:00Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5nVU9EWndqajFCYVlvQ2NHYzBBLU85Y3d5ek50TS1RSDlkNDd6YmRldVhUeHNvWHV4SVRlenJWeFpsSkJZV2ZHOFVDSTZxZzI1TjROWjFzOVg1QmJYdGFIazF3M3REdDhNcU1VdHBMbDNTNHBRWmJnajZQTXk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Mattarella le cere celor Douăzeci și șapte de acțiuni comune în situații de criză și timpuri mai rapide pentru extindere",
+      "title_it": "Mattarella chiede ai Ventisette un’azione comune nelle crisi e tempi più rapidi per l’allargamento",
       "translation_status": "machine_translation"
     },
     {
@@ -324,14 +400,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-0d23e4d16e8cc62e",
+      "id": "geo-3f470469a9d6ff20",
       "category": "securitate",
       "region": "asia",
       "title": "PM wants constructive ties with China, a year after Taiwan remark anniversary",
       "summary": "",
       "source": "Japan Today",
       "published": "2026-11-07T07:00:00Z",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPeFlST1BLV093QUlsVGo3YlFvNGxKOGdXQnpYa2k1OHdnMFg1WWVaYWtZV1F4WGZhdklOemZOZWhzRW5WTFg0UGxENklrdDJKaC1JelhTaFZzanNrV1FDbXFNNlV3ZGRBYk9iUkF6ekRDSms0enpKcHRXcDhFWlN5czIxT3JVUjlJUXBQS01CdHZDeWFYd0huVTN6YTNGZmd2NGJCUjJvODhvM29pNzJkV2toempmbUZ6UzVUS2tqdDRtQnJYVWRDTzRNbGlrRms4VTJlTw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNQTc3SmFrdUdpcU5wQ2ZnMTJUcGFhR1h3N2pVUk1FX2FWUEtNblZqelpBRnJUcXYxeGF6U01FS3BpM1pueG1zckJScVFpLXdRWHJQM05TRm1fVHhuaWw2REd6VGRQWUxvZExvNVktdTYtem96V2tIR2dHdVJkMUx5ZGJaS09CUjR3V2xUV2xPVUptT2FHM1YxbU5McVdQQVA1eGZISUhoQnN4SDBqM25FVW5JVFZHaFRn?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Premierul vrea legături constructive cu China, la un an după aniversarea remarcii Taiwanului",
       "title_it": "Il Primo Ministro vuole legami costruttivi con la Cina, un anno dopo l’anniversario delle celebrazioni di Taiwan",
@@ -380,6 +456,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-49f540d8c15f2227",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Just weeks after a historic election triumph, Brazilian President Luiz Inácio Lula da Silva will head to the Philippines to join global leaders at the 49th ASEAN Summit",
+      "summary": "",
+      "source": "Facebook",
+      "published": "2026-11-07T05:22:02Z",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdHUxLWlNOTJjTEFpTzZBTXdVWU0wbzdnX25PaDM1VVJZUmhGa3FEaFVFTG1IRXFJRDh2WE1abnU3b3pTVi1zNzlialozaFh0TzV5aHhmQTFaRFMzVUlNS255cFJBOUVvbHdpX1I3WVVNdEhJeE0ybjlnS2tpSE9TT2NGMDh4WUxiOW9sSVJCV3llZ3k2aHJyQk9SNzZPWVBRRFM4UWpJdHJPQy15S0dmdEg0SEZtbmdHV2Z4MC00bWxCLVYzUGJYXzVWWDJaS0FyVXhqeG5neTBXTlU2NWptNE93?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "La doar câteva săptămâni după un triumf electoral istoric, președintele brazilian Luiz Inácio Lula da Silva se va îndrepta în Filipine pentru a se alătura liderilor mondiali la cel de-al 49-lea Summit ASEAN.",
+      "title_it": "A poche settimane dallo storico trionfo elettorale, il presidente brasiliano Luiz Inácio Lula da Silva si recherà nelle Filippine per unirsi ai leader mondiali al 49° vertice ASEAN",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-7ebfc57981016712",
       "category": "conflicte",
       "region": "orient",
@@ -408,14 +498,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-f3edffce6f4b43da",
+      "id": "geo-ece4d5c033e29568",
       "category": "energie",
       "region": "global",
       "title": "[Energy Odyssey](18) After Oil, Rare Earths... China-Centric Supply Chains Flash a \"Warning Light\"",
       "summary": "",
       "source": "아시아경제",
       "published": "2026-11-07T04:08:21Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hVVEzelNtVFFYbTlIWnB3Q2xXN1RvZW53bnA5Unl3Z3VZVXg0NG9lQ0szZE9oYXE3bWc4aHJ6R2d4NHN0SDFsYk9FTUNLdFlIajJKUFdUM196S0pBSVlqcmE5aFo?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvX2R1dWlzVmxFUnBQWXhIT2VHWkl5RVlvTGpnVXJhQ0l4N2Q4R1A0U1FzZF95SHJteGZWTzJ6ZWxCQzZGeEpZVU5sOWpCTmFBZ0lZSGJQOXBBTlpqdW5UcXJ2Uk04ODBsT2xGeXEyUUlsQ0s5SjZzNGJCVQ?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "[Energy Odyssey](18) După petrol, pământuri rare... Lanțurile de aprovizionare centrate pe China aprind o „lumină de avertizare”",
       "title_it": "[Odissea energetica](18) Dopo il petrolio, le terre rare... le catene di approvvigionamento incentrate sulla Cina lampeggiano come una \"luce d'avvertimento\"",
