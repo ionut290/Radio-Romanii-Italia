@@ -364,6 +364,7 @@ function buildComments(track){
  if(musicAuth.required&&!musicAuth.user){
   const a=node("a","login-comment","🔐 "+({it:"Accedi per commentare",ro:"Autentifică-te pentru a comenta",en:"Sign in to comment"})[language]);
   a.href="./accedi-ai-music.html?next=spotlight-ai.html";panel.append(a);
+  const list=node("div","comment-list");panel.append(list);
   showComments(track,panel);return panel;
  }
  const form=node("form","comment-form");
