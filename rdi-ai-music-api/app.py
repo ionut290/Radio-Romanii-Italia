@@ -626,7 +626,7 @@ def attach_audio_to_submission(sid):
     upload=request.files.get("audio")
     if not upload or not upload.filename:
         return jsonify(error="Choose the original audio file"),400
-    original=clamp(Path(upload.filename.replace("\\\\","/")).name,180)
+    original=clamp(Path(upload.filename.replace("\\","/")).name,180)
     suffix=Path(original).suffix.lower()
     if suffix not in ALLOWED_EXT:
         return jsonify(error="Unsupported audio extension"),400
