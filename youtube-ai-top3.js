@@ -101,6 +101,7 @@ function run(next){
 }
 function startIfDue(next){
  if(active||typeof next!=="function"||blocking())return false;
+ if(fetchedDay!==romeClock(new Date())?.day)return false;
  if(!due({now:new Date(),shownDay:lastRunDay,tracks:top,preview:false,enabled:true}))return false;
  return run(next);
 }
@@ -119,4 +120,13 @@ async function refresh(){
 window.rdiTop3Break={startIfDue,stop:()=>stop(false),get state(){return{active,loaded:top.length,day:fetchedDay,lastRunDay}}};
 window.addEventListener("rdi:nowplaying",event=>{lastNowPlaying=event.detail;if(active)setAudioStatus()});
 refresh();setInterval(refresh,120000);setInterval(()=>{if(active)nowPlaying()},10000);
+// Resilience: old cached YouTube HTML may not yet know this new break.
+// Even then, start the daily countdown once when its approved data is ready.
+// The radio/FFmpeg audio path is NEVER changed.
+if(!preview)setInterval(()=>{
+ if(!active&&fetchedDay===romeClock(new Date())?.day&&
+   due({now:new Date(),shownDay:lastRunDay,tracks:top,enabled:true})&&!blocking()){
+    run(()=>window.rdiResumeNews?.());
+ }
+},15000);
 })();
