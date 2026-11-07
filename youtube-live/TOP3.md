@@ -1,11 +1,13 @@
 # RDI AI MUSIC — Top 3 quotidiana nel live YouTube
 
-## Stato: grafica TV attiva, audio del countdown ancora da programmare
+## Stato: selezione Top 3 con audio implementata e testata; audio del countdown ancora da programmare
 La pagina pubblica della diretta `youtube-news.html` carica il modulo
 `youtube-ai-top3.js` e presenta alle **20:30 Europe/Rome** una classifica TV
 della community (prima la posizione 3, poi 2, poi 1). Il modulo:
 - legge la classifica reale dalla API pubblica `/api/ai-music/spotlight?page=1`;
-- include solo brani già approvati dalla redazione;
+- considera **solo brani approvati con file audio caricato e ascolto pubblico abilitato** (`audio_preview=1`); scarta i brani con solo link esterno;
+- **non rimuove** gli esclusi dalla classifica del sito RDI: ricompone soltanto il podio televisivo 3→2→1 con i successivi brani idonei;
+- esempio verificato 7 novembre 2026: `Roma` (Massimo Sculli, senza file) è esclusa dalla Top 3 YouTube e sostituita da `Le colline di settembre` (N.p.L);
 - usa esclusivamente voti, titoli e artisti presenti nella classifica;
 - non ripete l'intermezzo nello stesso giorno nel medesimo browser;
 - se ci sono meno di 3 brani, o la API non risponde, **non interrompe le notizie**;
