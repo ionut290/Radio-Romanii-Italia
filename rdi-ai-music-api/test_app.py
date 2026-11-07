@@ -225,7 +225,10 @@ class SubmissionTests(unittest.TestCase):
     def test_google_login_off_wrong_origin_bad_token_and_no_code(self):
         endpoint="/api/ai-music/auth/google"
         params={"credential":"a"*100,"nonce":"google_nonce_test_1234567890"}
-        self.assertEqual(self.client.post(endpoint,headers=self.origin,json=params).status_code,503)
+        # Simulate Google sign-in explicitly disabled, even when a valid Client ID
+        # is configured in production and the google-auth library is installed.
+        with patch.object(service,"GOOGLE_AUTH_READY",False):
+            self.assertEqual(self.client.post(endpoint,headers=self.origin,json=params).status_code,503)
         with patch.object(service,"GOOGLE_AUTH_READY",True), \
              patch.object(service,"verify_google_credential",side_effect=ValueError("Bad token")):
             self.assertEqual(self.client.post(endpoint,headers={"Origin":"https://wrong.example.org"},
