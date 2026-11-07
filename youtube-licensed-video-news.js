@@ -18,8 +18,14 @@ Object.assign(video.style,{height:'100%',width:'100%',objectFit:'contain',backgr
 const credit=document.createElement('div');
 Object.assign(credit.style,{position:'absolute',bottom:'12px',left:'30px',right:'30px',padding:'12px 18px',background:'rgba(5,17,36,.85)',borderRadius:'9px',fontSize:'20px',fontWeight:'700'});
 layer.append(video,credit);stage.append(layer);
+function romeToday(){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date())}
+function sameRomeDay(v){if(typeof v!=='string'||!v.trim())return false;
+ const date=new Date(v);if(Number.isNaN(date.getTime()))return false;
+ return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(date)===romeToday();
+}
 function eligible(x){
  if(!x||x.approved_for_youtube_live!==true||x.audio_language!=='it')return false;
+ if(!sameRomeDay(x.published_at)||!sameRomeDay(x.event_date))return false;
  if(!x.audio_language_verified_at||!x.audio_language_verification_method||!x.rights_checked_at||!x.rights_evidence)return false;
  if(!x.source_id||!x.title||!x.source_page_url||!x.license_name||!x.license_url||!x.attribution)return false;
  const path=x.downloaded_file_path;
