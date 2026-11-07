@@ -12,6 +12,37 @@ test("API ranking keeps its public, ordered Top 3 and never invents votes",()=>{
  assert.deepEqual(t.map(x=>x.rank),[1,2,3]);assert.deepEqual(t.map(x=>x.votes),[1,4,15]);
  assert.deepEqual(t.map(x=>x.title),["Terzo brano","Secondo brano","Primo brano"]);
 });
+test("YouTube TV skips link-only Roma and reassigns podium to next audio song",()=>{
+ const tracks=[
+  {id:id(1),title:"Draghi di Carta",artist:"Dario Germanà",votes:7,audio_preview:1},
+  {id:id(2),title:"Roma",artist:"Massimo Sculli",votes:5,audio_preview:0,link:"https://youtu.be/test"},
+  {id:id(3),title:"Comme t'aggio aspettato",artist:"ionel varga",votes:3,audio_preview:1},
+  {id:id(4),title:"Le colline di settembre",artist:"N.p.L",votes:2,audio_preview:1},
+  {id:id(5),title:"Un altro brano",artist:"Another",votes:1,audio_preview:1}
+ ];
+ const eligible=rankedTop3({tracks});
+ assert.deepEqual(eligible.map(t=>t.title),
+   ["Draghi di Carta","Comme t'aggio aspettato","Le colline di settembre"]);
+ assert.deepEqual(eligible.map(t=>t.rank),[1,2,3]);
+ assert.deepEqual(eligible.map(t=>t.votes),[7,3,2]);
+ assert.ok(eligible.every(t=>t.audio_preview===true));
+ assert.equal(due({now:new Date("2026-11-07T19:30:00Z"),
+   shownDay:"",tracks:eligible}),true);
+});
+
+test("do not show a Top 3 until three approved playable files exist",()=>{
+ const onlyTwo={tracks:[
+  {id:id(1),title:"Track A",artist:"Artist A",votes:4,audio_preview:1},
+  {id:id(2),title:"Track B",artist:"Artist B",votes:3,audio_preview:0},
+  {id:id(3),title:"Track C",artist:"Artist C",votes:2,audio_preview:false},
+  {id:id(4),title:"Track D",artist:"Artist D",votes:1,audio_preview:true}
+ ]};
+ const top=rankedTop3(onlyTwo);
+ assert.deepEqual(top.map(x=>x.title),["Track A","Track D"]);
+ assert.equal(due({now:new Date("2026-11-07T19:30:00Z"),
+   shownDay:"",tracks:top}),false);
+});
+
 test("incomplete, malformed and duplicate charts do not broadcast",()=>{
  assert.equal(rankedTop3({tracks:[sample.tracks[0]]}).length,1);
  const unsafe={tracks:[sample.tracks[0],sample.tracks[0],{id:id(2),title:"",artist:"X",votes:1}]};
