@@ -2,7 +2,7 @@
  * YouTube relay takes AUDIO from AzuraCast, never this browser. Do not claim
  * an RDI Spotlight track is being heard unless confirmed by real now-playing.
  */
-import {rankedTop3,due,romeClock,onAirRank} from "./youtube-ai-top3-core.mjs";
+import {rankedTop3,due,romeClock,onAirRank} from "./youtube-ai-top3-core.mjs?v=audio-only-20261107";
 (()=>{
 "use strict";
 const stage=document.getElementById("stage");
