@@ -1,0 +1,29 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>RDI Top3 diagnostics</title>
+<style>body{background:#101820;color:#d5ffff;font:18px/1.55 monospace;margin:0;padding:15px}pre{white-space:pre-wrap;word-break:break-word}#stage{position:relative;width:100%;height:50vh;background:#142f37}.status{position:relative;z-index:100;background:#101820}#rdiTop3TV[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="./youtube-ai-top3.css?v=debug"></head><body>
+<div class="status"><h1>RDI TOP3 DIAGNOSTICA (pubblico)</h1><pre id="log">Avvio...</pre></div>
+<div id="stage"></div>
+<script>
+const lines=[];
+const log=(title,value)=>{lines.push(title+": "+String(value));document.getElementById("log").textContent=lines.join("\n")};
+window.addEventListener("error",e=>log("JS-ERROR",e.message+" @ "+e.filename+":"+e.lineno));
+window.addEventListener("unhandledrejection",e=>log("PROMISE-ERROR",String(e.reason)));
+async function load(){
+ const urlBase="https://radio-romanii-italia.duckdns.org";
+ for(const path of ["./youtube-ai-top3-core.mjs","./youtube-ai-top3.js"]){
+  try{const r=await fetch(path+"?diagnostics=1",{cache:"no-store"});
+   const tx=await r.text();
+   log(path,r.status+" "+r.headers.get("content-type")+" bytes="+tx.length+" begins="+tx.slice(0,75));
+  }catch(e){log(path,"ERROR "+e)}
+ }
+ try{const r=await fetch(urlBase+"/api/ai-music/spotlight?page=1",{cache:"no-store"});
+    const data=await r.json();log("API","HTTP "+r.status+" tracks="+data.tracks?.length+" firstID="+data.tracks?.[0]?.id);
+ }catch(e){log("API","ERROR "+e)}
+ try{const lib=await import("./youtube-ai-top3-core.mjs?diagnostics=1");
+    log("core-import","OK top="+lib.rankedTop3({tracks:[{id:"0".repeat(32),title:"Test",artist:"Artist",votes:1}]}).length)
+ }catch(e){log("core-import","ERROR "+e+" STACK "+(e.stack||""))}
+ try{await import("./youtube-ai-top3.js?diagnostics=1");log("visual-import","OK")}catch(e){log("visual-import","ERROR "+e+" STACK "+(e.stack||""))}
+ setTimeout(()=>{const v=document.getElementById("rdiTop3TV");log("state",JSON.stringify(window.rdiTop3Break?.state||null));log("overlay",v?"Exists; hidden="+v.hidden:"Missing")},3500)
+}
+load();
+</script></body></html>
