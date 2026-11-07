@@ -32,7 +32,7 @@ jobs:
           for f in /opt/rdi-ai-music-api/app.py /var/lib/rdi-ai-music/submissions.sqlite3 /var/lib/rdi-ai-music/uploads /tmp/rdi-geopolitica-auth.php; do
             test ! -e "$f" || echo "PATH_${f}=exists"
           done
-          python3 - <<'PY'
+          sudo -n python3 - <<'PY'
           import sqlite3, pathlib
           root=pathlib.Path('/var/lib/rdi-ai-music')
           files=list(root.glob('*.db'))+list(root.glob('*.sqlite*'))
