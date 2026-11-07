@@ -142,6 +142,32 @@ class SubmissionTests(unittest.TestCase):
         self.assertEqual(len(records), 1)
         self.assertEqual(records[0]["status"], "pending")
 
+    def test_youtube_consent_is_explicit_and_requires_an_uploaded_file(self):
+        data=self.data(link="")
+        data["audio"]=(io.BytesIO(b"x"*2000),"consented.mp3")
+        data["spotlight_consent"]="yes"
+        data["youtube_consent"]="yes"
+        response=self.client.post("/api/ai-music/submissions",headers=self.origin,data=data)
+        self.assertEqual(response.status_code,201)
+        with service.db() as con:
+            row=con.execute("SELECT status,youtube_consent FROM submissions WHERE id=?",
+                             (response.json["id"],)).fetchone()
+            self.assertEqual(row["status"],"pending")
+            self.assertEqual(row["youtube_consent"],1)
+        no_file=self.post(title="Link only",youtube_consent="yes",spotlight_consent="yes")
+        self.assertEqual(no_file.status_code,201)
+        with service.db() as con:
+            self.assertEqual(con.execute("SELECT youtube_consent FROM submissions WHERE id=?",
+               (no_file.json["id"],)).fetchone()[0],0)
+        data=self.data(link="")
+        data["audio"]=(io.BytesIO(b"x"*2000),"without-consent.mp3")
+        data["spotlight_consent"]="yes"
+        response=self.client.post("/api/ai-music/submissions",headers=self.origin,data=data)
+        self.assertEqual(response.status_code,201)
+        with service.db() as con:
+            self.assertEqual(con.execute("SELECT youtube_consent FROM submissions WHERE id=?",
+               (response.json["id"],)).fetchone()[0],0)
+
     def test_audio_is_private_and_never_auto_approved(self):
         fields = self.data(link="")
         fields["audio"] = (io.BytesIO(b"not-real-audio"), "demo.mp3")
