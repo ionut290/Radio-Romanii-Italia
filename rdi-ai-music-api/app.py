@@ -44,6 +44,7 @@ GOOGLE_CLIENT_ID=os.environ.get("RDI_AI_GOOGLE_CLIENT_ID","952052945501-atbs3pg7
 GOOGLE_AUTH_READY=bool(GOOGLE_CLIENT_ID and GOOGLE_AUTH_LIBRARY_READY)
 AUTH_SESSION_SECONDS=14*86400
 AUTH_CODE_SECONDS=10*60
+YOUTUBE_CONSENT_VERSION="rdi-youtube-live-2026-11"
 
 def rate_key():
     # Nginx MUST overwrite X-Real-IP; otherwise all requests via Unix socket share one IP.
@@ -79,6 +80,15 @@ def db():
         con.execute("ALTER TABLE submissions ADD COLUMN spotlight_consent INTEGER NOT NULL DEFAULT 0")
     if "youtube_consent" not in columns:
         con.execute("ALTER TABLE submissions ADD COLUMN youtube_consent INTEGER NOT NULL DEFAULT 0")
+    if "youtube_consent_at" not in columns:
+        con.execute("ALTER TABLE submissions ADD COLUMN youtube_consent_at TEXT")
+    if "youtube_consent_version" not in columns:
+        con.execute("ALTER TABLE submissions ADD COLUMN youtube_consent_version TEXT")
+    con.execute("""CREATE TABLE IF NOT EXISTS submission_authorization_events (
+      id INTEGER PRIMARY KEY AUTOINCREMENT, submission_id TEXT NOT NULL,
+      scope TEXT NOT NULL, granted INTEGER NOT NULL, source TEXT NOT NULL,
+      consent_version TEXT NOT NULL, created_at TEXT NOT NULL)""")
+    con.execute("CREATE INDEX IF NOT EXISTS authorization_events_by_submission ON submission_authorization_events(submission_id,created_at)")
     con.execute("CREATE TABLE IF NOT EXISTS admin_settings (setting TEXT PRIMARY KEY, value TEXT NOT NULL)")
     con.execute("CREATE TABLE IF NOT EXISTS admin_sessions (session_hash TEXT PRIMARY KEY, expires_at INTEGER NOT NULL)")
     con.execute("CREATE TABLE IF NOT EXISTS admin_login_attempts (ip_key TEXT NOT NULL, created_at INTEGER NOT NULL)")
@@ -546,6 +556,8 @@ def submit():
     link=clamp(request.form.get("link"),1500)
     notes=clamp(request.form.get("notes"),800)
     spotlight_consent=int(request.form.get("spotlight_consent")=="yes")
+    youtube_consent=int(request.form.get("youtube_consent")=="yes")
+    submitted_at=now()
     if not artist or not title or not email or "@" not in email or not platform:
         return jsonify(error="Required fields missing"),400
     if link and not valid_link(link):
@@ -583,8 +595,11 @@ def submit():
             return jsonify(error=str(exc)),400
     try:
         with db() as con:
-            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name,spotlight_consent,user_id,youtube_consent) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
-              (sid,now(),artist,email,title,platform,link,notes,original,stored,spotlight_consent,user["id"] if user else None,int(bool(stored and spotlight_consent and request.form.get("youtube_consent")=="yes"))))
+            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name,spotlight_consent,user_id,youtube_consent,youtube_consent_at,youtube_consent_version) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+              (sid,submitted_at,artist,email,title,platform,link,notes,original,stored,spotlight_consent,user["id"] if user else None,youtube_consent,submitted_at if youtube_consent else None,YOUTUBE_CONSENT_VERSION if youtube_consent else None))
+            if youtube_consent:
+                con.execute("INSERT INTO submission_authorization_events(submission_id,scope,granted,source,consent_version,created_at) VALUES (?,?,?,?,?,?)",
+                            (sid,"youtube_live_recording",1,"artist_submission",YOUTUBE_CONSENT_VERSION,submitted_at))
     except Exception:
         if stored:(FILES/stored).unlink(missing_ok=True)
         raise
@@ -596,7 +611,7 @@ def submit():
 def list_submissions():
     admin()
     with db() as con:
-        rows=con.execute("SELECT id,created_at,artist,email,title,platform,link,notes,file_name,status,reviewed_at,reviewed_note,spotlight_consent,youtube_consent FROM submissions ORDER BY created_at DESC LIMIT 300").fetchall()
+        rows=con.execute("SELECT id,created_at,artist,email,title,platform,link,notes,file_name,status,reviewed_at,reviewed_note,spotlight_consent,youtube_consent,youtube_consent_at,youtube_consent_version FROM submissions ORDER BY created_at DESC LIMIT 300").fetchall()
     return jsonify(submissions=[dict(row) for row in rows])
 @app.get("/api/ai-music/admin/submissions/<sid>/audio")
 def audio(sid):
@@ -677,8 +692,12 @@ def set_youtube_broadcast_consent(sid):
         if row is None: abort(404)
         if enabled and (row["status"]!="approved" or not row["stored_name"]):
             return jsonify(error="Approved original audio file required"),400
-        con.execute("UPDATE submissions SET youtube_consent=? WHERE id=?",(int(enabled),sid))
-    return jsonify(ok=True,id=sid,youtube_consent=int(enabled))
+        consent_at=now() if enabled else None
+        con.execute("UPDATE submissions SET youtube_consent=?,youtube_consent_at=?,youtube_consent_version=? WHERE id=?",
+                    (int(enabled),consent_at,YOUTUBE_CONSENT_VERSION if enabled else None,sid))
+        con.execute("INSERT INTO submission_authorization_events(submission_id,scope,granted,source,consent_version,created_at) VALUES (?,?,?,?,?,?)",
+                    (sid,"youtube_live_recording",int(enabled),"editor_verification" if enabled else "editor_revocation",YOUTUBE_CONSENT_VERSION,now()))
+    return jsonify(ok=True,id=sid,youtube_consent=int(enabled),youtube_consent_at=consent_at,youtube_consent_version=YOUTUBE_CONSENT_VERSION if enabled else None)
 
 @app.post("/api/ai-music/admin/submissions/<sid>/review")
 def review(sid):
