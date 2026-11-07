@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-07T09:50:34.429531Z",
+  "updated_at": "2026-11-07T10:37:19.956782Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,13 +8,24 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
+      "id": "geo-6c6935e0760ab3bd",
+      "category": "conflicte",
+      "region": "africa",
+      "title": "AU-EU joint peace push as Sudan, DRC, Sahel crises dominate talks",
+      "summary": "",
+      "source": "Citizen Digital",
+      "published": "2026-11-07T10:23:55Z",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxON2pJWURaZjN6dTR2MEUzYlpBcjhvTHlCSEJteG5GWks2MDVHVjFYUEM0aEFBUG14UEh1Y09qSlZBdjI2U3pEejlKcld5TFpyeTBJLUZKNlB5N0FPdHJ2VFl1akpyOEN3QzRMQWpNTTJJU195cGlCNjhuWU5pQ0w4eF93eXBGZXpUTkJuY1RsUFF0UXhiTm1lbnZOY1JuNXlTcENhSGxn?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-95326480b2b84729",
       "category": "conflicte",
       "region": "europa",
       "title": "Putin unleashes ballistic missile barrage on Kyiv as school & bridge blitzed",
       "summary": "",
-      "source": "www.the-sun.com",
-      "published": "2026-11-07T09:46:13Z",
+      "source": "The Sun",
+      "published": "2026-11-07T09:48:11Z",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSW5QdlZxUE54YmRTQ3FLX3NlUW1iOEk0c2lZMzZCU2NZekh2a0tqRktBM25yNVY5cGxTNDJ5UkwySnR4anJweVZSUkNxUlFSWjhOUWZtS19vMjdrcVVWbndkeUFkaUtwZDRLUk13Uy1RWjZzNkNNdnAzR1d1U3R0Z2hhS2I?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Putin declanșează un baraj de rachete balistice asupra Kievului, în timp ce școala și podul sunt lovite",
@@ -64,18 +75,15 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-064bc6ba7e6184c2",
+      "id": "geo-36dfdac57acaf50a",
       "category": "clima",
       "region": "global",
       "title": "COP31 Opens in Turkey Amid Calls to Reform Consensus Rules",
       "summary": "",
       "source": "JournalArta",
-      "published": "2026-11-07T08:01:58Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQbjdOT2JRd2pQeE9TZWJCcXFMMFR4UmI4bFhRX0locHRtQ2xRTVBmVk9MMDhlSHhuS0UxZEpDcUJoSndHUGxYU1dIV0t1Yi1qckdpNy1LN1BLS2VORjNHQ1lwUWk1V25rNUR6eTI2ZmppZ0dzRVNMWWV3bHB3Y3ZJQ3dIZmFHbXY2ZEE?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "COP31 se deschide în Turcia pe fondul apelurilor de a reforma regulile consensuale",
-      "title_it": "La COP31 si apre in Turchia tra le richieste di riforma delle regole di consenso",
-      "translation_status": "machine_translation"
+      "published": "2026-11-07T08:06:55Z",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOTRtaXczeHVNaHVtMG5GbUh0dGN1Sy10dXo5SEVOcVl5U1Qwc0N3RVFhdEFGQ0RVSHdkRHhTNGpqdVVPdWdFQWl3b3ppSGF4UTBXd0x4OWhhOU5kal91MENZVDNNcHVKTVVLeUNFYVFaYkRoNGJvRmlINS00eVd1cS1rbGRsZw?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-53032e4871f8e897",
@@ -148,18 +156,15 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-ecf1206899da5d02",
-      "category": "clima",
-      "region": "global",
-      "title": "Türkiye, Australia face climate leadership test over coal ahead of COP31",
+      "id": "geo-5a9a37ff45513307",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russia Strikes Kyiv With Ballistic Missiles, Two Injured Ahead Of Abu Dhabi Peace Talks",
       "summary": "",
-      "source": "The Climate Watch",
-      "published": "2026-11-07T05:51:42Z",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNQWtBaEFnZ0sxeUFWVWlhSld6VVdKQk4zU3g1ZWtMR0dNXzRQTWcyV0J6aXZES3UxT1B0NE9SaFJhaGpRRHVFQzhjcTg0bHR6VnlqVC15am11SnRFZGYwSFNMRGgweDZrc1J6RXpXWW1jUlFPWGlFNDEtVTNNVVJrdUt5X09FMmFMbHpxYU1pTUxaNXQ2YjVOVjdNVTc1UTZCcXc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Turcia, Australia se confruntă cu un test de lider în materie de climat în privința cărbunelui înainte de COP31",
-      "title_it": "La Turchia e l’Australia devono affrontare un test di leadership climatica sul carbone in vista della COP31",
-      "translation_status": "machine_translation"
+      "source": "Outlook India",
+      "published": "2026-11-07T06:29:10Z",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRkFqSkhXbHpXaVpBS0c2Zi1rUFFqLVhveGpPTmF2Ujl0Qms2aWlfdUl1VVdCS0xlMGRZSWh0d0xZaTRMaU1rcktlSWt1RUF0aHRranA3NGx1elRmNGVmRks5Z0dZZ1RkR3NHbjFybm9pcVBOc3V1Um8td2l0NXVCSnhYQnR3TlNCWFBJRUZXRmNNaC1wa3RrNWdnTWl4R0hlLUlsWU9WUHhGME1lUUVKdks4emY2VEJqbEHSAccBQVVfeXFMTVNNQUVpRXBnMXJsc3ZnUTF1emg4OWdvMFVDd0dzdW5ZTmFVNS1BMFhpRURyQk5NM0QxRFZnZkQxYUFtSkNtMTcyaXFkUzhIbUFzaDctYUNtVHJycEgyVUxhb1YtV0N2dlpxbjdZMnZhVjJfNDVHSExZZGtIZ0hwZDVpWFFmRWQtcTdZRmVSd1Vkc2RfNGtKdG9heVdVSnNtRmtWLTE0VTZwaTVlbUhnU252RWw0ZGtmTzNjeFJDeHMtaGJWLUhwUQ?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-7ebfc57981016712",
