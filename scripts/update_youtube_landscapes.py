@@ -36,6 +36,11 @@ def is_host(url: str, host: str, path_prefix: str) -> bool:
     return parsed.scheme == "https" and parsed.hostname == host and parsed.path.startswith(path_prefix)
 
 
+def is_commons_image(url: str) -> bool:
+    parsed = urlparse(url)
+    return parsed.scheme == "https" and parsed.hostname in {"upload.wikimedia.org", "thumb.wikimedia.org"} and parsed.path.startswith("/wikipedia/commons/")
+
+
 def clean_html(value: object) -> str:
     text = re.sub(r"<[^>]+>", " ", str(value or ""))
     return re.sub(r"\s+", " ", unescape(text)).strip()
@@ -68,7 +73,7 @@ def commons_item(page: dict, country: str, topic: str, reviewed_on: str) -> dict
     licence_name = clean_html((meta.get("LicenseShortName") or {}).get("value"))
     licence_url = str((meta.get("LicenseUrl") or {}).get("value") or "")
     author = clean_html((meta.get("Artist") or {}).get("value")) or "Wikimedia Commons"
-    if not (asset_id.isdigit() and filename.startswith("File:") and is_host(image, "upload.wikimedia.org", "/")
+    if not (asset_id.isdigit() and filename.startswith("File:") and is_commons_image(image)
             and re.search(r"\.(?:jpe?g|png|webp)$", urlparse(image).path, re.I)
             and permitted_license(licence_name, licence_url)):
         return None
@@ -115,7 +120,7 @@ def build_config(today: str) -> dict:
                 by_country[country].append(item)
     missing = [country for country, items in by_country.items() if len(items) < MIN_PER_COUNTRY]
     if missing:
-        raise RuntimeError("Not enough valid Pexels visuals for: " + ", ".join(missing))
+        raise RuntimeError("Not enough valid Wikimedia visuals for: " + ", ".join(missing))
     for items in by_country.values():
         random.SystemRandom().shuffle(items)
     return {
