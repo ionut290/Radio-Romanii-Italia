@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "purpose": "RDI LIVE YouTube — registro dei singoli video autorizzati",
+  "updated_on": "2026-11-07",
+  "default_policy": "deny",
+  "sources": [
+    {
+      "id": "ec-audiovisual",
+      "name": "Commissione europea — Audiovisual Service / Europe by Satellite",
+      "catalog_url": "https://audiovisual.ec.europa.eu/",
+      "terms_url": "https://audiovisual.ec.europa.eu/en/conditions-of-use",
+      "default_license": "CC BY 4.0 per contenuti di proprietà UE, salvo indicazioni differenti",
+      "notes": "Controllare licenza della singola clip, musica e terzi; attribuzione obbligatoria; non implicare approvazione UE."
+    },
+    {
+      "id": "europarl-mmc",
+      "name": "Parlamento europeo — Multimedia Centre",
+      "catalog_url": "https://multimedia.europarl.europa.eu/",
+      "terms_url": "https://www.europarl.europa.eu/news/en/media-services/multimedia-centre",
+      "default_license": "Riutilizzo con attribuzione secondo condizioni specifiche",
+      "notes": "Conservare fonte e specifiche restrizioni prima di mettere in onda."
+    }
+  ],
+  "videos": [],
+  "approval_requirements": {
+    "must_have": [
+      "source_id",
+      "title",
+      "source_page_url",
+      "downloaded_file_path",
+      "license_name",
+      "license_url",
+      "attribution",
+      "rights_checked_at",
+      "rights_evidence",
+      "approved_for_youtube_live"
+    ],
+    "approved_for_youtube_live_required_value": true,
+    "check_third_party_music": true,
+    "check_identifiable_person_rights": true,
+    "allow_embed_only": false
+  },
+  "broadcast": {
+    "enabled": false,
+    "reason": "Nessun singolo filmato ancora controllato e caricato: non iniziare riproduzione automatica."
+  }
+}
