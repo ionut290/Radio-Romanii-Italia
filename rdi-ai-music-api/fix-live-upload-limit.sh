@@ -29,7 +29,7 @@ import sys
 path = Path(sys.argv[1])
 source = path.read_text(encoding="utf-8")
 # Case 1: original production backend with RATE_MAX=6.
-match = re.search(r"(?m)^RATE_MAX\s*=\s*(\d+)\s*$", source)
+match = re.search(r"(?m)^RATE_MAX[ \t]*=[ \t]*(\d+)[ \t]*$", source)
 if match:
     value = int(match.group(1))
     if value == 12:
