@@ -23,9 +23,11 @@ DEFAULT_OUTPUT = ROOT / "data" / "youtube-landscapes.json"
 COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 MIN_PER_COUNTRY = 5
 
+# Keep the public API use deliberately light: one search per country per day.
+# The API returns up to 12 candidates for each of these broad, scenic queries.
 TOPICS = {
-    "Italia": ["Rome skyline", "Venice canal", "Dolomites landscape", "Tuscany landscape", "Sicily coast", "Italian lakes", "Italian coast", "Milan skyline"],
-    "România": ["Bucharest skyline", "Transylvania landscape", "Carpathian Mountains", "Danube Delta", "Romanian village", "Romania castle", "Sibiu Romania", "Romania coast"],
+    "Italia": "Italy landscape",
+    "România": "Romania landscape",
 }
 
 
@@ -40,6 +42,10 @@ def clean_html(value: object) -> str:
 
 
 def title(country: str, topic: str) -> str:
+    if country == "Italia":
+        return "PEISAJ ITALIAN · ITALIA"
+    if country == "România":
+        return "PEISAJ ROMÂNESC · ROMÂNIA"
     short = topic.replace(" Romania", "").replace(" Italy", "").upper()
     return f"{short} · {country.upper()}"
 
@@ -101,14 +107,12 @@ def build_config(today: str) -> dict:
     by_country: dict[str, list[dict]] = {country: [] for country in TOPICS}
     seen: set[str] = set()
     for country, topics in TOPICS.items():
-        for topic in topics:
-            payload = get_json(topic)
-            for record in (payload.get("query") or {}).get("pages") or []:
-                item = commons_item(record, country, topic, today)
-                if item and item["id"] not in seen:
-                    seen.add(item["id"])
-                    by_country[country].append(item)
-                    break
+        payload = get_json(topics)
+        for record in (payload.get("query") or {}).get("pages") or []:
+            item = commons_item(record, country, topics, today)
+            if item and item["id"] not in seen:
+                seen.add(item["id"])
+                by_country[country].append(item)
     missing = [country for country, items in by_country.items() if len(items) < MIN_PER_COUNTRY]
     if missing:
         raise RuntimeError("Not enough valid Pexels visuals for: " + ", ".join(missing))
