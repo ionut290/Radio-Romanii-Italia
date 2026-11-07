@@ -1,0 +1,31 @@
+/* RDI AI MUSIC TV: standalone 1280x720 visual overlay, no audio output. */
+#rdiTop3TV[hidden]{display:none!important}
+#rdiTop3TV{position:absolute;inset:0;z-index:40;display:flex;flex-direction:column;overflow:hidden;pointer-events:none;color:#fff;background:
+radial-gradient(circle at 80% 10%,rgba(0,210,220,.19),transparent 52%),
+radial-gradient(circle at 10% 90%,rgba(40,96,142,.65),transparent 55%),
+linear-gradient(125deg,#071318,#081b2c 64%,#041e24);font-family:Arial,Helvetica,sans-serif}
+#rdiTop3TV:before{content:"";position:absolute;inset:-45%;background:repeating-radial-gradient(circle at 65% 50%,transparent 0 30px,#6bd1de15 32px 34px,transparent 35px 54px);animation:rdiTop3Turn 48s linear infinite}
+@keyframes rdiTop3Turn{to{transform:rotate(15deg)}}
+.rdi-top3-header{position:relative;display:flex;align-items:center;justify-content:space-between;padding:28px 52px 18px;z-index:2}
+.rdi-top3-brand{display:flex;align-items:center;gap:14px;font-size:22px;font-weight:900}.rdi-top3-brand img{width:57px;height:57px;object-fit:contain;filter:drop-shadow(0 4px 12px #000a)}
+.rdi-top3-live{font-size:13px;letter-spacing:2px;font-weight:900;background:#0d4746;border:1px solid #33dfdd;border-radius:30px;padding:12px 22px;color:#6aefed}
+.rdi-top3-main{position:relative;z-index:2;flex:1;min-height:0;display:flex;align-items:center;gap:32px;padding:0 6% 35px}
+.rdi-top3-rank{width:42%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.rdi-top3-medal{display:grid;place-items:center;width:300px;height:300px;border-radius:50%;border:10px solid #217e92;background:radial-gradient(circle,#1a767c 0,#10435a 56%,#0c2439 58%,#041e2d 75%);box-shadow:0 0 0 18px #3bc6dc16,0 0 0 29px #3bc6dc09,0 0 65px #18cadc4a;font-size:180px;line-height:1;font-weight:900;letter-spacing:-17px;text-indent:-17px;text-shadow:0 7px 20px #000a}
+.rdi-top3-medal.gold{border-color:#f3c76d;background:radial-gradient(circle,#96723a 0,#5b461c 55%,#25372f 60%,#071e29 78%);box-shadow:0 0 0 18px #f9cb6b18,0 0 0 29px #f7ca6e0b,0 0 70px #ffdb7045}
+.rdi-top3-rank-label{font-size:19px;font-weight:900;letter-spacing:5px;margin-top:30px;color:#41e3e3}
+.rdi-top3-main-copy{width:58%;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.rdi-top3-kicker{font-size:17px;color:#52dfe4;letter-spacing:3px;font-weight:900;margin-bottom:14px}
+.rdi-top3-title{font-size:clamp(45px,5.6vw,80px);line-height:1.03;letter-spacing:-2px;overflow-wrap:anywhere;margin:0 0 15px}
+.rdi-top3-artist{font-size:30px;color:#b3d5dd;margin:0 0 20px;overflow-wrap:anywhere}
+.rdi-top3-votes{font-size:18px;background:#102c35;border:1px solid #32606d;border-radius:12px;padding:13px 18px;display:inline-flex;align-self:flex-start;gap:10px;align-items:center}
+.rdi-top3-stack{display:flex;gap:10px;max-width:100%;margin-top:19px}
+.rdi-top3-chip{padding:9px 12px;border:1px solid #377082;border-radius:10px;font-size:15px;color:#aac8d1;background:#092c35;max-width:33%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.rdi-top3-chip.current{background:#36cdd5;color:#09222c;font-weight:900;border-color:#5cf0e9}
+.rdi-top3-footer{height:91px;background:linear-gradient(90deg,#16b5c5,#086e80);position:relative;z-index:3;padding:17px 50px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.rdi-top3-link{font-size:23px;font-weight:900;letter-spacing:.4px}
+.rdi-top3-audio{max-width:45%;font-size:14px;text-align:right;font-weight:700;color:#e1fdff}
+.rdi-top3-progress{position:absolute;bottom:0;left:0;height:6px;background:#ffc865;transition:none}
+.rdi-top3-intro .rdi-top3-medal{font-size:100px;letter-spacing:-9px;text-indent:-9px}
+.rdi-top3-intro .rdi-top3-main-copy{justify-content:center}
+@media(prefers-reduced-motion:reduce){#rdiTop3TV:before{animation:none!important}}
