@@ -7,8 +7,8 @@ on:
       - 'scripts/deploy-rdi-ai-top3-oracle.py'
       - '.github/workflows/rdi-ai-top3-radio.yml'
   schedule:
-    # 18:30 in inverno, 19:30 in estate a Roma. Safe cutoff 20:00 local.
-    - cron: '30 17 * * *'
+    # 07:30 winter / 08:30 summer in Rome: before the first 09:30 airing.
+    - cron: '30 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -33,6 +33,7 @@ jobs:
           set -euo pipefail
           python -m py_compile scripts/build-rdi-ai-top3.py scripts/deploy-rdi-ai-top3-oracle.py
           node --test tests/youtube-ai-top3.test.mjs
+          python -m unittest discover -s tests -p 'test_rdi_ai_top3_schedule.py' -v
           test -s scripts/rdi-geopolitica-auth.php
       - name: Prepare secure Oracle connection
         env:

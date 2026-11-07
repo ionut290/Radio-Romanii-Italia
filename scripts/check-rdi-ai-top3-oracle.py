@@ -23,9 +23,12 @@ def main():
         pid=int(playlist["id"])
         detail=api.call("GET",f"/station/1/playlist/{pid}")
         sched=detail.get("schedule_items",[])
-        assert any(x.get("start_time")==2030 and x.get("end_time")==2120 and
-                   x.get("start_date")==manifest["edition_day"] and x.get("end_date")==manifest["edition_day"]
-                   and x.get("loop_once") for x in sched)
+        expected={(930,1010),(1330,1410),(1730,1810),(2030,2110)}
+        day=manifest["edition_day"]
+        times={(int(x["start_time"]),int(x["end_time"])) for x in sched
+            if x.get("start_date")==day and x.get("end_date")==day
+            and x.get("loop_once") is True}
+        assert len(sched)==4 and times==expected,"Four daily Top3 windows required"
         files=api.call("GET","/station/1/files")
         wanted="RDI AI MUSIC TOP3/"+manifest["track_title"]+".mp3"
         found=[f for f in files if f.get("path")==wanted]

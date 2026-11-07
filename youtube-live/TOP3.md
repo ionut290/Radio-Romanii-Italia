@@ -1,8 +1,8 @@
 # RDI AI MUSIC — Top 3 quotidiana nel live YouTube
 
-## Stato: selezione Top 3 con audio implementata e testata; audio del countdown ancora da programmare
+## Stato: puntata completa preparata, quattro passaggi quotidiani su AzuraCast
 La pagina pubblica della diretta `youtube-news.html` carica il modulo
-`youtube-ai-top3.js` e presenta alle **20:30 Europe/Rome** una classifica TV
+`youtube-ai-top3.js` e presenta durante le quattro puntate alle **09:30, 13:30, 17:30 e 20:30 Europe/Rome** una classifica TV
 della community (prima la posizione 3, poi 2, poi 1). Il modulo:
 - legge la classifica reale dalla API pubblica `/api/ai-music/spotlight?page=1`;
 - considera **solo brani approvati con file audio caricato e ascolto pubblico abilitato** (`audio_preview=1`); scarta i brani con solo link esterno;
@@ -48,3 +48,15 @@ Passaggi per l'edizione radiofonica completa:
 
 **Non attivare il blocco audio finché non sono verificati tutti i passaggi.**
 Riferimento YouTube: https://support.google.com/youtube/answer/3367684?hl=it
+
+
+## Quattro repliche quotidiane (dal 7 novembre 2026)
+La playlist `RDI AI MUSIC - TOP 3 del giorno` usa quattro schedule_items
+con orari interi HHMM: 09:30–10:10, 13:30–14:10, 17:30–18:10 e
+20:30–21:10 (fuso Europe/Rome), ciascuno con `loop_once=true`.
+Il workflow giornaliero parte alle 06:30 UTC (07:30 CET / 08:30 CEST)
+per aggiornare l'audio del giorno prima del primo appuntamento.
+AzuraCast può leggermente posticipare l'avvio per rispettare i brani già in
+onda. Nessun audio di Chromium viene inviato al live: la grafica segue
+titolo ed elapsed reali dell'audio AzuraCast. La distribuzione verifica la
+presenza esatta di tutti e quattro gli orari prima dell'abilitazione.

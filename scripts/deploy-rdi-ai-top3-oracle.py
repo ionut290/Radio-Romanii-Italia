@@ -56,12 +56,24 @@ def safe_edition(mp3,manifest):
     if len(rows)!=3:raise ValueError("Explicit YouTube broadcasting authorization is required for ALL three songs")
     return data
 
+BROADCAST_SLOTS=((930,1010),(1330,1410),(1730,1810),(2030,2110))
+
 def schedule(day):
-    # AzuraCast's StationSchedule stores HHMM as an integer (e.g. 2030).
-    # Passing a string such as "20:30" is cast to integer 20 (00:20!).
-    return [{"start_time":2030,"end_time":2120,
-       "start_date":day,"end_date":day,"days":[],
-       "loop_once":True}]
+    # AzuraCast requires integer HHMM and one distinct slot per airing.
+    return [{"start_time":start,"end_time":end,"start_date":day,
+             "end_date":day,"days":[],"loop_once":True}
+            for start,end in BROADCAST_SLOTS]
+
+def valid_schedule(items,day):
+    if not isinstance(items,list) or len(items)!=len(BROADCAST_SLOTS):
+        return False
+    try:
+        seen={(int(item["start_time"]),int(item["end_time"]))
+              for item in items if item.get("start_date")==day
+              and item.get("end_date")==day and item.get("loop_once") is True}
+    except (ValueError,TypeError,KeyError):
+        return False
+    return len(seen)==len(BROADCAST_SLOTS) and seen==set(BROADCAST_SLOTS)
 
 def main():
     parser=argparse.ArgumentParser()
@@ -116,7 +128,7 @@ def main():
             else:raise RuntimeError("Top3 media was not indexed by AzuraCast")
         day=prepared["edition_day"]
         fields={"name":PLAYLIST_NAME,
-          "description":"Puntata con annunci 3,2,1 e file autorizzati, automatica ogni sera",
+          "description":"Puntata con annunci 3,2,1 e file autorizzati, automatica quattro volte al giorno",
           "type":"once_per_hour","source":"songs","order":"sequential",
           "is_enabled":False,"play_per_hour_minute":30,
           "include_in_requests":False,"include_in_on_demand":False,
@@ -142,15 +154,8 @@ def main():
         # AzuraCast returns the station's schedule with canonical timezone
         # representations, which can differ from the HH:MM input format.
         print("TOP3_STATION_SCHEDULE="+json.dumps(items,ensure_ascii=False,default=str)[:3000])
-        if not any(
-            str(item.get("start_date",""))==day
-            and str(item.get("end_date",""))==day
-            and int(item.get("start_time",-1))==2030
-            and int(item.get("end_time",-1))==2120
-            and bool(item.get("loop_once"))
-            for item in items
-        ):
-            raise RuntimeError("Unexpected Top3 broadcast schedule; playlist left disabled")
+        if not valid_schedule(items,day):
+            raise RuntimeError("Four daily Top3 schedules were not saved; playlist left disabled")
         api.call("PUT","/station/1/files/batch",{
           "do":"playlist","playlists":[playlist_id],"files":[relative],"dirs":[]})
         # Never erase another station playlist, and never delete still-playing files.
@@ -171,7 +176,7 @@ def main():
         pending.chmod(0o644);pending.replace(destination)
         print("RDI_TOP3_SCHEDULED=true")
         print("PLAYLIST_ID="+str(playlist_id))
-        print("DATE="+day+" TIME=20:30 Europe/Rome")
+        print("DATE="+day+" TIMES=09:30,13:30,17:30,20:30 Europe/Rome")
         print("EPISODE_TITLE="+prepared["track_title"])
     finally:
         if key:lib.azura_php(args.php_helper.read_bytes(),"revoke",key.split(":",1)[0])
