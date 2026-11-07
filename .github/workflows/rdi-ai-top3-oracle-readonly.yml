@@ -29,12 +29,12 @@ jobs:
           for name in ffmpeg ffprobe espeak-ng espeak pico2wave python3 xdotool; do
             if command -v "$name" >/dev/null; then echo "TOOL_${name}=available"; else echo "TOOL_${name}=missing"; fi
           done
-          for f in /opt/rdi-ai-music-api/app.py /opt/rdi-ai-music-api/rdi_music.sqlite3 /opt/rdi-ai-music-api/uploads /usr/local/bin/rdi-geopolitica-api-helper.php /tmp/rdi-geopolitica-auth.php; do
+          for f in /opt/rdi-ai-music-api/app.py /var/lib/rdi-ai-music/submissions.sqlite3 /var/lib/rdi-ai-music/uploads /tmp/rdi-geopolitica-auth.php; do
             test ! -e "$f" || echo "PATH_${f}=exists"
           done
           python3 - <<'PY'
           import sqlite3, pathlib
-          root=pathlib.Path('/opt/rdi-ai-music-api')
+          root=pathlib.Path('/var/lib/rdi-ai-music')
           files=list(root.glob('*.db'))+list(root.glob('*.sqlite*'))
           print("DB_FILE_COUNT="+str(len(files)))
           for db in files:
