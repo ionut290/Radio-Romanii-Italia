@@ -1,0 +1,61 @@
+name: RDI Top3 — register already-authorized existing artist audio
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rdi-top3-existing-song-permissions.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  approved-existing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Connect securely using existing Oracle SSH keys
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/rdi" "$HOME/.ssh/known_hosts"
+          ssh -i "$HOME/.ssh/rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 ubuntu@129.151.255.41 'sudo -n python3 -' <<'PY'
+          import datetime, json, pathlib, sqlite3
+          root=pathlib.Path("/var/lib/rdi-ai-music")
+          folder=root/"top3";folder.mkdir(parents=True,exist_ok=True)
+          marker=folder/".existing-library-confirmed-20261107"
+          if marker.exists():
+            print("EXISTING_YOUTUBE_RIGHTS=ALREADY_RECORDED");raise SystemExit(0)
+          with sqlite3.connect(root/"submissions.sqlite3",timeout=25) as db:
+            db.row_factory=sqlite3.Row
+            allrows=db.execute("""SELECT id,title,artist,stored_name,youtube_consent
+              FROM submissions WHERE status='approved' AND spotlight_consent=1
+              AND stored_name IS NOT NULL""").fetchall()
+            rows=[x for x in allrows if (root/"uploads"/x["stored_name"]).is_file()]
+            if len(rows)<3:
+              raise SystemExit("Fewer than three approved source files: no bulk action taken")
+            # The station operator explicitly confirmed all existing approved
+            # music had artist permission to be published and broadcast BEFORE
+            # its inclusion in RDI AI MUSIC. This grants only the existing songs
+            # once; future submissions must use the explicit checkbox.
+            backup=folder/"existing-rights-pre-change-20261107.sqlite3"
+            if not backup.exists():
+              with sqlite3.connect(backup) as dest:db.backup(dest)
+              backup.chmod(0o600)
+            for song in rows:
+              if not song["youtube_consent"]:
+                db.execute("UPDATE submissions SET youtube_consent=1 WHERE id=?",(song["id"],))
+            db.commit()
+            audit={"recorded":"2026-11-07",
+              "authority":"RDI manager confirmed pre-existing artist permission to publish and transmit",
+              "number_of_tracks":len(rows),
+              "titles":[{"id":x["id"],"title":x["title"],"artist":x["artist"]} for x in rows]}
+          marker.write_text(json.dumps(audit,ensure_ascii=False,indent=2))
+          marker.chmod(0o600)
+          print("EXISTING_YOUTUBE_RIGHTS=RECORDED_ONCE")
+          print("TRACK_COUNT="+str(audit["number_of_tracks"]))
+          PY
