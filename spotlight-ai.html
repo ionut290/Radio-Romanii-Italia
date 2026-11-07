@@ -3,209 +3,68 @@
 <meta name="theme-color" content="#0b1630"><meta name="description" content="RDI AI MUSIC Spotlight: ascolta e vota i brani AI approvati dalla redazione.">
 <title>RDI AI MUSIC Spotlight | Radio Românii din Italia</title>
 <style>
-:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 95% 0%,#304b72,#0a1425 67%);color:#f4f7ff;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1050px;margin:0 auto;padding:22px 18px 70px}a{color:#ffd27c}header{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}h1{font-size:clamp(33px,6vw,57px);line-height:1.08;margin:42px 0 12px}h1 span{color:#ffd17a}.lead{font-size:18px;color:#cad8e9;max-width:750px}.links{display:flex;gap:12px;flex-wrap:wrap}.links a{border:1px solid #6d85a8;border-radius:12px;padding:10px 14px;text-decoration:none}.summary{margin:24px 0 16px;color:#c2d5ec}.tracks{display:grid;gap:14px}.track{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:16px;padding:20px;background:#172a45;border:1px solid #445b7b;border-radius:20px;box-shadow:0 6px 18px #0002}.position{font-size:29px;font-weight:900;color:#f5ca6d}.track h2{margin:0;font-size:22px}.track p{margin:4px 0 10px;color:#c0d0e5}.listen{margin:10px 0}.listen audio{width:min(100%,420px);display:block}.votes{font-weight:800;color:#f9d181}.vote{cursor:pointer;border:0;border-radius:12px;padding:13px 21px;background:#f5c669;color:#192942;font-size:16px;font-weight:800;min-width:112px}.vote:disabled{cursor:not-allowed;background:#758399;color:#e3eaf5}.hint{font-size:12px;color:#b4c6de}.notice{background:#203551;padding:16px;border-left:4px solid #f5c669;border-radius:6px;margin:26px 0}.status{min-height:23px;color:#f9cf82}.empty{padding:28px;border-radius:16px;background:#172a45}footer{margin-top:34px;color:#bdcce0}select{padding:9px 12px;border-radius:10px;border:1px solid #7289a8;background:#10233b;color:white;font:inherit}@media(max-width:620px){.track{grid-template-columns:43px minmax(0,1fr);gap:10px;padding:15px}.track .votebox{grid-column:2}.vote{width:100%}h1{margin-top:26px}}button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:3px}
- 
-/* Animated musical atmosphere and compact, accessible community comments */
-body{background:radial-gradient(ellipse at 85% -5%,#245ea2 0%,transparent 48%),radial-gradient(circle at 0% 47%,#132f60 0%,transparent 48%),linear-gradient(145deg,#07152c,#10274a 48%,#071126);background-attachment:fixed}
-main{position:relative;isolation:isolate}
-main::before,main::after{content:"♫ ♪ ♬ ♩  ♫";position:fixed;z-index:-1;font-size:clamp(32px,4vw,58px);white-space:pre;letter-spacing:7vw;color:#ffcf6b3b;pointer-events:none;text-shadow:0 0 24px #ffd17b66;animation:notesFloat 22s ease-in-out infinite alternate;left:2%;top:18%;transform:rotate(-16deg)}
-main::after{left:auto;right:1%;top:70%;animation-delay:-10s;animation-duration:29s;color:#8fd5ff48}
-@keyframes notesFloat{0%{transform:translateY(20px) rotate(-14deg);opacity:.25}50%{opacity:.8}100%{transform:translateY(-95px) rotate(12deg);opacity:.4}}
-@media(prefers-reduced-motion:reduce){main::before,main::after{animation:none}}
-.track{position:relative;transition:border-color .2s,box-shadow .2s;background:linear-gradient(120deg,#152b49ee,#11233fef);border-color:#46698f}
-.track:nth-child(1){border-color:#dfb65d;box-shadow:0 0 28px #eeb85833}.track:nth-child(2){border-color:#a3c4e5}.track:nth-child(3){border-color:#c38a5e}
-.track.open{border-color:#ffd377;box-shadow:0 0 24px #f1ba6f29}
-.track h2{margin:0}
-.track-title{font:inherit;text-align:left;padding:0;color:#f9fbff;background:none;border:0;cursor:pointer;font-weight:800}
-.track-title:hover{text-decoration:underline;color:#ffd27c}
-.votebox{display:flex;flex-direction:column;gap:9px}
-.comment-toggle{background:#253e61;border:1px solid #7d9bbd;color:#f4f7fd;border-radius:11px;padding:10px;cursor:pointer;font-weight:700;white-space:nowrap}
-.comment-toggle:hover{background:#335980}
-.comments-panel{grid-column:1 / -1;padding:15px 16px 17px;border-top:1px solid #6985a455;margin-top:5px;background:#09203c8c;border-radius:12px}
-.comments-title{color:#ffd27c;font-size:17px;font-weight:800;margin-bottom:12px}
-.comment-form{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr) auto;gap:8px;margin-bottom:15px}
-.comment-form input,.comment-form textarea{background:#0a1b32;border:1px solid #6886aa;color:white;font:inherit;border-radius:10px;padding:11px;min-width:0}
-.comment-form textarea{resize:vertical;min-height:45px;max-height:110px}
-.comment-form button{background:#f5c669;border:0;border-radius:10px;color:#102340;font-weight:800;padding:9px 15px;cursor:pointer}
-.comment-form button:disabled{opacity:.5;cursor:default}
-.comment-list{display:grid;gap:9px}
-.comment-line{background:#193552;border:1px solid #395b7b;border-radius:11px;padding:11px 13px}
-.comment-line strong{color:#ffe29c}.comment-line time{color:#abc1db;font-size:12px;margin-left:8px}
-.comment-line p{margin:5px 0 0;overflow-wrap:anywhere;white-space:pre-wrap}
-.comment-feedback{color:#ffd27c;min-height:20px;margin:4px 0 10px}
-@media(max-width:650px){.comment-form{grid-template-columns:1fr}.comment-form button{width:100%}.comments-panel{padding:12px}.track{column-gap:9px}.votebox{grid-column:2;flex-direction:row;flex-wrap:wrap}.vote{width:auto;flex:1}.comment-toggle{flex:1}main::before,main::after{letter-spacing:8vw}}
-
-/* Spotlight premium layout: musical hero, top three podium and 20-item pages */
-main{max-width:1140px}
-.hero{position:relative;isolation:isolate;overflow:hidden;min-height:220px;padding:35px 24px 36px 0}
-.hero:before{content:"";position:absolute;inset:0 0 0 27%;z-index:-1;background:radial-gradient(ellipse at 72% 46%,#187ed56b,transparent 62%);pointer-events:none}
-.hero h1{margin:5px 0 14px;text-shadow:0 0 22px #70b8ff35}
-.hero .lead{max-width:640px}
-.hero-art{position:absolute;right:3%;top:0;font-size:clamp(95px,13vw,180px);line-height:1;transform:rotate(-12deg);filter:drop-shadow(0 0 20px #f7c15f99);opacity:.94;z-index:-1;pointer-events:none}
-.hero-art:after{content:"♫ ♪";display:block;font-size:32px;letter-spacing:25px;color:#ffd783;animation:notesFloat 9s ease-in-out infinite alternate}
-.links a{background:#0d2646ca;border-color:#d8a959;box-shadow:0 0 18px #f7b94715}
-.notice{border:1px solid #5c8cbd;border-left:4px solid #f5c669;border-radius:14px;background:#102c4dcc}
-.summary{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:19px;font-weight:700;color:#ffe1a0}
-.summary strong{color:#fff}
-.tracks{gap:10px}
-.track{grid-template-columns:52px 1fr auto;border-radius:15px;padding:13px 17px;gap:12px;align-items:center}
-.track:nth-child(-n+3){min-height:108px;padding:18px 20px}
-.track:nth-child(n+4) h2{font-size:17px}
-.track:nth-child(n+4) p{font-size:13px}
-.track:nth-child(n+4) .position{font-size:22px}
-.track .position{font-size:26px}
-.track:nth-child(1) .position:before{content:"👑 ";font-size:20px}
-.track:nth-child(2) .position:before{content:"🥈 ";font-size:17px}
-.track:nth-child(3) .position:before{content:"🥉 ";font-size:17px}
-.track .listen{margin:5px 0}.track .votes{font-size:13px}.track .votebox{flex-direction:row;align-items:center}
-.track .votebox button{min-width:90px;padding:10px 12px}
-.track .votebox .vote{background:linear-gradient(130deg,#ffe08e,#f5ba4f);box-shadow:0 4px 14px #ffc85c20}
-.pager{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin:26px 0 18px}
-.pager button,.playall{border:1px solid #d6a959;background:#133253;color:#ffe1a0;font:inherit;font-weight:750;border-radius:12px;padding:11px 17px;cursor:pointer}
-.pager button:disabled{opacity:.38;cursor:not-allowed}
-.pager .page-info{min-width:120px;text-align:center}
-.player-bar{border:1px solid #d9a94a;background:linear-gradient(125deg,#102e53,#142a4a);border-radius:18px;box-shadow:0 0 22px #f7ca7231;padding:13px 16px;display:flex;align-items:center;flex-wrap:wrap;gap:13px;margin:14px 0}
-.player-bar audio{width:min(100%,330px);flex:1 1 240px}
-.player-bar .player-label{font-weight:750;color:#ffdc8c;flex:1 1 200px}
-.player-bar button{border:1px solid #e8bf6b;border-radius:10px;background:#f5c669;color:#11263d;padding:9px 14px;font:inherit;font-weight:750;cursor:pointer}
-.player-note{font-size:12px;color:#c5d7ec;width:100%}
-.admin-link{display:inline-block;border-radius:12px;border:1px solid #638dbd;color:#bddbff;padding:10px 14px;text-decoration:none;font-weight:700}
-.comments-panel{box-shadow:inset 0 0 20px #0a1c43}
-@media(max-width:820px){.hero-art{opacity:.28;right:-16px}.hero{min-height:0;padding:20px 0}.track{grid-template-columns:38px minmax(0,1fr);gap:8px}.track .votebox{grid-column:2;justify-content:flex-start}.track:nth-child(-n+3){min-height:0;padding:15px}.track .votebox button{min-width:0}.track:nth-child(n+4) .votebox{flex-wrap:wrap}.summary{font-size:17px}}
-
-/* Abstract placeholders instead of invented artist cover artwork */
-.track{grid-template-columns:52px 62px minmax(0,1fr) auto}
-.cover{width:62px;height:62px;display:grid;place-items:center;border-radius:12px;overflow:hidden;font-size:27px;color:#ffe7a8;text-shadow:0 0 18px #ffe8af80;border:1px solid #7da1c66b;box-shadow:inset 0 0 28px #60beff35}
-.track:nth-child(5n+1) .cover{background:linear-gradient(135deg,#1d2864,#9058a9,#edb96c)}
-.track:nth-child(5n+2) .cover{background:linear-gradient(135deg,#054b73,#348dd0,#9f71d3)}
-.track:nth-child(5n+3) .cover{background:linear-gradient(135deg,#7b3853,#e6a25c,#1d3d68)}
-.track:nth-child(5n+4) .cover{background:linear-gradient(135deg,#0f4368,#1f7197,#d9c178)}
-.track:nth-child(5n) .cover{background:linear-gradient(135deg,#402968,#ae6087,#4ba4ad)}
-.hero:after{content:"▁▂▃▅▇▅▃▂▁";position:absolute;right:21%;top:59%;font-size:clamp(16px,3.2vw,37px);letter-spacing:3px;color:#ffca6e;font-weight:900;text-shadow:0 0 18px #f6b944;pointer-events:none;animation:wavePulse 2.3s ease-in-out infinite alternate}
-@keyframes wavePulse{from{opacity:.35;transform:scaleY(.6)}to{opacity:1;transform:scaleY(1.25)}}
-@media(prefers-reduced-motion:reduce){.hero:after{animation:none}}
-@media(max-width:820px){.track{grid-template-columns:38px 50px minmax(0,1fr)}.cover{width:50px;height:50px}.track .votebox{grid-column:3}.hero:after{right:8%;opacity:.4}}
-
-/* RDI Spotlight — editorial premium redesign, November 2026 */
-:root{--gold:#ffce72;--gold2:#e8a941;--ice:#b8d7f7;--navy:#07152b;--panel:#112a49;--stroke:rgba(164,201,241,.24);--ring:0 0 0 3px rgba(255,207,113,.36)}
-html{scroll-behavior:smooth}
-body{min-height:100vh;background:radial-gradient(ellipse 75% 33% at 89% 3%,#165590b8,transparent 75%),radial-gradient(ellipse 58% 48% at -15% 49%,#123968a1,transparent 80%),linear-gradient(160deg,#061126,#0b2342 49%,#071529 100%);color:#f6f9ff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.23;background-image:radial-gradient(#9dcaff55 .6px,transparent .8px);background-size:29px 29px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
-main{max-width:1220px;padding:22px clamp(16px,3.8vw,50px) 60px}
-header{padding:7px 0 10px;gap:14px}
-header>a{font-size:14px;font-weight:700;text-decoration:none;color:#ffe1a7;border-bottom:1px solid #dfac56;transition:color .2s}
-header>a:hover{color:white}
-select{font-size:14px;min-height:42px;padding:9px 34px 9px 13px;border:1px solid #7d9ebd;border-radius:12px;background:#081d39;color:#fff}
-.hero{min-height:285px;margin:14px 0 12px;padding:37px 260px 38px 0;overflow:visible}
-.hero:before{inset:-14px -5% -15px 20%;background:radial-gradient(ellipse at 71% 47%,#2d8bc758,transparent 62%);filter:blur(8px)}
-.hero h1{font-weight:900;font-size:clamp(37px,5.3vw,68px);letter-spacing:-.055em;line-height:1.09;margin:10px 0 20px;max-width:850px}
-.hero h1 span{background:linear-gradient(110deg,#ffe4a1,#ffba46 85%);color:transparent;background-clip:text;-webkit-background-clip:text;letter-spacing:-.04em}
-.hero .lead{max-width:670px;font-size:clamp(16px,1.65vw,19px);line-height:1.6;color:#d3e4f8;margin:0 0 25px}
-.hero-art{right:2%;top:10px;transform:rotate(-12deg);font-size:clamp(115px,14vw,190px);opacity:.9;filter:drop-shadow(0 12px 34px #000a) drop-shadow(0 0 24px #ffc76a69)}
-.hero-art:after{font-size:24px;letter-spacing:14px}
-.hero:after{right:17%;top:72%;font-size:clamp(19px,2.8vw,35px);letter-spacing:2px}
-.links{gap:11px;position:relative;z-index:1}
-.links a,.admin-link{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:11px 19px;border:1px solid #8faac8;border-radius:13px;background:linear-gradient(145deg,#173a60,#0a203e);color:#f5f9ff;text-decoration:none;font-size:14px;font-weight:800;transition:transform .2s,background .2s,box-shadow .2s,border-color .2s}
-.links a:first-child{background:linear-gradient(135deg,#ffe5a0,#f6b84a);color:#14243a;border-color:#ffe6a8;box-shadow:0 7px 23px #edb35438}
-.links a:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 9px 25px #f7bb4933}
-.notice{position:relative;margin:9px 0 32px;padding:20px 25px 20px 70px;border:1px solid #527caa;border-left:3px solid #f8c35f;border-radius:15px;background:linear-gradient(115deg,#173858e0,#0d2745dc);color:#dfeaf8;font-size:14px;line-height:1.7;box-shadow:0 10px 28px #0002}
-.notice:before{content:"ⓘ";position:absolute;left:23px;top:50%;transform:translateY(-50%);font-size:29px;font-weight:800;color:var(--gold)}
-.summary{margin:28px 0 15px;padding-bottom:12px;border-bottom:1px solid #b7a06b53;font-size:clamp(18px,2.1vw,24px);font-weight:750;letter-spacing:-.02em}
-.summary span{color:var(--gold)}
-.player-bar{display:grid;grid-template-columns:auto auto minmax(120px,1fr) minmax(230px,355px);gap:12px;align-items:center;margin:12px 0 26px;padding:18px 20px 14px;border:1px solid #cda55a88;border-radius:19px;background:linear-gradient(115deg,#183d66ed,#0e2949f2);box-shadow:0 10px 40px #0003,0 0 28px #ffca6b12}
-.player-bar button{min-height:46px;padding:9px 19px;border:1px solid #9db1c8;border-radius:11px;background:#1a385a;color:#f4f8ff;font-weight:800;transition:transform .2s,box-shadow .2s}
-.player-bar #play-all{background:linear-gradient(145deg,#ffe6a2,#f5b848);border-color:#ffe6a2;color:#102238;box-shadow:0 5px 19px #ffbd5040}
-.player-bar button:hover{transform:translateY(-2px);box-shadow:0 7px 18px #0004}
-.player-bar .player-label{font-size:14px;color:#ffdf9a;min-width:0}
-.player-bar audio{width:100%;min-width:0}
-.player-note{grid-column:1/-1;font-size:12px;line-height:1.5;color:#bbd0ea}
-.status{font-size:14px;min-height:0;margin:0 0 11px}
-.tracks{gap:13px}
-.track,.track:nth-child(-n+3){min-height:126px;display:grid;grid-template-columns:56px 74px minmax(0,1fr) auto;align-items:center;gap:17px;padding:17px 19px;background:linear-gradient(110deg,#183859f7,#0b2342f7);border:1px solid var(--stroke);border-radius:18px;box-shadow:0 10px 24px #0003;transition:transform .2s,border-color .2s,box-shadow .2s}
-.track:hover{transform:translateY(-2px);border-color:#aac8e17d;box-shadow:0 14px 30px #0005}
-.track:nth-child(1){border:1px solid #e9b960;box-shadow:0 0 0 1px #e7b34a22,0 12px 35px #f9bb4220;background:linear-gradient(110deg,#244363,#112e4f 65%,#102442)}
-.track:nth-child(2){border-color:#8dabc46b}.track:nth-child(3){border-color:#a9876773}
-.track .position,.track:nth-child(n+4) .position{font-size:clamp(19px,2.5vw,27px);font-weight:900;color:var(--gold);line-height:1.4;white-space:nowrap}
-.track:nth-child(1) .position:before,.track:nth-child(2) .position:before,.track:nth-child(3) .position:before{display:block;margin-bottom:2px;font-size:24px}
-.cover{width:74px;height:74px;border-radius:15px;font-size:34px;box-shadow:inset 0 0 36px #9cd9ff23,0 8px 22px #0003}
-.track>div:nth-child(3){min-width:0}
-.track h2,.track:nth-child(n+4) h2{margin:0;font-size:clamp(18px,1.8vw,22px);line-height:1.25;letter-spacing:-.024em}
-.track-title{overflow-wrap:anywhere;transition:color .2s}
-.track p,.track:nth-child(n+4) p{font-size:14px;margin:3px 0 8px;color:#bdcee4}
-.track .listen{margin:5px 0 7px}
-.track .listen audio{width:min(100%,390px);height:40px}
-.track .listen a{font-size:14px;color:#ffcf73;text-underline-offset:4px}
-.track .votes{font-size:13px;color:#ffdb90;line-height:1.3}
-.track .votebox{display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap}
-.track .votebox button{min-width:100px;min-height:44px;padding:10px 13px;border-radius:11px;font-size:13px}
-.comment-toggle{background:#214365;border:1px solid #718fae;color:#f6faff;transition:background .2s}
-.comment-toggle:hover{background:#355b81}
-.track .votebox .vote{background:linear-gradient(135deg,#ffe29a,#f5b849);color:#14223a;box-shadow:0 5px 14px #e6ac4b29}
-.track .votebox .vote:disabled{opacity:.85;color:#223047}
-.comments-panel{grid-column:1/-1;margin-top:10px;padding:20px;background:#071c34ba;border:1px solid #739ac23d;border-radius:13px}
-.comment-form input,.comment-form textarea{border-color:#6786a3;background:#0b2541}
-.comment-form input:focus,.comment-form textarea:focus{outline:2px solid #ffd27c;outline-offset:1px}
-.pager{margin:28px 0 32px;gap:18px}
-.pager button{min-height:43px;border-radius:11px;padding:10px 18px;background:#123052}
-.pager button:not(:disabled):hover{background:#20496f}
-footer{margin:40px 0 0;padding:28px 0 5px;border-top:1px solid #ddba6d45;text-align:center;font-size:13px;color:#b9cce4}
-button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #ffda89;outline-offset:4px}
-@media(max-width:1000px){.player-bar{grid-template-columns:auto auto minmax(0,1fr)}.player-bar audio{grid-column:1/-1}.track,.track:nth-child(-n+3){grid-template-columns:46px 64px minmax(0,1fr);gap:13px}.cover{width:64px;height:64px}.track .votebox{grid-column:3;justify-content:flex-start}.hero{padding-right:210px}}
-@media(max-width:680px){main{padding:13px 15px 38px}.hero{padding:28px 0 20px;min-height:0}.hero h1{font-size:clamp(35px,9vw,49px);margin:5px 0 15px;max-width:500px}.hero-art{right:-5px;top:0;font-size:115px;opacity:.18}.hero:after{display:none}.hero .lead{font-size:16px}.links a{flex:1 1 auto;font-size:13px;padding:10px 11px}.notice{margin:15px 0 24px;padding:18px 16px 18px 52px;font-size:13px}.notice:before{left:14px;font-size:24px}.summary{font-size:18px}.player-bar{display:flex;flex-wrap:wrap;padding:13px;gap:9px}.player-bar button{flex:1 1 100px}.player-label{flex:1 1 100%!important;order:3}.player-bar audio{order:4;flex:1 1 100%}.player-note{order:5}.track,.track:nth-child(-n+3){grid-template-columns:37px 54px minmax(0,1fr);gap:10px;padding:13px;border-radius:15px}.track .position,.track:nth-child(n+4) .position{font-size:20px}.track:nth-child(1) .position:before,.track:nth-child(2) .position:before,.track:nth-child(3) .position:before{font-size:17px}.cover{width:54px;height:54px;font-size:25px}.track h2,.track:nth-child(n+4) h2{font-size:18px}.track p,.track:nth-child(n+4) p{font-size:12px}.track .votebox{grid-column:2/-1;justify-content:stretch;flex-wrap:nowrap}.track .votebox button{flex:1;min-width:0;padding:9px 5px;font-size:12px}.track .listen audio{max-width:100%}.comments-panel{padding:12px}.pager{gap:9px}.pager .page-info{min-width:0}.pager button{padding:10px 11px;font-size:13px}}
-@media(max-width:390px){.track,.track:nth-child(-n+3){grid-template-columns:30px 46px minmax(0,1fr);gap:7px;padding:11px}.cover{width:46px;height:46px}.track .position{font-size:17px}.track .votebox{grid-column:1/-1}.links a{flex-basis:100%}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-
-
-/* RDI Spotlight — compact gallery and podium v2 */
-main{max-width:1190px}
-.tracks{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;align-items:stretch}
-.track,.track:nth-child(-n+3){grid-column:span 3;display:grid;grid-template-columns:45px 62px minmax(0,1fr);align-content:start;align-items:center;gap:12px;padding:18px;border-radius:18px;min-height:0;max-width:none;background:linear-gradient(143deg,#1a385c,#0c2341);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-.track:nth-child(-n+3){grid-column:span 2;grid-template-columns:40px 58px minmax(0,1fr);padding:17px 14px;border-color:#d6b36e75;background:linear-gradient(145deg,#213e60,#102c4f 72%,#0d2545);box-shadow:0 10px 26px #0003}
-.track:nth-child(1){border-color:#ffc96e;box-shadow:0 0 0 1px #ffc96e45,0 12px 30px #efb94c26}
-.track:nth-child(2){border-color:#9bbedc91}
-.track:nth-child(3){border-color:#dcae7c88}
-.track:nth-child(-n+3) .position{font-size:21px;line-height:1.2}
-.track:nth-child(-n+3) .position:before{font-size:19px;margin:0 0 5px}
-.track .position,.track:nth-child(n+4) .position{font-size:23px;line-height:1.1}
-.track .cover,.track:nth-child(-n+3) .cover{width:62px;height:62px;font-size:29px;border-radius:13px;flex:none}
-.track:nth-child(-n+3) .cover{width:58px;height:58px;font-size:27px}
-.track>div:nth-child(3){min-width:0;align-self:center}
-.track h2,.track:nth-child(n+4) h2{font-size:clamp(17px,1.65vw,21px);line-height:1.3;letter-spacing:-.03em;overflow-wrap:anywhere}
-.track p,.track:nth-child(n+4) p{font-size:12px;margin:4px 0 6px}
-.track .listen{margin:5px 0}
-.track .listen audio{width:100%;max-width:325px;height:37px}
-.track .listen a{font-size:12px}
-.track .votes{margin-top:4px;font-size:12px}
-.track .votebox,.track:nth-child(-n+3) .votebox{grid-column:1/-1;display:flex;justify-content:flex-end;align-items:center;gap:9px;flex-wrap:nowrap;margin-top:4px;padding-top:12px;border-top:1px solid #7898b440}
-.track .votebox button,.track:nth-child(-n+3) .votebox button{flex:1 1 0;min-width:0;min-height:39px;padding:8px 8px;font-size:12px;white-space:nowrap}
-.track .votebox .vote:disabled{background:linear-gradient(125deg,#b7a06a,#8b805e);color:#f7f7f4;box-shadow:none}
-.track:hover{transform:translateY(-3px);box-shadow:0 16px 32px #0005}
-.comments-panel{grid-column:1/-1}
-.track.open{border-color:#ffd780}
-@media(min-width:991px){.track:nth-child(-n+3){grid-template-columns:1fr 58px;row-gap:9px}.track:nth-child(-n+3) .position{grid-column:1;grid-row:1}.track:nth-child(-n+3) .cover{grid-column:2;grid-row:1}.track:nth-child(-n+3)>div:nth-child(3){grid-column:1/-1;grid-row:2;align-self:start}.track:nth-child(-n+3) .votebox{grid-row:3}}
-@media(max-width:990px){.tracks{grid-template-columns:repeat(2,minmax(0,1fr))}.track,.track:nth-child(-n+3){grid-column:span 1}.track:nth-child(-n+3){grid-template-columns:40px 58px minmax(0,1fr)}}
-@media(max-width:640px){.tracks{grid-template-columns:minmax(0,1fr);gap:11px}.track,.track:nth-child(-n+3){grid-column:1;grid-template-columns:34px 54px minmax(0,1fr);padding:13px;gap:10px}.track .cover,.track:nth-child(-n+3) .cover{width:54px;height:54px;font-size:24px}.track .position,.track:nth-child(-n+3) .position,.track:nth-child(n+4) .position{font-size:20px}.track .votebox,.track:nth-child(-n+3) .votebox{grid-column:1/-1;flex-wrap:nowrap}.track .votebox button,.track:nth-child(-n+3) .votebox button{font-size:12px}.track .listen audio{max-width:100%}}
-@media(max-width:360px){.track,.track:nth-child(-n+3){grid-template-columns:29px 45px minmax(0,1fr);gap:7px;padding:11px}.track .cover,.track:nth-child(-n+3) .cover{width:45px;height:45px}.track .votebox{grid-column:1/-1}}
-
-</style></head><body><main>
-<header><a href="./index.html">← Radio Românii din Italia</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></header>
-<section class="hero"><div class="hero-art" aria-hidden="true">🎧</div>
-<h1>RDI AI MUSIC <span>Spotlight</span></h1><p class="lead" id="intro"></p>
-<nav class="links"><a href="./artisti-ai.html" id="submitLink"></a><a href="./index.html" id="radioLink"></a><a href="./redactie-ai-music.html" class="admin-link" id="adminLink">🔐 Redazione</a></nav>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+:root{color-scheme:dark;--bg:#060c1d;--panel:#111b32;--line:#ffffff1a;--txt:#f7f8ff;--muted:#a7b5d1;--gold:#ffd47d;--gold2:#f2ac54;--violet:#9775ff;--cyan:#67d5f0;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--txt);font:15px/1.5 'DM Sans',system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse 65% 40% at 95% 1%,#1d3864 0%,transparent 68%),radial-gradient(ellipse 60% 48% at -17% 37%,#3622559c 0%,transparent 70%),radial-gradient(ellipse 60% 36% at 80% 90%,#103456 0%,transparent 75%),#060c1d}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.13;background-image:radial-gradient(#b5d4ff .7px,transparent .7px);background-size:28px 28px;mask-image:linear-gradient(#000,transparent 85%)}
+button,input,select{font:inherit}button,a,select{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid #ffcf77;outline-offset:3px}
+a{color:inherit}main{max-width:1240px;margin:auto;padding:18px clamp(16px,3.2vw,48px) 112px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 17px;border:1px solid #ffffff1f;border-radius:21px;background:#111b31bd;backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 8px 38px #0003}
+.brand{display:flex;align-items:center;gap:11px;min-width:0;text-decoration:none}.brand img{width:43px;height:43px;border-radius:13px;object-fit:cover;box-shadow:0 0 0 1px #ffffff22}.brand b{display:block;font:800 16px/1.1 Outfit,system-ui,sans-serif;letter-spacing:.01em}.brand small{display:block;font-size:11px;color:#aebcda;margin-top:3px}.brand strong{color:var(--gold)}.top-actions{display:flex;align-items:center;gap:10px}.back-home{font-size:12px;text-decoration:none;color:#c5d4ed;border:1px solid #ffffff24;border-radius:11px;padding:10px 12px;white-space:nowrap}.top-actions select{border-radius:11px;padding:9px 12px;min-height:41px;background:#0a1730;border:1px solid #ffffff32;color:#e5ecfc}
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(290px,.7fr);gap:24px;align-items:center;margin:22px 0 24px;padding:clamp(25px,4.3vw,54px);border:1px solid #ffffff27;border-radius:33px;overflow:hidden;background:radial-gradient(circle at 68% 26%,#6949a65b,transparent 48%),radial-gradient(circle at 13% 75%,#16498087,transparent 62%),linear-gradient(120deg,#101a34ee,#13234aeb 65%,#111a38);box-shadow:0 30px 70px #0005,inset 0 1px #ffffff18}
+.hero:before{content:"";position:absolute;width:440px;height:440px;right:-150px;top:-215px;border-radius:50%;background:#5f7bff1f;filter:blur(35px);pointer-events:none}.hero:after{content:"";position:absolute;width:200px;height:200px;left:42%;bottom:-145px;border-radius:50%;background:#ffd07324;filter:blur(35px);pointer-events:none}
+.hero-copy,.hero-feature{position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #ffffff3d;border-radius:99px;padding:8px 12px;background:#101c39bd;color:#d5dff9;font-weight:800;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.eyebrow .pulse{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px #ffda7330,0 0 18px #ffdb8a}
+.hero h1{font:900 clamp(44px,5.5vw,76px)/.99 Outfit,system-ui,sans-serif;letter-spacing:-.06em;margin:22px 0 19px}.hero h1 em{font-style:normal;color:var(--gold);background:linear-gradient(100deg,#fff1b9,#ffc76b 45%,#e69b64);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .lead{color:#cbd5ec;font-size:clamp(14px,1.7vw,17px);line-height:1.75;max-width:590px;margin:0 0 24px}.links{display:flex;flex-wrap:wrap;gap:10px}.links a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:47px;padding:12px 17px;border-radius:13px;border:1px solid #ffffff35;background:#ffffff0b;text-decoration:none;font-weight:800;font-size:13px;transition:transform .2s,background .2s,border-color .2s}.links a:hover{transform:translateY(-2px);border-color:#ffce78}.links a.primary{background:linear-gradient(130deg,#ffe4a6,#ffbd61);color:#1e2238;border-color:#ffdea0;box-shadow:0 8px 28px #ffd27d37}.links a.admin-link{color:#b9c9e5}.hero-meta{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:24px;color:#adbcdc;font-size:11px;font-weight:700}.hero-meta span{display:inline-flex;align-items:center;gap:7px}.hero-meta i{width:6px;height:6px;display:inline-block;border-radius:50%;background:#5ad5c1}
+.hero-feature{background:linear-gradient(150deg,#ffffff1c,#ffffff04);border:1px solid #ffffff35;padding:19px;border-radius:25px;box-shadow:0 18px 38px #0003;min-width:0;backdrop-filter:blur(12px)}.feature-top{display:flex;align-items:center;justify-content:space-between;color:#fff3ca;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.feature-top strong{border:1px solid #ffe1a277;padding:5px 10px;border-radius:99px;color:#ffdf8c}.record-wrap{display:grid;place-items:center;position:relative;height:210px;overflow:hidden}.record-glow{position:absolute;width:175px;height:175px;border-radius:50%;background:#9775ff;filter:blur(45px);opacity:.27}.vinyl{position:relative;width:170px;height:170px;border-radius:50%;background:repeating-radial-gradient(circle at center,#111427 0 3px,#28304a 4px 5px,#111427 6px 8px);border:6px solid #252943;box-shadow:0 8px 28px #0008,inset 0 0 0 2px #6e75a8,0 0 0 1px #ffffff33;animation:vinylSpin 19s linear infinite}.vinyl:before{content:"";position:absolute;inset:42px;border-radius:50%;background:conic-gradient(from 40deg,#dd94d4,#765ee1,#3487b8,#f7c66d,#dd94d4);border:3px solid #fff6;box-shadow:0 0 20px #ffffff16}.vinyl:after{content:"♫";display:grid;place-items:center;position:absolute;inset:73px;border-radius:50%;background:#0a1731;color:#ffe69d;font-size:15px}.record-arm{position:absolute;width:85px;height:10px;border-radius:10px;right:2%;top:45px;transform:rotate(-39deg);transform-origin:right;background:linear-gradient(90deg,#f5d398,#7d8ca6);box-shadow:0 4px 12px #0007}
+.feature-track{text-align:center}.feature-track small{display:block;color:#c7bdeb;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.feature-track h2{font:800 22px/1.18 Outfit,system-ui,sans-serif;margin:7px 0 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.feature-track p{margin:0;color:#bfcce5;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.feature-go{display:flex;align-items:center;justify-content:center;gap:8px;margin:17px auto 0;padding:11px 16px;border:1px solid #ffffff40;border-radius:12px;background:#ffffff1c;color:#fff;font-size:12px;font-weight:800;text-decoration:none;max-width:230px}
+.chart-stage{padding:0 2px}#chart{scroll-margin-top:110px}.stage-header{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin:0 2px 19px}.kicker{color:#ad94ff;font-weight:900;font-size:10px;letter-spacing:.19em;text-transform:uppercase;margin:0 0 6px}.summary{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0;font:800 clamp(26px,3.3vw,39px)/1.2 Outfit,system-ui,sans-serif;letter-spacing:-.045em}.summary .trophy{font-size:26px}.summary .count{font:700 12px/1.5 'DM Sans',sans-serif;color:#ffde9a;letter-spacing:0;border:1px solid #f9d3873b;border-radius:99px;padding:6px 11px;white-space:nowrap;background:#e8b86112}.section-sub{color:var(--muted);font-size:12px;margin:5px 0 0}.stage-mark{font-size:11px;font-weight:800;color:#b5c4e3;padding:9px 12px;border:1px solid #ffffff1d;border-radius:12px}
+.discovery{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:0 0 16px;padding:12px;border:1px solid #ffffff1b;border-radius:19px;background:#111b32b8;box-shadow:0 12px 30px #0002}.filters{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.filters button{border:1px solid transparent;border-radius:12px;padding:10px 12px;background:transparent;color:#b5c3dd;font-size:12px;font-weight:800;white-space:nowrap}.filters button:hover{background:#ffffff10}.filters button.active{background:#ffe1a1;color:#141b2a;box-shadow:0 3px 14px #fbcf8133}.search-area{display:flex;align-items:center;gap:8px;flex-wrap:wrap;flex:1;justify-content:flex-end}.searchbox{display:flex;gap:8px;align-items:center;background:#081125;border:1px solid #ffffff26;border-radius:12px;color:#849bc0;padding:0 11px;min-width:200px;flex:0 1 270px}.searchbox input{min-width:0;width:100%;border:0;outline:0;background:none;color:#fff;padding:11px 0;font-size:12px}.searchbox input::placeholder{color:#7386a7}.search-area select{background:#081125;color:#d3def2;border:1px solid #ffffff26;border-radius:12px;padding:10px;font-size:12px;max-width:150px}
+.player-bar{display:grid;grid-template-columns:52px minmax(0,1fr) auto;grid-template-areas:"ic title controls" "ic audio audio" ". note note";align-items:center;gap:6px 14px;padding:17px 18px;margin:0 0 19px;border:1px solid #d8b46d5e;border-radius:20px;background:linear-gradient(107deg,#23213e,#142848 50%,#142a4c);box-shadow:0 8px 34px #0003}.player-icon{grid-area:ic;display:grid;place-items:center;width:50px;height:50px;border-radius:15px;background:linear-gradient(125deg,#f6d99b,#a990fc);color:#1b1b31;font-size:22px;box-shadow:0 0 22px #ffe3a733}.player-text{grid-area:title;min-width:0}.player-kicker{color:#ffcf7e;font-size:10px;font-weight:900;letter-spacing:.13em}.player-label{display:block;min-width:0;color:#f4f5ff;font-size:12px;font-weight:700;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.player-actions{grid-area:controls;display:flex;gap:7px}.player-actions button{padding:10px 15px;border-radius:11px;border:1px solid #e0bb79;color:#1a2638;background:#ffda91;font-size:12px;font-weight:900;white-space:nowrap}.player-actions #player-stop{background:#ffffff10;color:#d4def1;border:1px solid #ffffff3d}.player-bar audio{grid-area:audio;width:100%;height:35px;min-width:0;opacity:.93}.player-note{grid-area:note;color:#93a7c7;font-size:10px}.status{margin:4px 0;min-height:5px;color:var(--gold);font-size:12px}.status:not(:empty){margin:10px 0;min-height:20px}
+.tracks{display:grid;gap:10px}.track{display:grid;grid-template-columns:42px 70px minmax(0,1fr) auto;align-items:center;gap:14px;min-width:0;padding:16px 18px;border:1px solid #ffffff19;border-radius:19px;background:linear-gradient(110deg,#17223cd9,#101a31e6);box-shadow:0 5px 22px #0002;transition:transform .2s,border .2s,background .2s}.track:hover{transform:translateY(-2px);border-color:#c8b1ff62;background:linear-gradient(110deg,#1e2e4be6,#12203ce8)}.track:first-child{background:linear-gradient(105deg,#343044da,#132542ed);border-color:#fed58a6f;box-shadow:inset 3px 0 0 #ffcb73,0 10px 30px #0003}.track:nth-child(2){border-color:#b7c8e04d}.track:nth-child(3){border-color:#dfb69345}
+.position{font:800 18px Outfit,system-ui,sans-serif;letter-spacing:-.04em;color:#8394b4;text-align:center}.track:first-child .position{color:#ffdb91;font-size:23px}.track:nth-child(2) .position{color:#e1e6f5}.track:nth-child(3) .position{color:#e7b88d}
+.cover{position:relative;width:70px;height:70px;border-radius:15px;display:grid;place-items:center;color:#f9deac;font:800 30px Outfit,system-ui,sans-serif;background:linear-gradient(130deg,#7244a0,#23347f 55%,#ed9d7c);box-shadow:0 6px 18px #0005,inset 0 1px #ffffff65;overflow:hidden}.cover:before{content:"";position:absolute;inset:-65%;background:linear-gradient(110deg,transparent 40%,#fff5 50%,transparent 60%);transform:rotate(30deg);opacity:.6}.track:nth-child(5n+2) .cover{background:linear-gradient(130deg,#274da1,#2e9baf,#78d0df)}.track:nth-child(5n+3) .cover{background:linear-gradient(125deg,#9c485c,#eaa45f,#503584)}.track:nth-child(5n+4) .cover{background:linear-gradient(125deg,#333465,#754dce,#e5a5dc)}.track:nth-child(5n) .cover{background:linear-gradient(125deg,#155969,#4cb6a3,#eac36b)}
+.track-info{min-width:0}.track h2{margin:0;font:800 clamp(16px,1.5vw,20px)/1.18 Outfit,system-ui,sans-serif;letter-spacing:-.02em}.track-title{border:0;padding:2px 0;text-align:left;font:inherit;color:#f7f8ff;background:transparent;cursor:pointer;overflow-wrap:anywhere}.track-title:hover{color:var(--gold)}.track-info>p{color:#adbed8;font-size:12px;margin:4px 0 3px;overflow-wrap:anywhere}.listen{margin:5px 0 0}.listen audio{display:block;width:min(100%,315px);height:34px;border-radius:8px}.listen a{display:inline-flex;padding:4px 0;color:#ffcd7a;font-size:12px;font-weight:800;text-decoration:none}.hint{font-size:11px;color:#9faecc}.votes{display:inline-block;color:#ffcd8a;font-size:11px;font-weight:800;margin-top:4px}
+.votebox{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}.votebox button{border-radius:11px;padding:10px 12px;font-size:12px;font-weight:800;min-height:42px;white-space:nowrap;transition:background .15s}.comment-toggle{background:#ffffff0b;border:1px solid #ffffff2b;color:#d3e0f4}.vote{background:linear-gradient(125deg,#ffe4a4,#ffc674);color:#18263e;border:1px solid #ffe0a5;box-shadow:0 5px 16px #f8c77c1c}.vote:disabled{background:#263650;color:#abbdd9;border-color:#50647c;box-shadow:none;cursor:default}.track.open{border-color:#ffc9787a}
+.comments-panel{grid-column:1/-1;border-top:1px solid #ffffff24;margin-top:5px;padding:17px 4px 3px}.comments-title{font:800 16px Outfit,system-ui,sans-serif;color:#ffd790;margin-bottom:13px}.comment-form{display:grid;grid-template-columns:minmax(120px,170px) minmax(0,1fr) auto;gap:8px}.comment-form input,.comment-form textarea{background:#070f21;color:#fff;border:1px solid #516384;border-radius:10px;padding:10px 12px;min-width:0;font-size:12px}.comment-form textarea{resize:vertical;min-height:43px;max-height:125px}.comment-form button{border:0;border-radius:10px;background:#ffda94;color:#17213c;font-weight:800;padding:9px 16px}.comment-form button:disabled{opacity:.5}.comment-feedback{min-height:18px;color:#ffdc94;font-size:11px;margin:7px 0}.comment-list{display:grid;gap:8px}.comment-line{padding:12px;border:1px solid #ffffff20;border-radius:12px;background:#ffffff09}.comment-line strong{color:#ffdd9e}.comment-line time{color:#839aba;font-size:11px;margin-left:12px}.comment-line p{margin:6px 0 0;color:#cfdaec;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.empty{background:#ffffff0b;border:1px solid #ffffff2a;padding:24px;border-radius:17px;color:#d5e1f0}
+.pager{display:flex;justify-content:center;align-items:center;gap:12px;margin:24px 0 0}.pager button{padding:11px 16px;border:1px solid #ffffff39;border-radius:12px;background:#ffffff10;color:#fff;font-weight:800;font-size:12px}.pager button:disabled{opacity:.3;cursor:default}.pager .page-info{font-size:12px;color:#b7c7e3}
+.notice{margin:24px 0 0;border:1px solid #ffffff20;border-radius:15px;background:#ffffff08;color:#aebed8;font-size:12px;overflow:hidden}.notice summary{display:flex;align-items:center;gap:10px;padding:15px 18px;cursor:pointer;font-weight:800;color:#d4e0f4;list-style:none}.notice summary:before{content:"ⓘ";font-size:18px;color:var(--gold)}.notice summary:after{content:"+";margin-left:auto;color:var(--gold);font-size:19px}.notice[open] summary:after{content:"−"}.notice #notice{padding:0 18px 18px;margin:0;line-height:1.7}
+footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;border-top:1px solid #ffffff1a;margin:40px 0 0;padding:25px 2px;color:#8ea2c1;font-size:12px}footer a{color:#cfdcf2;text-decoration:none}
+@keyframes vinylSpin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:950px){.hero{grid-template-columns:1fr 270px;gap:14px}.hero h1{font-size:50px}.hero .lead{font-size:14px}.record-wrap{height:172px}.vinyl{width:145px;height:145px}.vinyl:before{inset:34px}.vinyl:after{inset:62px}.record-arm{right:-7px}.track{grid-template-columns:35px 60px minmax(0,1fr)}.cover{width:60px;height:60px}.track .votebox{grid-column:3;justify-content:flex-start}.track .comments-panel{grid-column:1/-1}}
+@media(max-width:680px){main{padding:12px 12px 95px}.topbar{border-radius:17px;padding:9px 11px}.brand img{height:35px;width:35px;border-radius:10px}.brand b{font-size:13px}.brand small{font-size:9px}.back-home{display:none}.top-actions select{font-size:12px;padding:8px;min-height:36px}.hero{grid-template-columns:1fr;border-radius:24px;margin:14px 0 28px;padding:25px 19px;gap:18px}.hero h1{font-size:clamp(43px,10vw,61px);margin:19px 0 12px}.eyebrow{font-size:9px;padding:7px 10px}.hero .lead{font-size:14px;line-height:1.65;margin-bottom:18px}.links{gap:7px}.links a{flex:1 1 auto;min-height:43px;font-size:11px;padding:10px 11px}.links a.admin-link{flex:0 0 auto}.hero-meta{margin-top:18px;gap:12px;font-size:9px}.hero-feature{display:grid;grid-template-columns:78px minmax(0,1fr);grid-template-rows:auto auto;align-items:center;gap:4px 13px;padding:12px;border-radius:17px}.feature-top{grid-column:1/-1;font-size:9px}.record-wrap{grid-row:2;grid-column:1;height:82px}.vinyl{width:72px;height:72px;border-width:3px}.vinyl:before{inset:16px;border-width:1px}.vinyl:after{inset:31px;font-size:9px}.record-arm{width:27px;top:19px;right:0;height:5px}.record-glow{width:78px;height:78px;filter:blur(25px)}.feature-track{grid-row:2;grid-column:2;text-align:left}.feature-track h2{font-size:16px;margin:3px 0}.feature-track p{font-size:11px}.feature-track small{font-size:9px}.feature-go{margin:6px 0 0;font-size:10px;padding:6px 10px;display:inline-flex}.stage-header{margin-bottom:13px}.summary{font-size:26px;gap:8px}.stage-mark{display:none}.discovery{display:block;padding:10px;border-radius:16px}.filters{display:flex;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:4px}.filters::-webkit-scrollbar{display:none}.filters button{flex:none;padding:9px 11px;font-size:11px}.search-area{justify-content:stretch;margin-top:8px}.searchbox{flex:1;min-width:0}.search-area select{max-width:135px}.player-bar{grid-template-columns:38px minmax(0,1fr) auto;grid-template-areas:"ic title controls" "audio audio audio" "note note note";padding:11px;gap:7px 9px;border-radius:16px}.player-icon{height:36px;width:36px;font-size:16px;border-radius:11px}.player-label{font-size:10px}.player-kicker{font-size:9px}.player-actions{gap:4px}.player-actions button{padding:9px 10px;font-size:10px}.player-bar audio{height:32px}.player-note{font-size:9px;line-height:1.4}.tracks{gap:9px}.track{grid-template-columns:28px 51px minmax(0,1fr);gap:8px 10px;padding:12px 10px;border-radius:16px}.track .position{font-size:14px}.track:first-child .position{font-size:17px}.track .cover{width:51px;height:51px;font-size:25px;border-radius:11px}.track h2{font-size:17px}.track-info>p{font-size:11px;margin:3px 0}.track .listen audio{height:31px;max-width:260px}.track .votes{font-size:10px}.track .votebox{grid-column:2/-1;display:flex;justify-content:flex-start;gap:6px}.votebox button{min-height:34px;padding:7px 11px;font-size:11px}.comments-panel{padding:13px 0 3px}.comment-form{grid-template-columns:1fr}.comment-form button{width:100%}.pager button{padding:10px 11px}.notice{margin-top:18px}footer{font-size:10px}}
+@media(max-width:360px){.brand small{display:none}.hero h1{font-size:41px}.links a{font-size:10px;padding:9px}.search-area select{max-width:105px}.player-actions button{padding:8px}}
+</style>
+</head><body><main>
+<header class="topbar">
+  <a class="brand" href="./index.html" aria-label="Radio Românii din Italia - Home"><img src="./RADIO-LOGO.png" alt="" onerror="this.style.display='none'"><span><b>RADIO <strong>ROMÂNII</strong></b><small>DIN ITALIA · AI MUSIC</small></span></a>
+  <div class="top-actions"><a class="back-home" href="./index.html">← Radio RDI</a><select id="lang" aria-label="Lingua"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></div>
+</header>
+<section class="hero" aria-label="RDI AI MUSIC Spotlight">
+ <div class="hero-copy">
+  <div class="eyebrow"><i class="pulse"></i><span id="hero-eyebrow">LA COMMUNITY DELLA MUSICA AI</span></div>
+  <h1>RDI <em>AI MUSIC</em><br>Spotlight<span style="color:#ffdc8c">.</span></h1>
+  <p class="lead" id="intro"></p>
+  <nav class="links"><a class="primary" href="./artisti-ai.html" id="submitLink"></a><a href="./index.html" id="radioLink"></a><a href="./redactie-ai-music.html" class="admin-link" id="adminLink">🔐 Redazione</a></nav>
+  <div class="hero-meta"><span><i></i><span id="hero-proof">Brani approvati dalla redazione</span></span><span>✦ <span id="hero-community">La community sceglie</span></span></div>
+ </div>
+ <aside class="hero-feature" aria-label="In vetta alla classifica">
+  <div class="feature-top"><span id="feature-label">IN CIMA ALLA CLASSIFICA</span><strong>#1</strong></div>
+  <div class="record-wrap"><div class="record-glow"></div><div class="vinyl" aria-hidden="true"></div><div class="record-arm" aria-hidden="true"></div></div>
+  <div class="feature-track"><small id="feature-kicker">BRANO IN EVIDENZA</small><h2 id="heroTitle">AI MUSIC Spotlight</h2><p id="heroArtist">Radio Românii din Italia</p><a class="feature-go" id="feature-go" href="#tracks">Scopri il brano ↓</a></div>
+ </aside>
 </section>
-<section class="notice" id="notice"></section>
-<div class="summary">🏆 <strong id="heading"></strong> · <span id="count"></span></div>
-<div class="player-bar">
- <button id="play-all" type="button">▶ Play All</button>
- <button id="player-stop" type="button">■ Stop</button>
- <span class="player-label" id="player-label">🎵 Ascolta tutti i brani disponibili</span>
- <audio id="playlist-player" controls preload="none"></audio>
- <span class="player-note" id="player-note">La riproduzione continua include i file autorizzati; i link esterni non possono essere riprodotti automaticamente.</span>
-</div>
-<p class="status" id="status" role="status" aria-live="polite"></p>
-<div class="tracks" id="tracks"></div>
-<nav class="pager" aria-label="Pagine classifica"><button id="page-prev" type="button">← Precedente</button><span class="page-info" id="page-info">Pagina 1</span><button id="page-next" type="button">Successiva →</button></nav>
-<footer>Radio Românii din Italia · RDI AI MUSIC Spotlight</footer>
+<section class="chart-stage" id="chart">
+ <div class="stage-header"><div><p class="kicker">RDI COMMUNITY CHART</p><h2 class="summary"><span class="trophy">🏆</span><strong id="heading">Classifica pubblica</strong><span class="count" id="count">…</span></h2><p class="section-sub" id="chart-caption">Le canzoni più amate dalla nostra community</p></div><span class="stage-mark" id="stage-mark">✦ 20 brani per pagina</span></div>
+ <div class="discovery"><div class="filters" aria-label="Filtra classifica"><button class="active" type="button" data-view="all" aria-pressed="true" id="view-all">Tutti</button><button type="button" data-view="top" aria-pressed="false" id="view-top">Top 10</button><button type="button" data-view="voted" aria-pressed="false" id="view-voted">Già votati</button><button type="button" data-view="audio" aria-pressed="false" id="view-audio">Con audio</button></div><div class="search-area"><label class="searchbox">⌕ <input type="search" id="song-search" aria-label="Cerca brani" placeholder="Cerca in questa pagina…" autocomplete="off"></label><select id="song-sort" aria-label="Ordina canzoni"><option value="rank">Per classifica</option><option value="az">Titolo A–Z</option></select></div></div>
+ <div class="player-bar"><div class="player-icon" aria-hidden="true">♫</div><div class="player-text"><span class="player-kicker" id="player-kicker">PLAYLIST RDI</span><span class="player-label" id="player-label">🎵 Ascolta tutti i brani disponibili</span></div><div class="player-actions"><button id="play-all" type="button">▶ Play All</button><button id="player-stop" type="button">■ Stop</button></div><audio id="playlist-player" controls preload="none"></audio><span class="player-note" id="player-note">La riproduzione continua include solo file autorizzati.</span></div>
+ <p class="status" id="status" role="status" aria-live="polite"></p>
+ <div class="tracks" id="tracks"></div>
+ <nav class="pager" aria-label="Pagine classifica"><button id="page-prev" type="button">← Precedente</button><span class="page-info" id="page-info">Pagina 1</span><button id="page-next" type="button">Successiva →</button></nav>
+ <details class="notice"><summary id="notice-title">Come funzionano voti e classifiche?</summary><p id="notice"></p></details>
+</section>
+<footer><span>© 2026 Radio Românii din Italia · RDI AI MUSIC Spotlight</span><a href="./index.html" id="footer-home">Torna alla radio ↗</a></footer>
 </main><script>
 "use strict";
 const API="https://radio-romanii-italia.duckdns.org/api/ai-music";
@@ -221,6 +80,13 @@ let allTracks=[],voted=new Set(JSON.parse(localStorage.getItem("rdi-spotlight-vo
 let visitor=localStorage.getItem("rdi-spotlight-visitor");
 if(!visitor || !/^[0-9a-f-]{36}$/i.test(visitor)){visitor=crypto.randomUUID();localStorage.setItem("rdi-spotlight-visitor",visitor)}
 function t(k){return strings[language][k]}
+const uiLocale={
+ it:{eyebrow:"LA COMMUNITY DELLA MUSICA AI",proof:"Brani approvati dalla redazione",community:"La community sceglie",feature:"IN CIMA ALLA CLASSIFICA",featured:"BRANO IN EVIDENZA",discover:"Scopri il brano ↓",caption:"Le canzoni più amate dalla nostra community",page:"✦ 20 brani per pagina",all:"Tutti",top:"Top 10",voted:"Già votati",audio:"Con audio",search:"Cerca in questa pagina…",rank:"Per classifica",az:"Titolo A–Z",player:"PLAYLIST RDI",notice:"Come funzionano voti e classifiche?",home:"Torna alla radio ↗",noResult:"Nessun brano corrisponde ai filtri in questa pagina."},
+ ro:{eyebrow:"COMUNITATEA MUZICII AI",proof:"Piese aprobate de redacție",community:"Comunitatea alege",feature:"PE PRIMUL LOC ÎN CLASAMENT",featured:"PIESA EVIDENȚIATĂ",discover:"Descoperă piesa ↓",caption:"Piesele preferate de comunitatea noastră",page:"✦ 20 de piese pe pagină",all:"Toate",top:"Top 10",voted:"Votate",audio:"Cu audio",search:"Caută în această pagină…",rank:"După clasament",az:"Titlu A–Z",player:"PLAYLIST RDI",notice:"Cum funcționează voturile și clasamentul?",home:"Înapoi la radio ↗",noResult:"Nicio piesă nu corespunde filtrelor de pe această pagină."},
+ en:{eyebrow:"THE AI MUSIC COMMUNITY",proof:"Editorially approved tracks",community:"The community decides",feature:"TOP OF THE CHART",featured:"FEATURED TRACK",discover:"Explore the track ↓",caption:"The tracks our community loves most",page:"✦ 20 tracks per page",all:"All tracks",top:"Top 10",voted:"Voted",audio:"With audio",search:"Search this page…",rank:"Chart order",az:"Title A–Z",player:"RDI PLAYLIST",notice:"How do votes and charts work?",home:"Back to radio ↗",noResult:"No tracks match these filters on this page."}
+};
+let currentView="all",searchTerm="",sortMode="rank";
+function translateExtra(){const u=uiLocale[language];const pairs={"hero-eyebrow":"eyebrow","hero-proof":"proof","hero-community":"community","feature-label":"feature","feature-kicker":"featured","feature-go":"discover","chart-caption":"caption","stage-mark":"page","view-all":"all","view-top":"top","view-voted":"voted","view-audio":"audio","player-kicker":"player","notice-title":"notice","footer-home":"home"};Object.entries(pairs).forEach(([id,k])=>$(id).textContent=u[k]);$("song-search").placeholder=u.search;const opts=$("song-sort").options;opts[0].textContent=u.rank;opts[1].textContent=u.az;}
 function translate(){document.documentElement.lang=language;
 $("adminLink").textContent=({it:"🔐 Redazione",ro:"🔐 Redacție",en:"🔐 Editorial login"})[language];
 $("page-prev").textContent=({it:"← Precedente",ro:"← Anterioară",en:"← Previous"})[language];
@@ -228,7 +94,7 @@ $("page-next").textContent=({it:"Successiva →",ro:"Următoarea →",en:"Next �
 $("play-all").textContent=({it:"▶ Play All",ro:"▶ Redă toate",en:"▶ Play All"})[language];
 $("player-stop").textContent=({it:"■ Stop",ro:"■ Oprește",en:"■ Stop"})[language];
 $("player-note").textContent=({it:"La riproduzione continua include solo i file audio autorizzati. I link esterni non sono riproducibili automaticamente.",ro:"Redarea continuă include doar fișierele audio autorizate. Linkurile externe nu pot fi redate automat.",en:"Continuous playback includes only approved and consented audio files. External music links cannot be autoplayed."})[language];
-$("intro").textContent=t("intro");$("submitLink").textContent=t("submit");$("radioLink").textContent=t("radio");$("notice").textContent=t("notice");$("heading").textContent=t("heading");render()}
+$("intro").textContent=t("intro");$("submitLink").textContent=t("submit");$("radioLink").textContent=t("radio");$("notice").textContent=t("notice");$("heading").textContent=t("heading");translateExtra();render()}
 $("lang").onchange=()=>{language=$("lang").value;localStorage.setItem("rdi-language",language);translate()};
 function node(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x}
 function safeLink(url){try{const u=new URL(url);return u.protocol==="https:"&&!u.username&&!u.password?u.href:null}catch{return null}}
@@ -285,14 +151,21 @@ function buildComments(track){
 }
 function render(){
  const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=total+" "+t("songs");
+ const visibleTracks=allTracks.filter((track,i)=>{
+  const q=(String(track.title||"")+" "+String(track.artist||"")+" "+String(track.platform||"")+" "+String(track.genre||"")).toLocaleLowerCase();
+  return (!searchTerm||q.includes(searchTerm))&&(currentView!=="top"||(page===1&&i<10))&&(currentView!=="voted"||voted.has(track.id))&&(currentView!=="audio"||!!track.audio_preview);
+ });
+ if(sortMode==="az")visibleTracks.sort((a,b)=>String(a.title||"").localeCompare(String(b.title||""),language));
+ if(page===1&&allTracks.length){$("heroTitle").textContent=allTracks[0].title||"AI MUSIC Spotlight";$("heroArtist").textContent=allTracks[0].artist||"Radio Românii din Italia";}
+ else if(page===1){$("heroTitle").textContent="AI MUSIC Spotlight";$("heroArtist").textContent="Radio Românii din Italia";}
  $("page-info").textContent=({it:"Pagina ",ro:"Pagina ",en:"Page "})[language]+page+" / "+totalPages;
- $("page-prev").disabled=page<=1;$("page-next").disabled=page>=totalPages;
- if(!allTracks.length){wrap.append(node("p","empty",t("empty")));return}
- allTracks.forEach((track,i)=>{
+ $("page-prev").disabled=page<=1||currentView==="top";$("page-next").disabled=page>=totalPages||currentView==="top";document.querySelector(".pager").hidden=totalPages<=1&&!searchTerm;
+ if(!visibleTracks.length){wrap.append(node("p","empty",!allTracks.length?t("empty"):uiLocale[language].noResult));return}
+ visibleTracks.forEach((track,i)=>{
   const card=node("article","track");
-  card.append(node("div","position","#"+((page-1)*20+i+1)));
+  card.append(node("div","position","#"+((page-1)*20+allTracks.indexOf(track)+1)));
   const cover=node("div","cover",["♫","🎵","♪","♬","🎶"][i%5]);cover.setAttribute("aria-hidden","true");card.append(cover);
-  const info=node("div");
+  const info=node("div","track-info");
  const title=node("h2");const openTitle=node("button","track-title",track.title);openTitle.type="button";openTitle.setAttribute("aria-expanded",String(expandedTrackId===track.id));title.append(openTitle);
  info.append(title,node("p","",track.artist+" · "+track.platform));
   const preview=node("div","listen");
@@ -318,6 +191,9 @@ function render(){
  })
 }
 async function load(){$("status").textContent=t("loading");try{const response=await fetch(API+"/spotlight?page="+page,{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();allTracks=Array.isArray(data.tracks)?data.tracks:[];total=Number(data.total)||0;totalPages=Math.max(1,Number(data.total_pages)||1);if(page>totalPages){page=totalPages;return load()}$("status").textContent="";render()}catch(e){$("status").textContent=t("error");allTracks=[];$("tracks").replaceChildren()}}
+$("song-search").addEventListener("input",e=>{searchTerm=e.target.value.trim().toLocaleLowerCase();render()});
+$("song-sort").addEventListener("change",e=>{sortMode=e.target.value;render()});
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{currentView=b.dataset.view;document.querySelectorAll("[data-view]").forEach(x=>{const active=x.dataset.view===currentView;x.classList.toggle("active",active);x.setAttribute("aria-pressed",String(active))});if(currentView==="top"&&page!==1){page=1;load()}else render()}));
 $("page-prev").onclick=()=>{if(page>1){page--;expandedTrackId=null;load();$("heading").scrollIntoView({behavior:"smooth",block:"start"})}};
 $("page-next").onclick=()=>{if(page<totalPages){page++;expandedTrackId=null;load();$("heading").scrollIntoView({behavior:"smooth",block:"start"})}};
 const playlistAudio=$("playlist-player");
