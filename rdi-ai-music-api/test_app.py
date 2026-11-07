@@ -170,6 +170,72 @@ class SubmissionTests(unittest.TestCase):
             )
         self.assertEqual(review.status_code, 400)
 
+    def test_email_member_login_and_guarded_actions(self):
+        with patch.object(service,"AUTH_MAIL_READY",True), \
+             patch.object(service,"AUTH_REQUIRED",True), \
+             patch.object(service,"send_music_login_email") as deliver, \
+             patch.object(service.secrets,"randbelow",return_value=123456):
+            auth="/api/ai-music/auth"
+            config=self.client.get(auth+"/config")
+            self.assertEqual(config.status_code,200)
+            self.assertTrue(config.json["login_required"])
+            self.assertEqual(self.post(title="Anonymous").status_code,401)
+            request_code=self.client.post(auth+"/request-code",headers=self.origin,
+                  json={"email":"artist@example.org","name":"Test Music Artist"})
+            self.assertEqual(request_code.status_code,200)
+            deliver.assert_called_once_with("artist@example.org","123456")
+            wrong=self.client.post(auth+"/verify-code",headers=self.origin,
+                json={"email":"artist@example.org","code":"000000"})
+            self.assertEqual(wrong.status_code,401)
+            verified=self.client.post(auth+"/verify-code",headers=self.origin,
+                json={"email":"artist@example.org","code":"123456"})
+            self.assertEqual(verified.status_code,200)
+            token=verified.json["session"]
+            headers={**self.origin,"Authorization":"Bearer "+token}
+            me=self.client.get(auth+"/me",headers=headers)
+            self.assertEqual(me.status_code,200)
+            self.assertEqual(me.json["user"]["display_name"],"Test Music Artist")
+            submission=self.client.post("/api/ai-music/submissions",
+                  data=self.data(title="Protected song"),headers=headers)
+            self.assertEqual(submission.status_code,201)
+            self.assertEqual(len(self.client.get("/api/ai-music/me/submissions",headers=headers).json["submissions"]),1)
+            sid=submission.json["id"]
+            self.assertEqual(self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
+                  headers=self.admin,json={"status":"approved"}).status_code,200)
+            visitor="8d9b18ca-7c76-4f6b-90f1-85ba92e1cd20"
+            vote_url=f"/api/ai-music/spotlight/{sid}/vote"
+            self.assertEqual(self.client.post(vote_url,headers=self.origin,
+                  json={"visitor":visitor}).status_code,401)
+            self.assertEqual(self.client.post(vote_url,headers=headers,
+                  json={"visitor":visitor}).status_code,201)
+            self.assertEqual(self.client.post(vote_url,headers=headers,
+                  json={"visitor":"9d9b18ca-7c76-4f6b-90f1-85ba92e1cd20"}).status_code,409)
+            comment_url=f"/api/ai-music/spotlight/{sid}/comments"
+            self.assertEqual(self.client.post(comment_url,headers=self.origin,
+                  json={"nickname":"Someone","body":"Great music"}).status_code,401)
+            comment=self.client.post(comment_url,headers=headers,
+                  json={"nickname":"Unknown","body":"Wonderful song"})
+            self.assertEqual(comment.status_code,201)
+            visible=self.client.get(comment_url).json["comments"]
+            self.assertEqual(visible[0]["nickname"],"Test Music Artist")
+            self.assertEqual(self.client.post(auth+"/logout",headers=headers).status_code,200)
+            self.assertEqual(self.client.get(auth+"/me",headers=headers).status_code,401)
+
+    def test_email_code_rate_and_expiry(self):
+        with patch.object(service,"AUTH_MAIL_READY",True), \
+             patch.object(service,"send_music_login_email"), \
+             patch.object(service.secrets,"randbelow",return_value=123456):
+            for i in range(1):
+                self.assertEqual(self.client.post("/api/ai-music/auth/request-code",
+                    headers=self.origin,json={"email":"artist@example.org"}).status_code,200)
+            self.assertEqual(self.client.post("/api/ai-music/auth/request-code",
+                headers=self.origin,json={"email":"artist@example.org"}).status_code,429)
+            for i in range(5):
+                self.assertEqual(self.client.post("/api/ai-music/auth/verify-code",
+                    headers=self.origin,json={"email":"artist@example.org","code":"000000"}).status_code,401)
+            self.assertEqual(self.client.post("/api/ai-music/auth/verify-code",
+                headers=self.origin,json={"email":"artist@example.org","code":"123456"}).status_code,401)
+
     def test_rate_limit_persists_across_requests(self):
         # The batch upload UI sends ten separate requests; they must all succeed.
         self.assertGreaterEqual(service.RATE_MAX, 10)
