@@ -405,7 +405,7 @@ def submit():
     if request.form.get("website"):  # honeypot
         return jsonify(ok=True),202
     artist=clamp(request.form.get("artist"),100)
-    email=clamp(request.form.get("email"),200)
+    email=user["email"] if user else clamp(request.form.get("email"),200)
     title=clamp(request.form.get("title"),160)
     platform=clamp(request.form.get("platform"),60)
     link=clamp(request.form.get("link"),1500)
