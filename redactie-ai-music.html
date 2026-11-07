@@ -1,4 +1,28 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>RDI AI MUSIC | Redazione</title><style>*{box-sizing:border-box}body{margin:0;background:#0b1424;color:#f5f7fc;font:16px system-ui}main{max-width:1100px;padding:24px;margin:auto}h1{margin:0;color:#f2c66c}.card{background:#17273c;border:1px solid #3b536d;border-radius:16px;padding:18px;margin:16px 0;overflow-wrap:anywhere}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}input,textarea{width:100%;padding:10px;margin:8px 0;background:#0b1726;color:white;border:1px solid #71829b;border-radius:9px}button{cursor:pointer;padding:11px 15px;background:#f2c66c;border:0;border-radius:9px;font-weight:700;margin:5px 5px 5px 0;color:#172536}button.secondary{background:#d5deed}button.danger{background:#f19c9c}small,p{color:#c4d0e0}a{color:#f2c66c}.chip{font-size:12px;background:#384d66;border-radius:50px;padding:4px 8px}.actions{display:flex;flex-wrap:wrap;gap:4px}nav{display:flex;align-items:center;justify-content:space-between;gap:15px}</style></head><body><main><nav><h1>RDI AI MUSIC · Redazione</h1><a href="./index.html">← Radio</a></nav><p>Area privata: candidature ricevute e revisione manuale. I brani approvati non vengono trasmessi automaticamente.</p><section class="card">
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>RDI AI MUSIC | Redazione</title><style>
+:root{color-scheme:dark;--bg:#0b1424;--panel:#17273c;--line:#344b65;--ink:#f5f7fc;--muted:#afc0d4;--gold:#f2c66c;--green:#65d9ad}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#182b45 0,#0b1424 62%);color:var(--ink);font:15px/1.5 system-ui,-apple-system,sans-serif}
+main{max-width:1280px;padding:24px 18px 70px;margin:auto}h1{margin:0;color:var(--gold);font-size:clamp(22px,3vw,30px)}h2{font-size:18px;margin:0 0 12px}h3{margin:0;font-size:18px;line-height:1.3}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0;overflow-wrap:anywhere;box-shadow:0 8px 28px #0002}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:14px;align-items:start}
+.grid>.card{margin:0;display:flex;flex-direction:column;gap:9px}
+.grid>.card>p{margin:0;font-size:13px}
+input,textarea,select{width:100%;padding:10px;margin:7px 0;background:#0d1a2b;color:white;border:1px solid #667b95;border-radius:9px;font:inherit}
+input[type=checkbox]{width:auto;accent-color:#eac16d}
+button{cursor:pointer;padding:10px 13px;background:var(--gold);border:0;border-radius:9px;font-weight:700;margin:3px 4px 3px 0;color:#172536;font:inherit;font-weight:700}
+button:hover:not(:disabled){filter:brightness(1.09)}button:disabled{opacity:.5;cursor:not-allowed}
+button.secondary{background:#d5deed}button.danger{background:#f19c9c}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+small,p{color:#c4d0e0}a{color:var(--gold)}.chip{font-size:12px;background:#384d66;border-radius:50px;padding:4px 9px;width:max-content}.chip.approved{background:#174f43;color:#b5ffe3}.chip.pending{background:#554522;color:#ffe5a0}.chip.rejected{background:#572d39;color:#ffc5c5}
+.actions{display:flex;flex-wrap:wrap;gap:5px}nav{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}.toolbar input{flex:1;min-width:200px;margin:0}.toolbar select{width:auto;min-width:150px;margin:0}.toolbar .chip{margin-left:auto}
+details{border:1px solid #3a526b;border-radius:11px;padding:10px 12px;margin-top:5px;background:#1c3048}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px}
+summary::-webkit-details-marker{display:none}summary:after{content:'⌄';font-size:20px;color:var(--gold)}details[open]>summary:after{content:'⌃'}
+details>p{font-size:13px;margin:8px 0}.card-title{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.meta{font-size:12px;color:var(--muted)}.card-tools{margin-top:5px}
+#comments-items{display:grid;gap:10px}#comments-items .card{margin:0;padding:12px}
+#comments-panel:not([open]) #comments-items{display:none}
+#status:not(:empty),#comments-status:not(:empty){font-size:13px}
+@media(max-width:600px){main{padding:16px 12px 48px}.card{padding:14px}.grid{grid-template-columns:1fr}.toolbar{align-items:stretch}.toolbar input,.toolbar select{width:100%;min-width:0}.toolbar .chip{margin:0}button{min-height:42px}}
+</style></head><body><main><nav><h1>RDI AI MUSIC · Redazione</h1><a href="./index.html">← Radio</a></nav><p>Area privata: candidature ricevute e revisione manuale. I brani approvati non vengono trasmessi automaticamente.</p><section class="card">
 <h2>🔐 Accesso alla redazione</h2>
 <div id="setup-area" hidden>
  <p>Prima configurazione: inserisci il precedente token una sola volta per impostare la tua password. Dopo userai esclusivamente la password.</p>
@@ -21,14 +45,17 @@
  <button id="load" type="button">Carica candidature</button>
  <button id="clear" type="button" class="secondary">🚪 Esci</button>
 </div>
-<p id="status" role="status" aria-live="polite"></p></section><section class="card"><h2>💬 Moderazione commenti Spotlight</h2><p>Controlla i commenti pubblicati e nascondi quelli non appropriati.</p><button id="load-comments" class="secondary">Carica commenti</button><p id="comments-status" role="status"></p><div id="comments-items"></div></section><section id="items" class="grid"></section></main><script>
+<p id="status" role="status" aria-live="polite"></p></section><details id="comments-panel" class="card"><summary>💬 Moderazione commenti Spotlight</summary><p>Mostra e modera i commenti degli ascoltatori.</p><button id="load-comments" class="secondary">Aggiorna commenti</button><p id="comments-status" role="status"></p><div id="comments-items"></div></details>
+<div class="toolbar" id="music-toolbar" hidden><input id="music-search" type="search" placeholder="🔎 Cerca brano, artista o email…" aria-label="Cerca candidature"><select id="music-filter" aria-label="Filtra stato"><option value="all">Tutti gli stati</option><option value="pending">In attesa</option><option value="approved">Approvati</option><option value="rejected">Rifiutati</option></select><span id="music-count" class="chip"></span></div><section id="items" class="grid"></section></main><script>
 let token=sessionStorage.getItem('rdi-editor-session')||'';const $=id=>document.getElementById(id);const status=s=>$('status').textContent=s;const el=(tag,txt)=>{const n=document.createElement(tag);n.textContent=txt??'';return n};
 async function api(path,opt={}){const r=await fetch('https://radio-romanii-italia.duckdns.org/api/ai-music/admin/'+path,{...opt,credentials:'omit',headers:{Authorization:'Bearer '+token,...(opt.headers||{})},cache:'no-store'});if(!r.ok){let msg=r.status+' HTTP error';try{msg=(await r.json()).error||msg}catch{}throw Error(msg)}return r}
-async function load(){if(!token){status('Effettua prima l’accesso con la password');return}status('Caricamento…');try{const payload=await (await api('submissions')).json();render(payload.submissions||[]);status('Candidature: '+payload.submissions.length)}catch(e){status('Errore: '+e.message)}}
+let cachedSubmissions=[];async function load(){if(!token){status('Effettua prima l’accesso con la password');return}status('Caricamento…');try{const payload=await (await api('submissions')).json();cachedSubmissions=payload.submissions||[];$('music-toolbar').hidden=false;applyFilters();status('Candidature caricate: '+cachedSubmissions.length)}catch(e){status('Errore: '+e.message)}}
+function applyFilters(){const q=$('music-search').value.trim().toLocaleLowerCase('it');const f=$('music-filter').value;const visible=cachedSubmissions.filter(x=>(f==='all'||x.status===f)&&[x.title,x.artist,x.email,x.platform].some(v=>String(v||'').toLocaleLowerCase('it').includes(q)));$('music-count').textContent=visible.length+' / '+cachedSubmissions.length;render(visible)}
+$('music-search').addEventListener('input',applyFilters);$('music-filter').addEventListener('change',applyFilters);
 function render(items){$('items').replaceChildren();if(!items.length){$('items').append(el('p','Nessuna candidatura presente.'));return}
-for(const it of items){const c=el('article');c.className='card';const heading=el('h2',it.title+' · '+it.artist);const chip=el('span',it.status);chip.className='chip';c.append(heading,chip,el('p',it.platform+' · '+new Date(it.created_at).toLocaleString('it-IT')));const mail=el('p','Contatto: '+it.email);c.append(mail);if(it.link){const a=el('a','Apri link brano');a.href=it.link;a.target='_blank';a.rel='noopener noreferrer';c.append(a)}if(!it.file_name){
- const attach=el('div');attach.style.cssText='margin:12px 0;padding:14px;background:#18394a;border:1px solid #36717d;border-radius:12px';
- attach.append(el('strong','🎵 File originale per radio e YouTube Live'),el('p','Non è presente un MP3 su RDI. Allega il file ricevuto dall’artista: questa candidatura manterrà ID, approvazione, voti e commenti.'));
+for(const it of items){const c=el('article');c.className='card';const heading=el('h3',it.title);const chip=el('span',it.status==='approved'?'✓ Approvato':it.status==='pending'?'⏳ In attesa':'✕ Rifiutato');chip.className='chip '+it.status;const titleRow=el('div');titleRow.className='card-title';titleRow.append(heading,chip);c.append(titleRow,el('p','🎤 '+it.artist),el('p',it.platform+' · '+new Date(it.created_at).toLocaleString('it-IT')));const mail=el('p','✉ '+it.email);c.append(mail);if(it.link){const a=el('a','Apri link brano');a.href=it.link;a.target='_blank';a.rel='noopener noreferrer';c.append(a)}if(!it.file_name){
+ const attach=el('details');
+ attach.append(el('summary','🎵 Allega audio originale'),el('p','Non è presente un MP3 su RDI. Allega il file ricevuto dall’artista: questa candidatura manterrà ID, approvazione, voti e commenti.'));
  const file=el('input');file.type='file';file.accept='.mp3,.wav,.flac,.m4a,.ogg,audio/*';file.setAttribute('aria-label','File audio originale per '+it.title);
  const upload=el('button','⬆️ Allega audio a questo brano');upload.className='secondary';
  upload.onclick=async()=>{
@@ -43,9 +70,9 @@ for(const it of items){const c=el('article');c.className='card';const heading=el
   }catch(e){status('Errore caricamento: '+e.message);upload.disabled=false}
  };
  attach.append(file,upload);c.append(attach)
-}if(it.file_name){const download=el('button','Scarica audio: '+it.file_name);download.className='secondary';download.onclick=async()=>{try{const b=await (await api('submissions/'+encodeURIComponent(it.id)+'/audio')).blob();const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=it.file_name;a.click();setTimeout(()=>URL.revokeObjectURL(u),30000)}catch(e){status(e.message)}};c.append(download);
-const permission=el('div');permission.style.cssText='margin-top:14px;padding:12px;background:#233b55;border-radius:10px';
-permission.append(el('p','Anteprima Spotlight: '+(it.spotlight_consent?'abilitata':'non autorizzata')));
+}if(it.file_name){const download=el('button','⬇ Scarica MP3');download.title=it.file_name;download.className='secondary';download.onclick=async()=>{try{const b=await (await api('submissions/'+encodeURIComponent(it.id)+'/audio')).blob();const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=it.file_name;a.click();setTimeout(()=>URL.revokeObjectURL(u),30000)}catch(e){status(e.message)}};c.append(download);
+const permission=el('details');
+permission.append(el('summary','▶ Play pubblico: '+(it.spotlight_consent?'attivo ✓':'disattivato')));
 const consentLabel=el('label');consentLabel.style.cssText='display:flex;gap:10px;align-items:flex-start';
 const consentBox=el('input');consentBox.type='checkbox';consentBox.style.cssText='width:auto;flex:none;margin-top:5px';
 consentLabel.append(consentBox,el('span',"Confermo che l'artista ha autorizzato espressamente l'ascolto pubblico di questo file su RDI AI MUSIC Spotlight."));
@@ -58,8 +85,8 @@ if(it.spotlight_consent){const disable=el('button','Disattiva Play pubblico');di
 c.append(permission)
 }
 if(it.file_name){
- const yt=el('div');yt.style.cssText='margin:12px 0;padding:14px;background:#172e3a;border:1px solid #3b566b;border-radius:12px';
- yt.append(el('strong','📺 Autorizzazione YouTube Live: '+(it.youtube_consent?'confermata':'da confermare')));
+ const yt=el('details');
+ yt.append(el('summary','📺 YouTube Live: '+(it.youtube_consent?'autorizzato ✓':'da autorizzare')));
  if(it.youtube_consent){yt.append(el('small','Registrata: '+(it.youtube_consent_at?new Date(it.youtube_consent_at).toLocaleString('it-IT'):'data storica non disponibile')+(it.youtube_consent_version?' · '+it.youtube_consent_version:'')));}
  const label=el('label');label.style.cssText='display:flex;gap:10px;align-items:center;font-size:13px';
  const check=el('input');check.type='checkbox';check.style.cssText='width:auto;flex:none;margin-top:5px';
@@ -84,7 +111,7 @@ if(it.file_name){
  }
  c.append(yt)
 }
-if(it.notes)c.append(el('p','Note artista: '+it.notes));const comment=el('textarea');comment.rows=2;comment.placeholder='Nota redazionale (facoltativa)';comment.value=it.reviewed_note||'';c.append(comment);const actions=el('div');actions.className='actions';for(const [value,label,klass] of [['approved','Approva',''],['rejected','Rifiuta','danger'],['pending','Rimetti in attesa','secondary']]){const b=el('button',label);b.className=klass;b.onclick=async()=>{b.disabled=true;try{await api('submissions/'+encodeURIComponent(it.id)+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:value,note:comment.value})});status('Candidatura aggiornata');await load()}catch(e){status('Errore: '+e.message)}finally{b.disabled=false}};actions.append(b)}c.append(actions);$('items').append(c)}}
+if(it.notes)c.append(el('p','Note artista: '+it.notes));const reviewDetails=el('details');reviewDetails.append(el('summary','✎ Revisione e note'));const comment=el('textarea');comment.rows=2;comment.placeholder='Nota redazionale (facoltativa)';comment.value=it.reviewed_note||'';reviewDetails.append(comment);const actions=el('div');actions.className='actions';for(const [value,label,klass] of [['approved','Approva',''],['rejected','Rifiuta','danger'],['pending','Rimetti in attesa','secondary']]){const b=el('button',label);b.className=klass;b.onclick=async()=>{b.disabled=true;try{await api('submissions/'+encodeURIComponent(it.id)+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:value,note:comment.value})});status('Candidatura aggiornata');await load()}catch(e){status('Errore: '+e.message)}finally{b.disabled=false}};actions.append(b)}reviewDetails.append(actions);c.append(reviewDetails);$('items').append(c)}}
 async function loadComments(){
  if(!token){$('comments-status').textContent="Effettua prima l’accesso con la password";return}
  $('comments-status').textContent="Caricamento commenti…";
@@ -157,7 +184,7 @@ $('load-comments').onclick=loadComments;
 $('load').onclick=load;
 $('clear').onclick=async()=>{
  const prior=token;token='';sessionStorage.removeItem('rdi-editor-session');
- $('items').replaceChildren();$('comments-items').replaceChildren();showAuth();
+ $('items').replaceChildren();$('comments-items').replaceChildren();cachedSubmissions=[];$('music-toolbar').hidden=true;showAuth();
  try{await fetch(AUTH+'logout',{method:'POST',headers:{Authorization:'Bearer '+prior},credentials:'omit'})}catch(e){}
  status('Sessione terminata')
 };
