@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-07T12:50:44.731799Z",
+  "updated_at": "2026-11-07T14:00:18.208360Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-6bf3246c39bc9c96",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Why the Last Year in US-Kazakhstan Relations Was the Best Yet",
+      "summary": "",
+      "source": "The National Interest",
+      "published": "2026-11-07T13:33:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNT3pzSkRkTVhtTVhMSWJ6YWxyUmZqNlE0NmRMYjlmb2UxdldNMXQwUWRPeGVkNzMxVU9fQ185TG5CRWQxaTg5bzd6Y0RDc1Y5NzFFSE9iTlRodnVwdnM3T25LNlI3dXVHc1FoZXhVd2NxMXM3NF9lTzNrTUU1djJjakwzeFpaVGVuTktjam1hRjUzT1NxOWQ0c2IxalIyREx3clE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce ultimul an în relațiile SUA-Kazahstan a fost cel mai bun de până acum",
+      "title_it": "Perché l'ultimo anno nelle relazioni tra Stati Uniti e Kazakistan è stato il migliore fino ad ora",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-47f4372b10092409",
       "category": "diplomatie",
@@ -274,14 +288,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-ece4d5c033e29568",
+      "id": "geo-f3edffce6f4b43da",
       "category": "energie",
       "region": "global",
       "title": "[Energy Odyssey](18) After Oil, Rare Earths... China-Centric Supply Chains Flash a \"Warning Light\"",
       "summary": "",
       "source": "아시아경제",
       "published": "2026-11-07T04:08:21Z",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvX2R1dWlzVmxFUnBQWXhIT2VHWkl5RVlvTGpnVXJhQ0l4N2Q4R1A0U1FzZF95SHJteGZWTzJ6ZWxCQzZGeEpZVU5sOWpCTmFBZ0lZSGJQOXBBTlpqdW5UcXJ2Uk04ODBsT2xGeXEyUUlsQ0s5SjZzNGJCVQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hVVEzelNtVFFYbTlIWnB3Q2xXN1RvZW53bnA5Unl3Z3VZVXg0NG9lQ0szZE9oYXE3bWc4aHJ6R2d4NHN0SDFsYk9FTUNLdFlIajJKUFdUM196S0pBSVlqcmE5aFo?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "[Energy Odyssey](18) După petrol, pământuri rare... Lanțurile de aprovizionare centrate pe China aprind o „lumină de avertizare”",
       "title_it": "[Odissea energetica](18) Dopo il petrolio, le terre rare... le catene di approvvigionamento incentrate sulla Cina lampeggiano come una \"luce d'avvertimento\"",
@@ -372,6 +386,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-6cd7d599f6f5b00e",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Europe insists Putin end Ukraine war before discussing Russia’s concerns",
+      "summary": "",
+      "source": "The Straits Times",
+      "published": "2026-11-07T00:30:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNc3dGWXdpQkpIREJINmpuSWQtTXYta3RLU3lGZ2lJUVBhYmV5enBCTGlRNVBCZUdVTFhvdk5pTV9zR2VUbEp1ak10YkhlN1JZQkJoUy1UU2phY2RNY0NSMWo5QXgyS2p5SFFJNGtCdnJzWC1MMGJhZXJOQWtKR082SE9EOWpndHg4WVUzNzY3WFl0alZiS2c3dWRGeTdOT05UdmM2T1pOeDBHRDR1RlJaam5RVQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Europa insistă pe Putin să pună capăt războiului din Ucraina înainte de a discuta despre preocupările Rusiei",
+      "title_it": "L’Europa insiste che Putin metta fine alla guerra in Ucraina prima di discutere le preoccupazioni della Russia",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-16dc1b0ab18b8084",
       "category": "securitate",
       "region": "asia",
@@ -397,20 +425,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Georgieva de la FMI spune că orice încetinire a creșterii determinate de IA ar fi un factor pentru băncile centrale",
       "title_it": "Georgieva del FMI afferma che qualsiasi rallentamento della crescita guidata dall’intelligenza artificiale sarebbe un fattore per le banche centrali",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-6a9be7da206cb475",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Europe insists Putin end war before discussing Russia’s concerns",
-      "summary": "",
-      "source": "The Japan Times",
-      "published": "2026-11-06T23:36:00Z",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPbmIxOUx2T243MEFxYjJrNG9XdGFBalNWUVJjWk5vX09IS2xKT3RRXy1RYXY1LVNiWEVDOHk0azUyWmk0YWNBZDlEQy1FRWFKSTdobnU4cU9SSXJBZVNCNXg3VWRCM20tR0FVVk1KWlpDLXJTSlBuUFc0b1M0SG9nSkZoR0VPUW1RSnlfekQ0aTY5WG1yYjBzRXJyNlBDdw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Europa insistă pe Putin să pună capăt războiului înainte de a discuta despre preocupările Rusiei",
-      "title_it": "L’Europa insiste che Putin metta fine alla guerra prima di discutere le preoccupazioni della Russia",
       "translation_status": "machine_translation"
     },
     {
