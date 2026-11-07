@@ -1,0 +1,42 @@
+name: RDI Top3 — verify AzuraCast episode read-only
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rdi-ai-top3-confirm-ready.yml'
+      - 'scripts/check-rdi-ai-top3-oracle.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Oracle SSH (existing verified secrets)
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/rdi" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/rdi" </dev/null >/dev/null 2>&1
+      - name: Verify scheduled audio, playlist, authorization and media assignment without mutation
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          opts=(-i "$HOME/.ssh/rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12)
+          STAGE="/tmp/rdi-ai-top3-audit-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          ssh "${opts[@]}" "$REMOTE" "install -d -m 700 '$STAGE'"
+          cleanup() { ssh "${opts[@]}" "$REMOTE" "sudo -n rm -rf -- '$STAGE'" || true; }
+          trap cleanup EXIT
+          scp -q "${opts[@]}" scripts/check-rdi-ai-top3-oracle.py scripts/deploy-geopolitica-oracle.py scripts/rdi-geopolitica-auth.php "$REMOTE:$STAGE/"
+          ssh "${opts[@]}" "$REMOTE" "sudo -n python3 '$STAGE/check-rdi-ai-top3-oracle.py' --api-module '$STAGE/deploy-geopolitica-oracle.py' --php-helper '$STAGE/rdi-geopolitica-auth.php'"
+          echo "READ_ONLY_AUDIT_COMPLETED=true"
