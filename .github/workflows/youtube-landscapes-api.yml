@@ -1,4 +1,4 @@
-name: RDI - Aggiorna visual Pexels per YouTube
+name: RDI - Aggiorna visual Wikimedia per YouTube
 
 on:
   schedule:
@@ -21,26 +21,24 @@ jobs:
         with:
           ref: main
           persist-credentials: true
-      - name: Testa selettore Pexels e validatore della diretta
+      - name: Testa selettore Wikimedia e validatore della diretta
         run: |
           set -euo pipefail
           python -m unittest discover -s tests -p 'test_update_youtube_landscapes.py' -v
           node --test tests/youtube-landscapes.test.mjs
-      - name: Crea una nuova selezione Italia e Romania con crediti
-        env:
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      - name: Crea una nuova selezione Italia e Romania con crediti e licenze
         run: python scripts/update_youtube_landscapes.py
       - name: Pubblica solo se la nuova rotazione è valida e diversa
         run: |
           set -euo pipefail
           if git diff --quiet -- data/youtube-landscapes.json; then
-            echo 'Nessuna variazione Pexels da pubblicare.'
+            echo 'Nessuna variazione Wikimedia da pubblicare.'
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/youtube-landscapes.json
-          git commit -m "RDI: aggiorna visual YouTube Pexels"
+          git commit -m "RDI: aggiorna visual YouTube Wikimedia"
           for attempt in 1 2 3 4; do
             if git pull --rebase -X ours origin main && git push origin HEAD:main; then exit 0; fi
             git rebase --abort || true
