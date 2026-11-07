@@ -39,7 +39,8 @@ SMTP_FROM=os.environ.get("RDI_AI_SMTP_FROM","").strip()
 SMTP_SSL=os.environ.get("RDI_AI_SMTP_SSL","0").lower() in ("1","true","yes")
 AUTH_SECRET=os.environ.get("RDI_AI_AUTH_SECRET","") or ADMIN_TOKEN
 AUTH_MAIL_READY=bool(SMTP_HOST and SMTP_FROM and AUTH_SECRET)
-GOOGLE_CLIENT_ID=os.environ.get("RDI_AI_GOOGLE_CLIENT_ID","").strip()
+# Public OAuth client ID for the official RDI site (not a secret). An env override is supported.
+GOOGLE_CLIENT_ID=os.environ.get("RDI_AI_GOOGLE_CLIENT_ID","952052945501-atbs3pg7n7v0gnjk50q75njg6i79nqnt.apps.googleusercontent.com").strip()
 GOOGLE_AUTH_READY=bool(GOOGLE_CLIENT_ID and GOOGLE_AUTH_LIBRARY_READY)
 AUTH_SESSION_SECONDS=14*86400
 AUTH_CODE_SECONDS=10*60
