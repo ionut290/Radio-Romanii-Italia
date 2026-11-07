@@ -1,5 +1,6 @@
 """RDI AI MUSIC moderation API. Run behind HTTPS and a same-origin /api/ai-music/ reverse proxy."""
-import os, sqlite3, secrets, hmac, subprocess, uuid, time, hashlib, base64
+import os, sqlite3, secrets, hmac, subprocess, uuid, time, hashlib, base64, smtplib, re, ssl
+from email.message import EmailMessage
 from datetime import datetime, timezone
 from pathlib import Path
 from flask import Flask, request, jsonify, send_file, abort
@@ -20,6 +21,17 @@ ALLOWED_EXT={".mp3",".wav",".flac",".m4a",".ogg"}
 RATE_WINDOW_SECONDS=max(60,int(os.environ.get("RDI_AI_SUBMISSION_RATE_WINDOW_SECONDS","3600")))
 RATE_MAX=max(1,int(os.environ.get("RDI_AI_SUBMISSION_RATE_MAX","12")))
 VOTE_IP_DAILY_MAX=30
+# Enable only after SMTP delivery has been verified on the Oracle server.
+AUTH_REQUIRED=os.environ.get("RDI_AI_REQUIRE_LOGIN","0").lower() in ("1","true","yes")
+SMTP_HOST=os.environ.get("RDI_AI_SMTP_HOST","").strip()
+SMTP_PORT=int(os.environ.get("RDI_AI_SMTP_PORT","587"))
+SMTP_USER=os.environ.get("RDI_AI_SMTP_USER","").strip()
+SMTP_PASSWORD=os.environ.get("RDI_AI_SMTP_PASSWORD","")
+SMTP_FROM=os.environ.get("RDI_AI_SMTP_FROM","").strip()
+SMTP_SSL=os.environ.get("RDI_AI_SMTP_SSL","0").lower() in ("1","true","yes")
+AUTH_MAIL_READY=bool(SMTP_HOST and SMTP_FROM)
+AUTH_SESSION_SECONDS=14*86400
+AUTH_CODE_SECONDS=10*60
 
 def rate_key():
     # Nginx MUST overwrite X-Real-IP; otherwise all requests via Unix socket share one IP.
@@ -57,6 +69,19 @@ def db():
     con.execute("CREATE TABLE IF NOT EXISTS admin_sessions (session_hash TEXT PRIMARY KEY, expires_at INTEGER NOT NULL)")
     con.execute("CREATE TABLE IF NOT EXISTS admin_login_attempts (ip_key TEXT NOT NULL, created_at INTEGER NOT NULL)")
     con.execute("CREATE INDEX IF NOT EXISTS admin_login_attempts_ip ON admin_login_attempts(ip_key,created_at)")
+    if "user_id" not in columns:
+        con.execute("ALTER TABLE submissions ADD COLUMN user_id TEXT DEFAULT NULL")
+    con.execute("""CREATE TABLE IF NOT EXISTS music_users (
+      id TEXT PRIMARY KEY, email TEXT NOT NULL UNIQUE, display_name TEXT NOT NULL, created_at TEXT NOT NULL)""")
+    con.execute("""CREATE TABLE IF NOT EXISTS music_login_codes (
+      email TEXT PRIMARY KEY, code_hash TEXT NOT NULL, display_name TEXT NOT NULL,
+      expires_at INTEGER NOT NULL, attempts INTEGER NOT NULL DEFAULT 0)""")
+    con.execute("""CREATE TABLE IF NOT EXISTS music_login_requests (
+      ip_key TEXT NOT NULL, email_hash TEXT NOT NULL, created_at INTEGER NOT NULL)""")
+    con.execute("CREATE INDEX IF NOT EXISTS music_login_requests_ip ON music_login_requests(ip_key,created_at)")
+    con.execute("""CREATE TABLE IF NOT EXISTS music_user_sessions (
+      session_hash TEXT PRIMARY KEY, user_id TEXT NOT NULL, expires_at INTEGER NOT NULL)""")
+    con.execute("CREATE INDEX IF NOT EXISTS music_user_sessions_user ON music_user_sessions(user_id,expires_at)")
     con.commit()
     return con
 def now():
@@ -181,8 +206,175 @@ def response_headers(r):
     r.headers["X-Content-Type-Options"]="nosniff"
     r.headers["Referrer-Policy"]="no-referrer"
     return r
+
+def music_email(value):
+    value=str(value or "").strip().lower()
+    if len(value)>254 or not re.fullmatch(r"[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?\\.[a-z]{2,63}",value):
+        return None
+    if ".." in value or any(part.startswith("-") or part.endswith("-") for part in value.split("@")[-1].split(".")):
+        return None
+    return value
+
+def send_music_login_email(email,code):
+    if not AUTH_MAIL_READY:
+        raise RuntimeError("Email login is not configured")
+    message=EmailMessage()
+    message["Subject"]="Il tuo codice di accesso RDI AI MUSIC"
+    message["From"]=SMTP_FROM
+    message["To"]=email
+    message.set_content("Codice di accesso a Radio Românii din Italia AI MUSIC: "+code+"\\n"
+                        "Valido per 10 minuti. Non condividerlo con nessuno.\\n"
+                        "Se non lo hai richiesto, ignora questo messaggio.")
+    if SMTP_SSL:
+        with smtplib.SMTP_SSL(SMTP_HOST,SMTP_PORT,timeout=12,context=ssl.create_default_context()) as smtp:
+            if SMTP_USER: smtp.login(SMTP_USER,SMTP_PASSWORD)
+            smtp.send_message(message)
+    else:
+        with smtplib.SMTP(SMTP_HOST,SMTP_PORT,timeout=12) as smtp:
+            smtp.starttls(context=ssl.create_default_context())
+            if SMTP_USER: smtp.login(SMTP_USER,SMTP_PASSWORD)
+            smtp.send_message(message)
+
+def user_session(required=None):
+    """Validate an RDI member session; never accept admin tokens as user sessions."""
+    if required is None: required=AUTH_REQUIRED
+    bearer=request.headers.get("Authorization","")
+    if not bearer.startswith("Bearer "):
+        return None if not required else (None, (jsonify(error="Login required"),401))
+    token=bearer[7:]
+    if len(token)>200 or not re.fullmatch(r"[A-Za-z0-9_-]{32,200}",token):
+        return None if not required else (None, (jsonify(error="Invalid session"),401))
+    session_hash=hashlib.sha256(token.encode()).hexdigest()
+    with db() as con:
+        row=con.execute("""SELECT u.id,u.email,u.display_name
+            FROM music_user_sessions ms JOIN music_users u ON u.id=ms.user_id
+            WHERE ms.session_hash=? AND ms.expires_at>=?""",
+            (session_hash,int(time.time()))).fetchone()
+    if row: return dict(row)
+    return None if not required else (None, (jsonify(error="Session expired or invalid"),401))
+
+def require_music_user():
+    result=user_session(required=True)
+    if isinstance(result,tuple): return None,result[1]
+    return result,None
+
+@app.get("/api/ai-music/auth/config")
+def music_auth_config():
+    return jsonify(login_required=AUTH_REQUIRED,email_available=AUTH_MAIL_READY,
+                   provider="email_code")
+
+@app.post("/api/ai-music/auth/request-code")
+def music_auth_request_code():
+    if request.headers.get("Origin")!=PUBLIC_ORIGIN:
+        return jsonify(error="Please use the RDI website"),403
+    if not AUTH_MAIL_READY:
+        return jsonify(error="Email login has not been configured yet"),503
+    if request.content_length and request.content_length>2048:
+        return jsonify(error="Request too large"),413
+    data=request.get_json(silent=True) or {}
+    if not isinstance(data,dict): return jsonify(error="JSON required"),400
+    email=music_email(data.get("email"))
+    display_name=clamp(data.get("name"),40)
+    if not email: return jsonify(error="Enter a valid email address"),400
+    current=int(time.time())
+    ip_key=rate_key()
+    email_hash=hashlib.sha256(email.encode()).hexdigest()
+    with db() as con:
+        con.execute("DELETE FROM music_login_requests WHERE created_at<?",(current-3600,))
+        last=con.execute("SELECT MAX(created_at) FROM music_login_requests WHERE email_hash=?",
+                         (email_hash,)).fetchone()[0]
+        ip_hits=con.execute("SELECT COUNT(*) FROM music_login_requests WHERE ip_key=?",
+                            (ip_key,)).fetchone()[0]
+        email_hits=con.execute("SELECT COUNT(*) FROM music_login_requests WHERE email_hash=?",
+                               (email_hash,)).fetchone()[0]
+        if (last is not None and current-last<60) or ip_hits>=12 or email_hits>=5:
+            return jsonify(error="Too many login attempts. Try again later."),429
+        code=f"{secrets.randbelow(1000000):06d}"
+        code_hash=hmac.new((ADMIN_TOKEN or "rdi-code-key").encode(),
+                           (email+":"+code).encode(),hashlib.sha256).hexdigest()
+        con.execute("""INSERT OR REPLACE INTO music_login_codes(email,code_hash,display_name,expires_at,attempts)
+            VALUES(?,?,?,?,0)""",(email,code_hash,display_name,current+AUTH_CODE_SECONDS))
+        con.execute("INSERT INTO music_login_requests(ip_key,email_hash,created_at) VALUES(?,?,?)",
+                    (ip_key,email_hash,current))
+    try:
+        send_music_login_email(email,code)
+    except Exception:
+        app.logger.exception("RDI login email delivery failed")
+        with db() as con:
+            con.execute("DELETE FROM music_login_codes WHERE email=? AND code_hash=?",(email,code_hash))
+        return jsonify(error="Cannot send the email right now. Try again later."),503
+    return jsonify(ok=True,message="Verification code sent",expires_in_seconds=AUTH_CODE_SECONDS)
+
+@app.post("/api/ai-music/auth/verify-code")
+def music_auth_verify_code():
+    if request.headers.get("Origin")!=PUBLIC_ORIGIN:
+        return jsonify(error="Please use the RDI website"),403
+    data=request.get_json(silent=True) or {}
+    if not isinstance(data,dict): return jsonify(error="JSON required"),400
+    email=music_email(data.get("email"))
+    code=data.get("code")
+    if not email or not isinstance(code,str) or not re.fullmatch(r"\\d{6}",code):
+        return jsonify(error="Invalid verification code"),400
+    current=int(time.time())
+    token=secrets.token_urlsafe(36)
+    with db() as con:
+        con.execute("BEGIN IMMEDIATE")
+        row=con.execute("SELECT * FROM music_login_codes WHERE email=?",(email,)).fetchone()
+        if not row or row["expires_at"]<current or row["attempts"]>=5:
+            return jsonify(error="Code expired or invalid. Request a new code."),401
+        expected=hmac.new((ADMIN_TOKEN or "rdi-code-key").encode(),
+                          (email+":"+code).encode(),hashlib.sha256).hexdigest()
+        if not hmac.compare_digest(row["code_hash"],expected):
+            con.execute("UPDATE music_login_codes SET attempts=attempts+1 WHERE email=?",(email,))
+            con.commit()
+            return jsonify(error="Incorrect code"),401
+        user=con.execute("SELECT id,email,display_name FROM music_users WHERE email=?",(email,)).fetchone()
+        if user is None:
+            user_id=uuid.uuid4().hex
+            name=(row["display_name"] or "Utente RDI").strip()
+            if len(name)<2: name="Utente RDI"
+            con.execute("INSERT INTO music_users(id,email,display_name,created_at) VALUES(?,?,?,?)",
+                        (user_id,email,name,now()))
+        else:
+            user_id=user["id"]
+        con.execute("DELETE FROM music_login_codes WHERE email=?",(email,))
+        con.execute("INSERT INTO music_user_sessions(session_hash,user_id,expires_at) VALUES(?,?,?)",
+                    (hashlib.sha256(token.encode()).hexdigest(),user_id,current+AUTH_SESSION_SECONDS))
+        con.execute("DELETE FROM music_user_sessions WHERE expires_at<?",(current,))
+    with db() as con:
+        user=dict(con.execute("SELECT id,email,display_name FROM music_users WHERE id=?",(user_id,)).fetchone())
+    return jsonify(ok=True,session=token,user=user,expires_in_seconds=AUTH_SESSION_SECONDS),200
+
+@app.get("/api/ai-music/auth/me")
+def music_auth_me():
+    user,error=require_music_user()
+    if error: return error
+    return jsonify(user=user)
+
+@app.post("/api/ai-music/auth/logout")
+def music_auth_logout():
+    bearer=request.headers.get("Authorization","")
+    if bearer.startswith("Bearer "):
+        with db() as con:
+            con.execute("DELETE FROM music_user_sessions WHERE session_hash=?",
+                        (hashlib.sha256(bearer[7:].encode()).hexdigest(),))
+    return jsonify(ok=True)
+
+@app.get("/api/ai-music/me/submissions")
+def my_music_submissions():
+    user,error=require_music_user()
+    if error: return error
+    with db() as con:
+        rows=con.execute("""SELECT id,title,artist,platform,created_at,status
+            FROM submissions WHERE user_id=? ORDER BY created_at DESC LIMIT 300""",
+            (user["id"],)).fetchall()
+    return jsonify(submissions=[dict(row) for row in rows])
+
 @app.post("/api/ai-music/submissions")
 def submit():
+    # Secure member-only uploads when the RDI account system is activated.
+    user,error=(require_music_user() if AUTH_REQUIRED else (None,None))
+    if error: return error
     # Server must be behind HTTPS, with trusted proxy enforcing request limits.
     ip_key=rate_key()
     current=int(time.time())
@@ -246,8 +438,8 @@ def submit():
             return jsonify(error=str(exc)),400
     try:
         with db() as con:
-            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name,spotlight_consent) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
-              (sid,now(),artist,email,title,platform,link,notes,original,stored,spotlight_consent))
+            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name,spotlight_consent,user_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+              (sid,now(),artist,email,title,platform,link,notes,original,stored,spotlight_consent,user["id"] if user else None))
     except Exception:
         if stored:(FILES/stored).unlink(missing_ok=True)
         raise
@@ -362,7 +554,9 @@ def spotlight_audio(sid):
 
 @app.post("/api/ai-music/spotlight/<sid>/vote")
 def spotlight_vote(sid):
-    """One vote per browser identity and approved track, plus per-IP daily cap."""
+    """One vote per account and track when account access is required."""
+    user,error=(require_music_user() if AUTH_REQUIRED else (None,None))
+    if error: return error
     if request.headers.get("Origin")!=PUBLIC_ORIGIN:
         return jsonify(error="Voting is available on the RDI website only"),403
     data=request.get_json(silent=True)
@@ -379,7 +573,8 @@ def spotlight_vote(sid):
         return jsonify(error="Invalid visitor ID"),400
     if not ADMIN_TOKEN:
         return jsonify(error="Voting temporarily unavailable"),503
-    voter_key=hmac.new(ADMIN_TOKEN.encode(),visitor.lower().encode(),hashlib.sha256).hexdigest()
+    identity=("user:"+user["id"]) if user else visitor.lower()
+    voter_key=hmac.new(ADMIN_TOKEN.encode(),identity.encode(),hashlib.sha256).hexdigest()
     ip_key=rate_key()
     current=int(time.time())
     con=db()
@@ -416,7 +611,9 @@ def spotlight_comments(sid):
 
 @app.post("/api/ai-music/spotlight/<sid>/comments")
 def add_spotlight_comment(sid):
-    """Public community comments with short limits and persistent IP rate limiting."""
+    """Account comments after activation, retaining the existing anti-abuse checks."""
+    user,error=(require_music_user() if AUTH_REQUIRED else (None,None))
+    if error: return error
     if request.headers.get("Origin")!=PUBLIC_ORIGIN:
         return jsonify(error="Comments must be submitted from the RDI website"),403
     if request.content_length and request.content_length>4096:
@@ -430,7 +627,7 @@ def add_spotlight_comment(sid):
     body=data.get("body")
     if not isinstance(nickname,str) or not isinstance(body,str):
         return jsonify(error="Name and comment are required"),400
-    nickname=nickname.strip()
+    nickname=user["display_name"] if user else nickname.strip()
     body=body.strip()
     if not (2<=len(nickname)<=40) or not (3<=len(body)<=500):
         return jsonify(error="Name must be 2-40 characters and comment 3-500 characters"),400
