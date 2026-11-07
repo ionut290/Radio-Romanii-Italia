@@ -18,6 +18,13 @@ button{width:100%;background:#36dfe5;border:0;border-radius:11px;color:#062226;f
 #status{color:#64e5da;font-size:13px;min-height:24px;margin:16px 0 0;overflow-wrap:anywhere}
 #status.error{color:#ffb1ac}
 small{color:#97adb0}.step[hidden]{display:none}
+.google-area{display:flex;flex-direction:column;align-items:center;gap:10px;padding:15px 12px;border:1px solid #314144;border-radius:12px;background:#101718}
+#google-button{display:flex;justify-content:center;width:100%;min-height:42px}
+.google-note{font-size:12px;color:#9db8ba;text-align:center;margin:0}
+.separator{display:flex;align-items:center;gap:12px;margin:20px 0;color:#839a9d;font-size:12px}
+.separator:before,.separator:after{content:"";height:1px;flex:1;background:#354144}
+#email-help{font-size:12px;color:#95b1b3;line-height:1.5;margin:12px 0 0}
+
 .account{border-radius:12px;padding:14px;background:#102b2b;color:#bde3df;font-size:13px}
 footer{text-align:center;font-size:11px;color:#708d90;margin:23px auto}
 @media(max-width:500px){main{padding-top:20px}.panel{padding:23px}}
@@ -26,9 +33,16 @@ footer{text-align:center;font-size:11px;color:#708d90;margin:23px auto}
 <main><section class="panel"><div class="overline">RDI AI MUSIC · COMMUNITY</div><h1>Accedi alla tua musica</h1>
 <p class="lead">Un unico account per caricare brani, votare e commentare. Ascoltare è sempre gratuito e libero.</p>
 <div class="step" id="start-step">
+<div class="google-area" aria-label="Accedi con Google">
+ <div id="google-button"></div>
+ <p class="google-note" id="google-note">Accesso Google in preparazione: attendiamo la configurazione sul server RDI.</p>
+</div>
+<div class="separator"><span>oppure accedi via email</span></div>
 <form id="request-form"><label>La tua email<input type="email" id="email" required maxlength="254" autocomplete="email" placeholder="nome@esempio.it"></label>
 <label>Nome d'arte o nickname (per i nuovi account)<input type="text" id="name" maxlength="40" autocomplete="nickname" placeholder="Come vuoi apparire"></label>
-<button id="request-button" type="submit">Invia codice di accesso</button></form>
+<button id="request-button" type="submit">Invia codice di accesso</button>
+<p id="email-help">Riceverai un codice di 6 cifre, senza password.</p>
+</form>
 </div>
 <div class="step" id="verify-step" hidden><p class="account">Abbiamo inviato un codice di 6 cifre a <strong id="target-email"></strong>. Scade dopo 10 minuti.</p>
 <form id="verify-form"><label>Codice di verifica<input id="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" required placeholder="123456"></label><button id="verify-button" type="submit">Verifica e accedi</button></form>
@@ -45,14 +59,77 @@ const NEXT=new URLSearchParams(location.search).get("next");
 const target=["artisti-ai.html","spotlight-ai.html","profilo-ai-music.html"].includes(NEXT)?NEXT:"spotlight-ai.html";
 const TOKEN_KEY="rdi-ai-music-session";
 let email="",busy=false;
+const googleNonce=crypto.randomUUID();
+let googleInitialized=false;
+function googleSignIn(config){
+ if(!config.google_available||!config.google_client_id){
+   $("google-note").textContent="Continua con Google: in attesa di configurazione OAuth sul server RDI.";
+   return;
+ }
+ const script=document.createElement("script");
+ script.src="https://accounts.google.com/gsi/client";script.async=true;
+ script.onload=()=>{
+   if(!window.google?.accounts?.id){$("google-note").textContent="Google non è disponibile su questo browser.";return}
+   google.accounts.id.initialize({
+     client_id:config.google_client_id,nonce:googleNonce,
+     callback:onGoogleCredential,ux_mode:"popup",auto_select:false
+   });
+   google.accounts.id.renderButton($("google-button"),{
+     type:"standard",theme:"filled_black",size:"large",
+     shape:"rectangular",text:"continue_with",
+     width:Math.min(340,Math.max(230,$("google-button").clientWidth-4))
+   });
+   googleInitialized=true;$("google-note").textContent="Accesso sicuro con il tuo account Google. RDI non vede la tua password.";
+ };
+ script.onerror=()=>{$("google-note").textContent="Impossibile caricare il pulsante Google. Verifica la connessione.";};
+ document.head.append(script);
+}
+async function onGoogleCredential(response){
+ if(busy)return;
+ if(!response?.credential){status("Google non ha restituito un accesso valido.",true);return}
+ busy=true;status("Verifica dell'account Google…");
+ try{
+   const result=await jsonRequest("/auth/google",{
+     credential:response.credential,nonce:googleNonce
+   });
+   localStorage.setItem(TOKEN_KEY,result.session);
+   go();
+ }catch(error){status(error.message||"Accesso Google non riuscito.",true)}
+ finally{busy=false}
+}
 function show(which){["start","verify","logged"].forEach(k=>$(k+"-step").hidden=k!==which);}
 function status(text,error=false){$("status").textContent=text;$("status").classList.toggle("error",error)}
 async function jsonRequest(path,body,token){const headers={"Content-Type":"application/json"};if(token)headers.Authorization="Bearer "+token;const r=await fetch(API+path,{method:"POST",headers,body:JSON.stringify(body),credentials:"omit"});const data=await r.json().catch(()=>({}));if(!r.ok)throw Error(data.error||"Errore "+r.status);return data}
 function go(){location.href="./"+target}
-async function check(){let config;try{const r=await fetch(API+"/auth/config",{cache:"no-store"});if(!r.ok)throw Error();config=await r.json()}catch{status("Il login non è ancora disponibile sul server RDI.",true);$("request-button").disabled=true;return}
-if(!config.email_available){status("L'accesso email è in preparazione: la redazione deve ancora attivare la posta del server.",true);$("request-button").disabled=true;return}
-const token=localStorage.getItem(TOKEN_KEY);if(!token)return;
-try{const r=await fetch(API+"/auth/me",{headers:{Authorization:"Bearer "+token},cache:"no-store"});if(!r.ok)throw Error();const data=await r.json();$("account-name").textContent=data.user.display_name;show("logged")}catch{localStorage.removeItem(TOKEN_KEY)}
+async function check(){
+ let config;
+ try{
+   const r=await fetch(API+"/auth/config",{cache:"no-store"});
+   if(!r.ok)throw Error("Backend not yet updated");
+   config=await r.json();
+ }catch{
+   status("Il login non è ancora disponibile sul server RDI.",true);
+   $("request-button").disabled=true;
+   $("google-note").textContent="Continua con Google: il backend RDI deve essere aggiornato.";
+   return;
+ }
+ googleSignIn(config);
+ if(!config.email_available){
+   $("request-button").disabled=true;
+   $("email-help").textContent="Accesso con codice email non ancora attivo.";
+ }
+ if(!config.email_available&&!config.google_available){
+   status("Accesso in preparazione: occorre attivare Google o l'invio email sul server.",true);
+ }else{status("")}
+ const token=localStorage.getItem(TOKEN_KEY);
+ if(!token)return;
+ try{
+   const r=await fetch(API+"/auth/me",{headers:{Authorization:"Bearer "+token},cache:"no-store"});
+   if(!r.ok)throw Error("Session invalid");
+   const data=await r.json();
+   $("account-name").textContent=data.user.display_name;
+   show("logged");
+ }catch{localStorage.removeItem(TOKEN_KEY)}
 }
 $("request-form").onsubmit=async e=>{e.preventDefault();if(busy)return;email=$("email").value.trim().toLowerCase();busy=true;$("request-button").disabled=true;status("Invio del codice…");
 try{await jsonRequest("/auth/request-code",{email,name:$("name").value.trim()});$("target-email").textContent=email;show("verify");status("Controlla la casella email, anche la cartella Spam.");$("code").focus()}catch(err){status(err.message,true)}finally{busy=false;$("request-button").disabled=false}};
