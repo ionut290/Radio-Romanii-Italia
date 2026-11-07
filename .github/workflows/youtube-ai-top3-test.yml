@@ -1,0 +1,30 @@
+name: Test RDI AI MUSIC Top 3 TV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'youtube-ai-top3.js'
+      - 'youtube-ai-top3.css'
+      - 'youtube-ai-top3-core.mjs'
+      - 'tests/youtube-ai-top3.test.mjs'
+      - '.github/workflows/youtube-ai-top3-test.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  top3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify YouTube chart JS syntax
+        run: |
+          node --check youtube-ai-top3-core.mjs
+          node --input-type=module --check < youtube-ai-top3.js
+      - name: Test real rank mapping, Rome schedule, audio identity guard
+        run: node --test tests/youtube-ai-top3.test.mjs
