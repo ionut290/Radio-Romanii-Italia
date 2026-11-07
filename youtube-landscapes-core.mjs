@@ -4,6 +4,7 @@
 const ALLOWED_VIDEO = "videos.pexels.com";
 const ALLOWED_POSTER = "images.pexels.com";
 const ALLOWED_NASA = "eol.jsc.nasa.gov";
+const ALLOWED_COMMONS = "upload.wikimedia.org";
 const countryLabel = new Set(["Italia","România"]);
 const clean = s => typeof s==="string" ? s.trim() : "";
 export function safeLandscapeURL(value,kind) {
@@ -13,6 +14,7 @@ export function safeLandscapeURL(value,kind) {
     if(kind==="video") return u.hostname===ALLOWED_VIDEO && /\/video-files\/\d+\/.+\.mp4$/.test(u.pathname);
     if(kind==="poster") return u.hostname===ALLOWED_POSTER && /\/videos\/\d+\/[^/]+\.jpe?g$/i.test(u.pathname);
     if(kind==="photo") return u.hostname===ALLOWED_POSTER && /\/photos\/\d+\/[^/]+\.jpe?g$/i.test(u.pathname);
+    if(kind==="commons") return u.hostname===ALLOWED_COMMONS && /\/[^/]+\.(?:jpe?g|png|webp)$/i.test(u.pathname);
     if(kind==="nasa") return u.hostname===ALLOWED_NASA && /^\/DatabaseImages\/ESC\/large\/ISS\d+\/ISS\d+-E-\d+\.JPG$/i.test(u.pathname);
     return false;
   }catch{return false;}
@@ -37,6 +39,10 @@ export function validateLandscape(item){
     if(license!=="https://www.pexels.com/license/" && license!=="https://www.pexels.com/it-it/license/")return null;
     if(!safeLandscapeURL(src,"photo")||src!==item.poster)return null;
     if(!/^https:\/\/www\.pexels\.com\/photo\/.+-\d+\/?$/i.test(source))return null;
+  }else if(kind==="commons"){
+    if(!safeLandscapeURL(src,"commons")||src!==item.poster)return null;
+    if(!/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/i.test(source))return null;
+    if(!/^https:\/\/(?:creativecommons\.org|commons\.wikimedia\.org)\//i.test(license))return null;
   }else return null;
   return {id,country,title,credit,kind,src,poster:item.poster,source_url:source,license_url:license};
 }
