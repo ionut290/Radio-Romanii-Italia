@@ -11,13 +11,18 @@ export function rankedTop3(payload) {
     const title = String(t.title || "").trim().slice(0, 140);
     const artist = String(t.artist || "").trim().slice(0, 100);
     if (!title || !artist || seen.has(t.id)) continue;
+    // Live countdown must contain only approved tracks whose original audio
+    // is available for public playback on RDI. A link-only entry is ineligible.
+    if (t.audio_preview !== 1 && t.audio_preview !== true) continue;
     seen.add(t.id);
     const votes = Number(t.votes);
     if (!Number.isSafeInteger(votes) || votes < 0) continue;
     rows.push({id:t.id, title, artist, votes, created_at:String(t.created_at||""),audio_preview:t.audio_preview===1 || t.audio_preview===true});
   }
-  // API is already ordered by votes and submission recency. Keep the public
-  // chart's exact order, so the TV ranking cannot contradict the website.
+  // Maintain API ranking order among audio-eligible entries. The YouTube
+  // Top 3 is a distinct, audio-only chart; the main public chart is unchanged.
+  // E.g. public #2 'Roma' (no uploaded audio) is skipped and the next
+  // approved, playable song moves into the TV countdown.
   return rows.slice(0, 3).map((r, index)=>({...r,rank:index+1}));
 }
 export function romeClock(input) {
