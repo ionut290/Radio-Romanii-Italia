@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-06T23:35:21.264953+00:00",
+  "news_updated_at": "2026-11-07T01:00:30.768426+00:00",
   "editorial_updated_at": "2026-11-07T00:01:11.947322+01:00",
   "translations_updated_at": "2026-11-06T23:32:22.114420+00:00",
-  "feed_total": 73,
-  "feed_extended_400": 2,
-  "feed_missing_body": 71,
+  "feed_total": 74,
+  "feed_extended_400": 1,
+  "feed_missing_body": 73,
   "feed_short_body": 0,
   "editorial_total": 20,
   "archived_editorials": 184,
@@ -12,8 +12,8 @@
   "pending_total": 129,
   "pending_filtered_out": 304,
   "editorial_verde": 5,
-  "editorial_galben": 43,
-  "editorial_rosu": 45,
+  "editorial_galben": 42,
+  "editorial_rosu": 47,
   "pending": [
     {
       "title": "A Ciampino l'omaggio alle salme dei 4 militari italiani morti in Bosnia 02/11/2026 - L'eco del sud",
@@ -618,6 +618,33 @@
   ],
   "recent_news": [
     {
+      "title": "L’acciaio italiano nelle mani dei fratelli Jindal - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-07T00:00:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNR1JFVDF2VTdCTFJ2dmRSTjVIZ01aSXJhTmRPOGl5VzRkVHBFOU1hQ0xGUHZ2SHJPSEtubVFkTFJHelA4RWoyVTgwTGVEb1RxRGhfUVN4LXpIMDBsVHExclFzc1g5V1owM3ZCaHFFYkpYckx2UUdXRVdSUEdLelp1djJQNF9UbnV5cDVMZE9MNHlTcXRwaWMxRGhYVDdueUdqYUlIMEtzRnItdUkxeWRSTy1KemswZw?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "L’ex Ilva è spenta, nessuna intesa sulla cassa integrazione: nuovo round martedì 10 - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-07T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOOEo1MVYtYURpWW56UDYyTnFkZG50YWFCc1lhNzZFdjY0ZFhyX2NjaFVZMHRDRjNGVEFDQlZDeFRzdDczYjZqQS1rQU9XNUVlV3hpMjV4aFZGNy1BUE1qSjU2aWtWWk9saHFsN19XQTlRSWI2MmZKVExTS2V2QndLUFdsU2l1NlNGTHdRcC1EQUhGU3pkZjZOeTFINVd1OU5XZ3BkWmdYU2V5cmJNSlhzU05rbm5SYXFrQzhNVzZRT0dUN2M?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Papa Leone: 'Fiero di essere americano e di avere votato'",
+      "category": "Italia",
+      "published": "2026-11-06T23:31:42+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/07/papa-leone-fiero-di-essere-americano-e-di-avere-votato_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Meloni blinda la manovra: «Io rigorista come Giorgetti» - Il Messaggero",
       "category": "Italia",
       "published": "2026-11-06T23:29:10+00:00",
@@ -645,6 +672,15 @@
       "words": 0
     },
     {
+      "title": "Riforma pensioni 2027: cosa prevede il testo della Manovra - PMI.it",
+      "category": "Italia",
+      "published": "2026-11-06T23:03:41+00:00",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE15TlJlTzZ5T0RycGNIMmhEM0RQSjVzLW9jYkVROEtXTS1kY2xDTzlwWGw0YmNiMUpNUVdNTGlaM1F4TTYzdUNWYnFvSjRuQkFuODhqOFlaWWlqaHh5aVFlbmRCSXU3WHRuX1RoZ01HcUpBRjVnNW1xdW1fNA?oc=5",
+      "source": "PMI.it",
+      "status": "verde",
+      "words": 582
+    },
+    {
       "title": "L'Fbi arresta in Florida il padre di Meghan Markle",
       "category": "Italia",
       "published": "2026-11-06T22:50:34+00:00",
@@ -661,15 +697,6 @@
       "source": "ANSA",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Il Papa a Montevideo: 'Fiero di essere americano e di avere votato'",
-      "category": "Italia",
-      "published": "2026-11-06T22:13:30+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/06/il-papa-in-sudamerica-e-atterrato-a-montevideo-benedetti-check-up-mai-avuto-dubbi-su-questo_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 492
     },
     {
       "title": "Scontro tra opposizioni e governo sulla nomina alla presidenza dell'Anac, il leghista Altieri si ritira",
@@ -807,15 +834,6 @@
       "words": 0
     },
     {
-      "title": "Riforma pensioni 2027: cosa prevede il testo della Manovra - PMI.it",
-      "category": "Italia",
-      "published": "2026-11-06T20:01:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE15TlJlTzZ5T0RycGNIMmhEM0RQSjVzLW9jYkVROEtXTS1kY2xDTzlwWGw0YmNiMUpNUVdNTGlaM1F4TTYzdUNWYnFvSjRuQkFuODhqOFlaWWlqaHh5aVFlbmRCSXU3WHRuX1RoZ01HcUpBRjVnNW1xdW1fNA?oc=5",
-      "source": "PMI.it",
-      "status": "verde",
-      "words": 582
-    },
-    {
       "title": "Ilie Bolojan, la o întâlnire a liberalilor din Vrancea: „PNL trebuie să le spună corect oamenilor lucrurile”",
       "category": "România",
       "published": "2026-11-06T19:44:39+00:00",
@@ -933,15 +951,6 @@
       "words": 0
     },
     {
-      "title": "Dl Bollette, quanto varrà il risparmio del tetto al gas per i consumatori? Appena un caffè al mese - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-06T17:26:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNV2M0VU9UNkQ3dTNVQXFEcGhKVko3Mk1SR29jUkR3ZS1URV9yN1FWcFhaRGQ4Q3dNdzZtRTBrSUdIVFpHaGVpS3N2S2JtWWZzQS05bVhIa2FRMXgxRG1fSmhieC0tbjZ5OWFOTHVhelRkcHdYZVExa1BVM2NDUy1aRF9ISlhZYks5VnhwT0RKNTdnZmFRYnhXSW1LUUhuZ3FtWTBHMUZjTkg4M00?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Imprese, Savino (Mef) sul sondaggio Bankitalia: \"Segnali positivi su investimenti e lavoro\" - la Repubblica",
       "category": "Italia",
       "published": "2026-11-06T17:21:00+00:00",
@@ -978,15 +987,6 @@
       "words": 0
     },
     {
-      "title": "I salari europei crescono del 4,3 per cento, ma l’Italia resta indietro. La Spagna allunga il passo - Eunews",
-      "category": "Italia",
-      "published": "2026-11-06T15:43:18+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQNHNoRVhRUWVWYkJ6SnJkekpGNU4xeG05R3ZwMjk1ajVSTWNZYjAzaHhhcl83YThmV1BNSUUwWVVJYU12Ul9MMGZ3VkJSa01na3RjWDY5NHVmLUdUM0N2SXRSQUhnZkZOeGtERURrdUZZOXJuM09PSWVscndCZU85cFVqVTlhQjBzNUlfcjc0MnVfR2pWNWVEazZMbFBtdmRDeVJoaFF1OVRoUWg1cmFzenZYUXNhX29PR282dHp5Qlp2dmtNbzlzRw?oc=5",
-      "source": "Eunews",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Recruiting Day Young a Udine, colloqui per under 35 il 26 novembre - Diario FVG",
       "category": "Italia",
       "published": "2026-11-06T14:30:56+00:00",
@@ -1002,15 +1002,6 @@
       "url": "https://www.ansa.it/responsabilmente/notizie/accessibilita/2026/11/06/corso-di-speaker-radiofonico-per-persone-con-disabilita-visiva_4aa14ef9-6490-4260-bfbe-a6d649c6ed62.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ex Ilva, tutti gli impianti dell'area a caldo sono stati spenti - Sky TG24",
-      "category": "Italia",
-      "published": "2026-11-06T14:19:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNUpuWmxZQzEweDdmLTlETEY2eV9Nay0zYnhYR1FQektfWDBXeFlXeDVFS3J1M3ctckNwTk1HZXZ2ekdnQ2w3VVFiWUE0cDJhUEVVMS1wWDJaV3ExRE4tbkVCSUU5N0Y4S2NCdTZJVGxBLVF5Z0FHOXVCZU5STVFDSC03V29sTklEVjFvNWRfYw?oc=5",
-      "source": "Sky TG24",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -1167,11 +1158,29 @@
       "words": 0
     },
     {
+      "title": "Anvelope de Iarnă Când Începe eMAG BLACK FRIDAY 2026 cu Ofertele cele mai Bune - iDevice.ro",
+      "category": "România",
+      "published": "2026-11-06T04:28:49+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUm03YWNtQmlKTDBPbGVWTjNkdXVnU290QkhWaElOeGNfeHN2b3FBb0d1dGYwQkJ0dC1QUFVzaUFlSzZ5UDg4VC1UQmdUdTRka3hyUWpEU2tNZVNxeVhCbXVwU2VOQmtTdW9rM1BXaDBGVTZXTE1QejBzRlVkUEQwZUxRRF9QcW16UEVNMkYxaF9PcFNjTFhpeVFsZzFFRmNtWnkwTmIwZV8?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "“Conti in ordine e sanità forte. Giusta l’azione delle Regioni, ma da Giorgetti un grande lavoro” - Il Giorno",
       "category": "Italia",
       "published": "2026-11-06T02:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDNDl4LUtoM0k4QnFxS28yUlNDX2pCUUFGOUltNi1MNzRnTE1rMEtqclJYS1NSRVJZN0RrcjlTY1FMckgyZHdITnB3U1FhcXZsa1ZVMlBGOVU0X2xZWlY4blZsVC1ScGV0X3pBWDVCUDFSZw?oc=5",
       "source": "Il Giorno",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Anna Rosa e Simona sfrattate a causa del carovita, gara di solidarietà: arrivano offerte di lavoro e ora sperano - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-06T01:50:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNEhOTTFlTEVhcUJ3NFJZUjZBVkhBMG00bXZOUl94T192ZzNWeUxyZDAxRkljSVBlQlVySHN4WVhfZDhEcWR5UDdIcVd4ZWVKY25KYnBMQnV0T1cyY1hmeUxWV0N2ZkptbnBBY0dGa2JZZGNlUktRYWRaZDctb3NuZjBaaW1tSWFtcEVIbEowdG5pLTZE?oc=5",
+      "source": "Il Resto del Carlino",
       "status": "roșu",
       "words": 0
     },
@@ -1212,20 +1221,20 @@
       "words": 0
     },
     {
+      "title": "Lavoro, nel Lazio solo il 68,9% dei giovani adulti è occupato ma il terziario è tra i più dinamici d’Italia - La Gazzetta del Mezzogiorno",
+      "category": "Italia",
+      "published": "2026-11-05T13:20:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQSjlwZGlHMk1Kby1USnkwNFFyYjA3T3pYMzdBMUNWVE5WT0FoNklfdW02Y1dfU2ZnVE1nMjJfeEM2ZWw1aUpuMVJmb1p2Ym5fdVhLSUV0RUtOR212eVI1R1oyMTJKNFROUFFxcUw0NzhGX1FJZGNDV20wbGhwOHJpNGtzV2tOTGpsdU1MbUdWcEI0Yk1vY1FGMmZ2bDJIY0dVUVJxUHlzaDVFcnVMSExlU3dhaGE3bmVQaDFzWTQ0NDVaODZ0TVFVd1FXQUFKTjY0ZncybWtsOWdjZlR3REt1QWd0QlBvM0tvVFpQdER6Y2RCdVdTZy1MQk9tMmstWVZh0gH_AUFVX3lxTFBjdDh3amFnWDBDaXBKZElQTGREUXhFOUFDU0xMakY4dmhid1hjeXY2VGpNRUp5U09GaTFKUnNqbDVHanpRU3dJRnNvMGp4NVZodzV",
+      "source": "La Gazzetta del Mezzogiorno",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Ruotolo, 'riunione speciale sull'Italia del gruppo di lavoro del Pe sull'Emfa' - ANSA",
       "category": "Italia",
       "published": "2026-11-05T12:25:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPQm1RRTlHWmNMeE9ocXhfNWdDWnZTN2k0X0M1SFZGWG02Y0wzTWMyYncteVFhdEg2U0tfVjJ3ZVM2VG80OFVQVzFYTzVlb1phdzFoNjgyS215OS1PWTFET0ZqYTNrUlhWd3daaWlBc0QyVE83YV8xeFNYZW9Tb3ZUZU9rQUVHRTdINnJlYTNPYTJWdWhqa0NVMy1iSXZOU2VZYm5YZTY0aGM5S1owODlFSk5xdzI0NlBKVlMyam5TOTBOZTlxSlNxUjFrQmhvNlp2WVgzZ0lpOVZXN2FXRWNobndCVWpwWDJLWk1zZ1BLaW40VVZlRFhfSE9pSkhLRzlDZ0lrNkk2czBCaXYz0gGSAkFVX3lxTE8yTGRZS0tmdHh4Q200XzFMaWVwSjYyMEJhRlNDU29JXzZPUktQMTAzZWdVTVUyVE5pNWlBaE1RRnJBbkJxMnl",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Perché gli italiani lasciano sempre meno soldi sul conto corrente - Idealista",
-      "category": "Italia",
-      "published": "2026-11-05T11:03:18+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVW5DNzJmTUdNQlVoTjRqTncxMGFOaXYyRjlycHhqMEhySHB4M0gxVi1DSlZJRzZWS2U1MC1qeFlhUFBjclJydEhubDRvbWZKZm9pNlFZN1h3andQc3g1OGJtbndjeE5IZTdzN2dqa1RKTHZqMDJLS1FiNk1MNHg0S1ZSRExSV2pwY2loelcwOFNSbGpxOGZpV0N6YWtZeFVxYTNWUzkwSUFidkgxNVpMSURuUW5EbE1SSHkwYWtuQllTMGl0R25XRWZvN0ZnbHPSAdQBQVVfeXFMUHdHNTgwLVgyUlFIcnpXZnVmblFUUWQtdDFtbUxsdnhuaDItdFBobmZ3Qk1rRzg2elpqLXA4WTRzUjFCNFkza2haNW5BQ1prSkVNc3NQcTFteThMY1RRTWRmNnVOZDNERy14TFhkR1gyTjZGcU5DU1VSSktDbHQ5alBZTFF",
-      "source": "Idealista",
       "status": "roșu",
       "words": 0
     },
@@ -1310,25 +1319,25 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
+      "title": "Video Un român a murit pe un șantier naval din Italia. Colegii vor să organizeze un protest în urma tragediei - Digi24",
+      "category": "Diaspora",
+      "published": "2026-11-06T16:09:58+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPVEtvT0NfMTBmMUg5YlFXTHMtY1dQV1NWUjF1OE5UcndLdzNzN241a2ZkUVNFQ0k4TWtRSkdHbGJjSXgxVTEzTVNadUJmd1JLY010aWxrWmlnUnVEb1BfUmFwXzI3Vl9nM3kxaEYzVDh5eWVKOUtCVEc5c1NsZGJtb2RYeW5kTkQ1VUoxaU4yVXozV0xTenZhVW4zZjBtQzlWa2FTX0xPU1QzM0dSaFhjdTcxbmZYOU53MWlLY0p0X3FiOTBPcmhlaDVpeEp0bk9WaHZHdDA0dVQ2NXBiaG5zUF9BT2c?oc=5",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 443,
+      "intro": "Marius Hurba, muncitor român de 34 de ani, a murit la șantierul Fincantieri din Marghera.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
       "title": "Riforma pensioni 2027: cosa prevede il testo della Manovra - PMI.it",
       "category": "Italia",
-      "published": "2026-11-06T20:01:13+00:00",
+      "published": "2026-11-06T23:03:41+00:00",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE15TlJlTzZ5T0RycGNIMmhEM0RQSjVzLW9jYkVROEtXTS1kY2xDTzlwWGw0YmNiMUpNUVdNTGlaM1F4TTYzdUNWYnFvSjRuQkFuODhqOFlaWWlqaHh5aVFlbmRCSXU3WHRuX1RoZ01HcUpBRjVnNW1xdW1fNA?oc=5",
       "source": "PMI.it",
       "status": "verde",
       "words": 582,
       "intro": "Il Consiglio dei ministri ha approvato il 28 ottobre 2026 il disegno di legge di bilancio per il 2027, aprendo una nuova discussione sulle pensioni.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
-    },
-    {
-      "title": "Il Papa a Montevideo: 'Fiero di essere americano e di avere votato'",
-      "category": "Italia",
-      "published": "2026-11-06T22:13:30+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/06/il-papa-in-sudamerica-e-atterrato-a-montevideo-benedetti-check-up-mai-avuto-dubbi-su-questo_0d5eaef1-75f3-4c07-81f7-0db8debd1fbf.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 492,
-      "intro": "Leone: 'Check-up benedetti, mai avuto dubbi su questo viaggio'",
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     }
   ]
