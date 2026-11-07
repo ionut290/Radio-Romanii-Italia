@@ -1,5 +1,5 @@
 """RDI AI MUSIC moderation API. Run behind HTTPS and a same-origin /api/ai-music/ reverse proxy."""
-import os, sqlite3, secrets, hmac, subprocess, uuid, time, hashlib, base64, smtplib, re, ssl
+import os, sqlite3, secrets, hmac, subprocess, uuid, time, hashlib, base64, smtplib, re, ssl, json
 from email.message import EmailMessage
 from datetime import datetime, timezone
 from pathlib import Path
@@ -742,6 +742,50 @@ def spotlight():
         """,(per_page,(page-1)*per_page)).fetchall()
     return jsonify(tracks=[dict(row) for row in rows],page=page,per_page=per_page,total=total,total_pages=max(1,(total+per_page-1)//per_page))
 
+
+@app.get("/api/ai-music/top3/authorized")
+def top3_authorized():
+    """Only songs authorized for YouTube Live and already playable on RDI.
+    Remains in the same vote order as the audio-only chart.
+    """
+    with db() as con:
+        rows=con.execute("""
+          SELECT s.id,s.title,s.artist,COUNT(v.submission_id) AS votes
+          FROM submissions s
+          LEFT JOIN spotlight_votes v ON v.submission_id=s.id
+          WHERE s.status='approved'
+            AND s.spotlight_consent=1
+            AND s.youtube_consent=1
+            AND s.stored_name IS NOT NULL
+          GROUP BY s.id
+          ORDER BY votes DESC,s.created_at DESC LIMIT 3
+        """).fetchall()
+    return jsonify(tracks=[dict(row) for row in rows],ready=len(rows)==3)
+
+@app.get("/api/ai-music/top3/live")
+def top3_live():
+    """Public timings for the RDI YouTube overlay; never expose filesystem paths."""
+    manifest_path=ROOT/"top3"/"current.json"
+    try:
+        payload=json.loads(manifest_path.read_text(encoding="utf-8"))
+        if not isinstance(payload,dict) or not payload.get("published"):
+            raise ValueError("Top3 is not published")
+        segments=payload.get("segments")
+        if not isinstance(segments,list) or len(segments)!=3:
+            raise ValueError("Invalid Top3 manifest")
+        ids=[t.get("id") for t in segments]
+        with db() as con:
+            allowed=con.execute("""SELECT id FROM submissions WHERE status='approved'
+                AND spotlight_consent=1 AND youtube_consent=1
+                AND stored_name IS NOT NULL""").fetchall()
+        eligible={row["id"] for row in allowed}
+        if any(track_id not in eligible for track_id in ids):
+            return jsonify(ready=False,reason="authorization_revoked")
+        return jsonify(ready=True,edition_id=payload["edition_id"],
+             edition_day=payload["edition_day"],track_title=payload["track_title"],
+             duration_seconds=payload["duration_seconds"],segments=segments)
+    except (OSError,ValueError,KeyError,TypeError,json.JSONDecodeError):
+        return jsonify(ready=False)
 
 @app.get("/api/ai-music/spotlight/playlist")
 def spotlight_playlist():
