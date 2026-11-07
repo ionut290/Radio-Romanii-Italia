@@ -277,6 +277,15 @@ def require_music_user():
     if isinstance(result,tuple): return None,result[1]
     return result,None
 
+def current_music_user():
+    """Use verified member data when signed in; reject stale credentials.
+    Until login enforcement is enabled, anonymous activity still follows
+    legacy public rules, but logged-in activity is always bound to the account.
+    """
+    if AUTH_REQUIRED or request.headers.get("Authorization"):
+        return require_music_user()
+    return None,None
+
 @app.get("/api/ai-music/auth/config")
 def music_auth_config():
     return jsonify(login_required=AUTH_REQUIRED,email_available=AUTH_MAIL_READY,
@@ -500,7 +509,7 @@ def my_music_submissions():
 @app.post("/api/ai-music/submissions")
 def submit():
     # Secure member-only uploads when the RDI account system is activated.
-    user,error=(require_music_user() if AUTH_REQUIRED else (None,None))
+    user,error=current_music_user()
     if error: return error
     # Server must be behind HTTPS, with trusted proxy enforcing request limits.
     ip_key=rate_key()
@@ -527,7 +536,8 @@ def submit():
             return response
     if request.form.get("website"):  # honeypot
         return jsonify(ok=True),202
-    artist=clamp(request.form.get("artist"),100)
+    # Account identity wins over any editable or forged form fields.
+    artist=clamp(user["display_name"],100) if user else clamp(request.form.get("artist"),100)
     email=user["email"] if user else clamp(request.form.get("email"),200)
     title=clamp(request.form.get("title"),160)
     platform=clamp(request.form.get("platform"),60)
@@ -689,7 +699,7 @@ def spotlight_audio(sid):
 @app.post("/api/ai-music/spotlight/<sid>/vote")
 def spotlight_vote(sid):
     """One vote per account and track when account access is required."""
-    user,error=(require_music_user() if AUTH_REQUIRED else (None,None))
+    user,error=current_music_user()
     if error: return error
     if request.headers.get("Origin")!=PUBLIC_ORIGIN:
         return jsonify(error="Voting is available on the RDI website only"),403
@@ -746,7 +756,7 @@ def spotlight_comments(sid):
 @app.post("/api/ai-music/spotlight/<sid>/comments")
 def add_spotlight_comment(sid):
     """Account comments after activation, retaining the existing anti-abuse checks."""
-    user,error=(require_music_user() if AUTH_REQUIRED else (None,None))
+    user,error=current_music_user()
     if error: return error
     if request.headers.get("Origin")!=PUBLIC_ORIGIN:
         return jsonify(error="Comments must be submitted from the RDI website"),403
@@ -757,11 +767,11 @@ def add_spotlight_comment(sid):
         return jsonify(error="JSON required"),400
     if data.get("website"):
         return jsonify(ok=True),202
-    nickname=data.get("nickname")
+    nickname=user["display_name"] if user else data.get("nickname")
     body=data.get("body")
     if not isinstance(nickname,str) or not isinstance(body,str):
         return jsonify(error="Name and comment are required"),400
-    nickname=user["display_name"] if user else nickname.strip()
+    nickname=nickname.strip()
     body=body.strip()
     if not (2<=len(nickname)<=40) or not (3<=len(body)<=500):
         return jsonify(error="Name must be 2-40 characters and comment 3-500 characters"),400
