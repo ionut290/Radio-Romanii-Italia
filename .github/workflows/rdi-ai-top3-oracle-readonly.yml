@@ -1,0 +1,57 @@
+name: RDI Top3 — Oracle preflight (read-only)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/rdi-ai-top3-oracle-readonly.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Connect safely using configured Oracle SSH key
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/rdi" "$HOME/.ssh/known_hosts"
+          ssh -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12 -i "$HOME/.ssh/rdi" ubuntu@129.151.255.41 'bash -se' <<'REMOTE'
+          set -euo pipefail
+          echo "PREFLIGHT=RDI_TOP3"
+          for name in ffmpeg ffprobe espeak-ng espeak pico2wave python3 xdotool; do
+            if command -v "$name" >/dev/null; then echo "TOOL_${name}=available"; else echo "TOOL_${name}=missing"; fi
+          done
+          for f in /opt/rdi-ai-music-api/app.py /opt/rdi-ai-music-api/rdi_music.sqlite3 /opt/rdi-ai-music-api/uploads /usr/local/bin/rdi-geopolitica-api-helper.php /tmp/rdi-geopolitica-auth.php; do
+            test ! -e "$f" || echo "PATH_${f}=exists"
+          done
+          python3 - <<'PY'
+          import sqlite3, pathlib
+          root=pathlib.Path('/opt/rdi-ai-music-api')
+          files=list(root.glob('*.db'))+list(root.glob('*.sqlite*'))
+          print("DB_FILE_COUNT="+str(len(files)))
+          for db in files:
+            try:
+              con=sqlite3.connect(f"file:{db}?mode=ro",uri=True)
+              con.row_factory=sqlite3.Row
+              columns=[row['name'] for row in con.execute('PRAGMA table_info(submissions)')]
+              print("YOUTUBE_CONSENT_COLUMN="+str('youtube_consent' in columns).lower())
+              if 'youtube_consent' in columns:
+                rows=con.execute("SELECT title,artist,stored_name,spotlight_consent,youtube_consent FROM submissions WHERE status='approved' AND stored_name IS NOT NULL ORDER BY created_at DESC LIMIT 20").fetchall()
+                print("APPROVED_FILES="+str(len(rows)))
+                for row in rows:
+                  print("AUDIO="+str(row['title'])[:100]+" / "+str(row['artist'])[:100]+
+                    " available="+str((root/'uploads'/row['stored_name']).is_file())+
+                    " site="+str(row['spotlight_consent'])+" youtube="+str(row['youtube_consent']))
+              con.close()
+            except Exception as exc:
+              print("DB_PROBE="+type(exc).__name__)
+          PY
+          REMOTE
