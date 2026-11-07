@@ -15,8 +15,10 @@ ALLOWED_ORIGINS={PUBLIC_ORIGIN}
 app=Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"]=MAX_MB*1024*1024+128*1024
 ALLOWED_EXT={".mp3",".wav",".flac",".m4a",".ogg"}
-RATE_WINDOW_SECONDS=3600
-RATE_MAX=6
+# Permit a complete 10-track submission from one artist, with limited retry headroom.
+# Keep the limit per IP to protect this publicly accessible upload endpoint.
+RATE_WINDOW_SECONDS=max(60,int(os.environ.get("RDI_AI_SUBMISSION_RATE_WINDOW_SECONDS","3600")))
+RATE_MAX=max(1,int(os.environ.get("RDI_AI_SUBMISSION_RATE_MAX","12")))
 VOTE_IP_DAILY_MAX=30
 
 def rate_key():
@@ -188,7 +190,16 @@ def submit():
         con.execute("DELETE FROM rate_events WHERE created_at<?",(current-RATE_WINDOW_SECONDS,))
         hits=con.execute("SELECT COUNT(*) FROM rate_events WHERE ip_key=? AND created_at>=?",(ip_key,current-RATE_WINDOW_SECONDS)).fetchone()[0]
         if hits>=RATE_MAX:
-            return jsonify(error="Too many submissions. Retry later."),429
+            oldest=con.execute(
+                "SELECT MIN(created_at) FROM rate_events WHERE ip_key=? AND created_at>=?",
+                (ip_key,current-RATE_WINDOW_SECONDS)
+            ).fetchone()[0]
+            retry_after=max(1,RATE_WINDOW_SECONDS-(current-int(oldest))) if oldest is not None else RATE_WINDOW_SECONDS
+            response=jsonify(error="Too many submissions. Retry later.",
+                             retry_after_seconds=retry_after)
+            response.status_code=429
+            response.headers["Retry-After"]=str(retry_after)
+            return response
     if request.form.get("website"):  # honeypot
         return jsonify(ok=True),202
     artist=clamp(request.form.get("artist"),100)
