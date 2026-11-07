@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-07T15:00:45.102426Z",
+  "updated_at": "2026-11-07T16:10:44.044919Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-5a8b5fc5877177ff",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "Nvidia's H200 Chips Reached China Through Ghost Company",
+      "summary": "",
+      "source": "The Tech Buzz",
+      "published": "2026-11-07T16:06:29Z",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNR0JKT2N5OXBlRDFDSG5xSE5VYTJYcG9LMTZ4dGpmaTRKd3B1MTI2V0hIZ1FxVVBqOUt0Rkl2eGg5ZDc0QThiX0xyeUQ4STZweGI0a1pSWDZ2aURwUVpjZnVXV0RaVHMzTldpeFZMaWh4SGhlVXBBRDV5bVlIX0RReld6VTI0OTlpY05PakFtYU9HZw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cipurile H200 de la Nvidia au ajuns în China prin intermediul companiei Ghost",
+      "title_it": "I chip H200 di Nvidia hanno raggiunto la Cina tramite Ghost Company",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-7b9f3276aaff19b0",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Zelensky says Ukraine's deported children are now being conscripted into the Russian army",
+      "summary": "",
+      "source": "Latin Times",
+      "published": "2026-11-07T15:02:49Z",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPT0JYcWhMdV92RGZHNTBULXVGMngxMTAzNV9GWnpITG82V1AxZ1NMd0FYb0hIbnd2djV3VlpOaFFIWDdtaktKNHRyd2dSN1NBbEZUZHRVU3pEdWFMa2pkS1RScEVxeW5JcHV4VWthUFNTV19STlc1NE9tdmJONXBwM3JRTnltOTN5SFRfNXRNTnJuQmtM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Zelensky spune că copiii deportați din Ucraina sunt acum înrolați în armata rusă",
+      "title_it": "Zelenskyj afferma che i bambini deportati dall’Ucraina vengono ora arruolati nell’esercito russo",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-a08a1af10f2d423b",
       "category": "conflicte",
@@ -19,6 +47,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ploile abundente lasă zeci de mii de oameni fără adăpost în Gaza",
       "title_it": "Le forti piogge lasciano decine di migliaia di persone senza riparo a Gaza",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-167a93a5974d541f",
+      "category": "clima",
+      "region": "global",
+      "title": "Strengthening Bangladesh’s climate diplomacy: From COP31 preparedness to national priorities",
+      "summary": "",
+      "source": "The Business Standard",
+      "published": "2026-11-07T14:24:10Z",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRkVHZl85dW1uVWpJb2c1WFJOb1JseGpXQ2pkQWpScnZacWJVcXZzd2FJMjQ1RDV4aDN1WW51aFFsdE53WHJYVGwwcG8wUVRNcjJlQjdtTG1HVHVBS3c3MmN0VGktaWZGRkgwTkU5dlFpNG1GLU1uUThJOU5xTEJ2SDlSeW1PTDFSTHlQcW5iQWx6N0ZJVHljNEVDQk16aDAycm1jUXVCVm5sZ2h4MmM3UWNoOFA4TUF1ZEhOcmh1S2I?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Consolidarea diplomației climatice din Bangladesh: de la pregătirea pentru COP31 la prioritățile naționale",
+      "title_it": "Rafforzare la diplomazia climatica del Bangladesh: dalla preparazione alla COP31 alle priorità nazionali",
       "translation_status": "machine_translation"
     },
     {
@@ -106,20 +148,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2ed0df82f0571195",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Ukraine Prepares for Peace Talks Amidst Russian Missile Strikes in Kyiv",
-      "summary": "",
-      "source": "Ratopati",
-      "published": "2026-11-07T11:33:47Z",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPamY2VUhHMUlFOWNPSVRPcnBIcGNLWUxFYi0teVRzb1pCZ0hnV3A1Wk5GeFV6VDYwMDZ3QUtrY2tTcnRmc3FKQ2JTblJ3SlVHMXl0YUVGQjFaOEFIWmpid09yaW1RY3FPcVVGQkNJUVlWdXBRbDRkM3RYZmx0WUJPZ3JESThiejkwS2NPS0ZHa0RNZksxQmFqVUJucGEzcXFySUJTbmhrX3FQSUhiYnFleTZ1dkNBQQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ucraina se pregătește pentru discuții de pace în mijlocul rachetelor rusești la Kiev",
-      "title_it": "L’Ucraina si prepara ai colloqui di pace durante gli attacchi missilistici russi a Kiev",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-6c6935e0760ab3bd",
       "category": "conflicte",
       "region": "africa",
@@ -162,6 +190,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-0ce4ba5254b3dec3",
+      "category": "europa",
+      "region": "europa",
+      "title": "Mattarella chiede ai Ventisette un’azione comune nelle crisi e tempi più rapidi per l’allargamento",
+      "summary": "",
+      "source": "Sbircia la Notizia Magazine",
+      "published": "2026-11-07T10:04:00Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5nVU9EWndqajFCYVlvQ2NHYzBBLU85Y3d5ek50TS1RSDlkNDd6YmRldVhUeHNvWHV4SVRlenJWeFpsSkJZV2ZHOFVDSTZxZzI1TjROWjFzOVg1QmJYdGFIazF3M3REdDhNcU1VdHBMbDNTNHBRWmJnajZQTXk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Mattarella le cere celor Douăzeci și șapte de acțiuni comune în situații de criză și timpuri mai rapide pentru extindere",
+      "title_it": "Mattarella chiede ai Ventisette un’azione comune nelle crisi e tempi più rapidi per l’allargamento",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-95326480b2b84729",
       "category": "conflicte",
       "region": "europa",
@@ -173,6 +215,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Putin declanșează un baraj de rachete balistice asupra Kievului, în timp ce școala și podul sunt lovite",
       "title_it": "Putin lancia uno sbarramento di missili balistici su Kiev mentre la scuola e il ponte vengono colpiti",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-78650441d07bd844",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Eye on China: US looks to reactivate WWII airbases once used against Japan",
+      "summary": "",
+      "source": "The Times of India",
+      "published": "2026-11-07T09:45:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQUXFVOGU1bzVFdURfdTh3VVEzNEhPc2ZxbHhjTk5mMFBsQ1FtdnFTd05PWWN4RGMwSFZmR0dETEhjUFZoQ0RWdXR5LUNQbE41TzdWeGZMZlJRYnJFazA3aFUzdTU0N0ktZlc0VDE1WGNMRjZIMmNXSDN6bGhzeTV1NnRsRjZBbWRhQWFOSHlSYzIxYUh3ZTkyU2x2NHpjb3k0XzJmR21jeWF1dG42dElOcURDUFZoY2lDcUFxMm9UMzlsWUEzWFBESzZVdEZUT0x3Ty1iWV9ycFl5UGxDNGlvUWRzbUdOYUppZjFGbHdn0gHzAUFVX3lxTE9Fem1adTlCb3h6Unc3ZmtWZ0J4UlBZNVlRZUpzRzdKQnlRZkF5bUFuQk1iYWVvUnF0cElRSi1DMlkzNWJkUDlrbWNZSHR5Qno1dXc5TGJZUzVMaWI5U3VYWkQ1MEIzb2dNWkxBS1NSN3Y1djl2SFpoeXRKbHl1dHVhSWc1ZDg5YVdLU3A3T3JPd2ZpMFNTUTJmN1IxUk5IdkVkMmpkYWY1STdCVUJtaDk5R0NxNEZMOFYzYTJPaWdNRjJ2Wnh0RnJxcHlCQUdYM3MzbkEyX2pXck9EdVoxT3VqT0EzamJVdzgyeEdlZlYxRUdQdw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ochi pe China: SUA încearcă să reactiveze bazele aeriene din cel de-al Doilea Război Mondial, folosite cândva împotriva Japoniei",
+      "title_it": "Occhio alla Cina: gli Stati Uniti cercano di riattivare le basi aeree della Seconda Guerra Mondiale, una volta utilizzate contro il Giappone",
       "translation_status": "machine_translation"
     },
     {
@@ -190,16 +246,16 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-879422d18fed43aa",
+      "id": "geo-bff2bad66096d7a0",
       "category": "economie",
       "region": "global",
       "title": "IMF: Any Slowdown in AI-driven Growth Would be Factor for Central Banks",
       "summary": "",
-      "source": "ASHARQ AL-AWSAT English",
-      "published": "2026-11-07T08:23:31Z",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNzBYSW5lRjR0dllfaVlBRDlaZUVieHJoR3ZFem9kdWJBaDNYTmxjTGhHV3RRcG05ZXRjN1ZWQ3JWekxaUWdFMlNXYl9sY1QtamxWVXJORnBOQzAybGd0TU1USUNCSmR0RTB6ekx3NllYVjdjd3hkTmZhRnhaQlBrUlMwWVlTaHEtbHA4VXVKQ013R3RYWnl5RXJXelRuVU4zblcxRkpJQ1F4Zms?oc=5",
+      "source": "شبكة تواصل الإخبارية",
+      "published": "2026-11-07T08:21:45Z",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBDUTlLRnh4UnN3Q1dublJBWVRpazdFRnFTN0RzVE5ZTEFKSVBzVDNLNnJPYUhsZ0hrd2F0aHNqMURPbG9hSWVrR2c4Ukh4MmFtV2xJ?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "FMI: Orice încetinire a creșterii determinate de IA ar fi un factor pentru băncile centrale",
+      "title_ro": "FMI: Orice încetinire a creșterii determinate de inteligența artificială ar fi un factor pentru băncile centrale",
       "title_it": "FMI: Qualsiasi rallentamento nella crescita guidata dall’intelligenza artificiale sarebbe un fattore per le banche centrali",
       "translation_status": "machine_translation"
     },
@@ -372,6 +428,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-096aad1466c1f837",
+      "category": "clima",
+      "region": "global",
+      "title": "Nearly 200 Nations Gather in Turkey for COP31 Amid Climate Deal Uncertainty",
+      "summary": "",
+      "source": "TVC News",
+      "published": "2026-11-07T03:43:00Z",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOV3otcGY2TkhqQ2JmNzdocFlNNTFSTHo2Z0pSZFEtbzcxMmpwVjVKQXBIUHp1VzJKRjZJbTRhTlp4M0w2QmdDZmxkT2RPY0lFSW5GR2F3ZVhqMGZOc1FsYTJUd3NoWDhCdFZDbGNwU0NXUmQ4OWFIUHotYVpMVkk1TU83cWVEMzQ5TjZwaW95eWxVS1dmWVo2cktfSXJKVTFE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Aproape 200 de națiuni se adună în Turcia pentru COP31, pe fondul incertitudinii acordului climatic",
+      "title_it": "Quasi 200 nazioni si riuniscono in Turchia per la COP31 nell’incertezza dell’accordo sul clima",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-c7c94f5d9a2abdc1",
       "category": "conflicte",
       "region": "europa",
@@ -383,20 +453,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "„În primul rând încetarea focului”: Polonia avertizează împotriva acordului SUA-Rusia privind securitatea Europei",
       "title_it": "“Prima il cessate il fuoco”: la Polonia mette in guardia contro l’accordo USA-Russia sulla sicurezza dell’Europa",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-353b0c816270114e",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "JD Vance spearheads quiet diplomatic push for new Iran deal: Report",
-      "summary": "",
-      "source": "Big News Network.com",
-      "published": "2026-11-07T03:30:00Z",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaW9XQVh0WFFXZ19VVU9sMWVzOGxLVWZJSkM1VGl0RWJmc0JWZUJqOFFGVE05ZVlIOFBrVVFlOENYME5BQzlfWlR0Q2l2ekF0WVk5YzNRbjIweGhHbFlVUzY3OTF3SzBuaHJtLTNMUjd0cldyWDBKYURFMU9CV3NpdjFjanI3N25ISGZ5LWtKSEZBekh5b2FmLVpPTHFXbi1TeTluUVR4SVZNMktlNk5lZ3pn?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "JD Vance conduce un impuls diplomatic liniştit pentru un nou acord cu Iranul: Raport",
-      "title_it": "JD Vance guida una silenziosa spinta diplomatica per un nuovo accordo con l'Iran: rapporto",
       "translation_status": "machine_translation"
     },
     {
@@ -467,6 +523,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Japonia, Taiwan, China și testul strategic emergent din 2028",
       "title_it": "Giappone, Taiwan, Cina e il test strategico emergente del 2028",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2b7f4370881f384f",
+      "category": "economie",
+      "region": "global",
+      "title": "IMF's Georgieva says any slowdown in AI-driven growth would be factor for central banks",
+      "summary": "",
+      "source": "Yahoo Finance",
+      "published": "2026-11-06T23:52:17Z",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTlN6NlBjSUU3ei1qVHAtVHZ1Q292WkNRYjFYZGpKWVoyX05Ec3lqYnNHMjEyblJTM0JKU0oyeVkzaGQ4LVZscm9LZWk0ZzJ0d1hEOEtfb3hsdllibnNZUDA3VFV0MVg4TklKTWsyajdHUEhZMkVNSW84LWk4T3JJTzd5WmpETVFpOG1CSERBYlpYOGFzZXdCZGVnVQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Georgieva de la FMI spune că orice încetinire a creșterii determinate de IA ar fi un factor pentru băncile centrale",
+      "title_it": "Georgieva del FMI afferma che qualsiasi rallentamento della crescita guidata dall’intelligenza artificiale sarebbe un fattore per le banche centrali",
       "translation_status": "machine_translation"
     },
     {
