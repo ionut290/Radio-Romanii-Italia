@@ -170,6 +170,45 @@ class SubmissionTests(unittest.TestCase):
             )
         self.assertEqual(review.status_code, 400)
 
+    def test_authenticated_identity_used_even_before_login_becomes_mandatory(self):
+        # Members must never have to type their name/email again; editable
+        # client fields cannot override Google verified identity.
+        with patch.object(service,"GOOGLE_AUTH_READY",True), \
+             patch.object(service,"AUTH_REQUIRED",False), \
+             patch.object(service,"verify_google_credential",
+                 return_value=("member@gmail.com","google-member-identity-009","Ionel Varga")):
+            response=self.client.post("/api/ai-music/auth/google",
+                headers=self.origin,json={
+                    "credential":"a"*100,"nonce":"nonce_for_member_test_123456"})
+            self.assertEqual(response.status_code,200)
+            token=response.json["session"]
+            headers={**self.origin,"Authorization":"Bearer "+token}
+            upload=self.client.post("/api/ai-music/submissions",headers=headers,
+                data=self.data(title="Own composition",
+                               artist="Forged Artist",
+                               email="forged@example.org"))
+            self.assertEqual(upload.status_code,201)
+            sid=upload.json["id"]
+            with service.db() as con:
+                track=con.execute("SELECT artist,email,user_id FROM submissions WHERE id=?",
+                                  (sid,)).fetchone()
+                self.assertEqual(track["artist"],"Ionel Varga")
+                self.assertEqual(track["email"],"member@gmail.com")
+                self.assertEqual(track["user_id"],response.json["user"]["id"])
+            review=self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
+                headers=self.admin,json={"status":"approved"})
+            self.assertEqual(review.status_code,200)
+            comment=self.client.post(f"/api/ai-music/spotlight/{sid}/comments",
+                headers=headers,json={"body":"Great melody","nickname":"Forged commenter"})
+            self.assertEqual(comment.status_code,201)
+            visible=self.client.get(f"/api/ai-music/spotlight/{sid}/comments")
+            self.assertEqual(visible.json["comments"][0]["nickname"],"Ionel Varga")
+            # Stale credentials must not silently fall back to guest submission.
+            unauthorized=self.client.post("/api/ai-music/submissions",
+                headers={**self.origin,"Authorization":"Bearer invalid_session"},
+                data=self.data(title="Forged"))
+            self.assertEqual(unauthorized.status_code,401)
+
     def test_google_member_login_reuses_verified_email_and_existing_tracks(self):
         # A previously submitted artist must get the SAME RDI identity.
         old=self.post(title="Earlier submission",email="artist@gmail.com")
