@@ -307,7 +307,9 @@ $("page-next").textContent=({it:"Successiva →",ro:"Următoarea →",en:"Next �
 $("play-all").textContent=({it:"▶ Play All",ro:"▶ Redă toate",en:"▶ Play All"})[language];
 $("player-stop").textContent=({it:"■ Stop",ro:"■ Oprește",en:"■ Stop"})[language];
 $("player-note").textContent=({it:"La riproduzione continua include solo i file audio autorizzati. I link esterni non sono riproducibili automaticamente.",ro:"Redarea continuă include doar fișierele audio autorizate. Linkurile externe nu pot fi redate automat.",en:"Continuous playback includes only approved and consented audio files. External music links cannot be autoplayed."})[language];
-$("intro").textContent=t("intro");$("submitLink").textContent=t("submit");$("radioLink").textContent=t("radio");$("notice").textContent=t("notice");$("heading").textContent=t("heading");translateExtra();render()}
+$("intro").textContent=t("intro");$("submitLink").textContent=t("submit");$("radioLink").textContent=t("radio");$("notice").textContent=t("notice");$("heading").textContent=t("heading");
+if(!$("playlist-player").getAttribute("src"))$("player-label").textContent=({it:"🎵 Ascolta tutti i brani disponibili",ro:"🎵 Ascultă toate piesele disponibile",en:"🎵 Listen to all available tracks"})[language];
+translateExtra();render()}
 $("lang").onchange=()=>{language=$("lang").value;localStorage.setItem("rdi-language",language);translate()};
 function node(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x}
 function safeLink(url){try{const u=new URL(url);return u.protocol==="https:"&&!u.username&&!u.password?u.href:null}catch{return null}}
