@@ -583,8 +583,8 @@ def submit():
             return jsonify(error=str(exc)),400
     try:
         with db() as con:
-            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name,spotlight_consent,user_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
-              (sid,now(),artist,email,title,platform,link,notes,original,stored,spotlight_consent,user["id"] if user else None))
+            con.execute("INSERT INTO submissions (id,created_at,artist,email,title,platform,link,notes,file_name,stored_name,spotlight_consent,user_id,youtube_consent) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+              (sid,now(),artist,email,title,platform,link,notes,original,stored,spotlight_consent,user["id"] if user else None,int(bool(stored and spotlight_consent and request.form.get("youtube_consent")=="yes"))))
     except Exception:
         if stored:(FILES/stored).unlink(missing_ok=True)
         raise
