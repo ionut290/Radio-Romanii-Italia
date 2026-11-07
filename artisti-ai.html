@@ -48,7 +48,7 @@ aside.card{position:sticky;top:86px}.tip{display:flex;gap:10px;align-items:start
 @media(max-width:750px){.layout{grid-template-columns:1fr}aside.card{position:static;order:2}.card{padding:17px}main{padding-top:18px}.topbar{padding:11px 13px}.brand{font-size:13px}.brand img{width:30px;height:30px}.toplinks a{display:none}.form-pair{grid-template-columns:1fr;gap:0}.upload-area{padding:17px}.hero h1{font-size:36px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
 </style></head><body>
-<header class="topbar"><a href="./spotlight-ai.html" class="brand"><img src="./RADIO-LOGO.png" alt="">RDI <strong>AI MUSIC</strong></a><div class="toplinks"><a href="./spotlight-ai.html" data-t="back">← Classifica</a><select id="lang" aria-label="Lingua"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></div></header>
+<header class="topbar"><a href="./spotlight-ai.html" class="brand"><img src="./RADIO-LOGO.png" alt="">RDI <strong>AI MUSIC</strong></a><div class="toplinks"><a href="./spotlight-ai.html" data-t="back">← Classifica</a><a id="account-link" href="./accedi-ai-music.html?next=artisti-ai.html">Accedi</a><select id="lang" aria-label="Lingua"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></div></header>
 <main>
 <div class="hero"><div class="eyebrow"><i></i><span data-t="eyebrow">RDI MUSIC STUDIO</span></div><h1 data-t="hero">Carica la tua musica AI</h1><p class="lead" data-t="intro"></p><a href="./spotlight-ai.html" data-t="seeChart">♫ Torna alla classifica</a></div>
 <div class="layout">
@@ -87,6 +87,8 @@ aside.card{position:sticky;top:86px}.tip{display:flex;gap:10px;align-items:start
 <script>
 "use strict";
 const API="https://radio-romanii-italia.duckdns.org/api/ai-music/submissions",MAX_FILES=10,MAX_BYTES=30*1024*1024,PACE_MS=1000;
+const TOKEN_KEY="rdi-ai-music-session";
+let loginRequired=false;
 const allowed=/\.(mp3|wav|flac|m4a|ogg)$/i;
 const t={
 it:{back:"← Classifica",eyebrow:"RDI MUSIC STUDIO",hero:"Carica la tua musica AI",intro:"Invia da 1 a 10 canzoni insieme. Il titolo di ogni brano viene compilato automaticamente dal nome del file e puoi correggerlo prima dell'invio.",seeChart:"♫ Torna alla classifica",formTitle:"Carica fino a 10 brani",formInfo:"Ogni file diventa una candidatura separata, in attesa di approvazione. Massimo 30 MB per file.",artist:"Nome dell'artista / pseudonimo",email:"Indirizzo email",platform:"Piattaforma utilizzata",dropTitle:"Trascina qui le canzoni",dropInfo:"MP3, WAV, FLAC, M4A, OGG · fino a 10 file · 30 MB ciascuno",selectFiles:"＋ Seleziona fino a 10 canzoni",selectedTitle:"Brani selezionati",linkIntro:"Oppure invia un solo brano tramite link:",title:"Titolo del brano",link:"Link pubblico o condivisibile",notes:"Note facoltative (comuni a tutti i brani)",rights:"Dichiaro di possedere i diritti e i permessi necessari per proporre questi brani alla diffusione radiofonica e che i termini della piattaforma lo consentono.",privacy:"Acconsento all'uso dei dati per valutare le candidature e ricontattarmi.",spotlightConsent:"Facoltativo: autorizzo l'ascolto pubblico dei file audio su RDI AI MUSIC Spotlight, dopo l'approvazione.",notice:"Ogni canzone viene verificata dalla redazione. L'invio non garantisce la pubblicazione o la messa in onda.",send:"↥ Invia brani",retry:"↥ Riprova non inviati",reset:"Svuota selezione",howTitle:"Come funziona",how:"Un sistema semplice per inviare musica alla redazione RDI.",tip1:"Scegli fino a 10 file dal computer o telefono.",tip2:"RDI legge automaticamente i titoli dai nomi dei file. Puoi modificarli.",tip3:"Premi Invia una sola volta: vengono caricati uno dopo l'altro e vedi l'esito di ciascuno.",free:"La partecipazione è gratuita. I brani approvati possono entrare nella classifica.",pending:"Da inviare",sending:"Invio in corso…",done:"Inviato",failed:"Errore",invalidCount:"Puoi scegliere al massimo 10 file alla volta.",invalidType:"Formato non supportato",invalidSize:"Il file supera 30 MB",missing:"Seleziona un file audio oppure inserisci un link.",missingTitle:"Inserisci il titolo del brano.",sendingAll:"Caricamento",finished:"Caricamento completato",partial:"Alcuni file non sono stati inviati: controlla gli errori e riprova.",blocked:"Invio sospeso: il server limita temporaneamente le richieste. Riprova più tardi senza reinviare i brani riusciti.",unknown:"Connessione interrotta. Prima di riprovare, controlla nella redazione se la candidatura è arrivata.",noPending:"Tutti i brani selezionati sono già stati inviati.",linkSuccess:"Candidatura ricevuta. Codice:",resetConfirm:"Ci sono caricamenti già riusciti. Vuoi davvero svuotare questa lista?",needInput:"Inserisci i dati obbligatori.",queued:"In attesa",queuedNum:"brani in attesa",pacing:"Passo al brano successivo…",limitAdvice:"Il server ha raggiunto il limite di invii. I brani riusciti sono salvati: attendi prima di riprovare i rimanenti."},
@@ -125,9 +127,11 @@ dropzone.addEventListener("drop",e=>{if(!busy)chooseFiles(e.dataTransfer.files)}
 $("reset-button").addEventListener("click",()=>{if(busy)return;if(rows.some(r=>r.state==="ok")&&!confirm(msg("resetConfirm")))return;rows=[];$("audio").value="";$("song").value="";$("link").value="";$("file-list").replaceChildren();$("status").textContent="";$("progress-wrap").hidden=true;syncMode()});
 function payloadFor(title,file){const fd=new FormData();for(const [id,key] of [["artist","artist"],["email","email"],["platform","platform"],["notes","notes"]])fd.append(key,$(id).value.trim());
  fd.append("title",title);fd.append("link",file?"":$("link").value.trim());fd.append("rights",$("rights").checked?"yes":"no");fd.append("privacy",$("privacy").checked?"yes":"no");fd.append("website",$("website").value);fd.append("spotlight_consent",$("spotlightConsent").checked?"yes":"no");if(file)fd.append("audio",file,file.name);return fd}
-async function sendOne(title,file){const resp=await fetch(API,{method:"POST",body:payloadFor(title,file),credentials:"omit"});let data={};try{data=await resp.json()}catch{};if(!resp.ok){const err=new Error(data.error||"HTTP "+resp.status);err.status=resp.status;err.retryAfter=Number(data.retry_after_seconds||resp.headers.get("Retry-After")||0);throw err}return data}
+async function sendOne(title,file){const token=localStorage.getItem(TOKEN_KEY);const headers=token?{Authorization:"Bearer "+token}:{};
+const resp=await fetch(API,{method:"POST",body:payloadFor(title,file),headers,credentials:"omit"});let data={};try{data=await resp.json()}catch{};if(!resp.ok){const err=new Error(data.error||"HTTP "+resp.status);err.status=resp.status;err.retryAfter=Number(data.retry_after_seconds||resp.headers.get("Retry-After")||0);throw err}return data}
 function setProgress(n,d){$("progress-wrap").hidden=false;$("progress-fill").style.width=Math.round(n/d*100)+"%"}
-$("submission").addEventListener("submit",async e=>{e.preventDefault();if(busy)return;const form=e.currentTarget;const status=$("status");
+$("submission").addEventListener("submit",async e=>{e.preventDefault();if(busy)return;
+if(loginRequired&&!localStorage.getItem(TOKEN_KEY)){location.href="./accedi-ai-music.html?next=artisti-ai.html";return}const form=e.currentTarget;const status=$("status");
  if(!form.reportValidity()){status.textContent=msg("needInput");return}
  if(!rows.length){const title=$("song").value.trim(),link=$("link").value.trim();if(!link){status.textContent=msg("missing");return}if(!title){status.textContent=msg("missingTitle");$("song").focus();return}
  busy=true;syncMode();status.textContent=msg("sending");
@@ -144,5 +148,13 @@ $("submission").addEventListener("submit",async e=>{e.preventDefault();if(busy)r
  busy=false;renderFiles();
  status.textContent=stop?(uncertain?msg("unknown"):msg("limitAdvice")+(retryAfter?" · "+Math.ceil(retryAfter/60)+" min.":"")):complete===rows.length?msg("finished")+" · "+complete+"/"+rows.length:msg("partial")+" · "+complete+"/"+rows.length;
 });
-tr();syncMode();
+async function setupAccount(){
+ try{const r=await fetch("https://radio-romanii-italia.duckdns.org/api/ai-music/auth/config",{cache:"no-store"});
+ if(!r.ok)return;const config=await r.json();loginRequired=!!config.login_required;
+ const token=localStorage.getItem(TOKEN_KEY);const link=$("account-link");
+ if(token){const me=await fetch("https://radio-romanii-italia.duckdns.org/api/ai-music/auth/me",{headers:{Authorization:"Bearer "+token},cache:"no-store"});if(me.ok){const data=await me.json();link.textContent=data.user.display_name;link.href="./profilo-ai-music.html";return}localStorage.removeItem(TOKEN_KEY)}
+ link.textContent="Accedi";if(loginRequired){$("status").textContent="Per caricare canzoni effettua l'accesso con email.";location.href="./accedi-ai-music.html?next=artisti-ai.html"}
+ }catch(error){console.warn("Account RDI",error)}
+}
+tr();syncMode();setupAccount();
 </script></body></html>
