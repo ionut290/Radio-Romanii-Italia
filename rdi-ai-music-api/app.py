@@ -292,9 +292,11 @@ def verify_google_credential(credential,nonce):
     try:
         claims=google_id_token.verify_oauth2_token(
             credential,GoogleAuthRequest(),GOOGLE_CLIENT_ID)
-    except (ValueError,Exception) as exc:
-        # Do not include token contents in any response or log.
+    except ValueError as exc:
+        # Do not expose the token or the verifier's detailed error in responses.
         raise ValueError("Google identity token could not be verified") from exc
+    except Exception as exc:
+        raise RuntimeError("Google identity provider temporarily unavailable") from exc
     if claims.get("iss") not in ("accounts.google.com","https://accounts.google.com"):
         raise ValueError("Invalid Google token issuer")
     if claims.get("aud")!=GOOGLE_CLIENT_ID:
