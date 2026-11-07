@@ -40,6 +40,7 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 /* RDI AI MUSIC STUDIO — dark music workspace redesign */
 .mureka-rdi #account-link{color:#46e4e8;text-decoration:none;padding:8px 10px;border-radius:9px;border:1px solid #2c6061;font-size:11px;font-weight:800;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mureka-rdi .login-comment{display:inline-block;color:#35e6e7;border:1px solid #2a7479;border-radius:9px;padding:9px 13px;text-decoration:none;background:#132b2e;font-weight:750}
+.mureka-rdi .comment-author{display:flex;align-items:center;border:1px solid #2b5556;background:#103034;border-radius:9px;color:#58e9e5;font-size:11px;font-weight:750;padding:10px 12px;min-width:0;overflow-wrap:anywhere}
 
 :root{color-scheme:dark;--rdi-cyan:#27d9e3;--rdi-ink:#090b0d;--rdi-panel:#151719;--rdi-border:#292e32;--rdi-white:#f5f7f8;--rdi-gray:#a3afb4}
 body.mureka-rdi{background:#0b0c0e;color:#f5f7f8;font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
@@ -368,15 +369,16 @@ function buildComments(track){
   showComments(track,panel);return panel;
  }
  const form=node("form","comment-form");
- const name=node("input");name.type="text";name.minLength=2;name.maxLength=40;name.required=true;name.placeholder=ct("name");name.setAttribute("aria-label",ct("name"));if(musicAuth.required&&musicAuth.user){name.value=musicAuth.user.display_name;name.readOnly=true;}
+ const name=node("input");name.type="text";name.minLength=2;name.maxLength=40;name.required=true;name.placeholder=ct("name");name.setAttribute("aria-label",ct("name"));
+ const commentAuthor=musicAuth.user?node("div","comment-author","👤 "+({it:"Commenti come ",ro:"Comentezi ca ",en:"Commenting as "})[language]+musicAuth.user.display_name):name;
  const body=node("textarea");body.minLength=3;body.maxLength=500;body.required=true;body.placeholder=ct("write");body.setAttribute("aria-label",ct("write"));
  const send=node("button","",ct("send"));send.type="submit";
  const feedback=node("div","comment-feedback");feedback.setAttribute("role","status");
  const list=node("div","comment-list");
- form.append(name,body,send);panel.append(form,feedback,list);
+ form.append(commentAuthor,body,send);panel.append(form,feedback,list);
  form.onsubmit=async e=>{
   e.preventDefault();
-  const nickname=name.value.trim(),message=body.value.trim();
+  const nickname=musicAuth.user?musicAuth.user.display_name:name.value.trim(),message=body.value.trim();
   if(nickname.length<2||nickname.length>40||message.length<3||message.length>500){feedback.textContent=ct("limit");return}
   send.disabled=true;
   try{
