@@ -137,8 +137,15 @@ def main():
         items=detail.get("schedule_items") if isinstance(detail,dict) else None
         if not items:
             raise RuntimeError("Schedule did not persist; playlist left disabled")
-        if not any(str(item.get("start_date",""))==day and
-                   str(item.get("start_time","")).startswith("20:30") for item in items):
+        # AzuraCast returns the station's schedule with canonical timezone
+        # representations, which can differ from the HH:MM input format.
+        print("TOP3_STATION_SCHEDULE="+json.dumps(items,ensure_ascii=False,default=str)[:3000])
+        if not any(
+            day in str(item.get("start_date","")) and
+            ("20:30" in str(item.get("start_time","")) or
+             str(item.get("start_time","")) in ("73800","73800.0"))
+            for item in items
+        ):
             raise RuntimeError("Unexpected Top3 broadcast schedule; playlist left disabled")
         api.call("PUT","/station/1/files/batch",{
           "do":"playlist","playlists":[playlist_id],"files":[relative],"dirs":[]})
