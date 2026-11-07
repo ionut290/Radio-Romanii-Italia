@@ -170,6 +170,82 @@ class SubmissionTests(unittest.TestCase):
             )
         self.assertEqual(review.status_code, 400)
 
+    def test_editor_can_attach_missing_audio_without_losing_votes_or_approval(self):
+        sid=self.post(title="Roma",artist="Massimo Sculli",link="https://youtu.be/example").json["id"]
+        self.assertEqual(self.client.post(
+            f"/api/ai-music/admin/submissions/{sid}/review",
+            headers=self.admin,json={"status":"approved"}).status_code,200)
+        audio_url=f"/api/ai-music/admin/submissions/{sid}/attach-audio"
+        self.assertEqual(self.client.post(audio_url,data={
+            "audio":(io.BytesIO(b"x"*2300),"Roma.mp3")}).status_code,401)
+        vote=self.client.post(f"/api/ai-music/spotlight/{sid}/vote",
+                headers=self.origin,json={"visitor":"49c55ac8-c3fe-4a1f-8a9f-dda66b10e8d6"})
+        self.assertEqual(vote.status_code,201)
+        with patch.object(service.subprocess,"run") as probe:
+            probe.return_value.returncode=0
+            probe.return_value.stdout="codec_type=audio"
+            attach=self.client.post(audio_url,headers=self.admin,data={
+                "audio":(io.BytesIO(b"x"*2300),"Roma.mp3")})
+        self.assertEqual(attach.status_code,201,attach.get_json())
+        self.assertTrue(attach.json["preserved_votes"])
+        duplicate=self.client.post(audio_url,headers=self.admin,data={
+            "audio":(io.BytesIO(b"y"*2300),"Other.mp3")})
+        self.assertEqual(duplicate.status_code,409)
+        chart=self.client.get("/api/ai-music/spotlight").json["tracks"]
+        self.assertEqual(len(chart),1)
+        self.assertEqual(chart[0]["id"],sid)
+        self.assertEqual(chart[0]["title"],"Roma")
+        self.assertEqual(chart[0]["votes"],1)
+        with service.db() as con:
+            item=con.execute("SELECT status,file_name,spotlight_consent,youtube_consent FROM submissions WHERE id=?",(sid,)).fetchone()
+            self.assertEqual(item["status"],"approved")
+            self.assertEqual(item["file_name"],"Roma.mp3")
+            self.assertEqual(item["spotlight_consent"],0)
+            self.assertEqual(item["youtube_consent"],0)
+
+    def test_editor_youtube_consent_requires_explicit_authorization_and_audio(self):
+        sid=self.post(title="Roma").json["id"]
+        url=f"/api/ai-music/admin/submissions/{sid}/youtube-consent"
+        self.assertEqual(self.client.post(url,json={"enabled":True,
+             "artist_permission_confirmed":True,
+             "youtube_live_recording_authorized":True}).status_code,401)
+        self.assertEqual(self.client.post(url,headers=self.admin,json={"enabled":True,
+             "artist_permission_confirmed":True,
+             "youtube_live_recording_authorized":True}).status_code,400)
+        self.client.post(f"/api/ai-music/admin/submissions/{sid}/review",
+            headers=self.admin,json={"status":"approved"})
+        self.assertEqual(self.client.post(url,headers=self.admin,json={"enabled":True,
+             "artist_permission_confirmed":True,
+             "youtube_live_recording_authorized":True}).status_code,400)
+        attach=f"/api/ai-music/admin/submissions/{sid}/attach-audio"
+        with patch.object(service.subprocess,"run") as probe:
+            probe.return_value.returncode=0
+            probe.return_value.stdout="codec_type=audio"
+            self.assertEqual(self.client.post(attach,headers=self.admin,
+                data={"audio":(io.BytesIO(b"x"*2300),"Roma.mp3")}).status_code,201)
+        self.assertEqual(self.client.post(url,headers=self.admin,
+            json={"enabled":True}).status_code,400)
+        self.assertEqual(self.client.post(url,headers=self.admin,
+            json={"enabled":True,"artist_permission_confirmed":True,
+                  "youtube_live_recording_authorized":True}).status_code,200)
+        self.assertEqual(self.client.post(url,headers=self.admin,
+            json={"enabled":False}).status_code,200)
+        with service.db() as con:
+            self.assertEqual(con.execute("SELECT youtube_consent FROM submissions WHERE id=?",(sid,)).fetchone()[0],0)
+
+    def test_editor_rejects_invalid_source_audio_without_changing_submission(self):
+        sid=self.post(title="Roma").json["id"]
+        url=f"/api/ai-music/admin/submissions/{sid}/attach-audio"
+        self.assertEqual(self.client.post(url,headers=self.admin,
+            data={"audio":(io.BytesIO(b"x"*2300),"fake.exe")}).status_code,400)
+        with patch.object(service.subprocess,"run") as probe:
+            probe.return_value.returncode=1
+            probe.return_value.stdout=""
+            self.assertEqual(self.client.post(url,headers=self.admin,
+                data={"audio":(io.BytesIO(b"x"*2300),"fake.mp3")}).status_code,400)
+        with service.db() as con:
+            self.assertIsNone(con.execute("SELECT stored_name FROM submissions WHERE id=?",(sid,)).fetchone()[0])
+
     def test_authenticated_identity_used_even_before_login_becomes_mandatory(self):
         # Members must never have to type their name/email again; editable
         # client fields cannot override Google verified identity.
