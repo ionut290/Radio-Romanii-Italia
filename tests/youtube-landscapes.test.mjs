@@ -13,8 +13,8 @@ const build=JSON.parse(await read("../data/youtube-build.json"));
 test("RDI landscapes are strictly Italy/Romania, source credited, without audio",()=>{
  const p=parseLandscapeConfig(config);
  assert.equal(p.enabled,true);
- assert.equal(p.every,4);
- assert.equal(p.duration,20);
+ assert.equal(p.every,8);
+ assert.equal(p.duration,16);
  assert.equal(p.items.length,6);
  assert.deepEqual(p.items.map(x=>x.country),["Italia","România","Italia","România","Italia","România"]);
  for(const scene of config.items){
@@ -40,9 +40,9 @@ test("bad origins, invalid rights and audio fail closed",()=>{
  assert.equal(parseLandscapeConfig({enabled:false,items:config.items}).enabled,false);
 });
 
-test("four-news cadence provides a 20-second interlude",()=>{
- assert.deepEqual([1,2,3,4,5,8,12].map(n=>landscapeDue(n,4)),
-   [false,false,false,true,false,true,true]);
+test("eight-news cadence keeps archive interludes brief",()=>{
+ assert.deepEqual([1,2,3,4,5,8,12,16].map(n=>landscapeDue(n,8)),
+   [false,false,false,false,false,true,false,true]);
  const changed=parseLandscapeConfig({...config,after_news_cards:0,duration_seconds:100});
  assert.equal(changed.every,3);
  assert.equal(changed.duration,30);
@@ -59,6 +59,8 @@ test("RDI live page includes silent visuals only and respects priority overlays"
  assert.match(script,/video\.volume=0/);
  assert.match(script,/window\.rdiSpotActive\|\|window\.rdiGeoActive/);
  assert.match(script,/window\.rdiLandscapeBreak=/);
+ assert.match(script,/shuffleScenes/);
+ assert.match(script,/Never let the last visual of one deck be repeated/);
  assert.match(script,/configReady\.then/);
  assert.match(css,/body\.rdi-spot-active #rdiLandscapes/);
  assert.match(css,/body\.rdi-geo-active #rdiLandscapes/);
