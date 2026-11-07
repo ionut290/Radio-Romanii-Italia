@@ -26,7 +26,24 @@ let token=sessionStorage.getItem('rdi-editor-session')||'';const $=id=>document.
 async function api(path,opt={}){const r=await fetch('https://radio-romanii-italia.duckdns.org/api/ai-music/admin/'+path,{...opt,credentials:'omit',headers:{Authorization:'Bearer '+token,...(opt.headers||{})},cache:'no-store'});if(!r.ok){let msg=r.status+' HTTP error';try{msg=(await r.json()).error||msg}catch{}throw Error(msg)}return r}
 async function load(){if(!token){status('Effettua prima l’accesso con la password');return}status('Caricamento…');try{const payload=await (await api('submissions')).json();render(payload.submissions||[]);status('Candidature: '+payload.submissions.length)}catch(e){status('Errore: '+e.message)}}
 function render(items){$('items').replaceChildren();if(!items.length){$('items').append(el('p','Nessuna candidatura presente.'));return}
-for(const it of items){const c=el('article');c.className='card';const heading=el('h2',it.title+' · '+it.artist);const chip=el('span',it.status);chip.className='chip';c.append(heading,chip,el('p',it.platform+' · '+new Date(it.created_at).toLocaleString('it-IT')));const mail=el('p','Contatto: '+it.email);c.append(mail);if(it.link){const a=el('a','Apri link brano');a.href=it.link;a.target='_blank';a.rel='noopener noreferrer';c.append(a)}if(it.file_name){const download=el('button','Scarica audio: '+it.file_name);download.className='secondary';download.onclick=async()=>{try{const b=await (await api('submissions/'+encodeURIComponent(it.id)+'/audio')).blob();const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=it.file_name;a.click();setTimeout(()=>URL.revokeObjectURL(u),30000)}catch(e){status(e.message)}};c.append(download);
+for(const it of items){const c=el('article');c.className='card';const heading=el('h2',it.title+' · '+it.artist);const chip=el('span',it.status);chip.className='chip';c.append(heading,chip,el('p',it.platform+' · '+new Date(it.created_at).toLocaleString('it-IT')));const mail=el('p','Contatto: '+it.email);c.append(mail);if(it.link){const a=el('a','Apri link brano');a.href=it.link;a.target='_blank';a.rel='noopener noreferrer';c.append(a)}if(!it.file_name){
+ const attach=el('div');attach.style.cssText='margin:12px 0;padding:14px;background:#18394a;border:1px solid #36717d;border-radius:12px';
+ attach.append(el('strong','🎵 File originale per radio e YouTube Live'),el('p','Non è presente un MP3 su RDI. Allega il file ricevuto dall’artista: questa candidatura manterrà ID, approvazione, voti e commenti.'));
+ const file=el('input');file.type='file';file.accept='.mp3,.wav,.flac,.m4a,.ogg,audio/*';file.setAttribute('aria-label','File audio originale per '+it.title);
+ const upload=el('button','⬆️ Allega audio a questo brano');upload.className='secondary';
+ upload.onclick=async()=>{
+  const chosen=file.files?.[0];
+  if(!chosen){status('Seleziona prima il file audio originale di '+it.title);return}
+  if(chosen.size>30*1024*1024){status('Il file supera il limite di 30 MB.');return}
+  if(!confirm('Confermi che questo file è il brano originale di '+it.artist+' — '+it.title+' e che hai il diritto di caricarlo su RDI?'))return;
+  upload.disabled=true;status('Caricamento file originale di '+it.title+'…');
+  try{const payload=new FormData();payload.append('audio',chosen);
+   await api('submissions/'+encodeURIComponent(it.id)+'/attach-audio',{method:'POST',body:payload});
+   status('File originale collegato a '+it.title+'. Voti e posizione preservati.');await load()
+  }catch(e){status('Errore caricamento: '+e.message);upload.disabled=false}
+ };
+ attach.append(file,upload);c.append(attach)
+}if(it.file_name){const download=el('button','Scarica audio: '+it.file_name);download.className='secondary';download.onclick=async()=>{try{const b=await (await api('submissions/'+encodeURIComponent(it.id)+'/audio')).blob();const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=it.file_name;a.click();setTimeout(()=>URL.revokeObjectURL(u),30000)}catch(e){status(e.message)}};c.append(download);
 const permission=el('div');permission.style.cssText='margin-top:14px;padding:12px;background:#233b55;border-radius:10px';
 permission.append(el('p','Anteprima Spotlight: '+(it.spotlight_consent?'abilitata':'non autorizzata')));
 const consentLabel=el('label');consentLabel.style.cssText='display:flex;gap:10px;align-items:flex-start';
@@ -39,7 +56,34 @@ allow.onclick=async()=>{if(!consentBox.checked){status("Conferma prima il consen
 permission.append(allow);
 if(it.spotlight_consent){const disable=el('button','Disattiva Play pubblico');disable.className='danger';disable.onclick=async()=>{disable.disabled=true;try{await api('submissions/'+encodeURIComponent(it.id)+'/spotlight-consent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({enabled:false})});status('Play pubblico disattivato');await load()}catch(e){status('Errore: '+e.message);disable.disabled=false}};permission.append(disable)}
 c.append(permission)
-}if(it.notes)c.append(el('p','Note artista: '+it.notes));const comment=el('textarea');comment.rows=2;comment.placeholder='Nota redazionale (facoltativa)';comment.value=it.reviewed_note||'';c.append(comment);const actions=el('div');actions.className='actions';for(const [value,label,klass] of [['approved','Approva',''],['rejected','Rifiuta','danger'],['pending','Rimetti in attesa','secondary']]){const b=el('button',label);b.className=klass;b.onclick=async()=>{b.disabled=true;try{await api('submissions/'+encodeURIComponent(it.id)+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:value,note:comment.value})});status('Candidatura aggiornata');await load()}catch(e){status('Errore: '+e.message)}finally{b.disabled=false}};actions.append(b)}c.append(actions);$('items').append(c)}}
+}
+if(it.file_name){
+ const yt=el('div');yt.style.cssText='margin:12px 0;padding:14px;background:#172e3a;border:1px solid #3b566b;border-radius:12px';
+ yt.append(el('strong','📺 Autorizzazione YouTube Live: '+(it.youtube_consent?'confermata':'da confermare')));
+ const label=el('label');label.style.cssText='display:flex;gap:10px;align-items:center;font-size:13px';
+ const check=el('input');check.type='checkbox';check.style.cssText='width:auto;flex:none;margin-top:5px';
+ label.append(check,el('span',"Confermo di avere il permesso dell'artista per trasmettere il file su YouTube Live e mantenerlo nella registrazione della diretta."));
+ yt.append(label);
+ if(!it.youtube_consent){
+  const allow=el('button','✅ Conferma autorizzazione YouTube');allow.className='secondary';
+  allow.disabled=it.status!=='approved';
+  allow.onclick=async()=>{if(!check.checked){status('Conferma prima l’autorizzazione YouTube Live dell’artista.');return}
+   allow.disabled=true;
+   try{await api('submissions/'+encodeURIComponent(it.id)+'/youtube-consent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({enabled:true,artist_permission_confirmed:true,youtube_live_recording_authorized:true})});
+    status('Autorizzazione YouTube Live registrata.');await load()
+   }catch(e){status('Errore: '+e.message);allow.disabled=false}
+  };yt.append(allow)
+ }else{
+  const revoke=el('button','Revoca autorizzazione YouTube');revoke.className='danger';
+  revoke.onclick=async()=>{if(!confirm('Revocare la possibilità di usare '+it.title+' nelle prossime trasmissioni YouTube?'))return;
+   revoke.disabled=true;try{await api('submissions/'+encodeURIComponent(it.id)+'/youtube-consent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({enabled:false})});
+    status('Autorizzazione YouTube revocata.');await load()
+   }catch(e){status('Errore: '+e.message);revoke.disabled=false}
+  };yt.append(revoke)
+ }
+ c.append(yt)
+}
+if(it.notes)c.append(el('p','Note artista: '+it.notes));const comment=el('textarea');comment.rows=2;comment.placeholder='Nota redazionale (facoltativa)';comment.value=it.reviewed_note||'';c.append(comment);const actions=el('div');actions.className='actions';for(const [value,label,klass] of [['approved','Approva',''],['rejected','Rifiuta','danger'],['pending','Rimetti in attesa','secondary']]){const b=el('button',label);b.className=klass;b.onclick=async()=>{b.disabled=true;try{await api('submissions/'+encodeURIComponent(it.id)+'/review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:value,note:comment.value})});status('Candidatura aggiornata');await load()}catch(e){status('Errore: '+e.message)}finally{b.disabled=false}};actions.append(b)}c.append(actions);$('items').append(c)}}
 async function loadComments(){
  if(!token){$('comments-status').textContent="Effettua prima l’accesso con la password";return}
  $('comments-status').textContent="Caricamento commenti…";
