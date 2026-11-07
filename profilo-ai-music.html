@@ -1,0 +1,37 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0d10"><title>Il mio profilo · RDI AI MUSIC</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{background:#0b0d10;color:#f0f5f6;margin:0;font:14px/1.55 system-ui,-apple-system,sans-serif}a{color:#31dce3;text-decoration:none}
+header{background:#121618;border-bottom:1px solid #32393b;padding:16px max(18px,calc((100% - 920px)/2));display:flex;align-items:center;justify-content:space-between;gap:10px}header strong{font-size:17px}header strong span{color:#28d9e0}
+main{max-width:920px;margin:auto;padding:26px 18px}h1{font-size:32px;letter-spacing:-.05em;margin:10px 0}.eyebrow{color:#32dfdf;font-size:10px;letter-spacing:.16em;font-weight:800}
+.card{background:#151a1c;border:1px solid #333c3e;border-radius:16px;padding:20px;margin:18px 0}.muted{color:#9db2b6}.user{font-weight:900;font-size:19px}.button{display:inline-flex;background:#31d9e0;color:#051f24;padding:11px 16px;font-weight:850;border:0;border-radius:9px;font:inherit;cursor:pointer;margin:6px 8px 6px 0}.outline{color:#d4e6e6;background:#283236}
+.table{display:grid;gap:8px}.track{border:1px solid #394447;border-radius:11px;padding:14px;background:#111719;display:flex;align-items:center;justify-content:space-between;gap:12px}.track b{font-size:14px}.track small{display:block;color:#96aaaf}.status{padding:5px 9px;border-radius:7px;background:#303638;color:#dfeded;font-size:11px;white-space:nowrap;font-weight:800}.approved{color:#9af4b4;background:#174832}.rejected{color:#f8a9a2;background:#472426}
+#notice{color:#4bdddf;font-size:13px}
+</style></head><body>
+<header><strong>RDI <span>AI MUSIC</span></strong><a href="./spotlight-ai.html">← Classifica</a></header>
+<main><div class="eyebrow">RDI ARTIST WORKSPACE</div><h1>Il mio profilo</h1><p class="muted">Qui trovi le tue canzoni inviate alla redazione.</p>
+<section class="card"><div id="profile-name" class="user">Verifica dell'account…</div><div id="profile-email" class="muted"></div><a class="button" href="./artisti-ai.html">＋ Carica fino a 10 brani</a><button class="button outline" id="logout" type="button">Esci</button></section>
+<section class="card"><h2>Le mie canzoni</h2><p id="notice" role="status"></p><div id="list" class="table"></div></section>
+</main><script>
+"use strict";
+const API="https://radio-romanii-italia.duckdns.org/api/ai-music",KEY="rdi-ai-music-session";
+const $=id=>document.getElementById(id);
+const token=localStorage.getItem(KEY);
+if(!token){location.replace("./accedi-ai-music.html?next=profilo-ai-music.html")}
+async function init(){
+ if(!token)return;
+ try{
+ const headers={Authorization:"Bearer "+token};
+ const me=await fetch(API+"/auth/me",{headers,cache:"no-store"});if(!me.ok)throw Error("Session expired");
+ const user=(await me.json()).user;$("profile-name").textContent=user.display_name;$("profile-email").textContent=user.email;
+ const res=await fetch(API+"/me/submissions",{headers,cache:"no-store"});if(!res.ok)throw Error("Unable to load tracks");
+ const data=await res.json();$("notice").textContent=data.submissions.length+" brani trovati";
+ for(const track of data.submissions){const item=document.createElement("div");item.className="track";const left=document.createElement("div");
+ const title=document.createElement("b");title.textContent=track.title;const meta=document.createElement("small");meta.textContent=track.platform+" · "+new Date(track.created_at).toLocaleDateString("it-IT");
+ left.append(title,meta);const state=document.createElement("span");state.className="status "+(track.status==="approved"?"approved":track.status==="rejected"?"rejected":"");
+ state.textContent=({approved:"Approvata",rejected:"Rifiutata",pending:"In attesa"})[track.status]||track.status;item.append(left,state);$("list").append(item)}
+ }catch(e){$("notice").textContent="L'accesso non è più valido. Effettua nuovamente il login.";localStorage.removeItem(KEY);setTimeout(()=>location.replace("./accedi-ai-music.html?next=profilo-ai-music.html"),1500)}
+}
+$("logout").onclick=async()=>{localStorage.removeItem(KEY);if(token)try{await fetch(API+"/auth/logout",{method:"POST",headers:{Authorization:"Bearer "+token}})}catch{}location.replace("./spotlight-ai.html")};
+init();
+</script></body></html>
