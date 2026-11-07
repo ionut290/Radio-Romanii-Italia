@@ -9,8 +9,11 @@ on:
       - 'scripts/build_storia_shares.py'
   schedule:
     # Pubblicazione del mattino e recupero, in UTC.
-    - cron: '45 3 * * *'
-    - cron: '45 6 * * *'
+    - cron: '45 3 * * *'  # prima pubblicazione
+    - cron: '15 5 * * *'  # recupero mattutino
+    - cron: '45 6 * * *'  # recupero secondario
+    - cron: '15 9 * * *'  # ulteriore recupero se GitHub ritarda
+    - cron: '15 12 * * *' # ultimo controllo diurno
   workflow_dispatch:
 
 permissions:
