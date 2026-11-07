@@ -12,6 +12,7 @@ export function safeLandscapeURL(value,kind) {
     if(u.protocol!=="https:" || u.username || u.password || u.port) return false;
     if(kind==="video") return u.hostname===ALLOWED_VIDEO && /\/video-files\/\d+\/.+\.mp4$/.test(u.pathname);
     if(kind==="poster") return u.hostname===ALLOWED_POSTER && /\/videos\/\d+\/[^/]+\.jpe?g$/i.test(u.pathname);
+    if(kind==="photo") return u.hostname===ALLOWED_POSTER && /\/photos\/\d+\/[^/]+\.jpe?g$/i.test(u.pathname);
     if(kind==="nasa") return u.hostname===ALLOWED_NASA && /^\/DatabaseImages\/ESC\/large\/ISS\d+\/ISS\d+-E-\d+\.JPG$/i.test(u.pathname);
     return false;
   }catch{return false;}
@@ -32,6 +33,10 @@ export function validateLandscape(item){
     if(license!=="https://www.nasa.gov/nasa-brand-center/images-and-media/")return null;
     if(!safeLandscapeURL(src,"nasa")||src!==item.poster)return null;
     if(!/^https:\/\/eol\.jsc\.nasa\.gov\/(?:[Ss]earch[Pp]hotos)\/photo\.pl\?/.test(source))return null;
+  }else if(kind==="photo"){
+    if(license!=="https://www.pexels.com/license/" && license!=="https://www.pexels.com/it-it/license/")return null;
+    if(!safeLandscapeURL(src,"photo")||src!==item.poster)return null;
+    if(!/^https:\/\/www\.pexels\.com\/photo\/.+-\d+\/?$/i.test(source))return null;
   }else return null;
   return {id,country,title,credit,kind,src,poster:item.poster,source_url:source,license_url:license};
 }
