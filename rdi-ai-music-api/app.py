@@ -77,6 +77,8 @@ def db():
     columns={row["name"] for row in con.execute("PRAGMA table_info(submissions)").fetchall()}
     if "spotlight_consent" not in columns:
         con.execute("ALTER TABLE submissions ADD COLUMN spotlight_consent INTEGER NOT NULL DEFAULT 0")
+    if "youtube_consent" not in columns:
+        con.execute("ALTER TABLE submissions ADD COLUMN youtube_consent INTEGER NOT NULL DEFAULT 0")
     con.execute("CREATE TABLE IF NOT EXISTS admin_settings (setting TEXT PRIMARY KEY, value TEXT NOT NULL)")
     con.execute("CREATE TABLE IF NOT EXISTS admin_sessions (session_hash TEXT PRIMARY KEY, expires_at INTEGER NOT NULL)")
     con.execute("CREATE TABLE IF NOT EXISTS admin_login_attempts (ip_key TEXT NOT NULL, created_at INTEGER NOT NULL)")
@@ -594,7 +596,7 @@ def submit():
 def list_submissions():
     admin()
     with db() as con:
-        rows=con.execute("SELECT id,created_at,artist,email,title,platform,link,notes,file_name,status,reviewed_at,reviewed_note,spotlight_consent FROM submissions ORDER BY created_at DESC LIMIT 300").fetchall()
+        rows=con.execute("SELECT id,created_at,artist,email,title,platform,link,notes,file_name,status,reviewed_at,reviewed_note,spotlight_consent,youtube_consent FROM submissions ORDER BY created_at DESC LIMIT 300").fetchall()
     return jsonify(submissions=[dict(row) for row in rows])
 @app.get("/api/ai-music/admin/submissions/<sid>/audio")
 def audio(sid):
@@ -605,6 +607,79 @@ def audio(sid):
     path=FILES/row["stored_name"]
     if not path.is_file(): abort(404)
     return send_file(path,as_attachment=True,download_name=row["file_name"],mimetype="application/octet-stream")
+
+@app.post("/api/ai-music/admin/submissions/<sid>/attach-audio")
+def attach_audio_to_submission(sid):
+    """Attach an artist-authorized source file without replacing a submission.
+
+    Preserve its ID, review status, votes and community comments. Editor-only.
+    This is an upload, not a YouTube downloader.
+    """
+    admin()
+    if not re.fullmatch(r"[a-f0-9]{32}",sid):
+        abort(404)
+    with db() as con:
+        row=con.execute("SELECT stored_name,status FROM submissions WHERE id=?",(sid,)).fetchone()
+    if row is None: abort(404)
+    if row["stored_name"]:
+        return jsonify(error="An original audio file is already attached"),409
+    upload=request.files.get("audio")
+    if not upload or not upload.filename:
+        return jsonify(error="Choose the original audio file"),400
+    original=clamp(Path(upload.filename.replace("\\\\","/")).name,180)
+    suffix=Path(original).suffix.lower()
+    if suffix not in ALLOWED_EXT:
+        return jsonify(error="Unsupported audio extension"),400
+    FILES.mkdir(parents=True,exist_ok=True)
+    name=sid+"-editor-"+uuid.uuid4().hex[:12]+suffix
+    location=FILES/name
+    size=0
+    try:
+        with open(location,"xb") as dst:
+            while True:
+                chunk=upload.stream.read(1024*1024)
+                if not chunk: break
+                size+=len(chunk)
+                if size>MAX_MB*1024*1024: raise ValueError("File too large")
+                dst.write(chunk)
+        if size<1000: raise ValueError("Invalid or empty audio file")
+        check=subprocess.run(["ffprobe","-v","error","-select_streams","a:0",
+              "-show_entries","stream=codec_type","-of","default=nw=1",str(location)],
+              capture_output=True,text=True,timeout=25)
+        if check.returncode or "codec_type=audio" not in check.stdout:
+            raise ValueError("Not a valid audio file")
+        with db() as con:
+            result=con.execute("UPDATE submissions SET file_name=?,stored_name=? WHERE id=? AND stored_name IS NULL",
+                               (original,name,sid))
+            if result.rowcount!=1:
+                raise ValueError("Audio has already been attached to this submission")
+    except (OSError,ValueError,subprocess.TimeoutExpired) as exc:
+        location.unlink(missing_ok=True)
+        return jsonify(error=str(exc)),400
+    except Exception:
+        location.unlink(missing_ok=True)
+        raise
+    return jsonify(ok=True,id=sid,file_name=original,status=row["status"],preserved_votes=True),201
+
+@app.post("/api/ai-music/admin/submissions/<sid>/youtube-consent")
+def set_youtube_broadcast_consent(sid):
+    """Store explicit YouTube Live/recording authorization independently."""
+    admin()
+    data=request.get_json(silent=True)
+    if not isinstance(data,dict) or type(data.get("enabled")) is not bool:
+        return jsonify(error="Explicit enabled true/false required"),400
+    enabled=data["enabled"]
+    if enabled and (data.get("artist_permission_confirmed") is not True
+                    or data.get("youtube_live_recording_authorized") is not True):
+        return jsonify(error="Confirm the artist authorized YouTube Live and recording"),400
+    with db() as con:
+        row=con.execute("SELECT stored_name,status FROM submissions WHERE id=?",(sid,)).fetchone()
+        if row is None: abort(404)
+        if enabled and (row["status"]!="approved" or not row["stored_name"]):
+            return jsonify(error="Approved original audio file required"),400
+        con.execute("UPDATE submissions SET youtube_consent=? WHERE id=?",(int(enabled),sid))
+    return jsonify(ok=True,id=sid,youtube_consent=int(enabled))
+
 @app.post("/api/ai-music/admin/submissions/<sid>/review")
 def review(sid):
     admin()
