@@ -38,6 +38,9 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 
 
 /* RDI AI MUSIC STUDIO — dark music workspace redesign */
+.mureka-rdi #account-link{color:#46e4e8;text-decoration:none;padding:8px 10px;border-radius:9px;border:1px solid #2c6061;font-size:11px;font-weight:800;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mureka-rdi .login-comment{display:inline-block;color:#35e6e7;border:1px solid #2a7479;border-radius:9px;padding:9px 13px;text-decoration:none;background:#132b2e;font-weight:750}
+
 :root{color-scheme:dark;--rdi-cyan:#27d9e3;--rdi-ink:#090b0d;--rdi-panel:#151719;--rdi-border:#292e32;--rdi-white:#f5f7f8;--rdi-gray:#a3afb4}
 body.mureka-rdi{background:#0b0c0e;color:#f5f7f8;font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
 body.mureka-rdi:before,body.mureka-rdi main:before,body.mureka-rdi main:after{display:none!important}
@@ -229,7 +232,7 @@ body.mureka-rdi a{color:inherit}
 <main class="app-main">
 <header class="topbar"><button type="button" id="menu-toggle" class="menu-toggle" aria-label="Apri menu" aria-expanded="false" aria-controls="app-sidebar">☰</button>
  <div class="top-crumb"><span class="long">RDI MUSIC</span><span class="sep">/</span><b>AI MUSIC Spotlight</b></div>
- <div class="top-actions"><a class="top-live" href="./index.html">● RADIO LIVE</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></div>
+ <div class="top-actions"><a class="top-live" href="./index.html">● RADIO LIVE</a><a id="account-link" href="./accedi-ai-music.html?next=spotlight-ai.html">Accedi</a><select id="lang" aria-label="Language"><option value="it">Italiano</option><option value="ro">Română</option><option value="en">English</option></select></div>
 </header>
 <div class="content-wrap">
 <nav class="studio-tabs" aria-label="Navigazione rapida">
@@ -273,6 +276,25 @@ body.mureka-rdi a{color:inherit}
 <script>
 "use strict";
 const API="https://radio-romanii-italia.duckdns.org/api/ai-music";
+const MEMBER_TOKEN_KEY="rdi-ai-music-session";
+const musicAuth={required:false,user:null,voted:new Set()};
+function memberToken(){return localStorage.getItem(MEMBER_TOKEN_KEY)||""}
+function loginRedirect(){location.href="./accedi-ai-music.html?next=spotlight-ai.html"}
+function memberHeaders(){const token=memberToken();return token?{Authorization:"Bearer "+token}:{}}
+async function loadMember(){
+ try{
+  const r=await fetch(API+"/auth/config",{cache:"no-store"});if(!r.ok)return;
+  const config=await r.json();musicAuth.required=!!config.login_required;
+  if(memberToken()){
+   const me=await fetch(API+"/auth/me",{headers:memberHeaders(),cache:"no-store"});
+   if(me.ok){musicAuth.user=(await me.json()).user}else{localStorage.removeItem(MEMBER_TOKEN_KEY);musicAuth.user=null}
+  }
+  const link=$("account-link");
+  link.textContent=musicAuth.user?musicAuth.user.display_name:"Accedi";
+  link.href=musicAuth.user?"./profilo-ai-music.html":"./accedi-ai-music.html?next=spotlight-ai.html";
+  render();
+ }catch(e){console.warn("Account RDI non disponibile",e)}
+}
 const strings={
 it:{intro:"Ascolta le canzoni AI selezionate dalla redazione, vota quelle che ami e scopri la classifica della community.",submit:"Carica fino a 10 brani",radio:"Ascolta la radio",notice:"In classifica compaiono solo brani approvati. Ogni browser può votare una volta per brano. I voti sono indicativi e soggetti a controlli anti-abuso. L'approvazione e i voti non garantiscono la messa in onda.",heading:"Classifica pubblica",songs:"brani",votes:"voti",vote:"Vota",voted:"Hai votato",listen:"Ascolta il brano",listenExternal:"Ascolta sulla piattaforma",noPreview:"Anteprima non disponibile: per i file audio serve il consenso dell'artista.",loading:"Caricamento classifica…",empty:"Non ci sono ancora brani approvati in classifica.",error:"Impossibile caricare la classifica. Riprova più tardi.",thanks:"Voto registrato!",duplicate:"Hai già votato questo brano.",limited:"Troppi voti da questa connessione. Riprova domani.",failed:"Voto non riuscito."},
 ro:{intro:"Ascultă piesele AI aprobate de redacție, votează-ți preferatele și urmărește clasamentul comunității.",submit:"Încarcă până la 10 piese",radio:"Ascultă radioul",notice:"Apar doar piesele aprobate. Fiecare browser poate vota o singură dată pentru fiecare piesă. Voturile sunt orientative și sunt verificate împotriva abuzurilor. Voturile nu garantează difuzarea.",heading:"Clasament public",songs:"piese",votes:"voturi",vote:"Votează",voted:"Ai votat",listen:"Ascultă piesa",listenExternal:"Ascultă pe platformă",noPreview:"Previzualizare indisponibilă: pentru fișiere este necesar acordul artistului.",loading:"Se încarcă clasamentul…",empty:"Nu există încă piese aprobate în clasament.",error:"Clasamentul nu poate fi încărcat. Revino mai târziu.",thanks:"Votul a fost înregistrat!",duplicate:"Ai votat deja această piesă.",limited:"Prea multe voturi de la această conexiune. Revino mâine.",failed:"Vot nereușit."},
@@ -339,8 +361,13 @@ async function showComments(track,panel){
 function buildComments(track){
  const panel=node("section","comments-panel");panel.setAttribute("aria-label",ct("comments"));
  panel.append(node("div","comments-title",ct("comments")+" · "+track.title));
+ if(musicAuth.required&&!musicAuth.user){
+  const a=node("a","login-comment","🔐 "+({it:"Accedi per commentare",ro:"Autentifică-te pentru a comenta",en:"Sign in to comment"})[language]);
+  a.href="./accedi-ai-music.html?next=spotlight-ai.html";panel.append(a);
+  showComments(track,panel);return panel;
+ }
  const form=node("form","comment-form");
- const name=node("input");name.type="text";name.minLength=2;name.maxLength=40;name.required=true;name.placeholder=ct("name");name.setAttribute("aria-label",ct("name"));
+ const name=node("input");name.type="text";name.minLength=2;name.maxLength=40;name.required=true;name.placeholder=ct("name");name.setAttribute("aria-label",ct("name"));if(musicAuth.required&&musicAuth.user){name.value=musicAuth.user.display_name;name.readOnly=true;}
  const body=node("textarea");body.minLength=3;body.maxLength=500;body.required=true;body.placeholder=ct("write");body.setAttribute("aria-label",ct("write"));
  const send=node("button","",ct("send"));send.type="submit";
  const feedback=node("div","comment-feedback");feedback.setAttribute("role","status");
@@ -353,7 +380,7 @@ function buildComments(track){
   send.disabled=true;
   try{
    const res=await fetch(API+"/spotlight/"+encodeURIComponent(track.id)+"/comments",{
-    method:"POST",headers:{"Content-Type":"application/json"},credentials:"omit",
+    method:"POST",headers:{"Content-Type":"application/json",...memberHeaders()},credentials:"omit",
     body:JSON.stringify({nickname,body:message})});
    if(res.status===201){body.value="";feedback.textContent=ct("sent");await showComments(track,panel)}
    else if(res.status===429){feedback.textContent=ct("slow")}
@@ -390,12 +417,14 @@ function render(){
    const link=node("a","",t("listenExternal"));link.href=safeLink(track.link);link.target="_blank";link.rel="noopener noreferrer";preview.append(link)
   }else{preview.append(node("span","hint",t("noPreview")))}
   info.append(preview,node("div","votes","🔥 "+Number(track.votes).toLocaleString(language)+" "+t("votes")));
-  const buttons=node("div","votebox");const vote=node("button","vote",voted.has(track.id)?"✅ "+t("voted"):"👍 "+t("vote"));vote.disabled=voted.has(track.id);vote.type="button";
-  vote.onclick=async()=>{vote.disabled=true;const prior=vote.textContent;vote.textContent="…";
-   try{const resp=await fetch(API+"/spotlight/"+encodeURIComponent(track.id)+"/vote",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({visitor}),credentials:"omit"});const data=await resp.json().catch(()=>({}));
-    if(resp.status===201||resp.status===409){voted.add(track.id);localStorage.setItem("rdi-spotlight-voted",JSON.stringify([...voted]));$("status").textContent=resp.status===201?t("thanks"):t("duplicate");await load();return}
+  const buttons=node("div","votebox");const wasVoted=musicAuth.required?musicAuth.voted.has(track.id):voted.has(track.id);
+ const vote=node("button","vote",musicAuth.required&&!musicAuth.user?"🔐 "+({it:"Accedi",ro:"Autentificare",en:"Sign in"})[language]:wasVoted?"✅ "+t("voted"):"👍 "+t("vote"));
+ vote.disabled=wasVoted;vote.type="button";
+  vote.onclick=async()=>{if(musicAuth.required&&!musicAuth.user){loginRedirect();return}vote.disabled=true;const prior=vote.textContent;vote.textContent="…";
+   try{const resp=await fetch(API+"/spotlight/"+encodeURIComponent(track.id)+"/vote",{method:"POST",headers:{"Content-Type":"application/json",...memberHeaders()},body:JSON.stringify({visitor}),credentials:"omit"});const data=await resp.json().catch(()=>({}));
+    if(resp.status===201||resp.status===409){if(musicAuth.required){musicAuth.voted.add(track.id)}else{voted.add(track.id);localStorage.setItem("rdi-spotlight-voted",JSON.stringify([...voted]))}$("status").textContent=resp.status===201?t("thanks"):t("duplicate");await load();return}
     $("status").textContent=resp.status===429?t("limited"):(data.error||t("failed"));
-   }catch(e){$("status").textContent=t("failed")}vote.disabled=voted.has(track.id);vote.textContent=voted.has(track.id)?"✅ "+t("voted"):prior};
+   }catch(e){$("status").textContent=t("failed")}const votedNow=musicAuth.required?musicAuth.voted.has(track.id):voted.has(track.id);vote.disabled=votedNow;vote.textContent=votedNow?"✅ "+t("voted"):prior};
   const commentsButton=node("button","comment-toggle",expandedTrackId===track.id?ct("hide"):ct("show"));
   commentsButton.type="button";commentsButton.setAttribute("aria-expanded",String(expandedTrackId===track.id));
   const toggle=()=>{expandedTrackId=expandedTrackId===track.id?null:track.id;render()};
@@ -446,5 +475,5 @@ const menuButton=$("menu-toggle");const closeMenu=()=>{document.body.classList.r
 menuButton.onclick=()=>{const open=document.body.classList.toggle("menu-open");menuButton.setAttribute("aria-expanded",String(open))};
 $("sidebar-scrim").onclick=closeMenu;document.querySelectorAll(".app-sidebar a").forEach(a=>a.addEventListener("click",closeMenu));
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu()});
-translate();load();prepareQueue();
+translate();load();prepareQueue();loadMember();
 </script></body></html>
