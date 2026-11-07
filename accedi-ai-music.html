@@ -1,0 +1,65 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0c0e"><meta name="description" content="Accedi a RDI AI MUSIC con un codice inviato via email.">
+<title>Accedi · RDI AI MUSIC</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 75% 5%,#16444b 0%,#0b0e10 50%);color:#f7fafb;font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1020px;padding:22px 18px;margin:auto}
+header a{color:#a7c2c6;text-decoration:none;font-size:13px}.logo{display:flex;align-items:center;gap:10px;font-weight:850;color:#fff}.logo img{width:37px;height:37px;border-radius:9px}.logo b{color:#34dce0}
+main{max-width:470px;padding:42px 18px 70px;margin:auto}
+.panel{background:#161b1d;border:1px solid #3a4a4d;border-radius:22px;padding:29px;box-shadow:0 24px 70px #0006}
+.overline{color:#39e3e3;font-size:11px;font-weight:850;letter-spacing:.14em}
+h1{font-size:31px;line-height:1.12;letter-spacing:-.045em;margin:12px 0}.lead{color:#afc2c6;font-size:14px;margin:0 0 24px}
+label{display:block;font-size:12px;color:#c7dadb;font-weight:750;margin:16px 0 0}
+input{display:block;width:100%;margin-top:7px;padding:12px 14px;color:#fff;background:#0c1113;border:1px solid #4a5a5d;border-radius:11px;font:inherit}
+input:focus{outline:2px solid #48e9ec;outline-offset:2px}
+button{width:100%;background:#36dfe5;border:0;border-radius:11px;color:#062226;font:inherit;font-weight:850;cursor:pointer;padding:13px 16px;margin-top:20px}button:disabled{opacity:.55;cursor:default}
+.btn-light{background:#263235;color:#d9e8e9;margin-top:9px;border:1px solid #405457}
+.note{margin-top:18px;padding:12px 14px;background:#15272a;border:1px solid #315155;border-radius:11px;color:#a8cacc;font-size:12px}
+#status{color:#64e5da;font-size:13px;min-height:24px;margin:16px 0 0;overflow-wrap:anywhere}
+#status.error{color:#ffb1ac}
+small{color:#97adb0}.step[hidden]{display:none}
+.account{border-radius:12px;padding:14px;background:#102b2b;color:#bde3df;font-size:13px}
+footer{text-align:center;font-size:11px;color:#708d90;margin:23px auto}
+@media(max-width:500px){main{padding-top:20px}.panel{padding:23px}}
+</style></head><body>
+<header><a class="logo" href="./spotlight-ai.html"><img src="./RADIO-LOGO.png" alt="">RDI <b>AI MUSIC</b></a><a href="./spotlight-ai.html">← Classifica</a></header>
+<main><section class="panel"><div class="overline">RDI AI MUSIC · COMMUNITY</div><h1>Accedi alla tua musica</h1>
+<p class="lead">Un unico account per caricare brani, votare e commentare. Ascoltare è sempre gratuito e libero.</p>
+<div class="step" id="start-step">
+<form id="request-form"><label>La tua email<input type="email" id="email" required maxlength="254" autocomplete="email" placeholder="nome@esempio.it"></label>
+<label>Nome d'arte o nickname (per i nuovi account)<input type="text" id="name" maxlength="40" autocomplete="nickname" placeholder="Come vuoi apparire"></label>
+<button id="request-button" type="submit">Invia codice di accesso</button></form>
+</div>
+<div class="step" id="verify-step" hidden><p class="account">Abbiamo inviato un codice di 6 cifre a <strong id="target-email"></strong>. Scade dopo 10 minuti.</p>
+<form id="verify-form"><label>Codice di verifica<input id="code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" required placeholder="123456"></label><button id="verify-button" type="submit">Verifica e accedi</button></form>
+<button id="back-button" class="btn-light" type="button">Usa un'altra email</button></div>
+<div class="step" id="logged-step" hidden><p class="account">Hai effettuato l'accesso come <strong id="account-name"></strong>.</p><button id="continue-button" type="button">Continua su RDI MUSIC</button><button id="logout-button" type="button" class="btn-light">Esci dall'account</button></div>
+<p id="status" role="status" aria-live="polite"></p>
+<div class="note">Per ascoltare la musica non serve un account. I codici di accesso non devono mai essere comunicati ad altre persone.</div>
+</section><footer>Radio Românii din Italia · AI MUSIC</footer></main>
+<script>
+"use strict";
+const API="https://radio-romanii-italia.duckdns.org/api/ai-music";
+const $=id=>document.getElementById(id);
+const NEXT=new URLSearchParams(location.search).get("next");
+const target=["artisti-ai.html","spotlight-ai.html","profilo-ai-music.html"].includes(NEXT)?NEXT:"spotlight-ai.html";
+const TOKEN_KEY="rdi-ai-music-session";
+let email="",busy=false;
+function show(which){["start","verify","logged"].forEach(k=>$(k+"-step").hidden=k!==which);}
+function status(text,error=false){$("status").textContent=text;$("status").classList.toggle("error",error)}
+async function jsonRequest(path,body,token){const headers={"Content-Type":"application/json"};if(token)headers.Authorization="Bearer "+token;const r=await fetch(API+path,{method:"POST",headers,body:JSON.stringify(body),credentials:"omit"});const data=await r.json().catch(()=>({}));if(!r.ok)throw Error(data.error||"Errore "+r.status);return data}
+function go(){location.href="./"+target}
+async function check(){let config;try{const r=await fetch(API+"/auth/config",{cache:"no-store"});if(!r.ok)throw Error();config=await r.json()}catch{status("Il login non è ancora disponibile sul server RDI.",true);$("request-button").disabled=true;return}
+if(!config.email_available){status("L'accesso email è in preparazione: la redazione deve ancora attivare la posta del server.",true);$("request-button").disabled=true;return}
+const token=localStorage.getItem(TOKEN_KEY);if(!token)return;
+try{const r=await fetch(API+"/auth/me",{headers:{Authorization:"Bearer "+token},cache:"no-store"});if(!r.ok)throw Error();const data=await r.json();$("account-name").textContent=data.user.display_name;show("logged")}catch{localStorage.removeItem(TOKEN_KEY)}
+}
+$("request-form").onsubmit=async e=>{e.preventDefault();if(busy)return;email=$("email").value.trim().toLowerCase();busy=true;$("request-button").disabled=true;status("Invio del codice…");
+try{await jsonRequest("/auth/request-code",{email,name:$("name").value.trim()});$("target-email").textContent=email;show("verify");status("Controlla la casella email, anche la cartella Spam.");$("code").focus()}catch(err){status(err.message,true)}finally{busy=false;$("request-button").disabled=false}};
+$("verify-form").onsubmit=async e=>{e.preventDefault();if(busy)return;busy=true;$("verify-button").disabled=true;status("Verifica del codice…");
+try{const result=await jsonRequest("/auth/verify-code",{email,code:$("code").value.trim()});localStorage.setItem(TOKEN_KEY,result.session);go()}catch(err){status(err.message,true)}finally{busy=false;$("verify-button").disabled=false}};
+$("back-button").onclick=()=>{show("start");status("");$("code").value=""};
+$("continue-button").onclick=go;
+$("logout-button").onclick=async()=>{const token=localStorage.getItem(TOKEN_KEY);localStorage.removeItem(TOKEN_KEY);show("start");status("Disconnesso.");if(token)try{await jsonRequest("/auth/logout",{},token)}catch{}};
+check();
+</script></body></html>
