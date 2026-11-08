@@ -1,21 +1,111 @@
 {
-  "news_updated_at": "2026-11-08T15:51:15.003861+00:00",
-  "editorial_updated_at": "2026-11-08T16:03:06.081063+01:00",
-  "translations_updated_at": "2026-11-08T15:01:26.970040+00:00",
-  "feed_total": 76,
+  "news_updated_at": "2026-11-08T16:20:41.961411+00:00",
+  "editorial_updated_at": "2026-11-08T17:04:20+01:00",
+  "translations_updated_at": "2026-11-08T16:05:12.601744+00:00",
+  "feed_total": 77,
   "feed_extended_400": 1,
-  "feed_missing_body": 75,
+  "feed_missing_body": 76,
   "feed_short_body": 0,
-  "editorial_total": 14,
+  "editorial_total": 15,
   "archived_editorials": 203,
-  "translation_records": 51,
+  "translation_records": 57,
   "pending_total": 0,
   "pending_filtered_out": 0,
-  "editorial_verde": 2,
+  "editorial_verde": 3,
   "editorial_galben": 38,
-  "editorial_rosu": 46,
+  "editorial_rosu": 47,
   "pending": [],
   "recent_news": [
+    {
+      "title": "Oficial: Gadi Eisenkot a primit mandatul de a forma următorul guvern israelian. „Trecem printr-una dintre cele mai critice perioade”",
+      "category": "România",
+      "published": "2026-11-08T16:16:56+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/oficial-gadi-eisenkot-a-primit-mandatul-de-a-forma-urmatorul-guvern-israelian-trecem-printr-una-dintre-cele-mai-critice-perioade-4026905",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Scontro fra due treni a Giza in Egitto, almeno 4 morti e 88 feriti",
+      "category": "Italia",
+      "published": "2026-11-08T16:13:57+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/11/08/scontro-fra-due-treni-a-giza-in-egitto-almeno-4-morti-e-88-feriti_d275111b-249d-41dd-a29f-7e7b6fb13fb7.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Serie A: due errori del Genoa, il Milan riparte da un 2-1 a Marassi",
+      "category": "Italia",
+      "published": "2026-11-08T16:13:54+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-due-errori-del-genoa-il-milan-riparte-da-un-2-1-a-marassi_cbaae15d-e302-4f11-9083-8a0c99394a64.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Donna uccisa in casa nel Bergamasco, fermato il figlio",
+      "category": "Italia",
+      "published": "2026-11-08T16:09:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/donna-uccisa-in-casa-nel-bergamasco-sospetti-su-uno-dei-due-figli_225ce1b2-18e9-4ecb-a1c3-d0a0121c41c5.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Il Papa a Florida per l'ultima tappa in Uruguay: 'I governanti perseguano il bene di tutti'",
+      "category": "Italia",
+      "published": "2026-11-08T16:08:08+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-a-florida-per-lultima-tappa-in-uruguay-i-governanti-perseguano-il-bene-di-tutti_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Un nou mesaj Ro-Alert a fost emis pentru locuitorii din Tulcea. Două avioane F-16 au decolat de la Baza 86 Aeriană Feteşti",
+      "category": "România",
+      "published": "2026-11-08T16:06:58+00:00",
+      "url": "https://www.digi24.ro/stiri/un-nou-mesaj-ro-alert-a-fost-emis-pentru-locuitorii-din-tulcea-privind-o-posibila-incursiune-de-drone-4026863",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Attacchi informatici, Piantedosi convoca il Comitato di sicurezza pubblica",
+      "category": "Italia",
+      "published": "2026-11-08T16:05:04+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_2ff3c55f-8d26-4dfe-830b-5bc7344a1033.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Român mort la muncă în Italia. Familia a primit un milion de euro drept despăgubire - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-08T16:04:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNWXV4MkxwdTk0bEZNcVpJaDhwWHVWQnY2RlZxQUxVeG9DQzR5NE1yMGx0a1RWX3IySTdOZlB1QTdHUDRXOHItcnFocS0yVEpPTW1nMXJvd19yM1l5ZVdGTjB2YUtYRlZOX3ZEaFRpYTFEYmxKZGJmR0pLNW9JSnFBMEsyNDBKeXBIVFNjVDFHTmxTanFsTGRqa2lTR1dkV2JPZG0wWWhOX0MzZw?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
+      "category": "Italia",
+      "published": "2026-11-08T15:59:43+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 448
+    },
+    {
+      "title": "„America a făcut un pas uriaş înapoi în istorie”. Trump dă asigurări că republicanii se vor întoarce „mai mari și mai puternici”",
+      "category": "România",
+      "published": "2026-11-08T15:59:16+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/america-a-facut-un-pas-urias-inapoi-in-istorie-trump-da-asigurari-ca-republicanii-se-vor-intoarce-mai-mari-si-mai-puternici-4026887",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
     {
       "title": "Accident feroviar în Egipt, după coliziunea a două trenuri: patru morți și 88 de răniți. Un mecanic de locomotivă, printre victime",
       "category": "România",
@@ -53,39 +143,12 @@
       "words": 0
     },
     {
-      "title": "Un nou mesaj Ro-Alert a fost emis pentru locuitorii din Tulcea privind o posibilă incursiune de drone",
-      "category": "România",
-      "published": "2026-11-08T15:22:33+00:00",
-      "url": "https://www.digi24.ro/stiri/un-nou-mesaj-ro-alert-a-fost-emis-pentru-locuitorii-din-tulcea-privind-o-posibila-incursiune-de-drone-4026863",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Attacchi informatici, Piantedosi convoca il Comitato di sicurezza pubblica",
-      "category": "Italia",
-      "published": "2026-11-08T15:21:48+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_2ff3c55f-8d26-4dfe-830b-5bc7344a1033.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Aliații europeni sunt mai conștienți de apetitul tot mai mare al Kremlinului pentru risc, spune șeful armatei britanice",
       "category": "România",
       "published": "2026-11-08T15:21:19+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/aliatii-europeni-sunt-mai-constienti-de-apetitul-tot-mai-mare-al-kremlinului-pentru-risc-spune-seful-armatei-britanice-4026861",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Serie A: in campo Genoa-Milan 0-2 DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-08T15:15:51+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-15-genoa-milan-diretta-_cbaae15d-e302-4f11-9083-8a0c99394a64.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -107,30 +170,12 @@
       "words": 0
     },
     {
-      "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
-      "category": "Italia",
-      "published": "2026-11-08T15:07:48+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 448
-    },
-    {
       "title": "Val de frig peste România: meteorologii anunță nopți geroase și ploi în multe zone. Când se întorc temperaturile de peste 20°C",
       "category": "România",
       "published": "2026-11-08T15:06:22+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/social/meteorologii-anunta-nopti-geroase-si-ploi-in-multe-zone-ale-tarii-de-cand-se-incalzeste-vremea-4026799",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Il Papa a Florida per l'ultima tappa in Uruguay: 'I governanti perseguano il bene di tutti'",
-      "category": "Italia",
-      "published": "2026-11-08T15:00:28+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-a-florida-per-lultima-tappa-in-uruguay-i-governanti-perseguano-il-bene-di-tutti_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -215,15 +260,6 @@
       "words": 0
     },
     {
-      "title": "Donna uccisa in casa nel Bergamasco, sospetti su uno dei due figli",
-      "category": "Italia",
-      "published": "2026-11-08T13:57:13+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/donna-uccisa-in-casa-nel-bergamasco-sospetti-su-uno-dei-due-figli_225ce1b2-18e9-4ecb-a1c3-d0a0121c41c5.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Incident grav la Poliția Locală Constanța. Armă descărcată accidental de o polițistă: glonțul a ricoșat în podea și într-un geam",
       "category": "România",
       "published": "2026-11-08T13:51:40+00:00",
@@ -248,15 +284,6 @@
       "url": "https://www.digi24.ro/stiri/externe/putin-duce-o-campanie-de-razboi-hibrid-impotriva-irlandei-in-perspectiva-gazduirii-de-catre-aceasta-a-unor-summituri-importante-ale-ue-4026727",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Bomba a Lugo, neutralizzato un ordigno bellico di 240 kg - Il Resto del Carlino",
-      "category": "Italia",
-      "published": "2026-11-08T13:07:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5UMHpmNzBNNldkb2tmaFBzMTFJeWdseXF0MVV5R054MVBkNnhsclRHMk80cVVKdVN0dXFIU0c3R0dZNl91d3dfSkVMNFZJNjZRUDhISHlRUEJPN0t6ZUZNckRNSDFpTXRtSWNVLXFZeGJXZ0g3cE9F?oc=5",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -305,30 +332,12 @@
       "words": 0
     },
     {
-      "title": "Autoritățile ruse vor să înroleze în armată aproape 200 de tineri reținuți în Moscova pentru că „tulburau” ordinea publică",
-      "category": "România",
-      "published": "2026-11-08T12:07:19+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/autoritatile-ruse-vor-sa-inroleze-in-armata-aproape-200-de-tineri-retinuti-in-moscova-pentru-ca-tulburau-ordinea-publica-4026701",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Româncă acuzată în Italia că și-a vândut bebelușul abia născut. A mințit că a fost amanta celui care i-a cumpărat copilul - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-08T12:06:20+00:00",
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdHhVTVMtaC03Q0xHMEFCUjByNmNDM0pNcUdlTVlqMDJZek5HbUJndHJheTRBYzZURlNpeWUwMHRmZS1jMmJlX19Zd2xSUUlBX3hVUW53THQ3TG5pWElYenhTNlRja1R4bWFleEhZOEh3Q0lRcWd6U3hPUEZpMzhmakZKQjBZS0NUSjVPX21VSTFCRTN0T20za3lNSGtTLUxvN0NVenVvME9sd2Q4YU05N2c2SkdzNjNaOG9IVWIyUE1TWnJ3a2RMbU02N2FkUTdYMDlKSVFDRHNvUG13?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ursula von der Leyen vine în România. Șefa CE se va întâlni cu președintele Dan și premierul Niculescu",
-      "category": "România",
-      "published": "2026-11-08T11:34:24+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/ursula-von-der-leyen-vine-in-romania-sefa-ce-se-va-intalni-cu-presedintele-dan-si-premierul-niculescu-4026671",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -365,15 +374,6 @@
       "url": "https://www.ansa.it/sito/notizie/cultura/libri/libri_film/2026/11/06/dustin-hoffman-si-racconta-per-la-prima-volta-dietro-la-leggenda-in-look-at-me_31409828-5242-4c35-9e31-224f151f6efa.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "'Preso di mira il distretto finanziario di Riad, danneggiato l'edificio di Aramco'",
-      "category": "Italia",
-      "published": "2026-11-08T09:08:25+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/preso-di-mira-il-distretto-finanziario-di-riad-danneggiato-ledificio-di-aramco_6c296638-1451-4f99-bcf1-b0d26626f6eb.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -463,6 +463,15 @@
       "published": "2026-11-07T21:15:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNY0paNVk5b0Rvcm1mRl82VTg4V1g2S1o3UXdRNzB1a1NlaG9GOFhhVzUwOUN3aWFOaDZDT0ZFZ0hlQXBrUVhXUjFjS0pHUGNfQ1hfQi1NNXoxV2xqdmd4LV9fcnJyQ28ycDBkd3c0RXh3SlBjNlNBZUJuWlE1NzNaNXV0TUJtUXlfbHBoS2ROZ1VzRHBQTkFjbE8wTWw1S0pqMGVfdTZPVmFvSFNoM1JpSGJRbGs0bEdpMDJUZnN5WjJHeWVPSFJaUDRjcVlMbUFBVnFxWl9FZmNQVzlVeVExYWplcjJmdVhuTFUwWmhCcGxyejUxVHZ5T0hSR1lydnMweGRvdFNoR1VfZw?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "le ultime notizie - Cremaonline",
+      "category": "Italia",
+      "published": "2026-11-07T20:06:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1mb2ZIWHFEbTladERPMUhBQjR4VEdxakJIbzhudUxBZWpBSEVVX3Q4eE9xdW1QSklwck5JdkdVb1pQVXJrc0d1Q09tY3F2R1AzdjdqUg?oc=5",
+      "source": "Cremaonline",
       "status": "roșu",
       "words": 0
     },
@@ -714,9 +723,20 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
+      "title": "Egipt: patru morți și 88 de răniți după ciocnirea a două trenuri în regiunea Giza",
+      "category": "Știri din redacție",
+      "published": "2026-11-08T15:44:43+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/accident-feroviar-in-egipt-dupa-coliziunea-a-doua-trenuri-patru-morti-si-88-de-raniti-un-mecanic-de-locomotiva-printre-victime-4026879",
+      "source": "Reuters; Associated Press; ANSA",
+      "status": "verde",
+      "words": 462,
+      "intro": "Două trenuri de pasageri s-au ciocnit în Giza.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
       "category": "Italia",
-      "published": "2026-11-08T15:07:48+00:00",
+      "published": "2026-11-08T15:59:43+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
       "source": "ANSA",
       "status": "verde",
@@ -744,17 +764,6 @@
       "status": "galben",
       "words": 24,
       "intro": "Un român a spart o casă din Italia și, obosit de atâta cotrobăit, s-a culcat.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Un român a murit pe un șantier naval din Italia. Colegii vor să organizeze un protest în urma tragediei - Digi24",
-      "category": "Diaspora",
-      "published": "2026-11-06T16:09:58+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNSklBTTZDWUdZYklVRGxqVzVaeUlvOVduX2MxbkY2amVXVVdWQXc0VTQyQ091dThuSjRrMjlUTDNEckxTVVBWUm5JYUk3RUpXNjRrYlBseFdZTnN1V1NmNXlOR0E0XzNhLUtjUTB5NlpJYzZlZTR6aGR2VHlwVHdrY0dqUFdkUnJ2aTZvc1NaTXR2NEhUZlAxOTlZaDc0SlM5aHhkSTFoRzNGX3lXN3dXZnNtUlZ1c0xUSFRGM3YxYm1fS1l3Q3pzeVZVbDJEQ24xMm5HemRjdGpiNV9HSXVHSGV1QTF3X0w3TVl1MHVLc9IB7wFBVV95cUxNSklBTTZDWUdZYklVRGxqVzVaeUlvOVduX2MxbkY2amVXVVdWQXc0VTQyQ091dThuSjRrMjlUTDNEckxTVVBWUm5JYUk3RUpXNjRrYlBseFdZTnN1V1NmNXlOR0E",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 20,
-      "intro": "Un român a murit pe un șantier naval din Italia.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
