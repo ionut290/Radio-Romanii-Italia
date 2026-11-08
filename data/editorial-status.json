@@ -1,26 +1,179 @@
 {
-  "news_updated_at": "2026-11-08T13:31:47.609989+00:00",
+  "news_updated_at": "2026-11-08T14:46:09.457689+00:00",
   "editorial_updated_at": "2026-11-08T08:13:05.873938+01:00",
   "translations_updated_at": "2026-11-08T13:29:18.082815+00:00",
-  "feed_total": 72,
-  "feed_extended_400": 1,
-  "feed_missing_body": 71,
+  "feed_total": 76,
+  "feed_extended_400": 0,
+  "feed_missing_body": 76,
   "feed_short_body": 0,
   "editorial_total": 24,
   "archived_editorials": 201,
   "translation_records": 48,
   "pending_total": 0,
   "pending_filtered_out": 0,
-  "editorial_verde": 3,
-  "editorial_galben": 46,
-  "editorial_rosu": 44,
+  "editorial_verde": 2,
+  "editorial_galben": 48,
+  "editorial_rosu": 46,
   "pending": [],
   "recent_news": [
     {
       "title": "Ce se știe despre presupusul autor al atacului din Cracovia: imagine tulburătoare a unui extremist. Cine sunt victimele sale",
       "category": "România",
-      "published": "2026-11-08T13:27:48+00:00",
+      "published": "2026-11-08T14:45:23+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ce-se-stie-despre-presupusul-autor-al-atacului-din-cracovia-imagine-tulburatoare-a-unui-extremist-prima-zi-de-doliu-national-4026487",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Ormuz 2.0” se află în Caucaz. Iranul mai are un as în mânecă: o conductă de petrol esențială pentru Israel și Europa",
+      "category": "România",
+      "published": "2026-11-08T14:44:18+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/ormuz-2-0-se-afla-in-caucaz-iranul-mai-are-un-as-in-maneca-o-conducta-de-petrol-esentiala-pentru-israel-si-europa-4021543",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Meteorologii anunță nopți geroase și ploi în multe zone ale țării. De când se încălzește vremea",
+      "category": "România",
+      "published": "2026-11-08T14:43:36+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/meteorologii-anunta-nopti-geroase-si-ploi-in-multe-zone-ale-tarii-de-cand-se-incalzeste-vremea-4026799",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
+      "category": "Italia",
+      "published": "2026-11-08T14:36:28+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Nu este o problemă a străinilor. Este o problemă a societății japoneze”. Latura întunecată a „orașului care nu doarme” din Tokyo",
+      "category": "România",
+      "published": "2026-11-08T14:32:42+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/nu-este-o-problema-a-strainilor-este-o-problema-a-societatii-japoneze-latura-intunecata-a-orasului-care-nu-doarme-din-tokyo-4019677",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Româncă întoarsă din Italia, ofițer pe navă la numai 25 de ani. „Dacă tu te simți capabilă, dă-i înainte cu tupeu!” - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-08T14:30:08+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQdFIyUnhILWF6US1ySmhrRGRCVjhLSDY3RkNqeUZLWVlSRjNnMFlNY2MzM2FCVGZuU1JmRllyRzBJdkltWFJJUnVEM3JFM0twOU5BS0pWdTZRTjFoOHVqWGs1OUZSTUF2a3dmLWFlN0xqQW1mQnU5bjNkczBVcVpSQlgzdWkxbWFWZ29NNXVEVThuSGdkOGthd1JWWkpnUWxIZWFLMGgwMVAyeWFHTkJCbVRhaXdXWmFUQXptSmlTWEpPcmZXVXN1cVp4blM5dw?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Genoa-Milan 0-2 DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-08T14:29:42+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-15-genoa-milan-diretta-_cbaae15d-e302-4f11-9083-8a0c99394a64.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Europenii se întorc la masa negocierilor privind Ucraina, de la Abu Dhabi: „Vor fi bine reprezentaţi”. Anunțul a fost făcut de Franța",
+      "category": "România",
+      "published": "2026-11-08T14:28:24+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/europenii-se-intorc-la-masa-negocierilor-privind-ucraina-de-la-abu-dhabi-vor-fi-bine-reprezentati-anuntul-a-fost-facut-de-franta-4026815",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Incendiu puternic la două locuințe din Chiajna: pompierii intervin cu mai multe autospeciale",
+      "category": "România",
+      "published": "2026-11-08T14:26:45+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/incendiu-puternic-la-doua-locuinte-din-chiajna-pompierii-intervin-cu-mai-multe-autospeciale-4026813",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il Papa a Florida per l'ultima tappa in Uruguay: 'I governanti perseguano il bene di tutti'",
+      "category": "Italia",
+      "published": "2026-11-08T14:26:13+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-a-florida-per-lultima-tappa-in-uruguay-i-governanti-perseguano-il-bene-di-tutti_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Drone detectate lângă Insula Șerpilor. Aeronave şi elicoptere ale Forţelor Armate Spaniole, mobilizate. Ro-Alert în jud. Tulcea",
+      "category": "România",
+      "published": "2026-11-08T14:16:43+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/drone-detectate-langa-insula-serpilor-aeronave-si-elicoptere-ale-fortelor-armate-spaniole-mobilizate-ro-alert-pentru-in-jud-tulcea-4026739",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Diaco si scusa con Ravagnani ma avverte, 'pronto a querele'",
+      "category": "Italia",
+      "published": "2026-11-08T14:15:55+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/08/diaco-si-scusa-con-ravagnani-ma-avverte-pronto-a-querele_522d4334-b691-4a0e-9340-f8755681b297.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trump: 'L'America ha fatto un passo indietro nella storia con le elezioni'. Domani vedrà Dana White",
+      "category": "Italia",
+      "published": "2026-11-08T14:11:00+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/08/trump-lamerica-ha-fatto-un-passo-indietro-nella-storia-con-le-elezioni.-domani_185e5971-a7a8-47f4-b15a-df683dc8bdc1.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Efectele inteligenței artificiale asupra atacurilor cibernetice: „Democratizarea AI a pus capabilităţi puternice la îndemâna tuturor”",
+      "category": "România",
+      "published": "2026-11-08T14:08:48+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/lumea-digitala/efectele-inteligentei-artificiale-asupra-atacurilor-cibernetice-democratizarea-ai-a-pus-capabilitati-puternice-la-indemana-tuturor-4026731",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Monza-Atalanta 0-0 DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-08T14:08:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-15-monza-atalanta-diretta_befacfa2-5f4e-49b2-aecd-f0495849d8be.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Donna uccisa in casa nel Bergamasco, sospetti su uno dei due figli",
+      "category": "Italia",
+      "published": "2026-11-08T13:57:13+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/donna-uccisa-in-casa-nel-bergamasco-sospetti-su-uno-dei-due-figli_225ce1b2-18e9-4ecb-a1c3-d0a0121c41c5.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Incident grav la Poliția Locală Constanța. Armă descărcată accidental de o polițistă: glonțul a ricoșat în podea și într-un geam",
+      "category": "România",
+      "published": "2026-11-08T13:51:40+00:00",
+      "url": "https://www.digi24.ro/regional/digi24-constanta/incident-grav-la-politia-locala-constanta-arma-descarcata-accidental-de-o-politista-glontul-a-ricosat-in-podea-si-intr-un-geam-4026773",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cum vrea America să izoleze Iranul: grup de lucru special pentru blocarea rutelor terestre",
+      "category": "România",
+      "published": "2026-11-08T13:49:49+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/cum-vrea-america-sa-izoleze-iranul-grup-de-lucru-special-pentru-blocarea-rutelor-terestre-4026771",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -28,37 +181,10 @@
     {
       "title": "Attacchi informatici, Piantedosi convoca il Comitato di sicurezza pubblica",
       "category": "Italia",
-      "published": "2026-11-08T13:24:52+00:00",
+      "published": "2026-11-08T13:46:01+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_2ff3c55f-8d26-4dfe-830b-5bc7344a1033.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Mama, tatăl și sora presupusului autor al atacului de Cracovia, au fost găsiți morți în locuința din Ostrowiec Swietokrzyski",
-      "category": "România",
-      "published": "2026-11-08T13:22:06+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mama-tatal-si-sora-presupusului-autor-al-atacului-de-cracovia-au-fost-gasiti-morti-in-locuinta-din-ostrowiec-swietokrzyski-4026537",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Drone detectate lângă Insula Șerpilor. Aeronave şi elicoptere ale Forţelor Armate Spaniole, mobilizate. Ro-Alert pentru în jud. Tulcea",
-      "category": "România",
-      "published": "2026-11-08T13:20:51+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/drone-detectate-langa-insula-serpilor-aeronave-si-elicoptere-ale-fortelor-armate-spaniole-mobilizate-ro-alert-pentru-in-jud-tulcea-4026739",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Il Papa a Florida per l'ultima tappa in Uruguay, poi vola in Argentina",
-      "category": "Italia",
-      "published": "2026-11-08T13:16:07+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-a-florida-per-lultima-tappa-in-uruguay-poi-vola-in-argentina_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -67,15 +193,6 @@
       "published": "2026-11-08T13:10:15+00:00",
       "url": "https://www.digi24.ro/stiri/externe/putin-duce-o-campanie-de-razboi-hibrid-impotriva-irlandei-in-perspectiva-gazduirii-de-catre-aceasta-a-unor-summituri-importante-ale-ue-4026727",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
-      "category": "Italia",
-      "published": "2026-11-08T13:01:15+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
-      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -98,12 +215,12 @@
       "words": 0
     },
     {
-      "title": "Serie A: in campo Napoli-Lazio 1-1 DIRETTA",
+      "title": "Cracovia, la testimonianza di un italiano che era a pochi metri dalla sparatoria",
       "category": "Italia",
-      "published": "2026-11-08T12:43:47+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-12.30-napoli-lazio-diretta-_ae79ac8e-1941-4fe3-8d95-d74ca4e44feb.html",
+      "published": "2026-11-08T12:47:58+00:00",
+      "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/08/cracovia-la-testimonianza-di-un-italiano-che-era-a-pochi-metri-dalla-sparatoria_11e8e889-0850-4dbf-b9a9-cfe3652f79da.html",
       "source": "ANSA",
-      "status": "roșu",
+      "status": "galben",
       "words": 0
     },
     {
@@ -125,21 +242,21 @@
       "words": 0
     },
     {
-      "title": "Ucraina, Zelensky: 'Raid russo su Komyshuvakha dove ancora si scava dopo la strage'",
+      "title": "Parigi, europei e Francia saranno presenti al trilaterale di Abu Dhabi",
       "category": "Italia",
-      "published": "2026-11-08T12:22:22+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/kiev-una-vittima-e-danni-a-infrastrutture-in-attacco-russo-a-odessa_cf45c21e-66b8-4ec5-a9ba-82f775f146b1.html",
+      "published": "2026-11-08T12:21:59+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/parigi-europei-e-francia-saranno-presenti-al-trilaterale-di-abu-dhabi_093f3a23-531b-4851-ab34-fd51d14f1168.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Doi chirurgi se aflau la un restaurant în apropierea zonei atacului din Cracovia: au fost salvatorii poliștilor răniți (mărturii)",
-      "category": "România",
-      "published": "2026-11-08T12:19:01+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/doi-renumiti-chirurgi-se-aflau-la-un-restaurant-in-apropierea-zonei-atacului-din-cracovia-au-fost-salvatorii-polistilor-raniti-4026587",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "O tânără româncă de 27 de ani a murit într-un accident cumplit în Italia. Șoferul camionului... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-08T12:21:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQU0hQQ0NLU3dXVU9SQ2x5YzJXSFZweDFFeFBLLU10dk40NU1MdHVrZGtYVHB1X3hTbElCeERyVlh0bjlwNGsxUHBZZmdTbjFQa2hBdkM3eVU5bmUyZldyTHduX3dMWlU5V1lZQy1aM1FLRFZoZFJwTVQxZFdfY2J2elVfeGlzUTVuazRTaUQ4QU9oZVRlUW5leUFDYlo3YUdJbFRwRzZ2NXdzeUV5VEFTc3E3M2M4ekY5TUFJN3Z4Q29uQktqVU4yc2pqUzU4OHduYldCMlNmc2xxQ0ZHS1hZYmgwTjZOZ0RlMzdnZXRrN1BpeWhmWEdNMm9TUdIBgAJBVV95cUxPWU9jTHJMdG5FeXlWYW9jV0p4QWhQcTBmbEdtQzNxdXJ3ZFlXNm5Yd1hVSnlUZWxrb0twcmVGSkFnVVVycTQtTGx3bWl0SjIyRGllcnlHT0J",
+      "source": "StiriDiaspora",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -166,15 +283,6 @@
       "published": "2026-11-08T12:06:20+00:00",
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdHhVTVMtaC03Q0xHMEFCUjByNmNDM0pNcUdlTVlqMDJZek5HbUJndHJheTRBYzZURlNpeWUwMHRmZS1jMmJlX19Zd2xSUUlBX3hVUW53THQ3TG5pWElYenhTNlRja1R4bWFleEhZOEh3Q0lRcWd6U3hPUEZpMzhmakZKQjBZS0NUSjVPX21VSTFCRTN0T20za3lNSGtTLUxvN0NVenVvME9sd2Q4YU05N2c2SkdzNjNaOG9IVWIyUE1TWnJ3a2RMbU02N2FkUTdYMDlKSVFDRHNvUG13?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Media: 'Dana White incontrerà Trump alla Casa Bianca lunedì'",
-      "category": "Italia",
-      "published": "2026-11-08T11:48:16+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/media-dana-white-incontrera-trump-alla-casa-bianca-lunedi_114c6f50-3765-4abd-b2bf-155221563d4b.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -233,15 +341,6 @@
       "words": 0
     },
     {
-      "title": "Cursă cu forțele de ordine în trafic după ce un șofer a accidentat un polițist și a încercat să scape. Cum a fost prins",
-      "category": "România",
-      "published": "2026-11-08T10:24:31+00:00",
-      "url": "https://www.digi24.ro/stiri/cursa-cu-fortele-de-ordine-in-trafic-dupa-ce-un-sofer-a-accidentat-un-politist-si-a-incercat-sa-scape-cum-a-fost-prins-4026633",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Ce naţionalități au cetăţenii străini răniţi în atacul din Cracovia",
       "category": "România",
       "published": "2026-11-08T10:19:29+00:00",
@@ -251,39 +350,12 @@
       "words": 0
     },
     {
-      "title": "Prezzi carburanti fermi malgrado lo stop al taglio delle accise, gasolio a 2,23 euro",
-      "category": "Italia",
-      "published": "2026-11-08T10:14:52+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/08/mimit-prezzi-carburanti-fermi-malgrado-stop-taglio-accise-gasolio-a-223_3a4e4aa5-2d2a-4119-bd93-63dba8a9828c.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Dustin Hoffman si racconta per la prima volta dietro la leggenda in 'Look at me'",
       "category": "Italia",
       "published": "2026-11-08T10:02:51+00:00",
       "url": "https://www.ansa.it/sito/notizie/cultura/libri/libri_film/2026/11/06/dustin-hoffman-si-racconta-per-la-prima-volta-dietro-la-leggenda-in-look-at-me_31409828-5242-4c35-9e31-224f151f6efa.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "ELCEN anunță că introduce suplimentar 1.860.000 litri de apă fierbinte pe oră în rețea, pentru a compensa pierderile Termoenergetica",
-      "category": "România",
-      "published": "2026-11-08T09:34:56+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/elcen-anunta-ca-introduce-suplimentar-1-860-000-litri-de-apa-fierbinte-pe-ora-in-retea-pentru-a-compensa-pierderile-termoenergetica-4026623",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Clădiri afectate în Riad după ce Arabia Saudită a transmis că a interceptat două rachete balistice ale rebelilor",
-      "category": "România",
-      "published": "2026-11-08T09:26:15+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/cladiri-afectate-in-riad-dupa-ce-arabia-saudita-a-transmis-ca-a-interceptat-doua-rachete-balistice-ale-rebelilor-4026619",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -305,6 +377,15 @@
       "words": 0
     },
     {
+      "title": "Anticipare il futuro per decidere oggi, sbarca a Torino il Radar della scienza internazionale - La Stampa",
+      "category": "Italia",
+      "published": "2026-11-08T09:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbVRJejlwLXhoeVY0eHJ1ZHpESHprZGFaRkYyVXZ6NkZfc09FdmtLd1poR3l1ZnZBYnVNNG9VWFJia1ZTV25sQ1ZtX0FjRktvYVNkTmIydlZfemdTS0xZYnYyb0ExcFVPT0NHNE5yV0E4ZkVLMl84VkxRN0owdkxLZEFHY05Wb3N6RjEwcTMwVDZaY3djYzZIdW9WWDZhSXZnWXZ3WUV3ckFkSHVnbjZZeW1OOERQNXh6VGxn0gHAAUFVX3lxTE13NV9fTVB4b2Y2cWtXT0hwWVJIZTE1M1VnR2ZTellVSE9KQ2FkcmdTX2txVGJ0MzM2QmpJb3c1ODVsM1oxa0RaWjFYX2dLV05oQVFza3puQ3RuUnZIbm9DWHI5Mkp0NVJGM3I0d0lFeFhlZXZ6SVp6WEh4c0NMZmR1azlTb0x2a05qcGhMdGRsOEF6X3RURWR",
+      "source": "La Stampa",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Horoscop luni, 9 noiembrie 2026. Două zodii au noroc la bani și oportunități profesionale - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-08T08:44:18+00:00",
@@ -314,47 +395,20 @@
       "words": 0
     },
     {
-      "title": "Referendum într-o comună din Sibiu pentru un proiect de exploatare minieră. Cum arată operațiunea companiei",
-      "category": "România",
-      "published": "2026-11-08T08:36:54+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/referendum-intr-o-comuna-din-sibiu-pentru-un-proiect-de-exploatare-miniera-cum-arata-operatiunea-companiei-4026597",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 438
-    },
-    {
-      "title": "Cel puțin 22 de răniți în Japonia după ce un cutremur a zguduit țara. Vitrinele a zeci de magazine au fost distruse",
-      "category": "România",
-      "published": "2026-11-08T08:00:34+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/cel-putin-22-de-raniti-in-japonia-dupa-ce-un-cutremur-a-zguduit-tara-vitrinele-a-zeci-de-magazine-au-fost-distruse-4026567",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Hackerii susţin că au găsit până la 450.000 de ruși morţi în războiul din Ucraina în statisticile oficiale de la Moscova",
-      "category": "România",
-      "published": "2026-11-08T07:56:05+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/hackerii-sustin-ca-au-gasit-pana-la-450-000-de-rusi-morti-in-razboiul-din-ucraina-in-statisticile-oficiale-de-la-moscova-4026555",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Torino, il treno di cioccolato più lungo del mondo al museo Choco-Story",
+      "title": "Gli avvocati italiani e il banchetto emiratino - la Repubblica",
       "category": "Italia",
-      "published": "2026-11-08T07:42:32+00:00",
-      "url": "https://www.ansa.it/piemonte/videogallery/2026/11/07/torino-il-treno-di-cioccolato-piu-lungo-del-mondo-al-museo-choco-story_337a1f6b-9e5d-4d0e-b573-14c651ba7355.html",
-      "source": "ANSA",
-      "status": "galben",
+      "published": "2026-11-08T07:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOOFVRNHlXVWlvVmIydTRqMV9KLUc4eHJiMHdTb2lfRW5jXzh4cDF3SjIyT3V6blRvelJ5Ym12ZWswSnN0S2drdnNIUUVkbUpqaUFxTHllMnB1dWIyUjIxTmtrd3JYOVFSajBJTksxanhIQWctdE11TmJRbEtENG1lOWhEc202WERDa1l5X0NUQXRlT1FFS2doR2diV2N2d3VXMW5IODJhcnJmMG9o?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
       "words": 0
     },
     {
-      "title": "Terremoto di magnitudo 5.7 in Giappone, oltre 20 persone ferite",
-      "category": "Italia",
-      "published": "2026-11-08T07:41:39+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/terremoto-di-magnitudo-5.7-in-giappone-oltre-20-persone-ferite_2da9a175-db68-465c-8419-89c979310b92.html",
-      "source": "ANSA",
+      "title": "O româncă aflată în SUA a rămas dezamăgită de mâncarea de peste Ocean: „În America, până... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-08T07:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQWUs4czZOZXczR1ZfMFY2eGNfVHEyWGx2LVlsSXFkc21MM1YxaTgxajA5RG9NTHkxT0liZUhTOEN6T3VDakF6M3pPazhyejM0cmxFWk4telJOQzdzUWRTVVczN1hQS0VxWFlVWFJhQ2M4anFRMXdhTVBhRXVxUk1BZ0tfYWQtVlpRUmxBMEZjQnlQcFdKaHd1dmowN0FFN3BwdWVRbjViUWc0QVE0T3VFYkdkeS1RVkpVVHNrSFp1M3Y2bUZnb3RCWVZYUHpVc2w5RGl6U2p1c1I5eEFWX2F5TlJydWZjUE5HVVHSAe8BQVVfeXFMUE5iOGloRzhIQ2VQQ2tFcFNtTk0wRG4tRWduUjk3MUI4Q2pLbTByaWR5Y1RPSm1GdG1qYzdEY2FZem5NbzEwMUhJdHdIQm5seUhvZUhwd2NyVng4dFlfUS0wbWhSbVg5b2g",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -427,6 +481,15 @@
       "published": "2026-11-07T18:40:26+00:00",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOTk5DeWRLbVdBNGk1RFpVX2g0V2QzV3dySUluYk03TjNkZ0RWa0pFb0VlQ0VmelhLZHdVOEtoZm1jNXBHaC1JLVpTWFNZLUJMd2FHejNDSkU2UURVNnJLOTlveng2aUFNek9KT05fbUZQbU1xSF8wYTlkelJlTHk1eFp1d2V3VGlrU0hpSnBiTjF6d9IBgwFBVV95cUxPaENpZXdUVHdvM0ZJbHFJbHlxQXhOOFhySmk5RXhpaXctN3k0ZGJoM0lwY1hfY3UtLXhzUnowaXFabk43cFB5dF9zR0N0X3VQY1drZXMtR0dRLXAtQnM1STJDOWVWb3hLYmoyQjlyT3pxdmh6ZDBoYldTSm5JOFEySVJZQQ?oc=5",
       "source": "Jurnalul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Articole cu tagul: tren - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-07T17:51:08+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBWbkNLTEI2ZHZmLUhaN3BZSGRKVlVsOVFlREZlR2ZsRWRRQ2RzTExnbU1zLXV6Vklmd1BZNTlkU3RrSHppdGdjN3ZWSUM2bmZ1OExwekJjaw?oc=5",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -517,15 +580,6 @@
       "published": "2026-11-07T09:32:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOdkp1TXpnX1NXWTJSZWlfVlRwRjREVUxwWVk4TmtOdFcybnlKOGlmeHFxTzhiUzNWaHAtT3ktX3hjMy1JLW1GNHVBU2h2N2RCSHNyanlkaWdTdHZuRVduRFo4REQydkNnakJVQUsyN2hOZ3BycXhSSHJ0ajdjbTU2TGU1eW9VUmZoQ0xyLWlIVXRBTkVCVHR6WlZRS1FBM0l6WFNLRTQtVzJ6Z1ZQcVZERkRVQnY4NUtxMGpYNHZjZ2JoUHNDOWZ6Uy1TMDhwcExZSVdYWjZOT2tPejJPdnZ30gHkAUFVX3lxTE5XMDNZa2VWSXVNOFB2dVFJV0J5UmI0S19JbEFQbjBORTNRdDdKOEhrZE9rdHUxbU9tZldfR2xvMnBOaUVyTERMVWZGOFQzNmlfanF5NzA2QmRBRTBXVFhnSThQUVFFMUdFMUxYM205LXFNQXR",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il racconto della settimana in immagini",
-      "category": "Italia",
-      "published": "2026-11-07T09:27:14+00:00",
-      "url": "https://www.ansa.it/sito/videogallery/short_video/2026/11/07/il-racconto-della-settimana-in-immagini_83264205-b4c2-4546-86f0-abd173279325.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -645,24 +699,6 @@
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Ex Ilva, tutti gli impianti dell'area a caldo sono stati spenti - Sky TG24",
-      "category": "Italia",
-      "published": "2026-11-06T14:19:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNUpuWmxZQzEweDdmLTlETEY2eV9Nay0zYnhYR1FQektfWDBXeFlXeDVFS3J1M3ctckNwTk1HZXZ2ekdnQ2w3VVFiWUE0cDJhUEVVMS1wWDJaV3ExRE4tbkVCSUU5N0Y4S2NCdTZJVGxBLVF5Z0FHOXVCZU5STVFDSC03V29sTklEVjFvNWRfYw?oc=5",
-      "source": "Sky TG24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Usa, a ottobre l'economia aggiunge 165.000 posti di lavoro, superando nettamente le previsioni - Borsa Italiana",
-      "category": "Italia",
-      "published": "2026-11-06T14:10:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNaldBeWpseGNmWDd3NGlOdHE3a19sNDRrb3I4ZXlPYWg1RmxLaHFOWHhRMFoxZXJoWGtZdTFnLUt1UWwydFdVV0FYOTlaR2cyRlhMYW5pbk5UVGo2ckVKMC1vdnpMVmw5ZmgwUmNKbU01dDZvWklaWnYwdncyRnRYUnRvZlRhUjYyZ3dPMGJGeHBydmVYYi0wVDVwajJJd0hyeWxyS2RvY2g3UVBFVjFzRnNVY0Rfdms3UHZQM256TGpYQ01GOVAwazdYMXlubXRkZFU4dGVVSHcxbngwRUdYNThYNjhTYTlTb0JKSXFBdDR4SkVnV3k0TkxEZE5mZHNDNEhKTkQyQjY?oc=5",
-      "source": "Borsa Italiana",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
@@ -689,17 +725,6 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "Referendum într-o comună din Sibiu pentru un proiect de exploatare minieră. Cum arată operațiunea companiei",
-      "category": "România",
-      "published": "2026-11-08T08:36:54+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/referendum-intr-o-comuna-din-sibiu-pentru-un-proiect-de-exploatare-miniera-cum-arata-operatiunea-companiei-4026597",
-      "source": "Digi24",
-      "status": "verde",
-      "words": 438,
-      "intro": "Peste 4.400 de locuitori din Răşinari, judeţul Sibiu, sunt aşteptaţi duminică la un referendum local pentru a se pronunţa în legătură cu deschiderea unei exploatări miniere pe raza localităţii.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
-    },
-    {
       "title": "Un român a vrut să jefuiască o casă din Italia, dar a adormit în patul proprietarilor. Ce le-a spus carabinierilor care l-au trezit - Adevărul",
       "category": "Diaspora",
       "published": "2026-11-06T07:26:23+00:00",
@@ -719,6 +744,17 @@
       "status": "galben",
       "words": 21,
       "intro": "Un român a intrat să fure dintr-o casă din Italia, dar a adormit în patul proprietarilor.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Un hoț român a jefuit o casă din Italia, apoi a adormit în patul proprietarilor. Cum l-au prins carabinierii - Observator News",
+      "category": "Diaspora",
+      "published": "2026-11-06T08:30:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxObjVBdXFfcld0MW5jbmJQeUhYNzlickZXU2M1enhOZ0prZWNSc25Tc3Q4NzRVdkxZel9tNVJXS09pLVdZQV9zeGdQOGx5c0w4OFFtdU05elNfN0ZBaVVDNy1OdUxvZWpIeGE5cW9ZMHRqVW9qRmtSV3VyQkVpR1d1RXN3cWowaklocE1JbDZvcmJMcmpiS2xyRDRnN2VoeDFaWm9QQlZFUF9BSHJYMTNRaVdlRDRnTzgyUEJXY2Y1c2RhV0JmS293MExrTVBHX2kxeVNiN3lfVnN6cEMtS3I3UFFKaGg?oc=5",
+      "source": "Observator News",
+      "status": "galben",
+      "words": 21,
+      "intro": "Un hoț român a jefuit o casă din Italia, apoi a adormit în patul proprietarilor.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
