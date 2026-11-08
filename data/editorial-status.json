@@ -1,28 +1,136 @@
 {
-  "news_updated_at": "2026-11-08T15:01:26.512816+00:00",
-  "editorial_updated_at": "2026-11-08T08:13:05.873938+01:00",
-  "translations_updated_at": "2026-11-08T13:29:18.082815+00:00",
+  "news_updated_at": "2026-11-08T15:51:15.003861+00:00",
+  "editorial_updated_at": "2026-11-08T16:03:06.081063+01:00",
+  "translations_updated_at": "2026-11-08T15:01:26.970040+00:00",
   "feed_total": 76,
   "feed_extended_400": 1,
   "feed_missing_body": 75,
   "feed_short_body": 0,
-  "editorial_total": 24,
-  "archived_editorials": 201,
-  "translation_records": 48,
+  "editorial_total": 14,
+  "archived_editorials": 203,
+  "translation_records": 51,
   "pending_total": 0,
   "pending_filtered_out": 0,
-  "editorial_verde": 3,
-  "editorial_galben": 47,
+  "editorial_verde": 2,
+  "editorial_galben": 38,
   "editorial_rosu": 46,
   "pending": [],
   "recent_news": [
     {
-      "title": "Meteorologii anunță nopți geroase și ploi în multe zone ale țării. De când se încălzește vremea",
+      "title": "Accident feroviar în Egipt, după coliziunea a două trenuri: patru morți și 88 de răniți. Un mecanic de locomotivă, printre victime",
       "category": "România",
-      "published": "2026-11-08T14:57:04+00:00",
+      "published": "2026-11-08T15:44:43+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/accident-feroviar-in-egipt-dupa-coliziunea-a-doua-trenuri-patru-morti-si-88-de-raniti-un-mecanic-de-locomotiva-printre-victime-4026879",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Rusia îl celebrează pe fostul șef al spionajului Stasi. Markus Wolf a fost „omul fără chip” pentru serviciile secrete occidentale",
+      "category": "România",
+      "published": "2026-11-08T15:42:48+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/rusia-il-celebreaza-pe-fostul-sef-al-spionajului-stasi-markus-wolf-a-fost-omul-fara-chip-pentru-serviciile-secrete-occidentale-4026875",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Herzog affida a Eisenkot l'incarico di formare il nuovo governo",
+      "category": "Italia",
+      "published": "2026-11-08T15:42:18+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/herzog-affida-a-eisenkot-lincarico-di-formare-il-nuovo-governo_9bce6d47-9f8f-434e-b62a-b429a911d586.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Parigi, europei e Francia saranno presenti al trilaterale di Abu Dhabi",
+      "category": "Italia",
+      "published": "2026-11-08T15:30:41+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/parigi-europei-e-francia-saranno-presenti-al-trilaterale-di-abu-dhabi_093f3a23-531b-4851-ab34-fd51d14f1168.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Un nou mesaj Ro-Alert a fost emis pentru locuitorii din Tulcea privind o posibilă incursiune de drone",
+      "category": "România",
+      "published": "2026-11-08T15:22:33+00:00",
+      "url": "https://www.digi24.ro/stiri/un-nou-mesaj-ro-alert-a-fost-emis-pentru-locuitorii-din-tulcea-privind-o-posibila-incursiune-de-drone-4026863",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Attacchi informatici, Piantedosi convoca il Comitato di sicurezza pubblica",
+      "category": "Italia",
+      "published": "2026-11-08T15:21:48+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_2ff3c55f-8d26-4dfe-830b-5bc7344a1033.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Aliații europeni sunt mai conștienți de apetitul tot mai mare al Kremlinului pentru risc, spune șeful armatei britanice",
+      "category": "România",
+      "published": "2026-11-08T15:21:19+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/aliatii-europeni-sunt-mai-constienti-de-apetitul-tot-mai-mare-al-kremlinului-pentru-risc-spune-seful-armatei-britanice-4026861",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Genoa-Milan 0-2 DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-08T15:15:51+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-15-genoa-milan-diretta-_cbaae15d-e302-4f11-9083-8a0c99394a64.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: in campo Monza-Atalanta 0-1 DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-08T15:13:41+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-15-monza-atalanta-diretta_befacfa2-5f4e-49b2-aecd-f0495849d8be.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Piazza Italia compra Conbipel: piano a 5 anni con 100 nuovi store (e assunzioni) per lo storico marchio di Cocconato d'Asti - Torino Cronaca",
+      "category": "Italia",
+      "published": "2026-11-08T15:11:12+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQRTdVc2FfWTgxaHdVZHpHOWFjOUZidS1CT1NVZnlaNE9hajdqaHAwenlhUHZFeVQ1Sktxd21OOVd4dV9kNHNNN0tXcmRhek9wT3J3bDRVU1NXNE0yemh0bkJ6c1JPVXJDVkEyN1RqUTN6dFNQX3ZpR2UwTmdNd0NjQUF0bi1ybWJZMjF0ejBWdkNQZS1fOE13bU03WWVva3M2eWZKalB6SGdITTJQdXFXbjVNbUZHWGFNZjBfRFdTNlNzSmxNZFFKWEpNOGtkbjNnbmNuNEJ3ajN5bHNkcExiV0VObnlXZUVzdnhLZFRCR293VW5Db0g5cDRKdGtUdGwtSnJzcHBn?oc=5",
+      "source": "Torino Cronaca",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
+      "category": "Italia",
+      "published": "2026-11-08T15:07:48+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 448
+    },
+    {
+      "title": "Val de frig peste România: meteorologii anunță nopți geroase și ploi în multe zone. Când se întorc temperaturile de peste 20°C",
+      "category": "România",
+      "published": "2026-11-08T15:06:22+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/social/meteorologii-anunta-nopti-geroase-si-ploi-in-multe-zone-ale-tarii-de-cand-se-incalzeste-vremea-4026799",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il Papa a Florida per l'ultima tappa in Uruguay: 'I governanti perseguano il bene di tutti'",
+      "category": "Italia",
+      "published": "2026-11-08T15:00:28+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-a-florida-per-lultima-tappa-in-uruguay-i-governanti-perseguano-il-bene-di-tutti_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -53,33 +161,6 @@
       "words": 0
     },
     {
-      "title": "Ce se știe despre autorul atacului din Cracovia: imagine tulburătoare a unui extremist. Cine sunt victimele sale",
-      "category": "România",
-      "published": "2026-11-08T14:49:22+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ce-se-stie-despre-presupusul-autor-al-atacului-din-cracovia-imagine-tulburatoare-a-unui-extremist-prima-zi-de-doliu-national-4026487",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
-      "category": "Italia",
-      "published": "2026-11-08T14:38:28+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
-      "source": "ANSA",
-      "status": "verde",
-      "words": 448
-    },
-    {
-      "title": "Parigi, europei e Francia saranno presenti al trilaterale di Abu Dhabi",
-      "category": "Italia",
-      "published": "2026-11-08T14:37:43+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/parigi-europei-e-francia-saranno-presenti-al-trilaterale-di-abu-dhabi_093f3a23-531b-4851-ab34-fd51d14f1168.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "„Nu este o problemă a străinilor. Este o problemă a societății japoneze”. Latura întunecată a „orașului care nu doarme” din Tokyo",
       "category": "România",
       "published": "2026-11-08T14:32:42+00:00",
@@ -98,30 +179,12 @@
       "words": 0
     },
     {
-      "title": "Serie A: in campo Genoa-Milan 0-2 DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-08T14:29:42+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-15-genoa-milan-diretta-_cbaae15d-e302-4f11-9083-8a0c99394a64.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Europenii se întorc la masa negocierilor privind Ucraina, de la Abu Dhabi: „Vor fi bine reprezentaţi”. Anunțul a fost făcut de Franța",
       "category": "România",
       "published": "2026-11-08T14:28:24+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/europenii-se-intorc-la-masa-negocierilor-privind-ucraina-de-la-abu-dhabi-vor-fi-bine-reprezentati-anuntul-a-fost-facut-de-franta-4026815",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Il Papa a Florida per l'ultima tappa in Uruguay: 'I governanti perseguano il bene di tutti'",
-      "category": "Italia",
-      "published": "2026-11-08T14:26:13+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-a-florida-per-lultima-tappa-in-uruguay-i-governanti-perseguano-il-bene-di-tutti_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -143,30 +206,12 @@
       "words": 0
     },
     {
-      "title": "Trump: 'L'America ha fatto un passo indietro nella storia con le elezioni'. Domani vedrà Dana White",
-      "category": "Italia",
-      "published": "2026-11-08T14:11:00+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/08/trump-lamerica-ha-fatto-un-passo-indietro-nella-storia-con-le-elezioni.-domani_185e5971-a7a8-47f4-b15a-df683dc8bdc1.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Efectele inteligenței artificiale asupra atacurilor cibernetice: „Democratizarea AI a pus capabilităţi puternice la îndemâna tuturor”",
       "category": "România",
       "published": "2026-11-08T14:08:48+00:00",
       "url": "https://www.digi24.ro/stiri/sci-tech/lumea-digitala/efectele-inteligentei-artificiale-asupra-atacurilor-cibernetice-democratizarea-ai-a-pus-capabilitati-puternice-la-indemana-tuturor-4026731",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Serie A: in campo Monza-Atalanta 0-0 DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-08T14:08:22+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-alle-15-monza-atalanta-diretta_befacfa2-5f4e-49b2-aecd-f0495849d8be.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -197,21 +242,21 @@
       "words": 0
     },
     {
-      "title": "Attacchi informatici, Piantedosi convoca il Comitato di sicurezza pubblica",
-      "category": "Italia",
-      "published": "2026-11-08T13:46:01+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_2ff3c55f-8d26-4dfe-830b-5bc7344a1033.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Putin duce o campanie de război hibrid împotriva Irlandei, în perspectiva găzduirii de către aceasta a unor summituri importante ale UE",
       "category": "România",
       "published": "2026-11-08T13:10:15+00:00",
       "url": "https://www.digi24.ro/stiri/externe/putin-duce-o-campanie-de-razboi-hibrid-impotriva-irlandei-in-perspectiva-gazduirii-de-catre-aceasta-a-unor-summituri-importante-ale-ue-4026727",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Bomba a Lugo, neutralizzato un ordigno bellico di 240 kg - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-08T13:07:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5UMHpmNzBNNldkb2tmaFBzMTFJeWdseXF0MVV5R054MVBkNnhsclRHMk80cVVKdVN0dXFIU0c3R0dZNl91d3dfSkVMNFZJNjZRUDhISHlRUEJPN0t6ZUZNckRNSDFpTXRtSWNVLXFZeGJXZ0g3cE9F?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -228,15 +273,6 @@
       "category": "Italia",
       "published": "2026-11-08T12:47:58+00:00",
       "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/08/cracovia-la-testimonianza-di-un-italiano-che-era-a-pochi-metri-dalla-sparatoria_11e8e889-0850-4dbf-b9a9-cfe3652f79da.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "In Israele è il giorno di Eisenkot, Herzog gli affiderà l'incarico di formare il governo",
-      "category": "Italia",
-      "published": "2026-11-08T12:30:23+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/herzog-affida-a-eisenkot-lincarico-di-formare-il-governo-in-israele_a23fdf32-f6f2-45a5-ac13-96235962585a.html",
       "source": "ANSA",
       "status": "galben",
       "words": 0
@@ -296,24 +332,6 @@
       "words": 0
     },
     {
-      "title": "Piazza Italia compra Conbipel: piano a 5 anni con 100 nuovi store (e assunzioni) per lo storico marchio di Cocconato d'Asti - Torino Cronaca",
-      "category": "Italia",
-      "published": "2026-11-08T11:30:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQRTdVc2FfWTgxaHdVZHpHOWFjOUZidS1CT1NVZnlaNE9hajdqaHAwenlhUHZFeVQ1Sktxd21OOVd4dV9kNHNNN0tXcmRhek9wT3J3bDRVU1NXNE0yemh0bkJ6c1JPVXJDVkEyN1RqUTN6dFNQX3ZpR2UwTmdNd0NjQUF0bi1ybWJZMjF0ejBWdkNQZS1fOE13bU03WWVva3M2eWZKalB6SGdITTJQdXFXbjVNbUZHWGFNZjBfRFdTNlNzSmxNZFFKWEpNOGtkbjNnbmNuNEJ3ajN5bHNkcExiV0VObnlXZUVzdnhLZFRCR293VW5Db0g5cDRKdGtUdGwtSnJzcHBn?oc=5",
-      "source": "Torino Cronaca",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Imagini halucinante la un meci de box din Turcia. Unul dintre sportivi a fost bătut de spectatori după un gest provocator",
-      "category": "România",
-      "published": "2026-11-08T11:18:47+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/imagini-halucinante-la-un-meci-de-box-din-turcia-unul-dintre-sportivi-a-fost-batut-de-spectatori-dupa-un-gest-provocator-4026675",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "OpenAI, un nuovo modello di IA scova falle in oggetti connessi",
       "category": "Italia",
       "published": "2026-11-08T10:41:13+00:00",
@@ -338,15 +356,6 @@
       "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/06/de-sica-i-cinepanettoni-oggi-non-si-possono-piu-fare-sarebbero-sbagliati_bcf92997-5b10-4908-a708-1cdfa20805ec.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ce naţionalități au cetăţenii străini răniţi în atacul din Cracovia",
-      "category": "România",
-      "published": "2026-11-08T10:19:29+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/ce-nationalitati-au-cetatenii-straini-raniti-in-atacul-din-cracovia-4026645",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -454,15 +463,6 @@
       "published": "2026-11-07T21:15:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxNY0paNVk5b0Rvcm1mRl82VTg4V1g2S1o3UXdRNzB1a1NlaG9GOFhhVzUwOUN3aWFOaDZDT0ZFZ0hlQXBrUVhXUjFjS0pHUGNfQ1hfQi1NNXoxV2xqdmd4LV9fcnJyQ28ycDBkd3c0RXh3SlBjNlNBZUJuWlE1NzNaNXV0TUJtUXlfbHBoS2ROZ1VzRHBQTkFjbE8wTWw1S0pqMGVfdTZPVmFvSFNoM1JpSGJRbGs0bEdpMDJUZnN5WjJHeWVPSFJaUDRjcVlMbUFBVnFxWl9FZmNQVzlVeVExYWplcjJmdVhuTFUwWmhCcGxyejUxVHZ5T0hSR1lydnMweGRvdFNoR1VfZw?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "le ultime notizie - Cremaonline",
-      "category": "Italia",
-      "published": "2026-11-07T20:06:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1mb2ZIWHFEbTladERPMUhBQjR4VEdxakJIbzhudUxBZWpBSEVVX3Q4eE9xdW1QSklwck5JdkdVb1pQVXJrc0d1Q09tY3F2R1AzdjdqUg?oc=5",
-      "source": "Cremaonline",
       "status": "roșu",
       "words": 0
     },
@@ -703,17 +703,6 @@
   ],
   "radio_briefs": [
     {
-      "title": "Un român a spart o casă în Italia, apoi a adormit în pat. Carabinierii l-au trezit și l-au arestat:... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-06T09:23:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPSmoxQVIzYU5rcTF3WGd4ZVZta0IxSno5a2JCWExMXzdBOFBHeFdpM1BQbzV2QjZScWdXX0Y1Y2xxM2xBMk0yaWF3Mzd2ekktajhyNlpfWDJJYkxrd2lzNnBCQW5zWVdBd3dpVUhDMXc3MTJMM1AtV1c3QVp6cWQxTEdyODRFdXJjMkVrcjVkQXhXeXY5alczelF2LVQ4ZkpQWUpnRXh6SEZUNjBSNU5hc3VwTWtSLWM2TG1FMExKYzVTR0EyMlR2MWl6UEpGV3NWeGZBTmhnT25oQy12WTJFR3pFeVJXdmZuVl9ZbEYyY1R1cE51bVhTcdIB_gFBVV95cUxQY0g5VUNodEYyWmFGTThOWGNOYWJsdEZSTFBEd05SM3NVLTBieW9OY1BPSERYY2ExRjBsVFhXb3JKVXdtRDZxNmhxMjBoYnhGdVFWWlR2WHJVZk1",
-      "source": "StiriDiaspora",
-      "status": "verde",
-      "words": 524,
-      "intro": "În Toscana, un român de 42 de ani a fost găsit dormind într-o casă în care este acuzat că intrase pentru a fura.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
       "title": "Video Un român a murit pe un șantier naval din Italia. Colegii vor să organizeze un protest în urma tragediei - Digi24",
       "category": "Diaspora",
       "published": "2026-11-06T16:09:58+00:00",
@@ -727,7 +716,7 @@
     {
       "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
       "category": "Italia",
-      "published": "2026-11-08T14:38:28+00:00",
+      "published": "2026-11-08T15:07:48+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
       "source": "ANSA",
       "status": "verde",
@@ -736,25 +725,36 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
-      "title": "Un român a vrut să jefuiască o casă din Italia, dar a adormit în patul proprietarilor. Ce le-a spus carabinierilor care l-au trezit - Adevărul",
+      "title": "Video - Un român a spart o casă din Italia și, obosit de atâta cotrobăit, s-a culcat. Ce le-a spus polițiștilor care l-au trezit - Stirile ProTV",
       "category": "Diaspora",
-      "published": "2026-11-06T07:26:23+00:00",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPLTVGQjFwRmF1cVJfcXNqckdidUE3R0wzdGd4N0kxRTFEMkFBVlpjNDNja1oxWEU2V3F2OXFJVVpNU05xSnpkb1VidERtNW9saGxhWTJCM0lhWW8wNFNLRWZ6VUN5Q2gyZmNKeG45anN4WjZDUnVUZGx2R0dvbDlKeGw3MmhRb3Z6ZEV5RDR6Y3RreVVjVXZXT1RlOUdzdU1lSnhHRVRVNA?oc=5",
-      "source": "Adevărul",
+      "published": "2026-11-06T15:28:31+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQWXlVVFRIVk02OGV1Z1FBenZnZWQ3SUpXdUFFWGlQWUFMM1Z3emNIemJHanVCeFJsWjBSZWh2T2pYbDAyUHFIeDdEcXZKMFRKMGVGSjlaTFBKTnIwcm5NRW5iVFpqcF83YkpTc09QQ1dEMWs1V2EwUWhBamNKRmxPTWpzUUlVWEwtUEdqRHNqU3ZiTnhoT3QtU0hHUUlJUlBQOW00UW1Zd09xczRQUW5RQ19wNjFibkNuNlAzZkhIZGpMVWRyS3NfTEFfREFmdUVTQ0NlZlhvR0U3cTFiTEU1Rkd4WVNLclIy?oc=5",
+      "source": "Stirile ProTV",
       "status": "galben",
-      "words": 24,
-      "intro": "Un român a vrut să jefuiască o casă din Italia, dar a adormit în patul proprietarilor.",
+      "words": 26,
+      "intro": "Video - Un român a spart o casă din Italia și, obosit de atâta cotrobăit, s-a culcat.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "Un român a intrat să fure dintr-o casă din Italia, dar a adormit în patul proprietarilor. Polițiștii l-au găsit dimineața - Tion",
+      "title": "Un român a spart o casă din Italia și, obosit de atâta cotrobăit, s-a culcat. Ce le-a spus polițiștilor care l-au trezit - Stirile ProTV",
       "category": "Diaspora",
-      "published": "2026-11-06T08:21:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQT3ViTzlmZUd4TGVVT19tUHA2U01KT1p1WVBsMTJpSUdydGRySmhSdm5iN1ZaR2R6OURxMUhoSXFvalV0cWVOVlZIUWJkTGJvajdvRWIydDFhWDZ5OUxwQ2tkTEh4WU5ZUTJYZUx5Q3JsU3d1Q21MTnctejgxeEdEQ084RTFwQ0JoaU5Gb3diNERrOFNKMTZ1dDNGWTJpdTg0alQxLVEzWXNPTHhjZVI4LU1JSk1CZElXM19UZTRweXk0X3FVekNkTEVMSjZpS0hHOTVWa0NSMjdkRDJQbnd5Q2xjQkM2VnFKSkptb1JTdw?oc=5",
-      "source": "Tion",
+      "published": "2026-11-06T15:28:42+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNOExWWkhPRWVCT0Z2Nzk0X20xYndQcHBQS2NweURUNTU0WGhxdzdsTmRGNnJJX0cyMmt3VHI2UWxIellBeXdfNnRUWmlpYzI0dWNrWjI1NVFZREFBek0yTTdCUXJHVExwcThxNWdUOUppNGdnR09PclNPdVVGc1JveXVFZ2RyZ3IwQ0NQbFo2aFdjajhtZmF1Wk9sS2RiNFdyRHdRV2RUWjBlUVZudzg4RnJDbkwtRGxrdW8zMmViS1pucG1hdW8wYWVlbzR2cVJDUUVJVmRhZjdYVzhHUTQ1LUJvLTdOYlBtWDFHa2xYMDU0emI1SjVyMjFR?oc=5",
+      "source": "Stirile ProTV",
       "status": "galben",
-      "words": 21,
-      "intro": "Un român a intrat să fure dintr-o casă din Italia, dar a adormit în patul proprietarilor.",
+      "words": 24,
+      "intro": "Un român a spart o casă din Italia și, obosit de atâta cotrobăit, s-a culcat.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Un român a murit pe un șantier naval din Italia. Colegii vor să organizeze un protest în urma tragediei - Digi24",
+      "category": "Diaspora",
+      "published": "2026-11-06T16:09:58+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNSklBTTZDWUdZYklVRGxqVzVaeUlvOVduX2MxbkY2amVXVVdWQXc0VTQyQ091dThuSjRrMjlUTDNEckxTVVBWUm5JYUk3RUpXNjRrYlBseFdZTnN1V1NmNXlOR0E0XzNhLUtjUTB5NlpJYzZlZTR6aGR2VHlwVHdrY0dqUFdkUnJ2aTZvc1NaTXR2NEhUZlAxOTlZaDc0SlM5aHhkSTFoRzNGX3lXN3dXZnNtUlZ1c0xUSFRGM3YxYm1fS1l3Q3pzeVZVbDJEQ24xMm5HemRjdGpiNV9HSXVHSGV1QTF3X0w3TVl1MHVLc9IB7wFBVV95cUxNSklBTTZDWUdZYklVRGxqVzVaeUlvOVduX2MxbkY2amVXVVdWQXc0VTQyQ091dThuSjRrMjlUTDNEckxTVVBWUm5JYUk3RUpXNjRrYlBseFdZTnN1V1NmNXlOR0E",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 20,
+      "intro": "Un român a murit pe un șantier naval din Italia.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
