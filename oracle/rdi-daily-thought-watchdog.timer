@@ -1,0 +1,11 @@
+[Unit]
+Description=Check RDI daily thought every 10 minutes
+
+[Timer]
+OnCalendar=*:3/10
+Persistent=true
+RandomizedDelaySec=40
+Unit=rdi-daily-thought-watchdog.service
+
+[Install]
+WantedBy=timers.target

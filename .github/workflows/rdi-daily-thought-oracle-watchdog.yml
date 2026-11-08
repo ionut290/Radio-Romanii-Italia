@@ -1,0 +1,66 @@
+name: RDI - Watchdog Oracle Pensiero del Giorno
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-thought.yml'
+      - 'oracle/rdi-daily-thought-watchdog.py'
+      - 'oracle/rdi-daily-thought-watchdog.service'
+      - 'oracle/rdi-daily-thought-watchdog.timer'
+      - '.github/workflows/rdi-daily-thought-oracle-watchdog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-daily-thought-oracle-watchdog-install
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Configura accesso Oracle
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+      - name: Installa e verifica il watchdog senza toccare radio o streaming
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          STAGE=/tmp/rdi-daily-thought-watchdog-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "install -d -m 700 '$STAGE'"
+          trap 'ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "rm -rf -- '\''$STAGE'\''" || true' EXIT
+          scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            oracle/rdi-daily-thought-watchdog.py oracle/rdi-daily-thought-watchdog.service oracle/rdi-daily-thought-watchdog.timer "$REMOTE:$STAGE/"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "sudo -n env STAGE='$STAGE' bash -s" <<'REMOTE_SCRIPT'
+          set -euo pipefail
+          install -d -m 755 /opt/rdi-daily-thought-watchdog
+          install -m 755 "$STAGE/rdi-daily-thought-watchdog.py" /opt/rdi-daily-thought-watchdog/rdi-daily-thought-watchdog.py
+          install -m 644 "$STAGE/rdi-daily-thought-watchdog.service" /etc/systemd/system/rdi-daily-thought-watchdog.service
+          install -m 644 "$STAGE/rdi-daily-thought-watchdog.timer" /etc/systemd/system/rdi-daily-thought-watchdog.timer
+          install -d -m 750 -o ubuntu -g ubuntu /home/ubuntu/.local/state/rdi-daily-thought-watchdog
+          test -s /home/ubuntu/rdi-monitor/github-token
+          systemctl daemon-reload
+          systemctl enable --now rdi-daily-thought-watchdog.timer
+          systemctl start rdi-daily-thought-watchdog.service
+          systemctl is-active --quiet rdi-daily-thought-watchdog.timer
+          systemctl show rdi-daily-thought-watchdog.service -p Result -p ExecMainStatus --no-pager
+          systemctl list-timers --all --no-pager rdi-daily-thought-watchdog.timer
+          REMOTE_SCRIPT
