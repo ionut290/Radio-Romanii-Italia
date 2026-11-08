@@ -70,14 +70,14 @@ function italianStory(story,translationItems){
   return {...story,title:translated.title,summary:translated.summary};
  }
  // Already Italian, including trusted Italian news providers.
- const knownItalianSource=/^(?:ANSA|la Repubblica|Eunews|Diario FVG|Borsa Italiana|PMI\\.it)(?:\\b|$)/i;
+ const knownItalianSource=/^(?:ANSA|la Repubblica|Eunews|Diario FVG|Borsa Italiana|PMI\.it)(?:\b|$)/i;
  if(story.category==='Italia'&&knownItalianSource.test(String(story.source||'')))return story;
  if((story.language==='it'||story.content_language==='it')&&story.summary&&story.title)return story;
  // Romanian-only fallback: do not accidentally broadcast untranslated English.
  const source=String(story.source||'').toLowerCase();
  const url=String(story.url||'').toLowerCase();
- const romanianSources=/digi24|agerpres|mediafax|antena 3|adevărul|adevarul|știridiaspora|stiridiaspora|libertatea|informat\\.ro|kanal d romania|gazeta românească|gazeta romaneasca|rotalianul|aktual24|stirileprotv|hotnews|g4media|ziare\\.com/i;
- const romanianDomain=/https?:\\/\\/[^/]*\\.(?:ro|md)(?:[/:?#]|$)/i;
+ const romanianSources=/digi24|agerpres|mediafax|antena 3|adevărul|adevarul|știridiaspora|stiridiaspora|libertatea|informat\.ro|kanal d romania|gazeta românească|gazeta romaneasca|rotalianul|aktual24|stirileprotv|hotnews|g4media|ziare\.com/i;
+ const romanianDomain=/https?:\/\/[^/]*\.(?:ro|md)(?:[/:?#]|$)/i;
  const isRomanian=story.content_language==='ro'||story.language==='ro'||romanianSources.test(source)||romanianDomain.test(url);
  if(isRomanian&&story.summary&&story.title)return {...story,rdiFallbackLanguage:'ro'};
  return null;
