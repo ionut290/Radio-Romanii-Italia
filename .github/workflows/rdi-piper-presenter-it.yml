@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
       - name: Verifica sintassi script e contenuti
         run: |
-          python -m py_compile scripts/rdi_piper_presenter_it.py
+          python -m py_compile scripts/rdi_piper_presenter_it.py scripts/rdi_piper_mp3_preview.py
           python - <<'PY'
           import ast
           from pathlib import Path
@@ -56,6 +56,6 @@ jobs:
           set -euo pipefail
           opts=(-i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12)
           remote=ubuntu@129.151.255.41
-          scp "${opts[@]}" scripts/rdi_piper_presenter_it.py "$remote:/tmp/rdi_piper_presenter_it.py"
-          ssh "${opts[@]}" "$remote" "test -f /home/ubuntu/rdi-piper-test/venv/bin/python && timeout 360 nice -n 15 python3 /tmp/rdi_piper_presenter_it.py"
-          echo "File pronti nel server Oracle, MA NON IN ONDA."
+          scp "${opts[@]}" scripts/rdi_piper_presenter_it.py scripts/rdi_piper_mp3_preview.py "$remote:/tmp/"
+          ssh "${opts[@]}" "$remote" "test -f /home/ubuntu/rdi-piper-test/venv/bin/python && timeout 360 nice -n 15 python3 /tmp/rdi_piper_presenter_it.py && timeout 240 nice -n 15 python3 /tmp/rdi_piper_mp3_preview.py"
+          echo "WAV e MP3 pronti nel server Oracle, MA NON IN ONDA."
