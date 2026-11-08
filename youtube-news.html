@@ -60,6 +60,8 @@ function italianCategory(value){
 }
 // Only display verified Italian copy. Never expose untranslated Romanian or English
 // headlines in the TV broadcast. The multilingual website remains unchanged.
+// Prefer Italian. Until the automated translation is available, show
+// confirmed Romanian-language articles in Romanian instead of an empty TV screen.
 function italianStory(story,translationItems){
  if(!story||typeof story.title!=='string')return null;
  const translated=(translationItems[story.id]||translationItems[story.url])?.it;
@@ -67,12 +69,17 @@ function italianStory(story,translationItems){
     typeof translated.summary==='string'&&translated.summary.trim()){
   return {...story,title:translated.title,summary:translated.summary};
  }
- // Italian editorial providers deliver copy in Italian already.
- const knownItalianSource=/^(?:ANSA|la Repubblica|Eunews|Diario FVG|Borsa Italiana|PMI\.it)(?:\b|$)/i;
- if(story.category==='Italia'&&knownItalianSource.test(String(story.source||''))){
-  return story;
- }
- if(story.language==='it'&&story.summary&&story.title)return story;
+ // Already Italian, including trusted Italian news providers.
+ const knownItalianSource=/^(?:ANSA|la Repubblica|Eunews|Diario FVG|Borsa Italiana|PMI\\.it)(?:\\b|$)/i;
+ if(story.category==='Italia'&&knownItalianSource.test(String(story.source||'')))return story;
+ if((story.language==='it'||story.content_language==='it')&&story.summary&&story.title)return story;
+ // Romanian-only fallback: do not accidentally broadcast untranslated English.
+ const source=String(story.source||'').toLowerCase();
+ const url=String(story.url||'').toLowerCase();
+ const romanianSources=/digi24|agerpres|mediafax|antena 3|adevărul|adevarul|știridiaspora|stiridiaspora|libertatea|informat\\.ro|kanal d romania|gazeta românească|gazeta romaneasca|rotalianul|aktual24|stirileprotv|hotnews|g4media|ziare\\.com/i;
+ const romanianDomain=/https?:\\/\\/[^/]*\\.(?:ro|md)(?:[/:?#]|$)/i;
+ const isRomanian=story.content_language==='ro'||story.language==='ro'||romanianSources.test(source)||romanianDomain.test(url);
+ if(isRomanian&&story.summary&&story.title)return {...story,rdiFallbackLanguage:'ro'};
  return null;
 }
 function valid(x){return x&&typeof x.title==='string'&&x.title.trim().length>8}
@@ -101,8 +108,8 @@ async function load(){
     return !Number.isNaN(stamp.getTime())&&romeDay.format(stamp)===today;
   }
   const seen=new Set();
-  const italianItems=[...(editorial.items||[]),...(news.items||[]),...events].map(x=>italianStory(x,translationData.items||{})).filter(Boolean);
-  const incoming=italianItems.filter(publishedToday).filter(valid).filter(x=>!x.promotion&&!/^(publicitate|pubblicit[aà]|advertising|sponsorizat[ăa]?|promovare|activități și servicii)$/i.test(String(x.category||"").trim())).filter(x=>{
+  const displayItems=[...(editorial.items||[]),...(news.items||[]),...events].map(x=>italianStory(x,translationData.items||{})).filter(Boolean);
+  const incoming=displayItems.filter(publishedToday).filter(valid).filter(x=>!x.promotion&&!/^(publicitate|pubblicit[aà]|advertising|sponsorizat[ăa]?|promovare|activități și servicii)$/i.test(String(x.category||"").trim())).filter(x=>{
    const key=x.category+'|'+x.title.trim().toLocaleLowerCase('ro');
    if(seen.has(key))return false;seen.add(key);return true;
   });
