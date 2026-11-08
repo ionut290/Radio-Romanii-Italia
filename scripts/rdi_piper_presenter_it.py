@@ -57,7 +57,7 @@ def generate(now: dt.datetime, dry_run: bool) -> list[dict]:
         os.close(fd)
         tmp = Path(tmpname)
         try:
-            cmd = [str(PIPER), "-m", MODEL, "--data-dir", str(VOICES), "-f", str(tmp), "--", words]
+            cmd = [str(PIPER), "-m", "piper", "-m", MODEL, "--data-dir", str(VOICES), "-f", str(tmp), "--", words]
             # Low process priority; CPU thread cap limits contention with LIVE.
             env = dict(os.environ, OMP_NUM_THREADS="2", OPENBLAS_NUM_THREADS="2")
             result = subprocess.run(["nice", "-n", "15", *cmd], env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, timeout=120, check=False)
