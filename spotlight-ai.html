@@ -352,10 +352,8 @@ const shareLabels={
  en:{share:"↗ Share",copy:"🔗 Copy link",copied:"Link copied!",failed:"Could not copy link",title:"Listen to"}
 };
 function trackShareUrl(track){
- const url=new URL(location.pathname,location.origin);
- url.searchParams.set("song",String(track.id));
- url.searchParams.set("page",String(page));
- return url.href;
+ const songId=String(track.id).replace(/[^a-zA-Z0-9_-]/g,"_");
+ return new URL("./ai-music-share/"+encodeURIComponent(songId)+".html",location.href).href;
 }
 async function copyTrackLink(track,button){
  const url=trackShareUrl(track);
