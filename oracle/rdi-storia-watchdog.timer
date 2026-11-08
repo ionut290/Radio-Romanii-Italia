@@ -1,0 +1,11 @@
+[Unit]
+Description=Check RDI STORIA every 10 minutes
+
+[Timer]
+OnCalendar=*:7/10
+Persistent=true
+RandomizedDelaySec=40
+Unit=rdi-storia-watchdog.service
+
+[Install]
+WantedBy=timers.target

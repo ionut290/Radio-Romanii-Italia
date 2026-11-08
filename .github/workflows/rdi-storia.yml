@@ -1,1 +1,93 @@
-bmFtZTogUkRJIFNUT1JJQSAtIEFjY2FkZGUgb2dnaSAoYXV0b21hdGljbykKCm9uOgogIHB1c2g6CiAgICBicmFuY2hlczogW21haW5dCiAgICBwYXRoczoKICAgICAgLSAnLmdpdGh1Yi93b3JrZmxvd3MvcmRpLXN0b3JpYS55bWwnCiAgICAgIC0gJ3NjcmlwdHMvZ2VuZXJhdGVfcmRpX3N0b3JpYS5weScKICAgICAgLSAnc2NyaXB0cy9idWlsZF9zdG9yaWFfc2hhcmVzLnB5JwogIHNjaGVkdWxlOgogICAgIyBQcmltYSBwdWJibGljYXppb25lIGUgcmVjdXBlcmkgZGlzdHJpYnVpdGk6IEdpdEh1YiBwdcOyIHJpdGFyZGFyZQogICAgIyBzaW5nb2xpIGNyb247IGlsIHByaW1vIHRlbnRhdGl2byBhcnJpdmEgcXVpbmRpIG1vbHRvIHByaW1hIGRlbCBtYXR0aW5vLgogICAgLSBjcm9uOiAnMTUgMSAqICogKicgICMgcHJpbWEgcHViYmxpY2F6aW9uZSAoMDI6MTUgaW4gSXRhbGlhIGQnaW52ZXJubykKICAgIC0gY3JvbjogJzQ1IDMgKiAqIConICAjIGNvbnRyb2xsbyBtYXR0dXRpbm8KICAgIC0gY3JvbjogJzE1IDUgKiAqIConICAjIHJlY3VwZXJvCiAgICAtIGNyb246ICc0NSA2ICogKiAqJyAgIyByZWN1cGVybyBzZWNvbmRhcmlvCiAgICAtIGNyb246ICcxNSA5ICogKiAqJyAgIyB1bHRlcmlvcmUgcmVjdXBlcm8gc2UgR2l0SHViIHJpdGFyZGEKICAgIC0gY3JvbjogJzE1IDEyICogKiAqJyAjIHVsdGltbyBjb250cm9sbG8gZGl1cm5vCiAgd29ya2Zsb3dfZGlzcGF0Y2g6CgpwZXJtaXNzaW9uczoKICBjb250ZW50czogd3JpdGUKCmNvbmN1cnJlbmN5OgogIGdyb3VwOiByZGktc3RvcmlhLXB1Ymxpc2gKICBjYW5jZWwtaW4tcHJvZ3Jlc3M6IGZhbHNlCgpqb2JzOgogIHB1YmxpY2E6CiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICB0aW1lb3V0LW1pbnV0ZXM6IDEyCiAgICBzdGVwczoKICAgICAgLSBuYW1lOiBQcmVsZXZhIGlsIHNpdG8gUkRJCiAgICAgICAgdXNlczogYWN0aW9ucy9jaGVja291dEB2NAogICAgICAgIHdpdGg6CiAgICAgICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiB0cnVlCiAgICAgIC0gbmFtZTogQ29uZmlndXJhIFB5dGhvbgogICAgICAgIHVzZXM6IGFjdGlvbnMvc2V0dXAtcHl0aG9uQHY1CiAgICAgICAgd2l0aDoKICAgICAgICAgIHB5dGhvbi12ZXJzaW9uOiAnMy4xMicKICAgICAgLSBuYW1lOiBDb250cm9sbGEgbGUgZGlwZW5kZW56ZSBlIGdlbmVyYSBsJ2VkaXppb25lIG9kaWVybmEKICAgICAgICBlbnY6CiAgICAgICAgICBUWjogRXVyb3BlL1JvbWUKICAgICAgICBydW46IHwKICAgICAgICAgIHB5dGhvbiAtbSBweV9jb21waWxlIHNjcmlwdHMvZ2VuZXJhdGVfcmRpX3N0b3JpYS5weQogICAgICAgICAgaWYgWyAiJHt7IGdpdGh1Yi5ldmVudF9uYW1lIH19IiA9ICJwdXNoIiBdOyB0aGVuCiAgICAgICAgICAgIHB5dGhvbiBzY3JpcHRzL2dlbmVyYXRlX3JkaV9zdG9yaWEucHkgLS1mb3JjZQogICAgICAgICAgZWxzZQogICAgICAgICAgICBweXRob24gc2NyaXB0cy9nZW5lcmF0ZV9yZGlfc3RvcmlhLnB5CiAgICAgICAgICBmaQogICAgICAtIG5hbWU6IFByZXBhcmEgcGFnaW5lIGNvbmRpdmlzaWJpbGkgc3UgRmFjZWJvb2sKICAgICAgICBydW46IHwKICAgICAgICAgIHB5dGhvbiAtbSBweV9jb21waWxlIHNjcmlwdHMvYnVpbGRfc3RvcmlhX3NoYXJlcy5weQogICAgICAgICAgcHl0aG9uIHNjcmlwdHMvYnVpbGRfc3RvcmlhX3NoYXJlcy5weQogICAgICAtIG5hbWU6IFB1YmJsaWNhIGV2ZW50aSwgZm90byBlIGFyY2hpdmlvIG5lbCBzaXRvCiAgICAgICAgc2hlbGw6IGJhc2gKICAgICAgICBydW46IHwKICAgICAgICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAgICAgICBpZiBbIC16ICIkKGdpdCBzdGF0dXMgLS1wb3JjZWxhaW4gLS0gZGF0YS9zdG9yaWEtb2dnaS5qc29uIGRhdGEvc3RvcmlhLWFyY2hpdmlvLyBzdG9yaWEtZXZlbnRpLykiIF07IHRoZW4KICAgICAgICAgICAgZWNobyAiUkRJIFNUT1JJQSBkZWwgZ2lvcm5vIGdpw6AgcHViYmxpY2F0by4iCiAgICAgICAgICAgIGV4aXQgMAogICAgICAgICAgZmkKICAgICAgICAgIGdpdCBjb25maWcgdXNlci5uYW1lICJnaXRodWItYWN0aW9uc1tib3RdIgogICAgICAgICAgZ2l0IGNvbmZpZyB1c2VyLmVtYWlsICI0MTg5ODI4MitnaXRodWItYWN0aW9uc1tib3RdQHVzZXJzLm5vcmVwbHkuZ2l0aHViLmNvbSIKICAgICAgICAgIGdpdCBhZGQgLS0gZGF0YS9zdG9yaWEtb2dnaS5qc29uIGRhdGEvc3RvcmlhLWFyY2hpdmlvLyBzdG9yaWEtZXZlbnRpLwogICAgICAgICAgZ2l0IGNvbW1pdCAtbSAiUkRJIFNUT1JJQTogcHViYmxpY2EgbGEgc3RvcmlhIGRlbCBnaW9ybm8iCiAgICAgICAgICBmb3IgYXR0ZW1wdCBpbiAxIDIgMyA0IDU7IGRvCiAgICAgICAgICAgIGlmIGdpdCBwdWxsIC0tcmViYXNlIG9yaWdpbiBtYWluICYmIGdpdCBwdXNoIG9yaWdpbiBIRUFEOm1haW47IHRoZW4KICAgICAgICAgICAgICBlY2hvICJFZGl6aW9uZSBSREkgU1RPUklBIHB1YmJsaWNhdGEgc3UgR2l0SHViIFBhZ2VzLiIKICAgICAgICAgICAgICBleGl0IDAKICAgICAgICAgICAgZmkKICAgICAgICAgICAgZ2l0IHJlYmFzZSAtLWFib3J0IHx8IHRydWUKICAgICAgICAgICAgc2xlZXAgIiQoKGF0dGVtcHQgKiAzKSkiCiAgICAgICAgICBkb25lCiAgICAgICAgICBlY2hvICI6OmVycm9yOjpFZGl6aW9uZSBnZW5lcmF0YSBtYSBub24gcHViYmxpY2F0YSBzdSBHaXRIdWIuIgogICAgICAgICAgZXhpdCAxCgogICAgICAtIG5hbWU6IENvbGxhdWRvIGF1dG9tYXRpY28gZGVsbGEgcHJvc3NpbWEgZWRpemlvbmUgKHNlbnphIHB1YmJsaWNhcmxhKQogICAgICAgIGlmOiBnaXRodWIuZXZlbnRfbmFtZSA9PSAncHVzaCcKICAgICAgICBzaGVsbDogYmFzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgcHl0aG9uIC0gPDwnUFknCiAgICAgICAgICBpbXBvcnQgZGF0ZXRpbWUgYXMgZHQKICAgICAgICAgIGltcG9ydCBzeXMKICAgICAgICAgIGZyb20gem9uZWluZm8gaW1wb3J0IFpvbmVJbmZvCiAgICAgICAgICBzeXMucGF0aC5pbnNlcnQoMCwgJ3NjcmlwdHMnKQogICAgICAgICAgZnJvbSBnZW5lcmF0ZV9yZGlfc3RvcmlhIGltcG9ydCBjcmVhdGUKICAgICAgICAgIHRvbW9ycm93ID0gZHQuZGF0ZXRpbWUubm93KFpvbmVJbmZvKCdFdXJvcGUvUm9tZScpKS5kYXRlKCkgKyBkdC50aW1lZGVsdGEoZGF5cz0xKQogICAgICAgICAgcmVzdWx0ID0gY3JlYXRlKHRvbW9ycm93KQogICAgICAgICAgYXNzZXJ0IGxlbihyZXN1bHRbJ2V2ZW50cyddKSA+PSA1CiAgICAgICAgICBhc3NlcnQgYWxsKGUuZ2V0KCdzb3VyY2UnKSBhbmQgZS5nZXQoJ3RpdGxlX2l0JykgYW5kIGUuZ2V0KCd0ZXh0X2l0JykgZm9yIGUgaW4gcmVzdWx0WydldmVudHMnXSkKICAgICAgICAgIHByaW50KCdDb2xsYXVkbyByaXVzY2l0bzonLCB0b21vcnJvdywgJywgZXZlbnRpOicsIGxlbihyZXN1bHRbJ2V2ZW50cyddKSkKICAgICAgICAgIFBZCg==
+name: RDI STORIA - Accadde oggi (automatico)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rdi-storia.yml'
+      - 'scripts/generate_rdi_storia.py'
+      - 'scripts/build_storia_shares.py'
+  schedule:
+    # Prima pubblicazione e recuperi distribuiti: GitHub può ritardare
+    # singoli cron; il primo tentativo arriva quindi molto prima del mattino.
+    - cron: '15 1 * * *'  # prima pubblicazione (02:15 in Italia d'inverno)
+    - cron: '45 3 * * *'  # controllo mattutino
+    - cron: '15 5 * * *'  # recupero
+    - cron: '45 6 * * *'  # recupero secondario
+    - cron: '15 9 * * *'  # ulteriore recupero se GitHub ritarda
+    - cron: '15 12 * * *' # ultimo controllo diurno
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rdi-storia-publish
+  cancel-in-progress: false
+
+jobs:
+  publica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Preleva il sito RDI
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Configura Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controlla le dipendenze e genera l'edizione odierna
+        env:
+          TZ: Europe/Rome
+        run: |
+          python -m py_compile scripts/generate_rdi_storia.py
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python scripts/generate_rdi_storia.py --force
+          else
+            python scripts/generate_rdi_storia.py
+          fi
+      - name: Prepara pagine condivisibili su Facebook
+        run: |
+          python -m py_compile scripts/build_storia_shares.py
+          python scripts/build_storia_shares.py
+      - name: Pubblica eventi, foto e archivio nel sito
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- data/storia-oggi.json data/storia-archivio/ storia-eventi/)" ]; then
+            echo "RDI STORIA del giorno già pubblicato."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/storia-oggi.json data/storia-archivio/ storia-eventi/
+          git commit -m "RDI STORIA: pubblica la storia del giorno"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              echo "Edizione RDI STORIA pubblicata su GitHub Pages."
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep "$((attempt * 3))"
+          done
+          echo "::error::Edizione generata ma non pubblicata su GitHub."
+          exit 1
+
+      - name: Collaudo automatico della prossima edizione (senza pubblicarla)
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import sys
+          from zoneinfo import ZoneInfo
+          sys.path.insert(0, 'scripts')
+          from generate_rdi_storia import create
+          tomorrow = dt.datetime.now(ZoneInfo('Europe/Rome')).date() + dt.timedelta(days=1)
+          result = create(tomorrow)
+          assert len(result['events']) >= 5
+          assert all(e.get('source') and e.get('title_it') and e.get('text_it') for e in result['events'])
+          print('Collaudo riuscito:', tomorrow, ', eventi:', len(result['events']))
+          PY
