@@ -1,12 +1,23 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-08T18:50:29.029827Z",
+  "updated_at": "2026-11-08T18:59:56.144735Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-57efa1157226e1bb",
+      "category": "clima",
+      "region": "global",
+      "title": "Australia’s climate minister is about to walk a diplomatic tightrope at COP31",
+      "summary": "",
+      "source": "The Conversation",
+      "published": "2026-11-08T18:44:21Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPOXhMdlZ0VlhiVGluWmFfQ1llRFBBUVlYNE52bDFMTVdEb0FYTUFILWVCMTZRR3lwejZCcjdiZjdfWEcxeFNVSXFWSzZTRUcxRWZ2X3Jwc1J5WndBRlAxRjlXQm52YU0wek14T05NZU15Q3N5SDR4NG9XdkN6ZTBuVXhta0hRaTY3VWgyYy1USnNvRVhkM3ZtQkNaWGtqRXdfVHV0bjZUa18xdmVrbXFPZg?oc=5",
+      "review_status": "external_headline_unverified"
+    },
     {
       "id": "geo-ba3dffd16ac89dbb",
       "category": "clima",
@@ -166,17 +177,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-308f0a591bf25ba4",
-      "category": "clima",
-      "region": "global",
-      "title": "From commitments to action: Taiwan and the world creating climate solutions together",
-      "summary": "",
-      "source": "موقع عمان نت",
-      "published": "2026-11-08T11:55:38Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTmRRcm1tSjZQVkNISU9yUEZBMWVrV2pEWk5Jb21kd3k2WDdVal9uSF9rQTd1a0VlbDVYMW5nNmwwU1lheTZCeEpfMHdHX0k2SU5vSDNOQU45MVJkS0hpTjlnSnFVdzl1N01pUFZCTHVOVElSM2s2OGkzeEtKM3UyMi1tWWVseEE3czlTRWxxNDFOck5iNnFkaWM1T05PVkJHV0xBXzFPdnFDUnU0UFQwaFlfSEhUbGtraEZac05fWQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-25dfcda2a03269f3",
       "category": "diplomatie",
       "region": "asia",
@@ -281,6 +281,17 @@
       "title_ro": "Hamas spune că blocada israeliană agravează suferința pe măsură ce inundațiile au lovit Gaza",
       "title_it": "Hamas afferma che il blocco israeliano peggiora le sofferenze mentre le inondazioni colpiscono Gaza",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-a04dc7e415819352",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Israel’s Arab Joint List warns of worsening Gaza crisis as floods swamp 70,000 tents",
+      "summary": "",
+      "source": "Middle East Monitor",
+      "published": "2026-11-08T09:21:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQZy15RENMMFJtMVJVQ21EdUVQZ01EMHBYR0JrcE54cnVjR25BbmlLUy1ZTnlUdFZGVFFMdVJZVy1MTUVHU1hGeVlyX1JtZVlteU5wTGY1aVM5TkpBVGcxMXVKUzNPTWZiWlNxbjVtWDlKR2hKMTVpRkh1czZLVWNFSDdsdjBYTmdWOTdHMDI3Rk5tVldic21PaFF6M0gySDM0ZGZ1VXFqQ3hBUjFnTGtWOGMzdWJ4VlpDZml4b0diOUliQkZuZnNROV9n0gHKAUFVX3lxTFBnLXlEQ0wwUm0xUlVDbUR1RVBnTUQwcFhHQmtwTnhydWNHbkFuaUtTLVlOeVR0VkZUUUx1UllXLUxNRUdTWEZ5WXJfUm1lWW15TnBMZjVpUzlOSkFUZzExdUpTM09NZmJaU3FuNW1YOUpHaEoxNWlGSHVzNktVY0VIN2x2MFhOZ1Y5N0cwMjdGTm1WV2JzbU9oUXozSDJIMzRkZnVVcWpDeEFSMWdMa1Y4YzN1YnhWWkNmaXhvR2I5SWJCRm5mc1E5X2c?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-d9bf1f35a66079a7",
