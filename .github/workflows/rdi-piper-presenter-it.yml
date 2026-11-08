@@ -1,0 +1,61 @@
+name: RDI - Conduttore Piper italiano (solo preparazione audio)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '12 5 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-piper-annunci-italiani
+  cancel-in-progress: false
+
+jobs:
+  generate-offair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verifica sintassi script e contenuti
+        run: |
+          python -m py_compile scripts/rdi_piper_presenter_it.py
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          tree=ast.parse(Path("scripts/rdi_piper_presenter_it.py").read_text())
+          assert any(isinstance(x,ast.Assign) and any(isinstance(t,ast.Name) and t.id=="SCRIPTS" for t in x.targets) for x in tree.body)
+          print("PIPER_SCRIPT_VALID=true")
+          PY
+      - name: Prepara SSH sicuro
+        id: ssh
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "$SSH_KEY_B64" || -z "$SSH_KNOWN_HOSTS" ]]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::SSH Oracle non configurato: nessuna generazione."
+            exit 0
+          fi
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 -d > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          timeout 10 ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null
+          echo "configured=true" >> "$GITHUB_OUTPUT"
+      - name: Genera annunci OFF AIR su Oracle con il Piper già installato
+        if: steps.ssh.outputs.configured == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          opts=(-i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes -o BatchMode=yes -o ConnectTimeout=12)
+          remote=ubuntu@129.151.255.41
+          scp "${opts[@]}" scripts/rdi_piper_presenter_it.py "$remote:/tmp/rdi_piper_presenter_it.py"
+          ssh "${opts[@]}" "$remote" "test -f /home/ubuntu/rdi-piper-test/venv/bin/python && timeout 360 nice -n 15 python3 /tmp/rdi_piper_presenter_it.py"
+          echo "File pronti nel server Oracle, MA NON IN ONDA."
