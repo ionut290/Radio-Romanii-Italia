@@ -1,1 +1,69 @@
-bmFtZTogUkRJIC0gV2F0Y2hkb2cgT3JhY2xlIFBlbnNpZXJvIGRlbCBHaW9ybm8KCm9uOgogIHB1c2g6CiAgICBicmFuY2hlczogW21haW5dCiAgICBwYXRoczoKICAgICAgLSAnLmdpdGh1Yi93b3JrZmxvd3MvZGFpbHktdGhvdWdodC55bWwnCiAgICAgIC0gJ29yYWNsZS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy5weScKICAgICAgLSAnb3JhY2xlL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnNlcnZpY2UnCiAgICAgIC0gJ29yYWNsZS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lcicKICAgICAgLSAnLmdpdGh1Yi93b3JrZmxvd3MvcmRpLWRhaWx5LXRob3VnaHQtb3JhY2xlLXdhdGNoZG9nLnltbCcKICB3b3JrZmxvd19kaXNwYXRjaDoKCnBlcm1pc3Npb25zOgogIGNvbnRlbnRzOiByZWFkCgpjb25jdXJyZW5jeToKICBncm91cDogcmRpLWRhaWx5LXRob3VnaHQtb3JhY2xlLXdhdGNoZG9nLWluc3RhbGwKICBjYW5jZWwtaW4tcHJvZ3Jlc3M6IGZhbHNlCgpqb2JzOgogIGluc3RhbGw6CiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICB0aW1lb3V0LW1pbnV0ZXM6IDUKICAgIHN0ZXBzOgogICAgICAtIHVzZXM6IGFjdGlvbnMvY2hlY2tvdXRAdjQKICAgICAgICB3aXRoOgogICAgICAgICAgcmVmOiBtYWluCiAgICAgICAgICBwZXJzaXN0LWNyZWRlbnRpYWxzOiBmYWxzZQogICAgICAtIG5hbWU6IENvbmZpZ3VyYSBhY2Nlc3NvIE9yYWNsZQogICAgICAgIGVudjoKICAgICAgICAgIFNTSF9LRVlfQjY0OiAke3sgc2VjcmV0cy5SRElfT1JBQ0xFX1NTSF9LRVlfQjY0IH19CiAgICAgICAgICBTU0hfS05PV05fSE9TVFM6ICR7eyBzZWNyZXRzLlJESV9PUkFDTEVfS05PV05fSE9TVFMgfX0KICAgICAgICBzaGVsbDogYmFzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgc2V0IC1ldW8gcGlwZWZhaWwKICAgICAgICAgIHRlc3QgLW4gIiRTU0hfS0VZX0I2NCIgJiYgdGVzdCAtbiAiJFNTSF9LTk9XTl9IT1NUUyIKICAgICAgICAgIGluc3RhbGwgLWQgLW0gNzAwICIkSE9NRS8uc3NoIgogICAgICAgICAgcHJpbnRmICclcycgIiRTU0hfS0VZX0I2NCIgfCB0ciAtZCAnWzpzcGFjZTpdJyB8IGJhc2U2NCAtLWRlY29kZSA+ICIkSE9NRS8uc3NoL2lkX3JkaSIKICAgICAgICAgIHByaW50ZiAnJXNcbicgIiRTU0hfS05PV05fSE9TVFMiIHwgdHIgLWQgJ1xyJyA+ICIkSE9NRS8uc3NoL2tub3duX2hvc3RzIgogICAgICAgICAgY2htb2QgNjAwICIkSE9NRS8uc3NoL2lkX3JkaSIgIiRIT01FLy5zc2gva25vd25faG9zdHMiCiAgICAgIC0gbmFtZTogSW5zdGFsbGEgZSB2ZXJpZmljYSBpbCB3YXRjaGRvZyBzZW56YSB0b2NjYXJlIHJhZGlvIG8gc3RyZWFtaW5nCiAgICAgICAgc2hlbGw6IGJhc2gKICAgICAgICBydW46IHwKICAgICAgICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAgICAgICBSRU1PVEU9dWJ1bnR1QDEyOS4xNTEuMjU1LjQxCiAgICAgICAgICBTVEFHRT0vdG1wL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLSR7R0lUSFVCX1JVTl9JRH0tJHtHSVRIVUJfUlVOX0FUVEVNUFR9CiAgICAgICAgICBzc2ggLWkgIiRIT01FLy5zc2gvaWRfcmRpIiAtbyBCYXRjaE1vZGU9eWVzIC1vIFN0cmljdEhvc3RLZXlDaGVja2luZz15ZXMgIiRSRU1PVEUiICJpbnN0YWxsIC1kIC1tIDcwMCAnJFNUQUdFJyIKICAgICAgICAgIHRyYXAgJ3NzaCAtaSAiJEhPTUUvLnNzaC9pZF9yZGkiIC1vIEJhdGNoTW9kZT15ZXMgLW8gU3RyaWN0SG9zdEtleUNoZWNraW5nPXllcyAiJFJFTU9URSIgInJtIC1yZiAtLSAnXCcnJFNUQUdFJ1wnJyIgfHwgdHJ1ZScgRVhJVAogICAgICAgICAgc2NwIC1xIC1pICIkSE9NRS8uc3NoL2lkX3JkaSIgLW8gQmF0Y2hNb2RlPXllcyAtbyBTdHJpY3RIb3N0S2V5Q2hlY2tpbmc9eWVzIFwKICAgICAgICAgICAgb3JhY2xlL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnB5IG9yYWNsZS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy5zZXJ2aWNlIG9yYWNsZS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lciAiJFJFTU9URTokU1RBR0UvIgogICAgICAgICAgc3NoIC1pICIkSE9NRS8uc3NoL2lkX3JkaSIgLW8gQmF0Y2hNb2RlPXllcyAtbyBTdHJpY3RIb3N0S2V5Q2hlY2tpbmc9eWVzICIkUkVNT1RFIiAic3VkbyAtbiBlbnYgU1RBR0U9JyRTVEFHRScgYmFzaCAtcyIgPDwnUkVNT1RFX1NDUklQVCcKICAgICAgICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAgICAgICBpbnN0YWxsIC1kIC1tIDc1NSAvb3B0L3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nCiAgICAgICAgICBpbnN0YWxsIC1tIDc1NSAiJFNUQUdFL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnB5IiAvb3B0L3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnB5CiAgICAgICAgICBpbnN0YWxsIC1tIDY0NCAiJFNUQUdFL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnNlcnZpY2UiIC9ldGMvc3lzdGVtZC9zeXN0ZW0vcmRpLWRhaWx5LXRob3VnaHQtd2F0Y2hkb2cuc2VydmljZQogICAgICAgICAgaW5zdGFsbCAtbSA2NDQgIiRTVEFHRS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lciIgL2V0Yy9zeXN0ZW1kL3N5c3RlbS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lcgogICAgICAgICAgaW5zdGFsbCAtZCAtbSA3NTAgLW8gdWJ1bnR1IC1nIHVidW50dSAvaG9tZS91YnVudHUvLmxvY2FsL3N0YXRlL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nCiAgICAgICAgICB0ZXN0IC1zIC9ob21lL3VidW50dS9yZGktbW9uaXRvci9naXRodWItdG9rZW4KICAgICAgICAgIHN5c3RlbWN0bCBkYWVtb24tcmVsb2FkCiAgICAgICAgICBzeXN0ZW1jdGwgZW5hYmxlIC0tbm93IHJkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnRpbWVyCiAgICAgICAgICBpZiAhIHN5c3RlbWN0bCBzdGFydCByZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy5zZXJ2aWNlOyB0aGVuCiAgICAgICAgICAgIGpvdXJuYWxjdGwgLXUgcmRpLWRhaWx5LXRob3VnaHQtd2F0Y2hkb2cuc2VydmljZSAtbiAzMCAtLW5vLXBhZ2VyIHx8IHRydWUKICAgICAgICAgICAgZXhpdCAxCiAgICAgICAgICBmaQogICAgICAgICAgc3lzdGVtY3RsIGlzLWFjdGl2ZSAtLXF1aWV0IHJkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnRpbWVyCiAgICAgICAgICBzeXN0ZW1jdGwgc2hvdyByZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy5zZXJ2aWNlIC1wIFJlc3VsdCAtcCBFeGVjTWFpblN0YXR1cyAtLW5vLXBhZ2VyCiAgICAgICAgICBzeXN0ZW1jdGwgbGlzdC10aW1lcnMgLS1hbGwgLS1uby1wYWdlciByZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lcgogICAgICAgICAgUkVNT1RFX1NDUklQVAo=
+name: RDI - Watchdog Oracle Pensiero del Giorno
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-thought.yml'
+      - 'oracle/rdi-daily-thought-watchdog.py'
+      - 'oracle/rdi-daily-thought-watchdog.service'
+      - 'oracle/rdi-daily-thought-watchdog.timer'
+      - '.github/workflows/rdi-daily-thought-oracle-watchdog.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-daily-thought-oracle-watchdog-install
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Configura accesso Oracle
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+      - name: Installa e verifica il watchdog senza toccare radio o streaming
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          STAGE=/tmp/rdi-daily-thought-watchdog-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "install -d -m 700 '$STAGE'"
+          trap 'ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "rm -rf -- '\''$STAGE'\''" || true' EXIT
+          scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            oracle/rdi-daily-thought-watchdog.py oracle/rdi-daily-thought-watchdog.service oracle/rdi-daily-thought-watchdog.timer "$REMOTE:$STAGE/"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "sudo -n env STAGE='$STAGE' bash -s" <<'REMOTE_SCRIPT'
+          set -euo pipefail
+          install -d -m 755 /opt/rdi-daily-thought-watchdog
+          install -m 755 "$STAGE/rdi-daily-thought-watchdog.py" /opt/rdi-daily-thought-watchdog/rdi-daily-thought-watchdog.py
+          install -m 644 "$STAGE/rdi-daily-thought-watchdog.service" /etc/systemd/system/rdi-daily-thought-watchdog.service
+          install -m 644 "$STAGE/rdi-daily-thought-watchdog.timer" /etc/systemd/system/rdi-daily-thought-watchdog.timer
+          install -d -m 750 -o ubuntu -g ubuntu /home/ubuntu/.local/state/rdi-daily-thought-watchdog
+          test -s /home/ubuntu/rdi-monitor/github-token
+          systemctl daemon-reload
+          systemctl enable --now rdi-daily-thought-watchdog.timer
+          if ! systemctl start rdi-daily-thought-watchdog.service; then
+            journalctl -u rdi-daily-thought-watchdog.service -n 30 --no-pager || true
+            exit 1
+          fi
+          systemctl is-active --quiet rdi-daily-thought-watchdog.timer
+          systemctl show rdi-daily-thought-watchdog.service -p Result -p ExecMainStatus --no-pager
+          systemctl list-timers --all --no-pager rdi-daily-thought-watchdog.timer
+          REMOTE_SCRIPT
