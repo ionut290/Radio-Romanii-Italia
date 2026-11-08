@@ -1,26 +1,35 @@
 {
-  "news_updated_at": "2026-11-08T14:46:09.457689+00:00",
+  "news_updated_at": "2026-11-08T15:01:26.512816+00:00",
   "editorial_updated_at": "2026-11-08T08:13:05.873938+01:00",
   "translations_updated_at": "2026-11-08T13:29:18.082815+00:00",
   "feed_total": 76,
-  "feed_extended_400": 0,
-  "feed_missing_body": 76,
+  "feed_extended_400": 1,
+  "feed_missing_body": 75,
   "feed_short_body": 0,
   "editorial_total": 24,
   "archived_editorials": 201,
   "translation_records": 48,
   "pending_total": 0,
   "pending_filtered_out": 0,
-  "editorial_verde": 2,
-  "editorial_galben": 48,
+  "editorial_verde": 3,
+  "editorial_galben": 47,
   "editorial_rosu": 46,
   "pending": [],
   "recent_news": [
     {
-      "title": "Ce se știe despre presupusul autor al atacului din Cracovia: imagine tulburătoare a unui extremist. Cine sunt victimele sale",
+      "title": "Meteorologii anunță nopți geroase și ploi în multe zone ale țării. De când se încălzește vremea",
       "category": "România",
-      "published": "2026-11-08T14:45:23+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ce-se-stie-despre-presupusul-autor-al-atacului-din-cracovia-imagine-tulburatoare-a-unui-extremist-prima-zi-de-doliu-national-4026487",
+      "published": "2026-11-08T14:57:04+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/meteorologii-anunta-nopti-geroase-si-ploi-in-multe-zone-ale-tarii-de-cand-se-incalzeste-vremea-4026799",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Rusia spune că împărţirea zonelor de influenţă cu SUA şi China este mai importantă decât pacea în Ucraina. „Nu vrem o Ialta 2”",
+      "category": "România",
+      "published": "2026-11-08T14:55:35+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia-spune-ca-impartirea-zonelor-de-influenta-cu-sua-si-china-este-mai-importanta-decat-pacea-in-ucraina-nu-vrem-o-ialta-2-4026713",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -28,17 +37,26 @@
     {
       "title": "„Ormuz 2.0” se află în Caucaz. Iranul mai are un as în mânecă: o conductă de petrol esențială pentru Israel și Europa",
       "category": "România",
-      "published": "2026-11-08T14:44:18+00:00",
+      "published": "2026-11-08T14:55:07+00:00",
       "url": "https://www.digi24.ro/stiri/externe/mapamond/ormuz-2-0-se-afla-in-caucaz-iranul-mai-are-un-as-in-maneca-o-conducta-de-petrol-esentiala-pentru-israel-si-europa-4021543",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Meteorologii anunță nopți geroase și ploi în multe zone ale țării. De când se încălzește vremea",
+      "title": "Incendiu la două locuințe din Chiajna: pompierii intervin cu mai multe autospeciale. Cinci oameni au avut nevoie de îngrijire medicală",
       "category": "România",
-      "published": "2026-11-08T14:43:36+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/meteorologii-anunta-nopti-geroase-si-ploi-in-multe-zone-ale-tarii-de-cand-se-incalzeste-vremea-4026799",
+      "published": "2026-11-08T14:54:30+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/incendiu-puternic-la-doua-locuinte-din-chiajna-pompierii-intervin-cu-mai-multe-autospeciale-4026813",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ce se știe despre autorul atacului din Cracovia: imagine tulburătoare a unui extremist. Cine sunt victimele sale",
+      "category": "România",
+      "published": "2026-11-08T14:49:22+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ce-se-stie-despre-presupusul-autor-al-atacului-din-cracovia-imagine-tulburatoare-a-unui-extremist-prima-zi-de-doliu-national-4026487",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -46,10 +64,19 @@
     {
       "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
       "category": "Italia",
-      "published": "2026-11-08T14:36:28+00:00",
+      "published": "2026-11-08T14:38:28+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
       "source": "ANSA",
-      "status": "galben",
+      "status": "verde",
+      "words": 448
+    },
+    {
+      "title": "Parigi, europei e Francia saranno presenti al trilaterale di Abu Dhabi",
+      "category": "Italia",
+      "published": "2026-11-08T14:37:43+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/parigi-europei-e-francia-saranno-presenti-al-trilaterale-di-abu-dhabi_093f3a23-531b-4851-ab34-fd51d14f1168.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -84,15 +111,6 @@
       "category": "România",
       "published": "2026-11-08T14:28:24+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/europenii-se-intorc-la-masa-negocierilor-privind-ucraina-de-la-abu-dhabi-vor-fi-bine-reprezentati-anuntul-a-fost-facut-de-franta-4026815",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Incendiu puternic la două locuințe din Chiajna: pompierii intervin cu mai multe autospeciale",
-      "category": "România",
-      "published": "2026-11-08T14:26:45+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/incendiu-puternic-la-doua-locuinte-din-chiajna-pompierii-intervin-cu-mai-multe-autospeciale-4026813",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -206,15 +224,6 @@
       "words": 0
     },
     {
-      "title": "Rusia spune că împărţirea zonelor de influenţă cu SUA şi China este mai importantă decât pacea în Ucraina. „Nu vrem o Ialta 2”",
-      "category": "România",
-      "published": "2026-11-08T12:49:43+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/rusia-spune-ca-impartirea-zonelor-de-influenta-cu-sua-si-china-este-mai-importanta-decat-pacea-in-ucraina-nu-vrem-o-ialta-2-4026713",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Cracovia, la testimonianza di un italiano che era a pochi metri dalla sparatoria",
       "category": "Italia",
       "published": "2026-11-08T12:47:58+00:00",
@@ -238,15 +247,6 @@
       "published": "2026-11-08T12:30:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOT3pkQ3g2ZFR4bVZLUmxuRlFXeHVJWVo5TUs0ZHZZc0J2eEVxeFNQQzZpY21hNVo2YkYtU1hJLVhEZXh2VW10TjU0SVFjM3BmMUZOV1h2dHQ4TTNTZXpYTHRUN0JfSWhGRFluVXJOREJOUHFnMi1xR3d1X081cDBhLUstdXhvcUViYlJ3a2p3LXFzS29oaFZ5NjAzZkZXaHhfcmJwb0dqUW9PV1hpOFdTY2RxTUNPNFBpN0pJTXJLcFVCMXZwQW4zdnluUDRLc2tZeXdF?oc=5",
       "source": "iDevice.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Parigi, europei e Francia saranno presenti al trilaterale di Abu Dhabi",
-      "category": "Italia",
-      "published": "2026-11-08T12:21:59+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/parigi-europei-e-francia-saranno-presenti-al-trilaterale-di-abu-dhabi_093f3a23-531b-4851-ab34-fd51d14f1168.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -355,15 +355,6 @@
       "published": "2026-11-08T10:02:51+00:00",
       "url": "https://www.ansa.it/sito/notizie/cultura/libri/libri_film/2026/11/06/dustin-hoffman-si-racconta-per-la-prima-volta-dietro-la-leggenda-in-look-at-me_31409828-5242-4c35-9e31-224f151f6efa.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il CorrierePl.it apre le porte al volontariato per il 2027 - Corriere di Puglia e Lucania",
-      "category": "Italia",
-      "published": "2026-11-08T09:18:17+00:00",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVTY3WU9ZTURidENmMHduVjRxS2ZXV3BoMnhhR1hMeXllb19zZDRLb2tVS3NUc3ZIakRUQld2dTdOTThnazN6MDZzNkp5SjFTLU15dFNpbVZpLUctQjJhekZDM19hSWFNeTI4OEFJZlhVZmVudmhxZ1pzWE1UV2pRdThQSTlsUjlFRy1jSjlWUmRwT2ZFNi1nRjlSdkI?oc=5",
-      "source": "Corriere di Puglia e Lucania",
       "status": "roșu",
       "words": 0
     },
@@ -566,6 +557,15 @@
       "words": 0
     },
     {
+      "title": "Parte da Genova la mobilitazione della Cisl. Sì all'acciaio verde - RaiNews",
+      "category": "Italia",
+      "published": "2026-11-07T10:56:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNVS1yR3ZGRHg5MWZjZVFtWDFDdS0yYWllOW5DMVY4MHMzLTFPQUkwaGt2Sl9PLTJrRjNkdnBEdVlETEZsQlpjdnRSTnoxTU9XbEJSeTZNVnRTUVktNE9UODBpVmdURU5JVk1TQ0J3YzBhUW1KelVZbVBMY1lPTjNObXFvS2luWVlvYmJZLUUydkc5VEt2VjRJTUw0aEFJZGhXWGRpLWdmUGpFc0NvVFk2XzhKSGpra1RrX2xDWEMyenZEQ0VNZmFueFEzUFYwLVo2dG55UHhxYTVNZzRCejBlbWFyNVZkSnJqVlRlWW1qbVZJclhCSUxZ0gH8AUFVX3lxTE81LWFqR1QtanlzeFFSMWV3UHNpU2duMndJUHBpMFRoNlNKUG4weTZuYXcwc3I1bzkzcXluYV9pS1B1M05ZVFVMNFVDWnJWVEZEYUh5MlUzcnZERW9",
+      "source": "RaiNews",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Varză murată cu sfeclă roșie. Rețeta care le amintește românilor din diaspora de cămara de... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-07T10:46:00+00:00",
@@ -725,6 +725,17 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
+      "title": "Cracovia, aperta inchiesta per terrorismo. L'attentatore frequentava il poligono",
+      "category": "Italia",
+      "published": "2026-11-08T14:38:28+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/cracovia-lattentatore-e-gravemente-ferito.-in-casa-morti-padre-madre-e-sorella_83b09fd3-1468-4bbc-80be-f708664a5b9a.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 448,
+      "intro": "Sequestrate armi e munizioni.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Un român a vrut să jefuiască o casă din Italia, dar a adormit în patul proprietarilor. Ce le-a spus carabinierilor care l-au trezit - Adevărul",
       "category": "Diaspora",
       "published": "2026-11-06T07:26:23+00:00",
@@ -744,17 +755,6 @@
       "status": "galben",
       "words": 21,
       "intro": "Un român a intrat să fure dintr-o casă din Italia, dar a adormit în patul proprietarilor.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Un hoț român a jefuit o casă din Italia, apoi a adormit în patul proprietarilor. Cum l-au prins carabinierii - Observator News",
-      "category": "Diaspora",
-      "published": "2026-11-06T08:30:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxObjVBdXFfcld0MW5jbmJQeUhYNzlickZXU2M1enhOZ0prZWNSc25Tc3Q4NzRVdkxZel9tNVJXS09pLVdZQV9zeGdQOGx5c0w4OFFtdU05elNfN0ZBaVVDNy1OdUxvZWpIeGE5cW9ZMHRqVW9qRmtSV3VyQkVpR1d1RXN3cWowaklocE1JbDZvcmJMcmpiS2xyRDRnN2VoeDFaWm9QQlZFUF9BSHJYMTNRaVdlRDRnTzgyUEJXY2Y1c2RhV0JmS293MExrTVBHX2kxeVNiN3lfVnN6cEMtS3I3UFFKaGg?oc=5",
-      "source": "Observator News",
-      "status": "galben",
-      "words": 21,
-      "intro": "Un hoț român a jefuit o casă din Italia, apoi a adormit în patul proprietarilor.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
