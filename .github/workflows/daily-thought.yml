@@ -1,1 +1,119 @@
-bmFtZTogUkRJIC0gUGVuc2llcm8gb3JpZ2luYWxlIGRlbCBnaW9ybm8KCm9uOgogICMgRXNlZ3VlIHN1Yml0byBhbmNoZSBxdWFuZG8gdmllbmUgbW9kaWZpY2F0YSBxdWVzdGEgcGlhbmlmaWNhemlvbmUuCiAgcHVzaDoKICAgIGJyYW5jaGVzOiBbbWFpbl0KICAgIHBhdGhzOgogICAgICAtICcuZ2l0aHViL3dvcmtmbG93cy9kYWlseS10aG91Z2h0LnltbCcKICAjIFB1YmJsaWNhemlvbmUgYXV0b25vbWEgYWxsZSAwMTozMCBpdGFsaWFuZSBlIHJlY3VwZXJvIGFsbGUgMDY6MzAuCiAgIyBFbnRyYW1iZSBsZSBmYXNjZSBnZXN0aXNjb25vIGF1dG9tYXRpY2FtZW50ZSBvcmEgc29sYXJlL2xlZ2FsZS4KICBzY2hlZHVsZToKICAgIC0gY3JvbjogJzMwIDIzICogKiAqJwogICAgLSBjcm9uOiAnMzAgMCAqICogKicKICAgIC0gY3JvbjogJzMwIDQgKiAqIConCiAgICAtIGNyb246ICczMCA1ICogKiAqJwogIHdvcmtmbG93X2Rpc3BhdGNoOgoKcGVybWlzc2lvbnM6CiAgY29udGVudHM6IHdyaXRlCgpjb25jdXJyZW5jeToKICBncm91cDogcmRpLWRhaWx5LXRob3VnaHQKICBjYW5jZWwtaW4tcHJvZ3Jlc3M6IGZhbHNlCgpqb2JzOgogIHB1Ymxpc2g6CiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICB0aW1lb3V0LW1pbnV0ZXM6IDEyCiAgICBzdGVwczoKICAgICAgLSBuYW1lOiBWZXJpZmljYSBsJ29yYXJpbyBkaSBjb250cm9sbG8gaXRhbGlhbm8KICAgICAgICBpZDogb3JhCiAgICAgICAgc2hlbGw6IGJhc2gKICAgICAgICBlbnY6CiAgICAgICAgICBFVkVOVF9OQU1FOiAke3sgZ2l0aHViLmV2ZW50X25hbWUgfX0KICAgICAgICBydW46IHwKICAgICAgICAgIGlmIFsgIiRFVkVOVF9OQU1FIiAhPSBzY2hlZHVsZSBdOyB0aGVuCiAgICAgICAgICAgIGVjaG8gImV4ZWN1dGU9dHJ1ZSIgPj4gIiRHSVRIVUJfT1VUUFVUIgogICAgICAgICAgICBleGl0IDAKICAgICAgICAgIGZpCiAgICAgICAgICBIT1VSPSQoVFo9RXVyb3BlL1JvbWUgZGF0ZSArJUgpCiAgICAgICAgICBlY2hvICJPcmEgaXRhbGlhbmE6ICQoVFo9RXVyb3BlL1JvbWUgZGF0ZSAnKyVGICVUICVaJykiCiAgICAgICAgICBpZiBbICIkSE9VUiIgPSAwMSBdIHx8IFsgIiRIT1VSIiA9IDA2IF07IHRoZW4KICAgICAgICAgICAgZWNobyAiZXhlY3V0ZT10cnVlIiA+PiAiJEdJVEhVQl9PVVRQVVQiCiAgICAgICAgICBlbHNlCiAgICAgICAgICAgIGVjaG8gImV4ZWN1dGU9ZmFsc2UiID4+ICIkR0lUSFVCX09VVFBVVCIKICAgICAgICAgICAgZWNobyAiUXVlc3RvIFVUQyBub24gY29ycmlzcG9uZGUgYWxsZSAwMSBvIGFsbGUgMDYgaXRhbGlhbmU7IGlnbm9ybyBpbCBwYXNzYWdnaW8uIgogICAgICAgICAgZmkKICAgICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QHY0CiAgICAgICAgaWY6IHN0ZXBzLm9yYS5vdXRwdXRzLmV4ZWN1dGUgPT0gJ3RydWUnCiAgICAgICAgd2l0aDoKICAgICAgICAgIHBlcnNpc3QtY3JlZGVudGlhbHM6IHRydWUKICAgICAgLSB1c2VzOiBhY3Rpb25zL3NldHVwLXB5dGhvbkB2NQogICAgICAgIGlmOiBzdGVwcy5vcmEub3V0cHV0cy5leGVjdXRlID09ICd0cnVlJwogICAgICAgIHdpdGg6CiAgICAgICAgICBweXRob24tdmVyc2lvbjogJzMuMTInCiAgICAgIC0gbmFtZTogUHJlcGFyYSBsYSBmb3RvdGVjYSByZWFsaXN0aWNhIFJESQogICAgICAgIGlmOiBzdGVwcy5vcmEub3V0cHV0cy5leGVjdXRlID09ICd0cnVlJwogICAgICAgIHJ1bjogcHl0aG9uIC1tIHBpcCBpbnN0YWxsIC0tZGlzYWJsZS1waXAtdmVyc2lvbi1jaGVjayAncGlsbG93Pj0xMCw8MTMnCiAgICAgIC0gbmFtZTogR2VuZXJhIGlsIHBlbnNpZXJvIHF1b3RpZGlhbm8gc2UgbWFuY2EKICAgICAgICBpZjogc3RlcHMub3JhLm91dHB1dHMuZXhlY3V0ZSA9PSAndHJ1ZScKICAgICAgICBlbnY6CiAgICAgICAgICAjIFVzYSBzb2xvIGxhIGZvdG90ZWNhIFJESSBnacOgIGF1dG9yaXp6YXRhLCBkaWNoaWFyYW5kb2xhIHNlbXByZSBjb21lCiAgICAgICAgICAjIGNvbXBvc2l6aW9uZSBkJ2FyY2hpdmlvOiBuZXNzdW4gc2Vydml6aW8gYSBwYWdhbWVudG8gZSBuZXNzdW5hIGZvdG8KICAgICAgICAgICMgdmllbmUgcHJlc2VudGF0YSBjb21lIHVubyBzY2F0dG8gbnVvdm8gZGVsIGdpb3Juby4KICAgICAgICAgIFJESV9BTExPV19BUkNISVZFX1BIT1RPOiAnMScKICAgICAgICAgIFJESV9USE9VR0hUX1VTRV9BSV9JTUFHRVM6ICcwJwogICAgICAgIHJ1bjogcHl0aG9uIHNjcmlwdHMvZ2VuZXJhdGVfZGFpbHlfdGhvdWdodC5weQogICAgICAtIG5hbWU6IFB1YmJsaWNhIGlsIGNvbnRlbnV0byBkZWwgZ2lvcm5vCiAgICAgICAgaWY6IHN0ZXBzLm9yYS5vdXRwdXRzLmV4ZWN1dGUgPT0gJ3RydWUnCiAgICAgICAgc2hlbGw6IGJhc2gKICAgICAgICBydW46IHwKICAgICAgICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAgICAgICBpZiBbIC16ICIkKGdpdCBzdGF0dXMgLS1wb3JjZWxhaW4gLS0gZGF0YS9kYWlseS10aG91Z2h0Lmpzb24gZGF0YS9jYWxlbmRhcmlvLWZpbG9zb2ZpY28tb2dnaS5qc29uIGVkaXRvcmlhbC1pbWFnZXMvZGFpbHktdGhvdWdodC8pIiBdOyB0aGVuCiAgICAgICAgICAgIGVjaG8gIklsIHBlbnNpZXJvIGRpIG9nZ2kgw6ggZ2nDoCBwdWJibGljYXRvLiIKICAgICAgICAgICAgZXhpdCAwCiAgICAgICAgICBmaQogICAgICAgICAgZ2l0IGNvbmZpZyB1c2VyLm5hbWUgImdpdGh1Yi1hY3Rpb25zW2JvdF0iCiAgICAgICAgICBnaXQgY29uZmlnIHVzZXIuZW1haWwgIjQxODk4MjgyK2dpdGh1Yi1hY3Rpb25zW2JvdF1AdXNlcnMubm9yZXBseS5naXRodWIuY29tIgogICAgICAgICAgZ2l0IGFkZCAtLSBkYXRhL2RhaWx5LXRob3VnaHQuanNvbiBkYXRhL2NhbGVuZGFyaW8tZmlsb3NvZmljby1vZ2dpLmpzb24gZWRpdG9yaWFsLWltYWdlcy9kYWlseS10aG91Z2h0LwogICAgICAgICAgZ2l0IGNvbW1pdCAtbSAiUkRJOiBwdWJibGljYSBpbCBwZW5zaWVybyBkZWwgZ2lvcm5vIgogICAgICAgICAgZm9yIGF0dGVtcHQgaW4gMSAyIDMgNCA1OyBkbwogICAgICAgICAgICBpZiBnaXQgcHVsbCAtLXJlYmFzZSAtWCBvdXJzIG9yaWdpbiBtYWluICYmIGdpdCBwdXNoIG9yaWdpbiBIRUFEOm1haW47IHRoZW4KICAgICAgICAgICAgICBlY2hvICJQZW5zaWVybyBlIGltbWFnaW5lIHB1YmJsaWNhdGkuIgogICAgICAgICAgICAgIGV4aXQgMAogICAgICAgICAgICBmaQogICAgICAgICAgICBnaXQgcmViYXNlIC0tYWJvcnQgfHwgdHJ1ZQogICAgICAgICAgICBzbGVlcCAiJCgoYXR0ZW1wdCAqIDMpKSIKICAgICAgICAgIGRvbmUKICAgICAgICAgIGVjaG8gIjo6ZXJyb3I6OklsIHBlbnNpZXJvIMOoIHN0YXRvIGdlbmVyYXRvIG1hIG5vbiDDqCBzdGF0byBwb3NzaWJpbGUgcHViYmxpY2FybG8uIgogICAgICAgICAgZXhpdCAxCiAgICAgIC0gbmFtZTogQWdnaW9ybmEgaWwgd2F0Y2hkb2cgT3JhY2xlIGRlbCBQZW5zaWVybwogICAgICAgIGlmOiBzdGVwcy5vcmEub3V0cHV0cy5leGVjdXRlID09ICd0cnVlJwogICAgICAgIGVudjoKICAgICAgICAgIFNTSF9LRVlfQjY0OiAke3sgc2VjcmV0cy5SRElfT1JBQ0xFX1NTSF9LRVlfQjY0IH19CiAgICAgICAgICBTU0hfS05PV05fSE9TVFM6ICR7eyBzZWNyZXRzLlJESV9PUkFDTEVfS05PV05fSE9TVFMgfX0KICAgICAgICBzaGVsbDogYmFzaAogICAgICAgIHJ1bjogfAogICAgICAgICAgc2V0IC1ldW8gcGlwZWZhaWwKICAgICAgICAgIGluc3RhbGwgLWQgLW0gNzAwICIkSE9NRS8uc3NoIgogICAgICAgICAgcHJpbnRmICclcycgIiRTU0hfS0VZX0I2NCIgfCB0ciAtZCAnWzpzcGFjZTpdJyB8IGJhc2U2NCAtLWRlY29kZSA+ICIkSE9NRS8uc3NoL2lkX3JkaSIKICAgICAgICAgIHByaW50ZiAnJXNcbicgIiRTU0hfS05PV05fSE9TVFMiIHwgdHIgLWQgJ1xyJyA+ICIkSE9NRS8uc3NoL2tub3duX2hvc3RzIgogICAgICAgICAgY2htb2QgNjAwICIkSE9NRS8uc3NoL2lkX3JkaSIgIiRIT01FLy5zc2gva25vd25faG9zdHMiCiAgICAgICAgICBSRU1PVEU9dWJ1bnR1QDEyOS4xNTEuMjU1LjQxCiAgICAgICAgICBTVEFHRT0vdG1wL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLSR7R0lUSFVCX1JVTl9JRH0KICAgICAgICAgIHNzaCAtaSAiJEhPTUUvLnNzaC9pZF9yZGkiIC1vIEJhdGNoTW9kZT15ZXMgLW8gU3RyaWN0SG9zdEtleUNoZWNraW5nPXllcyAiJFJFTU9URSIgImluc3RhbGwgLWQgLW0gNzAwICckU1RBR0UnIgogICAgICAgICAgdHJhcCAnc3NoIC1pICIkSE9NRS8uc3NoL2lkX3JkaSIgLW8gQmF0Y2hNb2RlPXllcyAtbyBTdHJpY3RIb3N0S2V5Q2hlY2tpbmc9eWVzICIkUkVNT1RFIiAicm0gLXJmIC0tICdcJyckU1RBR0UnXCcnIiB8fCB0cnVlJyBFWElUCiAgICAgICAgICBzY3AgLXEgLWkgIiRIT01FLy5zc2gvaWRfcmRpIiAtbyBCYXRjaE1vZGU9eWVzIC1vIFN0cmljdEhvc3RLZXlDaGVja2luZz15ZXMgb3JhY2xlL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnB5IG9yYWNsZS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy5zZXJ2aWNlIG9yYWNsZS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lciAiJFJFTU9URTokU1RBR0UvIgogICAgICAgICAgc3NoIC1pICIkSE9NRS8uc3NoL2lkX3JkaSIgLW8gQmF0Y2hNb2RlPXllcyAtbyBTdHJpY3RIb3N0S2V5Q2hlY2tpbmc9eWVzICIkUkVNT1RFIiAic3VkbyAtbiBlbnYgU1RBR0U9JyRTVEFHRScgYmFzaCAtcyIgPDwnUkVNT1RFX1NDUklQVCcKICAgICAgICAgIHNldCAtZXVvIHBpcGVmYWlsCiAgICAgICAgICBpbnN0YWxsIC1kIC1tIDc1NSAvb3B0L3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nCiAgICAgICAgICBpbnN0YWxsIC1tIDc1NSAiJFNUQUdFL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnB5IiAvb3B0L3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnB5CiAgICAgICAgICBpbnN0YWxsIC1tIDY0NCAiJFNUQUdFL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnNlcnZpY2UiIC9ldGMvc3lzdGVtZC9zeXN0ZW0vcmRpLWRhaWx5LXRob3VnaHQtd2F0Y2hkb2cuc2VydmljZQogICAgICAgICAgaW5zdGFsbCAtbSA2NDQgIiRTVEFHRS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lciIgL2V0Yy9zeXN0ZW1kL3N5c3RlbS9yZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lcgogICAgICAgICAgaW5zdGFsbCAtZCAtbSA3NTAgLW8gdWJ1bnR1IC1nIHVidW50dSAvaG9tZS91YnVudHUvLmxvY2FsL3N0YXRlL3JkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nCiAgICAgICAgICBzeXN0ZW1jdGwgZGFlbW9uLXJlbG9hZAogICAgICAgICAgc3lzdGVtY3RsIGVuYWJsZSAtLW5vdyByZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lcgogICAgICAgICAgc3lzdGVtY3RsIHN0YXJ0IHJkaS1kYWlseS10aG91Z2h0LXdhdGNoZG9nLnNlcnZpY2UKICAgICAgICAgIHN5c3RlbWN0bCBpcy1hY3RpdmUgLS1xdWlldCByZGktZGFpbHktdGhvdWdodC13YXRjaGRvZy50aW1lcgogICAgICAgICAgUkVNT1RFX1NDUklQVAo=
+name: RDI - Pensiero originale del giorno
+
+on:
+  # Esegue subito anche quando viene modificata questa pianificazione.
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-thought.yml'
+  # Pubblicazione autonoma alle 01:30 italiane e recupero alle 06:30.
+  # Entrambe le fasce gestiscono automaticamente ora solare/legale.
+  schedule:
+    - cron: '30 23 * * *'
+    - cron: '30 0 * * *'
+    - cron: '30 4 * * *'
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rdi-daily-thought
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verifica l'orario di controllo italiano
+        id: ora
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" != schedule ]; then
+            echo "execute=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          HOUR=$(TZ=Europe/Rome date +%H)
+          echo "Ora italiana: $(TZ=Europe/Rome date '+%F %T %Z')"
+          if [ "$HOUR" = 01 ] || [ "$HOUR" = 06 ]; then
+            echo "execute=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "execute=false" >> "$GITHUB_OUTPUT"
+            echo "Questo UTC non corrisponde alle 01 o alle 06 italiane; ignoro il passaggio."
+          fi
+      - uses: actions/checkout@v4
+        if: steps.ora.outputs.execute == 'true'
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        if: steps.ora.outputs.execute == 'true'
+        with:
+          python-version: '3.12'
+      - name: Prepara la fototeca realistica RDI
+        if: steps.ora.outputs.execute == 'true'
+        run: python -m pip install --disable-pip-version-check 'pillow>=10,<13'
+      - name: Genera il pensiero quotidiano se manca
+        if: steps.ora.outputs.execute == 'true'
+        env:
+          # Usa solo la fototeca RDI già autorizzata, dichiarandola sempre come
+          # composizione d'archivio: nessun servizio a pagamento e nessuna foto
+          # viene presentata come uno scatto nuovo del giorno.
+          RDI_ALLOW_ARCHIVE_PHOTO: '1'
+          RDI_THOUGHT_USE_AI_IMAGES: '0'
+        run: python scripts/generate_daily_thought.py
+      - name: Pubblica il contenuto del giorno
+        if: steps.ora.outputs.execute == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- data/daily-thought.json data/calendario-filosofico-oggi.json editorial-images/daily-thought/)" ]; then
+            echo "Il pensiero di oggi è già pubblicato."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- data/daily-thought.json data/calendario-filosofico-oggi.json editorial-images/daily-thought/
+          git commit -m "RDI: pubblica il pensiero del giorno"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase -X ours origin main && git push origin HEAD:main; then
+              echo "Pensiero e immagine pubblicati."
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep "$((attempt * 3))"
+          done
+          echo "::error::Il pensiero è stato generato ma non è stato possibile pubblicarlo."
+          exit 1
+      - name: Aggiorna il watchdog Oracle del Pensiero
+        if: steps.ora.outputs.execute == 'true'
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          REMOTE=ubuntu@129.151.255.41
+          STAGE=/tmp/rdi-daily-thought-watchdog-${GITHUB_RUN_ID}
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "install -d -m 700 '$STAGE'"
+          trap 'ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "rm -rf -- '\''$STAGE'\''" || true' EXIT
+          scp -q -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes oracle/rdi-daily-thought-watchdog.py oracle/rdi-daily-thought-watchdog.service oracle/rdi-daily-thought-watchdog.timer "$REMOTE:$STAGE/"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "sudo -n env STAGE='$STAGE' bash -s" <<'REMOTE_SCRIPT'
+          set -euo pipefail
+          install -d -m 755 /opt/rdi-daily-thought-watchdog
+          install -m 755 "$STAGE/rdi-daily-thought-watchdog.py" /opt/rdi-daily-thought-watchdog/rdi-daily-thought-watchdog.py
+          install -m 644 "$STAGE/rdi-daily-thought-watchdog.service" /etc/systemd/system/rdi-daily-thought-watchdog.service
+          install -m 644 "$STAGE/rdi-daily-thought-watchdog.timer" /etc/systemd/system/rdi-daily-thought-watchdog.timer
+          install -d -m 750 -o ubuntu -g ubuntu /home/ubuntu/.local/state/rdi-daily-thought-watchdog
+          systemctl daemon-reload
+          systemctl enable --now rdi-daily-thought-watchdog.timer
+          systemctl start rdi-daily-thought-watchdog.service
+          systemctl is-active --quiet rdi-daily-thought-watchdog.timer
+          REMOTE_SCRIPT
