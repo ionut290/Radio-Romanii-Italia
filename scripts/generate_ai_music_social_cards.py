@@ -106,24 +106,25 @@ def build():
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(og_title)}</title>
 <meta name="description" content="{escape(description)}">
-<meta property="og:type" content="music.song">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Radio Românii din Italia">
 <meta property="og:title" content="{escape(og_title)}">
 <meta property="og:description" content="{escape(description)}">
 <meta property="og:url" content="{escape(card_url)}">
 <meta property="og:image" content="{escape(image_url)}">
 <meta property="og:image:secure_url" content="{escape(image_url)}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="{escape(og_title)}">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{escape(og_title)}">
 <meta name="twitter:description" content="{escape(description)}">
 <meta name="twitter:image" content="{escape(image_url)}">
 <link rel="canonical" href="{escape(card_url)}">
-<meta http-equiv="refresh" content="0;url={escape(link)}">
-<style>body{{font:18px system-ui;background:#0c111b;color:white;text-align:center;padding:50px 15px}}a{{color:#46e1e9}}</style>
-</head><body><h1>{escape(og_title)}</h1><p>{escape(description)}</p>
-<p><a href="{escape(link)}">▶ Ascolta la canzone su RDI AI Music</a></p>
-<script>location.replace({__import__("json").dumps(link)});</script>
+<!-- Nessun meta-refresh: i crawler social leggono la copertina della canzone. -->
+<style>body{{font:18px system-ui;background:#0c111b;color:white;text-align:center;min-height:100vh;margin:0;padding:28px 15px}}main{{max-width:760px;margin:auto}}img{{display:block;width:100%;height:auto;border-radius:18px;box-shadow:0 12px 34px #0008}}a.cta{{background:#29d7e1;color:#0c2229;display:inline-block;border-radius:14px;padding:15px 24px;font-weight:800;text-decoration:none;margin:16px 0}}p{{color:#c2d3da}}</style>
+</head><body><main><h1>{escape(og_title)}</h1><img src="{escape(image_url)}" width="1200" height="630" alt="{escape(og_title)}"><p>{escape(description)}</p>
+<a class="cta" href="{escape(link)}">▶ Ascolta la canzone e vota</a><p>Radio Românii din Italia • RDI AI Music</p></main>
 </body></html>"""
         (OUT / (safe_id + ".html")).write_text(page_html, encoding="utf-8")
         generated.add(safe_id)
