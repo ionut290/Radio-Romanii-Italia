@@ -8,7 +8,7 @@ Type=oneshot
 User=ubuntu
 Group=ubuntu
 Environment=RDI_DAILY_THOUGHT_WATCHDOG_STATE=/home/ubuntu/.local/state/rdi-daily-thought-watchdog/last_dispatch
-Environment=RDI_GITHUB_TOKEN_FILE=/home/ubuntu/rdi-monitor/github-token
+LoadCredential=github-token:/home/ubuntu/rdi-monitor/github-token
 ExecStart=/usr/bin/python3 /opt/rdi-daily-thought-watchdog/rdi-daily-thought-watchdog.py
 NoNewPrivileges=true
 PrivateTmp=true

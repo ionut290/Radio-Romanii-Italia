@@ -18,7 +18,8 @@ API = f"https://api.github.com/repos/{OWNER}/{REPO}"
 FEED = "https://radioromanii.duckdns.org/data/calendario-filosofico-oggi.json"
 ROME = ZoneInfo("Europe/Rome")
 STATE = Path(os.getenv("RDI_DAILY_THOUGHT_WATCHDOG_STATE", "/var/lib/rdi-daily-thought-watchdog/last_dispatch"))
-TOKEN_FILE = Path(os.getenv("RDI_GITHUB_TOKEN_FILE", "/home/ubuntu/rdi-monitor/github-token"))
+_credential_dir = os.getenv("CREDENTIALS_DIRECTORY", "").strip()
+TOKEN_FILE = Path(_credential_dir) / "github-token" if _credential_dir else Path("/home/ubuntu/rdi-monitor/github-token")
 COOLDOWN_SECONDS = 45 * 60
 
 
