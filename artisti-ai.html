@@ -75,11 +75,6 @@ aside.card{position:sticky;top:86px}.tip{display:flex;gap:10px;align-items:start
 </div>
 <div class="file-head"><strong data-t="selectedTitle">Brani selezionati</strong><span class="counter" id="file-counter">0 / 10</span></div>
 <div id="file-list" class="file-list" aria-live="polite"></div>
-<div id="link-only">
- <div class="sep"></div><p data-t="linkIntro"></p>
- <label class="field"><span data-t="title"></span><input id="song" name="song" maxlength="160"></label>
- <label class="field"><span data-t="link"></span><input type="url" id="link" name="link" placeholder="https://..." maxlength="1500"></label>
-</div>
 <label class="field"><span data-t="notes"></span><textarea id="notes" rows="3" maxlength="800"></textarea></label>
 <label class="checkbox"><input id="rights" type="checkbox" required><span data-t="rights"></span></label>
 <label class="checkbox"><input id="privacy" type="checkbox" required><span data-t="privacy"></span></label>
@@ -115,7 +110,7 @@ function tr(){document.documentElement.lang=lang;document.querySelectorAll("[dat
 picker.addEventListener("change",()=>{lang=picker.value;localStorage.setItem("rdi-language",lang);tr()});
 function titleFromFilename(filename){return filename.replace(/\.(mp3|wav|flac|m4a|ogg)$/i,"").replace(/[_]+/g," ").replace(/^\s*\d{1,3}[\s._-]+/,"").replace(/\s{2,}/g," ").trim().slice(0,160)||"Untitled"}
 function sizeLabel(n){return (n/1024/1024).toFixed(1)+" MB"}
-function syncMode(){$("link-only").hidden=rows.length>0;$("audio").disabled=busy;$("reset-button").disabled=busy;const button=$("submit-button");button.disabled=busy;button.textContent=rows.some(r=>r.state==="ok"||r.state==="error")?msg("retry"):msg("send");$("file-counter").textContent=rows.length+" / "+MAX_FILES}
+function syncMode(){$("audio").disabled=busy;$("reset-button").disabled=busy;const button=$("submit-button");button.disabled=busy;button.textContent=rows.some(r=>r.state==="ok"||r.state==="error")?msg("retry"):msg("send");$("file-counter").textContent=rows.length+" / "+MAX_FILES}
 function renderFiles(){const list=$("file-list");list.replaceChildren();rows.forEach((item,i)=>{const card=document.createElement("div");card.className="file-row "+(item.state==="ok"?"is-success":item.state==="error"?"is-error":item.state==="sending"?"is-active":"");
  const num=document.createElement("span");num.className="file-num";num.textContent=String(i+1).padStart(2,"0");
  const body=document.createElement("div");const file=document.createElement("span");file.className="source-name";file.title=item.file.name;file.textContent=item.file.name;
@@ -139,16 +134,14 @@ const dropzone=$("dropzone");["dragenter","dragover"].forEach(e=>dropzone.addEve
 dropzone.addEventListener("drop",e=>{if(!busy)chooseFiles(e.dataTransfer.files)});
 $("reset-button").addEventListener("click",()=>{if(busy)return;if(rows.some(r=>r.state==="ok")&&!confirm(msg("resetConfirm")))return;rows=[];$("audio").value="";$("song").value="";$("link").value="";$("file-list").replaceChildren();$("status").textContent="";$("progress-wrap").hidden=true;syncMode()});
 function payloadFor(title,file){const fd=new FormData();for(const [id,key] of [["artist","artist"],["email","email"],["platform","platform"],["notes","notes"]])fd.append(key,$(id).value.trim());
- fd.append("title",title);fd.append("link",file?"":$("link").value.trim());fd.append("rights",$("rights").checked?"yes":"no");fd.append("privacy",$("privacy").checked?"yes":"no");fd.append("website",$("website").value);fd.append("spotlight_consent",$("spotlightConsent").checked?"yes":"no");fd.append("youtube_consent",$("youtubeConsent").checked?"yes":"no");if(file)fd.append("audio",file,file.name);return fd}
+ fd.append("title",title);fd.append("rights",$("rights").checked?"yes":"no");fd.append("privacy",$("privacy").checked?"yes":"no");fd.append("website",$("website").value);fd.append("spotlight_consent",$("spotlightConsent").checked?"yes":"no");fd.append("youtube_consent",$("youtubeConsent").checked?"yes":"no");if(file)fd.append("audio",file,file.name);return fd}
 async function sendOne(title,file){const token=localStorage.getItem(TOKEN_KEY);const headers=token?{Authorization:"Bearer "+token}:{};
 const resp=await fetch(API,{method:"POST",body:payloadFor(title,file),headers,credentials:"omit"});let data={};try{data=await resp.json()}catch{};if(!resp.ok){const err=new Error(data.error||"HTTP "+resp.status);err.status=resp.status;err.retryAfter=Number(data.retry_after_seconds||resp.headers.get("Retry-After")||0);throw err}return data}
 function setProgress(n,d){$("progress-wrap").hidden=false;$("progress-fill").style.width=Math.round(n/d*100)+"%"}
 $("submission").addEventListener("submit",async e=>{e.preventDefault();if(busy)return;
 if(loginRequired&&!localStorage.getItem(TOKEN_KEY)){location.href="./accedi-ai-music.html?next=artisti-ai.html";return}const form=e.currentTarget;const status=$("status");
  if(!form.reportValidity()){status.textContent=msg("needInput");return}
- if(!rows.length){const title=$("song").value.trim(),link=$("link").value.trim();if(!link){status.textContent=msg("missing");return}if(!title){status.textContent=msg("missingTitle");$("song").focus();return}
- busy=true;syncMode();status.textContent=msg("sending");
- try{const data=await sendOne(title,null);status.textContent=msg("linkSuccess")+" "+data.id;$("song").value="";$("link").value=""}catch(err){status.textContent=msg("failed")+": "+err.message}finally{busy=false;syncMode()}return}
+ if(!rows.length){status.textContent=msg("missing");return}
  const pending=rows.filter(r=>r.state!=="ok");if(!pending.length){status.textContent=msg("noPending");return}
  if(rows.some(r=>!r.title.trim()||r.title.length>160)){status.textContent=msg("missingTitle");return}
  busy=true;syncMode();let complete=rows.filter(r=>r.state==="ok").length,stop=false,uncertain=false,attemptedThisRun=0,retryAfter=0;
