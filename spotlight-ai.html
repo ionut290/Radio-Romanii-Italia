@@ -37,6 +37,12 @@ footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 @media(max-width:360px){.brand small{display:none}.hero h1{font-size:41px}.links a{font-size:10px;padding:9px}.search-area select{max-width:105px}.player-actions button{padding:8px}}
 
 
+.track .track-share,.track .track-copy,.track .track-social{background:#12373c;border:1px solid #30727a;color:#a3f7fa;border-radius:10px;padding:9px 11px;font-size:11px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:38px}
+.track .track-social{background:#1b252b;color:#d4e6f4;border-color:#46565d}
+.track .track-share:hover,.track .track-copy:hover,.track .track-social:hover{background:#24525a;color:#fff}
+.track.shared-highlight{border:2px solid #43e7e9!important;box-shadow:0 0 0 4px #43e7e91a,0 12px 34px #0005}
+.track.shared-highlight .track-title{color:#74f5f4}
+@media(max-width:680px){.track .track-share,.track .track-copy,.track .track-social{font-size:10px;padding:8px 9px;min-height:34px}}
 /* RDI AI MUSIC STUDIO — dark music workspace redesign */
 .mureka-rdi #account-link{color:#46e4e8;text-decoration:none;padding:8px 10px;border-radius:9px;border:1px solid #2c6061;font-size:11px;font-weight:800;max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .mureka-rdi .login-comment{display:inline-block;color:#35e6e7;border:1px solid #2a7479;border-radius:9px;padding:9px 13px;text-decoration:none;background:#132b2e;font-weight:750}
@@ -303,7 +309,10 @@ en:{intro:"Listen to AI songs approved by our editors, vote for your favorites a
 };
 const $=id=>document.getElementById(id);
 let language=localStorage.getItem("rdi-language")||"it";if(!strings[language])language="it";$("lang").value=language;
-let page=1,total=0,totalPages=1,playQueue=[],playIndex=-1;
+const initialParams=new URLSearchParams(location.search);
+const sharedSongId=initialParams.get("song");
+let sharedSongPending=!!sharedSongId;
+let page=Math.max(1,Math.min(100000,parseInt(initialParams.get("page"),10)||1)),total=0,totalPages=1,playQueue=[],playIndex=-1;
 let allTracks=[],voted=new Set(JSON.parse(localStorage.getItem("rdi-spotlight-voted")||"[]"));
 let visitor=localStorage.getItem("rdi-spotlight-visitor");
 if(!visitor || !/^[0-9a-f-]{36}$/i.test(visitor)){visitor=crypto.randomUUID();localStorage.setItem("rdi-spotlight-visitor",visitor)}
@@ -337,6 +346,39 @@ $("lang").onchange=()=>{language=$("lang").value;localStorage.setItem("rdi-langu
 function node(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x}
 function safeLink(url){try{const u=new URL(url);return u.protocol==="https:"&&!u.username&&!u.password?u.href:null}catch{return null}}
 let expandedTrackId=null;
+const shareLabels={
+ it:{share:"↗ Condividi",copy:"🔗 Copia link",copied:"Link copiato!",failed:"Non è stato possibile copiare il link",title:"Ascolta"},
+ ro:{share:"↗ Distribuie",copy:"🔗 Copiază link",copied:"Link copiat!",failed:"Nu s-a putut copia linkul",title:"Ascultă"},
+ en:{share:"↗ Share",copy:"🔗 Copy link",copied:"Link copied!",failed:"Could not copy link",title:"Listen to"}
+};
+function trackShareUrl(track){
+ const url=new URL(location.pathname,location.origin);
+ url.searchParams.set("song",String(track.id));
+ url.searchParams.set("page",String(page));
+ return url.href;
+}
+async function copyTrackLink(track,button){
+ const url=trackShareUrl(track);
+ try{
+  if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(url);
+  else{
+   const temporary=document.createElement("textarea");temporary.value=url;temporary.style.position="fixed";temporary.style.opacity="0";document.body.append(temporary);temporary.select();
+   const ok=document.execCommand("copy");temporary.remove();if(!ok)throw Error("copy");
+  }
+  button.textContent=shareLabels[language].copied;
+  setTimeout(()=>button.textContent=shareLabels[language].copy,2200);
+ }catch(e){$("status").textContent=shareLabels[language].failed}
+}
+async function shareTrack(track){
+ const url=trackShareUrl(track);
+ const message=shareLabels[language].title+" “"+track.title+"” — "+track.artist+" su RDI AI Music!";
+ if(navigator.share){
+  try{await navigator.share({title:track.title+" · RDI AI Music",text:message,url});return}
+  catch(e){if(e.name==="AbortError")return}
+ }
+ window.open("https://api.whatsapp.com/send?text="+encodeURIComponent(message+" "+url),"_blank","noopener,noreferrer");
+}
+
 const commentText={
  it:{show:"💬 Commenti",hide:"▲ Chiudi commenti",comments:"💬 Commenti della community",no:"Ancora nessun commento. Scrivi il primo!",name:"Il tuo nome",write:"Scrivi un commento…",send:"✉ Invia",sent:"Commento pubblicato!",slow:"Attendi almeno un minuto prima di scrivere di nuovo.",problem:"Commenti temporaneamente non disponibili.",limit:"Usa un nome da 2 a 40 caratteri e un commento da 3 a 500 caratteri."},
  ro:{show:"💬 Comentarii",hide:"▲ Închide comentariile",comments:"💬 Comentariile comunității",no:"Încă nu există comentarii. Scrie primul!",name:"Numele tău",write:"Scrie un comentariu…",send:"✉ Trimite",sent:"Comentariu publicat!",slow:"Așteaptă cel puțin un minut înainte de a comenta din nou.",problem:"Comentariile nu sunt disponibile momentan.",limit:"Numele trebuie să aibă 2-40 de caractere, iar comentariul 3-500."},
@@ -407,7 +449,7 @@ function render(){
  $("page-prev").disabled=page<=1||currentView==="top";$("page-next").disabled=page>=totalPages||currentView==="top";document.querySelector(".pager").hidden=totalPages<=1&&!searchTerm;
  if(!visibleTracks.length){wrap.append(node("p","empty",!allTracks.length?t("empty"):uiLocale[language].noResult));return}
  visibleTracks.forEach((track,i)=>{
-  const card=node("article","track");
+  const card=node("article","track");card.id="song-"+encodeURIComponent(String(track.id));
   card.append(node("div","position","#"+((page-1)*20+allTracks.indexOf(track)+1)));
   const cover=node("div","cover",["♫","🎵","♪","♬","🎶"][i%5]);cover.setAttribute("aria-hidden","true");card.append(cover);
   const info=node("div","track-info");
@@ -432,12 +474,27 @@ function render(){
   commentsButton.type="button";commentsButton.setAttribute("aria-expanded",String(expandedTrackId===track.id));
   const toggle=()=>{expandedTrackId=expandedTrackId===track.id?null:track.id;render()};
   openTitle.onclick=toggle;commentsButton.onclick=toggle;
-  buttons.append(commentsButton,vote);card.append(info,buttons);
+  const shareButton=node("button","track-share",shareLabels[language].share);
+  shareButton.type="button";shareButton.setAttribute("aria-label",shareLabels[language].share+" — "+track.title);shareButton.onclick=()=>shareTrack(track);
+  const copyButton=node("button","track-copy",shareLabels[language].copy);
+  copyButton.type="button";copyButton.onclick=()=>copyTrackLink(track,copyButton);
+  const whatsapp=node("a","track-social","WhatsApp");whatsapp.href="https://api.whatsapp.com/send?text="+encodeURIComponent(shareLabels[language].title+" “"+track.title+"” — "+track.artist+" su RDI AI Music! "+trackShareUrl(track));whatsapp.target="_blank";whatsapp.rel="noopener noreferrer";
+  const facebook=node("a","track-social","Facebook");facebook.href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(trackShareUrl(track));facebook.target="_blank";facebook.rel="noopener noreferrer";
+  buttons.append(commentsButton,vote,shareButton,copyButton,whatsapp,facebook);card.append(info,buttons);
   if(expandedTrackId===track.id){card.classList.add("open");card.append(buildComments(track))}
   wrap.append(card);
  })
 }
-async function load(){$("status").textContent=t("loading");try{const response=await fetch(API+"/spotlight?page="+page,{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();allTracks=Array.isArray(data.tracks)?data.tracks:[];total=Number(data.total)||0;totalPages=Math.max(1,Number(data.total_pages)||1);if(page>totalPages){page=totalPages;return load()}$("status").textContent="";render()}catch(e){$("status").textContent=t("error");allTracks=[];$("tracks").replaceChildren()}}
+async function load(){$("status").textContent=t("loading");try{const response=await fetch(API+"/spotlight?page="+page,{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();allTracks=Array.isArray(data.tracks)?data.tracks:[];total=Number(data.total)||0;totalPages=Math.max(1,Number(data.total_pages)||1);if(page>totalPages){page=totalPages;return load()}$("status").textContent="";render();
+ if(sharedSongPending&&sharedSongId){
+  const target=allTracks.find(track=>String(track.id)===sharedSongId);
+  if(target){
+   sharedSongPending=false;
+   const card=document.getElementById("song-"+encodeURIComponent(sharedSongId));
+   if(card){card.classList.add("shared-highlight");requestAnimationFrame(()=>card.scrollIntoView({behavior:"smooth",block:"center"}))}
+  }
+ }
+ }catch(e){$("status").textContent=t("error");allTracks=[];$("tracks").replaceChildren()}}
 $("song-search").addEventListener("input",e=>{searchTerm=e.target.value.trim().toLocaleLowerCase();render()});
 $("song-sort").addEventListener("change",e=>{sortMode=e.target.value;render()});
 document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>{currentView=b.dataset.view;document.querySelectorAll("[data-view]").forEach(x=>{const active=x.dataset.view===currentView;x.classList.toggle("active",active);x.setAttribute("aria-pressed",String(active))});if(currentView==="top"&&page!==1){page=1;load()}else render()}));
