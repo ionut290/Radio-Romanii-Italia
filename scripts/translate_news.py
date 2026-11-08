@@ -92,22 +92,41 @@ def translate(value, source, target):
 count = 0
 # Prioritize Romanian diaspora/Romania reports missing Italian copy; Italian
 # originals can already appear on the broadcast without translation.
-ordered_items = sorted(items.items(), key=lambda pair: (
-    0 if source_lang(pair[1]) == "ro" else 1,
-    0 if pair[1].get("category") == "Diaspora" else 1,
-))
+# Process today's headlines first, then older ones; keep diaspora prominent.
+from zoneinfo import ZoneInfo
+today_rome = now.astimezone(ZoneInfo("Europe/Rome")).date()
+def priority(pair):
+    x = pair[1]
+    stamp = dt.datetime.fromisoformat(str(x["published"]).replace("Z", "+00:00"))
+    is_today = stamp.astimezone(ZoneInfo("Europe/Rome")).date() == today_rome
+    is_diaspora = x.get("category") == "Diaspora"
+    return (0 if is_today else 1, 0 if is_diaspora else 1, -stamp.timestamp())
+ordered_items = sorted(items.items(), key=priority)
 for key, x in ordered_items:
     source = source_lang(x)
     if not source:
         continue
     original = {field: str(x.get(field) or "") for field in ("title", "summary", "body")}
     previous = translations.get(key, {})
-    if previous.get("original") == original and previous.get("it") and previous.get("ro"):
+    translated = previous.get("it" if source == "ro" else "ro", {})
+    if (previous.get("original", {}).get("title") == original["title"]
+            and previous.get("original", {}).get("summary") == original["summary"]
+            and translated.get("title") and translated.get("summary")):
+        continue
+    # The TV only needs title and summary. Preserve original body; avoid
+    # exhausting the public translation quota with full article bodies.
+    if not original["title"] or not original["summary"]:
         continue
     record = {"original": original, "source": source, source: original.copy()}
     target = "it" if source == "ro" else "ro"
     try:
-        record[target] = {field: translate(value, source, target) for field, value in original.items()}
+        record[target] = {
+            "title": translate(original["title"], source, target),
+            "summary": translate(original["summary"][:600], source, target),
+            "body": "",
+        }
+        if not record[target]["title"] or not record[target]["summary"]:
+            raise ValueError("Incomplete TV translation")
     except Exception as error:
         print("Translation not published for", key[:40], type(error).__name__)
         continue
