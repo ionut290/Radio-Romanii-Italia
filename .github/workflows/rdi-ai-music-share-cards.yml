@@ -1,6 +1,10 @@
 name: Update RDI AI Music social preview cards
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/rdi-ai-music-share-cards.yml'
+      - 'scripts/generate_ai_music_social_cards.py'
   schedule:
     - cron: "17 */3 * * *"
 permissions:
