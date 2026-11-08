@@ -435,8 +435,9 @@ function buildComments(track){
  return panel;
 }
 function render(){
- const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=audioTracks.length+" "+t("songs");
+ const wrap=$("tracks");wrap.replaceChildren();
  const audioTracks=allTracks.filter(track=>!!track.audio_preview);
+ $("count").textContent=audioTracks.length+" "+t("songs");
  const visibleTracks=audioTracks.filter((track,i)=>{
   const q=(String(track.title||"")+" "+String(track.artist||"")+" "+String(track.platform||"")+" "+String(track.genre||"")).toLocaleLowerCase();
   return (!searchTerm||q.includes(searchTerm))&&(currentView!=="top"||(page===1&&i<10))&&(currentView!=="voted"||voted.has(track.id))&&(currentView!=="audio"||!!track.audio_preview);
