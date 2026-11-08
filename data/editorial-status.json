@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-08T19:36:48.465161+00:00",
+  "news_updated_at": "2026-11-08T20:04:28.294588+00:00",
   "editorial_updated_at": "2026-11-08T20:34:42.037272+01:00",
   "translations_updated_at": "2026-11-08T18:31:15.569708+00:00",
-  "feed_total": 79,
+  "feed_total": 77,
   "feed_extended_400": 0,
-  "feed_missing_body": 79,
+  "feed_missing_body": 77,
   "feed_short_body": 0,
   "editorial_total": 13,
   "archived_editorials": 207,
@@ -12,35 +12,71 @@
   "pending_total": 0,
   "pending_filtered_out": 0,
   "editorial_verde": 1,
-  "editorial_galben": 42,
-  "editorial_rosu": 46,
+  "editorial_galben": 41,
+  "editorial_rosu": 45,
   "pending": [],
   "recent_news": [
     {
-      "title": "PNL începe negocierile pentru absorbția Forței Dreptei, partidul fondat de Ludovic Orban - Monden.ro",
-      "category": "România",
-      "published": "2026-11-08T19:35:26+00:00",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUFdJMW45MUVWXzZCNUJOelFFa0c4SUhyOFl3amRsVEw2SWNhemRsclNVdExKVUVWLVBUQi00MF9pOUpXRWpPV2d0YjhLY1hPYTBsSktmTkZQQWhfb2ctZll6QnJzWlhtdzQ1cll4X0dfaGdiYnJIaGdjazRGb1FSVUp4dGViS3YyOTY5cGxDM2lITjQ3bGZZeGl6NEwzY0ZZWThTcmRvVHZaNzlpTVVjUUZDbGc?oc=5",
-      "source": "Monden.ro",
-      "status": "roșu",
+      "title": "Manovra alla Camera, il governo vuole solo piccole modifiche",
+      "category": "Italia",
+      "published": "2026-11-08T20:02:36+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/08/manovra-alla-camera-il-governo-vuole-solo-piccole-modifiche_7d9c1a4f-8dc8-4127-9d48-8261a159eb29.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il Papa in Argentina, Milei lo accoglie con una lunga stretta di mano",
+      "category": "Italia",
+      "published": "2026-11-08T20:00:32+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/il-papa-in-argentina-milei-lo-accoglie-con-una-lunga-stretta-di-mano_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
+      "source": "ANSA",
+      "status": "galben",
       "words": 0
     },
     {
       "title": "De ce repornirea reactorului 1 de la Cernavodă nu înseamnă că vom plăti facturi mai mici la energie. Explicația dată de Ciprian Cherciu",
       "category": "România",
-      "published": "2026-11-08T19:31:29+00:00",
+      "published": "2026-11-08T19:57:25+00:00",
       "url": "https://www.digi24.ro/stiri/economie/energie/de-ce-repornirea-reactorului-1-de-la-cernavoda-nu-inseamna-ca-vom-plati-facturi-mai-mici-la-energie-explicatia-data-de-ciprian-cherciu-4026995",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "F1: in Brasile vince Norris, settima la Ferrari di Leclerc",
+      "title": "Serie A, in campo Fiorentina-Juventus DIRETTA",
       "category": "Italia",
-      "published": "2026-11-08T19:29:29+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/08/f1-in-brasile-vince-norris-settima-la-ferrari-di-leclerc_2cb302f9-f2e8-4c7a-8948-4e03b73b39a2.html",
+      "published": "2026-11-08T19:57:03+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-fiorentina-juventus-diretta_f14e0417-2435-4476-933e-30be9285b4d5.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "PNL începe „polul de modernizare” și negocierile pentru absorbția Forței Dreptei. Ciucu: „Vin foarte mulți oameni către PNL”",
+      "category": "România",
+      "published": "2026-11-08T19:51:15+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/pnl-incepe-polul-de-modernizare-si-negocierile-pentru-absorbtia-fortei-dreptei-ciucu-vin-foarte-multi-oameni-catre-pnl-4027023",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Eisenkot ha il mandato per il governo, 'momento fragile per la democrazia'",
+      "category": "Italia",
+      "published": "2026-11-08T19:45:40+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/herzog-affida-a-eisenkot-lincarico-di-formare-il-nuovo-governo_9bce6d47-9f8f-434e-b62a-b429a911d586.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "F1: festa Norris in Brasile, Ferrari indietro tutta e la Mercedes è campione",
+      "category": "Italia",
+      "published": "2026-11-08T19:35:31+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/11/08/f1-in-brasile-vince-norris-settima-la-ferrari-di-leclerc_2cb302f9-f2e8-4c7a-8948-4e03b73b39a2.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -57,15 +93,6 @@
       "category": "Italia",
       "published": "2026-11-08T19:21:15+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/08/trump-lancia-lera-miller-ma-vance-trema-finanziatori-in-fuga_185e5971-a7a8-47f4-b15a-df683dc8bdc1.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Eisenkot ha il mandato per il governo, 'momento fragile per la democrazia'",
-      "category": "Italia",
-      "published": "2026-11-08T19:13:38+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/herzog-affida-a-eisenkot-lincarico-di-formare-il-nuovo-governo_9bce6d47-9f8f-434e-b62a-b429a911d586.html",
       "source": "ANSA",
       "status": "galben",
       "words": 0
@@ -89,15 +116,6 @@
       "words": 0
     },
     {
-      "title": "Manovra alla Camera, il governo vuole solo piccole modifiche",
-      "category": "Italia",
-      "published": "2026-11-08T19:07:22+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/08/manovra-alla-camera-il-governo-vuole-solo-piccole-modifiche_7d9c1a4f-8dc8-4127-9d48-8261a159eb29.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Settantenne uccisa in casa a coltellate, fermato il figlio",
       "category": "Italia",
       "published": "2026-11-08T19:05:15+00:00",
@@ -111,15 +129,6 @@
       "category": "Italia",
       "published": "2026-11-08T19:04:45+00:00",
       "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/08/diaco-si-scusa-con-ravagnani-ma-avverte-pronto-a-querele_522d4334-b691-4a0e-9340-f8755681b297.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Serie A, in campo Fiorentina-Juventus DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-08T19:03:53+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/08/serie-a-in-campo-fiorentina-juventus-diretta_f14e0417-2435-4476-933e-30be9285b4d5.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
@@ -206,28 +215,10 @@
       "words": 0
     },
     {
-      "title": "Leone: 'La politica pensi al bene comune'. Faccia a faccia con Milei",
-      "category": "Italia",
-      "published": "2026-11-08T17:50:43+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/leone-la-politica-pensi-al-bene-comune.-faccia-a-faccia-con-milei_b1a9c1ef-f58d-4638-863e-926dd7986a78.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Cine este favoritul democraților pentru alegerile prezidențiale în SUA din 2028. Rezultatele unui sondaj intern",
       "category": "România",
       "published": "2026-11-08T17:29:15+00:00",
       "url": "https://www.digi24.ro/stiri/externe/sua/cine-este-favoritul-democratilor-pentru-alegerile-prezidentiale-in-sua-din-2028-rezultatele-unui-sondaj-intern-4026947",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Aliații europeni sunt mai conștienți de apetitul tot mai mare al Kremlinului pentru risc, spune șeful Armatei britanice",
-      "category": "România",
-      "published": "2026-11-08T16:58:33+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/aliatii-europeni-sunt-mai-constienti-de-apetitul-tot-mai-mare-al-kremlinului-pentru-risc-spune-seful-armatei-britanice-4026861",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -715,15 +706,6 @@
       "published": "2026-11-07T01:01:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5PTUFBcEUwUDRaemZWM1FUby1HSkRFQ2o1VzI1Rk5EbHBjSzY5NXBqc2d4X2hwbG1wNDUtRl8yaENBd0NzQjdjSl92dzByel9KZnlSOW5hQlJjMTdLaUZleHdUQlpya2NXc0dV?oc=5",
       "source": "Il Giorno",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tânăr tată român mort la muncă în Italia. Marius avea doi copii și trebuia să se întoarcă acasă de Crăciun - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-06T19:42:54+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQeXZYRHNjdzhEQUFMcHZ5M0NMZXNPSVJzZEJ3dDFZRjVuYnoxbXdBb2lZR0JvZ3FNeEVlR05jQ0RqR081amNwYUo3WVE2NjB2blVWQXJjZDZuMUpxdElGZ1RBTUlVRjU0aGRGakhvM0x5dHhBUHB2QjhuVlhBZXoxdDUzNUk5VXZIWURNWGhBWDJBMXhlM0NfMjVwNm9yWVhlVHhEMGI3dzRCWTFzTGh0a29ZaGZ4ZVZYdmRhQjhtNmZaV1AtQkwzMw?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     }
