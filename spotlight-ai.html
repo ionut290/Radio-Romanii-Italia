@@ -209,7 +209,7 @@ body.mureka-rdi a{color:inherit}
 .mureka-rdi footer a{color:#30d7dc}
 .mureka-rdi .row-play{border:1px solid #225c5b;color:#4be1e4;background:#103236;border-radius:8px;padding:5px 9px;font-size:10px;font-weight:800;cursor:pointer}.mureka-rdi .row-play:hover{background:#20585a}
 @media(max-width:1120px){.mureka-rdi .workspace-grid{grid-template-columns:minmax(0,1fr) 250px;gap:12px}.mureka-rdi .votebox{grid-column:3/-1}.mureka-rdi .track{grid-template-columns:26px 48px minmax(0,1fr)}.mureka-rdi .cover{width:48px;height:48px}.mureka-rdi .right-rail{top:75px}.mureka-rdi .hero{grid-template-columns:minmax(0,1fr) 220px}.mureka-rdi .hero-feature{grid-template-columns:50px minmax(0,1fr)}.mureka-rdi .record-wrap{height:60px}.mureka-rdi .vinyl{width:50px;height:50px}.mureka-rdi .vinyl:before{inset:10px}.mureka-rdi .vinyl:after{inset:20px}.mureka-rdi .record-arm{right:-6px}}
-@media(max-width:840px){.mureka-rdi .workspace-grid{grid-template-columns:1fr}.mureka-rdi .right-rail{position:static;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.mureka-rdi .player-bar{grid-column:1}.mureka-rdi .queue-card{grid-column:2}.mureka-rdi .info-card{grid-column:1/-1}.mureka-rdi .hero{grid-template-columns:1fr}.mureka-rdi .hero-feature{display:none}}
+@media(max-width:840px){.mureka-rdi .workspace-grid{grid-template-columns:1fr}.mureka-rdi .right-rail{position:static;order:-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.mureka-rdi .player-bar{grid-column:1}.mureka-rdi .queue-card{grid-column:2}.mureka-rdi .info-card{grid-column:1/-1}.mureka-rdi .hero{grid-template-columns:1fr}.mureka-rdi .hero-feature{display:none}}
 @media(max-width:700px){.mureka-rdi .app-sidebar{transform:translateX(-105%);transition:transform .2s;box-shadow:0 0 40px #0008}.mureka-rdi.menu-open .app-sidebar{transform:translateX(0)}.mureka-rdi.menu-open .sidebar-scrim{display:block;position:fixed;inset:0;background:#000b;z-index:25}.mureka-rdi main.app-main{margin-left:0}.mureka-rdi .topbar{padding:10px 13px}.mureka-rdi .menu-toggle{display:block}.mureka-rdi .top-crumb{font-size:11px}.mureka-rdi .top-crumb .sep,.mureka-rdi .top-crumb .long{display:none}.mureka-rdi .top-live{font-size:9px;padding:7px 9px}.mureka-rdi .top-actions select{font-size:11px;padding:8px}.mureka-rdi .content-wrap{padding:13px 12px}.mureka-rdi .studio-tabs{margin:0 0 13px;gap:10px}.mureka-rdi .studio-tabs a{font-size:12px;padding:10px 8px}.mureka-rdi .hero{padding:17px;margin-bottom:19px;border-radius:15px}.mureka-rdi .hero h1{font-size:33px;margin:10px 0}.mureka-rdi .hero .lead{font-size:12px}.mureka-rdi .links a{font-size:11px;padding:9px 11px}.mureka-rdi .hero-meta{gap:9px;font-size:9px}.mureka-rdi .summary{font-size:22px}.mureka-rdi .stage-mark{display:none}.mureka-rdi .discovery{padding:8px}.mureka-rdi .filters{flex-wrap:nowrap;overflow-x:auto;width:100%;scrollbar-width:none}.mureka-rdi .filters button{white-space:nowrap;font-size:10px}.mureka-rdi .search-area{width:100%}.mureka-rdi .track{grid-template-columns:25px 45px minmax(0,1fr);gap:8px;padding:10px 9px}.mureka-rdi .cover{width:45px;height:45px;font-size:20px}.mureka-rdi .track h2{font-size:13px!important}.mureka-rdi .track-info>p{font-size:10px}.mureka-rdi .votebox{grid-column:2/-1;justify-content:flex-start}.mureka-rdi .right-rail{grid-template-columns:1fr}.mureka-rdi .player-bar,.mureka-rdi .queue-card,.mureka-rdi .info-card{grid-column:1}.mureka-rdi .player-visual{max-height:165px;aspect-ratio:2.3}.mureka-rdi .queue-list{max-height:220px}.mureka-rdi .player-actions{max-width:370px;width:100%;margin:auto}.mureka-rdi .comment-form{grid-template-columns:1fr}.mureka-rdi .comment-form button{width:100%}}
 @media(prefers-reduced-motion:reduce){.mureka-rdi .vinyl,.mureka-rdi .player-art{animation:none}}
 
@@ -435,8 +435,9 @@ function buildComments(track){
  return panel;
 }
 function render(){
- const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=total+" "+t("songs");
- const visibleTracks=allTracks.filter((track,i)=>{
+ const wrap=$("tracks");wrap.replaceChildren();$("count").textContent=audioTracks.length+" "+t("songs");
+ const audioTracks=allTracks.filter(track=>!!track.audio_preview);
+ const visibleTracks=audioTracks.filter((track,i)=>{
   const q=(String(track.title||"")+" "+String(track.artist||"")+" "+String(track.platform||"")+" "+String(track.genre||"")).toLocaleLowerCase();
   return (!searchTerm||q.includes(searchTerm))&&(currentView!=="top"||(page===1&&i<10))&&(currentView!=="voted"||voted.has(track.id))&&(currentView!=="audio"||!!track.audio_preview);
  });
@@ -456,8 +457,6 @@ function render(){
   const preview=node("div","listen");
   if(track.audio_preview){
    const playButton=node("button","row-play","▶ "+t("listen"));playButton.type="button";playButton.setAttribute("aria-label",t("listen")+" — "+track.title);playButton.onclick=()=>playSingle(track);preview.append(playButton);
-  }else if(safeLink(track.link)){
-   const link=node("a","",t("listenExternal"));link.href=safeLink(track.link);link.target="_blank";link.rel="noopener noreferrer";preview.append(link)
   }else{preview.append(node("span","hint",t("noPreview")))}
   info.append(preview,node("div","votes","🔥 "+Number(track.votes).toLocaleString(language)+" "+t("votes")));
   const buttons=node("div","votebox");const wasVoted=musicAuth.required?musicAuth.voted.has(track.id):voted.has(track.id);
