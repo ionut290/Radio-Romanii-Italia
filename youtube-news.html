@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261107-landscape-shuffle-1';
+const RDI_YOUTUBE_BUILD='20261109-news-yesterday-fallback-1';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -97,21 +97,29 @@ async function load(){
    source:x.source||'Eventi RDI',published:x.published||x.date||today,
    image:x.image||'',url:x.url||'',city:x.city||''
   }));
-  // Only today's publications in the Italian timezone enter the YouTube news rotation.
-  // Events are included only when announced today; advertising appears only during actual AzuraCast spot audio.
+  // Prefer publications dated today in Rome; fall back to yesterday only
+  // when no eligible stories from today are available.
   const romeDay=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'});
-  function publishedToday(x){
+  const yesterdayDate=new Date();
+  yesterdayDate.setDate(yesterdayDate.getDate()-1);
+  const yesterday=romeDay.format(yesterdayDate);
+  function publicationDay(x){
     const raw=x&&x.published;
-    if(typeof raw!=='string'||!raw.trim())return false;
-    if(/^\\d{4}-\\d{2}-\\d{2}$/.test(raw.trim()))return raw.trim()===today;
-    const stamp=new Date(raw);
-    return !Number.isNaN(stamp.getTime())&&romeDay.format(stamp)===today;
+    if(typeof raw!=='string'||!raw.trim())return '';
+    const value=raw.trim();
+    if(/^\d{4}-\d{2}-\d{2}$/.test(value))return value;
+    const stamp=new Date(value);
+    return Number.isNaN(stamp.getTime())?'':romeDay.format(stamp);
   }
+  const displayItems=[...(editorial.items||[]),...(news.items||[]),...events]
+    .map(x=>italianStory(x,translationData.items||{})).filter(Boolean)
+    .filter(valid).filter(x=>!x.promotion&&!/^(publicitate|pubblicit[aà]|advertising|sponsorizat[ăa]?|promovare|activități și servicii)$/i.test(String(x.category||"").trim()));
+  const todaysItems=displayItems.filter(x=>publicationDay(x)===today);
+  const selectedItems=todaysItems.length?todaysItems:displayItems.filter(x=>publicationDay(x)===yesterday);
   const seen=new Set();
-  const displayItems=[...(editorial.items||[]),...(news.items||[]),...events].map(x=>italianStory(x,translationData.items||{})).filter(Boolean);
-  const incoming=displayItems.filter(publishedToday).filter(valid).filter(x=>!x.promotion&&!/^(publicitate|pubblicit[aà]|advertising|sponsorizat[ăa]?|promovare|activități și servicii)$/i.test(String(x.category||"").trim())).filter(x=>{
-   const key=x.category+'|'+x.title.trim().toLocaleLowerCase('ro');
-   if(seen.has(key))return false;seen.add(key);return true;
+  const incoming=selectedItems.filter(x=>{
+    const key=x.category+'|'+x.title.trim().toLocaleLowerCase('ro');
+    if(seen.has(key))return false;seen.add(key);return true;
   });
   // Round-robin among categories so no category or event gets buried behind dozens of headlines.
   const buckets=new Map();
@@ -130,7 +138,7 @@ async function load(){
    stories=updated;
    if(current){const position=stories.findIndex(x=>x.title===current);index=position>=0?position:0;}
    if(!started){started=true;show();}
-  }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Nessuna notizia pubblicata oggi';$('summary').textContent='Torneremo con aggiornamenti da Romania, Italia e diaspora.';$('category').textContent='NOTIZIE';$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
+  }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Notizie momentaneamente non disponibili';$('summary').textContent='Torneremo con aggiornamenti da Romania, Italia e diaspora.';$('category').textContent='NOTIZIE';$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
  }catch(e){console.warn('News update failed',e)}
 }
 // YouTube uses a short display excerpt; stored articles and Facebook copies stay complete.
