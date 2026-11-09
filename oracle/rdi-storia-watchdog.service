@@ -1,4 +1,5 @@
 [Unit]
+# Verifica automatica ridondante RDI.
 Description=RDI STORIA Oracle publication watchdog
 Wants=network-online.target
 After=network-online.target
