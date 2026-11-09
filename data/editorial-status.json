@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-09T21:22:35.299322+00:00",
+  "news_updated_at": "2026-11-09T21:59:19.920092+00:00",
   "editorial_updated_at": "2026-11-09T18:23:31.500426+01:00",
   "translations_updated_at": "2026-11-09T20:47:21.641158+00:00",
   "feed_total": 78,
-  "feed_extended_400": 0,
-  "feed_missing_body": 78,
+  "feed_extended_400": 1,
+  "feed_missing_body": 77,
   "feed_short_body": 0,
   "editorial_total": 11,
   "archived_editorials": 212,
   "translation_records": 35,
   "pending_total": 39,
   "pending_filtered_out": 35,
-  "editorial_verde": 1,
-  "editorial_galben": 41,
-  "editorial_rosu": 46,
+  "editorial_verde": 2,
+  "editorial_galben": 39,
+  "editorial_rosu": 47,
   "pending": [
     {
       "title": "A Milano più donne al lavoro che nel resto d'Italia, ma pesa il divario di reddito - ANSA",
@@ -408,10 +408,28 @@
   ],
   "recent_news": [
     {
+      "title": "Giallo sul decreto armi per Kiev, Giorgetti non lo firma",
+      "category": "Italia",
+      "published": "2026-11-09T21:53:03+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/09/giallo-sul-decreto-armi-per-kiev-giorgetti-non-lo-firma_bd84e8d5-bb54-4f9e-ab20-c050f5ae3632.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Mărirea și decăderea lui Russell Brand: vedetă TV, actor, activist politic și dependent de sex condamnat într-un final pentru viol",
       "category": "România",
-      "published": "2026-11-09T21:20:05+00:00",
+      "published": "2026-11-09T21:51:35+00:00",
       "url": "https://www.digi24.ro/magazin/timp-liber/showbiz/marirea-si-decaderea-lui-russell-brand-vedeta-tv-actor-activist-politic-si-dependent-de-sex-condamnat-intr-un-final-pentru-viol-4028947",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Dronele ucrainene ar putea renunța la Starlink. Alternativa israeliano-europeană, mai greu de bruiat",
+      "category": "România",
+      "published": "2026-11-09T21:23:05+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/dronele-ucrainene-ar-putea-renunta-la-starlink-alternativa-israeliano-europeana-mai-greu-de-bruiat-4028951",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -419,11 +437,11 @@
     {
       "title": "Lider PSD, despre comasările voluntare: Săptămâna viitoare o să apară textul propus de Guvern. O analiză a criteriilor, făcută cu AI",
       "category": "România",
-      "published": "2026-11-09T21:16:58+00:00",
+      "published": "2026-11-09T21:22:18+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/lider-psd-despre-comasarile-voluntare-saptamana-viitoare-o-sa-apara-textul-propus-de-guvern-o-analiza-a-criteriilor-facuta-cu-ai-4028909",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 445
     },
     {
       "title": "Criză în vămi: 1.000 de posturi neocupate, controale îngreunate și soluții care evită problema reală. Declarația Sindicatului Meridian",
@@ -437,7 +455,7 @@
     {
       "title": "Parigi accusa: 'C'è Teheran dietro agli attacchi ai frigoriferi'",
       "category": "Italia",
-      "published": "2026-11-09T20:53:26+00:00",
+      "published": "2026-11-09T20:54:57+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/09/francia-apre-inchiesta-ipotesi-mano-iran-dietro-gli-hacker-dei_de65c382-657a-4efa-8666-9ff0e05b25d1.html",
       "source": "ANSA",
       "status": "galben",
@@ -489,15 +507,6 @@
       "words": 0
     },
     {
-      "title": "Electrolux, due operaie con danni permanenti dopo il lavoro sulla linea frigoriferi: 80mila euro di risarcimento - Il Messaggero",
-      "category": "Italia",
-      "published": "2026-11-09T20:37:50+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQN1RlVzhQclNvMXAxVXNUcEhETy01Y2dWdWU1bTFFMGYyUE9xa1g2M2RqSUhBWHZQVFA1OGlZRXZ2MEdnaC1ablZPbjdqNXR3UElzYk55ZFFFeVBwR25ucTk1RUFlYkJ1ZFBKYlRGUzQ3U3NnM2VmYi1mMjhXR0lyQ2xlbUN2ZU9JeUppbXhXeUFjbzdjVnFFZlNMOTI1OXZWaVJZZ2tXdlU1bnIw0gGrAUFVX3lxTE9Mcy1tamV6TU14WFh3OURJbnM3VVlUbDlweWQ3WVNBdmtTYzR2dnpSVXJHNmRRaE0xSTR6UTRVeXJoaWdXUkhDVHRKOURJd19CQ3NuRk1DdEdLdVF2Ukt0NHF2S2xNUzRSWW1kb2tIY2QzbVk5a3VXMFgxVjNFSWlYeGNOUHdianRjd3NJakMycWM1WUtKMjNmMUpGRGVPakZ6Ujk3UUh",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Cancerul îl împiedică pe Joe Biden să-și promoveze cartea de memorii: „Unele zile sunt mai bune decât altele”",
       "category": "România",
       "published": "2026-11-09T20:35:59+00:00",
@@ -543,12 +552,30 @@
       "words": 0
     },
     {
+      "title": "Il Papa, 'la disoccupazione è un dramma, ferisce la dignità' - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-09T20:10:07+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPa2ktVUpqamtmTTBYOFppSWktWjU3MDZ6Nnlud1p6S04yd1ozdkJYV1VxYXdmbExickFMLV9iTlM0c2d6eUNYTktnbWp5cEJaYnVfRlNWTGZydDd1MjRyc2N6NmJaazUwRlQxLWl0QmZHMVdJa0wtZlRWY3B4c1ktV0xObXJ6UQ?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Dal Cdm ok al Decreto Bollette, '15 euro in meno al megawattora'",
       "category": "Italia",
       "published": "2026-11-09T20:09:24+00:00",
       "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/dal-cdm-ok-al-decreto-bollette-15-euro-in-meno-al-megawattora_cbf74d76-2c12-4718-89af-73ab9c1e6fec.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ex Ilva, solo due offerte da Jindal e Arvedi: non c’è la cordata italiana guidata da Federacciai - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-09T20:06:28+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeWlpdmFIUm9uMEpKQ2ptSENOMkF3TWM2UEV0MmU2X3BIX2E4bFJsSF9CblBrR1RqdGQzSnBHamNfeHdMTWhYUGlDXzQwdEpBbEVQY0dEcDREOW5qMDNNdFVob2tqRkxtTkl0VEVyeU9ONWU0bFVHbi03SFV6OHJiRXRaUV9wZVFMelJabmx6QU9jOW1nTlBpS3dyeUJXM3BYdEhXZm9tM0U4M2c0bEVIOThsRnYtVC1fQUtBNG5OYzU?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -609,7 +636,7 @@
       "title": "A Sabbadini il Premio di Letteratura Economica e Finanziaria “Canova Club” 2026 - la Repubblica",
       "category": "Italia",
       "published": "2026-11-09T19:40:32+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNazZTNnI3dmFyTHJHbkZaZzF3RF9ZRl9VZmFiQzZlb2x1RGlxV25qODRpLS1ybmdRNFJHQmdkMFR4a09fNmV4dHJ4M3lvNmFHeXA5dmN0YXZ3WFBUT0YwSU9tbDc3SzdENkNIYXlsdm4xTjBqc01zZ0tlamtWVE96OEZIMnpSSzhUcXh0TzB0TGZQbEpMNnRXZERjd2puV0drQnZvcUVyRVRub2d5Q0M0TkJyU0t2RENkWnkxR3NDYXdkUFJWdkI0Sm5jT2UyNzU3SHFMV21JSTVYcWM?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPT1lEVC1UQmRscERBcW85NVZNUXMwVlp1WGdSVWw1cUJhLVNLMzNqeFltS2ZfdXFva3hNX3djTHBTQm5lWlFFNWp2UkNzcGFpRFlUVVZRTTBndUFDNlVQLTVaOVFocUtKejdkcDZ2SDhqNW1EQXhtaFdkdl93QTU4a1NyTUNyMV9MU2NLcW1HbUl0S1ZaV2RtcS1rUEZZd2NfQi1VdTVqQXVFbGtUdkY1X0ZPeVFENWpRWmZjbnZRN0U3V1lJN0dtSFRtLXA3X1AxWE0tSG93?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -669,15 +696,6 @@
       "words": 0
     },
     {
-      "title": "Lucian Bode susține că nu are nicio legătură cu datoriile partidului: „Nu am semnat niciodată un contract care să nu respecte legea”",
-      "category": "România",
-      "published": "2026-11-09T18:54:46+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/lucian-bode-sustine-ca-nu-are-nicio-legatura-cu-datoriile-partidului-nu-am-semnat-niciodata-un-contract-care-sa-nu-respecte-legea-4028729",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Maxi investimento da 3,2 miliardi a Novara: la fabbrica di microchip Silicon Box crea 1.600 posti di lavoro - Torino Cronaca",
       "category": "Italia",
       "published": "2026-11-09T18:50:01+00:00",
@@ -732,15 +750,6 @@
       "words": 0
     },
     {
-      "title": "'In Ucraina morti oltre 400 mila russi', hacker svelano i dati di Mosca",
-      "category": "Italia",
-      "published": "2026-11-09T17:12:13+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/09/in-ucraina-morti-oltre-400-mila-russi-hacker-svelano-i-dati-di-mosca_1ddc6347-be4e-4839-b9b1-3ec7132351bb.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Il posto fisso diventa un gioco da tavolo: arriva 'Si Sistemau'",
       "category": "Italia",
       "published": "2026-11-09T16:25:00+00:00",
@@ -764,6 +773,15 @@
       "published": "2026-11-09T15:45:40+00:00",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNM3FZQVoyeTJOQkdfQWloc1pUa1VVazFWN2NIUzJiOW51d2RrUlhJUEpHUXBlSnF1QlVVenZfcmNPdmhCaFBlSWlqNnFXOHZOTTA0bkk2bkFLb2Y2c3Z6UnBaRjNMcHlLMmN0MkdDYURmU2VhaF9pSTlGNG5RMnV5d3hFUnBzMDhtTWVRVktzMERKTFlCdjltc0pjU0x6UmJac1VfVERVOA?oc=5",
       "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Bankitalia, economia in Liguria: +0,9% nel primo semestre dell’anno - Il Secolo XIX",
+      "category": "Italia",
+      "published": "2026-11-09T15:40:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxORnJLV0ZoMjQ2amVuVHZiWExhLW13SXBvVVp3Y2hLRGxzRWZUQW5yTmNVU0ljeU51STdsMXBnV1pfaVEyckJUSUM1V3lrMVJrVGRTTnJnSGlsMEh6eEJiaV9hdzJfSEt0TTRaYmJ6eUZBQ29JU2RNd1JjcEVTVmFVdWVmdjh2WVJXN3BscHlJRUltQVpjX2pRdQ?oc=5",
+      "source": "Il Secolo XIX",
       "status": "roșu",
       "words": 0
     },
@@ -948,29 +966,11 @@
       "words": 0
     },
     {
-      "title": "Ex Ilva, solo due offerte da Jindal e Arvedi: non c’è la cordata italiana guidata da Federacciai - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-09T08:29:59+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeWlpdmFIUm9uMEpKQ2ptSENOMkF3TWM2UEV0MmU2X3BIX2E4bFJsSF9CblBrR1RqdGQzSnBHamNfeHdMTWhYUGlDXzQwdEpBbEVQY0dEcDREOW5qMDNNdFVob2tqRkxtTkl0VEVyeU9ONWU0bFVHbi03SFV6OHJiRXRaUV9wZVFMelJabmx6QU9jOW1nTlBpS3dyeUJXM3BYdEhXZm9tM0U4M2c0bEVIOThsRnYtVC1fQUtBNG5OYzU?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Stipendi in Europa, nel 2025 +4,3%. L’Italia a metà classifica, ma sotto la media Ue - Idealista",
       "category": "Italia",
       "published": "2026-11-09T07:51:06+00:00",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPZUNYanFQVkF1ZlM1SFFLcW1ldVRoMmVHMFFJTzhGSUpwZDJkY0xXOGxMZ1FwNkdNR2pkRC1aZ3Vvd2l2YU5sMnhYaU00NjJyZjNZN3d4cjhLci1xQTZ3ak9CSGNHNFp0VXVaRldSeTkxU2VBZVhZeU9OMzJhaXZSRjJJVDQ1VE0tcEJzNGFodFBjMHB2WVJGa0JSZzFHOEdpTlp5QWswVE1nNnJUZjQ5Y2hab0x6NERRS2hCZWFqa1FfeW81WkZhbk5oV29YdjItR055b2ZZZVZyQdIB3wFBVV95cUxOd040TlFod3hsRklIOW9ZVGY0cW1xdzVSQTdYNzF4NnZTRTF2cnZoSHQ2azNMY2QxVnRLNFFUOXAyQWktcWw2cFZKd2Nyd2UzOF9Tc2V5TWZjTTUySmhaMV9HUklWRDIxTHB4OXl3OXRnaXlDVWZHZUN",
       "source": "Idealista",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Per Unicredit il miglior trimestre di sempre. Orcel: “In Italia cresciamo forte senza acquisizioni” - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-09T07:13:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxONE9qSFk3LUNCZHktQkJVLVRuTlNzRE9nOTBXSkxxRmJRR0I2MEdqYWctOE4zU0tvbEVmaVpVSzVTTGRfUWFqVWZfYzZmamJoMXE3bWNOMHEzZWlveGU3M3g1TTJCejY1YTdGblJwcDlEU0RvdUotRVM1Ym45UWViYWg2ZkJKRk9ycUVMUTVrM0xVOVcxQVVPOXhuazNXc3diU2JiRWFZamo?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1123,6 +1123,17 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
+      "title": "Lider PSD, despre comasările voluntare: Săptămâna viitoare o să apară textul propus de Guvern. O analiză a criteriilor, făcută cu AI",
+      "category": "România",
+      "published": "2026-11-09T21:22:18+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/lider-psd-despre-comasarile-voluntare-saptamana-viitoare-o-sa-apara-textul-propus-de-guvern-o-analiza-a-criteriilor-facuta-cu-ai-4028909",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 445,
+      "intro": "Vicepreședintele PSD Gabriel Zetea a anunțat, luni seară, la Digi24, că săptămâna viitoare va fi publicată prima variantă a textului propus de Ministerul Dezvoltării privind comasarea voluntară a localităților.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Noi detalii despre moartea muncitorului român pe șantierul Fincantieri din Italia: Marius ar fi leșinat în câteva secunde, în timp ce verifica două conducte - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-07T21:15:00+00:00",
@@ -1153,17 +1164,6 @@
       "status": "galben",
       "words": 22,
       "intro": "Un român din Italia a fost arestat după ce a fost găsit dormind în casa pe care tocmai o jefuise Antena 3",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "„Blestem ziua în care am venit în România”. Italienii stabiliți în România, opinii radical diferite - Mediafax",
-      "category": "Diaspora",
-      "published": "2026-11-08T05:45:38+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPWGJZVlRiaUQ3Q2plR3dlcnhtQWg5XzNMaG85a2w0cHhYOGZtRE9XWlBlU1BHaWVocG1RWVQ2clR6VnEwWW5PYkNldHR2ZnN5c2NwZS1sZ21fTDBHcGQxNEVLeFB2NjVHTEJyWHM1Z3JkLVY3ZzZYc0ZENHJRcWREbkRBdUZSakxLNkVZWl9JYWFKeDNDYndJRHdzbFFHY2otQW9TTm5qT0dVTENOOTh1V2RYalB5d2dLM3Nralg0ampQd2FXbGJVSkRDRdIBywFBVV95cUxPWGJZVlRiaUQ3Q2plR3dlcnhtQWg5XzNMaG85a2w0cHhYOGZtRE9XWlBlU1BHaWVocG1RWVQ2clR6VnEwWW5PYkNldHR2ZnN5c2NwZS1sZ21fTDBHcGQxNEVLeFB2NjVHTEJyWHM1Z3JkLVY3ZzZYc0ZENHJRcWREbkRBdUZSakx",
-      "source": "Mediafax",
-      "status": "galben",
-      "words": 16,
-      "intro": "„Blestem ziua în care am venit în România”.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
