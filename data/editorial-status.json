@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-10T18:39:46.569038+00:00",
+  "news_updated_at": "2026-11-10T19:49:44.545107+00:00",
   "editorial_updated_at": "2026-11-10T18:42:08.029568+01:00",
-  "translations_updated_at": "2026-11-10T11:49:32.010296+00:00",
-  "feed_total": 82,
+  "translations_updated_at": "2026-11-10T19:47:07.158811+00:00",
+  "feed_total": 84,
   "feed_extended_400": 0,
-  "feed_missing_body": 82,
+  "feed_missing_body": 84,
   "feed_short_body": 0,
   "editorial_total": 13,
   "archived_editorials": 221,
-  "translation_records": 29,
+  "translation_records": 27,
   "pending_total": 39,
   "pending_filtered_out": 35,
   "editorial_verde": 0,
-  "editorial_galben": 38,
+  "editorial_galben": 39,
   "editorial_rosu": 56,
   "pending": [
     {
@@ -408,12 +408,210 @@
   ],
   "recent_news": [
     {
-      "title": "Nicușor Dan, despre situația financiară, de ce respinge o guvernare AUR, pericolul anticipatelor și iluzia unei guvernări PNL-USR",
+      "title": "Militar american, arestat în Marea Britanie sub suspiciunea de spionaj în favoarea Rusiei",
       "category": "România",
-      "published": "2026-11-10T18:36:17+00:00",
+      "published": "2026-11-10T19:43:58+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/militar-american-arestat-in-marea-britanie-sub-suspiciunea-de-spionaj-in-favoarea-rusiei-4030423",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nicușor Dan s-a mutat cu familia într-o locuință de protocol, din luna octombrie. Încă nu s-a însurat cu Mirabela Grădinaru",
+      "category": "România",
+      "published": "2026-11-10T19:40:10+00:00",
+      "url": "https://www.digi24.ro/stiri/nicusor-dan-s-a-mutat-cu-familia-intr-o-locuinta-de-protocol-din-luna-octombrie-inca-nu-s-a-insurat-cu-mirabela-gradinaru-4030415",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Scontro sulle armi a Kiev. Meloni sente Giorgetti, firmerà il decreto",
+      "category": "Italia",
+      "published": "2026-11-10T19:39:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/ucraina-meloni-sempre-trovata-una-sintesi-la-posizione-dellitalia-non-cambiera_83808254-a528-4178-aee1-ade2f46fc15d.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Pressing Usa ma Mosca chiude, 'niente tregua come vuole l'Ue'",
+      "category": "Italia",
+      "published": "2026-11-10T19:37:17+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/rubio-plaude-ai-colloqui-di-pace-ad-abu-dhabi-sullucraina-ma-la-strada-e-ancora-lunga_22e143a9-4f98-46fe-97f9-b037c9f33370.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nicușor Dan, conferință de presă maraton la Cotroceni, despre buget, guvernare, AUR, justiție, relația cu SUA și alegerile anulate",
+      "category": "România",
+      "published": "2026-11-10T19:37:11+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/presedintele-nicusor-dan-sustine-acum-o-conferinta-de-presa-la-palatul-cotroceni-principalele-declaratii-4030131",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Eternit, disposto nuovo processo di appello per Schmidheiny",
+      "category": "Italia",
+      "published": "2026-11-10T19:33:20+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/eternit-disposto-nuovo-processo-di-appello-per-schmidheiny_9dfd62e0-995f-4129-9cf1-3a6a6a33ce01.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Președintele, despre întâlnirea cu numărul 2 din Pentagon: Cred că am făcut tot ce se putea pentru o soluție bună pentru România",
+      "category": "România",
+      "published": "2026-11-10T19:31:45+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/presedintele-despre-intalnirea-cu-numarul-2-din-pentagon-cred-ca-am-facut-tot-ce-se-putea-pentru-o-solutie-buna-pentru-romania-4030303",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Eisenkot annulla un incontro per trattative con Likud dopo discorso Netanyahu",
+      "category": "Italia",
+      "published": "2026-11-10T19:30:07+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/media-abbas-verso-riconoscimento-di-hamas-come-gruppo-terroristico_9fa547ca-d8a3-4c82-b3d9-db39b7a90e19.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Manovra, verso un nuovo vertice di maggioranza per fare il punto sulle modifiche",
+      "category": "Italia",
+      "published": "2026-11-10T19:28:16+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/manovra-labi-sulle-banche-dal-2025-misure-fiscali-per-22-miliardi_c2e7ae7d-cb17-4bcb-80d1-2c3b67244d5f.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nicuşor Dan spune că nu a pus condiţia guvernului Niculescu privind scăderea TVA de la 1 ianuarie 2027: „Am pus o singură condiţie”",
+      "category": "România",
+      "published": "2026-11-10T19:26:19+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-spune-ca-nu-a-pus-conditia-guvernului-niculescu-privind-scaderea-tva-de-la-1-ianuarie-2027-am-pus-o-singura-conditie-4030395",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nuovo allarme Ue, 'nel mirino degli hacker anche gli elettrodomestici'",
+      "category": "Italia",
+      "published": "2026-11-10T19:20:55+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/agenzia-ue-attacchi-hacker-potrebbero-colpire-anche-elettrodomestici_28703d89-c3b2-4c05-8315-d0e77f5339ba.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Tânăr român, mort în Italia după un accident cu trei mașini în Italia. Paul avea numai 20 de ani - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-10T19:19:43+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOWnpfZDYtV2hWdzMydjlsVHpsWG5lSFozSUpuZGd6TkJkbGNwSWp2aktFak1WWDF4ZmpFZkdIY1NxaTZKZHNfcm9oaDFPX0YwWjEyZjFFazhIelVTUmJsYk9GR1UtWGkycVl6THZYWXI5MHZkbGZlWjA2dGNCN21ieWg2d0JXLWlPR3NBTnFsNUhSaFFhemhRbXVydlhGNE5BQlp6QURHb3VKeXZhVDRNUkUtaDVFTGI2ZWc?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nicușor Dan, despre criza din Justiție: Am avut un dialog cu magistraţii, dar criză politică ne-a luat energia. Sunt gata să-l reluăm",
+      "category": "România",
+      "published": "2026-11-10T19:11:54+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/nicusor-dan-despre-criza-din-justitie-am-avut-un-dialog-cu-magistratii-dar-criza-politica-ne-a-luat-energia-sunt-gata-sa-l-reluam-4030341",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nicuşor Dan: Pare că Primăria Capitalei are dreptate în cazul mitingului AUR. „Cât am fost primar, am avizat vreo 5.000 de proteste”",
+      "category": "România",
+      "published": "2026-11-10T19:09:31+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-pare-ca-primaria-capitalei-are-dreptate-in-cazul-mitingului-aur-cat-am-fost-primar-am-avizat-vreo-5-000-de-proteste-4030359",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "TikTok, 2,9 mld di valore aggiunto all’economia dell’Italia nel 2025 - Askanews",
+      "category": "Italia",
+      "published": "2026-11-10T19:07:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQUltV3B2d0otMF85Zi00TlRDU1hSRnFaTUpUWmR0SEdDM2JCeW4tVkI5UkJ2YlMzcmp4Y3dhOTdyWDVBQkl5Qk10V1l5VmhOY1dTYjJYSzBUdmVTeU91OG1nY3VQeUlOVFRXZWVfU1liWV85aFRIU0xScHlmLXk2MkFpWF9LNkl2RXVIa29WdmI4c2pEV2NfRE1aS1g?oc=5",
+      "source": "Askanews",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nicuşor Dan: Există mai multe informaţii interesante despre parcursul lui Călin Georgescu şi care nu sunt în spaţiul public",
+      "category": "România",
+      "published": "2026-11-10T19:06:39+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-exista-mai-multe-informatii-interesante-despre-parcursul-lui-calin-georgescu-si-care-nu-sunt-in-spatiul-public-4030335",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Hegseth in trincea, 'sabotaggio, contro di me una farsa politica'",
+      "category": "Italia",
+      "published": "2026-11-10T19:06:05+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/10/hegseth-terra-oggi-una-conferenza-stampa-dopo-la-richiesta-di-impeachment_2979584a-b939-48f3-bb33-2ca237fbebf5.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ce calcule a făcut Nicușor Dan când i-a încredințat formarea guvernului lui Adrian Veștea. Despre negocierile acestuia cu AUR",
+      "category": "România",
+      "published": "2026-11-10T19:02:15+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/ce-calcule-a-facut-nicusor-dan-cand-i-a-incredintat-formarea-guvernului-lui-adrian-vestea-despre-negocierile-acestuia-cu-aur-4030331",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Raportul privind anularea alegerilor prezidențiale din 2024: șeful statului refuză să dea un termen privind publicarea sa",
+      "category": "România",
+      "published": "2026-11-10T18:53:42+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/raportul-privind-anularea-alegerilor-prezidentiale-din-2024-seful-statului-refuza-sa-dea-un-termen-privind-publicarea-sa-4030307",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Mattarella difende l'indipendenza delle toghe, 'gli altri poteri non devono condizionarli'",
+      "category": "Italia",
+      "published": "2026-11-10T18:53:21+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/mattarella-toghe-non-devono-avere-soggezione-di-tipo-gerarchico_e1de678a-708c-4d26-b7a5-f23e92faf14a.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Urbanistica Milano, chiesta l'archiviazione per Sala, Boeri e Catella",
+      "category": "Italia",
+      "published": "2026-11-10T18:49:46+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/urbanistica-milano-chiesta-larchiviazione-per-sala-boeri-e-catella-_88fa0456-761c-47e9-b672-004558a268c2.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nicușor Dan, despre lipsa unei vizite de stat în SUA: Succesul în materie de politică externă nu se măsoară în viteza unei vizite",
+      "category": "România",
+      "published": "2026-11-10T18:47:03+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-despre-lipsa-unei-vizite-de-stat-in-sua-succesul-in-materie-de-politica-externa-nu-se-masoara-in-viteza-unei-vizite-4030289",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "L'attore Iacopini lascia l'ospedale e va in un centro di riabilitazione",
+      "category": "Italia",
+      "published": "2026-11-10T18:36:34+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/lattore-iacopini-lascia-lospedale-e-va-in-un-centro-di-riabilitazione_c79cf8a0-0bae-4f39-b4b6-94e3c3c91c11.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -426,20 +624,11 @@
       "words": 0
     },
     {
-      "title": "Nicușor Dan, despre lipsa unei vizite de stat în SUA: Succesul în materie de politică externă nu se măsoară în viteza unei vizite",
-      "category": "România",
-      "published": "2026-11-10T18:33:05+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-despre-lipsa-unei-vizite-de-stat-in-sua-succesul-in-materie-de-politica-externa-nu-se-masoara-in-viteza-unei-vizite-4030289",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Hegseth: 'Gli sforzi per il mio impeachment sono una farsa'",
-      "category": "Italia",
-      "published": "2026-11-10T18:26:58+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/10/hegseth-terra-oggi-una-conferenza-stampa-dopo-la-richiesta-di-impeachment_2979584a-b939-48f3-bb33-2ca237fbebf5.html",
-      "source": "ANSA",
+      "title": "Moarte îngrozitoare pentru un tânăr din Italia care ar putea fi român: capul a fost găsit la 200 de kilometri distanță de corp - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-10T18:25:19+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPaUFtTExzdTVWdElPSkR5dDFZR1FSd3NLbmFoaU80aWJtR2NPVWo5UDhueU9ENUdHYThhengzVEJSSFJDejlBUTZQSmhVYjhMZkxXUk53TDd0NlJQR3oyVmpTRENWSE15WHcyc2RQalY0LWtWa0o2TEtyTU5zOEpoRTl5emNEWC1SaUtHMF9DYTFtSThhaUVnR2RYWnNyYXFMaDk5RWdNdE1ic3RoRDQ4TVFqTUFmZTlDbmhHdzRsTHFYNTBRYzdBU0Z3eF9ydWczTXhsMFJiTm1DRTVkb1ZSSUtCQQ?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     },
@@ -471,24 +660,6 @@
       "words": 0
     },
     {
-      "title": "Manovra, l'Abi: 'Sulle banche dal 2025 misure fiscali per 22 miliardi di euro'. Dubbi di costituzionalità",
-      "category": "Italia",
-      "published": "2026-11-10T18:18:26+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/manovra-labi-sulle-banche-dal-2025-misure-fiscali-per-22-miliardi_c2e7ae7d-cb17-4bcb-80d1-2c3b67244d5f.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tensione sulle armi a Kiev, la Lega avverte gli alleati",
-      "category": "Italia",
-      "published": "2026-11-10T18:08:50+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/ucraina-meloni-sempre-trovata-una-sintesi-la-posizione-dellitalia-non-cambiera_83808254-a528-4178-aee1-ade2f46fc15d.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Președintele spune că procurorii-șefi pregătesc un raport la șase luni de la numire. „Există o dinamizare a activităţii parchetelor”",
       "category": "România",
       "published": "2026-11-10T17:57:59+00:00",
@@ -507,15 +678,6 @@
       "words": 0
     },
     {
-      "title": "La relazione extraconiugale del ceo di Nvidia 'ha favorito l'invio di chip Usa in Cina'",
-      "category": "Italia",
-      "published": "2026-11-10T17:56:16+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/nvidia-e-huang-citati-in-giudizio-dagli-azionisti-per-la-relazione-con-la-ex-manager_bcc2009d-acf1-41aa-bbd3-7a65a6a40575.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Nicușor Dan a explicat de ce alegerile anticipate nu erau o soluție viabilă pentru România",
       "category": "România",
       "published": "2026-11-10T17:55:45+00:00",
@@ -530,42 +692,6 @@
       "published": "2026-11-10T17:51:14+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/de-ce-nu-vrea-nicusor-dan-aur-la-guvernare-ar-fi-insemnat-intr-o-saptamana-retrogradarea-ratingului-de-tara-4030205",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ţintă aeriană detectată la 25 de kilometri est de Sulina. Forțele Aeriene au ridicat două avioane F-16",
-      "category": "România",
-      "published": "2026-11-10T17:49:31+00:00",
-      "url": "https://www.digi24.ro/stiri/tinta-aeriana-detectata-la-25-de-kilometri-est-de-sulina-fortele-aeriene-au-ridicat-doua-avioane-f-16-4030049",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Spinto dalla minicar, l'attore Iacopini lascia l'ospedale",
-      "category": "Italia",
-      "published": "2026-11-10T17:46:03+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/spinto-dalla-minicar-lattore-iacopini-lascia-lospedale_c79cf8a0-0bae-4f39-b4b6-94e3c3c91c11.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Dl Bollette, risparmi annui da 7 a 23 euro. Meloni: 'Per le imprese 520mila'",
-      "category": "Italia",
-      "published": "2026-11-10T17:31:30+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/pichetto-dal-decreto-bollette-una-riduzione-del-4-5-del-prezzo-finale_b82bd521-c9c0-4149-a7d3-f8659452c9d7.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Urbanistica Milano, chiesta l'archiviazione per Sala, Boeri e Catella",
-      "category": "Italia",
-      "published": "2026-11-10T17:28:09+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/10/urbanistica-milano-chiesta-larchiviazione-per-sala-boeri-e-catella-_88fa0456-761c-47e9-b672-004558a268c2.html",
-      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -606,30 +732,12 @@
       "words": 0
     },
     {
-      "title": "Scandal în Parlament din cauza șefiei Curții de Conturi. PNL și USR acuză o alianță PSD-AUR la alegerea lui Sorin Lazăr",
-      "category": "România",
-      "published": "2026-11-10T17:08:11+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/scandal-in-parlament-din-cauza-sefiei-curtii-de-conturi-pnl-si-usr-acuza-o-alianta-psd-aur-la-alegerea-lui-sorin-lazar-4029965",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Un poliţist a ajuns inconștient la spital după ce a intrat cu maşina în remorca unui TIR. Cum s-a produs accidentul",
-      "category": "România",
-      "published": "2026-11-10T17:00:27+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/un-politist-a-ajuns-inconstient-la-spital-dupa-ce-a-intrat-cu-masina-in-remorca-unui-tir-cum-s-a-produs-accidentul-4030093",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Fritz: Încă o doamnă din politica germană s-a trezit să jignească românii. Cei ce muncesc în Germania contribuie cu până la 9 mld euro",
-      "category": "România",
-      "published": "2026-11-10T16:56:04+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/fritz-inca-o-doamna-din-politica-germana-s-a-trezit-sa-jigneasca-romanii-cei-ce-muncesc-in-germania-contribuie-cu-pana-la-9-mld-euro-4030115",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Ex Ilva, nessun accordo con sindacati su cassa integrazione - Sky TG24",
+      "category": "Italia",
+      "published": "2026-11-10T16:58:54+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNU055TmF0amFvQTZzX0F0cm9YaV9YWlYwV2lPY0E3NkdoakZfMGRMZkxIYkxvZmp3WGRTSDB3QVBtXzhNdkI0dXZVdEtRZFItU21PaExEdkRQVTZZTkMyTWtvcFJ3cElySWREVkNmSEoxOFNwd2lJdmFMQ1RlTVBZVGNqODhFUG55R3YyWQ?oc=5",
+      "source": "Sky TG24",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -642,93 +750,12 @@
       "words": 0
     },
     {
-      "title": "Agenzia Ue, attacchi hacker potrebbero colpire anche elettrodomestici",
-      "category": "Italia",
-      "published": "2026-11-10T16:49:07+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/agenzia-ue-attacchi-hacker-potrebbero-colpire-anche-elettrodomestici_28703d89-c3b2-4c05-8315-d0e77f5339ba.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Mattarella: 'Le toghe non devono avere soggezione di tipo gerarchico'",
-      "category": "Italia",
-      "published": "2026-11-10T16:48:37+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/mattarella-toghe-non-devono-avere-soggezione-di-tipo-gerarchico_e1de678a-708c-4d26-b7a5-f23e92faf14a.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Avertizare de călătorie de la MAE: cod roșu de furtună în Portugalia. Ciclonul Charles aduce vânt puternic și precipitații",
-      "category": "România",
-      "published": "2026-11-10T16:45:13+00:00",
-      "url": "https://www.digi24.ro/stiri/avertizare-de-calatorie-de-la-mae-cod-rosu-de-furtuna-in-portugalia-ciclonul-charles-aduce-vant-puternic-si-precipiotatii-4030087",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Fostul secretar de stat John Kerry critică ritmul tranziției energetice în SUA: „Singura țară care a accelerat semnificativ este China”",
-      "category": "România",
-      "published": "2026-11-10T16:43:50+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/fostul-secretar-de-stat-john-kerry-critica-ritmul-tranzitiei-energetice-in-sua-singura-tara-care-a-accelerat-semnificativ-este-china-4030071",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "HEINEKEN Italia: 4,5 miliardi di euro di valore per l’economia nazionale - la Repubblica",
       "category": "Italia",
       "published": "2026-11-10T16:36:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNSjFCYVFKdlVMZ3NER002Y3B1QlY2R0FPVjNVVkRuWkx0ZjRONWo1czY4dHVIYmloM2EwZVNQdGRKdTBjc0dNSGVWWlF2TUdlUHhnNlZYbG51M3A1ZENRTTFLTkhQTVBWOWRlclhGWXZkcF9TX2VXM2VCS1pvQlp1dHNpaVduTnRLaEY1Mnc4RGhfVzdfOEFpWmxUNnhqMEFfS3VCdFJFSnd2OVRYbDc0azRxLTdFSlNqZ1BFSXBMNUJlQ0x6dDkxb1d3?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Aree interne, da Vizzini la proposta di Ragusa (Als Mcl): \"Una zona economica sociale contro lo spopolamento\" - CataniaToday",
-      "category": "Italia",
-      "published": "2026-11-10T16:34:43+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZmtOMElzT2xFV1g3VWdBdS1VQmZHYnJ3TklnSFJCLVFYb3oxM0lRU1ZteDRwMDNEOUpQQ0dJNkxyOGpjZzdSSW96VlI2YmpKR1hwN1JVcnA4YVl3cmstVGpKa3JTV3plVFNzaTkwTks4cG1GWkY4NDNaQmgxTWtrNEVWV2VSaG1kM1RBaEgwcGh2TF9vd19IRlpJV0tkdHNvQlpaQUxXQkNnNWJXVzROc0ViRUZSa2RPS1V2QzJFS1A3bm41UmJaeFhlcmlyZFdRbVdMRENNVFZYdlp5?oc=5",
-      "source": "CataniaToday",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Incendiu la subsolul unui hotel de pe strada Stirbei Vodă din București: fum degajat de la un panou electric, nu sunt victime",
-      "category": "România",
-      "published": "2026-11-10T16:32:44+00:00",
-      "url": "https://www.digi24.ro/stiri/incendiul-la-subsolul-unui-hotel-de-pe-strada-stirbei-voda-din-bucuresti-fum-degajat-de-la-un-panou-electric-nu-sunt-victime-4030075",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Portavoce Ue: 'Presto per negoziati diretti Russia-Europa'. Rubio 'la strada è ancora lunga'",
-      "category": "Italia",
-      "published": "2026-11-10T16:20:55+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/10/rubio-plaude-ai-colloqui-di-pace-ad-abu-dhabi-sullucraina-ma-la-strada-e-ancora-lunga_22e143a9-4f98-46fe-97f9-b037c9f33370.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "„Consiliul pentru Pace” al lui Trump critică ajutorul „insuficient” al Israelului în urma inundațiilor din Gaza",
-      "category": "România",
-      "published": "2026-11-10T16:13:24+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/consiliul-pentru-pace-al-lui-trump-critica-ajutorul-insuficient-al-israelului-in-urma-inundatiilor-din-gaza-4030039",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ursula von der Leyen își scurtează vizita în Bulgaria după accidentul în lanț de pe autostrada Trakia. Ce mesaj a transmis șefa CE",
-      "category": "România",
-      "published": "2026-11-10T16:12:55+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/ursula-von-der-leyen-isi-scurteaza-vizita-in-bulgaria-dupa-accidentul-in-lant-de-pe-autostrada-trakia-ce-mesaj-a-transmis-sefa-ce-4030021",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -912,24 +939,6 @@
       "words": 0
     },
     {
-      "title": "Români, amendați după o petrecere de 8 martie. Poliția i-a găsit pe petrecăreți după imaginile de... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-10T05:50:34+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNQWdpS3hzcGRnaWMxZUM2WGRQOTNTX2dDTy1iZ2VGc3ZHd2xTSDB2MGxtbFBvUjhvRXRWcDlwUF9rd20xRVNkUGJfZFQydlVxaUlkWmhiS1c0SkZkMFBvUmpxX0NmOG4wWk9teFZNVHItSFdOMko1ZE1nZ29sNHUzcGRadER6d0d6ZGtnYkM1blVveTc0d3hwN19LaU9PTnVIa0gzTjhXV25NMXJZX0ZORElkWHo4X0RycjJ5elBQSUhrbExkMG10NkM2OV9aeUczNFNtOEJhajN2ZUx4cXY3dDBCcE5FNWPSAecBQVVfeXFMTUFnaUt4c3BkZ2ljMWVDNlhkUDkzU19nQ08tYmdlRnN2R3dsU0gwdjBsbWxQb1I4b0V0VnA5cFBfa3dtMUVTZFBiX2RUMnZVcWlJZFpoYktXNEpGZDBQb1JqcV9DZjhuMFpPbXh",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cgil Brindisi protagonista di Good News: premi ai lavoratori del Cetma e stabilizzazioni nella sanità pubblica - BrindisiReport",
-      "category": "Italia",
-      "published": "2026-11-10T05:30:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5XTWhaMEdzOWJDNkM2YmRTejJHYmt2dFoyXzgwRzJ4UlJUUWpfNGFzVDFWcU1wd0Z3OUxzM0tQdFZLUHo0TkVQMHpXbk42dmZmR21UTkJ6OWZPNmdzNlNhcGQweUloR2hCYW4xVVpVY0I1blFBZGc?oc=5",
-      "source": "BrindisiReport",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Nasce lo “Sportello Placement” per aiutare gli universitari a inserirsi nel mondo del lavoro - Il Resto del Carlino",
       "category": "Italia",
       "published": "2026-11-10T05:05:18+00:00",
@@ -1020,20 +1029,20 @@
       "words": 0
     },
     {
+      "title": "Via libera alla flessibilità per l’Italia. Quasi 29 miliardi tra energia e difesa - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-09T15:45:40+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNM3FZQVoyeTJOQkdfQWloc1pUa1VVazFWN2NIUzJiOW51d2RrUlhJUEpHUXBlSnF1QlVVenZfcmNPdmhCaFBlSWlqNnFXOHZOTTA0bkk2bkFLb2Y2c3Z6UnBaRjNMcHlLMmN0MkdDYURmU2VhaF9pSTlGNG5RMnV5d3hFUnBzMDhtTWVRVktzMERKTFlCdjltc0pjU0x6UmJac1VfVERVOA?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Un italian vrea să se mute în țara noastră pentru iubita lui și cere sfaturi de la conaționali pe internet. „Blestemată fie ziua în care am pus piciorul în România” - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-09T15:28:23+00:00",
       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNNUh2RGJ1VkRVMTVDdjdwRGc3UXB4Q2tGamJVZU90SDVXWHd6ZlpVWjV2Sl81NnVZTFAwNjhMZFl3RmNLeHZXWmhjblNYMzhEQi1wSW1Ed3NnbTFsUHVKWGFNYTlYUHJXcXozcXFkRjF4TFNkRGtWY1gwcFBGTzFHVEt5TEVEbEdFV3JhOUdaSGJEaFNSQ2lFb29BSUNHYWdYVEZZNmgzMkJvVXJUM1E1Y2NILU1NY1p2S1RBMThLVVRwUGJLdWp0eWZVT0pUbHQ1eFVTdENpSVRsQm1jeExfRzA2VjNUNjItZWtmQVp0MkhlazZNTFo0VThfUC0tRUYxXzRqV1FyUmFfUVhUZ0FCb05HZw?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Giorgetti, soddisfatti per l'attivazione della Nec dell'Italia - ANSA",
-      "category": "Italia",
-      "published": "2026-11-09T15:08:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNNno1akh0d1pPdEt5d045eHZQdGpWNXhNWlhzeVFyZEFBVzhBUnhweXNZYUVnQTdjVEFCRkVUQmhGNXJsdnZJdmlJeU5TQk1LRE9zRGdqWjFyZE05eVZTM0plYmRUWU5zQUdSV3NMdjZQaWhaVEJVQW1jWUFMQUNGMWtnNkotRDl4NkRuR1ZwQzZfOWZVMkVIaW50VzlwMkZ3OG1obWhSYkhoQzVmU2tUTkVuUi1wVUtYWVFwVEhJYldwMDNQX05VQjlJN1ZMZlJyVi1QZkpuVEZXQjItOFdDbmJOXzNsVlpDcnhLSW5RcFlwUE1HNzVYLS12Z9IBgAJBVV95cUxNaHJlTUJPdHVhVHhoY2hLZ2x6WmlFX0xkcHdyU283Y2plb1ljMl9YZmI1T2tzcjRCeHlmclhlU1JYOW1nbFpPZDZHeHpiaG15dG5Mek56dDJ",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -1083,6 +1092,15 @@
       "words": 0
     },
     {
+      "title": "Belgia a adoptat legea care permite poliției să intre în locuințe pentru a aresta migranți în situație ilegală - Gazeta Românească Italia",
+      "category": "Diaspora",
+      "published": "2026-11-09T11:36:54+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOeGd5YnBUeXFIeXIzajhKOHhjMzVGU3lhQ3h5anNXNEF2N3B3U2VZUzFjeFkwT2s4bWNoazI4MW5tS2NvLXRXV3UzRGpqV0dCc3ZQWF96MUJibUJGQVFSODYzTWNCc3FmX1gybEZlOS1FU3Z4cjd0OUxCMWJlWXgzS2N4TkttclVRMWlOV0FiaWNHS1NoZEF5SnBxSmZDM0lnbktwR0sxcXdya09LZE5obTBUTHAxRnA2ZEpnZnFUZmx6eDdWMkkwOW9vT1RTZlpuNDEyeHZEYVV1MGowbG9aT2VNVVdFRG1XQldkbDhZbkF6ZzctZHlCbG1rTQ?oc=5",
+      "source": "Gazeta Românească Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Emergency cere închiderea centrelor pentru migranți din Albania: „Condiții inumane” - Gazeta Românească Italia",
       "category": "Diaspora",
       "published": "2026-11-09T11:35:14+00:00",
@@ -1119,6 +1137,15 @@
       "words": 0
     },
     {
+      "title": "Horoscop duminică, 8 noiembrie 2026. Scorpionii intră în centrul atenției, iar zodiile au parte de un... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-09T07:21:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQWHBKTU13Z0pHUTlRUkl2am5WeGhSaU8ydFB3eXBFUVd0SThlTkgtZnY0RF9oZUs0NWY4UWl5eklJRHhTbHNVQkdqcjlPLU9fSGFvQ2liaFhmRUUtcm02RGVIM2o0QUlray16SHlUekRCTFF3UnctSjZjLWgyeUNIcnNfVW9QMlVHV2JwQ2pkenRjbWt0RmtlNHJGYlFCLXlYU2dzRTQtaG1CU0cwenV4cDdlWUZGU0pQQllVamNTTS1qSS04YVJFTVJUZ3M4WE01WmdIRlR1ZjQweXlzWDhDTUFSVXZtb1Y3a1RMaGN2WDdERGM0UFVlR2RDZHdDRDZWT3JXUldyVdIBjAJBVV95cUxPcTN0UUtYdGdqWVR0NTU3RWZycTYzbWNGNURydE01bi15bWNIVkFVN3pwT3lvTTZ3ZW42WmJyVlA3eTM1OERVWHhVYXN",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Horoscop luni, 9 noiembrie 2026. Două zodii au noroc la bani și oportunități profesionale - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-09T07:21:25+00:00",
@@ -1132,15 +1159,6 @@
       "category": "Diaspora",
       "published": "2026-11-09T06:58:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNaHhXekVfRGczN3JPQV9oQk1ib2ZyN1VYalpYb1c0V2h2UkVFV2psRnFUWFdJaW1OaXZpYi01UGtuU05qc2l6SzUwSDltdFMzYk5tcnJ2VERWU1AtVUZQalRKSThtcU9zOWRsTUh6cUZHSGl3M3RpSlkzVlhpWkt3QTd2LTctQjI3R3ZPalB1WTZySXhmSjB4cGlPMVlkVUNDYjBzaTVxYUR1a2dZWWY2R2VYNnFlemhCZkgzLUpqalhkaUR3NTUtNW55VGo0c2hWQ1dWZjV6amJkZll40gHiAUFVX3lxTE5BbnNYVWZqQWZsN3RYd0gyc0VnWEppWFpfdjVndmszSm9QNWxmWUtFcFU1TUNtVzlxTnVhbkFNeG8xMEh2c2NwLVBqTkF5alNMOVhFeEFNbGd3ak9HaFB1QmlZeDgxbWxyLWkxc3JuWms2b3BzTWF",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "A fi rom este o piedică? Oana Rusu, actriţă şi solistă la Teatrul Naţional de Operetă, la... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-08T19:21:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOQjFiMjlDRjRCeUxyb1hsRGI0ZV9kM3RJYmxjYlpnME9KSWpGSjFwT1VsMkFGbnZpWEVjZk5INFdFVnhsMTJVVkJFczNfQmJwWWs0anBPMGJRWFpIZTlnZzRLbkJwbml6c19ZZ1ZNUEJqVVRfd1V4WDUyX3pKTUR6YVR2cUpyak5WYzdoSXU2M0lDZVFiZHdZZTRiRm43VXNoV0NxOVFoeVdDdHY2dk9QWDRrV3A0N2pDc3duQ0VSdXBORU9aQV9tZHpPSUlPUzVTQmwtNVNFSDd1RjI0N2xIdXlkb0VVSUtzdlhOcjVKWGdjOTlPb3pmUk5R0gH_AUFVX3lxTE5hNVJFaVFnTk9SUWYzaG9SUE10bVRTRTZCaW5ZWW1JcVV3RmdxaTlhS3pxaE9FTWRoOEdsNlQzN2ROeGt0TnBKOGVSQV9ROXFjRkg4dmU4bE8",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
