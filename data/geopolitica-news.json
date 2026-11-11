@@ -1,12 +1,54 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-11T18:20:27.932874Z",
+  "updated_at": "2026-11-11T19:30:23.968876Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-e235c701394dddd2",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Southeast Asian and other world leaders meet in Manila from Sunday, November 15, 2026, for the final summit of the Philippines' year as ASEAN chair, with United States President Donald Trump due to attend his country’s “special” meet with t",
+      "summary": "",
+      "source": "Facebook",
+      "published": "2026-11-11T19:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQbDh4SFNqYzFXaVRzZnNUMVh0bWZzMUYwTlRtczVPdW4wQ0pISTF4NEQ4UWFfSm5GVHpXUXFBWWNzemFLVlJYczhzbUlYcGVaWHBqcG8yTkZNTldEQTR1cENsU2FRTzR4OEdEcV9zYS1DcHF4RkU2SWxDbkkybTB5cUdQNFZDV3BOZ0ZRYzNzemJzZWpRWWFGNW1BVzA4RlpQamFodGNQSVNCbHQtVjJacmtMTC1KOXVFcVYyMUZBaHdSd090TjBLQ0dibDd6ejdTTlRPMUZHdndNWFk4?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Liderii din Asia de Sud-Est și alți lideri mondiali se întâlnesc la Manila de duminică, 15 noiembrie 2026, pentru ultimul summit al anului Filipine în calitate de președinte ASEAN, iar președintele Statelor Unite, Donald Trump, urmează să participe la întâlnir",
+      "title_it": "I leader del Sud-Est asiatico e di altri paesi si incontreranno a Manila da domenica 15 novembre 2026 per il vertice finale dell'anno in cui le Filippine presiede l'ASEAN, con il presidente degli Stati Uniti Donald Trump che parteciperà all'incontro \"speciale\"",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-8ba2ce98b20f4ba7",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Middle East latest: Iran warns of domestic gas shortages from war this winter",
+      "summary": "",
+      "source": "The National",
+      "published": "2026-11-11T18:56:27Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOX1E2VFlpWERDcU1PanZ2RkFFbXN6OFJvZ2ljaUdxVjAzemJXZFlRcTFpMEZyc1FBWE9zQ1JWUy1kUHBpdHZYM2xUbDVWUHRiUEZLRjBFWGtYMUFYeExqQzdXa2lqbWl0clBvLVRXZGZqRzZ2Uk00WmlGT1hnSEZBdWFOa1ljT045RUthemFUcDhjdm1EODNtNDUtdW5SOWxpeFZPMQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ultimul Orient Mijlociu: Iranul avertizează asupra penuriei interne de gaze din cauza războiului din această iarnă",
+      "title_it": "Ultime notizie dal Medio Oriente: l’Iran mette in guardia sulla carenza di gas interno a causa della guerra di quest’inverno",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-cdbd01d724968a51",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Iran's Pezeshkian meets Iraqi president, Pakistani premier at COP31 in Antalya",
+      "summary": "",
+      "source": "Anadolu Ajansı",
+      "published": "2026-11-11T18:32:28Z",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSjZTWWlzRXd0MHlNb0syZFVuaUplLVN6YUQwODB4VlQzSjlRWFdjVU5GRnQxZEhJMFhnTWxTZW1xQmU3SDVnOVJTRFZERkFpdWV2UlRlY3JnRUR5eVpGQlFwRWJXUFNuOFdKT2RESGdhR2ZBLWppal9fY1h5Y2x2UnducS12aHZXTGl1LWNVN3c4VmZmRExrY1FBREFXckVoV00wQnRxTkVob0RFVmZFc1ZNR3VjYWlq?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Pezeshkian iranian se întâlnește cu președintele irakian, premierul pakistanez la COP31 din Antalya",
+      "title_it": "Pezeshkian dell'Iran incontra il presidente iracheno e il premier pakistano alla COP31 ad Antalya",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-9839fd0e698d3d97",
       "category": "tehnologie",
@@ -16,7 +58,10 @@
       "source": "Telangana Today",
       "published": "2026-11-11T17:55:19Z",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNa2Q1dWRYU3hER3F3akIxNWZNaDhuSmducXFWOEN2aEpaM0h4T0VxLWdHdmkwbUZDVjBObFg5MF9DX0RBS251SmpDTDljdVpzQjZ6aHA0UHJBUjlHaHFsakhwQi1NZDFFcXlXT3dCTlJrOVp4eDlhTTA0NjNDYm5Cek56NmtONlhy?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Editorial: Scandalul Jensen Huang — căderea unui erou tehnologic",
+      "title_it": "Editoriale: Scandalo Jensen Huang: la caduta di un eroe della tecnologia",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d5b346e3ec43d14b",
@@ -27,18 +72,24 @@
       "source": "Latin Times",
       "published": "2026-11-11T17:48:39Z",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWGo5SmVjN0tlZlJYUnRLalNUOEFmY2NUdGRrWWV4LWdJTVBYYjZLMWg0WkFjeEhhZVItdVZrWm1KMGpoSlM1Rk9MSXM1UGYwZ3Bab2tYcnp1RGdaWG9XZlduMjBSZDB6dU5SUVZoVnc3MElhY25nWTVtWnpSOVNId240azU5QlV2Ui01V0stamtTSHlR?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "După revenirea sa șocantă, Lula merge la Antalya cu un singur mesaj: Națiunile bogate datorează sudului global",
+      "title_it": "Dopo il suo scioccante ritorno, Lula va ad Antalya con un messaggio: le nazioni ricche sono in debito con il Sud del mondo",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2c8d5f58a5678d62",
-      "category": "clima",
-      "region": "global",
-      "title": "Global climate diplomacy and multilateralism",
+      "id": "geo-a29c6fd92bd96a0f",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Separate Non-Aggression Deals With NATO Countries Proposed by Moscow, Russian Official Says",
       "summary": "",
-      "source": "Graphic Online",
-      "published": "2026-11-11T17:38:23Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYWVILXo5WkJ3bVRFUGlnaC0zMGpkS09QektTMDhMSmNidlg5TktVblZXWmZpV3Raa0pibVBXNnJLcGg3UHR6YkN6UFQ3dUF5UGprT1dRVi15T3JCblkySjFXVm1GNGJjTHJwd0xDcFdVN3NXQU0yY2dZb1d1M3ZZQi05a21wZ09YYi0zT3JEajE1ajJsWGRWQg?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "UNITED24 Media",
+      "published": "2026-11-11T17:31:01Z",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQOEIyNy1nTVBiclJGRDNFVmdRYlZMTk5aMVhOaXg4WjF5TXBkTVk0MThLWDVQN0FhSlg5c0ZiWHpCVnJSUWw2SUxJd213WmdpcElpZmwtc1N0a1NYQng4aHJMQUs1enYzSWFuTHBZOFM3NldnWjRHV29jNXhncUt3V2V0V1NfSHgwTXVrMnVON2xGYjZleTItSDdBQ1k4aUwyVDBJUXVWZl8xYUtxUGpwajVmRWR2VDBfU2lfdXl3MmxhS3d3MjB4UmF4cElkNTlRbEJR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Acorduri separate de non-agresiune cu țările NATO propuse de Moscova, spune oficialul rus",
+      "title_it": "Accordi separati di non aggressione con i paesi della NATO proposti da Mosca, afferma un funzionario russo",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-da21206ff79d2905",
@@ -47,9 +98,12 @@
       "title": "NATO taps Ukraine as red-team in drills to ‘trigger an adaptation cycle’",
       "summary": "",
       "source": "Breaking Defense",
-      "published": "2026-11-11T17:34:24Z",
+      "published": "2026-11-11T17:26:25Z",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcThEMkkxM3IwU0lIZVBRTDBpVGtGQnd5QklCQVdRT1dJdG1nWDg4c2xna2NoTTZYSnJsZlN6d2xiWkdsNE1vQ05nUkpQVkdxWDNoZUVpRW5URGZmbGtTRVJMTjBCWXdjbER0LW1MYlFhaEtIRjF6WVB2dmVPaFVnODdMcVRvMk92NDdIbEJLTGdCUVVZb1JkRm15Nl9zdzM5V1lkaGxGdzRHVVU?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO apelează la Ucraina ca echipă roșie în exerciții pentru „declanșarea unui ciclu de adaptare”",
+      "title_it": "La NATO sceglie l’Ucraina come squadra rossa nelle esercitazioni per “innescare un ciclo di adattamento”",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-11a71e066c241049",
@@ -60,7 +114,10 @@
       "source": "Council on Foreign Relations",
       "published": "2026-11-11T17:23:10Z",
       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9Pb01CTjloNk9WeFhmTVRKeXhjVElJUUpRQkstZFNuamQyNGZ5dGVBbE5XOTY3OXZBOVdHVERsdHpUTDBEeTFmajJkWW1YZUNzalZuc1hjX1ZPRUFUQ084dEdjbDFCRXl0YW5wc3Fn?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "China în Asia de Sud: octombrie 2026",
+      "title_it": "La Cina nell’Asia meridionale: ottobre 2026",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d5e60a1f99dae5a5",
@@ -71,18 +128,24 @@
       "source": "ANI News",
       "published": "2026-11-11T17:15:00Z",
       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPR1U4Mmpib2Y0THozQ1lrTUJpd1ZWMlVxaGxIWXJwT3A2VDVFdXpDOG9pbkNFdzV3ZHVrNWlIdzVoYTJEaWV2U3FDd21mUHdWNmZYOHNkdDF0ME55VzRCcV90TlZ6ZjlZLVREdTdUaGo2RkFzWlJvRk1CRFU5RXE2Y21vMEdqLXRuLXdGaGNhZ0JkeXRMRWdzZHI0QTFDQnEwMVVPTFo5N2pOc0ZNXzlGZndJdUFKRXBBZzZSZFRObXZCVGlzbWhNaUpQQWpLWG1SdURfWFZlSnBQcHNFR01ENHJjc0kxRTFGTENRanJEMnZ0ZnNyRkRzdldR?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Pentru noi, în India, are unele implicații”: expertul în afaceri externe Sachdeva despre un posibil „mare” târg între SUA și China",
+      "title_it": "\"Per noi in India, ha alcune implicazioni\": l'esperto di affari esteri Sachdeva sul possibile \"grande\" accordo tra Stati Uniti e Cina",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-4e076270f6882d77",
+      "id": "geo-7b407a278aacaae2",
       "category": "diplomatie",
       "region": "global",
       "title": "World Leaders Urge Stronger and Faster Action at UN Climate Talks Over Inadequate Response",
       "summary": "",
-      "source": "شبكة تواصل الإخبارية",
-      "published": "2026-11-11T16:47:39Z",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5ZaU0teUE4ZEhiTTI2ZUNTcC1xY1RFS3diZnBPZzFKd1p4V3QtODV1ZHdPcVhMRzN5aUwyM3FKZ3RtN1FFVkV6SWV2eUMxYUNKZldn?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "ASHARQ AL-AWSAT English",
+      "published": "2026-11-11T16:48:19Z",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPLTFuQ25CNkxpWnI1T0x4aTMwcFJiMk4zRGVvcmJRMGFWWGNrcUctcDcwR2FleG5DWmVGOWlJdUpjM1Q1a3RtMHJWN2dzNHNuVjZSRXhoelJFZkYtZEF2TS1BUU5lR0JIQnBjaWxINWNETjk5cjQwVmZTMWhwXy1FRlg1Zm1GWXhVa1hPSnJVRFVUZ2hqMmRXOXV6ckQ2RTZ4cGFpN1Mzc2FVcTd2aXRmekxqeWZWblNVZWhB?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Liderii mondiali îndeamnă o acțiune mai puternică și mai rapidă la discuțiile ONU privind schimbările climatice din cauza răspunsului inadecvat",
+      "title_it": "I leader mondiali sollecitano un’azione più forte e più rapida ai colloqui sul clima delle Nazioni Unite per la risposta inadeguata",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6eeb819fd429e56b",
@@ -93,7 +156,10 @@
       "source": "Spotmedia.ro",
       "published": "2026-11-11T16:21:44Z",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQOGJFT2tzeHNRVjRVSVJwUzdJYy1ObnNMTEpuLVNZcVBFa1pKX1pwX2FVa2gxU2hUV0pLN1UyVDVScjY4eXpyN2hoTGphazBvbDR3QXYwU0JFdGxkcG4tZmRGc2hHZWt5OVl2U3c1bnpvbV80OVN6RGZJRjBuQkx4UVJmdkY2ZDdDTm5HS2tYWkRjTW5aT0h4QTdNNF8yT2x2RlZaWHdTM0xrY2x4RjhQQ2V2c08yR1FxWXNtT0ZocXBZc1k?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum încearcă Rusia să rupă NATO: Moscova propune pacte de neagresiune membrilor Alianței",
+      "title_it": "Come la Russia sta cercando di rompere la NATO: Mosca propone patti di non aggressione ai membri dell'Alleanza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-9da04dd6de03c024",
@@ -104,7 +170,10 @@
       "source": "IFA - Institute of Foreign Affairs",
       "published": "2026-11-11T16:00:32Z",
       "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE9jRzlPc09zYk9vOEpFSUZzOVl2cXBFb2ZVcXdzWXZsam9kUllNYm4talJJUXV0bGVLTlhjOVctX2tkSUlqZVE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Etiopia și tranziția energetică globală: Dividenda privind diplomația climatică a COP32 Accesul la energie, finanțarea dezvoltării și construirea consensului în acțiunea globală pentru schimbările climatice",
+      "title_it": "L’Etiopia e la transizione energetica globale: il dividendo della diplomazia climatica derivante dall’accesso all’energia, dai finanziamenti allo sviluppo e dalla costruzione del consenso nell’azione globale per il clima nella COP32",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2bd3ad9d85e50bfa",
@@ -115,7 +184,24 @@
       "source": "Kyiv Post",
       "published": "2026-11-11T15:34:29Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE43ZldsX1Vza1JXUEJ5UXNPNEtpSkxaTzB2ZGZ5RzhzeXV4UDB5aFhuNGFxQ3ZrNU03U29xVXRvVlNQdTAzblJMUFh5UQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia plutește pacte de neagresiune cu membrii NATO în timp ce discuțiile privind Ucraina se îndreaptă spre securitatea europeană",
+      "title_it": "La Russia propone patti di non aggressione con i membri della NATO mentre i colloqui con l’Ucraina si concentrano sulla sicurezza europea",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-a3dec39deb1f1acb",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russia-Ukraine talks yield prisoner exchange but no major progress toward peace",
+      "summary": "",
+      "source": "Scripps News",
+      "published": "2026-11-11T15:27:43Z",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRVJxNnkwM1h3YzVnRnR0enlNdC1SdGQyOTMzRlBNUTdnT21KRzJuTmczN20wazhvaWVFTFVIVHJMMy1VN2hON3Q2cnBBTjJ6YmRleXVUSUJ1aDRRVUNJalFibUVxZndGVnVoY3d4eDF3UjNhR1VGYzhHRUUwUzhOeGtaYy1QT2NKbHdMekthU0lfczBNX0puNHdteU9SbUw4bmVfSEVDbW9ibS00dlZGVFJweVZaNjJCR3RTVw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Discuțiile Rusia-Ucraina oferă schimb de prizonieri, dar niciun progres major spre pace",
+      "title_it": "I colloqui Russia-Ucraina hanno prodotto scambi di prigionieri ma nessun grande progresso verso la pace",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-c33ea53635529d2f",
@@ -126,7 +212,10 @@
       "source": "Hromadske",
       "published": "2026-11-11T14:50:00Z",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPanQxUW5mczJvSUd2QldIY1h0SThQS3FVWXV1TGVRN3dTQjZrV3MzNE1qRkVIRl9ZNml6SFNhMzlyLXl2enlETDJkU3ZWUmk3d0U1MmpMQkc4WnV3eExMQ2k4VmZDdGp3N0ZMMW9Wa1VlSUo2SkZ5ZTNCTFI2azV5VGFzVHhHYmQ4a1pLOW00VG5CaURGTkllYk1qTnAwY1RTZENCWnhjUlRlc1ljdlNVQ0xWLWttdVBYQ2lJRDlwUzZ1SzFGUEhXV0dWTVgwbXVNLWhycEZNY3JBZ9IB2gFBVV95cUxPanQxUW5mczJvSUd2QldIY1h0SThQS3FVWXV1TGVRN3dTQjZrV3MzNE1qRkVIRl9ZNml6SFNhMzlyLXl2enlETDJkU3ZWUmk3d0U1MmpMQkc4WnV3eExMQ2k4VmZDdGp3N0ZMMW9Wa1VlSUo2SkZ5ZTNCTFI2azV5VGFzVHhHYmQ4a1pLOW00VG5CaURGTkllYk1qTnAwY1RTZENCWnhjUlRlc1ljdlNVQ0xWLWttdVBYQ2lJRDlwUzZ1SzFGUEhXV0dWTVgwbXVNLWhycEZNY3JBZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO cântărește cea mai mare revizuire a planificării militare din ultimii 20 de ani pentru a acorda prioritate apărării împotriva Rusiei",
+      "title_it": "La NATO valuta la più grande revisione della pianificazione militare degli ultimi 20 anni per dare priorità alla difesa contro la Russia",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-41b932452a90ed66",
@@ -277,7 +366,10 @@
       "source": "Arab News PK",
       "published": "2026-11-11T13:14:15Z",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQWF9GcXh1TDA1Q1o3Nkg4Y1ZmQmpoa0tlTGU3MC13ZTUzTGd4TENiVFVPdE03SmVFUU92VHlaQ01kOE5sRVJ5MGhvbm4tNXN4clNldUV2RVdHeHZ6SzkzbVA2dWo1bjJTWC1ZZXFQSzBzV1VjeWdfX2owell6SUNraS1nNl9NMXlLVmVZYzMwUmw1MUtCV2p4NlBOVEdaUmZNUkcxd1R5MFlnaGtITzQwcFlOYlFLNU1ob3BmajBNRDRPUDJWd0hj?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Premierul Pakistanului spune că diplomația este singura cale către pacea regională după discuțiile cu președintele Iranului",
+      "title_it": "Il primo ministro pakistano afferma che la diplomazia è l’unica via per la pace nella regione dopo i colloqui con il presidente iraniano",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-55fb71099338bc52",
@@ -288,7 +380,10 @@
       "source": "Baltic News Network",
       "published": "2026-11-11T13:03:20Z",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNUFYxdWdkUnhZd215bWZlSjEtaHc5TzB0eDJZUG5xWjlUc3F1SWxFeHF6WTRhZUtvOExGNWlsdWNvaXM5ZWl1T0Z3bnNGRzhTVHJBX01FU0tyQjlzQWpjbFhIVXBIYnZuMEtmLXBfZXVDeERTZTlrQWdUOXVNVF92NTR4elRfNkJITFIzTWdlRWlsSmV0WEJfWmk2OFdySDMxWks0bW43bFg?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO să se concentreze mai mult pe apărarea împotriva Rusiei; reduce misiunile în altă parte",
+      "title_it": "La NATO si concentrerà maggiormente sulla difesa contro la Russia; ridurre le missioni altrove",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-ff3e4ae536e55513",
@@ -303,17 +398,6 @@
       "title_ro": "Promovarea cooperării dintre Vietnam și UE la un nou nivel, dezvoltând-o în profunzime și substanță.",
       "title_it": "Promuovere la cooperazione tra Vietnam e UE a un nuovo livello, sviluppandola in profondità e sostanza.",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-7dc14ac84a526317",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Russia and Ukraine agree to a large prisoner exchange as talks end with no major breakthrough",
-      "summary": "",
-      "source": "WSVN",
-      "published": "2026-11-11T12:57:59Z",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1QT2ozN1hNMnhlYW5ZZUNPRUdWNURNWkp5RVNLNy1WYmNUa0wwbjN1OFVuWk9ZdWw5c2NlbEcxZF9KUnpCaHBZa0NNY18yQ0taVnVKdTVwLXUwMTBFN21SZ0szMVlUYWhlV3JTQ19abWRhNzIzZ19HY3dzc2QtajQ?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-04f1041949afbc68",
@@ -355,34 +439,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-a962948a598ab7fd",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "SA Business Leaders Push African Investment Agenda Amid US Exclusion of Pretoria from G20 Meetings",
-      "summary": "",
-      "source": "Central News South Africa",
-      "published": "2026-11-11T11:00:51Z",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTFpHTzMxQ0hoVzlRMDNnXzRZUlM3anBVU1hDbHFjZGwtenplVnAxaEVvNXpHN25yRTJSSk5Nd2NiNm85aHhoRXZNZXRQZnlmWXQxYUJ6NXh3eDVJRTZ2YjdNckl1dkszRmg5bGdrMnJjV1RvTmVXaVhVUlFhM3VuT2xfYVkzcVg5cFliOTBqcnVMaDJyWnVYUnBla0tvZ2NwY0MzQmhxSkFpSTI2QWpPd09QSzE1VzliTFM2VUVBcFNOWHM?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Liderii de afaceri SA promovează agenda de investiții în Africa pe fondul excluderii americane a Pretoriei de la reuniunile G20",
-      "title_it": "I leader aziendali del SA spingono l’agenda degli investimenti in Africa nel contesto dell’esclusione di Pretoria dagli incontri del G20 da parte degli Stati Uniti",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-9d36f0252c87ddf0",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Gaza Ceasefire Violations Continue as Health Crisis Deepens",
-      "summary": "",
-      "source": "- IMEMC News",
-      "published": "2026-11-11T10:49:58Z",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONzA2eFQ5RHZIWEtVclV4X2tDMTRPMHNnSkt6MWtqSjRPUGx1REs3aHZsVU5PNkxJbzVJaDU2UDFYTlFmRl9LeEdvQ0phcjJSR0tuZl9LWFAzSEpvc1M1Mk9jX2FoTmF6ZGY1b3dnbWdzc2NxOWlzTDZOM0JDQjFrbWJfQ092OFFmUEdOVHJxQQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Încălcările încetării focului din Gaza continuă pe măsură ce criza sănătății se adâncește",
-      "title_it": "Le violazioni del cessate il fuoco a Gaza continuano mentre la crisi sanitaria si aggrava",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-6ac88fc78a564294",
       "category": "securitate",
       "region": "asia",
@@ -391,7 +447,10 @@
       "source": "India's News.Net",
       "published": "2026-11-11T10:45:00Z",
       "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQb04ycTZkNU1keGI5Z00wY3pGbWRjNHR1NFpkNUlzd3Q3ZXJrekkwM0dvOFRDR0NxbXQ3NkJqMmIxUUNEWnhZZHd0QlF6cmhOYUpYd3p5R1g1RzV3VzBCdldNVDFDM0ctU1JZcVBxQ2NQMkhsXzl1VjBMR2xhR0k0a1F2dFBZczljenFiazFjUmYzUzNRcllLMEUwcDdwcmJESFRxMjBJSnRGWGJsM1dTMnB6YW01VHNUd3MzNFpONU9fcFV3VkhLYmpVSkRBclNLaXBLaVcxZUtRZlJ5emlaS0gxaFJESkJNSFJPN0VUQWpvRXBTTUozRllXWlA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Sunmax reunește experți medicali din Asia-Pacific pentru Deusaderm APAC Summit 2026, care sărbătorește 25 de ani de inovație în colagen",
+      "title_it": "Sunmax riunisce gli esperti medici dell'Asia-Pacifico per il Deusaderm APAC Summit 2026, celebrando 25 anni di innovazione nel collagene",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-907f6711bc10dad5",
@@ -405,20 +464,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Turkmenistanul reafirmă angajamentul față de obiectivele Acordului de la Paris la COP31",
       "title_it": "Il Turkmenistan riafferma l’impegno verso gli obiettivi dell’Accordo di Parigi alla COP31",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f2bc0bd958005331",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Ayebare Holds Talks with Leaders from Tanzania, Palestine, Iran and Somalia at COP31",
-      "summary": "",
-      "source": "Nilepost",
-      "published": "2026-11-11T10:34:08Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUk45TTZybUFwZzBSZ3ZkelFXcDh2TVNWcDc5eXNubXNvYWtTY2YxajBraHRIbmkyMnBPRk14bUhzbUlsZ0xxOEI4eEc3NmVaZU1nNHdjd2NjaW5tVnRoUzlHWkVTWnBRaVZ6YXhJX0pBRXdSR3NBalBFd0NUYTcybUJqanM4aXh5dnlJRm9oNVVWNHdFXzQxcHFTZ3NDcFB1S0ZTWWx3TnlqMlZENHkyb3cwWG5LMVdH0gHAAUFVX3lxTE83dXhWTm0xV3g5UU12TW1fTEJVdmNVS09ZVDNmc0ozck9Wc1QtOURXeFhaNlpXakRPQ1NpNExCV3dKbWlySU5STjk3Tlo0U0JxaXpTTThONnliaWN6SWxFbE1lTFZieWV3RXRIaFdRSEdZVGU2T3UyZzFVYVh2Q3RkcGt5aXdMVW9nOG5hSHgzakVBX3J1RjNhQkt4TnlQR1B4YWRBT3dmR3o4YWxYSXdQWThrNzBwODF6VC1yRHJ5Rw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ayebare poartă discuții cu lideri din Tanzania, Palestina, Iran și Somalia la COP31",
-      "title_it": "Ayebare tiene colloqui con i leader di Tanzania, Palestina, Iran e Somalia alla COP31",
       "translation_status": "machine_translation"
     },
     {
@@ -508,20 +553,9 @@
       "source": "Trend News Agency",
       "published": "2026-11-11T09:37:25Z",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBTTHF5NzMwNlI1TUNyZFJJS0tiakVSLTZNdGR1TmFNV08wTVJ4Sk83WVY3SjR4Y3lmbHRwZi1QUnUtZzFSclVEYko3SFp5TlAxZHgzRWl5dw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-5e36a25c2029fa9a",
-      "category": "europa",
-      "region": "europa",
-      "title": "Alexandru Bordian (deputat AUR): „România trebuie să fie partener la Bruxelles, nu executant!”",
-      "summary": "",
-      "source": "Partid AUR",
-      "published": "2026-11-11T09:35:49Z",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbkhMZzZnUTZyX1FiZy1mU0E5dTd3X2R4ODBzMnIxX2llZURmSllMN1ZxZk9CQUR4RFJGV09NUXc2aHg4aGs4ZVNCN01WWHhFQ2NpM1V6RHZGMGhHTFp4NEJ0RjlJZS1aWHdmMGNwQ1JhQ0JnTllpUGM3b3dKNFcyLTlfeUVGUWl2amloVWFiR1pYVDZnWDBBNE5iXzR1cGw4UG92YUNVRWFxcTlxbEpmRA?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Alexandru Bordian (deputat AUR): „România trebuie să fie partener la Bruxelles, nu executant!”",
-      "title_it": "Alexandru Bordian (deputato dell'AUR): \"La Romania deve essere un partner di Bruxelles, non un esecutore testamentario!\"",
+      "title_ro": "Azerbaidjanul discută despre cooperarea energetică cu Bulgaria și AIE (FOTO)",
+      "title_it": "L'Azerbaigian discute della cooperazione energetica con la Bulgaria e l'AIE (FOTO)",
       "translation_status": "machine_translation"
     },
     {
@@ -547,7 +581,10 @@
       "source": "WJBF",
       "published": "2026-11-11T09:01:03Z",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNdEljZWlIb1BLMzNhTGVGN3p6d3FFQ3dDcFBHdEdsUWFPMWxpWWc0TUlMbk5mWTBZRUxJWjQ3LW1PUU8yMGk0R25CYkIzQmF1YmVvUzhmaUhIMDExOVhUXzRSVHpzUnlJSm13QUdlUlRRRFJMZURwdGxVWkNmRm9Ya0hBZzJwOGo5RWlrYWlLenkxdG5HWFJrUW5RVFNydjBvUDlHQjFfbGppdjNidTdpQ2Z6T0UyX2NWRGxIX3AzTFFNY3RoRWNIMTNRWTJNZFNYRWJCMUlHS19TNk1RX0xxVjdxYWZBRjhNdFBr0gHrAUFVX3lxTE10SWNlaUhvUEszM2FMZUY3enp3cUVDd0NwUEd0R2xRYU8xbGlZZzRNSUxuTmZZMFlFTElaNDctbU9RTzIwaTRHbkJiQjNCYXViZW9TOGZpSEgwMTE5WFRfNFJUenNSeUlKbXdBR2VSVFFEUkxlRHB0bFVaQ2ZGb1hrSEFnMnA4ajlFaWthaUt6eTF0bkdYUmtRblFUU3J2MG9QOUdCMV9saml2M2J1N2lDZnpPRTJfY1ZEbEhfcDNMUU1jdGhFY0gxM1FZMk1kU1hFYkIxSUdLX1M2TVFfTHFWN3FhZkFGOE10UGs?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Netanyahu neagă că Israelul este vinovat pentru condițiile din lagărele din Gaza și alte știri din Orientul Mijlociu",
+      "title_it": "Netanyahu nega che Israele sia responsabile delle condizioni nei campi di Gaza e di altre notizie dal Medio Oriente",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-4c797c9c3dfcee8c",
@@ -575,6 +612,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Uzbekistanul propune la COP o platformă de finanțare a schimbărilor climatice din Asia Centrală pentru 2027",
       "title_it": "L’Uzbekistan propone alla COP una piattaforma di finanziamento del clima dell’Asia centrale per il 2027",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-be1894e58dc76c12",
+      "category": "clima",
+      "region": "global",
+      "title": "World leaders begin talks at Cop31 climate conference but big names missing",
+      "summary": "",
+      "source": "RFI",
+      "published": "2026-11-11T08:12:07Z",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPSXJORjFCblkyYzN5OVRVOUlMeXRIZlJtQmkxREVXRUM3Tl8zbi1saFlaaFZjdnJrM3VfTU9uRmZ3c1g4OGFWeWtaM09RbEsxSjQtR0JEbDdrMGl1aXFmcUJyUUQ4TFE0ZlVlWWRjWjJ3SGpsWHRZS3lWa1pSRENqRzhEcWNxbzMtQWZ0X0VNeFdqQnlrTUdQeUd3dFk1TVhGQUpOT29XanBXWFFCRmJRWm1XdkJCU2dieHc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Liderii mondiali încep discuțiile la conferința Cop31 privind clima, dar lipsesc nume mari",
+      "title_it": "I leader mondiali iniziano i colloqui alla conferenza sul clima Cop31 ma mancano i grandi nomi",
       "translation_status": "machine_translation"
     },
     {
@@ -642,20 +693,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-1aa58bf4c671c6da",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Senior US officer in NATO unit arrested in UK on suspicion of spying for Russia",
-      "summary": "",
-      "source": "The Times of Israel",
-      "published": "2026-11-11T06:29:56Z",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORjZBMnpTZFV3aWJsUUI3akhmek5ZdFR1TEpLQ3RrQmUwQVRxaWM0Q3ZsN1BYV3FzNzNhNDd3Y1JDUG5WQTRiVWxLTTdNTnI2S2hWcXdObDVNa0FUVUpwOUhvWnUxY0JBM2pudGd3SDJzVVdTMXFtTWltdUZJVnduenVYVTE3a0xyckhpVFMwVHZlTkZOQlFKeU9POURNN0ZrMDlTQlZUMXQyblB4S05F0gG0AUFVX3lxTE94Ymt4V2ZXUE9ReHZfbWl0N2htSVJCdlVBakZaWXA2eVJjdUlRU3h1X1QzSkdLSUZFRG5NQVVjdmdtRjUtMG5wVnJPVmxlc2RfVWhWYm1tSEJmSEdEUTZwaWZ4Tll3Q1JMOXBRRHRxQ1NNVU9HeVdDX2FuT255eDJlQWY3Qm5xblZxRG9uMDEzSGlzZzFNUDZNZmc1U0FHNkJQbjI0UmlMb0ZtaWZZdDJHNE1jMA?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Un ofițer superior american în unitatea NATO a fost arestat în Marea Britanie, fiind suspectat de spionaj pentru Rusia",
-      "title_it": "Arrestato nel Regno Unito un alto ufficiale americano dell'unità NATO perché sospettato di spionaggio a favore della Russia",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-efa06525ea217e72",
       "category": "clima",
       "region": "global",
@@ -664,7 +701,10 @@
       "source": "Trend News Agency",
       "published": "2026-11-11T06:04:54Z",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1vTnBsb05HMDFsUVItSUJDQzdLRjRFUHRJQ0xxQ3ZPUXlYYmFDei1HQjdaS2VXMHNRdW9BWWh5emlIWHJBM2FRQ21Jby1SYW15VWJLWlRtS2Rldlc5NTZV?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Președintele uzbec subliniază un parteneriat pentru climă de 200 de milioane de dolari cu GCF",
+      "title_it": "Il presidente uzbeko evidenzia una partnership sul clima da 200 milioni di dollari con GCF",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2b87f1eac3fff473",
@@ -703,7 +743,10 @@
       "source": "FOX40",
       "published": "2026-11-11T04:28:49Z",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNSzBPVGhieXRvbEtEdmxiZWF3OERGM0owU1VhNGRQa3dWRkF1a1hBTWV3SWVXOEJXVEhwaTZTM0FraXpXemFtQWNKOWJwM3RIN0hXQ0pTZVVpWmpWUE9nWV9OWHNNbnF5S1pYU0NRVk5GQWtJS3ctSzMxckFTSnFMajIyRFotR3JNTnJrb3FMUnRSd1pzazlUUmwwMjVXejN4amxMMjRrRXlZaUlmRnBZYllXbWw2OWttd0VWdnZGOTdESUZLQ2d0OFRIOU1fTlNZaGlRdjdieU03d2haamRUblQ4T1cyd9IB5gFBVV95cUxNSzBPVGhieXRvbEtEdmxiZWF3OERGM0owU1VhNGRQa3dWRkF1a1hBTWV3SWVXOEJXVEhwaTZTM0FraXpXemFtQWNKOWJwM3RIN0hXQ0pTZVVpWmpWUE9nWV9OWHNNbnF5S1pYU0NRVk5GQWtJS3ctSzMxckFTSnFMajIyRFotR3JNTnJrb3FMUnRSd1pzazlUUmwwMjVXejN4amxMMjRrRXlZaUlmRnBZYllXbWw2OWttd0VWdnZGOTdESUZLQ2d0OFRIOU1fTlNZaGlRdjdieU03d2haamRUblQ4T1cydw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Netanyahu spune că Israelul nu este de vină pentru criza inundațiilor din Gaza și alte știri din Orientul Mijlociu",
+      "title_it": "Netanyahu dice che Israele non è responsabile della crisi delle inondazioni a Gaza e di altre notizie dal Medio Oriente",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6dd7df3a947edb2b",
@@ -739,17 +782,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-8ba2ce98b20f4ba7",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Middle East latest: Iran warns of domestic gas shortages from war this winter",
-      "summary": "",
-      "source": "The National",
-      "published": "2026-11-11T02:38:12Z",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOX1E2VFlpWERDcU1PanZ2RkFFbXN6OFJvZ2ljaUdxVjAzemJXZFlRcTFpMEZyc1FBWE9zQ1JWUy1kUHBpdHZYM2xUbDVWUHRiUEZLRjBFWGtYMUFYeExqQzdXa2lqbWl0clBvLVRXZGZqRzZ2Uk00WmlGT1hnSEZBdWFOa1ljT045RUthemFUcDhjdm1EODNtNDUtdW5SOWxpeFZPMQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-65ea9ff0f6adc039",
       "category": "clima",
       "region": "global",
@@ -758,6 +790,31 @@
       "source": "The Hindu",
       "published": "2026-11-11T02:15:22Z",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQRXQ5Q1RIYm1fbThYMmtSQUJqQjEtdTRyRUJkWUpleGtrd1R1ZVNSSkpFOW1SYkU1NDc0S1JBaGp4OW1GVVVLWHg0YTJjc2R4ckZSQVhQcnFrN2NHU0JVVzVBZUVic0Z2RGNIc3VxczU4QTZjVmt1LUFTYmI1eXhWekQ3a1hCcXk5eVdtTnZ5ZExER1AtQmVvZ2NTS1VoZ2pqZFNCNGJvNGFTbnlINzZiejhXSmZSdlVrdm5RdGRKZzljYm9VWnpFSzhVYUtOcW9HZ2dj0gHTAUFVX3lxTFBFdDlDVEhibV9tOFgya1JBQmpCMS11NHJFQmRZSmV4a2t3VHVlU1JKSkU5bVJiRTU0NzRLUkFoang5bUZVVUtYeDRhMmNzZHhyRlJBWFBycWs3Y0dTQlVXNUFlRWJzRnZEY0hzdXFzNThBNmNWa3UtQVNiYjV5eFZ6RDdrWEJxeTl5V21OdnlkTERHUC1CZW9nY1NLVWhnampkU0I0Ym80YVNueUg3NmJ6OFdKZlJ2VWt2blF0ZEpnOWNib1VaekVLOFVhS05xb0dnZ2M?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Liderii mondiali urcă pe scenă la COP31, dar lipsesc nume mari",
+      "title_it": "I leader mondiali sono sul palco della COP31 ma mancano i grandi nomi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d00457a48d5aeddc",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Japan watches for signs of change in Trump's foreign policy priorities following US midterm elections",
+      "summary": "",
+      "source": "DW.com",
+      "published": "2026-11-11T01:25:41Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZl8wNmN3X1hmU19lWDZqSDBONUNKTHVOeElOMjZHOXhuY0oxdDlvWk9waEU1Q0pmVkItOFJGM1Fhbl9kZVRPUFdnamlSbldWeXo0MjBZTkNYWXl0WWRrWmVjSzQ5akpWZ3lFa2NYajREejljOHhPbFVIOTQ5bTdpaEVqZXRXQ1hRaEVpbWRfcXdMZWcwTll6RklvcDF2ZHYxQy15ctIBpAFBVV95cUxOaDRQYW9uYkdxM0p6cno4bHlPcGwxa0Y5cXlKX1k3Vjg3WTdkWnNhaEpWX19ta3lWWHRTX0FReWNzclp6OTg4eFl0dGhjU3BwNmE1VzZOUUl5Tm9MSWZZVnJfYUJqS3RITE9JLVdqQjNPM1NRODRQY3I5YmhHRFREbDlCcE4wb2VPRVZrQVpQV1Z3RUx3TmFLbGdLOTk1dTVyZG9LSw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-4daad890637c572b",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "UN chief urges world leaders to tackle fossil fuels at COP31",
+      "summary": "",
+      "source": "France 24",
+      "published": "2026-11-11T01:15:57Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVWFiM0JFZUI2Nzc0TWJwQmVZN25SWnBFZzN5cFVkUk9KNG1feTdFeXl2LVdmLWl2c2ZvZHBOcUUzbXhEMzBNRHpWbl91YUJpOTFqTzZZZWd0X211YlZBdW5aVFV2RV95OVNSenVVSTVFbG5UdmZZS2VhRDNwZEpRV1dYaTdsZ3dDWDB1dm9za0NLMVZ2d2lDa09fTktrdENmNGd2Qw?oc=5",
       "review_status": "external_headline_unverified"
     }
   ]
