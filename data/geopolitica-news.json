@@ -1,10 +1,25 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-10T23:50:42.818560Z",
+  "updated_at": "2026-11-11T00:50:18.885928Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
-  "items": []
+  "items": [
+    {
+      "id": "geo-4c82f77db5e8b705",
+      "category": "securitate",
+      "region": "asia",
+      "title": "G7 Ministers Unite Against North Korea's Threats",
+      "summary": "",
+      "source": "조선일보",
+      "published": "2026-11-10T23:03:55Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORGpDMy03ZlR4SEtVaWN6MEc5N1ppa0ZCMjJuRzZjRGRITzNzZURZVmNlcTdjOGc2WFp4WHdGMlZReHk2QkhTVm1xN0xJenVORW42Sndhdm13aURQNnZReGFWeGZzS3NUTE9qTThuOHhyVDBCX3dwWGpoald3emdScDRfYUM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Miniștrii G7 se unesc împotriva amenințărilor Coreei de Nord",
+      "title_it": "I ministri del G7 si uniscono contro le minacce della Corea del Nord",
+      "translation_status": "machine_translation"
+    }
+  ]
 }
