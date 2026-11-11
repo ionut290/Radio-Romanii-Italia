@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T15:36:29.963544+00:00",
+  "updated_at": "2026-11-11T22:15:48.964369+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -196,7 +196,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "LINGUA_NON_LEGGIBILE",
+      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "8722e91b78c0229914",
@@ -211,7 +217,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "LINGUA_NON_LEGGIBILE",
+      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "84bb36758542e56d1f",
@@ -226,7 +238,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "LINGUA_NON_LEGGIBILE",
+      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "6ae29610cec9f5d888",
@@ -241,7 +259,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "LINGUA_NON_LEGGIBILE",
+      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "40371ece101b71a082",
@@ -256,7 +280,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "LINGUA_NON_LEGGIBILE",
+      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "194b7a808a204d479e",
@@ -271,7 +301,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "LINGUA_NON_LEGGIBILE",
+      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "f182c13478ba9dc2ad",
@@ -907,7 +943,7 @@
       "id": "840d3f3f1f09085fab",
       "source_id": "commissione_europea",
       "source": "Commissione europea",
-      "title": "The Future of Europe's Fishing and Aquaculture Industry: Who Will Fish Tomorrow?",
+      "title": "The Future of the Fishing and Aquaculture Industry in Europe: Who Will Fish Tomorrow?",
       "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297309",
       "published_at": "2026-11-09",
       "language_hint": "und",
@@ -3153,6 +3189,6 @@
       "language_probe_version": 3
     }
   ],
-  "language_checks_this_run": 8,
+  "language_checks_this_run": 6,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
