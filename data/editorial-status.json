@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-12T18:01:31.771355+00:00",
+  "news_updated_at": "2026-11-12T18:36:12.985348+00:00",
   "editorial_updated_at": "2026-11-12T11:55:19.458232+01:00",
-  "translations_updated_at": "2026-11-12T17:02:40.127407+00:00",
+  "translations_updated_at": "2026-11-12T18:01:14.946132+00:00",
   "feed_total": 78,
   "feed_extended_400": 0,
   "feed_missing_body": 78,
   "feed_short_body": 0,
   "editorial_total": 15,
   "archived_editorials": 238,
-  "translation_records": 24,
+  "translation_records": 26,
   "pending_total": 39,
   "pending_filtered_out": 35,
   "editorial_verde": 1,
-  "editorial_galben": 37,
-  "editorial_rosu": 54,
+  "editorial_galben": 36,
+  "editorial_rosu": 55,
   "pending": [
     {
       "title": "A Milano più donne al lavoro che nel resto d'Italia, ma pesa il divario di reddito - ANSA",
@@ -408,12 +408,111 @@
   ],
   "recent_news": [
     {
+      "title": "Nicușor Dan, declarații după summitul de la Dublin. Europa vrea un rol la masa negocierilor pentru pace în Ucraina",
+      "category": "România",
+      "published": "2026-11-12T18:35:05+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-participa-la-reuniunea-comunitatii-politice-europene-la-dublin-agenda-evenimentului-4032169",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "S-a câștigat marele premiu la Loto 6/49. Cât a costat biletul jucat la agenția 40-020",
+      "category": "România",
+      "published": "2026-11-12T18:28:59+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/social/s-a-castigat-marele-premiu-la-loto-6-49-cat-a-costat-biletul-jucat-la-agentia-40-020-4034105",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nicușor Dan, discuție la Dublin cu președintele Azerbaidjanului: subiectele abordate",
+      "category": "România",
+      "published": "2026-11-12T18:20:40+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-discutie-la-dublin-cu-presedintele-azerbaidjanului-subiectele-abordate-4034075",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Migranti travolti dal fiume a Ventimiglia, si cercano alcuni dispersi",
+      "category": "Italia",
+      "published": "2026-11-12T18:19:30+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/migranti-travolti-dal-fiume-a-ventimiglia-sei-in-salvo_fd1325d7-6a5a-4bce-9871-a73474015925.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Român din Italia găsit mort în propria mașină, în parcarea unui spital. Nepoata lui a dat alarma - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-12T18:17:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQaDY0bHVOOXFqRllIN1E0cm9qUHcxLURFRlhCNjdLN21HOUtPNENwdzgwX1VVc3lGT25qOERObjhyWDRONjFUUWlGSE1SX04yUUdXYWZYYml2QWgzbE1LT25MTC1pejZ0azdhUF9FOXZzaFFNUGlOUXNfdFA4alhoUHpSa1RscXhFc1JiZkE5MUxvSERiVVRDdjV1QTlRWGxlVGZvNjVhX3JkZFJMQk1Vbk9KcEY3VlVNNXc?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nu contează doar câte ore dormi. Un studiu pe 23.000 de persoane arată de ce ora la care te culci poate afecta sănătatea mintală",
+      "category": "România",
+      "published": "2026-11-12T18:16:26+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/nu-conteaza-doar-cate-ore-dormi-un-studiu-pe-23-000-de-persoane-arata-de-ce-ora-la-care-te-culci-poate-afecta-sanatatea-mintala-4034067",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Sute de tineri, reținuți la Moscova și împinși să se înroleze în armata rusă. Putin avertizează că trupele străine din Ucraina sunt „ți",
+      "category": "România",
+      "published": "2026-11-12T18:14:02+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/sute-de-tineri-retinuti-la-moscova-si-impinsi-sa-se-inroleze-in-armata-rusa-putin-avertizeaza-ca-trupele-straine-din-ucraina-sunt-ti-4034031",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Premierul Edi Rama, despre un summit al NATO în Albania anul viitor: „Problema este că nu există încă o poziție comună”",
+      "category": "România",
+      "published": "2026-11-12T18:13:16+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/premierul-edi-rama-despre-un-summit-al-nato-in-albania-anul-viitor-problema-este-ca-nu-exista-inca-o-pozitie-comuna-4034071",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "La strage di Via D'Amelio, perquisizioni all'ex capo della Polizia Gianni De Gennaro",
+      "category": "Italia",
+      "published": "2026-11-12T18:08:35+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/la-strage-di-via-damelio-perquisizioni-allex-capo-della-polizia-gianni-de-gennaro_4f725d2f-4016-4316-9cbb-d99677d42f7c.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Witkoff: 'Gli europei parteciperanno al prossimo round di colloqui sull'Ucraina'",
+      "category": "Italia",
+      "published": "2026-11-12T17:59:49+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/zelensky-denuncia-il-sistema-starshield-ha-di-nuovo-delle-limitazioni_3b13b03e-1348-4fd1-9b1f-f2a129c504cd.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Premierul portughez spune că secretarul general al NATO este „complet deconectat de la realitate”. Declarația care l-a indignat",
       "category": "România",
       "published": "2026-11-12T17:57:59+00:00",
       "url": "https://www.digi24.ro/stiri/externe/premierul-portughez-spune-ca-secretarul-general-al-nato-este-complet-deconectat-de-la-realitate-declaratia-care-l-a-indignat-4034043",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "È morto Toni Capuozzo, poco tempo fa aveva annunciato di avere un tumore",
+      "category": "Italia",
+      "published": "2026-11-12T17:55:49+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/12/e-morto-toni-capuozzo-pochi-giorni-fa-lannuncio-del-tumore_d91e7c63-c965-4b50-b4d9-931c2a6fd56f.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -435,21 +534,30 @@
       "words": 0
     },
     {
+      "title": "Il benessere non è solo benefit: così le aziende stanno cambiando il modo di lavorare in Italia - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-12T17:46:10+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxQQ3BpY3paa2tUZjFtMXhQbU8tWDBUUS0tSUZCb3gxZi1rRE5ZVWtEalFFOEFYRFhaN0hOTU9CRGUtZDZCbEF4UTEteFE5MEJVaF9xWTI4NjAwZkFGN0FxQ3NXdmJyRDJSY0U5Y3ZEMFoxVFVSd3pvbF81bElMRHJCMFZQMUdwUHlBQTNReDRrWFVMVjJVLUtjWEhnQ1N1QzVvX2YzdHlUMjE5V3dqSk1MVTZTcnowR1VSYnVNdlhHbkp3T2d2M1hLSEUyd3g0WWRNZEVBTm1ZYzdQbXc2bDhiOUczOTluYkNrb2piem8zQnV0Y0pucWV2eEt5WDRvaWdy?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nvidia: Jensen Huang si è dimesso da ceo, Colette Kress nominata ad interim. Trump candida Cook",
+      "category": "Italia",
+      "published": "2026-11-12T17:43:23+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/nvidia-jensen-huang-si-e-dimesso-con-effetto-immediato-da-ceo-colette-kress_0b01f8ad-f5ea-4fd2-a7a4-7ccfc68be774.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Messina: 'Ecobonus portati a dieci anni sono formula sudamericana'. Meloni: 'La nostra è una scelta di giustizia'",
       "category": "Italia",
       "published": "2026-11-12T17:36:02+00:00",
       "url": "https://www.ansa.it/sito/notizie/economia/2026/11/12/messina-ecobonus-portati-a-dieci-anni-sono-formula-sudamericana_66cb92ca-cf90-4cae-a644-923b05b820c5.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "È morto Toni Capuozzo, poco tempo fa aveva annunciato di avere un tumore",
-      "category": "Italia",
-      "published": "2026-11-12T17:32:29+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/12/e-morto-toni-capuozzo-pochi-giorni-fa-lannuncio-del-tumore_d91e7c63-c965-4b50-b4d9-931c2a6fd56f.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -468,24 +576,6 @@
       "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/12/cyberattacchi-cosa-prevede-un-kit-di-emergenza_ff6edfbd-c22b-43f5-b452-e59d432201f6.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Nvidia: Jensen Huang si è dimesso da ceo, Colette Kress nominata ad interim. Trump candida Cook",
-      "category": "Italia",
-      "published": "2026-11-12T17:25:42+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/nvidia-jensen-huang-si-e-dimesso-con-effetto-immediato-da-ceo-colette-kress_0b01f8ad-f5ea-4fd2-a7a4-7ccfc68be774.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "ANSA Newsroom | La notte americana: le elezioni di Midterm al centro della nuova puntata",
-      "category": "Italia",
-      "published": "2026-11-12T17:16:30+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/11/ansa-newsroom-la-notte-americana-le-elezioni-di-midterm-al-centro-della-nuova-puntata_1d689574-cc56-421f-9174-695e21936d05.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -512,15 +602,6 @@
       "published": "2026-11-12T16:57:10+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/nuovo-allarme-bomba-nelle-scuole-indagano-i-pm-dellantiterrorismo-liveblog_97a3c6b7-93f4-44a2-940b-dd33198f2f91.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Municipiul Iaşi se constituie parte civilă în Dosarul Păcura, în care este cercetat şi primarul Mihai Chirica. Reacția edilului",
-      "category": "România",
-      "published": "2026-11-12T16:54:49+00:00",
-      "url": "https://www.digi24.ro/stiri/municipiul-iasi-se-constituie-parte-civila-in-dosarul-pacura-in-care-este-cercetat-si-primarul-mihai-chirica-reactia-edilului-4033803",
-      "source": "Digi24",
       "status": "galben",
       "words": 0
     },
@@ -561,15 +642,6 @@
       "words": 0
     },
     {
-      "title": "Un neonato morto di freddo a Gaza, un raid colpisce un ospedale",
-      "category": "Italia",
-      "published": "2026-11-12T16:44:45+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/protezione-civile-gaza-raid-israeliano-uccide-6-persone-in-un-ospedale_30554bb9-dc24-4e02-86b4-049e6a5420bf.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Avertismentul lui Kelemen Hunor: „Dacă reforma administrativă afectează drepturile maghiarilor, UDMR va reacționa dur”",
       "category": "România",
       "published": "2026-11-12T16:44:27+00:00",
@@ -583,15 +655,6 @@
       "category": "România",
       "published": "2026-11-12T16:42:32+00:00",
       "url": "https://www.digi24.ro/stiri/ministrul-de-externe-a-vorbit-cu-familia-alinei-apostol-aflata-de-9-ani-intr-o-inchisoare-din-china-marius-balo-face-greva-foamei-4033929",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Europa vrea un rol la masa negocierilor pentru pace în Ucraina. Liderii UE discută la Dublin despre apărarea comună și amenințarea rusă",
-      "category": "România",
-      "published": "2026-11-12T16:41:29+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-participa-la-reuniunea-comunitatii-politice-europene-la-dublin-agenda-evenimentului-4032169",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -651,33 +714,6 @@
       "words": 0
     },
     {
-      "title": "Luca Niculescu, discuții cu premierul Marocului. Candidatura lui Dacian Cioloş la șefia OIF, printre subiectele abordate",
-      "category": "România",
-      "published": "2026-11-12T16:08:28+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/luca-niculescu-discutii-cu-premierul-marocului-candidatura-lui-dacian-ciolos-la-sefia-oif-printre-subiectele-abordate-4033863",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Zelensky: 'Ad Abu Dhabi colloqui seri, non privi di sostanza'",
-      "category": "Italia",
-      "published": "2026-11-12T15:55:34+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/zelensky-denuncia-il-sistema-starshield-ha-di-nuovo-delle-limitazioni_3b13b03e-1348-4fd1-9b1f-f2a129c504cd.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Zelenski vrea ca Europa să devină „parte integrantă” a negocierilor de pace privind Ucraina: „Trebuie să ne asigurăm”",
-      "category": "România",
-      "published": "2026-11-12T15:53:18+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/zelenski-vrea-ca-europa-sa-devina-parte-integranta-a-negocierilor-de-pace-privind-ucraina-trebuie-sa-ne-asiguram-4033815",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Cresce l’agroalimentare italiano, export a quota 72,5 mld nel 2025 12/11/2026 - L'eco del sud",
       "category": "Italia",
       "published": "2026-11-12T15:50:13+00:00",
@@ -687,39 +723,12 @@
       "words": 0
     },
     {
-      "title": "John Kerry îl acuză pe Trump că a abandonat cursa pentru energia verde: „Este cel mai mare ratat pe care l-am văzut de multă vreme”",
-      "category": "România",
-      "published": "2026-11-12T15:40:55+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/john-kerry-il-acuza-pe-trump-ca-a-abandonat-cursa-pentru-energia-verde-este-cel-mai-mare-ratat-pe-care-l-am-vazut-de-multa-vreme-4033793",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Meloni, nessuna minaccia su scuole, al lavoro su protocolli specifici - ANSA",
       "category": "Italia",
       "published": "2026-11-12T15:37:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOajd0U2pOQy00TW13MGg4akpsZ0V6eUJLcVphR283Nk9OQ3BPOGdENTUyb3l3OWF1aDFrMVRCRFc1dUQzdGRSYjJsYW1jUWsyVmhkWmNnZGNoMWl1ME1BejBmRDB1X05vTmMzdFZXcEE3bkI1Y0RiRURPMHZBenFSYVNMcDIxZE1vdnFHU0c3STdOZEVIRHhZYkJMbWUxMGR1Qmo2ejY3LTRzckUyaXZGcDk5dENqRldGMHRyQy1ZdHQ5Zi1CZWZGOS1OX2tJd3JCaEVJV0QyOWlaRk9yWThuUURuVDIxV2lwTDFYZkd1ZVZvVkxnSlR5ZW0tc2VZR1lSZGF0MNIBigJBVV95cUxNM015SkNFSGR4Mi0xX3d4bGFsem9IUlNadnA3THdHOEpJTUdja2ZVcWxBU1g3LXA2VXFQMDBqVm5CeFpReWwwWTFYbXlncm8",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Concursurile pentru funcțiile de lector universitar și șef de lucrări universitar au fost deblocate, anunță Ministerul Educației",
-      "category": "România",
-      "published": "2026-11-12T15:29:32+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/educatie/concursurile-pentru-functiile-de-lector-universitar-si-sef-de-lucrari-universitar-au-fost-deblocate-anunta-ministerul-educatiei-4033791",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "L'udienza preliminare per Andrea Sempio è fissata al 25 febbraio",
-      "category": "Italia",
-      "published": "2026-11-12T15:09:19+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/ludienza-preliminare-per-andrea-sempio-e-fissata-al-25-febbraio_e27733db-732a-41af-9832-aa6eb5bde397.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -755,6 +764,15 @@
       "published": "2026-11-12T14:08:36+00:00",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOV3RVZk96enhiM3pxRElZY3UzSFg5R3FxMlVBUk5odXZNNV9KOFVhMVlwNlRnUTZWOXByMnhlUzZQVHZodmNVdW84ZFhabEhVMzJMcUhzMlB6T0toTWdNTWJLRzdfMHhnU2gyTi0wZzdiR2VEVGNFdTY5UXUwdzZDNW9vel9QbXdGbWM5TzBjWE5kMmFIQVVPZXNiVHQ2SWZfTmJ4SzhOQVB0WC1ZZ0IzdzFVc1JoTXo4NVZIc0pR?oc=5",
       "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Român găsit mort în Italia, într-o dubă parcată lângă un cimitir. Și-a pierdut viața înainte să poată cere ajutor - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-12T12:43:31+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOclVTdW42blMzVGlta2R6UlJSZkNhV29JMGJhanA0bHZ4bHdLSGY0WjByUEVVN3NTYXpvQlplamc1dVRnTm9WOXY5d3hhM0dUbnRuLU81Nlp5MDhQanV0dUwxdkhTWGpsWTJtVDRvSE5Gc0dFNFNsUVZLTDdJTW56TEhRVnNlOUdOSkF1eGRjVE5BU2pjQnNndWs5dnoweDFJZnYtb29oT1Nhc0l3TkxJdkhnWC1DYXJkQzZkblVteHEwdjRmT3EwQU8zNDBaelA5?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     },
@@ -1038,11 +1056,11 @@
       "words": 0
     },
     {
-      "title": "Manovra, Giorgetti: cuore misure dirette a incentivare lavoro, specialmente quello giovanile - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-11T10:08:19+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOeGJfTWtPZlNHZWxuZGFoUnI2bk1HNWhJeFREWnhtVzl0OUREX2tvbUVHVkpxUjlncVFUZm90NUxyUlNxZ3NVSW9nWnlRSWZjZXZ3RVdlZGtvWTFubHhpd25EajRjbFdOSFlFZUc2cHV1U0d2YjVwbTdTVGNlT0ZhQXdrWWN4Q2RHVmFKTGJTbFZhVy1fbnpORDNZZGotZGw0cFVZQkQ1V3ZhR3JaaHJoVFBFZzZVUnhoR2NYN3R3Q1VXUmpHcHhPNV9HU1pJOGRod3c0d2g5Ty1ybW90dkE?oc=5",
-      "source": "la Repubblica",
+      "title": "Jaf în stil militar pe o autostradă din Italia: Hoții au detonat un vehicul blindat și au dat foc... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-11T07:10:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxORDk5NUZyeko2QndQaTgyRWlvVlg3emJqUkxOS3NUc1BIS2V4bnBvc0wzM1ZDU3N3MGx5M3BISFBLVkVKM3Q5TmIxbDJBMnlodFRDSXJORUV2RlBIOExBcDNIZ1ZIU2I0dEhSb0szbUpOWkhkRTB6TWEzWG04ZGh3VE9BV1E1d3BCeHA5a2l1MFZvZEJWYkdXNThpaHE5dHlNQmNtQm9ZdU9FTTdJNzVTLVhEQXFaTWktZEhaMkxhdHR3b2xBV0tjOWI4ZXRlX0xTMlpoX09SeGcwenhwanJZampPY21LYzR1QjBReFAyYXpScjh0ekRNNkZtMUUzdkRaSjQw0gGIAkFVX3lxTE13Q3l4bHpJTXQ5VTE0N3JIcFdpT2ppNnhwcHFPMXR2VVpkNVVPaDBiZHAwZzFZQ3QwZ1ppclhtSzhZeDZEWTA3ZlJvdGMxQ3h",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1088,24 +1106,6 @@
       "published": "2026-11-10T19:14:40+00:00",
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQcnBSeFdwcFFjRmJLTjk0bThiNWNOMmJRRjBsM3RiZlJadGJIbnlEYW51QkRrcFZfUHdwS2pjWVZqTU5ESS03d1h0cllJQm0yMm5RbzlLOTVPOFlRamJkWXhTeC1XTnBaUnUtUnlnYU9QQXBaM3pIenh2eXlMVHdaVS04V19SeEdWVHdPWXZKRWpRVnQ3UmNaRmJmeF9nYnRLYkJlR25zTkFfQXhyYU1IZGE3UWRuQTJnMGkxMWpqUTFaUTk0VXgtYThWTGwyQ1hOYm9mVlF0Q0tQSFRWYXZwMEtGWEhJMm1qU09HQzNyMkRmdw?oc=5",
       "source": "Oficiul de Știri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Doi români, arestați în Austria după o serie de nouă spargeri pe șantiere. Prejudiciul depășește... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-10T18:30:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQTFBRM0hvTzlvQnN5QnlCdTVtQ2V5a2hkQ05rSnY0cEFtSXpBWnZ6TEdUZkVzM1lhbDlyQnAwRkRuZDNRbm1na2hlUTlWRFh2RnRSOC1tbVJqY0toano2SlVGdUtyY1VpRUNFUk1nenBocVdDQlhtRjFiRlRlRXF2eUFkSW9mOUZMb0NNN2Q4S0ktZVdpQjVNRW8yeGtUaVoyUnJaY0hRTTU2OVBYdm0zaHJwM1RqcWxQWi1CX3p4a1g2R1VkSVNTa1JjOGFlR3VfakROTU1aSnRhb2t5RXpHVnd4VWzSAeoBQVVfeXFMUG1vMVNtZ2NxTUJtejJ2RW1pVlRHT1p0M05nTlE4LUtoTjdxVDBrdGpmazVYRUpyUElRbThSbm9DZFlmR3ZfWGR1bTZQWm1qbzVRN0FwQWtrSkJ0ZGdfWFo0MHBDMXhWUk9PYWNMY1Z",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Moarte îngrozitoare pentru un tânăr din Italia care ar putea fi român: capul a fost găsit la 200 de kilometri distanță de corp - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-10T18:25:19+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPaUFtTExzdTVWdElPSkR5dDFZR1FSd3NLbmFoaU80aWJtR2NPVWo5UDhueU9ENUdHYThhengzVEJSSFJDejlBUTZQSmhVYjhMZkxXUk53TDd0NlJQR3oyVmpTRENWSE15WHcyc2RQalY0LWtWa0o2TEtyTU5zOEpoRTl5emNEWC1SaUtHMF9DYTFtSThhaUVnR2RYWnNyYXFMaDk5RWdNdE1ic3RoRDQ4TVFqTUFmZTlDbmhHdzRsTHFYNTBRYzdBU0Z3eF9ydWczTXhsMFJiTm1DRTVkb1ZSSUtCQQ?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     }
