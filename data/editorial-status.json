@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-12T07:07:33.875605+00:00",
+  "news_updated_at": "2026-11-12T08:54:45.005252+00:00",
   "editorial_updated_at": "2026-11-12T03:52:44.299113+01:00",
   "translations_updated_at": "2026-11-12T07:06:36.035651+00:00",
-  "feed_total": 80,
+  "feed_total": 78,
   "feed_extended_400": 0,
-  "feed_missing_body": 80,
+  "feed_missing_body": 78,
   "feed_short_body": 0,
   "editorial_total": 14,
   "archived_editorials": 236,
@@ -12,7 +12,7 @@
   "pending_total": 39,
   "pending_filtered_out": 35,
   "editorial_verde": 0,
-  "editorial_galben": 38,
+  "editorial_galben": 36,
   "editorial_rosu": 56,
   "pending": [
     {
@@ -408,6 +408,231 @@
   ],
   "recent_news": [
     {
+      "title": "HARTĂ Cod portocaliu de ploi, ninsoare la munte, temperaturi în scădere bruscă în toată țara. Prognoza anunțată de meteorologi",
+      "category": "România",
+      "published": "2026-11-12T08:49:45+00:00",
+      "url": "https://www.digi24.ro/meteo/harta-cod-portocaliu-de-ploi-ninsoare-la-munte-temperaturi-in-scadere-brusca-in-toata-tara-prognoza-anuntata-de-meteorologi-4032875",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Românul implicat în accidentul catastrofal din Bulgaria este în stare critică, anunță presa de peste Dunăre",
+      "category": "România",
+      "published": "2026-11-12T08:46:46+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/romanul-implicat-in-accidentul-catastrofal-din-bulgaria-este-in-stare-critica-anunta-presa-de-peste-dunare-4032873",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Forlì per 3 giorni capitale dell’Economia Sociale: al via il primo Festival - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-12T08:44:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPcndXM1NLNXZlSVVxV1hCSTZ5MllYNFEtdXRfNEtMLXczVG1UTl81S2pMWmV2UGttR0wyNlZqYmZHSTdadlJtLTItWkFYVjlIY3lsaVdvNk1ySkFseENLaEt1OWVBdkpiMEJseTRLVGVwTGlFYkF5OFhyQTJTczc3SEw4WXozMUVfTDlr?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Guvernul pregătește un plan pentru siguranța în școli. Luca Niculescu: „Trebuie să identificăm din timp situațiile de risc\"",
+      "category": "România",
+      "published": "2026-11-12T08:37:26+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/educatie/guvernul-pregateste-un-plan-pentru-siguranta-in-scoli-luca-niculescu-trebuie-sa-identificam-din-timp-situatiile-de-risc-4032815",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Protezione civile Gaza, raid israeliano uccide 6 persone in un ospedale",
+      "category": "Italia",
+      "published": "2026-11-12T08:34:11+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/protezione-civile-gaza-raid-israeliano-uccide-6-persone-in-un-ospedale_30554bb9-dc24-4e02-86b4-049e6a5420bf.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Mattarella: 'L'impegno dell'Italia per la salvaguardia della pace, del multilateralismo e della dignità della persona'",
+      "category": "Italia",
+      "published": "2026-11-12T08:33:37+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/12/mattarella-impegno-italia-per-salvaguardia-pace-multilateralismo-dignita-persona_159503bf-e220-4285-a020-c23557aadbaf.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Allerta rossa per rischio idrogeologico sulla Toscana del nord ovest",
+      "category": "Italia",
+      "published": "2026-11-12T08:29:33+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/allerta-rossa-per-rischio-idrogeologico-sulla-toscana-del-nord-ovest_2188f77a-8b0c-4674-af13-637b6ac4bfea.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Formazione e lavoro: come innovare. Dalla Regione oltre due milioni - La Nazione",
+      "category": "Italia",
+      "published": "2026-11-12T08:28:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPdktPZWFNNW1ULTN0RWVqX2ExVWhEZHZBUFpqZ201MEZxS0MwcUR6VzhRUjF1QktTR2N2WGdOaEk1SmdEb21uWEJDckxURlA2cHpsRno0VUQwRFJTTmM0dTZWVjBpdmpTcVRFc2dNYktabVVZTEFONVhCUjRkWjR5ZXFBeVU0cWJwT2c?oc=5",
+      "source": "La Nazione",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "O bandă de români a escrocat sistemul de garanție-returnare din Austria. Care era metoda prin care au obținut circa 150.000 de euro",
+      "category": "România",
+      "published": "2026-11-12T08:27:16+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/o-banda-de-romani-a-escrocat-sistemul-de-garantie-returnare-din-austria-care-era-metoda-prin-care-au-obtinut-circa-150-000-de-euro-4032809",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Si rientra in classe dopo gli allarmi nelle scuole, vertice a Palazzo Chigi: Meloni incontra le opposizioni e fa appello all'unità",
+      "category": "Italia",
+      "published": "2026-11-12T08:22:19+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/si-rientra-in-classe-dopo-gli-allarmi-nelle-scuole-oggi-il-vertice-a-palazzo_cd319cf3-a1cf-4b88-b35a-77a0eaa9c9fc.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Comune: \"Via Papa Giovanni XXIII, tecnici al lavoro per migliorare\" - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-12T08:19:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPRmxZckcwRUtnay1WTVg0VUhHamhGbnFoNjQ2WHZiX2NQZVFrTWN5YU9IR3hnWlkyeVBWNzI1bXFMYnlpa3lKMUJPa2tDRmNIVVlON0djdVl2LVFHRmQ4dTJocGxFOVNQMjU3VHFUMHBUSzhSWEMyeWV6ZW83aHU0SEJ1VVVIU01qejZrOUh5dw?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Grindeanu cere măsuri urgente pentru reducerea prețurilor la energie: „Nu vreau să avem pe conștiință că pleacă Dacia sau Ford”",
+      "category": "România",
+      "published": "2026-11-12T08:18:02+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/grindeanu-cere-masuri-urgente-pentru-reducerea-preturilor-la-energie-nu-vreau-sa-avem-pe-constiinta-ca-pleaca-dacia-sau-ford-4032819",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "EU Bond: che cosa sono le obbligazioni emesse dall’Unione europea",
+      "category": "Italia",
+      "published": "2026-11-12T08:16:32+00:00",
+      "url": "https://www.ansa.it/native/ansacom/2026/11/12/eu-bond-che-cosa-sono-le-obbligazioni-emesse-dallunione-europea_81c994c1-ce76-4a91-b89f-dbdbb66dd6f4.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Kim Jong Un a vizitat şantierul unei noi baze navale din Coreea de Nord. O „întreprindere centrală crucială\"",
+      "category": "România",
+      "published": "2026-11-12T08:08:43+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/kim-jong-un-a-vizitat-santierul-unei-noi-baze-navale-din-coreea-de-nord-o-intreprindere-centrala-cruciala-4032823",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Forumul Finanțe Digitale în Europa Centrală și de Est 2026",
+      "category": "România",
+      "published": "2026-11-12T08:06:36+00:00",
+      "url": "https://www.digi24.ro/finante/forumul-finante-digitale-in-europa-centrala-si-de-est-2026-4032773",
+      "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Le previsioni di come sarà l'economia mondiale nel 2040 - Idealista",
+      "category": "Italia",
+      "published": "2026-11-12T08:00:14+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYTdRVm50clBVYkVqUFNvTXo2Q1RoS2ZPd3k2RTdDWEhJWHlQeW1mdGRzb1pReVp2UExoR1J2YjRORzJXUG5zbDNPZWQtUkFSUGZMQ3pLdnRGZnV4Tm1BaHpnV0g3VnZaUFVhZWdMczU4XzFFYTkzZTJZSWdCVTdON094QUpYa0dQVlk3bElZM2Y5blFQd0NnVHdlTDEtSWFFS1hnR2NfaTROOFM1QTNJWEk3Q1JBamxU0gG-AUFVX3lxTFBIcjJyVG1ZcHNCR3Nva0s0QVBpUkNuMGx0VkZmaU91ZTFEbWx4VGJkaVo4UFNUVE9URkEtcmNjQVd0SkFucXRUZ3BuQ3lHUjBfdEUydFc3Z053QXpqaDczSUVyRFFiSVZEX2NxVk1ENnkyYXFRd3pCRTNrMk02WG1nQkItaEhoa3J0OVllRExHSzkydGUybTYxbUs",
+      "source": "Idealista",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Rata anuală a inflației a ajuns la 6,9% în octombrie. Motorina conduce topul scumpirilor, urmată de chirii și benzină",
+      "category": "România",
+      "published": "2026-11-12T07:58:44+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/rata-anuala-a-inflatiei-a-ajuns-la-69-in-octombrie-motorina-conduce-topul-scumpirilor-urmata-de-chirii-si-benzina-4032799",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Crimă mascată de incendiu la Timișoara: Poliţiştii l-au prins pe autor",
+      "category": "România",
+      "published": "2026-11-12T07:43:55+00:00",
+      "url": "https://www.digi24.ro/stiri/crima-mascata-de-incendiu-la-timisoara-politistii-l-au-prins-pe-autor-4032791",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Sorin Grindeanu conduce Guvernul «Scuze și Regrete»”. Siegfried Mureșan, atac dur la adresa liderului social-democraților",
+      "category": "România",
+      "published": "2026-11-12T07:43:19+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/sorin-grindeanu-conduce-guvernul-scuze-si-regrete-siegfried-muresan-atac-dur-la-adresa-liderului-social-democratilor-4032789",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Sorin Grindeanu, despre posibilitatea ca România să ceară ajutorul FMI: „Nu pot să exclud 100%”",
+      "category": "România",
+      "published": "2026-11-12T07:33:35+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/sorin-grindeanu-despre-posibilitatea-ca-romania-sa-ceara-ajutorul-fmi-nu-pot-sa-exclud-100-4032751",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Absurd rusesc: delegația trimisă de Putin să negocieze pacea la Abu Dhabi a spus că „nu are mandat”",
+      "category": "România",
+      "published": "2026-11-12T07:33:23+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/absurd-rusesc-delegatia-trimisa-de-putin-sa-negocieze-pacea-la-abu-dhabi-a-spus-ca-nu-are-mandat-4032779",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Percheziții în 6 județe într-o anchetă privind fraudarea fiscului britanic. Prejudiciul depășește 1,7 milioane de lire",
+      "category": "România",
+      "published": "2026-11-12T07:18:50+00:00",
+      "url": "https://www.digi24.ro/stiri/perchezitii-in-6-judete-intr-o-ancheta-privind-fraudarea-fiscului-britanic-prejudiciul-depaseste-17-milioane-de-lire-4032761",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Un colonel rus a fost ucis într-un atac cu bombă, în apropiere de Sankt Petersburg",
+      "category": "România",
+      "published": "2026-11-12T07:18:12+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/un-colonel-rus-a-fost-ucis-intr-un-atac-cu-bomba-in-apropiere-de-sankt-petersburg-4032749",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nvidia ar putea rămâne fără CEO. O altă aventură a lui Jensen Huang, cu o angajată, a ieșit la iveală",
+      "category": "România",
+      "published": "2026-11-12T07:13:25+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/nvidia-ar-putea-ramane-fara-ceo-o-alta-aventura-a-lui-jensen-huang-cu-o-angajata-a-iesit-la-iveala-4032755",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Valul democrat mai cucerește un bastion republican. Mississippi trimite în Congresul SUA primul senator de culoare după 145 de ani",
+      "category": "România",
+      "published": "2026-11-12T07:11:47+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/valul-democrat-mai-cucereste-un-bastion-republican-mississippi-trimite-in-congresul-sua-primul-senator-de-culoare-dupa-145-de-ani-4032717",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Emisarii lui Trump, Jared Kushner și Steve Witkoff, au sosist la Moscova pentru o întâlnire cu Putin",
       "category": "România",
       "published": "2026-11-12T07:02:55+00:00",
@@ -426,75 +651,12 @@
       "words": 0
     },
     {
-      "title": "Grindeanu anunță desființarea a cel puțin 100 de instituții și companii de stat: „I-am cerut lui Neacșu să fie fără milă”",
-      "category": "România",
-      "published": "2026-11-12T06:59:51+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/grindeanu-anunta-desfiintarea-a-cel-putin-100-de-institutii-si-companii-de-stat-i-am-cerut-lui-neacsu-sa-fie-fara-mila-4032715",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Accidentele produse de TIR-uri pot scumpi RCA pentru toți șoferii. Care este explicația",
-      "category": "România",
-      "published": "2026-11-12T06:57:13+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/accidentele-produse-de-tir-uri-pot-scumpi-rca-pentru-toti-soferii-care-este-explicatia-4032709",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Accident grav în Timiș: Un autobuz în care se aflau 29 de oameni s-a răsturnat. Opt persoane au fost transportate la spital",
-      "category": "România",
-      "published": "2026-11-12T06:53:48+00:00",
-      "url": "https://www.digi24.ro/stiri/accident-grav-in-timis-un-autobuz-in-care-se-aflau-29-de-oameni-s-a-rasturnat-opt-persoane-au-fost-transportate-la-spital-4032705",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "La Rai avvia accertamenti su Bellama' di Diaco. Il conduttore: 'La mia giornata più difficile, ma bisogna andare avanti'",
+      "title": "PRIME PAGINE | Allarme bomba, paura in seimila scuole",
       "category": "Italia",
-      "published": "2026-11-12T06:49:50+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cultura/tv/2026/11/11/la-rai-avvia-accertamenti-su-bellama-di-diaco.-il-conduttore-la-mia-giornata-piu-difficile_227263e9-89b9-4ac4-995c-60f27cad298a.html",
+      "published": "2026-11-12T06:57:33+00:00",
+      "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/12/prime-pagine-allarme-bomba-paura-in-seimila-scuole_f98a6c5e-38db-4d30-84f8-749b8c57c96a.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Si rientra in classe dopo gli allarmi nelle scuole, oggi il vertice a Palazzo Chigi: Meloni incontra le opposizioni",
-      "category": "Italia",
-      "published": "2026-11-12T06:39:44+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/si-rientra-in-classe-dopo-gli-allarmi-nelle-scuole-oggi-il-vertice-a-palazzo_cd319cf3-a1cf-4b88-b35a-77a0eaa9c9fc.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Sorin Grindeanu dă asigurări că nu vor crește taxele anul viitor. Ce spune despre indexarea pensiilor",
-      "category": "România",
-      "published": "2026-11-12T06:31:12+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/sorin-grindeanu-da-asigurari-ca-nu-vor-creste-taxele-anul-viitor-ce-spune-despre-indexarea-pensiilor-4032693",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Hegseth și membrii echipei sale au fost mustrați verbal de un soldat de gardă la Mormântul Soldatului Necunoscut",
-      "category": "România",
-      "published": "2026-11-12T06:23:01+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/hegseth-si-membrii-echipei-sale-au-fost-mustrati-verbal-de-un-soldat-de-garda-la-mormantul-soldatului-necunoscut-4032671",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Farmacii la tot pasul în orașe, niciuna în 486 de comune. Cum supraviețuiesc românii din localitățile fără acces la medicamente",
-      "category": "România",
-      "published": "2026-11-12T06:00:42+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/farmacii-la-tot-pasul-in-orase-niciuna-in-486-de-comune-cum-supravietuiesc-romanii-din-localitatile-fara-acces-la-medicamente-4032253",
-      "source": "Digi24",
-      "status": "galben",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -507,110 +669,11 @@
       "words": 0
     },
     {
-      "title": "Nicușor Dan participă la reuniunea Comunității Politice Europene, la Dublin. Agenda evenimentului",
-      "category": "România",
-      "published": "2026-11-12T05:40:22+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-participa-la-reuniunea-comunitatii-politice-europene-la-dublin-agenda-evenimentului-4032169",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "O postare a Ambasadei Finlandei din Australia a devenit virală pe Instagram și nimeni nu înțelege de ce",
-      "category": "România",
-      "published": "2026-11-12T05:40:16+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/o-postare-a-ambasadei-finlandei-din-australia-a-devenit-virala-pe-instagram-si-nimeni-nu-intelege-de-ce-4031339",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cel puțin două persoane au murit și multe altele au fost rănite, după prăbușirea unei clădiri din Brooklyn",
-      "category": "România",
-      "published": "2026-11-12T05:39:07+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/cel-putin-doua-persoane-au-murit-si-multe-altele-au-fost-ranite-dupa-prabusirea-unei-cladiri-din-brooklyn-4032651",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Imprese-sindacati, siglata l'intesa su rappresentanza e contratti",
       "category": "Italia",
       "published": "2026-11-12T05:17:57+00:00",
       "url": "https://www.ansa.it/sito/notizie/economia/2026/11/12/imprese-sindacati-siglata-lintesa-su-rappresentanza-e-contratti_393c99df-924d-49cb-9d28-29501660ca00.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Rușii fără mâini sau picioare întorși de pe front, la prezentări de modă cu bani din fondul lui Putin. Proiectul: „O nouă imagine”",
-      "category": "România",
-      "published": "2026-11-12T05:01:53+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/rusia/rusii-fara-maini-sau-picioare-intorsi-de-pe-front-la-prezentari-de-moda-cu-bani-din-fondul-lui-putin-proiectul-o-noua-imagine-4031237",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Poți primi pensie de invaliditate și indemnizație de handicap în același timp? Condițiile pentru acordarea ambelor drepturi",
-      "category": "România",
-      "published": "2026-11-12T05:00:56+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/poti-primi-pensie-de-invaliditate-si-indemnizatie-de-handicap-in-acelasi-timp-conditiile-pentru-acordarea-ambelor-drepturi-4031693",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Prințesa Kate, noi mărturisiri despre recuperarea după cancer: „Natura a fost refugiul meu”",
-      "category": "România",
-      "published": "2026-11-12T05:00:52+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/printesa-kate-noi-marturisiri-despre-recuperarea-dupa-cancer-natura-a-fost-refugiul-meu-4031453",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "„Și” vs „Sau”. NATO vrea să pună combaterea Rusiei pe primul loc și să reducă efectivele pentru misiuni în străinătate (Politico)",
-      "category": "România",
-      "published": "2026-11-12T05:00:49+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/si-vs-sau-nato-vrea-sa-puna-combaterea-rusiei-pe-primul-loc-si-sa-reduca-efectivele-pentru-misiuni-in-strainatate-politico-4031183",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ce să mănânci pentru o digestie mai bună. Gustările recomandate de specialiști și alimentele care pot provoca balonare",
-      "category": "România",
-      "published": "2026-11-12T05:00:44+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/ce-sa-mananci-pentru-o-digestie-mai-buna-gustarile-recomandate-de-specialisti-si-alimentele-care-pot-provoca-balonare-4031811",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Deși a stârnit revolta liderilor europeni, premierul Norvegiei vrea să discute din nou cu Putin la telefon",
-      "category": "România",
-      "published": "2026-11-12T05:00:39+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/desi-a-starnit-revolta-liderilor-europeni-premierul-norvegiei-vrea-sa-discute-din-nou-cu-putin-la-telefon-4031345",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Stresul, a doua mare grijă a românilor. Cum se manifestă primele semne și ce riscuri ascund acestea. „Poate nu se vede pe fața noastră”",
-      "category": "România",
-      "published": "2026-11-12T05:00:32+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/stresul-a-doua-mare-grija-a-romanilor-cum-se-manifesta-primele-semne-si-ce-riscuri-ascund-acestea-poate-nu-se-vede-pe-fata-noastra-4030375",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Lavoro, c’è l’accordo sindacati-imprese. Fumarola: “Rinnovo contratti a scadenza e recupero inflazione” - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-12T04:56:05+00:00",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOY3BLQjJDSThtRm1Zc3VaVVg5T05wejhJOGZlblNDRi00ZnVaSWVxMGd4XzBVQ0J2bEducUNNM3o3dEtycGVOeWtQeUhTXzhscEVMdllwZDE1dzgzNVBWaG9Ma1c1UE5fdVhQRTRJcUFqd1pRVkRHMERqWTJOZXpDNklKaEJVSThCMWcxU0FKZ1pPN1d6QUlON3dn?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -633,20 +696,11 @@
       "words": 0
     },
     {
-      "title": "Fincantieri, Poste e Tim. Alleanza nell’IA - Il Messaggero",
+      "title": "I big pubblici battono le imprese private: Eni, Enel e Gse prime per ricavi, Poste per occupati - la Repubblica",
       "category": "Italia",
-      "published": "2026-11-12T00:05:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOdFVDU29IVlpxZ0w3cGw4T0UxSE1EaU9fbGZUWlNiRThqbThMNTA2d2U0aFZBSDBQbnVLSWtnbEJpLW4yN2hzdHRJN255aG5COXl5enAtX0VuRDkxY3RxTDhrcVdDdHhiWUZpQ21URENPbm9IX1lhWWphMnhFSFUxaEh2RE5VRjlwQlVYSzlaaXF2a2I0VTRHNmxRQVd5enpXNUHSAaABQVVfeXFMTWkwdWNZSHZCN2pibGJzeVdzRExBeUQ1ZmQtdHo1bWFka3k3U280VGlzSUNsMm5fS2lncFRnX1VZV2h2UGNMUFU3VkZqTFE2YmhaRm1IbzBjT3gtRVk0ZVRabDVLNFNBQi1Ra2NrT0Z5enhzYUp4TXVPTGlHbWczWDVSbmRURVo1Mk9lMGtWaTBmTV9fUU1BTUtTSjBkVlZ0aQ?oc=5",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Revista românului din Italia – Pagina 1776 - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-11T23:17:57+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE41UXVxR2NGQ2lWemhFX3RnS0czTmRvdXpSZkNDUWlockZLQ2JIVHBtRlNJT0o1MGlWcDhHWlJ4eWE0N1BSTlZfUQ?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
+      "published": "2026-11-12T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOMnFYWlFEZS1rQlZaUXlMY0dpR2Q0SmFsZ3JIRUZtOHlBRnUyRXhrcm9MQmxBYzFreXFId1dKek5oZW92RUoxZTNXUUdONGtjNUVpRVVPNjZXSVpFdUo4aXJINDBjbWNKeXJGbGJFY3IwQVNXSXR0emVaNFI3R0FSSFdGVVQ3ZzJtMF9EN3QwZ0ZPYUt4Y1IySTdkWTc2ajh0bHFPZ0FCTnJNeTgtd0pwVzR0NV9PclJVMmx4ZE5wb3Y5SElPZy1GdDJiNWVUWm5jMlhHS1ZFOEJsVDQwdmZLZUJIeldCdjFCQ3c?oc=5",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -705,15 +759,6 @@
       "words": 0
     },
     {
-      "title": "L'ora di Hegseth rinviata a gennaio, Trump esulta",
-      "category": "Italia",
-      "published": "2026-11-11T19:17:10+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/11/la-camera-usa-boccia-la-procedura-di-impeachment-per-hegseth_2979584a-b939-48f3-bb33-2ca237fbebf5.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Mihaela, răpusă de o boală cruntă în Italia la numai 42 de ani. Lasă în urma sa o fetiță - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-11T18:28:29+00:00",
@@ -745,24 +790,6 @@
       "category": "Italia",
       "published": "2026-11-11T17:30:29+00:00",
       "url": "https://www.ansa.it/sito/videogallery/italia/2026/11/11/allarme-bomba-nelle-scuole-italiane-evacuazioni-a-roma-milano-liguria-e-venezia_7aa42fc1-bbfb-4057-a24a-320286389ef8.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Snam: “La domanda di gas continua a crescere”. Raggiunto l’obiettivo del 90% sugli stoccaggi - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-11T15:42:16+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNEd0YVBOT0FsdDExTngtVkFiSTZLLWUzY0NvMkpKdFktM0ctWm5iQmw5WGJDQlVFeWp4ZHBxNE9Ec1p0YUtaUXdPeHJBcmc5VVRTWk94SDZ6SGhyMjlEN25ubWw3Yl9wSmNsLWttYnN2eGxfM0VTeUpzOWRFWUdQMXpvX0tNSWRGLW1GZi14Ync2dzEyZHk3em45OTNid0s5am5UY3NzTVprZG1XQ19pTEt3?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tridico (M5s), 'la manovra porterà l'Italia in stagflazione' - ANSA",
-      "category": "Italia",
-      "published": "2026-11-11T15:26:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPb3NSb1h1ZnY4WlVLZC1waUR6QXlwQXlVSGRNanc2WnVBNEwtSEtTSGl2OGZsYllMVFBxRzJfbGxudldwRjM2dEJPSXNkTl9tMjVnUU1rdXJsbWhSS1pQb2tseDdFTjRHaHhLTkVqbWd0TlpiR084Y3ZGS2hHYmQybkJBVFhkYVJMWTZjT01pVFc3dFh3MVh2N2ZyQnpJNjBvRnctdXFvSFI1Mld2WUs2cGZJWGQ0UWE2VWUzTkRYbEI3c3BxTlJFUU9TX0E1V1dtclBUeU5zWU8wd19qa0hJNVYtbUdSRUhUSjZ0MG56UDZkZ0XSAfgBQVVfeXFMTUw2MXk0M1g2YTFnMm1ENGdKakJYNldZNTN5dlJYRGpNQUhRRmc5Zl9scWdPaWZtbnRhM01DVEhRZ0w3eDNIbnluWXBsRzUtLTRPeHlLX0xEUkJoT3o3VEJ",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
@@ -813,11 +840,11 @@
       "words": 0
     },
     {
-      "title": "Il Papa con i familiari dei desaparecidos, ferita aperta in Argentina",
+      "title": "La moto vale 35 miliardi di euro in Europa. l'Italia è protagonista, ma il futuro è una sfida - Moto.it",
       "category": "Italia",
-      "published": "2026-11-11T13:54:20+00:00",
-      "url": "https://www.ansa.it/sito/podcast/in_diretta_dal_mondo/2026/11/11/il-papa-con-i-familiari-dei-desaparecidos-ferita-aperta-in-argentina_5c8c27fc-40dc-4555-8c8d-d4da65b32d87.html",
-      "source": "ANSA",
+      "published": "2026-11-11T14:27:58+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPTTl3MndsUC15VFpEZUFVNjlfWUc0Mks5Z3VtYmQ0NVRGbTB4ZTRVLURra3NMd08wZm5TV25mcFJNQUJqU0R4aHFhVXU4VTR2UmFTSVR5RnZ6TklvcVpQZzFKdUJac2Vpc0gzVlY0ZmtGX0FQUHJtc3BWTU1vakdId01xeVlHR0ZnTUI1elRoQ0tlVW9RMG1TNW9yY0FwY2JDajdYOHJ1ejRKbGdqMFNrRlhKWEtDMnpzNnRHaU9n?oc=5",
+      "source": "Moto.it",
       "status": "roșu",
       "words": 0
     },
@@ -845,15 +872,6 @@
       "published": "2026-11-11T12:29:43+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPX0o1OWgxTXZCRDYzU3FPMnMwbVU3WXliRTBiby1jS1lKeUVqN3JzUmhlVTVFdW5adDN4amktaThKa0xYczAxaEVkbFpEQkIxTzA3OHhuc1JQMXE4Wm1sV2ZQQ2lCZkpmNndxaFN0VDd0MHRFMDktb0xnc0hra1IxRmJ2WVlVa3lVMXFHbnMzaUtjcklhNHFyUXhrNnJBbFdxejdwcl9iLU9hNVg1eWlJUVhOLXpuVlRNcGdzN1c3RFU?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Treviso D’Autore – Le Rotte. La Sfida Globale: 14 e 15 novembre all’Auditorium Santa Caterina - Adnkronos",
-      "category": "Italia",
-      "published": "2026-11-11T12:12:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMURuSTBzamxRWDhkTGxjWkgxUlp1TW5RdE9kQmdWN2NMVEo5SWdHSDlPQ0ZNazZSTWktTUg3SFdQbkptWThrS1VtdTdDQnExcG01SldYYzlSN2Jfd3RhYkwtdVpaS0xFei1SRkNRNlJuQXNXSHZnaS15ejFXWTNQWXBtd3VzX2dxX3EybERoYlNMSHg1WkY3MDlySDQwSW5nT083WDVUQXpOQjFIeFU2akNlTmxVUmsw?oc=5",
-      "source": "Adnkronos",
       "status": "roșu",
       "words": 0
     },
@@ -921,29 +939,11 @@
       "words": 0
     },
     {
-      "title": "La morte di Domenico, indagati due sanitari dell'ospedale di Bolzano",
-      "category": "Italia",
-      "published": "2026-11-11T10:21:43+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/la-morte-di-domenico-indagati-due-sanitari-dellospedale-di-bolzano_d79d9729-4fd3-435f-a4ab-a1d62c74d8e0.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Manovra, Giorgetti: cuore misure dirette a incentivare lavoro, specialmente quello giovanile - la Repubblica",
       "category": "Italia",
       "published": "2026-11-11T10:08:19+00:00",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOeGJfTWtPZlNHZWxuZGFoUnI2bk1HNWhJeFREWnhtVzl0OUREX2tvbUVHVkpxUjlncVFUZm90NUxyUlNxZ3NVSW9nWnlRSWZjZXZ3RVdlZGtvWTFubHhpd25EajRjbFdOSFlFZUc2cHV1U0d2YjVwbTdTVGNlT0ZhQXdrWWN4Q2RHVmFKTGJTbFZhVy1fbnpORDNZZGotZGw0cFVZQkQ1V3ZhR3JaaHJoVFBFZzZVUnhoR2NYN3R3Q1VXUmpHcHhPNV9HU1pJOGRod3c0d2g5Ty1ybW90dkE?oc=5",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Jaf în stil militar pe o autostradă din Italia: Hoții au detonat un vehicul blindat și au dat foc... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-11T07:10:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxORDk5NUZyeko2QndQaTgyRWlvVlg3emJqUkxOS3NUc1BIS2V4bnBvc0wzM1ZDU3N3MGx5M3BISFBLVkVKM3Q5TmIxbDJBMnlodFRDSXJORUV2RlBIOExBcDNIZ1ZIU2I0dEhSb0szbUpOWkhkRTB6TWEzWG04ZGh3VE9BV1E1d3BCeHA5a2l1MFZvZEJWYkdXNThpaHE5dHlNQmNtQm9ZdU9FTTdJNzVTLVhEQXFaTWktZEhaMkxhdHR3b2xBV0tjOWI4ZXRlX0xTMlpoX09SeGcwenhwanJZampPY21LYzR1QjBReFAyYXpScjh0ekRNNkZtMUUzdkRaSjQw0gGIAkFVX3lxTE13Q3l4bHpJTXQ5VTE0N3JIcFdpT2ppNnhwcHFPMXR2VVpkNVVPaDBiZHAwZzFZQ3QwZ1ppclhtSzhZeDZEWTA3ZlJvdGMxQ3h",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -971,6 +971,15 @@
       "published": "2026-11-11T04:05:37+00:00",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPS2N2OHVscUg5YWxxcmlLS19mTm0tVTRFeVlWeUxQQkZNYkpLYkVCZWVBczZvNTV0b0w0M2VRVk5NT3hQRFJxTWFJekp5N0dRZWpEYV90S1NIdjctLXQ3NUlpQmcwc29WM3UyT3BJVnc2azZycmk5MGJuaUx6RXpRQzJSMkx0RXdrMklFNE5mNXdPZw?oc=5",
       "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Medicii, asistentele și rezidenții din Italia ies în stradă. Vor protesta în capitală și în alte... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-10T21:08:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNek8yMEk1Rkt4WktuZldaWTFlUjdqQkdwenpMRlVLNDNsRDh1VGVHVWxuQVRUVjdBQmFkeklELTBvbkNhLU9OM1FCbDRxZFRlb1g3alVkemxaelRqRG9YWVVjWEIybDM1Mm1tdTNqZVpoNFJJb1I2UkdlYlMydENraTdLRGVYMVc1bUtaZG5DY2U0SmV4V0NoRmhvRGh2MG54UWN5YkpLZ3UxUUNCTVQ2UE0xLW9EaVdkNmg3Y0tlbW1mMHoyZ3QyOUlkLXN0bW12dWFhNVQ3dmzSAd4BQVVfeXFMUFpIVGN6N2ZpOElac3hUdU5qRTQ4eHZ6dXFTb1FhbjVNMnA2eUdnWmpESjBXOW8xZGgtcVo0a2tGa00yMDFkTVV4dW5LcF9lS0pydzE5UU14N1VXU25aQzJjUF9KUEUxVnV3Mm5abGltN09TS3JKYlVaMHJ",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1011,6 +1020,15 @@
       "words": 0
     },
     {
+      "title": "RENAR, conferință națională de Ziua Mondială a Calității: Cum contribuie acreditarea la siguranța produselor și protecția consumatorilor - Oficiul de Știri",
+      "category": "România",
+      "published": "2026-11-10T19:14:40+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQcnBSeFdwcFFjRmJLTjk0bThiNWNOMmJRRjBsM3RiZlJadGJIbnlEYW51QkRrcFZfUHdwS2pjWVZqTU5ESS03d1h0cllJQm0yMm5RbzlLOTVPOFlRamJkWXhTeC1XTnBaUnUtUnlnYU9QQXBaM3pIenh2eXlMVHdaVS04V19SeEdWVHdPWXZKRWpRVnQ3UmNaRmJmeF9nYnRLYkJlR25zTkFfQXhyYU1IZGE3UWRuQTJnMGkxMWpqUTFaUTk0VXgtYThWTGwyQ1hOYm9mVlF0Q0tQSFRWYXZwMEtGWEhJMm1qU09HQzNyMkRmdw?oc=5",
+      "source": "Oficiul de Știri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Doi români, arestați în Austria după o serie de nouă spargeri pe șantiere. Prejudiciul depășește... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-10T18:30:00+00:00",
@@ -1047,29 +1065,11 @@
       "words": 0
     },
     {
-      "title": "Pompei, aperture notturne fino a metà marzo per la Villa dei Misteri",
-      "category": "Italia",
-      "published": "2026-11-10T16:39:53+00:00",
-      "url": "https://www.ansa.it/canale_viaggi/regione/campania/2026/11/10/pompei-aperture-notturne-fino-a-meta-marzo-per-la-villa-dei-misteri_e49efc2c-e04e-446a-b788-5b13da76842c.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Fiica unui român a cerut ajutorul carabinierilor în Italia. Tatăl ei este acuzat de abuzuri sexuale asupra sa și a surorii vitrege - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-10T15:50:11+00:00",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPSXFvRU1tbnJRcUZWWWF6c3RTc1BqcjZ0cUlybGw2TEdWRGI2WmxNZW1OR2Y1dl8yWjJodTdBbjVGU1BEX1R6bXBvZEVzZFZlNjc5M3BzQUFITUVFTEhvV1pVZUZIbk9IQlhSZGE4UHJpUWVSTnNhWVZqaVd2a1BGMXUxMzNmUy1QNnptWTEtZTVaTFBHT181Q3ZTOUllNFNSeFFCaW1pNWJmTDdKcWVpWGY3bndwUUNHRUNod2xNT05QT0d0TUdoNC1wczBxWUxILTNyaGtka3dFcjI2bWhVdDJPWDhrbUVu?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "“Banca d’Italia promuove l’Umbria: è il risultato del lavoro di questi anni” - Assemblea Legislativa | Regione Umbria",
-      "category": "Italia",
-      "published": "2026-11-10T13:44:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQdGcwaWk2R1FmaGZOUkd3eUE3SzBnRGREeFpUemNEZDRWTzA1ZG1NZUtHbkhUejZTTXdyNVpWQUhPaXd0cXZwbUhiTG1ROW5ZSWw5Q2lXc2g5YmJJV19oUy1rYm9rUzlMUmRBbEVKajRSWkxVelY4d3BoYjZOcEZHTEpRMWVTcWxzNUN3WG1mYWI2QjhqLWNhSFh2LVFWNGt2MUV3emhpOWd1QWd1UnJDcE5JNkwwM19IcEhWLWVlQmtkV19qS0c3WUdGZDdUUQ?oc=5",
-      "source": "Assemblea Legislativa | Regione Umbria",
       "status": "roșu",
       "words": 0
     },
@@ -1106,24 +1106,6 @@
       "published": "2026-11-10T10:42:43+00:00",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZGNMdXdLYnhjZ2lkdGJJLWpaTnVtQzFyXzdPMjFQYmRRQXp6SnRRSDBMdEZmTkEyalp5bFU1SUhMamNvb0F2MEkwYmxxS0Nrc1plT0UycDNveE4xTUFDVmQtVEdTYnc5TFJSanh1cVMtNER0ZkNhWjJSM3RBTUlDM0NmQXhJT0VkTEhMQTFNUGVFNHg1LXBqQlFBa1dmeVAwOEE?oc=5",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Fost parlamentar român, amendat după imaginile postate de soţia sa, pe malul mării, la Eforie - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-10T08:54:16+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNTzlSRGhUYjR5Zmpra0hBLUZweWJibzliNXl0RkFWZW04cUJkNnlaM0w1MWJ0NmoyRWUzSlBiQW52cl9FX3hGcU80c3lJd2Q4Z3J1OVpsZVlhTWVqdDlPTE9JblQxb0U1MUthRXlIQ3o3REF5dDBuYXRzSFZrVnN4RXRiT0tOXzl6RWFNNVVZNUlIdTdJZnIyaGg5NUpuSG5WaXVIdVAtbGttM05QWGZrSTZlZWRfVGFyTUpUY1NoMnhlNDNkR1ZGREN2OGl5Q1dqRmZzWdIB1AFBVV95cUxNTzlSRGhUYjR5Zmpra0hBLUZweWJibzliNXl0RkFWZW04cUJkNnlaM0w1MWJ0NmoyRWUzSlBiQW52cl9FX3hGcU80c3lJd2Q4Z3J1OVpsZVlhTWVqdDlPTE9JblQxb0U1MUthRXlIQ3o3REF5dDBuYXRzSFZrVnN",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Un muncitor român a murit electrocutat pe o schelă în Italia. Procurorii au trimis în judecată trei... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-10T07:10:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNVkY1SnBYa2FscHo4bWZPZHBTTDE1TldIUHFyZ1plNzhUUXdZRXhXcmM2TmxaNTJOdzN0OUZZM04tU3JVdHVGTW5YUjhCWV9RRlVlamhYTTdOb2xsTlhsa3pmZ0k2T0VXSWFHazJvZ18xS2p5UEZLcXBzUE5uNUpsMnNTblNMYkxPQnhsY3pCaUJKMlhRY2U5S1pXendRZ29adG5BemlfbjMtd2VFeHdmOUtOdWcxY2N2T1pqcjRBV2ZnOWJhRjNBa2tvZHZWZllUX2ViOGpfMW92akphcEtSVG9xTEVkclo1cGpOWjc1SGU1ZnhTMVVyaVRKTdIBgAJBVV95cUxObnAxQ1ZpeW9RbU5aSjFrTUhrVnNVNTB6b3NvdFhFZXJFYnFzOU1RT3RzWFRDVk14MlZkcE1SeHZoMjcyeDhXTWFZdzZBSXJkU0l5cEhZUHQ",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     }
@@ -1174,15 +1156,15 @@
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "Pompei, aperture notturne fino a metà marzo per la Villa dei Misteri",
-      "category": "Italia",
-      "published": "2026-11-10T16:39:53+00:00",
-      "url": "https://www.ansa.it/canale_viaggi/regione/campania/2026/11/10/pompei-aperture-notturne-fino-a-meta-marzo-per-la-villa-dei-misteri_e49efc2c-e04e-446a-b788-5b13da76842c.html",
-      "source": "ANSA",
+      "title": "Burse pentru 27 de elevi din Oradea și Bihor, printr-un proiect susținut de binefăcători din Italia și România - Observatorul Bihorean",
+      "category": "Diaspora",
+      "published": "2026-11-11T05:06:25+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOZmpPVzREem9LcHBXVnhkekV4OHRVNDk4RUZKVGFzMVhGeERKQkhRb2ZmOEtLclFacF9rTWJEcFVEdGFHcXhRalY3T3hKcDdab1QxNzBiYWw2enE3dlhnSGJ1aDJQU0E3TTNJbDlQNHh5T3VUcGJTYlZkSkdNQUxjY1JKR2RRSDJVSGxTdWRlVTN3Y0pkM0tqVFhQaU9NSHlJMHc1MHhlSDkxQ2JzM2thNHlyekUwNFQ3N2RFWVAxU29iRWV0WnZPSTRQTlhjS2Fnb3ctR0EzZ2dsQQ?oc=5",
+      "source": "Observatorul Bihorean",
       "status": "galben",
-      "words": 0,
-      "intro": "Visite ed eventi al costo di 5 euro con presentazione libri, musica, storia e degustazioni",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+      "words": 20,
+      "intro": "Burse pentru 27 de elevi din Oradea și Bihor, printr-un proiect susținut de binefăcători din Italia și România Observatorul Bihorean",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
 }
