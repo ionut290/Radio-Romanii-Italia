@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-12T22:47:16.787700+00:00",
+  "news_updated_at": "2026-11-12T23:04:22.953749+00:00",
   "editorial_updated_at": "2026-11-12T19:50:25.125368+01:00",
   "translations_updated_at": "2026-11-12T18:36:58.457425+00:00",
   "feed_total": 75,
-  "feed_extended_400": 0,
-  "feed_missing_body": 75,
+  "feed_extended_400": 1,
+  "feed_missing_body": 74,
   "feed_short_body": 0,
   "editorial_total": 17,
   "archived_editorials": 242,
   "translation_records": 35,
   "pending_total": 39,
   "pending_filtered_out": 35,
-  "editorial_verde": 1,
-  "editorial_galben": 40,
+  "editorial_verde": 2,
+  "editorial_galben": 39,
   "editorial_rosu": 50,
   "pending": [
     {
@@ -422,8 +422,8 @@
       "published": "2026-11-12T22:18:45+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/contrabanda-cu-petrol-rusesc-prin-portul-constanta-anchetata-de-diicot-66-000-de-tone-ar-fi-fost-aduse-in-romania-cu-acte-false-4033477",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 477
     },
     {
       "title": "Știri Jurnalul din 13 Noiembrie 2026 - Jurnalul",
@@ -903,15 +903,6 @@
       "words": 0
     },
     {
-      "title": "Aprire la partita Iva online in pochi click e senza commercialista: nuova piattaforma in arrivo - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-12T04:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOR2RCVzBaQ2Y1Z3BPX1d0NDE2WnlJR2Joc05YY2g3ZkE1ZXpNRFo3SU16eUROM19fcXhRVmFJYWcwU2NNTzJQMjVrcEZVbkJrMFlrdGVWbGlYRkZnSFVURGw4MEhpbS1jN1M3ZnNzVGcyMEEzOGsxamUzNmxtdTJRVVVlX0RsTmVPbHVkZEVJMEFlUnZMcGJDNmd6eGtaeUlfR2ZFX2pocDEzbW52dTI4V0YtOUdhV0pwR0g0c2hReFJoR0p3Y3dwQXNnOGRNYnhJSUFEbnNoRy16bUFiLUJV?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Revista românului din Italia – Pagina 1776 - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-11T23:17:57+00:00",
@@ -1081,6 +1072,15 @@
       "source": "Il Resto del Carlino",
       "status": "roșu",
       "words": 0
+    },
+    {
+      "title": "D’Alascio: \"La sicurezza nei luoghi di lavoro deve essere una responsabilità di tutti\" - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-11T04:05:37+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPS2N2OHVscUg5YWxxcmlLS19mTm0tVTRFeVlWeUxQQkZNYkpLYkVCZWVBczZvNTV0b0w0M2VRVk5NT3hQRFJxTWFJekp5N0dRZWpEYV90S1NIdjctLXQ3NUlpQmcwc29WM3UyT3BJVnc2azZycmk5MGJuaUx6RXpRQzJSMkx0RXdrMklFNE5mNXdPZw?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
     }
   ],
   "radio_briefs": [
@@ -1093,6 +1093,17 @@
       "status": "verde",
       "words": 416,
       "intro": "Consiliul Local Iași a votat constituirea municipiului ca parte civilă; acuzațiile DNA și apărarea primarului Mihai Chirica rămân distincte.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
+      "title": "Contrabandă cu petrol prin Portul Constanța, anchetată de DIICOT. Fostul director comercial al Oil Terminal a fost reținut",
+      "category": "România",
+      "published": "2026-11-12T22:18:45+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/contrabanda-cu-petrol-rusesc-prin-portul-constanta-anchetata-de-diicot-66-000-de-tone-ar-fi-fost-aduse-in-romania-cu-acte-false-4033477",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 477,
+      "intro": "Aproximativ 66.000 de tone de petrol ar fi fost introduse în România prin Portul Constanța, folosind documente false, într-o schemă de contrabandă și fraudă fiscală cu un prejudiciu estimat la aproape 80 de milioane de lei, potrivit informațiilor Digi24.",
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
@@ -1126,17 +1137,6 @@
       "status": "galben",
       "words": 20,
       "intro": "Burse pentru 27 de elevi din Oradea și Bihor, printr-un proiect susținut de binefăcători din Italia și România Observatorul Bihorean",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "„Tata mă violează”. Un român acuzat de abuz sexual în Italia, denunțat chiar de fiica… - Mediafax",
-      "category": "Diaspora",
-      "published": "2026-11-11T07:54:56+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbExHUVBtbEJsU1Etc1Y4ZXZycTItaElBd0dTbHNZSUI1S0phcU5zYThOdU8tLWVtcUdORG9oWlBhS0Q4eG1lR09kNzRxbEtodGFZa1RrZTFHWFl3NUxaa2xydW4xZncwSTV2cnRoc29DQkFDdXdHNnNqckRtVDhIZUUzekhqTUR3NVE4bW15cnpXQzBmaUJSSjVXNEw2aUwtVjdud3FzRmFjcEJCVUZMbTJIaElNSW130gG-AUFVX3lxTE9jNTFnRkZCbmdWblprZFAtdklDakR0N3paa0MzV1NlREtvQWNiVGZaUnpnbURrdWJWeHIxd0tPbnFDUzItc0gxdWQ1bzdSQXRlNWtTaVBEZTFNb0lJOXRsSm8xY3RHWnF0UkRqMGRPaGdzZXRzM1hmNEUxUndGQlF0YVNSc2NWVk5PamU2RkFDMHZ0d0p5dXVGcm9",
-      "source": "Mediafax",
-      "status": "galben",
-      "words": 16,
-      "intro": "„Tata mă violează”.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
