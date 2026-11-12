@@ -1,12 +1,82 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-12T15:50:46.025895Z",
+  "updated_at": "2026-11-12T17:00:41.380230Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-c3461a5031f3b44c",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Taiwan welcomes G7’s stance on Strait",
+      "summary": "",
+      "source": "Taipei Times",
+      "published": "2026-11-12T16:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBhcUpQeWgtdTV0MERseURkc2ZUVExTOG9CZ1hnVHRuVlhKR093OWNSN2g2RG9TYnJwaXE5ZlFPdHk4TzM2azhuWDNGTVZDRlo4QnFaOUl0X3NhN3FPTVA3QnBDODdNT2R0T3c4cmNuaDlreThmNVRGNA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Taiwan salută poziția G7 cu privire la Strâmtoarea",
+      "title_it": "Taiwan accoglie con favore la posizione del G7 sullo Stretto",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-136da54fd99b3a4b",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "53 countries, organizations urge Israel to allow rapid humanitarian access to Gaza",
+      "summary": "",
+      "source": "Middle East Monitor",
+      "published": "2026-11-12T15:57:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTjFwaHQwQzFvekxTTWlnU0g5bEpJN1M5dlM3Zjg3dTU0cE9oak9EOW4wLUZkbDdZcXBrX0xCOU5Cb0hiTy1NSHVxTEJET1BpYzRKS1U3QnhwSzlnU19xcTJRZDQ5WXk5YnZuOFdHUWZjYVMtSlVmcW00aHpZSS1RNzYxMlp0NEFHcWFkRW52Z1NqeEVIc2hoMFdTanZIQ0lsWWp1MEZhYXhINzRMSDVFcUlvb3d4WG5MaUdUYkpUSWROQlXSAcgBQVVfeXFMTzF2bE05ZzhTLWdCWnVHb0g2b3lZc0JYQllEV2hSdEVnNE9hemZ2Y3YxU2tKUzlzN2hSdmFjZl9FZ0w4bE8wVjNVMmJsZlBtd1MwN1BnMWdGeGYzOXV6bHNpU01Jb0pBM1Q1Qy0wM2lpVERDR2pSUF84MXlqTnRITTl1S2JGUzNZZ2RtOG51WWVFLU4xbVZweG4tSmFwS01MMlpXX0REVVFiUkhYVTU2TzFzQnhYS3JmYzJ2eG04ZlZzZ1BGaTZOQmo?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "53 de țări, organizații îndeamnă Israelul să permită accesul umanitar rapid în Gaza",
+      "title_it": "In 53 paesi, le organizzazioni sollecitano Israele a consentire un rapido accesso umanitario a Gaza",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-71a16b69352e5e60",
+      "category": "securitate",
+      "region": "asia",
+      "title": "India, Japan Key To Indo-Pacific Stability Amid Shifting US Priorities: Report",
+      "summary": "",
+      "source": "Ommcom News",
+      "published": "2026-11-12T15:54:09Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZTZibXl1cXZvWUhnaGtPM1VqSW5Zc2IxVjRQSzAxeTMtLW9Wb1dVTWtUX3pfcmZBemtiTVUwVDVkOWRqcTNNdWJsZWxUNFczZEJLUWJuX29nVU1DRGdwTzVzcjZrdENPa242Nzg1TFhSVlljWGNTVm91QjNxcmNpX0xjY2lnZ2dHS0tyS1hPcU4wUjB4SWdXZ1FHOE1FbHlvamdiWmFReElGX1U3RmNjcw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "India, Japonia, cheia stabilității indo-pacifice pe fondul schimbărilor priorităților SUA: raport",
+      "title_it": "India e Giappone sono fondamentali per la stabilità dell’Indo-Pacifico nel contesto del cambiamento delle priorità degli Stati Uniti: rapporto",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-3f7963a4e8d96b38",
+      "category": "europa",
+      "region": "europa",
+      "title": "Bruxelles-ul și Canberra au semnat intrarea Australiei în programul Orizont Europa",
+      "summary": "",
+      "source": "Agerpres",
+      "published": "2026-11-12T15:09:35Z",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPZ0ZlMXpKZ2dqM1gtQnZyMS0tN1NyOTVTY3BFMDVtNTlaUFJRaDE5cG1JMko2aFRBdkozb2NUU3ctaG00X2NUYkp0SHBuN3hsY0d5b2NWLUpHaXNqQlZkX0ROdy1YNF92LUtnMVlZNHJhaVhXMzNwaWVGNTdTTGZjbFFYZXlTbVdDWGlEOHJUb0IzVTk2RnB3cGVvZnZwNTdDRlJSTUxYVkxQOVp6b1MwWGpNaHJ4NXFQdzhKakZ4VXNCc2QzS0x1bzA0OXU0eW8ySlg4?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Bruxelles-ul și Canberra au semnat intrarea Australiei în programul Orizont Europa",
+      "title_it": "Bruxelles e Canberra hanno firmato l’ingresso dell’Australia nel programma Horizon Europe",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-5d4f3a76080df2f5",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "FIU experts available to discuss G20 Miami 2026 priorities and global issues",
+      "summary": "",
+      "source": "Florida International University",
+      "published": "2026-11-12T15:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWmY0OGdnc1Nvb2VDdnZoamdyaXEzVTNFczJueF85VnM2bzliekE5ZGkwQU1qTEZXcmdNOXJVSkpTZ0RnenpucVA4b1Y4OXJwVmNJcDhaa2hSQ1NlTE5YUk82M19jNjRpZlJFRk1KQ0FScmFaakN5eWY3RDJvdWJNQ3hpOFpRcWpXOEhoR1JQYVNmUWtCN0Qtc1FSYUowYlc4dUY3TQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Experți FIU disponibili pentru a discuta despre prioritățile G20 Miami 2026 și problemele globale",
+      "title_it": "Esperti della UIF disponibili per discutere le priorità del G20 Miami 2026 e le questioni globali",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-ef71d445def28f1b",
       "category": "europa",
@@ -16,7 +86,38 @@
       "source": "Eunews",
       "published": "2026-11-12T14:51:23Z",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOT0l0enpRNFJoTFZrMXpVVzhycVgtbkQ3RTBWTGN6ZmZwRE9PcldPWWs2LUFBekRxSFg3WkFXalJtMnJoSDFsTnVoc1VfSGpFajV5U2R0T3VGTDMwVGJocEpLTjhCNktsb1RIUkVFRTF5V0Q3Yk81UHRqZWlFVW1GQmVJYzVRSTM4ZW9qekI5azB1djExRG9zUVViTXNCTk1IU015QVZTQ25XcXZPVk5NNGFQMms2d1VNUFFQR09ZOGFVZ1FqSTUzcQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Comunitatea politică europeană caută unitate în Ucraina, dar Putin și Trump rămân problemele",
+      "title_it": "La comunità politica europea alla ricerca dell'unità sull'Ucraina, ma restano i nodi Putin e Trump",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-3eb2d12d8886c3cf",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Japan Weighs Nuclear Submarines as China Extends Its Pacific Reach",
+      "summary": "",
+      "source": "Defence Security Asia",
+      "published": "2026-11-12T14:27:15Z",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOM1MxOG5RTG1tZ1JFYW5yaVN5RVlMTXFMaEdCQUNaeXJ5ZUZpbDlQWVdicnZEVU9zMnVURDVjWUFuMjc1bE16ek54YXlSQS1FcjhyS25fY21VWkgxMlkzMzkxWGNONXBUTmJqOFc1NzBsZk9OR1BBaUFTWkdvOFIxRl9PQVNQelRxY3c?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Japonia cântărește submarine nucleare în timp ce China își extinde aria Pacificului",
+      "title_it": "Il Giappone pesa i sottomarini nucleari mentre la Cina estende la sua portata nel Pacifico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4c3fa24974af19ed",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Trump Envoys Witkoff and Kushner Meet With Putin in Moscow for Ukraine Talks",
+      "summary": "",
+      "source": "Time Magazine",
+      "published": "2026-11-12T14:22:12Z",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQWkxWdzRaWWZjX1dBSm1fRzl3dXNsbFExTHRra1haVS1OWUl2T0JrMUhQbGJiNHpSMUlXd0JKanV1cjgxclBWSXRYRm1lTTVjMWdnZ3VtRVpzNUJmNW9uZ1dpN2RYS3BaamEwYVowcTB4MjQwcUJodFVudWttRjFmZ0p2Um5abjI4dTk4THV0T3h3U1RXSXFjSU1NWC1wbE9l?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trimișii lui Trump Witkoff și Kushner se întâlnesc cu Putin la Moscova pentru discuțiile cu Ucraina",
+      "title_it": "Gli inviati di Trump Witkoff e Kushner incontrano Putin a Mosca per i colloqui con l'Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-23da879f0e805521",
@@ -33,15 +134,74 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-aedf161f2b9672c5",
+      "id": "geo-19b3d1c7eef9f8a9",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "China slams Chile-Belgium High Seas Treaty bid, pushes rival Xiamen proposal",
+      "summary": "",
+      "source": "South China Morning Post",
+      "published": "2026-11-12T13:47:50Z",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOb1hJZHY3Sm9hQTRSaW5mNTJtZ0laNnZDUTZrU0VwNGJNbmd1VEJxSm4wbnZzdU9NcmdHSnVIRkt3b2xWOXdseTFaaGo0cktqMmlvVW5UQU5paG9RQmY4aUdiZncwTjJ4RFBxTmluWUI5U0VJTjBpXzI0Vy1tTmxaLVE2a1ZPSGEyMzBkTFppLUtjMXBMQl90R1lZS01mNEZiOWpHQUxEd0xxZHFpYnEtb3FSMVlaMUdZNmdIc1FYeXRUQ05jMFBSRFBheVBNbXZ3R3dRQVVmZnhhcTjSAdsBQVVfeXFMTm9YSWR2N0pvYUE0UmluZjUybWdJWjZ2Q1E2a1NFcDRiTW5ndVRCcUpuMG52c3VPTXJnR0p1SEZLd29sVjl3bHkxWmhqNHJLajJpb1VuVEFOaWhvUUJmOGlHYmZ3ME4yeERQcU5pbllCOVNFSU4waV8yNFctbU5sWi1RNmtWT0hhMjMwZExaaS1LYzFwTEJfdEdZWUtNZjRGYjlqR0FMRHdMcWRxaWJxLW9xUjFZWjFHWTZnSHNRWHl0VENOYzBQUkRQYXlQTW12d0d3UUFVZmZ4YXE4?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "China respinge oferta Chile-Belgia pentru Tratatul Mării Libere, respinge propunerea rivalei Xiamen",
+      "title_it": "La Cina respinge la proposta del Trattato d’alto mare tra Cile e Belgio e spinge la proposta rivale di Xiamen",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-cebcd967b78e70f9",
+      "category": "europa",
+      "region": "europa",
+      "title": "UE ia în considerare o îmbunătățire semnificativă a relațiilor cu Siria pentru a contracara influența rusă",
+      "summary": "",
+      "source": "Digi24",
+      "published": "2026-11-12T13:21:16Z",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQNnpPNHdIc0EyZTNzaWppMDRGc3RiVElnLXhTY041Vkw1TktOcVdZbWtfSV9MVmF2dDZSU29KTV8tZC1OZUJSc2ZPUnRJVzFyaEIyZzNQZDZ5Qllra2l4UDVWaW5tQ0o1cEFoelVFVHNxcnR2em1faFVFVWQ4ZnNnMFo5ZGFrMF9EdFkxQ1M5RFZkRERwRTN5YktUa1Y3eFJEX2hrbzl2TG1LdTBDOGlkVVBOc3plNm1vTDFqczhJelAySnotZG0xUDhTN0psYzB0ckRKR08wOVNneDZ6cUp0dG1JUVBsSkR6SGpVclBZa9IB7wFBVV95cUxQNnpPNHdIc0EyZTNzaWppMDRGc3RiVElnLXhTY041Vkw1TktOcVdZbWtfSV9MVmF2dDZSU29KTV8tZC1OZUJSc2ZPUnRJVzFyaEIyZzNQZDZ5Qllra2l4UDVWaW5tQ0o1cEFoelVFVHNxcnR2em1faFVFVWQ4ZnNnMFo5ZGFrMF9EdFkxQ1M5RFZkRERwRTN5YktUa1Y3eFJEX2hrbzl2TG1LdTBDOGlkVVBOc3plNm1vTDFqczhJelAySnotZG0xUDhTN0psYzB0ckRKR08wOVNneDZ6cUp0dG1JUVBsSkR6SGpVclBZaw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE ia în considerare o îmbunătățire semnificativă a relațiilor cu Siria pentru a contracara influența rusă",
+      "title_it": "L’UE sta valutando un significativo miglioramento delle relazioni con la Siria per contrastare l’influenza russa",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-44ec0007c0a7b690",
+      "category": "europa",
+      "region": "europa",
+      "title": "Mai multe orașe europene cer interzicerea filtrelor de țigări: „Nu fac fumatul mai puțin nociv și poluează mediul”",
+      "summary": "",
+      "source": "Stirile ProTV",
+      "published": "2026-11-12T13:08:24Z",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPdlB3V09UZ2poS3hzN1lMeEVacXB6VDFmSER3eWlfZDJWNUJfYnlub0FzWUw3LVpCUDREcE8xX3pvZ3Fzd2JxdTF0SVlYOXdwVWRFRVNQWmVPZUVDWDd5aE5PNnp0a2NYVl9TOUdkRUpzeE1HSGEtaWZwM0dtOHNqQmxUVWdWblRrSnA5Z0t0a2ItV1VGVXp3SWZUSXZGQ1Zib0dneU9jT3h4cHlsSThQMDRlY1k2Tmg1TUc3eGhwblNyanVubElTUHZQSnlsYkM2TVBVMEc0WVlLekQyUUIxck5iNzNld2k1aHRMWlI2d3JlQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Mai multe orașe europene cer interzicerea filtrelor de țigări: „Nu fac fumatul mai puțin nociv și poluează mediul”",
+      "title_it": "Diverse città europee chiedono il divieto dei filtri per sigarette: \"Non rendono il fumo meno dannoso e inquinano l'ambiente\"",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b0ec60f42e8b9fff",
+      "category": "europa",
+      "region": "europa",
+      "title": "Chi parla per l’Europa? Kallas alza la mano al casting per negoziare la pace in Ucraina",
+      "summary": "",
+      "source": "Demócrata",
+      "published": "2026-11-12T12:54:00Z",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUmozS3g1US1sVTQ4YWladWhMbk00cnN6VEFEZlpFdTd1a0hIdWtPNnpaaTR5eXhfMEdlOGQ5U0ljMmhfOWsyZW5jWjh4djR6UGx3cmw1ZHZuZ3RERmVjMUZINGcwOU4zaTNqelRQdzFCMG13a0huYkZmMFhON0FLQ0p1VjFjUzBUYWFiOXB6WDRTOWF6VEhLQVFhM2lFaV8yWXNjbVNlcFRjLTZsdkwwOUIycTNpRVJQMU1PdGZPVdIBxAFBVV95cUxOdTB3bmhBWFpVcFI4cmNxY2wtdHBVRW4xQlNkZktUQlpXc2xPWnBWMVBvT0otclVHZW1RMTNpYXFGcnFDdW1DZm8xTUhwdmFKamlWck5BZTRsVUoxSmFuRUFWdEJsbGV1OUsxZlhEalB4QnJrT2Vja3Z5eXFJeUxzcFluSUxPZUYxUlV2Nk1HVWpRRWNKT0VNVUt6U3hobjE2NUQzSGk2ZWIySjZ6dFZqaU9xQmNVblZCMFUydEtLaG1IWWhD?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cine vorbește pentru Europa? Kallas ridică mâna la casting pentru a negocia pacea în Ucraina",
+      "title_it": "Chi parla per l’Europa? Kallas alza la mano al casting per negoziare la pace in Ucraina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4ee136cae7075dc7",
       "category": "europa",
       "region": "europa",
       "title": "Kallas si riafferma insieme a Costa come voce dell’UE nei futuri negoziati di pace sull’Ucraina",
       "summary": "",
       "source": "Demócrata",
       "published": "2026-11-12T12:53:56Z",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPQ2d3R0ljTEw3X09xNDJpV2pMMnZpb0ttNE9Ld2lZVGFQd3Uwd2lWS0dyUi1XY2RLWmhUWHZScXR4WlVmU09hV0pHSGZ6R2JKX3lCUGZzTFhMeThLUmxEX0F4OVNfcjBKSWJEMnA1Y0pPR0N2S0d5dTZMaGdPUklwdERHZ2lVRUoxb2tybGVyRkhYRDI2Ym9oWGhRdF9VbjRMVnBKMlRieVM0U01peXJLWkUwNXhBTDBVdjh6ekV3eXI3SUdzRmN2Vi11WEhMZENJMUM4MFRn0gHbAUFVX3lxTFBZaWZtdm1JMnZTOVBWSHdaUFMtRXpxbm5rZllHSHJodW9aYXA2cUdYU3hCenEwWmVFeFo2akJyVDdzdTNRVlJYeXAxcFJmNFNLd3IwU3AycTBtZjZBMXZTQXR3cXRGVkhmaFkycEIwWGNpVzNmTXZSYWg3dkdRMlI4TlBCU095bk05NGV2bGRqd3RjcHhDeGdTeExXOFU3UklYWTBfUTd2UXlWb2prc2FlRjNYUXdwZUtITE14LVk1ZXQtdjBHSzNWcUNZeFNRclFUWndkb2FiTFRBbw?oc=5",
-      "review_status": "external_headline_unverified"
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWWlmbXZtSTJ2UzlQVkh3WlBTLUV6cW5ua2ZZR0hyaHVvWmFwNnFHWFN4QnpxMFplRXhaNmpCclQ3c3UzUVZSWHlwMXBSZjRTS3dyMFNwMnEwbWY2QTF2U0F0d3F0RlZIZmhZMnBCMFhjaVczZk12UmFoN3ZHUTJSOE5QQlNPeW5NOTRldmxkand0Y3B4Q3hnU3hMVzhVN1JJWFkwX1E3dlF5Vm9qa3NhZUYzWFF3cGVLSExNeC1ZNWV0LXYwR0szVnFDWXhTUXJRVFp3ZG9hYkxUQW_SAdsBQVVfeXFMUFlpZm12bUkydlM5UFZId1pQUy1FenFubmtmWUdIcmh1b1phcDZxR1hTeEJ6cTBaZUV4WjZqQnJUN3N1M1FWUlh5cDFwUmY0U0t3cjBTcDJxMG1mNkExdlNBdHdxdEZWSGZoWTJwQjBYY2lXM2ZNdlJhaDd2R1EyUjhOUEJTT3luTTk0ZXZsZGp3dGNweEN4Z1N4TFc4VTdSSVhZMF9RN3ZReVZvamtzYWVGM1hRd3BlS0hMTXgtWTVldC12MEdLM1ZxQ1l4U1FyUVRad2RvYWJMVEFv?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Kallas se reafirmă împreună cu Costa ca vocea UE în viitoarele negocieri de pace privind Ucraina",
+      "title_it": "Kallas si riafferma insieme a Costa come voce dell’UE nei futuri negoziati di pace sull’Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-35afe12e7afda7f2",
@@ -55,6 +215,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Erdogan cere încetarea imediată a războiului SUA împotriva Iranului în discuții cu Pezeshkian",
       "title_it": "Erdogan chiede la fine immediata della guerra degli Stati Uniti contro l’Iran nei colloqui con Pezeshkian",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-87f13630279b31b2",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Germany’s Merz sees ‘positive signals’ in Ukraine peace talks",
+      "summary": "",
+      "source": "A News",
+      "published": "2026-11-12T12:18:29Z",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOEhUTHpQRnI5dEpzNzN2OXNQbm5hUWs0U2t6Y3RQY3hUaFFMYlE2NmtZZVpZZ0l1M0ZhbUhwRXEwMFZlekZKc0NaR1hNRE9jN2x2SWNvY0V1U3BjSG55RzlST0YtYk8xZlVPb3dZM3FaRWRrNF9QaDRhdGFueWZRMlRsRTlvdDMyMXlFVTA3dldFMlU1eklpVHdXcWZxemkxSHBv0gGoAUFVX3lxTE9rdk9aWGZVcHFDVWZaRGt1NHhUd0xkRXZCV1VaaGE1TmxJRjRSTVZqWkpOU1NBaVY3aVg1NEhVRGtFbXczWW51WkZXZ0JMUTFpa0xLZWNDUTU4a2FzbjgzaUV2R0V0Wm5Ga09nM2xGUUVITGtESFEybTFoOWVhbDN2YTUzRzU2SXJ2clJCdjd5X25UUzYtWnVjQ3UyNTNxYWRTYzRvVUpFcQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Germanul Merz vede „semnale pozitive” în negocierile de pace cu Ucraina",
+      "title_it": "Il tedesco Merz vede “segnali positivi” nei colloqui di pace in Ucraina",
       "translation_status": "machine_translation"
     },
     {
@@ -72,14 +246,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2405ae0dfedbf6cb",
+      "id": "geo-4add96a96cbf6440",
       "category": "diplomatie",
       "region": "global",
       "title": "Erdogan urges return to diplomacy to end Iran-US conflict | Gulf Times",
       "summary": "",
       "source": "Gulf Times",
       "published": "2026-11-12T12:03:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUTRvcjdKS3QyUDduY2V3ZmczYlJBdUphSUhLdmx1S1UyR1ZOMEZhOVJrZTJKREZTS2phVTVlWEp1bENVVXhETzhHbExVYmlvd0dSb1JlV2llVktKVzloSjZHWXZ5XzNyZ2hHd3pWb0hDbzlvZWluNHdWc3dSbnlZV0N0cDdlZDR0X3hpbG85MGtLMXhSOVZlUktXcEVWZlJuVm5tOHhFZXZkd1pwZ3R0ODBYVGtXcEV60gG4AUFVX3lxTE9RNG9yN0pLdDJQN25jZXdmZzNiUkF1SmFJSEt2bHVLVTJHVk4wRmE5UmtlMkpERlNLamFVNWVYSnVsQ1VVeERPOEdsTFViaW93R1JvUmVXaWVWS0pXOWhKNkdZdnlfM3JnaEd3elZvSENvOW9laW40d1Zzd1JueVlXQ3RwN2VkNHRfeGlsbzkwa0sxeFI5VmVSS1dwRVZmUm5Wbm04eEVldmR3WnBndHQ4MFhUa1dwRXo?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTDZPV05VQnphMWhTWS05MVV6QnZIdUk2V0R3djJPdDUtTU1JYTdFb2s5MXFxdDhibmNxSGNETEs4bWFZa2pDejI2dWVDM05PWW9kdmtOOFZSUWxkZzNfU0xNWWFXeXBjenZzazkzcEhWcHp4RW01QjVkLUpzYnNsT3NBNFY2X0N6dm1HVEx6bzIzQm80bG9vWGE3WXQySnhROVc2SHVBREhHdW1EVjFLRTJWc9IBuAFBVV95cUxPUTRvcjdKS3QyUDduY2V3ZmczYlJBdUphSUhLdmx1S1UyR1ZOMEZhOVJrZTJKREZTS2phVTVlWEp1bENVVXhETzhHbExVYmlvd0dSb1JlV2llVktKVzloSjZHWXZ5XzNyZ2hHd3pWb0hDbzlvZWluNHdWc3dSbnlZV0N0cDdlZDR0X3hpbG85MGtLMXhSOVZlUktXcEVWZlJuVm5tOHhFZXZkd1pwZ3R0ODBYVGtXcEV6?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Erdogan cere revenirea la diplomație pentru a pune capăt conflictului Iran-SUA | Gulf Times",
       "title_it": "Erdogan sollecita il ritorno alla diplomazia per porre fine al conflitto Iran-USA | Tempi del Golfo",
@@ -97,31 +271,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Antalya și noua geopolitică: imperativul de securitate, apărare și economic al Indoneziei",
       "title_it": "Antalya e la nuova geopolitica: sicurezza, difesa e imperativo economico dell’Indonesia",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-af907807fd2e31c6",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Scoop: U.S. asks Russia to propose new security agreement with Europe",
-      "summary": "",
-      "source": "Axios",
-      "published": "2026-11-12T11:46:22Z",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPYU5fMUxkS1lXVDJQTG8wTXFuaVV3UU5YUkFTMFdRX18yS25OQkFUVGNUaVl4MGVsYTNOTUswaHFhTXlfa0NHekF3aHJiMDRUUjQwckU5bkFMY3F6ZDNCVUhzc1dIZXowY2VJRENLVWtrMXN4MkpuNHA1RHdidHJ4WURXSQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-dc4957c557235181",
-      "category": "europa",
-      "region": "europa",
-      "title": "Opt țări se alătură deciziei UE de prelungire a sancțiunilor împotriva Tiraspolului",
-      "summary": "",
-      "source": "Stiri.md",
-      "published": "2026-11-12T11:38:08Z",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNUl4RDVCak12OUdTcXVQOVpaSG51QjJUTGMwN2VCUXNTd1lpbEhKWDg0bm5RNGhvWkZCVDdvMllIa3JkTWNmZEFzMUxNVUdyczUwd01aQXAyU3JIM2l2T2h3dnBlbW5vQjdNMnVRT2hqNlF1OTVpMDJyUXN2MTdXQ1NpaDYzckNNdUg0YTZQVVhTSzdnU1Y0OVFuODJNdDRHTVNnM29aR1FqSkxPMXItNHlsd1E1UQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Opt țări se alătură deciziei UE de prelungire a sancțiunilor împotriva Tiraspolului",
-      "title_it": "Otto paesi si uniscono alla decisione dell'UE di estendere le sanzioni contro Tiraspol",
       "translation_status": "machine_translation"
     },
     {
@@ -181,20 +330,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-9bbeddcb3ad56cbd",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Lewis Hamilton condemns Gaza genocide, urges Israel to ‘let the aid trucks in’",
-      "summary": "",
-      "source": "Anadolu Ajansı",
-      "published": "2026-11-12T10:27:07Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNWXpZVTRkN3RyQVpRcmJfTkkzeEkxblI3dlBBVVoxajVOTlRLZlZMaE9raV80ZDh0UTY1SWJ1SWJFMm5hRHdmckExTjJnS2xpVnlfdnhhUkJwdk1RS2pCMDgzUHFYTDlxTjJMakE5N3NralNUY3ZjZ0pWVVd6WDltdHhPbzNkQ0dtNWdOVHExQ1ZuR1JZbV9tcnpKZHRtYUpHY0JDaEdLdGExU3ZGVXVfdDZsR1NST2Mt?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Lewis Hamilton condamnă genocidul din Gaza și îndeamnă Israelul să „lase camioanele de ajutor”",
-      "title_it": "Lewis Hamilton condanna il genocidio di Gaza ed esorta Israele a “lasciare entrare i camion degli aiuti”",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-1f9f279eb0e09897",
       "category": "economie",
       "region": "global",
@@ -207,31 +342,6 @@
       "title_ro": "Zhang Ming: China ar trebui să profite de noi oportunități pentru a internaționaliza renminbi",
       "title_it": "Zhang Ming: la Cina dovrebbe cogliere nuove opportunità per internazionalizzare il renminbi",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f87a98da42794af0",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Erdogan urges return to diplomacy to end Iran-US conflict",
-      "summary": "",
-      "source": "Bangladesh Sangbad Sangstha (BSS)",
-      "published": "2026-11-12T10:14:56Z",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE45d0NPZExNUWlBbXpqSV9HeW53WVdzVldpVEVxY1dWUUF3VlJPQ2NKbHc3OGhKLXlwb0pzSlpZY3IzbktqTjVsSkc5eDhDV2JxLXVZd1RSbw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Erdogan cere revenirea la diplomație pentru a pune capăt conflictului Iran-SUA",
-      "title_it": "Erdogan sollecita il ritorno alla diplomazia per porre fine al conflitto Iran-USA",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-040e090ec1aca44b",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Villa grad with NATO ties explains the stakes of Ukraine war | Opinion",
-      "summary": "",
-      "source": "Erie Times-News",
-      "published": "2026-11-12T10:10:00Z",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQWlc5cW5SYnJuWEFLcmFyVjNKbDdJZDIwamxFUUhqRVBoT2t5V3VrQWhvZjdjRnVId1ptbVJjdnMxdEhyMkpBUmtEdXpLSFhKaGpTWXE3WFFiZHRjRXUtcHVUQzZXc0MxMVlfSDZyZHEtNWRYX3l0NUtrVDdfSDU1bndoUjdrQ1JmTk0zNzFlX25iYWZ0eWplR3FYR3pKQ1BpaUtpMlpmNEFNejliVDRqQTFyQkdjOXhZdnBqNU9TSG1qbnAzM25PMXdRU21hYnRzZE5QSUZhYWtXWnJmMkNYYnFnaHU0QQ?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-d921e7c7a7e4d424",
@@ -318,20 +428,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-3904df3e4c9ab748",
-      "category": "europa",
-      "region": "europa",
-      "title": "Se conturează o nouă Germanie? Ce înseamnă ascensiunea AfD pentru Europa",
-      "summary": "",
-      "source": "Universul.net",
-      "published": "2026-11-12T09:26:18Z",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOcW9wOWxwdko1THVITkRVMzh6YWNOQk1uV3J4Ym9JbUxjXzhnR1Y4eGYzY2dTeDJPSjA4NlVIR0ZwTnU1eGVWUTR4NFBpXzZDWmpiVERqb3B2VnlzWUkzVVA0WkhPd2U0ZUp3Y1NMSHhZUjFfelJHQVc2V09FVmdlY2NlMkNVX2o2X1puQVVrMkVMX1FoZXNJaWJn?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Se conturează o nouă Germanie? Ce înseamnă ascensiunea AfD pentru Europa",
-      "title_it": "Sta prendendo forma una nuova Germania? Cosa significa per l’Europa l’ascesa dell’AfD",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-9809c9886d0bc043",
       "category": "diplomatie",
       "region": "global",
@@ -346,28 +442,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-50ebf5ab272a2606",
-      "category": "clima",
-      "region": "global",
-      "title": "India ranks 28th on Climate Change Performance Index. No country makes it to top 3",
-      "summary": "",
-      "source": "ThePrint",
-      "published": "2026-11-12T09:11:27Z",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQcE9FMk1wTWVwdk5HQlEyZ2xoM1RKT29MbGs5SGp6SFZ5NWQzSDNNcXh6akI1QWhjZXJMR24xdnpTbjI4U1BsbmJiOVRXcFVlOHEtM0lKenREanVPeDI3S0ZWb056SVRqU2FPQWhmaVg5d2VXbTJucTYxRTYyekxybmRPWC1hY1pKV01VODJNNkTSAZYBQVVfeXFMUEJVMVZLQnhrT1ZzZi1JdkVzTk5tdTlVeXJUbFQzY25TbTJwZnVLd1VPRUd1Z3k2bnBvWWhISHpEVzRtci13cTBDMnJhS2NhZlVZY0JFUFpnQ0pNMmNIc2FENW1qV0trSnlUeGtrTTQyTmRtLU5hamJFVmIyck1BX3VXWF9TMmE5NXNTdHBpNU13eld3QVBR?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-4d0253ddb80a510c",
-      "category": "tehnologie",
-      "region": "global",
-      "title": "How China gets around the U.S. ban on Nvidia chips",
-      "summary": "",
-      "source": "CBC",
-      "published": "2026-11-12T09:00:00Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE11ZmdHbDJSbUFacjI5dVg0MkhYa2lvelJFeURaYk1vNUc5ZU92VlZNY054aE1EZ0tpMGgzTHRBZGZ4SXFYbkJUV2lUOFlELU0wR1NXNkYxUEZ6Mi15TzBaR1hnOXEzTkMtMWlHc0prbw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-e44639a0b4154aa7",
       "category": "clima",
       "region": "global",
@@ -379,20 +453,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "#Video_News :-PM_Abiy îndeamnă marii emitenți să intensifice, intensifică relațiile diplomatice înainte de ceasul COP32 din #Etiopia",
       "title_it": "#Video_News:-PM_Abiy esorta i principali produttori di emissioni a farsi avanti e intensifica il contatto diplomatico in vista della COP32 dell'#Etiopia",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-b3a0ed379e236005",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Why Are G7 Countries Raising Concerns About China’s Military Activity East of Taiwan?",
-      "summary": "",
-      "source": "Modern Diplomacy",
-      "published": "2026-11-12T08:50:43Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQRDJYMkRJLWFyM2tmM2ZPMERJMENJUG9RQ0dPNXFSemZZVC0tRTMwZ1o3VGZTVThHT3VxS2J3bFJHeUF0S053SklkazJDamx5WmRjZ1RFeERGR25OVzVWclBfXy1ZMmx5R2dNdVRKa1pWZkJsbVN3TXVwbDV4SlQ1V2o3SkNkNW5jS00tOElRQnl2bWdDUV9MYWpQZEhZM2pvM3dzRWZ4OW1pWU9xV2FHekFOcTB0RkhHX2VndzZuZw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De ce își exprimă îngrijorarea țărilor din G7 cu privire la activitatea militară a Chinei la est de Taiwan?",
-      "title_it": "Perché i paesi del G7 sollevano preoccupazioni sull’attività militare della Cina a est di Taiwan?",
       "translation_status": "machine_translation"
     },
     {
@@ -494,17 +554,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-05e39eec5afefa0f",
-      "category": "securitate",
-      "region": "europa",
-      "title": "NATO Chief Thanks Troops Aboard UK Carrier in Oslo",
-      "summary": "",
-      "source": "Mirage News",
-      "published": "2026-11-12T07:11:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcXhQcndkT0lFc3FwQTYwOW11R2Q4OF9mU1VJQks1RnZXLWtZNWR3aHhaUDFIRE1icTdFTUJJRVMxTnpUZ0VHa2dUSGNSRk1oZ1otSzl5cFBWQmVSTVhQaDVBQnVUQUxOcmw3OFp2aW5HRUhTblhVRTlnR2c3a29tcmtxYVJPWEVP?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-51edfd82035f4862",
       "category": "conflicte",
       "region": "orient",
@@ -558,20 +607,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Turcia respinge Israelul la COP31, dar expertul israelian în climă spune că Ierusalimul a ales să nu participe",
       "title_it": "La Turchia snobba Israele alla COP31, ma l’esperto climatico israeliano afferma che Gerusalemme ha scelto di non partecipare",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-4e72a1b3c05ad24d",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Takaichi-Xi summit unlikely at APEC as China holds firm",
-      "summary": "",
-      "source": "朝日新聞",
-      "published": "2026-11-12T06:16:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBVbHRNUnBNd3ZNZEJoazZ3UERtRHI2ekp0a3psODJZeDIwQWEwOFFDRUw4dWNERlRrQXNYQXZ3SXhpV3hkV0pic2FtMXczWERTaG9HRnBn?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Summitul Takaichi-Xi este puțin probabil la APEC, deoarece China se menține ferm",
-      "title_it": "Improbabile il vertice Takaichi-Xi all’APEC poiché la Cina tiene duro",
       "translation_status": "machine_translation"
     },
     {
@@ -673,20 +708,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-4e6ae70aa94490e5",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "World leaders view PM as 'Transformative Leader': Humaiun",
-      "summary": "",
-      "source": "The Daily Star",
-      "published": "2026-11-12T05:26:29Z",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQV0EtSjNlcGNVR2tjM01uUlJyUTRTdkpIWWtMNXNJVU90T2JkUEJReXNQZTZGRnRiUFp4SERqY2JhWjFvQWRjUDhpYkV6X3FIU3FURzZwUHVQazY3ajQ2VURVb3d2NFFfRW1ZVFc5VVppR2JZVzlXdDkzQmdnVF9YYzVvWkdlLVBxcEx4QUV3Q2Fmc3RBTS1ySTVhNWtMaVFoMEJRWGJIdWdwakg0SlV2Mk5FcUU1aXNBaS04?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Liderii mondiali îl privesc pe PM drept „Lider transformator”: Humaiun",
-      "title_it": "I leader mondiali vedono il Primo Ministro come un “leader trasformativo”: Humaiun",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-fcbb910d98a3809c",
       "category": "economie",
       "region": "global",
@@ -715,20 +736,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-1977042c4f9a3ffc",
-      "category": "europa",
-      "region": "europa",
-      "title": "De ce nu reușește România să se apropie de administrația Trump. Anularea alegerilor, un posibil obstacol",
-      "summary": "",
-      "source": "Evenimentul Zilei",
-      "published": "2026-11-12T04:46:54Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNN0k0OTBZMGRQZzlOV2YwVXlmazZHVGFiR1BJOFpqb3JLNnNWWUF3b0J1OGc2N1loNEJuX0dzdlYxQU00RXpvYmx0UVdiaXlaajc0bEhnYlBpRmRGRVhDaGM2eGlLM2w0eXd4bmRLRVRnNFNQRXFMSDV2S1FMOUFIeE1oNmFNSDVMMmIxUHRuQmg3c3JBWHVqaC1SVXhTTFN4QVhZcTRSZ1h5R3IwRTgtbkVHNzE3N3dRVWs3OTRCbw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De ce nu reușește România să se apropie de administrația Trump. Anularea alegerilor, un posibil obstacol",
-      "title_it": "Perché la Romania non riesce ad avvicinarsi all’amministrazione Trump. Annullamento delle elezioni, un possibile ostacolo",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-76732b2842777e43",
       "category": "conflicte",
       "region": "orient",
@@ -740,6 +747,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "„GENOCIDUL ISRAELULUI DIN GAZA ESTE TERMINANT” În urma unei vizite la punctul de trecere a frontierei Rafah, pilotul de curse britanic și de șapte ori campion mondial de Formula 1 Lewis Hamilton și-a exprimat solidaritatea cu palestinienii din Gaza și a cerut ",
       "title_it": "\"IL GENOCIDIO DI ISRAELE A GAZA È SPAVENTOSO\" Dopo una visita al valico di frontiera di Rafah, il pilota automobilistico britannico e sette volte campione del mondo di Formula 1 Lewis Hamilton ha espresso solidarietà ai palestinesi di Gaza e ha esortato Israel",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-e07476d8c7d7244e",
+      "category": "clima",
+      "region": "global",
+      "title": "An On-the-Ground Report from COP31 in Turkey",
+      "summary": "",
+      "source": "Legal Planet",
+      "published": "2026-11-12T04:08:56Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQS2xGRjdTdkR4ZlNYRHE4Qkd3b0lpU0oxYi1uY2Q5VmFZYW1ZNkUzQVFxdHlkNHFsdmp4bGxBRGREeGNMaW5UN0F0TkRDZk0tSWZvanpUUUZodElwRmtFa3ppbG92WDc0dmFlSGJUTkl3Q3prcjJ2WHNvOXdrY0Y2UFFHQWxJbWxB?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Un raport pe teren de la COP31 din Turcia",
+      "title_it": "Un rapporto sul campo della COP31 in Turchia",
       "translation_status": "machine_translation"
     },
     {
@@ -755,17 +776,6 @@
       "title_ro": "Europa vrea să treacă de la a fi invitată la a pune masa în negocierile privind Ucraina",
       "title_it": "L’Europa vuole passare dall’essere l’invitata al mettere la tavola nella negoziazione sull’Ucraina",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-1cbe8f43c2827214",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Global powers head to Asia with trade, AI, security in focus",
-      "summary": "",
-      "source": "Bangkok Post",
-      "published": "2026-11-12T03:49:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNLVVjVWc2blV2b295S1c1cFd3UTQ5bFEzZVEwQmdxbXRyTlYwajN1TTFnYUFIREhTcmF3X3hXSGtsSUVoaHI3QTAweVJvNVFYQWdEQzhrdVR6bjlJY0MtbEVSb0pTUDlLVEZDR1JGZ1VlRjVVLUlvMThRLUZpR0xvYUVxYWxYRkZXZnhHNHo5b3QyWVRUVGV6RXNlMHF1eFVqQWc?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-9df972f707f7cc24",
@@ -796,15 +806,18 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-1b635ba5ffc56be0",
+      "id": "geo-cc32a97802517888",
       "category": "diplomatie",
       "region": "americi",
-      "title": "Rubio and Wang Discuss Possible US-China-Russia Summit",
+      "title": "Rubio, Wang Discussed Trilateral Summit With Russia, China Makes No Mention",
       "summary": "",
       "source": "Kyiv Post",
       "published": "2026-11-12T02:27:43Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9xaWFBNEhRY0h0TFYwRk1oTl9TckprSmhhRDlhSFVOY29vSFlxRzZ5VmFiTG9wR2NkRTZjdldZNm1vdVdLS0ZjQlVBdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rubio și Wang au discutat despre Summit-ul trilateral cu Rusia, China nu face nicio mențiune",
+      "title_it": "Rubio e Wang discutono del vertice trilaterale con la Russia, la Cina non ne fa menzione",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-0787cff582e86b04",
@@ -818,6 +831,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "După eliminarea alegerilor, Trump se îndreaptă în Asia pentru a arăta lumii că încă este la conducere",
       "title_it": "Dopo la sconfitta elettorale, Trump si dirige in Asia per dimostrare al mondo che è ancora al potere",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-6cfe08c74f186636",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "G7 Foreign Ministers coordinate action on Ukraine, Middle East and global security",
+      "summary": "",
+      "source": "INSIGHT EU MONITORING",
+      "published": "2026-11-12T01:09:59Z",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOQ0tYSjJ5Z0k2R0VoUmUyeVIxQkRIaW9OYzMzXzZ6WnhMTUJvZWFoYlkzRnJ1azNIenpubjBuOHdLRWFab1VraF9ielBFbkRLTzZGaFgxdTRqVU9aTWNQa05neW1wdjF3QmJKdUFHLXZjMjJiR2k1eDQ2QzU1WDNOSnZxdFBHV01LTWRockowMVhuQjZXSFpWT2dVLWdWQkZVcTVzVGwzNDNjTmpCc05QM2RhOHVFTUxkOVlkLXdPTUJkcGUtOW00SUV5Xy13OUdrMEVJeUpuQ2lEVzdUdHFyOFl3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Miniștrii de externe G7 coordonează acțiunile privind Ucraina, Orientul Mijlociu și securitatea globală",
+      "title_it": "I ministri degli Esteri del G7 coordinano l’azione su Ucraina, Medio Oriente e sicurezza globale",
       "translation_status": "machine_translation"
     }
   ]
