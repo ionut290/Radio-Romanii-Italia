@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-12T17:03:47.916221+00:00",
+  "news_updated_at": "2026-11-12T18:01:31.771355+00:00",
   "editorial_updated_at": "2026-11-12T11:55:19.458232+01:00",
-  "translations_updated_at": "2026-11-12T10:21:37.307323+00:00",
-  "feed_total": 77,
+  "translations_updated_at": "2026-11-12T17:02:40.127407+00:00",
+  "feed_total": 78,
   "feed_extended_400": 0,
-  "feed_missing_body": 77,
+  "feed_missing_body": 78,
   "feed_short_body": 0,
-  "editorial_total": 14,
+  "editorial_total": 15,
   "archived_editorials": 238,
   "translation_records": 24,
   "pending_total": 39,
   "pending_filtered_out": 35,
-  "editorial_verde": 0,
-  "editorial_galben": 38,
-  "editorial_rosu": 53,
+  "editorial_verde": 1,
+  "editorial_galben": 37,
+  "editorial_rosu": 54,
   "pending": [
     {
       "title": "A Milano più donne al lavoro che nel resto d'Italia, ma pesa il divario di reddito - ANSA",
@@ -408,11 +408,110 @@
   ],
   "recent_news": [
     {
+      "title": "Premierul portughez spune că secretarul general al NATO este „complet deconectat de la realitate”. Declarația care l-a indignat",
+      "category": "România",
+      "published": "2026-11-12T17:57:59+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/premierul-portughez-spune-ca-secretarul-general-al-nato-este-complet-deconectat-de-la-realitate-declaratia-care-l-a-indignat-4034043",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ministrul Dezvoltării, după discuțiile cu Asociația Comunelor: Reforma administrativă nu înseamnă dispariţia satelor, a tradițiilor",
+      "category": "România",
+      "published": "2026-11-12T17:51:59+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/ministrul-dezvoltarii-dupa-discutiile-cu-asociatia-comunelor-reforma-administrativa-nu-inseamna-disparitia-satelor-a-traditiilor-4034039",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "UE ar putea schimba regulile pentru migrație și azil la doar șase luni după adoptare. Ce planuri se discută la Bruxelles",
+      "category": "România",
+      "published": "2026-11-12T17:46:22+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/ue-ar-putea-schimba-regulile-pentru-migratie-si-azil-la-doar-sase-luni-dupa-adoptare-ce-planuri-se-discuta-la-bruxelles-4034027",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Messina: 'Ecobonus portati a dieci anni sono formula sudamericana'. Meloni: 'La nostra è una scelta di giustizia'",
+      "category": "Italia",
+      "published": "2026-11-12T17:36:02+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/12/messina-ecobonus-portati-a-dieci-anni-sono-formula-sudamericana_66cb92ca-cf90-4cae-a644-923b05b820c5.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "È morto Toni Capuozzo, poco tempo fa aveva annunciato di avere un tumore",
+      "category": "Italia",
+      "published": "2026-11-12T17:32:29+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/12/e-morto-toni-capuozzo-pochi-giorni-fa-lannuncio-del-tumore_d91e7c63-c965-4b50-b4d9-931c2a6fd56f.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Hubert Thuma, șeful CJ Ilfov: PNL are nevoie de alegeri interne, de jos în sus",
+      "category": "România",
+      "published": "2026-11-12T17:30:24+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/hubert-thuma-seful-cj-ilfov-pnl-are-nevoie-de-alegeri-interne-de-jos-in-sus-4033999",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cyberattacchi, cosa prevede un kit di emergenza",
+      "category": "Italia",
+      "published": "2026-11-12T17:28:27+00:00",
+      "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/12/cyberattacchi-cosa-prevede-un-kit-di-emergenza_ff6edfbd-c22b-43f5-b452-e59d432201f6.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nvidia: Jensen Huang si è dimesso da ceo, Colette Kress nominata ad interim. Trump candida Cook",
+      "category": "Italia",
+      "published": "2026-11-12T17:25:42+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/nvidia-jensen-huang-si-e-dimesso-con-effetto-immediato-da-ceo-colette-kress_0b01f8ad-f5ea-4fd2-a7a4-7ccfc68be774.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "ANSA Newsroom | La notte americana: le elezioni di Midterm al centro della nuova puntata",
+      "category": "Italia",
+      "published": "2026-11-12T17:16:30+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/11/ansa-newsroom-la-notte-americana-le-elezioni-di-midterm-al-centro-della-nuova-puntata_1d689574-cc56-421f-9174-695e21936d05.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Meloni: 'Messina? Ci sono realtà in Italia che sono andate bene grazie al governo' - ANSA",
+      "category": "Italia",
+      "published": "2026-11-12T17:00:09+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNV1dFOVo3V01CdmExRkNBaWdvdXVsQWowcWRVdWZFeC1uU3I3NWZ5UUQ1ZFhjNE02YTZvZHdrekdyZ09Sb0xEaVJxYjY1WnhXbU5EYVNTOHZSQ1ROeEhNcTRtcGtZb2t3U21jM3h4NFhGeWtVX0F3Y2gzQ2t4bmFZcnMtTUxnbmtpcXhvNmVOc0plNG5tOXRIYk1fSGdMQ1A3S3lRRC00dG9WZFdmNFY1NVF4SnBvbHU2ZWtjazhDcV80akRiOURxTDNLb0JBekJybFhUbGZrVUJ2Slo3UTJuWXhac2pRVUJrMDNTdFVyc1NQWUlnZW5iUEhJX1cyY1ZIVkMtUtIBigJBVV95cUxQeDVWRzRkV3NSVnZ6N3Nvc3RidXFQSlIxWDBXTjUwOXBienhqM2FuUjVvOER3dFJza1BCREo5TzFmTVRlMnVIa2xfcW5IS1R",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Rezultate LOTO - Joi, 12 noiembrie 2026. Numerele extrase și premiile puse în joc de Loteria Română",
       "category": "România",
       "published": "2026-11-12T16:58:19+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/social/rezultate-loto-joi-12-noiembrie-2026-la-6-49-reportul-depaseste-45-milioane-de-lei-la-joker-sunt-in-joc-156-milioane-de-lei-4032067",
       "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nuovi allarmi bomba nelle scuole, palazzo Chigi: 'Coinvolti 3.788 istituti, solo 77 evacuati' - LIVEBLOG",
+      "category": "Italia",
+      "published": "2026-11-12T16:57:10+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/nuovo-allarme-bomba-nelle-scuole-indagano-i-pm-dellantiterrorismo-liveblog_97a3c6b7-93f4-44a2-940b-dd33198f2f91.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -441,6 +540,33 @@
       "url": "https://www.digi24.ro/stiri/externe/ue/nu-este-nevoie-sa-reinventam-roata-liderii-europeni-resping-eforturile-rusiei-de-a-reforma-arhitectura-de-securitate-a-continentului-4033961",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Meloni: 'Con le opposizioni colloquio franco e produttivo sugli allarmi nelle scuole'",
+      "category": "Italia",
+      "published": "2026-11-12T16:49:11+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/si-rientra-in-classe-dopo-gli-allarmi-nelle-scuole-oggi-il-vertice-a-palazzo_cd319cf3-a1cf-4b88-b35a-77a0eaa9c9fc.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Industria alimentare italiana, il valore aggiunto è salito a 42,3 miliardi di euro nel 2025 - WineNews",
+      "category": "Italia",
+      "published": "2026-11-12T16:45:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNU19uZFE2aXVja21xamd5OVBERW9MQVRoOC1WZS14c3JiZmlHdHFRaFlSell2ZU9xcEtZVmlpUWhlaE5wN1hsZjc4Y1hQRE9lVDV1dUhUWW1KYU5SV0RnQ3ZZN0k5bVdyRHBrcHBKaHk2LXI0d0YwV1dUeWJSTWtPZVp6YzBLX0ZPVWkxOGZEeUdEZXJRTWpVSEx6b3M5YWFGblpMMHpZb3FEdWlWdEZsY2JGU3RHR0FpS3N6Ng?oc=5",
+      "source": "WineNews",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Un neonato morto di freddo a Gaza, un raid colpisce un ospedale",
+      "category": "Italia",
+      "published": "2026-11-12T16:44:45+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/protezione-civile-gaza-raid-israeliano-uccide-6-persone-in-un-ospedale_30554bb9-dc24-4e02-86b4-049e6a5420bf.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -476,42 +602,6 @@
       "published": "2026-11-12T16:39:20+00:00",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxObmY0ZW1IZGp1bkJDcGo1SFNzem0tOUgyMmIzSXRSbDd0UTFpLUM4bzEzQmhCZFVzVEFTRnhHekxjcExIVHQ2eFZpUnJHZWl6ME5Wb3FnWlB1dnZUTlFQNmRRYXM5NGlRb2RtZUdCRmlPWmpLSDBJdnN5czVnTkZIQXgxUnh5UG9LcDlmOEpNRlQ3d1paeWp4QVR1MTZ0enlkMklPWmEwUF9FLVJCeVhRTGh2TzVHOUdYeFV1Sk5walM3VGNFZWNJLUxOUTI4Zw?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Sparatoria in centro a Washington: cinque persone colpite, un morto. Si è ucciso l'uomo che ha sparato",
-      "category": "Italia",
-      "published": "2026-11-12T16:34:58+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/sparatoria-in-centro-a-washington-cinque-persone-colpite-un-morto.-si-e-ucciso-luomo-che_b3d1f241-30d3-48d2-80e0-b6f155a26c15.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Messina: 'Ecobonus portati a dieci anni sono formula sudamericana'. Meloni: 'La nostra è una scelta di giustizia'",
-      "category": "Italia",
-      "published": "2026-11-12T16:34:10+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/12/messina-ecobonus-portati-a-dieci-anni-sono-formula-sudamericana_66cb92ca-cf90-4cae-a644-923b05b820c5.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Gioielliere sequestrato a scopo di rapina nel Foggiano, ma il colpo fallisce",
-      "category": "Italia",
-      "published": "2026-11-12T16:27:40+00:00",
-      "url": "https://www.ansa.it/sito/videogallery/italia/2026/11/12/gioielliere-sequestrato-a-scopo-di-rapina-nel-foggiano-ma-il-colpo-fallisce_12075929-8386-459b-9663-210a08a8b1f6.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "È morto Toni Capuozzo, poco tempo fa aveva annunciato di avere un tumore",
-      "category": "Italia",
-      "published": "2026-11-12T16:25:22+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cultura/2026/11/12/e-morto-toni-capuozzo-pochi-giorni-fa-lannuncio-del-tumore_d91e7c63-c965-4b50-b4d9-931c2a6fd56f.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -552,19 +642,19 @@
       "words": 0
     },
     {
+      "title": "Campi Flegrei, riscritta la storia dell'eruzione che formò il territorio di Napoli",
+      "category": "Italia",
+      "published": "2026-11-12T16:12:33+00:00",
+      "url": "https://www.ansa.it/canale_scienza/notizie/terra_poli/2026/11/12/campi-flegrei-riscritta-la-storia-delleruzione-che-formo-il-territorio-di-napoli_51d9210b-ce41-4b63-89eb-06919822dc78.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Luca Niculescu, discuții cu premierul Marocului. Candidatura lui Dacian Cioloş la șefia OIF, printre subiectele abordate",
       "category": "România",
       "published": "2026-11-12T16:08:28+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/luca-niculescu-discutii-cu-premierul-marocului-candidatura-lui-dacian-ciolos-la-sefia-oif-printre-subiectele-abordate-4033863",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ce se va întâmpla cu procurorii-șefi din țară ale căror funcții vor fi desființate prin comasare. Explicațiile ministrului Justiției",
-      "category": "România",
-      "published": "2026-11-12T15:57:19+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/ce-se-va-intampla-cu-procurorii-sefi-din-tara-ale-caror-functii-vor-fi-desfiintate-prin-comasare-explicatiile-ministrului-justitiei-4033725",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -588,21 +678,12 @@
       "words": 0
     },
     {
-      "title": "AEP: Valoarea subvenţiilor alocate partidelor, în noiembrie 2026, ajunge la peste 17.700.000 lei. Cea mai mare sumă, primită de PSD",
-      "category": "România",
-      "published": "2026-11-12T15:52:54+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/aep-valoarea-subventiilor-alocate-partidelor-in-noiembrie-2026-ajunge-la-peste-17-700-000-lei-cea-mai-mare-suma-primita-de-psd-4033777",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Nvidia: Jensen Huang si è dimesso da ceo, Colette Kress nominata ad interim. Trump candida Cook",
+      "title": "Cresce l’agroalimentare italiano, export a quota 72,5 mld nel 2025 12/11/2026 - L'eco del sud",
       "category": "Italia",
-      "published": "2026-11-12T15:41:34+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/nvidia-jensen-huang-si-e-dimesso-con-effetto-immediato-da-ceo-colette-kress_0b01f8ad-f5ea-4fd2-a7a4-7ccfc68be774.html",
-      "source": "ANSA",
-      "status": "galben",
+      "published": "2026-11-12T15:50:13+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSjI4VlR3cFI5Mzg5bGMtTXJZZTc4VUZVRHBMY3V3bk9QSTlFdFM3OS1Gcko1WVZ6VGxtTW5rZmU2VlZZckJrcGEzUnNTSy1BanM1dkg0YkhESDRyZS1RZlA5b1k1czFGSnl3NzVRb296RllwUlppc0VIVTNWb2lfLUJDVHFjdmJ2MDBCcWV1ZUVjWENqQTFFUUZsV1ZXcjJRM05PdnJkeFZEekNQ?oc=5",
+      "source": "L'eco del sud",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -624,37 +705,10 @@
       "words": 0
     },
     {
-      "title": "Meloni, 'Messina? Ci sono realtà in Italia che sono andate bene grazie al governo' - ANSA",
-      "category": "Italia",
-      "published": "2026-11-12T15:36:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxNV1dFOVo3V01CdmExRkNBaWdvdXVsQWowcWRVdWZFeC1uU3I3NWZ5UUQ1ZFhjNE02YTZvZHdrekdyZ09Sb0xEaVJxYjY1WnhXbU5EYVNTOHZSQ1ROeEhNcTRtcGtZb2t3U21jM3h4NFhGeWtVX0F3Y2gzQ2t4bmFZcnMtTUxnbmtpcXhvNmVOc0plNG5tOXRIYk1fSGdMQ1A3S3lRRC00dG9WZFdmNFY1NVF4SnBvbHU2ZWtjazhDcV80akRiOURxTDNLb0JBekJybFhUbGZrVUJ2Slo3UTJuWXhac2pRVUJrMDNTdFVyc1NQWUlnZW5iUEhJX1cyY1ZIVkMtUtIBigJBVV95cUxQeDVWRzRkV3NSVnZ6N3Nvc3RidXFQSlIxWDBXTjUwOXBienhqM2FuUjVvOER3dFJza1BCREo5TzFmTVRlMnVIa2xfcW5IS1R",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Concursurile pentru funcțiile de lector universitar și șef de lucrări universitar au fost deblocate, anunță Ministerul Educației",
       "category": "România",
       "published": "2026-11-12T15:29:32+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/educatie/concursurile-pentru-functiile-de-lector-universitar-si-sef-de-lucrari-universitar-au-fost-deblocate-anunta-ministerul-educatiei-4033791",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Meloni: 'Con le opposizioni colloquio franco e produttivo sugli allarmi nelle scuole'",
-      "category": "Italia",
-      "published": "2026-11-12T15:28:33+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/si-rientra-in-classe-dopo-gli-allarmi-nelle-scuole-oggi-il-vertice-a-palazzo_cd319cf3-a1cf-4b88-b35a-77a0eaa9c9fc.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Metoda prin care casierele de la Universitatea Bucureşti au delapidat 1,6 milioane de lei. Cum au fost descoperite faptele",
-      "category": "România",
-      "published": "2026-11-12T15:20:06+00:00",
-      "url": "https://www.digi24.ro/stiri/metoda-prin-care-casierele-de-la-universitatea-bucuresti-au-delapidat-16-milioane-de-lei-cum-au-fost-descoperite-faptele-4033749",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -675,15 +729,6 @@
       "url": "https://www.ansa.it/canale_terraegusto/notizie/in_breve/2026/11/12/guida-michelin-16-ristoranti-neo-stellati-da-paestum-ad-azachena-da-napoli-a-torino_13488ba5-2506-4e47-8418-6c456797459a.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Nuovo allarme bomba nelle scuole, indagano i pm dell'antiterrorismo - LIVEBLOG",
-      "category": "Italia",
-      "published": "2026-11-12T14:15:22+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/nuovo-allarme-bomba-nelle-scuole-indagano-i-pm-dellantiterrorismo-liveblog_97a3c6b7-93f4-44a2-940b-dd33198f2f91.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -732,6 +777,15 @@
       "words": 0
     },
     {
+      "title": "Regno Unito, Re Carlo ospite speciale del podcast di Elton John",
+      "category": "Italia",
+      "published": "2026-11-12T11:49:10+00:00",
+      "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/12/regno-unito-re-carlo-ospite-speciale-del-podcast-di-elton-john_c68dd229-e739-419e-ae03-a95e57a9d467.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Scriitoare româncă din Italia, prezintă romanul unei adolescente care își caută locul între două țări. „Cărțile m-au salvat în momente de o singurătate profundă” - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-12T11:33:14+00:00",
@@ -750,15 +804,6 @@
       "words": 0
     },
     {
-      "title": "Protezione civile Gaza, raid israeliano uccide 6 persone in un ospedale. Netanyahu e Eisenkot si incontreranno oggi",
-      "category": "Italia",
-      "published": "2026-11-12T10:47:07+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/protezione-civile-gaza-raid-israeliano-uccide-6-persone-in-un-ospedale_30554bb9-dc24-4e02-86b4-049e6a5420bf.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Mai mulți români au pus la cale o schemă de fraudare a Fiscului britanic. Suma obținută: 1,7... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-12T10:46:00+00:00",
@@ -774,15 +819,6 @@
       "url": "https://www.ansa.it/sito/podcast/la-storia-nell-armadio/2026/11/12/la-storia-nellarmadio-alla-scoperta-dei-colori-il-giallo_aac9f266-6171-453f-8a9d-d89a2f705a6c.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Giocare è un affare serio, genitori a \"lezione\" dal pedagogista ludico Di Pietro",
-      "category": "Italia",
-      "published": "2026-11-12T10:20:37+00:00",
-      "url": "https://www.ansa.it/canale_legalita_scuola/notizie/tavoli_legalita/regione/veneto/2026/11/11/giocare-e-un-affare-serio-genitori-a-lezione-dal-pedagogista-ludico-di-pietro_469aaa95-b736-4d8b-b201-a5b6f953bfd9.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -912,15 +948,6 @@
       "words": 0
     },
     {
-      "title": "Cine ar putea scăpa de plata CASS în 2027. Scutire pentru venituri suplimentare de până la 120.000 de lei pe an - Oficiul de Știri",
-      "category": "România",
-      "published": "2026-11-11T13:34:28+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQNXo0a3paaUpockdlaXN1NW40aHFwSGFqZTF6QkUtY3h5MGR2R1cyLTN6RU93NUU5cVdCbm11c2FDSVBjVWFuWlZtc3otX2c4cUM5RVNwcFhDa2hIMXc4UjVlbVVKMWdpQUdlZzF6dnpTSXVMWlF1YUNQb3FBUE01YWRCaHRCRVlFSzZfcUtKeUpONjZ3Mmg3R3lmRGVZVGFRTXQ3SGpNZmUwZjNFY3NoTThXQVBZQ212U0MwUkpMVTFUTXRuRUE3ZU1OU21vaEVwcHc?oc=5",
-      "source": "Oficiul de Știri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Alerte cu bombă în peste 300 de școli din Italia. Elevi evacuați și reuniune de urgență la guvern - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-11T12:45:13+00:00",
@@ -944,15 +971,6 @@
       "published": "2026-11-11T12:03:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQZmc1Smg2b0o4NV8tOVc0QWFvbmtvc2JWN2hHTkZyOTNrSzVsZE1POGhBR2NIMTg1VXR0cTdxSDhKSk96WWp6TGR5bVBHS05yWmlveFdqU0FPN0szb0tJby1mNkhXRXpBb3JkdlZPdDdZV2drX2s1eUQyX0lNMFRYQmhTTUNheGo5RzR0djFLM2VycENHTEMtR0U2V3NmN1FaWmhiaUt0S09RWmlsUVpZdlczU2RfdHJ0MGpLcmdQRWNXdWltZ0tXN0xVY19VaGI5aW85RnRYTlVjQTYxU1VreFU2bkpPTGJpbk4tNm92QmUxSzBtU2hpc2hCbGVXUUZzaFdJMVZKMkltQzRBbWVxeDhGajFmVE5o0gGeAkFVX3lxTE5CVUJfdktfT0xjOF90QUdMQXdjYVZJcm4wMF9vUVdoVHN4V2tDNWlKcGJqTGwwblRnOTE",
       "source": "Corriere della Sera",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "TikTok e creator, l'economia passa dai social: ecco come cambia il volto delle imprese - RaiNews",
-      "category": "Italia",
-      "published": "2026-11-11T12:01:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNaUhKTFFtc0lDRGpKbWtGNV95d2dHVjc3aXgwUk1GdEN5c056MnBqYXBsb1R4WTZmcHp3Z1V1NkF4b0pGNWcxeVhVcTBMeGJXNDJISm5iRmN3T0xTYm95ZGRVQW1jc2FSdWVPNVAtTEFucGkwOUxQejA2U2Q3akQ5ZHc4ai0xWF9BZUR4OVpRRGxoM2NSS0tJME1oRFBhS3ZPM3BPVmRyb0tZMXhZQy1HeWI2VUxKMWtrYTRvbXA4LTAzSGxFWVZBX1VrLVVKMnAyUU0yTWw1MDk2LXpEQThXNTN4S1ROZDNYOUtaaldrdVB5Q2dZMjBGYi14blBfVXk5aktwU0gwb0ItVXM4VkxFVmtPSUoydzdwZzA3NDRYYVNSRmdxSHpNZHR4amvSAbICQVVfeXFMTzNkblpscXk0YmNHMGZ6bmVGUm00Z2pxTFBvUjlHODB",
-      "source": "RaiNews",
       "status": "roșu",
       "words": 0
     },
@@ -1029,15 +1047,6 @@
       "words": 0
     },
     {
-      "title": "\"La crisi soffoca il lavoro. E il carovita supera il 18%\" - Il Resto del Carlino",
-      "category": "Italia",
-      "published": "2026-11-11T05:46:08+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNT1dSQUpka0RNU0pKcEVHTXVUeVRseVAwb2tHWGNKWVRGc3hKZXcwUjBZYXlYTUViR2cyX01aOXJQS0VsR2xVRktIaDdMRE9uN01KOGtadWRiWFdtNVJETVB4aTBkck10WTE2bHd5dmJ4VzczTlFZNE1xeFI1bFpYWGlOTlF4TERDSjBB?oc=5",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Nicușor Dan i-a retras în direct acreditarea de la Cotroceni jurnalistului Ovidiu Vanghele: \"Pentru injuriile pe care mi le-ați adus, nu o să mai puneți nici o întrebare\" - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-10T19:48:00+00:00",
@@ -1103,6 +1112,17 @@
   ],
   "radio_briefs": [
     {
+      "title": "Iași: municipiul cere recuperarea a peste două milioane de lei în dosarul „Păcura”",
+      "category": "România",
+      "published": "2026-11-12T16:54:49+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/municipiul-iasi-se-constituie-parte-civila-in-dosarul-pacura-in-care-este-cercetat-si-primarul-mihai-chirica-reactia-edilului-4033803",
+      "source": "Digi24; Ziarul de Iași; Euronews România",
+      "status": "verde",
+      "words": 416,
+      "intro": "Consiliul Local Iași a votat constituirea municipiului ca parte civilă; acuzațiile DNA și apărarea primarului Mihai Chirica rămân distincte.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Peste 170 de badante din Republica Moldova, sechestrate și exploatate în Italia. Șapte persoane... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-10T11:07:00+00:00",
@@ -1144,17 +1164,6 @@
       "status": "galben",
       "words": 20,
       "intro": "Burse pentru 27 de elevi din Oradea și Bihor, printr-un proiect susținut de binefăcători din Italia și România Observatorul Bihorean",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "„Tata mă violează”. Un român acuzat de abuz sexual în Italia, denunțat chiar de fiica… - Mediafax",
-      "category": "Diaspora",
-      "published": "2026-11-11T07:54:56+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbExHUVBtbEJsU1Etc1Y4ZXZycTItaElBd0dTbHNZSUI1S0phcU5zYThOdU8tLWVtcUdORG9oWlBhS0Q4eG1lR09kNzRxbEtodGFZa1RrZTFHWFl3NUxaa2xydW4xZncwSTV2cnRoc29DQkFDdXdHNnNqckRtVDhIZUUzekhqTUR3NVE4bW15cnpXQzBmaUJSSjVXNEw2aUwtVjdud3FzRmFjcEJCVUZMbTJIaElNSW130gG-AUFVX3lxTE9jNTFnRkZCbmdWblprZFAtdklDakR0N3paa0MzV1NlREtvQWNiVGZaUnpnbURrdWJWeHIxd0tPbnFDUzItc0gxdWQ1bzdSQXRlNWtTaVBEZTFNb0lJOXRsSm8xY3RHWnF0UkRqMGRPaGdzZXRzM1hmNEUxUndGQlF0YVNSc2NWVk5PamU2RkFDMHZ0d0p5dXVGcm9",
-      "source": "Mediafax",
-      "status": "galben",
-      "words": 16,
-      "intro": "„Tata mă violează”.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
