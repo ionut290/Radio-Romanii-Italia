@@ -1,0 +1,19 @@
+{
+  "name": "radio-romanii-din-italia-ios",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Native iOS shell for Radio Românii din Italia",
+  "scripts": {
+    "ios:generate": "npx cap add ios --packagemanager SPM || true",
+    "ios:sync": "npx cap sync ios",
+    "ios:configure": "node scripts/configure-ios.mjs",
+    "ios:prepare": "npm run ios:generate && npm run ios:sync && npm run ios:configure"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.0.0",
+    "@capacitor/ios": "8.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.0.0"
+  }
+}
