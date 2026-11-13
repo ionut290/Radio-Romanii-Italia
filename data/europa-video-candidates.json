@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-13T01:01:44.089818+00:00",
+  "updated_at": "2026-11-13T07:52:20.294616+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -701,11 +701,11 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "",
+      "languages_declared": "Original",
       "italian_version_available": false,
       "italian_audio_candidate": false,
-      "language_status": "LINGUA_NON_LEGGIBILE",
-      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
       "language_probe_version": 3
     },
     {
@@ -722,11 +722,11 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "",
+      "languages_declared": "Original English français",
       "italian_version_available": false,
       "italian_audio_candidate": false,
-      "language_status": "LINGUA_NON_LEGGIBILE",
-      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
       "language_probe_version": 3
     },
     {
@@ -743,11 +743,11 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "",
+      "languages_declared": "Original",
       "italian_version_available": false,
       "italian_audio_candidate": false,
-      "language_status": "LINGUA_NON_LEGGIBILE",
-      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
       "language_probe_version": 3
     },
     {
@@ -764,11 +764,11 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "",
+      "languages_declared": "Original English français",
       "italian_version_available": false,
       "italian_audio_candidate": false,
-      "language_status": "LINGUA_NON_LEGGIBILE",
-      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
       "language_probe_version": 3
     },
     {
@@ -785,11 +785,11 @@
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
-      "languages_declared": "",
+      "languages_declared": "Original",
       "italian_version_available": false,
       "italian_audio_candidate": false,
-      "language_status": "LINGUA_NON_LEGGIBILE",
-      "language_checked_at": "2026-11-11T22:15:48.964369+00:00",
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
       "language_probe_version": 3
     },
     {
@@ -2212,7 +2212,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "d5fb2e0c8d1734f433",
@@ -3135,7 +3141,7 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:45:49.946317+00:00",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
       "language_probe_version": 3
     },
     {
@@ -3156,7 +3162,7 @@
       "italian_version_available": false,
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-10-29T19:45:49.946317+00:00",
+      "language_checked_at": "2026-11-13T07:52:20.294616+00:00",
       "language_probe_version": 3
     }
   ],
