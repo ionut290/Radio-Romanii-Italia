@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-14T18:28:43.587898+00:00",
-  "editorial_updated_at": "2026-11-14T18:58:39+01:00",
+  "news_updated_at": "2026-11-14T19:03:14.946054+00:00",
+  "editorial_updated_at": "2026-11-14T20:02:00+01:00",
   "translations_updated_at": "2026-11-14T18:00:11.133434+00:00",
-  "feed_total": 77,
+  "feed_total": 76,
   "feed_extended_400": 0,
-  "feed_missing_body": 77,
+  "feed_missing_body": 76,
   "feed_short_body": 0,
-  "editorial_total": 21,
+  "editorial_total": 22,
   "archived_editorials": 264,
   "translation_records": 40,
   "pending_total": 92,
   "pending_filtered_out": 75,
-  "editorial_verde": 3,
-  "editorial_galben": 40,
-  "editorial_rosu": 54,
+  "editorial_verde": 4,
+  "editorial_galben": 43,
+  "editorial_rosu": 51,
   "pending": [
     {
       "title": "A Milano più donne al lavoro che nel resto d'Italia, ma pesa il divario di reddito - ANSA",
@@ -618,11 +618,92 @@
   ],
   "recent_news": [
     {
+      "title": "„Petrolul era dreptul nostru din naștere”. Cum a ajuns Donald Trump să revendice bogăția care a definit Venezuela",
+      "category": "România",
+      "published": "2026-11-14T18:58:25+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/petrolul-era-dreptul-nostru-din-nastere-cum-a-ajuns-donald-trump-sa-revendice-bogatia-care-a-definit-venezuela-4036901",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Scontro tra due auto in galleria, cinque morti nel Cosentino",
+      "category": "Italia",
+      "published": "2026-11-14T18:53:25+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/scontro-tra-due-auto-in-galleria-cinque-morti-nel-cosentino_8ec108df-8b0d-4769-b193-6ad64658d5fa.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Pentagonul testează roboți de război care vânează ținte în grup, fără GPS. Cum funcționează noile arme autonome ale armatei americane",
+      "category": "România",
+      "published": "2026-11-14T18:52:37+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/sua/pentagonul-testeaza-roboti-de-razboi-care-vaneaza-tinte-in-grup-fara-gps-cum-functioneaza-noile-arme-autonome-ale-armatei-americane-4036899",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Rusia susține că Europa ar fi mai sigură fără NATO. Zaharova compară Alianța cu o „măsea stricată”",
+      "category": "România",
+      "published": "2026-11-14T18:38:13+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/rusia-sustine-ca-europa-ar-fi-mai-sigura-fara-nato-zaharova-compara-alianta-cu-o-masea-stricata-4036891",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "'Gli Usa senza lo status morbillo-free è un passo indietro, rischio globale'",
+      "category": "Italia",
+      "published": "2026-11-14T18:35:40+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/usa-senza-status-morbillo-free-passo-indietro-rischio-globale-_edc198d3-e58c-4c0c-94b9-36e075dee664.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il Papa: 'Ci sentiamo minacciati da incertezza, violenza e sofferenze'",
+      "category": "Italia",
+      "published": "2026-11-14T18:34:11+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/14/il-papa-ci-sentiamo-minacciati-da-incertezza-violenza-e-sofferenze-_deb338cd-5c66-46be-b986-297fe0877dca.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Netanyahu non molla: 'Governo con me per chiudere i conti con l'Iran'",
+      "category": "Italia",
+      "published": "2026-11-14T18:32:55+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/netanyahu-insiste-governo-di-unita-nazionale-per-chiudere-i-conti-con-liran_4d3f88f9-75de-4a25-8443-33545fc2ce33.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ucraina, Zelensky: 'Gli Usa ci propongono la Nato in cambio del Donbass'",
+      "category": "Italia",
+      "published": "2026-11-14T18:30:41+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/ucraina-zelensky-gli-usa-ci-propongono-la-nato-in-cambio-del-donbass_48c4f0d9-c61c-4d79-8523-64805b2f303f.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "București. Manifestația pro Georgescu de la Izvor s-a încheiat. O parte dintre simpatizanți s-au mutat apoi în fața Arestului Central",
       "category": "România",
       "published": "2026-11-14T18:13:57+00:00",
       "url": "https://www.digi24.ro/stiri/protest-aur-in-capitala-pentru-sustinerea-lui-calin-georgescu-simion-se-asteapta-la-zeci-de-mii-de-participanti-4035591",
       "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Caos nei cieli Usa, annullati oltre 16mila voli in due giorni",
+      "category": "Italia",
+      "published": "2026-11-14T18:10:52+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/caos-nei-cieli-usa-annullati-oltre-16mila-voli-in-due-giorni_d2a6ded1-a075-4399-8855-8bc69e436c24.html",
+      "source": "ANSA",
       "status": "galben",
       "words": 0
     },
@@ -663,15 +744,6 @@
       "words": 0
     },
     {
-      "title": "Ucraina, Zelensky: 'Gli Usa ci propongono la Nato in cambio del Donbass'",
-      "category": "Italia",
-      "published": "2026-11-14T17:55:32+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/ucraina-zelensky-gli-usa-ci-propongono-la-nato-in-cambio-del-donbass_48c4f0d9-c61c-4d79-8523-64805b2f303f.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "„Există o acțiune orchestrată”. MAI semnalează inundarea rețelelor sociale cu mesaje care instigă la violență",
       "category": "România",
       "published": "2026-11-14T17:48:56+00:00",
@@ -690,15 +762,6 @@
       "words": 0
     },
     {
-      "title": "'Gli Usa senza lo status morbillo-free è un passo indietro, rischio globale'",
-      "category": "Italia",
-      "published": "2026-11-14T17:42:27+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/usa-senza-status-morbillo-free-passo-indietro-rischio-globale-_edc198d3-e58c-4c0c-94b9-36e075dee664.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Lega: 'Eserciti di bot inquinano confronto democratico, anche sui social di Salvini'",
       "category": "Italia",
       "published": "2026-11-14T17:41:56+00:00",
@@ -713,15 +776,6 @@
       "published": "2026-11-14T17:40:26+00:00",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZFdrNm1Dc2tlcHhDNUdpU2V1amdUYUVhTGF4d1puTklxbTdHQTdVeGN3U2E2MVM5MjRSMnAxNXZpanQ2QWEzeXNhLXd2UW1YeVROLUEzQ1Q5ZEFNNktjY19MRjkwV285Y2lMWjI1UnBELWNsN1F5WUViSl92ZEEtME5RSXdaaU0?oc=5",
       "source": "Il Giorno",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Scontro tra due auto in galleria, cinque morti nel Cosentino",
-      "category": "Italia",
-      "published": "2026-11-14T17:32:51+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/scontro-tra-due-auto-in-galleria-4-morti-e-una-ferita-grave-nel_8ec108df-8b0d-4769-b193-6ad64658d5fa.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -807,15 +861,6 @@
       "words": 0
     },
     {
-      "title": "Prosegue il caos nei cieli Usa, soppressi oggi oltre 4.000 voli",
-      "category": "Italia",
-      "published": "2026-11-14T16:20:03+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/prosegue-il-caos-nei-cieli-usa-soppressi-oggi-oltre-4.000-voli_d2a6ded1-a075-4399-8855-8bc69e436c24.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Regele Charles, glume despre bătrânețe alături de Elton John, într-o emisiune radio. Ce replică a stârnit amuzamentul monarhului",
       "category": "România",
       "published": "2026-11-14T16:17:40+00:00",
@@ -843,48 +888,12 @@
       "words": 0
     },
     {
-      "title": "Negocieri comerciale între China și SUA înaintea summitului Xi-Trump. Ce se întâmplă cu tarifele și importurile agricole",
-      "category": "România",
-      "published": "2026-11-14T15:34:22+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/sua/negocieri-comerciale-intre-china-si-sua-inaintea-summitului-xi-trump-ce-se-intampla-cu-tarifele-si-importurile-agricole-4036663",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Victorie istorică a democraților în Alaska, după 28 de ani. Candidatul susținut de Trump, învins în cursa pentru guvernator",
-      "category": "România",
-      "published": "2026-11-14T15:31:30+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/victorie-istorica-a-democratilor-in-alaska-dupa-28-de-ani-candidatul-sustinut-de-trump-invins-in-cursa-pentru-guvernator-4036661",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Distretti del commercio, 2,78 milioni in più dal 2027: coinvolti 179 Comuni - Diario FVG",
       "category": "Italia",
       "published": "2026-11-14T15:21:27+00:00",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFA1dndIT2h5eXFMRmRVcmgtY2d1UDFJOE44UHVNcmRTSkd5WmVrSUl3RnpXVVlCamxiU2dxdkxoYnp5RGR6Q1hFZg?oc=5",
       "source": "Diario FVG",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ilie Bolojan a devenit socru mic. Fiica sa cea mare s-a căsătorit la Oradea. Cine este ginerele fostului premier",
-      "category": "România",
-      "published": "2026-11-14T15:19:36+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/ilie-bolojan-a-devenit-socru-mic-fiica-sa-cea-mare-s-a-casatorit-la-oradea-cine-este-ginerele-fostului-premier-4036645",
-      "source": "Digi24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il Papa: 'Ci sentiamo minacciati da incertezza, violenza e sofferenze'",
-      "category": "Italia",
-      "published": "2026-11-14T15:12:36+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/14/il-papa-ci-sentiamo-minacciati-da-incertezza-violenza-e-sofferenze-_deb338cd-5c66-46be-b986-297fe0877dca.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -955,15 +964,6 @@
       "category": "Italia",
       "published": "2026-11-14T12:31:05+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/meloni-per-la-sinistra-gli-autonomi-di-serie-b-noi-aiutiamo-chi-rischia_a45aae7e-ea75-4996-a2d0-5519950bc747.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Garante: '805 milioni di multa a Meta per l'uso di foto su Fb senza consenso'",
-      "category": "Italia",
-      "published": "2026-11-14T12:15:07+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/garante-805-milioni-di-multa-a-meta-per-luso-di-foto-su-fb-senza-consenso_c28909e5-4d3b-4ec6-9d7c-e23ea349b64d.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
@@ -1300,15 +1300,6 @@
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Român arestat în Italia, acuzat de masacru! A provocat intenționat explozia din apartamentul său. Nouă persoane au fost rănite - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-12T19:00:46+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOMVJYYUdTclpTR1FmQXJ1c0xYQ3VGR1NkWVk3bHJCcUF2aFdBSE9NOWxVS2hleE9ReWJPcFlhalhCMFZpeTJpYlBrdmowWEk3ZkF3VGg2NW9oa3JUeVNtMy1VVW9ZTWNMUDd2WlAySjR4dHpKRXcyQUxUeldZMlI3bEIxOVZPcjk0SEpJbnBTLUYxMlFubzNaU1R6TktCOUJtRzN5WGhkUDJhajlBTnlpaThzV0ZlRWtETWFjaUh6X2Jfbng3a01sUkdRN3dzNzRYbl9ZT2FDQmFBXzJyTjNvQQ?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
@@ -1335,6 +1326,17 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
+      "title": "Protest pentru Călin Georgescu la București: de la Parcul Izvor la Arestul Central",
+      "category": "Știri din redacție",
+      "published": "2026-11-14T16:49:00+02:00",
+      "url": "https://www.digi24.ro/stiri/protest-aur-in-capitala-pentru-sustinerea-lui-calin-georgescu-simion-se-asteapta-la-zeci-de-mii-de-participanti-4035591",
+      "source": "Digi24; TVR Info; Agerpres; Radio România; Mediafax",
+      "status": "verde",
+      "words": 413,
+      "intro": "Mii de persoane au participat la manifestația din 14 noiembrie 2026.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Rezidențiat 2026: aproape 10.000 de candidați, examen național pe 15 noiembrie",
       "category": "Știri din redacție",
       "published": "2026-11-14T18:30:00+01:00",
@@ -1354,17 +1356,6 @@
       "status": "galben",
       "words": 23,
       "intro": "Un șofer român de TIR a fost arestat în Italia, după ce ar fi încercat să fure motorină din rezervorul unui camion Informat.ro",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Un român a fost găsit mort în Italia, în mașina în care se adăpostea - Informat.ro",
-      "category": "Diaspora",
-      "published": "2026-11-12T18:33:49+00:00",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaFpDMkxJVUF2QkdQbV9HRV9SZVZ0bE9fTGd2d2FpX3Y3bXZvR0hjdnpEUW1uZEZ1MnlMam1ORGFSX01pdVN4X3hXWVl4MVkwOXY5UWdhRkVvRDlmZ3kyc1p4YUNSejA5c1MtaHdTM25XdHhJcXdrZEh2Z1ZPYTE2dHRPWHAxaHVEUmJJN2JpSmVBbnUtUnFj?oc=5",
-      "source": "Informat.ro",
-      "status": "galben",
-      "words": 15,
-      "intro": "Un român a fost găsit mort în Italia, în mașina în care se adăpostea Informat.ro",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
