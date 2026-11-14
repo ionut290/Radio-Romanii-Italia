@@ -30,6 +30,7 @@ RDI_APP_URL = os.getenv("RDI_APP_URL", "https://radioromanii.duckdns.org/index.h
 RDI_PAGE_URL = os.getenv("RDI_PAGE_URL", "https://www.facebook.com/profile.php?id=61595529061512")
 DAILY_LIMIT = max(1, min(int(os.getenv("RDI_FB_MAX_DAILY_POSTS", "12")), 50))
 LIVE_PROMO_INTERVAL_HOURS = max(1, min(int(os.getenv("RDI_FB_LIVE_PROMO_INTERVAL_HOURS", "6")), 24))
+NEWS_MIN_INTERVAL_MINUTES = max(30, min(int(os.getenv("RDI_FB_NEWS_MIN_INTERVAL_MINUTES", "90")), 360))
 PAGE_ID = os.getenv("RDI_FB_PAGE_ID", "")
 PAGE_TOKEN = os.getenv("RDI_FB_PAGE_TOKEN", "")
 PAGE_TOKEN_FILE = os.getenv("RDI_FB_PAGE_TOKEN_FILE", "")
@@ -137,6 +138,26 @@ def publish(item: dict, message: str | None = None) -> str:
     return str(payload["id"])
 
 
+def news_score(item: dict) -> tuple[int, str]:
+    category = str(item.get("category") or "").lower()
+    score = 0
+    if "diaspora" in category:
+        score += 40
+    elif "românia" in category or "romania" in category:
+        score += 30
+    elif "italia" in category:
+        score += 25
+    elif "lavoro" in category or "comunit" in category:
+        score += 20
+    if item.get("summary"):
+        score += 5
+    source_tier = str(item.get("source_tier") or "").lower()
+    if source_tier == "community":
+        score -= 3
+    published = str(item.get("published") or "")
+    return score, published
+
+
 def live_promo_message() -> str:
     return "\n\n".join([
         "🔴 RDI È IN DIRETTA 24 ORE SU 24",
@@ -179,14 +200,26 @@ def main() -> None:
         key = item_key(item)
         if key not in published:
             candidates.append((key, item))
-    candidates.sort(key=lambda pair: str(pair[1].get("published") or ""), reverse=True)
-    today = datetime.now(timezone.utc).date().isoformat()
+    candidates.sort(key=lambda pair: news_score(pair[1]), reverse=True)
+    last_news_times = [
+        str(value.get("published_at", ""))
+        for value in published.values()
+        if isinstance(value, dict) and value.get("published_at")
+    ]
+    news_due = True
+    if last_news_times:
+        try:
+            last_news = max(datetime.fromisoformat(value) for value in last_news_times)
+            news_due = (now - last_news).total_seconds() >= NEWS_MIN_INTERVAL_MINUTES * 60
+        except ValueError:
+            news_due = True
+    today = now.date().isoformat()
     posted_today = sum(
         1 for value in published.values()
         if isinstance(value, dict) and str(value.get("published_at", "")).startswith(today)
     )
     remaining_today = max(0, DAILY_LIMIT - posted_today)
-    selected = candidates[:min(MAX_POSTS, remaining_today)]
+    selected = candidates[:min(MAX_POSTS, remaining_today)] if news_due else []
     save_share_queue([item for _, item in selected])
     results = []
     for key, item in selected:
@@ -201,7 +234,7 @@ def main() -> None:
         results.append(f"{'BOZZA' if DRY_RUN else 'PUBBLICATO'}: {item['title']}")
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     save_state(state)
-    print(f"RDI Facebook: {len(results)} elementi gestiti; modalità={'dry-run' if DRY_RUN else 'pubblicazione'}; pubblicati oggi={posted_today + len(results)}/{DAILY_LIMIT}")
+    print(f"RDI Facebook: {len(results)} elementi gestiti; modalità={'dry-run' if DRY_RUN else 'pubblicazione'}; pubblicati oggi={posted_today + len(results)}/{DAILY_LIMIT}; prossimo intervallo notizie={NEWS_MIN_INTERVAL_MINUTES} min")
     print(f"Coda condivisione gruppi: {len(selected)} contenuti pronti per approvazione manuale")
     for line in results:
         print(line)
