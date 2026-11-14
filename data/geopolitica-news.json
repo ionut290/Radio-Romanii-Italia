@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-14T18:00:28.501843Z",
+  "updated_at": "2026-11-14T19:10:36.086202Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-bf6f939ee36c7750",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "EU rejects a single envoy and opts for a six-seat team in Ukraine peace talks",
+      "summary": "",
+      "source": "Latin Times",
+      "published": "2026-11-14T18:53:48Z",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1YTUVpSmQ5U3JETkg5aEtZT3JHUEFaQjdmc0J2UHUtaGRDenRQMThaV0hFbnlHa05IYnFrT2owRkxmSUd6UHdkeTZBUmdmLVhBTzBWR0pROGdLT3dJRS05djhld0pKczlLUDRRcFJFVHZPOUZnS3V2VUVn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE respinge un singur trimis și optează pentru o echipă de șase locuri în negocierile de pace cu Ucraina",
+      "title_it": "L’UE rifiuta un unico inviato e opta per un team di sei posti nei colloqui di pace in Ucraina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-c8e56714db741cfb",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Appeasing Putin won’t bring peace. History taught us that lesson",
+      "summary": "",
+      "source": "www.israelhayom.com",
+      "published": "2026-11-14T17:45:27Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWF5dFlBcVVnbENFTFlWUUxkRjB6MXA0ZGtVX2tOdkhwRWVyQUJyTmhhZnZYeGFoX25BWW5Cd052VlIzTXZFZ2lwMDBaU29tcGFmM1ZvRXRDV1MwS1Z4c3JhLVJDY1FkUVVSblU3amFlSWdpdUFWSGZpUUFncXFkZFkzellIQkY1QUNRNXQ5OU1DX0ZXYzVTc19MM1pEMDRXUHBfUg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Împătrunderea lui Putin nu va aduce pace. Istoria ne-a învățat această lecție",
+      "title_it": "Accontentare Putin non porterà la pace. La storia ci ha insegnato questa lezione",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-4550a83a96aaf29d",
       "category": "conflicte",
@@ -16,7 +44,10 @@
       "source": "Latest news from Azerbaijan",
       "published": "2026-11-14T17:15:00Z",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOdGJkOHQ0Z0lDRVRrOVN1YkJ3aEY3d0dib0hUY3U1RmRRdHVpXzZDQVpmY3dEZmpqQVZpcFhNR044c2hvcjl1Z1dPS3BUYzJRTWhPMVZXSWhnaGMxX1lvMVI5c09wZGlvdUtfVzhHeDJMYVFNbV9fUzk3Rk1xZzU0VkRHcU13cmtrNnRQS3JYakxod0M1Si0tU0h2LU1Sb2RaNjdpSjZ3Rm51UQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA au propus retragerea Donbasului în schimbul aderării Ucrainei la NATO, spune Zelensky",
+      "title_it": "Gli Stati Uniti hanno proposto il ritiro del Donbass in cambio dell’adesione dell’Ucraina alla NATO, afferma Zelenskyj",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d929edb3da89cf3b",
@@ -27,7 +58,10 @@
       "source": "Haberler.com",
       "published": "2026-11-14T17:14:56Z",
       "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPV1NISjkxLWpDUkZwdmdQZENYZGUzOWtBRktHWUdYcUtDUUpPWlBzbUVYLWZLRE9La1JsLTktbnFCekFwU3YzdndaS0Ntc1B1TDNzUWF4M1ZidE1xZWFSYkxMeDR2X3FyUTg1TFNQU0hDT1VKQlkwVURlUWVFYzBMZi01WHZTWUxmSGc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ministrul Kurum a arătat o țară și a avertizat: 19% din aceasta va fi inundată.",
+      "title_it": "Il ministro Kurum ha indicato un paese e ha avvertito: il 19% di esso sarà sommerso.",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-0338710bd183872e",
@@ -38,7 +72,24 @@
       "source": "The National Interest",
       "published": "2026-11-14T17:01:45Z",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVl9MSWc4al9VVlVsNV96MXJRb3ZUeThfZ2lJTVI1TDhjMHJPQXFOaGViY0Z1S241UTFsbGFjNndqMVFTLTFaUWZBZlFKNk9iS1BRT0Y3akZlSndzN1ZlYzVlb3JBWXBZbHk2dC1NMndVVmZ2RUJGdXQ0YVBFX19pQ18zQjN0Y2Nt?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum poate SUA să extindă Quad 2.0 în Indo-Pacific",
+      "title_it": "Come gli Stati Uniti possono espandere il Quad 2.0 nell’Indo-Pacifico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d30041165923ad1b",
+      "category": "clima",
+      "region": "global",
+      "title": "Most Important GK Topics For CLAT 2027: March–April 2026 Current Affairs",
+      "summary": "",
+      "source": "PW",
+      "published": "2026-11-14T16:55:46Z",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPaC1NeTN4V1hiVUI2ekllRjQ2YWQ0cjlBS0tmbi1jQTRKWlpNZGpOdGJrRXh6X21vUEVncnNfV1Y2RDdVM21yYXhUcVIyZmJaV1VybEYwZGJrYXhZUkJ0b2paTmlBZUI2bkpTRXg3djBOQldMZTM0QXBSUWFCQU5VVDRIclVlc1d1SkdhUENFUlJnZndQVkVrWVpqQ0ZSaUlFSzZN?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cele mai importante subiecte GK pentru CLAT 2027: martie-aprilie 2026 Afaceri curente",
+      "title_it": "Argomenti GK più importanti per CLAT 2027: Attualità marzo-aprile 2026",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-56a8d6277d57f655",
@@ -49,7 +100,10 @@
       "source": "BizPac Review",
       "published": "2026-11-14T16:50:37Z",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNdFhocGFPRXJQNG9MRVBrX0lUT3kwdWc2VnhPZnVWYlhxaEE0NmFDWGdvdDJPQmhpX1Y1RVVJMjNwVlRQZGZwcnYzMVItYmg4NlhhWkIzek1vWTNaSXVnYTE0UFZYUlF5a2pLR00tdVM5SmFpbUNUd2FNLWxHWVpjVG5kd2pFd1ZfRWtOU0xVa3RYMmNXRHozMEt2MDJpQQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "AIE găsește un surplus fragil de țiței pe bază de apă",
+      "title_it": "L’IEA rileva un fragile surplus di greggio trasportato dall’acqua",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-f7c367838c4759e0",
@@ -60,7 +114,10 @@
       "source": "The Times of India",
       "published": "2026-11-14T16:10:00Z",
       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxQWGxmSVYzSkdDNzVSdHExYjdSMXB2Ry16QnFhcjBqVUd5QUhKd1NOY2ZodUI4dEtaN29TbXZwZTdWbl9mU2c3a3JpSC1qbXRzTWFlYzZybEVCUVRkXzNRYlNDVkcwVnY2OFA4cFQtT0xNVXY1UERSaU92elNtalc2bWZsMG84QnBSbWpFckMxSG1kdVRuVFh2Y0lKVFpXeUlXSXJSaHJ4UTI2c01KSWRrRERRbmlzRWtKS212aU9za2F4OWRxUTEwM3VFa1JlTHRWNWpHb2VpQ1JsRTRadzJjeWhCaTJTUDNzNVpfanN3NmxmMmd0WGdFeTJJa2FBUFpORG5LWmtQRdIBjAJBVV95cUxPWmRfdjlHazNseWVBdlJfajdmT2Q1ZWdvX1B4Tmh4Rjd3NmxRREQyUkhqY2xhOGRxRHhlQTMwWC1VV3JGUWRqcXNnZlpqTUZzQ2Nlc1R4aTNkV01Uam54UFI0cVREalJkclBNTVBSMWxnd3NoYlhuWkpPMUpVcUNPZi1nNkRBeU0yQ2JFcTh2QWs0S256bUhac2pHVzc4RXVaMUVIV3c3SHBhWDV4RmcwMUhOZWx2SHd4UFlLd0wxdEtvd3ROMUMyaDZEdGE0bEpYcmhSRE1tRmVXRGNFSGpOQXZOYlBnWVRlVjdMX21TUGJPaFdTUjd2MU9IalBSQ3ZqQmNDdE8zcU9oRF92?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "18 națiuni arabe și islamice condamnă atacul israelian asupra spitalului Nasser din Gaza și avertizează asupra amenințării de încetare a focului",
+      "title_it": "18 nazioni arabe e islamiche condannano l'attacco israeliano all'ospedale Nasser di Gaza e avvertono della minaccia di cessate il fuoco",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2d0b3200254f1f2c",
@@ -71,7 +128,24 @@
       "source": "The Manila Times",
       "published": "2026-11-14T16:06:00Z",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOU21rMWxfSjJrdlBDdWxwczBzSzB6WkVlUWU4MjBTZG0tNE9ibjFHLUF6RV9XcmNOd3pGb2pFLUowQ015UUhKbW9WWlBLT0VucTVPMzgzS2h6aHFQM1R2cDVvZVppMUJHbFFMSnBnV3B6NElaY3FER0V0aTROVWtGWVdFczZNd9IBiwFBVV95cUxOWkFwQnhzTlV4R2JGeVN2WTZja3ROZlBuQVBxT0dlV29JZ3F1TnBjV1FMMGd2dlZDNllVeExBQ2RrZUJIal93ZVBYMFRiaFFGeXFxV2xKajFHbEs5QVQ4Qm1OdEJmX0RkcHZnMVRwZkJIckRWaC1xcFR0Vk1zcXA4RUJyWUd3S3FSR1dB?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "China în Orientul Mijlociu",
+      "title_it": "La Cina nel Medio Oriente",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-af9f65c3597f96bf",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31: Africa climate diplomacy suffers early setback",
+      "summary": "",
+      "source": "APAnews - Agence de Presse Africaine",
+      "published": "2026-11-14T15:45:46Z",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5kX3drYVpYazZNWThqQTJWZU5SWmU1STFLQ29fZmFXSXJnOWpFZms3RlRCYWNWQ2NZRnpHbzgyMmhMandqUUh1YkNRRGFMUmpVRkIzSS1vaVpaLXd2QVZqbi1uSExnU1NSRkt5ZVlaX0VLUjJzdl9mcTE3bTgyZw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31: Diplomația climatică din Africa suferă un eșec timpuriu",
+      "title_it": "COP31: La diplomazia climatica africana subisce una battuta d’arresto anticipata",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-4576f2b166455be2",
@@ -82,7 +156,10 @@
       "source": "A News",
       "published": "2026-11-14T15:37:14Z",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOaXpvcW94MGJJRl9BbnZSX1FIZ0ZWVmNLYTF4RXBHc1JKNV9EcG1mZUprNUlCVG02SXBfNFFBOWVYWGc0eEM2VE5ybkY5VVQtb2dla29JRy04OGxTWFBleThieW9nZHZsUFZwNzZWUldQUEZsTkdSa1RSbnNwWE1mNVplNDRKQ3lRYkQ2VkFaLWNnUUp4NXRfRkxneW56elnSAaQBQVVfeXFMTkVRVWhieXhwOHRwanZjRktGZ2l1QW5WdkswRHNhMFRuYkZibmFrSWFzTzByNndIQURBak93TkFMelMwLWZTaWxFVVozR1hDNXVpNlA4MmRnTHdnTXA3RGtETkk0Wjg3M3FZam5VYVlnNTB3SHRSWWFfQmx4Nmg5aUpzTTB6RUZkMUdqVF90bEFONFB0dW11SlFKcHpqSHFFdW1IaUk?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Majoritatea europenilor susțin crearea armatei UE - sondaj",
+      "title_it": "La maggioranza degli europei sostiene la creazione di un esercito dell'UE - sondaggio",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-8f821778f18d25f2",
@@ -93,7 +170,10 @@
       "source": "Middle East Monitor",
       "published": "2026-11-14T15:28:00Z",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNdEU0cURkbXVvSVNMek5YbGF1SFNNSkE1SVBEQ0x0ZlRHdVlDVVl2UTVWMmVfUU5tdDlPZTJKLTQxelNrZVBtT1BwOVI0SzVXRUhsUHRQdDNIcGZBLWktOENFQ0dLQ2hNMjc3bzJlYXprQkNfNUZCTnBIX0EwWGhmbW1CUXIxbUtBQk5ZQkFkbjJ6VlVpR2pCemEzOTdpLUdVQUlWMXNwV1pZajFPdDVfcngwc0RUM3lq0gG-AUFVX3lxTE9NbDhYaWNIVHJ4V25mQmxpajZPbFdhSDN2YXNmQURMMFpTZWNRdC1RcWdoYVlQaFZnbjE2cklpeTZlU1c4OVpjWUZGd3BpU083SllKM1hpMjZJckJiaXBvNExraVZpcGxLSzlvTi1Jd1NxS0lPNjFadEFzemtnQUJoYlF6S3FvN1pwUW9UNVk4OVFDVGJDbWtvM2hyelNHRi0yN0hTQUZ3dGhFY01NM3dWeVZiSmxDclcwR2E2QUE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE îndeamnă Israelul să redeschidă punctele de trecere din Gaza, să permită ajutor umanitar nestingherit",
+      "title_it": "L’UE esorta Israele a riaprire i valichi di Gaza e a consentire il libero accesso agli aiuti umanitari",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d7a7992a4ab1bf77",
@@ -104,7 +184,10 @@
       "source": "ABP Live English",
       "published": "2026-11-14T15:01:15Z",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNQUt5ZTNaVE5oaFUwbDE2YnZHbUZxLXBLVUFUVnBZZk5mLURKNFRTNEN5bThsaGk0VEVRdUlFVXhDOWpCakdzVkk4RFVMQk1GRWJZRGxEbXZXWXVOUm5RY2tiN2tjYXJtYm9HZGNBS29GMmRaeDhXeEFBOWk2TWNiSHBCQW0xNlFlNFhHYUFMOFdtNW95cjFJQ05pS01DT3c1REFkaEYxVFFTNWwyN1UzWGhEcUt0SHB2c1lJMDZQMm5pRGJOeHhVZHRjRFdKd9IB0wFBVV95cUxNYlRObmNJRkRvWjc2SUhDQnAtdy1mTmxiSW90Vnp2T0JxSFZlSVV2WTdQOG5kZzhmNlNKeXlIQlVZWUlGY09iUldhbkk2ckMwcWNvYk8yc0VNNl81YzFsQ2wzYmcwZVgxYS1xcWJXVTJvM1hSM3dnTWRFYl9xOE8yLUdnR0w4SFRWQ2dDS1ZNSmVLMG1PbldQNXVpVGlOZEdfRDVRenkya05sWEZrWXlLWlFVRDJjYmlrX2hDdEp1NUhBUUNINWxlMTV5TV9lSVFfRXd3?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ucraina ar putea renunța la Donbas pentru aderarea la NATO? Zelenskyy dezvăluie ce au propus negociatorii americani",
+      "title_it": "L’Ucraina potrebbe rinunciare al Donbas per aderire alla NATO? Zelenskyj rivela ciò che hanno proposto i negoziatori statunitensi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-43810367ce8f7294",
@@ -115,7 +198,10 @@
       "source": "Middle East Monitor",
       "published": "2026-11-14T14:54:00Z",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcExSNHc2TFB4MlQyQ24yYVh0blBKU0luLWpPcVVDNHJyQVBoTDZUQklxSXpSd0h4QVVIdUxIRVZNZ1JMZEJOaUFzN3lvRWZLOGlIVUdCLWJNYjdBX0ZXcHUtYUJFckRsUS0yWmtzR2V2SkZXTlJiN3dGdjhFLTNyMmlVLWZEdEU1RzVtSXBxclN5dVRCTmM3ME5WZ3pXc29WbDNMUlRJYS1PZkJQa2Mwa1dDQXpvRklrajZYT3doTdIBxAFBVV95cUxQN0cxQkxGT2FUN1VhVFZZbnB6dkptSXVjQkhNQWhsOVFJRE03eEhLbUV5UmZkOHVDWE5oVWtQSU5kVGVyd0lLbDRLQW5WVnlMSTVRZ0pwa0FXRC1EM0ZmRGlmU0JTS294MXZibkNuNWU0Y3dnM0VZU3llVXQtS0U2OS1wdFQtQ1dndURMUkJoSkVJdkNfZ04yOG9TbkxNeFpoMG01enY0V2RjaXBYNmtvcE40QkdpQ2o2Qm5iVkZ1eU01TDNp?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "18 țări condamnă atacul israelian asupra spitalului din Gaza și solicită respectarea încetării focului",
+      "title_it": "18 paesi condannano l’attacco israeliano all’ospedale di Gaza e sollecitano il rispetto del cessate il fuoco",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-1966e67eac015275",
@@ -126,7 +212,10 @@
       "source": "Facebook",
       "published": "2026-11-14T14:43:39Z",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNRzdyX0l0NXJQdi1GRFhsM29MdVVTbFZQdEVlUHQtVzNIV3ZyUkw5OGtHZHpyWHlpYWgtTFlHUFZxVFFOV2V4cXBWUnJQdG85UlY1VnJHRkFjWllyR19TY3VJZ3JYaTZWLWxvWk51UzVzOXVsYzAtbEI2NEltR1Q3dnhpT0M5SDZuZk9Bc0pLTVE1akhHeDlDbVphSERpYzk2ZlRLZ2p1UW1XSXpVUFZsRTMxNGFxaUYwTFdSRlZhczhwZW9WQW9TTThyNTRQUWtERFhv?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Iată cele mai mari titluri din 14 noiembrie 2026, începând cu ora 22:00. Trump, alți lideri Quad se vor întâlni marți la Manila, spun surse https://www.gmanetwork.com/news/topstories/nation/1009483/trump-other-quad-leaders-to-meet-in-manila-on-tuesda",
+      "title_it": "Ecco i titoli più importanti del 14 novembre 2026, alle 22:00. Trump e altri leader del Quad si incontreranno martedì a Manila, dicono le fonti https://www.gmanetwork.com/news/topstories/nation/1009483/trump-other-quad-leaders-to-meet-in-manila-on-tuesda",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a9979efc91bf58e2",
@@ -137,18 +226,10 @@
       "source": "commonspace.eu",
       "published": "2026-11-14T14:12:42Z",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTWU1QllCc2Y0YkRxQTh0dDhOeDkzQlFHdXBSRk4tb2xtdFZzMUNSRWNRMlRtX3pFNktKQ3QxaGlhb09rM1l2UDVOa0pSYXhjNGp5LUFhM1g4RUJOZVNLb1lkRVp4Yl9wSkdOR0V2SjdWdWdDdklLUkdEX2FELUdjOVVSQTduQkdPMHJtNU9KODFVeGpQdmw3S20zcDlTeXZJeVRiMEZOYktuenZPUEN2eFJFRUZLVzNQLWpmdDByYw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-97439ffb61d23e22",
-      "category": "clima",
-      "region": "global",
-      "title": "Bangladesh and Singapore Sign MoU on Carbon Market Cooperation under Article 6 of the Paris Agreement",
-      "summary": "",
-      "source": "The Bangladesh Today",
-      "published": "2026-11-14T13:38:37Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB1ai00YVI2QlZmQllRQ3dkRFhyeUwzN2lsRnBELTRqOE1JS3hKRTFERjNlTm12bUJhZTdla3lfakNIbmVYNmlhYlBDNFlQN2FXNU1kSWlMLXNkc2dFRHlock5rUy1BUzBQTkE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Actualizarea COP31 6: În a patra zi, guvernele anunță noi angajamente privind clima pe fondul condamnării de către activiști",
+      "title_it": "COP31 Aggiornamento 6: il quarto giorno i governi annunciano nuovi impegni sul clima nonostante la condanna degli attivisti",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-65c2a6a08a6560a4",
@@ -159,7 +240,10 @@
       "source": "TVP World",
       "published": "2026-11-14T13:30:00Z",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNeXoyNXBZdGFvZU9xbWNxLW1hRlZaY3NZOHZwcVdrUTA5aDlBOE5KM1dhaFIxRk44V0Y2eVhXODZyaDZOUml1dG1fMEpzQlUtSHlZUFM4ZGNUckd3ZDktRnAxZG51dW9DclR6TnhKdTVzTU15amdZSHBaQ1JaQU56dXVSREwwZ2pDVzVIX2xNZUJHZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Finlanda respinge cererea „revoltatoare” raportată a Rusiei de a părăsi NATO",
+      "title_it": "La Finlandia respinge la “scandalosa” richiesta russa di lasciare la NATO",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-4e6ae70aa94490e5",
@@ -170,7 +254,10 @@
       "source": "The Daily Star",
       "published": "2026-11-14T13:16:54Z",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQV0EtSjNlcGNVR2tjM01uUlJyUTRTdkpIWWtMNXNJVU90T2JkUEJReXNQZTZGRnRiUFp4SERqY2JhWjFvQWRjUDhpYkV6X3FIU3FURzZwUHVQazY3ajQ2VURVb3d2NFFfRW1ZVFc5VVppR2JZVzlXdDkzQmdnVF9YYzVvWkdlLVBxcEx4QUV3Q2Fmc3RBTS1ySTVhNWtMaVFoMEJRWGJIdWdwakg0SlV2Mk5FcUU1aXNBaS04?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Liderii mondiali îl privesc pe PM drept „Lider transformator”: Humaiun",
+      "title_it": "I leader mondiali vedono il Primo Ministro come un “leader trasformativo”: Humaiun",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-0e593ac11e5b9164",
@@ -192,7 +279,10 @@
       "source": "uatv.ua",
       "published": "2026-11-14T13:04:00Z",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOS1J0dkRMeTJGaFd6SzlQUlh2ZWZqcVNwdzVEVHkwaUdnUXVrcXcxSzQ3M29mUTd1UzBzSFE0d1VSZ1Y0UW42X2ZLVWpaZkpQbmxKMjNRd2kwUkdSZWRwNGJEUDgzRC1xcnExbW5DOGZIeUtDcHZ2MktUYkdVaklBT3Y5bXZPeHdtSk9aZE1sVTd5WDlsUVAtbjZR?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Finlanda respinge cererile Rusiei ca o țară să părăsească NATO – Ministrul Apărării",
+      "title_it": "La Finlandia respinge le richieste russe di lasciare la NATO – Ministro della Difesa",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-25fb9d10a1ca66d1",
@@ -251,7 +341,7 @@
       "title": "Nepal's COP 31 Delegation Faces Diplomatic Setback in Antalya",
       "summary": "",
       "source": "Ratopati",
-      "published": "2026-11-14T12:17:05Z",
+      "published": "2026-11-14T12:17:29Z",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNY2U3SzF6Vmx3cHdnMTlMNnRhU0d2RGFPd3I2VFFoOV9zZ0lWblZvRlVNaW5ZTDJ5MDVBSUw0Yi1HZHpQaEtuR0ttdEpBdnE4SzVlUUtxbHhna1pTemdpXzh1S1FpamlTVTdleDY4SS14OEFEYjJwN0c5cWZlWHRSa09DWFF2ME5Ocm9EbWRYbUJWMVRvTi01QndrYkY3T1NtQUl1Sg?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Delegația COP 31 a Nepalului se confruntă cu un regres diplomatic în Antalya",
@@ -267,7 +357,10 @@
       "source": "The New Voice of Ukraine",
       "published": "2026-11-14T11:33:00Z",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPal9WYWtOSy1aVndtR3dtRGxycm53dnA4Q2RjUUpWSjFSS3ozOE00Y3RMRmRUMXNkNHh2WkpRUFFrOC1QZEppZUhHeHVtdjNrUGdkdHdMdGIxMzJmUWdieE1MTHJ5cXZhcWpScGV6SnpIU3RzSTlQOHBzSlZqSjRkTTREQTFoampNa0RNNDhNb3RfMlpHU3ZwcEFqdHp6cGJnZzdpTWxPOVdDM1ZYNUp0VlFCTzh0RHpET2lSYnZRYTNwZ9IBvgFBVV95cUxPTVNLdlo4bURIeGRHUkp3Nk1HblBUdWxQbFFSbHZ0cVBpODI5My1DYXc3OEZkaTNWUEVhaDJ2cllUcllMZktTV0FZemZSUUx1Y1d1RkFRVGlYV2d0MUdUVUFfMW5ERF94eENWSVU1bVBSc2doU3k3NW5obW5mUGtpbTFISWVOd09MVERLLWRub05JOS1MMWdPdzRId2xkcWdtcUtQM3g3a0doS3FDSGdjYnRWR2std2JMenh2dmRB?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia cere NATO întoarcerea la granițele din 1997 și interzicerea folosirii în comun de către aliați a armelor nucleare",
+      "title_it": "La Russia chiede alla NATO di ritornare ai confini del 1997 e di vietare l’uso condiviso di armi nucleari da parte degli alleati",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-ab02a88d5124e592",
@@ -306,7 +399,10 @@
       "source": "POLITICO.eu",
       "published": "2026-11-14T10:48:00Z",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVV9uczBkNFloREFHdU8xZjI5ZnhkZFZERDJhTTRKU0xfbDBCVUt2eVNDRkZ6U3dRaU5GQnFZeHhkbzBYQ1hWc2lZcmVScmZtZzlvWlJrbUhvM1h0WThGdXZwRzhFeG8yM1FtcDdicTlOaWxaNk1VY1R5RWlVcEdVR0Q1M1hQSVdWcnBKYVlBZW1nNDJ4WGwxRVItemw3RWJmbVo4MU5ma3NYTlh3N2c?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA a sugerat că Ucraina ar putea renunța la Donbas pentru aderarea la NATO, spune Zelenskyy",
+      "title_it": "Gli Stati Uniti hanno suggerito che l’Ucraina potrebbe rinunciare al Donbass per l’adesione alla NATO, dice Zelenskyj",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-012fe47975326500",
@@ -317,7 +413,10 @@
       "source": "Frontline Magazine",
       "published": "2026-11-14T10:39:21Z",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPRlczSTJOTmJJTENUNHV2eEU4dDBZX1pJWDlJNVhhR0dGT1NDUDlPZ2tJYW1XUDczLXhiWlAtbWpiTkV5MmFPNjFmZzNsQUZEcGFrOXZ2WlA3aGhKeEdjMlhtRG0wclJsSk1tZnZWNEVZbDQ0RU9oblVXRXJuMUtoYmlwMXZRa1BfTDdfcjlPODZ5NXVpN250Qm9CdkFYMnc4VXhzazJ1a1FfT1FwSXBOMkxpUW5hZHF3SGZyV9IBwwFBVV95cUxOc29LWkpuQXphTWVSVVVTTVZjcWc1V2Q2cFNjTDJyMTRKVFdGZG9MbHJYbFItY3JnZGd2UjdiX0p4U2FSLUhBMEFZNFBLOVU5aEZfb09zYnY4TlduMy1EenF4NHQxQThoQnl0RE9Pd3FJUEd6QUctaW1iU1NzdU1sX21GTGhRZDVXX1hfZkhPWl9qLU5qY25OTlBXUUNuWUNJcEd2cUVURDFIc2w3YVIwUlAwZGxteFFkNnRvRHhYcnFUTnc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31: Provocarea capitalului propriu din spatele angajamentului 35x35",
+      "title_it": "COP31: La sfida azionaria dietro l’impegno 35x35",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a3767dc038230a94",
@@ -401,17 +500,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-eb0d2537bfd8d70c",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Rappler. . Australia’s Anthony Albanese arrives in Manila for ASEAN Summit WATCH: Australian Prime Minister Anthony Albanese arrives in Manila on Saturday, November 14, 2026, for the 49th ASEAN Summit and Related Summits. Albanese has serve",
-      "summary": "",
-      "source": "Facebook",
-      "published": "2026-11-14T06:52:25Z",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQV29vOFZEaUlkZURBZDBNNGlZZzhJUEtsTG80S0kzbW9FNnlDMGlYc1RMaGpBUExmRGs4cTNPbnhmOUpxMllpS1Z0Q0VERFVUU0QwNXF2N1BqVHBFM3RKS1EwVi04SUFET3lYOEprUmJ1NVZHVGhQamwxM24ySlEycFVmazU2aU9Ldnpyb2FiZWlvNmhyVXhaS0hPNUdNUUNtWGhhZ0VNZEdzUU9TUVZrUndsc0tETDBUTm9NbDJfNTBIdHBjVjh0Qm5QeFhzWkNmWVlWUzZuOUxBaU04?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-15cd60a54a232b61",
       "category": "diplomatie",
       "region": "global",
@@ -465,20 +553,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-64015333ccb75f26",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "WATCH LIVE: Brazilian President Luiz Inacio Lula da Silva is given arrival honors as he embarks on his state visit to the Philippines on November 14, 2026. He will have a bilateral meeting with Philippine President Ferdinand Marcos Jr. at t",
-      "summary": "",
-      "source": "Facebook",
-      "published": "2026-11-14T05:24:33Z",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPVm03cFYxSEhCaF9udWg1TEtWaFhoUmFOdlNNN1p3ZnRHUXViVWRfbkN4QjhXQXd5cE9oYmZTSnpOOVBlaWdaVWVwLURUTU9obzU2Y0M5eFlKVkJUQWMxVVJUM2V2VmRzTHdhWVZ5RXhnRzIzNDhqN2Q4RHctbk0yekhwMVBhWGRWTmM4UkpYZXV5N0FBdDl4UnlWYXFEcDFhRDM4THJXZ1VNcXBoMVRKN0xOLVFnTS1pSmNkdldraHJlQURHWVAwVndKd0dyaUxSU1pnNVdkZEFfLU0?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "URMĂȚI LIVE: Președintele brazilian Luiz Inacio Lula da Silva primește onoruri de sosire în timp ce își începe vizita de stat în Filipine pe 14 noiembrie 2026. El va avea o întâlnire bilaterală cu președintele filipinez Ferdinand Marcos Jr. la t",
-      "title_it": "GUARDA DAL VIVO: Il presidente brasiliano Luiz Inacio Lula da Silva riceve gli onori di arrivo mentre intraprende la sua visita di stato nelle Filippine il 14 novembre 2026. Avrà un incontro bilaterale con il presidente filippino Ferdinand Marcos Jr. a t",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-12b22a645b01e1d1",
       "category": "tehnologie",
       "region": "global",
@@ -487,7 +561,10 @@
       "source": "WTOP News",
       "published": "2026-11-14T05:17:46Z",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONVljNTFyVTBob3FTSTFEWjNjeldvelllSkphSjI0clRGSEl4WjhuYXhVdElzU01GdS05My1YeFhkNW9fd1c4MzBWVERWaUN5OVpHbmpOeVhjaXFEOWhGZTY2TThOYVU2dEg5NjhjQVllMWpFYlNjVHJxcDh2STlIU2hGYVpSUHNpcjllUkdUYWhJaGRGYjVoR2xxUER5NlR1QklqY2ljNnlnYVBIX3hacllzU3dhRnB4TmZMSm5n?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Scandalul Nvidia sporește rivalitatea AI a Americii cu China înaintea vizitei lui Trump",
+      "title_it": "Lo scandalo Nvidia sta intensificando la rivalità dell’America nel campo dell’intelligenza artificiale con la Cina in vista della visita di Trump",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e98451d7d30f1720",
@@ -529,20 +606,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Pregătirea Nepalului și dezvoltarea capacității instituționale este o necesitate pentru negocierile privind schimbările climatice, ministrul Khanal",
       "title_it": "La preparazione del Nepal e lo sviluppo delle capacità istituzionali sono fondamentali per i negoziati sul clima, ministro Khanal",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f752555ff9d08d88",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "53 countries and organizations urge unrestricted humanitarian access to Gaza",
-      "summary": "",
-      "source": "ABNA English",
-      "published": "2026-11-14T04:40:00Z",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQVnZ5endDbTVfd2JXMFB5Uy15YVU2Z1JZS0xrZVJXR2N4Y1U5WDZCTEdKQXpCYWo0aXR0eVhuOThfVF82MzFYWmF5czBNR3JHTDFYenQydXhaYzMtc0I3bGIxVEZsQkhjWG9LdjRJVUJCckxZQkNnV1ZzNEc1bHJQN1lyVjgwSHJDS0hwTVhNNi01SFhHbTlQRDRfUFY?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "53 de țări și organizații solicită acces umanitar nerestricționat în Gaza",
-      "title_it": "53 paesi e organizzazioni chiedono un accesso umanitario senza restrizioni a Gaza",
       "translation_status": "machine_translation"
     },
     {
@@ -602,17 +665,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-4593fe512a56d871",
-      "category": "clima",
-      "region": "global",
-      "title": "“Nepal needs stronger diplomatic capacity for climate talks”",
-      "summary": "",
-      "source": "Khabarhub",
-      "published": "2026-11-14T01:59:41Z",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9HNEJnNGROcWl2NGxCSm8wXzhtc3hab1NaOS03bk93T0JuRndvTGJSeDF1bmtkSlJBV2RxV0gydFFNazU1QVpETVMwOGdFZGxUN3BpNVotano?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-c9e043204a0ff503",
       "category": "diplomatie",
       "region": "asia",
@@ -660,6 +712,20 @@
       "source": "AOL.co.uk",
       "published": "2026-11-14T00:12:00Z",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWmNLUThzeGhQTDM4RnNGYmd4WldKeG1SdjVfdU1CM1BCdjF4al9kRlpvM2l0MTJNRGJXTDBlMFpNUEVPbnFpWVV3RkFPc3FZV3ZwOHlYRnl5UHhiQzZQZEJFYWJlN250alV1WU1WdjJmQ0FYLTBVakxqMExDYUpIcUhiVk1iOEQ2?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diplomația cafelei a lui Anthony Albanese nu poate îndepărta umbra politicii interne la Cop31",
+      "title_it": "La diplomazia del caffè di Anthony Albanese non riesce a rimuovere l’ombra della politica interna alla Cop31",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b5194c8886a7a9e8",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "How disputes between Israel and Hamas have contributed to the worsening humanitarian situation in Gaza",
+      "summary": "",
+      "source": "DW.com",
+      "published": "2026-11-13T23:59:16Z",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcWxsS3l6RnFYUVNjMDk0OUFoMWVpcF9wbjJoLWVMdmozeXp5am1QR2MwT1N5Z1NIbElUd2NFbzlhUnJYUnFxcnhfc3hQRUxicVhnd3NCUWFXbTBHVmRIU3hZZG9TTnVKeFg3ekEzdDA3b0loY1JNdG5HekQtdTJpNEc2bVF5dGl5MTJqeE01Skx3XzhFa1F6Vy0yY9IBmwFBVV95cUxOVkU5OGNIcnBIWV84c0ZzODVmbi1qVk9FVGtrODU2Z1NMT3U2Um1JdmRULWVnREVBVVBuV3B6XzZ6YWJZY0RzS3B5Tk1ScG54Sm1nZEQ2cHVVMWVjdDdxOUVtV0dIUEtnR0ZpTzNmcjA4YzhMYkZsRkZrWFJhNGJPSFlDeTNvQTR2MDljU2s3LXRHSHVfV184eTN2MA?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
