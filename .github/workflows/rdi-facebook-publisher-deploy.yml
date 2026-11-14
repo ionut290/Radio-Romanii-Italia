@@ -75,6 +75,7 @@ jobs:
           RDI_YOUTUBE_LIVE_URL=https://www.youtube.com/watch?v=_qt-NjBcbtA
           RDI_APP_URL=https://radioromanii.duckdns.org/index.html
           RDI_FB_STATE_FILE=/var/lib/rdi-facebook/state.json
+          RDI_FB_SHARE_QUEUE_FILE=/var/lib/rdi-facebook/share-queue.json
           FB_GRAPH_VERSION=v27.0
           EOF
           cat > /etc/systemd/system/rdi-facebook-publisher.service <<'EOF'
