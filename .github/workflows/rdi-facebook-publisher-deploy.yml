@@ -119,4 +119,10 @@ jobs:
           SSH=(ssh -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
           SCP=(scp -q -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
           "${SCP[@]}" rdi-facebook-publisher.py "$REMOTE:/tmp/rdi-facebook-publisher.py"
-          "${SSH[@]}" "$REMOTE" 'sudo -n install -m 755 /tmp/rdi-facebook-publisher.py /opt/rdi-facebook/rdi-facebook-publisher.py && sudo -n rm -f /tmp/rdi-facebook-publisher.py && sudo -n systemctl is-active --quiet rdi-facebook-publisher.timer && sudo -n systemctl start rdi-facebook-publisher.service && sudo -n systemctl status --no-pager --lines=20 rdi-facebook-publisher.service'
+          "${SSH[@]}" "$REMOTE" 'sudo -n install -m 755 /tmp/rdi-facebook-publisher.py /opt/rdi-facebook/rdi-facebook-publisher.py && sudo -n rm -f /tmp/rdi-facebook-publisher.py && sudo -n systemctl is-active --quiet rdi-facebook-publisher.timer
+          set +e
+          sudo -n systemctl start rdi-facebook-publisher.service
+          rc=$?
+          sudo -n systemctl status --no-pager --lines=30 rdi-facebook-publisher.service || true
+          sudo -n journalctl -u rdi-facebook-publisher.service --no-pager -n 40 || true
+          exit $rc'
