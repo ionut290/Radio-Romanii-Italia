@@ -29,6 +29,7 @@ YOUTUBE_LIVE_URL = os.getenv("RDI_YOUTUBE_LIVE_URL", "https://www.youtube.com/wa
 RDI_APP_URL = os.getenv("RDI_APP_URL", "https://radioromanii.duckdns.org/index.html")
 RDI_PAGE_URL = os.getenv("RDI_PAGE_URL", "https://www.facebook.com/profile.php?id=61595529061512")
 DAILY_LIMIT = max(1, min(int(os.getenv("RDI_FB_MAX_DAILY_POSTS", "12")), 50))
+LIVE_PROMO_INTERVAL_HOURS = max(1, min(int(os.getenv("RDI_FB_LIVE_PROMO_INTERVAL_HOURS", "6")), 24))
 PAGE_ID = os.getenv("RDI_FB_PAGE_ID", "")
 PAGE_TOKEN = os.getenv("RDI_FB_PAGE_TOKEN", "")
 PAGE_TOKEN_FILE = os.getenv("RDI_FB_PAGE_TOKEN_FILE", "")
@@ -107,14 +108,14 @@ def message_for(item: dict) -> str:
     return "\n\n".join(lines)
 
 
-def publish(item: dict) -> str:
+def publish(item: dict, message: str | None = None) -> str:
     if DRY_RUN:
         return "dry-run"
     if not PAGE_ID or not PAGE_TOKEN:
         raise RuntimeError("RDI_FB_PAGE_ID e RDI_FB_PAGE_TOKEN sono obbligatori per pubblicare")
     url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/feed"
     body = urllib.parse.urlencode({
-        "message": message_for(item),
+        "message": message if message is not None else message_for(item),
         "link": str(item["url"]),
         "published": "true",
         "access_token": PAGE_TOKEN,
@@ -136,6 +137,16 @@ def publish(item: dict) -> str:
     return str(payload["id"])
 
 
+def live_promo_message() -> str:
+    return "\n\n".join([
+        "🔴 RDI È IN DIRETTA 24 ORE SU 24",
+        "Ascolta Radio Românii din Italia in qualsiasi momento.",
+        f"🎙️ Ascolta il live su YouTube: {YOUTUBE_LIVE_URL}",
+        f"📻 Apri l’app RDI: {RDI_APP_URL}",
+        f"🔔 Segui la pagina RDI per non perdere i prossimi aggiornamenti: {RDI_PAGE_URL}",
+        "#RadioRomaniiDinItalia #RDI #Live",
+    ])
+
 def main() -> None:
     feed = read_json(NEWS_URL)
     items = feed.get("items") if isinstance(feed, dict) else []
@@ -143,6 +154,24 @@ def main() -> None:
         raise RuntimeError("news.json non contiene una lista items")
     state = load_state()
     published = state.setdefault("published", {})
+    now = datetime.now(timezone.utc)
+    last_live = state.get("last_live_promo_at")
+    live_due = True
+    if last_live:
+        try:
+            live_due = (now - datetime.fromisoformat(str(last_live))).total_seconds() >= LIVE_PROMO_INTERVAL_HOURS * 3600
+        except ValueError:
+            live_due = True
+    if live_due:
+        live_item = {
+            "title": "RDI è in diretta 24 ore su 24",
+            "url": YOUTUBE_LIVE_URL,
+            "source": "RDI",
+            "summary": "Radio Românii din Italia trasmette in diretta 24 ore su 24.",
+        }
+        promo_result = publish(live_item, live_promo_message())
+        state["last_live_promo_at"] = now.isoformat()
+        print(f"{'BOZZA' if DRY_RUN else 'PUBBLICATO'}: promemoria live RDI 24/7 ({promo_result})")
     candidates = []
     for item in items:
         if not isinstance(item, dict) or not item.get("url") or not item.get("title"):
