@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coda condivisioni · RDI</title>
+<style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#15233b;font:16px system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:980px;margin:auto;padding:28px 18px 60px}header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}.brand{display:flex;align-items:center;gap:12px}.brand img{width:52px;height:52px;object-fit:contain;border-radius:14px}.brand h1{margin:0;font-size:clamp(24px,4vw,36px)}.brand p{margin:3px 0 0;color:#667792}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:11px;padding:11px 15px;background:#1268d5;color:white;font-weight:750;text-decoration:none;cursor:pointer}.button.secondary{background:#e4edf8;color:#1b3d6e}.intro{background:linear-gradient(115deg,#10294a,#1c5da9);color:white;border-radius:22px;padding:24px;margin-bottom:20px;box-shadow:0 10px 28px #0d376622}.intro h2{margin:0 0 8px}.intro p{margin:0;color:#dcecff;line-height:1.55}.status{margin:18px 0;color:#657894}.queue{display:grid;gap:16px}.card{background:white;border:1px solid #dfe8f3;border-radius:18px;padding:18px;box-shadow:0 5px 18px #102b5010}.card h3{margin:0 0 8px;line-height:1.3}.meta{color:#71829a;font-size:13px;margin-bottom:12px}.message{white-space:pre-wrap;background:#f6f8fb;border:1px solid #e5ebf3;border-radius:12px;padding:14px;line-height:1.5;color:#334765}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.empty{text-align:center;padding:42px;color:#71829a;border:1px dashed #cbd8e8;border-radius:18px;background:#fff}.note{font-size:13px;color:#71829a;margin-top:20px;line-height:1.5}@media(max-width:600px){main{padding:18px 12px}.top-actions,.actions{width:100%}.button{flex:1}.intro{padding:18px}.card{padding:14px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand"><img src="./RADIO-LOGO.png" alt="RDI"><div><h1>Coda condivisioni</h1><p>Contenuti RDI pronti per i gruppi autorizzati</p></div></div>
+  <div class="top-actions"><a class="button secondary" href="./index.html">← Torna alla radio</a><button class="button" id="refresh">Aggiorna</button></div>
+</header>
+<section class="intro"><h2>Condividi con criterio</h2><p>Controlla il testo, copia il contenuto e scegli manualmente il gruppo corretto. Pubblica solo dove la pagina o il tuo account sono autorizzati.</p></section>
+<div class="status" id="status">Caricamento coda…</div>
+<section class="queue" id="queue"></section>
+<p class="note">La coda viene aggiornata automaticamente dal bot quando arrivano nuove notizie. Questa pagina non invia automaticamente post nei gruppi.</p>
+</main>
+<script>
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const queue=document.getElementById('queue'),status=document.getElementById('status');
+function render(items){
+ if(!items.length){queue.innerHTML='<div class="empty">Nessun contenuto in attesa di condivisione.</div>';return}
+ queue.innerHTML=items.map((x,i)=>'<article class="card"><h3>'+esc(x.title||'Contenuto RDI')+'</h3><div class="meta">'+esc(x.url||'')+'</div><div class="message">'+esc(x.message||'')+'</div><div class="actions"><button class="button" data-copy="'+i+'">Copia testo</button><a class="button secondary" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(x.url||'')+'">Apri condivisione Facebook</a><a class="button secondary" target="_blank" rel="noopener" href="'+esc(x.url||'#')+'">Apri notizia</a></div></article>').join('');
+ document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{const text=items[Number(b.dataset.copy)]?.message||'';await navigator.clipboard.writeText(text);b.textContent='Copiato ✓';setTimeout(()=>b.textContent='Copia testo',1800)});
+}
+async function load(){status.textContent='Caricamento coda…';try{const r=await fetch('./rdi-share-queue.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const d=await r.json();render(Array.isArray(d.items)?d.items:[]);status.textContent=d.generated_at?'Ultimo aggiornamento: '+new Date(d.generated_at).toLocaleString('it-IT'):'Coda aggiornata';}catch(e){render([]);status.textContent='La coda non è ancora disponibile.'}}
+document.getElementById('refresh').onclick=load;load();
+</script>
+</body>
+</html>
