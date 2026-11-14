@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-14T16:49:04.100866+00:00",
-  "editorial_updated_at": "2026-11-14T11:14:51.493008+01:00",
+  "news_updated_at": "2026-11-14T17:36:18.987973+00:00",
+  "editorial_updated_at": "2026-11-14T17:59:18.678028+01:00",
   "translations_updated_at": "2026-11-14T15:50:57.358456+00:00",
-  "feed_total": 81,
+  "feed_total": 80,
   "feed_extended_400": 0,
-  "feed_missing_body": 81,
+  "feed_missing_body": 80,
   "feed_short_body": 0,
-  "editorial_total": 22,
-  "archived_editorials": 261,
+  "editorial_total": 20,
+  "archived_editorials": 264,
   "translation_records": 35,
   "pending_total": 92,
   "pending_filtered_out": 75,
-  "editorial_verde": 3,
+  "editorial_verde": 2,
   "editorial_galben": 42,
-  "editorial_rosu": 57,
+  "editorial_rosu": 55,
   "pending": [
     {
       "title": "A Milano più donne al lavoro che nel resto d'Italia, ma pesa il divario di reddito - ANSA",
@@ -618,10 +618,10 @@
   ],
   "recent_news": [
     {
-      "title": "O analiză de sânge pentru depistarea cancerului de sân şi prezicerea riscului de recidivă a fost dezvoltată de cercetători",
+      "title": "De la cazarmă la cada de baie: rața de cauciuc cu pușcă de asalt, noul bestseller al armatei germane",
       "category": "România",
-      "published": "2026-11-14T16:43:05+00:00",
-      "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/o-analiza-de-sange-pentru-depistarea-cancerului-de-san-si-prezicerea-riscului-de-recidiva-a-fost-dezvoltata-de-cercetatori-4032917",
+      "published": "2026-11-14T17:32:37+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/de-la-cazarma-la-cada-de-baie-rata-de-cauciuc-cu-pusca-de-asalt-noul-bestseller-al-armatei-germane-4036797",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -629,17 +629,80 @@
     {
       "title": "Manifestația pro Georgescu din Capitală s-a mutat la Arestul Central. Important dispozitiv al Jandarmeriei în zonă",
       "category": "România",
-      "published": "2026-11-14T16:38:12+00:00",
+      "published": "2026-11-14T17:21:56+00:00",
       "url": "https://www.digi24.ro/stiri/protest-aur-in-capitala-pentru-sustinerea-lui-calin-georgescu-simion-se-asteapta-la-zeci-de-mii-de-participanti-4035591",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
+      "title": "Dopo 26 anni gli Usa perdono lo status di Paese libero dal morbillo",
+      "category": "Italia",
+      "published": "2026-11-14T17:20:56+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/dopo-26-anni-gli-usa-perdono-lo-status-di-paese-libero-dal-morbillo_edc198d3-e58c-4c0c-94b9-36e075dee664.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Rezidenţiat 2026: Aproape 10.000 de candidaţi înscrişi la concurs, din care 3.736 - la UMF „Carol Davila” Bucureşti",
+      "category": "România",
+      "published": "2026-11-14T17:10:52+00:00",
+      "url": "https://www.digi24.ro/stiri/rezidentiat-2026-aproape-10-000-de-candidati-inscrisi-la-concurs-din-care-3-736-la-umf-carol-davila-bucuresti-4036787",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Incendii devastatoare, caniculă mortală și inundații catastrofale: 2026, un an al fenomenelor meteorologice extreme",
+      "category": "România",
+      "published": "2026-11-14T17:04:10+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/natura-si-mediu/incendii-devastatoare-canicula-mortala-si-inundatii-catastrofale-2026-un-an-al-fenomenelor-meteorologice-extreme-4036757",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Confindustria convoca le Assise prima del voto. 'La politica ci ascolti'",
+      "category": "Italia",
+      "published": "2026-11-14T17:00:03+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/14/orsini-la-manovra-momento-complicato-ci-aspettiamo-risposte_e7e1de2d-a227-4024-9594-d9523aab3ffe.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Ucraina și Danemarca au finalizat primele componente ale sistemului antibalistic FREYJA. Anunțul lui Zelenski",
       "category": "România",
-      "published": "2026-11-14T16:36:57+00:00",
+      "published": "2026-11-14T16:55:11+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/ucraina-si-danemarca-au-finalizat-primele-componente-ale-sistemului-antibalistic-freyja-anuntul-lui-zelenski-4036725",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Italia a amendat Meta cu 887 milioane USD pentru accesarea fotografiilor şi videoclipurilor utilizatorilor Android fără consimțământ",
+      "category": "România",
+      "published": "2026-11-14T16:50:00+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/italia-a-amendat-meta-cu-887-de-milioane-de-dolari-pentru-accesarea-fotografiilor-si-videoclipurilor-utilizatorilor-android-fara-consim-4036761",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Scontro tra due auto in galleria, 4 morti e una ferita grave nel Cosentino",
+      "category": "Italia",
+      "published": "2026-11-14T16:43:59+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/scontro-tra-due-auto-in-galleria-4-morti-e-una-ferita-grave-nel_8ec108df-8b0d-4769-b193-6ad64658d5fa.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "O analiză de sânge pentru depistarea cancerului de sân şi prezicerea riscului de recidivă a fost dezvoltată de cercetători",
+      "category": "România",
+      "published": "2026-11-14T16:43:05+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/o-analiza-de-sange-pentru-depistarea-cancerului-de-san-si-prezicerea-riscului-de-recidiva-a-fost-dezvoltata-de-cercetatori-4032917",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -690,30 +753,12 @@
       "words": 0
     },
     {
-      "title": "Scontro tra due auto in galleria, cinque morti nel Cosentino",
-      "category": "Italia",
-      "published": "2026-11-14T15:55:33+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/scontro-tra-due-auto-in-galleria-cinque-morti-nel-cosentino_8ec108df-8b0d-4769-b193-6ad64658d5fa.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Scagionata dopo 14 anni: 'Non ho più né casa né lavoro'",
       "category": "Italia",
       "published": "2026-11-14T15:54:17+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/infermiera-scagionata-da-omicidio-sono-a-casa-poi-si-vedra_efe0b4f8-0c28-45b6-8bf1-9b0201aa7dfa.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Sydney si tinge di viola con la fioritura delle jacarande",
-      "category": "Italia",
-      "published": "2026-11-14T15:51:33+00:00",
-      "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/14/sydney-si-tinge-di-viola-con-la-fioritura-delle-jacarande_b182d95f-adb2-4fee-814e-48aea3099ea7.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -816,39 +861,12 @@
       "words": 0
     },
     {
-      "title": "David Popovici face un nou apel către Guvern pentru plata banilor datorați sportivilor, la inaugurarea bazinului olimpic din Otopeni",
-      "category": "România",
-      "published": "2026-11-14T14:24:59+00:00",
-      "url": "https://www.digi24.ro/stiri/sport/david-popovici-face-un-nou-apel-catre-guvern-pentru-plata-banilor-datorati-sportivilor-la-inaugurarea-bazinului-olimpic-din-otopeni-4036607",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Appartamenti minuscoli: vivere in 10 metri quadrati è la nuova normalità - la Repubblica",
       "category": "Italia",
       "published": "2026-11-14T14:21:23+00:00",
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNN0pFWmlndkN4Uk1pLWxiZ3d6Smh1dktyTm1ndlMyUk92emNqMl84bldBMEZGcUthaXFFZGVuWTFhbUFReVRiQTlCM0NJdk02TktWcUFta0dEcXNQblNoYmhad2ZKeDRtM25ybE5VS2dCM2JfSThHV0ZfazJsa25Pa3EtNjh6dGtheVUwRVA2Mko4S1dqOXphZURPTUZCY2Qtc0l1bkY0dmxOeDExY2plMm1RUU9uV1M2c0dFRk1uYmJTdU9ock1CUkUwU1pRQQ?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Congo își retrage candidatul în favoarea României la șefia Francofoniei. Cioloș, în cursa pentru funcție: „Împărtășim aceleași valori”",
-      "category": "România",
-      "published": "2026-11-14T14:10:26+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/congo-isi-retrage-candidatul-in-favoarea-romaniei-la-sefia-francofoniei-ciolos-in-cursa-pentru-functie-impartasim-aceleasi-valori-4036571",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "FJORD, de Cristian Mungiu, cinci nominalizări la Premiile Academiei Europene de Film. Sebastian Stan, în cursa pentru cel mai bun actor",
-      "category": "România",
-      "published": "2026-11-14T13:50:26+00:00",
-      "url": "https://www.digi24.ro/magazin/timp-liber/showbiz/fjord-de-cristian-mungiu-cinci-nominalizari-la-premiile-academiei-europene-de-film-sebastian-stan-in-cursa-pentru-cel-mai-bun-actor-4036577",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -867,24 +885,6 @@
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/anziano-ucciso-durante-la-truffa-del-falso-carabiniere-due-fermi_5d3e1a2d-d519-4fe8-b10b-e866c55fbb82.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "20 de milioane de dolari găsite îngropate în păduri din Ungaria: Un fost ministru al Guvernului Viktor Orban, în centrul scandalului",
-      "category": "România",
-      "published": "2026-11-14T13:36:10+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/20-de-milioane-de-dolari-gasite-ingropate-in-paduri-din-ungaria-un-fost-ministru-al-guvernului-orban-in-centrul-scandalului-4036551",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Orsini: 'Con Superbonus in 10 anni a rischio la fiducia imprese-istituzioni'",
-      "category": "Italia",
-      "published": "2026-11-14T13:36:03+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/14/orsini-la-manovra-momento-complicato-ci-aspettiamo-risposte_e7e1de2d-a227-4024-9594-d9523aab3ffe.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -996,20 +996,20 @@
       "words": 0
     },
     {
+      "title": "Concorsi, arrivano 887 assunzioni al Mimit per laureati e diplomati - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-14T04:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUWxJUFdLQ05SbEFLUUlvWm9OTWVZMm45UThfcURMbUNoVS14WGNRWUJKT05NQkNHMER6OFFIaE0tSmstY290UjBSTTZuVVo3ZmRia2hsWHJRZDlSSmpUbENuZFlMR2x3ZHotNjI2RlZlS3k3dWV1R09OX0RUNXNpMUlMRnR1aWRLRGlwemhCeV9iUHVDTUFGS2c2WnExZzByelNaZS12aks?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Devoluzione cinque per mille Volontariato Anno finanziario 2023 - Quinto elenco Accredito su conto corrente per importi inferior - Ministero del Lavoro e delle Politiche",
       "category": "Drepturile muncitorilor",
       "published": "2026-11-14T01:46:42+00:00",
       "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxObWhkbDV5dkVTZHhIN3BFaTV2VkFjcXdRcHBKS1hIR3hKTkw4OWNpX3dQRUJ2bFZUR25vOWZnTkszRXB1Y3lhWTBfWURuVUlEeFQ2OExHeUVHN0tKN1pJaHI5bUp4QUNSc1U0UURtckxscmFTS2ZkdTFteFVlcU5rQy1MM1FHakFiNEZvRDJ6ZVlsR0duMmR5aDJRZ2UzcUdlZXZDUUtoMTVMOHdhNWJOMGdJd2xNU0FkQ0NWRGkwZHB4SlhlOFFmcVZPTERDSnpMbXBGOEdKT0NJTlFPa2lKYUtOUDFkVk5QcWw0X2JmNTZ6LVBPNFJpd05lelVCQmFocGlIOQ?oc=5",
       "source": "Ministero del Lavoro e delle Politiche",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Le sfide delle 500 aziende leader piacentine, focus alla Cattolica - Libertà",
-      "category": "Italia",
-      "published": "2026-11-14T00:44:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdXRFeWhCWXlvYWxMNGhxRE9Oay1NQVNBQU4yanExRHhvUGQ2cHNoZ1lKUEtjV1NzbWNOb0xYUlVZZWVrcnJJaUVVWFpsRzZKWGxHM3lLMGx0V1lsTHRIRDNNOVZWWmFGNWoxd3ZUVmEyb2Z1d292UEZMUktFWUhubkJZdGZPclB5SC1uTVNlYnZUOHVXYmcxSzlPV0ttQlZJdlFIcGJDb3dBNjNKdGFkTXlFMUdVb2pnZUREYWVtOVc3UQ?oc=5",
-      "source": "Libertà",
       "status": "roșu",
       "words": 0
     },
@@ -1239,15 +1239,6 @@
       "words": 0
     },
     {
-      "title": "Lagalla \"Rapporti con Romania consolidati, lavoro consolato produrrà altri frutti\" 13/11/2026 - L'eco del sud",
-      "category": "Italia",
-      "published": "2026-11-13T09:12:12+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQRTBzNHJVWk9vMGt5bDgzdUoyLUVzbDFyYVZEdVdVOHhyYTlPZFA3TXZZRENIWkZSYVZ6WklkeXJWQTF5NnNFenFuSndCZ21FSDhBNW5WYW5RdUVLRHdxUnltUUVWeWpfaG5XOTEwRzhNWTc4SVMtY3NQNTllNzFURHdJSnREck9DNlVGa1dYTWRTdy03RjV2ZHZ4UlNqWFNYTFlQbGx0bi1PM1RjZzBidjVGc25hX19JUzJ6aXpzV0F6Zw?oc=5",
-      "source": "L'eco del sud",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Un român a furat aproape 900 de metri de cablu de cupru de pe calea ferată Madrid-Barcelona - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-13T08:38:00+00:00",
@@ -1302,6 +1293,15 @@
       "words": 0
     },
     {
+      "title": "Enel, l’estero traina i numeri dei nove mesi. In Italia margini in calo - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-12T19:13:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMXMzdFFZWms3R0FNX3RzUzZUQmFrLTMyNER2NXFIemhkeF9aMDdVMjhJcnJHbFlVbHRROUJsUWxWY2ZJTldSbTBvVzhUR0pyMmxsUDBRd3N4X05YZlFVYmJFcF9KQ3ZVelA3OHEyMno1V3p5Y01meDFSQmlGU2pjYjI4S2VVamwwYnVSOEVEeXFSQTlPU3d5UkRPV0RmSXIyOXc?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Nicușor Dan a explicat de ce l-a dat afară pe jurnalistul Ovidiu Vanghele de la Cotroceni: \"Eu nu sunt un gunoi\" - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-12T19:08:00+00:00",
@@ -1336,29 +1336,9 @@
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Alina Apostol, românca închisă în China. Ministrul de Externe promite intensificarea demersurilor... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-12T16:57:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQdnpDeHhRYVpKRHNyZnFNT0tyZDgtamJBWWlQLWVBOHd1Qnh5bERvR0pVYWhHSmxVTElXQlo3WFpTclkzS21mTmhPRXc2Q2lreTg0ZmxEWjgtTTBqUHh3R1AxTkpmSXdzbTRTbHBlUjdja3pvM2JlRVQyOHIxQmpfZU5kenAwcjhRZXhybmUyOHBTR3VqcUhzUUtCaVVMVF9QMGVkTEN5UTlrLWthcEJpWUJ0NlNJd2lRNkZOemtzUC1xT1R6YzBEWV9YWjFsUGM1c0FlbzlTLXhXb1FLaV9GLUp0Q1d4VkM5Zk9yMG9Kb0Zfb0g2Wl8xZUhIUjVyRk3SAf8BQVVfeXFMUHZ6Q3h4UWFaSkRzcmZxTU9LcmQ4LWpiQVlpUC1lQTh3dUJ4eWxEb0dKVWFoR0psVUxJV0JaN1haU3JZM0ttZk5oT0V3NkNpa3k4NGZ",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
-    {
-      "title": "Iași: municipiul cere recuperarea a peste două milioane de lei în dosarul „Păcura”",
-      "category": "România",
-      "published": "2026-11-12T16:54:49+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/justitie/municipiul-iasi-se-constituie-parte-civila-in-dosarul-pacura-in-care-este-cercetat-si-primarul-mihai-chirica-reactia-edilului-4033803",
-      "source": "Digi24; Ziarul de Iași; Euronews România",
-      "status": "verde",
-      "words": 416,
-      "intro": "Consiliul Local Iași a votat constituirea municipiului ca parte civilă; acuzațiile DNA și apărarea primarului Mihai Chirica rămân distincte.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
-    },
     {
       "title": "Un român de 22 de ani, erou în Italia / Și-a pus mașina la dispoziție pentru a ajuta victimele inundațiilor din La Spezia / „Nu mai văzusem niciodată o inundație. Dacă mi s-ar fi întâmplat mie?” - G4Media",
       "category": "Diaspora",
@@ -1382,25 +1362,36 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
-      "title": "Satul românesc din Italia. Poveștile oamenilor care au construit comunitatea - Euronews România",
+      "title": "Un șofer român de TIR a fost arestat în Italia, după ce ar fi încercat să fure motorină din rezervorul unui camion - Informat.ro",
       "category": "Diaspora",
-      "published": "2026-11-12T12:56:14+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMjZjUVIzS0V4VUhFR0JpbkIxcjNQS3lfV1NTZ2hUNzJPdUsxVzlNa3l6ckwxeGhnZXRISmZ5Ym16aGdGZjZaS1J4WFBrWUZUR2dySE14N1Zmb1g0aXQ0OXpYRF9uSVE4aC04SkNaT1NHOXdrZGFLUG9LSWpIQkVGOGxfZWIteUJpSS1pdk5kdw?oc=5",
-      "source": "Euronews România",
+      "published": "2026-11-12T18:25:48+00:00",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRURjU0NjSXo2ejJCTHE5aDV5Q0RTcjRXM2V1U3JtYmlTY2hzQWM0M0dkOThJZHhTNUZ3RHNSQ2VXWjFDNkFnVnVlb05zRE1VOC1TV0YweXkyckFqTUlDbFNkWC02cGhncFVWR3JxWHJJanJGRXpoRENuT1VMallseFpzRkVyV0h5LXBodEtXaDdKMzJ0XzVqZnpMTQ?oc=5",
+      "source": "Informat.ro",
       "status": "galben",
-      "words": 12,
-      "intro": "Satul românesc din Italia.",
+      "words": 23,
+      "intro": "Un șofer român de TIR a fost arestat în Italia, după ce ar fi încercat să fure motorină din rezervorul unui camion Informat.ro",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "Foto și Video. Patru copii români de la cursurile LCCR, premiați la Roma în cadrul evenimentului ,,Premiului Internațional al Tinerilor pentru Pace 2026“. Cursul LCCR este o necesitate pentru comunitatea românească din I",
+      "title": "Un român a fost găsit mort în Italia, în mașina în care se adăpostea - Informat.ro",
       "category": "Diaspora",
-      "published": "2026-11-12T14:28:50+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxQczVlRExEZzFkREU4SEFQZFNTeElvaVJoMV81bC10dnRvb2ZPa0JSMGFTWnVTQXVjeXFKazNxVlZ3LVdUbmtQcjR1Yzk4S2trQ0U4U05DdFpHU0FfX2pBTHhWc2VCOXlIa3J4dFNRT3pKdEhHUVFybGZqYVVKc29pYWZyamZCTTVzMGItY1FlOW80bGZ1RFhuOGFNdm83OV9RekVGX1NtYkMtWHdCNGI4OS1lckdCX2ZrMEhJS1JoLUdwWEtDQ3RyZ2FYSm1RTWhvN2xpNzFEMy1lc1IzZXh3Q0FPNVIzUnU4TVRGY3JwMHdaMkZXWFlNcWpKcjgzOFhZLWxMMWI3a1d5UDg0di1jNG9DQWdzYVFuYnVvemJwM0NCanNNNi04cTMwQmpqU292NWdlUVN5Y2lNcmhkZFFRZ29TSHUtaWc?oc=5",
-      "source": "Monitorul de Făgăraș",
+      "published": "2026-11-12T18:33:49+00:00",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQaFpDMkxJVUF2QkdQbV9HRV9SZVZ0bE9fTGd2d2FpX3Y3bXZvR0hjdnpEUW1uZEZ1MnlMam1ORGFSX01pdVN4X3hXWVl4MVkwOXY5UWdhRkVvRDlmZ3kyc1p4YUNSejA5c1MtaHdTM25XdHhJcXdrZEh2Z1ZPYTE2dHRPWHAxaHVEUmJJN2JpSmVBbnUtUnFj?oc=5",
+      "source": "Informat.ro",
       "status": "galben",
-      "words": 36,
-      "intro": "Foto și Video.",
+      "words": 15,
+      "intro": "Un român a fost găsit mort în Italia, în mașina în care se adăpostea Informat.ro",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "Un român de 52 de ani a murit de frig în mașina în care locuia, parcată lângă un spital din Italia - Libertatea",
+      "category": "Diaspora",
+      "published": "2026-11-13T06:17:17+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZjQwWEhPRXF0QTdveWJzR2k5TUtsSC1YSS1nb0FWOFBxbGFHLWZ2Yjg0LVgwYUN6d29Ncm5TS183Q3lJWHEwbDhPQVdRN0licEZaUVNPbnFUMlFFSUdUTld5ZTZ6aWtnMkcxcHpXazZPVmNuM1JEVW14dkpIc0t5a09DNGZhYzVncnZrcXlxVDZuZ0NMNmJYZS1tLUFCSkRaOVp0cnpDdjVvUDU4SWxn?oc=5",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 22,
+      "intro": "Un român de 52 de ani a murit de frig în mașina în care locuia, parcată lângă un spital din Italia Libertatea",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
