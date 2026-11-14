@@ -1,0 +1,117 @@
+name: RDI - Pubblicatore Facebook su Oracle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - rdi-facebook-publisher.py
+      - news.json
+      - .github/workflows/rdi-facebook-publisher-deploy.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rdi-facebook-publisher-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Prepara SSH Oracle
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+          RDI_FB_PAGE_TOKEN: ${{ secrets.RDI_FB_PAGE_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo '::error::Manca RDI_ORACLE_SSH_KEY_B64'; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo '::error::Manca RDI_ORACLE_KNOWN_HOSTS'; exit 1; }
+          test -n "$RDI_FB_PAGE_TOKEN" || { echo '::error::Manca RDI_FB_PAGE_TOKEN'; exit 1; }
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
+          umask 077
+          printf '%s' "$RDI_FB_PAGE_TOKEN" > "$RUNNER_TEMP/rdi-facebook-token"
+          chmod 600 "$RUNNER_TEMP/rdi-facebook-token"
+
+      - name: Installa pubblicatore e timer Facebook
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          TOKEN_REMOTE="/tmp/rdi-facebook-token-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          SSH=(ssh -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 -o ServerAliveInterval=5 -o ServerAliveCountMax=2)
+          SCP=(scp -q -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
+          "${SCP[@]}" "$RUNNER_TEMP/rdi-facebook-token" "$REMOTE:$TOKEN_REMOTE"
+          cleanup() {
+            "${SSH[@]}" "$REMOTE" "sudo -n rm -f -- '$TOKEN_REMOTE' /tmp/rdi-facebook-publisher-install.sh" >/dev/null 2>&1 || true
+          }
+          trap cleanup EXIT
+          "${SSH[@]}" "$REMOTE" "sudo -n tee /tmp/rdi-facebook-publisher-install.sh >/dev/null" <<'REMOTE_INSTALL'
+          set -euo pipefail
+          token_file="$1"
+          install -d -m 755 /opt/rdi-facebook /var/lib/rdi-facebook
+          install -m 600 "$token_file" /etc/rdi-facebook-publisher.token
+          install -m 600 /dev/null /etc/rdi-facebook-publisher.env
+          chown ubuntu:ubuntu /var/lib/rdi-facebook
+          cat > /etc/rdi-facebook-publisher.env <<EOF
+          RDI_NEWS_URL=https://raw.githubusercontent.com/ionut290/Radio-Romanii-Italia/main/news.json
+          RDI_FB_PAGE_ID=1365404166659194
+          RDI_FB_PAGE_TOKEN_FILE=/etc/rdi-facebook-publisher.token
+          RDI_FB_DRY_RUN=false
+          RDI_FB_MAX_POSTS=3
+          RDI_FB_STATE_FILE=/var/lib/rdi-facebook/state.json
+          FB_GRAPH_VERSION=v27.0
+          EOF
+          cat > /etc/systemd/system/rdi-facebook-publisher.service <<'EOF'
+          [Unit]
+          Description=RDI Facebook publisher
+          After=network-online.target
+          Wants=network-online.target
+
+          [Service]
+          Type=oneshot
+          User=ubuntu
+          EnvironmentFile=/etc/rdi-facebook-publisher.env
+          ExecStart=/usr/bin/python3 /opt/rdi-facebook/rdi-facebook-publisher.py
+          NoNewPrivileges=true
+          PrivateTmp=true
+          EOF
+          cat > /etc/systemd/system/rdi-facebook-publisher.timer <<'EOF'
+          [Unit]
+          Description=Run RDI Facebook publisher every 15 minutes
+
+          [Timer]
+          OnBootSec=3min
+          OnUnitActiveSec=15min
+          Persistent=true
+          Unit=rdi-facebook-publisher.service
+
+          [Install]
+          WantedBy=timers.target
+          EOF
+          systemctl daemon-reload
+          systemctl enable --now rdi-facebook-publisher.timer
+          systemctl reset-failed rdi-facebook-publisher.service || true
+          systemctl is-active --quiet rdi-facebook-publisher.timer
+          systemctl show rdi-facebook-publisher.timer --no-pager -p ActiveState -p NextElapseUSecRealtime
+          REMOTE_INSTALL
+          "${SSH[@]}" "$REMOTE" "sudo -n bash /tmp/rdi-facebook-publisher-install.sh '$TOKEN_REMOTE'"
+          "${SSH[@]}" "$REMOTE" "sudo -n rm -f -- '$TOKEN_REMOTE' /tmp/rdi-facebook-publisher-install.sh"
+
+      - name: Copia script e verifica servizio
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          SSH=(ssh -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
+          SCP=(scp -q -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
+          "${SCP[@]}" rdi-facebook-publisher.py "$REMOTE:/tmp/rdi-facebook-publisher.py"
+          "${SSH[@]}" "$REMOTE" 'sudo -n install -m 755 /tmp/rdi-facebook-publisher.py /opt/rdi-facebook/rdi-facebook-publisher.py && sudo -n rm -f /tmp/rdi-facebook-publisher.py && sudo -n systemctl is-active --quiet rdi-facebook-publisher.timer && sudo -n systemctl status --no-pager --lines=0 rdi-facebook-publisher.timer'
