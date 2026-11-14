@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-14T17:36:18.987973+00:00",
-  "editorial_updated_at": "2026-11-14T17:59:18.678028+01:00",
-  "translations_updated_at": "2026-11-14T15:50:57.358456+00:00",
-  "feed_total": 80,
+  "news_updated_at": "2026-11-14T18:02:31.877023+00:00",
+  "editorial_updated_at": "2026-11-14T18:58:39+01:00",
+  "translations_updated_at": "2026-11-14T18:00:11.133434+00:00",
+  "feed_total": 78,
   "feed_extended_400": 0,
-  "feed_missing_body": 80,
+  "feed_missing_body": 78,
   "feed_short_body": 0,
-  "editorial_total": 20,
+  "editorial_total": 21,
   "archived_editorials": 264,
-  "translation_records": 35,
+  "translation_records": 40,
   "pending_total": 92,
   "pending_filtered_out": 75,
-  "editorial_verde": 2,
-  "editorial_galben": 42,
+  "editorial_verde": 3,
+  "editorial_galben": 40,
   "editorial_rosu": 55,
   "pending": [
     {
@@ -618,30 +618,84 @@
   ],
   "recent_news": [
     {
+      "title": "Protestul din Parcul Izvor - Marian Neacşu: „Astăzi, românii au dat o lecţie de civilizaţie şi de respect pentru democraţie”",
+      "category": "România",
+      "published": "2026-11-14T17:57:44+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/protestul-din-parcul-izvor-marian-neacsu-astazi-romanii-au-dat-o-lectie-de-civilizatie-si-de-respect-pentru-democratie-4036853",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ucraina, Zelensky: 'Gli Usa ci propongono la Nato in cambio del Donbass'",
+      "category": "Italia",
+      "published": "2026-11-14T17:55:32+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/ucraina-zelensky-gli-usa-ci-propongono-la-nato-in-cambio-del-donbass_48c4f0d9-c61c-4d79-8523-64805b2f303f.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "„Există o acțiune orchestrată”. MAI semnalează inundarea rețelelor sociale cu mesaje care instigă la violență",
+      "category": "România",
+      "published": "2026-11-14T17:48:56+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/exista-o-actiune-orchestrata-mai-semnaleaza-inundarea-retelelor-sociale-cu-mesaje-care-instiga-la-violenta-4036841",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "AI Music Awards: Prima gală a premiilor pentru muzica generată cu Inteligenţă Artificială, organizată în SUA. Artiştii AI câştigă teren",
+      "category": "România",
+      "published": "2026-11-14T17:43:28+00:00",
+      "url": "https://www.digi24.ro/magazin/timp-liber/showbiz/ai-music-awards-prima-gala-a-premiilor-pentru-muzica-generata-cu-inteligenta-artificiala-organizata-in-sua-artistii-ai-castiga-teren-4036829",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "'Gli Usa senza lo status morbillo-free è un passo indietro, rischio globale'",
+      "category": "Italia",
+      "published": "2026-11-14T17:42:27+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/usa-senza-status-morbillo-free-passo-indietro-rischio-globale-_edc198d3-e58c-4c0c-94b9-36e075dee664.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Lega: 'Eserciti di bot inquinano confronto democratico, anche sui social di Salvini'",
+      "category": "Italia",
+      "published": "2026-11-14T17:41:56+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/14/lega-eserciti-di-bot-inquinano-confronto-democratico-anche-sui-social-di-salvini_3b12b190-cf89-4c45-96d5-1d1ed0c1b93c.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Robot, il ministro Urso traccia la strada per la Lombardia: “Possiamo diventare la fabbrica dell’Occidente. Anche con la AI” - Il Giorno",
+      "category": "Italia",
+      "published": "2026-11-14T17:40:26+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOZFdrNm1Dc2tlcHhDNUdpU2V1amdUYUVhTGF4d1puTklxbTdHQTdVeGN3U2E2MVM5MjRSMnAxNXZpanQ2QWEzeXNhLXd2UW1YeVROLUEzQ1Q5ZEFNNktjY19MRjkwV285Y2lMWjI1UnBELWNsN1F5WUViSl92ZEEtME5RSXdaaU0?oc=5",
+      "source": "Il Giorno",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Scontro tra due auto in galleria, cinque morti nel Cosentino",
+      "category": "Italia",
+      "published": "2026-11-14T17:32:51+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/scontro-tra-due-auto-in-galleria-4-morti-e-una-ferita-grave-nel_8ec108df-8b0d-4769-b193-6ad64658d5fa.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "De la cazarmă la cada de baie: rața de cauciuc cu pușcă de asalt, noul bestseller al armatei germane",
       "category": "România",
       "published": "2026-11-14T17:32:37+00:00",
       "url": "https://www.digi24.ro/stiri/externe/ue/de-la-cazarma-la-cada-de-baie-rata-de-cauciuc-cu-pusca-de-asalt-noul-bestseller-al-armatei-germane-4036797",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Manifestația pro Georgescu din Capitală s-a mutat la Arestul Central. Important dispozitiv al Jandarmeriei în zonă",
-      "category": "România",
-      "published": "2026-11-14T17:21:56+00:00",
-      "url": "https://www.digi24.ro/stiri/protest-aur-in-capitala-pentru-sustinerea-lui-calin-georgescu-simion-se-asteapta-la-zeci-de-mii-de-participanti-4035591",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Dopo 26 anni gli Usa perdono lo status di Paese libero dal morbillo",
-      "category": "Italia",
-      "published": "2026-11-14T17:20:56+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/dopo-26-anni-gli-usa-perdono-lo-status-di-paese-libero-dal-morbillo_edc198d3-e58c-4c0c-94b9-36e075dee664.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -687,15 +741,6 @@
       "url": "https://www.digi24.ro/stiri/externe/ue/italia-a-amendat-meta-cu-887-de-milioane-de-dolari-pentru-accesarea-fotografiilor-si-videoclipurilor-utilizatorilor-android-fara-consim-4036761",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Scontro tra due auto in galleria, 4 morti e una ferita grave nel Cosentino",
-      "category": "Italia",
-      "published": "2026-11-14T16:43:59+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/scontro-tra-due-auto-in-galleria-4-morti-e-una-ferita-grave-nel_8ec108df-8b0d-4769-b193-6ad64658d5fa.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -780,15 +825,6 @@
       "words": 0
     },
     {
-      "title": "Ucraina, Zelensky: 'Gli Usa propongono l'adesione alla Nato in cambio della cessione di territori'",
-      "category": "Italia",
-      "published": "2026-11-14T15:30:48+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/zelensky-gli-usa-propongono-ladesione-alla-nato-in-cambio-della-cessione_48c4f0d9-c61c-4d79-8523-64805b2f303f.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Distretti del commercio, 2,78 milioni in più dal 2027: coinvolti 179 Comuni - Diario FVG",
       "category": "Italia",
       "published": "2026-11-14T15:21:27+00:00",
@@ -843,21 +879,12 @@
       "words": 0
     },
     {
-      "title": "PNL Iaşi anunţă că rupe orice colaborare politică în municipiu cu PSD şi iniţiază procedura revocării din funcţie a viceprimarului PSD",
-      "category": "România",
-      "published": "2026-11-14T14:42:12+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/pnl-iasi-anunta-ca-rupe-orice-colaborare-politica-in-municipiu-cu-psd-si-initiaza-procedura-de-revocare-din-functie-a-viceprimarului-ps-4036623",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Liga Națiunilor. România - Polonia, de la ora 21:45. „Tricolorii” caută revanșa după umilința de la Varșovia",
-      "category": "România",
-      "published": "2026-11-14T14:29:20+00:00",
-      "url": "https://www.digi24.ro/stiri/sport/fotbal/liga-natiunilor-romania-polonia-de-la-ora-2145-tricolorii-cauta-revansa-dupa-umilinta-de-la-varsovia-4036615",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Cambio gomme, dal 15 novembre tempo di invernali",
+      "category": "Italia",
+      "published": "2026-11-14T14:36:07+00:00",
+      "url": "https://www.ansa.it/canale_motori/notizie/sicurezza/2026/10/27/cambio-gomme-dal-15-novembre-tempo-di-invernali_242ecc49-fa3e-4522-95ac-60eacbe5b17c.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -969,15 +996,6 @@
       "words": 0
     },
     {
-      "title": "Ciro Grillo: 'nessuna concessione, piuttosto in galera da innocente'",
-      "category": "Italia",
-      "published": "2026-11-14T07:47:14+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/ciro-grillo-nessuna-concessione-piuttosto-in-galera-da-innocente-_493a185c-4b7b-4e27-b548-0e8ddd2c6acf.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Sfida",
       "category": "Italia",
       "published": "2026-11-14T07:01:46+00:00",
@@ -1059,15 +1077,6 @@
       "words": 0
     },
     {
-      "title": "De-mitizzare il barolo, il rosso iconico delle Langhe",
-      "category": "Italia",
-      "published": "2026-11-13T21:24:26+00:00",
-      "url": "https://www.ansa.it/canale_lifestyle/notizie/food/2026/11/13/de-mitizzare-il-barolo-il-rosso-iconico-delle-langhe_6ca4e290-90ac-4aa5-aa55-00cdb17cf5b6.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "S&p conferma il rating dell’Italia. Outlook positivo - la Repubblica",
       "category": "Italia",
       "published": "2026-11-13T21:19:04+00:00",
@@ -1110,24 +1119,6 @@
       "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQS2NYWlpBcHhNVEowWnhJVEdoeWhLMmI1ZzlFSzVkV2ZXWHJRYUNCVGlQWEp3NW4zQzZPWkxtMGVWYms5ZTJkR2haYnVLVi05TU9rNzl0b2pKUTdUQzNFeGt5N1EtZVJXMlh5SVBTTGZ4SVExZlByR0xNNDQ2czZ4Vmh3eHpFTzRWYmhPT25USXNTcnJoTkgxN1RsTGxtT0RGZDgzT0xBc1hOSlEyQ0cxUWY5Vjh5Y2ctTHg3eWE1Xy14REZOUzIzZkhQaFBFTFEtVG10OHkzYmtjTVlHNDhGS3Fwc1RVb1F0SmtqdnVRR3NfM0tnME5LR1lhUkNzcjZfcDFHeU9fZEI0Nm1qdkVVMXZZYnRyWWM?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "#ioleggoperché, ultimo weekend di donazioni di libri alle biblioteche di scuole e nidi",
-      "category": "Italia",
-      "published": "2026-11-13T18:21:40+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cultura/libri/approfondimenti/2026/11/13/ioleggoperche-ultimo-weekend-di-donazioni-di-libri-alle-biblioteche-di-scuole-e-nidi_b7f6aaab-2e68-4559-af1a-d7432309dc6a.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Al Museo Ma*Ga di Gallarate i 'Corpi esposti' di Jago",
-      "category": "Italia",
-      "published": "2026-11-13T18:02:05+00:00",
-      "url": "https://www.ansa.it/canale_viaggi/regione/lombardia/2026/11/13/al-museo-maga-di-gallarate-i-corpi-esposti-di-jago_279491ca-c4b9-4b85-b51f-1733662044c7.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -1293,15 +1284,6 @@
       "words": 0
     },
     {
-      "title": "Enel, l’estero traina i numeri dei nove mesi. In Italia margini in calo - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-12T19:13:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPMXMzdFFZWms3R0FNX3RzUzZUQmFrLTMyNER2NXFIemhkeF9aMDdVMjhJcnJHbFlVbHRROUJsUWxWY2ZJTldSbTBvVzhUR0pyMmxsUDBRd3N4X05YZlFVYmJFcF9KQ3ZVelA3OHEyMno1V3p5Y01meDFSQmlGU2pjYjI4S2VVamwwYnVSOEVEeXFSQTlPU3d5UkRPV0RmSXIyOXc?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Nicușor Dan a explicat de ce l-a dat afară pe jurnalistul Ovidiu Vanghele de la Cotroceni: \"Eu nu sunt un gunoi\" - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-12T19:08:00+00:00",
@@ -1362,6 +1344,17 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
+      "title": "Rezidențiat 2026: aproape 10.000 de candidați, examen național pe 15 noiembrie",
+      "category": "Știri din redacție",
+      "published": "2026-11-14T18:30:00+01:00",
+      "url": "https://www.ms.gov.ro/ro/centrul-de-presa/concursul-na%C8%9Bional-de-admitere-%C3%AEn-reziden%C8%9Biat-va-avea-loc-%C3%AEn-data-de-15-noiembrie-2026-pentru-domeniile-medicin%C4%83-medicin%C4%83-dentar%C4%83-%C8%99i-farmacie-concursul-se-va-desf%C4%83%C8%99ura-at%C3%A2t-pe-locuri-c%C3%A2t-%C8%99i-pe-posturi/",
+      "source": "Ministerul Sănătății; UMF Victor Babeș Timișoara; TVR Info",
+      "status": "verde",
+      "words": 437,
+      "intro": "Date oficiale despre candidați, centrele de examen și procedurile anunțate înaintea concursului de rezidențiat.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Un șofer român de TIR a fost arestat în Italia, după ce ar fi încercat să fure motorină din rezervorul unui camion - Informat.ro",
       "category": "Diaspora",
       "published": "2026-11-12T18:25:48+00:00",
@@ -1381,17 +1374,6 @@
       "status": "galben",
       "words": 15,
       "intro": "Un român a fost găsit mort în Italia, în mașina în care se adăpostea Informat.ro",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Un român de 52 de ani a murit de frig în mașina în care locuia, parcată lângă un spital din Italia - Libertatea",
-      "category": "Diaspora",
-      "published": "2026-11-13T06:17:17+00:00",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZjQwWEhPRXF0QTdveWJzR2k5TUtsSC1YSS1nb0FWOFBxbGFHLWZ2Yjg0LVgwYUN6d29Ncm5TS183Q3lJWHEwbDhPQVdRN0licEZaUVNPbnFUMlFFSUdUTld5ZTZ6aWtnMkcxcHpXazZPVmNuM1JEVW14dkpIc0t5a09DNGZhYzVncnZrcXlxVDZuZ0NMNmJYZS1tLUFCSkRaOVp0cnpDdjVvUDU4SWxn?oc=5",
-      "source": "Libertatea",
-      "status": "galben",
-      "words": 22,
-      "intro": "Un român de 52 de ani a murit de frig în mașina în care locuia, parcată lângă un spital din Italia Libertatea",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
