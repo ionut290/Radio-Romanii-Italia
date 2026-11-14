@@ -24,6 +24,8 @@ STATE_FILE = pathlib.Path(os.getenv("RDI_FB_STATE_FILE", "/var/lib/rdi-facebook/
 MAX_POSTS = max(1, min(int(os.getenv("RDI_FB_MAX_POSTS", "3")), 10))
 DRY_RUN = os.getenv("RDI_FB_DRY_RUN", "true").lower() not in {"0", "false", "no"}
 GRAPH_VERSION = os.getenv("FB_GRAPH_VERSION", "v27.0")
+YOUTUBE_LIVE_URL = os.getenv("RDI_YOUTUBE_LIVE_URL", "https://www.youtube.com/watch?v=_qt-NjBcbtA")
+RDI_APP_URL = os.getenv("RDI_APP_URL", "https://radioromanii.duckdns.org/index.html")
 PAGE_ID = os.getenv("RDI_FB_PAGE_ID", "")
 PAGE_TOKEN = os.getenv("RDI_FB_PAGE_TOKEN", "")
 PAGE_TOKEN_FILE = os.getenv("RDI_FB_PAGE_TOKEN_FILE", "")
@@ -70,6 +72,8 @@ def message_for(item: dict) -> str:
         lines.append(summary[:420])
     lines.append(f"Fonte: {source}")
     lines.append("#RadioRomaniiDinItalia #RDI")
+    lines.append(f"🎙️ Ascolta RDI live su YouTube: {YOUTUBE_LIVE_URL}")
+    lines.append(f"📻 Apri l’app RDI: {RDI_APP_URL}")
     return "\n\n".join(lines)
 
 
