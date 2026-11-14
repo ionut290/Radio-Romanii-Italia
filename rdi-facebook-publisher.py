@@ -25,7 +25,7 @@ SHARE_QUEUE_FILE = pathlib.Path(os.getenv("RDI_FB_SHARE_QUEUE_FILE", "/var/lib/r
 MAX_POSTS = max(1, min(int(os.getenv("RDI_FB_MAX_POSTS", "3")), 10))
 DRY_RUN = os.getenv("RDI_FB_DRY_RUN", "true").lower() not in {"0", "false", "no"}
 GRAPH_VERSION = os.getenv("FB_GRAPH_VERSION", "v27.0")
-YOUTUBE_LIVE_URL = os.getenv("RDI_YOUTUBE_LIVE_URL", "https://www.youtube.com/watch?v=_qt-NjBcbtA")
+YOUTUBE_LIVE_URL = os.getenv("RDI_YOUTUBE_LIVE_URL", "https://www.youtube.com/live/_qt-NjBcbtA")
 RDI_APP_URL = os.getenv("RDI_APP_URL", "https://radioromanii.duckdns.org/index.html")
 RDI_PAGE_URL = os.getenv("RDI_PAGE_URL", "https://www.facebook.com/profile.php?id=61595529061512")
 DAILY_LIMIT = max(1, min(int(os.getenv("RDI_FB_MAX_DAILY_POSTS", "12")), 50))
