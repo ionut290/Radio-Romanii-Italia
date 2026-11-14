@@ -71,9 +71,11 @@ jobs:
           RDI_FB_PAGE_ID=1365404166659194
           RDI_FB_PAGE_TOKEN_FILE=/etc/rdi-facebook-publisher.token
           RDI_FB_DRY_RUN=false
-          RDI_FB_MAX_POSTS=3
+          RDI_FB_MAX_POSTS=2
+          RDI_FB_MAX_DAILY_POSTS=12
           RDI_YOUTUBE_LIVE_URL=https://www.youtube.com/watch?v=_qt-NjBcbtA
           RDI_APP_URL=https://radioromanii.duckdns.org/index.html
+          RDI_PAGE_URL=https://www.facebook.com/profile.php?id=61595529061512
           RDI_FB_STATE_FILE=/var/lib/rdi-facebook/state.json
           RDI_FB_SHARE_QUEUE_FILE=/var/lib/rdi-facebook/share-queue.json
           FB_GRAPH_VERSION=v27.0
