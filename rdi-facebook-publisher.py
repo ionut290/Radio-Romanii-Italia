@@ -27,6 +27,8 @@ DRY_RUN = os.getenv("RDI_FB_DRY_RUN", "true").lower() not in {"0", "false", "no"
 GRAPH_VERSION = os.getenv("FB_GRAPH_VERSION", "v27.0")
 YOUTUBE_LIVE_URL = os.getenv("RDI_YOUTUBE_LIVE_URL", "https://www.youtube.com/watch?v=_qt-NjBcbtA")
 RDI_APP_URL = os.getenv("RDI_APP_URL", "https://radioromanii.duckdns.org/index.html")
+RDI_PAGE_URL = os.getenv("RDI_PAGE_URL", "https://www.facebook.com/profile.php?id=61595529061512")
+DAILY_LIMIT = max(1, min(int(os.getenv("RDI_FB_MAX_DAILY_POSTS", "12")), 50))
 PAGE_ID = os.getenv("RDI_FB_PAGE_ID", "")
 PAGE_TOKEN = os.getenv("RDI_FB_PAGE_TOKEN", "")
 PAGE_TOKEN_FILE = os.getenv("RDI_FB_PAGE_TOKEN_FILE", "")
@@ -78,6 +80,16 @@ def item_key(item: dict) -> str:
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:24]
 
 
+def growth_cta(item: dict) -> str:
+    """CTA variabile per crescita organica, senza spam o promesse artificiose."""
+    variants = [
+        f"🔔 Segui RDI per ricevere le notizie della diaspora e dell'Italia: {RDI_PAGE_URL}",
+        f"📌 Ti interessa questo tema? Segui la pagina RDI e condividi il post con chi vive in Italia: {RDI_PAGE_URL}",
+        f"🌍 RDI informa ogni giorno la comunità romena in Italia. Segui la pagina: {RDI_PAGE_URL}",
+    ]
+    return variants[int(item_key(item), 16) % len(variants)]
+
+
 def message_for(item: dict) -> str:
     title = " ".join(str(item.get("title") or "").split())
     summary = " ".join(str(item.get("summary") or "").split())
@@ -91,6 +103,7 @@ def message_for(item: dict) -> str:
     lines.append("#RadioRomaniiDinItalia #RDI")
     lines.append(f"🎙️ Ascolta RDI live su YouTube: {YOUTUBE_LIVE_URL}")
     lines.append(f"📻 Apri l’app RDI: {RDI_APP_URL}")
+    lines.append(growth_cta(item))
     return "\n\n".join(lines)
 
 
@@ -138,7 +151,13 @@ def main() -> None:
         if key not in published:
             candidates.append((key, item))
     candidates.sort(key=lambda pair: str(pair[1].get("published") or ""), reverse=True)
-    selected = candidates[:MAX_POSTS]
+    today = datetime.now(timezone.utc).date().isoformat()
+    posted_today = sum(
+        1 for value in published.values()
+        if isinstance(value, dict) and str(value.get("published_at", "")).startswith(today)
+    )
+    remaining_today = max(0, DAILY_LIMIT - posted_today)
+    selected = candidates[:min(MAX_POSTS, remaining_today)]
     save_share_queue([item for _, item in selected])
     results = []
     for key, item in selected:
@@ -153,7 +172,7 @@ def main() -> None:
         results.append(f"{'BOZZA' if DRY_RUN else 'PUBBLICATO'}: {item['title']}")
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     save_state(state)
-    print(f"RDI Facebook: {len(results)} elementi gestiti; modalità={'dry-run' if DRY_RUN else 'pubblicazione'}")
+    print(f"RDI Facebook: {len(results)} elementi gestiti; modalità={'dry-run' if DRY_RUN else 'pubblicazione'}; pubblicati oggi={posted_today + len(results)}/{DAILY_LIMIT}")
     print(f"Coda condivisione gruppi: {len(selected)} contenuti pronti per approvazione manuale")
     for line in results:
         print(line)
