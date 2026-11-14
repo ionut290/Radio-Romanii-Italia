@@ -73,6 +73,7 @@ jobs:
           RDI_FB_DRY_RUN=false
           RDI_FB_MAX_POSTS=2
           RDI_FB_MAX_DAILY_POSTS=12
+          RDI_FB_LIVE_PROMO_INTERVAL_HOURS=6
           RDI_YOUTUBE_LIVE_URL=https://www.youtube.com/watch?v=_qt-NjBcbtA
           RDI_APP_URL=https://radioromanii.duckdns.org/index.html
           RDI_PAGE_URL=https://www.facebook.com/profile.php?id=61595529061512
