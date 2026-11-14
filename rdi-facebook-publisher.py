@@ -25,6 +25,12 @@ DRY_RUN = os.getenv("RDI_FB_DRY_RUN", "true").lower() not in {"0", "false", "no"
 GRAPH_VERSION = os.getenv("FB_GRAPH_VERSION", "v27.0")
 PAGE_ID = os.getenv("RDI_FB_PAGE_ID", "")
 PAGE_TOKEN = os.getenv("RDI_FB_PAGE_TOKEN", "")
+PAGE_TOKEN_FILE = os.getenv("RDI_FB_PAGE_TOKEN_FILE", "")
+if not PAGE_TOKEN and PAGE_TOKEN_FILE:
+    try:
+        PAGE_TOKEN = pathlib.Path(PAGE_TOKEN_FILE).read_text(encoding="utf-8").strip()
+    except OSError:
+        PAGE_TOKEN = ""
 
 
 def read_json(url: str) -> dict:
