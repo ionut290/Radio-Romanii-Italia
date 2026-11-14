@@ -1,0 +1,95 @@
+name: Deploy TikTok publisher to Oracle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "rdi-tiktok-publisher.py"
+      - "TIKTOK-CONTENUTI.md"
+      - ".github/workflows/rdi-tiktok-publisher-deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install SSH key
+        shell: bash
+        env:
+          ORACLE_SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          ORACLE_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$ORACLE_SSH_KEY_B64"
+          test -n "$ORACLE_KNOWN_HOSTS"
+          install -d -m 700 ~/.ssh
+          printf '%s' "$ORACLE_SSH_KEY_B64" | base64 -d > ~/.ssh/oracle.key
+          chmod 600 ~/.ssh/oracle.key
+          printf '%s\n' "$ORACLE_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Copy publisher
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/oracle.key -o BatchMode=yes ubuntu@129.151.255.41 \
+            "sudo install -d -o ubuntu -g ubuntu -m 755 /opt/rdi-tiktok /var/lib/rdi-tiktok"
+          scp -i ~/.ssh/oracle.key -o BatchMode=yes rdi-tiktok-publisher.py \
+            ubuntu@129.151.255.41:/tmp/rdi-tiktok-publisher.py
+          ssh -i ~/.ssh/oracle.key -o BatchMode=yes ubuntu@129.151.255.41 \
+            "sudo install -o root -g root -m 755 /tmp/rdi-tiktok-publisher.py /opt/rdi-tiktok/rdi-tiktok-publisher.py && rm -f /tmp/rdi-tiktok-publisher.py"
+
+      - name: Install safe dry-run service
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/oracle.key -o BatchMode=yes ubuntu@129.151.255.41 'sudo tee /etc/rdi-tiktok-publisher.env >/dev/null' <<'EOF'
+          RDI_TIKTOK_DRY_RUN=true
+          RDI_TIKTOK_CONTENT_TYPE=video
+          RDI_TIKTOK_VIDEO_FILE=/var/lib/rdi-tiktok/rdi-live-promo.mp4
+          RDI_TIKTOK_TITLE=RDI Live 24/7
+          RDI_TIKTOK_DESCRIPTION=Ascolta RDI Radio Romanii din Italia in diretta: https://www.youtube.com/watch?v=_qt-NjBcbtA
+          EOF
+          ssh -i ~/.ssh/oracle.key -o BatchMode=yes ubuntu@129.151.255.41 'sudo chmod 600 /etc/rdi-tiktok-publisher.env && sudo tee /etc/systemd/system/rdi-tiktok-publisher.service >/dev/null' <<'EOF'
+          [Unit]
+          Description=RDI TikTok publisher (safe dry-run)
+          ConditionPathExists=/var/lib/rdi-tiktok/rdi-live-promo.mp4
+          After=network-online.target
+          Wants=network-online.target
+
+          [Service]
+          Type=oneshot
+          User=ubuntu
+          EnvironmentFile=/etc/rdi-tiktok-publisher.env
+          ExecStart=/usr/bin/python3 /opt/rdi-tiktok/rdi-tiktok-publisher.py
+          NoNewPrivileges=true
+          PrivateTmp=true
+          EOF
+          ssh -i ~/.ssh/oracle.key -o BatchMode=yes ubuntu@129.151.255.41 'sudo tee /etc/systemd/system/rdi-tiktok-publisher.timer >/dev/null' <<'EOF'
+          [Unit]
+          Description=Check RDI TikTok publisher every 6 hours
+
+          [Timer]
+          OnBootSec=10min
+          OnUnitActiveSec=6h
+          Persistent=true
+          Unit=rdi-tiktok-publisher.service
+
+          [Install]
+          WantedBy=timers.target
+          EOF
+          ssh -i ~/.ssh/oracle.key -o BatchMode=yes ubuntu@129.151.255.41 \
+            'sudo systemctl daemon-reload && sudo systemctl enable --now rdi-tiktok-publisher.timer && sudo systemctl is-enabled rdi-tiktok-publisher.timer && sudo systemctl is-active rdi-tiktok-publisher.timer'
+
+      - name: Verify installation
+        shell: bash
+        run: |
+          set -euo pipefail
+          ssh -i ~/.ssh/oracle.key -o BatchMode=yes ubuntu@129.151.255.41 \
+            'sudo test -x /opt/rdi-tiktok/rdi-tiktok-publisher.py && sudo systemctl is-active rdi-tiktok-publisher.timer'
