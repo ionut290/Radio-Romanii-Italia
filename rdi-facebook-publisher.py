@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import pathlib
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -86,8 +87,16 @@ def publish(item: dict) -> str:
     }).encode("utf-8")
     request = urllib.request.Request(url, data=body, method="POST")
     request.add_header("User-Agent", "RDI-Facebook-Publisher/1.0")
-    with urllib.request.urlopen(request, timeout=20) as response:
-        payload = json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        raw = error.read().decode("utf-8", errors="replace")
+        try:
+            details = json.loads(raw).get("error", {}).get("message", raw)
+        except json.JSONDecodeError:
+            details = raw
+        raise RuntimeError(f"Facebook API HTTP {error.code}: {details}") from error
     if not payload.get("id"):
         raise RuntimeError(f"Facebook non ha restituito l'id del post: {payload}")
     return str(payload["id"])
