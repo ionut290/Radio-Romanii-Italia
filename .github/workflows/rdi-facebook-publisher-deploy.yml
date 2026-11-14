@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: rdi-facebook-publisher-deploy
@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          persist-credentials: false
+          persist-credentials: true
       - name: Prepara SSH Oracle
         shell: bash
         env:
@@ -113,6 +113,24 @@ jobs:
           REMOTE_INSTALL
           "${SSH[@]}" "$REMOTE" "sudo -n bash /tmp/rdi-facebook-publisher-install.sh '$TOKEN_REMOTE'"
           "${SSH[@]}" "$REMOTE" "sudo -n rm -f -- '$TOKEN_REMOTE' /tmp/rdi-facebook-publisher-install.sh"
+
+      - name: Aggiorna coda condivisioni su GitHub
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          SSH=(ssh -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
+          SCP=(scp -q -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12)
+          if "${SSH[@]}" "$REMOTE" 'test -s /var/lib/rdi-facebook/share-queue.json'; then
+            "${SCP[@]}" "$REMOTE:/var/lib/rdi-facebook/share-queue.json" rdi-share-queue.json
+            git add rdi-share-queue.json
+            if ! git diff --cached --quiet; then
+              git config user.name "RDI Facebook Bot"
+              git config user.email "rdi-facebook-bot@users.noreply.github.com"
+              git commit -m "Aggiorna coda condivisioni RDI"
+              git push origin HEAD:main
+            fi
+          fi
 
       - name: Copia script e verifica servizio
         shell: bash
