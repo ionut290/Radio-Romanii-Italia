@@ -72,6 +72,8 @@ jobs:
           RDI_FB_PAGE_TOKEN_FILE=/etc/rdi-facebook-publisher.token
           RDI_FB_DRY_RUN=false
           RDI_FB_MAX_POSTS=3
+          RDI_YOUTUBE_LIVE_URL=https://www.youtube.com/watch?v=_qt-NjBcbtA
+          RDI_APP_URL=https://radioromanii.duckdns.org/index.html
           RDI_FB_STATE_FILE=/var/lib/rdi-facebook/state.json
           FB_GRAPH_VERSION=v27.0
           EOF
