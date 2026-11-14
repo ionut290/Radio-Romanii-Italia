@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gruppi diaspora · RDI</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fb;color:#15233b;font:16px system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1050px;margin:auto;padding:24px 16px 60px}header{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.brand{display:flex;gap:12px;align-items:center}.brand img{width:50px;height:50px;border-radius:14px}.brand h1{margin:0;font-size:clamp(25px,4vw,38px)}.brand p{margin:3px 0;color:#71819a}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:11px;padding:11px 14px;background:#1268d5;color:#fff;font-weight:750;text-decoration:none;cursor:pointer}.btn.secondary{background:#e4edf8;color:#1b3d6e}.hero{margin:22px 0;background:linear-gradient(115deg,#10294a,#1c5da9);color:#fff;border-radius:22px;padding:22px}.hero h2{margin:0 0 7px}.hero p{margin:0;color:#dcecff;line-height:1.5}.layout{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:start}.card{background:#fff;border:1px solid #dfe8f3;border-radius:18px;padding:18px;box-shadow:0 5px 18px #102b5010}.card h2{margin:0 0 14px;font-size:20px}.field{margin:12px 0}.field label{display:block;font-size:13px;font-weight:750;margin-bottom:5px;color:#4b6382}.field input,.field textarea,.field select{width:100%;border:1px solid #d4dfed;border-radius:10px;padding:10px;font:inherit;color:#203957;background:#fff}.field textarea{min-height:82px;resize:vertical}.hint{font-size:12px;color:#71819a;line-height:1.45}.group-list{display:grid;gap:13px}.group-card h3{margin:0 0 5px}.group-meta{font-size:13px;color:#6e8099;margin-bottom:9px}.group-note{background:#f6f8fb;border-radius:10px;padding:10px;font-size:13px;color:#405672;white-space:pre-wrap}.group-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}.group-actions .btn{font-size:13px;padding:9px 10px}.empty{text-align:center;color:#71819a;padding:35px;border:1px dashed #cbd8e8;border-radius:16px}.count{color:#6d7f98;font-size:13px;margin:0 0 12px}@media(max-width:750px){main{padding:16px 12px}.layout{grid-template-columns:1fr}.actions,.group-actions{width:100%}.btn{flex:1;text-align:center}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="brand"><img src="./RADIO-LOGO.png" alt="RDI"><div><h1>Gruppi diaspora</h1><p>Organizza le condivisioni RDI</p></div></div><div class="actions"><a class="btn secondary" href="./condivisioni.html">← Coda contenuti</a><a class="btn secondary" href="./index.html">Radio</a></div></header>
+<section class="hero"><h2>Crescita ordinata, senza spam</h2><p>Aggiungi i gruppi autorizzati, annota le loro regole e prepara rapidamente una condivisione personalizzata. L’ultimo clic resta sempre manuale.</p></section>
+<div class="layout">
+<section class="card"><h2>＋ Aggiungi gruppo</h2>
+<div class="field"><label for="name">Nome gruppo</label><input id="name" placeholder="Es. Români în Bologna"></div>
+<div class="field"><label for="url">Link del gruppo</label><input id="url" type="url" placeholder="https://www.facebook.com/groups/..."></div>
+<div class="field"><label for="area">Zona / lingua</label><input id="area" placeholder="Bologna · romeno"></div>
+<div class="field"><label for="rules">Regole o note</label><textarea id="rules" placeholder="Es. niente pubblicità, solo notizie locali..."></textarea></div>
+<button class="btn" id="add">Salva gruppo</button>
+<p class="hint">Inserisci solo gruppi dove hai il permesso di condividere contenuti.</p>
+</section>
+<section><div class="card"><p class="count" id="count">0 gruppi salvati in questo browser</p><div class="group-list" id="list"></div></div></section>
+</div>
+</main>
+<script>
+const key='rdi-growth-groups-v1',load=()=>{try{return JSON.parse(localStorage.getItem(key)||'[]')}catch{return[]}},save=x=>localStorage.setItem(key,JSON.stringify(x)),esc=x=>String(x||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let groups=load();
+function render(){document.getElementById('count').textContent=groups.length+' gruppi salvati in questo browser';const list=document.getElementById('list');if(!groups.length){list.innerHTML='<div class="empty">Nessun gruppo ancora. Aggiungi il primo gruppo autorizzato.</div>';return}list.innerHTML=groups.map((g,i)=>'<article class="card group-card"><h3>'+esc(g.name)+'</h3><div class="group-meta">'+esc(g.area||'Zona non indicata')+'</div><div class="group-note">'+esc(g.rules||'Nessuna nota sulle regole.')+'</div><div class="group-actions"><a class="btn" target="_blank" rel="noopener" href="'+esc(g.url)+'">Apri gruppo</a><button class="btn secondary" data-copy="'+i+'">Copia modello</button><button class="btn secondary" data-remove="'+i+'">Rimuovi</button></div></article>').join('');document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=async()=>{const g=groups[+b.dataset.copy];const t='📰 Novità per la comunità\n\n'+g.name+'\n\nScopri le notizie di RDI - Radio Românii din Italia.\n\nhttps://radioromanii.duckdns.org/\n\nRispettiamo le regole del gruppo.';await navigator.clipboard.writeText(t);b.textContent='Copiato ✓';setTimeout(()=>b.textContent='Copia modello',1600)});document.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{if(confirm('Rimuovere questo gruppo dal browser?')){groups.splice(+b.dataset.remove,1);save(groups);render()}})}
+document.getElementById('add').onclick=()=>{const name=document.getElementById('name').value.trim(),url=document.getElementById('url').value.trim(),area=document.getElementById('area').value.trim(),rules=document.getElementById('rules').value.trim();if(!name||!/^https:\/\/www\.facebook\.com\/groups\//i.test(url)){alert('Inserisci nome e link valido del gruppo.');return}groups.unshift({name,url,area,rules,addedAt:new Date().toISOString()});save(groups);['name','url','area','rules'].forEach(id=>document.getElementById(id).value='');render()};render();
+</script>
+</body>
+</html>
