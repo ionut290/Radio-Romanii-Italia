@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-14T10:53:04.246403+00:00",
+  "news_updated_at": "2026-11-14T11:00:23.897052+00:00",
   "editorial_updated_at": "2026-11-14T11:14:51.493008+01:00",
   "translations_updated_at": "2026-11-14T09:00:20.597382+00:00",
   "feed_total": 81,
-  "feed_extended_400": 0,
-  "feed_missing_body": 81,
+  "feed_extended_400": 1,
+  "feed_missing_body": 80,
   "feed_short_body": 0,
   "editorial_total": 22,
   "archived_editorials": 261,
   "translation_records": 41,
   "pending_total": 92,
   "pending_filtered_out": 75,
-  "editorial_verde": 3,
-  "editorial_galben": 44,
+  "editorial_verde": 4,
+  "editorial_galben": 43,
   "editorial_rosu": 56,
   "pending": [
     {
@@ -618,22 +618,22 @@
   ],
   "recent_news": [
     {
-      "title": "Blocaj la vama Siret, înainte de sărbători. 360 de camioane așteaptă să iasă din România",
+      "title": "Trimișii lui Trump i-au propus o concesie lui Zelenski în schimbul aderării la NATO. Ce ar trebui să cedeze Rusiei",
       "category": "România",
-      "published": "2026-11-14T10:47:30+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/blocaj-la-vama-siret-inainte-de-sarbatori-360-de-camioane-asteapta-sa-iasa-din-romania-4036357",
+      "published": "2026-11-14T10:55:37+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/trimisii-lui-trump-i-au-propus-o-concesie-lui-zelenski-in-schimbul-aderarii-la-nato-ce-ar-trebui-sa-cedeze-rusiei-4036355",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Trimișii lui Trump i-au propus o concesie lui Zelenski în schimbul aderării la NATO. Ce ar trebui să cedeze Rusiei",
+      "title": "Blocaj la vama Siret, înainte de sărbători. 360 de camioane așteaptă să iasă din România",
       "category": "România",
       "published": "2026-11-14T10:47:30+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/trimisii-lui-trump-i-au-propus-o-concesie-lui-zelenski-in-schimbul-aderarii-la-nato-ce-ar-trebui-sa-cedeze-rusiei-4036355",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/blocaj-la-vama-siret-inainte-de-sarbatori-360-de-camioane-asteapta-sa-iasa-din-romania-4036357",
       "source": "Digi24",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 440
     },
     {
       "title": "Nelle case italiane 100 milioni di dispositivi connessi, 1 su 3 a rischio hacker",
@@ -1382,6 +1382,17 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
+      "title": "Blocaj la vama Siret, înainte de sărbători. 360 de camioane așteaptă să iasă din România",
+      "category": "România",
+      "published": "2026-11-14T10:47:30+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/blocaj-la-vama-siret-inainte-de-sarbatori-360-de-camioane-asteapta-sa-iasa-din-romania-4036357",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 440,
+      "intro": "Aproximativ 360 de camioane așteaptă în coloană la Punctul de Trecere a Frontierei Siret pentru a ieși din România către Ucraina.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Satul românesc din Italia. Poveștile oamenilor care au construit comunitatea - Euronews România",
       "category": "Diaspora",
       "published": "2026-11-12T12:56:14+00:00",
@@ -1390,17 +1401,6 @@
       "status": "galben",
       "words": 12,
       "intro": "Satul românesc din Italia.",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Foto și Video. Patru copii români de la cursurile LCCR, premiați la Roma în cadrul evenimentului ,,Premiului Internațional al Tinerilor pentru Pace 2026“. Cursul LCCR este o necesitate pentru comunitatea românească din I",
-      "category": "Diaspora",
-      "published": "2026-11-12T14:28:50+00:00",
-      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxQczVlRExEZzFkREU4SEFQZFNTeElvaVJoMV81bC10dnRvb2ZPa0JSMGFTWnVTQXVjeXFKazNxVlZ3LVdUbmtQcjR1Yzk4S2trQ0U4U05DdFpHU0FfX2pBTHhWc2VCOXlIa3J4dFNRT3pKdEhHUVFybGZqYVVKc29pYWZyamZCTTVzMGItY1FlOW80bGZ1RFhuOGFNdm83OV9RekVGX1NtYkMtWHdCNGI4OS1lckdCX2ZrMEhJS1JoLUdwWEtDQ3RyZ2FYSm1RTWhvN2xpNzFEMy1lc1IzZXh3Q0FPNVIzUnU4TVRGY3JwMHdaMkZXWFlNcWpKcjgzOFhZLWxMMWI3a1d5UDg0di1jNG9DQWdzYVFuYnVvemJwM0NCanNNNi04cTMwQmpqU292NWdlUVN5Y2lNcmhkZFFRZ29TSHUtaWc?oc=5",
-      "source": "Monitorul de Făgăraș",
-      "status": "galben",
-      "words": 36,
-      "intro": "Foto și Video.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
