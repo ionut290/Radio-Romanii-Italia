@@ -21,6 +21,7 @@ NEWS_URL = os.getenv(
     "https://raw.githubusercontent.com/ionut290/Radio-Romanii-Italia/main/news.json",
 )
 STATE_FILE = pathlib.Path(os.getenv("RDI_FB_STATE_FILE", "/var/lib/rdi-facebook/state.json"))
+SHARE_QUEUE_FILE = pathlib.Path(os.getenv("RDI_FB_SHARE_QUEUE_FILE", "/var/lib/rdi-facebook/share-queue.json"))
 MAX_POSTS = max(1, min(int(os.getenv("RDI_FB_MAX_POSTS", "3")), 10))
 DRY_RUN = os.getenv("RDI_FB_DRY_RUN", "true").lower() not in {"0", "false", "no"}
 GRAPH_VERSION = os.getenv("FB_GRAPH_VERSION", "v27.0")
@@ -54,6 +55,22 @@ def save_state(state: dict) -> None:
     tmp = STATE_FILE.with_suffix(".tmp")
     tmp.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     os.replace(tmp, STATE_FILE)
+
+
+def save_share_queue(items: list[dict]) -> None:
+    """Prepara contenuti per la condivisione manuale nei soli gruppi autorizzati."""
+    SHARE_QUEUE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "notice": "Condividere solo nei gruppi autorizzati e rispettando le regole del gruppo.",
+        "items": [
+            {"title": item.get("title"), "url": item.get("url"), "message": message_for(item)}
+            for item in items
+        ],
+    }
+    tmp = SHARE_QUEUE_FILE.with_suffix(".tmp")
+    tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(tmp, SHARE_QUEUE_FILE)
 
 
 def item_key(item: dict) -> str:
@@ -122,6 +139,7 @@ def main() -> None:
             candidates.append((key, item))
     candidates.sort(key=lambda pair: str(pair[1].get("published") or ""), reverse=True)
     selected = candidates[:MAX_POSTS]
+    save_share_queue([item for _, item in selected])
     results = []
     for key, item in selected:
         result = publish(item)
@@ -136,6 +154,7 @@ def main() -> None:
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     save_state(state)
     print(f"RDI Facebook: {len(results)} elementi gestiti; modalità={'dry-run' if DRY_RUN else 'pubblicazione'}")
+    print(f"Coda condivisione gruppi: {len(selected)} contenuti pronti per approvazione manuale")
     for line in results:
         print(line)
 
