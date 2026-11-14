@@ -59,6 +59,8 @@ jobs:
           token_file="$1"
           install -d -m 755 /opt/rdi-facebook /var/lib/rdi-facebook
           install -m 600 "$token_file" /etc/rdi-facebook-publisher.token
+          chown root:ubuntu /etc/rdi-facebook-publisher.token
+          chmod 640 /etc/rdi-facebook-publisher.token
           install -m 600 /dev/null /etc/rdi-facebook-publisher.env
           chown ubuntu:ubuntu /var/lib/rdi-facebook
           cat > /etc/rdi-facebook-publisher.env <<EOF
