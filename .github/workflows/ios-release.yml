@@ -8,7 +8,7 @@ on:
 
 jobs:
   release:
-    runs-on: macos-14
+    runs-on: macos-13
     env:
       BUNDLE_ID: org.radioromaniidinitalia.radio
       TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
