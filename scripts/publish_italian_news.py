@@ -24,7 +24,7 @@ queries = [
     ("Diaspora", "Romania Italia cittadini romeni pensioni documenti when:3d"),
 ]
 existing_urls = {str(i.get("url", "")).rstrip("/") for i in items}
-existing_titles = {re.sub(r"\\W+", " ", str(i.get("title", "")).casefold()).strip() for i in items}
+existing_titles = {re.sub(r"\W+", " ", str(i.get("title", "")).casefold()).strip() for i in items}
 new = []
 failures = []
 for category, query in queries:
@@ -46,7 +46,7 @@ for category, query in queries:
                 continue
             if not dt.timedelta(0) <= NOW - date <= dt.timedelta(hours=36):
                 continue
-            title_key = re.sub(r"\\W+", " ", title.casefold()).strip()
+            title_key = re.sub(r"\W+", " ", title.casefold()).strip()
             if link.rstrip("/") in existing_urls or title_key in existing_titles:
                 continue
             raw = entry.findtext("description") or ""
