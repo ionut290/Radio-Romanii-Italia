@@ -1,0 +1,21 @@
+name: iOS build validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "ios/**"
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build archive
+        run: |
+          xcodebuild -project ios/RadioRomanii.xcodeproj -scheme RadioRomanii -sdk iphoneos -configuration Release -archivePath "$RUNNER_TEMP/RadioRomanii.xcarchive" CODE_SIGNING_ALLOWED=NO archive
+      - name: Upload unsigned archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: RadioRomanii-unsigned-archive
+          path: ${{ runner.temp }}/RadioRomanii.xcarchive
