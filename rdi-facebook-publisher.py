@@ -30,7 +30,7 @@ RDI_APP_URL = os.getenv("RDI_APP_URL", "https://radioromanii.duckdns.org/index.h
 RDI_PAGE_URL = os.getenv("RDI_PAGE_URL", "https://www.facebook.com/profile.php?id=61595529061512")
 DAILY_LIMIT = max(1, min(int(os.getenv("RDI_FB_MAX_DAILY_POSTS", "12")), 50))
 LIVE_PROMO_INTERVAL_HOURS = max(1, min(int(os.getenv("RDI_FB_LIVE_PROMO_INTERVAL_HOURS", "6")), 24))
-NEWS_MIN_INTERVAL_MINUTES = max(30, min(int(os.getenv("RDI_FB_NEWS_MIN_INTERVAL_MINUTES", "90")), 360))
+NEWS_MIN_INTERVAL_MINUTES = max(30, min(int(os.getenv("RDI_FB_NEWS_MIN_INTERVAL_MINUTES", "60")), 360))
 PAGE_ID = os.getenv("RDI_FB_PAGE_ID", "")
 PAGE_TOKEN = os.getenv("RDI_FB_PAGE_TOKEN", "")
 PAGE_TOKEN_FILE = os.getenv("RDI_FB_PAGE_TOKEN_FILE", "")
@@ -154,6 +154,8 @@ def news_score(item: dict) -> tuple[int, str]:
         score += 20
     if item.get("summary"):
         score += 5
+    if str(item.get("image") or "").startswith(("https://", "http://")):
+        score += 15
     source_tier = str(item.get("source_tier") or "").lower()
     if source_tier == "community":
         score -= 3
@@ -204,6 +206,10 @@ def main() -> None:
         if key not in published:
             candidates.append((key, item))
     candidates.sort(key=lambda pair: news_score(pair[1]), reverse=True)
+    force_first_photo = state.get("hourly_photo_launch") != "2026-11-15-v1"
+    if force_first_photo:
+        candidates.sort(key=lambda pair: not str(pair[1].get("image") or "").startswith(("https://", "http://")))
+
     last_news_times = [
         str(value.get("published_at", ""))
         for value in published.values()
@@ -222,7 +228,7 @@ def main() -> None:
         if isinstance(value, dict) and str(value.get("published_at", "")).startswith(today)
     )
     remaining_today = max(0, DAILY_LIMIT - posted_today)
-    selected = candidates[:min(MAX_POSTS, remaining_today)] if news_due else []
+    selected = candidates[:min(1, remaining_today)] if (news_due or force_first_photo) else []
     save_share_queue([item for _, item in selected])
     results = []
     for key, item in selected:
@@ -235,6 +241,8 @@ def main() -> None:
             "mode": "dry-run" if DRY_RUN else "published",
         }
         results.append(f"{'BOZZA' if DRY_RUN else 'PUBBLICATO'}: {item['title']}")
+    if force_first_photo and results:
+        state["hourly_photo_launch"] = "2026-11-15-v1"
     state["last_run"] = datetime.now(timezone.utc).isoformat()
     save_state(state)
     print(f"RDI Facebook: {len(results)} elementi gestiti; modalità={'dry-run' if DRY_RUN else 'pubblicazione'}; pubblicati oggi={posted_today + len(results)}/{DAILY_LIMIT}; prossimo intervallo notizie={NEWS_MIN_INTERVAL_MINUTES} min")
