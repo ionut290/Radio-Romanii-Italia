@@ -1,12 +1,68 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-15T18:00:42.762323Z",
+  "updated_at": "2026-11-15T19:10:28.233981Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-64cc60fa53bd4f20",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Cambodia takes over Francophonie Summit presidency from France",
+      "summary": "",
+      "source": "Khmer Times",
+      "published": "2026-11-15T18:38:43Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTTFVWmhpbnpheXZTcDhtZ3NSUG1sZ09GTktlRTdhbFhZejk5U0EwUDhzZlR5aFROVVhreVdINTI4dUFKd1otSVd0X1NDM1lqZzlGcEpndDhJdTR3SW9fQXI4U24tMTlGYzNYVVJhMjcxWjlPQ3BxSzBsRGxsa1RUVG9wazlFUnNaZERtSE1kU2hpU09OOWVQQk1BbDJIMENYbUZySg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cambodgia preia președinția Summitului Francofoniei de la Franța",
+      "title_it": "La Cambogia assume la presidenza del vertice della Francofonia dalla Francia",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-aa21fbaf7c9699e8",
+      "category": "energie",
+      "region": "global",
+      "title": "Oil market’s fragile surplus: A war-driven rebound, not an energy transition",
+      "summary": "",
+      "source": "BLiTZ - Fears None But God",
+      "published": "2026-11-15T18:04:01Z",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPaU1KSzFtNDdFbXNUeHVmLTBYbnYxQWtVTzVMblkyTFVaVURYZTBoN055NzVrQnk5T1BjdDdWVkV1aDdPYkkzZlpuWWFrUzdrQTZVRXJpVFliZDYxTzN2RDRjYVRNMTNkLTZRSVNZamc3bFpucUsySEE0RHJwbkZOTDQyTWNBY2JhMUdwWGo3QXF5Rl96VTN3dGhLZVRzQnE3WVBWcEkyUzFZRDljVEE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Surplusul fragil al pieței petrolului: o revenire determinată de război, nu o tranziție energetică",
+      "title_it": "Il fragile surplus del mercato petrolifero: una ripresa guidata dalla guerra, non una transizione energetica",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ea598fb279896b05",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Why China Could Gain Most from Trump–Putin–Xi Summit",
+      "summary": "",
+      "source": "www.daily-sun.com",
+      "published": "2026-11-15T18:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE92b2xDdEQ4QWhiU0RrbDRiX0JDWThGRnRwRGNTZDJDcnpwcXZLcjNXZ0pRRkZsektpeHU2QUxRN3dmRkNVR2pzOHRBRlZYYjd3MGttNQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce China ar putea câștiga cel mai mult din Summit-ul Trump-Putin-Xi",
+      "title_it": "Perché la Cina potrebbe trarre il massimo vantaggio dal vertice Trump-Putin-Xi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ed901f59764e656a",
+      "category": "securitate",
+      "region": "asia",
+      "title": "World leaders head to Asia for back-to-back diplomatic summits",
+      "summary": "",
+      "source": "The Guardian",
+      "published": "2026-11-15T17:41:00Z",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPR2h4aGNocE5HaTJqS18wa25CNEQ2QUZLT0hCUHo2dXktVTNWMlpQRzhOUGtMZmRfUXUtVXp3emtCalllcUpuSFJnNTR4TlV0YWlVVnBlTmVIVHNUOUJsME4tdXRTM2dKcW55NlNLc3doVnYyZVB6eVltVzdjczVscEtydko3Z040VU5iX2Zaa1BNV1N5NkdXVkw4QQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Liderii lumii se îndreaptă spre Asia pentru summituri diplomatice consecutive",
+      "title_it": "I leader mondiali si recano in Asia per i vertici diplomatici consecutivi",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-317345f49b7510dc",
       "category": "economie",
@@ -16,7 +72,10 @@
       "source": "The Daily Star",
       "published": "2026-11-15T17:37:30Z",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMVVLbEdLcDRmNzE3NTNqdUZKUnlHd3l5bFJrTTdxM2ZMaVlFTzNRMkYzaU1NOXVLdzUwbXBySGdyZUxaN0lnNnRBWVJrX0pDNGgycUFSbWNhOHBJUnhJZDR1aXFVLWFkWFc5S2lZQ1h4T2RjN05SZzIzMWpRU1QyWlFfSkFpR0tPS3NaZGFvelVQTGlpRHdnVEQ5cndicHpoSzc3UjhnMDEzZjhG?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "91% dintre firme sunt optimiste cu privire la creșterea comerțului, în ciuda creșterii costurilor",
+      "title_it": "Il 91% delle aziende è ottimista sulla crescita del commercio nonostante l’aumento dei costi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-b1112c383e4376f7",
@@ -27,7 +86,10 @@
       "source": "The New Voice of Ukraine",
       "published": "2026-11-15T17:12:00Z",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQalRxcjM4VDZraVdSbmpkcTlxZGk4dDNaZVRqbk1MZl9uaTNFdkRGV3ZRZU5UTVdyMTJZdkNtQ0c1c1JaakFDakJUTmhXRkFXRGRQSmtHUjVQZVJFNzNIWi1FbjNBdEpHY0RhU0F4NUZ0SkR2YXk4bU1nWElFOFo1NXg5Z19KX2g2OTlURDliUlRYTVFsb2F5ZUw0UE9OUkpGZThhUTZLcmdJX0J6LWZ2ZjEwdmpEUHNLSHZ1RW9ubnM4Q3NPVDdjSzZGRHVCa01FYkZ1OGVn0gHSAUFVX3lxTFBVSF8tbmo3MVBIYWd2eWNxUTlOeW03amUtTU1oUlhKbVNQWldSXzkzd3l5ZFJpdGM1MzZJUUNGRzgwLUx0a3phNGZNNURIOG04VVZDMEZUbU0yTHAwSW95Qzk5Zm5uRWNVUTJFNk9xWnRhdjRCNXFVZmhwR2VfRFIwdklVOWN4VWZCWE4xWFZReldRYmVzVlZWOXpGQzN6UXl5aXN2TnNJWU1FbDMzZ3B5Z0FmN0FCTHdtYVBYNi1MRWFkUEdiOEpIT1VuazUtRU5pdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Witkoff și Kushner au complicat discuțiile cu Ucraina prin deschiderea „cutiei Pandorei” privind securitatea europeană",
+      "title_it": "Witkoff e Kushner complicano i colloqui con l'Ucraina aprendo il “vaso di Pandora” sulla sicurezza europea",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-95a5aeaa1805a3ef",
@@ -80,7 +142,10 @@
       "source": "Forbes Middle East",
       "published": "2026-11-15T15:03:22Z",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOdlkzSGR1aVVUVnJLYUNtY05JUERfZUFZUzMtQmR4N3g0a1pDNUdyRG9GdktPbjBTS1dnSDN3eHowM0VFZDlOaXZONFAxbGNuN2w1MHFPUEtzeVJwUURTbGhIdkVnRnY0WVVZTVRqMGxuUkRnT2R0Y2N0WkR0WEhwTG1sblV0bkM4YXQzYVRxVWtJOUVBTGdTd1RJZmJwdjZsN29sdE1SVEVDQzdlaTR0Vzg0MWQzcEE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Summit-ul ASEAN se deschide la Manila pe fondul perturbărilor energetice și comerciale",
+      "title_it": "Il vertice dell’ASEAN si apre a Manila tra interruzioni energetiche e commerciali",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-9cb90e88d36ba356",
@@ -195,15 +260,18 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-f9e4e67e46763a47",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "INDIA AND FREE TRADE AGREEMENTS: A PERSPECTIVE",
+      "id": "geo-535403310f7a4186",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Europe needs to talk to Russia",
       "summary": "",
-      "source": "IMPRI Impact and Policy Research Institute",
-      "published": "2026-11-15T12:54:37Z",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPb3d1em1DZmdzQlpJa2NzQWVnRHAwcWxOaWV6TWYxNW8xZWdzQk0tem8wcnpDekJ3bmx5aktJZUdaUUJnQ2VOOG16RzMzb0EtendFNVhERmhlYXRybTVidkhrSlZvYzIxZUhEeVFqbVZEaUhDdHVBZVVaZWNzaEEwMg?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "Financial Times",
+      "published": "2026-11-15T13:00:05Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8wQnd1c1Y0NVNNXzRUSl9xN25CekdNX1d6bVlDelRuTm95ZFZKVUZwbVYzS1Y4aUczQkJJRXNjcy1PY3FVZWt2cnFaSVNJSWhkY3IwekNKQ0l4LWpFQUNzTXJ6UndHNjhKQWwxZ215TGY?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Europa trebuie să vorbească cu Rusia",
+      "title_it": "L’Europa ha bisogno di parlare con la Russia",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-256dea4ec3f5913a",
@@ -220,17 +288,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-4f692b750f98010e",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Putin sends dire nuclear warning to UK as he threatens long Ukraine war",
+      "id": "geo-f90307ce4145a14a",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Saudi Arabia and 17 other nations jointly condemn Israel's bombing of Gaza hospital",
       "summary": "",
-      "source": "Daily Express",
-      "published": "2026-11-15T12:50:00Z",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOYk1vYTZCZ3pRNF9TbFg3dVI0THRsMlR5WDRDOGtVNHFHUFFEY1BKclFySWNYUEprRHJUSmlDRG4yMlFQT1NmWWNJUVkyZ2FzS2hPRFByTXhUaXBaSkx1Q0J6bWRQSml1X2x6R25mb1NESDhkME5JRlJIZmoyQ2hFYzBYb9IBiAFBVV95cUxQWkRtRGpqdGtHbjlBbGJ0S3ZCUjVuSEpTRHhKaWNZQ2o5enJNWkpHUjRXUnhuV2Y2YWtRTVNfMUdySEgwejR0YWd0cnhXanNDNjZac1A4STBQMVpQNUk5VFlVaUNwdmxmbXVmRGhUYllMTGpDNjRBZkZRYmtTU3dDYWM0aHNqNmhj?oc=5",
+      "source": "アラブニュース",
+      "published": "2026-11-15T12:34:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNREFneU9rU0V3eHVWRHgwc0JKZndWZGVqcW1JbExfZkJGZmRBV0FpU3k0Ty1wVXYyQ2N0Skt1WUYxZUI1XzNFRVN2MWs3dXFYQUtxVzJKekVseV93bFZWMjV2V3FuTmlEemVRUFJGVWhINTFyREhiQVJXSWZtcnMwRWNpQnZVY0lnQndZVTlIbGt3YmMzWGlmTzNPYUhGSHB4dHBxWmFSaWRqTWdXX1Bad0ZsNFJIT083YU9RNnNNblVmTjhPbG5XYkFn?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Putin trimite Marii Britanii un avertisment nuclear îngrozitor, deoarece amenință cu un război lung în Ucraina",
-      "title_it": "Putin invia un terribile allarme nucleare al Regno Unito mentre minaccia una lunga guerra in Ucraina",
+      "title_ro": "Arabia Saudită și alte 17 națiuni condamnă împreună bombardarea Israelului asupra spitalului din Gaza",
+      "title_it": "L'Arabia Saudita e altre 17 nazioni condannano congiuntamente il bombardamento israeliano dell'ospedale di Gaza",
       "translation_status": "machine_translation"
     },
     {
@@ -248,20 +316,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-ed901f59764e656a",
-      "category": "securitate",
-      "region": "asia",
-      "title": "World leaders head to Asia for back-to-back diplomatic summits",
-      "summary": "",
-      "source": "The Guardian",
-      "published": "2026-11-15T12:20:00Z",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPR2h4aGNocE5HaTJqS18wa25CNEQ2QUZLT0hCUHo2dXktVTNWMlpQRzhOUGtMZmRfUXUtVXp3emtCalllcUpuSFJnNTR4TlV0YWlVVnBlTmVIVHNUOUJsME4tdXRTM2dKcW55NlNLc3doVnYyZVB6eVltVzdjczVscEtydko3Z040VU5iX2Zaa1BNV1N5NkdXVkw4QQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Liderii lumii se îndreaptă spre Asia pentru summituri diplomatice consecutive",
-      "title_it": "I leader mondiali si recano in Asia per i vertici diplomatici consecutivi",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-e071a6d091b0e776",
       "category": "diplomatie",
       "region": "global",
@@ -273,6 +327,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Iranul spune că SUA au folosit discuții de două ori pentru a permite atacuri surpriză, subminând diplomația",
       "title_it": "L’Iran afferma che gli Stati Uniti hanno utilizzato i colloqui due volte per consentire attacchi a sorpresa, minando la diplomazia",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-7bc226ab3bdd04f1",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Humanitarian crisis worsens for Gaza children as winter rains hit, UN says",
+      "summary": "",
+      "source": "Sada Elbalad English",
+      "published": "2026-11-15T11:40:01Z",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeGRkUS1DbzZsZnJyQ0NmY29NUDNfRnBvVWRpY1lhMGVUU3c2WTZoU0ZBZG9sZTktaXNYUm1qNzZ3US1tT29JTmR2OHByQVdsUnVNM3MwZjZITTdVYnZ3cWo5dGtIWFVRSXhGbWxrS2J1Q2w5c21RaFE0MndSMU15SHZ3TnRaakM2dGdtbWNLOVNzZUdl?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Criza umanitară se înrăutățește pentru copiii din Fâșia Gaza pe măsură ce ploile de iarnă au lovit, a spus ONU",
+      "title_it": "La crisi umanitaria peggiora per i bambini di Gaza con le piogge invernali, afferma l’ONU",
       "translation_status": "machine_translation"
     },
     {
@@ -304,6 +372,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-bd2cff9cabdfddad",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "‘Quad belongs to fading era’: Jeffrey Sachs says India should leave Quad | Interview",
+      "summary": "",
+      "source": "Firstpost",
+      "published": "2026-11-15T10:08:53Z",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQTHM3YlhjODhZRFo3dGZLQUlhREhMR2x2NGRpOVVSRU5XVFdhUWZmcVdOR053NVh5QzhGWHlYdjNsSXNMMjdfazE0ZG1GbFJnS0dNeENXcmhOckNJckl6OEMwNmt5S3NQNTZkVmp3MW1vZ1VyTmp4bTczUGVjc2ZJV1N1WHQwNXMwcE8yNVM1NFkydG5ScVVRdjhyY0otM05kXzJzLTRsWUpLTzZBZ0RDV0I2cVVWcERySm1sYUhES0lKbmJCZXp30gHMAUFVX3lxTFBNc0l2cThQT2tUT3hOelpES3Q5UmFLVDlfY1VJRk44N3lLWnpJUzd4OFVVQncwUTZWY3E3VTYzbzdYYUVHMlEwU2tDdTNlNmV6MHVjc2FfbXhDRjNhbzZleFB6aU5VTU82Vl9VV2RmOEh5YzNFMW5WYlpTQVczazk5TE1LYTBMdVhyN3R1VlZPS01KWW4tbU1IeDFXOUNieG9FdkozNmJXTkllTzhvTGYyc0xTa2Z0bGdER1RPcDdsbmgxMmRHSU10SkpKdw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Quad aparține erei fading”: Jeffrey Sachs spune că India ar trebui să părăsească Quad | Interviu",
+      "title_it": "“Il Quad appartiene ad un’era che tramonta”: Jeffrey Sachs dice che l’India dovrebbe lasciare il Quad | Colloquio",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-d09f00b9c62d1719",
       "category": "clima",
       "region": "global",
@@ -329,20 +411,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Parlamentarii se adună pentru diplomația COP31, pentru a discuta calea legislativă | Sabah zilnic",
       "title_it": "I legislatori si riuniscono per la diplomazia COP31, per discutere il percorso legislativo | Sabato quotidiano",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-d4bd5693dbd307bb",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "President Ferdinand R. Marcos Jr. will visit Brazil next year following his historic bilateral talks with Brazilian President Luiz Inácio Lula da Silva on the sidelines of the 49th Association of Southeast Asian Nations Summit and Related S",
-      "summary": "",
-      "source": "Facebook",
-      "published": "2026-11-15T08:25:00Z",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZURSUWpDcXV0T0ZIblFEYU8wb1c5SHUzLVVOdzRUN0pEWmFiMHJIdDVLcEpVeXBuaktRcHY3T0FQWE4taUtKeTNiR0NoRDdFalpXamFjZVZadjhpbGhkX25xS0gxUi1KSlRNXzhRY3hRcmxpeFJITko2OWhVZnJ4Y1pkNmpEa2NpbnkwMGt4OUMyU0ZQcjV5c3oxVXI3SEJfWVJGempTbzZKaHJudnlWUS0xY09Rdkp1R0txQmRlZXZVQ1U1a2FiR2p4V2RVS0gybkNLTQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Președintele Ferdinand R. Marcos Jr. va vizita Brazilia anul viitor, în urma discuțiilor sale bilaterale istorice cu președintele brazilian Luiz Inácio Lula da Silva, în marginea celui de-al 49-lea Summit al Asociației Națiunilor din Asia de Sud-Est și S-a con",
-      "title_it": "Il presidente Ferdinand R. Marcos Jr. visiterà il Brasile il prossimo anno dopo i suoi storici colloqui bilaterali con il presidente brasiliano Luiz Inácio Lula da Silva a margine del 49° vertice dell'Associazione delle nazioni del sud-est asiatico e relative ",
       "translation_status": "machine_translation"
     },
     {
@@ -385,6 +453,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Europenii susțin armata UE, deoarece încrederea în rolul de securitate al SUA scade",
       "title_it": "Gli europei sostengono l’esercito dell’UE mentre diminuisce la fiducia nel ruolo della sicurezza degli Stati Uniti",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-eca103a714ffb993",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "NEWS UPDATE: Brazilian President Lula da Silva invites President Ferdinand “Bongbong” Marcos Jr., among other world leaders, to visit Brazil next year, in a news conference on the sidelines of the 49th #ASEAN2026 Summit and Related Summits.",
+      "summary": "",
+      "source": "Facebook",
+      "published": "2026-11-15T07:06:45Z",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOV0p5N2ZnMk03NEU0MkpOZF9Jdk9mZG1IS181Q3dVYVFpa2RyczUyRG44UXpUbGw3OThTWURJVkR3Szlwd0h0VXk4c1BqYjMwellpUkp5Z0NmZDd2TkFRQThVSFhGVnlDaW1HSS1wV29NS3E5UjF1RzlHbGdNa1hPbmJrMXhybjRPSVMtaHhvYVBEYUlxTkhER2hkOEJZM0p3Nkk1cjBDSmFaajFuY183empJcEJoV2lkZm1JNEp5SFdyN0VKa0Z0UXdhY0p3RnF6THJn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "ACTUALIZARE ȘTIRI: Președintele brazilian Lula da Silva îl invită pe președintele Ferdinand „Bongbong” Marcos Jr., printre alți lideri mondiali, să viziteze Brazilia anul viitor, într-o conferință de presă în marginea celui de-al 49-lea Summit #ASEAN2026 și a ",
+      "title_it": "AGGIORNAMENTO NOTIZIE: Il presidente brasiliano Lula da Silva invita il presidente Ferdinand “Bongbong” Marcos Jr., tra gli altri leader mondiali, a visitare il Brasile il prossimo anno, in una conferenza stampa a margine del 49° vertice #ASEAN2026 e dei verti",
       "translation_status": "machine_translation"
     },
     {
@@ -494,7 +576,10 @@
       "source": "BigGo Finance",
       "published": "2026-11-15T05:08:00Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE52M21LN3JYOW1NYnBhWWFWTDNLWmRSQVRCOTZnclJkaDBadllwRzZqUm1sNVhtVkVpTUZXekc0VWpLWVRhSHhjaEdxZW5mdEZ4dVRGRlV4Z3QzLTA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "NVIDIA își înlătură „bancherul central AI”: în spatele plecării lui Jensen Huang, o reacție în lanț a amestecului de calcul și a controalelor la export",
+      "title_it": "NVIDIA caccia il suo \"banchiere centrale dell'intelligenza artificiale\": dietro la partenza di Jensen Huang, una reazione a catena di confusione informatica e controlli sulle esportazioni",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2c9d98e21a0e0533",
@@ -575,18 +660,24 @@
       "source": "VOI.ID",
       "published": "2026-11-15T02:56:39Z",
       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5HU0kwT3p5VzBZSDd4YTQ1cTdEVzRmOXl1TWhibzVxRXEtcTlBaEcxYlZLVGg1R1BISUdWYmIyR3Y1Zw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Indonezia la răscruce către COP33 2028: între marile oportunități și provocări de găzduit",
+      "title_it": "L’Indonesia al bivio verso la COP33 2028: tra grandi opportunità e sfide da ospitare",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-5690b113f309d447",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Diplomatic Maneuvering Intensifies Amid Sharply Divergent Outlooks on North Korea-U.S. Summit... Korean Peninsula Denuclearization Agenda Is Key",
+      "id": "geo-d5dea7eaca4e952a",
+      "category": "economie",
+      "region": "global",
+      "title": "'Think of the unthinkable and prepare for it,' warns IMF chief as oil price rout intensifies",
       "summary": "",
-      "source": "파이낸셜뉴스",
-      "published": "2026-11-15T02:55:13Z",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12eGwwMXFTNUotVEpXZ24tSnRWQ1NXQnQta1JORkd1V0NEVTd0OXhqcWpfaE5PYndpRlV4Nmd1SldIbTdZeHVsY3FBVDJ0Q245dHp6Nl83VnI?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "weekendargus.co.za",
+      "published": "2026-11-15T02:07:38Z",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1xQ1dvNXJtRFRWMW9BYmtjUDhIcUZzbzFPOWpYbElBaTFVaXp4dzdjZ2xlNlF6OV8yQWdjNnB2eWgtTDRTLUJOMVIyMF9xRXdLanZncy0wNjBYSWg1TERNTjE2VWZkNUp5c2VnRG01aUpXNllhR0JfcUJR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Gândiți-vă la ceea ce este de neconceput și pregătiți-vă pentru asta”, avertizează șeful FMI, în timp ce derularea prețului petrolului se intensifică",
+      "title_it": "“Pensa all’impensabile e preparati”, avverte il capo del FMI mentre il crollo del prezzo del petrolio si intensifica",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-402974c94fd9fca0",
@@ -639,7 +730,10 @@
       "source": "The Daily Star",
       "published": "2026-11-14T23:10:04Z",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQbGEzU2VfakNuS2Y5M0tsZ1ZmelVOUGxLS25NU0hlWmJjSUNtZzZmWmJMb3ctU0Y4bV9IdDJ0OS1nMlhvRGphbi0zb2F3TDZ3REpUSVVlUERSTlNENVFWeXJZMVJuWFlLZFNMVkRhQm83aTNPaFZsUUhueXF3X2NlLW9wTjZMY2toamxoZlBMSGRzeTk0UGo5QllzTUpFeC0zRUUxanJsbFJ1SWFQNzlYWjBXbmpWZlhZUHc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Prim-ministrul, soția participă la cina găzduită de Erdogan pentru liderii mondiali",
+      "title_it": "Il Primo Ministro e la moglie partecipano alla cena offerta da Erdogan per i leader mondiali",
+      "translation_status": "machine_translation"
     }
   ]
 }
