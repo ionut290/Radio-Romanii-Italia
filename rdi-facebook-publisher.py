@@ -114,13 +114,16 @@ def publish(item: dict, message: str | None = None) -> str:
         return "dry-run"
     if not PAGE_ID or not PAGE_TOKEN:
         raise RuntimeError("RDI_FB_PAGE_ID e RDI_FB_PAGE_TOKEN sono obbligatori per pubblicare")
-    url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/feed"
-    body = urllib.parse.urlencode({
-        "message": message if message is not None else message_for(item),
-        "link": str(item["url"]),
-        "published": "true",
-        "access_token": PAGE_TOKEN,
-    }).encode("utf-8")
+    image_url = str(item.get("image") or "").strip()
+    use_photo = image_url.startswith(("https://", "http://")) and item.get("imageType") != "editorial-illustration"
+    post_message = message if message is not None else message_for(item)
+    if use_photo:
+        url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/photos"
+        data = {"url": image_url, "message": post_message + "\n\n🔗 Articolo: " + str(item["url"]), "published": "true", "access_token": PAGE_TOKEN}
+    else:
+        url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/feed"
+        data = {"message": post_message, "link": str(item["url"]), "published": "true", "access_token": PAGE_TOKEN}
+    body = urllib.parse.urlencode(data).encode("utf-8")
     request = urllib.request.Request(url, data=body, method="POST")
     request.add_header("User-Agent", "RDI-Facebook-Publisher/1.0")
     try:
