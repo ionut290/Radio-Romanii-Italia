@@ -1,10 +1,10 @@
 {
-  "news_updated_at": "2026-11-15T17:01:00.866399+00:00",
+  "news_updated_at": "2026-11-15T17:49:00.478261+00:00",
   "editorial_updated_at": "2026-11-15T17:59:44.577869+01:00",
   "translations_updated_at": "2026-11-15T14:49:53.374553+00:00",
-  "feed_total": 73,
+  "feed_total": 69,
   "feed_extended_400": 0,
-  "feed_missing_body": 73,
+  "feed_missing_body": 69,
   "feed_short_body": 0,
   "editorial_total": 16,
   "archived_editorials": 274,
@@ -13,7 +13,7 @@
   "pending_filtered_out": 112,
   "editorial_verde": 3,
   "editorial_galben": 39,
-  "editorial_rosu": 46,
+  "editorial_rosu": 42,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,9 +618,63 @@
   ],
   "recent_news": [
     {
+      "title": "Suspiciuni de fraudă la examenul de rezidențiat de la medicină",
+      "category": "România",
+      "published": "2026-11-15T17:47:20+00:00",
+      "url": "https://www.digi24.ro/stiri/suspiciuni-de-frauda-la-examenul-de-rezidentiat-de-la-medicina-4037483",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il Papa a Cusco, subito il bagno di folla in Papamobile",
+      "category": "Italia",
+      "published": "2026-11-15T17:31:55+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/15/il-papa-a-cusco-subito-il-bagno-di-folla-in-papamobile_9a8adf03-7d7d-4158-b2d8-3ccd37cc5021.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Victorie pentru o româncă din Italia! A câștigat centura de campioană mondială NAGA la grappling fără kimono - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-15T17:27:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZDNZTklHLTRESTdZRUNuR2o0UEVFU1pHTUhzQXRlal9PZ19sS1k0SmktUS15dXV3SFZXcVhNXzlHVEllWWE5X2s5WnJqUTJFZWxXTEk0Z3U1aTFmcnVrSEpPWExHekNpVjVvY3NmQ3h4TFB6X3dEaGYtYWEyM0dHaDRpbFZaSUtHRk5EM2lfai1IbWtlX2hyOWxuSFh4cDYtN2t1T253WlpDX0YtT2JkTjl4UThGa2w1bnJSQVd2VHBLRlR1bldRMTFfNA?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Tensione sulla Vigilanza Rai, La Russa e Fontana pronti a fare le nomine",
+      "category": "Italia",
+      "published": "2026-11-15T17:18:42+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/15/tensione-sulla-vigilanza-rai-la-russa-e-fontana-pronti-a-fare-le-nomine_b098c0d7-1b2d-452b-a641-ac71ecac7d33.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ce ar putea fi 1998 KY26, obiectul care străbate Sistemul Solar cu o accelerație neobișnuită. Ipoteza unei sonde sovietice dispărute",
+      "category": "România",
+      "published": "2026-11-15T17:17:15+00:00",
+      "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/ce-ar-putea-fi-1998-ky26-obiectul-care-strabate-sistemul-solar-cu-o-acceleratie-neobisnuita-ipoteza-unei-sonde-sovietice-disparute-4037465",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Bonnie Tyler, single postum cu o piesă de Crăciun. „Tuturor, noapte bună”",
+      "category": "România",
+      "published": "2026-11-15T17:07:46+00:00",
+      "url": "https://www.digi24.ro/magazin/timp-liber/showbiz/bonnie-tyler-single-postum-cu-o-piesa-de-craciun-tuturor-noapte-buna-4035869",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Vladimir Putin cere Abandonarea Europei, pentru a Renunța la Războiul din Ucraina - iDevice.ro",
       "category": "România",
-      "published": "2026-11-15T16:54:30+00:00",
+      "published": "2026-11-15T16:54:11+00:00",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNSkJCa0RkcGVOQzNGLTJaMm5OVDVabFZDQzluM1hMS2NoQ1JncDMweHZXMUpQeGlZOGpuZHRSbzkyT0RjVXROR2dtbWQxcy1NMmZnSlhja2hESmpLRUh0S2ZOX2hEY2dGMXdzNllZcGswUUJHaUdPQ3Y4VXRNZFlYMmU0MktQVm02bEVId19mSEZEZlRfU0sySlVKbl9YUi1aU3hFc0hTckczQ0RD?oc=5",
       "source": "iDevice.ro",
       "status": "roșu",
@@ -735,15 +789,6 @@
       "words": 0
     },
     {
-      "title": "Il Papa a Cusco, subito il bagno di folla in Papamobile",
-      "category": "Italia",
-      "published": "2026-11-15T16:04:45+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/15/il-papa-a-cusco-subito-il-bagno-di-folla-in-papamobile_9a8adf03-7d7d-4158-b2d8-3ccd37cc5021.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Zannier: preservare la capacità produttiva agroalimentare a San Quirino - Diario FVG",
       "category": "Italia",
       "published": "2026-11-15T16:02:12+00:00",
@@ -780,21 +825,21 @@
       "words": 0
     },
     {
+      "title": "Qualità della vita 2026, Genova tra le prime dieci città italiane per affari e lavoro - Telenord",
+      "category": "Italia",
+      "published": "2026-11-15T15:23:11+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNclpMUUtpcXNBTkVoT2VxeDdKTW5YeWV3T1dkbnR3ZGgwY3RnTFR1cmJNZ2xEVGJPTm5MalZQamJWZUNsMmF1bl9acF9mRGNUd1VpaUpIVDlyOFJwYXBxWms0a05STlpKdDhoX2NlNXJoVEdTd3o0cTBLc0xrUlllU2FCTzNJNldEbXlyeXl5OA?oc=5",
+      "source": "Telenord",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Un craniu neobişnuit, vechi de 1600 de ani, al unui copil cu ochi de ciclop, descoperit în Peru",
       "category": "România",
       "published": "2026-11-15T15:22:50+00:00",
       "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/un-craniu-neobisnuit-vechi-de-1600-de-ani-al-unui-copil-cu-ochi-de-ciclop-descoperit-in-peru-4035673",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Qualità della vita 2026, Genova tra le prime dieci città italiane per affari e lavoro - Telenord",
-      "category": "Italia",
-      "published": "2026-11-15T15:22:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNclpMUUtpcXNBTkVoT2VxeDdKTW5YeWV3T1dkbnR3ZGgwY3RnTFR1cmJNZ2xEVGJPTm5MalZQamJWZUNsMmF1bl9acF9mRGNUd1VpaUpIVDlyOFJwYXBxWms0a05STlpKdDhoX2NlNXJoVEdTd3o0cTBLc0xrUlllU2FCTzNJNldEbXlyeXl5OA?oc=5",
-      "source": "Telenord",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -861,39 +906,12 @@
       "words": 0
     },
     {
-      "title": "Mesaj RO-Alert în Tulcea: Populația, avertizată asupra posibilităţii pătrunderii de drone în spaţiul aerian naţional",
-      "category": "România",
-      "published": "2026-11-15T14:18:11+00:00",
-      "url": "https://www.digi24.ro/stiri/mesaj-ro-alert-in-tulcea-populatia-avertizata-asupra-posibilitatii-patrunderii-de-drone-in-spatiul-aerian-national-4037289",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Susținători ai lui Călin Georgescu s-au supărat pe George Simion: „Noi, băieții din stradă, te declarăm pe tine un laș și un trădător”",
       "category": "România",
       "published": "2026-11-15T14:07:42+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/sustinatori-ai-lui-calin-georgescu-s-au-suparat-pe-george-simion-noi-baietii-din-strada-te-declaram-pe-tine-un-las-si-un-tradator-4037329",
       "source": "Digi24",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Centrala CET București Vest a revenit în funcțiune după incendiile din primăvară. Precizările ELCEN",
-      "category": "România",
-      "published": "2026-11-15T13:59:32+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/centrala-cet-bucuresti-vest-a-revenit-in-functiune-dupa-incendiile-din-primavara-precizarile-elcen-4037315",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Haosul zborurilor din SUA nu se încheie prea curând. Când estimează autoritățile revenirea la normal",
-      "category": "România",
-      "published": "2026-11-15T13:36:24+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/haosul-zborurilor-din-sua-nu-se-incheie-prea-curand-cand-estimeaza-autoritatile-revenirea-la-normal-4037273",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -920,24 +938,6 @@
       "published": "2026-11-15T13:03:09+00:00",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMVpjQzdTVk1heDAxc2MwMTNBS1VmdmVIc09pSFhtRVdFQ091SVp1NlhWMm05bGZyd2Z0OFZOd1dlZE11dkgzX1dRS0lTMWhISURJM3ZFY0FJRUJZTjlpLXpyTHBnXzVGZFIzR0JrNWh6WmdfQnZXNDFlNlp0aG9kNVF1dEZFZF80bFczcVJIU1NHekNJRlBtT25zdHFNTzVyTEtGMXVWVQ?oc=5",
       "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Vigilanza Rai, Richetti: 'Non farò mai il presidente di nulla per conto della destra'",
-      "category": "Italia",
-      "published": "2026-11-15T12:41:40+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/15/vigilanza-rai-richetti-non-faro-mai-il-presidente-di-nulla-per-conto_b098c0d7-1b2d-452b-a641-ac71ecac7d33.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Qualità della vita 2026, Milano non è più la regina d’Italia: scende al secondo posto. Retrocedono anche la Brianza e Cremona - Il Giorno",
-      "category": "Italia",
-      "published": "2026-11-15T12:26:06+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQenVGUTVkQV9KUEVBRXdxa3hzdF9vaEM1RUdFNmhQSVhtYlhaYndzUUREbk1WRHF5aHlXV3lYQmdUNWlJOUN1U1N4LTg4czFINzV1UVg1bE54NVBEQXplWXM2elY2Rkxobkd5LXJuUUJkSW13UU1vSXFjZGllZE8ySkkzV2o2SmRXVUJLQ3VGYTVMNk0?oc=5",
-      "source": "Il Giorno",
       "status": "roșu",
       "words": 0
     },
@@ -1059,6 +1059,15 @@
       "words": 0
     },
     {
+      "title": "Morto nella piattaforma sull’Adriatico. La Fiom Cgil proclama due ore di sciopero - Il Resto del Carlino",
+      "category": "Italia",
+      "published": "2026-11-15T05:20:50+00:00",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdlE0Ml80RnBLY21nVmtUQ0ZQUXRHOXZXTmJFQ1RjcGp6TzgyU3gycFdYZ3o0clZaYWt4REVGaTNwd3ZxWjR6eVMxT2NRcXNTM29fMEo5YnVhUkNGYnlfNl9heW1qUzNjaHgybndWc1NZUWc0dzBSZzQ4c2pnVUpTb0dRWkc4RUwwR3hiakluaElJNnVYbUJRdFJBRnluNGM?oc=5",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Un’Ai urbana. Ne parla. Luciano Floridi - Il Resto del Carlino",
       "category": "Italia",
       "published": "2026-11-15T04:24:45+00:00",
@@ -1080,7 +1089,7 @@
       "title": "Debiti con il Fisco? Dall’anno prossimo un anno in più per rateizzare le cartelle - la Repubblica",
       "category": "Italia",
       "published": "2026-11-15T04:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQOTNILVN4YmhucGszZXZIV3NqMWhwdjR3RzFBZXVydExkWlVtQmVZcU45LUlFQWI0bDlEeEhneUhVcVdlYWMwc3huN2VjU1RabFB2NVJKVkpfbU1DRTlwZ2plZ3pKNjc3b3A5UlNPZFJ6eWFMOTR6VmFBOGxqdHduTnBuVTM3dU9ibHY3MGx1dFhTX1ZjcC1fbGljMEhpVGl6WDFKQVRnR0dTZDA3eTg5dnQydHJGN2h5eWJKSWJSbGUxcmV0c0VXdzFxQnZqNlNyb1JGaTZqcFV5cFNxV21MZDRfYjJaUGI5eVhuRWY2STVzVVZGVjlVRHpsa3E3bU0?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxObHpYcHpCc1lLTkQ4VmtDdWw1OTVNQjJtMU5YM1l4djhpTjd3X3F1UGFRRm9TVHFFaWxOc3l1MGxBMFpBNGl4SnlTWEdtdWhPZTk4QkE3cUZ1dlFEU01JQUdVQTNwU01UOE9peUY5M19QNEVVUk1jSXpHR3hMenVWYkk1Vk96NWZlX3Vzc0RpSnJEb3dSWmlNc3dzN0JHREozekRHal9TV0V5YU5VMnpOMUFKbENWb1JXaGpBMURnOE8yci0wVFplcHQ3VUZWb1FEaU1UbjRzeGpZQ3pValItdlM2NHdDb1hXUFhFSlUyQkVtOXJoU2pXeGVB?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -1118,15 +1127,6 @@
       "published": "2026-11-14T20:30:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPTVFJMjlRLWJwS1FhQjR1TENoR1FrdEprazFCbXB0NkM4RnlVZFVLT084aFc4bFpLQWdRdVBwejg0NkRaaTBXSkFhRER4US10aDNYZnNlVFlJUlhvMEhBNG1jSFFfYWNWUnAxMEtDdTlUYTRFOFg4VnJ1Qi1FakRGYkw3eEtSSzUyOFFIMmxxSE5SZUJKUWZXZFpsa2hGSW5Lamh4MWNwNWJvNEZyejZBMk9waE45aTBCWlhGQk9vU1VvVDJ2bmlBeHZKRnhzT2dJZ2IyclAxcEpXUFVBaUHSAeMBQVVfeXFMT2NUTGdCV3lycmpNR29jNWNFeUhROUU4aXA4TEJCZjRZbjgtNDF2NGJlNU5FTUV2RXJvS1dWMGU0QXFPUUhmSGxYSkdBcGpUR1gwcVBIYVdvR0pQX0VTOHdqeU10a3Q4VGtUa0hnWDV3MjV4VWN",
       "source": "RaiNews",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Nadia Comăneci, prima reacție după ce României i s-a furat medalia de bronz: \"M-am dus la arbitra șefă\" - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-14T20:01:21+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQejFnNzUtZGhtZzhVZHkxUG9nbS1sWkM5ZExaUDhMWklEVVJNaVlYeE9JSXpEbFpkT3BoWHJpMnFjS0wtRGdnWkR6VHg4QVJGalZmRzJHUVRkQU5JbFZ5SlBxRmQtZE5fczFnMEgwRWtQOW5kUjUzZjljdzZiOUhDUnhJanhCR0d3ekwyY2J6ZmNCNC1KZmJqQUVHMEYzVzFUNWp0NDNfNU9nZ1hQVWJXTENQWU9pbmZSOTFYMFh2cGJUWjBuaHZQQlZ0RkJDUG9UcDFzdmN2ZGp5Vjla?oc=5",
-      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1235,42 +1235,6 @@
       "published": "2026-11-13T18:28:40+00:00",
       "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQS2NYWlpBcHhNVEowWnhJVEdoeWhLMmI1ZzlFSzVkV2ZXWHJRYUNCVGlQWEp3NW4zQzZPWkxtMGVWYms5ZTJkR2haYnVLVi05TU9rNzl0b2pKUTdUQzNFeGt5N1EtZVJXMlh5SVBTTGZ4SVExZlByR0xNNDQ2czZ4Vmh3eHpFTzRWYmhPT25USXNTcnJoTkgxN1RsTGxtT0RGZDgzT0xBc1hOSlEyQ0cxUWY5Vjh5Y2ctTHg3eWE1Xy14REZOUzIzZkhQaFBFTFEtVG10OHkzYmtjTVlHNDhGS3Fwc1RVb1F0SmtqdnVRR3NfM0tnME5LR1lhUkNzcjZfcDFHeU9fZEI0Nm1qdkVVMXZZYnRyWWM?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Bolojan atacă PSD după datele economice ale INS: Sunt infirmate scenariile apocaliptice, sper să nu-și... - Digi24",
-      "category": "România",
-      "published": "2026-11-13T17:40:03+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxORE1mMmNwMGlVa280ODh3YkxtbE1DZ2VDVWU0YWdOOGo1b3ZDaDJIRUlfYnIxZHZrSmo1NjQyZWZmaXhiWENPU1B3Qmt5LVM4NFdPVWJPb1Nka3ZNa3FmbXYtRUllN3VjOXFERXg5TTdLcWg2cUh1R0xIdHFTQ0FJdmFSdW9RNWp1R2hCR2cxU2xEV0N5T1p6VkZPLXUyS1M0SjVTRlN0c3Y5MUdaVkVWS05iZXhXTnlvTEdveXZKQ2N1VkVYRG9XT0NKUlZxWkF2NHhaeFRHV25zeDVua2hTa1lSMkpNQzlka3U2Qmk1U05vYy1tQUhPZ0VkSlIxbXBWS3JlQVk5X3ppWDBmeGZBTllwVWljazBXV3hBUkNzdUxaUdIBogJBVV95cUxORE1mMmNwMGlVa280ODh3YkxtbE1DZ2VDVWU0YWdOOGo1b3ZDaDJIRUl",
-      "source": "Digi24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tunisia: peste 6.000 de migranți repatriați voluntar în 2026, peste 26.000 din 2022 - Gazeta Românească Italia",
-      "category": "Diaspora",
-      "published": "2026-11-13T17:24:36+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQYTcwWXdZUUljY0JKeEdiV2JuMGVuV0oybS1wOE1ENjJSY0xhb01sS09hSHVFUTJ4a2xYTHYyUkkxb3MzRktWVk0zd3RyZW9zXzBiZW5vbnhpbXQzdnNjellwTWpXM2s1Nm5qZmhXU01wV1UzZkVNWWR6amhzb01RczAwTXMxNkdLNDZwcGUzTF9GbE0tYWo5ZU5qd1ZObnB4T3k2X0thNG5rV3lJQmdBNzVVb0dsU2R5eWVOclZvd0hfUEZLNVVseDJvNUZ5aHRoYjBYOGxFNkV2QQ?oc=5",
-      "source": "Gazeta Românească Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "OCDE: migranții, o resursă esențială pentru a face față îmbătrânirii populației și crizei forței de muncă - Gazeta Românească Italia",
-      "category": "Diaspora",
-      "published": "2026-11-13T17:24:21+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxON2h3NENEc1ZRUE1pSzc2TU4yUW5MZUpPQlJKYktnRGxmVUFmeTVLN3ZtTlljVDFTVGJFbVVQbDdhVFFNZEw0M09xRGZSQVJ2ZTlJNy1BcWVOU21pV2NfNWtPNW9WMHlxdEphc3pzQlY4eUMtYWhWcTdIdFFuNThrNHNRRWVHR0JTYlNJX3RZT3drWnJqLXVYNmg2SGFmczRkMXN1RzlaM25KZW9ZSFQxVkp6UHhQSTJLeklUSy1CNTFVemwzYnd4QnR2ME5fYjNWSDEwTHhxVE9FaFZ5TnE2QnVyc1lCVnBpaDVDWjZOQUtKLXh2YU1N?oc=5",
-      "source": "Gazeta Românească Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ucraina: 4,37 milioane de persoane sub protecție temporară în UE, aproape 60.000 în Italia - Gazeta Românească Italia",
-      "category": "Diaspora",
-      "published": "2026-11-13T17:24:06+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQV1RsaFkzM1J0a282ZWl2ODFvMlZ6WERQbWhObi11S3ltY0ZPUkptUFdkLU4yUTJsLXVzRGt1bmpCZndBX043TXJaRTI2a1JMYjlmTngzbENTcWktTzJ4X3BLSW05ajNTYkphZ2I5WXFGUXZ1a1NBRHM4ZnZDdkhmdFlONGFDRnRDZmNVb1REZVRCUl9aekRVZUFobUxsNnNLaGtZNktOSmxtRHF0ZEo2cWZuT2NGMkp0YTJUcGFuNUpzWnZWUW9mTS1zMEdrVl9mUXFXQ1lweG5mMEpz?oc=5",
-      "source": "Gazeta Românească Italia",
       "status": "roșu",
       "words": 0
     }
