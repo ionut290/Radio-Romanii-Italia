@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-15T19:10:28.233981Z",
+  "updated_at": "2026-11-15T20:20:44.472812Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-b5225db47e1919f5",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "First-ever U.S.-China-Russia summit looming; concerns mount over transactional diplomacy on Korean Peninsula security",
+      "summary": "",
+      "source": "재경일보",
+      "published": "2026-11-15T20:05:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBGMEZjR0hHU0MwSFRsa1RaM2JfRjRKVV9oYVBaNEJ1ME1uajBYWUh1LU05Zl9qS0ZrRzh4TUJGYXBRSzRjSWt2NFU5VzVoZV9wa1NPZVNzVlVMcmdzUzNKUzdn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Primul summit SUA-China-Rusia se profilează; preocupările cresc cu privire la diplomația tranzacțională privind securitatea Peninsula Coreeană",
+      "title_it": "Si avvicina il primo vertice USA-Cina-Russia; crescono le preoccupazioni sulla diplomazia transazionale sulla sicurezza della penisola coreana",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-64cc60fa53bd4f20",
       "category": "diplomatie",
@@ -41,7 +55,7 @@
       "region": "americi",
       "title": "Why China Could Gain Most from Trump–Putin–Xi Summit",
       "summary": "",
-      "source": "www.daily-sun.com",
+      "source": "Daily Sun",
       "published": "2026-11-15T18:00:00Z",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE92b2xDdEQ4QWhiU0RrbDRiX0JDWThGRnRwRGNTZDJDcnpwcXZLcjNXZ0pRRkZsektpeHU2QUxRN3dmRkNVR2pzOHRBRlZYYjd3MGttNQ?oc=5",
       "review_status": "external_headline_unverified",
@@ -176,6 +190,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-1743414ec6d194fc",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Trump heads to Asia with hopes of shifting the momentum after midterm setbacks hurt him at home",
+      "summary": "",
+      "source": "Bozeman Daily Chronicle",
+      "published": "2026-11-15T14:22:00Z",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQU0VLRWlEOEdMdTZLWVNJbTN5T1NOOWQyY3JpdXZoOWg2T2J1R3dUWUZNbFpTaUdIODloeDUySkJWbGVZZHZMWVBTX2ZNc1J0R3MwdHdKYkdxOEVwTkI2Wk1uT0pBR0ZiUUlXMjRJNlFqanN6RGdrb3FqbHFMUEdqZFJLWThENmxrdHZtbnQtLVpJcHZtVmRRaHgtb0NDM0R3OFFSZ1dDUmpZYzZPQWE0cUw2Qy1zRkxkQ0pYdEx3RnlNSHZBNEJEZjVmSFJ3c1FqVnV5YURiRGhyc3RrX1hWNzRtSjFSZlBIV2o5TWQ4SUY5RTZCbm1oUldIQzU1UkZNRmxKZGlWSW5YXzBIV1MwemVVbDhnZkJW?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump se îndreaptă în Asia cu speranța de a schimba impulsul după ce eșecurile la mijlocul mandatului l-au rănit acasă",
+      "title_it": "Trump si dirige verso l’Asia con la speranza di cambiare slancio dopo che le battute d’arresto di medio termine lo hanno ferito in patria",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-6074663ed6e0595a",
       "category": "europa",
       "region": "europa",
@@ -201,20 +229,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Kremlinul include abandonarea de către Marea Britanie a protecției sale nucleare a Europei printre condițiile pentru încetarea focului în Ucraina - The Telegraph",
       "title_it": "Il Cremlino include l’abbandono da parte della Gran Bretagna della protezione nucleare dell’Europa tra le condizioni per il cessate il fuoco in Ucraina – The Telegraph",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-1743414ec6d194fc",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Trump heads to Asia with hopes of shifting the momentum after midterm setbacks hurt him at home",
-      "summary": "",
-      "source": "Bozeman Daily Chronicle",
-      "published": "2026-11-15T13:28:16Z",
-      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQU0VLRWlEOEdMdTZLWVNJbTN5T1NOOWQyY3JpdXZoOWg2T2J1R3dUWUZNbFpTaUdIODloeDUySkJWbGVZZHZMWVBTX2ZNc1J0R3MwdHdKYkdxOEVwTkI2Wk1uT0pBR0ZiUUlXMjRJNlFqanN6RGdrb3FqbHFMUEdqZFJLWThENmxrdHZtbnQtLVpJcHZtVmRRaHgtb0NDM0R3OFFSZ1dDUmpZYzZPQWE0cUw2Qy1zRkxkQ0pYdEx3RnlNSHZBNEJEZjVmSFJ3c1FqVnV5YURiRGhyc3RrX1hWNzRtSjFSZlBIV2o5TWQ4SUY5RTZCbm1oUldIQzU1UkZNRmxKZGlWSW5YXzBIV1MwemVVbDhnZkJW?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Trump se îndreaptă în Asia cu speranța de a schimba impulsul după ce eșecurile la mijlocul mandatului l-au rănit acasă",
-      "title_it": "Trump si dirige verso l’Asia con la speranza di cambiare slancio dopo che le battute d’arresto di medio termine lo hanno ferito in patria",
       "translation_status": "machine_translation"
     },
     {
@@ -285,6 +299,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Zelenskyy susține referendumul NATO în timp ce Europa respinge condițiile de securitate ale Rusiei",
       "title_it": "Zelenskyj lancia un referendum sulla NATO mentre l’Europa rifiuta le condizioni di sicurezza della Russia",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-af0a3ef19af2d78a",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31 must show multilateralism works amid global 'polycrisis': Australian Minister Bowen",
+      "summary": "",
+      "source": "Anadolu Ajansı",
+      "published": "2026-11-15T12:45:11Z",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQUS15S1NsYzAwek9wWHAyTEcwTGg2cEEzV3QyWi0yUG96ZUdkaEIxWHAtYW1jZld1VTJnWDFlazJrN08yV3VQeHF0YTh6RWtLYVpOTkRoOTBXRmtMZlMwOEM0dGhUQjJ2N0w3R3hROHVkZmhNYzNyVXNWb055eDU2VEdZSGxrZ0wtaWY3RDZzSEFOU1dIaEx1TmR5U2lXQk55Vm4tYkk4OWhocWpHQnFaRlBXeGVVZm5NRzdVZXRpRzAxSUE5M1o3Q0pKazVaNXFod1BEaWJySE5NQUFfcUNJ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31 trebuie să arate că multilateralismul funcționează pe fondul „policrizei” globale: ministrul australian Bowen",
+      "title_it": "La COP31 deve dimostrare che il multilateralismo funziona in mezzo alla “policrisi” globale: il ministro australiano Bowen",
       "translation_status": "machine_translation"
     },
     {
@@ -467,6 +495,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "ACTUALIZARE ȘTIRI: Președintele brazilian Lula da Silva îl invită pe președintele Ferdinand „Bongbong” Marcos Jr., printre alți lideri mondiali, să viziteze Brazilia anul viitor, într-o conferință de presă în marginea celui de-al 49-lea Summit #ASEAN2026 și a ",
       "title_it": "AGGIORNAMENTO NOTIZIE: Il presidente brasiliano Lula da Silva invita il presidente Ferdinand “Bongbong” Marcos Jr., tra gli altri leader mondiali, a visitare il Brasile il prossimo anno, in una conferenza stampa a margine del 49° vertice #ASEAN2026 e dei verti",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-8d5a8925f45c3227",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Japan worries U.S., China, Russia could cozy up at 3-way summit",
+      "summary": "",
+      "source": "Japan Today",
+      "published": "2026-11-15T07:05:00Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWXZuVjBvUnhqREk1cEtXdkZES0VSYmVZdjRVR091Rk9Pd2tvaHBMa3JSUUFKMzBxVzRxalJ3M0htV1AyVVV6Y3NHMUtKWjhab3hxTVZqMlNMOV9XVlJWemVSeHhxM2hUVUNPQTRKSFJuTmZlaUZUUDZpWlk4S2xVbVhwOVlPYkhndUpxTTAzYmo0dndiM0ZKXzdYa2ZLOFhkb0JnVw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Japonia se teme că SUA, China și Rusia s-ar putea pregăti la un summit cu trei căi",
+      "title_it": "Il Giappone teme che Stati Uniti, Cina e Russia possano avvicinarsi al vertice a tre",
       "translation_status": "machine_translation"
     },
     {
@@ -666,20 +708,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-d5dea7eaca4e952a",
-      "category": "economie",
-      "region": "global",
-      "title": "'Think of the unthinkable and prepare for it,' warns IMF chief as oil price rout intensifies",
-      "summary": "",
-      "source": "weekendargus.co.za",
-      "published": "2026-11-15T02:07:38Z",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1xQ1dvNXJtRFRWMW9BYmtjUDhIcUZzbzFPOWpYbElBaTFVaXp4dzdjZ2xlNlF6OV8yQWdjNnB2eWgtTDRTLUJOMVIyMF9xRXdLanZncy0wNjBYSWg1TERNTjE2VWZkNUp5c2VnRG01aUpXNllhR0JfcUJR?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "„Gândiți-vă la ceea ce este de neconceput și pregătiți-vă pentru asta”, avertizează șeful FMI, în timp ce derularea prețului petrolului se intensifică",
-      "title_it": "“Pensa all’impensabile e preparati”, avverte il capo del FMI mentre il crollo del prezzo del petrolio si intensifica",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-402974c94fd9fca0",
       "category": "conflicte",
       "region": "orient",
@@ -719,6 +747,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "De ce relațiile dintre India și Filipine sunt brusc cele mai importante",
       "title_it": "Perché le relazioni tra India e Filippine sono improvvisamente le più impensabili",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-013ac68aa913a88f",
+      "category": "securitate",
+      "region": "europa",
+      "title": "In reversal, Pentagon eyes smaller troop cuts across Europe",
+      "summary": "",
+      "source": "The Japan Times",
+      "published": "2026-11-14T23:34:00Z",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMy1sVTVXZmJBWjdsWGZpbGQ3TUQ4dHdOVVNETlFjWTNRbEV6UjRzNF9KU0xhVWU1WW5yZ05zdFk5b1VKam00cUpWY1BEaVU2OHp3eHc3R0NJaDBHMUJFSlRZUkxMS2tSU2YwcUdXU1B4RFVNYTFpTUxPVjJrQ1RjcW5uZXkwZkdnalA1emNad1A?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "În sens invers, Pentagonul vede că trupele mai mici sunt tăiate în toată Europa",
+      "title_it": "Al contrario, il Pentagono punta a tagli di truppe più piccoli in tutta Europa",
       "translation_status": "machine_translation"
     },
     {
