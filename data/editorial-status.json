@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-15T09:14:56.903020+00:00",
+  "news_updated_at": "2026-11-15T10:05:10.000381+00:00",
   "editorial_updated_at": "2026-11-15T10:13:36.647337+01:00",
   "translations_updated_at": "2026-11-15T07:14:51.802723+00:00",
-  "feed_total": 69,
+  "feed_total": 73,
   "feed_extended_400": 1,
-  "feed_missing_body": 68,
-  "feed_short_body": 0,
+  "feed_missing_body": 71,
+  "feed_short_body": 1,
   "editorial_total": 22,
   "archived_editorials": 273,
   "translation_records": 35,
   "pending_total": 127,
   "pending_filtered_out": 112,
   "editorial_verde": 4,
-  "editorial_galben": 43,
-  "editorial_rosu": 44,
+  "editorial_galben": 46,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,6 +618,51 @@
   ],
   "recent_news": [
     {
+      "title": "Rețea de contrabandă cu țigări, cu ajutorul unor angajați feroviari. Marfa era ascunsă în trenurile de călători",
+      "category": "România",
+      "published": "2026-11-15T10:02:21+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/retea-de-contrabanda-cu-tigari-cu-ajutorul-unor-angajati-feroviari-marfa-era-ascunsa-in-trenurile-de-calatori-4037161",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Schimbare radicală: SUA nu mai retrag soldații din Europa, îi transferă pe flancul estic. România ar putea fi vizată (Bloomberg)",
+      "category": "România",
+      "published": "2026-11-15T09:57:49+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/schimbare-radicala-sua-renunta-la-retragerea-trupelor-din-europa-si-le-transfera-pe-flancul-estic-romania-ar-putea-fi-vizata-4037137",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Mosca: 'Negozieremo per raggiungere gli obiettivi fissati da Putin nel 2024'",
+      "category": "Italia",
+      "published": "2026-11-15T09:54:17+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/mosca-abbattuti-533-droni-ucraini-nella-notte-su-diverse-regioni-russe_b2d35761-af9c-44dd-964c-e157cfba1464.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Explozii în Bahrain, după un atac cu drone revendicat de Iran asupra unei baze americane. Populația, îndemnată să se refugieze",
+      "category": "România",
+      "published": "2026-11-15T09:53:59+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/explozii-in-bahrain-dupa-un-atac-cu-drone-revendicat-de-iran-asupra-unei-baze-americane-populatia-indemnata-sa-se-refugieze-4037157",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "SpaceX fa la storia, recupera per la prima volta un veicolo spaziale",
+      "category": "Italia",
+      "published": "2026-11-15T09:53:10+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/spacex-recupera-per-la-prima-volta-nella-storia-un-veicolo-spaziale_d061a5b5-9f2d-4539-9b90-45189df72084.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Putin dă un ultimatum Regatului Unit privind armele nucleare. Ce vrea de fapt președintele rus",
       "category": "România",
       "published": "2026-11-15T09:08:51+00:00",
@@ -633,6 +678,33 @@
       "url": "https://www.digi24.ro/stiri/actualitate/social/alerta-de-incendiu-pe-aeroportul-din-chisinau-pasagerii-si-angajatii-au-fost-evacuati-ce-au-descoperit-autoritatile-4037115",
       "source": "Digi24",
       "status": "galben",
+      "words": 388
+    },
+    {
+      "title": "Al Bano: 'Se il Papa va a Gaza, ci vado anch'io al suo fianco'",
+      "category": "Italia",
+      "published": "2026-11-15T08:46:26+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/11/13/al-bano-se-il-papa-va-a-gaza-ci-vado-anchio-al-suo-fianco_f3a3e3d5-20ea-4dd1-b710-0fc560a439d6.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Gustave Fayet collezionista e creatore, un capolavoro di mostra a Parigi",
+      "category": "Italia",
+      "published": "2026-11-15T08:43:54+00:00",
+      "url": "https://www.ansa.it/canale_viaggi/notizie/mondo/2026/11/13/gustave-fayet-collezionista-e-creatore-un-capolavoro-di-mostra-a-parigi_479f50d9-26e3-4e11-a202-243e3c37bf35.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Peggy Guggenheim e il vetro artistico del '900, una mostra a Venezia",
+      "category": "Italia",
+      "published": "2026-11-15T08:38:59+00:00",
+      "url": "https://www.ansa.it/canale_viaggi/regione/veneto/2026/11/13/peggy-guggenheim-e-il-vetro-artistico-del-900-una-mostra-a-venezia_79eeb756-509d-45a2-b373-76719b0b7a83.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -641,6 +713,15 @@
       "published": "2026-11-15T08:37:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQUWRyLWE2emw2LVk2WlFjNERmcVk2X29DQmtDVHdiV0lxRVNXS3pHV0tLRnNYckZkRnBCRGNRMWI1d2hmVTdlbXJVb2ZfMjkwZUlOTGx6ZWI3bnFUY2R5YkJmMlBJT1cyZ2k4MXRPLUR3US1LWVV0bHE4QUI5U0pwZG1OVHpjQ01hWWJBSFdYTU84QXhsWnpkTUY4NUtudk5zRjhPZXNvUHJTZlZHRnItcXZ5REZfUmVZSUt6YWZPeVMtWGRZVHhNSVFCc3RBX24zLUtjWmktY0o?oc=5",
       "source": "RguNotizie",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Steven Spielberg: \"Ho ancora l'entusiasmo di un ragazzino quando faccio un film\"",
+      "category": "Italia",
+      "published": "2026-11-15T08:35:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/13/steven-spielberg-ho-ancora-lentusiasmo-di-un-ragazzino-quando-faccio-un-film_a995f667-7465-4d54-ad60-01e83c96a0bf.html",
+      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -654,21 +735,21 @@
       "words": 0
     },
     {
+      "title": "Giorgio Napolitano, il figlio Giulio racconta una vita al servizio delle istituzioni",
+      "category": "Italia",
+      "published": "2026-11-15T08:31:27+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cultura/libri/approfondimenti/2026/11/13/giorgio-napolitano-il-figlio-giulio-racconta-una-vita-al-servizio-delle-istituzioni_877bb068-e54c-4d4c-84b3-3392b2cea138.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Nicușor Dan, primit de regele Cambodgiei. România încearcă să obțină șefia Francofoniei prin Dacian Cioloș",
       "category": "România",
       "published": "2026-11-15T08:19:56+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/politica/nicusor-dan-participa-la-summitul-de-la-phnom-penh-dacian-ciolos-sustinut-de-romania-pentru-sefia-francofoniei-4037059",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Mosca: abbattuti 533 droni ucraini nella notte su diverse regioni russe",
-      "category": "Italia",
-      "published": "2026-11-15T08:09:59+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/mosca-abbattuti-533-droni-ucraini-nella-notte-su-diverse-regioni-russe_b2d35761-af9c-44dd-964c-e157cfba1464.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -687,6 +768,15 @@
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/il-principe-harry-in-visita-leopoli-per-la-prima-conferenza-sui-traumi-di-guerra_457d311f-ef82-4aea-9f71-34a71092ee96.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Buscemi (Cgil): \"Colpire la cooperativa Livatino significa colpire il lavoro e la speranza di riscatto del nostro territorio\" - AgrigentoNotizie",
+      "category": "Italia",
+      "published": "2026-11-15T07:44:50+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPejBjU3lWVDlKTy1UMGp0a1BCLTB4TmNDcWlRUzBJeE1lYnpEcmU2ZUF1aFVCM1JrY0FFWEpqTWxjaTNxQWRHelI2eHpzT1FOaENNRjZodzk2elo5OTNSNkJodVBDbllJMFpwalAzLWt6bVlQUGREMUUzb2JnZzhwTVhCU2hLN3A1eVBoQWtZUm9EeXBIeWdVYTZYRU5HQ3pvSnpVUWJR?oc=5",
+      "source": "AgrigentoNotizie",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -798,15 +888,6 @@
       "words": 490
     },
     {
-      "title": "Economia e spiritualità con la pace di Pistoletto - Il Giorno",
-      "category": "Italia",
-      "published": "2026-11-15T05:03:19+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSFM4WC1wdXZQNzA3NWtleHdQc2tnZjdnWHBWejNpT281LUJHeks1UnZ1UDNJMk0yXzZLTHZjVEdsMkxXXzNXcENUaXhSZkZnS01uTjA5M0VPMXFUaDhuekVhUDFMb0RfVnRBZ2pCbFN6Qm12NjBZS1NvTmp4b0x1ZG9ya1pHNXA5RXc?oc=5",
-      "source": "Il Giorno",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Unu din trei adulți din România are obezitate, dar boala este subdiagnosticată în spitale. Pacienții își plătesc singuri tratamentele",
       "category": "România",
       "published": "2026-11-15T05:00:46+00:00",
@@ -820,33 +901,6 @@
       "category": "România",
       "published": "2026-11-15T05:00:46+00:00",
       "url": "https://www.digi24.ro/stiri/externe/sua/cum-ar-putea-noul-congres-al-sua-sa-puna-capat-razboiului-cu-iranul-cele-trei-instrumente-prin-care-donald-trump-poate-fi-presat-4033703",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Paradoxul de 20 de trilioane de dolari al Chinei. Care este marea dilemă cu care Beijingul se va confrunta în următorul sfert de secol",
-      "category": "România",
-      "published": "2026-11-15T05:00:36+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/paradoxul-de-20-de-trilioane-de-dolari-al-chinei-care-este-marea-dilema-cu-care-beijingul-se-va-confrunta-in-urmatorul-sfert-de-secol-4030637",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Solstițiul de iarnă 2026: Când este cea mai lungă noapte din an și de la ce dată se măresc zilele",
-      "category": "România",
-      "published": "2026-11-15T05:00:26+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/solstitiul-de-iarna-2026-cand-este-cea-mai-lunga-noapte-din-an-si-de-la-ce-data-se-maresc-zilele-4035187",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Serviciul secret al Chinei, tot mai influent sub conducerea lui Xi Jinping. Care e principala țintă a Beijingului",
-      "category": "România",
-      "published": "2026-11-15T05:00:16+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/serviciul-secret-al-chinei-tot-mai-influent-sub-conducerea-lui-xi-jinping-care-e-principala-tinta-a-beijingului-4034587",
       "source": "Digi24",
       "status": "galben",
       "words": 0
@@ -924,15 +978,6 @@
       "words": 0
     },
     {
-      "title": "SpaceX recupera per la prima volta nella storia un veicolo spaziale",
-      "category": "Italia",
-      "published": "2026-11-14T23:07:13+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/spacex-recupera-per-la-prima-volta-nella-storia-un-veicolo-spaziale_d061a5b5-9f2d-4539-9b90-45189df72084.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Tensione sul supercaccia Gcap. L’Italia: “Favorevoli a Berlino” - la Repubblica",
       "category": "Italia",
       "published": "2026-11-14T21:43:20+00:00",
@@ -957,6 +1002,15 @@
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/14/anziano-ucciso-durante-la-truffa-del-falso-carabiniere-due-fermi_5d3e1a2d-d519-4fe8-b10b-e866c55fbb82.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nadia Comăneci, prima reacție după ce României i s-a furat medalia de bronz: \"M-am dus la arbitra șefă\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-14T20:01:21+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQejFnNzUtZGhtZzhVZHkxUG9nbS1sWkM5ZExaUDhMWklEVVJNaVlYeE9JSXpEbFpkT3BoWHJpMnFjS0wtRGdnWkR6VHg4QVJGalZmRzJHUVRkQU5JbFZ5SlBxRmQtZE5fczFnMEgwRWtQOW5kUjUzZjljdzZiOUhDUnhJanhCR0d3ekwyY2J6ZmNCNC1KZmJqQUVHMEYzVzFUNWp0NDNfNU9nZ1hQVWJXTENQWU9pbmZSOTFYMFh2cGJUWjBuaHZQQlZ0RkJDUG9UcDFzdmN2ZGp5Vjla?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -1001,15 +1055,6 @@
       "published": "2026-11-14T14:54:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQQWJfRGNUeGVpR1N2cGJZenNiNV9PTzJldnJmUnZLVHE5bUMyZWdDaG9UZ0hBNkZnZ2dybG5LSFNTTzRNV2d5blBQUFRwWHVTRlZxLTVXTjUtQVJudEVKUHV2NGdGeEZ0VE9Ic0czLXQxaEU5WGFOQXBtaElOSFQwaU9GRDFLRkw4X1paRlNROXZXaDVreVkyTDhRVjR3emJvQ183UFljaldkOUxSVC03LTZMZzdkc3dkM2FTazVkNEZKZ9IBxwFBVV95cUxNVktqN1IxMk1HU2psZkwxUWhPc2wzV19IVFFyM3dhLXlWdHQ5NzU3cnNRZV81MnZfajJSOXZxVVNnakU5eV96MFIxQUgtWWszdTh6U1A1M3ptOERKbDdVeHVYZU1VUko5Sy1uUW5jdzA1MTA1MUJXQzVLNGZjTVhwWjBGX01XRVNwZmJmZUJab0l",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cambio gomme, dal 15 novembre tempo di invernali",
-      "category": "Italia",
-      "published": "2026-11-14T14:36:07+00:00",
-      "url": "https://www.ansa.it/canale_motori/notizie/sicurezza/2026/10/27/cambio-gomme-dal-15-novembre-tempo-di-invernali_242ecc49-fa3e-4522-95ac-60eacbe5b17c.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -1124,19 +1169,19 @@
     {
       "title": "S&p conferma il rating dell’Italia. Outlook positivo - la Repubblica",
       "category": "Italia",
-      "published": "2026-11-13T21:19:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOXJRdGlCLW5wRFFWOGItMktIRzY5aWZPcVR3Nk1LUlNXTXpnR1lHbExmRkFWbXdRbWsxNW13ZmVtR1BxV0FrN2kzd2RLaUdNVVhxYXNCZ25ybllQLWM0b2NMX1YtNFkxaF9icVg4MFAzbW10THNsQU52WXowLVk1cXRZQzRKQks5dmJvRDRVWHdUWkZKU2owMldqX2tKaTQ?oc=5",
+      "published": "2026-11-13T21:31:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOREFqeHR6R3o3VTlvdDZRRUdMb1lGZU1lbFg5bEF6cUprSVJ3aU5FbGdEa1dyMUM4Q2NVY3Zwa1laOEZhMmdKT1A1R1Q1TVE5QkZ6ZzM1MlpMcG5URHBETUxiTjh3WDNMQjNMX2w5WkJnZUhUUkdKWENETS1FOUVDRzRZbUllQjBBRE8wVGZWM2xlU0d3U29VSFFwemZlM3VuZnJYeg?oc=5",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "In Italia 5 milioni con il diabete ma un milione non sa di averlo",
+      "title": "S&p conferma il rating dell’Italia. Outlook positivo - la Repubblica",
       "category": "Italia",
-      "published": "2026-11-13T20:00:48+00:00",
-      "url": "https://www.ansa.it/canale_saluteebenessere/notizie/diabete/2026/11/13/in-italia-il-75-degli-adulti-convive-con-il-diabete_0729d1e7-f75c-4f0a-9e55-e8bb8d47cb1d.html",
-      "source": "ANSA",
-      "status": "galben",
+      "published": "2026-11-13T21:19:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOXJRdGlCLW5wRFFWOGItMktIRzY5aWZPcVR3Nk1LUlNXTXpnR1lHbExmRkFWbXdRbWsxNW13ZmVtR1BxV0FrN2kzd2RLaUdNVVhxYXNCZ25ybllQLWM0b2NMX1YtNFkxaF9icVg4MFAzbW10THNsQU52WXowLVk1cXRZQzRKQks5dmJvRDRVWHdUWkZKU2owMldqX2tKaTQ?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -1146,15 +1191,6 @@
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPeFQ5UnFTYnFQdWRRa0FZYnlJVnE2bVBjVW5TQWozTjVtN1NjdFdyc1JXejRudS1uM3JfREN3S2YzVzMxRFhQSmxNVWFGUHNmV2RZSWxVV1lfYURnRElIZ3liNFZDMUxIZzNxRkt4S2tvWm5fZWZUVmFtMS1KTTE3cDE0NW44dllfdUJnam1zRDU3bVNPMUhmRnl3YzllTGcwMDRwSkFKNHZWZTZOc2t1TmtCZzE5YmxTVEdTenBYd084QzIwdl81TG1CMnJQU1hvUkV0QXFwajJCaTA4bnEw?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Giornata della colletta alimentare, in campo 160mila volontari e 12mila supermercati",
-      "category": "Italia",
-      "published": "2026-11-13T18:46:37+00:00",
-      "url": "https://www.ansa.it/canale_terraegusto/notizie/fiere_eventi/2026/11/13/ansagiornata-colletta-alimentare-in-campo-160mila-volontari-e-12mila-supermercati_83ef6cd3-a7dd-4535-87c3-8c4ce1f90d28.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -1215,7 +1251,7 @@
       "title": "Ameninţări cu bombă în Europa. Franța spune că e posibilă o \"ingerinţă străină\", însă evită să spună țara - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-13T12:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPN2JqWDlwckp3emoxRkdUUEY0OWl4UkZ6MzE3dVNoYlBJOXNCRzJEZXpZMEZPOHY5LUlvc2hvWUFmLS04TmxYYjFKZjkteU9BSzRyQ0NmV0tlaWU3VVZNQlpmVDZ5ZjdiN2diOGVtc3QwdVBVRjN1N3VwRGhLbE1zSndGa1luRW5CY3BaTy1URGVCNFNBdGVGQnRrUGJjV2pHSEY0d2hsU09vZGg5eDhHX3ptcm9TQlB0dE9BbG9lZlV5S2NhZmNCWFdzN3V4RW1hRUU1UW15QkhVQQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQU3pUMW10OHVjYWhfU3VWUnRPXzJSQUtmWklLbGRuSmNxLW9yRU1ncG5Ld3B4N3ZFWU1uTFl6RFpQOE5qVmppMGlpS09YSkQzSDBTNVg0eVA0WjkxcDlNeVdqd2lwRG0zQzNBamE1NkZqTzNqdUt6NWU0VkFkNEtmNEs2YW5JY2JGdURYZF83MWNVWGlabG9zQ2hXTC1Cd2thaDlEOHBoZnlnZE1mbldQVDFYaGhWeDNmZkF3RHktbVRPa0c2Nml2REpIeVMydHdCUTh3d1dHSWV2VXhpZndv?oc=5",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
