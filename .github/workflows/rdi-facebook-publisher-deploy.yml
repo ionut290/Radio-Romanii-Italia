@@ -35,6 +35,8 @@ jobs:
           test -n "$SSH_KEY_B64" || { echo '::error::Manca RDI_ORACLE_SSH_KEY_B64'; exit 1; }
           test -n "$SSH_KNOWN_HOSTS" || { echo '::error::Manca RDI_ORACLE_KNOWN_HOSTS'; exit 1; }
           test -n "$RDI_FB_PAGE_TOKEN" || { echo '::error::Manca RDI_FB_PAGE_TOKEN'; exit 1; }
+          page_token="$(curl -fsS -G "https://graph.facebook.com/v27.0/${RDI_FB_PAGE_ID:-1365404166659194}" --data-urlencode "fields=access_token" --data-urlencode "access_token=$RDI_FB_PAGE_TOKEN" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("access_token",""))')"
+          test -n "$page_token" || { echo '::error::Facebook non ha restituito il token specifico della pagina'; exit 1; }
           install -d -m 700 "$HOME/.ssh"
           printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
           printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
