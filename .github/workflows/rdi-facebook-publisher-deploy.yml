@@ -43,7 +43,7 @@ jobs:
           chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
           ssh-keygen -y -f "$HOME/.ssh/id_rdi" </dev/null >/dev/null 2>&1
           umask 077
-          printf '%s' "$RDI_FB_PAGE_TOKEN" > "$RUNNER_TEMP/rdi-facebook-token"
+          printf '%s' "$page_token" > "$RUNNER_TEMP/rdi-facebook-token"
           chmod 600 "$RUNNER_TEMP/rdi-facebook-token"
 
       - name: Installa pubblicatore e timer Facebook
