@@ -1,0 +1,59 @@
+name: RDI - Pubblica traduzioni italiane Oracle
+on:
+  schedule:
+    - cron: '43 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: radio-editorial-publish
+  cancel-in-progress: false
+jobs:
+  translate-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controlla Python
+        run: python -m py_compile scripts/rdi_translate_publish.py
+      - name: Apri collegamento privato a Oracle
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64"
+          test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 -d > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh -f -N -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o ExitOnForwardFailure=yes -o ConnectTimeout=12 -L 127.0.0.1:15000:127.0.0.1:5000 ubuntu@129.151.255.41
+      - name: Cerca, traduci e filtra gli estratti
+        run: python scripts/rdi_translate_publish.py
+      - name: Aggiorna archivio
+        run: python scripts/archive_editorial.py
+      - name: Pubblica file modificati
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- editorial.json data/editorial-archive.json)" ]; then
+            echo "Nessuna notizia pronta per pubblicazione"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editorial.json data/editorial-archive.json
+          git commit -m "RDI: brevi notizie tradotte automaticamente in italiano"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep 5
+          done
+          exit 1
