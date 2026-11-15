@@ -39,7 +39,7 @@ html,body,body *,body *::before,body *::after{cursor:none!important}
 const $=id=>document.getElementById(id);
 // The Chromium page on the server stays open for days. A small public build
 // marker makes it reload itself after a new YouTube layout is deployed.
-const RDI_YOUTUBE_BUILD='20261109-news-yesterday-fallback-1';
+const RDI_YOUTUBE_BUILD='20261115-news-fetch-recovery-1';
 async function refreshWhenDeployed(){
  try{
   const response=await fetch('./data/youtube-build.json?ts='+Date.now(),{cache:'no-store'});
@@ -83,13 +83,34 @@ function italianStory(story,translationItems){
  return null;
 }
 function valid(x){return x&&typeof x.title==='string'&&x.title.trim().length>8}
+const feedCache=new Map();
+let loadInProgress=false,emptyRetry=null;
+async function readNewsFeed(path){
+ const controller=new AbortController();
+ const timeout=setTimeout(()=>controller.abort(),8000);
+ try{
+  const response=await fetch(path+'?ts='+Date.now(),{cache:'no-store',signal:controller.signal});
+  if(!response.ok)throw new Error('News feed HTTP '+response.status);
+  const data=await response.json();
+  if(!data||typeof data!=='object'||Array.isArray(data))throw new Error('Invalid news feed');
+  const key=path.includes('events-auto')?'events':'items';
+  if(path.includes('translations')){
+   if(!data.items||typeof data.items!=='object'||Array.isArray(data.items))throw new Error('Invalid translations');
+  }else if(!Array.isArray(data[key]))throw new Error('Invalid news list');
+  feedCache.set(path,data);
+  return data;
+ }catch(error){
+  console.warn('News feed unavailable',path,error.message);
+  return feedCache.get(path)||{};
+ }finally{clearTimeout(timeout);}
+}
 async function load(){
+ if(loadInProgress)return;
+ loadInProgress=true;
  try{
   const [news,editorial,eventData,translationData]=await Promise.all([
-   fetch('./news.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
-   fetch('./editorial.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
-   fetch('./events-auto.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})),
-   fetch('./news-translations.json?ts='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))
+   readNewsFeed('./news.json'),readNewsFeed('./editorial.json'),
+   readNewsFeed('./events-auto.json'),readNewsFeed('./news-translations.json')
   ]);
   const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
   const events=(eventData.events||[]).filter(x=>valid(x)&&(x.endDate||x.date||'')>=today).map(x=>({
@@ -138,8 +159,13 @@ async function load(){
    stories=updated;
    if(current){const position=stories.findIndex(x=>x.title===current);index=position>=0?position:0;}
    if(!started){started=true;show();}
-  }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Notizie momentaneamente non disponibili';$('summary').textContent='Torneremo con aggiornamenti da Romania, Italia e diaspora.';$('category').textContent='NOTIZIE';$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
+  }else{stories=[];index=0;started=false;clearTimeout(nextTimer);nextTimer=null;$('headline').textContent='Notizie momentaneamente non disponibili';$('summary').textContent='Torneremo con aggiornamenti da Romania, Italia e diaspora.';$('category').textContent='NOTIZIE';$('source').textContent='Radio Românii din Italia';$('tickerText').textContent='Aggiornamento delle notizie in corso';if(tickerAnimation){tickerAnimation.cancel();tickerAnimation=null;}$('photo').removeAttribute('src');$('photo').style.display='none';$('fallback').style.display='flex';}
  }catch(e){console.warn('News update failed',e)}
+ finally{
+  loadInProgress=false;
+  if(emptyRetry)clearTimeout(emptyRetry);
+  emptyRetry=stories.length?null:setTimeout(load,30000);
+ }
 }
 // YouTube uses a short display excerpt; stored articles and Facebook copies stay complete.
 function tvExcerpt(value,limit=160){
