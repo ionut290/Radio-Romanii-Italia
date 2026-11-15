@@ -1,0 +1,41 @@
+name: RDI - Prova traduzione Oracle RO-IT
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controlla sintassi
+        run: python -m py_compile scripts/rdi_translate_preview.py
+      - name: Prepara tunnel privato Oracle
+        shell: bash
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" || { echo "::error::Chiave Oracle assente"; exit 1; }
+          test -n "$SSH_KNOWN_HOSTS" || { echo "::error::Host Oracle assente"; exit 1; }
+          mkdir -p "$HOME/.ssh"
+          chmod 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 -d > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+          ssh -f -N -i "$HOME/.ssh/id_rdi" -o IdentitiesOnly=yes -o BatchMode=yes -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=12 -L 127.0.0.1:15000:127.0.0.1:5000 ubuntu@129.151.255.41
+      - name: Traduci tre titoli senza pubblicare
+        env:
+          RDI_TRANSLATE_URL: http://127.0.0.1:15000/translate
+        run: python scripts/rdi_translate_preview.py
+      - name: Salva il risultato di prova
+        uses: actions/upload-artifact@v4
+        with:
+          name: anteprima-traduzioni-rdi
+          path: data/rdi-translation-preview.json
+          retention-days: 3
