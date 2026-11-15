@@ -1,0 +1,45 @@
+name: RDI - Notizie automatiche in italiano
+on:
+  schedule:
+    - cron: '33 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: radio-editorial-publish
+  cancel-in-progress: false
+jobs:
+  italian-news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Controllo sintassi
+        run: python -m py_compile scripts/publish_italian_news.py
+      - name: Importa notizie italiane con fonti
+        run: python scripts/publish_italian_news.py
+      - name: Archivia i nuovi articoli
+        run: python scripts/archive_editorial.py
+      - name: Pubblica solo se ci sono novità
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- editorial.json data/editorial-archive.json)" ]; then
+            echo "Nessuna notizia nuova"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editorial.json data/editorial-archive.json
+          git commit -m "RDI: notizie verificate in italiano"
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort || true
+            sleep 5
+          done
+          exit 1
