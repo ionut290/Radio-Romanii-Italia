@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-15T20:14:43.041887+00:00",
-  "editorial_updated_at": "2026-11-15T17:59:44.577869+01:00",
-  "translations_updated_at": "2026-11-15T14:49:53.374553+00:00",
+  "news_updated_at": "2026-11-15T21:43:26.026972+00:00",
+  "editorial_updated_at": "2026-11-15T22:42:00.599695+01:00",
+  "translations_updated_at": "2026-11-15T20:25:11.863836+00:00",
   "feed_total": 70,
   "feed_extended_400": 0,
   "feed_missing_body": 70,
   "feed_short_body": 0,
   "editorial_total": 16,
-  "archived_editorials": 274,
-  "translation_records": 31,
+  "archived_editorials": 277,
+  "translation_records": 27,
   "pending_total": 127,
   "pending_filtered_out": 112,
   "editorial_verde": 3,
-  "editorial_galben": 39,
-  "editorial_rosu": 43,
+  "editorial_galben": 40,
+  "editorial_rosu": 42,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,12 +618,93 @@
   ],
   "recent_news": [
     {
-      "title": "Nations League: in campo Belgio-Italia 2-1 DIRETTA",
+      "title": "Nations League: in campo Belgio-Italia 4-1 DIRETTA",
       "category": "Italia",
-      "published": "2026-11-15T20:11:41+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/15/nations-league-in-campo-belgio-italia-2-1-diretta_c9e4e2b8-d8e7-489f-8d65-615b5bb7a7a4.html",
+      "published": "2026-11-15T21:28:41+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/15/nations-league-in-campo-belgio-italia-4-1-diretta_c9e4e2b8-d8e7-489f-8d65-615b5bb7a7a4.html",
       "source": "ANSA",
       "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Forțele UE au interceptat în Marea Mediterană un petrolier suspectat că face parte din flota fantomă rusă. Anunțul făcut de Kaja Kallas",
+      "category": "România",
+      "published": "2026-11-15T21:26:24+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/fortele-ue-au-interceptat-in-marea-mediterana-un-petrolier-suspectat-ca-face-parte-din-flota-fantoma-rusa-anuntul-facut-de-kaja-kallas-4037625",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ministrul Justiției, despre anchetarea magistraților de către DNA: „Nu faci decât să muți dosare”",
+      "category": "România",
+      "published": "2026-11-15T21:23:44+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/justitie/ministrul-justitiei-despre-anchetarea-magistratilor-de-catre-dna-nu-faci-decat-sa-muti-dosare-4037643",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Traian Băsescu pune la îndoială raportul promis de Nicușor Dan privind anularea alegerilor: „Nu își poate asuma nimeni o minciună”",
+      "category": "România",
+      "published": "2026-11-15T21:09:40+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/traian-basescu-pune-la-indoiala-raportul-promis-de-nicusor-dan-privind-anularea-alegerilor-nu-isi-poate-asuma-nimeni-o-minciuna-4037627",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il Papa a Cusco, l'Angelus a 3mila metri dopo l'operazione",
+      "category": "Italia",
+      "published": "2026-11-15T21:01:09+00:00",
+      "url": "https://www.ansa.it/vaticano/notizie/2026/11/15/il-papa-a-cusco-langelus-a-3mila-metri-dopo-loperazione-_9a8adf03-7d7d-4158-b2d8-3ccd37cc5021.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ucraina, afectată de limitările sistemului Starshield. Zelenski spune că dronele Shahed ajung să lovească infrastructura energetică",
+      "category": "România",
+      "published": "2026-11-15T20:50:24+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/ucraina-afectata-de-limitarile-sistemului-starshield-zelenski-spune-ca-dronele-shahed-ajung-sa-loveasca-infrastructura-energetica-4037601",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Orban îl critică pe Nicușor Dan pentru că legitimează AUR ca partid de opoziție: „Dezavantajează formațiunile democratice”",
+      "category": "România",
+      "published": "2026-11-15T20:47:30+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/ludovic-orban-acuza-ca-aur-este-legitimat-artificial-ca-partid-de-opozitie-asta-dezavantajeaza-opozitia-autentica-4037547",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Scoop del Financial Times: 'Huang pensa a un clamoroso ritorno alla guida di Nvidia'",
+      "category": "Italia",
+      "published": "2026-11-15T20:38:14+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/scoop-del-financial-times-huang-pensa-a-un-clamoroso-ritorno-alla-guida_5f2ba24d-056b-4f96-aca8-03e59566888d.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ce influențează testosteronul: Diferențe între proteinele animale și vegetale. Rezultatele surprinzătoare ale unui studiu",
+      "category": "România",
+      "published": "2026-11-15T20:28:03+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/proteinele-animale-si-cele-vegetale-influenteaza-diferit-nivelul-de-testosteron-rezultatele-surprinzatoare-ale-unui-studiu-4037599",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Avertismentul Moscovei privind testele nucleare: Rusia promite un răspuns proporțional dacă alte țări reiau experimentele",
+      "category": "România",
+      "published": "2026-11-15T20:15:17+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/rusia/avertismentul-moscovei-privind-testele-nucleare-rusia-promite-un-raspuns-proportional-daca-alte-tari-reiau-experimentele-4037589",
+      "source": "Digi24",
+      "status": "galben",
       "words": 0
     },
     {
@@ -633,15 +714,6 @@
       "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/un-studiu-rastoarna-tot-ce-se-stia-despre-viata-pisicilor-din-egiptul-antic-nu-erau-toate-venerate-ca-simboluri-ale-puterii-divine-4033155",
       "source": "Digi24",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ft: 'Jensen Huang pensa a un clamoroso ritorno alla guida di Nvidia'",
-      "category": "Italia",
-      "published": "2026-11-15T20:09:06+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/ft-jensen-huang-pensa-a-un-clamoroso-ritorno-alla-guida-di-nvidia_5f2ba24d-056b-4f96-aca8-03e59566888d.html",
-      "source": "ANSA",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -663,12 +735,12 @@
       "words": 0
     },
     {
-      "title": "Orban acuză că AUR primește artificial statutul de partid antisistem: „Asta dezavantajează opoziția autentică”",
-      "category": "România",
-      "published": "2026-11-15T19:45:37+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/ludovic-orban-acuza-ca-aur-este-legitimat-artificial-ca-partid-de-opozitie-asta-dezavantajeaza-opozitia-autentica-4037547",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "Nvidia, la svolta possibile: Huang pensa al ritorno come ceo - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-15T19:46:38+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdWxqOElBTklHcEdCNC1lWlJ6cFdGbW5nREgwT2FXQTJzQUU2U1ZLSlUyX2lVMjA2akp2MWlES2xUakFyQ2dYS2RqLVpHWlFFcmQxT1dFdUZpalhBcUk1NlRTU2ppU2JLVXZSTUV0MnBsSnVQaEUxeTdTZkpzek5CS211U05jbjRfTjBoelpVaDM3RGEwOG94UnJUUF85TFlVZTNaX193dkdYYnJfQk9UQnZ2RUwtZERJT29GSGRDNE83Zw?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -762,6 +834,15 @@
       "words": 0
     },
     {
+      "title": "Lavori stradali a Padova dal 16 novembre, chiusure in tre vie per il gas e la fognatura - Padova24Ore",
+      "category": "Italia",
+      "published": "2026-11-15T18:53:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBvSHB4bmpvTGlGNzFlTV9fbW5ib1cxQ2lidjI3VFBYNGdzU0pVV0dWTy1fZDREQ0JwbGFvaUllNi1kVHZVOU9TWG9uejU2c1d6cWZNNEZFU1o4VGFfZVRSXy1Sb2VrS2VUcVRMM0VaVQ?oc=5",
+      "source": "Padova24Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "La manovra alla prova delle modifiche, nuovo vertice di maggioranza",
       "category": "Italia",
       "published": "2026-11-15T18:47:17+00:00",
@@ -777,15 +858,6 @@
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBlU09yaG54UDYzWVdISjd3ejVHUTJhLWhrR0ZXc3hOUGNaY3lQb2prUUhvYzlMeWg1Vm1KdDB0V2Q4RWM0a3h1bmx5cFpyRTAyZ2xOYk9SVEp0ZVJ1MW1Wdm90QVBlM3lVSmJxdXdIYngyb0lR?oc=5",
       "source": "Padova24Ore",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Leone XIV a Cusco, bagno di folla in Papamobile. 'Qui un popolo che sa soffrire con dignità'",
-      "category": "Italia",
-      "published": "2026-11-15T18:44:56+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/15/leone-xiv-a-cusco-bagno-di-folla-in-papamobile.-qui-un-popolo-che-sa-soffrire_9a8adf03-7d7d-4158-b2d8-3ccd37cc5021.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -834,15 +906,6 @@
       "words": 0
     },
     {
-      "title": "Suspiciuni de fraudă la examenul de rezidențiat de la medicină",
-      "category": "România",
-      "published": "2026-11-15T17:47:55+00:00",
-      "url": "https://www.digi24.ro/stiri/suspiciuni-de-frauda-la-examenul-de-rezidentiat-de-la-medicina-4037483",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Victorie pentru o româncă din Italia! A câștigat centura de campioană mondială NAGA la grappling fără kimono - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-15T17:27:06+00:00",
@@ -852,57 +915,12 @@
       "words": 0
     },
     {
-      "title": "Ce ar putea fi 1998 KY26, obiectul care străbate Sistemul Solar cu o accelerație neobișnuită. Ipoteza unei sonde sovietice dispărute",
-      "category": "România",
-      "published": "2026-11-15T17:17:15+00:00",
-      "url": "https://www.digi24.ro/stiri/sci-tech/descoperiri/ce-ar-putea-fi-1998-ky26-obiectul-care-strabate-sistemul-solar-cu-o-acceleratie-neobisnuita-ipoteza-unei-sonde-sovietice-disparute-4037465",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Bonnie Tyler, single postum cu o piesă de Crăciun. „Tuturor, noapte bună”",
-      "category": "România",
-      "published": "2026-11-15T17:07:46+00:00",
-      "url": "https://www.digi24.ro/magazin/timp-liber/showbiz/bonnie-tyler-single-postum-cu-o-piesa-de-craciun-tuturor-noapte-buna-4035869",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Vladimir Putin cere Abandonarea Europei, pentru a Renunța la Războiul din Ucraina - iDevice.ro",
+      "title": "Vladimir Putin: Cererea Complet Inacceptabilă pentru a Opri Războiul din Ucraina - iDevice.ro",
       "category": "România",
       "published": "2026-11-15T16:54:11+00:00",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNSkJCa0RkcGVOQzNGLTJaMm5OVDVabFZDQzluM1hMS2NoQ1JncDMweHZXMUpQeGlZOGpuZHRSbzkyT0RjVXROR2dtbWQxcy1NMmZnSlhja2hESmpLRUh0S2ZOX2hEY2dGMXdzNllZcGswUUJHaUdPQ3Y4VXRNZFlYMmU0MktQVm02bEVId19mSEZEZlRfU0sySlVKbl9YUi1aU3hFc0hTckczQ0RD?oc=5",
       "source": "iDevice.ro",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Rezultate LOTO - Duminică, 15 noiembrie 2026. Numerele extrase și premiile puse în joc de Loteria Română",
-      "category": "România",
-      "published": "2026-11-15T16:53:31+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/rezultate-loto-duminica-15-noiembrie-2026-numerele-extrase-si-premiile-puse-in-joc-de-loteria-romana-4035791",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "„Jos mâinile de pe media”. Sute de mii de cehi au protestat la Praga, de teama controlului politic asupra radiodifuziunii publice",
-      "category": "România",
-      "published": "2026-11-15T16:49:33+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/jos-mainile-de-pe-media-sute-de-mii-de-cehi-au-protestat-la-praga-de-teama-controlului-politic-asupra-radiodifuziunii-publice-4037439",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Revoltă la Nvidia după plecarea lui Jensen Huang. Peste 1.600 de mesaje de susținere, petiție cu 115.000 de semnături. Poziția lui Musk",
-      "category": "România",
-      "published": "2026-11-15T16:43:02+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/revolta-la-nvidia-dupa-plecarea-lui-jensen-huang-peste-1-600-de-mesaje-de-sustinere-petitie-cu-115-000-de-semnaturi-pozitia-lui-musk-4037437",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -1068,6 +1086,15 @@
       "words": 0
     },
     {
+      "title": "Două nave lovite de drone, în apropiere de canalul Sulina - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-15T07:20:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQbF9pTUViTUtEMDFWekQ3bnU0REl4M2hvQlllMW5YTnIwYUw1V2RLdENKcUp3QVkzX3oybXZZSWNtWmNqYWJWQnlrUDlWWG9zWEZCVXg0VHc5Sk9JRTFXVDZJbkhZNGlTRWxUX0ZiZ2F3SVhiOF9jWi00WkVuM2lFSkw5SS11dG9uS1R0aG1EUUs3UnpOTTdTNDJ3WG9DUdIBowFBVV95cUxOdV9YaDhpa3pISG1YMG5zcW1CX1l5aldPZG5vSTJPM0lnQl83RllEVU43SzZSajVrc2FCZjhFQkZKTWlTUUNyREVISmpRZjVuOE5oZnNkZFB3QkF4b1N4dnN1Rk1VcVp1M3hTbDZvSmJqVUFoRmlyR3V6STJZQjJxSGt4dzJobkRKajkzZFpEXzlsS0k5UWp6VXFuZkVkYTctZElz?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Nell'interesse generale",
       "category": "Italia",
       "published": "2026-11-15T05:57:36+00:00",
@@ -1194,15 +1221,6 @@
       "words": 0
     },
     {
-      "title": "Protest în Parcul Izvor: circulația a fost restricționată. MAI face apel la calm - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-14T11:18:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWVZ0V1dfOGpHdjhkaUhGUEd5dWR1b0tXUkx5U2NLdWRzUzZpeTcxbTlkVWY1QUdqeVBlS1J6U0ZPUzd5cXhLTmhZUUIwZE5Ibk9UdlppTGVnWl9CVURqZHNIUnNmbWI3dnFHUjRKa09qNjlMQ05xOWJ4dVY5a3ZFZ1FQWWlCLUtKaWdJbjlVdk12bTIybWMwa1dtY3A1VVpGWE5Z0gGoAUFVX3lxTE5zOHBPLXJRbTNfNF85cmZrT1dwRHhKRW5OWS1sdEhXMzQxZEw3el9fbVh2bmVhaEZ0S2RaUFprOXBfX25xSl9xaGktbkY2YmRTR2JYaF9OQ2p6UXZWM0tOUENSbllPZWhaaXZwNG5OYnpSOTR1emM0aDBSTFZzV2tYZjhpWVhQUkEtQ2s4eWJ6bUlQQ19EaTlyREJuaUpPaFRSdEJ5VDA3Xw?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Îngrijitoare româncă din Italia, spulberată de o mașină în timp ce traversa strada - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-14T10:47:00+00:00",
@@ -1226,24 +1244,6 @@
       "published": "2026-11-14T07:51:24+00:00",
       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5WcmQzU3dCcGlTYnE0eDh5c0FuQkRYd1hFWVJ4RERHSThPYmdQMVRMVkdJbEhMLW5rVlZkVnlZWUZkc1NBQlJUYg?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "S&p conferma il rating dell’Italia. Outlook positivo - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-13T21:31:59+00:00",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOREFqeHR6R3o3VTlvdDZRRUdMb1lGZU1lbFg5bEF6cUprSVJ3aU5FbGdEa1dyMUM4Q2NVY3Zwa1laOEZhMmdKT1A1R1Q1TVE5QkZ6ZzM1MlpMcG5URHBETUxiTjh3WDNMQjNMX2w5WkJnZUhUUkdKWENETS1FOUVDRzRZbUllQjBBRE8wVGZWM2xlU0d3U29VSFFwemZlM3VuZnJYeg?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "S&p conferma il rating dell’Italia. Outlook positivo - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-13T21:19:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNOXJRdGlCLW5wRFFWOGItMktIRzY5aWZPcVR3Nk1LUlNXTXpnR1lHbExmRkFWbXdRbWsxNW13ZmVtR1BxV0FrN2kzd2RLaUdNVVhxYXNCZ25ybllQLWM0b2NMX1YtNFkxaF9icVg4MFAzbW10THNsQU52WXowLVk1cXRZQzRKQks5dmJvRDRVWHdUWkZKU2owMldqX2tKaTQ?oc=5",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     }
@@ -1283,25 +1283,25 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
-      "title": "Doi frați, implicați într-un eveniment rutier grav în Italia! Unul și-a pierdut viața, iar altul se află în stare gravă, după ce mașina în care se aflau s-a izbit frontal de un alt autoturism - Kanal D Romania",
+      "title": "Lovitură pentru Cristi Chivu în Italia! Ultima decizie a șefilor l-a înfuriat pe român - Digi Sport",
       "category": "Diaspora",
-      "published": "2026-11-13T17:28:18+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPZi10SUZzcmptME9tMDZhV0xvQW9hbC1ZMUpQUEdBWUFLSjNzekhoOUpmdEZaQWRycTRDeEpxYkU0emRubHZMQ2t6YUlvb09GSVM5S2pTWGJUYkh2MHUzR0thdDNZdEw1NXRwUVk0V2lwaEpRV3ZfTG9zdndPdG5Wd3FhM3dNdGh6VTN3c3pxbmFPRDFYdTZFZXdHcDNWYnNhdHZCaUtzcjNsYTRnV21tSkpTcWlNdzVpUXNMZFEtbGVUMUVZZkRFMWJ0Ql9mSGpfWUtna0NnRXYtaTJGczg4U3FkMUlQNi1ZeDZSOTBxeXo5RzhVd2RUU21oaGF3OHRKR0lmSThVUjhfS0RwRGVlaElVaFJLeXFySC0yVTJyZzNTVEVJRWF4dHB5dVlHdTIycEZRMzViX2c0ZlNMTW84?oc=5",
-      "source": "Kanal D Romania",
+      "published": "2026-11-14T05:10:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNWGs3bHBKVlF1RmNtVExJVk1aWEFiVlVDMkFIMXktZ2FnVmFMa3NMaUtqbFZKcXNaS29JNTdLUE5GVFU0LVNSMXdLR0JxMjVYdjdiY1I2RWhkS1lhVGJSMGRUSzVfN1BOdGVlSXZycUVCUlhscWxteWlFNnZua3pPc3gweWpkMHMzdFl4MFdiUTFtQVg0c1pDUlZzWE9UVHBidVJyQVR4TFNJR3hXeG55cGluSnNKVTlJc1hKMW0ycXMtS1BSN3hsWGxBd0h2QdIB2AFBVV95cUxNNHR5NHlNZWpLYzAxbzlQbksyX3YwVkZGeWlPRlNPb2gwa2txYkZhYmpWam1TTDgtd09ScjltQjdlWVZzeDEzaUZzVmRwU2R2b1NOZVR1VE1xMFktNjBEMER5TFlWTmNud09lMXRtX1AzY3pBdTg2UkpSeVhKNFFKd2lwUWl",
+      "source": "Digi Sport",
       "status": "galben",
-      "words": 37,
-      "intro": "Doi frați, implicați într-un eveniment rutier grav în Italia!",
+      "words": 16,
+      "intro": "Lovitură pentru Cristi Chivu în Italia!",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
-      "title": "Sfârșit dramatic pentru un român în Italia! Stelian a fost găsit fără viață în propria mașină - Kanal D Romania",
+      "title": "Lovitură pentru Cristi Chivu în Italia! Ultima decizie a șefilor l-a înfuriat pe român - QWER.ro",
       "category": "Diaspora",
-      "published": "2026-11-13T17:28:18+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPd0JjX0ZqWTZQYVlTWHZoYk5LSTM1T0tVLUEzZFg0WEgxT1FyLWxGaEo4d3VqZ0k5Y0RGSnVSQl83WEFFRGRvNXV1dGM2N0pXM0NvOUNJTFhFWm9BMHNLWnU4d3VjWGVFY1JXWnpzR2hZX3JvLWhoNThERW1pMnNkZ0NyQkNaSlNmUzBBZ0h2TkRWeE5TMmVmeF9jdDB4S0ZQVEFUcnRnWEUwRzlrd1lHSkFLTzhzTkFlY2VFT0lrb3E?oc=5",
-      "source": "Kanal D Romania",
+      "published": "2026-11-14T05:35:16+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPN1lpdnVEMlNhRFpQbGdRZDBGNzRHTE1ZYWNjSUlFb2RmTzlKQlhPbDdLbG5IOHZieHNxanNkNlpXZmVfanNsWFFDNnJIaG5IRGFsc1NuWjczSkJyOXBlVEVTZ1dPZGZBR01WWHNYdk1ZbmR6czFGTDhUR1BNV2ZDT1J1M2dtS2FXdzZYZjhaTDZsS0NCZWwxMzhFOW10eFlSeFhn?oc=5",
+      "source": "QWER.ro",
       "status": "galben",
-      "words": 19,
-      "intro": "Sfârșit dramatic pentru un român în Italia!",
+      "words": 15,
+      "intro": "Lovitură pentru Cristi Chivu în Italia!",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
