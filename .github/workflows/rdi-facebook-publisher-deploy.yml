@@ -131,7 +131,9 @@ jobs:
           sudo -n systemctl start rdi-facebook-publisher.service
           rc=$?
           sudo -n systemctl status --no-pager --lines=30 rdi-facebook-publisher.service || true
-          sudo -n journalctl -u rdi-facebook-publisher.service --no-pager -n 40 || true
+          sudo -n journalctl -u rdi-facebook-publisher.service --no-pager -n 80 || true
+          sudo -n systemctl show rdi-facebook-publisher.timer --no-pager -p ActiveState -p SubState -p NextElapseUSecRealtime -p LastTriggerUSecRealtime || true
+          sudo -n systemctl list-timers --all --no-pager | grep -F rdi-facebook-publisher || true
           exit $rc'
 
       - name: Aggiorna coda condivisioni su GitHub
