@@ -1,6 +1,7 @@
 RDI iOS signed distribution request
 Date: 2026-11-16
-Version: 1.0 (build 7)
-Release content: Remove all three shortcuts below compact live radio player; show eight news stories on Home; correct AI Music individual audio URL to the same verified radio server as playlist (previous host returned 404); show native player audio errors. The AI Music section remains native with previous, play/pause, and next commands.
-Source: main after PR #32 merge ef868dd42d628bebf2cdc44cd4343d5d939cdaeb.
-Target: upload to App Store Connect for TestFlight; no submission for public review.
+Version: 1.0 (build 8)
+Release content: synchronize native iOS news with the RDI website. Combine the same news.json, editorial.json and current daily thought feed. Refresh every ten minutes and whenever the app returns to the foreground. Select the freshest feed between site and GitHub, avoid stale caches, display last updated date, and support the site's editorial articles.
+Keep compact live radio player, AI Music native controls, community views, and existing radio scheduling unchanged.
+Source: main after successful simulator validation (GitHub Actions run 43901644916), plus updated feed selection and build 8.
+Target: upload signed build 8 to App Store Connect for TestFlight; do not submit for public App Review.
