@@ -9,7 +9,7 @@ source=ROOT/"data"/"calendario-filosofico-2026.json"
 archive=json.loads(source.read_text())
 item=next((x for x in archive["days"] if x["date"]==DATE),None)
 if not item:raise SystemExit("No approved quote for "+DATE)
-current={"date":DATE,"quote":item["quote"],"image":"/"+image.relative_to(ROOT).as_posix(),"image_source":"Originale RDI: generazione IA da zero","status":"verified_file_in_repository"}
+current={"date":DATE,"quote":item["quote"],"image":"/"+image.relative_to(ROOT).as_posix(),"image_source":"Originale RDI: generazione IA da zero","status":"published"}
 pointer=ROOT/"data"/"calendario-filosofico-oggi.json"
 pointer.write_text(json.dumps(current,ensure_ascii=False,indent=2)+"\n")
 print("Updated pointer for",DATE,"image",current["image"])
