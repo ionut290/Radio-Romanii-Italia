@@ -1,0 +1,65 @@
+name: RDI - Audit editoriale completo su Oracle
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rdi-oracle-editorial-audit.yml'
+permissions:
+  contents: read
+concurrency:
+  group: rdi-oracle-editorial-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Prepare SSH
+        env:
+          SSH_KEY_B64: ${{ secrets.RDI_ORACLE_SSH_KEY_B64 }}
+          SSH_KNOWN_HOSTS: ${{ secrets.RDI_ORACLE_KNOWN_HOSTS }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY_B64" && test -n "$SSH_KNOWN_HOSTS"
+          install -d -m 700 "$HOME/.ssh"
+          printf '%s' "$SSH_KEY_B64" | tr -d '[:space:]' | base64 --decode > "$HOME/.ssh/id_rdi"
+          printf '%s\n' "$SSH_KNOWN_HOSTS" | tr -d '\r' > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/id_rdi" "$HOME/.ssh/known_hosts"
+      - name: Execute read-only full JSON audit on Oracle
+        shell: bash
+        run: |
+          set -euo pipefail
+          REMOTE=ubuntu@129.151.255.41
+          STAGE="/tmp/rdi-editorial-audit-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "mkdir -m 700 '$STAGE'"
+          trap 'ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" "rm -rf -- '\''$STAGE'\''" || true' EXIT
+          tar -czf /tmp/rdi-editorial-audit-source.tgz \
+            oracle/rdi-editorial-full-audit.py news.json data/geopolitica-news.json \
+            data/news-summaries.json data/geopolitica-articles.json
+          scp -q -i "$HOME/.ssh/id_rdi" -o StrictHostKeyChecking=yes \
+            /tmp/rdi-editorial-audit-source.tgz "$REMOTE:$STAGE/source.tgz"
+          ssh -i "$HOME/.ssh/id_rdi" -o BatchMode=yes -o StrictHostKeyChecking=yes "$REMOTE" \
+            "tar -xzf '$STAGE/source.tgz' -C '$STAGE' && python3 '$STAGE/oracle/rdi-editorial-full-audit.py' --repo '$STAGE'" \
+            > rdi-oracle-editorial-audit.json
+          python3 -m json.tool rdi-oracle-editorial-audit.json >/dev/null
+          python3 - <<'PY'
+          import json
+          with open('rdi-oracle-editorial-audit.json', encoding='utf-8') as f:
+              report=json.load(f)
+          for category in ('ordinary','geopolitical'):
+              r=report[category]
+              print(f"{category}: feed={r['feed_total']} missing={r['missing_body']} short={r['short_body']} 400+={r['matching_400_words']}")
+          PY
+      - name: Save audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdi-oracle-editorial-audit
+          path: rdi-oracle-editorial-audit.json
+          if-no-files-found: warn
+          retention-days: 14
