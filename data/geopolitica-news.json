@@ -1,12 +1,68 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-16T14:40:22.123212Z",
+  "updated_at": "2026-11-16T15:50:45.343215Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-b9c0e2230ed9320e",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Shafaq News..Israeli forces kill one in Gaza, demolish West Bank homes",
+      "summary": "",
+      "source": "شفق نيوز",
+      "published": "2026-11-16T15:29:44Z",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOLXlwa1duY2tqcC02UnhKQlF4LTdkamFXUW83eWZDdW9QdGZMRUdrYXJEZGd6bXo2Mjl6a3FPYXJXZUt4TEltOXdKLU5FY0Z4OHp4SVgtb1dfc3A0dE9rNVFzUFVwZXhSdzBua0dfU293bW9iZzBTZjk4MFgxQ2tmMGhqTEdVVThQc3dtTG4wLTN5eHRt?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ştiri Shafaq..Forţele israeliene ucid unul în Gaza, demolează case din Cisiordania",
+      "title_it": "Shafaq News..Le forze israeliane ne uccidono uno a Gaza e demoliscono le case della Cisgiordania",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-9af4a4245c3073ed",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Pilar Frank-O’Leary on why Hispanic influence goes far beyond culture: ‘We need to be seen as leaders’",
+      "summary": "",
+      "source": "HOLA",
+      "published": "2026-11-16T15:09:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQ21OLXVwTHE0WExySzRtYUtnUWI4aGptZk1fNDdURDNXdkZacmsyY3M1QUszM0o0MnJXNW4xVXNhdmNsOWM3TVNTX1BsUEdwLUlfNUdVWXZJU0dQVE83bWFLVmRHR1pneTVQU3pBRlQwMUh2MXkyTmlod3FYUElXNGtWV3BVU21hTV8wSEVhLW05blloWGpZRWI5MHFUekJPbXZYdWhxOTU?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Pilar Frank-O’Leary despre motivul pentru care influența hispanicilor depășește cu mult cultura: „Trebuie să fim văzuți ca lideri”",
+      "title_it": "Pilar Frank-O’Leary spiega perché l’influenza ispanica va ben oltre la cultura: “Dobbiamo essere visti come leader”",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-147cc546842320fd",
+      "category": "economie",
+      "region": "global",
+      "title": "SBP projects inflation at 5-7% during FY27",
+      "summary": "",
+      "source": "شبكة تواصل الإخبارية",
+      "published": "2026-11-16T15:08:47Z",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBUQjR2dmM1R1RPNWV1c3NwUmM3Y2R3cEpydGFzWHZDTDNjTl9lU0xmYVNSRS1ET3NFN0cwdGU5TDVaajN4WXVKSXI2VTZGak5XaEpn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "SBP proiectează inflația la 5-7% în timpul exercițiului financiar 27",
+      "title_it": "La SBP prevede un’inflazione al 5-7% durante l’anno fiscale 27",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-c9fdedf6d64a3229",
+      "category": "europa",
+      "region": "europa",
+      "title": "Ucraina, diplomazia europea alla prova",
+      "summary": "",
+      "source": "Gazzetta d'Alba",
+      "published": "2026-11-16T15:05:41Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOU1VjRWQxdFhFQlg5VmdNU2lYdHJCVHFaZWNtT2lRZ3FaTklqU3NTY0tnY2ZUS2FmMy1fREl0d2FjVVRxYkN0amgyYnlmVHUyeHBDZ09PVWMzTmJQN2lBZWZWOHdQd185bGxqREcwTXp6N1ZkYnpSWkxqX05yNURHZQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ucraina, diplomația europeană pusă la încercare",
+      "title_it": "Ucraina, diplomazia europea alla prova",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-b8f8d85e77da1abb",
       "category": "clima",
@@ -16,18 +72,10 @@
       "source": "KELO-AM",
       "published": "2026-11-16T14:21:56Z",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOYVlyckFfQnBhMGVhR3VTV2FZMEpVenpSbVc0T0toQl9hTmJGM3JESm9DQURoUERZeFhzNW1Zd0JVaTlOdHBsY2Z4YVpHTXdjRDk0YmhFRmZIRkhnOFVDejRYa29lOW03d3pSbC1LZmpJNlZpNldCTU5sRzY3V2g5aG9GaFdOX1ZtTFhHQnFwWUowTGs?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-05471bea6b604a7c",
-      "category": "economie",
-      "region": "global",
-      "title": "Pakistan inflation expected to ease to 5-7% target range in FY27: SBP",
-      "summary": "",
-      "source": "Geo News",
-      "published": "2026-11-16T14:01:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa2pVYXhTV3VFQWFFRWZsZnZucm1iZ2ZSckZtYnlJbXVMQUZpOE5CSnlPOVpCQ0VaNkRVODAwQVdveHYwNGJyMFNIYTZ0TzdYMXJKVlZLZjdhTzdBQkZROENYV0QxRXcteGJkNFo1ODlsMkdodndjX2FSeEpQcmtlSXZKM2FQTTZlV2pBS05ObE83YTdldUN5S0owQ29KbmRrRHc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Prima schiță a acordului COP31 semnalează negocieri dure care urmează",
+      "title_it": "La prima bozza dell’accordo COP31 preannuncia difficili negoziati a venire",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-476c7f60237f40fb",
@@ -38,29 +86,24 @@
       "source": "BusinessMirror",
       "published": "2026-11-16T13:56:13Z",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNWhOXzZFVlVLQm12RENXOFBUbjVtRXRjTWp6WGJ0OHlHQjZweUpEc0NIdzVnNDZkTkVsdXprUE9TckxPU0lZZVFlemQ1X3RVR1RhNTcxZ0JYYUstMklVb0tKVEdSTlg2WWZ0b09kMjNHajdDZTFqX0hhSFplVlNGZFlFTXRkWHJsWU1INFdJbw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "PIB-ul Asean combinat ar putea crește cu 4,3% dacă... – șeful FMI",
+      "title_it": "Il PIL combinato dell’ASEAN potrebbe crescere del 4,3% se… – capo del FMI",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-633e8113e968b20e",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Just by Meeting, Quad Leaders Send a Signal to Beijing",
-      "summary": "",
-      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
-      "published": "2026-11-16T13:40:33Z",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPLXNhUGNQVE5IR3F1OUpXdUNnekhla21iWEFYVUlDMWFMMmRKRnpGMnZBazMtd0gyR21RanRWY3MxLWp4QXhuX2hkcWRlU1JIbG10Z29LRS1pcXVqVHI3REZyR3JFZUVqN29lcFU5cHM5Zko5bVZ1TkV0MGtRSUMyWExMT0ZnVjJNaElCUFg0UQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-89ad28f6e4991252",
-      "category": "conflicte",
+      "id": "geo-80bf584ed4a4fb87",
+      "category": "europa",
       "region": "europa",
-      "title": "EU rejects Russian security demands and imposes new sanctions over stalled peace talks",
+      "title": "UE examinează pașii către un acord de asociere cu Siria înaintea forumului pentru reconstrucție de la Damasc",
       "summary": "",
-      "source": "Dagens.com",
-      "published": "2026-11-16T13:34:22Z",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQ01pbnF1X1RDdFNvOUx6MkJ0QWl2T2JoSjRCb2ZWVm45WUU2c3hLMXh0Nzk3a1N3dVBoTjd0WHVwTXB6XzY3QldFTmgzdlRjMjRDbDZLT1o3M01QcTZOaFJUOGxOTEVKZGdjbTFyUWNxcnpOUDF1TkZFdExFbjVNMnNueGw3SURuUm52V0o4TjQ0V3dPTkdDUjRSekpGdTAzM1diejdRbk9OdlR4RUF5bmlENA?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "Informat.ro",
+      "published": "2026-11-16T13:13:46Z",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOYUM3YWhjZ01GRl9oMy12WGpsS3ZtMzlYVUpqbkloamg2RHkzQ3ZWb3Q5YzhJTnR1S3dEcFRxRExuQnliUEl3YnZJTTZLWS1YZXJpdW9sZ0N6OHRBTHZ1RktsOHVMSXZidzBsMFRIeVV1Vlp4RTZQXzVEQUxJSUJyTWdnMXhGMVFudmNzYUVR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE examinează pașii către un acord de asociere cu Siria înaintea forumului pentru reconstrucție de la Damasc",
+      "title_it": "L'UE sta valutando l'opportunità di concludere un accordo di associazione con la Siria in vista del forum per la ricostruzione di Damasco",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-520345fdf58c97de",
@@ -71,7 +114,10 @@
       "source": "Firstpost",
       "published": "2026-11-16T13:03:11Z",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYm40X2RhUDZlODVVNkc1LUpqMXloNmlsTkN3Sk83czZCaEZzRUdWLTJJcTYwMlNyMlEzNnBjcXIzNmRmV2lOUjktMXlTcFdFT2FPc0RvcUdIajh5OEtFSXV6b0tBMWUwRXcwVmk2RFlTOTJEdFhsbjdmTUZDTXphM1l4OVY1cGI3TmxwWTFHN2NZOU1IT2FuMFhaekNURzJXTXdtQXdZV0lyQS1SWXRJWTRCdXFFbWdwd1AzWGdUUW4wUdIBxwFBVV95cUxPdnJxdWNmcVdTaHdhWHZ2dGZhbWlKMzhLc01wZWExQS1vNmFCWGdmd3J6eHFiWE9VeTJGMXoyc3FHZ2c1S0dNelU2eE9XcjhMbFRBQnAweGVfZUhTTWdTZ1RhcFRXeU1PdTd1RUtWNGhibmdWVTg4ckJjak5RdUFwby1OUEJSTXdPWDhjWjZGOWI1bWdiWlZhdzNJZEt6VlA5Q094MG5XQ2Zydko5dVVyT2Y1YV9sdl9WTmEwQUJrZHB2Y3BWM1l3?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE acuză Moscova că blochează discuțiile de pace și impune sancțiuni asupra a aproape 50 de bănci",
+      "title_it": "L'UE accusa Mosca di aver bloccato i colloqui di pace e impone sanzioni a quasi 50 banche",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5142aa181b4a9dfd",
@@ -82,7 +128,10 @@
       "source": "Ziarul Bursa",
       "published": "2026-11-16T12:47:00Z",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPeC1SYlJySDRQWWh1djRya1ZtR3U3YS03X2hLTFUzakhHVHdxY1h2SzMySDF5NmVaclo4TFNDWC1ubWhmV203UVR6RmpQQzU1YlQzenBoeFpwRGxFb2hjamlCRGZCcXN3Z09NNUV2Y2dON0pCaGtJc1NmVjFPQURNR19mTWVqdEtueURoM0wtZTlERjVwY3IxdDluRHBVaUd2TUNGQmxWRlctU0NKWDAwdkdJbFdBNmdQS3ZpNm5lWQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Politico: Kaja Kallas califică drept „absurde” cererile Rusiei privind pacea în Ucraina",
+      "title_it": "Politico: Kaja Kallas definisce “assurde” le richieste della Russia per la pace in Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-be5d34c6dbcbb8a0",
@@ -93,7 +142,10 @@
       "source": "Minute Mirror",
       "published": "2026-11-16T12:30:26Z",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeTVRYVQ0V2FZOXZtSHRXNmk0TVBNWXFxM0k4N3JtNi1ObFRfSTk0WDloT0k0RjBJRDk0SXBwQXFzMFBQcXVqckUxOXlxLTc3Y0EtMURqU1pBaFBHNjhHdThQNmJLdnpfaXd4Mk1JTHpUdWEwQzZzdHpWeFlQdlc5Ry1jMVM?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "SBP vede ca inflația să scadă la 5-7% în FY27",
+      "title_it": "La SBP prevede un calo dell’inflazione al 5-7% nell’anno fiscale 27",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a010bcf09c43befc",
@@ -126,7 +178,10 @@
       "source": "Facebook",
       "published": "2026-11-16T12:20:12Z",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOMXd3bW5URVlicVhRbDZ2UWN1UzQ0TmJFQlN6N2NkQWJmSjRER0k0RS1sV0t6OG5sUzRqZFBzRzlMekFLVWQxZWZJUmFuX0ctQ2JBeGhqUmNpVlhPVm1RZlJvcG52S2wwb0RnMlN2dXJ4Q0xpS0xQYTFJcnF4eXZRaGduUGxTTHdoSGl2bllOT0dGa2Y3UXRsbE9IZEJFbG55UU1jb0RkNlA5VGF5Mmh6LXBhOXZUbC1sMXNIbVFodXBEX1ZMWmlPUDd1UTVVUTRkN3c?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "PTV. . #PTVNewsNow | Președintele brazilian Lula da Silva apără multilateralismul pe fondul creșterii tarifelor vamale americane și al represaliilor politice ale lui Trump",
+      "title_it": "PTV. . #PTVNewsNow | Il presidente brasiliano Lula da Silva difende il multilateralismo tra l’aumento dei dazi statunitensi e la ritorsione politica di Trump",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-336e0055d3619b5f",
@@ -137,7 +192,10 @@
       "source": "Facebook",
       "published": "2026-11-16T12:09:50Z",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOU1JXVHRXUjlqYnE1ZG9VMFJ5WVJMa2hHVXVJTTFqbEQ3YmUwbDJSTEhZajZGWjBVaGhTSlR2emRjbDlPa09hNldhR1VjZFpTb1A5TkU3THBQQjFudmhTRmdORDBDcUFELWxYZ3hycjhzZkEzSkhxaDdFeG9VTk5SeWh2ZnpxQkxlN3pxU1NlRUJ2blFpX2tkZF80ZWRGYlBlN25adTl6YmxmMFhaS3BoTWFhbmU3RFZFMXJoZ3UzTG5yS1FoU1BiSzBsZVBuN24ySGN0Rg?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Știri GMA. . Urmăriți: Liderii ASEAN au participat la a treia întâlnire a liderilor din Mekong-Republica Coreea cu președintele sud-coreean Lee Jae Myung.",
+      "title_it": "Notizie GMA. . GUARDA: I leader dell'ASEAN hanno partecipato al 3° incontro dei leader del Mekong-Repubblica di Corea con il presidente sudcoreano Lee Jae Myung.#ASEAN2026 Per gentile concessione: ASEAN 2026 PH/YouTube Guarda il live streaming bit.ly/ASEAN2026",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-9733509ecefab4b9",
@@ -173,6 +231,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-534d6a70967fa87f",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Guterres Calls for End to Iran-US ‘No War, No Peace’ Situation",
+      "summary": "",
+      "source": "WANA News Agency",
+      "published": "2026-11-16T11:43:46Z",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ3FvMmpoWW5wWUtoZU14RExSNHpMY2lfR19Fcl9icmtTQVozU3A0blZWZVFBOVQwUUhUekVMQzlzSHJ4X0ROQ3hlWEluRVdpcTFwellsS0J2TmZqS21jU294M2c3NEV4WEZJV1NLelJsVUw5NzdNZVc4cjJTaUk3OFRpYmdoZw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-0cf78f30dae7a99e",
       "category": "europa",
       "region": "europa",
@@ -184,17 +253,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-534d6a70967fa87f",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Guterres Calls for End to Iran-US ‘No War, No Peace’ Situation",
-      "summary": "",
-      "source": "WANA News Agency",
-      "published": "2026-11-16T11:41:43Z",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQ3FvMmpoWW5wWUtoZU14RExSNHpMY2lfR19Fcl9icmtTQVozU3A0blZWZVFBOVQwUUhUekVMQzlzSHJ4X0ROQ3hlWEluRVdpcTFwellsS0J2TmZqS21jU294M2c3NEV4WEZJV1NLelJsVUw5NzdNZVc4cjJTaUk3OFRpYmdoZw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-21a35c449b8bd9cf",
       "category": "conflicte",
       "region": "europa",
@@ -203,7 +261,10 @@
       "source": "Tribune Online",
       "published": "2026-11-16T11:41:01Z",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPMGNaRlhjMkRkWDdCUjRwa1JZcmdrNFlRT042T0V1eUhrUHJjWEFaMkRfQ3BINk10REpRMUp1YVg3WEhnbnRic01haURuTkV4WjFvTTdjWGJKR3pYMWtIc2lyYUIxRnhJbG5pRXlJM2JhdXFndmhGS0pNNlV3TmYwUdIBhgFBVV95cUxOT3Y0V3BMeGl6M1lYV1FheFlSTF9Ca1dmbXJnTHp2dzJvSHNVa1JQY0NxQjd2NlhucTJPT1E4Y3pzdF9PQmZ3aWtaWVJGbVN4eUdHVkx3VDNvdXpCTWxPajlsODVPNG42ZnA2NW9vcXFXeGhNX19TQjlzd1B3cUduMXZ6UjBpZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE acuză Rusia că amână negocierile de pace cu Ucraina",
+      "title_it": "L’UE accusa la Russia di ritardare i colloqui di pace in Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-c1dcda7bb4eb20a6",
@@ -214,7 +275,10 @@
       "source": "Trav Talk",
       "published": "2026-11-16T11:37:30Z",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORExWWWZ1bFhmdHZHMjFzaE4zRlN5UnhTOGs5R0dPaW9hMlpsTVVGNHljdzBkSHNfbXJNd3JiZXBUUm1IZk1uYVp2eVVoaGVMSHZHTF9rbGZTTWFoT3RoMVF1Z2RndzFtc2NwcXVYSF91ektBNkJwRjVlVkhqZ1ZiY0Uxd2JDWDZSY3FnWFllVVJUcHhpRU1HRzFHSnhlNmgwTW4w?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Türkiye poziționează Antalya ca hub global MICE înaintea summit-ului COP31 privind schimbările climatice",
+      "title_it": "Türkiye posiziona Antalya come hub MICE globale in vista del vertice sul clima COP31",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a093434ccab71ec1",
@@ -250,6 +314,20 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-9a1e60050b4cc98f",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "Trump plans to name Nvidia among AI 'National Champions': what is this program?",
+      "summary": "",
+      "source": "TradingView",
+      "published": "2026-11-16T11:06:54Z",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPWnFFVzN5bmF5TnE1ajI4LWt3amhWWm1WRDZTTUtETHlWRTd6aWFtU0lIX2E0ejAyVllZLVlBcGV1UjhfZUNRb2pHcE1HVVBqck1naGdIZEpqR3ZfSzFvdXpfX2Z6dEQyaWxJYWEzck1XTnFhRDZPT3JTaEM2blZoLVZ3RFlvbFk2SU1PeFJXdDhfdUh6SHA3TmxSU2IwZGJWZmVCREppTDlHa2JJQ1pPdkVpN0RnVl9UWnhkeXVaekxVNEN5MURsUlpJMk0?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump plănuiește să numească Nvidia printre „campionii naționali” AI: ce este acest program?",
+      "title_it": "Trump intende nominare Nvidia tra i 'National Champions' dell'IA: cos'è questo programma?",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-aa171627a69bdfcc",
       "category": "securitate",
       "region": "asia",
@@ -258,7 +336,10 @@
       "source": "The Japan Times",
       "published": "2026-11-16T10:55:02Z",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNeHVnNUtBQjh2TGluWEVoZU9EanYtbWh2UTdocTRob3BYTjAxMVJDZFZ4ZVBrUjliR3M1emYwXzFyaGJTQUdBMjE0RGtmUUlwVmJhWGRUR1c4NWhhU3FzREU5czBTOHBaT3ZPYU41MnVlc2NhQ1p6U0tDcmstdWtfNDQxcDFUZFd4dXIzUVlVMWdTOXdIMGhz?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Takaichi se îndreaptă spre summit-urile din Asia, concentrându-se pe încălzirea legăturilor reci cu China",
+      "title_it": "Takaichi si dirige ai vertici asiatici concentrandosi sul rafforzamento dei freddi legami con la Cina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d01c1cf39dfcbc2e",
@@ -291,7 +372,10 @@
       "source": "Bozeman Daily Chronicle",
       "published": "2026-11-16T10:20:59Z",
       "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxOZnZRc1NnTFJMX0Fwcl8wTlpaejZPajNCNXdRRzVwby1tOENHWWxMLTgwRjl2cGFYMklTWmw0M0QxSm5LZTJFOC1Kd1AyeW9qTmM4YnNXdVRXdUZaTDBieVFtcUFEVEs4S2NURDN5SGJibG0yMUhmU3BHdmg5aENFakZzQlNGZzdYQklmZ29ZTUF2SmpVYzVuNVhFQzRwZzNyOHM4bDBXVHlXdGhFU2dsVkFnaks2UUd4LXVJQWVZRDR2RktsdjJiQ3RjYWdJVzc0OVZOS284bnllQWQ3SUk0YTQ0cGJnNjlMMVZaTnM4N0xlendxN1hRRDY0UGhadDNzekdLd3pQekNfaWpiUWt4TkFwMWx5Q0tOMnVoVk94VmI?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE acuză Rusia că a oprit negocierile de pace cu Ucraina pentru a viza centralele electrice pe măsură ce se apropie iarna",
+      "title_it": "L’UE accusa la Russia di aver bloccato i colloqui di pace in Ucraina per prendere di mira le centrali elettriche con l’avvicinarsi dell’inverno",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-35c4e1e4d0196ea5",
@@ -302,17 +386,6 @@
       "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
       "published": "2026-11-16T10:19:16Z",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQTkVzM3BpUDVoaUVMWHNpZWpCNW9DVXFwckhfMVQtTTBxQ2d5eEFhb1RCVE9zSW0zLWQ5cGZNMlFxOUZfb1Z0LVloU0lab2MzTnJQb09hNlB3dElPaExMWFUzZWxrM2RBR1NRRWZ5RWZZWjRIb0VsanJNM1ZoSTFXWUpqcVlUak1IazZkclBB?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-27c616dc5c2df955",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "UN ready to support any denuclearisation effort from US, China, Russia talks",
-      "summary": "",
-      "source": "Awani International",
-      "published": "2026-11-16T10:17:55Z",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQLUxTU3VpcGI2dUdCX2xMVk9lTFBmVFNqaGgtSkRfR3lwQWVrYzk5dnJHS1FNa3dHREFhUkdBd1JjaWY5UGx4WTlxYTZ0N01jUnQ0NFNiWGlwdUhmcERNOWtKVjdvZzR4NGQ0bjd5S2czdUJOdlFUc3VuSkdmTS0xUVJyV01rS0xIN25TMDlBbkJ0Zm81c0F3VENzTWdNSlplM3d4a2E1YWRwSmU4R2ZmTjNfSHJQUQ?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -360,6 +433,31 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-45807e96651ba06c",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "PM Modi arrives in Manila to attend ASEAN-India Summit and East Asia Summit",
+      "summary": "",
+      "source": "The Hawk",
+      "published": "2026-11-16T09:42:38Z",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNOVpnWFVERUQwSThvVm1CUUtaZVBqeGtQRDFIdDZwY3lBVmNOM1puWVkxMmkyVHFrZlEyVHJlSEpsc2RtNjBhX0hZd2JjcE1FZVdNTUJRLWRpMVBuVHpZQnNEek5uMEZnMFUzck45N042Q2VQY3JGaWViUGpqZGh0V2VQN0xZQ05rYjR3eU9GeVFJNDA5ME9FTVJDOU5MODRta2VDeFFEeHpLUk93M24wajJkbV9DaFN2UzY1Q3gxRGpxUmxVU2c?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-338a3964defa5101",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Why Does Moscow Believe It Has Leverage?",
+      "summary": "",
+      "source": "Eunews",
+      "published": "2026-11-16T09:42:07Z",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNclRkUktkMUNFUGRTREN0QnFLOWpCX3NDNHFxR1JnblhXc0dPSGpSUXlJczhYYTc5c0xrV1NVQzE3Q1RBZDdCQ3pORW9xM3hEeWVRQmJMTVJNNVlyT3QyVjFaZTRVVnpCOTZ3eHVKeDFSa2tCay1NeTF4VWVkVlhhQjVn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce crede Moscova că are efect de pârghie?",
+      "title_it": "Perché Mosca crede di avere influenza?",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-290b4ca9570e35f1",
       "category": "economie",
       "region": "global",
@@ -379,7 +477,10 @@
       "source": "Modern Diplomacy",
       "published": "2026-11-16T09:22:30Z",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcGVsUlI1NjVCOVhBOFktZzMzLVFpNy1uS1BRRGJ0ejRhRWJWOWJJV3lkQVY4YS1BQUYzTHdaM1ZOenRNdXBVOFNNSVVPY0ExVUhDc2RHY2c0eFV6UW9QcVFkZFRXWTl2U2Rvb0hqTDZNbHl6Skx2aTk3YXplVHoyY1J0LWJ0XzhWRldaSW5BbEhSNlpKRmFSLVNiaGVWU3NaemxyR1E4ZVV3VjhoeUZlMDNzZ083RE56RDlJQg?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Pot statele SUA să mențină vie acțiunea climatică în timp ce Trump ține Washingtonul departe de COP31?",
+      "title_it": "Gli Stati Uniti possono mantenere viva l’azione per il clima mentre Trump tiene Washington lontana dalla COP31?",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-7a923ede67031a03",
@@ -391,6 +492,20 @@
       "published": "2026-11-16T09:08:58Z",
       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNa0FaejVPWE1OWUhlRDB5R0dWdUZvdVB1SEF6eTJKRENlOTdIYjhfdmhLeU90Y1F3X01odDk4QWl3a2FLcEdDN2hkWWUwcmtFVm9yYVZYY1RwWkJHdy03Uk9xRkt1S2pMRGUxMWZyLWo0aFN0emlHU2ZCNWJXM29CZXBhUUJmaEFLS0NPRmZSbVlJU21vUjhPbDVkMk5pX2NqYW5OSGs1WkJGc21HZk1vZkFQSVFmZjdKRmZNYnZycnJvNUNmamN2eWZJb0d4WUdnd3dxYUxGZG1fXzNZNHRGYnpGY3AxVEdKdHoxb0VhMV9kcHg0RnZQcdIB_gFBVV95cUxPTkIyQnlqZXFBZ2ZLMk16UGFuQ0paaDZUY29lQWpJc2FUOUljclBxZmtaSkpLTVpnMUE1Zi14QVhGd0tzNWdkR040QjRYXzlGSkcyUER1RHRPXzducHF4RHdGS3ZuTHcybmwxZHRIU1BOQjFmeUh2dWY2RTRsSkQ1NDFxMUNWMU8xNzlJcENCTmttanV6QVAzZHI5ZS1sMmVZZGN3NmxyMElZY2s3Vk1oZU51NkNRTFdVMExqMHcybmNSZGdpNHBoZW9aUkNIZnIzZjQ2NTdKZnFCU01PRlB3QlYwSzItSnZsZWVqR21Qa1ptRjNiXzhUYWVqa2lXZw?oc=5",
       "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-78904642ead77fd9",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "US, allies team up to protect AI tech and infrastructure amid China rivalry",
+      "summary": "",
+      "source": "Reuters",
+      "published": "2026-11-16T09:04:16Z",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQME9ldVY0V0JLTVYyLTZZcXZlVmZwNnNlcWw5MHYwa0F4VUdRbGFueXVXX29SaXdiWTR4LWpfbDY5dV9sclVXNHBhakdiMUlBeWc5S1M0dmZTMW5IcmYwV2REZ1hUYnhyWFJDT2t5dkFuRlh6Q3RMYUxfVFh2X3JCR3VxMENuYzdMMWxFZzFSOV80OC10ZFNyMldjR1dyOTNOYlY5Y3JyTDJRSEV4anRmaHFidnJ0dw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA, aliații fac echipă pentru a proteja tehnologia și infrastructura AI pe fondul rivalității Chinei",
+      "title_it": "Gli alleati degli Stati Uniti si uniscono per proteggere la tecnologia e le infrastrutture dell’intelligenza artificiale nella rivalità cinese",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-58aad1b6f718c7a1",
@@ -415,17 +530,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-313c70c3898ec569",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Frosty China welcome likely for Japan PM due to Taiwan row",
-      "summary": "",
-      "source": "The Sun Malaysia",
-      "published": "2026-11-16T08:40:16Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQUjlKaklzd0lQeVhwelhtVkdqX2E4TlluTjltSWxWVUlqSnlhS2Q0M09UdlQ4OXl2TjZ6SzFDNVZXSldKdzJwRG90THI2RFFDYkswOURmWUtaSktaMFpJeHJHRldyeXdSTEFkdnFqR2NoMWt0OVVERldaYVBfT292Ry1HdTIyT0hFclE?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-e186eb49485a7cd2",
       "category": "diplomatie",
       "region": "asia",
@@ -445,7 +549,10 @@
       "source": "Crude Oil Prices Today | OilPrice.com",
       "published": "2026-11-16T08:30:00Z",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPV3lMWlRXSWRmR3AxQzIya1dSN1ZBTndwclYtTVBwRUhRLTc3WllZQ0RZU0lfZVVGVnRXZWxJZm90emt0eFdBZ0ZPQS1jSEVQX2lRY3REb1ZuQkI1UUdjeGp1TGpyUll3SERGdGpPVmdiU0RZYkMxTTBINGpLTmxkWXhmN0lLdFI0dWx2SURpX19yRVVyVGpMZGRZd3YzMHE1dWVBNXpR0gGrAUFVX3lxTE5DQjVka01Jbm1wdFBnVUxFc29QX25LanpnY1V0MXhkUmViV1BxSjBYU2p2TW1qOHd0M2V6WGotampHQzU4cTUzOGVlb290MTctNzRyWFA1V09PSzljTlJtOFlxbUtZZWUyRkViMkRrN3AyOUo5QmhvMFhUUFRaY0U2ODB1TVpUVXk4eVU4bF9Ya3BzVVVLNFl1NldmOG9MOVpZS2dFZVBCOXpvWQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Goldman Sachs avertizează despre excesul masiv de petrol în 2027",
+      "title_it": "Goldman Sachs mette in guardia contro un massiccio eccesso di petrolio nel 2027",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-bbd4b5d769d0394e",
@@ -456,7 +563,10 @@
       "source": "https://houseofsaud.com/",
       "published": "2026-11-16T08:29:07Z",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBIUV9ZWWl5OXdNRzNBQWdEZU9CVU5IaENCZ2xZaUF1enh6bGU3eHhFT210QTJod1M2THhfSUx0UTk0NGlhbi1WckY2N2RRdC1pRUpOT2trZTRkOVAwT21vX1RVVXo?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "IEA spune că aprovizionarea cu petrol depășește cererea pentru prima dată de la începutul războiului Iranului",
+      "title_it": "L’IEA afferma che l’offerta di petrolio supera la domanda per la prima volta dall’inizio della guerra con l’Iran",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d1ab1581d562809e",
@@ -470,14 +580,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-1f9fb5e618b9dca6",
-      "category": "europa",
-      "region": "europa",
-      "title": "Iulian Chifu | Ceea ce Rusia nu și-a dorit — Europa actor geopolitic: reașezări interne, greutate strategică externă",
+      "id": "geo-8c41051c2eb48686",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "UN ready to support any denuclearisation effort from US, China, Russia talks",
       "summary": "",
-      "source": "caleaeuropeana.ro",
-      "published": "2026-11-16T08:13:23Z",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQZFlNelBTNXRKRml3VmtMVEJWUDJxdTZ3eUc5TUJuWllmcWF1RW5rdWtyeFdZYzRSajFiZ1dJRmc5VEU4Q0tHbmM1ZzFZcWJza3NvTER0dTBmV3p2dVVMRG9ZRFVLYTVFNWQ4eDdJRk1Wam5rdkRzQkdvVmJhbExNS3QwMFBRc1RYakdsUElraGIyQ3dIeU11WVpiQWl2cUFvZVQ1eTlnbFF5eG9XSGZzUm5jNHBBTVEyR0xvOExqSHdnNllRb1VTV1JWMkczYWQwZTRsU3I5LUE?oc=5",
+      "source": "WTVB",
+      "published": "2026-11-16T08:16:56Z",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOYXVhcE1JOHg0RWJhRDBxS29sWHgxSzZFUUowOTRRaS1rTVc5c01pczhMelZsZ1pEOHFWcnBOTGRzREx0ODNVLUo0YUZGRElRSEZ0UWFlY01nTEhtX3Ffd3VfMmFFem1KWGhDUDlvMTNGOVVZdG1CbHRvSW9hV0o4eUtXbEVEUkxqQTYxSW9JNFp2OU1ERTdxOWROUkxGTFRJTG04aXpxXzk?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -489,7 +599,10 @@
       "source": "RS Web Solutions",
       "published": "2026-11-16T08:00:00Z",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZmd2SkF2THNUMzBSSHE4Y2c2aTlPdVAydldSUVUybVJETnVFSTdHV3ZnNGx0WDNfXzhPbHd6MDUyNlJEV2RacHZKQ2gxdno0UFRCQ05uNThydFZXdUFvZEVoYjlHa2pmbnRJT1BXUk1VUDVadWZUc250VEp5VUtsYVJUdl9nSjdIRUxrMm1nT3E4QzF3SUY2TFNBSGt6S2VYRFpQOGNuTXc4aUlRSGhRQw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Dilema Nvidia evidențiază cursa tehnologiei SUA-China înaintea vizitei lui Trump",
+      "title_it": "Il dilemma di Nvidia evidenzia la corsa tecnologica USA-Cina in vista della visita di Trump",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-dd287c44fb013183",
@@ -511,7 +624,10 @@
       "source": "Kyiv Post",
       "published": "2026-11-16T07:58:34Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1abDc1VGxMeHJobE5WQ0NyTlFmVk1zQ0dCbEdIeFpJZjc5TFB5SkxSQ0Z3UmJJRDVocnAwekY4aXpDc2pBZTROQklJZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO renunță la planurile pentru summitul liderilor din 2027 din Albania, pe fondul tensiunilor Alianței",
+      "title_it": "La NATO abbandona i piani per il vertice dei leader del 2027 in Albania nel contesto delle tensioni dell’Alleanza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-1cc277dc1a17391f",
@@ -522,17 +638,6 @@
       "source": "Inquirer.net",
       "published": "2026-11-16T07:57:00Z",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeEpNR3JoT1hkcHhWcklCR3lkWklicF9MMTFSeHg2N2hzZC1nWHNzR3pzdU5OUmJQV2ZvcEJfRXJrTk1sRi1xSDBfMG8xb0V6VldLYU02RlYxQkp2SkF3YmJNSFMteE9DYUZJLUZmTUxDRHY4b2NoSlRDOEdYUU44dGhOWlU5Q1NkMTQ2MUNDa9IBlAFBVV95cUxNNzZJYllabFBLeVVRNlJPZUNkdGlnSjZGcU8zUFNQMHNaZVZkUndOMnpDRUhJMnRvU0hQMTM5aGVJbzhPSzh3cDlCc2kxRnY3WnpseU9qMzhOc3AwRVBCeFVMWEhNNkpqUFZzSmdLRVZ4My10TEtTZWM3bmRjUXViREVxOV9EMERRT0dINV8wZ2lLZng1?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-de93922b561588f5",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Xi, Trump and Putin to hold first trilateral summit in China",
-      "summary": "",
-      "source": "News of Bahrain",
-      "published": "2026-11-16T07:52:57Z",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxONVF5bTYyWGU4Snk3aG05aTVnYWtMajdZb2hQdTNfdFJpR2dKOGJ6dG1odjRvUF9DWW9vMFpmWlBBRmNZTWdBQWNUMXRJT1AzVWFyNkJBZFdGcXpNdVh4MGZRYWFENkhiYVNQak1XMVNlZ0kyZ18zN1dhT3BISEF4NERXSzZqVzNOY2xEVU5McjVBSnF4eGlXNnFiVzl0UU9PSmc?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -580,14 +685,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-6d99f655f6294966",
+      "id": "geo-364af6a00eeb6e6c",
       "category": "diplomatie",
       "region": "global",
       "title": "Thailand and Cambodia vie for global backing as Trump arrives for Asean summit",
       "summary": "",
       "source": "South China Morning Post",
       "published": "2026-11-16T06:50:53Z",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOVXZIYkg4d2t2UkRBdVJCemM3U0NyT1FXUk8wWF9vY25qT0RMTVdEeVd2enh1TVdtLWxEdVd2b1dSUkROMkZvdTJIdTFueWpwQTBqQ3VsVTVTWUFrSDk0WnVWaGtfUlljZ21uZDZidHNpbExkNGVteENkZUtLUXRvNzhJRWw0ZXZXbXNjeEpHUDZvclk3aFp5YzhMLVltZnRPRTdmNFlxM0h5ZllXSkE0MF9UMG9wV1Rld3RxMjBmV2VXZk9iUzJmStIByAFBVV95cUxOVXZIYkg4d2t2UkRBdVJCemM3U0NyT1FXUk8wWF9vY25qT0RMTVdEeVd2enh1TVdtLWxEdVd2b1dSUkROMkZvdTJIdTFueWpwQTBqQ3VsVTVTWUFrSDk0WnVWaGtfUlljZ21uZDZidHNpbExkNGVteENkZUtLUXRvNzhJRWw0ZXZXbXNjeEpHUDZvclk3aFp5YzhMLVltZnRPRTdmNFlxM0h5ZllXSkE0MF9UMG9wV1Rld3RxMjBmV2VXZk9iUzJmSg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQYkp6b0RWa0tkRnphZWwtVTN5ei1LTFROQmFySzZxN1IyYWFyajZEZzcyUE9FNW1KUTFYV2dhNFh6QjVhcThaUVdOd1hkTldoQmVpVlZFRWxxOEMxeTBNdEJtTEZBNEptYWV1dXNSdmgyRl81ZWRBVTg1OWNkU05rZ2FMQnVTWFdBZzlUU09ZSllXLUo1M0dzYWtSR29hR3I0aXBiRy1lQ19Kc1I4bkZsU0ZZLTZtNm9IYmdtdzl0d1U1WVV4YVJHUdIByAFBVV95cUxOVXZIYkg4d2t2UkRBdVJCemM3U0NyT1FXUk8wWF9vY25qT0RMTVdEeVd2enh1TVdtLWxEdVd2b1dSUkROMkZvdTJIdTFueWpwQTBqQ3VsVTVTWUFrSDk0WnVWaGtfUlljZ21uZDZidHNpbExkNGVteENkZUtLUXRvNzhJRWw0ZXZXbXNjeEpHUDZvclk3aFp5YzhMLVltZnRPRTdmNFlxM0h5ZllXSkE0MF9UMG9wV1Rld3RxMjBmV2VXZk9iUzJmSg?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -613,17 +718,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-158c8d01badf9f45",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Chinese Premier lauds ‘extraordinary’ ties with ASEAN ahead of Trump visit",
-      "summary": "",
-      "source": "The Straits Times",
-      "published": "2026-11-16T06:20:00Z",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOGZBVjlPQlZ2aC1sbUVvTTloa2Y2NzlmZnlJWXlVQ0xHVEpyc1BfUERkdnJtcHN0aEFfa3Y3RW9SNHRZS0loWTdaVDEtRUNMMWwyZnUxNmVyMExMbjMzdmhxMUpNVjJGWXYtR3J2dVd3WVdPUzZubEhXdDhsb2pOd0ExTnpsMVpqa2l0Zk1GWXFSSE01cFVSWHIzWnpRTnpVbVpNdUUtVVJzdHlYRGdRSC04RXk?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-77c333624b5181bf",
       "category": "diplomatie",
       "region": "asia",
@@ -643,28 +737,6 @@
       "source": "The New York Times",
       "published": "2026-11-16T06:00:06Z",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOS3MxNFlBbVVGR3ZtcWN2U3JGYUpzWTVBSG4wa2UyTkQ3RVdHa2FwbGZhckF1dGhJc1ZSZncwb1ZKeGdUWjBBY1JBTXJkTkxMeGZ5Ny1JRE9CUlh4NUE4VmwwTGlIQ0FTNlFyRlFCd3BoQTdRcENQU0J6VVBMLWFoaTRR?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-5f43a1d8421dd61f",
-      "category": "europa",
-      "region": "europa",
-      "title": "Calendarul evenimentelor, 16 noiembrie – selecțiuni",
-      "summary": "",
-      "source": "Rador",
-      "published": "2026-11-16T05:53:14Z",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQSGZlTUJVRTk3QTRZdmtydk14UVY4YjJxd1hQUEx5SGVaR1ZuQ2p6VjhqNUFKU0VYcnVvLWc1VUctNnVFLUhfci1TR1BIYVhCeE5EQzVKY2ZuallEblcwVkR3ck9SdXkwNjhrdXhVaUxPb0hqdF9nVW9Ma3BQNEZod1JIaXg1elhacHh3Ng?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-21658f1ca5cea71c",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Economic Diplomacy Abroad and Restrictions at Home: Myanmar’s International Trade Dilemma",
-      "summary": "",
-      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
-      "published": "2026-11-16T05:43:45Z",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNazQzX2JPa1lYX3FZaldvdHVKbFZpQmM3aDMzZmxiTS1qcDZkZzRtSXZOc2NMN05HdU5MWmNndHB2bVVWbHc5VW4zeFMySHpCbzl3X2J3bThJQVMtR2x1OWtiZWFvbnA5ek1UZDliRlFwaTJhLURfMmw0Nm90WFg5eEdvVGc1NGNfOHd3RFBkZzlsQ3Z4OEJac3ZuU21WRmJsZFVCeFVoYzkzRDd3ODJzOElZMUFwZUtzcThmcQ?oc=5",
       "review_status": "external_headline_unverified"
     }
   ]
