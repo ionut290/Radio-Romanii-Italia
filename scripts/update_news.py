@@ -11,9 +11,16 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+# Public RSS feeds. We link to original articles and do not reproduce full texts.
+# use_publisher_images=False: generate RDI editorial artwork instead of copying photos.
 DIRECT_FEEDS = [
-    ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24"),
-    ("Italia", "https://www.ansa.it/sito/ansait_rss.xml", "ANSA"),
+    ("România", "https://www.digi24.ro/rss/Stiri/Digi24/", "Digi24", True),
+    ("România", "https://hotnews.ro/feed", "HotNews", False),
+    ("România", "https://www.g4media.ro/feed", "G4Media", False),
+    ("România", "https://www.libertatea.ro/feed", "Libertatea", False),
+    ("Italia", "https://www.ansa.it/sito/ansait_rss.xml", "ANSA", True),
+    ("Italia", "https://it.euronews.com/rss?format=mrss&level=theme&name=european-union", "Euronews", False),
+    ("Diaspora", "https://www.gazetaromaneasca.com/feed/", "Gazeta Românească", False),
 ]
 
 QUERIES = [
@@ -48,6 +55,7 @@ WORKER_ITALY_TERMS = ("italia", "italy", "italian", "italien", "inps", "patronat
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
 LIMIT = 18
 MAX_PER_CATEGORY = 35
+MAX_PER_SOURCE = 18  # Prevent one newsroom from crowding out the others.
 MAX_TOTAL = 120
 ITALY_CONTEXT = ("italia", "italy", "italian", "romeni", "români", "diaspora", "roma", "milano", "torino", "bologna", "napoli", "sicilia", "trentino", "veneto", "inps", "consulat", "ambasada", "patronato", "permesso", "lavoro")
 CONSULAR_CONTEXT = ("românia", "româniei", "român", "romeni", "romeno", "rumeno", "ambasada", "consulat", "econsulat")
@@ -88,7 +96,7 @@ for category, query, lang, country in QUERIES:
                     continue
             seen.add(link)
             description = re.sub(r"<[^>]+>", " ", entry.findtext("description") or "")
-            description = html.unescape(re.sub(r"\\s+", " ", description)).strip()
+            description = html.unescape(re.sub(r"\s+", " ", description)).strip()
             if description.lower().startswith(title.lower()[:35]):
                 description = ""
             items.append({
@@ -143,7 +151,7 @@ for query in CONSULAR_QUERIES:
                 continue
             seen.add(link)
             raw = entry.findtext("description") or ""
-            summary = re.sub(r"\\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", raw))).strip()
+            summary = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", raw))).strip()
             items.append({"category": "Știri consulare", "title": title[:240], "url": link,
                           "source": source[:90] or "Comunicat oficial", "published": date.isoformat(),
                           "summary": summary, "image": ""})
@@ -152,7 +160,7 @@ for query in CONSULAR_QUERIES:
 
 # Direct publisher feeds may provide genuine summaries and image metadata.
 # Only RSS excerpts are displayed; full articles remain at the publisher.
-for category, feed_url, publisher in DIRECT_FEEDS:
+for category, feed_url, publisher, use_publisher_images in DIRECT_FEEDS:
     try:
         request = urllib.request.Request(feed_url, headers=HEADERS)
         with urllib.request.urlopen(request, timeout=6) as response:
@@ -171,20 +179,24 @@ for category, feed_url, publisher in DIRECT_FEEDS:
                 continue
             raw = entry.findtext("description") or ""
             summary = html.unescape(re.sub(r"<[^>]+>", " ", raw))
-            summary = re.sub(r"\\s+", " ", summary).strip()
+            summary = re.sub(r"\s+", " ", summary).strip()
             image = ""
-            for child in entry.iter():
-                local = child.tag.split("}")[-1].lower()
-                candidate = child.attrib.get("url", "")
-                if local in ("thumbnail", "content", "enclosure") and candidate.startswith("https://"):
-                    mime = child.attrib.get("type", "")
-                    if mime.startswith("image/") or local == "thumbnail" or re.search(r"\\.(jpg|jpeg|png|webp)(\\?|$)", candidate, re.I):
-                        image = candidate
-                        break
-            if not image:
-                match = re.search(r'<img[^>]+src=["\\\'](https://[^"\\\']+)', raw, re.I)
-                if match:
-                    image = html.unescape(match.group(1))
+            image = ""
+            if use_publisher_images:
+                for child in entry.iter():
+                    local = child.tag.split("}")[-1].lower()
+                    candidate = child.attrib.get("url", "")
+                    if local in ("thumbnail", "content", "enclosure") and candidate.startswith("https://"):
+                        mime = child.attrib.get("type", "")
+                        if mime.startswith("image/") or local == "thumbnail" or re.search(r"\.(jpg|jpeg|png|webp)(\?|$)", candidate, re.I):
+                            image = candidate
+                            break
+                if not image:
+                    match = re.search(r'<img[^>]+src=["\'](https://[^"\']+)', raw, re.I)
+                    if match:
+                        image = html.unescape(match.group(1))
+            # Publisher text is only a brief excerpt; link stays with the original.
+            summary = summary[:360]
             fresh.append({"category": category, "title": title[:240], "url": link,
                           "source": publisher, "published": published.isoformat(),
                           "summary": summary, "image": image})
@@ -259,7 +271,7 @@ items = filtered
 deduped = []
 seen_titles = set()
 for item in items:
-    title_key = re.sub(r"[^\\w]+", " ", item.get("title", "").rsplit(" - ", 1)[0].casefold()).strip()
+    title_key = re.sub(r"[^\w]+", " ", item.get("title", "").rsplit(" - ", 1)[0].casefold()).strip()
     if title_key and title_key in seen_titles:
         continue
     if title_key:
@@ -267,16 +279,24 @@ for item in items:
     deduped.append(item)
 items = deduped
 per_category = {}
+per_source = {}
 balanced = []
 for item in items:
     category = item["category"]
+    source = item.get("source", "").casefold().strip() or "sconosciuta"
     if per_category.get(category, 0) >= MAX_PER_CATEGORY:
+        continue
+    if per_source.get(source, 0) >= MAX_PER_SOURCE:
         continue
     balanced.append(item)
     per_category[category] = per_category.get(category, 0) + 1
+    per_source[source] = per_source.get(source, 0) + 1
     if len(balanced) >= MAX_TOTAL:
         break
 items = balanced
+print("Fonti pubblicate: " + ", ".join(
+    f"{source}: {count}" for source, count in sorted(per_source.items())
+))
 
 # Transparent provenance lets the desk give precedence to institutions and
 # identify community reporting without treating it as an official notice.
