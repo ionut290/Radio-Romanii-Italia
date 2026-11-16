@@ -1,0 +1,23 @@
+name: RadioRomaniiItalia
+options:
+  bundleIdPrefix: org.radioromanii
+targets:
+  RadioRomaniiItalia:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: RadioRomaniiItalia
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.radioromanii.app
+        SWIFT_VERSION: "5.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: "Radio Românii"
+        INFOPLIST_KEY_UIBackgroundModes: "audio"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    scheme:
+      testTargets: []
