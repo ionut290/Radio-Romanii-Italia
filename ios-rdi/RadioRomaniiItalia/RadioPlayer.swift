@@ -18,6 +18,7 @@ final class RadioPlayer: ObservableObject {
     private var activeURL: URL
     private var player: AVPlayer?
     private var timeControlObservation: NSKeyValueObservation?
+    private var itemStatusObservation: NSKeyValueObservation?
     private var interruptionObserver: NSObjectProtocol?
     private var foregroundObserver: NSObjectProtocol?
     private var endedObserver: NSObjectProtocol?
@@ -178,10 +179,29 @@ final class RadioPlayer: ObservableObject {
         isBuffering = false
         errorMessage = nil
         if let player {
-            player.replaceCurrentItem(with: AVPlayerItem(url: url))
+            let item = AVPlayerItem(url: url)
+            player.replaceCurrentItem(with: item)
+            observeAudioItem(item)
         }
         updateRemoteCommands()
         updateNowPlaying()
+    }
+
+    private func observeAudioItem(_ item: AVPlayerItem) {
+        itemStatusObservation?.invalidate()
+        itemStatusObservation = item.observe(\.status, options: [.new]) { [weak self] observedItem, _ in
+            guard observedItem.status == .failed else { return }
+            let detail = observedItem.error?.localizedDescription
+            Task { @MainActor [weak self] in
+                guard let self, self.player?.currentItem === observedItem,
+                      self.currentAITrack != nil else { return }
+                self.isPlaying = false
+                self.isBuffering = false
+                self.errorMessage = detail.map { "Il brano non si avvia: \($0)" }
+                    ?? "Il brano non può essere riprodotto. Scegli un'altra canzone."
+                self.updateNowPlaying()
+            }
+        }
     }
 
     func play() {
@@ -195,6 +215,7 @@ final class RadioPlayer: ObservableObject {
                 let newPlayer = AVPlayer(url: activeURL)
                 newPlayer.automaticallyWaitsToMinimizeStalling = true
                 player = newPlayer
+                if let item = newPlayer.currentItem { observeAudioItem(item) }
                 timeControlObservation = newPlayer.observe(
                     \.timeControlStatus, options: [.initial, .new]
                 ) { [weak self] observedPlayer, _ in
@@ -209,7 +230,9 @@ final class RadioPlayer: ObservableObject {
                     }
                 }
             } else if player?.currentItem?.status == .failed {
-                player?.replaceCurrentItem(with: AVPlayerItem(url: activeURL))
+                let item = AVPlayerItem(url: activeURL)
+                player?.replaceCurrentItem(with: item)
+                observeAudioItem(item)
             }
 
             player?.play()
