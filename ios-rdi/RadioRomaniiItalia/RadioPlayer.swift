@@ -26,6 +26,10 @@ final class RadioPlayer: ObservableObject {
     private var remoteTargets: [Any] = []
     private var aiQueue: [RDIAITrack] = []
     private var currentAIIndex: Int?
+    private var retryTask: Task<Void, Never>?
+    private var retryCount = 0
+    private var playbackGeneration = 0
+    private var shouldResumeAfterInterruption = false
 
     var isRadioPlaying: Bool { currentAITrack == nil && isPlaying }
     var canSkipAI: Bool { currentAITrack != nil && aiQueue.count > 1 }
@@ -76,6 +80,7 @@ final class RadioPlayer: ObservableObject {
                       item === self.player?.currentItem else { return }
                 self.isBuffering = true
                 self.player?.play()
+                self.scheduleLiveReconnect()
             }
         }
 
@@ -88,9 +93,13 @@ final class RadioPlayer: ObservableObject {
                 guard let self, let item = notification.object as? AVPlayerItem,
                       item === self.player?.currentItem else { return }
                 self.isBuffering = false
-                self.isPlaying = false
-                self.errorMessage = "Riproduzione interrotta. Tocca Play per riprovare."
-                self.updateNowPlaying()
+                if self.currentAITrack == nil && self.isPlaying {
+                    self.scheduleLiveReconnect()
+                } else {
+                    self.isPlaying = false
+                    self.errorMessage = "Riproduzione interrotta. Tocca Play per riprovare."
+                    self.updateNowPlaying()
+                }
             }
         }
     }
@@ -121,7 +130,7 @@ final class RadioPlayer: ObservableObject {
 
     /// Riproduci il brano scelto nella playlist approvata dall'API RDI.
     func playAITrack(_ track: RDIAITrack, queue: [RDIAITrack]) {
-        guard let index = queue.firstIndex(of: track),
+        guard queue.contains(track),
               let url = track.audioURL else {
             errorMessage = "Questo brano non è disponibile."
             return
@@ -132,7 +141,6 @@ final class RadioPlayer: ObservableObject {
             toggle()
             return
         }
-        _ = index
         currentAIIndex = validIndex
         currentAITrack = track
         replaceSource(with: url)
@@ -160,6 +168,10 @@ final class RadioPlayer: ObservableObject {
     }
 
     private func replaceSource(with url: URL) {
+        retryTask?.cancel()
+        retryTask = nil
+        retryCount = 0
+        playbackGeneration += 1
         player?.pause()
         activeURL = url
         isPlaying = false
@@ -188,6 +200,11 @@ final class RadioPlayer: ObservableObject {
                     let waiting = observedPlayer.timeControlStatus == .waitingToPlayAtSpecifiedRate
                     Task { @MainActor [weak self] in
                         self?.isBuffering = (self?.isPlaying == true) && waiting
+                        if observedPlayer.timeControlStatus == .playing {
+                            self?.retryTask?.cancel()
+                            self?.retryTask = nil
+                            self?.retryCount = 0
+                        }
                     }
                 }
             } else if player?.currentItem?.status == .failed {
@@ -199,6 +216,9 @@ final class RadioPlayer: ObservableObject {
             isBuffering = player?.timeControlStatus != .playing
             errorMessage = nil
             updateNowPlaying()
+            if currentAITrack == nil && isBuffering {
+                scheduleLiveReconnect()
+            }
         } catch {
             isPlaying = false
             isBuffering = false
@@ -207,6 +227,9 @@ final class RadioPlayer: ObservableObject {
     }
 
     func pause() {
+        retryTask?.cancel()
+        retryTask = nil
+        playbackGeneration += 1
         player?.pause()
         isPlaying = false
         isBuffering = false
@@ -225,6 +248,38 @@ final class RadioPlayer: ObservableObject {
         do { try AVAudioSession.sharedInstance().setActive(true) }
         catch { return }
         player?.play()
+        if currentAITrack == nil { scheduleLiveReconnect() }
+    }
+
+    private func scheduleLiveReconnect() {
+        guard isPlaying, currentAITrack == nil, retryTask == nil,
+              player?.timeControlStatus != .playing else { return }
+        guard retryCount < 5 else {
+            isPlaying = false
+            isBuffering = false
+            errorMessage = "Connessione radio non disponibile. Tocca Play per riprovare."
+            updateNowPlaying()
+            return
+        }
+        let delay = [8, 3, 5, 8, 12][retryCount]
+        let generation = playbackGeneration
+        retryTask = Task { [weak self] in
+            try? await Task.sleep(nanoseconds: UInt64(delay) * 1_000_000_000)
+            guard let self, !Task.isCancelled, self.isPlaying,
+                  self.currentAITrack == nil,
+                  self.playbackGeneration == generation else { return }
+            self.retryTask = nil
+            guard self.player?.timeControlStatus != .playing else {
+                self.retryCount = 0
+                return
+            }
+            self.retryCount += 1
+            self.isBuffering = true
+            self.errorMessage = "Riconnessione radio in corso…"
+            self.player?.replaceCurrentItem(with: AVPlayerItem(url: self.liveURL))
+            self.player?.play()
+            self.scheduleLiveReconnect()
+        }
     }
 
     private func updateNowPlaying() {
@@ -279,14 +334,18 @@ final class RadioPlayer: ObservableObject {
               let type = AVAudioSession.InterruptionType(rawValue: raw) else { return }
         switch type {
         case .began:
+            shouldResumeAfterInterruption = isPlaying
+            retryTask?.cancel()
+            retryTask = nil
             isPlaying = false
             isBuffering = false
             updateNowPlaying()
         case .ended:
             let rawOptions = notification.userInfo?[AVAudioSessionInterruptionOptionKey] as? UInt ?? 0
-            if AVAudioSession.InterruptionOptions(rawValue: rawOptions).contains(.shouldResume) {
-                play()
-            }
+            let allowed = AVAudioSession.InterruptionOptions(rawValue: rawOptions).contains(.shouldResume)
+            let resume = shouldResumeAfterInterruption && allowed
+            shouldResumeAfterInterruption = false
+            if resume { play() }
         @unknown default:
             break
         }
