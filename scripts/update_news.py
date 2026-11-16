@@ -245,6 +245,25 @@ if output.exists():
                 current_urls.add(item["url"])
     except (OSError, ValueError, TypeError) as exc:
         print(f"Arhiva consulară nu poate fi citită: {exc}")
+# If an RSS endpoint temporarily returns no items, do not erase valid recent
+# reporting from the last published feed. Articles are still removed after 48h.
+if output.exists():
+    try:
+        previous_items = json.loads(output.read_text(encoding="utf-8")).get("items", [])
+        current_urls = {str(article.get("url", "")).strip() for article in items}
+        restored = 0
+        for old in previous_items:
+            if not isinstance(old, dict):
+                continue
+            old_url = str(old.get("url", "")).strip()
+            if old_url and old_url not in current_urls and old.get("title") and old.get("published"):
+                items.append(old)
+                current_urls.add(old_url)
+                restored += 1
+        print(f"Articoli recenti conservati dal ciclo precedente: {restored}")
+    except (OSError, ValueError, TypeError) as exc:
+        print(f"Archivio precedente non disponibile: {exc}")
+
 # Keep the public feed strictly limited to the last 48 hours, including
 # previously verified consular stories. Invalid timestamps are discarded.
 cutoff = now - dt.timedelta(hours=48)
@@ -291,24 +310,42 @@ for item in items:
         seen_titles.add(title_key)
     deduped.append(item)
 items = deduped
+# Rotate across categories to prevent a high-volume feed from hiding
+# diaspora, consular and NATO reporting. Keep newest first within each section.
+from collections import defaultdict, deque
+queues = defaultdict(deque)
+for article in items:
+    queues[article["category"]].append(article)
+category_order = list(queues)
 per_category = {}
 per_source = {}
 balanced = []
-for item in items:
-    category = item["category"]
-    source = item.get("source", "").casefold().strip() or "sconosciuta"
-    if per_category.get(category, 0) >= CATEGORY_LIMITS.get(category, MAX_PER_CATEGORY):
-        continue
-    if per_source.get(source, 0) >= MAX_PER_SOURCE:
-        continue
-    balanced.append(item)
-    per_category[category] = per_category.get(category, 0) + 1
-    per_source[source] = per_source.get(source, 0) + 1
-    if len(balanced) >= MAX_TOTAL:
-        break
-items = balanced
+while category_order and len(balanced) < MAX_TOTAL:
+    next_order = []
+    for category in category_order:
+        if len(balanced) >= MAX_TOTAL:
+            break
+        if per_category.get(category, 0) >= CATEGORY_LIMITS.get(category, MAX_PER_CATEGORY):
+            continue
+        group = queues[category]
+        while group:
+            article = group.popleft()
+            publisher = article.get("source", "").casefold().strip() or "sconosciuta"
+            if per_source.get(publisher, 0) >= MAX_PER_SOURCE:
+                continue
+            balanced.append(article)
+            per_category[category] = per_category.get(category, 0) + 1
+            per_source[publisher] = per_source.get(publisher, 0) + 1
+            break
+        if group and per_category.get(category, 0) < CATEGORY_LIMITS.get(category, MAX_PER_CATEGORY):
+            next_order.append(category)
+    category_order = next_order
+items = sorted(balanced, key=lambda x: x["published"], reverse=True)
+print("Categorie pubblicate: " + ", ".join(
+    f"{category}: {count}" for category, count in sorted(per_category.items())
+))
 print("Fonti pubblicate: " + ", ".join(
-    f"{source}: {count}" for source, count in sorted(per_source.items())
+    f"{publisher}: {count}" for publisher, count in sorted(per_source.items())
 ))
 
 # Transparent provenance lets the desk give precedence to institutions and
