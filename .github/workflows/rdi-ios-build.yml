@@ -1,0 +1,27 @@
+name: RDI iOS - Build di verifica
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'ios-rdi/**'
+      - '.github/workflows/rdi-ios-build.yml'
+permissions:
+  contents: read
+jobs:
+  ios-simulator:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installa XcodeGen
+        run: brew install xcodegen
+      - name: Genera progetto Xcode
+        run: cd ios-rdi && xcodegen generate
+      - name: Compila senza firma per simulatore
+        run: |
+          xcodebuild -project ios-rdi/RadioRomaniiItalia.xcodeproj \
+            -scheme RadioRomaniiItalia \
+            -configuration Release \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO build
