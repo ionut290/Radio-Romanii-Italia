@@ -8,7 +8,7 @@ jobs:
     runs-on: macos-15
     timeout-minutes: 45
     env:
-      RDI_BUNDLE_ID: ${{ vars.RDI_IOS_BUNDLE_ID }}
+      RDI_BUNDLE_ID: org.radioromaniidinitalia.radio
       RDI_TEAM_ID: ${{ secrets.RDI_APPLE_TEAM_ID }}
       P12_B64: ${{ secrets.RDI_IOS_P12_BASE64 }}
       P12_PASSWORD: ${{ secrets.RDI_IOS_P12_PASSWORD }}
