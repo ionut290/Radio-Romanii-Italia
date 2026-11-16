@@ -57,8 +57,23 @@ jobs:
       - name: Prepara la fototeca realistica RDI
         if: steps.ora.outputs.execute == 'true'
         run: python -m pip install --disable-pip-version-check 'pillow>=10,<13'
-      - name: Genera il pensiero quotidiano se manca
+      - name: Priorità alla fotografia originale approvata
         if: steps.ora.outputs.execute == 'true'
+        id: originale
+        shell: bash
+        run: |
+          set -euo pipefail
+          TODAY=$(TZ=Europe/Rome date +%F)
+          PHOTO="calendario-filosofico/${TODAY:0:4}/${TODAY}.jpg"
+          if [ -f "$PHOTO" ]; then
+            python3 scripts/publish_philosophy_photo.py "$TODAY"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+            echo "Fotografia originale approvata: $PHOTO"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Genera il pensiero quotidiano se manca
+        if: steps.ora.outputs.execute == 'true' && steps.originale.outputs.found != 'true'
         env:
           # Usa solo la fototeca RDI già autorizzata, dichiarandola sempre come
           # composizione d'archivio: nessun servizio a pagamento e nessuna foto
