@@ -28,6 +28,7 @@ private enum RDINewsFilter: String, CaseIterable, Identifiable {
     case diaspora = "Diaspora"
     case italy = "Italia"
     case romania = "Romania"
+    case world = "Mondo"
     case europe = "Unione Europea"
     case nato = "NATO"
     case institutions = "Istituzioni"
@@ -49,6 +50,7 @@ private enum RDINewsFilter: String, CaseIterable, Identifiable {
         case .diaspora: return category.contains("diaspora")
         case .italy: return category.contains("italia")
         case .romania: return category.contains("romania")
+        case .world: return category.contains("mondo")
         case .europe: return category.contains("unione europea")
         case .nato: return category.contains("nato e sicurezza")
         case .institutions: return category.contains("istituzioni")
