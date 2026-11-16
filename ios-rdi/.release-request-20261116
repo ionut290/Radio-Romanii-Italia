@@ -1,6 +1,6 @@
 RDI iOS signed distribution request
 Date: 2026-11-16
-Version: 1.0 (build 6)
-Release content: Compact home with more space for news; native in-app AI Music player with approved songs and artists, Top 3, skip previous/next and automatic track transitions; radio foreground reconnection. Fixed playlist endpoint after verifying live response from radio-romanii-italia.duckdns.org.
-Source: main after PR #31 merge 2159f429b63c881f0f306bc78676ef6e792c341f.
-Target: upload to App Store Connect for TestFlight; do not submit for public App Store review.
+Version: 1.0 (build 7)
+Release content: Remove all three shortcuts below compact live radio player; show eight news stories on Home; correct AI Music individual audio URL to the same verified radio server as playlist (previous host returned 404); show native player audio errors. The AI Music section remains native with previous, play/pause, and next commands.
+Source: main after PR #32 merge ef868dd42d628bebf2cdc44cd4343d5d939cdaeb.
+Target: upload to App Store Connect for TestFlight; no submission for public review.
