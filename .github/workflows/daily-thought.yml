@@ -130,6 +130,13 @@ jobs:
           install -d -m 750 -o ubuntu -g ubuntu /home/ubuntu/.local/state/rdi-daily-thought-watchdog
           systemctl daemon-reload
           systemctl enable --now rdi-daily-thought-watchdog.timer
-          systemctl start rdi-daily-thought-watchdog.service
+          # A one-shot watchdog can fail transiently (network/cache/token) even
+          # after the calendar was successfully committed. Keep the timer
+          # enabled and surface diagnostics without failing publication.
+          if ! systemctl start rdi-daily-thought-watchdog.service; then
+            echo "::warning::Oracle watchdog one-shot failed; calendar publication remains valid."
+            systemctl --no-pager --full status rdi-daily-thought-watchdog.service || true
+            journalctl --no-pager -u rdi-daily-thought-watchdog.service -n 35 || true
+          fi
           systemctl is-active --quiet rdi-daily-thought-watchdog.timer
           REMOTE_SCRIPT
