@@ -181,7 +181,6 @@ for category, feed_url, publisher, use_publisher_images in DIRECT_FEEDS:
             summary = html.unescape(re.sub(r"<[^>]+>", " ", raw))
             summary = re.sub(r"\s+", " ", summary).strip()
             image = ""
-            image = ""
             if use_publisher_images:
                 for child in entry.iter():
                     local = child.tag.split("}")[-1].lower()
