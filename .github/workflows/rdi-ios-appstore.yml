@@ -44,6 +44,33 @@ jobs:
           PROFILE_UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< "$(security cms -D -i "$CERT_DIR/profile.mobileprovision")")
           cp "$CERT_DIR/profile.mobileprovision" "$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
           echo "PROFILE_UUID=$PROFILE_UUID" >> "$GITHUB_ENV"
+      - name: Controlla compatibilità profilo e certificato
+        shell: bash
+        run: |
+          set -euo pipefail
+          CERT_DIR="$RUNNER_TEMP/rdi-signing"
+          security cms -D -i "$CERT_DIR/profile.mobileprovision" > "$CERT_DIR/profile.plist"
+          export RDI_PROFILE_PLIST="$CERT_DIR/profile.plist"
+          export RDI_P12_PATH="$CERT_DIR/certificate.p12"
+          python3 - <<'PY'
+          import os, plistlib, subprocess, hashlib, sys
+          with open(os.environ["RDI_PROFILE_PLIST"], "rb") as handle:
+              profile = plistlib.load(handle)
+          expected = os.environ["RDI_TEAM_ID"] + "." + os.environ["RDI_BUNDLE_ID"]
+          app_id = profile.get("Entitlements", {}).get("application-identifier", "")
+          team = profile.get("TeamIdentifier", [])
+          if app_id != expected or os.environ["RDI_TEAM_ID"] not in team:
+              sys.exit("::error::Il provisioning profile non corrisponde a Team ID e Bundle ID RDI")
+          if not profile.get("DeveloperCertificates"):
+              sys.exit("::error::Profilo senza certificato di distribuzione")
+          p12 = subprocess.run(["openssl", "pkcs12", "-in", os.environ["RDI_P12_PATH"], "-clcerts", "-nokeys", "-passin", "env:P12_PASSWORD"], capture_output=True, check=True)
+          cert = subprocess.run(["openssl", "x509", "-outform", "DER"], input=p12.stdout, capture_output=True, check=True).stdout
+          fingerprint = hashlib.sha1(cert).digest()
+          matched = any(hashlib.sha1(item).digest() == fingerprint for item in profile["DeveloperCertificates"])
+          if not matched:
+              sys.exit("::error::Il certificato P12 non è presente nel profilo RDI. Rigenera il profilo selezionando lo stesso certificato.")
+          print("OK: Team ID, Bundle ID e certificato combaciano")
+          PY
       - name: Genera progetto Xcode
         run: cd ios-rdi && xcodegen generate
       - name: Compila archivio firmato
