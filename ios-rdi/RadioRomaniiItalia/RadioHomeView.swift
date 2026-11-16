@@ -80,13 +80,13 @@ struct RadioHomeView: View {
 
     private let site = "https://radioromanii.duckdns.org"
     private let youtubeLive = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/live"
-    private let podcast = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/playlists"
+    private let podcast = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/podcasts"
 
     private var noMotion: Bool { reduceAnimations || systemReduceMotion }
 
     var body: some View {
         ZStack {
-            RDITheme.background.ignoresSafeArea()
+            RDINeonBackground(animated: !noMotion)
 
             VStack(spacing: 0) {
                 header
