@@ -39,9 +39,23 @@ struct RadioNewsArticle: Decodable, Identifiable {
     }
 }
 
+private struct RDITranslatedHeadline: Decodable {
+    let title: String?
+}
+
+private struct RDITranslatedArticle: Decodable {
+    let original: RDITranslatedHeadline?
+    let it: RDITranslatedHeadline?
+}
+
+private struct RDITranslationsResponse: Decodable {
+    let items: [String: RDITranslatedArticle]
+}
+
 @MainActor
 final class RadioNewsStore: ObservableObject {
     @Published private(set) var articles: [RadioNewsArticle] = []
+    @Published private(set) var italianTitles: [String: String] = [:]
     @Published private(set) var isLoading = false
     @Published private(set) var errorMessage: String?
 
@@ -50,6 +64,38 @@ final class RadioNewsStore: ObservableObject {
         URL(string: "https://radioromanii.duckdns.org/news.json")!,
         URL(string: "https://raw.githubusercontent.com/ionut290/Radio-Romanii-Italia/main/news.json")!
     ]
+
+    func italianTitle(for article: RadioNewsArticle) -> String {
+        italianTitles[article.title] ?? article.title
+    }
+
+    private func loadItalianTitles() async {
+        let endpoints = [
+            URL(string: "https://radioromanii.duckdns.org/news-translations.json")!,
+            URL(string: "https://raw.githubusercontent.com/ionut290/Radio-Romanii-Italia/main/news-translations.json")!
+        ]
+        for endpoint in endpoints {
+            do {
+                var request = URLRequest(url: endpoint)
+                request.cachePolicy = .reloadIgnoringLocalCacheData
+                request.timeoutInterval = 10
+                let (data, response) = try await URLSession.shared.data(for: request)
+                guard let response = response as? HTTPURLResponse,
+                      (200...299).contains(response.statusCode) else { continue }
+                let translated = try JSONDecoder().decode(RDITranslationsResponse.self, from: data)
+                var titles: [String: String] = [:]
+                for item in translated.items.values {
+                    guard let original = item.original?.title,
+                          let italian = item.it?.title, !italian.isEmpty else { continue }
+                    titles[original] = italian
+                }
+                italianTitles = titles
+                return
+            } catch {
+                continue
+            }
+        }
+    }
 
     func refresh() async {
         guard !isLoading else { return }
@@ -73,6 +119,7 @@ final class RadioNewsStore: ObservableObject {
                     var seen = Set<String>()
                     articles = valid.filter { seen.insert($0.id).inserted }
                     errorMessage = nil
+                    await loadItalianTitles()
                     return
                 }
             } catch {
