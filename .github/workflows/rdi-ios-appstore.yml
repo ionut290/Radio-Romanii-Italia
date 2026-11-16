@@ -5,7 +5,7 @@ permissions:
   contents: read
 jobs:
   app-store-connect:
-    runs-on: macos-15
+    runs-on: macos-26
     timeout-minutes: 45
     env:
       RDI_BUNDLE_ID: org.radioromaniidinitalia.radio
@@ -25,6 +25,19 @@ jobs:
           for name in RDI_BUNDLE_ID RDI_TEAM_ID P12_B64 P12_PASSWORD PROFILE_B64 ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_B64; do
             if [[ -z "${!name}" ]]; then echo "::error::Configurazione mancante: $name"; exit 1; fi
           done
+      - name: Verifica Xcode e SDK richiesti da Apple
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -version
+          SDK_VERSION="$(xcrun --sdk iphoneos --show-sdk-version)"
+          echo "iOS SDK: $SDK_VERSION"
+          XCODE_MAJOR="$(xcodebuild -version | awk '/^Xcode / {split($2, v, "."); print v[1]}')"
+          SDK_MAJOR="${SDK_VERSION%%.*}"
+          if [[ -z "$XCODE_MAJOR" || "$XCODE_MAJOR" -lt 26 || "$SDK_MAJOR" -lt 26 ]]; then
+            echo "::error::Apple richiede Xcode 26+ e SDK iOS 26+"
+            exit 1
+          fi
       - name: Installa XcodeGen
         run: brew install xcodegen
       - name: Installa firma temporanea
