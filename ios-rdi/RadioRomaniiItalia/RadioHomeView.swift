@@ -82,7 +82,6 @@ struct RadioHomeView: View {
     @State private var webPage: RDIWebPage?
 
     private let site = "https://radioromanii.duckdns.org"
-    private let youtubeLive = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/live"
     private let podcast = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/podcasts"
 
     private var noMotion: Bool { reduceAnimations || systemReduceMotion }
@@ -166,14 +165,12 @@ struct RadioHomeView: View {
         switch tab {
         case .home:
             RDICompactRadioPlayer(radio: radio, reduceMotion: noMotion)
-            quickAccess
             newsList(isCompact: true)
         case .radio:
             Text("Ascolta RDI")
                 .font(.title.bold())
                 .foregroundStyle(.white)
             RDICompactRadioPlayer(radio: radio, reduceMotion: noMotion)
-            quickAccess
             infoCard(title: "RDI AI MUSIC Spotlight",
                      detail: "Scopri le classifiche, ascolta i brani originali approvati e partecipa alla community.",
                      symbol: "music.note.list", button: "Scopri i brani") {
@@ -204,47 +201,6 @@ struct RadioHomeView: View {
             }
         case .settings:
             settingsContent
-        }
-    }
-
-    private var quickAccess: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Scopri RDI")
-                .font(.system(size: 19, weight: .bold))
-                .foregroundStyle(.white)
-
-            HStack(spacing: 8) {
-                RDICompactTile(
-                    title: "AI MUSIC",
-                    subtitle: "Top 3 e brani originali",
-                    symbol: "music.note",
-                    colors: [Color(red: 0.42, green: 0.08, blue: 0.89),
-                             Color(red: 0.80, green: 0.15, blue: 0.65)]
-                ) {
-                    openInApp("\(site)/spotlight-ai.html", pauseRadio: true)
-                }
-
-                RDIQuickTile(
-                    title: "LIVE YOUTUBE",
-                    subtitle: "Dirette ed eventi",
-                    symbol: "play.rectangle.fill",
-                    colors: [Color(red: 0.86, green: 0.04, blue: 0.24),
-                             Color(red: 0.94, green: 0.23, blue: 0.11)]
-                ) {
-                    // Il video parte nell'app YouTube o nel browser; evita due flussi simultanei.
-                    openExternalMedia(youtubeLive)
-                }
-
-                RDIQuickTile(
-                    title: "PODCAST",
-                    subtitle: "Interviste e riflessioni",
-                    symbol: "mic.fill",
-                    colors: [Color(red: 0.02, green: 0.36, blue: 0.92),
-                             Color(red: 0.45, green: 0.13, blue: 0.89)]
-                ) {
-                    openExternalMedia(podcast)
-                }
-            }
         }
     }
 
