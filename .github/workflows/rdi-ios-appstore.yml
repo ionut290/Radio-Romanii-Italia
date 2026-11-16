@@ -37,14 +37,16 @@ jobs:
           echo "$PROFILE_B64" | base64 --decode > "$CERT_DIR/profile.mobileprovision"
           umask 077
           openssl pkcs12 -in "$CERT_DIR/certificate.p12" -nodes -passin env:P12_PASSWORD -out "$CERT_DIR/identity.pem"
-          openssl pkcs12 -export -in "$CERT_DIR/identity.pem" -out "$CERT_DIR/modern.p12" -passout env:P12_PASSWORD -keypbe AES-256-CBC -certpbe AES-256-CBC -macalg sha256
+          TEMP_IMPORT_PASSWORD="$(openssl rand -hex 24)"
+          echo "::add-mask::$TEMP_IMPORT_PASSWORD"
+          openssl pkcs12 -export -in "$CERT_DIR/identity.pem" -out "$CERT_DIR/modern.p12" -passout "pass:$TEMP_IMPORT_PASSWORD" -keypbe AES-256-CBC -certpbe AES-256-CBC -macalg sha256
           rm -f "$CERT_DIR/identity.pem"
-          security create-keychain -p "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
+          security create-keychain -p "$TEMP_IMPORT_PASSWORD" "$CERT_DIR/build.keychain-db"
           security set-keychain-settings -lut 21600 "$CERT_DIR/build.keychain-db"
-          security unlock-keychain -p "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
-          security import "$CERT_DIR/modern.p12" -k "$CERT_DIR/build.keychain-db" -P "$P12_PASSWORD" -T /usr/bin/codesign
+          security unlock-keychain -p "$TEMP_IMPORT_PASSWORD" "$CERT_DIR/build.keychain-db"
+          security import "$CERT_DIR/modern.p12" -k "$CERT_DIR/build.keychain-db" -P "$TEMP_IMPORT_PASSWORD" -T /usr/bin/codesign
           security list-keychains -d user -s "$CERT_DIR/build.keychain-db" login.keychain-db
-          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$TEMP_IMPORT_PASSWORD" "$CERT_DIR/build.keychain-db"
           PROFILE_UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< "$(security cms -D -i "$CERT_DIR/profile.mobileprovision")")
           cp "$CERT_DIR/profile.mobileprovision" "$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
           echo "PROFILE_UUID=$PROFILE_UUID" >> "$GITHUB_ENV"
