@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-16T02:00:47.095573Z",
+  "updated_at": "2026-11-16T03:10:26.421603Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,9 +8,31 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
+      "id": "geo-c1cb3683e986fd9f",
+      "category": "securitate",
+      "region": "europa",
+      "title": "NATO cancels 2027 summit in Albania",
+      "summary": "",
+      "source": "Laodong.vn",
+      "published": "2026-11-16T02:52:14Z",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSTJQeHNTS2tsdkJJSnZlcUlGVjV5MEJQUnNOUU9aVmd4OU1ObEd2bFZFZ2VEZm5YbFZaamk0YUswZllrUzhxNFEyTlBWVnM4Q2hPazlQb1I3SnJwNXA1endnLU1hU3NDT2pLeERLNExHVmZzb1FjU2VNN0JubV96ZHBaaHoyOHRVcTlmVzNBYVdwajBLQlBidzMxQQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-b1cbb50aec3803c0",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31: Mere Promises or Planet Protection?",
+      "summary": "",
+      "source": "Countercurrents",
+      "published": "2026-11-16T02:39:24Z",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQcEZwZkhjZmIyby03eVhyZnR4VV9JOVZadVdaNFRCVTN6RWdiYVZlM0hUb2FHTFJ1bzJHczNxN1FFSFpVVDNsaUZtMGNacS1hTUprSEIxYUFOaGhTRExIMDZIbEkyWGplQnBLaE9OenhGaVM4OERoZ09HTmVvU2s2MTVKOA?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-788cf820cd120821",
       "category": "diplomatie",
-      "region": "asia",
+      "region": "global",
       "title": "Yalta 2.0? Trump, Xi and Putin lead Asia’s week of high-stakes diplomacy",
       "summary": "",
       "source": "Financial Times",
@@ -19,14 +41,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-6ba2042f2ee0ca26",
+      "id": "geo-05c53262df9a85cd",
       "category": "diplomatie",
       "region": "asia",
       "title": "PM Modi to attend Asean, East Asia summits in Manila; what's on agenda",
       "summary": "",
       "source": "The Times of India",
       "published": "2026-11-16T01:30:00Z",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSXA0aEpEUGljSHZYSGZ4RUxkOVV5OHVuTTVuWndwdDZ0TlRJY3pMU1ZtVkJnQkZZUElRbFIydzlHcXVYN1puOWxPNEktWl80SnNpaExtU1ZaOFpZS2x5dGFNc3pBaVVQTktDblZTNFhjMl9WRXZmeDM5LUJrNVdvNGpTdlJkaGR2WjdCeUVUbG9UZXJGeEY2OTI5NTNGN2ZvdDlkV2xnV3lGRl9RNkZKb0c5VDlzZGhSU3B1SkxobHpPREFyVy11TmlGRFVxcURI?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSXA0aEpEUGljSHZYSGZ4RUxkOVV5OHVuTTVuWndwdDZ0TlRJY3pMU1ZtVkJnQkZZUElRbFIydzlHcXVYN1puOWxPNEktWl80SnNpaExtU1ZaOFpZS2x5dGFNc3pBaVVQTktDblZTNFhjMl9WRXZmeDM5LUJrNVdvNGpTdlJkaGR2WjdCeUVUbG9UZXJGeEY2OTI5NTNGN2ZvdDlkV2xnV3lGRl9RNkZKb0c5VDlzZGhSU3B1SkxobHpPREFyVy11TmlGRFVxcURI0gHWAUFVX3lxTFBJd1JtZTRZZmhfUUlQYS02X3Bfb2FXUFhOVUJrVVpNOXlfRWp0UTRhUUFJanFPWkpnWnY1MHY1WUt4UHpyZ1EwNTdYTHVrWWNqZUQ1UDVBYlhXN1BFdS1QQ0l3Um5rN2FBQUFKYVByNVRBZE1ZVFR6Q3psUWhab1M2UU5UTGxqTF92eVFNOFJPVXZIZS1UWHZCWk53RnFFdTluVXRqVDB1dlA1QVFINXdKa2pYNHJLVVpsbUZUX25BbnRBRkRRdkIwejFGUncyY3V0dU1EaEE?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -71,6 +93,28 @@
       "source": "The Straits Times",
       "published": "2026-11-16T00:50:00Z",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYTVtR1NoNGpuZi1aMmZWaHhib0NLbEx4LUVRcUltS3htdElkby1ibjZpVENNdFR3Q0V3bXVRWEFiRHctMnh4VHBwdTI1a2ZNQXRKXzRzQjg2T1J3Vm5tVnI1LWlZdEVTWjB6Smt6amZZQmwwYjJhMTRSSnBNdUNVNTZmQUk1ckVVdlBjZHpxRWI2NjRFREYtWExQcUNWd0VqOHg1NjBn?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-bc2ad9d336243aa3",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "U.S., China, Russia to Hold First Trilateral Summit Amid Yalta Fears",
+      "summary": "",
+      "source": "조선일보",
+      "published": "2026-11-16T00:43:59Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOYnRTb2I4ZDRlTm1FbGl6dC0ybjhBREMyVXlsVVp3c09SN2xWT1JpTWRTdGxFdUlzQzh0X0pMQ2FSc255cmhhZmQ0c2tnV0RucnpvWERwSDVHVzUtSXJDN0tIZ3pEZWpIazY1WlF0YXM5QmpoVVdocEFWVUc1Qm5YOVZyZk4?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-39037e07ecc36b9c",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Trump heads to Asia with hopes of shifting the momentum after midterm setbacks hurt him at home",
+      "summary": "",
+      "source": "Manila Bulletin",
+      "published": "2026-11-16T00:36:29Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX2F3WEpTa3lJakgyRXlLWTlTT0d2bVZsSEVWSWpuN3ZyRHlNbXBwdXFtTnd3dm9Oa3hiRTdkaFVQVUpPYVpza3ladlpyWXFxSUtsRTcwb2g0MTFHaGpkbDNqMEh0UVNQV0NsYnEwVXdtLUxTaXV4RDQxcTFTU00wc2tBdTNwWXlnTnpSdGdlYnNuMHB5dHN1eTRLUW9GZlBtQ3UteDBWNi1YS2FmSDNZY2ljcGJPRGIyb1luczI4RHVqdw?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
