@@ -1,0 +1,49 @@
+name: RDI iOS - Diagnostica certificato (senza upload)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-p12:
+    runs-on: macos-15
+    timeout-minutes: 10
+    env:
+      P12_B64: ${{ secrets.RDI_IOS_P12_BASE64 }}
+      P12_PASSWORD: ${{ secrets.RDI_IOS_P12_PASSWORD }}
+    steps:
+      - name: Controlla disponibilità segreti
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$P12_B64" || { echo "::error::RDI_IOS_P12_BASE64 mancante"; exit 1; }
+          test -n "$P12_PASSWORD" || { echo "::error::RDI_IOS_P12_PASSWORD mancante"; exit 1; }
+      - name: Decodifica e verifica integrità PKCS12
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          printf '%s' "$P12_B64" | base64 --decode > "$RUNNER_TEMP/rdi.p12"
+          if ! openssl pkcs12 -in "$RUNNER_TEMP/rdi.p12" -info -noout -passin env:P12_PASSWORD > "$RUNNER_TEMP/openssl-check.log" 2>&1; then
+            echo "::error::PKCS12 non leggibile con la password GitHub o formato incompatibile. Verifica password e contenuto Base64."
+            exit 1
+          fi
+          echo "OK: PKCS12 leggibile con password GitHub"
+      - name: Prova importazione nel portachiavi macOS
+        shell: bash
+        run: |
+          set -euo pipefail
+          KEYCHAIN="$RUNNER_TEMP/rdi-test.keychain-db"
+          KEYCHAIN_PASSWORD="$(openssl rand -hex 24)"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+          if ! security import "$RUNNER_TEMP/rdi.p12" -k "$KEYCHAIN" -P "$P12_PASSWORD" -T /usr/bin/codesign > "$RUNNER_TEMP/security-import.log" 2>&1; then
+            echo "::error::OpenSSL legge il P12, ma il portachiavi macOS non riesce a importarlo: possibile incompatibilità formato."
+            exit 1
+          fi
+          echo "OK: certificato importabile in macOS"
+      - name: Pulisci file temporanei
+        if: always()
+        shell: bash
+        run: |
+          rm -f "$RUNNER_TEMP/rdi.p12" "$RUNNER_TEMP/openssl-check.log" "$RUNNER_TEMP/security-import.log"
+          security delete-keychain "$RUNNER_TEMP/rdi-test.keychain-db" 2>/dev/null || true
