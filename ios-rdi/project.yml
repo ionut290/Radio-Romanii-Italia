@@ -12,6 +12,10 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: org.radioromaniidinitalia.radio
         SWIFT_VERSION: "5.0"
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_KEY_CFBundleShortVersionString: "1.0"
+        INFOPLIST_KEY_CFBundleVersion: "1"
         TARGETED_DEVICE_FAMILY: "1,2"
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: "Radio Românii"
