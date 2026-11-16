@@ -26,7 +26,7 @@ final class RDIAIMusicStore: ObservableObject {
     @Published private(set) var errorMessage: String?
 
     private let playlistURL = URL(
-        string: "https://radioromanii.duckdns.org/api/ai-music/spotlight/playlist"
+        string: "https://radio-romanii-italia.duckdns.org/api/ai-music/spotlight/playlist"
     )!
 
     func refresh() async {
