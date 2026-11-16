@@ -1,0 +1,94 @@
+name: RDI iOS - Firma e caricamento Apple
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  app-store-connect:
+    runs-on: macos-15
+    timeout-minutes: 45
+    env:
+      RDI_BUNDLE_ID: ${{ vars.RDI_IOS_BUNDLE_ID }}
+      RDI_TEAM_ID: ${{ secrets.RDI_APPLE_TEAM_ID }}
+      P12_B64: ${{ secrets.RDI_IOS_P12_BASE64 }}
+      P12_PASSWORD: ${{ secrets.RDI_IOS_P12_PASSWORD }}
+      PROFILE_B64: ${{ secrets.RDI_IOS_PROFILE_BASE64 }}
+      ASC_KEY_ID: ${{ secrets.RDI_ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.RDI_ASC_ISSUER_ID }}
+      ASC_KEY_B64: ${{ secrets.RDI_ASC_KEY_P8_BASE64 }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica prerequisiti
+        shell: bash
+        run: |
+          set -euo pipefail
+          for name in RDI_BUNDLE_ID RDI_TEAM_ID P12_B64 P12_PASSWORD PROFILE_B64 ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_B64; do
+            if [[ -z "${!name}" ]]; then echo "::error::Configurazione mancante: $name"; exit 1; fi
+          done
+      - name: Installa XcodeGen
+        run: brew install xcodegen
+      - name: Installa firma temporanea
+        shell: bash
+        run: |
+          set -euo pipefail
+          CERT_DIR="$RUNNER_TEMP/rdi-signing"
+          mkdir -p "$CERT_DIR" "$HOME/Library/MobileDevice/Provisioning Profiles"
+          echo "$P12_B64" | base64 --decode > "$CERT_DIR/certificate.p12"
+          echo "$PROFILE_B64" | base64 --decode > "$CERT_DIR/profile.mobileprovision"
+          security create-keychain -p "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
+          security set-keychain-settings -lut 21600 "$CERT_DIR/build.keychain-db"
+          security unlock-keychain -p "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
+          security import "$CERT_DIR/certificate.p12" -k "$CERT_DIR/build.keychain-db" -P "$P12_PASSWORD" -T /usr/bin/codesign
+          security list-keychains -d user -s "$CERT_DIR/build.keychain-db" login.keychain-db
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
+          PROFILE_UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< "$(security cms -D -i "$CERT_DIR/profile.mobileprovision")")
+          cp "$CERT_DIR/profile.mobileprovision" "$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
+          echo "PROFILE_UUID=$PROFILE_UUID" >> "$GITHUB_ENV"
+      - name: Genera progetto Xcode
+        run: cd ios-rdi && xcodegen generate
+      - name: Compila archivio firmato
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild -project ios-rdi/RadioRomaniiItalia.xcodeproj \
+            -scheme RadioRomaniiItalia -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/RDI.xcarchive" \
+            PRODUCT_BUNDLE_IDENTIFIER="$RDI_BUNDLE_ID" \
+            DEVELOPMENT_TEAM="$RDI_TEAM_ID" \
+            CODE_SIGN_STYLE=Manual \
+            PROVISIONING_PROFILE_SPECIFIER="$PROFILE_UUID" archive
+      - name: Esporta IPA
+        shell: bash
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+          <key>method</key><string>app-store-connect</string>
+          <key>signingStyle</key><string>manual</string>
+          <key>teamID</key><string>$RDI_TEAM_ID</string>
+          <key>provisioningProfiles</key><dict>
+          <key>$RDI_BUNDLE_ID</key><string>$PROFILE_UUID</string>
+          </dict>
+          </dict></plist>
+          EOF
+          xcodebuild -exportArchive -archivePath "$RUNNER_TEMP/RDI.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/rdi-export"
+          test -f "$RUNNER_TEMP/rdi-export/RadioRomaniiItalia.ipa"
+      - name: Carica su App Store Connect
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HOME/.appstoreconnect/private_keys"
+          echo "$ASC_KEY_B64" | base64 --decode > "$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8"
+          chmod 600 "$HOME/.appstoreconnect/private_keys/AuthKey_${ASC_KEY_ID}.p8"
+          xcrun altool --upload-app --type ios \
+            --file "$RUNNER_TEMP/rdi-export/RadioRomaniiItalia.ipa" \
+            --apiKey "$ASC_KEY_ID" --apiIssuer "$ASC_ISSUER_ID"
+      - name: Elimina file di firma temporanei
+        if: always()
+        shell: bash
+        run: |
+          rm -rf "$RUNNER_TEMP/rdi-signing" "$HOME/.appstoreconnect/private_keys"
