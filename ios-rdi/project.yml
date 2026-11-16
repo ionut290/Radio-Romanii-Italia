@@ -1,6 +1,6 @@
 name: RadioRomaniiItalia
 options:
-  bundleIdPrefix: org.radioromanii
+  bundleIdPrefix: org.radioromaniidinitalia
 targets:
   RadioRomaniiItalia:
     type: application
@@ -10,7 +10,7 @@ targets:
       - path: RadioRomaniiItalia
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: org.radioromanii.app
+        PRODUCT_BUNDLE_IDENTIFIER: org.radioromaniidinitalia.radio
         SWIFT_VERSION: "5.0"
         TARGETED_DEVICE_FAMILY: "1,2"
         GENERATE_INFOPLIST_FILE: YES
