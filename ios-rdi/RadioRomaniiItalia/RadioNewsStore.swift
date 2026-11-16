@@ -119,19 +119,26 @@ final class RadioNewsStore: ObservableObject {
     }
 
     private func loadFeed(_ path: String) async -> RadioNewsFeed? {
+        var freshest: RadioNewsFeed?
         for endpoint in sources(for: path) {
             do {
                 let (data, response) = try await URLSession.shared.data(for: request(for: endpoint))
                 guard let response = response as? HTTPURLResponse,
                       (200...299).contains(response.statusCode) else { continue }
                 let feed = try JSONDecoder().decode(RadioNewsFeed.self, from: data)
-                if !feed.items.isEmpty { return feed }
+                guard !feed.items.isEmpty else { continue }
+                // GitHub Pages può arrivare dopo il commit: preferisci la data più recente.
+                let candidateDate = RadioNewsArticle.parsedDate(feed.updatedAt) ?? .distantPast
+                let currentDate = RadioNewsArticle.parsedDate(freshest?.updatedAt) ?? .distantPast
+                if freshest == nil || candidateDate > currentDate {
+                    freshest = feed
+                }
             } catch {
-                // La seconda origine viene tentata soltanto in caso di errore.
+                // Non interrompere le notizie se una delle origini è temporaneamente indisponibile.
                 continue
             }
         }
-        return nil
+        return freshest
     }
 
     private func loadItalianTitles() async {
