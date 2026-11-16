@@ -507,28 +507,142 @@ function renderQueue(){
  if(!playQueue.length){root.append(node("p","queue-empty",({it:"Nessun file audio autorizzato disponibile",ro:"Nu există fișiere audio autorizate",en:"No authorized audio files available"})[language]));return}
  playQueue.forEach((track,i)=>{const btn=node("button","queue-item"+(playIndex===i?" active":""));btn.type="button";btn.setAttribute("aria-label",String(track.title||"Brano")+" — "+String(track.artist||""));btn.append(node("span","queue-number",String(i+1)));const title=node("span","queue-name");title.append(node("b","",track.title||"Brano"),node("small","",track.artist||"Artista"));btn.append(title);btn.onclick=()=>playAt(i);root.append(btn)})
 }
-function playSingle(track){
- playlistAudio.pause();playIndex=-1;playlistAudio.src=API+"/spotlight/"+encodeURIComponent(track.id)+"/audio";
- $("player-label").textContent="♫ "+track.title+" · "+track.artist;
- renderQueue();const p=playlistAudio.play();if(p&&p.catch)p.catch(()=>{$("player-label").textContent="▶ "+track.title+" · "+track.artist});
+// One HTML audio element owns AI Music; retries never launch overlapping audio.
+let aiWantsPlayback=false,aiRetryCount=0,aiFailedTracks=0,aiGeneration=0;
+let aiRetryTimer=null,aiStallTimer=null,aiChangingSourceUntil=0,aiCurrentTrack=null;
+function clearAITimers(){
+ if(aiRetryTimer!==null){clearTimeout(aiRetryTimer);aiRetryTimer=null}
+ if(aiStallTimer!==null){clearTimeout(aiStallTimer);aiStallTimer=null}
 }
-function playAt(index){
- if(index<0||index>=playQueue.length){playIndex=-1;playlistAudio.pause();playlistAudio.removeAttribute("src");playlistAudio.load();$("player-label").textContent="🎵 Playlist terminata";return}
- playIndex=index;const item=playQueue[index];playlistAudio.src=API+"/spotlight/"+encodeURIComponent(item.id)+"/audio";
- $("player-label").textContent="🎶 "+item.title+" · "+item.artist+" ("+(index+1)+"/"+playQueue.length+")";
- renderQueue();const result=playlistAudio.play();if(result&&result.catch)result.catch(()=>{$("player-label").textContent="▶ Premi Play nel lettore per iniziare · "+item.title});
+function aiStatus(message){$("player-label").textContent=message}
+function aiAudioUrl(track){return API+"/spotlight/"+encodeURIComponent(track.id)+"/audio"}
+function aiStartWatchdog(){
+ if(aiStallTimer!==null)clearTimeout(aiStallTimer);
+ if(!aiWantsPlayback||document.hidden)return;
+ const gen=aiGeneration;
+ aiStallTimer=setTimeout(()=>{
+  aiStallTimer=null;
+  if(gen===aiGeneration&&aiWantsPlayback&&(playlistAudio.paused||playlistAudio.readyState<3)){
+   aiScheduleRetry("timeout")
+  }
+ },18000);
 }
-playlistAudio.onended=()=>playAt(playIndex+1);
-playlistAudio.onerror=()=>{if(playIndex>=0&&playIndex+1<playQueue.length)playAt(playIndex+1)};
+function aiPlayCurrent(){
+ if(!aiWantsPlayback||!aiCurrentTrack)return;
+ const gen=aiGeneration;
+ aiStartWatchdog();
+ try{
+  const result=playlistAudio.play();
+  if(result&&result.catch)result.catch(error=>{
+   if(gen!==aiGeneration||!aiWantsPlayback)return;
+   if(error?.name==="AbortError")return;
+   if(error?.name==="NotAllowedError"){
+    clearAITimers();aiWantsPlayback=false;
+    aiStatus("▶ Premi Play nel lettore per iniziare · "+aiCurrentTrack.title);
+   }else aiScheduleRetry("play");
+  });
+ }catch(error){if(gen===aiGeneration)aiScheduleRetry("play")}
+}
+function aiSetTrack(track,index,keepFailureCount=false){
+ if(!track||!track.id)return;
+ clearAITimers();aiGeneration++;aiRetryCount=0;
+ if(!keepFailureCount)aiFailedTracks=0;
+ aiCurrentTrack=track;playIndex=index;aiWantsPlayback=true;
+ aiChangingSourceUntil=Date.now()+1500;
+ playlistAudio.pause();playlistAudio.src=aiAudioUrl(track);playlistAudio.load();
+ aiStatus((index>=0?"🎶 ":"♫ ")+track.title+" · "+track.artist+(index>=0?" ("+(index+1)+"/"+playQueue.length+")":""));
+ renderQueue();aiPlayCurrent();
+}
+function playSingle(track){aiSetTrack(track,-1)}
+function playAt(index,keepFailureCount=false){
+ if(index<0||index>=playQueue.length){
+  clearAITimers();aiWantsPlayback=false;aiGeneration++;playIndex=-1;aiCurrentTrack=null;
+  aiChangingSourceUntil=Date.now()+1500;
+  playlistAudio.pause();playlistAudio.removeAttribute("src");playlistAudio.load();
+  aiStatus("🎵 Playlist terminata");renderQueue();return
+ }
+ aiSetTrack(playQueue[index],index,keepFailureCount)
+}
+function aiScheduleRetry(reason){
+ if(!aiWantsPlayback||!aiCurrentTrack||aiRetryTimer!==null||document.hidden)return;
+ if(!navigator.onLine){aiStatus("Connessione assente · AI Music riprenderà quando torna Internet");return}
+ if(aiRetryCount>=3){
+  if(playIndex>=0&&playIndex+1<playQueue.length&&aiFailedTracks<Math.min(playQueue.length-1,3)){
+   aiFailedTracks++;playAt(playIndex+1,true);return
+  }
+  aiWantsPlayback=false;clearAITimers();
+  aiStatus("Riproduzione non disponibile. Premi Play o scegli un altro brano.");
+  return
+ }
+ const gen=aiGeneration;const delay=[1500,3500,7000][aiRetryCount++];
+ aiStatus("⏳ Riconnessione AI Music…");
+ clearTimeout(aiStallTimer);aiStallTimer=null;
+ aiRetryTimer=setTimeout(()=>{
+  aiRetryTimer=null;
+  if(!aiWantsPlayback||gen!==aiGeneration||document.hidden)return;
+  if(!playlistAudio.paused&&playlistAudio.readyState>=3)return;
+  aiChangingSourceUntil=Date.now()+1500;
+  playlistAudio.pause();playlistAudio.load();aiPlayCurrent()
+ },delay)
+}
+playlistAudio.addEventListener("playing",()=>{
+ if(!aiWantsPlayback)return;
+ clearAITimers();aiRetryCount=0;aiFailedTracks=0;
+ if(aiCurrentTrack)aiStatus("♫ "+aiCurrentTrack.title+" · "+aiCurrentTrack.artist)
+});
+playlistAudio.addEventListener("waiting",()=>{
+ if(aiWantsPlayback){aiStatus("⏳ Buffering AI Music…");aiStartWatchdog()}
+});
+playlistAudio.addEventListener("stalled",()=>{
+ if(aiWantsPlayback){aiStatus("⏳ Connessione lenta…");aiStartWatchdog()}
+});
+playlistAudio.addEventListener("pause",()=>{
+ if(Date.now()>aiChangingSourceUntil&&!playlistAudio.ended){
+  aiWantsPlayback=false;clearAITimers()
+ }
+});
+playlistAudio.addEventListener("play",()=>{
+ if(!aiWantsPlayback&&aiCurrentTrack){
+  aiWantsPlayback=true;aiRetryCount=0;aiStartWatchdog()
+ }
+});
+playlistAudio.onended=()=>{
+ if(aiWantsPlayback&&playIndex>=0)playAt(playIndex+1);
+ else{aiWantsPlayback=false;clearAITimers()}
+};
+playlistAudio.onerror=()=>{if(aiWantsPlayback)aiScheduleRetry("error")};
+window.addEventListener("online",()=>{
+ if(aiWantsPlayback&&aiCurrentTrack&&!document.hidden){
+  clearTimeout(aiRetryTimer);aiRetryTimer=null;aiRetryCount=0;
+  if(playlistAudio.paused||playlistAudio.error){playlistAudio.load();aiPlayCurrent()}
+ }
+});
+document.addEventListener("visibilitychange",()=>{
+ if(!document.hidden&&aiWantsPlayback&&aiCurrentTrack){
+  if(playlistAudio.paused){aiPlayCurrent()}
+  else if(playlistAudio.readyState<3)aiStartWatchdog()
+ }
+});
 $("play-all").onclick=async()=>{
- $("player-label").textContent="🎵 Preparazione playlist…";
+ aiStatus("🎵 Preparazione playlist…");
  if(!playQueue.length)await prepareQueue();
- if(!playQueue.length){$("player-label").textContent=({it:"Nessun file audio autorizzato per Play All",ro:"Nu există fișiere autorizate pentru redare",en:"No consented audio files available for Play All"})[language];return}
+ if(!playQueue.length){
+  aiStatus(({it:"Nessun file audio autorizzato per Play All",ro:"Nu există fișiere autorizate pentru redare",en:"No consented audio files available for Play All"})[language]);
+  return
+ }
  playAt(0)
 };
-$("player-stop").onclick=()=>{playlistAudio.pause();playIndex=-1;playlistAudio.removeAttribute("src");playlistAudio.load();$("player-label").textContent="■ Stop";renderQueue()};
+$("player-stop").onclick=()=>{
+ clearAITimers();aiGeneration++;aiWantsPlayback=false;aiCurrentTrack=null;
+ aiChangingSourceUntil=Date.now()+1500;playIndex=-1;
+ playlistAudio.pause();playlistAudio.removeAttribute("src");playlistAudio.load();
+ aiStatus("■ Stop");renderQueue()
+};
 $("player-prev").onclick=()=>{if(playQueue.length)playAt(playIndex>0?playIndex-1:0)};
-$("player-next").onclick=async()=>{if(!playQueue.length)await prepareQueue();if(playQueue.length)playAt(playIndex>=0?(playIndex+1)%playQueue.length:0)};
+$("player-next").onclick=async()=>{
+ if(!playQueue.length)await prepareQueue();
+ if(playQueue.length)playAt(playIndex>=0?(playIndex+1)%playQueue.length:0)
+};
 const menuButton=$("menu-toggle");const closeMenu=()=>{document.body.classList.remove("menu-open");menuButton.setAttribute("aria-expanded","false")};
 menuButton.onclick=()=>{const open=document.body.classList.toggle("menu-open");menuButton.setAttribute("aria-expanded",String(open))};
 $("sidebar-scrim").onclick=closeMenu;document.querySelectorAll(".app-sidebar a").forEach(a=>a.addEventListener("click",closeMenu));
