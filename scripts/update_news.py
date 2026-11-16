@@ -55,6 +55,7 @@ WORKER_ITALY_TERMS = ("italia", "italy", "italian", "italien", "inps", "patronat
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; RadioRomaniiItalia/1.1)"}
 LIMIT = 18
 MAX_PER_CATEGORY = 35
+CATEGORY_LIMITS = {"Mondo": 12}  # Keep international stories without displacing the Italian/Romanian diaspora.
 MAX_PER_SOURCE = 18  # Prevent one newsroom from crowding out the others.
 MAX_TOTAL = 120
 ITALY_CONTEXT = ("italia", "italy", "italian", "romeni", "români", "diaspora", "roma", "milano", "torino", "bologna", "napoli", "sicilia", "trentino", "veneto", "inps", "consulat", "ambasada", "patronato", "permesso", "lavoro")
@@ -214,6 +215,12 @@ institutional = get_official_items(now, seen, HEADERS)
 items.extend(institutional)
 print(f"Comunicazioni istituzionali importate: {len(institutional)}")
 
+# Additional direct, verified publishers imported concurrently to limit runtime.
+from expanded_news import collect_extra_news
+extra = collect_extra_news(now, seen, HEADERS)
+items.extend(extra)
+print(f"Altri titoli raccolti da fonti verificate: {len(extra)}")
+
 output = Path("news.json")
 if not items:
     if output.exists():
@@ -290,7 +297,7 @@ balanced = []
 for item in items:
     category = item["category"]
     source = item.get("source", "").casefold().strip() or "sconosciuta"
-    if per_category.get(category, 0) >= MAX_PER_CATEGORY:
+    if per_category.get(category, 0) >= CATEGORY_LIMITS.get(category, MAX_PER_CATEGORY):
         continue
     if per_source.get(source, 0) >= MAX_PER_SOURCE:
         continue
@@ -311,7 +318,7 @@ COMMUNITY_SOURCES = ("rotalianul", "gazeta românească", "gazetaromaneasca", "�
 for item in items:
     provenance = f"{item.get('source', '')} {item.get('url', '')}".casefold()
     item["source_tier"] = (
-        "official" if item.get("source_type") == "comunicato_istituzionale" or any(name in provenance for name in OFFICIAL_SOURCES)
+        "official" if item.get("source_type") == "comunicato_istituzionale" or item.get("source_tier") == "official" or any(name in provenance for name in OFFICIAL_SOURCES)
         else "community" if any(name in provenance for name in COMMUNITY_SOURCES)
         else "news"
     )
