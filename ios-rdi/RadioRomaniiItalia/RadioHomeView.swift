@@ -213,7 +213,7 @@ struct RadioHomeView: View {
                                 .font(.subheadline.weight(.semibold))
                                 .padding(.horizontal, 15)
                                 .padding(.vertical, 10)
-                                .foregroundStyle(filter == item ? .white : .primary)
+                                .foregroundStyle(filter == item ? Color.white : Color.primary)
                                 .background(
                                     filter == item ? navy : Color(uiColor: .secondarySystemGroupedBackground),
                                     in: Capsule()
