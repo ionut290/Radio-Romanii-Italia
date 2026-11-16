@@ -82,6 +82,11 @@ struct RDIPlayerHero: View {
                 .blur(radius: 64)
                 .offset(x: glowing ? -130 : -60, y: 70)
 
+            RDINeonLines(animated: !reduceMotion)
+                .frame(height: 74)
+                .opacity(0.55)
+                .offset(y: 87)
+
             VStack(alignment: .leading, spacing: 11) {
                 HStack(spacing: 8) {
                     Image(systemName: "dot.radiowaves.left.and.right")
@@ -207,6 +212,9 @@ struct RDIPlayerHero: View {
 }
 
 struct RDIQuickTile: View {
+    @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
+    @AppStorage("rdi.reduceAnimations") private var reduceAnimations = false
+    @State private var glow = false
     let title: String
     let subtitle: String
     let symbol: String
@@ -249,11 +257,19 @@ struct RDIQuickTile: View {
             .clipShape(RoundedRectangle(cornerRadius: 19))
             .overlay(
                 RoundedRectangle(cornerRadius: 19)
-                    .stroke(.white.opacity(0.5), lineWidth: 1)
+                    .stroke(.white.opacity(glow ? 0.95 : 0.5), lineWidth: glow ? 1.9 : 1)
             )
-            .shadow(color: colors.first?.opacity(0.5) ?? .clear, radius: 8)
+            .shadow(color: (colors.first ?? .clear).opacity(glow ? 0.86 : 0.42),
+                    radius: glow ? 18 : 8)
+            .scaleEffect(glow ? 1.016 : 1)
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(title). \(subtitle)")
+        .onAppear {
+            guard !reduceAnimations && !systemReduceMotion else { return }
+            withAnimation(.easeInOut(duration: 2.5).repeatForever(autoreverses: true)) {
+                glow = true
+            }
+        }
     }
 }
