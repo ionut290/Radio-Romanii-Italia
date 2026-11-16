@@ -207,6 +207,13 @@ for category, feed_url, publisher, use_publisher_images in DIRECT_FEEDS:
     except Exception as exc:
         print(f"{publisher} RSS indisponibil: {exc}")
 
+# Independent institutional desk: authenticated EU, NATO and public-service bulletins.
+# A missing institutional feed must never block regular RDI news updates.
+from institutional_news import get_official_items
+institutional = get_official_items(now, seen, HEADERS)
+items.extend(institutional)
+print(f"Comunicazioni istituzionali importate: {len(institutional)}")
+
 output = Path("news.json")
 if not items:
     if output.exists():
@@ -299,12 +306,12 @@ print("Fonti pubblicate: " + ", ".join(
 
 # Transparent provenance lets the desk give precedence to institutions and
 # identify community reporting without treating it as an official notice.
-OFFICIAL_SOURCES = ("mae.ro", "econsulat", "inps", "inail", "lavoro.gov.it", "ispettorato", "agenziaentrate", "agerpres")
+OFFICIAL_SOURCES = ("mae.ro", "econsulat", "inps", "inail", "lavoro.gov.it", "ispettorato", "agenziaentrate", "agerpres", "commissione europea", "parlamento europeo", "consiglio dell\u0027ue", "nato", "onu", "ministero degli esteri")
 COMMUNITY_SOURCES = ("rotalianul", "gazeta românească", "gazetaromaneasca", "știri diaspora", "stiridiaspora")
 for item in items:
     provenance = f"{item.get('source', '')} {item.get('url', '')}".casefold()
     item["source_tier"] = (
-        "official" if any(name in provenance for name in OFFICIAL_SOURCES)
+        "official" if item.get("source_type") == "comunicato_istituzionale" or any(name in provenance for name in OFFICIAL_SOURCES)
         else "community" if any(name in provenance for name in COMMUNITY_SOURCES)
         else "news"
     )
