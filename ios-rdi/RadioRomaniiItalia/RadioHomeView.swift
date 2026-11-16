@@ -329,7 +329,7 @@ private struct RDINewsList: View {
 
     private var visible: [RadioNewsArticle] {
         let filtered = store.articles.filter { filter.includes($0) }
-        return compact ? Array(filtered.prefix(2)) : Array(filtered.prefix(50))
+        return compact ? Array(filtered.prefix(8)) : Array(filtered.prefix(50))
     }
 
     var body: some View {
