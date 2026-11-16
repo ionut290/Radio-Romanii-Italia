@@ -1,4 +1,6 @@
-RDI iOS release request
+RDI iOS signed distribution request
 Date: 2026-11-16
-Purpose: upload native news homepage and background radio playback to App Store Connect / TestFlight.
-Source: main, after successful iOS simulator build.
+Version: 1.0 (build 3)
+Release content: Animated Italian neon radio home, AI Music, YouTube Live, YouTube Podcast, news and native background playback.
+Source: main after PR #28 merge fa1dac442270550c88d272cbc4620d182a7a57b5.
+Target: upload to App Store Connect for TestFlight testing; do not submit for public App Store review.
