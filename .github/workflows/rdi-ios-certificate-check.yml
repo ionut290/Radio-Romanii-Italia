@@ -28,6 +28,14 @@ jobs:
             exit 1
           fi
           echo "OK: PKCS12 leggibile con password GitHub"
+      - name: Ricrea P12 compatibile con macOS
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          openssl pkcs12 -in "$RUNNER_TEMP/rdi.p12" -nodes -passin env:P12_PASSWORD -out "$RUNNER_TEMP/rdi-identity.pem"
+          openssl pkcs12 -export -in "$RUNNER_TEMP/rdi-identity.pem" -out "$RUNNER_TEMP/rdi-modern.p12" -passout env:P12_PASSWORD -keypbe AES-256-CBC -certpbe AES-256-CBC -macalg sha256
+          echo "OK: P12 ricreato con AES-256/SHA-256"
       - name: Prova importazione nel portachiavi macOS
         shell: bash
         run: |
@@ -36,7 +44,7 @@ jobs:
           KEYCHAIN_PASSWORD="$(openssl rand -hex 24)"
           security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
           security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
-          if ! security import "$RUNNER_TEMP/rdi.p12" -k "$KEYCHAIN" -P "$P12_PASSWORD" -T /usr/bin/codesign > "$RUNNER_TEMP/security-import.log" 2>&1; then
+          if ! security import "$RUNNER_TEMP/rdi-modern.p12" -k "$KEYCHAIN" -P "$P12_PASSWORD" -T /usr/bin/codesign > "$RUNNER_TEMP/security-import.log" 2>&1; then
             echo "::error::OpenSSL legge il P12, ma il portachiavi macOS non riesce a importarlo: possibile incompatibilità formato."
             exit 1
           fi
@@ -45,5 +53,5 @@ jobs:
         if: always()
         shell: bash
         run: |
-          rm -f "$RUNNER_TEMP/rdi.p12" "$RUNNER_TEMP/openssl-check.log" "$RUNNER_TEMP/security-import.log"
+          rm -f "$RUNNER_TEMP/rdi.p12" "$RUNNER_TEMP/rdi-modern.p12" "$RUNNER_TEMP/rdi-identity.pem" "$RUNNER_TEMP/openssl-check.log" "$RUNNER_TEMP/security-import.log"
           security delete-keychain "$RUNNER_TEMP/rdi-test.keychain-db" 2>/dev/null || true
