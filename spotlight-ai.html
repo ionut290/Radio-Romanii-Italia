@@ -500,7 +500,7 @@ $("page-prev").onclick=()=>{if(page>1){page--;expandedTrackId=null;load();$("hea
 $("page-next").onclick=()=>{if(page<totalPages){page++;expandedTrackId=null;load();$("heading").scrollIntoView({behavior:"smooth",block:"start"})}};
 const playlistAudio=$("playlist-player");
 async function prepareQueue(){
- try{const response=await fetch(API+"/spotlight/playlist",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();playQueue=Array.isArray(data.tracks)?data.tracks:[];renderQueue();return playQueue}catch(e){playQueue=[];renderQueue();return []}
+ try{const response=await fetch(API+"/spotlight/playlist",{cache:"no-store",credentials:"omit"});if(!response.ok)throw Error(String(response.status));const data=await response.json();playQueue=Array.isArray(data.tracks)?data.tracks:[];renderQueue();return playQueue}catch(e){/* Keep the last valid playlist during temporary network failures. */renderQueue();return playQueue}
 }
 function renderQueue(){
  const root=$("queue-list");root.replaceChildren();$("queue-total").textContent=String(playQueue.length);
