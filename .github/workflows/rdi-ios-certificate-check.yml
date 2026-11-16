@@ -34,17 +34,20 @@ jobs:
           set -euo pipefail
           umask 077
           openssl pkcs12 -in "$RUNNER_TEMP/rdi.p12" -nodes -passin env:P12_PASSWORD -out "$RUNNER_TEMP/rdi-identity.pem"
-          openssl pkcs12 -export -in "$RUNNER_TEMP/rdi-identity.pem" -out "$RUNNER_TEMP/rdi-modern.p12" -passout env:P12_PASSWORD -keypbe AES-256-CBC -certpbe AES-256-CBC -macalg sha256
+          TEMP_IMPORT_PASSWORD="$(openssl rand -hex 24)"
+          echo "::add-mask::$TEMP_IMPORT_PASSWORD"
+          openssl pkcs12 -export -in "$RUNNER_TEMP/rdi-identity.pem" -out "$RUNNER_TEMP/rdi-modern.p12" -passout "pass:$TEMP_IMPORT_PASSWORD" -keypbe AES-256-CBC -certpbe AES-256-CBC -macalg sha256
+          echo "TEMP_IMPORT_PASSWORD=$TEMP_IMPORT_PASSWORD" >> "$GITHUB_ENV"
           echo "OK: P12 ricreato con AES-256/SHA-256"
       - name: Prova importazione nel portachiavi macOS
         shell: bash
         run: |
           set -euo pipefail
           KEYCHAIN="$RUNNER_TEMP/rdi-test.keychain-db"
-          KEYCHAIN_PASSWORD="$(openssl rand -hex 24)"
+          KEYCHAIN_PASSWORD="$TEMP_IMPORT_PASSWORD"
           security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
           security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
-          if ! security import "$RUNNER_TEMP/rdi-modern.p12" -k "$KEYCHAIN" -P "$P12_PASSWORD" -T /usr/bin/codesign > "$RUNNER_TEMP/security-import.log" 2>&1; then
+          if ! security import "$RUNNER_TEMP/rdi-modern.p12" -k "$KEYCHAIN" -P "$TEMP_IMPORT_PASSWORD" -T /usr/bin/codesign > "$RUNNER_TEMP/security-import.log" 2>&1; then
             echo "::error::Importazione macOS fallita. Diagnostica del comando security:"
             grep -E "security:|SecKeychain|Error|error|MAC verification|Unknown|invalid|unsupported" "$RUNNER_TEMP/security-import.log" | head -n 8 || echo "Nessun dettaglio diagnostico disponibile"
             exit 1
