@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_news.py'
+      - 'scripts/expanded_news.py'
+      - 'scripts/institutional_news.py'
       - 'scripts/news_illustrations.py'
       - 'scripts/news_image_matching.py'
       - 'tests/test_news_image_matching.py'
