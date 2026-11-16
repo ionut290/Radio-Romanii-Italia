@@ -4,6 +4,7 @@ import SwiftUI
 private enum RDITab: String, CaseIterable, Identifiable {
     case home = "Home"
     case radio = "Radio"
+    case aiMusic = "AI Music"
     case news = "Notizie"
     case community = "Comunità"
     case settings = "Impostazioni"
@@ -14,6 +15,7 @@ private enum RDITab: String, CaseIterable, Identifiable {
         switch self {
         case .home: return "house.fill"
         case .radio: return "dot.radiowaves.left.and.right"
+        case .aiMusic: return "music.note"
         case .news: return "newspaper.fill"
         case .community: return "person.2.fill"
         case .settings: return "gearshape.fill"
@@ -73,6 +75,7 @@ struct RadioHomeView: View {
     @Environment(\.openURL) private var openURL
     @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
     @StateObject private var news = RadioNewsStore()
+    @StateObject private var aiMusic = RDIAIMusicStore()
     @AppStorage("rdi.reduceAnimations") private var reduceAnimations = false
 
     @State private var tab: RDITab = .home
@@ -91,7 +94,7 @@ struct RadioHomeView: View {
             VStack(spacing: 0) {
                 header
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 21) {
+                    VStack(alignment: .leading, spacing: 13) {
                         pageContent
                     }
                     .frame(maxWidth: 720)
@@ -101,6 +104,9 @@ struct RadioHomeView: View {
                     .padding(.bottom, 22)
                 }
                 .refreshable { await news.refresh() }
+                if tab != .aiMusic {
+                    RDICompactAIMiniPlayer(radio: radio) { tab = .aiMusic }
+                }
                 bottomBar
             }
         }
@@ -141,14 +147,14 @@ struct RadioHomeView: View {
             Spacer(minLength: 3)
 
             Button {
-                openInApp("\(site)/")
+                tab = .settings
             } label: {
-                Image(systemName: "bell.badge")
+                Image(systemName: "gearshape.fill")
                     .font(.system(size: 20))
                     .foregroundStyle(.white)
                     .frame(width: 43, height: 43)
             }
-            .accessibilityLabel("Apri il sito della radio")
+            .accessibilityLabel("Apri impostazioni")
         }
         .padding(.horizontal, 16)
         .padding(.top, 6)
@@ -159,20 +165,22 @@ struct RadioHomeView: View {
     @ViewBuilder private var pageContent: some View {
         switch tab {
         case .home:
-            RDIPlayerHero(radio: radio, reduceMotion: noMotion)
+            RDICompactRadioPlayer(radio: radio, reduceMotion: noMotion)
             quickAccess
             newsList(isCompact: true)
         case .radio:
             Text("Ascolta RDI")
                 .font(.title.bold())
                 .foregroundStyle(.white)
-            RDIPlayerHero(radio: radio, reduceMotion: noMotion)
+            RDICompactRadioPlayer(radio: radio, reduceMotion: noMotion)
             quickAccess
             infoCard(title: "RDI AI MUSIC Spotlight",
                      detail: "Scopri le classifiche, ascolta i brani originali approvati e partecipa alla community.",
                      symbol: "music.note.list", button: "Scopri i brani") {
-                openInApp("\(site)/spotlight-ai.html", pauseRadio: true)
+                tab = .aiMusic
             }
+        case .aiMusic:
+            RDIAIMusicView(store: aiMusic)
         case .news:
             newsList(isCompact: false)
         case .community:
@@ -200,13 +208,13 @@ struct RadioHomeView: View {
     }
 
     private var quickAccess: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 8) {
             Text("Scopri RDI")
                 .font(.system(size: 19, weight: .bold))
                 .foregroundStyle(.white)
 
             HStack(spacing: 8) {
-                RDIQuickTile(
+                RDICompactTile(
                     title: "AI MUSIC",
                     subtitle: "Top 3 e brani originali",
                     symbol: "music.note",
@@ -234,7 +242,7 @@ struct RadioHomeView: View {
                     colors: [Color(red: 0.02, green: 0.36, blue: 0.92),
                              Color(red: 0.45, green: 0.13, blue: 0.89)]
                 ) {
-                    openInApp(podcast, pauseRadio: true)
+                    openExternalMedia(podcast)
                 }
             }
         }
@@ -305,7 +313,7 @@ struct RadioHomeView: View {
 
     private var bottomBar: some View {
         HStack(spacing: 0) {
-            ForEach(RDITab.allCases) { item in
+            ForEach(RDITab.allCases.filter { $0 != .settings }) { item in
                 Button {
                     withAnimation(noMotion ? nil : .easeInOut(duration: 0.19)) {
                         tab = item
