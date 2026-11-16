@@ -11,7 +11,7 @@ struct RDIAITrack: Decodable, Identifiable, Hashable {
         guard id.range(of: "^[0-9a-f]{32}$", options: .regularExpression) != nil else {
             return nil
         }
-        return URL(string: "https://radioromanii.duckdns.org/api/ai-music/spotlight/\(id)/audio")
+        return URL(string: "https://radio-romanii-italia.duckdns.org/api/ai-music/spotlight/\(id)/audio")
     }
 }
 
