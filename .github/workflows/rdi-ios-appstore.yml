@@ -77,6 +77,15 @@ jobs:
               sys.exit("::error::Il certificato P12 non è presente nel profilo RDI. Rigenera il profilo selezionando lo stesso certificato.")
           print("OK: Team ID, Bundle ID e certificato combaciano")
           PY
+      - name: Prepara icona ufficiale RDI
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s RADIO-LOGO.png || { echo "::error::Logo RADIO-LOGO.png mancante"; exit 1; }
+          ICON_DIR="ios-rdi/RadioRomaniiItalia/Assets.xcassets/AppIcon.appiconset"
+          mkdir -p "$ICON_DIR"
+          swift ios-rdi/make-app-icon.swift "$GITHUB_WORKSPACE/RADIO-LOGO.png" "$GITHUB_WORKSPACE/$ICON_DIR/icon.png"
+          sips -g pixelWidth -g pixelHeight "$ICON_DIR/icon.png"
       - name: Genera progetto Xcode
         run: cd ios-rdi && xcodegen generate
       - name: Compila archivio firmato
