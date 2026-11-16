@@ -185,6 +185,7 @@ final class RadioPlayer: ObservableObject {
     }
 
     func play() {
+        if !isPlaying { retryCount = 0 }
         do {
             let session = AVAudioSession.sharedInstance()
             try session.setCategory(.playback, mode: .default)
