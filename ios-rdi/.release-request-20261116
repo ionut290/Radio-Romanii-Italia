@@ -1,7 +1,7 @@
-RDI iOS signed distribution request
+RDI iOS signed TestFlight distribution request
 Date: 2026-11-16
-Version: 1.0 (build 8)
-Release content: synchronize native iOS news with the RDI website. Combine the same news.json, editorial.json and current daily thought feed. Refresh every ten minutes and whenever the app returns to the foreground. Select the freshest feed between site and GitHub, avoid stale caches, display last updated date, and support the site's editorial articles.
-Keep compact live radio player, AI Music native controls, community views, and existing radio scheduling unchanged.
-Source: main after successful simulator validation (GitHub Actions run 43901644916), plus updated feed selection and build 8.
-Target: upload signed build 8 to App Store Connect for TestFlight; do not submit for public App Review.
+Version: 1.0 (build 9)
+Changes: stabilize live radio and AI Music playback in the native app. Single AVPlayer, buffered source items, bounded reconnect attempts for both streams and authorized AI tracks, reliable retries after stalls and failed items, resume only when playback was intended, and respect manual pause and source changes.
+Previous approved RDI features, news synchronization, the compact player and AI Music next/previous controls remain unchanged.
+Source: main after successful iOS simulator build check 43918056102. Web player stabilization is delivered by the website separately.
+Target: sign and upload build 9 to App Store Connect for TestFlight testing only. Do not submit for public App Store review.
