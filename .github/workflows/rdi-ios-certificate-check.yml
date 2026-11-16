@@ -45,7 +45,8 @@ jobs:
           security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
           security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
           if ! security import "$RUNNER_TEMP/rdi-modern.p12" -k "$KEYCHAIN" -P "$P12_PASSWORD" -T /usr/bin/codesign > "$RUNNER_TEMP/security-import.log" 2>&1; then
-            echo "::error::OpenSSL legge il P12, ma il portachiavi macOS non riesce a importarlo: possibile incompatibilità formato."
+            echo "::error::Importazione macOS fallita. Diagnostica del comando security:"
+            grep -E "security:|SecKeychain|Error|error|MAC verification|Unknown|invalid|unsupported" "$RUNNER_TEMP/security-import.log" | head -n 8 || echo "Nessun dettaglio diagnostico disponibile"
             exit 1
           fi
           echo "OK: certificato importabile in macOS"
