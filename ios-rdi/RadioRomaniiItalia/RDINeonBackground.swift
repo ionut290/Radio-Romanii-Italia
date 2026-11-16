@@ -64,11 +64,11 @@ struct RDINeonLines: View {
                     Path { path in
                         let height = geo.size.height
                         let width = geo.size.width
-                        path.move(to: CGPoint(x: -10, y: height * (0.55 + Double(index) * 0.12)))
+                        path.move(to: CGPoint(x: -10, y: height * (0.55 + CGFloat(index) * 0.12)))
                         path.addCurve(
-                            to: CGPoint(x: width + 10, y: height * (0.5 - Double(index) * 0.08)),
-                            control1: CGPoint(x: width * 0.36, y: height * (0.04 + Double(index) * 0.15)),
-                            control2: CGPoint(x: width * 0.65, y: height * (0.95 - Double(index) * 0.07))
+                            to: CGPoint(x: width + 10, y: height * (0.5 - CGFloat(index) * 0.08)),
+                            control1: CGPoint(x: width * 0.36, y: height * (0.04 + CGFloat(index) * 0.15)),
+                            control2: CGPoint(x: width * 0.65, y: height * (0.95 - CGFloat(index) * 0.07))
                         )
                     }
                     .stroke(
