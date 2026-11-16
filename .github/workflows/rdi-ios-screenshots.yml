@@ -1,0 +1,76 @@
+name: RDI iOS - Screenshot App Store
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rdi-ios-screenshots.yml'
+permissions:
+  contents: read
+jobs:
+  app-store-screenshots:
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica simulatori Apple
+        shell: bash
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available
+          xcrun simctl list runtimes
+      - name: Installa XcodeGen
+        run: brew install xcodegen
+      - name: Genera e compila app per simulatori
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd ios-rdi && xcodegen generate && cd ..
+          xcodebuild -project ios-rdi/RadioRomaniiItalia.xcodeproj \
+            -scheme RadioRomaniiItalia \
+            -configuration Release -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$RUNNER_TEMP/rdi-derived" \
+            CODE_SIGNING_ALLOWED=NO build
+      - name: Cattura screenshot autentici iPhone e iPad
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p app-store-screenshots
+          export RDI_APP="$RUNNER_TEMP/rdi-derived/Build/Products/Release-iphonesimulator/RadioRomaniiItalia.app"
+          test -d "$RDI_APP"
+          # Prefer 6.3-inch iPhones (Dynamic Island, medium display).
+          # Fall back to other Dynamic Island models if the current runner lacks the first.
+          IPHONE_TYPE="$(xcrun simctl list devicetypes | grep -E 'iPhone (17 Pro |16 Pro |15 Pro )' | head -1 | sed -E 's/.*\(([^()]*)\)$/\1/')"
+          IPAD_TYPE="$(xcrun simctl list devicetypes | grep -E 'iPad Pro 13-inch' | head -1 | sed -E 's/.*\(([^()]*)\)$/\1/')"
+          RUNTIME="$(xcrun simctl list runtimes -j | python3 -c 'import json,sys; r=[x for x in json.load(sys.stdin)["runtimes"] if x.get("isAvailable") and x["identifier"].startswith("com.apple.CoreSimulator.SimRuntime.iOS")];print(r[-1]["identifier"] if r else "")')"
+          if [[ -z "$IPHONE_TYPE" || -z "$IPAD_TYPE" || -z "$RUNTIME" ]]; then
+            echo "::error::Nessun simulatore iPhone/iPad appropriato disponibile"
+            exit 1
+          fi
+          for TYPE in iphone ipad; do
+            if [[ "$TYPE" == iphone ]]; then
+              DEVTYPE="$IPHONE_TYPE"
+              OUTPUT="app-store-screenshots/RDI-iPhone-Dynamic-Island.png"
+            else
+              DEVTYPE="$IPAD_TYPE"
+              OUTPUT="app-store-screenshots/RDI-iPad-13-inch.png"
+            fi
+            DEVICE="$(xcrun simctl create "RDI Store $TYPE" "$DEVTYPE" "$RUNTIME")"
+            xcrun simctl boot "$DEVICE"
+            xcrun simctl bootstatus "$DEVICE" -b
+            xcrun simctl status_bar "$DEVICE" override --time "9:41" --dataNetwork wifi --wifiMode active --wifiBars 3 --batteryState charged --batteryLevel 100
+            xcrun simctl install "$DEVICE" "$RDI_APP"
+            xcrun simctl launch "$DEVICE" org.radioromaniidinitalia.radio
+            sleep 10
+            xcrun simctl io "$DEVICE" screenshot "$OUTPUT"
+            sips -g pixelWidth -g pixelHeight "$OUTPUT"
+            xcrun simctl shutdown "$DEVICE"
+          done
+      - name: Salva screenshot come artefatti scaricabili
+        uses: actions/upload-artifact@v4
+        with:
+          name: RDI-App-Store-Screenshots-Build-9
+          path: app-store-screenshots/*.png
+          retention-days: 30
+          if-no-files-found: error
