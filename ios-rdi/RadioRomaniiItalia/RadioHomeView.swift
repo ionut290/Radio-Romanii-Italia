@@ -1,38 +1,68 @@
-import SwiftUI
 import SafariServices
+import SwiftUI
 
-private enum NewsFilter: String, CaseIterable {
-    case all = "Toate"
-    case diaspora = "Diaspora"
-    case italy = "Italia"
-    case romania = "România"
+private enum RDITab: String, CaseIterable, Identifiable {
+    case home = "Home"
+    case radio = "Radio"
+    case news = "Notizie"
+    case community = "Comunità"
+    case settings = "Impostazioni"
 
-    func includes(_ article: RadioNewsArticle) -> Bool {
-        let category = (article.category ?? "").folding(
-            options: [.diacriticInsensitive, .caseInsensitive],
-            locale: Locale(identifier: "ro_RO")
-        ).lowercased()
+    var id: String { rawValue }
+
+    var icon: String {
         switch self {
-        case .all: return true
-        case .diaspora: return category.contains("diaspora") || category.contains("comunit")
-        case .italy: return category.contains("italia")
-        case .romania: return category.contains("romania")
+        case .home: return "house.fill"
+        case .radio: return "dot.radiowaves.left.and.right"
+        case .news: return "newspaper.fill"
+        case .community: return "person.2.fill"
+        case .settings: return "gearshape.fill"
         }
     }
 }
 
-private struct ArticleDestination: Identifiable {
+private enum RDINewsFilter: String, CaseIterable, Identifiable {
+    case all = "Tutte"
+    case diaspora = "Diaspora"
+    case italy = "Italia"
+    case romania = "Romania"
+    case culture = "Cultura"
+    case events = "Eventi"
+
+    var id: String { rawValue }
+
+    func includes(_ article: RadioNewsArticle) -> Bool {
+        if self == .all { return true }
+        let category = (article.category ?? "").folding(
+            options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: "it_IT")
+        ).lowercased()
+        let title = article.title.folding(
+            options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: "it_IT")
+        ).lowercased()
+        switch self {
+        case .all: return true
+        case .diaspora: return category.contains("diaspora")
+        case .italy: return category.contains("italia")
+        case .romania: return category.contains("romania")
+        case .culture: return category.contains("cultur") || title.contains("cultur")
+        case .events: return category.contains("event") || title.contains("festival") || title.contains("evento")
+        }
+    }
+}
+
+private struct RDIWebPage: Identifiable {
     let id = UUID()
     let url: URL
 }
 
-private struct InAppArticleBrowser: UIViewControllerRepresentable {
+private struct RDIInAppBrowser: UIViewControllerRepresentable {
     let url: URL
 
     func makeUIViewController(context: Context) -> SFSafariViewController {
-        let browser = SFSafariViewController(url: url)
-        browser.dismissButtonStyle = .done
-        return browser
+        let controller = SFSafariViewController(url: url)
+        controller.dismissButtonStyle = .done
+        controller.preferredControlTintColor = UIColor.systemOrange
+        return controller
     }
 
     func updateUIViewController(_ controller: SFSafariViewController, context: Context) {}
@@ -40,202 +70,357 @@ private struct InAppArticleBrowser: UIViewControllerRepresentable {
 
 struct RadioHomeView: View {
     @EnvironmentObject private var radio: RadioPlayer
+    @Environment(\.openURL) private var openURL
+    @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
     @StateObject private var news = RadioNewsStore()
-    @State private var filter: NewsFilter = .all
-    @State private var articleDestination: ArticleDestination?
+    @AppStorage("rdi.reduceAnimations") private var reduceAnimations = false
 
-    private let orange = Color(red: 1.0, green: 0.54, blue: 0.17)
-    private let navy = Color(red: 0.06, green: 0.10, blue: 0.20)
+    @State private var tab: RDITab = .home
+    @State private var webPage: RDIWebPage?
 
-    private var filteredArticles: [RadioNewsArticle] {
-        Array(news.articles.filter { filter.includes($0) }.prefix(12))
-    }
+    private let site = "https://radioromanii.duckdns.org"
+    private let youtubeLive = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/live"
+    private let podcast = "https://music.amazon.com/podcasts/bc30b069-0dd7-4131-8921-dc97f49374c7/riflessioni-sulla-diaspora"
+
+    private var noMotion: Bool { reduceAnimations || systemReduceMotion }
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    topBar
-                    radioCard
-                    newsSection
-                    communityFooter
+        ZStack {
+            RDITheme.background.ignoresSafeArea()
+
+            VStack(spacing: 0) {
+                header
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 21) {
+                        pageContent
+                    }
+                    .frame(maxWidth: 720)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, 14)
+                    .padding(.top, 14)
+                    .padding(.bottom, 22)
                 }
-                .frame(maxWidth: 680)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal, 18)
-                .padding(.top, 14)
-                .padding(.bottom, 26)
+                .refreshable { await news.refresh() }
+                bottomBar
             }
-            .background(Color(uiColor: .systemGroupedBackground))
-            .safeAreaInset(edge: .bottom, spacing: 0) {
-                compactPlayer
-            }
-            .refreshable {
-                await news.refresh()
-            }
-            .task {
-                await news.refresh()
-            }
-            .sheet(item: $articleDestination) { destination in
-                InAppArticleBrowser(url: destination.url)
-                    .ignoresSafeArea()
-            }
-            .toolbar(.hidden, for: .navigationBar)
         }
+        .preferredColorScheme(.dark)
+        .tint(RDITheme.orange)
+        .sheet(item: $webPage) { target in
+            RDIInAppBrowser(url: target.url)
+                .ignoresSafeArea()
+        }
+        .task { await news.refresh() }
     }
 
-    private var topBar: some View {
+    private var header: some View {
         HStack(spacing: 10) {
             ZStack {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(orange)
-                    .frame(width: 46, height: 46)
+                RoundedRectangle(cornerRadius: 13)
+                    .fill(
+                        LinearGradient(colors: [RDITheme.orange, .red],
+                                       startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
+                    .frame(width: 45, height: 45)
                 Image(systemName: "antenna.radiowaves.left.and.right")
-                    .font(.title3.weight(.bold))
+                    .font(.title2.weight(.heavy))
                     .foregroundStyle(.white)
             }
 
             VStack(alignment: .leading, spacing: 2) {
                 Text("RDI")
-                    .font(.title2.weight(.heavy))
-                    .foregroundStyle(navy)
+                    .font(.system(size: 27, weight: .black, design: .rounded))
+                    .italic()
+                    .foregroundStyle(.white)
                 Text("Radio Românii din Italia")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                    .font(.system(size: 12, weight: .semibold))
+                    .foregroundStyle(RDITheme.muted)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
+            Spacer(minLength: 3)
 
-            Spacer()
-
-            HStack(spacing: 5) {
-                Circle()
-                    .fill(.red)
-                    .frame(width: 7, height: 7)
-                Text("ON AIR")
-                    .font(.caption.weight(.bold))
+            Button {
+                openInApp("\(site)/")
+            } label: {
+                Image(systemName: "bell.badge")
+                    .font(.system(size: 20))
+                    .foregroundStyle(.white)
+                    .frame(width: 43, height: 43)
             }
-            .foregroundStyle(navy)
-            .padding(.horizontal, 10)
-            .padding(.vertical, 8)
-            .background(.white, in: Capsule())
-            .accessibilityLabel("Radio în direct")
+            .accessibilityLabel("Apri il sito della radio")
+        }
+        .padding(.horizontal, 16)
+        .padding(.top, 6)
+        .padding(.bottom, 8)
+        .background(RDITheme.background)
+    }
+
+    @ViewBuilder private var pageContent: some View {
+        switch tab {
+        case .home:
+            RDIPlayerHero(radio: radio, reduceMotion: noMotion)
+            quickAccess
+            newsList(isCompact: true)
+        case .radio:
+            Text("Ascolta RDI")
+                .font(.title.bold())
+                .foregroundStyle(.white)
+            RDIPlayerHero(radio: radio, reduceMotion: noMotion)
+            quickAccess
+            infoCard(title: "RDI AI MUSIC Spotlight",
+                     detail: "Scopri le classifiche, ascolta i brani originali approvati e partecipa alla community.",
+                     symbol: "music.note.list", button: "Scopri i brani") {
+                openInApp("\(site)/spotlight-ai.html", pauseRadio: true)
+            }
+        case .news:
+            newsList(isCompact: false)
+        case .community:
+            Text("La nostra comunità")
+                .font(.title.bold())
+                .foregroundStyle(.white)
+            infoCard(title: "Comunità dei romeni in Italia",
+                     detail: "Storie, iniziative, esperienze e incontri della nostra comunità.",
+                     symbol: "person.3.fill", button: "Apri la comunità") {
+                openInApp("\(site)/comunitate.html")
+            }
+            infoCard(title: "Eventi",
+                     detail: "Scopri gli appuntamenti e le iniziative culturali.",
+                     symbol: "calendar", button: "Scopri gli eventi") {
+                openInApp("\(site)/evenimente.html")
+            }
+            infoCard(title: "Riflessioni sulla Diaspora",
+                     detail: "Il podcast originale di RDI sulle storie dei romeni in Italia.",
+                     symbol: "mic.fill", button: "Ascolta il podcast") {
+                openInApp(podcast, pauseRadio: true)
+            }
+        case .settings:
+            settingsContent
         }
     }
 
-    private var radioCard: some View {
-        VStack(alignment: .leading, spacing: 18) {
-            HStack {
-                Label("ASCULTĂ LIVE", systemImage: "dot.radiowaves.left.and.right")
-                    .font(.caption.weight(.bold))
-                    .tracking(1.1)
-                    .foregroundStyle(orange)
-                Spacer()
-                Image(systemName: "waveform")
-                    .font(.title2)
-                    .foregroundStyle(.white.opacity(0.75))
-                    .accessibilityHidden(true)
-            }
-
-            Text("Muzică, știri\nși comunitate")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+    private var quickAccess: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Scopri RDI")
+                .font(.system(size: 19, weight: .bold))
                 .foregroundStyle(.white)
-                .fixedSize(horizontal: false, vertical: true)
 
-            Text(radio.isBuffering ? "Se conectează la emisie..." :
-                    (radio.isPlaying ? "Acum asculți Radio Românii" : "Radioul tău, oriunde te-ai afla"))
-                .font(.subheadline)
-                .foregroundStyle(.white.opacity(0.75))
-
-            Button(action: radio.toggle) {
-                HStack(spacing: 12) {
-                    Image(systemName: radio.isPlaying ? "pause.fill" : "play.fill")
-                        .font(.title3.weight(.bold))
-                    Text(radio.isPlaying ? "Pauză" : "Pornește radioul")
-                        .font(.headline)
-                    Spacer()
-                    Image(systemName: "headphones")
+            HStack(spacing: 8) {
+                RDIQuickTile(
+                    title: "AI MUSIC",
+                    subtitle: "Top 3 e brani originali",
+                    symbol: "music.note",
+                    colors: [Color(red: 0.42, green: 0.08, blue: 0.89),
+                             Color(red: 0.80, green: 0.15, blue: 0.65)]
+                ) {
+                    openInApp("\(site)/spotlight-ai.html", pauseRadio: true)
                 }
-                .foregroundStyle(navy)
-                .padding(17)
-                .background(orange, in: RoundedRectangle(cornerRadius: 15))
-            }
-            .buttonStyle(.plain)
-            .accessibilityHint("Pornește sau oprește transmisia live")
 
-            if let error = radio.errorMessage {
-                Label(error, systemImage: "exclamationmark.triangle")
-                    .font(.footnote)
-                    .foregroundStyle(.white)
-                    .fixedSize(horizontal: false, vertical: true)
+                RDIQuickTile(
+                    title: "LIVE YOUTUBE",
+                    subtitle: "Dirette ed eventi",
+                    symbol: "play.rectangle.fill",
+                    colors: [Color(red: 0.86, green: 0.04, blue: 0.24),
+                             Color(red: 0.94, green: 0.23, blue: 0.11)]
+                ) {
+                    // Il video parte nell'app YouTube o nel browser; evita due flussi simultanei.
+                    radio.pause()
+                    if let url = URL(string: youtubeLive) { openURL(url) }
+                }
+
+                RDIQuickTile(
+                    title: "PODCAST",
+                    subtitle: "Interviste e riflessioni",
+                    symbol: "mic.fill",
+                    colors: [Color(red: 0.02, green: 0.36, blue: 0.92),
+                             Color(red: 0.45, green: 0.13, blue: 0.89)]
+                ) {
+                    openInApp(podcast, pauseRadio: true)
+                }
             }
         }
-        .padding(22)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            LinearGradient(
-                colors: [navy, Color(red: 0.13, green: 0.20, blue: 0.34)],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            ),
-            in: RoundedRectangle(cornerRadius: 24)
+    }
+
+    private func newsList(isCompact: Bool) -> some View {
+        RDINewsList(
+            store: news,
+            compact: isCompact,
+            onShowAll: { tab = .news },
+            onOpenArticle: { url in
+                webPage = RDIWebPage(url: url)
+            }
         )
     }
 
-    private var newsSection: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Ultimele știri")
-                        .font(.title2.weight(.bold))
-                        .foregroundStyle(.primary)
-                    Text("Noutăți din Italia, România și diaspora")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
+    private var settingsContent: some View {
+        VStack(alignment: .leading, spacing: 17) {
+            Text("Impostazioni")
+                .font(.title.bold())
+                .foregroundStyle(.white)
+
+            Toggle(isOn: $reduceAnimations) {
+                Label("Riduci le animazioni", systemImage: "sparkles")
+                    .font(.headline)
+            }
+            .tint(RDITheme.orange)
+            .padding(18)
+            .background(RDITheme.panel, in: RoundedRectangle(cornerRadius: 17))
+
+            Text("Gli effetti grafici non modificano l'audio della radio.")
+                .font(.footnote)
+                .foregroundStyle(RDITheme.muted)
+
+            infoCard(title: "Sito ufficiale RDI",
+                     detail: "Notizie, dirette e comunità.",
+                     symbol: "globe", button: "Apri il sito") {
+                openInApp("\(site)/")
+            }
+        }
+    }
+
+    private func infoCard(title: String, detail: String, symbol: String,
+                          button: String, action: @escaping () -> Void) -> some View {
+        VStack(alignment: .leading, spacing: 13) {
+            Label(title, systemImage: symbol)
+                .font(.headline)
+                .foregroundStyle(.white)
+            Text(detail)
+                .font(.subheadline)
+                .foregroundStyle(RDITheme.muted)
+            Button(action: action) {
+                HStack {
+                    Text(button)
+                    Spacer()
+                    Image(systemName: "arrow.up.right")
                 }
-                Spacer()
+                .font(.subheadline.bold())
+                .foregroundStyle(RDITheme.orange)
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(RDITheme.panel, in: RoundedRectangle(cornerRadius: 18))
+        .overlay(RoundedRectangle(cornerRadius: 18)
+            .stroke(RDITheme.cyan.opacity(0.24), lineWidth: 1))
+    }
+
+    private var bottomBar: some View {
+        HStack(spacing: 0) {
+            ForEach(RDITab.allCases) { item in
                 Button {
-                    Task { await news.refresh() }
+                    withAnimation(noMotion ? nil : .easeInOut(duration: 0.19)) {
+                        tab = item
+                    }
                 } label: {
-                    Image(systemName: "arrow.clockwise")
-                        .font(.headline)
-                        .frame(width: 42, height: 42)
-                        .background(.white, in: Circle())
+                    VStack(spacing: 5) {
+                        Image(systemName: item.icon)
+                            .font(.system(size: 20, weight: .semibold))
+                            .frame(height: 23)
+                        Text(item.rawValue)
+                            .font(.system(size: 10, weight: tab == item ? .bold : .medium))
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.72)
+                    }
+                    .foregroundStyle(tab == item ? RDITheme.orange : RDITheme.muted)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 57)
+                    .background(
+                        tab == item ? RDITheme.orange.opacity(0.1) : .clear,
+                        in: RoundedRectangle(cornerRadius: 15)
+                    )
                 }
-                .accessibilityLabel("Actualizează știrile")
+                .buttonStyle(.plain)
+                .accessibilityAddTraits(tab == item ? [.isSelected] : [])
+            }
+        }
+        .padding(.horizontal, 9)
+        .padding(.top, 9)
+        .padding(.bottom, 3)
+        .background(
+            RDITheme.background
+                .overlay(alignment: .top) {
+                    Rectangle().fill(RDITheme.cyan.opacity(0.27)).frame(height: 1)
+                }
+        )
+    }
+
+    private func openInApp(_ address: String, pauseRadio: Bool = false) {
+        guard let url = URL(string: address), url.scheme == "https" else { return }
+        if pauseRadio { radio.pause() }
+        webPage = RDIWebPage(url: url)
+    }
+}
+
+private struct RDINewsList: View {
+    @ObservedObject var store: RadioNewsStore
+    let compact: Bool
+    let onShowAll: () -> Void
+    let onOpenArticle: (URL) -> Void
+    @State private var filter: RDINewsFilter = .all
+
+    private var visible: [RadioNewsArticle] {
+        let filtered = store.articles.filter { filter.includes($0) }
+        return compact ? Array(filtered.prefix(2)) : Array(filtered.prefix(50))
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack {
+                Label("Ultime notizie", systemImage: "newspaper.fill")
+                    .font(.system(size: 21, weight: .bold))
+                    .foregroundStyle(.white)
+                Spacer()
+                if compact {
+                    Button("Vedi tutto") { onShowAll() }
+                        .font(.subheadline.bold())
+                        .foregroundStyle(RDITheme.orange)
+                } else {
+                    Button {
+                        Task { await store.refresh() }
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                            .font(.headline)
+                    }
+                    .accessibilityLabel("Aggiorna notizie")
+                }
             }
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 9) {
-                    ForEach(NewsFilter.allCases, id: \.self) { item in
+                HStack(spacing: 8) {
+                    ForEach(RDINewsFilter.allCases) { item in
                         Button {
                             filter = item
                         } label: {
                             Text(item.rawValue)
-                                .font(.subheadline.weight(.semibold))
-                                .padding(.horizontal, 15)
-                                .padding(.vertical, 10)
-                                .foregroundStyle(filter == item ? Color.white : Color.primary)
+                                .font(.system(size: 12, weight: .semibold))
+                                .foregroundStyle(filter == item ? .white : RDITheme.muted)
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 9)
                                 .background(
-                                    filter == item ? navy : Color(uiColor: .secondarySystemGroupedBackground),
+                                    filter == item ? RDITheme.orange :
+                                        RDITheme.panel,
                                     in: Capsule()
                                 )
+                                .overlay(Capsule()
+                                    .stroke(.white.opacity(0.24), lineWidth: 0.7))
                         }
                         .buttonStyle(.plain)
                     }
                 }
-                .padding(.vertical, 2)
             }
 
-            if news.isLoading && news.articles.isEmpty {
-                ProgressView("Se încarcă știrile...")
-                    .frame(maxWidth: .infinity)
-                    .padding(36)
-            } else if let error = news.errorMessage, news.articles.isEmpty {
-                ContentUnavailableViewFallback(message: error)
-            } else if filteredArticles.isEmpty {
-                ContentUnavailableViewFallback(message: "Nu există încă știri în această categorie.")
+            if store.isLoading && store.articles.isEmpty {
+                ProgressView("Caricamento delle notizie…")
+                    .foregroundStyle(.white)
+                    .padding(22)
+            } else if visible.isEmpty {
+                Text(store.errorMessage ?? "Non ci sono notizie in questa categoria.")
+                    .font(.subheadline)
+                    .foregroundStyle(RDITheme.muted)
+                    .padding(18)
             } else {
-                LazyVStack(spacing: 12) {
-                    ForEach(filteredArticles) { article in
+                LazyVStack(spacing: 10) {
+                    ForEach(visible) { article in
                         newsCard(article)
                     }
                 }
@@ -246,22 +431,41 @@ struct RadioHomeView: View {
     private func newsCard(_ article: RadioNewsArticle) -> some View {
         Button {
             guard let url = article.destination else { return }
-            articleDestination = ArticleDestination(url: url)
+            onOpenArticle(url)
         } label: {
-            HStack(alignment: .top, spacing: 13) {
-                newsThumbnail(article)
-                VStack(alignment: .leading, spacing: 7) {
-                    Text((article.category ?? "Știri").uppercased())
-                        .font(.system(size: 10, weight: .bold))
-                        .tracking(0.7)
-                        .foregroundStyle(orange)
+            HStack(spacing: 11) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(RDITheme.panel)
+                    if let imageURL = article.imageURL {
+                        AsyncImage(url: imageURL) { phase in
+                            switch phase {
+                            case .success(let image): image.resizable().scaledToFill()
+                            default:
+                                Image(systemName: "newspaper.fill")
+                                    .resizable().scaledToFit().padding(24)
+                                    .foregroundStyle(RDITheme.cyan)
+                            }
+                        }
+                        .clipped()
+                    } else {
+                        Image(systemName: "newspaper.fill")
+                            .font(.largeTitle)
+                            .foregroundStyle(RDITheme.cyan)
+                    }
+                }
+                .frame(width: 104, height: 100)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
 
-                    Text(article.title)
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(.primary)
+                VStack(alignment: .leading, spacing: 6) {
+                    Text((article.category ?? "NOTIZIE").uppercased())
+                        .font(.system(size: 10, weight: .black))
+                        .foregroundStyle(RDITheme.orange)
+                    Text(store.italianTitle(for: article))
+                        .font(.system(size: 13, weight: .bold))
+                        .foregroundStyle(.white)
                         .lineLimit(3)
                         .multilineTextAlignment(.leading)
-
                     HStack(spacing: 5) {
                         Text(article.source ?? "RDI")
                         if let date = article.shortDate {
@@ -269,120 +473,27 @@ struct RadioHomeView: View {
                             Text(date)
                         }
                     }
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    .font(.system(size: 10))
+                    .foregroundStyle(RDITheme.muted)
                     .lineLimit(1)
                 }
                 Spacer(minLength: 0)
+                Image(systemName: "chevron.right")
+                    .font(.caption.bold())
+                    .foregroundStyle(RDITheme.cyan)
             }
-            .padding(12)
+            .padding(9)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Color(uiColor: .secondarySystemGroupedBackground),
-                        in: RoundedRectangle(cornerRadius: 16))
+            .background(
+                LinearGradient(colors: [RDITheme.panel,
+                                         Color(red: 0.025, green: 0.065, blue: 0.16)],
+                               startPoint: .topLeading, endPoint: .bottomTrailing),
+                in: RoundedRectangle(cornerRadius: 17)
+            )
+            .overlay(RoundedRectangle(cornerRadius: 17)
+                .stroke(RDITheme.cyan.opacity(0.39), lineWidth: 0.9))
         }
         .buttonStyle(.plain)
-        .accessibilityHint("Deschide articolul")
-    }
-
-    @ViewBuilder
-    private func newsThumbnail(_ article: RadioNewsArticle) -> some View {
-        if let url = article.imageURL {
-            AsyncImage(url: url) { phase in
-                if case .success(let image) = phase {
-                    image.resizable().scaledToFill()
-                } else {
-                    thumbnailPlaceholder
-                }
-            }
-            .frame(width: 98, height: 96)
-            .clipShape(RoundedRectangle(cornerRadius: 11))
-        } else {
-            thumbnailPlaceholder
-                .frame(width: 98, height: 96)
-                .clipShape(RoundedRectangle(cornerRadius: 11))
-        }
-    }
-
-    private var thumbnailPlaceholder: some View {
-        ZStack {
-            Color(red: 0.93, green: 0.94, blue: 0.96)
-            Image(systemName: "newspaper.fill")
-                .font(.title2)
-                .foregroundStyle(navy.opacity(0.45))
-        }
-    }
-
-    private var communityFooter: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Label("Comunitatea noastră", systemImage: "person.3.fill")
-                .font(.headline)
-            Text("Povești, evenimente și informații pentru românii din Italia.")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-
-            Link(destination: URL(string: "https://radioromanii.duckdns.org/")!) {
-                HStack {
-                    Text("Explorează site-ul RDI")
-                    Spacer()
-                    Image(systemName: "arrow.up.right")
-                }
-                .font(.subheadline.weight(.semibold))
-                .foregroundStyle(orange)
-            }
-        }
-        .padding(20)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(uiColor: .secondarySystemGroupedBackground),
-                    in: RoundedRectangle(cornerRadius: 18))
-    }
-
-    private var compactPlayer: some View {
-        HStack(spacing: 12) {
-            Image(systemName: "antenna.radiowaves.left.and.right")
-                .font(.title3.weight(.bold))
-                .foregroundStyle(orange)
-                .frame(width: 40, height: 40)
-                .background(navy, in: RoundedRectangle(cornerRadius: 10))
-
-            VStack(alignment: .leading, spacing: 3) {
-                Text("Radio Românii din Italia")
-                    .font(.subheadline.weight(.semibold))
-                    .lineLimit(1)
-                Text(radio.isBuffering ? "Conectare..." : (radio.isPlaying ? "În direct" : "Atinge pentru a asculta"))
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
-            Spacer()
-            Button(action: radio.toggle) {
-                Image(systemName: radio.isPlaying ? "pause.fill" : "play.fill")
-                    .font(.title3.weight(.bold))
-                    .foregroundStyle(.white)
-                    .frame(width: 46, height: 46)
-                    .background(orange, in: Circle())
-            }
-            .accessibilityLabel(radio.isPlaying ? "Pauză" : "Pornește radioul")
-        }
-        .padding(.horizontal, 18)
-        .padding(.vertical, 10)
-        .frame(maxWidth: .infinity)
-        .background(.regularMaterial)
-    }
-}
-
-private struct ContentUnavailableViewFallback: View {
-    let message: String
-
-    var body: some View {
-        VStack(spacing: 9) {
-            Image(systemName: "wifi.exclamationmark")
-                .font(.title)
-                .foregroundStyle(.secondary)
-            Text(message)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(30)
+        .accessibilityHint("Apri l'articolo")
     }
 }
