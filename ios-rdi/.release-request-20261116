@@ -1,6 +1,6 @@
 RDI iOS signed distribution request
 Date: 2026-11-16
-Version: 1.0 (build 4)
-Release content: Italian neon radio home, animated background and waveform light trails, glowing AI Music, YouTube Live, YouTube Podcasts shortcuts, RDI news and native playback in background.
-Source: main after PR #29 merge 1856428687539bea02984828a145164aadd50eb8.
-Target: upload to App Store Connect for TestFlight; do not submit for public App Store review.
+Version: 1.0 (build 5)
+Release content: Compact live radio and feature buttons for news-first homepage; dedicated native AI Music playlist from approved RDI catalog; Top 3, artists, previous/play-pause/next, auto-advance and lock-screen remote controls; bounded radio reconnection and foreground recovery.
+Source: main after PR #30 merge ea1b809bb84f4af2bee4fc237738011db29077fb.
+Target: upload to App Store Connect for TestFlight. Do not submit for public App Store review.
