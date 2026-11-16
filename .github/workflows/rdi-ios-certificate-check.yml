@@ -36,9 +36,13 @@ jobs:
           openssl pkcs12 -in "$RUNNER_TEMP/rdi.p12" -nodes -passin env:P12_PASSWORD -out "$RUNNER_TEMP/rdi-identity.pem"
           TEMP_IMPORT_PASSWORD="$(openssl rand -hex 24)"
           echo "::add-mask::$TEMP_IMPORT_PASSWORD"
-          openssl pkcs12 -export -in "$RUNNER_TEMP/rdi-identity.pem" -out "$RUNNER_TEMP/rdi-modern.p12" -passout "pass:$TEMP_IMPORT_PASSWORD" -keypbe AES-256-CBC -certpbe AES-256-CBC -macalg sha256
+          if ! grep -Eq "BEGIN (RSA |EC |ENCRYPTED )?PRIVATE KEY" "$RUNNER_TEMP/rdi-identity.pem"; then
+            echo "::error::Il P12 non contiene una chiave privata, impossibile firmare applicazioni."
+            exit 1
+          fi
+          openssl pkcs12 -export -legacy -in "$RUNNER_TEMP/rdi-identity.pem" -out "$RUNNER_TEMP/rdi-modern.p12" -passout "pass:$TEMP_IMPORT_PASSWORD" -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -macalg sha1
           echo "TEMP_IMPORT_PASSWORD=$TEMP_IMPORT_PASSWORD" >> "$GITHUB_ENV"
-          echo "OK: P12 ricreato con AES-256/SHA-256"
+          echo "OK: P12 ricreato con compatibilità Apple PKCS12 3DES/SHA1"
       - name: Prova importazione nel portachiavi macOS
         shell: bash
         run: |
