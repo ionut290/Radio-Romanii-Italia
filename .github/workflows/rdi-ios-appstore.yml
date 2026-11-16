@@ -35,10 +35,14 @@ jobs:
           mkdir -p "$CERT_DIR" "$HOME/Library/MobileDevice/Provisioning Profiles"
           echo "$P12_B64" | base64 --decode > "$CERT_DIR/certificate.p12"
           echo "$PROFILE_B64" | base64 --decode > "$CERT_DIR/profile.mobileprovision"
+          umask 077
+          openssl pkcs12 -in "$CERT_DIR/certificate.p12" -nodes -passin env:P12_PASSWORD -out "$CERT_DIR/identity.pem"
+          openssl pkcs12 -export -in "$CERT_DIR/identity.pem" -out "$CERT_DIR/modern.p12" -passout env:P12_PASSWORD -keypbe AES-256-CBC -certpbe AES-256-CBC -macalg sha256
+          rm -f "$CERT_DIR/identity.pem"
           security create-keychain -p "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
           security set-keychain-settings -lut 21600 "$CERT_DIR/build.keychain-db"
           security unlock-keychain -p "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
-          security import "$CERT_DIR/certificate.p12" -k "$CERT_DIR/build.keychain-db" -P "$P12_PASSWORD" -T /usr/bin/codesign
+          security import "$CERT_DIR/modern.p12" -k "$CERT_DIR/build.keychain-db" -P "$P12_PASSWORD" -T /usr/bin/codesign
           security list-keychains -d user -s "$CERT_DIR/build.keychain-db" login.keychain-db
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$P12_PASSWORD" "$CERT_DIR/build.keychain-db"
           PROFILE_UUID=$(/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< "$(security cms -D -i "$CERT_DIR/profile.mobileprovision")")
