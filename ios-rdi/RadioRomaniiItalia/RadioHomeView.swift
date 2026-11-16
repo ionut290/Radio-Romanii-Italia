@@ -73,6 +73,7 @@ private struct RDIInAppBrowser: UIViewControllerRepresentable {
 struct RadioHomeView: View {
     @EnvironmentObject private var radio: RadioPlayer
     @Environment(\.openURL) private var openURL
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(\.accessibilityReduceMotion) private var systemReduceMotion
     @StateObject private var news = RadioNewsStore()
     @StateObject private var aiMusic = RDIAIMusicStore()
@@ -115,7 +116,24 @@ struct RadioHomeView: View {
             RDIInAppBrowser(url: target.url)
                 .ignoresSafeArea()
         }
-        .task { await news.refresh() }
+        .task {
+            await news.refresh()
+            // Il sito aggiorna le notizie ogni 10 minuti: allineiamo l'app.
+            while !Task.isCancelled {
+                do {
+                    try await Task.sleep(nanoseconds: 600_000_000_000)
+                } catch {
+                    break
+                }
+                await news.refresh()
+            }
+        }
+        .onChange(of: scenePhase) { phase in
+            if phase == .active {
+                // Riaggiorna subito anche tornando all'app dopo una lunga assenza.
+                Task { await news.refresh() }
+            }
+        }
     }
 
     private var header: some View {
@@ -352,6 +370,12 @@ private struct RDINewsList: View {
                     }
                     .accessibilityLabel("Aggiorna notizie")
                 }
+            }
+
+            if let lastUpdated = store.lastUpdated {
+                Text("Notizie aggiornate: " + lastUpdated.formatted(date: .abbreviated, time: .shortened))
+                    .font(.caption2)
+                    .foregroundStyle(RDITheme.muted)
             }
 
             ScrollView(.horizontal, showsIndicators: false) {
