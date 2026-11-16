@@ -80,7 +80,7 @@ struct RadioHomeView: View {
 
     private let site = "https://radioromanii.duckdns.org"
     private let youtubeLive = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/live"
-    private let podcast = "https://music.amazon.com/podcasts/bc30b069-0dd7-4131-8921-dc97f49374c7/riflessioni-sulla-diaspora"
+    private let podcast = "https://www.youtube.com/channel/UCmvtZ9q5gOoFJEm_Q9UaOuw/playlists"
 
     private var noMotion: Bool { reduceAnimations || systemReduceMotion }
 
@@ -189,10 +189,10 @@ struct RadioHomeView: View {
                      symbol: "calendar", button: "Scopri gli eventi") {
                 openInApp("\(site)/evenimente.html")
             }
-            infoCard(title: "Riflessioni sulla Diaspora",
-                     detail: "Il podcast originale di RDI sulle storie dei romeni in Italia.",
-                     symbol: "mic.fill", button: "Ascolta il podcast") {
-                openInApp(podcast, pauseRadio: true)
+            infoCard(title: "Podcast RDI su YouTube",
+                     detail: "Trova gli episodi e le rubriche nel canale YouTube della radio.",
+                     symbol: "mic.fill", button: "Guarda i podcast") {
+                openExternalMedia(podcast)
             }
         case .settings:
             settingsContent
@@ -224,8 +224,7 @@ struct RadioHomeView: View {
                              Color(red: 0.94, green: 0.23, blue: 0.11)]
                 ) {
                     // Il video parte nell'app YouTube o nel browser; evita due flussi simultanei.
-                    radio.pause()
-                    if let url = URL(string: youtubeLive) { openURL(url) }
+                    openExternalMedia(youtubeLive)
                 }
 
                 RDIQuickTile(
@@ -342,6 +341,12 @@ struct RadioHomeView: View {
                     Rectangle().fill(RDITheme.cyan.opacity(0.27)).frame(height: 1)
                 }
         )
+    }
+
+    private func openExternalMedia(_ address: String) {
+        guard let url = URL(string: address), url.scheme == "https" else { return }
+        radio.pause()
+        openURL(url)
     }
 
     private func openInApp(_ address: String, pauseRadio: Bool = false) {
