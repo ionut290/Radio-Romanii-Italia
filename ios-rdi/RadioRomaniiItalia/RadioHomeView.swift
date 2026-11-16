@@ -147,14 +147,14 @@ struct RadioHomeView: View {
             Spacer(minLength: 3)
 
             Button {
-                openInApp("\(site)/")
+                tab = .settings
             } label: {
-                Image(systemName: "bell.badge")
+                Image(systemName: "gearshape.fill")
                     .font(.system(size: 20))
                     .foregroundStyle(.white)
                     .frame(width: 43, height: 43)
             }
-            .accessibilityLabel("Apri il sito della radio")
+            .accessibilityLabel("Apri impostazioni")
         }
         .padding(.horizontal, 16)
         .padding(.top, 6)
@@ -313,7 +313,7 @@ struct RadioHomeView: View {
 
     private var bottomBar: some View {
         HStack(spacing: 0) {
-            ForEach(RDITab.allCases) { item in
+            ForEach(RDITab.allCases.filter { $0 != .settings }) { item in
                 Button {
                     withAnimation(noMotion ? nil : .easeInOut(duration: 0.19)) {
                         tab = item
