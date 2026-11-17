@@ -1,5 +1,5 @@
 {
-  "news_updated_at": "2026-11-17T17:49:15.540978+00:00",
+  "news_updated_at": "2026-11-17T18:34:39.643488+00:00",
   "editorial_updated_at": "2026-11-17T14:10:29.655911+01:00",
   "translations_updated_at": "2026-11-17T09:15:00.057370+00:00",
   "feed_total": 120,
@@ -12,8 +12,8 @@
   "pending_total": 125,
   "pending_filtered_out": 112,
   "editorial_verde": 0,
-  "editorial_galben": 44,
-  "editorial_rosu": 44,
+  "editorial_galben": 43,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,66 +618,399 @@
   ],
   "recent_news": [
     {
-      "title": "Zelenski a dezvăluit de ce Ucraina a lovit podul strategic Kerci. „Performanța excepțională” a dronelor și ce a funcționat „fără cusur”",
+      "title": "Sciopero generale Cgil del 20 novembre: chi si ferma e chi no, fasce garantite e cortei in tutta Italia",
+      "category": "Italia",
+      "published": "2026-11-17T18:34:13+00:00",
+      "url": "https://www.ilsole24ore.com/art/sciopero-generale-cgil-20-novembre-chi-si-ferma-e-chi-no-fasce-garantite-e-cortei-tutta-italia-AJ4y6VJC",
+      "source": "Il Sole 24 Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Brașovul le va oferi tinerilor care împlinesc 18 ani o cutie de bomboane și un an de cultură gratuită / Primăria vrea să le organizeze și o petrecere de majorat",
       "category": "România",
-      "published": "2026-11-17T17:45:03+00:00",
-      "url": "https://hotnews.ro/zelenski-a-dezvaluit-de-ce-ucraina-a-lovit-podul-strategic-kerci-performanta-exceptionala-a-dronelor-si-ce-a-functionat-fara-cusur-2406861",
-      "source": "HotNews",
+      "published": "2026-11-17T18:34:04+00:00",
+      "url": "https://www.g4media.ro/brasovul-le-va-oferi-tinerilor-care-implinesc-18-ani-o-cutie-de-bomboane-si-un-an-de-cultura-gratuita-primaria-vrea-sa-le-organizeze-si-o-petrecere-de-majorat.html",
+      "source": "G4Media",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Deutsche Bank under fire after internal documents made public",
+      "category": "Mondo",
+      "published": "2026-11-17T18:32:00+00:00",
+      "url": "https://www.dw.com/en/deutsche-bank-under-fire-after-internal-documents-made-public/a-79974543?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Luca Niculescu promite menținerea cotei unice și eliminarea impozitului minim pe cifra de afaceri / Declarația, făcută la Topul Național al Firmelor Private",
+      "category": "România",
+      "published": "2026-11-17T18:31:49+00:00",
+      "url": "https://www.g4media.ro/luca-niculescu-promite-mentinerea-cotei-unice-si-eliminarea-impozitului-minim-pe-cifra-de-afaceri-declaratia-facuta-la-topul-national-al-firmelor-private.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Trump a Manila: 'Raggiungeremo la Cina in 10 mesi sulle terre rare'",
+      "category": "Italia",
+      "published": "2026-11-17T18:30:30+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/trump-a-manila-raggiungeremo-la-cina-in-10-mesi-sulle-terre-rare_eb409fc3-0041-4e11-984a-6f48490ab800.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Emendamento al dl sicurezza, divieto di social agli under 13",
+      "category": "Italia",
+      "published": "2026-11-17T18:30:12+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/emendamento-al-dl-sicurezza-divieto-di-social-agli-under-13-_f50ee740-ac1a-426d-bb89-b77139abfd54.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Philip R. Lane: The practice and science of monetary policy communication: the ECB experience",
+      "category": "Unione europea",
+      "published": "2026-11-17T18:30:00+00:00",
+      "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261117~7f5d3b1a0e.en.pdf",
+      "source": "Banca Centrale Europea",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Greaua moștenire a lui Orbán: Milioane îngropate, trafic de persoane",
+      "category": "România",
+      "published": "2026-11-17T18:26:21+00:00",
+      "url": "https://adevarul.ro/blogurile-adevarul/greaua-mostenire-a-lui-orban-milioane-ingropate-2572311.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "PSD se gândește la un impozit progresiv pe salarii, cu plecare de la 0% pentru salariul minim. Care sunt tranșele de impozit propuse și ce spune premierul Niculescu",
+      "category": "România",
+      "published": "2026-11-17T18:24:50+00:00",
+      "url": "https://www.economica.net/psd-se-gandeste-la-un-impozit-progresiv-pe-salarii-cu-plecare-de-la-0-pentru-salariul-minim-care-sunt-transele-de-impozit-propuse-si-ce-spune-premierul-niculescu_996407.html",
+      "source": "Economica.net",
+      "status": "roșu",
       "words": 0
     },
     {
       "title": "Jensen Huang pushes Nvidia comeback after board rejects pressure to reinstate ex-boss",
       "category": "Mondo",
-      "published": "2026-11-17T17:42:26+00:00",
+      "published": "2026-11-17T18:24:21+00:00",
       "url": "https://www.bbc.co.uk/news/articles/cwx2en2vrxmdo?at_medium=RSS&at_campaign=rss",
       "source": "BBC News",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Piața muncii din România, deblocată prin repunerea platformei WorkinRomania. Ministrul Muncii, către antreprenori: Uneori, doar cu un telefon și cu încredere, poți să deblochezi un subiect important. Pentru tot ce nu cos",
+      "title": "Mesaj de la Cotroceni către antreprenori. „Statul nu va mai avea bani pentru subvenții, scheme de sprijin”",
       "category": "România",
-      "published": "2026-11-17T17:42:00+00:00",
-      "url": "https://www.profit.ro/taxe-si-consultanta/piata-muncii-romania-deblocata-repunerea-platformei-workinromania-ministrul-muncii-catre-antreprenori-uneori-telefon-incredere-poti-deblochezi-subiect-important-tot-costa-bani-aveti-mine-partener-22994245?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
+      "published": "2026-11-17T18:23:13+00:00",
+      "url": "https://hotnews.ro/mesaj-de-la-cotroceni-catre-antreprenori-statul-nu-va-mai-avea-bani-pentru-subventii-scheme-de-sprijin-2406877",
+      "source": "HotNews",
+      "status": "galben",
       "words": 0
     },
     {
-      "title": "Șeful Ford Europa avertizează că excluderea Marii Britanii, Turciei și Marocului din iniţiativa „Made in Europe” va afecta industria auto a UE în loc să o consolideze",
+      "title": "Colterm Timișoara pregătește transportul cărbunelui pe șosea / Linia ferată Drobeta – Turnu Severin – Caransebeș va fi închisă cinci ani / Cărbunele vine din Motru",
       "category": "România",
-      "published": "2026-11-17T17:39:25+00:00",
-      "url": "https://www.economica.net/seful-ford-europa-avertizeaza-ca-excluderea-marii-britanii-turciei-si-marocului-din-initiativa-made-in-europe-va-afecta-industria-auto-a-ue-in-loc-sa-o-consolideze_996390.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "GALERIE FOTO ”Ziua cârtiței” pe autostrada Sibiu – Pitești / Se montează TBM-ul care va fora Tunelul Poiana / E folosită o macara care poate ridica 400 de tone",
-      "category": "România",
-      "published": "2026-11-17T17:39:06+00:00",
-      "url": "https://www.g4media.ro/galerie-foto-ziua-cartitei-pe-autostrada-sibiu-pitesti-se-monteaza-tbm-ul-care-va-fora-tunelul-poiana-e-folosita-o-macara-care-poate-ridica-400-de-tone.html",
+      "published": "2026-11-17T18:22:14+00:00",
+      "url": "https://www.g4media.ro/colterm-timisoara-pregateste-transportul-carbunelui-pe-sosea-linia-ferata-drobeta-turnu-severin-caransebes-va-fi-inchisa-cinci-ani-carbunele-vine-din-motru.html",
       "source": "G4Media",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Niculescu: Întreprinderile mici și mijlocii reprezintă 98% din firmele din România. Guvernul promite reducerea birocrației cu 25%",
+      "title": "Tribunalul din Paris suspendă interdicția protestelor lângă școli: „O palmă dată guvernului”",
       "category": "România",
-      "published": "2026-11-17T17:38:55+00:00",
-      "url": "https://www.digi24.ro/stiri/economie/niculescu-intreprinderile-mici-si-mijlocii-reprezinta-98-din-firmele-din-romania-guvernul-promite-reducerea-birocratiei-cu-25-4040739",
+      "published": "2026-11-17T18:21:37+00:00",
+      "url": "https://www.g4media.ro/tribunalul-din-paris-suspenda-interdictia-protestelor-langa-scoli-o-palma-data-guvernului.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Bollette, ecco perché fare la lavatrice di giorno fa risparmiare",
+      "category": "Italia",
+      "published": "2026-11-17T18:19:21+00:00",
+      "url": "https://www.ilsole24ore.com/art/bollette-ecco-perche-fare-lavatrice-giorno-fa-risparmiare-AJgmkpJC",
+      "source": "Il Sole 24 Ore Economia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Meta testează o nouă aplicație de comunicare",
+      "category": "România",
+      "published": "2026-11-17T18:18:00+00:00",
+      "url": "https://www.profit.ro/romania-conectata/meta-testeaza-o-noua-aplicatie-de-comunicare-22992971?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Bursa de Valori București a numit-o pe Iuliana Mușat în funcția de director financiar",
+      "category": "România",
+      "published": "2026-11-17T18:16:02+00:00",
+      "url": "https://www.economica.net/bursa-de-valori-bucuresti-a-numit-o-pe-iuliana-musat-in-functia-de-director-financiar_996403.html",
+      "source": "Economica.net",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fritz, reacție la comisia de anchetă pentru folosirea SPP: „Nu nunta fiicei lui Bolojan e problema”. Liderul USR spune cine „a rămas fără lanț”",
+      "category": "România",
+      "published": "2026-11-17T18:14:53+00:00",
+      "url": "https://hotnews.ro/fritz-reactie-la-comisia-de-ancheta-pentru-folosirea-spp-nu-nunta-fiicei-lui-bolojan-e-problema-liderul-usr-spune-cine-a-ramas-fara-lant-2406878",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ion urma să devină tată. Un tren l-a ucis în Italia, după ce ieșise să cumpere chips-uri pentru iubita gravidă - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-17T18:14:47+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOU2JrcU1wUUlfZjdtRnJxcTBrMkRtSDhVQTlFUnJuRVlzY0NFZ0UyQlpoSHNGSFhRS3A4X1BPc3VRbFkzdlVpMWVoakhVU0tiRDVvRXhVNTBNZGNfOTdpZ0hoeS1ucF91ckh0aGtkODdRSi1STUUyMUY4Q0FDSmxxajFVRnVIOTVQRi1CM2paYUxVaWlMRGJaNDJHTkVuMThaN1N1c0Vobk4wMmYyaDMtVGttMDc4YjhkVUZmS1JOQ1JLYUdKU3VvYjNIRjU?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ucraina deschide un consulat în municipiul Sighetu Marmaţiei / „Să nu uităm că dincolo de graniţe trăiesc oameni care au nevoie de prieteni adevăraţi”",
+      "category": "România",
+      "published": "2026-11-17T18:14:25+00:00",
+      "url": "https://www.g4media.ro/ucraina-deschide-un-consulat-in-municipiul-sighetu-marmatiei-sa-nu-uitam-ca-dincolo-de-granite-traiesc-oameni-care-au-nevoie-de-prieteni-adevarati.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Jensen Huang to testify before US House committees next month",
+      "category": "Mondo",
+      "published": "2026-11-17T18:14:06+00:00",
+      "url": "https://www.aljazeera.com/economy/2026/11/17/jensen-huang-to-testify-before-us-house-committees-next-month?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "FBI a emis o avertizare privind amenințări cibernetice la nivel global. Hackeri „afiliați statal” exploatează tehnologia Artex AI",
+      "category": "România",
+      "published": "2026-11-17T18:12:07+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/fbi-a-emis-o-avertizare-privind-amenintari-cibernetice-la-nivel-global-hackeri-afiliati-statal-exploateaza-tehnologia-artex-ai-4040759",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Trump, întâmpinat cu proteste în Filipine. Mii de oameni au ieșit în stradă la Manila",
+      "title": "Bosnia – România, LIVE de la 21:45. „Tricolorii” luptă pentru evitarea ultimului loc în grupa din Liga Națiunilor",
       "category": "România",
-      "published": "2026-11-17T17:36:29+00:00",
-      "url": "https://adevarul.ro/stiri-externe/trump-intampinat-cu-proteste-in-filipine-mii-de-2572291.html",
+      "published": "2026-11-17T18:12:01+00:00",
+      "url": "https://hotnews.ro/bosnia-romania-live-liga-natiunilor-2406690",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Numărul doi din Pentagon critică atacurile Ucrainei în profunzimea teritoriului Rusiei și le numește o „sursă de escaladare”",
+      "category": "România",
+      "published": "2026-11-17T18:11:45+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/numarul-doi-din-pentagon-critica-atacurile-ucrainei-in-profunzimea-teritoriului-rusiei-si-le-numeste-o-sursa-de-escaladare-4040747",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Vigili alla sbarra per sequestro di denaro agli spacciatori: condanne confermate in appello",
+      "category": "Italia",
+      "published": "2026-11-17T18:08:26+00:00",
+      "url": "https://www.ilrestodelcarlino.it/rimini/cronaca/vigili-sequestro-denaro-condanne-appello-j1cjlj31",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "CNAIR: Tronsonul 4 din Sibiu – Pitești s-ar putea deschide în 3 decembrie / S-au încheiat testele la tunelul Momaia / O echipă de tehnicieni CNAIR și PORR vor asigura funcționarea non-stop a structurii tunelului",
+      "category": "România",
+      "published": "2026-11-17T18:07:51+00:00",
+      "url": "https://www.g4media.ro/cnair-tronsonul-4-din-sibiu-pitesti-s-ar-putea-deschide-in-3-decembrie-s-au-incheiat-testele-la-tunelul-momaia-o-echipa-de-tehnicieni-cnair-si-porr-vor-asigura-functionarea-non-stop-a-s.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Frații Pavăl duc în Grecia produse fabricate în România. Magazinele Praktiker devin Dedeman. Ce schimbări pregătesc noii proprietari",
+      "category": "România",
+      "published": "2026-11-17T18:06:18+00:00",
+      "url": "https://adevarul.ro/economie/fratii-paval-duc-in-grecia-produse-fabricate-in-2572306.html",
       "source": "Adevărul",
       "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "„Vreți să ne dați afară, să ne înlocuiți cu AI!\". Dezvăluiri ale ministrului Fondurilor Europene: Și statul greșește de foarte multe ori. România a finanțat din bani UE proiecte care nu au avut un impact real",
+      "category": "România",
+      "published": "2026-11-17T18:06:00+00:00",
+      "url": "https://www.profit.ro/stiri/social/vreti-ne-dati-afara-ne-inlocuiti-dezvaluiri-ministrului-fondurilor-europene-statul-greseste-foarte-multe-ori-romania-finantat-bani-ue-proiecte-au-avut-impact-real-22994259?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "The 5 Labour groups that matter as Burnham shows his hand on welfare",
+      "category": "Mondo",
+      "published": "2026-11-17T18:04:31+00:00",
+      "url": "https://www.politico.eu/article/5-labour-group-matter-andy-burnham-welfare-social-security/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "source": "POLITICO Europe",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "România își consolidează rolul strategic la Marea Neagră. Ce proiect pregătește împreună cu Bulgaria și ce importanță are Portul Constanța",
+      "category": "România",
+      "published": "2026-11-17T18:01:56+00:00",
+      "url": "https://adevarul.ro/stiri-interne/evenimente/romania-isi-consolideaza-rolul-strategic-la-marea-2572307.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Social vietati ai minori di 13 anni, emendamento della maggioranza al decreto sicurezza",
+      "category": "Italia",
+      "published": "2026-11-17T18:01:00+00:00",
+      "url": "https://www.ilsole24ore.com/art/social-vietati-minori-13-anni-emendamento-maggioranza-decreto-sicurezza-AJmWQjJC",
+      "source": "Il Sole 24 Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "In Spagna il governo ha approvato l'aumento del salario minimo di 65 euro: dal 2018 è passato da 736 a 1.286 euro",
+      "category": "Italia",
+      "published": "2026-11-17T18:01:00+00:00",
+      "url": "https://www.today.it/europa/economia/aumento-salario-minimo-spagna.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "F1, da Las Vegas inizia il rush finale: Antonelli testerà gli sviluppi del motore Mercedes",
+      "category": "Italia",
+      "published": "2026-11-17T18:00:42+00:00",
+      "url": "https://www.bolognatoday.it/sport/altro/f1-da-las-vegas-inizia-il-rush-finale-antonelli-testera-gli-sviluppi-del-motore-mercedes.html",
+      "source": "BolognaToday",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "ULTIMA ORĂ România riscă să piardă 3 miliarde de euro din PNRR. Comisar UE: România este una dintre țările cu risc semnificativ de reduceri",
+      "category": "România",
+      "published": "2026-11-17T18:00:00+00:00",
+      "url": "https://www.profit.ro/perspective/ultima-ora-romania-risca-sa-piarda-3-miliarde-de-euro-din-pnrr-comisar-ue-romania-este-una-dintre-tarile-cu-risc-semnificativ-de-reduceri-22993523?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Israeli forces invade Syrian village leaving homes damaged",
+      "category": "Mondo",
+      "published": "2026-11-17T17:57:20+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/17/israeli-forces-invade-syrian-village-leaving-homes-damaged?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Speech by Commissioner Dombrovskis at German Digital Ministers' Conference",
+      "category": "Unione europea",
+      "published": "2026-11-17T17:57:09+00:00",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2484",
+      "source": "Commissione europea",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "La Ue stima il deficit al 2,9%, l'Italia vede l'uscita dalla procedura",
+      "category": "Italia",
+      "published": "2026-11-17T17:49:41+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/dombrovskis-litalia-puo-uscire-dalla-procedura-per-deficit-in-primavera_a85781bf-32ba-4613-98e1-5b449c4e8475.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Manovra, pioggia di emendamenti, presentati circa 7mila. Fonti maggioranza: 'Tra le priorità le pensioni e la sanità'",
+      "category": "Italia",
+      "published": "2026-11-17T17:48:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/in-corso-il-vertice-in-videoconferenza-tra-i-leader-di-maggioranza-sulla-manovra_0852cc79-1b4d-45f3-a0ff-9faa1bbaab52.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Manovra, valanga di emendamenti. Depositate 6.600 proposte di modifica: un record - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-17T17:47:48+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUFBfSXlvWUJBY3pCUUg4MTlNYmxUX1dOdTZLVmg2anhxX3Qzakg5YnlwaGVrQzdXaUlxNHVkVWRyck1mS2IydUlPMlF6cnhNY3dQVVIyNVFzWFdJRUFMVzc0Q1FXOU44Ui1mMXhTaGQ5SEc2ekxueXk1cnV6S1hVUGtFU3p4dE56dXg0R2ItVy05V0g2bmR1ZWNPbmhCNXRXWC1HWnBlZndkdkNqcXJPX2V1TWprQQ?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Manovra, valanga di emendamenti: 6.600 proposte dal Reddito 2.0 alla rottamazione. Un record",
+      "category": "Italia",
+      "published": "2026-11-17T17:47:48+00:00",
+      "url": "https://www.repubblica.it/economia/2026/11/17/news/manovra_valanga_emendamenti_modifica_legge_record-425730357/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Incidente in A1, morta una delle ragazzine coinvolte nello schianto",
+      "category": "Italia",
+      "published": "2026-11-17T17:47:02+00:00",
+      "url": "https://www.bolognatoday.it/cronaca/incidente-stradale/incidente-a1-ragazzina-morta-casalecchio-valsamoggia.html",
+      "source": "BolognaToday",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Deutsche Bank, affari poco trasparenti con Epstein, Trump e gli oligarchi russi. E scivola in Borsa",
+      "category": "Italia",
+      "published": "2026-11-17T17:46:34+00:00",
+      "url": "https://www.repubblica.it/economia/2026/11/17/news/deutsche_bank_epstein_trump_oligarchi_russi_scivola_in_borsa-425730353/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Has empire shaped today’s world?",
+      "category": "Mondo",
+      "published": "2026-11-17T17:45:00+00:00",
+      "url": "https://www.aljazeera.com/video/doha-debates/2026/11/17/has-empire-shaped-todays-world?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "SwitchBot Connected Home Security Combo: completo sistema di sicurezza per la tua casa",
+      "category": "Italia",
+      "published": "2026-11-17T17:44:00+00:00",
+      "url": "https://www.today.it/tech/switchbot-connected-home-security-combo.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Deutsche Bank nella bufera, dai file interni gli affari poco trasparenti",
+      "category": "Italia",
+      "published": "2026-11-17T17:37:38+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/berlino-deutsche-bank-deve-spiegare-in-modo-trasparente_411981b3-1c96-43d1-bfce-a2156ca0d793.html",
+      "source": "ANSA",
+      "status": "galben",
       "words": 0
     },
     {
@@ -699,30 +1032,21 @@
       "words": 0
     },
     {
-      "title": "Impozit mai mic pe salarii în 2027: PSD cere taxe de la 0% la 10% pentru angajații cu venituri sub 6.000 de lei brut. Câți bani ar primi în plus - Oficiul de Știri",
-      "category": "România",
-      "published": "2026-11-17T17:34:02+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPbG8zU25EQ2M3Qlp1WFhUcG1La0R2QVktTlUxUFJiQ2VJTmttZENwTU9KbDZWYzhmZ2hYcGxLeU5MU3BjWkZYd2VEWkdLOEcxdVlZaU9FRTNqaFRlWW8xc0pRN1JUM2pFdTlyMVJNS1NJUWFPbE9rWU1sdjBUV2IwNDY0LTJOYjUzemVKWFVwSmlieVkwak9Ua0hGRHRRZTh2T2o2YzNUbnR0ZmI2X2EyUk5TMlh6ODY3Q1JQbkxnT2tmblkwMHlMOGlrZjBxX2xOcnJjaFRmRlRRakRQdzVMUU52V09jbDNZS0xsVmhUajVVb3YtYUpvNHNR?oc=5",
-      "source": "Oficiul de Știri",
+      "title": "Iraqi PM heads to Lebanon amid push to explore oil routes beyond Hormuz",
+      "category": "Mondo",
+      "published": "2026-11-17T17:34:27+00:00",
+      "url": "https://www.aljazeera.com/economy/2026/11/17/iraq-pm-heads-to-lebanon-amid-push-to-explore-oil-routes-beyond-hormuz?traffic_source=rss",
+      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "SURPRIZĂ Un nou lanț de restaurante din SUA intră în România",
-      "category": "România",
-      "published": "2026-11-17T17:34:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/retail/restaurant-american-incepe-extinderea-in-romania-chili-s-deschide-al-doilea-restaurant-din-romania-la-craiova-22993965?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
+      "title": "Religious ruling revives memories in Israel of Rabin assassination",
+      "category": "Mondo",
+      "published": "2026-11-17T17:33:18+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/17/religious-ruling-revives-memories-in-israel-of-rabin-assassination?traffic_source=rss",
+      "source": "Al Jazeera English",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Numărul doi din Pentagon critică atacurile Ucrainei în profunzimea teritoriului Rusiei și le numește o „sursă de escaladare”",
-      "category": "România",
-      "published": "2026-11-17T17:33:30+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/numarul-doi-din-pentagon-critica-atacurile-ucrainei-in-profunzimea-teritoriului-rusiei-si-le-numeste-o-sursa-de-escaladare-4040747",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -753,84 +1077,12 @@
       "words": 0
     },
     {
-      "title": "CNAS vrea ca persoanele fără venituri să fie obligate să plătească asigurări de sănătate. Sunt vizați și românii plecați în străinătate - RFI",
-      "category": "România",
-      "published": "2026-11-17T17:31:10+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi9AJBVV95cUxPcnU0elhmM1BMSDZIV0swYS1KMVVPanZkeEpZcnd4bUt6ZWhvQlB1ak1ldVRRS211c3pMV0xwa1lEUmFCWTdIeXBaODdoem0yQWFjRjMweFZSaDdUMjVZWnRZSUIybDMxYzZqSkIxalJDM2lTV1ViNlRRX1d0WUl1SWl1LS1CSnZKa3JobnY4NlZrTjlzTlZfSXlBZ3VPZE9FUXB0d2VEMmRXclF0U0pZaWZxaVhhR0tSNzVIRFR6ZW9UQWJTTUQyRHRjaHowVVRrakoyUEltMDZzWV8yVXdkam1hbk5vb0dfZE5XdjdsNkJEdEswbFBULXY3cVE1cWVWcUpSSFNxM1ZRNG5vVDFIaTZPSGFvWnVpbXdKSl9RcDEwSUVTVFJVNHNUcWF4MzUtWFgxb25xaFFQQThpbHhoNm5uTWdmT2tSTFRnSUgyN01fWTlydVp",
-      "source": "RFI",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Stefano De Martino, la confessione sul padre malato: \"Gli ho detto che avrei fatto il Festival per dargli forza\"",
       "category": "Italia",
       "published": "2026-11-17T17:30:00+00:00",
       "url": "https://www.today.it/tv/news/sanremo/stefano-de-martino-padre-promessa.html",
       "source": "Today",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Rețeaua de comunicații de securitate națională a SUA, cu grad ridicat de confidențialitate, este în pană",
-      "category": "România",
-      "published": "2026-11-17T17:29:21+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/reteaua-de-comunicatii-de-securitate-nationala-a-sua-cu-grad-ridicat-de-confidentialitate-este-in-pana-4040723",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Anna Boffa morta in ospedale dopo il farmaco abortivo, lo sfogo del marito: \"Era in salute quando è entrata. I medici chiedano scusa\"",
-      "category": "Italia",
-      "published": "2026-11-17T17:29:00+00:00",
-      "url": "https://www.today.it/cronaca/anna-boffa-morta-ospedale-salerno.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Un experiment științific în China a dus la moartea unei fetițe de 6 ani. Părinții au plătit 800.000 de dolari pentru finanțarea studiului",
-      "category": "România",
-      "published": "2026-11-17T17:28:47+00:00",
-      "url": "https://hotnews.ro/un-experiment-stiintific-in-china-a-dus-la-moartea-unei-fetite-de-6-ani-parintii-au-platit-800-000-de-dolari-pentru-finantarea-studiului-2406860",
-      "source": "HotNews",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "L'ultimo saluto a Michael, in chiesa palloncini bianchi e viola",
-      "category": "Italia",
-      "published": "2026-11-17T17:28:05+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/lultimo-saluto-a-michael-in-chiesa-palloncini-bianchi-e-viola_e98cd421-38cb-445b-bb9d-3ab2a3f72fd2.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ministrul Finanțelor anunță: Chiar acum se dă ultimul examen. România a reușit de 9 ori, în ultimul an și jumătate, să își păstreze ratingul de țară",
-      "category": "România",
-      "published": "2026-11-17T17:28:00+00:00",
-      "url": "https://www.profit.ro/taxe-si-consultanta/ministrul-finantelor-anunta-chiar-acum-se-da-ultimul-examen-romania-a-reusit-de-9-ori-in-ultimul-an-si-jumatate-sa-isi-pastreze-ratingul-de-tara-22994233?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "La sorella di Denis Bergamini: “Una sentenza arrivata dopo troppo tempo, la verità nascosta per 37 anni”",
-      "category": "Italia",
-      "published": "2026-11-17T17:27:17+00:00",
-      "url": "https://www.ilrestodelcarlino.it/ferrara/cronaca/bergamini-sorella-donata-intervista-te7bma0t",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Bucureștiul ar putea respira un aer mai curat. Ce măsuri au fost transmise Comisiei Europene pentru reducerea poluării",
-      "category": "România",
-      "published": "2026-11-17T17:26:51+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/bucurestiul-ar-putea-respira-un-aer-mai-curat-ce-masuri-au-fost-transmise-comisiei-europene-pentru-reducerea-poluarii-4040697",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -843,33 +1095,6 @@
       "words": 0
     },
     {
-      "title": "Kim Jong-un, fotografiat într-un fotoliu de lux și cu o țigară în mână, în mijlocul zăpezii. Fiica sa de 13 ani a atras toate privirile",
-      "category": "România",
-      "published": "2026-11-17T17:25:46+00:00",
-      "url": "https://adevarul.ro/stiri-externe/in-lume/kim-jong-un-fotografiat-intr-un-fotoliu-de-lux-si-2572297.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Secțiunea 4 a Autostrăzii Sibiu–Pitești, dintre Tigveni și Curtea de Argeș, se deschide din 3 decembrie. Anunțul ministrului Transporturilor",
-      "category": "România",
-      "published": "2026-11-17T17:25:41+00:00",
-      "url": "https://www.libertatea.ro/stiri/cand-se-deschide-sectiunea-4-tigveni-curtea-de-arges-autostrada-sibiu-pitesti-d7th32e",
-      "source": "Libertatea",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Analizele de plămâni pe care CNAS nu le decontează, dar îți pot salva viața: „Este o evaluare a dramei care se întâmplă în căile aeriene mici”",
-      "category": "România",
-      "published": "2026-11-17T17:24:52+00:00",
-      "url": "https://www.libertatea.ro/stiri/analizele-de-plamani-pe-care-cnas-nu-le-deconteaza-dar-iti-pot-salva-viata-este-o-evaluare-a-dramei-care-se-intampla-in-caile-aeriene-mici-t13twy3",
-      "source": "Libertatea",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Russia’s Lavrov says French troops in Ukraine amount to ‘direct participation’ in war",
       "category": "Mondo",
       "published": "2026-11-17T17:22:15+00:00",
@@ -879,47 +1104,11 @@
       "words": 0
     },
     {
-      "title": "Consilier Nicușor Dan: Nu mai avem de ales! Indiferent ce auziți la TV, statul va cheltui mai puțin. Firmele să nu mai aștepte subvenții și vouchere - Radu Burnete",
-      "category": "România",
-      "published": "2026-11-17T17:22:00+00:00",
-      "url": "https://www.profit.ro/taxe-si-consultanta/consilier-nicusor-dan-nu-mai-avem-de-ales-indiferent-ce-auziti-la-tv-statul-va-cheltui-mai-putin-firmele-sa-nu-mai-astepte-subventii-si-vouchere-radu-burnete-22994210?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ucraina a provocat prăbușirea parțială a Podului Kerci într-o operațiune fără precedent / Detaliile operațiunii desfășurată fără ajutorul Starlink / Umilință pentru Putin înainte de summitul din China",
-      "category": "România",
-      "published": "2026-11-17T17:21:53+00:00",
-      "url": "https://www.g4media.ro/ucraina-a-provocat-prabusirea-partiala-a-podului-kerci-intr-o-operatiune-fara-precedent-detaliile-operatiunii-desfasurata-fara-ajutorul-starlink-umilinta-pentru-putin-inainte-de-summitul-din-china.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Fratoianni a HuffPost: \"Caro Conte, se non c'è patrimoniale non c'è coalizione\"",
-      "category": "Italia",
-      "published": "2026-11-17T17:20:17+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/fratoianni-a-huffpost-caro-conte-se-non-ce-patrimoniale-non-ce-coalizione_95100f14-a927-4366-a8e3-b32b75c4dbf7.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Costa Rican journalist shot dead in first such killing in 25 years",
       "category": "Mondo",
       "published": "2026-11-17T17:19:12+00:00",
       "url": "https://www.theguardian.com/world/2026/nov/17/costa-rica-journalist-camilo-rodriguez-shot-dead",
       "source": "The Guardian",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tânărul din București anchetat de FBI pentru amenințări teroriste va fi judecat în România. Aproape 100 de mesaje ar fi fost trimise către școli și spitale",
-      "category": "România",
-      "published": "2026-11-17T17:18:58+00:00",
-      "url": "https://adevarul.ro/stiri-interne/evenimente/tanarul-din-bucuresti-anchetat-de-fbi-pentru-2572295.html",
-      "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
@@ -933,42 +1122,6 @@
       "words": 0
     },
     {
-      "title": "Huang rompe il silenzio: 'Disposto a tornare a Nvidia se il cda lo ritiene'",
-      "category": "Italia",
-      "published": "2026-11-17T17:11:03+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/huang-rompe-il-silenzio-disposto-a-tornare-a-nvidia-se-il-cda-lo-ritiene_ca04ab2c-2e9b-4bb7-b6ba-1d6938cb2d6e.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "US loses measles elimination status after 26 years amid record case numbers",
-      "category": "Mondo",
-      "published": "2026-11-17T17:10:03+00:00",
-      "url": "https://www.bbc.co.uk/news/articles/c977p71jx0xxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Dombrovskis: 'L'Italia può uscire dalla procedura per deficit in primavera'",
-      "category": "Italia",
-      "published": "2026-11-17T17:10:03+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/dombrovskis-litalia-puo-uscire-dalla-procedura-per-deficit-in-primavera_a85781bf-32ba-4613-98e1-5b449c4e8475.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "CAIR defends civil rights work against Trump’s ‘smear’",
-      "category": "Mondo",
-      "published": "2026-11-17T17:09:49+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/cair-defends-civil-rights-work-against-trumps-smear?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ilie, dispărut în străinătate și găsit în Italia după șapte ani. Repeta obsesiv un număr de telefon - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-17T17:06:27+00:00",
@@ -978,101 +1131,11 @@
       "words": 0
     },
     {
-      "title": "Brussels signals unwillingness to be Burnham’s EU sounding board",
-      "category": "Mondo",
-      "published": "2026-11-17T17:05:05+00:00",
-      "url": "https://www.politico.eu/article/brussels-andy-burnham-eu-options-brexit-reset/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "source": "POLITICO Europe",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Sport, stretta sui controlli ai club: al via la collaborazione tra Consob e Commissione di vigilanza sulle società professionistiche",
-      "category": "Italia",
-      "published": "2026-11-17T17:02:46+00:00",
-      "url": "https://www.ilsole24ore.com/art/sport-stretta-controlli-club-via-collaborazione-consob-e-commissione-vigilanza-societa-professionistiche-AJx2HmJC",
-      "source": "Il Sole 24 Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Saudi Arabia: Rights groups raise alarm over rising number of executions",
-      "category": "Mondo",
-      "published": "2026-11-17T17:02:00+00:00",
-      "url": "https://www.dw.com/en/saudi-arabia-rights-groups-raise-alarm-over-rising-number-of-executions/a-79970773?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Italia verso l'uscita dalla procedura d'infrazione Ue, ma inflazione e debito restano i rischi principali",
-      "category": "Italia",
-      "published": "2026-11-17T17:01:42+00:00",
-      "url": "https://it.euronews.com/2026/11/17/italia-verso-luscita-dalla-procedura-dinfrazione-ue-ma-inflazione-e-debito-restano-i-risch",
-      "source": "Euronews",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Latest news bulletin | November 17th, 2026 – Evening",
-      "category": "Mondo",
-      "published": "2026-11-17T17:00:27+00:00",
-      "url": "https://www.euronews.com/video/2026/11/17/latest-news-bulletin-november-17th-2026-evening",
-      "source": "Euronews English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ambra Angiolini, lo spettacolo salta per motivi di salute: come sta l’attrice",
-      "category": "Italia",
-      "published": "2026-11-17T16:58:44+00:00",
-      "url": "https://www.ilrestodelcarlino.it/emilia-romagna/cultura/ambra-angiolini-spettacolo-annullato-salute-a2j0i7lx",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
-      "category": "Mondo",
-      "published": "2026-11-17T16:56:38+00:00",
-      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Yemeni parliament approves law designating Houthis as ‘terrorists’",
-      "category": "Mondo",
-      "published": "2026-11-17T16:53:25+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/yemeni-parliament-approves-law-designating-houthis-as-terrorists?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Le proposte di Forza Italia sugli stadi di Bologna: video",
-      "category": "Italia",
-      "published": "2026-11-17T16:52:04+00:00",
-      "url": "https://www.ilrestodelcarlino.it/video/le-proposte-di-forza-italia-sugli-stadi-di-bologna-video-b10e4bst",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Manovra, vertice tra i leader di maggioranza. Fonti: 'Tra le le priorità l'adeguamento delle pensioni e la sanità'",
-      "category": "Italia",
-      "published": "2026-11-17T16:50:11+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/in-corso-il-vertice-in-videoconferenza-tra-i-leader-di-maggioranza-sulla-manovra_0852cc79-1b4d-45f3-a0ff-9faa1bbaab52.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Gennarino è andato in pensione. Parla l'addestratore: \"Fu Stefano De Martino in persona a sceglierlo\"",
-      "category": "Italia",
-      "published": "2026-11-17T16:48:00+00:00",
-      "url": "https://www.today.it/tv/news/gennarino-affari-tuoi-proprietario.html",
-      "source": "Today",
+      "title": "NATO Secretary General meets with the Minister of Defence of Ukraine - North Atlantic Treaty Organization | NATO",
+      "category": "NATO e sicurezza",
+      "published": "2026-11-17T16:49:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPMnE1cmJEamg1R1VKenlaRHBsRHlfVGFoNHRNNGRobFFHc2laTER0bE5qUzNsSVhlcHFDZXdfamgyMVRIaFN1ZTA3QV92bjVnUUJpaVNtOFJmZmRzU1A5QVE5WjBqMXo5ZTh2SUZVZE9zUWFiM2xsZHNEM21zc1Q5dm5zcGM0bEw2SDJJdXlsN3R2UGYxUkRFSkx3VFIxRDNOYjlqYzVSRURFbGxVV0JWTklyRC1ReGpvRGhqUGM3TWNIcF9Ic0ZDUERmR28?oc=5",
+      "source": "NATO",
       "status": "roșu",
       "words": 0
     },
@@ -1082,42 +1145,6 @@
       "published": "2026-11-17T16:47:27+00:00",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNzNZWXJoVGc4WVgybnZDMG9ueDlWd3pEaGxLSEQzOVdLT0dNNmxGb3RYQ1dHQjBMbHhCUkZXUDc5b1RSZUM4ZDU2QjBUbE5rT3JNWE55QldZQjVXY3pTeGdXZllYVTBIeDduMGpUVmtLUlJIZVVTVGI1aWtZR2RYUzltZWplYkRIaE43UUEyWjY0TjVoMi1FT2lOWEpIZllrUTk5U1VqRUc4RExka3BGTTVrS0VxbU0?oc=5",
       "source": "NATO",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Nvidia, Huang pronto a tornare al timone dopo lo scandalo: “Ne sarei onorato, chiedo scusa a tutti”",
-      "category": "Italia",
-      "published": "2026-11-17T16:46:18+00:00",
-      "url": "https://www.repubblica.it/economia/2026/11/17/news/nvidia_huang_tornare_amministratore_scandalo_amante_spia_cina_scuse-425730193/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Kemet, spiraglio per salvare la fabbrica: nuovo vertice tra una settimana",
-      "category": "Italia",
-      "published": "2026-11-17T16:45:15+00:00",
-      "url": "https://www.bolognatoday.it/cronaca/kemet-sasso-marconi-230-lavoratori-rischio-lepore-reindustrializzazione.html",
-      "source": "BolognaToday",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Transizione ecologica, l’Europa alla resa dei conti",
-      "category": "Italia",
-      "published": "2026-11-17T16:40:56+00:00",
-      "url": "https://www.ilsole24ore.com/art/transizione-ecologica-l-europa-resa-conti-AJZNMfJC",
-      "source": "Il Sole 24 Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Xiaomi 18 Pro Series: potenti smartphone con doppio display e fotocamere Leica da 200 MP",
-      "category": "Italia",
-      "published": "2026-11-17T16:40:00+00:00",
-      "url": "https://www.today.it/tech/smartphone/xiaomi-18-pro.html",
-      "source": "Today",
       "status": "roșu",
       "words": 0
     },
@@ -1205,10 +1232,46 @@
     {
       "title": "Tajani inaugura alla Farnesina l’XI Settimana della Cucina Italiana nel Mondo - Ministero degli Affari Esteri e della Cooperazione Internazionale",
       "category": "Istituzioni",
-      "published": "2026-11-17T12:15:48+00:00",
+      "published": "2026-11-17T12:17:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPTGV6WEQzLUlCU0M4dmdjSFlzV2xBX0ktd0thSEVqdnpzWWtyT3NuNGlWM09SUnVHZzNrRzRUT0JRRVRtNXJVLVMwVEVKOGNEVlhJVXhUREJ5LWQxQmJoTlEtZGNEUERtVTVDUEgtdmdReG16LXRPa0N5VGpqdnQ2OXhpaG5xR1hpRnpBTUFCckpNWVVlSXlYcUR5d0tnX3lVd3M2ZFJyN1hldDhpcFFxYWxpcWhWTm5tUk9lTkJkT1MyeTJIWmRhUXRUczE5cDJWQTFvb1dQYXpiNTg1YWJSZzR2RQ?oc=5",
       "source": "Ministero degli Esteri",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "COP31: The push to protect warming oceans reaches the negotiating table",
+      "category": "Istituzioni",
+      "published": "2026-11-17T12:00:00+00:00",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168824",
+      "source": "ONU",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Haiti: ‘Atrocious abuses’ continue as UN warns anti-gang operations must priortise civilian protection",
+      "category": "Istituzioni",
+      "published": "2026-11-17T12:00:00+00:00",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168823",
+      "source": "ONU",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "‘Hunger should not be a concern’: WFP steps in for families in Kenya who fled Ethiopia violence",
+      "category": "Istituzioni",
+      "published": "2026-11-17T12:00:00+00:00",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168822",
+      "source": "ONU",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Winter rains deepen Gaza crisis amid restricted access and aid cuts",
+      "category": "Istituzioni",
+      "published": "2026-11-17T12:00:00+00:00",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168821",
+      "source": "ONU",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -1451,69 +1514,6 @@
       "published": "2026-11-16T19:21:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZVNNRWRMcko2b3RNZGJ6NDM4MW9EQVFES0NCM0E4THp0RWpMNndTTzdlWmQ4WGFVaktjTWFFUl9XUk5fckYxeGVXbUQ5YXRveDJuWTZYcTRqNV83NjRMcUxCUGhRd1RsZlN0LUE4ajZaODNBazN1aU5uQWtuMWJ3Z0xmU2E4V2xKMkdSd1FBdFNNY3BXSDEyck5iUVRVNGZlRTRLNE8ySzNRa3QtLURrMFZ1X3RoQjhxakpBaXg1N1dudmM?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Casa Albergo Monteporzio: 22 posti per l’ospitalità residenziale. Domande online entro le ore 12 del 20 dicembre 2026. - INPS",
-      "category": "Istituzioni",
-      "published": "2026-11-16T18:56:08+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNRlQ3VWhlSmdQUUhvYXdVRkJpcHU0N084MzZWbDlfMWRsTlJ2eDhzUklwRm5LRE1wbXJHYjNYUF9HUTVBUGwwN01MSEVKblRiOUl4LXlaS3pmVl9aRERzYVFUZE5tOEpEMHpfTHJwQTVVXzdZMmk5MHREVklIMDU5MkUycHZGWWVzWGgzVXNhbkJHSlItdEdvN2U3SFZYNmF1ejJaU0RTeC1kQnNqeGxsczJYdTFTTXFOaEZ4ZXJrcy1PaTQxYjM0bXZsZndiNldPV1BlMEZrTmZNQnNGZHNpX045YlZ3SkFESTlqQUlfU2FJU0R1aUNqLWxFS0NJUzVCV2c?oc=5",
-      "source": "INPS",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Guvernul din Spania anunţă o creştere cu 5,3% a salariului minim de anul viitor - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-16T18:55:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObTl2Nnd5VVAyWW4tVExwekthYmNXR255ejJsWW1RbnhEd1EweWp6VVBLUVNVc0wteHg2SjVhRERQUjE2eGNGcWpSdVozZWVDR1dTZHZrZllaWmhjXzhRYVNxdVFzczV6TlBTOUt4SUpQTEo5OVNjajJpUUlWQV8yaUVjeFVqQ2t1MEFMdi1QREdMRmFsaDhHTFdYV2ZvMUwxbUdhMDlYNEU4bkhBZUpxaWk1aElQXzJuVDJYMFZVeljSAcABQVVfeXFMTm05djZ3eVVQMlluLVRMcHpLYWJjV0dueXoybFltUW54RHdRMHlqelVQS1FTVXNMLXh4Nko1YUREUFIxNnhjRnFqUnVaM2VlQ0dXU2R2a2ZZWlpoY184UWFTcXVRc3M1ek5QUzlLeElKUExKOTlTY2oyaVFJVkFfMmlFY3hVakNrdTBBTHYtUERHTEZ",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Replicile date de români fostului preot care nu mai crede în parastase și spovedanie. „Nu ne putem ierta singuri păcatele” - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-16T18:35:21+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQN2pQWWRsS04yc3A3cXZKTi01UmlqY3hmbXlGVC1YejJnS29BTGxIcmhhYk9IajkzcC1OVkZoN3FPSXRWM0xxUEt5aDIyNDBPdGNmYmJBV0QySjVaTjVuMlRVaVpzQkl4V3VTa2xFM0xaampkd3BLOGVsWWlkbzN2cHlVNm82QVdoUVBLeks0WTVROW1CcWRTTzk1M3liQk5VYjlqMVgxMXhhMXBHaVdSOHJjQ29aNFFudlYyeFJxMEFpYjFpZmViZ0VaSHNUM2tGYW9ybzRmbkgwUlk?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Renault angajează 2.000 de oameni în Franța, pe fondul cererii tot mai mari de mașini electrice - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-16T18:30:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOLV9GZzNZNU5QNUo3VUhxQXQzRi14b0R3N3NlaFgyaGI2X2M0VE8xRUZCUG5XNzZTX3NmTGppM1pWU3J6VEtvaWtJUTZ5MzA4VnEtcHJydkRZbWltREFEb0YzeG1oM2pJX1ZLaWtXeFVVTzF1UDNPd04yNTJnSk5yaWxjcmltbkJLMlJSbFNHeHN2c25ab2wwbENMTF9LU3hJTUJSSmloSGFDQWNvZnBJRVJRX2ZSV0JaTWJUZ3hfNmo3Nm44UlRROWI5U1cwOVlSc0NPSFh30gHWAUFVX3lxTE4tX0ZnM1k1TlA1SjdVSHFBdDNGLXhvRHc3c2VoWDJoYjZfYzRUTzFFRkJQblc3NlNfc2ZMamkzWlZTcnpUS29pa0lRNnkzMDhWcS1wcnJ2RFltaW1EQURvRjN4bWgzaklfVktpa1d4VVVPMXVQM093TjI1Mmd",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Bărbat din Italia, bătut de soție până a ajuns în cod roșu la spital. Era furioasă pentru că a uitat să spele vasele - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-16T18:06:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVGl4QlVncnBlRldFWGR4cXM2bjFPbHVhekxmZi1YWjM3bVpBdFdrTmpSMlB0aUxZQmh0aDRmSDhGQzQyZTdGSVBLRV93WURScFRkWTRldDJoWnpnUlVpdmdOeVEtQVBuTlBOMVRGZlRlZjVWVlhQdnNLdEpIS0tfOThyTlZNa3hBZTUySHJyclhfS2NicHMtc2ViYkIyUHNoQmwxTVNjQV9vRUJBSFloZUhUa3BjR29YVmJ4Z1VIMTNSQXlFaWU1ejRxaERRTWRaN0V0cw?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "STO-MP-HFM-387 – Programme Committee - NATO Science and Technology Organization",
-      "category": "NATO e sicurezza",
-      "published": "2026-11-16T17:43:57+00:00",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBwUmF6NlhHN0xyVUxkcG0yUE9OTVRLQWw1OXFLV1UtT1pxZFlyRDNXMFVCcnZMVzdiM2t4b2RYVE9aek5UUTlwTmtFRGVFWENEb3g1bGZnUnZBVFFRbnZXeGZ1ejRmX3dLMk44OHdiakdTRnNTbDltRQ?oc=5",
-      "source": "NATO",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "STO-MP-HFM-387 – Technical Evaluation Report - NATO Science and Technology Organization",
-      "category": "NATO e sicurezza",
-      "published": "2026-11-16T17:43:57+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNN0VIRFBLYWk2R0dhNGx3OXNuTm5fZkJpU3loWW5vS0NYX2syLTRWUGRUb28yUHVRaHh6dTJEWEFpQmdXSFZjS0stRmdibTVuLXA1cUlmOHQyOVFyeFl6N0JlTEVmYWRkeHN3WURBQ3plNURQQUY0XzJucDdCQTByUTZzbw?oc=5",
-      "source": "NATO",
       "status": "roșu",
       "words": 0
     }
