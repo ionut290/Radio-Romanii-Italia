@@ -1,10 +1,33 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-16T23:30:24.997941Z",
+  "updated_at": "2026-11-17T00:40:53.470250Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
-  "items": []
+  "items": [
+    {
+      "id": "geo-b6e15b271bb045a0",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "Singapore assessing impact of new US chip export controls aimed at curbing China’s access",
+      "summary": "",
+      "source": "CNA",
+      "published": "2026-11-16T23:44:07Z",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPZVZ3elR4czNuZl9TM21GQmFoZU93MUZlT3VQN194TWRPb0pwYnRfci1LX3FTcmhVbXJqd2VKTHlYZm9UTmUxek5iNU8zUFplelE5R1NPdGFIRlplVW9WaVl6YVBDRjZGSXgzeDJwSkpmMXhTTVZQaVF2amktQ1VtdDRMRQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-f2f2fc1ed10d4d1a",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Apec Summit 2026: Why Trump’s relentless tariff blitz means low expectations in China",
+      "summary": "",
+      "source": "Newswav",
+      "published": "2026-11-16T23:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPekdTQ252TWZTSUt3cm41N3h6YjA5X28xZ2ppZndfVC1KcUROczJZV0JPZzgzSHktUkJ4TmlGZlRWenowY3M3dWN2bmUyRWQ1S1pEWmFlYlJQeXBqT0VHRHR0cVRpTHJKcmlES3NpRFo3S2tmeHlfWklCSEstVnZaU2ViYzRIUXFELWxmSk1aUGhLTW92a3dJVzhHYkR6UFdqMkVsU2NqSjlrclBJT2NmOGIyOGM1Z28?oc=5",
+      "review_status": "external_headline_unverified"
+    }
+  ]
 }
