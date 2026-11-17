@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-17T03:04:10.502209+00:00",
-  "editorial_updated_at": "2026-11-16T21:38:37.042577+01:00",
+  "news_updated_at": "2026-11-17T03:45:37.892969+00:00",
+  "editorial_updated_at": "2026-11-17T04:43:45.103859+01:00",
   "translations_updated_at": "2026-11-17T03:02:43.433815+00:00",
   "feed_total": 120,
   "feed_extended_400": 1,
   "feed_missing_body": 119,
   "feed_short_body": 0,
-  "editorial_total": 17,
-  "archived_editorials": 292,
+  "editorial_total": 20,
+  "archived_editorials": 295,
   "translation_records": 27,
   "pending_total": 125,
   "pending_filtered_out": 112,
   "editorial_verde": 1,
-  "editorial_galben": 32,
+  "editorial_galben": 35,
   "editorial_rosu": 52,
   "pending": [
     {
@@ -618,11 +618,47 @@
   ],
   "recent_news": [
     {
+      "title": "Macron visits Malaysia as France seeks closer defence and rare earths ties",
+      "category": "Mondo",
+      "published": "2026-11-17T03:40:31+00:00",
+      "url": "https://www.france24.com/en/asia-pacific/20261117-macron-malaysia-france-defence-rare-earths-trade-energy",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Japan scrambles jets to counter suspected Russian aircraft",
+      "category": "Mondo",
+      "published": "2026-11-17T03:29:00+00:00",
+      "url": "https://www.dw.com/en/japan-scrambles-jets-to-counter-suspected-russian-aircraft/a-79964537?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "L'orrore di Bucha e le parole ancora più oscene di Travaglio",
       "category": "Italia",
       "published": "2026-11-17T03:27:00+00:00",
       "url": "https://www.today.it/opinioni/editoriale-travaglio-bucha-eccidio-ordinario.html",
       "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Tankers hit in Strait of Hormuz as drone raises alarm at Iraq gas field",
+      "category": "Mondo",
+      "published": "2026-11-17T03:12:54+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/17/tankers-hit-in-strait-of-hormuz-as-drone-raises-alarm-at-iraq-gas-field?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trump heads to Asia for historic nuclear talks with China and Russia",
+      "category": "Mondo",
+      "published": "2026-11-17T03:07:59+00:00",
+      "url": "https://www.france24.com/en/asia-pacific/20261117-trump-asia-nuclear-talks-china-russia",
+      "source": "France 24",
       "status": "roșu",
       "words": 0
     },
@@ -665,9 +701,18 @@
     {
       "title": "'Gli 007 americani avvertono: 'L'Iran sta sviluppando piani per una bomba sporca a Washington'",
       "category": "Italia",
-      "published": "2026-11-17T02:58:13+00:00",
+      "published": "2026-11-17T02:59:47+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "US moves to block China’s remote access to AI chips amid Nvidia scandal",
+      "category": "Mondo",
+      "published": "2026-11-17T02:52:56+00:00",
+      "url": "https://www.aljazeera.com/economy/2026/11/17/us-moves-to-block-chinas-remote-access-to-ai-chips-amid-nvidia-scandal?traffic_source=rss",
+      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -771,38 +816,11 @@
       "words": 0
     },
     {
-      "title": "Yemeni army reports 661 attacks on Houthis as group advances towards Aden",
-      "category": "Mondo",
-      "published": "2026-11-17T01:38:13+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/yemen-army-reports-661-attacks-on-houthis-amid-houthi-push-towards-aden?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Irish court jails man for life over Dublin knife attack that sparked riots",
-      "category": "Mondo",
-      "published": "2026-11-17T01:19:56+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/irish-court-jails-man-for-life-over-dublin-knife-attack-that-sparked-riots?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "EU countries announce migrant deportation centre in Rwanda",
-      "category": "Mondo",
-      "published": "2026-11-17T01:12:28+00:00",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/17/eu-countries-announce-migrant-deportation-centre-in-rwanda?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Five EU states announce plans for immigration ‘return hubs’ in Rwanda",
-      "category": "Mondo",
-      "published": "2026-11-17T01:10:59+00:00",
-      "url": "https://www.theguardian.com/world/2026/nov/16/eu-states-immigration-return-hubs-rwanda",
-      "source": "The Guardian",
+      "title": "“Ai privati i vantaggi e al Comune i rischi”. Bocciata a Milano la nuova società del trasporto pubblico - Il Giorno",
+      "category": "Italia",
+      "published": "2026-11-17T01:30:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdzhKZU1UQVVZdC1tTFk1NmU4c0tBY2JVb0JEdGQ0M094QjAzc1BnN3p6MTd0azg5b2lpTHFaVkxjQko2Nm9xbHJMWVFfX3VkNmloZ0Q0aktkVEphZlpUTS1wNHgzNGV2Uk00OFlJTjZYQTVWRUlkeDQyV3dDc2M2c0kwdw?oc=5",
+      "source": "Il Giorno",
       "status": "roșu",
       "words": 0
     },
@@ -843,15 +861,6 @@
       "words": 0
     },
     {
-      "title": "Russian strikes hit two key bridges in Kyiv, disrupting water and power supplies",
-      "category": "Mondo",
-      "published": "2026-11-17T00:58:33+00:00",
-      "url": "https://www.france24.com/en/europe/20261117-russian-strikes-hit-two-key-bridges-in-kyiv-disrupting-water-and-power-supplies-ukraine",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Cum arată enclavele sărăciei, comunele înființate din calcul electoral. Ce spun localnicii despre întoarcerea la comunele-mamă, după două decenii de exod și depopulare",
       "category": "România",
       "published": "2026-11-17T00:30:25+00:00",
@@ -879,6 +888,15 @@
       "words": 0
     },
     {
+      "title": "“Debito record, così bisognerà alzare le tasse”: l’allarme dell’economista ex Bce Ignazio Angeloni - la Repubblica",
+      "category": "Italia",
+      "published": "2026-11-17T00:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcmFqMEVZQXctalhjaFVSTlNWRHhySGFYM3VlajNuS3h1YlZRenprQ2c1aDh1c3p5WG9CbFkxa2h2VEZMNmxyeVdab3JfejRYUENEUmJ3YWFhSjRCNFBDZTVlc3BaRWtKQlVjN3p6SlhacGd3SkpDZl9SQW9qdEw4bVVVbU1FaWRwQk93NWFESTE5eWg3clV0cXdIaUt5Y1NfMmUzaXZxUFFfSFZSYWc?oc=5",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Manovra, spunta il maxi-condono: varrà in tutta la penisola. Meloni: spegnere i focolai",
       "category": "Italia",
       "published": "2026-11-17T00:00:00+00:00",
@@ -892,15 +910,6 @@
       "category": "Italia",
       "published": "2026-11-17T00:00:00+00:00",
       "url": "https://www.repubblica.it/politica/2026/11/17/news/manovra_assalto_ministri_sanita_istruzione_oltre_cento_emendamenti-425728517/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "“Debito record, così bisognerà alzare le tasse”: l’allarme dell’economista ex Bce Ignazio Angeloni",
-      "category": "Italia",
-      "published": "2026-11-17T00:00:00+00:00",
-      "url": "https://www.repubblica.it/economia/2026/11/17/news/debito_record_tasse_economista_bce_angeloni-425728535/",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -975,15 +984,6 @@
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_e9e48fc7-b720-4ea8-9a49-e5b5a1ec380a.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Guerra Ucraina - Russia, le news di oggi. Raid russi sui ponti di Kiev. Nuovo attacco al ponte di Crimea, traffico sospeso",
-      "category": "Italia",
-      "published": "2026-11-16T23:18:12+00:00",
-      "url": "https://www.repubblica.it/esteri/2026/11/17/diretta/guerra_ucraina_russia_news_oggi-425728577/",
-      "source": "la Repubblica",
-      "status": "roșu",
       "words": 0
     },
     {
