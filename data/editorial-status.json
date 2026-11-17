@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-17T01:04:33.799665+00:00",
+  "news_updated_at": "2026-11-17T03:02:44.481318+00:00",
   "editorial_updated_at": "2026-11-16T21:38:37.042577+01:00",
-  "translations_updated_at": "2026-11-16T21:02:54.571262+00:00",
+  "translations_updated_at": "2026-11-17T01:06:00.620008+00:00",
   "feed_total": 120,
-  "feed_extended_400": 0,
-  "feed_missing_body": 120,
+  "feed_extended_400": 1,
+  "feed_missing_body": 119,
   "feed_short_body": 0,
   "editorial_total": 17,
   "archived_editorials": 292,
-  "translation_records": 33,
+  "translation_records": 27,
   "pending_total": 125,
   "pending_filtered_out": 112,
-  "editorial_verde": 0,
-  "editorial_galben": 31,
-  "editorial_rosu": 53,
+  "editorial_verde": 1,
+  "editorial_galben": 29,
+  "editorial_rosu": 55,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,13 +618,202 @@
   ],
   "recent_news": [
     {
+      "title": "L'orrore di Bucha e le parole ancora più oscene di Travaglio",
+      "category": "Italia",
+      "published": "2026-11-17T03:27:00+00:00",
+      "url": "https://www.today.it/opinioni/editoriale-travaglio-bucha-eccidio-ordinario.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "5 takeaways from interview with Spanish election favorite Feijóo",
+      "category": "Mondo",
+      "published": "2026-11-17T03:00:00+00:00",
+      "url": "https://www.politico.eu/article/5-takeaways-from-interview-with-spanish-election-favorite-alberto-nunez-feijoo/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "source": "POLITICO Europe",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "I took the EU selection test. Here’s how it went.",
+      "category": "Mondo",
+      "published": "2026-11-17T03:00:00+00:00",
+      "url": "https://www.politico.eu/article/epso-eu-institutions-entrance-test-process/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "source": "POLITICO Europe",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "EU’s Kallas fights to find a role in Ukraine peace talks",
+      "category": "Mondo",
+      "published": "2026-11-17T03:00:00+00:00",
+      "url": "https://www.politico.eu/article/eu-kaja-kallas-fights-to-find-a-role-in-ukraine-peace-talks/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "source": "POLITICO Europe",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "'Gli 007 americani avvertono: 'L'Iran sta sviluppando piani per una bomba sporca a Washington'",
+      "category": "Italia",
+      "published": "2026-11-17T02:58:13+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex CEO",
+      "category": "Mondo",
+      "published": "2026-11-17T02:37:53+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Romagna Myeloma Academy, grande successo per la prima edizione",
+      "category": "Italia",
+      "published": "2026-11-17T02:30:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/forli/cronaca/romagna-myeloma-academy-grande-successo-per-la-prima-edizione-w8q2x0zf",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ukraine: Russian strikes hit bridges in Kyiv, mayor says",
+      "category": "Mondo",
+      "published": "2026-11-17T02:28:00+00:00",
+      "url": "https://www.dw.com/en/ukraine-russian-strikes-hit-bridges-in-kyiv-mayor-says/live-79964446?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Andrea, la storica libreria Nanni e l'indissolubile legame con la città: “Ecco qual è il nostro segreto”",
+      "category": "Italia",
+      "published": "2026-11-17T02:05:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/bologna/cultura/storica-libreria-nanni-qj2qpe4j",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Rio Tinto agrees to pay US$250m to begin repairing ‘devastation’ left by Panguna mine",
+      "category": "Mondo",
+      "published": "2026-11-17T02:02:30+00:00",
+      "url": "https://www.theguardian.com/world/2026/nov/17/rio-tinto-250m-panguna-mine-clean-up-bougainville-png",
+      "source": "The Guardian",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "România pierde angajații cu experiență. Doar 57% dintre persoanele de peste 55 de ani mai sunt active pe piața muncii",
+      "category": "România",
+      "published": "2026-11-17T02:00:25+00:00",
+      "url": "https://adevarul.ro/economie/romania-pierde-angajatii-cu-experienta-doar-57percent-2571910.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Martina Stella sceglie il musical: “Non potevo dire no a Lina Lamont, è un personaggio iconico”",
+      "category": "Italia",
+      "published": "2026-11-17T02:00:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/ascoli/cultura/martina-stella-teatro-ventidio-basso-x2s6b0vi",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Paura in Bolognina, pestano a sangue e rapinano un uomo di 46 anni. I residenti: “Massima allerta”",
+      "category": "Italia",
+      "published": "2026-11-17T02:00:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/bologna/bolognina-rapina-mercato-albani-sntuip78",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "“Il finto Ronaldinho? Lo abbiamo portato noi, la gente in centro a Ravenna è impazzita”",
+      "category": "Italia",
+      "published": "2026-11-17T02:00:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/ravenna/cronaca/ronaldinho-sosia-syxoyd9n",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Lo sfogo di Guido: “Mio padre ha un tumore e aspetta da oltre 45 giorni l’esito di un istologico urgente”",
+      "category": "Italia",
+      "published": "2026-11-17T02:00:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/ancona/cronaca/tumore-esito-istologico-attesa-itagbsby",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Live: Russian attacks target bridges in Kyiv, knocking out heating and water",
+      "category": "Mondo",
+      "published": "2026-11-17T01:38:38+00:00",
+      "url": "https://www.france24.com/en/europe/20261117-live-russian-attacks-target-bridges-in-kyiv-knocking-out-heating-and-water-ukraine",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Yemeni army reports 661 attacks on Houthis as group advances towards Aden",
+      "category": "Mondo",
+      "published": "2026-11-17T01:38:13+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/17/yemen-army-reports-661-attacks-on-houthis-amid-houthi-push-towards-aden?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Irish court jails man for life over Dublin knife attack that sparked riots",
+      "category": "Mondo",
+      "published": "2026-11-17T01:19:56+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/17/irish-court-jails-man-for-life-over-dublin-knife-attack-that-sparked-riots?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "EU countries announce migrant deportation centre in Rwanda",
+      "category": "Mondo",
+      "published": "2026-11-17T01:12:28+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/17/eu-countries-announce-migrant-deportation-centre-in-rwanda?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Five EU states announce plans for immigration ‘return hubs’ in Rwanda",
+      "category": "Mondo",
+      "published": "2026-11-17T01:10:59+00:00",
+      "url": "https://www.theguardian.com/world/2026/nov/16/eu-states-immigration-return-hubs-rwanda",
+      "source": "The Guardian",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Premiati a New York i giovani talenti della seconda edizione del “progettoDiventerò nel Mondo” - Consolato Generale d'Italia a New York",
+      "category": "Istituzioni",
+      "published": "2026-11-17T01:02:25+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOU0c4SXpqcFBwWno5SVQtUk02SnhHcVNsWGlSa1JqVEtQQk93dTR3ei1sY3N3TXBMWHVkVmg0SlFmY3JlRnh1Y2xtWl9tS0w2Q1BURlg3N01BcGNPemdtaW9BbjB1Z25wZFlmTmQwTG1YRGgxMTVQeXlqaHYxSDEwdWpEVzRtOHFBUnJjX3BYSDFRYTBYT0dqdFhab1VnRzdtaUY3RXd5RVBPM0VTMDRmbmZ6dWJIN3ZVNkZnMF9nQzlOV1FLWEd4RXY1bzVxX0dBaEtENWpfUGhKQm9FcWk2SHhYWXIwSHBn?oc=5",
+      "source": "Ministero degli Esteri",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Europa regândește educația în era ecranelor: Suedia revine la manuale, Spania vrea să suspende TikTok. Ce se întâmplă cu elevii din România",
       "category": "România",
       "published": "2026-11-17T01:00:25+00:00",
       "url": "https://adevarul.ro/stiri-interne/societate/europa-regandeste-educatia-in-era-ecranelor-2570691.html",
       "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 448
     },
     {
       "title": "Hotel Elvezia, è il giorno dello sfratto: via al piano di emergenza “a tempo”",
@@ -654,29 +843,11 @@
       "words": 0
     },
     {
-      "title": "Ukraine holds peace talks with US, Europe as conflict escalates",
-      "category": "Mondo",
-      "published": "2026-11-17T00:45:11+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/ukraine-holds-peace-talks-with-us-europe-as-conflict-escalates?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Cum arată enclavele sărăciei, comunele înființate din calcul electoral. Ce spun localnicii despre întoarcerea la comunele-mamă, după două decenii de exod și depopulare",
       "category": "România",
       "published": "2026-11-17T00:30:25+00:00",
       "url": "https://adevarul.ro/stiri-interne/cum-arata-enclavele-saraciei-comunele-infiintate-2571402.html",
       "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "UK seeks closer ties with EU after Brexit fail",
-      "category": "Mondo",
-      "published": "2026-11-17T00:30:21+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/uk-seeks-closer-ties-with-eu-after-brexit-fail?traffic_source=rss",
-      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -690,15 +861,6 @@
       "words": 0
     },
     {
-      "title": "Ethiopia Moyale clashes disrupt livelihoods as territorial dispute deepens",
-      "category": "Mondo",
-      "published": "2026-11-17T00:21:19+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/ethiopia-moyale-clashes-disrupt-livelihoods-as-territorial-dispute-deepens?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Copiii răpiți și vânduți bogaților și starurilor de cinema. Povestea uneia dintre cele mai șocante rețele de trafic de persoane",
       "category": "România",
       "published": "2026-11-17T00:00:25+00:00",
@@ -708,11 +870,56 @@
       "words": 0
     },
     {
-      "title": "Live: Houthis advance in Yemen as tankers hit sea mines in Strait of Hormuz",
-      "category": "Mondo",
-      "published": "2026-11-16T23:57:49+00:00",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/16/live-houthis-advance-in-yemen-as-tankers-hit-sea-mines-in-strait-of-hormuz?traffic_source=rss",
-      "source": "Al Jazeera English",
+      "title": "Manovra, spunta il maxi-condono: varrà in tutta la penisola. Meloni: spegnere i focolai",
+      "category": "Italia",
+      "published": "2026-11-17T00:00:00+00:00",
+      "url": "https://www.repubblica.it/politica/2026/11/17/news/maxi_condono_manovra_meloni_spegnere_focolai-425728505/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Manovra, assalto dei ministri: dalla sanità all’istruzione, oltre cento emendamenti",
+      "category": "Italia",
+      "published": "2026-11-17T00:00:00+00:00",
+      "url": "https://www.repubblica.it/politica/2026/11/17/news/manovra_assalto_ministri_sanita_istruzione_oltre_cento_emendamenti-425728517/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "“Debito record, così bisognerà alzare le tasse”: l’allarme dell’economista ex Bce Ignazio Angeloni",
+      "category": "Italia",
+      "published": "2026-11-17T00:00:00+00:00",
+      "url": "https://www.repubblica.it/economia/2026/11/17/news/debito_record_tasse_economista_bce_angeloni-425728535/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "“Giusto tassare i super ricchi”. Convergenza nel campo largo ma resta il nodo patrimoniale",
+      "category": "Italia",
+      "published": "2026-11-17T00:00:00+00:00",
+      "url": "https://www.repubblica.it/politica/2026/11/17/news/tassa_super_ricchi_convergenza_campo_largo_nodo_patrimoniale-425728450/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "La Spagna è il solo Paese europeo con un’imposta unica su tutti i beni. Uk e Francia i più severi",
+      "category": "Italia",
+      "published": "2026-11-17T00:00:00+00:00",
+      "url": "https://www.repubblica.it/politica/2026/11/17/news/spagna_unico_paese_europeo_imposta_unica_tutti_beni-425728445/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "L’aliquota sulle successioni all’estero è progressiva, noi tra gli Stati più generosi",
+      "category": "Italia",
+      "published": "2026-11-17T00:00:00+00:00",
+      "url": "https://www.repubblica.it/politica/2026/11/17/news/aliquota_successioni_estero_progressiva_italia_generosa-425728480/",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -723,33 +930,6 @@
       "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxORHdmTEdvY05xWTVPMElyNVZTdjhIT0t0bEp0N25HUUFHMUFUNlZoT3NreGZEUjExTkkxMENlLUFUTU5xcWVaeUxjaUpTdWhQcU9RU3Q5RzJLZXIzQTRPU0NhaGhfcFhqaHJTSUVHNktfVUJsNDRaVmszT01najNzcmU5WFR5MkRKdDRkNm5PMHV3WHVVTzNwV1BOVjFyY09VdFNLQVd1ekw5WXRPRjlMMmVEVm90aEgzT19XajhQUVhIQjhkRGJBZ2JoNlJ6ZE15N1hsRmVrQ2JiaGxsb3k2Ym9fSl9RMXpOY3RLSTZfUVR2YnVUR2xWZUlyRUpFVnNlM2ZSOFo1dVJmTmlRbWFoSk02THBLa3pucDl5XzlVOXFJUTZt?oc=5",
       "source": "Ministero degli Esteri",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Germany beat Netherlands 5-0 to win Nations League group",
-      "category": "Mondo",
-      "published": "2026-11-16T23:48:00+00:00",
-      "url": "https://www.dw.com/en/germany-beat-netherlands-5-0-to-win-nations-league-group/a-79964394?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Paraguay ex-president moved to military jail amid special treatment reports",
-      "category": "Mondo",
-      "published": "2026-11-16T23:44:32+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/16/paraguay-ex-president-moved-to-military-jail-amid-special-treatment-reports?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Trump departs for ASEAN on summit with Xi and Putin",
-      "category": "Mondo",
-      "published": "2026-11-16T23:42:03+00:00",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/16/trump-departs-for-asean-on-summit-with-xi-and-putin?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -767,15 +947,6 @@
       "published": "2026-11-16T23:30:25+00:00",
       "url": "https://adevarul.ro/stiri-externe/sua/500000-de-dolari-pentru-o-intalnire-cum-isi-2571997.html",
       "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "French presidential rivals take aim at Le Pen in debate",
-      "category": "Mondo",
-      "published": "2026-11-16T23:27:47+00:00",
-      "url": "https://www.politico.eu/article/france-election-2027-presidential-candidates-target-marine-le-pen-tv-debate/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "source": "POLITICO Europe",
       "status": "roșu",
       "words": 0
     },
@@ -798,46 +969,10 @@
       "words": 0
     },
     {
-      "title": "Five EU countries announce migrant deportation centre in Rwanda",
-      "category": "Mondo",
-      "published": "2026-11-16T23:20:45+00:00",
-      "url": "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Guerra Ucraina - Russia, le news di oggi. Raid russi sui ponti di Kiev. Nuovo attacco al ponte di Crimea, traffico sospeso",
       "category": "Italia",
       "published": "2026-11-16T23:18:12+00:00",
       "url": "https://www.repubblica.it/esteri/2026/11/17/diretta/guerra_ucraina_russia_news_oggi-425728577/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ukraine hits key Crimea bridge with drones",
-      "category": "Mondo",
-      "published": "2026-11-16T23:13:06+00:00",
-      "url": "https://www.france24.com/en/video/20261116-ukraine-hits-key-crimea-bridge-with-drones",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "United Airlines resolves tech outage that delayed flights",
-      "category": "Mondo",
-      "published": "2026-11-16T23:13:00+00:00",
-      "url": "https://www.dw.com/en/united-airlines-resolves-tech-outage-that-delayed-flights/a-79964387?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il nuovo ordine mondiale nella vignetta di Ellekappa",
-      "category": "Italia",
-      "published": "2026-11-16T23:01:00+00:00",
-      "url": "https://www.repubblica.it/esteri/2026/11/17/news/nuovo_ordine_mondiale_vignetta_ellekappa-425728425/",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -848,15 +983,6 @@
       "published": "2026-11-16T23:00:25+00:00",
       "url": "https://adevarul.ro/stil-de-viata/magazin/dintii-de-waterloo-afacerea-macabra-care-le-a-2571125.html",
       "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Atp Finals: Cobolli stecca la prima, con Medvedev una sconfitta che brucia: il russo vince in due set",
-      "category": "Italia",
-      "published": "2026-11-16T22:48:34+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/16/atp-finals-cobolli-stecca-la-prima-con-medvedev-una-sconfitta-che_76b3d219-b65a-44b1-8bfa-44aa29029416.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -987,69 +1113,6 @@
       "words": 0
     },
     {
-      "title": "Săptămână cu greve şi proteste de stradă, în 7 dintre economiile majore ale Occidentului",
-      "category": "România",
-      "published": "2026-11-16T21:59:24+00:00",
-      "url": "https://www.romania-actualitati.ro/stiri/in-lume/saptamana-cu-greve-si-proteste-de-strada-in-7-dintre-economiile-majore-ale-occidentului-id237589.html",
-      "source": "Radio România Actualități",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cobolli cede con Medvedev e si rabbuia, Tiafoe perde con Alcaraz sorridendo",
-      "category": "Italia",
-      "published": "2026-11-16T21:55:31+00:00",
-      "url": "https://www.repubblica.it/sport/rubriche/monday-s-net/2026/11/16/news/cobolli_medvedev_tiafoe_alcaraz_atp_finals-425728496/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il Papa lascia il suo Perù, ultima tappa di una visita storica",
-      "category": "Italia",
-      "published": "2026-11-16T21:55:27+00:00",
-      "url": "https://www.ansa.it/vaticano/notizie/2026/11/16/il-papa-lascia-il-suo-peru-ultima-tappa-di-una-visita-storica_0b44c651-3815-40b4-8ddd-75d5bc576fc1.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cobolli, falsa partenza: cede a un Medvedev perfetto nella prima delle Finals",
-      "category": "Italia",
-      "published": "2026-11-16T21:53:56+00:00",
-      "url": "https://www.repubblica.it/sport/tennis/2026/11/16/news/cobolli_medvedev_finals_sconfitta-425728486/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "The Donald sostiene Mr. Nvidia, 'una buona idea il suo rientro'",
-      "category": "Italia",
-      "published": "2026-11-16T21:43:23+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/the-donald-sostiene-mr.-nvidia-una-buona-idea-il-suo-rientro_df084f26-8996-46a2-927f-645ecc3fe8fe.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Atp Finals: Cobolli stecca la prima, vince Medvedev. L'azzurro sconfitto in due set per 7-6, 6-3",
-      "category": "Italia",
-      "published": "2026-11-16T21:32:10+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/16/atp-finals-cobolli-allesordio-nel-torneo-ora-la-sfida-con-medvedev_76b3d219-b65a-44b1-8bfa-44aa29029416.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "GF VIP, Valeria Marini: \"Guendalina ha bestemmiato\". Lei si infuria (e interviene Ilary Blasi)",
-      "category": "Italia",
-      "published": "2026-11-16T21:31:00+00:00",
-      "url": "https://www.today.it/tv/news/grande-fratello/vip-valeria-marini-guendalina-ha-bestemmiato.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "16417 - Circolare numero 111 del 16-11-2026 | Dettaglio di Circolari, Messaggi e Normativa - INPS",
       "category": "Istituzioni",
       "published": "2026-11-16T21:29:54+00:00",
@@ -1059,65 +1122,11 @@
       "words": 0
     },
     {
-      "title": "Nvidia chiude la porta a Huang, ma la Casa Bianca continua a difendere il manager",
-      "category": "Italia",
-      "published": "2026-11-16T21:22:31+00:00",
-      "url": "https://www.repubblica.it/economia/2026/11/16/news/nvidia_huang_casa_bianca_difendere_manager_azioni_trump-425728430/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Commissariata la banca Revolut, 'rapporti con indagati per mafia'",
-      "category": "Italia",
-      "published": "2026-11-16T21:16:50+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/commissariata-la-banca-revolut-rapporti-con-indagati-per-mafia_826ace80-1187-47af-9cab-866fe3539d56.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Gli attivisti del Cua cambiano il nome di piazza Verdi: “Si chiami Francesco Lorusso”",
-      "category": "Italia",
-      "published": "2026-11-16T21:16:04+00:00",
-      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/cua-piazza-verdi-francesco-lorusso-cone0ljj",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Lepore e i consensi, il centrodestra attacca: “L’ultimo posto segna il fallimento su tutto”",
-      "category": "Italia",
-      "published": "2026-11-16T20:59:49+00:00",
-      "url": "https://www.ilrestodelcarlino.it/bologna/politica/lepore-classifica-centrodestra-attacco-wzh0mukv",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Știri din secțiunea Internațional - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-16T20:45:35+00:00",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5FU3RvSlFNSGk1eldOSFI3VW5XYVA3VDdYWmdPR01VU1F3V0ZaUkx5eUJVclJYSl9COElyR29VemU4bldsYnB4MEpPbGNPVmRlN3VPaUw0cTR1SGc?oc=5",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Carcere, ancora una giornata di tensione: tentata rivolta, atteso il garante",
-      "category": "Italia",
-      "published": "2026-11-16T20:44:04+00:00",
-      "url": "https://www.ilrestodelcarlino.it/modena/cronaca/carcere-tentata-rivolta-haniy1cu",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Milly Carlucci difende Mariotto, poi parla di Barbara D'Urso: \"Non so se resterà a Ballando\"",
-      "category": "Italia",
-      "published": "2026-11-16T20:20:00+00:00",
-      "url": "https://www.today.it/tv/news/ballando-stelle/milly-carlucci-difende-mariotto-parole-barbara-durso.html",
-      "source": "Today",
       "status": "roșu",
       "words": 0
     },
@@ -1507,18 +1516,20 @@
       "source": "NATO",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "Bicicletă de 3.500 de euro, furată în Italia, găsită după două săptămâni la Piatra-Neamț.... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-16T10:34:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPUUc3b3QyWUJIdGlKV2YtRk1Sel80OE5yay1qanJLT3BMbGtScjJqVkdaQ2U5b2o0Rlo3NmRacXBOLVNIcGNTSElUaWZVU0xXUUNPdGgxcHQ3eGpaSlM1Qnh3UW1oeERtTkx1elZBQzdfakZxRkg4R1hRQkg0VzRFaFBIZWJGLTd0bHp4Uk1Fem4yWFVYR0Ruajk4YmZhdktfcUd4ck9Jc29NMXlfZmlLTlhPc3EzOHk3M0dSWUNDTG1YeVNSQWNVQ1BydWpLR0hqanRuZkJmbHdfTTNiNDg1dXFsWlVGVnZFUUN1UmdkaWNfUdIB9wFBVV95cUxPeU1CQjdwSGt6dW02OTBRMEdjTTllQ0xhS0VndG9ETjh5bEo2YWl1MDVSNnBrOXFvb05vbXgxUlQ3ajBoMnlXWmlGWWcwR09RcU5vb2tWSVBzd2RFQjFtVUh",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
+    {
+      "title": "Europa regândește educația în era ecranelor: Suedia revine la manuale, Spania vrea să suspende TikTok. Ce se întâmplă cu elevii din România",
+      "category": "România",
+      "published": "2026-11-17T01:00:25+00:00",
+      "url": "https://adevarul.ro/stiri-interne/societate/europa-regandeste-educatia-in-era-ecranelor-2570691.html",
+      "source": "Adevărul",
+      "status": "verde",
+      "words": 448,
+      "intro": "Dezbaterea europeană despre ecrane în educație nu se reduce la alegerea dintre manualul tipărit și tableta digitală.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
     {
       "title": "Carriera, l’Ai taglia metà dei ruoli di ingresso in azienda e li trasforma - Il Sole 24 ORE",
       "category": "Italia",
@@ -1562,17 +1573,6 @@
       "words": 25,
       "intro": "Un șofer de TIR merge un an la închisoare după o înțelegere cu un român, în Italia, pentru o datorie de 126 de euro Libertatea",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "Qualità della vita 2026 in Toscana, Firenze scivola al settimo posto: male sicurezza e borseggi. Lucca crolla, Pistoia vola - La Nazione",
-      "category": "Italia",
-      "published": "2026-11-15T11:52:17+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOM2xEcUowV1k5YWEtTVJYVkx2RTJ4MC1OcUtWdXBWcEtoSnlvYndlM2c3em90WlozNHE4VTNuemlXdVpodEE5cWlOS1NTWEZERkliTjJoWUtUWWZQZTN0NE1VRF84bXZaOEhuWHp3T0dVb2w0NnhLeXlsZEhaRWVuSmx3?oc=5",
-      "source": "La Nazione",
-      "status": "galben",
-      "words": 21,
-      "intro": "Qualità della vita 2026 in Toscana, Firenze scivola al settimo posto: male sicurezza e borseggi.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     }
   ]
 }
