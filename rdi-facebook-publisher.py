@@ -28,6 +28,7 @@ GRAPH_VERSION = os.getenv("FB_GRAPH_VERSION", "v27.0")
 YOUTUBE_LIVE_URL = os.getenv("RDI_YOUTUBE_LIVE_URL", "https://www.youtube.com/watch?v=_qt-NjBcbtA")
 RDI_APP_URL = os.getenv("RDI_APP_URL", "https://radioromanii.duckdns.org/index.html")
 RDI_PAGE_URL = os.getenv("RDI_PAGE_URL", "https://www.facebook.com/profile.php?id=61595529061512")
+RDI_FALLBACK_IMAGE_URL = os.getenv("RDI_FB_FALLBACK_IMAGE_URL", "https://raw.githubusercontent.com/ionut290/Radio-Romanii-Italia/main/RADIO-COVER.jpg")
 DAILY_LIMIT = max(1, min(int(os.getenv("RDI_FB_MAX_DAILY_POSTS", "12")), 50))
 LIVE_PROMO_INTERVAL_HOURS = max(1, min(int(os.getenv("RDI_FB_LIVE_PROMO_INTERVAL_HOURS", "6")), 24))
 NEWS_MIN_INTERVAL_MINUTES = max(30, min(int(os.getenv("RDI_FB_NEWS_MIN_INTERVAL_MINUTES", "60")), 360))
@@ -115,14 +116,21 @@ def publish(item: dict, message: str | None = None) -> str:
     if not PAGE_ID or not PAGE_TOKEN:
         raise RuntimeError("RDI_FB_PAGE_ID e RDI_FB_PAGE_TOKEN sono obbligatori per pubblicare")
     image_url = str(item.get("image") or "").strip()
-    use_photo = image_url.startswith(("https://", "http://")) and item.get("imageType") != "editorial-illustration"
+    # All publications, including live promos, must carry a real photo.
+    # Editorial illustrations and missing/invalid image URLs use RDI branding.
+    use_original = (
+        image_url.startswith("https://")
+        and item.get("imageType") != "editorial-illustration"
+    )
+    chosen_photo = image_url if use_original else RDI_FALLBACK_IMAGE_URL
     post_message = message if message is not None else message_for(item)
-    if use_photo:
-        url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/photos"
-        data = {"url": image_url, "message": post_message + "\n\n🔗 Articolo: " + str(item["url"]), "published": "true", "access_token": PAGE_TOKEN}
-    else:
-        url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/feed"
-        data = {"message": post_message, "link": str(item["url"]), "published": "true", "access_token": PAGE_TOKEN}
+    url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/photos"
+    data = {
+        "url": chosen_photo,
+        "message": post_message + "\n\n🔗 Articolo: " + str(item["url"]),
+        "published": "true",
+        "access_token": PAGE_TOKEN,
+    }
     body = urllib.parse.urlencode(data).encode("utf-8")
     request = urllib.request.Request(url, data=body, method="POST")
     request.add_header("User-Agent", "RDI-Facebook-Publisher/1.0")
@@ -130,12 +138,30 @@ def publish(item: dict, message: str | None = None) -> str:
         with urllib.request.urlopen(request, timeout=20) as response:
             payload = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as error:
-        raw = error.read().decode("utf-8", errors="replace")
-        try:
-            details = json.loads(raw).get("error", {}).get("message", raw)
-        except json.JSONDecodeError:
-            details = raw
-        raise RuntimeError(f"Facebook API HTTP {error.code}: {details}") from error
+        # An original image may be blocked, expired, or unsuitable for Meta.
+        # Retry exactly once with the RDI fallback, never with a text-only post.
+        if use_original and chosen_photo != RDI_FALLBACK_IMAGE_URL:
+            print("Foto originale non accettata da Facebook: riprovo con foto RDI.")
+            data["url"] = RDI_FALLBACK_IMAGE_URL
+            fallback_request = urllib.request.Request(
+                url, data=urllib.parse.urlencode(data).encode("utf-8"), method="POST"
+            )
+            fallback_request.add_header("User-Agent", "RDI-Facebook-Publisher/1.0")
+            try:
+                with urllib.request.urlopen(fallback_request, timeout=20) as response:
+                    payload = json.loads(response.read().decode("utf-8"))
+            except urllib.error.HTTPError as fallback_error:
+                raw = fallback_error.read().decode("utf-8", errors="replace")
+                raise RuntimeError(
+                    f"Facebook non accetta neppure la foto RDI (HTTP {fallback_error.code}): {raw[:500]}"
+                ) from fallback_error
+        else:
+            raw = error.read().decode("utf-8", errors="replace")
+            try:
+                details = json.loads(raw).get("error", {}).get("message", raw)
+            except json.JSONDecodeError:
+                details = raw
+            raise RuntimeError(f"Facebook API HTTP {error.code}: {details}") from error
     if not payload.get("id"):
         raise RuntimeError(f"Facebook non ha restituito l'id del post: {payload}")
     return str(payload["id"])
