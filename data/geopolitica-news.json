@@ -1,12 +1,34 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-18T18:40:47.806467Z",
+  "updated_at": "2026-11-18T19:21:07.176002Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-2d91eda2f84a3137",
+      "category": "securitate",
+      "region": "asia",
+      "title": "USCC Urges Pacific Cable Fleet With South Korea",
+      "summary": "",
+      "source": "조선일보",
+      "published": "2026-11-18T19:04:25Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQlhjZWs5NkNuOFN1M25IWjBJUmU4MzE2ZlJzZ1VURFFISC10V1VaRTlmOUhacHF6b2JpT1JkVktLb1FhVHJad2w1X216cXFvcWtUeW1sbzJsNzhPMXpkUHVyMVhpOTVYWHRDdHdISUVMdmJfMlBldDY3SXJvVXRBX0FFaTg?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-da51f4ae6f6ac972",
+      "category": "europa",
+      "region": "europa",
+      "title": "Nosatîi în Belgia: „Am înregistrat progrese importante prin dezvoltarea capacităților antidronă”",
+      "summary": "",
+      "source": "Puls Media",
+      "published": "2026-11-18T18:56:15Z",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOcnhfVGhzeEpITVV0VTNuNmNuQmRQek54a2F4cWlvZGJCS19GZHNnZi1VYnpwbWFXVHVLS0pDOGhwOG82cmp0ZlhvX3lBS1FUV3A1SFJ2bnBpUzkxbWgtcUNabVFMcXgyRmVBek9OT2JkUHF2NV9Uemh5MmxRMURheUQ1akowNzFKOUNuUks1VUpLNFdhN1FHWXZjRGxYNWtqbzVtWGJwbzFHSm5CWE15cTFGN2diRG10Qk85MVN1UThaeEJGcGdlMG9ZX3RadHpsdWZiYm9reVZRVWxV?oc=5",
+      "review_status": "external_headline_unverified"
+    },
     {
       "id": "geo-932afab655335039",
       "category": "europa",
@@ -19,18 +41,26 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-fcaf8c00dc82838a",
-      "category": "economie",
-      "region": "global",
-      "title": "BB to issue Tk 3,000 crore short-term Sukuk for rural infrastructure",
+      "id": "geo-6a6e7a4db61c147a",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Israeli Tanks Advance Across Gaza Cease-Fire Line in Rare Incursion",
       "summary": "",
-      "source": "The Daily Star",
-      "published": "2026-11-18T17:57:11Z",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSjU3dEZxdHYwcEJjNDhKci1hYUZhVkpCSG5VeHRlTWJvbnpfUUFWaWFvS3ZCNmZFaGo1d1NxMGhxQnRmTnFkNFNXTEx6ZXdLQzVBV2d2V2x2RW9pX1BYdHdnNks2U2FjdlNjcFI5cFl0eTJsb3F0SnB4Y1ZEOXo5Q192aG9HYWE0QmNKSC00THRwbGFnUVdfbEQyS2dieFZkTlhpaUlDeGpvd2x1TTFCZA?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "BB va emite sukuk pe termen scurt de 3.000 de milioane de Tk pentru infrastructura rurală",
-      "title_it": "BB emetterà Sukuk a breve termine da 3.000 crore di Tk per le infrastrutture rurali",
-      "translation_status": "machine_translation"
+      "source": "The New York Times",
+      "published": "2026-11-18T17:47:13Z",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeW5DSkhiak9mal9LREtyS0F6b1daM1VYcklSX1dEZXQtczhncGJMdlhub0k4eGo0enI2ZFFXNnV5UHZiZlRJSDZfVXlXWWtTSnh1ZWR5WDEyZl8zMGRfU2xLalQ5RGYtcVVvWEdMUzc3cjR1Y3NZaTJJVXVtc1ZGZ2ZKSlVzR3Q4TFBpcDRQWTUxWjg?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-7d6790194518f52d",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "The United States’ Participation in the 2026 East Asia Summit",
+      "summary": "",
+      "source": "U.S. Department of State (.gov)",
+      "published": "2026-11-18T17:26:15Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdHIzSXc0NEdHdlYtUElpMlhzbDJJUjB0d2NhbUNreDM4eUhoMXNKUnF6N1JMX3d0c2tkMnF5Y0JjUkk1cmhDVlNpV3o5YzlCWDlvLWhIYTNsUlM0OUZVOUZUNlhMNXJfU1JlWEhIUHJwMjF1U0s2WGhsOGFPWWktbWtsVlBDcXZrQWVoQms4N1Z1LVVwMEk4VmpndkF1TWRudUFSYTdtTnNUSi00cVZtQWpmSk1tM3NTQTdNX3BYUFFfdw?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-6833508b589b332a",
@@ -100,18 +130,15 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-dded5230e5abb0cb",
+      "id": "geo-d1025e569e69619c",
       "category": "diplomatie",
-      "region": "global",
-      "title": "Africa Does Not Need More Summits, It Needs Translators",
+      "region": "asia",
+      "title": "Vietnam’s Opening in Fractured Asia-Pacific Supply Chains",
       "summary": "",
-      "source": "Modern Ghana",
-      "published": "2026-11-18T16:32:00Z",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWE5QQnRTZnhkcDE4UEViNXAxUFVWaXNiN3JZbkZVR2VrYllETDBEbG1TMkdoX25QQWVNd3Fra3k4UzNqU0xXOXkwaXlXSzlDZ29VVnZPc2NaLXc2WVBrSnBadEpDWEFHQTFiODNOSDE2cnpLNFhEUHBISWJqZHBRNEh4LUhFeUN5c3dMdXFTNmRwY1o1X3NpVVhn0gGaAUFVX3lxTFBYTlBCdFNmeGRwMThQRWI1cDFQVVZpc2I3clluRlVHZWtiWURMMERsbVMyR2hfblBBZU13cWtreThTM2pTTFc5eTBpeVdLOUNnb1VWdk9zY1otdzZZUGtKcFp0SkNYQUdBMWI4M05IMTZyeks0WERQcEhJYmpkcFE0SHgtSEV5Q3lzd0x1cVM2ZHBjWjVfc2lVWGc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Africa nu are nevoie de mai multe summituri, are nevoie de traducători",
-      "title_it": "L’Africa non ha bisogno di più summit, ha bisogno di traduttori",
-      "translation_status": "machine_translation"
+      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "published": "2026-11-18T16:23:52Z",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOVzNMdTBwTzhrek9xWmJhcVRVOWRoTndFWlduSXFDNG9PN0xWVk9LaHVuUDdPRjVCQk8tNVR4R01NX0hJemp6N29WVXdGRWVSX2FnUHVkbnhBSmJMUGozald0WEJJNkVaU1NZVXdEUFhoQlA4WmF6Zm1sQmlBUDRVY1ZwSmx1Zjg2cmJUWDhfYnVrR0E?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-9f99573f725179d9",
@@ -170,28 +197,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-ba0cef324393d193",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Global Crisis Update: November 18, 2026, High-Stakes Diplomacy, Energy Shocks, and the Holiday Economic Outlook",
-      "summary": "",
-      "source": "News Talk Florida",
-      "published": "2026-11-18T15:18:44Z",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQT0VVVjhQc3NXd0NXdlJwaGVBSVpBMGluclIxelBzRDRUVHEyVU9uR2VydzZSUXVLd3VLd29zN1pvVENYbFFBUUNrZ21MeE5VNjNXRUs0UGNvTnVDamJxeVEzSDBLeWN5U3NIeGs3TkF4ZXlsZUdBaUo1M0kzYVpxdU1QRGdxNEZwZ1l2M2ZzWGVRU3FZbTdTRVhiOWFuQQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-ac1557526936dc30",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Trump, Xi and Putin in Shenzhen: What Their Trilateral Summit Can Achieve",
-      "summary": "",
-      "source": "Diplomacy and Law",
-      "published": "2026-11-18T15:11:48Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBMM1FMQlBsejdoemp5ekllOXpEdzFTYVpwMGRwVXQ4eUR2Q3RJRU9ZNVBEb09XTDE3ZFZxUGxaNGlyNEhUcTd0RTlpdUxxbllvUk1ySlpQN3pmX1hiOFh0WHNpdjA2OVo2VHc?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-d899af64668c493c",
       "category": "clima",
       "region": "global",
@@ -217,21 +222,10 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-d10af5f6505265a8",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Trump to meet Putin separately in China, first talks since 2025 Alaska summit",
-      "summary": "",
-      "source": "Business Upturn",
-      "published": "2026-11-18T14:38:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOLXhQekdjT1lGRjR1MjlnV1Vid1Z5c0dVb0VFQnlmcjRqU0VVYzZtRUI1cDNxNjdzRWNQam5XdTN4QkN3YWlHVGliRkpsY3B3NkJ3V1Q2ZDVHM2I4SWV0SVFzNkFCYThRR0dCS2NUOHBBY3hfSHV3bDh2N0IwNlNhb1RhYlEyX2poVTR3bmdMeHRMTXNhVnlyc09xbUtuUGJOY00xZ1R2S19zaWFOSVNWQVNzQQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-e81224bbf427c114",
+      "id": "geo-39c206f99e02fd03",
       "category": "diplomatie",
       "region": "americi",
-      "title": "Donald Trump, Xi, Vladimir Putin summit could reshape world order",
+      "title": "Trump, Xi, Putin meet at APEC in summit that could reshape global balance of power - analysis",
       "summary": "",
       "source": "The Jerusalem Post",
       "published": "2026-11-18T14:36:05Z",
@@ -317,6 +311,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-3ac213a8e2a99426",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "India Looks to Stronger ASEAN Partnership Amid Increasing Global Turbulence",
+      "summary": "",
+      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "published": "2026-11-18T13:07:51Z",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZ01qNTBRc0lETXNEZ2ZTSjJBRDBtS3ZpU3BaRUVsenAyc1lWdFlDWEVmUm1xUTM1MDlnRkRhZ3hmQmdzWVVWc08zdlhmNS1RS3MtNS10aVRuQS1HYjNkUWV1S0M5aGcwVkJubG5DdGZBRFluY1pVS0p3Wl9ZeG1iaDhhS0ZGSURCVF8zTVdnTFNITkZ1RUhxdTRXdjBXNzlCODdodG5fdFJTWUNk?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-67e373a5588685d5",
       "category": "diplomatie",
       "region": "asia",
@@ -356,14 +361,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-c5929440a0dd5efe",
+      "id": "geo-c992d8ad14e20e2e",
       "category": "diplomatie",
       "region": "asia",
       "title": "US PRESIDENT Donald Trump reaffirmed Washington’s commitment to Southeast Asia and assured leaders of Association of Southeast Asian Nations (Asean) member countries of continued American support during the US-Asean Special Summit in Manila",
       "summary": "",
       "source": "Facebook",
       "published": "2026-11-18T12:45:47Z",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQejA5ZV9lT0w1WU83Y0JxTnc0SU5tQnUwZHZUY1FJWXUyZGZydlJNX2lTRmlZMkxUZFhVT0c0c20yb1FiTDlTQTRyWVVFb09VWGt6R3FBOTZET1BsdUdFRnItc0J2VEJER1oyVjIyanhzeEpQS3Y1YnIzQWtPQlVlM09YWjRWTnJQQndsWjBIeHZpWnNLRDl2N1VFeXBOckpCdjFxUEpuc3dpaktWUzJJMGhCU0R2andJWnJqQldGUUhRbkg5RmxjTnpILWI3WTUxenFDeVJiX2F0TE5OZ0l1VQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQak9SNGlDMWJWYzRFNDhPeVVZMVRmdFY2OWtKeHI5R3BjNTdORWJ5ell6RjBET1lJSFM0TllwOTdvQ3RDdzRYRFUxREFNODFHdXBJWHBucS0xRzRjN3pDblRoSzkzZDdwSHZ3S2tnaWRiWk00dC1Fa1lXX0IxdW5sdDVxd1pFejlJc2xhbjVtelJpZExHWENSek56M19LQ2JWR2Jmd0YzTjJIRWlSS1NtU2ZxTkY0SXNQYlBVc0lNR2hTUFdFal9kaTdBd1BqZ3NEbVRadnN6VlRvUWtVSF9r?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -487,17 +492,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-af2afe247dc85f55",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "UN-OIC resolution 2026: India seeks inquiry into exclusions",
-      "summary": "",
-      "source": "NRI Affairs",
-      "published": "2026-11-18T10:10:52Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB1SWVYTV9aWlZKQnFiVzdkbTZSbG5FanhFWi01c3lxYk41UmtrSXR2VWJqZ3NLeS1TNWJEb0h0bE14bXlibkk0ZlhZdU4xdGRXTEpQTjlCZGxVRnllaHNYcHAtQklGcmdZclMwbmVB?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-fcbb910d98a3809c",
       "category": "economie",
       "region": "global",
@@ -510,6 +504,17 @@
       "title_ro": "Deblocarea potențialului de investiții al Somaliei - Oportunități în economia albastră, pescuit, energie și agricultură",
       "title_it": "Sbloccare il potenziale di investimento della Somalia: opportunità nell’economia blu, nella pesca, nell’energia e nell’agricoltura",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-7d1aa94830858b33",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Putin Will Continue Ukraine War Despite Plans to Meet Trump, Intelligence Says",
+      "summary": "",
+      "source": "The New York Times",
+      "published": "2026-11-18T10:03:56Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQMnVuNkc1OXlhc1RYRmEwZTZIRDF6TmVMY2pTdnE4clplaDBDTmwzMkxFZVl1MmxRc2JBV0stQzFVR3gtMVl3TVhVOEh4TVF3aDR3aEZoT2NQQTZPazZPZEU3ZFU2MWFCVjFidXRIT2FFcHd2NFZzRTdyczNnY0M2Yg?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-ecf6c53eea92f2c1",
@@ -565,17 +570,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-36c71a82f7f4bc58",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Putin: Russia, China united in pursuit of peace and prosperity in Asia-Pacific",
-      "summary": "",
-      "source": "thechronicle.com.ph",
-      "published": "2026-11-18T09:11:58Z",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPdVVrSmRsbm9FUU5OMDlwX1FUWV9DNnVxUDYxekJ3OEtXQ0RhUU9yaWpBRExva1hKaC12MGUtM254NWQ1SkFQTWI5a2tnMm9lM0RzVW1uazM2OFMxUXNpbGNPU1pxTWZxejVNVTlTLUFVS01rNjdzbnVTNm5Ya0pCQUxjQ2szV2JaNjdLcVdDVXoxLUtjOGN0eERlQWRXVHk1N3M5bDZ0S2g?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-c65ccded19ef1f0c",
       "category": "conflicte",
       "region": "europa",
@@ -588,17 +582,6 @@
       "title_ro": "Europa se teme că Putin exploatează eforturile de pace ale lui Trump pentru a scoate din afară Ucraina și UE",
       "title_it": "L’Europa teme che Putin stia sfruttando la spinta pacifista di Trump per mettere da parte l’Ucraina e l’UE",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-86528b9cd795010a",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "The U.S.-Chinese-Russian Summit and the Future of Trilateral Nuclear Talks",
-      "summary": "",
-      "source": "War on the Rocks",
-      "published": "2026-11-18T08:33:33Z",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNeVFxbkFOalpFWXpGNjg2UW02bmhod18wWUsxcTAwaDVwM2UyYUhkRFRxcFJ0UmRFdkxHcUxIbk42VjNZUHlDMnFmbGxQT0k1OVU1R3dFdDd1RVlfRmNjZG80dFBtSjU2cWJYSDhjajNPRFZKOGJ6RDdYY2doNTB2SHFkbHFFRGc4YjF1WDZZX2pQMkJMVUpBT2QyZWpueGlZUUE?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-e3d3cf1131e4b20d",
@@ -651,20 +634,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-a096f47eda60731f",
-      "category": "securitate",
-      "region": "asia",
-      "title": "The 21st East Asia Summit (EAS)(Summary)",
-      "summary": "",
-      "source": "Prime Minister's Office of Japan",
-      "published": "2026-11-18T07:04:43Z",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAzN1ppZkhmcG5UX1ZJb3B4MXNzWU90QnVDSWI0N1JCa1hGUml6SVQ4bkRKRkRWNmNDOUVJNXR5bUxZV3NVRExOMkRCdUV6SnNJZHo1S0M1YXc3cXQzX0NaM3lJanZHWXF5NndFWldR?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Al 21-lea Summit din Asia de Est (EAS) (Rezumat)",
-      "title_it": "Il 21° vertice dell'Asia orientale (EAS)(sintesi)",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-b9f49959c8d38b4a",
       "category": "securitate",
       "region": "europa",
@@ -673,6 +642,17 @@
       "source": "Big News Network.com",
       "published": "2026-11-18T07:03:00Z",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSy02REhYeEZ2cFhGOEg3NWpaZVNuRGxVNlViQk9KanZmdTlwXzlwZ2N6azN5QTFRa2VKU01YaDhPbFp6NHJ5WVNJRmtGSkFPWms0WlB1QS1veW5kSXBRRnBFQTYxTExhV3FEWU1qWS1HeHFwaW8yM1FJWno0V29yVlJfRHZMNU1MRG1rMF9seW1jN2QtOHp5RG1sMHgxSzg4NmtKeTE1aDNRWVptTkllVlZfajBfcldqWTNPQzZxOVpMbnVnM3JTSFFBQTIweWtPQkE?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-be30504ea524a53c",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Trump’s Sudden Ukraine Push Leaves Europe Walking Tightrope",
+      "summary": "",
+      "source": "Bloomberg.com",
+      "published": "2026-11-18T06:57:00Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOYk9oUy15aGpkNVBvTWtaVjhvNm1uTnN5bWVidkYtbFdGdmx1WDdJMUdWdlN3QVlTZ0dxZlV0UERhTHBSYUZTOUVpREtoR1ZtbjdsOEk0WS11WnZORXlVNXZpSFVjZzNKV21YUHJ3TFZNMGtvQUlTYkRVTjN5alhQR1AtbW1UVmd0MkxhN1VCMHNKTXgzU2lVR2pKZk4ta0cwaVA0Mkt2ODMxNEU4Wm9scll3?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -688,39 +668,6 @@
       "title_ro": "Încetarea focului în Gaza aproape de colaps, deoarece încălcările israeliene și blocada subminează armistițiul: Raport",
       "title_it": "Il cessate il fuoco di Gaza è vicino al collasso mentre le violazioni israeliane e il blocco minano la tregua: rapporto",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-9f44db5581d42a72",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Kairat Batyrbayev: Trump-Xi-Putin summit cannot reshape world order or undermine sovereignty of states - INTERVIEW",
-      "summary": "",
-      "source": "Latest news from Azerbaijan",
-      "published": "2026-11-18T06:38:38Z",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNNmJTX1FVbFcxblhDNFV6R3p2QTN5S1dCWk5CUDkwR3diREU2bC1oc3I2aVA1b01taTFrODdDVEpmM0QyMWx4ZENseXJiYlA4UUExT05jOVpKRmw5NVFCMktBNVFRR180eWdJM3llUEdETW5ibGhZeEVMMlNNWkJEY1JxSmxGOWlGQTlXSVpkU3p3SlJ2NG5IaE56b3M0ODE3dVB2Z1ZEMlZpX3lzQ3hGZ2pZY0o4OE14UnlBTW42RkNnUlRxbkMtN2F1QWk?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-b30e227237925e71",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Russian President Vladimir Putin arrived in China ahead of a summit with Chinese President Xi Jinping and US President Donald Trump, who is touring Asia in search of diplomatic gains after a bruising election defeat back home. Link to the f",
-      "summary": "",
-      "source": "Facebook",
-      "published": "2026-11-18T06:33:03Z",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZTdTQXFJS1B6Rlc3WW54czdHMFJwVEkwTEJ2N0RKeWtFUUNuZW4tWkJINEdRSnBCVWRhdHVTdUdZNXJGUnQwN0ZVd2JLVUtsMERRVnZvbVp1Uk9ieV9wcWFsejZUb3QzeGxOUzFFb3pqdU9vVlJqeS1DNWRjU3FIYUR1UTdlWTVLWHU2NGhXX2szQWJwZ0xnYklfWGl0S295dGRSVDMwY3hSa1ZVdTExM0tIV0l4ZGhRRzV5WDIzRmxubnZseXdkTUNHRy1USWZsODlvdzB5QQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-05ead94ef075920e",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Xi, Putin meet in Shenzhen as APEC precedes Trump talks",
-      "summary": "",
-      "source": "https://streamlinefeed.co.ke/",
-      "published": "2026-11-18T06:06:00Z",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdm9YNWNpVTdKM2ZRTEJXVTE1WUpleElZZDQ5em94SU5IbGg4dTFLRGtJMzdqV1dBSEZZY0t0Ynowdm8zQ3RUSl9ocWR3d2lBOG15bnRGanhUZTF0X25VVHFQRFNORkoyc2ZSQ19FV21QZDR2VkZieHJER3NTM1IzYXE2VTViRUI2MW5CTnRDclRXZw?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-dcf71792994972d0",
@@ -767,6 +714,50 @@
       "source": "The Daily Star",
       "published": "2026-11-18T05:12:12Z",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMVVLbEdLcDRmNzE3NTNqdUZKUnlHd3l5bFJrTTdxM2ZMaVlFTzNRMkYzaU1NOXVLdzUwbXBySGdyZUxaN0lnNnRBWVJrX0pDNGgycUFSbWNhOHBJUnhJZDR1aXFVLWFkWFc5S2lZQ1h4T2RjN05SZzIzMWpRU1QyWlFfSkFpR0tPS3NaZGFvelVQTGlpRHdnVEQ5cndicHpoSzc3UjhnMDEzZjhG?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-821dd49792e971db",
+      "category": "clima",
+      "region": "global",
+      "title": "Saudi Arabia steps up disruption of UN climate talks",
+      "summary": "",
+      "source": "Financial Times",
+      "published": "2026-11-18T05:00:16Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTjk1b3RnYjBhM2w4OE9aUXpHUnh2QUxDdzVHbWJIN3lrWG1Pclotb3NGZ0N3cWs3dUtKSkdOdk1RRk1CS3VoRjZHNWhHTzlzVDdCU0NnX1BsRDU2ZDJOSnZnbzNqa2p3RVhFdjRENUhyWG1tUjRkdkpMWm9NN2czSFJYLUQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-bd81d8729bd79f04",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Japan’s Role in Strengthening ASEAN’s Strategic Autonomy",
+      "summary": "",
+      "source": "orfonline.org",
+      "published": "2026-11-18T04:33:58Z",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPM0JMbGx0d1pLSkpBbE94VXpDSGFNVGxxb2htV21JRWJlUG4zbFJJVElHSlQ3WGZfcGsweTM4Wk5HLXVRZnlaMmdzcjJMN0IyaWVUQ2szQ0dtU3I1cW9mUjZ5MllRN1BfanEwSFlGdXlwTWM5X1lCMklEWDdVcXAxZDRBT1FDM0NQVk81LUYxMHNxZ3c?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-61758f593aef40a3",
+      "category": "economie",
+      "region": "global",
+      "title": "Smartphones may widen card payment access for small businesses",
+      "summary": "",
+      "source": "The Daily Star",
+      "published": "2026-11-18T04:19:16Z",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNN1U1ZGJLallRZy1hRF9VLVEweEV5WWpQY3VudEVQWnNtR0wzMGNiSUJJX2pxYzhmazdtamI4VDdBaEhHOUV6c1o2UlNNTHBsdlZ1SlJsRGVaSmg0emJkM1ZlLUI5bVNzMnlTZl9jczlzckxoNk9lYmFEclcwZEZPVnVZUWdqSGtMTTE3bnFybE5hUHFrcTB3VkJtVlEwWEdDSG9JYzR1eWJBUlJfMlhnNnZ2amZFVmRT?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-a12342ae34e3a1ce",
+      "category": "economie",
+      "region": "global",
+      "title": "ASEAN unity faces test as energy crisis, conflicts loom over summit",
+      "summary": "",
+      "source": "The Daily Star",
+      "published": "2026-11-18T03:39:41Z",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWTJ0MThmTjNUS1lvWklkVWU4dklONnU5MEYwSTVyRnNOOEVaRHFzVGRWUExjS09sZ0EwczdaS05Jalk5ek4ySkJMc3pwVk52aC1QeWFJLWt3RERwSlZzQXpRMktsdzItRWlIdmJTNGpfajNfUXBnZ3hoNkxjbWpzX2lFYXcxZWstRTJnUWdpeGg3ZGMtbVdwNmJTbzM0QmZCanRWR1NmZXR5aFpFQmlSb0RKcGZrcTdlaE1FeEZ4X2t4TUdLMHRjbA?oc=5",
       "review_status": "external_headline_unverified"
     }
   ]
