@@ -1,13 +1,13 @@
 {
-  "news_updated_at": "2026-11-18T21:52:27.379470+00:00",
-  "editorial_updated_at": "2026-11-18T22:50:48.925779+01:00",
+  "news_updated_at": "2026-11-18T23:32:21.243548+00:00",
+  "editorial_updated_at": "2026-11-18T23:15:19.710261+01:00",
   "translations_updated_at": "2026-11-18T18:08:04.207723+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
   "feed_missing_body": 120,
   "feed_short_body": 0,
-  "editorial_total": 14,
-  "archived_editorials": 311,
+  "editorial_total": 15,
+  "archived_editorials": 312,
   "translation_records": 20,
   "pending_total": 125,
   "pending_filtered_out": 112,
@@ -618,7 +618,277 @@
   ],
   "recent_news": [
     {
-      "title": "În ajunul lansării GTA 6, creatorii jocului de un miliard de euro s-au apărat în instanță, într-un proces deschis de foști angajați: „Prinși în flagrant”",
+      "title": "Amato, l’ora della verità. Moglie e suocera uccise, oggi il medico in Cassazione. Indizi, movente e farmaci: le tappe del caso",
+      "category": "Italia",
+      "published": "2026-11-18T23:27:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/amato-cassazione-oggi-h55vc185",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Anthropic fissa il prezzo a 83 dollari, verso l'Ipo più grande della storia",
+      "category": "Italia",
+      "published": "2026-11-18T23:24:56+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/18/anthropic-pronta-alla-maxi-quotazione-test-per-lia-dopo-nvidia_dfa59b00-bf9f-4c12-a1dd-94aa8fa3e1f1.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Myanmar faces historic genocide verdict at UN court over Rohingya massacres",
+      "category": "Mondo",
+      "published": "2026-11-18T23:04:06+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c5m2l90ez144o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Mituri despre blocurile din România și falsa siguranță în caz de cutremur. Cum poți cere expertizarea",
+      "category": "România",
+      "published": "2026-11-18T23:00:25+00:00",
+      "url": "https://adevarul.ro/stiri-interne/sanatate/mituri-despre-blocurile-din-romania-si-falsa-2572631.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "US steps up pressure on Iran-backed Hezbollah with new sanctions",
+      "category": "Mondo",
+      "published": "2026-11-18T22:56:19+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/18/us-steps-up-pressure-on-iran-backed-hezbollah-with-new-sanctions?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Italia vrea să recruteze 5.000 de soldați digitali și alocă miliarde de euro pentru combaterea războiului hibrid: „Suntem într-o fază nouă”",
+      "category": "România",
+      "published": "2026-11-18T22:51:51+00:00",
+      "url": "https://www.libertatea.ro/stiri/italia-vrea-sa-recruteze-5000-de-soldati-digitali-si-aloca-7-miliarde-de-euro-pentru-combaterea-razboiului-hibrid-1dmc2ql",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ludovic Orban a explicat de ce Nicușor Dan „a declanșat ostilitățile” la adresa lui Ilie Bolojan",
+      "category": "România",
+      "published": "2026-11-18T22:50:51+00:00",
+      "url": "https://www.libertatea.ro/stiri/ludovic-orban-a-explicat-de-ce-nicusor-dan-a-declansat-ostilitatile-la-adresa-lui-ilie-bolojan-t9216gs",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Marian Neacșu a primit de la Luca Niculescu atribuții extinse pentru ministerele din Guvern. „PSD preia și practic rolul de şef al Guvernului”, spune Oana Țoiu (USR)",
+      "category": "România",
+      "published": "2026-11-18T22:49:31+00:00",
+      "url": "https://www.libertatea.ro/stiri/oana-toiu-psd-preluat-rol-sef-guvern-marian-neacsu-atributii-toate-ministerele-luca-niculescu-h8sb77x",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cristian Tudor Popescu compară planul PSD de comasare a localităților cu „a doua colectivizare” și îl numește pe Luca Niculescu „pechinez” și „contorsionist”",
+      "category": "România",
+      "published": "2026-11-18T22:40:26+00:00",
+      "url": "https://www.libertatea.ro/stiri/cristian-tudor-popescu-compara-planul-psd-cu-a-doua-colectivizare-cs2ptgy",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Israeli military launches rare ground operation in Gaza beyond Yellow Line",
+      "category": "Mondo",
+      "published": "2026-11-18T22:34:56+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Dosarul Roșia Montană: Acționarul semnificativ român al Gabriel Resources NU mai finanțează compania, deși semnase contract înainte de victoria definitivă a României",
+      "category": "România",
+      "published": "2026-11-18T22:32:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/financiar/piata-de-capital/dosarul-rosia-montana-actionarul-semnificativ-roman-al-gabriel-resources-nu-mai-finanteaza-compania-desi-semnase-contract-inainte-de-victoria-definitiva-a-romaniei-22995265?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Florida pastor found guilty over 2021 assassination of Haitian president",
+      "category": "Mondo",
+      "published": "2026-11-18T22:31:41+00:00",
+      "url": "https://www.theguardian.com/us-news/2026/nov/18/florida-pastor-guilty-haiti-president-assassination",
+      "source": "The Guardian",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "EXCLUSIV FOTO Eșec cu prime hoteluri în România. Proiectul primelor hoteluri Adagio și Tribe a eșuat. În loc vor fi apartamente premium. „Bucureștiul nu are un trafic suficient de turiști!“",
+      "category": "România",
+      "published": "2026-11-18T22:30:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/real-estate-constructii/exclusiv-foto-esec-cu-prime-hoteluri-in-romania-proiectul-primelor-hoteluri-adagio-si-tribe-a-esuat-in-loc-vor-fi-apartamente-premium-bucurestiul-nu-are-un-trafic-suficient-de-turisti-22996344?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Motoarele diesel s-au prăbușit pur și simplu. Apar în România mașinile electrice range-extender. Prima statistică auto cu vânzările de automobile electrice range-extender arată o pondere foarte mare. Motoarele diesel, mi",
+      "category": "România",
+      "published": "2026-11-18T22:26:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/auto-transporturi/motoarele-diesel-s-au-prabusit-pur-simplu-apar-romania-masinile-electrice-range-extender-prima-statistica-auto-vanzarile-automobile-electrice-range-extender-arata-pondere-foarte-mare-motoarele-22991464?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "ULTIMA ORĂ Ștergere de datorii ale companiilor din energie și industrie la fosta EximBank a statului român, prin darea în plată a activelor acestora. Cine poate beneficia - proiect",
+      "category": "România",
+      "published": "2026-11-18T22:24:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/energie/ultima-ora-stergere-de-datorii-ale-companiilor-din-energie-si-industrie-la-fosta-eximbank-a-statului-roman-prin-darea-in-plata-a-activelor-acestora-cine-poate-beneficia-proiect-22995183?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "ULTIMA ORĂ Undă verde pentru fostul șef eMAG: ″Gazprom România″, cumpărată de 2 antreprenori români. OFAC a emis o licență specială",
+      "category": "România",
+      "published": "2026-11-18T22:22:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/energie/ultima-ora-unda-verde-pentru-fostul-sef-emag-gazprom-romania-cumparata-de-2-antreprenori-romani-ofac-a-emis-o-licenta-speciala-22996105?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Il lusso sta cambiando, addio logomania, è la Legitimacy Era",
+      "category": "Italia",
+      "published": "2026-11-18T22:13:49+00:00",
+      "url": "https://www.ansa.it/canale_lifestyle/notizie/lusso/2026/11/17/il-lusso-sta-cambiando-addio-logomania-e-la-legitimacy-era_bed062ea-3f50-409f-aaee-41ff2ca73731.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cobolli si arrende, Alcaraz irresistibile",
+      "category": "Italia",
+      "published": "2026-11-18T22:13:30+00:00",
+      "url": "https://www.repubblica.it/sport/rubriche/monday-s-net/2026/11/18/news/cobolli_si_arrende_alcaraz_irresistibile-425733571/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Șase zile de haos tehnologic în SUA. Avioane ținute la sol, bănci cu probleme și sisteme ale serviciilor secrete blocate",
+      "category": "România",
+      "published": "2026-11-18T22:10:25+00:00",
+      "url": "https://adevarul.ro/stiri-externe/sua/sase-zile-de-haos-tehnologic-in-sua-avioane-2572564.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cristian Tudor Popescu, după mutarea cu zece ministere delegate lui Marian Neacșu: „PSD a vrut cu tot dinadinsul umilirea publică a lui Niculescu”",
+      "category": "România",
+      "published": "2026-11-18T22:09:01+00:00",
+      "url": "https://hotnews.ro/cristian-tudor-popescu-dupa-mutarea-cu-zece-ministere-delegate-lui-marian-neacsu-psd-a-vrut-cu-tot-dinadinsul-umilirea-publica-a-lui-niculescu-2407958",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Membrii unui trib izolat din pădurea amazoniană a Braziliei au stabilit primul contact cu lumea și au cerut hrană",
+      "category": "România",
+      "published": "2026-11-18T22:08:41+00:00",
+      "url": "https://www.libertatea.ro/stiri/tribul-izolat-awa-din-brazilia-a-luat-contact-cu-lumea-exterioara-pentru-prima-data-si-a-cerut-mancare-3r8fypx",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Tale e Quale Show, Anna Pettinelli nei panni di Cristiano Malgioglio è l'apice della serata",
+      "category": "Italia",
+      "published": "2026-11-18T22:06:35+00:00",
+      "url": "https://www.today.it/tv/tale-e-quale-show-anna-pettinelli-diventa-malgioglio-il-doppio-cristiano-fa-impazzire-lo-studio.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Alleged Russian agent arrested for spying on Silicon Valley tech firm",
+      "category": "Mondo",
+      "published": "2026-11-18T22:05:07+00:00",
+      "url": "https://www.euronews.com/2026/11/18/alleged-russian-agent-arrested-for-spying-on-silicon-valley-tech-firm",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "19 noiembrie 1979: Ziua în care un lider comunist a îndrăznit să-l înfrunte pe Ceaușescu chiar la congresul partidului",
+      "category": "România",
+      "published": "2026-11-18T22:01:25+00:00",
+      "url": "https://adevarul.ro/istoria-zilei/19-noiembrie-1979-ziua-in-care-un-lider-comunist-2571953.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Tribunalul Constituţional i-a ridicat imunitatea preşedintelui său suspendat. Criza constituțională din Polonia se adâncește",
+      "category": "România",
+      "published": "2026-11-18T21:59:06+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/tribunalul-constitutional-i-a-ridicat-imunitatea-presedintelui-sau-suspendat-criza-constitutionala-din-polonia-se-adanceste-4043003",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Bukele confirms airstrike on Haitian gang leader Jeff's luxury mansion",
+      "category": "Mondo",
+      "published": "2026-11-18T21:58:48+00:00",
+      "url": "https://www.euronews.com/2026/11/18/bukele-confirms-airstrike-on-haitian-gang-leader-jeffs-luxury-mansion",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Explozie puternică în capitala Arabiei Saudite. Rebelii houthi au lansat rachete spre Riad",
+      "category": "România",
+      "published": "2026-11-18T21:57:22+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/mapamond/explozie-puternica-in-capitala-arabiei-saudite-rebelii-houthi-au-lansat-rachete-spre-riad-4043025",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Sanità, Regioni in pressing: spunta l’ipotesi di più fondi tagliando la card anziani",
+      "category": "Italia",
+      "published": "2026-11-18T21:56:54+00:00",
+      "url": "https://www.repubblica.it/economia/2026/11/18/news/sanita_regioni_card_anziani-425733547/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Arafat consideră că unele clădiri degradate ar trebui demolate, nu consolidate. „Nici nu merită”",
+      "category": "România",
+      "published": "2026-11-18T21:56:32+00:00",
+      "url": "https://adevarul.ro/stiri-interne/evenimente/arafat-considera-ca-unele-cladiri-degradate-ar-2572657.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Iraq sentences six French nationals to life in prison for joining ISIL",
+      "category": "Mondo",
+      "published": "2026-11-18T21:53:17+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/18/iraq-sentences-six-french-nationals-to-life-in-prison-for-joining-isil?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "În ajunul lansării GTA 6, creatorii jocului de un miliard de dolari s-au apărat în instanță, într-un proces deschis de foști angajați: „Prinși în flagrant”",
       "category": "România",
       "published": "2026-11-18T21:48:08+00:00",
       "url": "https://hotnews.ro/in-ajunul-lansarii-gta-6-creatorii-jocului-de-un-miliard-de-euro-s-au-aparat-in-instanta-intr-un-proces-deschis-de-fosti-angajati-prinsi-in-flagrant-2407888",
@@ -672,21 +942,12 @@
       "words": 0
     },
     {
-      "title": "Cancerul colorectal poate evolua fără simptome. De ce refuză românii investigațiile care le pot salva viața",
-      "category": "România",
-      "published": "2026-11-18T21:30:25+00:00",
-      "url": "https://adevarul.ro/stiri-interne/sanatate/cancerul-colorectal-poate-evolua-fara-simptome-de-2572302.html",
-      "source": "Adevărul",
+      "title": "Italia cere explicaţii Ucrainei, după ce online a apărut o listă cu eurodeputaţi italieni \"anti-ucraineni\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-18T21:35:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQZU5Gd1VuYnd5Vi1zNnJycWpzWkFWM1hSRENsaXhTUl9yOE10VHpSaG1yMlQzaHI4SXJiNGt0SXJxSmdvWnpxdWltRnptSzJ5TVB0cXZ2dGllUy1RYWhKczYtRDh6cnVsVkx3QzNJaUVlUktOZzJKMDR2ekhZOXB6cG9nakVfYnNRUmZNajk5RGk1a21kNnM0WGROaUxIb3BhdzVMamFMQ2tSSlZGNXh0SGtqSGJvcTU3WEZlV3F4bThveVY2WGtQc1FWWUNaems2d2x4RG16cUtOa0pDMDhLc1d3?oc=5",
+      "source": "StiriDiaspora",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "„Țarul paladiului” din Rusia, cu o avere estimată la 30 de miliarde de dolari, în fața unuia dintre cele mai costisitoare partaje din „capitala mondială a divorțurilor”",
-      "category": "România",
-      "published": "2026-11-18T21:24:56+00:00",
-      "url": "https://hotnews.ro/tarul-paladiului-din-rusia-cu-o-avere-estimata-la-30-de-miliarde-de-dolari-in-fata-unuia-dintre-cele-mai-costisitoare-divorturi-cat-risca-sa-piarda-2407952",
-      "source": "HotNews",
-      "status": "galben",
       "words": 0
     },
     {
@@ -708,30 +969,12 @@
       "words": 0
     },
     {
-      "title": "ANUNȚ Cărturești revine după incidentul de securitate. Mesaj personalizat trimis clienților: Platforma online a fost redeschisă, am preferat să nu ne grăbim, fără scurtături",
-      "category": "România",
-      "published": "2026-11-18T21:20:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/retail/anunt-carturesti-revine-dupa-incidentul-de-securitate-mesaj-personalizat-trimis-clientilor-platforma-online-a-fost-redeschisa-am-preferat-sa-nu-ne-grabim-fara-scurtaturi-22997139?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
+      "title": "Atp Finals: Cobolli crolla con Tiafoe, sfumano le semifinali",
+      "category": "Italia",
+      "published": "2026-11-18T21:17:36+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/18/atp-finals-cobolli-crolla-con-tiafoe-sfumano-le-semifinali-_e8d16eb9-9af9-429a-a084-310b0d445171.html",
+      "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Consumatorii vulnerabili ar urma să beneficieze de vouchere pentru plata energiei",
-      "category": "România",
-      "published": "2026-11-18T21:13:20+00:00",
-      "url": "https://www.romania-actualitati.ro/stiri/romania/consumatorii-vulnerabili-ar-urma-sa-beneficieze-de-vouchere-pentru-plata-energiei-id237721.html",
-      "source": "Radio România Actualități",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Planul pe 10 ani al premierului britanic Andy Burnham urmează să fie publicat pe 17 decembrie, înainte ca deputații să plece în vacanța de Crăciun",
-      "category": "România",
-      "published": "2026-11-18T21:13:04+00:00",
-      "url": "https://www.g4media.ro/planul-pe-10-ani-al-premierului-britanic-andy-burnham-urmeaza-sa-fie-publicat-pe-17-decembrie-inainte-ca-deputatii-sa-plece-in-vacanta-de-craciun.html",
-      "source": "G4Media",
-      "status": "galben",
       "words": 0
     },
     {
@@ -741,33 +984,6 @@
       "url": "https://www.aljazeera.com/video/newsfeed/2026/11/18/aje-onl-nf_floodwaters-submerge-cars-in-florida-181126?traffic_source=rss",
       "source": "Al Jazeera English",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Noi metode frauduloase de obţinere a datelor personale la telefon",
-      "category": "România",
-      "published": "2026-11-18T21:06:36+00:00",
-      "url": "https://www.romania-actualitati.ro/stiri/romania/noi-metode-frauduloase-de-obtinere-a-datelor-personale-la-telefon-id237720.html",
-      "source": "Radio România Actualități",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Un soldat columbian care a luptat pentru Ucraina, otrăvit mortal de o tânără de 19 ani pentru 1.000 de dolari",
-      "category": "România",
-      "published": "2026-11-18T21:04:44+00:00",
-      "url": "https://adevarul.ro/stiri-externe/in-lume/un-soldat-columbian-care-a-luptat-pentru-ucraina-2572653.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "GTA 6 a primit primele note de la critici. Scorul spectaculos cu care a egalat un record vechi de 28 de ani",
-      "category": "România",
-      "published": "2026-11-18T21:03:37+00:00",
-      "url": "https://www.digi24.ro/stiri/sci-tech/gta-6-a-primit-primele-note-de-la-critici-scorul-spectaculos-cu-care-a-egalat-un-record-vechi-de-28-de-ani-4042913",
-      "source": "Digi24",
-      "status": "galben",
       "words": 0
     },
     {
@@ -785,15 +1001,6 @@
       "published": "2026-11-18T21:01:05+00:00",
       "url": "https://www.aljazeera.com/news/2026/11/18/us-defence-secretary-announces-military-partnership-on-trip-to-venezuela?traffic_source=rss",
       "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Navigaţia pe Dunăre s-ar putea relua în condiţii optime.",
-      "category": "România",
-      "published": "2026-11-18T20:56:04+00:00",
-      "url": "https://www.romania-actualitati.ro/stiri/romania/navigatia-pe-dunare-s-ar-putea-relua-in-conditii-optime-id237719.html",
-      "source": "Radio România Actualități",
       "status": "roșu",
       "words": 0
     },
@@ -825,56 +1032,11 @@
       "words": 0
     },
     {
-      "title": "Primarul încarcerat al Istanbulului, Ekrem Imamoglu, a primit o nouă condamnare la închisoare. Ce acuzații i se aduc",
-      "category": "România",
-      "published": "2026-11-18T20:50:59+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/primarul-incarcerat-al-istanbulului-ekrem-imamoglu-a-primit-o-noua-condamnare-la-inchisoare-ce-acuzatii-i-se-aduc-4042957",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Mesaj de la Cotroceni despre reforma administrativă și „harta desenată de Ceaușescu”",
-      "category": "România",
-      "published": "2026-11-18T20:49:01+00:00",
-      "url": "https://hotnews.ro/eugen-tomac-despre-reforma-administrativa-nu-mai-putem-functiona-dupa-harta-desenata-de-ceausescu-2407939",
-      "source": "HotNews",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "EPP moves to suspend Serbia’s former ruling party",
-      "category": "Mondo",
-      "published": "2026-11-18T20:46:08+00:00",
-      "url": "https://www.politico.eu/article/epp-moves-to-suspend-serbias-former-ruling-party/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "source": "POLITICO Europe",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Alle Atp Finals: in campo Cobolli-Tiafoe 0-1 al tie break DIRETTA",
       "category": "Italia",
       "published": "2026-11-18T20:45:23+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/18/alle-atp-finals-in-campo-cobolli-tiafoe-come-una-finale-diretta_e8d16eb9-9af9-429a-a084-310b0d445171.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Primarul Istanbulului, aflat în închisoare, se alege cu o nouă condamnare pentru presupuse nereguli la un congres din 2023",
-      "category": "România",
-      "published": "2026-11-18T20:45:21+00:00",
-      "url": "https://www.g4media.ro/primarul-istanbulului-aflat-in-inchisoare-se-alege-cu-o-noua-condamnare-pentru-presupuse-nereguli-la-un-congres-din-2023.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ce se va întâmpla cu nodul Holdea în 2027, odată cu deschiderea marilor tuneluri de pe Autostrada A1 Lugoj - Deva",
-      "category": "România",
-      "published": "2026-11-18T20:45:18+00:00",
-      "url": "https://adevarul.ro/stiri-interne/evenimente/ce-se-va-intampla-cu-nodul-holdea-in-2027-odata-2572300.html",
-      "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
@@ -888,101 +1050,11 @@
       "words": 0
     },
     {
-      "title": "What does Israel’s new ground offensive mean for Palestinians in Gaza?",
-      "category": "Mondo",
-      "published": "2026-11-18T20:38:06+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/18/what-does-israels-new-ground-offensive-mean-for-palestinians-in-gaza?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Pew Research: Islam on track to become world’s largest religion by 2035",
-      "category": "Mondo",
-      "published": "2026-11-18T20:37:40+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/18/pew-research-islam-on-track-to-become-worlds-largest-religion-by-2035?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Intotero dispune controale în toate județele pentru a verifica dacă insulele ecologice sunt funcționale",
-      "category": "România",
-      "published": "2026-11-18T20:37:39+00:00",
-      "url": "https://www.g4media.ro/intotero-dispune-controale-in-toate-judetele-pentru-verificarea-daca-insulele-ecologice-sunt-functionale.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Dmitri Peskov spune că întâlnirea dintre Putin şi Trump din China va fi „scurtă”",
-      "category": "România",
-      "published": "2026-11-18T20:35:22+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/dmitri-peskov-spune-ca-intalnirea-dintre-putin-si-trump-din-china-va-fi-scurta-4042923",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Rogobete, despre moțiunea pe care USR a depus-o împotriva sa: Nu mă intimidează și nu voi renunța la controale, la transparență și la reformele începute",
-      "category": "România",
-      "published": "2026-11-18T20:33:56+00:00",
-      "url": "https://www.g4media.ro/rogobete-despre-motiunea-pe-care-usr-a-depus-o-impotriva-sa-nu-ma-intimideaza-si-nu-voi-renunta-la-controale-la-transparenta-si-la-reformele-incepute.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Reconstruction begins at Limoges City Hall after devastating fire",
-      "category": "Mondo",
-      "published": "2026-11-18T20:31:40+00:00",
-      "url": "https://www.france24.com/en/reconstruction-begins-at-limoges-city-hall-after-devastating-fire",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "What the Crimean bridge attack means for Russia",
-      "category": "Mondo",
-      "published": "2026-11-18T20:30:00+00:00",
-      "url": "https://www.dw.com/en/what-the-crimean-bridge-attack-means-for-russia/a-79985991?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Horoscop joi, 19 noiembrie. Berbecii au nevoie de izolare, iar Gemenii caută armonia în familie",
-      "category": "România",
-      "published": "2026-11-18T20:29:39+00:00",
-      "url": "https://adevarul.ro/stil-de-viata/horoscop/horoscop-joi-19-noiembrie-berbecii-au-nevoie-de-2572649.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Intercettazioni tra Acquaroli e Pistarelli, il commento del governatore delle Marche: \"Io corretto\"",
       "category": "Italia",
       "published": "2026-11-18T20:29:08+00:00",
       "url": "https://www.ilrestodelcarlino.it/video/intercettazioni-tra-acquaroli-e-pistarelli-il-commento-del-governatore-delle-marche-io-corretto-gjl4kai8",
       "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Putin’s nuclear briefcase makes surprise appearance at China summit",
-      "category": "Mondo",
-      "published": "2026-11-18T20:24:50+00:00",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/18/putins-nuclear-briefcase-makes-surprise-appearance-at-china-summit?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Hegseth uses Venezuela visit to boast of Maduro’s capture by US military",
-      "category": "Mondo",
-      "published": "2026-11-18T20:24:19+00:00",
-      "url": "https://www.theguardian.com/world/2026/nov/18/pete-hegseth-venezuela-nicolas-maduro-military",
-      "source": "The Guardian",
       "status": "roșu",
       "words": 0
     },
@@ -1032,42 +1104,6 @@
       "words": 0
     },
     {
-      "title": "La nuova Knesset cancella le leggi di Netanyahu, incombe lo spettro della guerra",
-      "category": "Italia",
-      "published": "2026-11-18T19:47:09+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/la-nuova-knesset-cancella-le-leggi-di-netanyahu-incombe-lo-spettro-della-guerra_c716c063-4ad1-4fdb-96b8-256f5a3a08ec.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Recensione Argon Audio Solo: aggiungi Spotify, WiFi e Bluetooth al tuo vecchio stereo",
-      "category": "Italia",
-      "published": "2026-11-18T19:35:00+00:00",
-      "url": "https://www.today.it/tech/recensioni/argon-audio-solo.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Due morti in cantieri edili a Treviso e Palermo",
-      "category": "Italia",
-      "published": "2026-11-18T19:20:54+00:00",
-      "url": "https://www.ilsole24ore.com/art/due-morti-cantieri-edili-treviso-e-palermo-AJn2XCLC",
-      "source": "Il Sole 24 Ore",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Fiano lascia il Pd per il no alla legge sull'antisemitismo",
-      "category": "Italia",
-      "published": "2026-11-18T19:17:59+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/18/ddl-antisemitismo-le-lacrime-di-fiano-lascio-il-pd-_ad0d5ec9-32e1-477a-8239-fc0659fef573.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Român, arestat preventiv în Spania după ce a furat o mașină și a izbit un echipaj de poliție - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-18T19:17:00+00:00",
@@ -1077,37 +1113,10 @@
       "words": 0
     },
     {
-      "title": "Confronto Pd a Bruxelles con il Sistema Italia sulla riforma degli appalti Ue - ANSA",
-      "category": "Italia",
-      "published": "2026-11-18T19:16:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQQ0FiS3pUSW51MmNhRjJUMU1mRjBiMl9nVC1pZjM4ZC1oT3VaOWliS2F1cmRReXB6cGRDTmpyNVlseC0wVjdGTThUQ2FNVkkxQ0FMQkZmQW0xQnZZYXZXLWIxTHE4NXNWQ2lvV0oySlNmV2d2Y0FnVXk0dE1iWmI1OE96SElMRHJkOW12aHFmRG1zVnpHcHJ4emZ3cmttMzVDQ2lSMHgyNnNlRFktOU14Xzltam84b1hxWEwxX0tSRUdCMTVuVThrd0NuZWpsZjUyMWtVUjhjX1Fwb1QxaUQ3LWFlcjhoN01mN0Nsa1d6TlJCNlVjdmRXel9oaWRwZkhjMW9oTm5ITF9vUnhUbjFYakFn0gGXAkFVX3lxTE4xbkQyTzhhYW54QzEyN2RiNFJGMU9QdmJGRk1PTzJhN1M5RWM1cnhEcmVOWXJJQ1ZKelRfQkVHTXJ",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Trump, Putin e Xi a Shenzhen tra abbracci e strette di mano",
-      "category": "Italia",
-      "published": "2026-11-18T19:13:29+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/18/trump-putin-e-xi-a-shenzhen-tra-abbracci-e-strette-di-mano_9e7135eb-3e7b-4851-bfab-d2fbdb0e6829.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Putin porta a Shenzhen la valigetta con i codici nucleari. L'ufficiale: \"È proprio lei\"",
-      "category": "Italia",
-      "published": "2026-11-18T19:05:00+00:00",
-      "url": "https://www.today.it/mondo/putin-cina-valigetta-codici-nucleari.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Un avocat român care a folosit ChatGPT a fost interzis timp de doi ani - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-18T18:31:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTzVCZm9QS3RZN1huamRueTlyUlpSTS0tOFJtTUZoWG5VNGE4Y2RRWUFuRkhPR0VCb1B4UThNY0J5dWtlb2t4eUhSSGw2SkxtT2FQWFJGWG5pd204dGprNVpKTW1jbHduR3JWZWtJanhBa0JTcnBJb1Ftcm1zWnNzYzE4dlBDbG9BQ3QxTmNTNXpNeFBram1hS3gyQXUyektHTDB4bTUwV0VrS0tMUE05V1JBNnJoQdIBtgFBVV95cUxNTzVCZm9QS3RZN1huamRueTlyUlpSTS0tOFJtTUZoWG5VNGE4Y2RRWUFuRkhPR0VCb1B4UThNY0J5dWtlb2t4eUhSSGw2SkxtT2FQWFJGWG5pd204dGprNVpKTW1jbHduR3JWZWtJanhBa0JTcnBJb1Ftcm1zWnNzYzE4dlBDbG9BQ3QxTmNTNXpNeFBram1hS3gyQXU",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbU40Z1hsXzkwTW9oTGtuQnRXRHdwbXIxTEppeEgyMGdiLVQzUW8ySGhmaG13TDVfb1c5SVdLcWMyNFhuXzFST2dhZE5WQWhPX2JTOXhuRFBBV3RyaFR5VlQ0aklsSmVqZk4taTd3cUxSS0ZtR2lSOVBJSEc4YTZ0TG1mUkRxU3Zhb3BXS0d3QXY3Ti1saURGU3pmc2dSSW5zdnJOQ21GU1hqOXBvQjFlV9IBtgFBVV95cUxNTzVCZm9QS3RZN1huamRueTlyUlpSTS0tOFJtTUZoWG5VNGE4Y2RRWUFuRkhPR0VCb1B4UThNY0J5dWtlb2t4eUhSSGw2SkxtT2FQWFJGWG5pd204dGprNVpKTW1jbHduR3JWZWtJanhBa0JTcnBJb1Ftcm1zWnNzYzE4dlBDbG9BQ3QxTmNTNXpNeFBram1hS3gyQXUyektHTDB",
       "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
@@ -1217,6 +1226,15 @@
       "published": "2026-11-18T12:50:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNWjh3c1pQVkVtdElmeFQ1enJBRS1FTmZ2Sm40a3h1ck5oT015WXpaeWMzNlBabTRDdUpvWWpVdzhPcnNMWjRhQ19pUm5ZdFN6Z0ZLbFBKaDVwczJlSE1hNnJscUxLdGFFaDJPVjlwcFc1RlRONXJmckJWQ05qVExPc2IxOWxkYndPWDItOGFqd2pUZTFJTzdUNnN4MVZ0Y25kRi04b3lqV29yeXluSjgwdjJFX3ZrajRFVDZxZVQxczdiN05Ocmh4bnIzVExoa0FTOFNj0gHYAUFVX3lxTE1ZWEh0OWozRnlOYnJNNTN2Tm9McC03cU02N2VXOW85Ynpld3dmTkJ1TUZ0SkJMTmdzeVhkX0pWTW1iNGJtUGphQk43cVljaTFLQm5tR2ZyUlROS3BfNnBCY2lSdlpKT0dfRFEwSnZXZTA1RHNEOFhoVEdHdkZwU2N",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "COP31 deadlock persists as countries launch new ‘climate reality check’",
+      "category": "Istituzioni",
+      "published": "2026-11-18T12:00:00+00:00",
+      "url": "https://news.un.org/feed/view/en/story/2026/11/1168833",
+      "source": "ONU",
       "status": "roșu",
       "words": 0
     },
@@ -1334,6 +1352,15 @@
       "published": "2026-11-18T10:29:20+00:00",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2497",
       "source": "Commissione europea",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "NATO Secretary General welcomes strong Allied support at Ukraine Defence Contact Group meeting - North Atlantic Treaty Organization | NATO",
+      "category": "NATO e sicurezza",
+      "published": "2026-11-18T09:51:18+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPUV9GTnFGTXZWNTd6c09QQ0plYjMxTUpQdm9aamhmVjBPeWljVVVWM1VrSGo1M0QzZzdVUzBaeDdLWkpERVpqYWpUS3dldGM0WV9JNnJ2SndLd1RoaXM4SDVub2hRN0ZmS0t3SG9ndlhQRDdwOGFGSTRsZzgwYVNQN01FWVlRY0hvYno2cVQ4akNFdTJJU3RhbzlTblJWRGJzbnRFbEVDaXlKc3FHSHVlYnRGUEdlQVRjbUh5MGY0dEtNLUY5SmVVYi1FSzdmbnhuREhrOWdqcThIQng0NnRTZnJKeFNIdUZqY1NBZDBoamw?oc=5",
+      "source": "NATO",
       "status": "roșu",
       "words": 0
     },
@@ -1486,33 +1513,6 @@
       "category": "Diaspora",
       "published": "2026-11-17T18:14:47+00:00",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOU2JrcU1wUUlfZjdtRnJxcTBrMkRtSDhVQTlFUnJuRVlzY0NFZ0UyQlpoSHNGSFhRS3A4X1BPc3VRbFkzdlVpMWVoakhVU0tiRDVvRXhVNTBNZGNfOTdpZ0hoeS1ucF91ckh0aGtkODdRSi1STUUyMUY4Q0FDSmxxajFVRnVIOTVQRi1CM2paYUxVaWlMRGJaNDJHTkVuMThaN1N1c0Vobk4wMmYyaDMtVGttMDc4YjhkVUZmS1JOQ1JLYUdKU3VvYjNIRjU?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tajani incontra il Presidente dell’Università Popolare di Trieste e i dirigenti dell’Unione Italiana - Ministero degli Affari Esteri e della Cooperazione Internazionale",
-      "category": "Istituzioni",
-      "published": "2026-11-17T17:33:46+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNOVMzZUc3Q0xiN2F6Zm5pdkhkUDRKU2xyT1hyc3VYMkZwMHFJZ0tMRkZnV3JnZGM2VWREZXJiMmVQeHBMLVhQbWhKbnRoWm8zeUo0ekFtUnJZMnFLRHlNZVJiMWNxQzVlTXNFV0xqZE90ZUxLZE5HZzRMSWt5aW5QX0dxMlVZdG1wMFdOSnpsU043Tks4NmN3Z0lYMGJ6M0ctSGtwV1VsU3RKaDllek5QTV8xRTRLdXl1THM3Mmc4Y3Fob1ZtMTNkb2JiZVVBZ3AwelZaRzctX1pRRHNIb21jUlhEM3F5ck04bUtUQVZMbDJhZlpraGJFeW84RHBJTV9V?oc=5",
-      "source": "Ministero degli Esteri",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "NATO Secretary General meets with the Minister of Defence of Ukraine - North Atlantic Treaty Organization | NATO",
-      "category": "NATO e sicurezza",
-      "published": "2026-11-17T16:49:33+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPMnE1cmJEamg1R1VKenlaRHBsRHlfVGFoNHRNNGRobFFHc2laTER0bE5qUzNsSVhlcHFDZXdfamgyMVRIaFN1ZTA3QV92bjVnUUJpaVNtOFJmZmRzU1A5QVE5WjBqMXo5ZTh2SUZVZE9zUWFiM2xsZHNEM21zc1Q5dm5zcGM0bEw2SDJJdXlsN3R2UGYxUkRFSkx3VFIxRDNOYjlqYzVSRURFbGxVV0JWTklyRC1ReGpvRGhqUGM3TWNIcF9Ic0ZDUERmR28?oc=5",
-      "source": "NATO",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Român găsit mort pe un șantier din Italia. Apel pentru găsirea familiei din România - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-17T16:28:03+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcDNrNHpGT2FCTm9BYjZBM185MHk1bVlwakV2WkdrZ08xUzFSalhlUDNBbDNvVExBZndDR2liRkhYdkFNLVdualNsY1NQbzJUbGkweHRaTEpUNUpycnowa1dpWEdyeWVvZzlmMWhLSHlNZGVrRWlsbUZ4NzFzMHhIQi1wbGFjTzFUNmUzbDhfMkV3YjM1Y2hjM3dGc1A2enkxRlhfb0R1QjBEdw?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
