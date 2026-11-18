@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T10:41:14.035419+00:00",
+  "updated_at": "2026-11-18T19:22:53.704809+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -15,6 +15,27 @@
     }
   ],
   "items": [
+    {
+      "id": "db9a1aa97aeaa4d3f7",
+      "source_id": "parlamento_europeo",
+      "source": "Parlamento europeo (tramite AV UE)",
+      "title": "EP News EP Delegation to COP31 UN Climate Change Conference in Antalya, Turkiye",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297436",
+      "published_at": "2026-11-18",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T19:22:53.704809+00:00",
+      "language_probe_version": 3
+    },
     {
       "id": "c9f762a9908f496460",
       "source_id": "commissione_europea",
@@ -97,6 +118,48 @@
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-11-18T10:41:14.035419+00:00",
+      "language_probe_version": 3
+    },
+    {
+      "id": "3e55a2209da595cd5d",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "Advanced Materials for Europe Initiative",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297499",
+      "published_at": "2026-11-18",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T19:22:53.704809+00:00",
+      "language_probe_version": 3
+    },
+    {
+      "id": "3b2ed81f19ab1325a6",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "Joint European Commission / European Parliament press conference in Antalya, Türkiye for the COP31",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297801",
+      "published_at": "2026-11-18",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T19:22:53.704809+00:00",
       "language_probe_version": 3
     },
     {
@@ -196,7 +259,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T19:22:53.704809+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "fb60697c153eefea64",
@@ -232,7 +301,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T19:22:53.704809+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "c0ef76bc5cb29bae25",
@@ -1108,7 +1183,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T19:22:53.704809+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "0f6aaea73597cfcaa4",
@@ -3083,72 +3164,9 @@
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-11-05T15:48:28.733694+00:00",
       "language_probe_version": 3
-    },
-    {
-      "id": "c8e47e63e220fa62be",
-      "source_id": "commissione_europea",
-      "source": "Commissione europea",
-      "title": "Education and Skills Package",
-      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297287",
-      "published_at": "2026-11-05",
-      "language_hint": "und",
-      "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
-      "audio_evidence": "",
-      "audio_italiano_verificato": false,
-      "diritti_verificati": false,
-      "status": "DA_VERIFICARE",
-      "languages_declared": "Original English français",
-      "italian_version_available": false,
-      "italian_audio_candidate": false,
-      "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-11-05T15:48:28.733694+00:00",
-      "language_probe_version": 3
-    },
-    {
-      "id": "c6f6a9f7b3811bf2d5",
-      "source_id": "commissione_europea",
-      "source": "Commissione europea",
-      "title": "Court of Justice of the European Union",
-      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-296877",
-      "published_at": "2026-11-05",
-      "language_hint": "und",
-      "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
-      "audio_evidence": "",
-      "audio_italiano_verificato": false,
-      "diritti_verificati": false,
-      "status": "DA_VERIFICARE",
-      "languages_declared": "Original",
-      "italian_version_available": false,
-      "italian_audio_candidate": false,
-      "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-11-05T15:48:28.733694+00:00",
-      "language_probe_version": 3
-    },
-    {
-      "id": "c26f73fb8be141bb25",
-      "source_id": "commissione_europea",
-      "source": "Commissione europea",
-      "title": "European Council President António COSTA at the 30th Ibero-American Summit in Madrid, Spain",
-      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297273",
-      "published_at": "2026-11-05",
-      "language_hint": "und",
-      "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
-      "audio_evidence": "",
-      "audio_italiano_verificato": false,
-      "diritti_verificati": false,
-      "status": "DA_VERIFICARE",
-      "languages_declared": "Original",
-      "italian_version_available": false,
-      "italian_audio_candidate": false,
-      "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-11-05T15:48:28.733694+00:00",
-      "language_probe_version": 3
     }
   ],
   "italian_versions": [],
-  "language_checks_this_run": 8,
+  "language_checks_this_run": 6,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
