@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T19:47:44.078067+00:00",
+  "updated_at": "2026-11-18T02:22:55.561846+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -364,7 +364,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T02:22:55.561846+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "eac47b0e8d9b1e1aea",
@@ -3046,7 +3052,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-18T02:22:55.561846+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "1a089cff747d1091ea",
@@ -3155,6 +3167,6 @@
     }
   ],
   "italian_versions": [],
-  "language_checks_this_run": 8,
+  "language_checks_this_run": 2,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
