@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-17T22:33:50.676057+00:00",
-  "editorial_updated_at": "2026-11-17T23:13:04.411839+01:00",
+  "news_updated_at": "2026-11-18T00:48:14.194538+00:00",
+  "editorial_updated_at": "2026-11-17T23:39:01.407893+01:00",
   "translations_updated_at": "2026-11-17T21:59:43.321178+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
   "feed_missing_body": 120,
   "feed_short_body": 0,
-  "editorial_total": 17,
-  "archived_editorials": 299,
+  "editorial_total": 19,
+  "archived_editorials": 301,
   "translation_records": 30,
   "pending_total": 125,
   "pending_filtered_out": 112,
   "editorial_verde": 0,
-  "editorial_galben": 39,
-  "editorial_rosu": 48,
+  "editorial_galben": 42,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,20 +618,290 @@
   ],
   "recent_news": [
     {
-      "title": "Gheorghe Hagi, după meciul Bosnia - România: Din păcate, am pierdut, dar cred că meritam mai mult",
+      "title": "Grids package: Council and Parliament agree to streamline permitting for a faster clean energy transition",
+      "category": "Unione europea",
+      "published": "2026-11-18T00:35:00+00:00",
+      "url": "https://www.consilium.europa.eu/it/press/press-releases/2026/11/18/grids-package-council-and-parliament-agree-to-streamline-permitting-for-a-faster-clean-energy-transition/",
+      "source": "Consiglio dell'UE",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nvidia beats Q3 expectations in first report post-Jensen Huang",
+      "category": "Mondo",
+      "published": "2026-11-18T00:34:00+00:00",
+      "url": "https://www.dw.com/en/nvidia-beats-q3-expectations-in-first-report-post-jensen-huang/a-79975683?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Top IRGC commander in Iraq for talks amid Kataib Hezbollah tensions",
+      "category": "Mondo",
+      "published": "2026-11-18T00:33:36+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/18/top-irgc-commander-in-iraq-for-talks-amid-kataib-hezbollah-tensions?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Oamenii de știință sunt nedumeriți de un obiect ciudat din spațiu care se mișcă într-un mod pe care gravitația singură nu îl poate explica",
       "category": "România",
-      "published": "2026-11-17T22:33:55+00:00",
+      "published": "2026-11-18T00:30:26+00:00",
+      "url": "https://adevarul.ro/stiri-externe/in-lume/oamenii-de-stiinta-sunt-nedumeriti-de-un-obiect-2572285.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Nvidia says it won't reinstate Huang as firm reports bumper results",
+      "category": "Mondo",
+      "published": "2026-11-18T00:28:01+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Forensic experts claim Epstein was strangled to death",
+      "category": "Mondo",
+      "published": "2026-11-18T00:17:23+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/18/forensic-experts-claim-epstein-was-strangled-to-death?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Why China’s Shenzhen was chosen for APEC summit",
+      "category": "Mondo",
+      "published": "2026-11-18T00:16:26+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/18/why-chinas-shenzhen-was-chosen-for-apec-summit?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ioana și Ilie Năstase, scandal în fața blocului din Mamaia: „Ăla-i amantul tău! Te-am văzut, am auzit tot!”",
+      "category": "România",
+      "published": "2026-11-18T00:01:19+00:00",
+      "url": "https://www.libertatea.ro/entertainment/ioana-si-ilie-nastase-scandal-in-fata-blocului-din-mamaia-4990171",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Iran war live: Kuwait says intercepting ‘hostile’ drone attacks",
+      "category": "Mondo",
+      "published": "2026-11-18T00:00:27+00:00",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/11/18/iran-war-live-kuwait-says-intercepting-hostile-drone-attacks?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Se nasc din nou copii infectați cu rujeolă. Medicii americani avertizează: „Vedem niveluri ale îmbolnăvirilor nemaiîntâlnite de 30 de ani”",
+      "category": "România",
+      "published": "2026-11-18T00:00:25+00:00",
+      "url": "https://adevarul.ro/stiri-externe/sua/se-nasc-din-nou-copii-infectati-cu-rujeola-2572237.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "VIDEO Statul vorbește de AI, dar lipește plicuri. \"Să ne purtăm cu pacientul precum cu stăpânul, dacă ne este stăpân!\". Persoanele fără venituri să plătească obligatoriu asigurări de sănătate, cere CNAS. Românii plecați,",
+      "category": "România",
+      "published": "2026-11-17T23:56:00+00:00",
+      "url": "https://www.profit.ro/stiri/social/video-statul-vorbeste-lipeste-plicuri-ne-purtam-pacientul-precum-stapanul-ne-stapan-persoanele-venituri-plateasca-obligatoriu-asigurari-sanatate-cere-cnas-romanii-plecati-suspectati-revin-vara-22994853?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Kuwait reports drone attacks as Iran, US trade attacks on Qeshm and Bahrain",
+      "category": "Mondo",
+      "published": "2026-11-17T23:38:38+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/17/kuwait-reports-drone-attacks-as-iran-us-trade-attacks-on-qeshm-and-bahrain?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Israel parliament elects Gadi Eisenkot ally Matan Kahana as new speaker",
+      "category": "Mondo",
+      "published": "2026-11-17T23:28:54+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/17/israel-parliament-elects-gadi-eisenkot-ally-matan-kahana-as-new-speaker?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Record di emendamenti alla manovra, la maggioranza vuole il condono",
+      "category": "Italia",
+      "published": "2026-11-17T23:28:31+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/record-di-emendamenti-alla-manovra-la-maggioranza-vuole-il-condono_0852cc79-1b4d-45f3-a0ff-9faa1bbaab52.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ddl antisemitismo è legge.No di M5s, Avs,nel Pd strappo dei riformisti",
+      "category": "Italia",
+      "published": "2026-11-17T23:27:43+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/la-camera-approva-il-ddl-antisemitismo-147-i-si.-e-legge_fef81d69-9cd3-4bef-8409-79e71f8c4e8a.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "'De Gennaro ossessionato da Contorno, ma non ha depistato sulle stragi'",
+      "category": "Italia",
+      "published": "2026-11-17T23:18:10+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/gip-da-indagini-nuove-prospettive-su-cabina-di-regia-dietro-stragi-92_a12dddfc-95bc-47c0-b974-53563c6a239c.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Gheorghe Hagi, după meciul Bosnia-România: „Din păcate, am pierdut, dar cred că meritam mai mult”. Ce a spus despre greșeala lui Rațiu",
+      "category": "România",
+      "published": "2026-11-17T23:16:03+00:00",
       "url": "https://www.digi24.ro/stiri/sport/fotbal/gheorghe-hagi-dupa-meciul-bosnia-romania-din-pacate-am-pierdut-dar-cred-ca-meritam-mai-mult-4041149",
+      "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fiction sui Panini, Serena Rossi è mamma Olga: “Era una roccia, sognava anche nelle difficoltà”",
+      "category": "Italia",
+      "published": "2026-11-17T23:07:11+00:00",
+      "url": "https://www.ilrestodelcarlino.it/modena/cultura/fiction-panini-serena-rossi-dvy8jvxb",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cum ajunge un fragment video să stârnească un val de indignare. Lecția controverselor de la concertul Theo Rose",
+      "category": "România",
+      "published": "2026-11-17T23:00:25+00:00",
+      "url": "https://adevarul.ro/stiri-interne/societate/cum-ajunge-un-fragment-video-sa-starneasca-un-val-2572241.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "La Cassazione: 'Roggero si è fatto giustizia da sé'",
+      "category": "Italia",
+      "published": "2026-11-17T22:50:43+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/roggero-condannato-i-giudici-da-parte-sua-una-deliberata-aggressione_6a42fa5e-4664-466d-affb-bfc112233623.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nvidia board rules that co-founder Jensen Huang will not return as CEO",
+      "category": "Mondo",
+      "published": "2026-11-17T22:50:32+00:00",
+      "url": "https://www.france24.com/en/technology/20261117-nvidia-board-rules-that-co-founder-jensen-huang-will-not-return-as-ceo",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Mostra su Rauti, la Camera chiede di rimuovere simboli che richiamano al fascismo",
+      "category": "Italia",
+      "published": "2026-11-17T22:48:58+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/mostra-su-rauti-la-camera-chiede-di-rimuovere-simboli-che-richiamano-al-fascismo_82e5b50e-3150-4462-b408-a8673a917231.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Liga Națiunilor: Învinsă de Bosnia, România termină pe ultimul loc. Clasamentul grupei și pe cine ar putea întâlni Tricolorii la baraj",
+      "category": "România",
+      "published": "2026-11-17T22:47:02+00:00",
+      "url": "https://www.digi24.ro/stiri/sport/fotbal/liga-natiunilor-invinsa-de-bosnia-romania-termina-pe-ultimul-loc-clasamentul-grupei-si-pe-cine-ar-putea-intalni-tricolori-la-baraj-4041123",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Liga Națiunilor: Învinsă de Bosnia, România termină pe ultimul loc. Clasamentul grupei și pe cine ar putea întâlni „Tricolori” la baraj",
+      "title": "Thomas Markle charged over child sex abuse material in Philippines",
+      "category": "Mondo",
+      "published": "2026-11-17T22:44:15+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "România a fost învinsă de Bosnia după ce a condus cu 1-0. „Tricolorii” rămân cu o singură victorie în Liga Națiunilor",
       "category": "România",
-      "published": "2026-11-17T22:28:34+00:00",
-      "url": "https://www.digi24.ro/stiri/sport/fotbal/liga-natiunilor-invinsa-de-bosnia-romania-termina-pe-ultimul-loc-clasamentul-grupei-si-pe-cine-ar-putea-intalni-tricolori-la-baraj-4041123",
+      "published": "2026-11-17T22:43:04+00:00",
+      "url": "https://www.digi24.ro/stiri/sport/fotbal/liga-natiunilor-bosnia-romania-azi-de-la-2145-tricolorii-spera-la-a-doua-victorie-in-grupa-4040527",
       "source": "Digi24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Il blocco di Eisenkot vince la prova della presidenza della Knesset",
+      "category": "Italia",
+      "published": "2026-11-17T22:41:00+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/il-blocco-di-eisenkot-vince-la-prova-della-presidenza-della-knesset_2a1369c8-b154-432e-8fb4-c9a976a54601.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trump sfida Xi sulle terre rare prima di sbarcare a Shenzhen",
+      "category": "Italia",
+      "published": "2026-11-17T22:37:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/trump-sfida-xi-sulle-terre-rare-prima-di-sbarcare-a-shenzhen_eb409fc3-0041-4e11-984a-6f48490ab800.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Virtus, una notte da grande impresa in Eurolega: il Panathinaikos si arrende al PalaDozza",
+      "category": "Italia",
+      "published": "2026-11-17T22:37:19+00:00",
+      "url": "https://www.ilrestodelcarlino.it/sport/basket/virtus-una-notte-da-grande-impresa-in-eurolega-il-panathinaikos-si-arrende-al-paladozza-60b3cedb",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Indotto ex ILVA e ADI Servizi Marittimi: nuova integrazione al reddito - INPS",
+      "category": "Istituzioni",
+      "published": "2026-11-17T22:37:14+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPSjZTVDlRMlpUcEcwU0tRU3ZDMDB1N0QwS0dpRUZKNVltZlVWeE44MU4zLUJNaFVMOHNGcXdWdmhPSzZhMXdPRHdKNHdqMlh5RnZ6bVIyaVdWX25XV05kZDJUOXRKQk1KZTh3bHgwSzRHSUcyRjhhZEZXTnRHY29VRzNxVXY0UlI5c0t0MGFrbjRxTkJzbjd0WXdRaG15LXk4RVVlTmlKQUlRMXdPcGxvTF9HZ2VhaXdiQUNxRmE3MjMtcER5MmFQMVl0M1VZd3pUU1ZFSVVTRG0zRXZiWFlVZ1FsRENVSVAwZ3pn?oc=5",
+      "source": "INPS",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "US criticises Ukraine's 'deep strike' campaign against Russia",
+      "category": "Mondo",
+      "published": "2026-11-17T22:34:29+00:00",
+      "url": "https://www.euronews.com/2026/11/17/us-criticises-ukraines-deep-strike-campaign-against-russia",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Gică Hagi, lovit de realitatea dură. L-a taxat pe Rațiu, autorul gafei care a decis soarta meciului cu Bosnia: „Ce să vorbesc cu el?”. Și Gică Popescu a răbufnit",
+      "category": "România",
+      "published": "2026-11-17T22:34:16+00:00",
+      "url": "https://adevarul.ro/sport/gica-hagi-lovit-de-realitatea-dureroasa-l-a-2572359.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ce a răspuns Ilie Bolojan când a fost întrebat dacă România are bani pentru indexarea pensiilor în 2027: „Trebuie să reducem cheltuielile”",
+      "category": "România",
+      "published": "2026-11-17T22:27:36+00:00",
+      "url": "https://www.libertatea.ro/stiri/ilie-bolojan-indexarea-pensiilor-2027-bani-buget-reducere-cheltuieli-stat-hkx1e5c",
+      "source": "Libertatea",
       "status": "galben",
       "words": 0
     },
@@ -654,20 +924,11 @@
       "words": 0
     },
     {
-      "title": "Andrei Rațiu a explicat gafa impardonabilă din Bosnia-România 2-1. Tricolorii au picat psihic: „Nu am putut să dau în minge, am ajuns forțat!”",
+      "title": "Andrei Rațiu a explicat gafa impardonabilă din Bosnia-România 2-1. Tricolorii au cedat psihic: „Nu am putut să dau în minge, am ajuns forțat!”",
       "category": "România",
       "published": "2026-11-17T22:20:00+00:00",
       "url": "https://adevarul.ro/sport/andrei-ratiu-a-explicat-gafa-impardonabila-din-2572358.html",
       "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "România a fost învinsă de Bosnia după ce a condus cu 1-0. „Tricolorii” rămân cu o singură victorie în Liga Națiunilor",
-      "category": "România",
-      "published": "2026-11-17T22:17:05+00:00",
-      "url": "https://www.digi24.ro/stiri/sport/fotbal/liga-natiunilor-bosnia-romania-azi-de-la-2145-tricolorii-spera-la-a-doua-victorie-in-grupa-4040527",
-      "source": "Digi24",
       "status": "roșu",
       "words": 0
     },
@@ -744,75 +1005,12 @@
       "words": 0
     },
     {
-      "title": "PREMIERĂ Miliardari străini cumpără în România pompe funebre. Grupul medical Affidea, deținut de miliardari din Belgia și Canada, a preluat și serviciul de pompe funebre odată cu achiziția spitalului Sfântul Sava",
-      "category": "România",
-      "published": "2026-11-17T22:02:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/premiera-miliardari-straini-cumpara-romania-pompe-funebre-grupul-medical-affidea-detinut-miliardari-belgia-canada-preluat-serviciul-pompe-funebre-odata-achizitia-spitalului-sfantul-sava-22993926?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "US Fed’s Lisa Cook refuses to attend White House hearing",
-      "category": "Mondo",
-      "published": "2026-11-17T22:01:27+00:00",
-      "url": "https://www.aljazeera.com/economy/2026/11/17/us-feds-lisa-cook-refuses-to-attend-white-house-hearing?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "18 noiembrie 1978: Tragedia de la Jonestown, unde peste 900 de oameni s-au sinucis la ordinul liderului de sectă Jim Jones",
-      "category": "România",
-      "published": "2026-11-17T22:01:25+00:00",
-      "url": "https://adevarul.ro/istoria-zilei/18-noiembrie-1978-tragedia-de-la-jonestown-unde-2571872.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Statele Unite lovesc o insulă iraniană după tirurile Teheranului asupra unei baze din Bahrein",
-      "category": "România",
-      "published": "2026-11-17T22:00:44+00:00",
-      "url": "https://www.economica.net/statele-unite-lovesc-o-insula-iraniana-dupa-tirurile-teheranului-asupra-unei-baze-din-bahrein_996450.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Discuții cu mai multe companii din zona Golfului Persic pentru salvarea Tarom",
-      "category": "România",
-      "published": "2026-11-17T21:57:30+00:00",
-      "url": "https://www.economica.net/discutii-cu-mai-multe-companii-din-zona-golfului-persic-pentru-salvarea-tarom_996448.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Fragmente ale unui aparat de zbor, descoperite la 50 de metri de granița Republicii Moldova cu Ucraina",
-      "category": "România",
-      "published": "2026-11-17T21:51:07+00:00",
-      "url": "https://adevarul.ro/stiri-externe/republica-moldova/fragmente-ale-unui-aparat-de-zbor-descoperite-la-2572354.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Redde rationem nella Lega, sfiduciato Romeo, arriva Dreosto",
       "category": "Italia",
       "published": "2026-11-17T21:50:10+00:00",
       "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/romeo-sostituito-al-senato-dreosto-eletto-capogruppo-della-lega_e03edd1a-4b58-4ade-aee0-ce8fdcc464c0.html",
       "source": "ANSA",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Caribbean nations fear economic impact of shuttering citizenship program after EU threats",
-      "category": "Mondo",
-      "published": "2026-11-17T21:49:29+00:00",
-      "url": "https://www.theguardian.com/world/2026/nov/17/st-kitts-nevis-citizenship-investment",
-      "source": "The Guardian",
-      "status": "roșu",
       "words": 0
     },
     {
@@ -825,105 +1023,6 @@
       "words": 0
     },
     {
-      "title": "Guvernul vrea să îşi asume răspunderea, până în 15 martie, pe proiectele privind restructurarea companiilor de stat şi privind reorganizarea administrativă",
-      "category": "România",
-      "published": "2026-11-17T21:46:15+00:00",
-      "url": "https://www.economica.net/guvernul-vrea-sa-isi-asume-raspunderea-pana-in-15-martie-pe-proiectele-privind-restructurarea-companiilor-de-stat-si-privind-reorganizarea-administrativa_996445.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Adrian Codîrlașu avertizează că România riscă o criză financiară după intrarea în stagflație. Economia ar putea scădea în 2026",
-      "category": "România",
-      "published": "2026-11-17T21:44:04+00:00",
-      "url": "https://adevarul.ro/economie/adrian-codirlasu-avertizeaza-ca-romania-risca-o-2572198.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Parisul confirmă prezența personalului militar francez în Ucraina, „extrem de situațională” și „foarte departe de linia frontului”",
-      "category": "România",
-      "published": "2026-11-17T21:43:02+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/parisul-confirma-prezenta-personalului-militar-francez-in-ucraina-extrem-de-situationala-si-foarte-departe-de-linia-frontului-4041063",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Isolated Brazilian tribe emerges amid alarm over threats to group’s way of life",
-      "category": "Mondo",
-      "published": "2026-11-17T21:40:56+00:00",
-      "url": "https://www.theguardian.com/world/2026/nov/17/brazil-amazon-isolated-indigenous-people",
-      "source": "The Guardian",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "UK hands NATO-assigned US soldier accused of Russia spying to US military",
-      "category": "Mondo",
-      "published": "2026-11-17T21:35:24+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/uk-hands-nato-assigned-us-soldier-accused-of-russia-spying-to-us-military?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "US, Mexico and Bolivia lose measles-free status as deaths mount",
-      "category": "Mondo",
-      "published": "2026-11-17T21:30:23+00:00",
-      "url": "https://www.france24.com/en/americas/20261117-us-mexico-and-bolivia-lose-measles-free-status-as-deaths-mount",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "UK sanctions Israeli settlement firms to protect two-state solution",
-      "category": "Mondo",
-      "published": "2026-11-17T21:28:31+00:00",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/17/aje-onl-nf_uk-sanctions-eight-israeli-settlement-firms-171126?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "‘Zero transparency’: Inside Trump’s plans for Venezuela’s oil money",
-      "category": "Mondo",
-      "published": "2026-11-17T21:26:42+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/17/zero-transparency-inside-trumps-plans-for-venezuelas-oil-money?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "🔴Israeli parliament elects Eisenkot ally Matan Kahana as new Knesset speaker",
-      "category": "Mondo",
-      "published": "2026-11-17T21:26:27+00:00",
-      "url": "https://www.france24.com/en/middle-east/20261117-%F0%9F%94%B4-israeli-parliament-elects-eisenkot-ally-matan-kahana-as-speaker",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Moment Russian military plane crashes in Siberia, killing 19",
-      "category": "Mondo",
-      "published": "2026-11-17T21:25:43+00:00",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/17/moment-russian-military-plane-crashes-in-siberia-killing-19?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
-      "category": "Mondo",
-      "published": "2026-11-17T21:24:35+00:00",
-      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Vicenda minicar, i due minorenni trasferiti in comunità",
       "category": "Italia",
       "published": "2026-11-17T21:24:31+00:00",
@@ -933,47 +1032,11 @@
       "words": 0
     },
     {
-      "title": "AI imagery complicates Nigeria's election prep",
-      "category": "Mondo",
-      "published": "2026-11-17T21:20:27+00:00",
-      "url": "https://www.france24.com/en/ai-imagery-complicates-nigeria-s-election-prep",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Record di emendamenti alla manovra, la maggioranza vuole il condono",
-      "category": "Italia",
-      "published": "2026-11-17T21:05:32+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/record-di-emendamenti-alla-manovra-la-maggioranza-vuole-il-condono_0852cc79-1b4d-45f3-a0ff-9faa1bbaab52.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "La fine dell’hotel Elvezia, o ‘sgombero soft’ tra ospiti smarriti. Ricchi pensionati e girovaghi: le storie",
       "category": "Italia",
       "published": "2026-11-17T21:02:19+00:00",
       "url": "https://www.ilrestodelcarlino.it/pesaro/cronaca/fine-hotel-elvezia-sgombero-st1g8jxq",
       "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Trump sfida Xi sulle terre rare prima di sbarcare a Shenzhen",
-      "category": "Italia",
-      "published": "2026-11-17T20:44:00+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/trump-sfida-xi-sulle-terre-rare-prima-di-sbarcare-a-shenzhen_eb409fc3-0041-4e11-984a-6f48490ab800.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ddl antisemitismo è legge.No di M5s, Avs,nel Pd strappo dei riformisti",
-      "category": "Italia",
-      "published": "2026-11-17T20:25:02+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/la-camera-approva-il-ddl-antisemitismo-147-i-si.-e-legge_fef81d69-9cd3-4bef-8409-79e71f8c4e8a.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -1014,15 +1077,6 @@
       "words": 0
     },
     {
-      "title": "Indotto ex ILVA e ADI Servizi Marittimi: nuova integrazione al reddito - INPS",
-      "category": "Istituzioni",
-      "published": "2026-11-17T19:44:45+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPSjZTVDlRMlpUcEcwU0tRU3ZDMDB1N0QwS0dpRUZKNVltZlVWeE44MU4zLUJNaFVMOHNGcXdWdmhPSzZhMXdPRHdKNHdqMlh5RnZ6bVIyaVdWX25XV05kZDJUOXRKQk1KZTh3bHgwSzRHSUcyRjhhZEZXTnRHY29VRzNxVXY0UlI5c0t0MGFrbjRxTkJzbjd0WXdRaG15LXk4RVVlTmlKQUlRMXdPcGxvTF9HZ2VhaXdiQUNxRmE3MjMtcER5MmFQMVl0M1VZd3pUU1ZFSVVTRG0zRXZiWFlVZ1FsRENVSVAwZ3pn?oc=5",
-      "source": "INPS",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Emendamento al dl sicurezza, divieto di social agli under 13",
       "category": "Italia",
       "published": "2026-11-17T19:44:14+00:00",
@@ -1041,60 +1095,6 @@
       "words": 0
     },
     {
-      "title": "'De Gennaro ossessionato da Contorno, ma non ha depistato sulle stragi'",
-      "category": "Italia",
-      "published": "2026-11-17T19:41:41+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/gip-da-indagini-nuove-prospettive-su-cabina-di-regia-dietro-stragi-92_a12dddfc-95bc-47c0-b974-53563c6a239c.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ddl antisemitismo approvato alla Camera tra le tensioni. Pd vota contro, Renzi e Calenda a favore",
-      "category": "Italia",
-      "published": "2026-11-17T19:40:14+00:00",
-      "url": "https://www.repubblica.it/politica/2026/11/17/news/ddl_antisemitismo_approvazione_camera_pd_riformisti_tensioni-425730690/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Andrea Mingardi si è sposato dopo 46 anni di fidanzamento: \"Beba è finalmente mia moglie\"",
-      "category": "Italia",
-      "published": "2026-11-17T19:39:43+00:00",
-      "url": "https://www.bolognatoday.it/social/andrea-mingardi-matrimonio-roberta-naldi-beba-46-anni.html",
-      "source": "BolognaToday",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Pensioni, Salvini sfida gli alleati: “Quota 64 già dal 2027, i soldi dalle banche” - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-17T19:34:27+00:00",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUTJnX2N4LUFWZ0JXRy11UVBQMmEtY2hGSFdPaFhxdDBHU3B6b196X0pELThqeWdVRHRqOUVtb296SG1QMWhFSWJlNlFXdVY4RWRBRjRiTnJGSmZvb3duZkpvMjBhQXV4NWNfelBWazEzSGtYc08xLTNBZldjMVFYMG9SSjJBUGpGa3pUZXEyNS1tVHhsWFIxZjlpd3NDdFBiamNfLVRLUFVWZHg2VDRWbUdDUV9adms?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "“Kimi è forte, avrà una carriera eccezionale. La sua fortuna? Non entrare in Ferrari”. Luca Cordero di Montezemolo esalta Antonelli",
-      "category": "Italia",
-      "published": "2026-11-17T19:18:34+00:00",
-      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/luca-cordero-montezemolo-kimi-antonelli-jz0xumup",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il gas made in Usa invade l'Italia: quanto costa il Gnl di Trump nelle nostre bollette",
-      "category": "Italia",
-      "published": "2026-11-17T19:01:00+00:00",
-      "url": "https://www.today.it/dossier/economia/gnl-usa-italia-record-trump-costi-bollette-2026.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Philip R. Lane: The practice and science of monetary policy communication: the ECB experience",
       "category": "Unione europea",
       "published": "2026-11-17T18:30:00+00:00",
@@ -1104,7 +1104,7 @@
       "words": 0
     },
     {
-      "title": "Ion urma să devină tată. Un tren l-a ucis în Italia, după ce ieșise să cumpere chips-uri pentru iubita gravidă - Rotalianul – Revista românului din Italia",
+      "title": "Ion avea numai 20 de ani și urma să devină tată. Un tren l-a ucis în Italia după ce ieșise să cumpere chips-uri pentru iubita gravidă - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-17T18:14:47+00:00",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOU2JrcU1wUUlfZjdtRnJxcTBrMkRtSDhVQTlFUnJuRVlzY0NFZ0UyQlpoSHNGSFhRS3A4X1BPc3VRbFkzdlVpMWVoakhVU0tiRDVvRXhVNTBNZGNfOTdpZ0hoeS1ucF91ckh0aGtkODdRSi1STUUyMUY4Q0FDSmxxajFVRnVIOTVQRi1CM2paYUxVaWlMRGJaNDJHTkVuMThaN1N1c0Vobk4wMmYyaDMtVGttMDc4YjhkVUZmS1JOQ1JLYUdKU3VvYjNIRjU?oc=5",
@@ -1145,15 +1145,6 @@
       "published": "2026-11-17T17:11:40+00:00",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2483",
       "source": "Commissione europea",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ilie, dispărut în străinătate și găsit în Italia după șapte ani. Repeta obsesiv un număr de telefon - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-17T17:06:27+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNWXpLeWpsVzZabHliVGt4WTdGZGpIdW5Mb1NIY0FESThlYmZ3RmVEc3BhOWxaekhoOUNDOE9NQ19GaGI2UUFCWmpDeE94OUJhVTliTE5mdlZrZWxhSW5Ya2o2OGVPMWdIZzlZczhoekRxLXVvR3o3d1pjVXFXSlJvRXg1SC1XclhwUTJXaGVrSElGa292bUlRQXdPV1haZ2dPanNaa0x6TWNGVkVyU2J3Vkkwc3NOTWNCV3FWNy1R?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     },
@@ -1347,6 +1338,15 @@
       "words": 0
     },
     {
+      "title": "Norvegia crește vârsta de pensionare și arată un calcul care s-ar putea aplica în viitor la toate... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-17T11:19:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOSUpxQ3RhcTAwYUtJRU4zT25oczFDZnl2dDZUQkpBWjcyd3ZyYmp4U1kzMWhXV3I2dENTUjNRUHc2OUdXVXBRX0lpM2xtTEhhZU9wYjJkQmN2eGdSYjFzc2JwZTBJdVNXT1BGVERtbDJqdHBDbE9KWmxMVi11R05mckhqTW4xTU1ISXZWd3V2czB1bFhyRmJDX3o2VjlaMkwwOUcxYUhJYVV2MXFUNFNFZ3hvdko2a0h6cHdnN3VYNXEwaEZGWlgtQkwzWHpudW14RDlkdjMtTmNDT004eGfSAeMBQVVfeXFMTzVKWHpXNnFCNzRlRTNMbXc0N1g0V3ZyRmhfbE4tajNPMkZBakw2T2kzMlNPcFBZREs4aGZLd0JZcUNJeFZsMkUxUU9STElzS1FiMnJpelYzMUNidzRRLWl1QUJ2b1U4WGNDcVBKWHNUY0RxWDV",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Famiglie italiane bloccate in Congo con minori adottati, Tajani scrive al Ministro congolese Bounda - Ministero degli Affari Esteri e della Cooperazione Internazionale",
       "category": "Istituzioni",
       "published": "2026-11-17T11:17:35+00:00",
@@ -1500,19 +1500,19 @@
       "words": 0
     },
     {
+      "title": "Ilie, dispărut în străinătate și găsit în Italia după șapte ani. Repeta obsesiv un număr de telefon - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-17T05:28:27+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNWXpLeWpsVzZabHliVGt4WTdGZGpIdW5Mb1NIY0FESThlYmZ3RmVEc3BhOWxaekhoOUNDOE9NQ19GaGI2UUFCWmpDeE94OUJhVTliTE5mdlZrZWxhSW5Ya2o2OGVPMWdIZzlZczhoekRxLXVvR3o3d1pjVXFXSlJvRXg1SC1XclhwUTJXaGVrSElGa292bUlRQXdPV1haZ2dPanNaa0x6TWNGVkVyU2J3Vkkwc3NOTWNCV3FWNy1R?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Premiati a New York i giovani talenti della seconda edizione del “progettoDiventerò nel Mondo” - Consolato Generale d'Italia a New York",
       "category": "Istituzioni",
       "published": "2026-11-17T01:02:25+00:00",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOU0c4SXpqcFBwWno5SVQtUk02SnhHcVNsWGlSa1JqVEtQQk93dTR3ei1sY3N3TXBMWHVkVmg0SlFmY3JlRnh1Y2xtWl9tS0w2Q1BURlg3N01BcGNPemdtaW9BbjB1Z25wZFlmTmQwTG1YRGgxMTVQeXlqaHYxSDEwdWpEVzRtOHFBUnJjX3BYSDFRYTBYT0dqdFhab1VnRzdtaUY3RXd5RVBPM0VTMDRmbmZ6dWJIN3ZVNkZnMF9nQzlOV1FLWEd4RXY1bzVxX0dBaEtENWpfUGhKQm9FcWk2SHhYWXIwSHBn?oc=5",
-      "source": "Ministero degli Esteri",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "REMINDER: NOTA DI ACCREDITAMENTO STAMPA – XI Edizione della Settimana della Cucina Italiana nel Mondo (Farnesina, 17 novembre 2026) - Ministero degli Affari Esteri e della Cooperazione Internazionale",
-      "category": "Istituzioni",
-      "published": "2026-11-16T23:54:30+00:00",
-      "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxORHdmTEdvY05xWTVPMElyNVZTdjhIT0t0bEp0N25HUUFHMUFUNlZoT3NreGZEUjExTkkxMENlLUFUTU5xcWVaeUxjaUpTdWhQcU9RU3Q5RzJLZXIzQTRPU0NhaGhfcFhqaHJTSUVHNktfVUJsNDRaVmszT01najNzcmU5WFR5MkRKdDRkNm5PMHV3WHVVTzNwV1BOVjFyY09VdFNLQVd1ekw5WXRPRjlMMmVEVm90aEgzT19XajhQUVhIQjhkRGJBZ2JoNlJ6ZE15N1hsRmVrQ2JiaGxsb3k2Ym9fSl9RMXpOY3RLSTZfUVR2YnVUR2xWZUlyRUpFVnNlM2ZSOFo1dVJmTmlRbWFoSk02THBLa3pucDl5XzlVOXFJUTZt?oc=5",
       "source": "Ministero degli Esteri",
       "status": "galben",
       "words": 0
