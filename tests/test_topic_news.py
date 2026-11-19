@@ -9,6 +9,8 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from topic_news import TOPIC_SEARCHES, _fetch_topic, collect_topic_news, MAX_PER_TOPIC
+from news_illustrations import make_svg, topic_for
+import xml.etree.ElementTree as ET
 
 
 class _Response(io.BytesIO):
@@ -29,6 +31,14 @@ class TopicNewsTests(unittest.TestCase):
             "Inteligență artificială", "Educație"
         }.issubset(categories))
         self.assertEqual(len(categories), len(TOPIC_SEARCHES))
+
+    def test_each_topic_has_a_valid_original_illustration(self):
+        for category, _, _ in TOPIC_SEARCHES:
+            with self.subTest(category=category):
+                item = {"category": category, "title": "Articol de exemplu", "summary": ""}
+                self.assertNotEqual(topic_for(item), "general")
+                root = ET.fromstring(make_svg(item))
+                self.assertTrue(root.tag.endswith("svg"))
 
     def test_rss_requires_source_https_and_fresh_date(self):
         recent = email.utils.format_datetime(self.NOW - dt.timedelta(hours=1))
