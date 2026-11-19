@@ -40,6 +40,26 @@ class TopicNewsTests(unittest.TestCase):
                 root = ET.fromstring(make_svg(item))
                 self.assertTrue(root.tag.endswith("svg"))
 
+    def test_technology_has_verified_publisher_fallback(self):
+        def empty_query(category, query, lang, now, headers):
+            return []
+        def tech_publisher(spec, now, headers):
+            category, publisher, _rss, _host = spec
+            articles = [
+                {"category": category, "title": f"{publisher} gadget {i}",
+                 "url": f"https://example.com/{publisher.replace(' ', '-')}/{i}",
+                 "source": publisher, "published": self.NOW.isoformat(),
+                 "summary": "", "image": ""}
+                for i in range(3)
+            ]
+            return publisher, articles, None
+        with patch("topic_news._fetch_topic", side_effect=empty_query), \
+             patch("expanded_news._fetch_one", side_effect=tech_publisher):
+            articles = collect_topic_news(self.NOW, set(), {})
+        technology = [item for item in articles if item["category"] == "Tehnologie"]
+        self.assertEqual(len(technology), MAX_PER_TOPIC)
+        self.assertEqual(len({item["url"] for item in technology}), MAX_PER_TOPIC)
+
     def test_rss_requires_source_https_and_fresh_date(self):
         recent = email.utils.format_datetime(self.NOW - dt.timedelta(hours=1))
         stale = email.utils.format_datetime(self.NOW - dt.timedelta(hours=50))
