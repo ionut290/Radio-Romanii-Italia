@@ -5,6 +5,8 @@ on:
     paths:
       - 'scripts/update_news.py'
       - 'scripts/expanded_news.py'
+      - 'scripts/topic_news.py'
+      - 'tests/test_topic_news.py'
       - 'scripts/institutional_news.py'
       - 'scripts/news_illustrations.py'
       - 'scripts/news_image_matching.py'
@@ -34,7 +36,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verifică asocierea fotografiilor
-        run: python -m unittest discover -s tests -p 'test_news_image_matching.py' -v
+        run: python -m unittest discover -s tests -p 'test_*news*.py' -v
       - name: Preia știrile
         timeout-minutes: 9
         run: |

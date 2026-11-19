@@ -221,6 +221,14 @@ extra = collect_extra_news(now, seen, HEADERS)
 items.extend(extra)
 print(f"Altri titoli raccolti da fonti verificate: {len(extra)}")
 
+# Dedicated culture, science and daily-life topics, balanced by language.
+# Existing diaspora and public-service reporting remains intact.
+from topic_news import TOPIC_SEARCHES, collect_topic_news
+CATEGORY_LIMITS.update({category: 4 for category, _, _ in TOPIC_SEARCHES})
+topic_items = collect_topic_news(now, seen, HEADERS)
+items.extend(topic_items)
+print(f"Nuovi titoli tematici raccolti: {len(topic_items)}")
+
 output = Path("news.json")
 if not items:
     if output.exists():

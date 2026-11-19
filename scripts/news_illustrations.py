@@ -19,6 +19,18 @@ COLORS = {
     "știri consulare": ("#153e64", "#427c9b", "#edc26b"),
     "drepturile muncitorilor": ("#183e5b", "#408c81", "#e9b957"),
     "conflict": ("#101f35", "#34415a", "#d5ad79"),
+    "muzică": ("#56315f", "#a34a80", "#f1bbd1"),
+    "cinema și seriale": ("#242b54", "#4e4b99", "#f3c77b"),
+    "tehnologie": ("#17375e", "#307eb5", "#a7ddf7"),
+    "inteligență artificială": ("#263165", "#6958bd", "#bfe8ff"),
+    "educație": ("#345069", "#408c91", "#f2cf7b"),
+    "știință": ("#163d65", "#3b78ad", "#b8e5ff"),
+    "sănătate": ("#265867", "#35a094", "#e4f1ff"),
+    "mediu și climă": ("#224a41", "#4e9767", "#d5e99d"),
+    "sport": ("#284966", "#3782ae", "#f4d58b"),
+    "cultură și cărți": ("#54405e", "#945f8b", "#efc8ad"),
+    "călătorii": ("#1e5064", "#51a1ad", "#f0c97b"),
+    "economie și consumatori": ("#315143", "#589a73", "#e4c76c"),
 }
 TOPICS = [
     (("meteo", "ploi", "ploaie", "vreme", "tempo", "allerta"), "weather"),
@@ -47,9 +59,27 @@ def is_armed_conflict(item):
     ))
 
 
+CATEGORY_TOPICS = {
+    "muzică": "music",
+    "cinema și seriale": "cinema",
+    "tehnologie": "technology",
+    "inteligență artificială": "artificial_intelligence",
+    "educație": "education",
+    "știință": "science",
+    "sănătate": "health",
+    "mediu și climă": "environment",
+    "sport": "sports",
+    "cultură și cărți": "culture",
+    "călătorii": "travel",
+    "economie și consumatori": "finance",
+}
+
 def topic_for(item):
     if is_armed_conflict(item):
         return "conflict"
+    explicit_topic = CATEGORY_TOPICS.get(str(item.get("category") or "").casefold())
+    if explicit_topic:
+        return explicit_topic
     combined = " ".join(str(item.get(key) or "") for key in ("title", "summary", "category")).casefold()
     if re.search(r"\b(?:milan|juventus|inter|lazio|napoli|fiorentina|atalanta)\b", combined):
         return "sports"
@@ -76,6 +106,22 @@ def drawing(topic, accent):
         return '<path d="M600 245 780 137 960 245Z" fill="#f0cb7e"/><rect x="630" y="257" width="300" height="24" fill="#edf2f9"/><g stroke="#e9eff9" stroke-width="38"><path d="M680 291v155m100-155v155m100-155v155"/></g><rect x="610" y="450" width="340" height="24" fill="#f0cb7e"/>'
     if topic == "community":
         return '<g fill="#e9f3fc"><circle cx="690" cy="252" r="56"/><circle cx="853" cy="252" r="56"/><circle cx="771" cy="297" r="43"/><path d="M587 472q0-146 103-146t103 146Zm164 0q0-146 103-146t103 146Z"/></g>'
+    if topic == "music":
+        return '<g fill="#f6dfed"><circle cx="700" cy="405" r="50"/><circle cx="865" cy="367" r="50"/><path d="M742 390V190l165-42v205h-35V195l-95 25v169Z"/></g>'
+    if topic == "cinema":
+        return '<rect x="616" y="240" width="340" height="235" rx="18" fill="#e8e5fd"/><path d="M616 240h340v65H616Z" fill="#292f68"/><path d="m645 245 55 58m55-58 55 58m55-58 55 58" stroke="#ead28b" stroke-width="23"/><path d="m630 220 300-92 24 80-300 92Z" fill="#ead28b"/>'
+    if topic == "technology":
+        return '<rect x="654" y="178" width="254" height="254" rx="28" fill="#e4f2ff"/><rect x="708" y="232" width="146" height="146" rx="16" fill="#3976a8"/><g stroke="#e4f2ff" stroke-width="14"><path d="M685 147v31m80-31v31m80-31v31m80 75h-17m17 80h-17M685 432v30m80-30v30m80-30v30M654 250h-35m35 80h-35"/></g>'
+    if topic == "artificial_intelligence":
+        return '<g stroke="#c7e6ff" stroke-width="12" fill="none"><path d="M660 226 793 155 908 237 880 395 743 455 625 348 660 226M660 226l220 169M793 155 743 455M625 348l283-111"/></g><g fill="#f0d08b"><circle cx="660" cy="226" r="26"/><circle cx="793" cy="155" r="26"/><circle cx="908" cy="237" r="26"/><circle cx="880" cy="395" r="26"/><circle cx="743" cy="455" r="26"/><circle cx="625" cy="348" r="26"/></g>'
+    if topic == "science":
+        return '<g fill="none" stroke="#def3ff" stroke-width="12"><ellipse cx="778" cy="306" rx="210" ry="82"/><ellipse cx="778" cy="306" rx="210" ry="82" transform="rotate(60 778 306)"/><ellipse cx="778" cy="306" rx="210" ry="82" transform="rotate(-60 778 306)"/></g><circle cx="778" cy="306" r="40" fill="#f3d17f"/>'
+    if topic == "environment":
+        return '<path d="M946 160Q652 150 612 365q65 185 245 87 115-69 89-292Z" fill="#d0e7b2"/><path d="M632 461q108-145 274-233" fill="none" stroke="#326a55" stroke-width="20" stroke-linecap="round"/>'
+    if topic == "sports":
+        return '<circle cx="780" cy="310" r="181" fill="#f0f4fc"/><path d="m780 242-60 50 25 72h77l30-72Z" fill="#395a76"/><path d="m650 235 70 57m130 0 65-64m-94 135 35 100m-113-99-47 100" stroke="#395a76" stroke-width="16" fill="none"/>'
+    if topic == "culture":
+        return '<path d="M588 195q110-45 190 16 98-61 194-16v264q-97-42-194 16-98-57-190-16Z" fill="#f3e6f2"/><path d="M778 211v264" stroke="#ac7fa1" stroke-width="13"/><path d="M622 255q55-16 111 8m-111 42q55-16 111 8m90-50q54-23 113-8m-113 58q54-23 113-8" stroke="#92708e" stroke-width="9" fill="none"/>'
     return '<g fill="none" stroke="#eef4fd" stroke-width="15"><circle cx="775" cy="297" r="156"/><ellipse cx="775" cy="297" rx="73" ry="156"/><path d="M621 297h308m-290-75h272m-272 150h272"/></g>'
 
 def make_svg(item):
@@ -93,7 +139,7 @@ def make_svg(item):
 <text x="65" y="99" font-family="Arial,sans-serif" font-size="53" font-weight="900" fill="white">RDI</text>
 <text x="177" y="83" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="white">RADIO ROMÂNII</text><text x="177" y="105" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="white">DIN ITALIA</text>
 <rect x="292" y="43" width="6" height="29" fill="#009246"/><rect x="298" y="43" width="6" height="29" fill="#fff"/><rect x="304" y="43" width="6" height="29" fill="#ce2b37"/>
-<rect x="65" y="234" width="260" height="36" rx="8" fill="{theme[2]}"/><text x="80" y="259" font-family="Arial,sans-serif" font-size="17" font-weight="800" fill="#16233b">{html.escape(category.upper())}</text>
+<rect x="65" y="234" width="260" height="36" rx="8" fill="{theme[2]}"/><text x="80" y="259" font-family="Arial,sans-serif" font-size="{13 if len(category) > 20 else 16}" font-weight="800" fill="#16233b">{html.escape(category.upper())}</text>
 <rect y="610" width="1200" height="65" fill="#0b1b32" opacity=".88"/><text x="65" y="649" font-family="Arial,sans-serif" font-size="20" fill="#d6e5f7">RADIO ROMÂNII DIN ITALIA · ILUSTRAȚIE EDITORIALĂ</text>
 </svg>'''
 
