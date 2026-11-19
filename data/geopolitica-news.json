@@ -1,12 +1,68 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-19T04:50:29.286356Z",
+  "updated_at": "2026-11-19T05:50:46.722151Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-281283f2f4212d3d",
+      "category": "securitate",
+      "region": "asia",
+      "title": "USCC Proposes Pacific Fleet With South Korea, Japan, Taiwan",
+      "summary": "",
+      "source": "조선일보",
+      "published": "2026-11-19T05:31:55Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOQlhjZWs5NkNuOFN1M25IWjBJUmU4MzE2ZlJzZ1VURFFISC10V1VaRTlmOUhacHF6b2JpT1JkVktLb1FhVHJad2w1X216cXFvcWtUeW1sbzJsNzhPMXpkUHVyMVhpOTVYWHRDdHdISUVMdmJfMlBldDY3SXJvVXRBX0FFaTg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "USCC propune flota din Pacific cu Coreea de Sud, Japonia, Taiwan",
+      "title_it": "L’USCC propone una flotta del Pacifico con Corea del Sud, Giappone e Taiwan",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-028bdc1333d53a62",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "An unprecedented trilateral summit in Shenzhen brings together Trump, Putin, and Xi to discuss influence and nuclear weapons",
+      "summary": "",
+      "source": "جريدة القدس",
+      "published": "2026-11-19T05:31:19Z",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQU41SXZUYWkzUnlMYk1VQzh5MmlvZlQ1SFlTVDBtR1RsWExYLVNVck9maE8yNnI0WWZlU3pkYkFFZmFnZkwycXFzR2R3Q1A1UEZKNnpqNUp0MFR1dkxRNENwZ1NHU3pHMG53eno5Um5PX05JeHpDNExmSFYtN1FNX0FlYXZ2bXRPdlFWV2NOaURzbUdEcFJ6Ql9mQXRNV2V3R1RySUhKYjhZV2FvM1NGdmRvQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Un summit trilateral fără precedent la Shenzhen îi reunește pe Trump, Putin și Xi pentru a discuta despre influență și arme nucleare",
+      "title_it": "Un vertice trilaterale senza precedenti a Shenzhen riunisce Trump, Putin e Xi per discutere di influenza e armi nucleari",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b4e25b3f876b8f9a",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "China pledges Peru $22.5 million in aid and heavy machinery as El Niño flood risks grow",
+      "summary": "",
+      "source": "Latin Times",
+      "published": "2026-11-19T05:10:55Z",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5IeFVab3ZDcVlEWExWVnVuRDc1Q0drY3EzT3ZYMHdLVFpkcExTOGR5Tkw1ZF8tRXFTcUl6UXpzenJrc2VlRTRvMGR5eURWU05oeXRMQjlEakMzNnA0dk1zS1FUc0ZiOHNUMmlzUzlUSmhnSjZOWDNoV05Uc2Y0S2c?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "China promite Peruului 22,5 milioane de dolari în ajutor și mașini grele pe măsură ce riscurile de inundații El Niño cresc",
+      "title_it": "La Cina promette al Perù 22,5 milioni di dollari in aiuti e macchinari pesanti mentre aumentano i rischi di inondazioni dovute a El Niño",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-7b30e6e8c4e505e8",
+      "category": "energie",
+      "region": "global",
+      "title": "How the War in Iran Will Remake the Global Energy Order",
+      "summary": "",
+      "source": "The New York Times",
+      "published": "2026-11-19T05:00:06Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yU0FMWnlOQ0Q5ajRGOTRXcGczQzJkSmo5VzlBOEJCOU9OVlluNXZNQmNTZzFlN0dLV1N4b1o0SmxBTVBka2EyejU1Q2xkVHRnWGRjUl84LTRtSlJpUU9sSjBYNERPbk9RNDJWOFBrZm43UHM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum războiul din Iran va reface ordinea energetică globală",
+      "title_it": "Come la guerra in Iran rimodellerà l’ordine energetico globale",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-643ae4c2200a2f7f",
       "category": "securitate",
@@ -33,6 +89,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ce ar putea însemna summitul istoric Trump-Xi-Putin pentru viitoarea ordine globală?",
       "title_it": "Cosa potrebbe significare lo storico vertice Trump-Xi-Putin per il futuro ordine globale?",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-fcaf8c00dc82838a",
+      "category": "economie",
+      "region": "global",
+      "title": "BB to issue Tk 3,000 crore short-term Sukuk for rural infrastructure",
+      "summary": "",
+      "source": "The Daily Star",
+      "published": "2026-11-19T03:41:43Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSjU3dEZxdHYwcEJjNDhKci1hYUZhVkpCSG5VeHRlTWJvbnpfUUFWaWFvS3ZCNmZFaGo1d1NxMGhxQnRmTnFkNFNXTEx6ZXdLQzVBV2d2V2x2RW9pX1BYdHdnNks2U2FjdlNjcFI5cFl0eTJsb3F0SnB4Y1ZEOXo5Q192aG9HYWE0QmNKSC00THRwbGFnUVdfbEQyS2dieFZkTlhpaUlDeGpvd2x1TTFCZA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "BB va emite sukuk pe termen scurt de 3.000 de crore Tk pentru infrastructura rurală",
+      "title_it": "BB emetterà Sukuk a breve termine da 3.000 crore di Tk per le infrastrutture rurali",
       "translation_status": "machine_translation"
     },
     {
@@ -117,6 +187,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Interesele petroliere și promisiunile climatice se ciocnesc la summitul COP31",
       "title_it": "Gli interessi petroliferi e le promesse sul clima si scontrano al vertice COP31",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-59fc88dc9c7fe780",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Japan scrambles fighter jets after Russian aircraft breach airspace amid rising Pacific tensions",
+      "summary": "",
+      "source": "WZDM",
+      "published": "2026-11-18T23:29:41Z",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNEVrOW5HYnR5VWhWWGVSZXM3YmRCNUEwTDRRY2NjQVRpYzczUGxYTlE2dC15b0lNTDJxcWFhQ05hbTZPcF84TnBTbGpLdVNNMi11WWlWN3J3MnJPRFlFOHpuUGJseTRuWU1zVkdvUnk5dHNqR2Q5bG9nZTRFZXRaVXBJSnR6OUFFSW5tODlkWlVUTlgzRUdKc1RDazdqMVFhdVc1RXdSc2lfdi11MlR2WHU0eEM0dUI0REs3U1hoNGNQSkYzZGRJaw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Japonia zboară avioanele de luptă după ce avioanele rusești au intrat în spațiul aerian pe fondul tensiunilor în creștere din Pacific",
+      "title_it": "Il Giappone fa decollare gli aerei da combattimento dopo che gli aerei russi hanno violato lo spazio aereo nel mezzo delle crescenti tensioni nel Pacifico",
       "translation_status": "machine_translation"
     }
   ]
