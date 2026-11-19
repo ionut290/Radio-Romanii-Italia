@@ -32,6 +32,14 @@ TOPIC_SEARCHES = (
 )
 MAX_PER_TOPIC = 4
 
+# Independent verified RSS as fallback when the generic news search is sparse.
+# Only headlines, publish dates and links are reused, not full article bodies.
+TECHNOLOGY_FEEDS = (
+    ("Tehnologie", "TechCrunch Hardware", "https://techcrunch.com/category/hardware/feed/", "techcrunch.com"),
+    ("Tehnologie", "The Verge", "https://www.theverge.com/rss/index.xml", "theverge.com"),
+    ("Tehnologie", "Ars Technica Gadgets", "https://feeds.arstechnica.com/arstechnica/gadgets", "arstechnica.com"),
+)
+
 
 def _fetch_topic(category, query, lang, now, headers):
     params = urllib.parse.urlencode({
@@ -115,5 +123,31 @@ def collect_topic_news(now, seen_urls, headers):
                 accepted += 1
             if accepted >= MAX_PER_TOPIC:
                 break
+        if category == "Tehnologie" and accepted < MAX_PER_TOPIC:
+            # Tech outlets continue to provide reliable dated headlines when
+            # the broad Google News technology query produces zero entries.
+            from expanded_news import _fetch_one
+            fallbacks = []
+            with ThreadPoolExecutor(max_workers=3, thread_name_prefix="rdi-tech") as pool:
+                futures = [pool.submit(_fetch_one, spec, now, headers) for spec in TECHNOLOGY_FEEDS]
+                for future in as_completed(futures):
+                    try:
+                        _publisher, articles, error = future.result()
+                        if error:
+                            print(f"RDI technology backup: {error}")
+                        else:
+                            fallbacks.extend(articles)
+                    except Exception as exc:
+                        print(f"RDI technology backup unavailable: {exc}")
+            for article in sorted(fallbacks, key=lambda item: item["published"], reverse=True):
+                title_key = re.sub(r"[^\w]+", " ", article["title"].casefold()).strip()
+                if article["url"] in seen_urls or title_key in seen_titles:
+                    continue
+                seen_urls.add(article["url"])
+                seen_titles.add(title_key)
+                output.append(article)
+                accepted += 1
+                if accepted >= MAX_PER_TOPIC:
+                    break
         print(f"RDI topic {category}: {accepted} titoli")
     return output
