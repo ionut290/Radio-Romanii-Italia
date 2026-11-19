@@ -65,7 +65,7 @@ def _fetch_topic(category, query, lang, now, headers):
             continue
         found.append({
             "category": category,
-            "title": re.sub(r"\\s+", " ", title)[:240],
+            "title": re.sub(r"\s+", " ", title)[:240],
             "url": link,
             "source": source[:90],
             "published": published.isoformat(),
@@ -106,7 +106,7 @@ def collect_topic_news(now, seen_urls, headers):
                 if index >= len(bucket) or accepted >= MAX_PER_TOPIC:
                     continue
                 article = bucket[index]
-                title_key = re.sub(r"[^\\w]+", " ", article["title"].casefold()).strip()
+                title_key = re.sub(r"[^\w]+", " ", article["title"].casefold()).strip()
                 if article["url"] in seen_urls or title_key in seen_titles:
                     continue
                 seen_urls.add(article["url"])
