@@ -1,7 +1,7 @@
 {
-  "news_updated_at": "2026-11-20T16:02:35.596415+00:00",
+  "news_updated_at": "2026-11-20T16:03:33.963637+00:00",
   "editorial_updated_at": "2026-11-20T14:28:42.902583+01:00",
-  "translations_updated_at": "2026-11-20T11:56:22.049802+00:00",
+  "translations_updated_at": "2026-11-20T16:02:27.242097+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
   "feed_missing_body": 120,
@@ -12,7 +12,7 @@
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 3,
-  "editorial_galben": 30,
+  "editorial_galben": 31,
   "editorial_rosu": 40,
   "pending": [
     {
@@ -618,6 +618,33 @@
   ],
   "recent_news": [
     {
+      "title": "Pentru un ministru german, invitația lui Putin adresată europenilor este „de salutat din toate punctele de vedere”",
+      "category": "România",
+      "published": "2026-11-20T16:03:39+00:00",
+      "url": "https://hotnews.ro/pentru-boris-pistorius-invitatia-adresata-de-putin-europenilor-este-acceptabila-2410031",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "EU warns against COP31 becoming a ‘fossil fuel summit’",
+      "category": "Mondo",
+      "published": "2026-11-20T16:03:22+00:00",
+      "url": "https://www.politico.eu/article/eu-warns-against-cop31-becoming-a-fossil-fuel-summit/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "source": "POLITICO Europe",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Gérard Depardieu şi scriitorul Michel Houellebecq, acuzaţi de viol în grup şi de agresiuni sexuale / Actorul francez a fost condamnat recent pentru o altă agresiune sexuală",
+      "category": "România",
+      "published": "2026-11-20T16:02:52+00:00",
+      "url": "https://www.g4media.ro/gerard-depardieu-si-scriitorul-michel-houellebecq-acuzati-de-viol-in-grup-si-de-agresiuni-sexuale-actorul-francez-a-fost-condamnat-recent-pentru-o-alta-agresiune-sexuala.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Italy: Workers and students stage nationwide strike over living costs",
       "category": "Mondo",
       "published": "2026-11-20T16:02:20+00:00",
@@ -735,6 +762,15 @@
       "words": 0
     },
     {
+      "title": "Omicidio Willy, condanna definitiva anche per Gabriele Bianchi: ergastolo",
+      "category": "Italia",
+      "published": "2026-11-20T15:53:04+00:00",
+      "url": "https://roma.repubblica.it/cronaca/2026/11/20/news/roma_colleferro_omicidio_willy_condanna_definitiva_ergastolo_gabriele_bianchi-425738228/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Gabi Tamaș a fost plasat în arest la domiciliu după scandalul din Centrul Vechi al Capitalei",
       "category": "România",
       "published": "2026-11-20T15:52:59+00:00",
@@ -771,15 +807,6 @@
       "words": 0
     },
     {
-      "title": "Generația Z iese din nou în stradă în peste 25 de țări. Ce îi revoltă pe tineri și de ce România ar putea urma valul european",
-      "category": "România",
-      "published": "2026-11-20T15:51:28+00:00",
-      "url": "https://adevarul.ro/stiri-interne/societate/generatia-z-iese-din-nou-in-strada-in-peste-25-de-2573138.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Il ritorno di Chiara Ferragni, Barbara D'Urso al Tg1 e gli altri gossip da leggere nel weekend",
       "category": "Italia",
       "published": "2026-11-20T15:51:00+00:00",
@@ -789,12 +816,21 @@
       "words": 0
     },
     {
-      "title": "Biletele de tren se scumpesc din decembrie. Care sunt noile tarife. „Se va simți diferența”",
-      "category": "România",
-      "published": "2026-11-20T15:48:26+00:00",
-      "url": "https://www.digi24.ro/stiri/biletele-de-tren-se-scumpesc-din-decembrie-care-sunt-noile-tarife-se-va-simti-diferenta-4046277",
-      "source": "Digi24",
-      "status": "galben",
+      "title": "One third of attacks on children worldwide recorded in Palestine",
+      "category": "Mondo",
+      "published": "2026-11-20T15:50:28+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/20/one-third-of-attacks-on-children-worldwide-recorded-in-palestine?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Kansas hosts become guests as Algeria repays World Cup welcome",
+      "category": "Mondo",
+      "published": "2026-11-20T15:49:06+00:00",
+      "url": "https://www.aljazeera.com/sports/2026/11/20/kansas-hosts-become-guests-as-algeria-repays-world-cup-welcome?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -831,6 +867,15 @@
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/tusk-lincursione-nel-nostro-spazio-aereo-una-provocazione-intenzionale-russa_6104402c-305d-441e-a983-2c8dfb41bd5e.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Jerusalem Daily: Palestinians return home to ruins",
+      "category": "Mondo",
+      "published": "2026-11-20T15:42:04+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/20/jerusalem-daily-palestinians-return-home-to-ruins?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -915,15 +960,6 @@
       "words": 0
     },
     {
-      "title": "Dario Amodei a sorpresa atterra a Brindisi mentre Anthropic crolla a Wall Street",
-      "category": "Italia",
-      "published": "2026-11-20T15:31:00+00:00",
-      "url": "https://www.today.it/economia/finanza/dario-amodei-puglia-anthropic-titolo-crolla-wall-street.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Poland condemns Russian ‘provocation’ after airspace violations",
       "category": "Mondo",
       "published": "2026-11-20T15:18:26+00:00",
@@ -933,38 +969,11 @@
       "words": 0
     },
     {
-      "title": "Spain’s political crossroads, Europe’s wider stakes: Spaniards to vote in key election",
-      "category": "Mondo",
-      "published": "2026-11-20T15:17:17+00:00",
-      "url": "https://www.france24.com/en/tv-shows/talking-europe/20261120-spains-political-crossroads-europes-wider-stakes-spaniards-to-vote-in-key-election",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Measles in America: Here's a constructive approach to beating the highly contagious disease, based on Brazil's experience",
-      "category": "Mondo",
-      "published": "2026-11-20T15:14:00+00:00",
-      "url": "https://www.dw.com/en/measles-in-america-here-s-a-constructive-approach-to-beating-the-highly-contagious-disease-based-on-brazil-s-experience/a-79990626?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ukraine: Rescue teams search wreckage after deadly Russian strike on Kyiv",
-      "category": "Mondo",
-      "published": "2026-11-20T15:12:40+00:00",
-      "url": "https://www.euronews.com/video/2026/11/20/ukraine-rescue-teams-search-wreckage-after-deadly-russian-strike-on-kyiv",
-      "source": "Euronews English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "NYC mayor unveils plan to close notorious Rikers Island jail by 2032",
-      "category": "Mondo",
-      "published": "2026-11-20T15:03:20+00:00",
-      "url": "https://www.euronews.com/2026/11/20/nyc-mayor-unveils-plan-to-close-notorious-rikers-island-jail-by-2032",
-      "source": "Euronews English",
+      "title": "Un român care se plimba prin Germania cu 200.000 de euro a rămas fără bani. Poliția i-a confiscat... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-20T15:04:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOYXhQRmpBZmhqaEZHZGx0UjBCbXNNelhvdEZFZnV4MTNWVEJKYWNJNFVzTzhZOFlraUJpaGZQUWZaZ2Z6WFE0dUUtOFF0NXFHM2dpa052QUE4OVhONE9QTUZMdVY3VDMwdG5NSkxMN3k5WF92N0V4R2tNdkJtSzNtekNhMkxPQjRzdWVwZHlpampMd2VPZTZwT0UxbGY2TlVDSGMwekdHZUdUckd1MkIwX01aVWZGM2RYUkJDbE5KZ1haZkI4WnV6a1hhY1RxeFFOU3hWbU5SUWNCTC1hZ0ZsOHhB0gHnAUFVX3lxTFBWQnhQRjY5SklyOGpJN1ViSGdrc2U2QUNLM3dNQVNlMWxRdGF6N3d3N1hJZkRMeU9YLTlXbGx3NS1Wd2hIMmdNWVQ0RGdKcHlTUjFLeTc5NDlWS3d5Z2FvNGEtU2o0ZDVHa1d2OER0WVh",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -974,6 +983,15 @@
       "published": "2026-11-20T15:02:13+00:00",
       "url": "https://www.theverge.com/policy/1038450/facebook-myanmar-genocide-un",
       "source": "The Verge",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
+      "category": "Inteligență artificială",
+      "published": "2026-11-20T15:00:06+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
+      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -1001,15 +1019,6 @@
       "published": "2026-11-20T14:10:00+00:00",
       "url": "https://www.consilium.europa.eu/it/press/press-releases/2026/11/20/council-calls-for-action-to-safeguard-europe-s-traditional-sports-and-games-for-future-generations/",
       "source": "Consiglio dell'UE",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
-      "category": "Inteligență artificială",
-      "published": "2026-11-20T14:00:07+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
-      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -1077,11 +1086,56 @@
       "words": 0
     },
     {
+      "title": "Commission partially greenlights Malta's final payment request for €61.7 million under NextGenerationEU",
+      "category": "Unione europea",
+      "published": "2026-11-20T12:32:21+00:00",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2550",
+      "source": "Commissione europea",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Commission greenlights Portugal's final payment request for €4.7 billion under NextGenerationEU",
+      "category": "Unione europea",
+      "published": "2026-11-20T12:30:50+00:00",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2549",
+      "source": "Commissione europea",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "MFF 2028-2034: Council agrees negotiating position on stronger civil protection mechanism and support for health preparedness",
       "category": "Unione europea",
       "published": "2026-11-20T12:30:00+00:00",
       "url": "https://www.consilium.europa.eu/it/press/press-releases/2026/11/20/mff-2028-2034-council-agrees-negotiating-position-on-stronger-civil-protection-mechanism-and-support-for-health-preparedness/",
       "source": "Consiglio dell'UE",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Commission greenlights Ireland's final payment request for €225 million under NextGenerationEU",
+      "category": "Unione europea",
+      "published": "2026-11-20T12:29:15+00:00",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2548",
+      "source": "Commissione europea",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Commission partially greenlights Poland's final payment request for €12.7 billion under NextGenerationEU",
+      "category": "Unione europea",
+      "published": "2026-11-20T12:27:35+00:00",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2547",
+      "source": "Commissione europea",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Commission partially greenlights Hungary's first and final payment request for €10 billion under NextGenerationEU",
+      "category": "Unione europea",
+      "published": "2026-11-20T12:24:37+00:00",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2546",
+      "source": "Commissione europea",
       "status": "roșu",
       "words": 0
     },
@@ -1239,24 +1293,6 @@
       "words": 0
     },
     {
-      "title": "Notizie giornaliere 20 / 11 / 2026",
-      "category": "Unione europea",
-      "published": "2026-11-20T10:34:48+00:00",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/it/mex_26_2543",
-      "source": "Commissione europea",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Daily News 20 / 11 / 2026",
-      "category": "Unione europea",
-      "published": "2026-11-20T10:34:48+00:00",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2543",
-      "source": "Commissione europea",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Sciopero generale il 20 novembre 2026 - INPS",
       "category": "Istituzioni",
       "published": "2026-11-20T10:29:09+00:00",
@@ -1302,15 +1338,6 @@
       "words": 0
     },
     {
-      "title": "Press release - COP31: MEPs urge all parties to implement climate change commitments",
-      "category": "Unione europea",
-      "published": "2026-11-20T09:43:00+00:00",
-      "url": "https://www.europarl.europa.eu/news/en/press-room/20261116IPR48908/",
-      "source": "Parlamento europeo",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ramayana - La Nascita di una Leggenda, il kolossal d'azione in pieno stile Bollywood di Nitesh Tiwari",
       "category": "Cinema și seriale",
       "published": "2026-11-20T09:40:00+00:00",
@@ -1334,24 +1361,6 @@
       "published": "2026-11-20T09:06:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQT3RoSVJYYU1lbllyUHJlQ1ZWUlFlLWVXVlJ5Zk40Ql9UWjAwN3RhYUZENE9PV3ZHQ2ttc080ZGx5TjlzUFg1eElEQ24zc3piOEVVVVpPTU1leEFiQUswTlQzM28zMHFVb0o0aXB6VWRsREJNUklleldoaVFvWERkZjlaeWRRVkFDdC1hLUVULVA2bTF0WWxOc2lPeng3YUJRWmlWRldmb092ME1rZnROR0lFckdUNVB4WWxtQS16OVZmREZ2MkV0MjRGcklma0Q0V200elFrbFpETzhHRHpzN2dWcFdZZnl6TFZLTjNBTkN0X1BJdENFWA?oc=5",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Commission greenlights Slovenia's seventh and final payment request for €271.8 million under NextGenerationEU",
-      "category": "Unione europea",
-      "published": "2026-11-20T09:04:07+00:00",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2535",
-      "source": "Commissione europea",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Commission greenlights Greece's final payment requests for €11.32 billion under NextGenerationEU",
-      "category": "Unione europea",
-      "published": "2026-11-20T09:00:19+00:00",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2534",
-      "source": "Commissione europea",
       "status": "roșu",
       "words": 0
     },
@@ -1506,15 +1515,6 @@
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNcEg5dGdsejVzakJ2RXAxblVQWGgwWDZMUlJaT2hGRTdJYmFabFZaRDgyUFFxdVlpaFFSamNSUWM2aWhOQ1FZTjNtYXBuMDQ5dVVqQWVsVmlCWmVVd2ZvWkVqZmJaa3pyZzBSN19qSkRrRUNhOFI0UzNUVUppSHZQdFlGYkxaMXNqNnliOUtfVE1Pa2p4Y3RLazlCTzFNQTVuT1ZOQ2RPcWdnRVJ4YWZva1hBNElEZHNJU0lkdGpLNEc5RzVsZWhDVDNxYlJWd01EMFB4N0VNM3Q0a1A3dWR3LVFRaEM3UDFlRmtJSGZTaEVjOU1q?oc=5",
       "source": "INPS",
       "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "ILINCA – Lansare album „Divin Féminin” la FORM Space Cluj",
-      "category": "Muzică",
-      "published": "2026-11-19T16:59:11+00:00",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB6Z2lCb3pyaGlVNTdEd0pHZGVwNGdHeGV2YjlpNE1WLU5vbTVJSmVaTWpFYmRWYmRuMHlfWVA3UmFIQnY4MnREN3dZakVzc2ZkRUQ2LURTUXBoS2NHbXcxNk9qNUdNOXc0SFA5Q3dvaFBSbjZUWENYSw?oc=5",
-      "source": "Zile și Nopți",
-      "status": "roșu",
       "words": 0
     }
   ],
