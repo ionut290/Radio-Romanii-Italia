@@ -1,26 +1,12 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-20T19:10:33.282913Z",
+  "updated_at": "2026-11-20T20:20:53.647216Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
-    {
-      "id": "geo-e039f26bbfb89161",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Latest news on the war in Ukraine. FT: ‘Trump has told the Europeans and Ukrainians that he wants a peace deal by early January’",
-      "summary": "",
-      "source": "Il Sole 24 ORE",
-      "published": "2026-11-20T18:59:40Z",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQY2k2eFFaTnFsZGF6aGYzTWowaG8yQkE0QnlqQzFEZmRsUGNvVTJsT1I1Vlkxa3JrWHFYUEx2NDRYcXhvenlDRTdTa2F5X3BhSFZmRkF4d3hsN3dSZWpZVlNXSTBRSWZKdERzb1o3NzhaUnowMjl5Qk4tSWpTZWFOcy1lTUVpRmN0?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ultimele știri despre războiul din Ucraina. FT: „Trump le-a spus europenilor și ucrainenilor că vrea un acord de pace până la începutul lunii ianuarie”",
-      "title_it": "Ultime notizie sulla guerra in Ucraina. FT: “Trump ha detto agli europei e agli ucraini che vuole un accordo di pace entro l’inizio di gennaio”",
-      "translation_status": "machine_translation"
-    },
     {
       "id": "geo-503cf1fdd674e5fd",
       "category": "diplomatie",
@@ -34,6 +20,31 @@
       "title_ro": "Hegseth propune operațiuni militare comune în Honduras și avertizează că SUA nu își vor ceda „curtea din spate”",
       "title_it": "Hegseth propone operazioni militari congiunte in Honduras e avverte che gli Stati Uniti non cederanno il loro \"cortile\"",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d875d1885608e6ed",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31 delivers deals for host Turkey as climate diplomacy stalls",
+      "summary": "",
+      "source": "Reuters",
+      "published": "2026-11-20T18:24:08Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaVhLeDVRNGJfN2d5RGs2bG5MN1J3aFFTZ2hMU2FyRjRYX1A0YWI2NmhKdnhNbXdXU21xZVE2QkQ1dlVOVExyMjhOaEVsZHJOR25xaElwTWdxODZFcnlJQmFoeE9kaHZZTHk3Mm5wYVJXY1YteV9pRlFmakh6WURLWHBURjNrSGVLZmU2cDJwZnF4UVN0cFZSblhJdlhZLV9zNnRjUlhLRjFkRFhNc0VmR0FR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31 oferă oferte pentru Turcia gazdă, pe măsură ce diplomația climatică se blochează",
+      "title_it": "La COP31 offre accordi alla Turchia ospitante mentre la diplomazia climatica è in stallo",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-89ee034afcbb4bc8",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Did Melania Trump's Russia-Ukraine Ceasefire Push Actually Work?",
+      "summary": "",
+      "source": "Newsweek",
+      "published": "2026-11-20T18:18:00Z",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOYWVHWmpHWmVSd0o1QWtfTGZGeUh4QjRBa3lOX0dQeXZveUdHSUtuUU9VSlZKbWVkNjdYRmdROVRzM2R6Wm5UVndLSG5BQm5QMjBNanlZZW51c3JfOUFDN0xBcmY1S3BNUzhJbTRWZnduYUlLZkozNGFHbUMxXzY4LTljNW4zdw?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-a4b6d053b938832f",
@@ -64,6 +75,28 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-6ce6a9152878dfdd",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "Chips can survive the space environment — can their financing?",
+      "summary": "",
+      "source": "TechCrunch",
+      "published": "2026-11-20T17:40:01Z",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObHpvVm9WT2hEaUlMNmNPcVRVNDRCLWtMSWhjRnlJcWVMalNLWnJSYkIxN3NmSzBxcGRraGd3dWprYzI4UWVrZ24wZDJmV2MwMFIwbWhYNUZlWUlXMWV6U3V4cE12VkJVS1QybkZjeUdRSmtqSjZ5UnJjUEtNY2IzM0hlUVpuR3BscnRIZ1p5V0lxcThZWUJLeW5B?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-5d6bc02fc9f64ebb",
+      "category": "europa",
+      "region": "europa",
+      "title": "Burnham: \"Regno Unito vuole rapporto migliore con UE\"",
+      "summary": "",
+      "source": "Eunews",
+      "published": "2026-11-20T17:35:57Z",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYjBNLUhuMmRGaFRfQzdjNjJTWmM0Y3VoX0VXZzdGMUtyMWhEOEtCNDV4Vk4xdnJDNlJIS3o2RHhlM3VYdklxN1QtcWhhQW9hc3ROUFJEd2Jidl9CUWlUSmdEZE5SMlZlNkdlb1RTSDdDNVR2MHhkWDVNSjdxeDdrWnJXZHVNWTFJYUI2NDNybkQ4UmFEZWI0ZDBuT0FPRjY1dWFnOHI1b2xsdw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-cbb198dd2449bde5",
       "category": "conflicte",
       "region": "europa",
@@ -76,6 +109,17 @@
       "title_ro": "Germania, Franța, Marea Britanie, Ucraina îndeamnă Rusia să accepte încetarea focului energetic de iarnă",
       "title_it": "Germania, Francia, Regno Unito e Ucraina sollecitano la Russia ad accettare il cessate il fuoco energetico invernale",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b8499e7c66d2c41c",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Trump administration wants Ukraine and Russia to reach peace deal by January 2027",
+      "summary": "",
+      "source": "Українська правда",
+      "published": "2026-11-20T17:19:00Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54VURoSDhFS0VGcjBfT1Nvdy1SR0RORnNqNzFCX3BXaHVRVlNoTGRIcnZSSC15SEhnZHFhTS1KSXFOSnBNMHNkbXlyOWFERzFVM1pGQjZqNzZwdVJOT1JxdGVlbVpMMHpPY1pjeGhQRkzSAXBBVV95cUxOeFVEaEg4RUtFRnIwX09Tb3ctUkdETkZzajcxQl9wV2h1UVZTaExkSHJ2UkgteUhIZ2RxYU0tSklxTkpwTTBzZG15cjlhREcxVTNaRkI2ajc2cHVSTk9ScXRlZW1aTDB6T2NaY3hoUEZM?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-db4dfbfd2629d536",
@@ -92,18 +136,15 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-5a52ed828afe7531",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "The Trump administration wants Ukraine and Russia to reach a peace agreement by January 2027 - media",
+      "id": "geo-67e373a5588685d5",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Trump to kick off Asia trip with Quad talks in Manila ahead of China visit",
       "summary": "",
-      "source": "Українські Національні Новини (УНН)",
-      "published": "2026-11-20T17:14:23Z",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOZEJRYlRlVDRlYmJ5QnY0amR5NUwtSlR2VmxOVVFlWEg0YUVielA3dV9MY3Z6S3RxVFl4LXJzNVZBeVpmbWxpMGRiOUozWDBkanVmNThuZ1FaamFYbmFBMTZFelpYR3lORWJFYjdsTENqOVo1MjVWT1F0eFB3TzJhMWV3NS1vaVh5YUNfTWI0VUVyN1gyNTBqYlNFRlYtTVJuMEI5ZjlZcndCSFFoZUY1MkxCaEhHUTQ0THdobWJRYmRyOUlVMU9lOUMzY1J5R0Z1Sm1PQkhyZ0lpNkJqQndZ0gHeAUFVX3lxTE9BaUNYV3VSbWwzLUFhaUxpLTBTRURqRTczbk9CX041M0FZUXdrNE5FMjBNem5TSC1TQVpaTXlYMThSZ0VILTZxMXRLendHeG1UOEI1VjFSUkhNVFNFWTJzblhnWUpRRmNfbFV0VGhDa1FkUnl1TmhOeFIwMm11NEdSSFhRaml1ajVkanBsTWZIV0RLNFc1UHZtRDhqcXNYRFphN1ZJOUtmQ3A5cm5NV3dlY1A3eTZueDFDSlVzNGx0aWFiQ1JLNEdKNlJobWdUQ0t5WVozWFptREpSNm41UQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Administrația Trump dorește ca Ucraina și Rusia să ajungă la un acord de pace până în ianuarie 2027 - media",
-      "title_it": "L'amministrazione Trump vuole che Ucraina e Russia raggiungano un accordo di pace entro gennaio 2027 - media",
-      "translation_status": "machine_translation"
+      "source": "DD News",
+      "published": "2026-11-20T17:14:06Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTW5XVEc5YjhPMk9vOElGelJ0WjNCU1Y4dTI3QXZTd180ZzBfOUVqYjF4VEp6UXJncWFabUJTWkFSUFlrUnRyWDdwWEtiYVIzeUpaSEpiLVRnb1NEMWcwR2ZkN191ZXdmbkpBZUxyY2FUb201MnRtMjN4NU5wXzJIU2dNcFQyVVJxc1E5bzg5SFRVbzJra2gyLWFUVVZPT2daRWc?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-59519bdf0f24d540",
@@ -201,20 +242,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "UE dă undă verde a 1 miliard de euro în sprijinul militar Ucrainei, în timp ce un diplomat de vârf afirmă că Rusia respinge pacea",
       "title_it": "L’UE dà il via libera a 1 miliardo di euro di sostegno militare all’Ucraina mentre un alto diplomatico afferma che la Russia rifiuta la pace",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-40b8c615a4203683",
-      "category": "europa",
-      "region": "europa",
-      "title": "Il Regno Unito fa passi verso l'UE, ma si attende il piano di Burnham",
-      "summary": "",
-      "source": "Euronews.com",
-      "published": "2026-11-20T15:57:27Z",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNFFFMXZFYjAzaEZlYkhYb0J4QVN6YmtzUEY5S2J1V3F5OXBUMThsSTY3YW10dzZ4cW1BOFpaLWx4ZjAxOG5SQnNKeTAtQXdld182VlBWX2Fhd3Y4Sm10X25wRU5PQ1B1enFMOVFKd2tMU0ZaQUlLQ0RkTjFaRnEzVjNFYllBcDNfVHR2OGtpMWY3NFAtWUFMTzFmWFlfSU9uQWp3M01UYnowLW0xZUE1MUpCLWV4SmhNWFE?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Marea Britanie face pași către UE, dar planul lui Burnham este așteptat",
-      "title_it": "Il Regno Unito fa passi verso l'UE, ma si attende il piano di Burnham",
       "translation_status": "machine_translation"
     },
     {
@@ -330,6 +357,17 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-1d2765eee0a8994b",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Russian Air Provocations Against Poland: Moscow Tests European Defenses and Advances a New Division of Spheres of Influence",
+      "summary": "",
+      "source": "Robert Lansing Institute",
+      "published": "2026-11-20T14:33:31Z",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQNlA5ZDZMSDgybjUyZjZiTVhhRVhGVjNyeDNfSkhvVi1GSnJtX29kdFhtX2FNcTdPQ29zMWh1ZVAwM0VsLW1uWVlZSUswOEhXNnd2dXc1aUNOYlVJTU9oVGlmbGhrOGs0allqaVluMGluOTY0SFVydnowVzY2b3o1NHRXVnBGakxQT192eTlrdFF3RWQ5b3d6Z1hNOXVOVFF5S3lSc3BLRWdCa3NBZ1d4WDNtMk1iNmlqRlZ5NFBiSGJ6UXY0Q1hUTXIzblUxUE9XOG43dFBic01sWkpZNk52cXJfU2dhVW5UcXBmaUJuU0JSRTVFWXc?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-a7936d8884e0b158",
       "category": "securitate",
       "region": "europa",
@@ -428,32 +466,15 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-d875d1885608e6ed",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31 delivers deals for host Turkey as climate diplomacy stalls",
+      "id": "geo-f2926eba5bbf4cfe",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Russian officer publicly confirms nuclear command briefcase ahead of Putin-Trump-Xi meeting",
       "summary": "",
-      "source": "Reuters",
-      "published": "2026-11-20T13:26:20Z",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaVhLeDVRNGJfN2d5RGs2bG5MN1J3aFFTZ2hMU2FyRjRYX1A0YWI2NmhKdnhNbXdXU21xZVE2QkQ1dlVOVExyMjhOaEVsZHJOR25xaElwTWdxODZFcnlJQmFoeE9kaHZZTHk3Mm5wYVJXY1YteV9pRlFmakh6WURLWHBURjNrSGVLZmU2cDJwZnF4UVN0cFZSblhJdlhZLV9zNnRjUlhLRjFkRFhNc0VmR0FR?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "COP31 oferă oferte pentru Turcia gazdă, pe măsură ce diplomația climatică se blochează",
-      "title_it": "La COP31 offre accordi alla Turchia ospitante mentre la diplomazia climatica è in stallo",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-a4b1b4b24a6266ec",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Russia rejects the idea of NATO-style security guarantees for Ukraine",
-      "summary": "",
-      "source": "Informat.ro",
-      "published": "2026-11-20T13:04:27Z",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPbXBiOVE2REpZd25Uam56NzFMZGc3X3hmVTNxOGxoOUs2VDFRRnpuT1VYVUxpSFAwVDc3OEd5STZzcGhoR3ljODJvMzcxd0VMR0YzUGZ0Y3EyVFZBc2NqMjNmNEJrQ3pEVHhZU1NnaUZtQ2JWMnRhUWxkdGxZY0xlU2dvNUg5T19fYkZpYjE1SFJXR3A0Y3ZBOGxpTndCb2FtekF3?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Rusia respinge ideea unor garanții de securitate în stil NATO pentru Ucraina",
-      "title_it": "La Russia rifiuta l’idea di garanzie di sicurezza in stile NATO per l’Ucraina",
-      "translation_status": "machine_translation"
+      "source": "Latin Times",
+      "published": "2026-11-20T13:37:46Z",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQa053TkVxa0hLSlZPam91WU5LeDljR2xGNFoyVE03MU96b0lSZGhjaXpQbDlfUm04akc1YWFkTEdqTVpQdlhIYTdYU3UzeHZfUS1aWlNDRUc0Y0xpc3VWd1F5MlY1dGViQW13OWFhWmtvSU02S2FtWkdZWl9SS25TaEktaw?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-29c063c47f38bbaf",
@@ -624,20 +645,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-0584caafc0271ab2",
-      "category": "clima",
-      "region": "global",
-      "title": "Can Turkey Turn COP31 Into a Green Investment Success Despite Stalled Climate Talks?",
-      "summary": "",
-      "source": "Modern Diplomacy",
-      "published": "2026-11-20T11:01:59Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTUtjZkJZQUZ1UVctZ2dGOWdVWkdlWGNKM3k1VUhSMDU0dklUUm5aTUtDaVNJUng5Wm9hMGFqVmxuc2dYdU54cDlEVW1mODZpZXdqcWJhOEdTbndONzB1SHNpNDcyQVdETTREajdmYnh3Z0JYNjZPRmRrYkt2dzB6UUdXMjdWQnFZcm5EUk03ekVVbUVWZVVGSzhqM3RMSXFiZ2RVanl5cVE5dmZ1dWUwdFh4THl6VXJGTmFwa3BKYw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Poate Turcia să transforme COP31 într-o investiție ecologică de succes, în ciuda blocării discuțiilor climatice?",
-      "title_it": "Riuscirà la Turchia a trasformare la COP31 in un successo di investimenti verdi nonostante lo stallo dei colloqui sul clima?",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-e8879fcd1ef25d45",
       "category": "energie",
       "region": "global",
@@ -650,6 +657,17 @@
       "title_ro": "Țările din Golf cântăresc o rețea de conducte de 40 de miliarde de dolari pentru a evita Ormuz - IEA",
       "title_it": "I paesi del Golfo pesano 40 miliardi di dollari su una rete di gasdotti per evitare Hormuz - IEA",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-6e311267ede77e96",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Russia Pushes Back Against U.S. Idea of NATO-Style Security Guarantees for Ukraine",
+      "summary": "",
+      "source": "The Moscow Times",
+      "published": "2026-11-20T10:16:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQclFYOVZlWXdIeXpUV296Zm1Cb0ppY0JfY2ZvX29iWGV6WkxKM3k0Q0x6d1d1bjZaSlMwZGUwTjI4Zjd6RU42ZHJnRUNLV3QwVW9KSHpLa29jRUs4SXFseEp3b0JOUGJyWXNYa0hDeEVlVU1rQS1aQU5WdTBpRnhQb2xFZU84aHlxbTBNaFJHdkpsOFgzX05lVDJzekQxOTd3VVZlQnVIbnEwWlRSTUhNQVo2ajh0YlU4SUVoOUFOWXQybzl2REswRw?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-2d019d3a03b1492f",
@@ -719,20 +737,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Organizația Tratatului Atlanticului de Nord (NATO) | Țări, fondatori, articolul 5, istorie, sediu și scop",
       "title_it": "Organizzazione del Trattato del Nord Atlantico (NATO) | Paesi, fondatori, articolo 5, storia, sede e scopo",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-84a3001f47ff24d3",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Rahul Gandhi calls Modi ‘compromised PM’, claims India would be at Trump-Xi-Putin trilateral if Congress were in power",
-      "summary": "",
-      "source": "شبكة تواصل الإخبارية",
-      "published": "2026-11-20T08:22:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5DNTgyN1VYcnlBTFBkYVNKMVJUTVJJYkw5Ni1sckxRT05kZ1NHUm5maTl1TU1ERGJqWEh1dUNwQ181VnAwbTVWQi1oNGU3dFpYX0w4?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Rahul Gandhi îl numește pe Modi „prim-ministru compromis”, susține că India s-ar afla la trilateral Trump-Xi-Putin dacă Congresul ar fi la putere",
-      "title_it": "Rahul Gandhi definisce Modi “primo ministro compromesso” e sostiene che l’India sarebbe nella trilaterale Trump-Xi-Putin se il Congresso fosse al potere",
       "translation_status": "machine_translation"
     },
     {
@@ -817,34 +821,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Andy Burnham la Bruxelles pentru a reînvia relațiile UE-Marea Britanie după Brexit",
       "title_it": "Andy Burnham a Bruxelles per rilanciare i rapporti UE-Regno Unito dopo la Brexit",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-cfa46cc4199f78d8",
-      "category": "europa",
-      "region": "europa",
-      "title": "UE și Regatul Unit caută să depășească, într-un summit la Bruxelles, 'trauma' cauzată de Brexit",
-      "summary": "",
-      "source": "Agerpres",
-      "published": "2026-11-20T07:29:33Z",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOOUh6aVpFV25HNXloUTBEX0FlTEMtWmEzWkppMXBkRGpKd204bWw0RjdoSTl3UG53WHh4bHlsZ0hCWEt2d1VPMTh4c0pLX1dOaVdNSTdOSWJJUlQ4dGI2Vnc1N0NIcW1GVk5sVk9felFRd1NIbHhiWUl3eFo0bnp1Q2ZmSHh0Z3dWVDM3SWdfWjZEZ3l0dDU4QkFFLTQ4Mjd6ZHp4aEVmTlVfdDZJZUtYMzdpdE9FMEdxNy1haVhZdmdUOXZBVUg1WWV1VF9SZFpHcW50V25GYngwcmV1Y2hn?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE și Regatul Unit caută să depășească, într-un summit la Bruxelles, 'trauma' cauzată de Brexit",
-      "title_it": "L'UE e il Regno Unito cercano di superare, in un vertice a Bruxelles, il \"trauma\" causato dalla Brexit",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-a54169e24352f26d",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Gaza children appeal to world: ‘Don’t forget us’",
-      "summary": "",
-      "source": "Middle East Monitor",
-      "published": "2026-11-20T07:08:00Z",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOSjJUb25yLW0yR0hGR19FcGQ4YjdjRkoxanZ6MkxvaFdlNWNxS3k0NjJzckhjMUVMS2RoUGdIYm1yUHU4SEh2WWlyeGdfZlhNUjR0TzBrNl8xay1jbllFNHFQbHFYbE40NVdSR0xOZlAwLVdmODgta0JFazViZDEzaHhLaFA1V21KRnBvNURrOTRYd9IBlwFBVV95cUxQc2hSZ1liZm9LclRUTzU1cXI3dW55cllQdFR4VDduUWtnbWQxeU13c2xhcFJfLS1DSFRJNDJuRjl2c2UzVWg4THJvaW5qMTVwNEctektvSzNxS1pOcTRQb01DSFhjSGNUWUQ2ZVViR29YeWZwY3ZFamFJdDdwWE9OejZRenZYQ0F5YW9Kam9pQk1Vb2Y5Y1FF?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Copiii din Gaza fac apel la lume: „Nu ne uitați”",
-      "title_it": "I bambini di Gaza lanciano un appello al mondo: “Non dimenticateci”",
       "translation_status": "machine_translation"
     }
   ]
