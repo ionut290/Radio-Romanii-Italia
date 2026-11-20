@@ -1,5 +1,5 @@
 {
-  "news_updated_at": "2026-11-20T17:01:53.929799+00:00",
+  "news_updated_at": "2026-11-20T17:08:02.739486+00:00",
   "editorial_updated_at": "2026-11-20T14:28:42.902583+01:00",
   "translations_updated_at": "2026-11-20T17:00:50.004234+00:00",
   "feed_total": 120,
@@ -12,7 +12,7 @@
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 3,
-  "editorial_galben": 30,
+  "editorial_galben": 31,
   "editorial_rosu": 42,
   "pending": [
     {
@@ -618,9 +618,45 @@
   ],
   "recent_news": [
     {
+      "title": "Guvern: Sesiunea de depunere pentru schema de 759 milioane de lei destinată industriei va fi prelungită",
+      "category": "România",
+      "published": "2026-11-20T17:08:15+00:00",
+      "url": "https://economedia.ro/guvern-sesiunea-de-depunere-pentru-schema-de-759-milioane-de-lei-destinata-industriei-va-fi-prelungita.html",
+      "source": "Economedia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Teenage Engineering’s first CD player puts the spinning disc on display",
+      "category": "Tehnologie",
+      "published": "2026-11-20T17:05:52+00:00",
+      "url": "https://www.theverge.com/tech/1038692/teenage-engineering-ep-bc-1-cd-compact-disc-player-broadcast-series-bluetooth",
+      "source": "The Verge",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Urla di dolore durante l'iniezione letale, esecuzione di oltre un'ora in Texas su un 70enne",
+      "category": "Italia",
+      "published": "2026-11-20T17:04:00+00:00",
+      "url": "https://www.today.it/mondo/iniezione-letale-urla-dolore-reinaldo-dennes-texas.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Antonella Clerici, la frecciata a Milly Carlucci: \"Ultimamente la parola famiglia è un po' abusata\"",
+      "category": "Italia",
+      "published": "2026-11-20T17:04:00+00:00",
+      "url": "https://www.today.it/tv/news/antonella-clerici-frecciata-milly-carlucci-famiglia.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Israel și SUA pregătesc un nou atac împotriva Iranului: ce scenarii iau în calcul liderii militari și oamenii politici",
       "category": "România",
-      "published": "2026-11-20T17:00:54+00:00",
+      "published": "2026-11-20T17:02:56+00:00",
       "url": "https://www.digi24.ro/stiri/externe/israel-si-sua-pregatesc-un-nou-atac-impotriva-iranului-ce-scenarii-iau-in-calcul-liderii-militari-si-oamenii-politici-4046375",
       "source": "Digi24",
       "status": "galben",
@@ -696,6 +732,15 @@
       "url": "https://hotnews.ro/proces-de-piraterie-in-rusia-un-israelian-va-fi-judecat-pentru-sechestrarea-unei-nave-in-2009-2410091",
       "source": "HotNews",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Fost angajat Dacia devine consilier onorific la Guvern. Premierul Luca Niculescu îl ia consilier pe reprezentantul constructorilor de automobile, fost angajat la Dacia",
+      "category": "România",
+      "published": "2026-11-20T16:54:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/auto-transporturi/fost-angajat-dacia-devine-consilier-onorific-la-guvern-premierul-luca-niculescu-il-ia-consilier-pe-reprezentantul-constructorilor-de-automobile-fost-angajat-la-dacia-23000755?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -780,20 +825,11 @@
       "words": 0
     },
     {
-      "title": "Popeyes a deschis restaurantul cu numărul 26 din România",
-      "category": "România",
-      "published": "2026-11-20T16:46:28+00:00",
-      "url": "https://www.economica.net/popeyes-a-deschis-restaurantul-cu-numarul-26-din-romania_997750.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "„Litoralul Vestului” se modernizează. Plaja Ghioroc din Arad va avea noi facilități de agrement, sport și relaxare",
-      "category": "România",
-      "published": "2026-11-20T16:44:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/turism/litoralul-vestului-se-modernizeaza-plaja-ghioroc-din-arad-va-avea-noi-facilitati-de-agrement-sport-si-relaxare-23000516?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
+      "title": "Sciopero generale il 20 novembre 2026 - INPS",
+      "category": "Istituzioni",
+      "published": "2026-11-20T16:43:45+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcU1FYmZjVkFtY2xwc0lhaXRYN0xiQlRSNHB4MmhKT1AyVVVFMUkwZ1JXSU1nZVpFLUQzaGNVdExIUzk5SmQ3bmYwSnBHZWJFeWtVbk8zRjB1LUhENHRMNU0wTGRWS1FERTdJc1NLaDRUUFNhc3VXek92QVRHeGlMNWZVWWdBdnlxYXlVTnNILXI4blE3RldOcjJHR0JHQTZydUljZnUtTVhPNnl0bFRuNmFPUFQ5VVBHTkxZQVRTQlQ?oc=5",
+      "source": "INPS",
       "status": "roșu",
       "words": 0
     },
@@ -960,29 +996,11 @@
       "words": 0
     },
     {
-      "title": "3 canzoni uscite questa settimana e che meritano di essere ascoltate",
-      "category": "Italia",
-      "published": "2026-11-20T16:18:00+00:00",
-      "url": "https://www.today.it/vision/musica/angelica-bove-motta-mobrici-nuove-uscite.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "'Blade Runner 2099' & 'Rivals': The big TV shows to watch this month",
       "category": "Mondo",
       "published": "2026-11-20T16:17:10+00:00",
       "url": "https://www.france24.com/en/tv-shows/arts24/20261120-blade-runner-2099-rivals-the-big-tv-shows-to-watch-this-month",
       "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Un attore famoso, i dipendenti, l’anonimo risparmiatore: storie di nuovi ricchi grazie ad Anthropic",
-      "category": "Italia",
-      "published": "2026-11-20T16:16:08+00:00",
-      "url": "https://www.repubblica.it/economia/2026/11/20/news/ricchi_azioni_anthropic_wall_street_intelligenza_artificiale_borsa_ia-425738309/",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1041,20 +1059,20 @@
       "words": 0
     },
     {
-      "title": "The best early Black Friday deals you can already shop",
-      "category": "Tehnologie",
-      "published": "2026-11-20T15:53:25+00:00",
-      "url": "https://www.theverge.com/gadgets/1028991/black-friday-best-early-deals-2026",
-      "source": "The Verge",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "UE și Marea Britanie încearcă să \"anuleze\" treptat Brexitul, prin acorduri privind educația, energia și apărarea - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-20T15:52:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQeGotdmRkcnBnTjlIbVBKZGpCRGFya0FHemdyaW1CdS00a1hDcTBfZmNhZlBqR0pfOFEwOUJBLTZ3R0ZBNm9YejdTbGdWMmRZZG9leThCMk12LXB0V0FuUVpNZ1RtLTdVb2dDcmlBUGlKMGE2S0tON0FFWkItSkpCeGNtemhpekc4XzNIUnU4RTdtMlktcDF6VUZFY2ExQnhyeVZjNHVkY3dRdndHWFRJUjVLOHpUZVU3TEE1ejdlUmtlVHJybXBzR2hEQnB0T0FjRU1La0NKQ3FwempFR1RuQkd4aw?oc=5",
       "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Festivalul Internațional Sabin Pautza, ediția a XIII-a, la Reșița: cinci zile de muzică, artă și cultură, între 18 și 22 noiembrie 2026",
+      "category": "Cultură și cărți",
+      "published": "2026-11-20T15:36:33+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPTk1QdzZaSlpkYmx6SG03NUpidFFVZHpkdDhGNTNoUWFSYTk2Tk5yalZxb19iM29SUlFNY05iaUg1M1hkLTczSUVXUmk4Vnc0RWxSSlktUVZlaGRKV0V6ejR4MkVmUVJfX0lPOEdSZXhMLUZxempVYkdFbkJ5VFdEYkNmZmJENGF3Y01JUEE3NmxmbEdhX1ZSQzEzTzhkbk9sdU1NNXY4anoxTkowanpFSk1QdFltdDlJdTBkZEVOaUVJR0h2WjZweVJtcDJPX3JJU1J3UWpTMnB1SndHNjc4X3VEb2R5M2wweGlqWTh3WGdHMzVNWmRsdA?oc=5",
+      "source": "Radio România Reșița",
       "status": "roșu",
       "words": 0
     },
@@ -1104,6 +1122,15 @@
       "words": 0
     },
     {
+      "title": "Live Nashville SC - FC Cincinnati - MLS: Punteggi & Highlights Calcio - 22/11/2026",
+      "category": "Sport",
+      "published": "2026-11-20T13:50:15+00:00",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQem1UY29VWkVSTWV5VVVTZ3NnWHVOZHp0SW9lSk52R0kwaERhQjVYMzJzY2hKN2FaeU03cDdseXlwWFRfZERpUWpGb1lPeXpjTlllOWVSMTJKeTVGQk4ydXQ2eFZVdVdOTGVEWGZzQm9NSW4xN3RlbFF5U19QZjd0VkN1NHdJbFlTWkRWWXFlcHNYVVE?oc=5",
+      "source": "www.eurosport.it",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Live New England Revolution - Philadelphia Union - MLS: Punteggi & Highlights Calcio - 21/11/2026",
       "category": "Sport",
       "published": "2026-11-20T13:50:10+00:00",
@@ -1145,6 +1172,15 @@
       "published": "2026-11-20T13:07:00+00:00",
       "url": "https://www.consilium.europa.eu/it/press/press-releases/2026/11/20/joint-statement-eu-united-kingdom-summit-20-november-2026/",
       "source": "Consiglio dell'UE",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "O româncă e dezamăgită că salariile din Spania nu mai acoperă cheltuielile: \"Nu se câștigă mai bine ca în România\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-20T12:55:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOcFlJWkRkWWdnUzZWZmJnZVpqaThHV1NXajdsWDlxT0V5QVh0UlN1ZHEzd0ZMQjFGbThoZ2lHRGxrN3RQei1ZRGo5Y1BFYVBFRW1zSU1YOWNOaXlXUDQ2UzdtdmxpVkpXXy1TVFBoTEVhTXdlbE5nZHFPbjF5OGZXT3ZHWF9EMmJoT0RIREdFLU5YbVlFbWsyN25hemcyMHJsZzNhdFQyRy16MEpsckVlR2l0WnlWakNZSkZQTkxuWnl4QWFiTjB4QzQxemZJYTc3OFVUV2FWQTRDdXhoc0FvNFhNTnJib09SOXZPRA?oc=5",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1374,15 +1410,6 @@
       "words": 0
     },
     {
-      "title": "Sciopero generale il 20 novembre 2026 - INPS",
-      "category": "Istituzioni",
-      "published": "2026-11-20T10:29:09+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQcU1FYmZjVkFtY2xwc0lhaXRYN0xiQlRSNHB4MmhKT1AyVVVFMUkwZ1JXSU1nZVpFLUQzaGNVdExIUzk5SmQ3bmYwSnBHZWJFeWtVbk8zRjB1LUhENHRMNU0wTGRWS1FERTdJc1NLaDRUUFNhc3VXek92QVRHeGlMNWZVWWdBdnlxYXlVTnNILXI4blE3RldOcjJHR0JHQTZydUljZnUtTVhPNnl0bFRuNmFPUFQ5VVBHTkxZQVRTQlQ?oc=5",
-      "source": "INPS",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Sciopero generale, a Bari in piazza anche i dipendenti dell'Università con gli studenti: «Mancano i servizi» VIDEO",
       "category": "Educație",
       "published": "2026-11-20T10:27:00+00:00",
@@ -1446,24 +1473,6 @@
       "words": 0
     },
     {
-      "title": "CDU cere micșorarea alocațiilor plătite de Germania în România: \"Nu se poate să le plătim pe baza costului vieții din Germania\" - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-20T09:06:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQT3RoSVJYYU1lbllyUHJlQ1ZWUlFlLWVXVlJ5Zk40Ql9UWjAwN3RhYUZENE9PV3ZHQ2ttc080ZGx5TjlzUFg1eElEQ24zc3piOEVVVVpPTU1leEFiQUswTlQzM28zMHFVb0o0aXB6VWRsREJNUklleldoaVFvWERkZjlaeWRRVkFDdC1hLUVULVA2bTF0WWxOc2lPeng3YUJRWmlWRldmb092ME1rZnROR0lFckdUNVB4WWxtQS16OVZmREZ2MkV0MjRGcklma0Q0V200elFrbFpETzhHRHpzN2dWcFdZZnl6TFZLTjNBTkN0X1BJdENFWA?oc=5",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cosa fare nel weekend a Reggio Emilia e provincia, gli appuntamenti da non perdere dal 20 al 22 novembre",
-      "category": "Cultură și cărți",
-      "published": "2026-11-20T09:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNZ1V5dGxHU0xZcWN5RFJzZGxNSkNTSXpYSEVJQWJ4ajNjN1lvTlk5SW5vVVRQU0xUM0k3SWt2M1g4SV9RYWlKbm1LS1BUalZWNTZISFpBaDVKRU9saXNUc2JvV09OM1Q5WTViX09zdjF5SGVUMVFDbFgyYkNTcWtPSUhoTHdRZjFxbTM4c0hHVXREYVozaVNFTV9tbXpqQ3pHUmxXVEtkT1JIbXZ2OXhhRkNuTHJtaE5QWXl3VnJPMURSNnFLZVN2Z2dORnFOSnFWRWI0NFdBUVB6UUk1UlE?oc=5",
-      "source": "Stampa Reggiana",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "- North Atlantic Treaty Organization | NATO",
       "category": "NATO e sicurezza",
       "published": "2026-11-20T08:33:53+00:00",
@@ -1482,28 +1491,10 @@
       "words": 0
     },
     {
-      "title": "11 români, arestați în Italia. Furau tractoare și le vindeau în România cu serii de șasiu și... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-20T07:52:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPZVBuTkZRWVlReFItbW1ldEpTbXJmV2QxelN0ZkFDNGZ4eTdIQngyQThvLVpVR3FPSHctSm5XLTJFdWpNNG9xSmhBQnc4WkZJZUhyV2o3UGZyQVhjVTdmZ3JDdnYtR09Dc011QjBJSFhSelNwUWF0ZFNDenYwOWNQandaQmN4U0w5bEkzeUJvekVNaFFBdlpZczNaS04xdTBRcGF4SGVvZkFoTmZJM3BqUm5xbjNoTmJhQ0Rpdkw1VTdiS3I2RGdGTlM1Z2pqckRfbGxIcU9iRTQ5Z216ZUNETFIydmczbUU2QkNGaW9qamVfSUd1Q3cwUtIB-AFBVV95cUxPZVBuTkZRWVlReFItbW1ldEpTbXJmV2QxelN0ZkFDNGZ4eTdIQngyQThvLVpVR3FPSHctSm5XLTJFdWpNNG9xSmhBQnc4WkZJZUhyV2o3UGZyQVh",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Addio coppa italia. Rimini, Carnesecchi va avanti : \"Ora testa al campionato»",
       "category": "Sport",
       "published": "2026-11-20T07:40:28+00:00",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPMmZiTWwxRnVrcjFCN19HWktTMWUtR0VuQzFvSUI4TkVnUUE3dGRtRjVfSElYempPSUhnVG5aNDFvSEZCOVNxVmdzUTBPZGxhYkh0WVFZU2szaDN6eVFERzNBQU5LdUtLczhzQkRSazFZNk9DN2NYSm00X1FDVmNSSDYxbm95S3NzMWotTHBpT0hhMkU?oc=5",
-      "source": "QS Quotidiano Sportivo",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tennis. Cittadella Sport Village fa il pieno. Racchette estensi protagoniste",
-      "category": "Sport",
-      "published": "2026-11-20T07:13:09+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPRE9peTBUYUhxTHd5S2tUVkNrMDYyNms0a2ZxN0xPWjhqRDdrTE1CUWtwOGlGSEhURGtUdnU5Rk5OczY1NXROcWVtSGIyRzZPR2N1enlyY2RGbEJMZ2NNd29HUUhILXNGUzlheEQyWmo2U0hoMXhxZVRJbkR2MW5rZkg3MENyTHRXeTROZDgydw?oc=5",
       "source": "QS Quotidiano Sportivo",
       "status": "roșu",
       "words": 0
@@ -1514,6 +1505,15 @@
       "published": "2026-11-20T06:49:33+00:00",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNX1NwMDNPcmVFeHVvYk9hVVBFeWZkSDE0cEkzbHJqVU1Kc1ctTWZoMThNaER5V2VIUzFXTVR3d2ljTUNldk51M1gwQ05PZGNUX0NwbDhoa3ZCNk1Yel9LbVJEeFF5QU0wUmVRQ2g5dU15cWhIYjRmcU5FSXFoU0hpaWx4YjAzX0p6cURIUnMyQk9EcTBXMlBSRUFnbGFSSDJ6cktubjFGNVQ?oc=5",
       "source": "Panorama della Sanità",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Sciopero 20 novembre 2026, documento di adesione della struttura nazionale di settore dirigenza scolastica FLC CGIL",
+      "category": "Educație",
+      "published": "2026-11-20T06:30:48+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxORmZQbXEwR3BvcjUyRWZyeThhQ3NwV0FLX2cxX0drc1RMNjBLUkJYQndEd1drekVKWXpQTF9FSlZrLU1HZm5GdmdfU3dSMm1RakJhemprWVNpZGVCaU1yN0Rxa2hXSzJXdklaa1B4ZUdLczN3ei1sZmZEaXlUdEdadUZqaEhJd0J2amZlckhOcXRoMHhpakJRMXBocVFGamlkU1BVRml5ZGhKRm5mV3ViMWZfT04xVzdGS3c1TW1Zazc2TjZIWmc3TmtqSFBmR1ppVlRwVExab2cxMUlRaHc4NEZvR3A3aWJpbzAyNFd3?oc=5",
+      "source": "FLC CGIL",
       "status": "roșu",
       "words": 0
     }
