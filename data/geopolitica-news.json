@@ -1,12 +1,40 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-20T20:20:53.647216Z",
+  "updated_at": "2026-11-20T21:30:25.710066Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-25edd0d097bda41c",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "The Council of Europe’s support for Ukraine",
+      "summary": "",
+      "source": "Council of Europe",
+      "published": "2026-11-20T20:26:49Z",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1pX0hpWVBpbzNPV1dSWi1zaU9OMXFSY1lmRnA1S0J2RU1CSllJaFJfejVmQnN5U2htUHJBQi1TVHdqNUxORUFZRDZBajlQUE9fRl90VmVzMUxMVnFZ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Sprijinul Consiliului Europei pentru Ucraina",
+      "title_it": "Il sostegno del Consiglio d’Europa all’Ucraina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-902b5d1c5e9009a4",
+      "category": "europa",
+      "region": "europa",
+      "title": "Ucraina, la diplomazia dei governi cambia gli equilibri nell’Ue",
+      "summary": "",
+      "source": "Domani",
+      "published": "2026-11-20T19:34:00Z",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcy1IRHV5X25FNFBTclFUb21nT0NaLXl3U0dZVGx1OUFDNEUxVjlrRmhUTzVXSGIwTWJYWGJmZm81dkZiMEVCNnhJT3JhNXRnQlRHbGRHMDg3NWhaeTV3dGZWRUJTMGhMRUlsZTBreURNYW5xS25KY2t5VExjOWJweTZfV0J1NkZNNXRpVXhwYXNlRlZtNkdSLXhvdVJBejdnZVVHWV9rMV96dkhpQ20yX1VYWE1ySHFoREJsUg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ucraina, diplomația guvernamentală schimbă echilibrul în UE",
+      "title_it": "Ucraina, la diplomazia dei governi cambia gli equilibri nell’Ue",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-503cf1fdd674e5fd",
       "category": "diplomatie",
@@ -44,7 +72,10 @@
       "source": "Newsweek",
       "published": "2026-11-20T18:18:00Z",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOYWVHWmpHWmVSd0o1QWtfTGZGeUh4QjRBa3lOX0dQeXZveUdHSUtuUU9VSlZKbWVkNjdYRmdROVRzM2R6Wm5UVndLSG5BQm5QMjBNanlZZW51c3JfOUFDN0xBcmY1S3BNUzhJbTRWZnduYUlLZkozNGFHbUMxXzY4LTljNW4zdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "A funcționat cu adevărat impulsul de încetare a focului dintre Rusia și Ucraina al Melaniei Trump?",
+      "title_it": "La spinta al cessate il fuoco tra Russia e Ucraina di Melania Trump ha funzionato davvero?",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a4b6d053b938832f",
@@ -83,7 +114,10 @@
       "source": "TechCrunch",
       "published": "2026-11-20T17:40:01Z",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObHpvVm9WT2hEaUlMNmNPcVRVNDRCLWtMSWhjRnlJcWVMalNLWnJSYkIxN3NmSzBxcGRraGd3dWprYzI4UWVrZ24wZDJmV2MwMFIwbWhYNUZlWUlXMWV6U3V4cE12VkJVS1QybkZjeUdRSmtqSjZ5UnJjUEtNY2IzM0hlUVpuR3BscnRIZ1p5V0lxcThZWUJLeW5B?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cipurile pot supraviețui mediului spațial - poate finanțarea lor?",
+      "title_it": "I chip possono sopravvivere nell’ambiente spaziale: può il loro finanziamento?",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5d6bc02fc9f64ebb",
@@ -94,20 +128,9 @@
       "source": "Eunews",
       "published": "2026-11-20T17:35:57Z",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYjBNLUhuMmRGaFRfQzdjNjJTWmM0Y3VoX0VXZzdGMUtyMWhEOEtCNDV4Vk4xdnJDNlJIS3o2RHhlM3VYdklxN1QtcWhhQW9hc3ROUFJEd2Jidl9CUWlUSmdEZE5SMlZlNkdlb1RTSDdDNVR2MHhkWDVNSjdxeDdrWnJXZHVNWTFJYUI2NDNybkQ4UmFEZWI0ZDBuT0FPRjY1dWFnOHI1b2xsdw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-cbb198dd2449bde5",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Germany, France, UK, Ukraine Urge Russia To Accept Winter Energy Ceasefire",
-      "summary": "",
-      "source": "TVC News",
-      "published": "2026-11-20T17:20:00Z",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZXEyN1ZjWXZEMUV4WlQ4NE9XcUdlQVJ4aVVUbnNYMXptX0lUU1BWZmRwY2R5ZDlYLWdwQmZvWXYzaWFnX2E4TzZoa0dvR0tZRFltLW9GcDctUENRVHNCbHBQYXJMczNNRHE4bDZlbDRsNWxGNHhJdzNBQ0ZSMnVSVWd6RkFBOGxtUUlpZ2dSeW9PSnRZS2dGZnFpNA?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Germania, Franța, Marea Britanie, Ucraina îndeamnă Rusia să accepte încetarea focului energetic de iarnă",
-      "title_it": "Germania, Francia, Regno Unito e Ucraina sollecitano la Russia ad accettare il cessate il fuoco energetico invernale",
+      "title_ro": "Burnham: „Marea Britanie vrea relații mai bune cu UE”",
+      "title_it": "Burnham: \"Regno Unito vuole rapporto migliore con UE\"",
       "translation_status": "machine_translation"
     },
     {
@@ -119,7 +142,10 @@
       "source": "Українська правда",
       "published": "2026-11-20T17:19:00Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE54VURoSDhFS0VGcjBfT1Nvdy1SR0RORnNqNzFCX3BXaHVRVlNoTGRIcnZSSC15SEhnZHFhTS1KSXFOSnBNMHNkbXlyOWFERzFVM1pGQjZqNzZwdVJOT1JxdGVlbVpMMHpPY1pjeGhQRkzSAXBBVV95cUxOeFVEaEg4RUtFRnIwX09Tb3ctUkdETkZzajcxQl9wV2h1UVZTaExkSHJ2UkgteUhIZ2RxYU0tSklxTkpwTTBzZG15cjlhREcxVTNaRkI2ajc2cHVSTk9ScXRlZW1aTDB6T2NaY3hoUEZM?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Administrația Trump dorește ca Ucraina și Rusia să ajungă la un acord de pace până în ianuarie 2027",
+      "title_it": "L’amministrazione Trump vuole che Ucraina e Russia raggiungano un accordo di pace entro gennaio 2027",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-db4dfbfd2629d536",
@@ -144,7 +170,10 @@
       "source": "DD News",
       "published": "2026-11-20T17:14:06Z",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTW5XVEc5YjhPMk9vOElGelJ0WjNCU1Y4dTI3QXZTd180ZzBfOUVqYjF4VEp6UXJncWFabUJTWkFSUFlrUnRyWDdwWEtiYVIzeUpaSEpiLVRnb1NEMWcwR2ZkN191ZXdmbkpBZUxyY2FUb201MnRtMjN4NU5wXzJIU2dNcFQyVVJxc1E5bzg5SFRVbzJra2gyLWFUVVZPT2daRWc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump va începe călătoria în Asia cu discuții Quad la Manila înaintea vizitei în China",
+      "title_it": "Trump darà il via al viaggio in Asia con i colloqui Quad a Manila prima della visita in Cina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-59519bdf0f24d540",
@@ -172,6 +201,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Deficitul aprovizionării cu petrol se înrăutățește în ciuda faptului că războiul din Iran este lovit de cerere, spune AIE",
       "title_it": "La carenza di offerta di petrolio peggiora nonostante il colpo sulla domanda causato dalla guerra con l’Iran, afferma l’IEA",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-50a945acc2cbce37",
+      "category": "europa",
+      "region": "europa",
+      "title": "UE și Marea Britanie încheie un acord pentru relansarea relațiilor post-Brexit. Ce prevede înțelegerea | AUDIO",
+      "summary": "",
+      "source": ": Europa FM",
+      "published": "2026-11-20T16:36:45Z",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0VZVW0tUU5sMEprUzNpc2Vhd1RGWHJlRGhEMUhTOEVkYms4b3pDeThEaFpjMWtZXzJUSjBNVjFIWncxeGtYTEZUYjdqaGZiNW4zRVF4VlR1SDRKUUNubERFWjlYU0ZzQnZBQU4xNDZKdGZxaW9KSTljcFU4aUZKZWpYYVVvMjZqUHpWZWFpRkhmSzcxS2Q1YUljczk4SVZCelYxQzBsOUt0ZS1jQlNsbjdyRC1ocE92VXNkSGJiTmNjUXZj?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE și Marea Britanie încheie un acord pentru relansarea relațiilor post-Brexit. Ce prevede înțelegerea | AUDIO",
+      "title_it": "Ue e Regno Unito raggiungono un accordo per rilanciare le relazioni post-Brexit. Cosa fornisce la comprensione | AUDIO",
       "translation_status": "machine_translation"
     },
     {
@@ -231,20 +274,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-688602a721bb670b",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "EU greenlights 1 billion euros in military support for Ukraine as top diplomat says Russia rejects peace",
-      "summary": "",
-      "source": "The Kyiv Independent",
-      "published": "2026-11-20T15:58:06Z",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNdHl3a0xvSXYzUDJJVHExLTM4dnF2VzVST1pNUlNGc1J2a2tveFctT0M2blE5cHdCRlRLMzlHUWNwZEotZTRmNUxHOXJvOGV4NVZ6bnR0QWlQeGs5OFNhRjVzT1M5dnRJbmt0SHUxZE9IV2lSSVRRbHVVblgzU0dZUkdUZFo3SnM4WExwS3paQzdqSHFrX1dCUVRJLUNEZXdvazE1aU9sTUpPUkJXSHEzVHhua2tabTNlQlhHWmJJc0tXLVp2VFJCVXE2TWhMQQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE dă undă verde a 1 miliard de euro în sprijinul militar Ucrainei, în timp ce un diplomat de vârf afirmă că Rusia respinge pacea",
-      "title_it": "L’UE dà il via libera a 1 miliardo di euro di sostegno militare all’Ucraina mentre un alto diplomatico afferma che la Russia rifiuta la pace",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-eea5901f88385dc8",
       "category": "diplomatie",
       "region": "americi",
@@ -270,20 +299,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ultimul război Ucraina-Rusia: o rachetă de croazieră rusă lovește Polonia în timp ce NATO zboară avioanele",
       "title_it": "Ultima guerra Ucraina-Russia: il missile da crociera russo colpisce la Polonia mentre la Nato fa decollare i jet",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-50a945acc2cbce37",
-      "category": "europa",
-      "region": "europa",
-      "title": "UE și Marea Britanie încheie un acord pentru relansarea relațiilor post-Brexit. Ce prevede înțelegerea | AUDIO",
-      "summary": "",
-      "source": ": Europa FM",
-      "published": "2026-11-20T15:36:01Z",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0VZVW0tUU5sMEprUzNpc2Vhd1RGWHJlRGhEMUhTOEVkYms4b3pDeThEaFpjMWtZXzJUSjBNVjFIWncxeGtYTEZUYjdqaGZiNW4zRVF4VlR1SDRKUUNubERFWjlYU0ZzQnZBQU4xNDZKdGZxaW9KSTljcFU4aUZKZWpYYVVvMjZqUHpWZWFpRkhmSzcxS2Q1YUljczk4SVZCelYxQzBsOUt0ZS1jQlNsbjdyRC1ocE92VXNkSGJiTmNjUXZj?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE și Marea Britanie încheie un acord pentru relansarea relațiilor post-Brexit. Ce prevede înțelegerea | AUDIO",
-      "title_it": "Ue e Regno Unito raggiungono un accordo per rilanciare le relazioni post-Brexit. Cosa fornisce la comprensione | AUDIO",
       "translation_status": "machine_translation"
     },
     {
@@ -365,7 +380,10 @@
       "source": "Robert Lansing Institute",
       "published": "2026-11-20T14:33:31Z",
       "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQNlA5ZDZMSDgybjUyZjZiTVhhRVhGVjNyeDNfSkhvVi1GSnJtX29kdFhtX2FNcTdPQ29zMWh1ZVAwM0VsLW1uWVlZSUswOEhXNnd2dXc1aUNOYlVJTU9oVGlmbGhrOGs0allqaVluMGluOTY0SFVydnowVzY2b3o1NHRXVnBGakxQT192eTlrdFF3RWQ5b3d6Z1hNOXVOVFF5S3lSc3BLRWdCa3NBZ1d4WDNtMk1iNmlqRlZ5NFBiSGJ6UXY0Q1hUTXIzblUxUE9XOG43dFBic01sWkpZNk52cXJfU2dhVW5UcXBmaUJuU0JSRTVFWXc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Provocații aeriene rusești împotriva Poloniei: Moscova testează apărarea europeană și promovează o nouă diviziune a sferelor de influență",
+      "title_it": "Provocazioni aeree russe contro la Polonia: Mosca mette alla prova le difese europee e promuove una nuova divisione delle sfere di influenza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a7936d8884e0b158",
@@ -393,20 +411,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Summit-ul UE-Marea Britanie, există primul acord post-Brexit. Iată declarația comună în avanpremieră, detaliile",
       "title_it": "Vertice Ue-Regno Unito, c'è il primo accordo post-Brexit. Ecco la dichiarazione congiunta in anteprima, i dettagli",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-535ccad40bc3842d",
-      "category": "europa",
-      "region": "europa",
-      "title": "Costa: 'La partnership tra Ue e Regno Unito è un investimento strategico'",
-      "summary": "",
-      "source": "Blasting News",
-      "published": "2026-11-20T14:23:56Z",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUUdMLVdZMWpzaFhIdF9TYnlVOVY2bWR4Q0xwZ0NTSnlXNFVZVEFBeU5PWnhfelNDN0dsX3NBZU82VkdHcXpHb2hEbWpaWU9fTU56bHByNFUwUHJOZ19sbDBrSGJYSnZ0dDYtOWpvRkgyZjlOdTlvRlc3Yi10Tm16ZnpTd0NmNW1GekVCaWZXSldtdzZmV1k0ZlpKS003ZXhJeF9nS2pNM2h6b1J1aTBSZVM4NVppN1BTcXpoaGx4NzZVQUlhVFBF?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Costa: „Parteneriatul dintre UE și Regatul Unit este o investiție strategică”",
-      "title_it": "Costa: 'La partnership tra Ue e Regno Unito è un investimento strategico'",
       "translation_status": "machine_translation"
     },
     {
@@ -474,7 +478,10 @@
       "source": "Latin Times",
       "published": "2026-11-20T13:37:46Z",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQa053TkVxa0hLSlZPam91WU5LeDljR2xGNFoyVE03MU96b0lSZGhjaXpQbDlfUm04akc1YWFkTEdqTVpQdlhIYTdYU3UzeHZfUS1aWlNDRUc0Y0xpc3VWd1F5MlY1dGViQW13OWFhWmtvSU02S2FtWkdZWl9SS25TaEktaw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Un ofițer rus confirmă public servieta de comandă nucleară înainte de întâlnirea Putin-Trump-Xi",
+      "title_it": "Ufficiale russo conferma pubblicamente la valigetta del comando nucleare prima dell'incontro Putin-Trump-Xi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-29c063c47f38bbaf",
@@ -667,7 +674,10 @@
       "source": "The Moscow Times",
       "published": "2026-11-20T10:16:00Z",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQclFYOVZlWXdIeXpUV296Zm1Cb0ppY0JfY2ZvX29iWGV6WkxKM3k0Q0x6d1d1bjZaSlMwZGUwTjI4Zjd6RU42ZHJnRUNLV3QwVW9KSHpLa29jRUs4SXFseEp3b0JOUGJyWXNYa0hDeEVlVU1rQS1aQU5WdTBpRnhQb2xFZU84aHlxbTBNaFJHdkpsOFgzX05lVDJzekQxOTd3VVZlQnVIbnEwWlRSTUhNQVo2ajh0YlU4SUVoOUFOWXQybzl2REswRw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia respinge ideea SUA privind garanțiile de securitate în stil NATO pentru Ucraina",
+      "title_it": "La Russia respinge l’idea americana di garanzie di sicurezza in stile NATO per l’Ucraina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2d019d3a03b1492f",
@@ -821,6 +831,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Andy Burnham la Bruxelles pentru a reînvia relațiile UE-Marea Britanie după Brexit",
       "title_it": "Andy Burnham a Bruxelles per rilanciare i rapporti UE-Regno Unito dopo la Brexit",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-cfa46cc4199f78d8",
+      "category": "europa",
+      "region": "europa",
+      "title": "UE și Regatul Unit caută să depășească, într-un summit la Bruxelles, 'trauma' cauzată de Brexit",
+      "summary": "",
+      "source": "Agerpres",
+      "published": "2026-11-20T07:29:33Z",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxOOUh6aVpFV25HNXloUTBEX0FlTEMtWmEzWkppMXBkRGpKd204bWw0RjdoSTl3UG53WHh4bHlsZ0hCWEt2d1VPMTh4c0pLX1dOaVdNSTdOSWJJUlQ4dGI2Vnc1N0NIcW1GVk5sVk9felFRd1NIbHhiWUl3eFo0bnp1Q2ZmSHh0Z3dWVDM3SWdfWjZEZ3l0dDU4QkFFLTQ4Mjd6ZHp4aEVmTlVfdDZJZUtYMzdpdE9FMEdxNy1haVhZdmdUOXZBVUg1WWV1VF9SZFpHcW50V25GYngwcmV1Y2hn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE și Regatul Unit caută să depășească, într-un summit la Bruxelles, 'trauma' cauzată de Brexit",
+      "title_it": "L'UE e il Regno Unito cercano di superare, in un vertice a Bruxelles, il \"trauma\" causato dalla Brexit",
       "translation_status": "machine_translation"
     }
   ]
