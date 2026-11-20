@@ -1,4 +1,16 @@
 {
+  "https://adevarul.ro/stiri-interne/societate/ingrasaminte-de-3900-de-lei-tona-ajutoare-de-2572635.html": {
+    "image": "./editorial-images/news-covers/rdi-biblioteca-raccolta-serra.jpg",
+    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+    "matched_description": "Lavoratore raccoglie ortaggi in una serra",
+    "selection": "subject-matched-v3"
+  },
+  "https://www.today.it/rassegna/start/ultime-notizie-oggi-20-novembre-2026.html": {
+    "image": "./editorial-images/news-covers/rdi-biblioteca-viaggio-aeroporto.jpg",
+    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+    "matched_description": "Famiglia attende in un terminal aeroportuale",
+    "selection": "subject-matched-v3"
+  },
   "https://www.aljazeera.com/video/newsfeed/2026/11/20/trump-nominee-refuses-to-call-jan-6-an-attack-at-senate-hearing?traffic_source=rss": {
     "image": "./editorial-images/news-covers/rdi-biblioteca-aula-parlamentare.jpg",
     "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
@@ -15,12 +27,6 @@
     "image": "./editorial-images/news-covers/rdi-biblioteca-raccolti-siccita.jpg",
     "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
     "matched_description": "Agricoltori controllano i campi durante la siccità",
-    "selection": "subject-matched-v3"
-  },
-  "https://adevarul.ro/stiri-interne/societate/vrem-sa-dam-viata-acestui-oras-tinerii-care-2572606.html": {
-    "image": "./editorial-images/news-covers/rdi-biblioteca-robotica-industriale.jpg",
-    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
-    "matched_description": "Ingegneri testano un braccio robotico",
     "selection": "subject-matched-v3"
   },
   "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUXdfQ2xHSHh2eXBHMnhDdUQ5X3pIZGVWejhUaWdtWlMtelYxVmRGQkZBZjNmMENsUG1HbEppLUg4UEVmbVlxN2JJLVQtRjBwNVQwVTkzNW52dHFqMGpPVG5oSFdjLWhMRzZVOTBtZUZQYnNrN1lvQUNSUUhmN2F3Tm5kVlNlWW1iYlBjWDhEWnhHb2pIRFJHWUdGYURvZ3FzUDVnME9xMkp5UQ?oc=5": {
@@ -47,10 +53,16 @@
     "matched_description": "Pendolari salgono su un treno regionale",
     "selection": "subject-matched-v3"
   },
-  "https://news.google.com/rss/articles/CBMidEFVX3lxTFB3N1hZTzc4OENBeTQ4dkRUOC1NNUN2Q2JuUHJMQ25DNkZsZDlFNVdSNmY5QTFmVzBFS2tBazNpT1k0YWU4YXNwUTdtdzZNcEwwY3B2Y3BQXzZCR2U4ZHJPN1RmQjZpaHhEaHZSY2IzVm5EUDFv?oc=5": {
+  "https://news.google.com/rss/articles/CBMie0FVX3lxTE91blRvVVpyaG15NW1DbUNnRDZ1NU11Q2UyVy1taXNacF9vMHF6elJ4WEoxUS1Ja2VuZnJrU2FNdGZnQWZiaDBSN2QwaUhVNVQ2cENuYmNfUlgyaldZS09wT0Z3NGZaem1lTTMtdk1UNXplbHJsa3BsQV94Yw?oc=5": {
     "image": "./editorial-images/news-covers/rdi-biblioteca-allenamento-calcio.jpg",
     "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
     "matched_description": "Squadra amatoriale si allena su un campo di calcio",
+    "selection": "subject-matched-v3"
+  },
+  "https://news.google.com/rss/articles/CBMidEFVX3lxTFB3N1hZTzc4OENBeTQ4dkRUOC1NNUN2Q2JuUHJMQ25DNkZsZDlFNVdSNmY5QTFmVzBFS2tBazNpT1k0YWU4YXNwUTdtdzZNcEwwY3B2Y3BQXzZCR2U4ZHJPN1RmQjZpaHhEaHZSY2IzVm5EUDFv?oc=5": {
+    "image": "./editorial-images/news-covers/rdi-sport-amatoriale.jpg",
+    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+    "matched_description": "Partita di calcio amatoriale, scena sportiva riutilizzabile",
     "selection": "subject-matched-v3"
   },
   "https://news.google.com/rss/articles/CBMiswJBVV95cUxPMXdFTWNHbHQzQV9VbzVmWUw4TFZBc3VwYWJxMGhsNVFUaFRTWjBWMEZCZnFobVQ1NVVnaTR3Ry1PMTB5cXBBekZpZlIxMzJtcmRQZ254UjJSQjI2SFNTV0RWSk9tZlVMalZvYUc4bGFkTTlUUUdXV1N6YlBQZFNsZm5GV2prUnlQNlJBRUsxX2JNcjZuT3k5VzhJNG96bmtfV0FsOUxJSWRIakxZRGRVVG02RkUtRDc3OUhpM2JIdUg5eXJRYXJ0Y3pXUFFKa3V0YVBmNkNFMU9NMFNERy02Q2dIZWdkM2M5ZXlBQ3JZNXVGd2ZVSHBKVC1LWlV0b3dhcS1EMk03RFNJdzVDcU0weE95XzVUUDVzSE5ZSm5rMk9aMjhwUVZnTVpzcFcyX0tDUVdR?oc=5": {
