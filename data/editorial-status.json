@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-21T14:05:24.592908+00:00",
+  "news_updated_at": "2026-11-21T16:41:51.966985+00:00",
   "editorial_updated_at": "2026-11-21T14:04:00Z",
   "translations_updated_at": "2026-11-21T14:05:08.864026+00:00",
   "feed_total": 120,
-  "feed_extended_400": 0,
-  "feed_missing_body": 120,
+  "feed_extended_400": 1,
+  "feed_missing_body": 119,
   "feed_short_body": 0,
   "editorial_total": 27,
   "archived_editorials": 341,
   "translation_records": 26,
   "pending_total": 125,
   "pending_filtered_out": 113,
-  "editorial_verde": 5,
+  "editorial_verde": 6,
   "editorial_galben": 34,
-  "editorial_rosu": 39,
+  "editorial_rosu": 36,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,21 +618,390 @@
   ],
   "recent_news": [
     {
-      "title": "Fumatul tradițional devine tot mai acceptat social pe fondul dezaprobării utilizării țigărilor electronice, potrivit unui studiu din vest",
+      "title": "Aproape jumătate dintre germani vor reducerea sau oprirea ajutorului acordat Ucrainei, arată datele unui recent sondaj",
       "category": "România",
-      "published": "2026-11-21T14:03:19+00:00",
-      "url": "https://www.g4media.ro/fumatul-traditional-devine-din-ce-in-ce-mai-acceptat-social-pe-fondul-dezaprobarii-utilizarii-tigarilor-electronice-potrivit-unui-studiu-din-vest.html",
+      "published": "2026-11-21T16:35:21+00:00",
+      "url": "https://www.g4media.ro/aproape-jumatate-dintre-germani-vor-reducerea-sau-oprirea-ajutorului-acordat-ucrainei-arata-datele-unui-recent-sondaj.html",
       "source": "G4Media",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Șeful AEP explică de ce vrea creșterea numărului minim de membri pentru partide. „Unele vor doar să ia spaţii de la RA-APPS”",
+      "title": "FBI reportedly investigating apparent hack of its criminal database",
+      "category": "Mondo",
+      "published": "2026-11-21T16:35:15+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cvze7de86pk3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Aproape jumătate dintre germani vor reducerea sau oprirea ajutorului acordat Ucrainei. Opiniile, în funcţie de preferinţele politice",
       "category": "România",
-      "published": "2026-11-21T14:00:28+00:00",
-      "url": "https://hotnews.ro/de-ce-seful-aep-cere-cresterea-numarului-minim-de-membri-pentru-partide-pentru-unele-miza-este-un-sediu-primit-de-la-ra-apps-2410551",
+      "published": "2026-11-21T16:35:11+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/aproape-jumatate-dintre-germani-vor-reducerea-sau-oprirea-ajutorului-acordat-ucrainei-opiniile-in-functie-de-preferintele-politice-4047281",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "CNAS cere CASS obligatoriu pentru persoanele active fără venituri; Rogobete exclude schimbări în 2027 - Monden.ro",
+      "category": "România",
+      "published": "2026-11-21T16:35:09+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOYmE3YlZtT2pFSUkyR0FrZERwdjIyLWRWM2ZvanVTLU5tS0FPd3dkVWdaYlIxVzdmeEZ1RjVrc0xKSVotdENvd1dWekVYYW1Yekl0QVRzVG5QQlVqeUYyT1E0MjBTUVN4MVczU1FsSFE5U1BRMEppVU85VnFZRFJRSWl5R1JxNmhQXzRfU1RrV2tXMzNmVDBmVzFLSFJsS0ZSbUxvWlhPX1hOMENZRHAxWTZScTV4WDh5QkZGRnRVaG1NNzVWVkE?oc=5",
+      "source": "Monden.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "È morto Paolo Bulgari: \"Addio al più grande gioielliere dei nostri tempi\"",
+      "category": "Italia",
+      "published": "2026-11-21T16:33:00+00:00",
+      "url": "https://www.today.it/attualita/e-morto-paolo-bulgari.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Angajații români sunt atașați de companiile pentru care lucrează, dar nu mai pun jobul pe primul loc. Ce așteaptă de la angajatori în privința stării de bine",
+      "category": "România",
+      "published": "2026-11-21T16:30:48+00:00",
+      "url": "https://economedia.ro/angajatii-romani-sunt-atasati-de-companiile-pentru-care-lucreaza-dar-nu-mai-pun-jobul-pe-primul-loc-ce-asteapta-de-la-angajatori-in-privinta-starii-de-bine.html",
+      "source": "Economedia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "O cetăţeană americană deţinută în Cuba timp de aproape zece ani a fost eliberată / Femeia, de profesie educatoare, fusese condamnată la 13 ani de închisoare pentru spionaj",
+      "category": "România",
+      "published": "2026-11-21T16:29:23+00:00",
+      "url": "https://www.g4media.ro/o-cetateana-americana-detinuta-in-cuba-timp-de-aproape-zece-ani-a-fost-eliberata.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Alcaraz, un tie-break perfetto al terzo set con Shelton vale la finale dei Maestri",
+      "category": "Italia",
+      "published": "2026-11-21T16:28:18+00:00",
+      "url": "https://www.repubblica.it/sport/tennis/2026/11/21/news/alcaraz_shelton_zverev_medvedev_atp_finals-425740438/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Tenorul Cezar Ouatu, jefuit în propria casă. Hoții au furat ceasuri de colecţie şi bijuterii. Mărturia artistului",
+      "category": "România",
+      "published": "2026-11-21T16:27:38+00:00",
+      "url": "https://hotnews.ro/tenorul-cezar-ouatu-jefuit-in-propria-casa-hotii-au-furat-ceasuri-de-colectie-si-bijuterii-din-aur-marturia-artistului-2410624",
       "source": "HotNews",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Mattarella chiama il fratello di De Gennaro. Meloni: 'Scioccata'. La Russa: 'Il suicidio è anche coraggio'",
+      "category": "Italia",
+      "published": "2026-11-21T16:24:47+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/meloni-profondamente-scioccata-per-de-gennaro.-il-figlio-di-borsellino-potrebbe-essersene-andato_42ef82fc-43b8-4902-a35d-dd280c6de41c.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nicoleta Pauliuc pierde șefia Organizației de Femei a PNL",
+      "category": "România",
+      "published": "2026-11-21T16:23:19+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicoleta-pauliuc-pierde-sefia-organizatiei-de-femei-a-pnl-4047187",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Un vicino di De Gennaro: 'Negli ultimi tempi non aveva voglia di sorridere'",
+      "category": "Italia",
+      "published": "2026-11-21T16:22:56+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/un-vicino-di-de-gennaro-negli-ultimi-tempi-non-aveva-voglia-di-sorridere_7d4d7b82-e5c8-4959-ab2a-f16af5a1468d.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Harghita, în topul celor mai bune 20 de destinații turistice din lume în 2027, realizat de BBC Travel. Județul devine Regiune Gastronomică Europeană",
+      "category": "România",
+      "published": "2026-11-21T16:21:11+00:00",
+      "url": "https://economedia.ro/harghita-in-topul-celor-mai-bune-20-de-destinatii-turistice-din-lume-in-2027-realizat-de-bbc-travel-judetul-devine-regiune-gastronomica-europeana.html",
+      "source": "Economedia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Gianni De Gennaro, fost şef al poliţiei italiene, a fost găsit mort / Era anchetat pentru o presupusă obstrucţionare a anchetei referitoare la asasinarea în stil mafiot a judecătorului Paolo Borsellino în 1992",
+      "category": "România",
+      "published": "2026-11-21T16:21:00+00:00",
+      "url": "https://www.g4media.ro/gianni-de-gennaro-fost-sef-al-politiei-italiene-a-fost-gasit-mort-era-anchetat-pentru-o-presupusa-obstructionare-a-anchetei-referitoare-la-asasinarea-in-stil-mafiot-a-judecatorului-paolo-borsellin.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Se Sinner si ferma, il resto non va",
+      "category": "Italia",
+      "published": "2026-11-21T16:18:26+00:00",
+      "url": "https://www.today.it/opinioni/sinner-tennis-cobolli-finals-21-novembre.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Risparmi: Unimpresa, ricchezza famiglie +393 mld in un anno (+6,3%)",
+      "category": "Economie și consumatori",
+      "published": "2026-11-21T16:17:07+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPU2JvYkhLWGVVTjlZcmJDYThEVkRjNlFqcUNpcXFnYm15Z2ZxbWlaU2hLZVhWWkJRcElRd2pxdVlfTnhUdkpjWHY3blAxdXJQdFRMeml4LXExQlZUcW56anNwdG9wWU15V19SNlZUYVZCeVFxcWc1WHU0ci1QMGQtcjZreWlXTjUwUnc?oc=5",
+      "source": "Ore12",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Vietnamul interzice cetăţenilor străini accesul pe lista de aşteptare pentru organe de la donatori decedaţi",
+      "category": "România",
+      "published": "2026-11-21T16:15:48+00:00",
+      "url": "https://www.g4media.ro/vietnamul-interzice-cetatenilor-straini-accesul-pe-lista-de-asteptare-pentru-organe-de-la-donatori-decedati.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "AEP confiscă bani de la toate partidele parlamentare, „inclusiv de la PSD”. Șeful instituției anunță „dosare noi”",
+      "category": "România",
+      "published": "2026-11-21T16:15:32+00:00",
+      "url": "https://adevarul.ro/politica/aep-confisca-bani-de-la-toate-partidele-2573348.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Pensioni, Quota 64 e Opzione Donna: le nuove anticipate del 2027: requisiti e chi potrebbe beneficiarne - Il Messaggero",
+      "category": "Italia",
+      "published": "2026-11-21T16:14:37+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcXFUVWIzeXpzRHJSdFZRbXdMbDFXRldGREoxYWpjck9GVk9MeE85a1htcG9KaVNLTG02Uy1WMTJralhiSVVmb3dYZkZ3emhnQXJEWkcxemVQYmY4SWxTZDFxTWlMZE9hSlIySDhXYWVPcFREandVQVhSbGJxRHA3Zmlsa2ZUZ3BLS1dfUm9JYUhWbDF0c1lxVTd5X0VBVXBhZUh0cVhxWFZsMXJITTN6T21B0gGwAUFVX3lxTE5SZlljeUk0V3JDUDk3LURna2YzNG9Pa3paV0diaVJzMVA4Rk5HNXpRM1pPd2JRX2M0Q0FHTGVaaUluaG4zTUpTTk1qcUVHRjA0QUhUME1od2oycGRKQzN4TzE5SVRnbnYtTjdBVU43Qlp3MnJYWDlZeXdqUGNYSVR4UUMxN0NLSFF4VEg3aHBJN0xQdVpPcEV5SHRuMWlISWN",
+      "source": "Il Messaggero",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: Il Como batte il Cagliari 2-0",
+      "category": "Italia",
+      "published": "2026-11-21T16:14:12+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/21/serie-a-il-como-batte-il-cagliari-2-0-_4b3e2afb-bd7a-45ec-9fa2-c85122e95160.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "India’s opposition stages protests against Meta over account removals",
+      "category": "Mondo",
+      "published": "2026-11-21T16:14:01+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/21/indias-opposition-stages-protests-against-meta-over-account-removals?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Pensionarii, victime în peste 40% dintre cazurile de fraudă cu investiții online din 2026 / Prejudiciu de aproape 120 de milioane de lei",
+      "category": "România",
+      "published": "2026-11-21T16:13:24+00:00",
+      "url": "https://economedia.ro/pensionarii-victime-in-peste-40-dintre-cazurile-de-frauda-cu-investitii-online-din-2026-prejudiciu-de-aproape-120-de-milioane-de-lei.html",
+      "source": "Economedia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Virtus, ora testa alla Lba: al PalaDozza arriva la Bc Roma",
+      "category": "Italia",
+      "published": "2026-11-21T16:07:46+00:00",
+      "url": "https://www.ilrestodelcarlino.it/bologna/sport/virtus/virtus-bc-roma-3fa678c6",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Amazon sviluppa una nuova serie TV",
+      "category": "Cinema și seriale",
+      "published": "2026-11-21T16:05:27+00:00",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE8wZUlOcTNpRVlUQzJ2dEo1Tm1NLU5SMzBhSFRhYjZvM01nQ1R0eWt0NWgtWHllZTc1YS1xMnZ2NDNiX0tOMmotdFVGM3ZmS0ZZUW5qYXg5RWIwMVVIYThyZVVUSl9lZ1V5VTNv?oc=5",
+      "source": "Recenserie",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Who is El Chapo Isidro, the alleged cartel boss arrested in Mexico?",
+      "category": "Mondo",
+      "published": "2026-11-21T16:03:16+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/21/who-is-el-chapo-isidro-the-alleged-cartel-boss-arrested-in-mexico?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "L'ex capo della Polizia De Gennaro si è ucciso sparandosi. La procura indaga per istigazione al suicidio",
+      "category": "Italia",
+      "published": "2026-11-21T16:01:13+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/lex-capo-della-polizia-de-gennaro-si-e-ucciso-sparandosi.-la-procura-indaga-per_5bcb2e78-76a6-4c7d-b2ba-61000e349ee9.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
+      "category": "Inteligență artificială",
+      "published": "2026-11-21T16:00:05+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
+      "source": "Il Messaggero",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "John Roberts, the voice of Linda Belcher, is just happy to finish a thing",
+      "category": "Tehnologie",
+      "published": "2026-11-21T16:00:00+00:00",
+      "url": "https://www.theverge.com/report/1038463/john-roberts-linda-belcher-bobs-burgers-interview",
+      "source": "The Verge",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Amazon’s first digital photo frame is up to 50 percent off for Black Friday",
+      "category": "Tehnologie",
+      "published": "2026-11-21T16:00:00+00:00",
+      "url": "https://www.theverge.com/gadgets/1038762/amazon-alexa-photo-frame-black-friday-2026-deal-sale",
+      "source": "The Verge",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: La Lazio batte il Lecce 3-0",
+      "category": "Italia",
+      "published": "2026-11-21T15:59:50+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/21/serie-a-la-lazio-batte-il-lecce-3-0_05227143-7aa6-4a9f-b9b1-0ba49f83d91d.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Alcaraz rimonta e vola in finale alle Atp Finale 2026: sfiderà il vincente di Zverev-Medvedev",
+      "category": "Italia",
+      "published": "2026-11-21T15:59:33+00:00",
+      "url": "https://www.today.it/sport/tennis/alcaraz-finale-atp-finals-2026-torino.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Schettino lascia il carcere dopo 9 anni, va ai servizi sociali. Fine pena anticipato al 2030 per buona condotta",
+      "category": "Italia",
+      "published": "2026-11-21T15:56:53+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/schettino-lascia-il-carcere-dopo-9-anni-va-ai-servizi-sociali_3dc58141-2a75-43e8-8aab-fc1b0adc999f.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 401
+    },
+    {
+      "title": "Countries race to secure Cop31 deal",
+      "category": "Mondo",
+      "published": "2026-11-21T15:52:00+00:00",
+      "url": "https://www.france24.com/en/countries-race-to-secure-cop31-deal",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "New day of protests across France",
+      "category": "Mondo",
+      "published": "2026-11-21T15:50:52+00:00",
+      "url": "https://www.france24.com/en/new-day-of-protests-across-france",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "US midterms 2026: What happens before the new Congress takes office?",
+      "category": "Mondo",
+      "published": "2026-11-21T15:49:32+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/21/us-midterms-2026-what-happens-before-the-new-congress-takes-office?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "French presidential candidate blames media for racist attack",
+      "category": "Mondo",
+      "published": "2026-11-21T15:46:18+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/21/french-presidential-candidate-blames-media-for-racist-attack?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "EU and Indonesia sign trade deal",
+      "category": "Mondo",
+      "published": "2026-11-21T15:21:00+00:00",
+      "url": "https://www.dw.com/en/eu-and-indonesia-sign-trade-deal/a-80010099?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Diallo present as Africa’s Motsepe reiterates support for FIFA’s Infantino",
+      "category": "Mondo",
+      "published": "2026-11-21T15:20:43+00:00",
+      "url": "https://www.aljazeera.com/sports/2026/11/21/diallo-present-as-africa-football-boss-motsepe-reiterates-infantino-support?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Prima ediție a „Cazino Music Festival” se încheie în acest weekend la Constanța. Baritonul Ionuț Pascu susține două recitaluri de gală și un dialog cu Ioan Holender",
+      "category": "Muzică",
+      "published": "2026-11-21T15:20:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxQS3lVNTJJbTFXZldBXzFiNjBkaWtScnRIQmZLbktrZnpjQnZ5THlCSDVfa05wTGhZM2t1OUxTT1JhQ2VVSDFLazFTODZHd0t6anU1dTA5WUlMTzFGOUVzcGlCdjc1dnJlUGZSSF85Q0tobEVSQXdnQXBYem5Ec2phLWRYcnp4a3dQQmJoUlhlUXEtcTRSX2RUcjFWN0xuaTdPd1M0RVhaWVhYbUxnYnhCNWRpUTJTd1hBNjcxZWtJTHBWcWZoVGxfM2F0WjAtUWFUODMxV1U4VnlDamZqYXR4akxuOTVXcElCbmpJWWhDUmhqWF9GZHlURGRuNEl4UEJfZ2ZzNDV1TU5ELVhuTV9PYm1raFQxMnlVMUMxWGY3X1F4eDY1b05vN0FLdw?oc=5",
+      "source": "Radio Constanța",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Tankers hit in Strait of Hormuz as Iran tightens grip on shipping",
+      "category": "Mondo",
+      "published": "2026-11-21T15:01:18+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/21/tankers-hit-in-strait-of-hormuz-as-iran-tightens-grip-on-shipping?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Can Anthropic afford to put safety first?",
+      "category": "Tehnologie",
+      "published": "2026-11-21T15:00:00+00:00",
+      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+      "source": "The Verge",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "New EU budget proposal aims at tax gobal tech giants",
+      "category": "Mondo",
+      "published": "2026-11-21T14:58:00+00:00",
+      "url": "https://www.dw.com/en/new-eu-budget-proposal-aims-at-tax-gobal-tech-giants/a-80009255?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+      "category": "Mondo",
+      "published": "2026-11-21T14:54:24+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -645,182 +1014,11 @@
       "words": 0
     },
     {
-      "title": "Băi termale și saune în aer liber: Destinații europene pentru o vacanță de iarnă",
-      "category": "România",
-      "published": "2026-11-21T13:59:38+00:00",
-      "url": "https://economedia.ro/bai-termale-si-saune-in-aer-liber-destinatii-europene-pentru-o-vacanta-de-iarna.html",
-      "source": "Economedia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Navă rusească în flăcări după ce a fost atacată de drone în Golful Finlandei",
-      "category": "România",
-      "published": "2026-11-21T13:59:06+00:00",
-      "url": "https://www.g4media.ro/nava-ruseasca-in-flacari-dupa-ce-a-fost-atacata-de-drone-in-golful-finlandei.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Günter Deuber, economist-șef RBI: Intrarea României în zona euro ar putea reduce dobânzile la creditele ipotecare cu 2-3 puncte procentuale. „Acest lucru va fi transferat către clienți” – Corespondență din Viena",
-      "category": "România",
-      "published": "2026-11-21T13:57:28+00:00",
-      "url": "https://economedia.ro/gunter-deuber-economist-sef-rbi-intrarea-romaniei-in-zona-euro-ar-putea-reduce-dobanzile-la-creditele-ipotecare-cu-2-3-puncte-procentuale-acest-lucru-va-fi-transferat-catre-clienti.html",
-      "source": "Economedia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Președintele Consiliului European propune reducerea bugetului UE pentru perioada 2028-2034 cu peste 200 de miliarde de euro",
-      "category": "România",
-      "published": "2026-11-21T13:56:35+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ue/presedintele-consiliului-european-propune-reducerea-bugetului-ue-pentru-perioada-2028-2034-cu-peste-200-de-miliarde-de-euro-4047177",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cod galben de viituri pe râuri din trei județe",
-      "category": "România",
-      "published": "2026-11-21T13:52:28+00:00",
-      "url": "https://www.romania-actualitati.ro/stiri/romania/cod-galben-de-viituri-pe-rauri-din-trei-judete-id237872.html",
-      "source": "Radio România Actualități",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Imagini terifiante cu un accident pe autostradă. Un microcar electric, prins între un autoturism și un camion. Tavi Perțea: „Nu este singurul vinovat”",
-      "category": "România",
-      "published": "2026-11-21T13:51:36+00:00",
-      "url": "https://adevarul.ro/stiri-interne/evenimente/imagini-terifiante-cu-un-accident-pe-autostrada-2573309.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Două petroliere, lovite de proiectile în strâmtoarea Ormuz, în apropierea Omanului / Atacurile au avut loc la mai puțin de o oră distanță",
-      "category": "România",
-      "published": "2026-11-21T13:50:47+00:00",
-      "url": "https://www.g4media.ro/doua-petroliere-lovite-de-proiectile-in-stramtoarea-ormuz-in-apropierea-omanului-atacurile-au-avut-loc-la-mai-putin-de-o-ora-distanta.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Dispută între Oana Gheorghiu și Daniel Zamfir pe tema salvării TAROM. Acuzații de dublu limbaj și lipsă de transparență",
-      "category": "România",
-      "published": "2026-11-21T13:50:12+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/disputa-intre-oana-gheorghiu-si-daniel-zamfir-pe-tema-salvarii-tarom-acuzatii-de-dublu-limbaj-si-lipsa-de-transparenta-4047061",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Podul Crimeei, din nou funcțional după atacurile ucrainene. Zelenski: „oricum nu va rămâne în picioare”",
-      "category": "România",
-      "published": "2026-11-21T13:49:59+00:00",
-      "url": "https://adevarul.ro/stiri-externe/rusia/podul-crimeei-din-nou-functional-dupa-atacurile-2573334.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Secretul din spatele întoarcerii prințului Harry în Marea Britanie: de ce a plecat brusc din SUA, alături de Meghan și de copii",
-      "category": "România",
-      "published": "2026-11-21T13:49:09+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/secretul-din-spatele-intoarcerii-printului-harry-in-marea-britanie-de-ce-a-plecat-brusc-din-sua-alaturi-de-meghan-si-de-copii-4047075",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Lavoro, Italia ultima in Europa per partecipazione. Salari ancora sotto i livelli del 2019 - La Stampa",
-      "category": "Italia",
-      "published": "2026-11-21T13:49:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNWE1WZS16THhzbHRBcFdHT2JMTndWM2N1US0zLW1ESnlDYm9YUVdPTGZpRVUtVnBaZk0tNDhkMUpxSko1QllwU0Q3NEFkNWJXbjJWUnliczJMWUlaUkFqb1I3QXVMTFQxUUktSFdCSUFKVFB4Yk5VcmZSanJORW42MkdfZ1RuR3dlVTV0OGgzOXNUaFJLc1NhYndqX01ZRXZSRWZ6UGxqZjBweGFBNkZJRHNkNVRkVlhodDhfOFFWTi1NUE0zUVN0UUxBUnRfaHBoQkNUNzgwczY5VHVOMDZHVA?oc=5",
-      "source": "La Stampa",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cateno De Luca in Puglia, tappa a Bari: il ‘sindaco d’Italia’ al lavoro per le prossime elezioni - VIDEO - Telebari",
-      "category": "Italia",
-      "published": "2026-11-21T13:47:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOQ0VKUkM3SV9LUTBQU3BCcXdVWHZMaWdEdDNZX0hJSWlqQndOYzdBSXliU1U3OWFNcVF2Sm9VYm1YYWNDVElTSWR4ZlBQU1pvRW9oYTB2SW5Za2JfWVJfY2FyUUVCMVpBUjBLODJMN1lMUjBfWnJJWm54a043QUVfSU9lN1NtanNoZUhWTVVFOW9nMGNRVHdaaTNLeUE1dzJ5LUJjcTllMENXeUNIZWpGaE9zVjJEczJQcVdYNUtkZlJRZ015anNjOWNrTnZweDZ1NHpwdjhFVm4wSUU?oc=5",
-      "source": "Telebari",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "La villa di De Gennaro setacciata alla ricerca di biglietti. La pistola trovata accanto al corpo",
-      "category": "Italia",
-      "published": "2026-11-21T13:47:13+00:00",
-      "url": "https://www.repubblica.it/cronaca/2026/11/21/news/montiano_villa_de_gennaro_perquisizione-425740167/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Fortitudo, derby a Cento: due punti pesanti per restare a un passo dalla vetta",
-      "category": "Italia",
-      "published": "2026-11-21T13:46:32+00:00",
-      "url": "https://www.ilrestodelcarlino.it/bologna/sport/fortitudo/fortitudo-derby-cento-a1ec304a",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "L'ex capo della Polizia De Gennaro si è ucciso sparandosi. La procura indaga per istigazione al suicidio",
-      "category": "Italia",
-      "published": "2026-11-21T13:43:58+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/lex-capo-della-polizia-de-gennaro-si-e-ucciso-sparandosi.-la-procura-indaga-per_5bcb2e78-76a6-4c7d-b2ba-61000e349ee9.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Bilancio UE, Costa propone nuovi tagli e tassa digitale per sbloccare l'accordo",
-      "category": "Italia",
-      "published": "2026-11-21T13:42:07+00:00",
-      "url": "https://it.euronews.com/2026/11/21/bilancio-ue-costa-propone-nuovi-tagli-e-tassa-digitale-per-sbloccare-laccordo",
-      "source": "Euronews",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Colturi nello slalom di Gurgl conquista la prima vittoria in Coppa del mondo: la piemontese in gara per l'Albania trionfa a 20 anni",
-      "category": "Italia",
-      "published": "2026-11-21T13:35:11+00:00",
-      "url": "https://www.today.it/sport/altro/sci-slalom-gurgl-lara-colturi-prima-vittoria-coppa-mondo-femminile.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Busti del Duce e tazze con Hitler: Rimini vieta vendita ed esposizione di gadget nazifascisti in mercatini e vetrine",
-      "category": "Italia",
-      "published": "2026-11-21T13:32:47+00:00",
-      "url": "https://www.ilrestodelcarlino.it/rimini/cronaca/vietata-esposizione-vendita-gadget-nazifascisti-we3donqg",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Capo della Polizia, poi 007: la vita di Gianni De Gennaro nelle foto d'archivio",
-      "category": "Italia",
-      "published": "2026-11-21T13:26:09+00:00",
-      "url": "https://www.ansa.it/sito/photogallery/primopiano/2026/11/21/capo-della-polizia-poi-007-la-vita-di-gianni-de-gennaro-nelle-foto_3948a551-2975-420c-aa7c-ac4b28509bfb.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "L'enorme business dei calendari dell'avvento (che ormai ci ha dato la nausea)",
-      "category": "Italia",
-      "published": "2026-11-21T13:23:00+00:00",
-      "url": "https://www.today.it/opinioni/calendari-avvento-2026.html",
-      "source": "Today",
+      "title": "Live Carlos Alcaraz - Ben Shelton - ATP Finals Singolo maschile -: Punteggi & Highlights Tennis - 21/11/2026",
+      "category": "Sport",
+      "published": "2026-11-21T13:30:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNV3FxV1NTd1dLZ3BWMTZRcU5vRHdIWmNJOW5zU3Rvc1FldTEtaDhDWlM3LUtHOGZBQm8yN0IwbFRUWWVsQmhMeURNd2xyWDJHSG9nYXlaYm9XYjl5RWVDMmdxWVBRTTgxYzdmR2hscm5uY256YzVKeGxLZ3RDdmx4bmRNVzlGQmNUbUlucTVSZXlfSkM0UGVVMUtSOENuZw?oc=5",
+      "source": "Eurosport.it",
       "status": "roșu",
       "words": 0
     },
@@ -834,110 +1032,11 @@
       "words": 0
     },
     {
-      "title": "Serie A: Como-Cagliari in campo sabato alle 15 DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-21T13:19:27+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/21/serie-a-como-cagliari-in-campo-sabato-alle-15-diretta_4b3e2afb-bd7a-45ec-9fa2-c85122e95160.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
-      "category": "Mondo",
-      "published": "2026-11-21T13:17:38+00:00",
-      "url": "https://www.bbc.co.uk/news/articles/c6wy0qj7w5zqo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Trovano un barcone di migranti in mezzo al mare, ma tirano dritto. L'influencer in lacrime: \"Perché non ci fermiamo?\"",
-      "category": "Italia",
-      "published": "2026-11-21T13:14:00+00:00",
-      "url": "https://www.today.it/storie/trovano-migranti-mare-non-si-fermano.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Cosa fare a Roma nel weekend: Musei in Musica, arte alla Nuvola e Amazing Wonders",
       "category": "Cultură și cărți",
       "published": "2026-11-21T13:11:34+00:00",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPSFdzY2FUbjNhZnZGNm9EMU8xOXBnTnJ0MlhPQWRuOG45UUdBdjBTUW5xUGNGejc5cFBrVl9JNFBXakpDUkFMbGNwUDlMXzlrNmN0aXBoUW93THhrUEVwVUpKUXFiLWJ1ckp0a2ZTREFoOFR6LXN3bWFXS0t6aWlxTHdaaXRxc0sxeVpJWFVLanBtMjg?oc=5",
       "source": "UniversiNet Magazine",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Chaudhary helps Australia beat England in T20 shake-off of scandal-hit run",
-      "category": "Mondo",
-      "published": "2026-11-21T13:08:59+00:00",
-      "url": "https://www.aljazeera.com/sports/2026/11/21/chaudhary-helps-australia-beat-england-in-t20-shake-off-of-scandal-hit-run?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "The Xiaomi 18 Pro proves two screens aren’t better than one",
-      "category": "Tehnologie",
-      "published": "2026-11-21T13:00:00+00:00",
-      "url": "https://www.theverge.com/tech/1038562/xiaomi-18-pro-max-review",
-      "source": "The Verge",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "The game of the year is finally here",
-      "category": "Tehnologie",
-      "published": "2026-11-21T13:00:00+00:00",
-      "url": "https://www.theverge.com/tech/1039433/gta-vi-alfred-6-clockwisetv-installer",
-      "source": "The Verge",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cargo ship runs aground off French coast",
-      "category": "Mondo",
-      "published": "2026-11-21T12:52:27+00:00",
-      "url": "https://www.france24.com/en/cargo-ship-runs-aground-off-french-coast",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Russia tests NATO’s eastern defences",
-      "category": "Mondo",
-      "published": "2026-11-21T12:50:35+00:00",
-      "url": "https://www.france24.com/en/russia-tests-nato-s-eastern-defences",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Riemann hypothesis: Has the world’s most famous maths problem been cracked?",
-      "category": "Mondo",
-      "published": "2026-11-21T12:49:20+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/21/riemann-hypothesis-has-the-worlds-most-famous-maths-problem-been-cracked?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Thousands protest overs prices, education, military spending in France and Europe",
-      "category": "Mondo",
-      "published": "2026-11-21T12:48:46+00:00",
-      "url": "https://www.france24.com/en/thousands-protest-overs-prices-education-military-spending-in-france-and-europe",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Russia says Kaliningrad-bound ship struck by drones in Gulf of Finland",
-      "category": "Mondo",
-      "published": "2026-11-21T12:45:24+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland?traffic_source=rss",
-      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -956,51 +1055,6 @@
       "published": "2026-11-21T12:37:31+00:00",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdXE4aVFtaXRjVTYzX0hmekctdDV2Q0JMU0N6NFo1ZW5pRi1CdVdpX1N6VzhqeUZqd19KSXg3SU4tTzkxS2g2NVZ4X3FZejR6OUJBMThWbmwwSWoydDUwX2VNNEN6VG1pY0lQdkJqcWh3M0RNSzMtcS1kWGVnemU2REFOT0FnNEt4MDBzWXJEZFBXdw?oc=5",
       "source": "Vietnam.vn",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Russian ship damaged by drone attack in Gulf of Finland, Helsinki and Moscow say",
-      "category": "Mondo",
-      "published": "2026-11-21T12:36:56+00:00",
-      "url": "https://www.politico.eu/article/russian-ship-damaged-drone-attack-gulf-finland-helsinki-moscow-say/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "source": "POLITICO Europe",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Drone attack sets Russian cargo ship ablaze in Gulf of Finland",
-      "category": "Mondo",
-      "published": "2026-11-21T12:35:54+00:00",
-      "url": "https://www.france24.com/en/europe/20261121-drone-attack-sets-russian-cargo-ship-ablaze-in-gulf-of-finland",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Germany's religious freedom report: Authoritarian regimes, holy wars, and spies abroad",
-      "category": "Mondo",
-      "published": "2026-11-21T12:31:00+00:00",
-      "url": "https://www.dw.com/en/germany-s-religious-freedom-report-authoritarian-regimes-holy-wars-and-spies-abroad/a-79995216?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Sudan’s elderly face hardship and heartbreak in a life of displacement",
-      "category": "Mondo",
-      "published": "2026-11-21T12:30:49+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/21/sudans-elderly-face-hardship-and-heartbreak-in-a-life-of-displacement?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Israeli attacks on Gaza kill at least four Palestinians",
-      "category": "Mondo",
-      "published": "2026-11-21T12:29:49+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/21/at-least-four-palestinians-killed-in-israeli-attacks-on-gaza?traffic_source=rss",
-      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -1032,20 +1086,11 @@
       "words": 0
     },
     {
-      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
+      "title": "Instruirea în domeniul inteligenței artificiale legată de probleme din lumea reală.",
       "category": "Inteligență artificială",
-      "published": "2026-11-21T12:00:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Harbinger is building the unsexy EVs that keep the economy moving",
-      "category": "Tehnologie",
-      "published": "2026-11-21T12:00:00+00:00",
-      "url": "https://www.theverge.com/transportation/1038448/harbinger-ev-startup-240m-series-d-fedex-army-trucks",
-      "source": "The Verge",
+      "published": "2026-11-21T12:10:11+00:00",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1jYmg4RVNaWGdTdkowLTBZRFE2MUoyb0lJRGpDY0tta1ZvWnlfZmx2NEtaTVI4eDJyMGVhekR4eUZWS09qTDdDRjJCdXFhODhBSVVJTURCZ0tQaU11S3NSQWxuYVQwQzBKbk9PWHdFM1Y?oc=5",
+      "source": "Vietnam.vn",
       "status": "roșu",
       "words": 0
     },
@@ -1055,6 +1100,15 @@
       "published": "2026-11-21T11:58:20+00:00",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQcktMbGM2M2dHYU8wUFl5T1JJZjhsY2w5TFZTVDBrcW9ld25IR3AwbUNfeUJHSEJzUXhKUTZOcERCWlVXN1F0UXlETUwxNDJ3eG9OZ3R6MWxGdU5OZ01ULUd0dGtJNnBtbjlnVmFSZnBhMjEwdFFOMzZVOW1sTEx6dWRvbjdRUERING1NcEtOX2dIc0JaS19tTGRBeFFMLXpyM18yNXh5UDZYUmZxcEdRVURRQm5XdExDN1ppcUR2cF9uQmFQTVp5RHA2WGxlRG9RRms5V0FhaXZMRFMwUkFYV3hFM29hTi1QX280T0g2ZXQ?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Se anunță încă două zile de haos în Italia. Grevele naționale afectează trenurile și avioanele.... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-21T11:49:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQakxMdkJPMGFmU0l3UWJlUkJnbjRZOFRVaUJ4MmVqVlFMb282di1wUW1YaFAtcEVBT0czMFQ4aUNrZURvckNlZ0tfb3llbDN1TjhxTnVQM0pSa1FEMDR0MUd5aktIVFNGTDRONmJCdl9oR2xBODRSYno0VTRvcWxoSEEyVlc5dUxKYXdZWWRRd2tGMU9QdDhWR28tSU5qUWNMZHhlUEVWbkVPZjQtbnl3N0ZmZFpsNUVKdXhkUDFoeXJqVHhNdnExQXNiTzVhNWVqTFJYTjNuek5uNTZtQjRSNFdoR1U4ZWVIUU5EbEVJLXpJdkhROHFQWXdR0gH_AUFVX3lxTE13ZmpOdnFnQVY2Xzl4alpFdlZ3cE5PMDI0UXYtenBVUU10d2lGVmZINmt3NDU1QTdPWWRoTkVvdnhxV3VJelk2cE0ySmloQ1V2ZjhtdXRLNlp",
+      "source": "StiriDiaspora",
       "status": "roșu",
       "words": 0
     },
@@ -1095,7 +1149,7 @@
       "words": 0
     },
     {
-      "title": "Călătorii de vis în Europa”: Destinații de vacanță uimitoare de vizitat în 2027",
+      "title": "„Călătorii de vis în Europa”: Destinații de vacanță uimitoare de vizitat în 2027",
       "category": "Călătorii",
       "published": "2026-11-21T10:31:59+00:00",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb1VyZHIwazhlc2RYLW9aQmNwWHBNSllzUjNCNzV2N0FNOFlLelMyUVJqVWJOSjRLOW44NGNSUE1MbFY3Ykw3clNPbVNPXzctM3RkVTdvbGU4ZmxHMC1PbkgyS2g1VzVTQUVhUDQ3WENwZjl3Wm1JWDFPVVVMbFhNZG5EMm9jUzh2TG12S0lFcjhWT1hGVC1EdVhxcDdwWU9YVjNINmdZalAzRml5emtj?oc=5",
@@ -1203,15 +1257,6 @@
       "words": 0
     },
     {
-      "title": "Profesorul Nguyen Trung Viet: Inteligența artificială nu poate înlocui capacitatea profesorilor de a inspira și îndruma.",
-      "category": "Inteligență artificială",
-      "published": "2026-11-21T04:56:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOM3praVpVTWxURDNQRlRQaVZaZFRmQ1NfeEo5a2s1VUhjYmVxMDZrcW1HellHMXV6ZWNwb29IWEhQX2pUTkladWhwVmYwRVpqcWRSanVEb2U3WERhZDVlTDR4SEFHc093d1B0N0Z0bWdFSGh4TlpKWFdhcXYybGJ5R25vRG54dHRjTnhxUmJvZjM0Rk9IRHBkM0hyczNISlZHa2N0TW91WFZISW5iSUJ3UGVXcXRRQ19DaEJhQkVwdU9LY0E?oc=5",
-      "source": "Vietnam.vn",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Ideea unui student vietnamez despre îngrijirea rănilor câștigă o competiție pentru startup-uri în SUA.",
       "category": "Educație",
       "published": "2026-11-21T03:50:16+00:00",
@@ -1243,15 +1288,6 @@
       "category": "Sport",
       "published": "2026-11-20T23:55:53+00:00",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZUkxa0QxTlJUcDVydUhoalc4bURHeFNKMlNTdTZBYmRVQW15S245VG1WTERuNEJLYWtiWVJBU25mVTcyMU5wekhzN09QVTh3cFZQb2lDQlFjUEJrYlZHVWdwb2RFVUNIUU9qdjc5QXJyRWhuWk9COXlsd0NHQm1QQm9ZNzdTcFVGM1pFVW9JOThzbVRGNFZjMDJOQjFNZ3ExRHNKOVM5WWFZckw3NFBBWFUzMUYxemFfNmlNampqdF81VHhVWGVsLTZVMXdqUjg?oc=5",
-      "source": "www.eurosport.it",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Kevin Krawietz/Tim Pütz - Théo Arribage/Albano Olivetti Riassunto della partita",
-      "category": "Sport",
-      "published": "2026-11-20T23:55:52+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPaTlURzJGOEhtSkxsQVl0cThYNDd3dEEtRVNad01hYzFmNzFJOWs1YzVTTEhJOWJubU80TjVxTUpwcV9sMW5uUW5CblBKQzhmSGljUDR6RUNwbHVnVHdhdE9oOGFGMm5zV1VRVjBGUmlLYWxtVGdVd3FnbFZmZEZsSkNqV2tPNEozajVVSFMzcndvbEs5dXc3MmZuTEhQaXpadHNXWGd2aWJXZkk0TDBtRGtJbEVRY3pycWtoZ0R6OHFPTFRKVDdMbjVB?oc=5",
       "source": "www.eurosport.it",
       "status": "roșu",
       "words": 0
@@ -1455,15 +1491,6 @@
       "words": 0
     },
     {
-      "title": "Basta bugie sui concerti annullati, l'azzardo di De Martino a Sanremo e tutta la musica della settimana",
-      "category": "Muzică",
-      "published": "2026-11-20T15:16:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRmpQc3hQUnFOcUV0VU5GMlc0Zm5jSTZIdTZTazE3bUs0ZWtoMjBsbU1pR3BGNm5qYkVlbUw3THlKZ0loVmRXSnFkeE1RWmJhV1hWUnRRVVJCLVBSaEtadUZhLTNmRTZ4Q2g3VkxMbnh2M2o4UXY4VzAzakktNzNuc2pRa2xXUHpMUzBPaEU2Qjh4TTlqai1qdEQzMzFDQdIBngFBVV95cUxNa2wxNVh6emY3M0pJcjFOaTdNR0xRZS15djgwRjRMNzBHbE9FeUEydkhIOFJVbVY0YWxsSjVnbjZVQVo2bDhLdXZYYTRMZEhfOGRFVTU5S0Y5SUVYRFFoSEx0OGF2dkJkQnhxM3Y1ZmMxRHBrTDlLSWtlNnpPZHRGMzBIT0dBZzdOTE9RSE5XZC16Vk9HeWk4Y1ZmQUNZQQ?oc=5",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Un român care se plimba prin Germania cu 200.000 de euro a rămas fără bani. Poliția i-a confiscat... - StiriDiaspora",
       "category": "Diaspora",
       "published": "2026-11-20T15:04:00+00:00",
@@ -1482,39 +1509,12 @@
       "words": 0
     },
     {
-      "title": "Chișinău, Cucina italiana tra promozione, divulgazione, inclusione e solidarietà - Ministero degli Affari Esteri e della Cooperazione Internazionale",
-      "category": "Istituzioni",
-      "published": "2026-11-20T14:25:26+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQay1HcUNOamJSNnVjZ3V2RElFaXJ4NDl5N1NTQl9NaUZQajF1Y1h2c2NyMmdWZWwzT09zLVhqektUT05xN3E1YjdrSGpIS1VaSlhhV1Q1aEVEZUR1eWprcjZQMlFaUkRTSThrRi1aNmVhRC1QYXQ2d3RKVXZkOFNaVFh0ejZ5bnVLNWFjZFJGOXhEZm81b0NqMzJ5YkhSeTZBQkdhRzhKdXctTWw2QVRwQkluWGtWempCOW1xWDI0cHB4cERzMkFUWWF0YWVndEEwbkZIazBfeE03MWgxcGs2QlNaVzhHS2dYbmtn?oc=5",
-      "source": "Ministero degli Esteri",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Presa olandeză scrie despre Florica Bagdasar, prima femeie ministru din România. Cum a reușit să... - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-20T13:41:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQeUIwNVBhNXl3eDhEUlhlOTc3MFl6SzNSQldfUDMtMG9UVUVYS2NpWGJJeE5UZDJkbXhYRGkwSmUyWkNVZEhTX2YtVXBCQXN4S1JvY3p1ZnIzRllCanVzS0MyX0RCQlZaQUk2dS1RZnBlMXJpOEt2enZ5UW5CYnNiN3VIcDg5NXBwdVJYTlh5eGZkOUhsQm04SERxWHFnZmNxNHk4cEVGay1QNVNfR1pENW5xRElBWWlQemlsOGxxUldOWWJYLWxNcl9jT0l4akZRNjI2TVoyNnExRDFDZUZRMmdOWDhzeGJXTVFhMXVIU3Jwb1hRX1dDb1FvNEkzUHdzdGJVQVRaT3VFOVBwWmhJQXh6MWhyd9IBmwJBVV95cUxNTW4tbkRzT1VKdFZSVUEzYVozeGdtN3JwTHJ6YUtxS3I3UjBDUEJ1YTAyR1NEVkdfT0h2Mlp",
-      "source": "StiriDiaspora",
+      "title": "Media advisory - Agriculture and Fisheries Council of  23 November 2026",
+      "category": "Unione europea",
+      "published": "2026-11-20T14:30:00+00:00",
+      "url": "https://www.consilium.europa.eu/it/press/press-releases/2026/11/20/media-advisory-agriculture-and-fisheries-council-of-23-november-2026/",
+      "source": "Consiglio dell'UE",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "16423 - Circolare numero 114 del 20-11-2026 | Dettaglio di Circolari, Messaggi e Normativa - INPS",
-      "category": "Istituzioni",
-      "published": "2026-11-20T13:19:03+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOM011UV9VMFV4TWt5R1dHVnU2Ul85d21Fdk4tTmgzUGk4UFJoQWlodzNNQXRWNGVVRlp1MXJGSzBZdEpyRkhqMGpxc1BzaDBxTnlDM0tCQVpQTjR3X0xvd2phRnY1dF9BdlhQeU9IYTgweENTRFRJVnJxOXp0VGQwWTh6RFdOcXdnZUpFVS1ieFhia0stNHB4emdpX1M4SzRDLUktRnduX2wzVHg4UWV6VjE0WWhzV0lBaVk0NEVhWEZSb2tScDA0NUVoUlFyZ1YtZVZSYWRDQU1VZEJXRHVFOGw2anZMRWFzeld4eUhpZHlBRGc?oc=5",
-      "source": "INPS",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Adozioni in Congo: la Farnesina al lavoro per il ricongiungimento dei minori con le famiglie italiane - Ministero degli Affari Esteri e della Cooperazione Internazionale",
-      "category": "Istituzioni",
-      "published": "2026-11-20T12:35:47+00:00",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQcUo4LXl6MFpyU2dsQWplMGRsTG9VLXc0UEw2OGh4SU9mbGMycnFPb3JyVFZFYlNBekEzZ192ZzljSUV3ZWowVTBrTkFING9zWUk4MVBveGlGRkJZbXVqdHAtR2hkQk93dk5lQmZaX0Q1Mlp0VXRndW0zWFBSRnJGU0ZmWHlES1ZuZm5qSjVLRTFaZHVOYUs5VTNaaVo1VVN3Z3FZTEktVnAwMERjd2VzbXFNZ0Ezb2NWOV9rNE5uTU9oa0k2R2lHbGtKMzNXMU0xZmdHUUkxdzhWclVLZHlJaWJXZ0pBV2RHUzdDX2ozRlVlelp2QlFybHpySnBTanZvTjFJ?oc=5",
-      "source": "Ministero degli Esteri",
-      "status": "galben",
       "words": 0
     }
   ],
