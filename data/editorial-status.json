@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-21T08:49:12.196660+00:00",
+  "news_updated_at": "2026-11-21T08:58:16.503887+00:00",
   "editorial_updated_at": "2026-11-21T02:24:37.887883+01:00",
   "translations_updated_at": "2026-11-21T04:00:19.076284+00:00",
   "feed_total": 120,
-  "feed_extended_400": 0,
-  "feed_missing_body": 120,
+  "feed_extended_400": 1,
+  "feed_missing_body": 119,
   "feed_short_body": 0,
   "editorial_total": 21,
   "archived_editorials": 336,
   "translation_records": 22,
   "pending_total": 125,
   "pending_filtered_out": 113,
-  "editorial_verde": 2,
-  "editorial_galben": 30,
-  "editorial_rosu": 41,
+  "editorial_verde": 3,
+  "editorial_galben": 27,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,12 +618,93 @@
   ],
   "recent_news": [
     {
+      "title": "Rusia amenință Republica Moldova cu expulzarea diplomaților moldoveni dacă Chișinăul îl trimite acasă pe ambasadorul Oleg Ozerov",
+      "category": "România",
+      "published": "2026-11-21T08:58:12+00:00",
+      "url": "https://adevarul.ro/stiri-externe/republica-moldova/rusia-ameninta-republica-moldova-cu-expulzarea-2573285.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fossil fuel row sees COP31 talks spill into overtime",
+      "category": "Mondo",
+      "published": "2026-11-21T08:56:33+00:00",
+      "url": "https://www.euronews.com/2026/11/21/fossil-fuel-row-sees-cop31-talks-spill-into-overtime",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "SUA restrâng cooperarea militară cu Canada printr-un ordin secret al Pentagonului. Noi tensiuni între cei doi aliați",
+      "category": "România",
+      "published": "2026-11-21T08:56:23+00:00",
+      "url": "https://adevarul.ro/stiri-externe/sua/sua-restrang-cooperarea-militara-cu-canada-2573281.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Autostrada Transilvania: Un tronson de 26 km a ajuns la un stadiu de 98%",
+      "category": "România",
+      "published": "2026-11-21T08:53:56+00:00",
+      "url": "https://www.g4media.ro/autostrada-transilvania-un-tronson-de-26-km-a-ajuns-la-un-stadiu-de-98.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Unul dintre cei mai căutați oameni de FBI tocmai a fost arestat într-o operațiune dramatică",
+      "category": "România",
+      "published": "2026-11-21T08:51:43+00:00",
+      "url": "https://hotnews.ro/unul-dintre-cei-mai-cautati-oameni-de-fbi-arestat-intr-o-operatiune-dramatica-2410349",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Washington Post: Un consilier al lui Trump a încasat 15 milioane de dolari într-un an / România apare printre clienții săi",
+      "category": "România",
+      "published": "2026-11-21T08:50:31+00:00",
+      "url": "https://www.g4media.ro/washington-post-un-consilier-al-lui-trump-a-incasat-15-milioane-de-dolari-intr-un-an-romania-apare-printre-clientii-sai.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Serie d. Gucci ricarica il Fano: \"Trodica sarà un ostacolo difficile. Dobbiamo ritrovare convinzione e cattiveria giuste»",
+      "category": "Italia",
+      "published": "2026-11-21T08:50:13+00:00",
+      "url": "https://www.ilrestodelcarlino.it/pesaro/sport/serie-d-gucci-ricarica-il-5408a89e",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Illicit alcohol kills 11, poisons 180 in northeast India’s Manipur state",
+      "category": "Mondo",
+      "published": "2026-11-21T08:48:54+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/21/suspected-toxic-alcohol-kills-at-least-11-people-in-northeast-india?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Rusia a încălcat intenționat spațiul aerian al Poloniei. Ce ar fi urmărit Moscova prin această provocare (ISW)",
       "category": "România",
       "published": "2026-11-21T08:48:47+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/rusia-a-incalcat-intentionat-spatiul-aerian-al-poloniei-ce-ar-fi-urmarit-moscova-prin-aceasta-provocare-isw-4046935",
+      "url": "https://www.digi24.ro/stiri/externe/rusia-a-incalcat-intentionat-spatiul-aerian-al-poloniei-ce-ar-fi-urmarit-moscova-prin-aceasta-provocare-isw-4046935",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Congresul SUA cere explicații cu privire la posibila influențare de către Nvidia a anchetei privind compania chineză Megaspeed, suspectată de contrabandă cu cipuri în China",
+      "category": "România",
+      "published": "2026-11-21T08:48:35+00:00",
+      "url": "https://www.economica.net/congresul-sua-cere-explicatii-cu-privire-la-posibila-influentare-de-catre-nvidia-a-anchetei-privind-compania-chineza-megaspeed-suspectata-de-contrabanda-cu-cipuri-in-china_997878.html",
+      "source": "Economica.net",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -659,8 +740,8 @@
       "published": "2026-11-21T08:43:48+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/schettino-lascia-il-carcere-dopo-9-anni-va-ai-servizi-sociali_3dc58141-2a75-43e8-8aab-fc1b0adc999f.html",
       "source": "ANSA",
-      "status": "galben",
-      "words": 0
+      "status": "verde",
+      "words": 401
     },
     {
       "title": "EUROCONTROL a blocat din nou conturile ROMATSA",
@@ -668,6 +749,15 @@
       "published": "2026-11-21T08:43:10+00:00",
       "url": "https://www.romania-actualitati.ro/stiri/romania/eurocontrol-a-blocat-din-nou-conturile-romatsa-id237857.html",
       "source": "Radio România Actualități",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Trump vrea pace între Rusia și Ucraina până în ianuarie, înainte ca democrații să preia controlul Congresului. Temerile Kievului",
+      "category": "România",
+      "published": "2026-11-21T08:42:42+00:00",
+      "url": "https://adevarul.ro/stiri-externe/sua/trump-vrea-pace-intre-rusia-si-ucraina-pana-in-2573279.html",
+      "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
@@ -681,39 +771,21 @@
       "words": 0
     },
     {
+      "title": "Atp Finals 2026, oggi le semifinali: dove vedere Alcaraz-Shelton e Zverev-Medvedev",
+      "category": "Italia",
+      "published": "2026-11-21T08:41:42+00:00",
+      "url": "https://www.today.it/sport/tennis/atp-finals-2026-semifinali-oggi-orari-dove-vedere-alcaraz-shelton-zverev-medvedev.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Swimmer braves tanker attacks to expose Hormuz contamination",
       "category": "Mondo",
       "published": "2026-11-21T08:39:35+00:00",
       "url": "https://www.aljazeera.com/video/newsfeed/2026/11/21/swimmer-braves-tanker-attacks-to-expose-hormuz-contamination?traffic_source=rss",
       "source": "Al Jazeera English",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "ISW: Rusia a încălcat intenționat spațiul aerian al Poloniei pentru a testa reacția NATO",
-      "category": "România",
-      "published": "2026-11-21T08:38:33+00:00",
-      "url": "https://www.g4media.ro/isw-rusia-a-incalcat-intentionat-spatiul-aerian-al-poloniei-pentru-a-testa-reactia-nato.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Rezistența la insulină sau prediabet: Cum faci diferența? Medicul explică semnele și investigațiile necesare pentru diagnostic corect",
-      "category": "România",
-      "published": "2026-11-21T08:37:58+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/sanatate/rezistenta-la-insulina-sau-prediabet-cum-faci-diferenta-medicul-explica-semnele-si-investigatiile-necesare-pentru-diagnostic-corect-4045991",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Turiștii aruncă tot mai puține monede în Fontana di Trevi din Roma / Cât afectează taxa de intrare de 2 euro introdusă în acest an: „Suntem mulțumiți să-l admirăm de aici”",
-      "category": "România",
-      "published": "2026-11-21T08:34:11+00:00",
-      "url": "https://www.g4media.ro/turistii-arunca-tot-mai-putine-monede-in-fontana-di-trevi-din-roma-cat-afecteaza-taxa-de-intrare-de-2-euro-introdusa-in-acest-an-suntem-multumiti-sa-l-admiram-de-aici.html",
-      "source": "G4Media",
-      "status": "galben",
       "words": 0
     },
     {
@@ -735,24 +807,6 @@
       "words": 0
     },
     {
-      "title": "Life.ro - De ce e mai greu să „pleci” de la serviciu când lucrezi de acasă?",
-      "category": "România",
-      "published": "2026-11-21T08:32:00+00:00",
-      "url": "https://www.profit.ro/de-weekend/life-ro-de-ce-e-mai-greu-sa-pleci-de-la-serviciu-cand-lucrezi-de-acasa-23000409?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "De ce iubea Jeffrey Epstein Rusia: femei, oligarhi și o șansă să se mântuiască (Reuters)",
-      "category": "România",
-      "published": "2026-11-21T08:30:34+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/de-ce-iubea-jeffrey-epstein-rusia-femei-oligarhi-si-o-sansa-sa-se-mantuiasca-reuters-4046891",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Seconda categoria. Nell’arco del Ca Gallo frecce velenose degli ex per fermare l’Apecchio",
       "category": "Italia",
       "published": "2026-11-21T08:30:17+00:00",
@@ -767,24 +821,6 @@
       "published": "2026-11-21T08:30:00+00:00",
       "url": "https://www.ilsole24ore.com/art/data-center-ecco-strategia-governo-mappatura-e-catasto-AJTLmCNC",
       "source": "Il Sole 24 Ore Economia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "VIDEO: Accidentare gravă pentru câștigătorul Balonului de Aur: Harry Kane, indisponibil câteva luni",
-      "category": "România",
-      "published": "2026-11-21T08:29:18+00:00",
-      "url": "https://www.g4media.ro/video-accidentare-grava-pentru-castigatorul-balonului-de-aur-harry-kane-indisponibil-cateva-luni.html",
-      "source": "G4Media",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Momente de panică pe o stradă din Cluj-Napoca. O tânără a fugit dintr-o mașină și a cerut ajutor pe o stradă din Cluj-Napoca. Ce au descoperit anchetatorii",
-      "category": "România",
-      "published": "2026-11-21T08:28:05+00:00",
-      "url": "https://adevarul.ro/stiri-locale/cluj-napoca/momente-de-panica-pe-o-strada-din-cluj-napoca-o-2573276.html",
-      "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
@@ -816,6 +852,15 @@
       "words": 0
     },
     {
+      "title": "Fincantieri, maxi commessa da 3 miliardi: anni di lavoro per il cantiere di Marghera - Il Gazzettino",
+      "category": "Italia",
+      "published": "2026-11-21T08:23:58+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNLW02a3BaaUxCR05ibWNRdExLMko5Rm1xT01zWThRUHZoSmhvM09mY2I3YU9OTUhvcUFZYTdXNmVoRjJYNDIycnIyZzZ0MjZLSkg2djRtcFAtc0JiaEd6VGdsQi1OR2pzMnM4SHAyRFFPeGZZWXluc3VJNjQwalZiNXhmMUg2NEt2QkwtOF9mRUluaFEyRHBpUHhhakhsR2tSZmJIYnhva9IBpgFBVV95cUxPZlFUVjNxamZOdEtCd1dpdDBMOXRVS3lHcHltLVB3c2wwaFpsbWZ0S0x5Wld1VXFZanJuako3RDB1NENxQlhsWHl3YzI0dWExVW1KbDBwVUZRbkpYU1VSZGIwRUZiSHVMZnhkWmF4OHJLLXFZZzA3WWp6NmVsQ0xfamFUb0NlUTZoV0RzaFMtSF8tTGFMWEFNdFZiMjd4UGs0dGt4UFZ3?oc=5",
+      "source": "Il Gazzettino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Falco-fabriano, mister Cappelli. Carbonari accende la piazza: \"Vorrei tutta Cagli allo stadio per battere il Villa capolista»",
       "category": "Italia",
       "published": "2026-11-21T08:20:16+00:00",
@@ -834,15 +879,6 @@
       "words": 0
     },
     {
-      "title": "La Reno insegue punti pesanti. Lo Sparta ospita il Cesenatico",
-      "category": "Italia",
-      "published": "2026-11-21T08:11:01+00:00",
-      "url": "https://www.ilrestodelcarlino.it/ravenna/cronaca/la-reno-insegue-punti-pesanti-5df33894",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Zelensky says Putin is a 'killer' after Trump calls Russian leader a friend",
       "category": "Mondo",
       "published": "2026-11-21T08:10:25+00:00",
@@ -852,38 +888,11 @@
       "words": 0
     },
     {
-      "title": "Vuelle. Ma come siamo \"Belli»: il consorzio incassa la conferma dello sponsor",
-      "category": "Italia",
-      "published": "2026-11-21T08:10:21+00:00",
-      "url": "https://www.ilrestodelcarlino.it/pesaro/sport/vuelle-ma-come-siamo-belli-d22e5c74",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Mps: 'L'Opas di Intesa congrua dopo il rilancio e le garanzie su Siena'",
-      "category": "Italia",
-      "published": "2026-11-21T08:04:08+00:00",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/21/mps-lopas-di-intesa-congrua-dopo-il-rilancio-e-le-garanzie-su-siena_02968d27-bddb-4349-a9f5-be183321f9c3.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Second judge blocks construction of Trump's massive 'triumphal arch'",
       "category": "Mondo",
       "published": "2026-11-21T08:01:28+00:00",
       "url": "https://www.euronews.com/2026/11/21/second-judge-blocks-construction-of-trumps-massive-triumphal-arch",
       "source": "Euronews English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
-      "category": "Inteligență artificială",
-      "published": "2026-11-21T08:00:05+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
-      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -942,24 +951,6 @@
       "words": 0
     },
     {
-      "title": "Man convicted of arson over deadly 2025 Palisades fire in Los Angeles",
-      "category": "Mondo",
-      "published": "2026-11-21T07:10:00+00:00",
-      "url": "https://www.dw.com/en/man-convicted-of-arson-over-deadly-2025-palisades-fire-in-los-angeles/a-80007933?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Putin a 'killer,' Zelenskyy says after Trump calls Russian leader his 'friend'",
-      "category": "Mondo",
-      "published": "2026-11-21T07:07:09+00:00",
-      "url": "https://www.euronews.com/2026/11/21/putin-a-killer-zelenskyy-says-after-trump-calls-russian-leader-his-friend",
-      "source": "Euronews English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "La Cina sviluppa la sua Ia copiando i modelli americani?",
       "category": "Inteligență artificială",
       "published": "2026-11-21T07:03:00+00:00",
@@ -969,11 +960,29 @@
       "words": 0
     },
     {
+      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
+      "category": "Inteligență artificială",
+      "published": "2026-11-21T07:00:05+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
+      "source": "Il Messaggero",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Festivalul Internațional Sabin Pautza, ediția a XIII-a, la Reșița: cinci zile de muzică, artă și cultură, între 18 și 22 noiembrie 2026",
       "category": "Cultură și cărți",
       "published": "2026-11-21T06:08:19+00:00",
       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPTk1QdzZaSlpkYmx6SG03NUpidFFVZHpkdDhGNTNoUWFSYTk2Tk5yalZxb19iM29SUlFNY05iaUg1M1hkLTczSUVXUmk4Vnc0RWxSSlktUVZlaGRKV0V6ejR4MkVmUVJfX0lPOEdSZXhMLUZxempVYkdFbkJ5VFdEYkNmZmJENGF3Y01JUEE3NmxmbEdhX1ZSQzEzTzhkbk9sdU1NNXY4anoxTkowanpFSk1QdFltdDlJdTBkZEVOaUVJR0h2WjZweVJtcDJPX3JJU1J3UWpTMnB1SndHNjc4X3VEb2R5M2wweGlqWTh3WGdHMzVNWmRsdA?oc=5",
       "source": "Radio România Reșița",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A 2026-27, dove vedere tutte le partite del campionato in diretta tv: Dazn o Sky",
+      "category": "Sport",
+      "published": "2026-11-21T05:49:18+00:00",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbjFndXQwdmgxWnprT1VaQUFKOThQeVE1V2dBbDF5WU5tY1pxYnNIbTBteklwd3dlMXd3QU9QTk5oUGZrYzJzZmowMVR5ZUN1clVXR1BwNGk0VTdYV2Uzb1RmaEFUYmQtRDJDTFhkZVdBdC1WZWVEMXkzVk5vYXk3OXdDbkFUalJTWkxQWFlRRm5abWwx0gGbAUFVX3lxTE9qOEhGa1FwcWlrYk9NTjFqcFNiQ1dzcWJQVGVFM2xqa211NHRqc1IzNVcxcTlIQkJocVRzc2FBX1RkajJ4WTlqWHJfZ3V0cDRpNVJfaUtMZl85ZVZrbjRkRmdHQWw1azRteGdQb0hsNS1UaXJIdnJTYzhWT2Zvd0YyNjljUFBFYTNld0Nhakh6XzRFYm5KaFlPak1J?oc=5",
+      "source": "Virgilio",
       "status": "roșu",
       "words": 0
     },
@@ -1028,6 +1037,15 @@
       "published": "2026-11-21T01:17:50+00:00",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBKVmFvMjk0U2lJV1RQQWJVbWQ2Mkt2ODNkazR4ekJDWnhmOXJBUnlib0xQSlNiMmxiX2V3MkljVjBFbENIa3JIRUd2bTUyenJXWlRnVTNwQlJ2cDhjOExLWVpibUtTOVBf?oc=5",
       "source": "Vietnam.vn",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Concerti a Firenze: i migliori live dell’autunno 2026",
+      "category": "Muzică",
+      "published": "2026-11-21T01:07:56+00:00",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5JTU05eEpkMDVwV01UdlVLbmFCRGlpR3JvNUFDc01QakFXQlphWjgxLWJ1bGJWM2ZnYzF2ajFCMEFkbHhvWUhTVldDQmhwN2o4cUJjSWVnZ2ZFaWdQUkUtaE1WVWRvVGxvM19iMXcyYTZIVEQtZmlnbQ?oc=5",
+      "source": "www.firenzeweekend.it",
       "status": "roșu",
       "words": 0
     },
@@ -1109,15 +1127,6 @@
       "published": "2026-11-20T20:43:52+00:00",
       "url": "https://www.theverge.com/streaming/1039096/youtube-social-media-addiction-school-districts-settlement",
       "source": "The Verge",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "FIFA, la Conmebol sta con Infantino: \"Fermo sostegno\" dalle 10 federazioni sudamericane",
-      "category": "Sport",
-      "published": "2026-11-20T20:28:48+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQR2NCczdyemRmVUZMVmpHTUh2M2hmUjFEejBmY0h6Z01ZSTZtaDRzb1dRdi1BRGJHM3l6aUEyY3cwYTJBaHlERk5yN0ZLSWE3dXFkN1A3OXdUeGxscENVY1UtWXJLTEZseFRoTGVSeVlMTmJnaC1iajd2bXVnS1JsZXNSQkRteGZGWG9SemtJeURLSUJ2eXU0dFRQZ3J6aFRXdk04YXdmdDVzT3dYNmg1SjZRYjFjVWVVQ2NjcVRfYUEzQVI1NTg5bkpacDYyakZiNmlIUlpR?oc=5",
-      "source": "Eurosport.it",
       "status": "roșu",
       "words": 0
     },
@@ -1455,15 +1464,6 @@
       "words": 0
     },
     {
-      "title": "Commission greenlights Ireland's final payment request for €225 million under NextGenerationEU",
-      "category": "Unione europea",
-      "published": "2026-11-20T12:29:15+00:00",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2548",
-      "source": "Commissione europea",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Supercinema. I film in uscita nel weekend in Italia: 20 novembre 2026",
       "category": "Cinema și seriale",
       "published": "2026-11-20T12:21:00+00:00",
@@ -1542,6 +1542,17 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
+      "title": "Schettino lascia il carcere dopo 9 anni, va ai servizi sociali",
+      "category": "Italia",
+      "published": "2026-11-21T08:43:48+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/schettino-lascia-il-carcere-dopo-9-anni-va-ai-servizi-sociali_3dc58141-2a75-43e8-8aab-fc1b0adc999f.html",
+      "source": "ANSA",
+      "status": "verde",
+      "words": 401,
+      "intro": "L'ex comandante della Concordia condannato a 16 anni per il naufragio in cui morirono 32 persone",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Tiziana Spinosa: «Orgogliosa della fiducia accordata. Sarà un duro lavoro, non tralascio il Sannio» - Il Mattino",
       "category": "Italia",
       "published": "2026-11-19T02:15:03+00:00",
@@ -1562,17 +1573,6 @@
       "words": 12,
       "intro": "Sciopero generale Cgil il 20 novembre: coinvolti bus, scuole e sanità DiariodelWeb.it",
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
-    },
-    {
-      "title": "Doi frați, implicați într-un eveniment rutier grav în Italia! Unul și-a pierdut viața, iar altul se află în stare gravă, după ce mașina în care se aflau s-a izbit frontal de un alt autoturism - Kanal D Romania",
-      "category": "Diaspora",
-      "published": "2026-11-19T14:03:42+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivwJBVV95cUxPZi10SUZzcmptME9tMDZhV0xvQW9hbC1ZMUpQUEdBWUFLSjNzekhoOUpmdEZaQWRycTRDeEpxYkU0emRubHZMQ2t6YUlvb09GSVM5S2pTWGJUYkh2MHUzR0thdDNZdEw1NXRwUVk0V2lwaEpRV3ZfTG9zdndPdG5Wd3FhM3dNdGh6VTN3c3pxbmFPRDFYdTZFZXdHcDNWYnNhdHZCaUtzcjNsYTRnV21tSkpTcWlNdzVpUXNMZFEtbGVUMUVZZkRFMWJ0Ql9mSGpfWUtna0NnRXYtaTJGczg4U3FkMUlQNi1ZeDZSOTBxeXo5RzhVd2RUU21oaGF3OHRKR0lmSThVUjhfS0RwRGVlaElVaFJLeXFySC0yVTJyZzNTVEVJRWF4dHB5dVlHdTIycEZRMzViX2c0ZlNMTW84?oc=5",
-      "source": "Kanal D Romania",
-      "status": "galben",
-      "words": 37,
-      "intro": "Doi frați, implicați într-un eveniment rutier grav în Italia!",
-      "question": "Cum schimbă această informație viața comunității românești din Italia?"
     }
   ]
 }
