@@ -1,14 +1,14 @@
 {
-  "news_updated_at": "2026-11-21T19:06:12.130807+00:00",
+  "news_updated_at": "2026-11-21T19:07:28.147481+00:00",
   "editorial_updated_at": "2026-11-21T18:23:01.245978+01:00",
-  "translations_updated_at": "2026-11-21T14:05:08.864026+00:00",
+  "translations_updated_at": "2026-11-21T19:06:13.042382+00:00",
   "feed_total": 120,
   "feed_extended_400": 1,
   "feed_missing_body": 119,
   "feed_short_body": 0,
   "editorial_total": 27,
   "archived_editorials": 346,
-  "translation_records": 26,
+  "translation_records": 28,
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 6,
@@ -618,6 +618,15 @@
   ],
   "recent_news": [
     {
+      "title": "„Se coace ceva la Cotroceni”. Comentariile prim-vicepreședintelui AUR legate de temerile lui Nicușor Dan legate de anul 2028",
+      "category": "România",
+      "published": "2026-11-21T19:06:58+00:00",
+      "url": "https://hotnews.ro/se-coace-ceva-la-cotroceni-comentariile-prim-vicepresedintelui-aur-legate-de-temerile-lui-nicusor-dan-legate-de-anul-2028-2410702",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Un astronom bulgar a participat la descoperirea unui sistem neobișnuit de trei stele, aflat în apropierea Pământului",
       "category": "România",
       "published": "2026-11-21T19:01:01+00:00",
@@ -807,15 +816,6 @@
       "words": 0
     },
     {
-      "title": "Microbuz în flăcări după ce a fost lovit de un tren, în Indonezia. Vehiculul a fost târât 500 de metri",
-      "category": "România",
-      "published": "2026-11-21T18:26:18+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/microbuz-in-flacari-dupa-ce-a-fost-lovit-de-un-tren-in-indonezia-vehiculul-a-fost-tarat-500-de-metri-4047353",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Grecia, polemiche per video di Mitsotakis ai giovani: \"Chiederete GTA VI per Natale?\"",
       "category": "Italia",
       "published": "2026-11-21T18:23:12+00:00",
@@ -906,15 +906,6 @@
       "words": 0
     },
     {
-      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
-      "category": "Inteligență artificială",
-      "published": "2026-11-21T18:00:06+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "UK police drag man from protest over ‘Pallet Sign Acton’ shirt",
       "category": "Mondo",
       "published": "2026-11-21T17:57:27+00:00",
@@ -956,6 +947,15 @@
       "published": "2026-11-21T17:26:47+00:00",
       "url": "https://www.france24.com/en/cop31-deep-divisions-persist-over-energy-finance-and-science",
       "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
+      "category": "Inteligență artificială",
+      "published": "2026-11-21T17:00:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
+      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -1073,6 +1073,15 @@
       "published": "2026-11-21T12:44:34+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQVjlwRWo0b3g0OGNud2lHZzFXNGZ6eUdvc3JtVVJadVlONWtYaXEzZm9mekFYZU1Pdkp6aFVIWHJfbDlMQXlicXlMUEhXQlJSWkVtS0M3NlNkS19VVi03QmJwU0wycm00dHFkUEFSVE5MQmtiTEtscXdQTGpnNnhEb2tCLUdMaHNXTGxmbDNpYTdLTzVlRURKTHpJdXlGWjFwWU9pZ0FrQ1pJMXROWVNKLXMzc3JWOVlTeE9vRTBqZlg?oc=5",
       "source": "Agenpress",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Press release - Lead MEPs reject cuts in European Council President’s EU budget proposal",
+      "category": "Unione europea",
+      "published": "2026-11-21T12:43:00+00:00",
+      "url": "https://www.europarl.europa.eu/news/en/press-room/20261116IPR48909/",
+      "source": "Parlamento europeo",
       "status": "roșu",
       "words": 0
     },
@@ -1239,20 +1248,20 @@
       "words": 0
     },
     {
+      "title": "Posizioni Organizzative - INPS",
+      "category": "Istituzioni",
+      "published": "2026-11-21T08:38:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY3poVm1qZFFlYThoVnJHWlJCZEJUUUJ1UlNULU0xelBaMDk1ellQTzVIamZfbE83d0lBLVBSY2phRm1XZ0w4a09FOUw0NlBQbFNyLUluUWV2c1AwTHRLOGhwOU5HVlZ2RXktZUJ3MVNFaGxOQ3B2ejF0LUg2SzByVVpWR0huZw?oc=5",
+      "source": "INPS",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Come si comunica l'arte oggi? Parola agli esperti: Giovanna Ambrosano",
       "category": "Cultură și cărți",
       "published": "2026-11-21T07:59:02+00:00",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOMllxallGek8xOWtNRGo0T01zX1BGNmJ4QUNQR1BabGFManBZSVFNUzljUnlzZHJQU0wtaXpwb2VxVC1mQ0JVZDU1X1Q3RGpsY1JZYmtBVWtpMmVRMWUwU05DaHhHQUFHcm1HLW4xdnZXRDhrMGNqVzVxelNQeDhZTk9uN1B3VmRoeVdOMzBxYkM1ejFsQXVrdG9MQkNHSHVEOHgwbTI5ZDNQZzRSQ01N?oc=5",
       "source": "Il Giornale dell'Arte",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Posizioni Organizzative - INPS",
-      "category": "Istituzioni",
-      "published": "2026-11-21T07:29:59+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQMlVVOHVISjI1TG9Ka0J5cWI2V3NPQi1QYXZkdlBVWnJZeWNqVk9YVGM5X2pLbURXajNGczBoNVdNcWhQdzhEUV96ZF84N0NMekxVR0tYQ1p0ZDJ3VmtadnRDb1ZSNzZlVnVjR3pVMUs2aWM4NjgyN2tndkc2QVJDQ0U5WVJJUQ?oc=5",
-      "source": "INPS",
       "status": "roșu",
       "words": 0
     },
@@ -1383,6 +1392,15 @@
       "words": 0
     },
     {
+      "title": "Rachete ruseşti în Polonia. Premierul Donald Tusk acuză o \"provocare intenționată\" - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-20T20:31:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPWlZGcUVCUlloS3h6VGxEel9xZXNyTzV6NkkzaE1BamhFaGlHUXVkaHAzNHZOdmpWYzZtXzZDMHExNEN4SWhOUnFRbXFyam1ZV1ZCYWhoOVdRSzZmWWp1aHlURTVBa0VUQ29NNGRFOTNQSW1nckc0ZnNpLXlYRjR6OTEtYVFaUXVhdm8zcXJCZkpCZUdna0pVcmFuR05uemxpeFppV3JTMnBodkNtaHBpUElySkJQN2NmbDFaOVpzNndJdw?oc=5",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Weekly schedule of President António Costa",
       "category": "Unione europea",
       "published": "2026-11-20T20:15:00+00:00",
@@ -1491,29 +1509,11 @@
       "words": 0
     },
     {
-      "title": "Muncitor român ucis de o mașină în Italia, în timp ce lucra. Pedepsele primite de angajator și șoferița aflată la volan - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-20T16:09:34+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNUmc0Q0lpWmRTNHl3bFhsbjNPTVhFdEFuaDhWTWRBbGQ4eXBqM1lSZG9JbzJfZ1ZjSG5QTWRzUDdfX0t3U2pHUTZScTNiUzd3NU1tQ2x0cnJXM0Izb0FQc0tQRWxwVC1VZGpJbGdZNzdzaGVXc0NrQ0NmWDlaRWduNEh2RlJoRnM4NFZMVHhld3BBaG5lYmhSVmZLajh2enZQVFZoWGNocEU1NWpVS3FqSjNETnZHZmc0X1FnWWc5TzJmMFFvLW9LdTFST2s0WnVkUkdab3lSLW0?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Dalla tutela dei coralli al recupero delle torbiere: 5 buone notizie per il Pianeta dalla COP31",
       "category": "Mediu și climă",
       "published": "2026-11-20T16:05:37+00:00",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZDZzVS0xN2huaU1NX3ZLajhaeWhXaVdGWVJSdDhkbkZfTllJaEFZSUNQdUtyMG95Y0hZdEN4cVB4bUNsM29FZ1pOeGxUNTVHWlk5dlFWVU9fY3FUXzFJbVZxaWZIc1FkZjlqMV9ZTDVZNkpBdVdGaGw1LXpwRUVZaVZoWHlEd1h3TkxDZ2ZTdjROSDdmN1JndTRTN1d3NlBKMTMzLTlUSHd2cVFDUlRaMXQ1bTNHVWE0Q3lMdFdVQXloMDVsNnc?oc=5",
       "source": "greenMe",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Prossimamente: 23 novembre - 6 dicembre 2026",
-      "category": "Unione europea",
-      "published": "2026-11-20T16:00:00+00:00",
-      "url": "https://www.consilium.europa.eu/it/press/press-releases/2026/11/20/forward-look-2026/",
-      "source": "Consiglio dell'UE",
       "status": "roșu",
       "words": 0
     }
