@@ -1,12 +1,54 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-21T15:14:42.629370Z",
+  "updated_at": "2026-11-21T16:20:26.919036Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-b9e6e641e6281228",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Canada to Join the NATO Innovation Fund to Advance the Local Defence, Security and Resilience Ecosystem",
+      "summary": "",
+      "source": "Business Wire",
+      "published": "2026-11-21T16:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOdEM3YWVUOHJVWTE2Ri05V0o5aGNmSENuWGFwVndqMDZldlYtSWZyNFE1eGRURF9PZWpBY2JBanVLcHNtQU5leFZVUFBvcmNPV2NFX0FGSThhZXdnbDdHYkhadzFhMVczdHJ4YXJLaTc2UzB4eTRiTzY1dDI0VWotQXdrajJ5NmxMUl9NM1RxTW1pLUxIX0VqcFVqeGw3T2FvcVZFdElfVThmbW1ndkx5UXhuQUk0U3cyWWJ5QkVOUTgwcXp3MldKd1E5Q2g5V3ctaHc4RFpRZXN1V3FXblhZc1hkRVVjZUNKSGozV2kzVno?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Canada se va alătura Fondului de inovare al NATO pentru a promova ecosistemul local de apărare, securitate și reziliență",
+      "title_it": "Il Canada aderirà al Fondo per l’innovazione della NATO per far avanzare l’ecosistema di difesa, sicurezza e resilienza locale",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-dd63ea1947fe9f34",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Turkish intelligence chief meets Hamas delegation in Istanbul",
+      "summary": "",
+      "source": "Anadolu Ajansı",
+      "published": "2026-11-21T15:47:49Z",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQa1o4SlMxdi1lRUlMN2V2RWE5RU16ZXBPd3lBdmNGcWQ3NVVRRWdqM05CUG1WTjhxTjhHUnBERHVXNUlWX0FHTzl6REJuRmo1RDNnSF9RX2wzcnNRNlowekdKZGNFaHNXdWZBTWFKVHVzdlpLRHloaDRKb21DV1FjSTJfZkloVG5qUDZNdjVUaEdHM1VZeDkzRjAxNnVaVlZ3SjBVbndYUDRIUQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Șeful serviciilor secrete turce se întâlnește cu delegația Hamas la Istanbul",
+      "title_it": "Il capo dell'intelligence turca incontra la delegazione di Hamas a Istanbul",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-93bbcb724ef55b53",
+      "category": "europa",
+      "region": "europa",
+      "title": "Danemarca cere suspendarea vizelor turistice pentru ruşi, după tentativa de asasinat organizată de Rusia la Copenhaga",
+      "summary": "",
+      "source": "Realitatea.NET",
+      "published": "2026-11-21T15:30:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOd1BRd0ZPWnN0UHpkSFppekVvdTNPOWRlc18wSENwZk9TTFItNmtFU1EtZEZjWUROcFAtalJwdXNTUDFKNlZYckRLUUdqaERTTnZsYXZlSFFTY0dKaGdlTVFWeFo4Q0tfZmpRZFVRS2QzaGc3N0JEbDh5ZlMxbFppZWpTbkh2WWRBU29WcXRLT09wMGJncU9Vc1c4LWo5TnkyQzFVanFycXVLY1B4anNOSjBha1hnNE01YlplX0NTdmhGRGVQVmxUM01XeDlKNVNrZmw0ajhid1I3UWdTTW5tM1RhS3g4NnFBSjhrVmI0R2ZWRXpVV0E?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Danemarca cere suspendarea vizelor turistice pentru ruşi, după tentativa de asasinat organizată de Rusia la Copenhaga",
+      "title_it": "La Danimarca chiede la sospensione dei visti turistici per i russi, dopo l'attentato organizzato dalla Russia a Copenaghen",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-4504e7127c33965e",
       "category": "europa",
@@ -16,7 +58,24 @@
       "source": "News.ro",
       "published": "2026-11-21T15:06:49Z",
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNV2Y4dl9LZFprV0oxZ1F1U2p6MG1TSXFKVi1COHo3Ql9LX0dvNTZCdlREbFZnV1ppc0YtTWdfb0hUMFZvY25iNVJWdDQ5M3dldDZwWTNNM0JWYjdFdVZJck5mcXQ2Q2FjeG5mVnFtbzJRNngyUzBjTGFDNjNJLXJTNmVVOTFTWFFLRldhZ29Pa2lEenY3Q2pKTWExRmRyR01MVmF5blVKemZqcnpzSDdjb1dfNmdOd0pGY2hIZU01LXRNQWxCa2NHRkFqR3B3S1NOYTJCZnpqZFhtZDVmMVl5M29WR3d3d1NveVA5MXBnZHNvbHBWZmtFazY5ZnlaWUl2c0dOaHNxLWk?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Danemarca cere UE să înăsprească restricţiile de călătorie pentru cetăţenii ruşi, după dejucarea unui complot de asasinat",
+      "title_it": "La Danimarca chiede all'UE di inasprire le restrizioni di viaggio per i cittadini russi dopo aver sventato il complotto omicida",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-edd7c4502a6094db",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31 Heats Up: Global Climate Negotiations Stall as Vulnerable Nations Demand Disaster Funding",
+      "summary": "",
+      "source": "Aktualita.co",
+      "published": "2026-11-21T15:00:32Z",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMVhNd2dMcWw3blZfU1o3elFoXzBNZXRrNTVnWEZ2aXk3cTA0c0J4bExGNmJnZHJCN1ZabldHZ2hvb1dwUmM5NTIyeWlranJxSmVpRWxnUjREVFc4dUV2bGJkZ0xCc3ZlQnptT0NibS04bG5KVFJYemNEX0htV3BSQUdaZnkxaXppeFNJYlM3clg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31 se încălzește: negocierile globale privind clima se blochează, deoarece națiunile vulnerabile cer finanțare pentru dezastre",
+      "title_it": "La COP31 si surriscalda: i negoziati globali sul clima sono in stallo mentre le nazioni vulnerabili chiedono finanziamenti per le catastrofi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-f2722db31a99c65f",
@@ -27,7 +86,10 @@
       "source": "Il Riformista",
       "published": "2026-11-21T15:00:00Z",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcFNMWW5VZDFBcU9EdkRKZW4zWkd3dTF6Q0k2NVFzXzY3OHVlVmU4M1IwNU93dVE0cnFtYW80dlRHQVdZNUlhdFVvWkh6SDNaWllGWkQwTEpnVmppX1ctLWRXN2h3TWpVd2FSUEJHaFlLdTJUdEJzMWg0MkVhVlhDUkhWb1VrRW15U1RpaWtDejUzSlA3ZU1RNmZ5MkVScjFyRnJz?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Europa caută un loc la masa păcii, dar își pierde credibilitatea",
+      "title_it": "L’Europa cerca un posto al tavolo per la pace ma perde credibilità",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-bd920618caecc46d",
@@ -38,7 +100,10 @@
       "source": "Odessa Journal",
       "published": "2026-11-21T14:49:12Z",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNU3JOcTdvMkRMNjVJaTlzdTVIdWdIeGJVLVZfaDc0UHlSWWw4Rlo1QVZmbUlhUHp6LV84TFQyNnI3X1ltQkJkaGpTV1BBZEFac3BJSm5zSjd2d3FSOXl5VnpFaEJ5RXFoM3BKaGQtMWNFVE00VnR3b3NWZVBCWWY3S0lwMUxXUF9GLTRycTQ1emNTeDlwLTlERWN5WXNpd1EwRUJj?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE și Marea Britanie promit un sprijin mai puternic pentru Ucraina și o presiune crescută asupra Rusiei - Oj",
+      "title_it": "UE e Regno Unito si impegnano a sostenere maggiormente l'Ucraina e ad aumentare la pressione sulla Russia - GU",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e1dbfb08f201fff3",
@@ -49,7 +114,10 @@
       "source": "U.S. News & World Report",
       "published": "2026-11-21T14:43:38Z",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQcXFpdTFSU3J1ZHY1YS1WMnZhVEp0TWgtZHpJaEpPZFFnakJIVE1kV3pVUzFOU1ctZXFHdzBDRndRYXBvQVFMQW54a1pjYVhnczF6SzAwZFJBUGMyS2RoM2cyQ2J3Ykt0Nm1zalJPa0RVTGhfZW02SUpDbFhRdVFnOGowbTFYbkxGT0J3ZkJ5WmttUU9iQm81SkdUZUh2emNtcWlkQnY3V29oN3RKTG1MQ0FiTXhRSml4UnBJ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31 Climate Summit riscă un eșec, pe măsură ce discuțiile merg adânc în orele suplimentare",
+      "title_it": "Il vertice sul clima COP31 rischia di fallire mentre i colloqui si approfondiscono",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-bf7a85f720efca6e",
@@ -60,7 +128,10 @@
       "source": "Mediafax",
       "published": "2026-11-21T14:26:15Z",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPY0ZRcWtVV1kwMGhaaHhQVXhRX2l5VVJKX2xoc0FMMUozN19tRHQ1d1ZhdERhWTNzRGV2RjRZV2tvNUVIamZYbUg4a09jSjhTYTJoenB1VDBkVDE4by1hQXZvNXhKWElMQm9CNFB6QWsta1dfUV84b3lwQkJ5bmZVOVFNV1FTcWh4RTFiS1dPQ1lvdmI0Q0FqZ3lLbllmMVI2Q1lkamVlV0Zja0IxZHlLT2pvNm1NU3RnNmM2M0RJdWxlZEtBUEp2ZUUwWDFNN015c2FUeNIB2gFBVV95cUxQaTlNZWkxWlQxVV9qNG5fYllOZThFSXppd2h1MS1lTUVZZV9jcWdwclhuM2NsWjNqcEVSZnpjdGkxQWhTV3B5OEFveUcxZFRUWXRqaW0yM3d2TlZIZGtPNlN0ZnlyYi00YktORXRjS1VHTmpEcHhTalplZXdEenhKMG1Hd2xibkdzX1NaLVhjMGJGaUlxdklQTF9qaXlIS1lHc0ptM24tU0g1cWFHVjlmZWNkR25pUFNTQWhnb2FacDZOZnNEdjAzZkVBTWJ0QkFqd3RKTGdXY0RmZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Președintele Consiliului European propune reducerea bugetului UE cu peste 200 de miliarde de euro",
+      "title_it": "Il presidente del Consiglio europeo propone di ridurre il bilancio Ue di oltre 200 miliardi di euro",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6deb675ee44a7b2f",
@@ -71,7 +142,10 @@
       "source": "E-International Relations",
       "published": "2026-11-21T13:59:49Z",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBoaVZsVHhaQ0Q0WEJ3ejgxeFNYZ2I4LWRjSVF3Ql8yZE03YnVjNzhPQk1fRmQtUy1mcE1YZXRvQ0pGMUcyZm9QSlA1VHBZczFwMEluT3hQV0twMkNLQnNURHFiWXIzd00?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Bambus în vânt: căutarea neutralității în Vietnam",
+      "title_it": "Bambù nel vento: la ricerca della neutralità del Vietnam",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-578ef6572c450dff",
@@ -82,7 +156,10 @@
       "source": "The Daily Star",
       "published": "2026-11-21T13:58:02Z",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOc211c2xBSG94d2lialJyWVZQdFB4aXI2c1F2RVpLclVTbnA1ZUZ0aFgxT0xHQV9aWXVUR2tTVjlSVDFWTFU3X1J0WGtkVzh0UWIwV3pfSlRVSXJtWnJ1TWxuV0JGcVQ0Rk9mVWdOWkNydm9nUnM4Y09HZDZ0V0taV0pSd0tDcGRQX212WVNHNHRxWERvaHduLWdPOWtscjhxNm5vS1dR?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Politica fiscală este incompatibilă cu controlul inflației",
+      "title_it": "La politica fiscale non è coerente con il controllo dell’inflazione",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-9a1ef145667ff3c8",
@@ -93,7 +170,10 @@
       "source": "The Kyiv Independent",
       "published": "2026-11-21T13:50:00Z",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZzcwMUZCTmxVczBvcnZrb3JHcHFscEhwbjNWNlQ5MUUzWXZYZU02UHRVU2pUa1ZscThvMlhQWUI1QzlxM3Fvc1VqVmJSVWd6N3VTN3ZPbHM4bjN5QmtFajdLSkJzckRvQnRBUmY2R3V6eXBjTGJfM2pacEVYdk80dl9pTXJfNVMyaVJ1eVJlb1JidnNYTi1rT2RtOGljRjJrODZTU0VhcFNENzNOOXR2N1VzY1M0STNFV2Nn?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Zelensky spune că Ucraina nu a văzut încă angajamente scrise privind garanțiile de securitate în stil NATO",
+      "title_it": "Zelenskyj afferma che l’Ucraina deve ancora vedere impegni scritti sulle garanzie di sicurezza in stile NATO",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-06888703ca1ff479",
@@ -104,7 +184,10 @@
       "source": "FocusPress",
       "published": "2026-11-21T13:49:40Z",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPSm4zb3FlV2dVYzRNeXk4VFBvNmVHcFFyeDkzQy1NM1lUVE1Pa1Qzek11UzJGUjZDeERQTThhenFEUE9DOFFJZGlxbzcwNzVjYWZGR0Y4aTZGckFuRS1CMjZuUzdwS2pWcHN6V3pUOUVmbEVXaDR1QVU5M1dNbWtNY0szd0F0ejllZlQzaXF4QlpXakswcHJaWVJ1UmtjZFMwTlRLbGpueF9WNnBsT0ptUmhCbWoxVlBzQ1ljLTZFQTlPbUVwb1ZNeWlmenJ4UGJVcmc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Antonio Costa propune reducerea bugetului UE pentru perioada 2028-2034 cu peste 200 de miliarde de euro",
+      "title_it": "Antonio Costa propone di ridurre di oltre 200 miliardi di euro il bilancio Ue per il periodo 2028-2034",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-361fd686a9023bf3",
@@ -115,7 +198,10 @@
       "source": "Britannica",
       "published": "2026-11-21T13:40:06Z",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRE40ZmJpbWFPM3pSZWE2ZWpyOWhDZG5ka01PZHpUa0xqZjlOUjRJeXdwajVSY0l4Wm1NUXpOLU12NGRkVkltdEdVNkhKVEozTXdFSHBvMWF6SFIzVFZJRW43dnNxc2d3YkR5OTVSMGptbnZhVl9OaUZNR01veTFSMklOb1V4b09VZ1ZBSDJ0MGo0UzNMY01fVzhMVjNSc1RNTVlIdmNidTBXNlcxNEE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum a schimbat Conferința de Pace de la Paris rolul publicității în diplomație?",
+      "title_it": "In che modo la Conferenza di pace di Parigi ha cambiato il ruolo della pubblicità nella diplomazia?",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d9fd900d99587a99",
@@ -126,7 +212,10 @@
       "source": "Dagens.com",
       "published": "2026-11-21T13:27:56Z",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSndrbE10bzV3bU1KVURhR0Y5bzRRaEtSNWZHb3hZSnp2QUxLYjFDNjR2bzJPcWQ0V3JrRHpMLUNpTHQ3bG4wUE1zS2JqdnJIMmIxeXBMWG5MN0l2Ry04Q2pNOUVxTXI4VC11SlFaRm9Td1J1amRmbEpyQm0yR2F1a3hmcnFnVzVuTlJ0ckV6RWNxVFk5YW5PZXByU1RRR1B0TnJZ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA, Rusia și China se angajează în dialogul nuclear pe fondul extinderii arsenalului",
+      "title_it": "Stati Uniti, Russia e Cina si impegnano nel dialogo nucleare nel contesto dell’espansione degli arsenali",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-104fee897cf1a152",
@@ -137,7 +226,10 @@
       "source": "The National",
       "published": "2026-11-21T13:07:30Z",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZ2dLb18tNHJDbzQyUzB5cDBxNHhVbUZid1JZMUs3aEtCSHg2LTN2d0RHUWRKMDlVV0ItVV9rVXFKREx2MXdGNmJhc1RnY2x5QVBBZTM3ZE5OZWZIREM4c2ZlYktUeEhDNG13S3o2My1obUFaTTVRSUpONkZ3SC13NDVzcVpVWHhJOUFicFl2cC1SYk4tbVdEalZfR1c4UkhFTGVtS1A4dXZUOUE0R05PMU5IOTdlTUU?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Emiratele Arabe Unite au lăudat pentru relațiile pe termen lung cu națiunile din America Latină",
+      "title_it": "Gli Emirati Arabi Uniti hanno elogiato le relazioni a lungo termine con le nazioni dell'America Latina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-7c395a66ea2e625e",
@@ -148,7 +240,10 @@
       "source": "Судово-юридична газета",
       "published": "2026-11-21T13:07:00Z",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPeUgzTFZJcUhoT2tIWDMycGQxQkdhTmZUdFA3OC03X0Vab2VHWWs3MF9mRTFVODVQVUl4YkdNVlN4UW1fMGNlbnpIekplbzRsQi1DNEt6bmpKSU5DX3FVNlNCdUlsM2V2SGNGR1dlSXIxS1pRLXRQWW55NmNkNEl6R21WMUhvMjJlOF9mWDVNclZXV3hXNWwxSThRcFdxOVMxdjhIanctU2xEVzJ3T0hJal80UHRmTGVzVFZpeXp3X1M3OE5zZXZPc2x2dzgwdDNQR0I3Rw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Volodymyr Zelensky a numit aderarea Ucrainei la NATO o garanție de securitate mai ieftină și mai bună",
+      "title_it": "Volodymyr Zelenskyj ha definito l'adesione dell'Ucraina alla NATO una garanzia di sicurezza più economica e migliore",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-9066d9f41e5f0a93",
@@ -159,7 +254,10 @@
       "source": "CAPITAL",
       "published": "2026-11-21T12:30:07Z",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOX1U2SGNYcFJGeko1cDNCS3dUbElkem91UW9BTmYyQnhseUNOVUN3dmxkaTM4NVQ2d3BSYzVQaEVYZjlsdTItQ1YtblM4Z1dfWG1jTW5ndmJBRm1OZVZfQmh3M1ViX1NtRGtSaHBPQWtiNHhTRmo5d3pLMi1sRFRRTndLWXRYMXBtelBZbWE4U0k5Y2JFY0ZTcGxrRlJtMXFyNTFVRE41ci1jYU9ZTm90aWR1dGJ1Rk9ZejZJN2lkZ0M5VXhYRFdpNzR6amcyRVBHTm1yQm5FQ0JtVm85OXc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Elena Udrea, atac dur la conducerea UE după întâlnirea Trump-Putin-Xi",
+      "title_it": "Elena Udrea, duro attacco alla leadership Ue dopo l'incontro Trump-Putin-Xi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-530290a6f581170a",
@@ -181,7 +279,10 @@
       "source": "https://newsalert.com.pk/",
       "published": "2026-11-21T12:10:44Z",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWVVmazFJLXRnd3lyTlZtMDJZNzZyYkIyYlB2Z3dHeXpOcVlZRDNHVEZTb3Ita0xvTWxZTGEzbUEtQUZaS2gxRXJIWDZDdGN3czZrZkY2TlJPQ2owUkN4NmlaS1UtN0ZSTjhkYXQtQmlQV2lycUxVa2xsUG0teEdjS2dXNTFCSEpQenpWVjhYZTlPQkJ6bmtDQUNUblZFaC1FMWxSQmxpZHVfd3hVdFE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Xi Jinping întărește poziția globală a Chinei în timp ce Trump celebrează summit-ul diplomatic",
+      "title_it": "Xi Jinping rafforza la posizione globale della Cina mentre Trump celebra il vertice diplomatico",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d54ee05d6e774077",
@@ -192,7 +293,10 @@
       "source": "ETV Bharat",
       "published": "2026-11-21T12:06:19Z",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZTltbFJnRTNIUFh2MmxCNENBVmJsbXlpazZ2aU9SUmwwVkpjQ2FqaExxVmtyUjhzejVxaU5XVFZCdVRLYllqMkVnb1F5akQyQUtfQWZoZGs3QW9OZUsyWi1XUVhVam9KcnJDcEZ5ZktaT1lIMHlmYlRzY3dZd2trZVI3XzJoMjNINkp3UG5JcmRvTW1HU00zU01ZOWd6WEpsMDAwNzdXMTRkMG5xMFFua2pXY0l2UdIBuwFBVV95cUxNUC05OHluNTdfWDVLYUQ1cEt3ME5MSXdKTGhLOHNTdU5sQzVvQlNSRjRKd3VJdXgtNVo4ekh1MndBWFB0TkUwU2FrMHBsTUp4eVRpRlBjZzVRekQydXlKUkZCXzdEaks1N1hWbm90Tmo1aVFZejduQkt0aEhRaHhlYW95MC0tVnBDOEJUdVE2NEJSQ2F6dWE4SU1MeXZxejU5Vnhjc0ItcHNJOEcwUGFZVUNDZThNTXM4T2lr?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Țările se luptă pentru a obține o înțelegere COP31 după rândul de combustibili fosili",
+      "title_it": "I paesi corrono per assicurarsi l’accordo COP31 dopo la disputa sui combustibili fossili",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-56850a32922fac31",
@@ -203,7 +307,10 @@
       "source": "The Friday Times",
       "published": "2026-11-21T11:51:00Z",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOTFDRlJreWZZWWh0RWdXaTJDbVc4RXUzUVI2c3dWSmVrYnZaS29KY2xpcEwzOTFPR1hyNElEd3d0WGJlam1jNXA5SkNTRW43ZUF6cW1VXzIxT3E5WG84UXdhajY4MnFxYmVhOGZWLUVEYWdldVVjWWpZN3lOZC1XQmZ5ZElqOEF4WTFBYldWdnFKWFpVU1pWRjBDMXdEUi1ZOW5TbENPRTRKMWxPNEZlN25sRGs?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Stabilizatorul Shenzhen: puterea de convocare a Chinei și limitele dialogului dintre marile puteri",
+      "title_it": "Lo stabilizzatore di Shenzhen: il potere di convocazione della Cina e i limiti del dialogo tra grandi potenze",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-3b801e1fd2f9422d",
@@ -225,7 +332,10 @@
       "source": "BigGo Finance",
       "published": "2026-11-21T11:08:00Z",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1QV2ZRMFZYVHU0VkQ1a2hIV2F5YndpZWlwX1A4Uks4ajQySEpHbU1acHR4a1FUd3o4bURCVUFIOVJYYzdKWi12enE0QmFrOWI0WjQ1V0ZVbUR2d1k?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Kyle Chan: De ce Beijingul nu va stimula consumatorii – și ce înseamnă asta pentru Huawei, DeepSeek și Chip Race",
+      "title_it": "Kyle Chan: perché Pechino non stimolerà i consumatori e cosa significa per Huawei, DeepSeek e la Chip Race",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-44b37a7730fe5e58",
@@ -265,20 +375,6 @@
       "published": "2026-11-21T10:50:00Z",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOOVBTNGg0cXRHdWF6YnIweTJHejZyaUZIa1FjNW1xZHlLR2N2eVhVd0dha3RzU0JTNFlYYWt6d2dRT0hZVHVYbEoyaTl5NkpCNzBjaXRhMUVqZzdKc3R6aURQTFAtQU9ZTHprZDI2T01IeUdZNDlOdnZ6dVVnNmdyQWQxbTRFZUx0N1M0R20wUm51UQ?oc=5",
       "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-452e090acbfca5d0",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "US Blocks Ukraine From Summit Declaration",
-      "summary": "",
-      "source": "Wisevoter",
-      "published": "2026-11-21T10:45:23Z",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYnYtOFhGTFRkanFDQ3l4TDNYZ1NFTVBzM1RQVS1WU2ZWazZPWkdOQUcwcENHQUZjeU9TdnhyQ2pkMjFxX0xqSUVvVFlONjlZS3hIU2dwNDNsSnVWOHA5MW9oOHNDSDBXYVlHYXo2cGVLb0VZLVhieko5eHdTY0VScw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "SUA blochează Ucraina de la Declarația de la Summit",
-      "title_it": "Gli Stati Uniti bloccano l’Ucraina dalla dichiarazione del vertice",
-      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e4ff209c007b389d",
@@ -370,6 +466,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-3ead1689b170104b",
+      "category": "clima",
+      "region": "global",
+      "title": "Fossil Fuel Dispute Pushes Antalya COP31 Talks Past Deadline",
+      "summary": "",
+      "source": "https://streamlinefeed.co.ke/",
+      "published": "2026-11-21T09:31:00Z",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONHlXN0Vickh6TzVUbmNVVkNiWjdzR1ZBWk11cHFwOG9UQThWdDJSQlktWjFIb0tVYTBUMWN4MnA3Q1JVamVmRjViMmtpYkFQRl9wMWVNMFlTcHdRM0VtM2FZLUZ3OW90V2xnOUdCMUtIVi1BclR4UUFpOWlwTDVvbDVzb1dIQVNEcW9iNkdDdTNUUWRFUDVJZkRB?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Disputa privind combustibilii fosili împinge discuțiile COP31 din Antalya peste termenul limită",
+      "title_it": "La controversia sui combustibili fossili spinge i colloqui della COP31 di Antalya oltre la scadenza",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-0cc263934d6799d1",
       "category": "securitate",
       "region": "europa",
@@ -395,20 +505,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Organizația Tratatului Atlanticului de Nord (NATO) | Țări, fondatori, articolul 5, istorie, sediu și scop",
       "title_it": "Organizzazione del Trattato del Nord Atlantico (NATO) | Paesi, fondatori, articolo 5, storia, sede e scopo",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-25edd0d097bda41c",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "The Council of Europe’s support for Ukraine",
-      "summary": "",
-      "source": "Council of Europe",
-      "published": "2026-11-21T08:23:12Z",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1pX0hpWVBpbzNPV1dSWi1zaU9OMXFSY1lmRnA1S0J2RU1CSllJaFJfejVmQnN5U2htUHJBQi1TVHdqNUxORUFZRDZBajlQUE9fRl90VmVzMUxMVnFZ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Sprijinul Consiliului Europei pentru Ucraina",
-      "title_it": "Il sostegno del Consiglio d’Europa all’Ucraina",
       "translation_status": "machine_translation"
     },
     {
@@ -452,6 +548,17 @@
       "title_ro": "Discuțiile COP31 asupra climei se revarsă în ore suplimentare, în timp ce națiunile se ceartă pentru combustibilii fosili",
       "title_it": "I colloqui sul clima della COP31 si prolungano nel tempo mentre le nazioni litigano sui combustibili fossili",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-10e95779a6a74750",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "What Is the G7? Member Countries, G8 History, Purpose and Legal Status",
+      "summary": "",
+      "source": "Diplomacy and Law",
+      "published": "2026-11-21T07:29:22Z",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE91RFBBNmxIaGk5YnM5MHV5SXZ6T24wclJJUHh4bDdfbTkxdEdGajFjV0szWEd6Q1Q5UndSMUlFVDdNYzI4a1JFOVRqYU1tNTdaRDhFTjM5OGEzUl9lVDBHSg?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-8726df9f52862417",
@@ -543,29 +650,10 @@
       "source": "Nhan Dan Online",
       "published": "2026-11-21T05:55:12Z",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVWdVa1llbjFTVFozaDVPaUE1ZUJOblNfam5odzlMMS1UaFAybjNldDFnTllMN1dIUmpoM2t1WTNLZTlVc0NXZWNDOUxWbDBLUmdEVHo1WHdkWUh0bjZicUQtWFJrdEx4MEdkbTU1Q1A4Ui0xQ1BSY1NWNmlzYXRSRFptOWpPU1l1bEVmSEdBREY5N2dNc1RKNFpqUElyV05lS3BEejhIX00wUEF2?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-4d4c52d93a4334b7",
-      "category": "energie",
-      "region": "global",
-      "title": "Oil Prices Hover Amid Supply Surplus and Middle East Unrest",
-      "summary": "",
-      "source": "NewzTodays",
-      "published": "2026-11-21T05:50:25Z",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOOUlfaTVLbzVhQWs4YzFTT3NQRW9nWER4OEJFRG1hQU8xYjQzajBrVVRqWU9NYmR2S0F6UDVTNjdwcFlCV3hneVgzSmRGdlc0YVpzQWhCb3JMV2VOVzFxblV4dDN3S1B3eHVTOFZ4S2RkNHplMlVUMjRHOGRUbnFZUEF3a0xIVW1XdldB?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-9cdc39ee1fbf5d10",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "States agree to UN talks aiming to regulate 'killer robots' by 2028",
-      "summary": "",
-      "source": "Reuters",
-      "published": "2026-11-21T05:36:00Z",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZTFDeHY0QlBhU2dnNndMa1FhdmhtUDV2eF9HYmhHU0tzRlFoM0U1a0ZuaE8zbGduLUhoTU0tWWExeDkyOWYwRi1aXzVOd0NhRGszMlU5MWFyVmdLSUJOREtvaXNYY1p3YnRIaDR5X0RwZGVPTG1GeW5wZm1Hd0dlM0RoVDVBQlZ4WFV1bU9mM3YzcDJISEpEZkI5ekdsMy1xb1BkZ0JUYw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Europa se confruntă cu nevoia de a se adapta în mod proactiv la un nou peisaj de securitate",
+      "title_it": "L’Europa si trova ad affrontare la necessità di adattarsi in modo proattivo a un nuovo panorama di sicurezza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6f9b989ea00e4ffa",
@@ -638,34 +726,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-50a945acc2cbce37",
-      "category": "europa",
-      "region": "europa",
-      "title": "UE și Marea Britanie încheie un acord pentru relansarea relațiilor post-Brexit. Ce prevede înțelegerea | AUDIO",
-      "summary": "",
-      "source": ": Europa FM",
-      "published": "2026-11-21T03:36:41Z",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0VZVW0tUU5sMEprUzNpc2Vhd1RGWHJlRGhEMUhTOEVkYms4b3pDeThEaFpjMWtZXzJUSjBNVjFIWncxeGtYTEZUYjdqaGZiNW4zRVF4VlR1SDRKUUNubERFWjlYU0ZzQnZBQU4xNDZKdGZxaW9KSTljcFU4aUZKZWpYYVVvMjZqUHpWZWFpRkhmSzcxS2Q1YUljczk4SVZCelYxQzBsOUt0ZS1jQlNsbjdyRC1ocE92VXNkSGJiTmNjUXZj?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE și Marea Britanie încheie un acord pentru relansarea relațiilor post-Brexit. Ce prevede înțelegerea | AUDIO",
-      "title_it": "Ue e Regno Unito raggiungono un accordo per rilanciare le relazioni post-Brexit. Cosa fornisce la comprensione | AUDIO",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-ec1720793e2500c2",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Philippine News Agency. . WATCH: The Philippines’ 2026 ASEAN chairship marked an important chapter in strengthening regional ties and advancing a shared vision for Southeast Asia. Beyond the meetings and agreements, the experience highlight",
-      "summary": "",
-      "source": "Facebook",
-      "published": "2026-11-21T03:05:45Z",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNYTY2T2JuWEVEdERzZG04VExRWGpNOGNHVXo3TGR0S0M1V01jNzFWWHhZWmI0NWdlcl8xZUhmaEdSVDJkNFphRGVoYmxWZ1o0TzVSd1E5ZjRmdEh5RmZLLTBuMUVNdm1kb1Jrb013cHdrME83SURZblJiSUZWMWgwN3o0amZReWQwTlJZOEJFLTRsUFB4aDJVTDdQMVpWMDh5ZVpBNXNWMU1sYWtJeVZDbk5HY1UzNFZHRWhXVWF5bjQwZHVaRGtaMXVpd2xsTWpyeHNQTldB?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Agenția de știri din Filipine. . Urmăriți: Președinția ASEAN din 2026 a Filipinelor a marcat un capitol important în consolidarea legăturilor regionale și în promovarea unei viziuni comune pentru Asia de Sud-Est. Dincolo de întâlniri și acorduri, experiența ev",
-      "title_it": "Agenzia di stampa filippina. . GUARDA: La presidenza ASEAN delle Filippine nel 2026 ha segnato un capitolo importante nel rafforzamento dei legami regionali e nel progresso di una visione condivisa per il Sud-Est asiatico. Al di là degli incontri e degli accor",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-92bc5e8c4c0eeb4e",
       "category": "diplomatie",
       "region": "global",
@@ -692,6 +752,17 @@
       "title_ro": "Japonia prinsă între China, Rusia și schimbarea ordinii mondiale a lui Trump",
       "title_it": "Il Giappone intrappolato tra Cina, Russia e il cambiamento dell’ordine mondiale di Trump",
       "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-e88d17fc16e06d0d",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Trump Xi Putin Joint Declaration: What the Four Points Mean",
+      "summary": "",
+      "source": "Diplomacy and Law",
+      "published": "2026-11-21T02:08:43Z",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5rb25iWGF3bFY0YzF5OVdzSkwweTJjSWJmYjNSbUYwMERfNTQxdFJOMm0xeGloQm8tYUprOUlHZGxaR2lTaXY1Y0hfdmNaNzZMZTRRWC1zMnUzZUFHWGY4Q0RzT2ZaR2V0VHRHbWNNcnFxWnNfRUFrUw?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-e256f0ca2f01e9e5",
@@ -748,17 +819,6 @@
       "title_ro": "UE și Regatul Unit: angajați față de stabilitatea și prosperitatea Balcanilor de Vest",
       "title_it": "UE e Regno Unito: impegnati per la stabilità e la prosperità dei Balcani occidentali",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-50c74f35941ca3ec",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31: UN Climate summit runs long with no deal in sight after fossil fuels omitted from draft",
-      "summary": "",
-      "source": "DW.com",
-      "published": "2026-11-21T01:00:59Z",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWjdENnFycUlpSkhpSUpSTktDTV9MTFRrUWJoVkloUVhiNlJwMUJmbzEtbWJ0SWpESjZGM0hkU0UwaUp3Q2VlTGpCa2lZNlpCX2xBYTBSZE4yZXFEOEpOQTdpTWsxQS05WlBsR3RkX3NsXzgzenBPSGZZbW9Xdk96cU1JWXdEVkdRc19WQTFPNXFCQkt4a3pwcldkUkNhNWVaTzcwWQ?oc=5",
-      "review_status": "external_headline_unverified"
     }
   ]
 }
