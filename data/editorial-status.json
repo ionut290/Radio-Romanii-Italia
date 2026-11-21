@@ -1,18 +1,18 @@
 {
-  "news_updated_at": "2026-11-21T19:46:48.839213+00:00",
+  "news_updated_at": "2026-11-21T20:04:06.283736+00:00",
   "editorial_updated_at": "2026-11-21T20:40:52.308685+01:00",
-  "translations_updated_at": "2026-11-21T19:06:13.042382+00:00",
+  "translations_updated_at": "2026-11-21T19:49:14.200156+00:00",
   "feed_total": 120,
-  "feed_extended_400": 0,
-  "feed_missing_body": 120,
+  "feed_extended_400": 1,
+  "feed_missing_body": 119,
   "feed_short_body": 0,
   "editorial_total": 28,
   "archived_editorials": 347,
-  "translation_records": 28,
+  "translation_records": 29,
   "pending_total": 125,
   "pending_filtered_out": 113,
-  "editorial_verde": 5,
-  "editorial_galben": 36,
+  "editorial_verde": 6,
+  "editorial_galben": 35,
   "editorial_rosu": 37,
   "pending": [
     {
@@ -618,13 +618,85 @@
   ],
   "recent_news": [
     {
+      "title": "Grevă generală în Belgia. Cele mai multe zboruri de pe aeroportul din Bruxelles vor fi anulate luni",
+      "category": "România",
+      "published": "2026-11-21T20:01:09+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/greva-generala-in-belgia-cele-mai-multe-zboruri-de-pe-aeroportul-din-bruxelles-vor-fi-anulate-luni-4047447",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Russia attacks Zelensky's hometown, Ukraine reaffirms wish to join NATO",
+      "category": "Mondo",
+      "published": "2026-11-21T19:56:39+00:00",
+      "url": "https://www.france24.com/en/europe/20261121-russia-attacks-zelensky-s-hometown-ukraine-reaffirms-wish-to-join-nato",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Act secret semnat la Guvern. Salarii majorate la Transelectrica și Transgaz. Creșterea va fi acoperită din fondurile proprii ale companiilor",
+      "category": "România",
+      "published": "2026-11-21T19:56:00+00:00",
+      "url": "https://www.profit.ro/stiri/politic/act-secret-semnat-la-guvern-salarii-majorate-la-transelectrica-si-transgaz-cresterea-va-fi-acoperita-din-fondurile-proprii-ale-companiilor-23002787?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Russia launches ballistic missile attack on Zelensky's hometown in central Ukraine",
+      "category": "Mondo",
+      "published": "2026-11-21T19:55:07+00:00",
+      "url": "https://www.france24.com/en/russia-launches-ballistic-missile-attack-on-zelensky-s-hometown-in-central-ukraine",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Polițiști anchetați în Franța pentru violențe și agresiune sexuală împotriva protestatarilor",
+      "category": "România",
+      "published": "2026-11-21T19:54:35+00:00",
+      "url": "https://hotnews.ro/politisti-anchetati-in-franta-pentru-violente-si-agresiune-sexuala-impotriva-protestatarilor-2410708",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Noni Madueke salvages draw for Arsenal at Newcastle United as Raya injured",
+      "category": "Mondo",
+      "published": "2026-11-21T19:53:00+00:00",
+      "url": "https://www.aljazeera.com/sports/2026/11/21/noni-madueke-salvages-draw-for-arsenal-at-newcastle-united-as-raya-injured?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Le ultime ore di Gianni De Gennaro da solo, la pistola trovata accanto al corpo",
+      "category": "Italia",
+      "published": "2026-11-21T19:52:01+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/le-ultime-ore-di-gianni-de-gennaro-da-solo-la-pistola-trovata-accanto-al-corpo_62566f21-e7ca-4243-a0b3-26a71e01c4ea.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Fostul preşedinte brazilian Jair Bolsonaro a fost internat la terapie intensivă: „Nu l-am văzut niciodată aşa”",
+      "category": "România",
+      "published": "2026-11-21T19:50:47+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/fostul-presedinte-brazilian-jair-bolsonaro-a-fost-internat-la-terapie-intensiva-nu-l-am-vazut-niciodata-asa-4047433",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Acord comercial de amploare între UE şi Indonezia: Taxe vamale eliminate la peste 90% din produse / Piață comună de 730 de milioane de oameni",
       "category": "România",
       "published": "2026-11-21T19:46:09+00:00",
       "url": "https://economedia.ro/acord-comercial-de-amploare-intre-ue-si-indonezia-taxe-vamale-eliminate-la-peste-90-din-produse-piata-comuna-de-730-de-milioane-de-oameni.html",
       "source": "Economedia",
-      "status": "roșu",
-      "words": 0
+      "status": "verde",
+      "words": 434
     },
     {
       "title": "Trump vrea să limiteze anchetele democraților asupra administrației sale. Ce prevede ordinul semnat",
@@ -636,11 +708,29 @@
       "words": 0
     },
     {
+      "title": "Românii sunt mai fericiți decât germanii, italienii și spaniolii și egali cu angajații din Franța și Suedia la serviciu. Salariul ocupă abia locul al cincilea printre motive - Studiu",
+      "category": "România",
+      "published": "2026-11-21T19:45:00+00:00",
+      "url": "https://www.profit.ro/stiri/social/romanii-sunt-mai-fericiti-decat-germanii-italienii-si-spaniolii-si-egali-cu-angajatii-din-franta-si-suedia-la-serviciu-salariul-ocupa-abia-locul-al-cincilea-printre-motive-studiu-23002766?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Salariile la Transgaz și Transelectrica se indexează 6,5%. Guvernul a adoptat un memorandum confidențial",
       "category": "România",
       "published": "2026-11-21T19:41:55+00:00",
       "url": "https://economedia.ro/salariile-la-transgaz-si-transelectrica-se-indexeaza-65-guvernul-a-adoptat-un-memorandum-confidential.html",
       "source": "Economedia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Coppa Davis a Bologna, da Berrettini a Zverev: orari e partite, ecco tutto quello che c’è da sapere",
+      "category": "Italia",
+      "published": "2026-11-21T19:40:59+00:00",
+      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/coppa-davis-squadre-orari-bologna-a7mh8fht",
+      "source": "Il Resto del Carlino",
       "status": "roșu",
       "words": 0
     },
@@ -663,21 +753,30 @@
       "words": 0
     },
     {
-      "title": "Cât îi costă pe bucureșteni haosul din trafic și transportul public",
-      "category": "România",
-      "published": "2026-11-21T19:35:46+00:00",
-      "url": "https://adevarul.ro/stiri-interne/societate/cat-ii-costa-pe-bucuresteni-haosul-din-trafic-si-2572284.html",
-      "source": "Adevărul",
+      "title": "Gatto a spasso in cabina, volo della Delta bloccato a Boston",
+      "category": "Italia",
+      "published": "2026-11-21T19:38:32+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/21/gatto-a-spasso-in-cabina-volo-della-delta-bloccato-a-boston_50bc666a-ec8d-4139-a6f2-cc436eea8fb5.html",
+      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
     {
       "title": "L'ex capo della Polizia De Gennaro si è ucciso, sconvolto dalle indagini su Via d'Amelio",
       "category": "Italia",
-      "published": "2026-11-21T19:35:18+00:00",
+      "published": "2026-11-21T19:37:17+00:00",
       "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/lex-capo-della-polizia-de-gennaro-si-e-ucciso-sparandosi.-la-procura-indaga-per_5bcb2e78-76a6-4c7d-b2ba-61000e349ee9.html",
       "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Cât îi costă pe bucureșteni haosul din trafic și transportul public",
+      "category": "România",
+      "published": "2026-11-21T19:35:46+00:00",
+      "url": "https://adevarul.ro/stiri-interne/societate/cat-ii-costa-pe-bucuresteni-haosul-din-trafic-si-2572284.html",
+      "source": "Adevărul",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -717,30 +816,12 @@
       "words": 0
     },
     {
-      "title": "Un camion care distribuia ajutoare în Fâșia Gaza a fost lovit într-un atac aerian israelian / Trei palestinieni au fost uciși",
-      "category": "România",
-      "published": "2026-11-21T19:29:14+00:00",
-      "url": "https://www.g4media.ro/un-camion-care-distribuia-ajutoare-in-fasia-gaza-a-fost-lovit-intr-un-atac-aerian-israelian-trei-palestinieni-au-fost-ucisi.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Serie A, in campo Napoli-Torino DIRETTA",
       "category": "Italia",
       "published": "2026-11-21T19:26:54+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/21/serie-a-in-campo-napoli-torino-diretta_289b27ac-0805-4344-91a4-55efce609725.html",
       "source": "ANSA",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Anchetă în Franţa după acuzaţii de violenţe şi agresiune sexuală comise de poliţişti asupra unor manifestanţi",
-      "category": "România",
-      "published": "2026-11-21T19:23:18+00:00",
-      "url": "https://www.g4media.ro/ancheta-in-franta-dupa-acuzatii-de-violente-si-agresiune-sexuala-comise-de-politisti-asupra-unor-manifestanti.html",
-      "source": "G4Media",
-      "status": "galben",
       "words": 0
     },
     {
@@ -780,15 +861,6 @@
       "words": 0
     },
     {
-      "title": "Majoritatea zborurilor de pe aeroportul din Bruxelles vor fi anulate luni, din cauza unei greve naţionale",
-      "category": "România",
-      "published": "2026-11-21T19:20:24+00:00",
-      "url": "https://www.g4media.ro/majoritatea-zborurilor-de-pe-aeroportul-din-bruxelles-vor-fi-anulate-luni-din-cauza-unei-greve-nationale.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Serie A: Malen ne fa 4 e travolge il Parma, la Roma va avanti a suon di gol",
       "category": "Italia",
       "published": "2026-11-21T19:20:23+00:00",
@@ -807,56 +879,11 @@
       "words": 0
     },
     {
-      "title": "Anchetă în Franța după acuzații de violențe comise de polițiști asupra unor manifestanți. Un agent, cercetat pentru agresiune sexuală",
-      "category": "România",
-      "published": "2026-11-21T19:16:13+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/ancheta-in-franta-dupa-acuzatii-de-violente-comise-de-politisti-asupra-unor-manifestanti-un-agent-cercetat-pentru-agresiune-sexuala-4047407",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "România nu are centre de date majore și nici protecție pentru gazele din Marea Neagră, avertizează Mircea Geoană",
-      "category": "România",
-      "published": "2026-11-21T19:15:01+00:00",
-      "url": "https://www.libertatea.ro/stiri/mircea-geoana-la-bucharest-forum-despre-investitiile-strategice-ale-romaniei-si-protejarea-gazelor-din-neptun-deep-vcjg16r",
-      "source": "Libertatea",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ecco le password più usate dagli italiani nel 2026",
+      "title": "L'ex presidente Jair Bolsonaro ricoverato in terapia intensiva",
       "category": "Italia",
-      "published": "2026-11-21T19:05:00+00:00",
-      "url": "https://www.today.it/tech/password-piu-usate-2026.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Malen irresistibile: poker al Parma, la Roma soffre ma poi dilaga 5-1",
-      "category": "Italia",
-      "published": "2026-11-21T19:02:50+00:00",
-      "url": "https://www.repubblica.it/sport/calcio/serie-a/roma/2026/11/21/news/parma_roma_gol_malen-425740778/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Chi guadagna mentre gratti e speri di vincere: il regalo di Natale del governo ai concessionari",
-      "category": "Italia",
-      "published": "2026-11-21T19:00:00+00:00",
-      "url": "https://www.today.it/dossier/economia/gratta-e-vinci-concessione-proroga-chi-guadagna.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "C'è chi paga per lavorare in ferie: fino a 500 euro a notte per raccogliere olive e mungere capre",
-      "category": "Italia",
-      "published": "2026-11-21T18:59:00+00:00",
-      "url": "https://www.today.it/dossier/societa/coltivare-frantoio-lavoro-vacanze-lazio.html",
-      "source": "Today",
+      "published": "2026-11-21T19:05:24+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/21/lex-presidente-del-brasile-jair-bolsonaro-ricoverato-in-terapia-intensiva_839ca9c3-f07e-4473-a141-0031f216f432.html",
+      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -920,33 +947,6 @@
       "published": "2026-11-21T18:02:23+00:00",
       "url": "https://www.france24.com/en/drone-attack-sets-russian-cargo-ship-ablaze-in-gulf-of-finland",
       "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "UK police drag man from protest over ‘Pallet Sign Acton’ shirt",
-      "category": "Mondo",
-      "published": "2026-11-21T17:57:27+00:00",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/21/uk-police-drag-man-from-protest-over-pallet-sign-acton-shirt?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Israeli strike hits food aid vehicle in Gaza, killing three",
-      "category": "Mondo",
-      "published": "2026-11-21T17:54:19+00:00",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/21/21-11-sv-israel-targets-gaza-food-truck?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Alleged Mexican drug cartel boss ‘El Chapo Isidro’ arrested in special forces raid",
-      "category": "Mondo",
-      "published": "2026-11-21T17:46:55+00:00",
-      "url": "https://www.theguardian.com/world/2026/nov/21/alleged-mexican-drug-cartel-boss-el-chapo-isidro-meza-flores-arrested",
-      "source": "The Guardian",
       "status": "roșu",
       "words": 0
     },
