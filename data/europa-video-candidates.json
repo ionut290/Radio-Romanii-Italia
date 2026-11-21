@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21T15:17:37.714497+00:00",
+  "updated_at": "2026-11-21T21:06:35.359215+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -196,7 +196,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-21T21:06:35.359215+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "f3d7b15027a5577e64",
@@ -423,10 +429,12 @@
       "diritti_verificati": false,
       "status": "DA_VERIFICARE",
       "italian_version_available": false,
-      "language_status": "METADATI_NON_DISPONIBILI",
-      "language_checked_at": "2026-11-20T09:08:43.685891+00:00",
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-21T21:06:35.359215+00:00",
       "language_probe_version": 3,
-      "language_error": "The read operation timed out"
+      "language_error": "The read operation timed out",
+      "languages_declared": "Original",
+      "italian_audio_candidate": false
     },
     {
       "id": "2d2eff8fe749ddf3f8",
@@ -3160,6 +3168,6 @@
     }
   ],
   "italian_versions": [],
-  "language_checks_this_run": 8,
+  "language_checks_this_run": 2,
   "disclaimer": "Candidate da fonti ufficiali: il titolo o la lingua del feed NON verifica audio italiano o licenze."
 }
