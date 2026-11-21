@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-21T21:56:24.461589+00:00",
-  "editorial_updated_at": "2026-11-21T20:40:52.308685+01:00",
+  "news_updated_at": "2026-11-21T23:07:30.926222+00:00",
+  "editorial_updated_at": "2026-11-22T00:05:48.939375+01:00",
   "translations_updated_at": "2026-11-21T20:04:15.039036+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
   "feed_missing_body": 120,
   "feed_short_body": 0,
   "editorial_total": 28,
-  "archived_editorials": 347,
+  "archived_editorials": 350,
   "translation_records": 29,
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 5,
-  "editorial_galben": 34,
-  "editorial_rosu": 38,
+  "editorial_galben": 31,
+  "editorial_rosu": 41,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,12 +618,219 @@
   ],
   "recent_news": [
     {
-      "title": "Nicoleta Pauliuc contestă demiterea din funcția de președintă a Organizației Femeilor Liberale: „Eu nu consider că am greşit”",
+      "title": "Românii taie de pe lista de cumpărături medicamentele fără rețetă și suplimentele. Scădere de 6,7 milioane de cutii",
       "category": "România",
-      "published": "2026-11-21T21:45:09+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/nicoleta-pauliuc-contesta-demiterea-din-functia-de-presedinta-a-organizatiei-femeilor-liberale-eu-nu-consider-ca-am-gresit-4047347",
-      "source": "Digi24",
+      "published": "2026-11-21T23:06:26+00:00",
+      "url": "https://adevarul.ro/economie/romanii-taie-de-pe-lista-de-cumparaturi-2572808.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ukraine: Dashcam captures massive explosion on Lviv street",
+      "category": "Mondo",
+      "published": "2026-11-21T23:05:47+00:00",
+      "url": "https://www.euronews.com/video/2026/11/22/ukraine-dashcam-captures-massive-explosion-on-lviv-street",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "L’originale Consorzio de Gli Ambulanti di Forte dei Marmi® a MODENA sabato 28 novembre",
+      "category": "Italia",
+      "published": "2026-11-21T23:00:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/pubbliredazionali/loriginale-consorzio-de-gli-ambulanti-di-forte-dei-marmi-a-modena-sabato-28-novembre-eq5opfyp",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Veste bună pentru factura la gaze. Perioada în care prețul la gaze este plafonat, pregătită să fie extinsă până la final de 2027",
+      "category": "România",
+      "published": "2026-11-21T22:46:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/energie/veste-buna-pentru-factura-la-gaze-perioada-in-care-pretul-la-gaze-este-plafonat-pregatita-sa-fie-extinsa-pana-la-final-de-2027-23003083?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Dinamo-Petrolul Ploiești 0-1",
+      "category": "România",
+      "published": "2026-11-21T22:40:56+00:00",
+      "url": "https://www.romania-actualitati.ro/stiri/sport/dinamo-petrolul-ploiesti-0-1-id237877.html",
+      "source": "Radio România Actualități",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Brescello, due intossicati dal monossido della stufa",
+      "category": "Italia",
+      "published": "2026-11-21T22:36:19+00:00",
+      "url": "https://www.ilrestodelcarlino.it/reggio-emilia/cronaca/brescello-due-intossicati-dal-monossido-della-stufa-fe650384",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Orășelul de la poalele Făgărașului, ales de Ceaușescu pentru o centrală nucleară. Cum s-a risipit visul atomic al regimului comunist",
+      "category": "România",
+      "published": "2026-11-21T22:31:25+00:00",
+      "url": "https://adevarul.ro/stiri-locale/brasov/oraselul-de-la-poalele-fagarasului-ales-de-2572754.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "L'ex capo della Polizia De Gennaro si è ucciso, sconvolto dalle indagini su Via d'Amelio",
+      "category": "Italia",
+      "published": "2026-11-21T22:28:04+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/lex-capo-della-polizia-de-gennaro-si-e-ucciso-sparandosi.-la-procura-indaga-per_5bcb2e78-76a6-4c7d-b2ba-61000e349ee9.html",
+      "source": "ANSA",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ballando con le Stelle, scontro tra Mariotto e Pernice: \"Noi facciamo spettacolo non la Messa Cantata\"",
+      "category": "Italia",
+      "published": "2026-11-21T22:26:28+00:00",
+      "url": "https://www.today.it/tv/news/ballando-stelle/mariotto-pernice-noemi-bocchi-scontro.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "VIDEO INEDIT Tudor Chirilă și-a cumpărat casă veche de 100 ani și povestește o întâmplare: \"Fosta proprietară a venit să culeagă merele deși vânduse casa.\"",
+      "category": "România",
+      "published": "2026-11-21T22:22:00+00:00",
+      "url": "https://www.profit.ro/stiri/life/video-inedit-tudor-chirila-si-a-cumparat-casa-veche-de-100-ani-si-povesteste-o-intamplare-fosta-proprietara-a-venit-sa-culeaga-merele-desi-vanduse-casa-23003045?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+      "category": "Mondo",
+      "published": "2026-11-21T22:19:43+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ucraina a doborât pentru prima dată noua rachetă rusească Filin care zboară la altitudine foarte joasă și viteză mare",
+      "category": "România",
+      "published": "2026-11-21T22:14:07+00:00",
+      "url": "https://www.libertatea.ro/stiri/noua-racheta-ruseasca-filin-de-35-metri-doborata-pentru-prima-data-de-armata-ucraineana-in-regiunea-cernihiv-yr507b3",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Reggio ritrova il sorriso: contro Trieste finisce 89-94",
+      "category": "Italia",
+      "published": "2026-11-21T22:10:04+00:00",
+      "url": "https://www.ilrestodelcarlino.it/reggio-emilia/reggio-trieste-risultato-c7f42343",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A, un super McTominay regala al Napoli la vittoria scacciacrisi",
+      "category": "Italia",
+      "published": "2026-11-21T22:07:36+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/21/serie-a-un-super-mctominay-regala-al-napoli-la-vittoria-scacciacrisi_289b27ac-0805-4344-91a4-55efce609725.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Telefoanele, motiv de conflict în școli. Unde se termină dreptul profesorilor de a impune reguli și începe abuzul",
+      "category": "România",
+      "published": "2026-11-21T22:05:25+00:00",
+      "url": "https://adevarul.ro/stiri-interne/societate/telefoanele-motiv-de-conflict-in-scoli-unde-se-2572818.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ministrul Agriculturii, Florin Barbu, propune prelungirea plafonării adaosului comercial la alimente până la 31 decembrie 2027: „Mecanismul și-a produs efectele”",
+      "category": "România",
+      "published": "2026-11-21T22:04:27+00:00",
+      "url": "https://www.g4media.ro/ministrul-agriculturii-florin-barbu-propune-prelungirea-plafonarii-adaosului-comercial-la-alimente-pana-la-31-decembrie-2027-mecanismul-si-a-produs-efectele.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "ULTIMA ORĂ Dacia Sandero, de neoprit în Europa. Revine pe primul loc. Vânzările mărcii Dacia, trase în jos de scăderea neașteptată a lui Bigster. Cel mai mare pericol va fi pentru Sandero în decembrie",
+      "category": "România",
+      "published": "2026-11-21T22:04:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/auto-transporturi/ultima-ora-dacia-sandero-de-neoprit-in-europa-revine-pe-primul-loc-vanzarile-marcii-dacia-trase-in-jos-de-scaderea-neasteptata-a-lui-bigster-cel-mai-mare-pericol-va-fi-pentru-sandero-in-decembrie-23002113?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Bahrain says Iranian attack hits industrial facility",
+      "category": "Mondo",
+      "published": "2026-11-21T22:02:03+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/21/bahrain-says-iranian-attack-hits-industrial-facility?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Cartea electronică de identitate și călătoria cu buletinul vechi. Termen-limită anunțat de autorități până la care mai pot românii să călătorească în UE cu vechiul act: Din 3 august 2031 nu va mai putea fi folosit",
+      "category": "România",
+      "published": "2026-11-21T22:02:00+00:00",
+      "url": "https://www.profit.ro/stiri/social/cartea-electronica-identitate-calatoria-buletinul-vechi-termen-limita-anuntat-autoritati-pana-pot-romanii-calatoreasca-ue-vechiul-act-3-august-2031-putea-folosit-22719804?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Istoria zilei, 22 noiembrie. Războiul care a dus la pierderea Basarabiei. Cum a ajuns Rusia să ocupe jumătate din Moldova",
+      "category": "România",
+      "published": "2026-11-21T22:01:25+00:00",
+      "url": "https://adevarul.ro/istoria-zilei/istoria-zilei-22-noiembrie-razboiul-care-a-dus-2572801.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Amazon is complaining about NYC Council on shipping labels, too",
+      "category": "Tehnologie",
+      "published": "2026-11-21T21:59:31+00:00",
+      "url": "https://www.theverge.com/tech/1039564/amazon-nyc-council-packages-shipping-label",
+      "source": "The Verge",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Finale Atp Finals 2026, è sfida Alcaraz-Zverev: in palio il titolo e oltre 5 milioni di dollari",
+      "category": "Italia",
+      "published": "2026-11-21T21:51:36+00:00",
+      "url": "https://www.today.it/sport/atp-tennis/alcaraz-zverev-finale-atp-finals-2026-orario-tv-montepremi.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Un sistem stelar triplu imposibil, desprins parcă din „Problema celor trei corpuri”, descoperit la 28 de ani-lumină",
+      "category": "România",
+      "published": "2026-11-21T21:50:54+00:00",
+      "url": "https://www.libertatea.ro/stiri/sistem-stelar-triplu-imposibil-doua-pitice-albe-pitica-rosie-28-ani-lumina-l96lf4x",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Ballando con le Stelle, Paolo Belli commosso: \"Dopo la tragedia ho passato mesi senza uscire di casa. Ritorno qui perchè qui è casa\"",
+      "category": "Italia",
+      "published": "2026-11-21T21:45:42+00:00",
+      "url": "https://www.today.it/tv/news/ballando-stelle/paolo-belli-commosso-qui-casa.html",
+      "source": "Today",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -632,15 +839,6 @@
       "published": "2026-11-21T21:41:10+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/21/serie-a-napoli-torino-1-0_289b27ac-0805-4344-91a4-55efce609725.html",
       "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "O aplicație românească promite mai puține certuri după divorț: „Poate organiza un calendar, dar nu poate vindeca resentimentele”",
-      "category": "România",
-      "published": "2026-11-21T21:34:25+00:00",
-      "url": "https://adevarul.ro/dezvoltare-personala/relatii/o-aplicatie-romaneasca-promite-mai-putine-certuri-2573115.html",
-      "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
@@ -659,42 +857,6 @@
       "published": "2026-11-21T21:31:03+00:00",
       "url": "https://www.aljazeera.com/news/2026/11/21/bahrain-says-iranian-attack-causes-fire-at-industrial-facility?traffic_source=rss",
       "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Claudiu Târziu susţine că a fost ţinut şi interogat timp de 40 de minute la controlul de pe aeroportul din Chişinău. Ce spune IGPF",
-      "category": "România",
-      "published": "2026-11-21T21:28:21+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/claudiu-tarziu-sustine-ca-a-fost-tinut-si-interogat-timp-de-40-de-minute-la-controlul-de-pe-aeroportul-din-chisinau-ce-spune-igpf-4047517",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Alexandru Rogobete spune care este cel mai ciudat neadevăr vehiculat în spațiul public despre el: „Că nu am şcoală”",
-      "category": "România",
-      "published": "2026-11-21T21:26:07+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/alexandru-rogobete-spune-care-este-cel-mai-ciudat-neadevar-vehiculat-in-spatiul-public-despre-el-ca-nu-am-scoala-4047511",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "VIDEO | Ministrul Energiei vrea prelungirea plafonării prețului la gaze până la finalul lui 2027: Prețul pentru populație este de 110 lei, față de 500 de lei în piață",
-      "category": "România",
-      "published": "2026-11-21T21:25:11+00:00",
-      "url": "https://economedia.ro/video-ministrul-energiei-vrea-prelungirea-plafonarii-pretului-la-gaze-pana-la-finalul-lui-2027-pretul-pentru-populatie-este-de-110-lei-fata-de-500-de-lei-in-piata.html",
-      "source": "Economedia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Ministrul Energiei: Gazele din Neptun Deep vor fi folosite în România",
-      "category": "România",
-      "published": "2026-11-21T21:19:33+00:00",
-      "url": "https://economedia.ro/ministrul-energiei-gazele-din-neptun-deep-vor-fi-folosite-in-romania.html",
-      "source": "Economedia",
       "status": "roșu",
       "words": 0
     },
@@ -744,15 +906,6 @@
       "words": 0
     },
     {
-      "title": "Calea ferată a momârlanilor, abandonată după 150 de ani. Șinele atârnă deasupra craterului uriaș format după alunecarea unui deal",
-      "category": "România",
-      "published": "2026-11-21T21:03:25+00:00",
-      "url": "https://adevarul.ro/stiri-locale/hunedoara/calea-ferata-a-momarlanilor-abandonata-dupa-150-2572854.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Brazil’s Jair Bolsonaro in intensive care with bowel obstruction",
       "category": "Mondo",
       "published": "2026-11-21T21:02:18+00:00",
@@ -777,42 +930,6 @@
       "url": "https://www.aljazeera.com/news/2026/11/21/iran-says-held-talks-with-qatari-mediators-urges-us-to-accept-conditions?traffic_source=rss",
       "source": "Al Jazeera English",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "FBI a fost vizat de un al doilea atac cibernetic la interval de câteva luni",
-      "category": "România",
-      "published": "2026-11-21T20:55:19+00:00",
-      "url": "https://hotnews.ro/fbi-a-fost-vizat-de-un-al-doilea-atac-cibernetic-la-interval-de-cateva-luni-2410727",
-      "source": "HotNews",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "12 producători români de componente auto au discutat cu BYD Global la Paris. Companiile locale vor să intre în lanțul european de furnizori al grupului chinez",
-      "category": "România",
-      "published": "2026-11-21T20:53:56+00:00",
-      "url": "https://economedia.ro/12-producatori-romani-de-componente-auto-au-discutat-cu-byd-global-la-paris-companiile-locale-vor-sa-intre-in-lantul-european-de-furnizori-al-grupului-chinez.html",
-      "source": "Economedia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "„Nu-mi place”. Ce informații speră Donald Trump să dezvăluie hackerii care au atacat cibernetic FBI",
-      "category": "România",
-      "published": "2026-11-21T20:52:52+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/nu-mi-place-ce-informatii-spera-donald-trump-sa-dezvaluie-hackerii-care-au-atacat-cibernetic-fbi-4047501",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "VIDEO Alexandru Rogobete la Digi24: „Nici nu știam unde e ministerul Sănătății, l-am găsit între timp. Sistemului sanitar românesc i-aș da acum nota 8”",
-      "category": "România",
-      "published": "2026-11-21T20:49:48+00:00",
-      "url": "https://www.g4media.ro/video-alexandru-rogobete-la-digi24-nici-nu-stiam-unde-e-ministerul-sanatatii-l-am-gasit-intre-timp-sistemului-sanitar-romanesc-i-as-da-acum-nota-8.html",
-      "source": "G4Media",
-      "status": "galben",
       "words": 0
     },
     {
@@ -843,42 +960,6 @@
       "words": 0
     },
     {
-      "title": "Meciul Dinamo - Petrolul a fost întrerupt 20 de minute, fanii au răsturnat monitorul VAR!",
-      "category": "România",
-      "published": "2026-11-21T20:43:03+00:00",
-      "url": "https://adevarul.ro/sport/meciul-dinamo-petrolul-a-fost-intrerupt-20-de-2573384.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "La ricetta di Orietta Berti: “Nelle giornate tristi sconfiggo la malinconia con un gin tonic e le poesie di Evtusenko”",
-      "category": "Italia",
-      "published": "2026-11-21T20:37:49+00:00",
-      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/orietta-berti-si-racconta--t6m88sxv",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "FOCUS | Nella notte il lascito di De Gennaro, la sua verità senza appello sulla vicenda Borsellino",
-      "category": "Italia",
-      "published": "2026-11-21T20:37:21+00:00",
-      "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/11/21/focus-nella-notte-il-lascito-di-de-gennaro-la-sua-verita-senza-appello-sulla_f49638b3-73fa-46e7-978c-18d09a469089.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Stretta di Fdi su studenti e cortei, 'agli indagati via le borse di studio'",
-      "category": "Italia",
-      "published": "2026-11-21T20:33:37+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/21/stretta-di-fdi-su-studenti-e-cortei-agli-indagati-via-le-borse-di-studio_f2ff1955-8465-47a7-a924-b8ab597b2323.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Șapte tendințe în călătorii care vor defini anul 2027",
       "category": "Călătorii",
       "published": "2026-11-21T20:30:16+00:00",
@@ -888,56 +969,11 @@
       "words": 0
     },
     {
-      "title": "Ballando con le Stelle, Milly Carlucci smorza le polemiche: \"Qui aleggia solo profumo di arte e di ballo\". Barbara d'Urso a distanza di sicurezza da Mariotto",
-      "category": "Italia",
-      "published": "2026-11-21T20:24:22+00:00",
-      "url": "https://www.today.it/tv/news/ballando-stelle/milly-carlucci-profumo-barbara-d-urso-mariotto.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Video shows Mexican forces capturing 'El Chapo Isidro', FBI most-wanted cartel boss",
-      "category": "Mondo",
-      "published": "2026-11-21T20:24:17+00:00",
-      "url": "https://www.euronews.com/2026/11/21/video-shows-mexican-forces-capturing-el-chapo-isidro-fbi-most-wanted-cartel-boss",
-      "source": "Euronews English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Orietta Berti presenta il suo libro a Bologna: il video",
-      "category": "Italia",
-      "published": "2026-11-21T20:24:04+00:00",
-      "url": "https://www.ilrestodelcarlino.it/video/orietta-berti-presenta-il-suo-libro-a-bologna-il-video-w0bwir27",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "France’s sixth consecutive Saturday of protests draw lower turnout",
-      "category": "Mondo",
-      "published": "2026-11-21T20:20:37+00:00",
-      "url": "https://www.france24.com/en/france/20261121-france-s-sixth-consecutive-saturday-of-protests-draw-lower-turnout",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "AI Act: UE interroga OpenAI e Anthropic su 20+ incidenti",
       "category": "Inteligență artificială",
       "published": "2026-11-21T20:17:29+00:00",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNdWhNODJucHhyckxwZ0hJazFXSkxSa04tN1RqWE14TUwxVUxQUXlFSXhROUw1X0IxSlRvVEVsWmh0Ny1vSHYyYTBhZHhleTlURFhjQ2tPX3FLWGR3Um9iQXpWNFRNbTRIMkNQOG5aZ21VNm9MR3I0Q1A2ZWE5bDVma1d1T1NJOGxrVjlnc0NvQQ?oc=5",
       "source": "shattered.io",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "'Worst Ever' COP Summit?",
-      "category": "Mondo",
-      "published": "2026-11-21T20:08:48+00:00",
-      "url": "https://www.france24.com/en/tv-shows/spotlight/20261121-worst-ever-cop-summit",
-      "source": "France 24",
       "status": "roșu",
       "words": 0
     },
@@ -965,33 +1001,6 @@
       "published": "2026-11-21T20:00:06+00:00",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
       "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Le ultime ore di Gianni De Gennaro da solo, la pistola trovata accanto al corpo",
-      "category": "Italia",
-      "published": "2026-11-21T19:52:01+00:00",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/le-ultime-ore-di-gianni-de-gennaro-da-solo-la-pistola-trovata-accanto-al-corpo_62566f21-e7ca-4243-a0b3-26a71e01c4ea.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "In migliaia per salutare Augias, l’abbraccio dei giovani: “Per noi era un maestro di impegno”",
-      "category": "Italia",
-      "published": "2026-11-21T19:50:14+00:00",
-      "url": "https://www.repubblica.it/spettacoli/tv-radio/2026/11/21/news/augias_camera_ardente_campidoglio_migliaia_di_persone-425740898/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Coppa Davis a Bologna, da Berrettini a Zverev: orari e partite, ecco tutto quello che c’è da sapere",
-      "category": "Italia",
-      "published": "2026-11-21T19:40:59+00:00",
-      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/coppa-davis-squadre-orari-bologna-a7mh8fht",
-      "source": "Il Resto del Carlino",
       "status": "roșu",
       "words": 0
     },
@@ -1046,15 +1055,6 @@
       "published": "2026-11-21T16:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaHFzZ2IxRGdzYTBpb3V4QjNvUG8tbzg3bkxEMC0zLUN0M1lCbEN3V0g1UHRLWi1BdFk0bEtJUW0zM3Vpb3Ftb1ladElzTFBOcTZTMXpHTVl2OHgwelVoREFXN3RZR3ZSaGw5QWFBSnprdm1DWXMyRjVjMG1YclBmLWtIS3FZdw?oc=5",
       "source": "MYmovies",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "John Roberts, the voice of Linda Belcher, is just happy to finish a thing",
-      "category": "Tehnologie",
-      "published": "2026-11-21T16:00:00+00:00",
-      "url": "https://www.theverge.com/report/1038463/john-roberts-linda-belcher-bobs-burgers-interview",
-      "source": "The Verge",
       "status": "roșu",
       "words": 0
     },
