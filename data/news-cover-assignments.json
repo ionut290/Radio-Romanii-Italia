@@ -1,8 +1,26 @@
 {
-  "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/lex-capo-della-polizia-de-gennaro-si-e-ucciso_5bcb2e78-76a6-4c7d-b2ba-61000e349ee9.html": {
+  "https://www.romania-actualitati.ro/stiri/romania/bucuresti-primaria-are-de-platit-300-de-milioane-de-lei-catre-termoenergetica-id237860.html": {
+    "image": "./editorial-images/news-covers/rdi-biblioteca-consiglio-cittadino.jpg",
+    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+    "matched_description": "Assemblea pubblica in una sala comunale",
+    "selection": "subject-matched-v3"
+  },
+  "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/lex-capo-della-polizia-de-gennaro-si-e-ucciso-sparandosi.-il-legale-conseguenze-di-accuse_5bcb2e78-76a6-4c7d-b2ba-61000e349ee9.html": {
     "image": "./editorial-images/news-covers/rdi-biblioteca-polizia-quartiere.jpg",
     "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
     "matched_description": "Agenti parlano con un commerciante in città",
+    "selection": "subject-matched-v3"
+  },
+  "https://www.ilsole24ore.com/art/de-gennaro-piantedosi-figlio-giudice-borsellino-reazioni-notizia-suicidio-AJu9QNOC": {
+    "image": "./editorial-images/news-covers/rdi-biblioteca-giudice-tribunale.jpg",
+    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+    "matched_description": "Giudice entra in un’aula di tribunale",
+    "selection": "subject-matched-v3"
+  },
+  "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNRzNTdkVFR0o3YXFRYU1LX1JVSzE5SDBjQzVoWmdUODV1Y0ExSTFad0ppNlp5Wmw0U3NRZHVCSXEzUF9ZVDFiQk52cjNTcGVXSkktWUktb18wM0Izcnk2MGo3bjl1Rmxma3JsQVZRd1RBZ0k3YUp0Yi1mOS1jZTk3NEliZGJlMWVPU0hUNWNDRXhtRWxEZUZaRnNuWW5LeThCQUxiUVY4MVFId3hvTE1GYzlNaHZubWQyMWcyaVA2RVRmZlBpeWMzVW1nQnIyUFNsdFIydkdKbw?oc=5": {
+    "image": "./editorial-images/news-covers/rdi-biblioteca-viaggio-aeroporto.jpg",
+    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
+    "matched_description": "Famiglia attende in un terminal aeroportuale",
     "selection": "subject-matched-v3"
   },
   "https://news.google.com/rss/articles/CBMilAFBVV95cUxPbjFndXQwdmgxWnprT1VaQUFKOThQeVE1V2dBbDF5WU5tY1pxYnNIbTBteklwd3dlMXd3QU9QTk5oUGZrYzJzZmowMVR5ZUN1clVXR1BwNGk0VTdYV2Uzb1RmaEFUYmQtRDJDTFhkZVdBdC1WZWVEMXkzVk5vYXk3OXdDbkFUalJTWkxQWFlRRm5abWwx0gGbAUFVX3lxTE9qOEhGa1FwcWlrYk9NTjFqcFNiQ1dzcWJQVGVFM2xqa211NHRqc1IzNVcxcTlIQkJocVRzc2FBX1RkajJ4WTlqWHJfZ3V0cDRpNVJfaUtMZl85ZVZrbjRkRmdHQWw1azRteGdQb0hsNS1UaXJIdnJTYzhWT2Zvd0YyNjljUFBFYTNld0Nhakh6XzRFYm5KaFlPak1J?oc=5": {
@@ -23,22 +41,10 @@
     "matched_description": "Addetta controlla pacchi in un magazzino logistico",
     "selection": "subject-matched-v3"
   },
-  "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcGlaVDVzelliRHV4WDdTX3QxQmJVNVp3NnNZR3l1Zi1hOWxpVTdiQUluMWY2dHVBNlg1bGFKTFZlWTN4M25LcUVuOWc1S1pBOGJIWktUX3RjTmpUdDljOGFld1pKR3NwV2M0NjJIdHF2RndmUVhvSmUzelJKVUc1cE9oRFBWeTVZU3cyTkY3SzZUaG9PTmdrQw?oc=5": {
-    "image": "./editorial-images/news-covers/rdi-biblioteca-incontro-genitori-scuola.jpg",
-    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
-    "matched_description": "Genitori romeni parlano con insegnanti a scuola",
-    "selection": "subject-matched-v3"
-  },
   "https://news.google.com/rss/articles/CBMihgJBVV95cUxOcWd5OGpBNnhQUklFbVY2VVZ5WXItemk1V2RJTm83SXBiY2k4NU5RVWR1ek9JUXJFWFUyVEFOUFNXa1J6ZE9jNjc5M3RkOTgzQWZVQkU5ekpyWlV2YnA3b3ljbDQxTHhaUWduVUtDUzhaNEFIWEFvMENxRHBlaWlSNDZmcDhaeXdveWNFZlpvaVV5ZG4zQXZ3VWtNYTZrX2RHRGltdkJiZ0E3cUtFMUplRTI1YmZYNUcza2xmVmxYRzR4djhCQXhFTURUX2xrOVRuNmduUW9td2trdzdyYlNkcUl4RkpQVkNGQ0Uyd3BLcWRJckVpc2RpZkpqeTliQnQxSVE1bWh3?oc=5": {
     "image": "./editorial-images/news-covers/rdi-biblioteca-treno-regionale.jpg",
     "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
     "matched_description": "Pendolari salgono su un treno regionale",
-    "selection": "subject-matched-v3"
-  },
-  "https://news.google.com/rss/articles/CBMixAFBVV95cUxNcjZYSXJ3VnNPTDFMb2dicDZ1aEQ0bkdIaW15MDUwRUViS1dYWklHcVNtbFJvYllqWUFtN1NyT3BhOTdHVzc2ajBDS1E3X1RVV1JKNFNUMk9oNUEzQy1MQjJKNmdtSTRDU2xTbUpYeGNDbGx4ZTNjWlQ1T0Z5V2Z3VkxlYTJLQkdRQWw1SklIQ1hYd2ZzT1hJbGRndnFMSkltcm5CLWR5NXp2SzkxcGdIcXgzZi16a1AwRTc0aW1UdnFhZEla?oc=5": {
-    "image": "./editorial-images/news-covers/rdi-biblioteca-viaggiatori-mappa-binari.jpg",
-    "credit": "Copertina fotorealistica generata con IA; immagine di contesto, non la fotografia dell’evento.",
-    "matched_description": "Viaggiatori consultano una mappa su una banchina ferroviaria",
     "selection": "subject-matched-v3"
   }
 }
