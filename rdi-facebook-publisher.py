@@ -110,18 +110,34 @@ def message_for(item: dict) -> str:
     return "\n\n".join(lines)
 
 
+def photo_url_for(item: dict) -> str:
+    """Restituisce una foto sorgente o una foto RDI pertinente in formato supportato."""
+    image = str(item.get("image") or "").strip()
+    if image.startswith("https://") and item.get("imageType") != "editorial-illustration":
+        return image
+    # I percorsi relativi del feed puntano a file versionati nel sito RDI.
+    # Facebook non accetta SVG come foto: usa solo JPEG/PNG editoriali pertinenti.
+    normalized = image.removeprefix("./")
+    if (
+        image.startswith("./editorial-images/")
+        and item.get("imageType") == "ai-editorial-photo"
+        and pathlib.PurePosixPath(normalized).suffix.lower() in {".jpg", ".jpeg", ".png"}
+        and ".." not in pathlib.PurePosixPath(normalized).parts
+    ):
+        return "https://raw.githubusercontent.com/ionut290/Radio-Romanii-Italia/main/" + normalized
+    return ""
+
+
 def publish(item: dict, message: str | None = None) -> str:
     if DRY_RUN:
         return "dry-run"
     if not PAGE_ID or not PAGE_TOKEN:
         raise RuntimeError("RDI_FB_PAGE_ID e RDI_FB_PAGE_TOKEN sono obbligatori per pubblicare")
-    image_url = str(item.get("image") or "").strip()
-    # All publications, including live promos, must carry a real photo.
-    # Editorial illustrations and missing/invalid image URLs use RDI branding.
-    use_original = (
-        image_url.startswith("https://")
-        and item.get("imageType") != "editorial-illustration"
-    )
+    image_url = photo_url_for(item)
+    is_live_promo = str(item.get("url") or "") == YOUTUBE_LIVE_URL
+    if not image_url and not is_live_promo:
+        raise RuntimeError("Articolo senza foto: pubblicazione saltata per evitare la copertina RDI generica")
+    use_original = bool(image_url)
     chosen_photo = image_url if use_original else RDI_FALLBACK_IMAGE_URL
     post_message = message if message is not None else message_for(item)
     url = f"https://graph.facebook.com/{GRAPH_VERSION}/{PAGE_ID}/photos"
@@ -228,13 +244,17 @@ def main() -> None:
     for item in items:
         if not isinstance(item, dict) or not item.get("url") or not item.get("title"):
             continue
+        # Gli articoli senza una foto editoriale o della fonte attendono una
+        # prossima scansione: non riempire il post con la copertina generica.
+        if not photo_url_for(item):
+            continue
         key = item_key(item)
         if key not in published:
             candidates.append((key, item))
     candidates.sort(key=lambda pair: news_score(pair[1]), reverse=True)
     force_first_photo = state.get("hourly_photo_launch") != "2026-11-15-v1"
     if force_first_photo:
-        candidates.sort(key=lambda pair: not str(pair[1].get("image") or "").startswith(("https://", "http://")))
+        candidates.sort(key=lambda pair: not bool(photo_url_for(pair[1])))
 
     last_news_times = [
         str(value.get("published_at", ""))
