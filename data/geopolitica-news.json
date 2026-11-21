@@ -1,12 +1,37 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-21T18:40:20.161346Z",
+  "updated_at": "2026-11-21T19:50:44.783606Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-8ffe59a87e19736f",
+      "category": "clima",
+      "region": "global",
+      "title": "Climate talks stall as countries mull showdown with Saudi Arabia over fossil fuel phase-out",
+      "summary": "",
+      "source": "The Guardian",
+      "published": "2026-11-21T19:46:04Z",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU1kxQzdNNXpJY0dmendlY1VjSG5EdHUwbmpjTkdCMDgxR3UxWnZOOEs3MEktTW1PakJWOExhMzdEX0wwSVdQS29Rb3lXeVhwRnlvYW1Ia3o3RGJYQkxmejhVTWhxZTRIdmlxQjJFbWVpUHdRTHhZV2ZQaGtFZ1VpdEhOcGhqYjhaOTl2WjJ0OEtqZ2VwbzNOazFMaGRVbTh0bDdIeDlOUkUtZ200VjZJYjdJMlZVaWhpZGUtSEZIRHl1THVy?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-ac44d7fc13ebec6a",
+      "category": "securitate",
+      "region": "europa",
+      "title": "In secret memo, Hegseth restricts U.S.-Canada defense relationship",
+      "summary": "",
+      "source": "The Washington Post",
+      "published": "2026-11-21T18:35:36Z",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPLThpNHAzbEIyTzc1LWo2X29EZ2Z2bXk0NUZRMXJJVkVCazVaSVFnNmlkLUFJeG9IRWYwaUhvTUZ1TGNoM2p0RE5wMEVpcEdpVkhnWFVtblVMMFRrbmdGLXZxOFU1M2FHbTJiM1ZadUhIeHhtbGpMWFNiTjU1MF9tYnVOclJ3NFFUcXY0OW5mNFNUckxmMW9fQjBveHZUTExLU1g1a2Raa19FVkhkWDJhSDN1WDJIeVJnTC1uNTl3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Într-un memoriu secret, Hegseth limitează relația de apărare dintre SUA și Canada",
+      "title_it": "In una nota segreta, Hegseth limita le relazioni di difesa tra Stati Uniti e Canada",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-b933e3cf9a6de392",
       "category": "diplomatie",
@@ -17,20 +42,6 @@
       "published": "2026-11-21T18:35:04Z",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZ0ZCd2lBT0hiX002OURFcUtPM1g4TFd2MkdsYWg0NDJZdWRGdDdNOGFDTXlsMF9PS3hoUWMxY21PZ3QxcTM2TzFwWmpkUGNpb1hGTjVPOTBULVhINS1FSnlQTFdFamJqM2VJSW1jb2RTcUZHaUd0U3piYkhDRjFmNm1lVWxvM1c0aGxuag?oc=5",
       "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-ac44d7fc13ebec6a",
-      "category": "securitate",
-      "region": "europa",
-      "title": "In secret memo, Hegseth restricts U.S.-Canada defense relationship",
-      "summary": "",
-      "source": "The Washington Post",
-      "published": "2026-11-21T18:29:19Z",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPLThpNHAzbEIyTzc1LWo2X29EZ2Z2bXk0NUZRMXJJVkVCazVaSVFnNmlkLUFJeG9IRWYwaUhvTUZ1TGNoM2p0RE5wMEVpcEdpVkhnWFVtblVMMFRrbmdGLXZxOFU1M2FHbTJiM1ZadUhIeHhtbGpMWFNiTjU1MF9tYnVOclJ3NFFUcXY0OW5mNFNUckxmMW9fQjBveHZUTExLU1g1a2Raa19FVkhkWDJhSDN1WDJIeVJnTC1uNTl3?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Într-un memoriu secret, Hegseth limitează relația de apărare dintre SUA și Canada",
-      "title_it": "In una nota segreta, Hegseth limita le relazioni di difesa tra Stati Uniti e Canada",
-      "translation_status": "machine_translation"
     },
     {
       "id": "geo-0880e1776c052bf1",
@@ -52,6 +63,17 @@
       "source": "Stiripesurse",
       "published": "2026-11-21T18:06:49Z",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOU2FOWTZ3SmRXd0tPVjdXc2twZ1JoZmtGa0E2WFM1Y0UyS05JcUtud2RaaE9ySFlfaENKbkwxMHQ5N0FRNGFHay1sVVQwNnYyZXZnWXlrRzk4QVFWc2lJbzltY3hVTk5ERjhLNmY4VFprMm9KZUluTVVLU0pDZi1xeVd5NzdoYllUd0tid2FfSmdfWW04VzVTbW9IVHU0X0tGeENETElwV3hZQUV2WWtEbkhmU3pPaUNTeVE?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-de765f15b67430fb",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31 talks drag on as nations remain divided over fossil fuel phase-out",
+      "summary": "",
+      "source": "Deccan Herald",
+      "published": "2026-11-21T17:03:18Z",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOWmJRUWlZbmdrekdXeHNYU2lQLUJZSVgtc0JrMjhDa0NhcXdCeGpDVEZnTGNqZWpfUThlTkJnZklxUy1XRWFkNHowc0F4NGt4c1JYOTZMb0VkNXRTYklpMENFRFpoOXFLdWhoVGV5WkF1UjFxSVowZFBEVE85OWNvTWpLQk5YdS0yLXZBZHp5MmJGQWkxZUZuR3gwWHgwZGpPMVlYUUhCRTdLbnFuY3V5MXNxS1MyZU5UVnV5QTVwQUJiN1hfSXppdnA0d9IBywFBVV95cUxOWmJRUWlZbmdrekdXeHNYU2lQLUJZSVgtc0JrMjhDa0NhcXdCeGpDVEZnTGNqZWpfUThlTkJnZklxUy1XRWFkNHowc0F4NGt4c1JYOTZMb0VkNXRTYklpMENFRFpoOXFLdWhoVGV5WkF1UjFxSVowZFBEVE85OWNvTWpLQk5YdS0yLXZBZHp5MmJGQWkxZUZuR3gwWHgwZGpPMVlYUUhCRTdLbnFuY3V5MXNxS1MyZU5UVnV5QTVwQUJiN1hfSXppdnA0dw?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -247,6 +269,17 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-65c5c7d3ca2cd707",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Xinhua Headlines: Why China-Russia-U.S. summit hailed historic for world stability, peace",
+      "summary": "",
+      "source": "Xinhua",
+      "published": "2026-11-21T13:49:15Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9tbkswWkt6cjM1M0Uwd0hGVUhwWlRtS3dnT2NVUXk1NGxOWDd0dmlqRXg5U1lydm5hWnVFTzZvZkk0VFZTSXJHdzVROTJmcnhfVnBLZ2lDOV9LeDBMOXltbV9mN3E3cVA1UDBibE5MTURpejhtXzdJbHczTDI?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-361fd686a9023bf3",
       "category": "diplomatie",
       "region": "global",
@@ -286,6 +319,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-7c395a66ea2e625e",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Volodymyr Zelensky called Ukraine's NATO membership a cheaper and better security guarantee",
+      "summary": "",
+      "source": "Судово-юридична газета",
+      "published": "2026-11-21T13:07:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPeUgzTFZJcUhoT2tIWDMycGQxQkdhTmZUdFA3OC03X0Vab2VHWWs3MF9mRTFVODVQVUl4YkdNVlN4UW1fMGNlbnpIekplbzRsQi1DNEt6bmpKSU5DX3FVNlNCdUlsM2V2SGNGR1dlSXIxS1pRLXRQWW55NmNkNEl6R21WMUhvMjJlOF9mWDVNclZXV3hXNWwxSThRcFdxOVMxdjhIanctU2xEVzJ3T0hJal80UHRmTGVzVFZpeXp3X1M3OE5zZXZPc2x2dzgwdDNQR0I3Rw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-da503f5e92d11919",
       "category": "europa",
       "region": "europa",
@@ -294,17 +338,6 @@
       "source": "Agerpres",
       "published": "2026-11-21T13:01:35Z",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQLTJiaERYakVaZEgxakp2bjFIQklMc25NX1l5Y1NuVmpSZDZvaENiUVFuelFNTk9rNVM5dHAwS2NncUplZ2hmRDRzeTFjWl9UT3dpWVJaRWRLWmd1ajNMWTRQeFFGM0hGU3hlbHBGVWdaYm1Wa1F2Q2prRmRvQTJHTkFITTV5VE1sT3RiYmVzS1FMNzMwNWNmdE9fQUhwMlptbTc0c3cxcm1SRW9GRVdUTEtfM0VhSDNvbXVDbmZiWUp2ME5VTi1IcDRkVk9qckxBTDNlekJhMk1qZlRTTUMyWFEwRXlOZlotekw0?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-61e2dfeeaea9b2b5",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Russia's Reported NATO Demands Raise Alarm In Central Asia, Caucasus",
-      "summary": "",
-      "source": "Radio Free Europe/Radio Liberty",
-      "published": "2026-11-21T12:31:01Z",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdzVXRHNGbXZINC16Y2wycC03WE1RNDhVV2VUbWc0S05kTkwtQkpsdHkwWm1jajNYanRxX3hJLTJGa003c1VrLWU0SlBWZVplU1p5RF83c3dHcUNCRFFLRHhHU2ZFbDQ3QkpSVDNJUFpwVjhfYW12cTYtM3NydXBVUUFnbHFfRE9YU1pHOXl30gGQAUFVX3lxTE9LUG96SFdVNjZCUVg5MFpraDVORXFkR2Z3WDBJRUE4WTVJRzA2QndFMWo5bFJ6SXZrcFJJa2Y4a3ZzUzhPbnAxMnhUVVVCbE5MZHlQa0VqaGRzQmxYakZaeEZXem5KdzVPZDRGZlFqdXJEQVFYekZlQkxyUkpGc0haaE0tUE9yckNCWlVoTHcwWg?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -345,17 +378,6 @@
       "title_ro": "Xi Jinping întărește poziția globală a Chinei în timp ce Trump celebrează summit-ul diplomatic",
       "title_it": "Xi Jinping rafforza la posizione globale della Cina mentre Trump celebra il vertice diplomatico",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-56850a32922fac31",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "The Shenzhen Stabiliser: China’s Convening Power and the Limits of Great-Power Dialogue",
-      "summary": "",
-      "source": "The Friday Times",
-      "published": "2026-11-21T11:51:00Z",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOTFDRlJreWZZWWh0RWdXaTJDbVc4RXUzUVI2c3dWSmVrYnZaS29KY2xpcEwzOTFPR1hyNElEd3d0WGJlam1jNXA5SkNTRW43ZUF6cW1VXzIxT3E5WG84UXdhajY4MnFxYmVhOGZWLUVEYWdldVVjWWpZN3lOZC1XQmZ5ZElqOEF4WTFBYldWdnFKWFpVU1pWRjBDMXdEUi1ZOW5TbENPRTRKMWxPNEZlN25sRGs?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-3b801e1fd2f9422d",
@@ -480,20 +502,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "UE, dublu summit de la Dublin: focus pe Ucraina și inteligența artificială",
       "title_it": "Ue, doppio summit a Dublino: focus su Ucraina e intelligenza artificiale",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-3ead1689b170104b",
-      "category": "clima",
-      "region": "global",
-      "title": "Fossil Fuel Dispute Pushes Antalya COP31 Talks Past Deadline",
-      "summary": "",
-      "source": "https://streamlinefeed.co.ke/",
-      "published": "2026-11-21T09:31:00Z",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxONHlXN0Vickh6TzVUbmNVVkNiWjdzR1ZBWk11cHFwOG9UQThWdDJSQlktWjFIb0tVYTBUMWN4MnA3Q1JVamVmRjViMmtpYkFQRl9wMWVNMFlTcHdRM0VtM2FZLUZ3OW90V2xnOUdCMUtIVi1BclR4UUFpOWlwTDVvbDVzb1dIQVNEcW9iNkdDdTNUUWRFUDVJZkRB?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Disputa privind combustibilii fosili împinge discuțiile COP31 din Antalya peste termenul limită",
-      "title_it": "La controversia sui combustibili fossili spinge i colloqui della COP31 di Antalya oltre la scadenza",
       "translation_status": "machine_translation"
     },
     {
@@ -632,17 +640,6 @@
       "title_ro": "Hamas îndeamnă la acțiune internațională împotriva raidurilor israeliene și a încălcărilor de încetare a focului în Gaza",
       "title_it": "Hamas sollecita un'azione internazionale contro i raid israeliani e le violazioni del cessate il fuoco a Gaza",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-ab5c7a7b6ff22748",
-      "category": "securitate",
-      "region": "europa",
-      "title": "The US has left open the possibility of protecting Ukraine using a mechanism similar to NATO's.",
-      "summary": "",
-      "source": "Vietnam.vn",
-      "published": "2026-11-21T04:21:06Z",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTTJRa21vbDZ3c3FKU1FXTDg2NWUzOThPVHViRVBKcEJkc1lneWV6QVVvVGVMUXF0ZzBnSTM3VHk5bDV0VENfcF9vUTlmRmktcEdtUWpjSEpFd0t4ZkI2aXhCTE5pTzk1U1NIeVoxVk1zV3lJRm5TZTY5eE5RRE1UalZ4WVpuX1k?oc=5",
-      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-73c6d7dfb10bb798",
