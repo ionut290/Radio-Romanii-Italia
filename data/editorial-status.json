@@ -1,7 +1,7 @@
 {
-  "news_updated_at": "2026-11-22T21:56:43.529242+00:00",
+  "news_updated_at": "2026-11-22T21:57:37.056350+00:00",
   "editorial_updated_at": "2026-11-22T20:28:34.497453+01:00",
-  "translations_updated_at": "2026-11-22T21:17:53.746177+00:00",
+  "translations_updated_at": "2026-11-22T21:56:42.332031+00:00",
   "feed_total": 120,
   "feed_extended_400": 2,
   "feed_missing_body": 118,
@@ -12,7 +12,7 @@
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 4,
-  "editorial_galben": 25,
+  "editorial_galben": 24,
   "editorial_rosu": 45,
   "pending": [
     {
@@ -618,9 +618,9 @@
   ],
   "recent_news": [
     {
-      "title": "Incendiu puternic la un hotel din Poiana Braşov. La intervenție au fost aduși în sprijin pompieri din alte trei județe",
+      "title": "Incendiu puternic la un hotel din Poiana Braşov. La intervenție au fost aduși în sprijin pompieri din încă trei județe",
       "category": "România",
-      "published": "2026-11-22T21:53:07+00:00",
+      "published": "2026-11-22T21:56:25+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/incendiu-puternic-la-un-hotel-din-poiana-brasov-intervin-pompieri-din-patru-judete-4048199",
       "source": "Digi24",
       "status": "verde",
@@ -641,6 +641,15 @@
       "published": "2026-11-22T21:45:00+00:00",
       "url": "https://www.profit.ro/povesti-cu-profit/romania-in-cartea-recordurilor-locul-1-in-europa-si-locul-2-in-lume-in-guinness-world-records-2027-ultimul-record-anuntat-la-profit-ro-tv-23004763?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
       "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A, Atalanta-Inter finisce 4-4",
+      "category": "Italia",
+      "published": "2026-11-22T21:44:09+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/serie-a-atalanta-inter-finisce-4-4_33021a11-0a66-40a8-a1e9-6b52d22307f0.html",
+      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -704,6 +713,15 @@
       "published": "2026-11-22T21:26:12+00:00",
       "url": "https://www.aljazeera.com/sports/2026/11/22/heartbreak-in-us-capital-as-washington-spirit-lose-womens-football-final?traffic_source=rss",
       "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Alcaraz si laurea 'maestro', vince le sue prime Atp Finals",
+      "category": "Italia",
+      "published": "2026-11-22T21:22:57+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/22/atp-finals-alcaraz-batte-zverev-e-conquista-il-suo-primo-titolo-del_edfb3ff5-f27f-4b0d-9e7e-6c8409ae4446.html",
+      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -843,15 +861,6 @@
       "words": 0
     },
     {
-      "title": "Sub amenințarea lui Le Pen, Germania vrea un mecanism prin care finanțarea Ucrainei să fie protejată de eventuale veto-uri ale guvernelor UE",
-      "category": "România",
-      "published": "2026-11-22T20:50:32+00:00",
-      "url": "https://www.g4media.ro/sub-amenintarea-lui-le-pen-germania-vrea-un-mecanism-prin-care-finantarea-ucrainei-sa-fie-protejata-de-eventuale-veto-uri-ale-guvernelor-ue.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Grillo da Fazio: “Se mi ridanno il simbolo 5S, lo dò a minori di 25 anni. Pronto ad aiutare Dibba”",
       "category": "Italia",
       "published": "2026-11-22T20:47:54+00:00",
@@ -865,15 +874,6 @@
       "category": "Italia",
       "published": "2026-11-22T20:36:19+00:00",
       "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/trump-apre-ai-democratici-pronto-a-collaborare-col-nuovo-congresso_a7791188-3388-4e6f-bf39-202dd6c2e6a9.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Alcaraz si laurea 'maestro', vince le sue prime Atp Finals",
-      "category": "Italia",
-      "published": "2026-11-22T20:29:46+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/22/atp-finals-alcaraz-batte-zverev-e-conquista-il-suo-primo-titolo-del_edfb3ff5-f27f-4b0d-9e7e-6c8409ae4446.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
@@ -951,6 +951,15 @@
       "words": 0
     },
     {
+      "title": "Moarte suspectă în cazul lui Dudu Georgescu. Ce spun anchetatorii din Canada - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-22T20:09:28+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPS3BITW80aDRQRjdQekJJSEMtMFAwTmc2MUxzelYtZlRBX1J6Q3hadkpwYW10SVEzWXpDSk9iSC1TQVotUUR3R1N6QXJTaGlEMkRUNFg5TWN3aDRKREJjTl9ZTXBsdVRmc0FjTU92NjgtZHFCNElBeWtvVVVXRGJqR2kyQmRtY1REX0NkRFhGdVI5Y1puakItOUFhYWNfQzQ0cmVBekMxN05iUUxNSC1zaFp0Ym1NUmphNDkyd9IBvAFBVV95cUxPS3BITW80aDRQRjdQekJJSEMtMFAwTmc2MUxzelYtZlRBX1J6Q3hadkpwYW10SVEzWXpDSk9iSC1TQVotUUR3R1N6QXJTaGlEMkRUNFg5TWN3aDRKREJjTl9ZTXBsdVRmc0FjTU92NjgtZHFCNElBeWtvVVVXRGJqR2kyQmRtY1REX0NkRFhGdVI5Y1puakI",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Liverpool 4-0 Manchester United: Five key takeaways for Pochettino",
       "category": "Mondo",
       "published": "2026-11-22T20:04:12+00:00",
@@ -983,24 +992,6 @@
       "published": "2026-11-22T19:59:12+00:00",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPTFBfN3hHVERGUDRCV0Z5dXlIR21sdmoxbTJBV1daaE5pa3A2NFpwM0JIczJkT2RkdnVhaUxHTUZnVkE0RWxIYlFLeUdac045V0N2eW1LZVV6NkZHX0tLRkhyYWlSRVpGLTVFQnRwa2ZMbWJfR3c2c2pmcEVNN2tmUWJLLTFPcVVxczQ3T25rUWVHVWt6SEgtQm1xRVJEQjBMcWtQcGtHTWtMRlhxY0VLTWlrS0w2aEZGZTRWSlVSbzhZZEJjNWp2TdIBzgFBVV95cUxOV0dQMU1NRUdOZUdxUHg4UlhGUm5iUkVUV1ExMGtaLVUxLUEySmJ0N1BQVW1DTlZEemJ3U1dLTno2ZC1ubUZfZEQxVDJxWG5FcTBvVnNJR1dZSWhrMXJUWGNtaWpob2dnb1BHcWJhNzhwcS1GRnMydFM0enJCcHdwMXhnNjZuSjYyVFJ",
       "source": "Corriere della Sera",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "De Gennaro, la morte che divide. D’Alema: “Come sono andate certe cose non lo sapremo mai”",
-      "category": "Italia",
-      "published": "2026-11-22T19:49:42+00:00",
-      "url": "https://www.repubblica.it/cronaca/2026/11/22/news/de_gennaro_suicidio_reazioni_d_alema_di_pietro_contorno_contrada-425742668/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Il Milan vince e diverte: Frosinone leggero, 5-1 a San Siro",
-      "category": "Italia",
-      "published": "2026-11-22T19:45:20+00:00",
-      "url": "https://www.repubblica.it/sport/calcio/serie-a/2026/11/22/news/milan_frosinone_gol-425742655/",
-      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
@@ -1455,6 +1446,15 @@
       "words": 0
     },
     {
+      "title": "Român, prins în Germania cu 170 de kilograme de dulciuri furate în mașină. Venea cu ele spre... - StiriDiaspora",
+      "category": "Diaspora",
+      "published": "2026-11-21T16:16:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPT2g4VmlKVFhsUFViOHg2SFRubEdMSUxaRmpOQkl5c0NwaE1KM2NIWVEtazBwQU50bURYWFJ3SnVhQml1WEQzNUZYVXZ4M01iRks5YmFpNXRwb2R2MmpoTGRZLTNKREhuMkZCMTVFNEFrcHRMemRXV0tGODM0YUZueEtkWGM3empielo3WG9jNnNHb1VGZFkwd052SE9BNGZ6VVNJX0RRWEJiRDNaYVkyOUJ0dlJwMzN6MzFyU0xQMFl3V0syWUZHRGVyQnY5TTNsY1V4bVJn0gHbAUFVX3lxTE40em53Nmhqd1hDNEpHMU9zYzN6STJUUnUzTHBMTUlOaEhWc2FxWFRjOFlHSGh1ekJCbTcyM2tDVjZKdHp0QzBhcXBjLXRxVXZMaHQtNEF0U1Zwc1lKWWhYR1lVWVZ1WE5yYkZLeVdlV2Q0aDdlTE8yb09hQVV",
+      "source": "StiriDiaspora",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Dichiarazione trattamenti pensionistici esteri per integrazione al trattamento minimo delle pensioni italiane in regime internazionale (SOSP.TM-2017) - INPS",
       "category": "Istituzioni",
       "published": "2026-11-21T15:40:21+00:00",
@@ -1553,9 +1553,9 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
-      "title": "Incendiu puternic la un hotel din Poiana Braşov. La intervenție au fost aduși în sprijin pompieri din alte trei județe",
+      "title": "Incendiu puternic la un hotel din Poiana Braşov. La intervenție au fost aduși în sprijin pompieri din încă trei județe",
       "category": "România",
-      "published": "2026-11-22T21:53:07+00:00",
+      "published": "2026-11-22T21:56:25+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/incendiu-puternic-la-un-hotel-din-poiana-brasov-intervin-pompieri-din-patru-judete-4048199",
       "source": "Digi24",
       "status": "verde",
