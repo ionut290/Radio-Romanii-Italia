@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-22T18:50:48.546085Z",
+  "updated_at": "2026-11-22T20:10:37.942908Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-d41d8980ec21dbca",
+      "category": "clima",
+      "region": "global",
+      "title": "Longest-ever COP climate summit ends without agreement",
+      "summary": "",
+      "source": "The New Daily",
+      "published": "2026-11-22T19:30:24Z",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUmZYdlJlUGJTLWF0R3UwblNLYnhVUTQwcXFyRnJSQ25XaC1ZeE43YXRzRUY5S3dnYk42LTdxYkt0R3JZYjRRUUQ4ajZVLXdIb1BjVE5nQ21lZVRxSlVpSm94NnEzRFJZNDREdEpoOFo2NWk1b2lOZC1OdG9jS24tdWVUMlFIWEc3bGU0b2tR?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cel mai lung summit COP asupra climei se încheie fără acord",
+      "title_it": "Il vertice COP sul clima più lungo di sempre si conclude senza un accordo",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-91b69d6fbebaf0a5",
       "category": "securitate",
@@ -117,6 +131,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Oficialii critică acțiunile contradictorii ale lui Xi",
       "title_it": "I funzionari criticano le azioni contraddittorie di Xi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-dabeafbd5d29d9cc",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Foreign Affairs Council: Press conference by High Representative Kaja Kallas",
+      "summary": "",
+      "source": "European External Action Service (EEAS)",
+      "published": "2026-11-22T15:53:44Z",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOb3I1NjRXbno5bUZuUjJWWFdCNzNkTUhqaWlMLUV0LXozVlp2UlQ1MVduT0FDQlFNYlBFWk5aMHlzVWZQZDNOVFVhbkNyRnk2WkdZWVF0OW8zcjBWX1ZZUGtfWV8yTGFpNHdCRGVRejF0cEhBSXQ4VlR2QmpNSVRqMURnMWVPODdlc2VYTlFTbFR6dmU5cGFITklrS0ZkNl9vS2NidkMzcFBnWmNndHc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Consiliul Afaceri Externe: Conferință de presă susținută de Înaltul Reprezentant Kaja Kallas",
+      "title_it": "Consiglio \"Affari esteri\": conferenza stampa dell'alto rappresentante Kaja Kallas",
       "translation_status": "machine_translation"
     },
     {
@@ -246,20 +274,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-dd04c640ca7b26ab",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31: European Union Blocks Final Agreement, Causing Diplomatic Crisis in Antalya",
-      "summary": "",
-      "source": "Entrevue.fr",
-      "published": "2026-11-22T12:22:51Z",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZGw3ZGx1ZkVjRnpMaWxpcGhNN0toS1VsNFNGSEZYMHpfMVlicTVxVFBvT090X2hiaEhyOV9hbmZpaXRHVGJodFRLV2xscDBaYWlVRWRQRllfX2E5S21XUm5EbExGaFJ5Rlhxd1VJMFQwQXA3a29ZZjNvUkJWbzZNanNHeHBQOTR6N0JNMExZWFNQbm1RdWZTRDl3SFFSalk2R1Rtck5Lbw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "COP31: Uniunea Europeană blochează acordul final, provocând criză diplomatică în Antalya",
-      "title_it": "COP31: L'Unione Europea blocca l'accordo finale, causando crisi diplomatica ad Antalya",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-76ea032bc172ed8e",
       "category": "securitate",
       "region": "asia",
@@ -274,20 +288,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-db96fb87ddb24b1a",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "A precarious balance: 2026 Rankings",
-      "summary": "",
-      "source": "Lowy Institute",
-      "published": "2026-11-22T12:03:14Z",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMkJTRllNOUpoYnBBbVk2QXNrQU5YUVZCVVlZRlp5OFZTVmQ1dWswV0RlX2RFQ0pEWTBOY3p1cVhlVFpqaXlsS0pGeFFwbmZmSGYyX0tBOXdMYnlVYVAtdW54VW9BRDJSWkttRUF4X0xFTnk3M2VHQ0c1cDJHRXVrUTgxVQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Un echilibru precar: Clasamentul 2026",
-      "title_it": "Un equilibrio precario: Classifiche 2026",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-9da38b1f8c890cd0",
       "category": "clima",
       "region": "global",
@@ -299,6 +299,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Discuțiile COP31 privind schimbările climatice se întrerup pe măsură ce UE și alții resping acordul",
       "title_it": "I colloqui sul clima della COP31 si interrompono perché l’UE e altri rifiutano l’accordo",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-c2dbffb5759069dd",
+      "category": "europa",
+      "region": "europa",
+      "title": "Iran e sicurezza europea, Alfredo Antoniozzi al Consiglio d'Europa: «Non c'è pace senza stop alle esecuzioni e diritti umani»",
+      "summary": "",
+      "source": "Cosenza Post",
+      "published": "2026-11-22T11:48:33Z",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOUjhpMWlrR04zU3pEWWFNQnpvbHV4bkZyeE1NS3g5eEd4QU0zOXpQZlA1SlFib1NCbFpXcU5CLU82SWdIUDZxaEE0Y0l0cDBoTFVUb2xzX1RlS0JCSEo1VEktYzllNGpYMUxEYXVEUG9SN1BJREpPTzJWTThielhXd3c4NF9ZS2EtOTVkYTBHQjRUVVZ4T0szM2RsY0VnbXJvWUJFT0EtazNPcmdTSDRvTndCcEZ1QzV5YW5ocGZIcnY1bDNIMU1OYlBOYTI0NEYzemFGR0Y2Q21LanF0YUlsRw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Iranul și securitatea europeană, Alfredo Antoniozzi la Consiliul Europei: „Nu există pace fără oprirea execuțiilor și a drepturilor omului”",
+      "title_it": "Iran e sicurezza europea, Alfredo Antoniozzi al Consiglio d'Europa: «Non c'è pace senza stop alle esecuzioni e diritti umani»",
       "translation_status": "machine_translation"
     },
     {
@@ -330,17 +344,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-f5528779aea7ac32",
+      "id": "geo-6e1e27526e151f16",
       "category": "diplomatie",
       "region": "asia",
-      "title": "Washington’s ‘missteps’ narrow US lead over China in annual Asia power ranking",
+      "title": "China on verge of eclipsing US power in Asia after Trump stumbles",
       "summary": "",
-      "source": "South China Morning Post",
-      "published": "2026-11-22T11:30:09Z",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMTVOMTJNRzVFRU95OGVnd3hxNzkzZ21rOXZMWjlVUXNaV1U0SFpQWnBGSUFvdkthdjFfemFrVTF0Z0RMaWlUWHd1Y0s1NDU5Q0RxaU5MdjNCSTJtOE84ZmJsaUVrdU9GR1Zpc1FhZ3N1elNVWjBRSzNfTUZzUVFwZzNMVzRZRS01aWNQaXd0RGZnMXQwaktvUEwzRUNfZFp4a3ROa0RWTEtoUnR6UzhIc051cFRpSjB6TS1OX3FTb0xRTi1ONm1TMy1R0gHKAUFVX3lxTE8xNU4xMk1HNUVFT3k4ZWd3eHE3OTNnbWs5dkxaOVVRc1pXVTRIWlBacEZJQW92S2F2MV96YWtVMXRnRExpaVRYd3VjSzU0NTlDRHFpTkx2M0JJMm04TzhmYmxpRWt1T0ZHVmlzUWFnc3V6U1VaMFFLM19NRnNRUXBnM0xXNFlFLTVpY1Bpd3REZmcxdDBqS29QTDNFQ19kWnhrdE5rRFZMS2hSdHpTOEhzTnVwVGlKMHpNLU5fcVNvTFFOLU42bVMzLVE?oc=5",
+      "source": "SMH.com.au",
+      "published": "2026-11-22T11:30:00Z",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPT3lRQzJKdzBlVUVXVnNkZVlnMXpoTERWNnF0STN0OV9fNnF6NnkzeXV2UVRjZnZBNm1XOFluaWQzZDE4YUVuSUwxcy01bVZGSldJMUNkcHFLWDl5YzFRWkNwc25laXZoUnpjQWw2c3F3U3RVT1B0Zi0xTFFjOW5CRmI5cGR1QzBwVy1zMzJjdi1qSE5MZHB1dHhjSWxjaUtYQTQ5Q08xZ2lfZ3pVaFk5TlU3WlpBTWZhRDhhQkhBQWpNdWVM?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "„Pașii greșiți” ale Washingtonului reduc avansul SUA față de China în clasamentul anual al puterii asiatice",
-      "title_it": "I “passi falsi” di Washington riducono il vantaggio degli Stati Uniti sulla Cina nella classifica annuale delle potenze asiatiche",
+      "title_ro": "China este pe punctul de a eclipsa puterea SUA în Asia după ce Trump s-a împiedicat",
+      "title_it": "La Cina è sul punto di eclissare il potere degli Stati Uniti in Asia dopo la caduta di Trump",
       "translation_status": "machine_translation"
     },
     {
@@ -386,6 +400,34 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-11fa11b01dfb05b7",
+      "category": "securitate",
+      "region": "europa",
+      "title": "NATO Will Defend ‘Every Inch’ of Poland, Rutte Says Ahead of Monday Council Talks",
+      "summary": "",
+      "source": "Kyiv Post",
+      "published": "2026-11-22T10:15:30Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5hTm82d3RUdWM0Q2lKazlkVG9kcGtUdEhmOW1EVFlYNlZrUktRNXF1U1gtVThZZXAwaEZnWGVXX09ObGNONTgyMFNUQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO va apăra „fiecare centimetru” din Polonia, spune Rutte înaintea discuțiilor Consiliului de luni",
+      "title_it": "La NATO difenderà “ogni centimetro” della Polonia, afferma Rutte in vista dei colloqui del Consiglio di lunedì",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2fbfb057e522801a",
+      "category": "securitate",
+      "region": "europa",
+      "title": "FM stresses no troops to Yemen yet as Ankara focuses on Saudi defense | Daily Sabah",
+      "summary": "",
+      "source": "Daily Sabah",
+      "published": "2026-11-22T10:05:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPaEE4em5KeGJOOUZObm81QjZLX1dEelFpNkJuS0UwSVVFek84NzdGb3VFelBZUjdIY0RMZzNYakh6ZDJFakIxVzd2UlNNRE1nTi1hYklhNDRRb1pNRUVQbGVNUm02czVkRE1DVE13bHpXYm9EeVZIci1tdURSSWx2eXVlWHhNUjJhTmxLcV9LdWo0R1dQRC03eHdfM3ZHX1dJc3lwYXdqUmI3LTJFSU5yQm5xbzIycW03elFr0gG7AUFVX3lxTE9oQTh6bkp4Yk45Rk5ubzVCNktfV0R6UWk2Qm5LRTBJVUV6Tzg3N0ZvdUV6UFlSN0hjRExnM1hqSHpkMkVqQjFXN3ZSU01ETWdOLWFiSWE0NFFvWk1FRVBsZU1SbTZzNWRETUNUTXdseldib0R5VkhyLW11RFJJbHZ5dWVYeE1SMmFObEtxX0t1ajRHV1BELTd4d18zdkdfV0lzeXBhd2pSYjctMkVJTnJCbnFvMjJxbTd6UWs?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "FM subliniază încă nicio trupă în Yemen, deoarece Ankara se concentrează pe apărarea Arabia Saudită | Sabah zilnic",
+      "title_it": "FM sottolinea che non ci sono ancora truppe nello Yemen mentre Ankara si concentra sulla difesa saudita | Sabato quotidiano",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-65660656a5871f78",
       "category": "securitate",
       "region": "asia",
@@ -414,17 +456,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-ec881dab083f4c65",
+      "id": "geo-dac0691b701d9ef8",
       "category": "securitate",
       "region": "asia",
-      "title": "The Shifting Balance of Power... In the Era of 'Persistent Crisis,' Where Does South Korea Stand Strategically? [Lee Jong-yoon's Military World]",
+      "title": "A Shifting Balance of Power... In the 'Constant Crisis' Era, What Is South Korea's Strategic Position? [Lee Jong-yoon's Military World]",
       "summary": "",
       "source": "파이낸셜뉴스",
       "published": "2026-11-22T09:39:56Z",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE45eFhhX2VNWjdSVzRQLTJnTHVyZWhCaHNCWnltMUFNWkxhdFZfdThFYXp5VzU2QWk5ZjVONC0xMzI3Z3JLQXVLNVVjRnkzTEZpbmhIY0cxUzM?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Schimbarea echilibrului de putere... În epoca „crizei persistente”, unde se află Coreea de Sud din punct de vedere strategic? [Lumea militară a lui Lee Jong-yoon]",
-      "title_it": "I mutevoli equilibri di potere... Nell'era della “crisi persistente”, dove si colloca strategicamente la Corea del Sud? [Il mondo militare di Lee Jong-yoon]",
+      "title_ro": "Un echilibru de putere în schimbare... În era „crizei constante”, care este poziția strategică a Coreei de Sud? [Lumea militară a lui Lee Jong-yoon]",
+      "title_it": "Un equilibrio di potere mutevole... Nell'era della \"crisi costante\", qual è la posizione strategica della Corea del Sud? [Il mondo militare di Lee Jong-yoon]",
       "translation_status": "machine_translation"
     },
     {
@@ -439,6 +481,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Ce trebuie să știți despre competiția SUA-China, deoarece Trump și Xi se reîntâlnesc săptămâna aceasta",
       "title_it": "Cosa sapere sulla competizione USA-Cina mentre Trump e Xi si incontrano di nuovo questa settimana",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-5a8568c20ecfa410",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31 Update 13: The Worst COP ever?",
+      "summary": "",
+      "source": "commonspace.eu",
+      "published": "2026-11-22T08:46:09Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1hN3BidW5faHZ5N01jRm9HQ0MzUktfLUFub3JGNHk5OGt1S18yM3BMRjktcWw3UW5GaGhlY0hON3RDZlEyUHVHQk16c05QaXA5TkFWUkZkWHJTc1V6QldpTnRmYjg2NWtJdXJGekJIS1ZLc2JlUnRWNHg5UFY?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Actualizarea COP31 13: Cel mai rău COP vreodată?",
+      "title_it": "COP31 Aggiornamento 13: Il peggior COP di sempre?",
       "translation_status": "machine_translation"
     },
     {
@@ -568,17 +624,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-9ffe5549e8d4e06c",
-      "category": "clima",
-      "region": "global",
-      "title": "Amid divisions, COP31 president says climate talks near deal",
+      "id": "geo-6839e831f70e8c21",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "India's Indo-Pacific Strategy: Key Outcomes of Manila Summit",
       "summary": "",
-      "source": "Premium Times Nigeria",
-      "published": "2026-11-22T05:13:14Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNd21Yc1FuSU1XaG45NEJpUW9nM3M5ZE45MGxid3R0Y1lvVHk5ZkJfSkh5NlVuZm9tdE5wSi15UlpnS1kwS2MwM1U0d2VwdXUybnAzbDZhUmowRXNPb3dLeklzMWFhdXo4VVRuU1hrel9GelRrczVRa09NN2xjUjc3TlB6YmtwRmRwTG9JOFVlbGRNTHNYNlBNSEs2bmtOX1dhdmthX3FEdVFYUFYtUk5IOUdfbWdlZlF4?oc=5",
+      "source": "Vajiram & Ravi",
+      "published": "2026-11-22T05:00:11Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1tQ1cyanZYUFFWVTlKTVhlN2FUZERCVURScG12enYwVUVHMlR2UE1zbmVlV3Z0Xy0xVzQwX1NJMExDTTJVbG5zanU1Z2U3UDJvSlM4SThNVTRTWlVGNGlhM1p1QXd2VHM4blhlMS13dmE2OUFVTVVlSjd2cms?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Pe fondul diviziunilor, președintele COP31 spune că discuțiile privind clima sunt aproape de acord",
-      "title_it": "Tra le divisioni, il presidente della COP31 afferma che i colloqui sul clima sono vicini a un accordo",
+      "title_ro": "Strategia Indo-Pacific a Indiei: Rezultatele cheie ale Summit-ului de la Manila",
+      "title_it": "La strategia indo-pacifica dell'India: risultati chiave del vertice di Manila",
       "translation_status": "machine_translation"
     },
     {
@@ -638,6 +694,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-bc3affffd640d547",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Open covenants openly arrived at",
+      "summary": "",
+      "source": "Greater Kashmir",
+      "published": "2026-11-22T01:57:35Z",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPWXZwOUlCd1hnbkhoOVJlWEZsOFNNR3Zja3ZEUlJUTmkydjJacjNqQ2M2R0lMcXY4UER6dEhNMFVOZHJKR3N4aWRVcWJZd184cEtNbkhVa0JiY3Z4LTQxdHY2dm1uZVB1a05ZWUdjazVoaGhHUk5MNWpjdWNTZnFQX05JajhjbE3SAYwBQVVfeXFMTy03Z1o0LUtzb2Y2T1BpQVJBa2tTd3pNc1BhUHVFQmNWeEtKNk9jXzlTb0tVSzBEV0wycXdyNGVCcEhpc2VqeUVsb3gtNzFZcDhRd1FOTFA2MVVoQklzYnh1elZGbU43dnJsdmNMNWRTaGR6TEo1MkJVeFpKLUMxOGVuYThHMlBlUG1TcUg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Legăminte deschise la care au ajuns în mod deschis",
+      "title_it": "I patti aperti sono stati raggiunti apertamente",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-ef8a093989e6baf9",
       "category": "diplomatie",
       "region": "global",
@@ -666,17 +736,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-8d2a17389469c379",
-      "category": "securitate",
+      "id": "geo-b19a2eef6b9cd121",
+      "category": "conflicte",
       "region": "europa",
-      "title": "Belgium Deploys Six F-16 Jets to Strengthen NATO Baltic Defences",
+      "title": "Trump cites good chance for Ukraine deal as Russia rejects NATO path",
       "summary": "",
-      "source": "Limapagi",
-      "published": "2026-11-22T01:39:35Z",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBydUU3NVFZcTVPWGlZcFROSjZuTTNtb29DbHpOY1FxSTItOTRDRlhmZGtkUW5xMFN4bmZuclhvZm90eElMV3pVbkxTV3Iwek5Ccm1zM3NGbk42NEJacEF4ekhTWlFYMUgxT3c?oc=5",
+      "source": "scanx.trade",
+      "published": "2026-11-22T01:45:38Z",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaVpzRk9hcXNzRzVVcmtlRGRFOVpmVWdPVGY5bkZPTnJnQUdOTjRESXVtcHljeXZPc2tOQ3lEbjEySnNNUVJtZVJpRHFiZkpJdzI1Rjg2QmNLdW9ZRGp1Z1JPeVFRNDZjdDFsaHRhZkl4Y3FxREg5U0d2ZEFuakFrcjZOVWpMSXFjTDhJZ2RMa0Qza05IMHZOMXBOT0tVeEtJSDNoWXlYR0p6V2xJcW50MnNJSUdkZw?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Belgia desfășoară șase avioane F-16 pentru a consolida apărarea NATO din Marea Baltică",
-      "title_it": "Il Belgio schiera sei jet F-16 per rafforzare le difese della NATO nel Baltico",
+      "title_ro": "Trump menționează șanse bune pentru un acord cu Ucraina, deoarece Rusia respinge calea NATO",
+      "title_it": "Trump cita buone possibilità per un accordo con l’Ucraina poiché la Russia rifiuta il percorso della NATO",
       "translation_status": "machine_translation"
     },
     {
@@ -719,20 +789,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Când ne vom revedea trei? – OpEd",
       "title_it": "Quando ci incontreremo di nuovo noi tre? – OpEd",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-f4743e1f3049c897",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Russia Escalates Ukraine Attacks as Europe Fears Grow",
-      "summary": "",
-      "source": "www.stl.news",
-      "published": "2026-11-22T00:22:05Z",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNcU90dWtuTTVOT29ta3NmaHY5Rm5ESHFBYTZSNDZlUDNsRXJHMDVrZGVvVnNJTkdBQnNiQTBEUjY3WnlLOTFLeFNrVjlFU3FuX0EwbmFSQTZaSGxMdXpURDZGdGg2dW0ycGh4Z0NWb1RDZlZ5S1NnWWtOWFp2ZFBycw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Rusia intensifică atacurile din Ucraina pe măsură ce temerile Europei cresc",
-      "title_it": "La Russia intensifica gli attacchi all’Ucraina mentre crescono i timori in Europa",
       "translation_status": "machine_translation"
     },
     {
