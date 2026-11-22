@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-22T16:30:27.521484Z",
+  "updated_at": "2026-11-22T17:40:29.951371Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,15 +8,88 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
+      "id": "geo-031d4f5501ac42ba",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Peace, selectively defined",
+      "summary": "",
+      "source": "Daily Tribune",
+      "published": "2026-11-22T17:13:08Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HOFNqbXhiZmtPWUt3RGkwa3FPdVh4Q1Jtc1R0YnY0dGppWEV2azdKV0lySXF6Nm0yR0xGeGxCTjItcXJaZ25nYjlBNXQ5b2gyNVBTbDkyUFFPOVkyeHVXUTM0aWs2Q05mUmJZ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Pace, definită selectiv",
+      "title_it": "Pace, definita selettivamente",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-688c84023b990258",
+      "category": "clima",
+      "region": "global",
+      "title": "Climate deal collapses in chaotic end to COP31",
+      "summary": "",
+      "source": "AFP.com",
+      "published": "2026-11-22T17:04:07Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBMMHlva0FpeWpwM0FNbDE1V0cxSTAxNGhmQ0VhUDBPcXBDUnVzRmdla09ydi1oamRLRmZ5WmpNNlFwTzV1UUpXTmdLVXJGbTFnZXJGcGFpYlcxRlRZc3l4UjNpdkZxTktDckF5aF8xOE8?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Acordul privind clima se prăbușește în finalul haotic al COP31",
+      "title_it": "L’accordo sul clima crolla nella caotica fine della COP31",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-8804d5d3e6f7102f",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Trump's Iran war and policy missteps narrow US power advantage over China to lowest level since 2018",
+      "summary": "",
+      "source": "Firstpost",
+      "published": "2026-11-22T16:55:50Z",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOZC1yblNjQUNuS0t4XzVKRUlWRHNVdVY0bC13RVFzOVE5Rkl1M19YQ21zb2h6WEVMaDRuTEtqa2NfRmFEcE9CZUNMSFMwWUxsUlJPdG9lcFYwdXpvZWpoeVJ5NlNjRW4yRld5UTB2T0Z1Z09IcUdGUl9SSHg3dlBNdC1VRDVUTWtZWU9iSTlRUG5yQmlIZFHSAZsBQVVfeXFMT2R4WFlGSHg5emI4ME9LNEtmVkRYQmhzT2hNR3hTWkR0UnZjQ1I5d0ZnUUV3bUY5Rkl4ZDZaN0lscmtwbXBmZ2dtZmZ3YzA4NDNtR1dDN3lMMWhBTER1T0h0SHdveGtfR19XbWFSSTJaNWM0LVc3UktySDNNeEhVaG9oc1J3TlFpVkZ6U2EzeW9jQzdkMm1UT1FtMHM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Războiul lui Trump în Iran și pașii greșiți în politică limitează avantajul de putere al SUA față de China la cel mai scăzut nivel din 2018",
+      "title_it": "La guerra di Trump in Iran e i passi falsi politici riducono il vantaggio di potere degli Stati Uniti sulla Cina al livello più basso dal 2018",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-72c3be750711b8de",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "HÜDA PAR leader calls for humanitarian aid ships to reach Gaza under naval escort",
+      "summary": "",
+      "source": "İlke Haber Ajansı",
+      "published": "2026-11-22T16:42:09Z",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPbjQ1bXRHT1VIMk9SNkdmTjVkV2RFMHpQYXNRUWZvSDBaQnFiTkZKWlJvRTVNWDVxeDVMRHVKOTJobi1qT3JOcWlxVWcySGc5WnF3Nms1NEV4dkVMVW94U2tERkg2VlhEN3VTTnNCdkUwU3FzdVFjYjIzdndCQXdpUl9rUlRRUkNxeEFLMGs1YV95OEx6RllRU0hjdjhXS3lsZlBBUGhOSUhud2RCUTlmSlpiTll1UGEtUTNmWjZn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Liderul HÜDA PAR cere ca navele de ajutor umanitar să ajungă în Gaza sub escortă navală",
+      "title_it": "Il leader dell'HÜDA PAR chiede che le navi di aiuti umanitari raggiungano Gaza sotto scorta navale",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-836e79360e7591d7",
       "category": "clima",
       "region": "global",
       "title": "Why Nations Failed to Secure a New Global Climate Change Agreement",
       "summary": "",
       "source": "Bloomberg.com",
-      "published": "2026-11-22T16:17:38Z",
+      "published": "2026-11-22T16:21:11Z",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOEZaeWtwOXBoWTBIVU00ZThzR1gycVhSLXJQcko2VnNkdWNKaWRJY2VReFJ5R3loTVRHbk5jLVBnd0pPeUJkNlpfeG5GbG04dmdQb3RoVUE0dTVPQUwtbTZpU1lKTHhleWROZXJYUlZiVzR0RElsbExCRlJ0Vk43MUswZzNOSUxNazhTWm5vbF9WbDlnV2R0NVp4cmJmWUNJanBMeUhtUFlFd090dXdkNXQ5OHRTeEVvY183Q2ZOS1RWQktQTXc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce națiunile nu au reușit să asigure un nou acord global privind schimbările climatice",
+      "title_it": "Perché le nazioni non sono riuscite a garantire un nuovo accordo globale sui cambiamenti climatici",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-833d4adc27f69310",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31 climate talks collapse as EU and others reject deal",
+      "summary": "",
+      "source": "South China Morning Post",
+      "published": "2026-11-22T14:57:45Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQaE83M3FWdGtwQ05QZWltbGlNbFBzUks0Vy1lck56SUZyVjBWRm1FU2djMUZZOGdiY0FEdFNfWTRsTDB5N1FBR2w1Y2xsVXRPdWRDb1dBWmFLbDMzbFlqc3dsLWRHU0hBQ0R2cUFjclFNVWpyU2J6RW9XXy1hLW1tclo4cjNiOFVGd2ZpYUhaa0w4TC1MYnhYQl9HQ1c2X2xvNXgzc9IBpAFBVV95cUxQaE83M3FWdGtwQ05QZWltbGlNbFBzUks0Vy1lck56SUZyVjBWRm1FU2djMUZZOGdiY0FEdFNfWTRsTDB5N1FBR2w1Y2xsVXRPdWRDb1dBWmFLbDMzbFlqc3dsLWRHU0hBQ0R2cUFjclFNVWpyU2J6RW9XXy1hLW1tclo4cjNiOFVGd2ZpYUhaa0w4TC1MYnhYQl9HQ1c2X2xvNXgzcw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Discuțiile COP31 privind schimbările climatice se prăbușesc în timp ce UE și alții resping acordul",
+      "title_it": "I colloqui sul clima della COP31 crollano mentre l’UE e altri rifiutano l’accordo",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-35ff6691faf3a071",
@@ -83,20 +156,9 @@
       "source": "Middle East Monitor",
       "published": "2026-11-22T13:45:00Z",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOb1VJR3ZRZU5yLTBidWxwRGJtcmNXNzBpVkFvYXNKMUY0b3VWUlJHVmVYeWxLeGVGNjlQYlJmdE5naUFqaVhUcjZsMEc0eURtdmRnN0FFWGpKc0tCTVVhQ0k1aHozMV9keFBRS3NoVkN6RDNOWmQxMDVGa0VzVHRJTGl1RU81dWhmbzU3NC1OSGhrZ2VrQzJEN1d4UEdWbkdmZ0NnM1g1U2RCX1JK0gGyAUFVX3lxTFBuNUdIWkFreUVydlRjOWtVcEVGMTIwdVJBNFRtUWQ3MHc2YjR2ZFZ2QTIyM3ZWY29mMGhYeHg0X3Q1OGhIbE9pYmVTc0dHNHc3QW1CVnBpX1NmSXNreTlmUUdHaHlQZkJyYXNwVXdGazZWN2pucjMxS0dqdHNSenVaYlVoRHVJRUdtRE1nQjl3WFdSanlESWpQUGpMcG9YMzBUb05SSVI5dHMyeUJXMFZKMVE?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-c93b882189bf9fa5",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31 president says climate summit on verge of 'historic opportunity' as talks near conclusion",
-      "summary": "",
-      "source": "Anadolu Ajansı",
-      "published": "2026-11-22T13:42:46Z",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOVGl6RWtRdWdvbk01c2xGV0t0QXBWM0JhcnRmNnF4MktRVE8yWU4yaUY0SXZtNm5NcE80Rk1Yb3lnYVo3aUhuNXhTMzJmU1FILUt6TmhQSm9sNnRsMlhGb0hhX210b2FzcDZMajdZVFVSaTItckd5bnM5eUtWb0w0aE5VTHdhMjQwZTFHYk9Jb0FyRURWRF9ZZ0pSYkVablNTalJPdlh4VjdQcVdIZUJndDdpemVBM2c4Tzc4dnlETlpUMlY0WHp5amkwZGxpTmxVTEFUSA?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Președintele COP31 spune că summit-ul climatic este aproape de „oportunitate istorică”, în timp ce discuțiile se apropie de încheiere",
-      "title_it": "Il presidente della COP31 afferma che il vertice sul clima è sull'orlo di una \"opportunità storica\" ​​poiché i colloqui sono prossimi alla conclusione",
+      "title_ro": "Copiii rămași orfani de atacurile israeliene din Gaza cer drepturi de bază",
+      "title_it": "I bambini resi orfani dagli attacchi israeliani a Gaza rivendicano i diritti fondamentali",
       "translation_status": "machine_translation"
     },
     {
@@ -234,7 +296,10 @@
       "source": "South China Morning Post",
       "published": "2026-11-22T11:30:09Z",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPMTVOMTJNRzVFRU95OGVnd3hxNzkzZ21rOXZMWjlVUXNaV1U0SFpQWnBGSUFvdkthdjFfemFrVTF0Z0RMaWlUWHd1Y0s1NDU5Q0RxaU5MdjNCSTJtOE84ZmJsaUVrdU9GR1Zpc1FhZ3N1elNVWjBRSzNfTUZzUVFwZzNMVzRZRS01aWNQaXd0RGZnMXQwaktvUEwzRUNfZFp4a3ROa0RWTEtoUnR6UzhIc051cFRpSjB6TS1OX3FTb0xRTi1ONm1TMy1R0gHKAUFVX3lxTE8xNU4xMk1HNUVFT3k4ZWd3eHE3OTNnbWs5dkxaOVVRc1pXVTRIWlBacEZJQW92S2F2MV96YWtVMXRnRExpaVRYd3VjSzU0NTlDRHFpTkx2M0JJMm04TzhmYmxpRWt1T0ZHVmlzUWFnc3V6U1VaMFFLM19NRnNRUXBnM0xXNFlFLTVpY1Bpd3REZmcxdDBqS29QTDNFQ19kWnhrdE5rRFZMS2hSdHpTOEhzTnVwVGlKMHpNLU5fcVNvTFFOLU42bVMzLVE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Pașii greșiți” ale Washingtonului reduc avansul SUA față de China în clasamentul anual al puterii asiatice",
+      "title_it": "I “passi falsi” di Washington riducono il vantaggio degli Stati Uniti sulla Cina nella classifica annuale delle potenze asiatiche",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6e1e27526e151f16",
@@ -273,7 +338,24 @@
       "source": "greatreporter",
       "published": "2026-11-22T10:43:24Z",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxORTVialFTbW1nSVJYZ3lZQWdjbEdqdGFjYXAyZm5oNGk4N3M5RkRFbzM3SjVfcmtuT2xheENUNFllQlVVdklreXQyQk51MFJDQXFHM0FPNXNIMy0xWlFqQllBRVV3Q3I3UFltbTgzRlJDMmpxTlA1OTVrbXluOVItT3BxUXFUWEdGYUdDc000N0toN3hyeHAzXzhRU1hRMlNpaVVnQUhMdlI0dXlaNmdpSzk5MkpYM1pJVGc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Israelul a ucis trei persoane într-o furgonetă alimentară din Gaza în timpul încetării focului, după ce a exclus ancheta penală cu privire la decesele veteranilor britanici care lucrează în alimentație",
+      "title_it": "Israele uccide tre persone nel furgone alimentare di Gaza durante il cessate il fuoco dopo aver escluso un'indagine criminale sulla morte dei veterani britannici dei lavoratori alimentari",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-9e82bb20c2e7ac1a",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Hamas urges mediator action after Israeli strike kills 3 in Gaza | Daily Sabah",
+      "summary": "",
+      "source": "Daily Sabah",
+      "published": "2026-11-22T10:30:00Z",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPdFVTcGt2NmVaaWczUUZPamk3alR6bVN2UXJUbFItZjE0N0ZOeV9adUxyWXgySGwwdlRrejhjdDhpaXd5Smd2akUwS01oaFViWWJNb1BMeU5SVy1DSHhtMkowT0pkTEZwcmp6LU0xTGdwMlR0WmZfNFNLckR4S1c1aGFSTVRQV0Y4cm9XZVRMN010Tm1zNXMyVnVla3pmT2VJS3JwYWhELWlubzFTaWhB0gGvAUFVX3lxTE90VVNwa3Y2ZVppZzNRRk9qaTdqVHptU3ZRclRsUi1mMTQ3Rk55X1p1THJZeDJIbDB2VGt6OGN0OGlpd3lKZ3ZqRTBLTWhoVWJZYk1vUEx5TlJXLUNIeG0ySjBPSmRMRnByanotTTFMZ3AyVHRaZl80U0tyRHhLVzVoYVJNVFBXRjhyb1dlVEw3TXRObXM1czJWdWVremZPZUlLcnBhaEQtaW5vMVNpaEE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Hamas îndeamnă mediator după ce atacul israelian a ucis trei persoane în Gaza | Sabah zilnic",
+      "title_it": "Hamas sollecita un'azione di mediazione dopo che l'attacco israeliano ha ucciso 3 persone a Gaza | Sabato quotidiano",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-65660656a5871f78",
@@ -427,20 +509,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Polonia evită articolul 4 al NATO după lovitura rusă cu rachete",
       "title_it": "La Polonia evita l’Articolo 4 della NATO dopo l’attacco missilistico russo",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-b0d1dd706fae28f2",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31 talks stall over fossil fuel phaseout and climate finance",
-      "summary": "",
-      "source": "The Climate Watch",
-      "published": "2026-11-22T06:35:57Z",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPNTRsWlpnVHRHcG9VbjdaejB0Y2ZSOU5mVkEzdlRWVU96YVc5ajZQbmxOZmZmSGdCQXJXZ3ZpU0Q2RG96LWRuRHpmdzM2bGF6blNpd3U3S1Zsdmlfek1rcGxxdDhrU1NyZXNsQjhrd2FSNlpOeE5aSG5EU0xURmZhZGdlLTVwM25EdDc5a3VoSkUzRTB0c0dz?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Discuțiile COP31 stagnează despre eliminarea treptată a combustibililor fosili și finanțarea climatică",
-      "title_it": "I colloqui della COP31 sono in stallo sull’eliminazione graduale dei combustibili fossili e sui finanziamenti per il clima",
       "translation_status": "machine_translation"
     },
     {
@@ -651,31 +719,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Rusia intensifică atacurile din Ucraina pe măsură ce temerile Europei cresc",
       "title_it": "La Russia intensifica gli attacchi all’Ucraina mentre crescono i timori in Europa",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-87e386a94b40219f",
-      "category": "energie",
-      "region": "global",
-      "title": "Nigeria World Energy Council Seeks Global Partnerships to Boost Energy Access, Reduce Food Wastage",
-      "summary": "",
-      "source": "THISDAYLIVE",
-      "published": "2026-11-21T23:53:33Z",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdFJLcHdzX3o2TmFWV2daTDJBcTl2dnRuNWgyTVFQTUl5T0Iyd1RZUk9NV3JkQkZEM3BERG1ZNnloOW9ZUXJHbmRoY2tQSkZGTllZckctM0dMQUVXdGd5N2RNdGFfQ3pjd1ZXSDcyNDhsWnpoZFEyNFBPZmpELS1TNXpnOENpdmp1QkNjYS1IMHl3RlZxNFRDUXI1cTU4UjEyQzJ6QkZnM2NXQk5Fc24zakUyVXZMczBWcFZzekhTSk9GRE1SQ1FldE9WYnRUcy14VF9R?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-6639c768a634a379",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "1945 Yalta vs. 2026 Shenzhen : Three Great Powers Meet Without a Common Enemy",
-      "summary": "",
-      "source": "Daily Excelsior",
-      "published": "2026-11-21T23:29:51Z",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNa20zWC16Q1Z2bHFvX09Ua0ZNZEd5ajdvWVdGMm1ZYkNhM2IzemxFMzRCckszNmRnc1NMajVIREN2eTF1dWdUb3pBekZvZGF5OWYySkpMME94OGdkc21wdnVYNmlUOWpzWUZlVkNRUElnWkRyMDQwc18xaEIyYXBKTjZIUWtfSkhkVlU5d3B0ZlRzTlJJQms4bXdEZExmdVdDVGtPU2h0VTJ6QdIBrgFBVV95cUxOc19rTjRlY0FVa2tQeC1OSG5ZUm0wOEVWcnVnV1ppRDRMQ1c5UkZ3Z3RnSU5WXzJ0eTc5SU1zc2c0SzIwNlNDVUJzV19zRFlpWTd5aVVlQlF4M242UWk0dDZqRlZqRzNwcWV6QnZEY3NramNJZFFVX2F1MGFjak5feElpcDM3dDQ0SlJCT1RaaEg3VURLc3RVaHU3U3B4N0J1RWt1NE9DbTVNMjVhamc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "1945 Yalta vs. 2026 Shenzhen: Trei mari puteri se întâlnesc fără un inamic comun",
-      "title_it": "Yalta del 1945 contro Shenzhen del 2026: tre grandi potenze si incontrano senza un nemico comune",
       "translation_status": "machine_translation"
     },
     {
