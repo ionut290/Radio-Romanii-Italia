@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-22T15:43:57.134483+00:00",
+  "news_updated_at": "2026-11-22T15:57:02.678045+00:00",
   "editorial_updated_at": "2026-11-22T12:10:10.903788+01:00",
   "translations_updated_at": "2026-11-22T15:42:03.277438+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
-  "feed_missing_body": 120,
-  "feed_short_body": 0,
+  "feed_missing_body": 119,
+  "feed_short_body": 1,
   "editorial_total": 22,
   "archived_editorials": 356,
   "translation_records": 24,
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 3,
-  "editorial_galben": 30,
-  "editorial_rosu": 46,
+  "editorial_galben": 31,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,22 +618,139 @@
   ],
   "recent_news": [
     {
-      "title": "Incendiu într-un complex comercial din Iași. Mai multe echipaje de pompieri, mobilizate pentru a opri extinderea flăcărilor",
+      "title": "O persoană aflată în Arestul Poliţiei Maramureș a încercat să se sinucidă",
       "category": "România",
-      "published": "2026-11-22T15:36:36+00:00",
-      "url": "https://adevarul.ro/stiri-locale/iasi/incendiu-intr-un-complex-comercial-din-iasi-mai-2573498.html",
+      "published": "2026-11-22T15:54:42+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/o-persoana-aflata-in-arestul-politiei-maramures-a-incercat-sa-se-sinucida-4048045",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "West Bank: Four Palestinian villages targeted in suspected settler attacks",
+      "category": "Mondo",
+      "published": "2026-11-22T15:52:31+00:00",
+      "url": "https://www.euronews.com/video/2026/11/22/west-bank-four-palestinian-villages-targeted-in-suspected-settler-attacks",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Marc Marquez câștigă al 8-lea titlu mondial în MotoGP după un sezon marcat de o revenire fantastică / Ibericul l-a egalat pe legendarul Giacomo Agostini",
+      "category": "România",
+      "published": "2026-11-22T15:51:46+00:00",
+      "url": "https://www.g4media.ro/marc-marquez-castiga-al-8-lea-titlu-mondial-in-motogp-dupa-un-sezon-marcat-de-o-revenire-fantastica-ibericul-l-a-egalat-pe-legendarul-giacomo-agostini.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Premieră în UE: O instanță din Olanda interzice vânzarea unui SUV chinezesc care seamănă cu Land Rover Defender",
+      "category": "România",
+      "published": "2026-11-22T15:50:35+00:00",
+      "url": "https://www.g4media.ro/premiera-in-ue-o-instanta-din-olanda-interzice-vanzarea-unui-suv-chinezesc-care-seamana-cu-land-rover-defender.html",
+      "source": "G4Media",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Explosion on Russian ship at Libya port likely caused by drone attack, officials say",
+      "category": "Mondo",
+      "published": "2026-11-22T15:50:13+00:00",
+      "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Il padre di Augusto De Megni: 'De Gennaro ti dava fiducia anche con il non dire'",
+      "category": "Italia",
+      "published": "2026-11-22T15:50:09+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/il-padre-di-augusto-de-megni-de-gennaro-ti-dava-fiducia-anche-con-il-non-dire_eedeeec8-3372-4ace-8564-dd8bb948f06e.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Motogp, storico Marc Marquez, conquista il suo decimo titolo mondiale e supera Valentino Rossi",
+      "category": "Italia",
+      "published": "2026-11-22T15:48:53+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/11/22/motogp-storico-marc-marquez-conquista-il-suo-decimo-titolo-mondiale-e-supera_654d3d62-960e-442e-a10c-eb8359e9aa1c.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Doi bărbați au murit într-un accident în Arad. Șoferul nu avea permis și s-a izbit violent de un copac",
+      "category": "România",
+      "published": "2026-11-22T15:48:47+00:00",
+      "url": "https://adevarul.ro/stiri-locale/arad/doi-barbati-au-murit-intr-un-accident-in-arad-2573500.html",
       "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Motogp, storico Marc Marquez, conquista il suo decimo titolo mondiale e supera Valentino Rossi&nbsp;",
+      "title": "Armata germană testează pentru prima dată drone kamikaze şi sisteme de identificare a ţintelor cu inteligenţă artificială în Lituania",
+      "category": "România",
+      "published": "2026-11-22T15:47:59+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/armata-germana-testeaza-pentru-prima-data-drone-kamikaze-si-sisteme-de-identificare-a-tintelor-cu-inteligenta-artificiala-in-lituania-4048039",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Pensioni, Quota 64 e Opzione Donna: le nuove anticipate del 2027: requisiti e chi potrebbe beneficiarne - Il Messaggero",
       "category": "Italia",
-      "published": "2026-11-22T15:35:25+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/11/22/motogp-storico-marc-marquez-conquista-il-suo-decimo-titolo-mondiale-e-supera_654d3d62-960e-442e-a10c-eb8359e9aa1c.html",
+      "published": "2026-11-22T15:47:02+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcXFUVWIzeXpzRHJSdFZRbXdMbDFXRldGREoxYWpjck9GVk9MeE85a1htcG9KaVNLTG02Uy1WMTJralhiSVVmb3dYZkZ3emhnQXJEWkcxemVQYmY4SWxTZDFxTWlMZE9hSlIySDhXYWVPcFREandVQVhSbGJxRHA3Zmlsa2ZUZ3BLS1dfUm9JYUhWbDF0c1lxVTd5X0VBVXBhZUh0cVhxWFZsMXJITTN6T21B0gGwAUFVX3lxTE5SZlljeUk0V3JDUDk3LURna2YzNG9Pa3paV0diaVJzMVA4Rk5HNXpRM1pPd2JRX2M0Q0FHTGVaaUluaG4zTUpTTk1qcUVHRjA0QUhUME1od2oycGRKQzN4TzE5SVRnbnYtTjdBVU43Qlp3MnJYWDlZeXdqUGNYSVR4UUMxN0NLSFF4VEg3aHBJN0xQdVpPcEV5SHRuMWlISWN",
+      "source": "Il Messaggero",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Marcelo Arévalo/Mate Pavic - Théo Arribage/Albano Olivetti Riassunto della partita",
+      "category": "Sport",
+      "published": "2026-11-22T15:45:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdmNIbUZ1LUZremMza2RuZjhUQXBYbHZfNUlxcENjSnZVdmxFb0NWN19YZkFybHJuU1NNWDlXeFhMT01tQmF6ZWliS295b000UFJUY2JfQ2M1Q05paVZ6RnQtdkJwMHl4czl1WGJsaDFhb3BwMUtjZTV0c2tZMC1temNJVkIxUFI2cWRQVlNsZkwxLThhNHpvRVhCSjU5d0wwc1lJT0c3d3lGWEFXQ3dtWHo3ZTdCMUJ6V0RreGJVWjJFM3BMZWUwNVNkTTc?oc=5",
+      "source": "Eurosport.it",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "\"Pe Ciolacu l-au anihilat complet, l-au scos pe el cu șinșila aia de iepure rex. Erau genți acolo mai scumpe decât șinșila lui, ceilalți nu au pățit nimic\" - Primarul Buzăului, Constantin Toma (PSD)",
+      "category": "România",
+      "published": "2026-11-22T15:44:00+00:00",
+      "url": "https://www.profit.ro/stiri/politic/pe-ciolacu-l-au-anihilat-complet-l-au-scos-pe-el-cu-sinsila-aia-de-iepure-rex-erau-genti-acolo-mai-scumpe-decat-sinsila-lui-ceilalti-nu-au-patit-nimic-primarul-buzaului-constantin-toma-psd-23004129?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Decizie istorică a industriei auto din Japonia. Producătorii auto vor avea piese auto standardizate pentru a reduce costurile",
+      "category": "România",
+      "published": "2026-11-22T15:41:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/auto-transporturi/decizie-istorica-a-industriei-auto-din-japonia-producatorii-auto-vor-avea-piese-auto-standardizate-pentru-a-reduce-costurile-23003836?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A: In campo Bologna-Udinese 1-1 e Sassuolo-Genoa 0-2 DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-22T15:38:22+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/serie-a-in-campo-bologna-udinese-1-0-e-sassuolo-genoa-0-2-diretta_00fc35c8-80a8-413f-a58e-8702f1f6c03d.html",
       "source": "ANSA",
       "status": "roșu",
       "words": 0
+    },
+    {
+      "title": "Incendiu într-un complex comercial din Iași. Mai multe echipaje de pompieri, mobilizate pentru a opri extinderea flăcărilor",
+      "category": "România",
+      "published": "2026-11-22T15:36:36+00:00",
+      "url": "https://adevarul.ro/stiri-locale/iasi/incendiu-intr-un-complex-comercial-din-iasi-mai-2573498.html",
+      "source": "Adevărul",
+      "status": "galben",
+      "words": 360
     },
     {
       "title": "Vaccinul antigripal revine în farmacii după săptămâni de lipsuri. Când vor fi disponibile peste 570.000 de doze",
@@ -690,75 +807,12 @@
       "words": 0
     },
     {
-      "title": "„Marcel Ciolacu, anihilat total”. Un primar controversat a făcut anunțul. Constantin Toma de la Buzău: Erau genți acolo mai scumpe decât șinșila",
-      "category": "România",
-      "published": "2026-11-22T15:26:04+00:00",
-      "url": "https://www.economica.net/marcel-ciolacu-anihilat-total-un-primar-controversat-a-facut-anuntul-constantin-toma-de-la-buzau-erau-genti-acolo-mai-scumpe-decat-sinsila_998042.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Un social-democrat spune motivul pentru care a fost „executat” Marcel Ciolacu după botezul copilului lui Simonis și numește „adevăratul premier în Guvernul Luca Niculescu”, nu Marian Neacșu",
-      "category": "România",
-      "published": "2026-11-22T15:24:48+00:00",
-      "url": "https://www.libertatea.ro/stiri/un-social-democrat-spune-motivul-pentru-care-a-fost-executat-marcel-ciolacu-dupa-botezul-copilului-lui-simonis-si-numeste-adevaratul-premier-in-guvernul-luca-niculescu-nu-marian-neacsu-sjcsx60",
-      "source": "Libertatea",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Dozens drown as boat capsizes in Nigeria en route to funeral",
       "category": "Mondo",
       "published": "2026-11-22T15:24:20+00:00",
       "url": "https://www.aljazeera.com/video/newsfeed/2026/11/22/dozens-drown-as-boat-capsizes-in-nigeria-en-route-to-funeral?traffic_source=rss",
       "source": "Al Jazeera English",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "EȘEC la summitul climatic. UE a respins documentul final",
-      "category": "România",
-      "published": "2026-11-22T15:24:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/energie/esec-la-summitul-climatic-ue-a-respins-documentul-final-23004103?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Navă de război rusească, distrusă într-o explozie uriașă într-un port libian",
-      "category": "România",
-      "published": "2026-11-22T15:23:40+00:00",
-      "url": "https://adevarul.ro/stiri-externe/in-lume/nava-de-razboi-ruseasca-distrusa-intr-o-explozie-2573497.html",
-      "source": "Adevărul",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Cum se menține Daniela Nane în formă la 55 de ani. „Vă îndemn să nu faceți ca mine, ci să mergeți la un medic”",
-      "category": "România",
-      "published": "2026-11-22T15:23:30+00:00",
-      "url": "https://www.libertatea.ro/entertainment/cum-se-mentine-daniela-nane-in-forma-la-55-de-ani-6twp8mj",
-      "source": "Libertatea",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Peste 23.000 de angajaţi din industria auto şi navală din Germania sunt chemaţi la grevă luni. Oamenii cer salarii mai mari",
-      "category": "România",
-      "published": "2026-11-22T15:22:06+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/peste-23-000-de-angajati-din-industria-auto-si-navala-din-germania-sunt-chemati-la-greva-luni-oamenii-cer-salarii-mai-mari-4048017",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "O navă militară rusească a fost distrusă de o explozie urmată de un incendiu puternic, într-un port din Libia",
-      "category": "România",
-      "published": "2026-11-22T15:22:06+00:00",
-      "url": "https://www.libertatea.ro/stiri/o-nava-militara-ruseasca-a-fost-devastata-de-o-explozie-urmata-de-un-incendiu-puternic-intr-un-port-din-libia-kd87rs5",
-      "source": "Libertatea",
-      "status": "galben",
       "words": 0
     },
     {
@@ -812,15 +866,6 @@
       "published": "2026-11-22T15:00:00+00:00",
       "url": "https://techcrunch.com/2026/11/22/can-a-tv-be-too-large-an-investigation/",
       "source": "TechCrunch Hardware",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Serie A: In campo Bologna-Udinese 1-0 e Sassuolo-Genoa 0-2 DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-22T14:55:01+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/serie-a-in-campo-bologna-udinese-1-0-e-sassuolo-genoa-0-2-diretta_00fc35c8-80a8-413f-a58e-8702f1f6c03d.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -942,15 +987,6 @@
       "words": 0
     },
     {
-      "title": "Iran unveils dual-missile launcher, new ‘missile city’: What to know",
-      "category": "Mondo",
-      "published": "2026-11-22T14:20:41+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/22/iran-unveils-dual-missile-launcher-new-missile-city-what-to-know?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Chiara Ferragni parla per la prima volta del flirt con Achille Lauro",
       "category": "Italia",
       "published": "2026-11-22T14:19:00+00:00",
@@ -960,47 +996,11 @@
       "words": 0
     },
     {
-      "title": "\"It can take years\": Why the AI Riemann proof is far from settled",
-      "category": "Mondo",
-      "published": "2026-11-22T14:18:55+00:00",
-      "url": "https://www.france24.com/en/tv-shows/tech-24/20261122-it-can-take-years-why-the-ai-riemann-proof-is-far-from-settled",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Alla Cop31 non c'è l'accordo sul clima. L'Ue boccia il testo finale",
-      "category": "Italia",
-      "published": "2026-11-22T14:07:46+00:00",
-      "url": "https://www.ansa.it/ansa2030/notizie/energia_energie/2026/11/22/alla-cop31-non-ce-laccordo-sul-clima.-lue-boccia-il-testo-finale_99eaed9c-073d-431f-8e97-9ceea7a67b6c.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Cele mai bune 20 de destinații de călătorie în 2027, potrivit BBC / Ce loc din România intră în listă",
       "category": "Călătorii",
       "published": "2026-11-22T14:07:44+00:00",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTkhfeEUydGFNSExxbXdPY0RidHJsejk2dThEOWx5ZWMtVUZKVHV2M08xdW03N19nZFJqTXBsX3dIeWVSUUdxLVZ6dnNvU0E3SV93SE12Y25lNGhzSmdSM2E0Wk1XT0p1d2J5Z0NFdHphUGlpNXI0cUQ0c002LV8wNmoxcUJJV2R4S2tGY3ZKaVNpanB4LWRJckszRWlrLVAzU2VUWEtLQXV3WGNweEEyRmFlUjVzTVN6Yko0UGpvM1h2ZlhY?oc=5",
       "source": "G4Media",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Marquez campione, è il decimo titolo: oltre Valentino. E arriva il regalo di Agostini",
-      "category": "Italia",
-      "published": "2026-11-22T14:04:20+00:00",
-      "url": "https://www.repubblica.it/sport/moto-gp/2026/11/22/news/marquez_campione_decimo_titolo_mondiale_valentino_agostini-425742028/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
-      "category": "Inteligență artificială",
-      "published": "2026-11-22T14:00:05+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
-      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -1028,6 +1028,15 @@
       "published": "2026-11-22T13:45:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNT2hIRjhpVGJpYlJETG1xbnowMFpNaEhUMGVIckROLVVib2tMLUJ6eVVWREdQUTktVDg4akw5Y0JWS2R6cHNwSTRzVTJvR3Vjcng4TDhYVDE5QUk0aHZRejMzN2h0dW1DQmpmZFFiRkZGMUpDWDFwQTUwejF5SllzV2t1RFpKRUM1WGtSd1RMMWExb19mQ0syVUFndVhZcHRlS1FMaVRVdkNhUzQ?oc=5",
       "source": "DigiTech.News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
+      "category": "Inteligență artificială",
+      "published": "2026-11-22T13:00:04+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
+      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -1104,21 +1113,21 @@
       "words": 0
     },
     {
+      "title": "Tajani in missione a Baku. Incontri con il Presidente Aliyev e i Ministri degli Esteri e dell’Economia. Business Forum Italia-Azerbaigian – Ministero degli Affari Esteri e della Cooperazione Internazionale - Ministero de",
+      "category": "Istituzioni",
+      "published": "2026-11-22T09:50:37+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxPVnNqeURYaUMyRUJ1VjZDZVFhb3RDUzNmbW9KRTJoam5OTnJiUWZvZWdvbTl0UDYwRE52QWMzTlhqdkpvTTFFLUZ3VnoyVWRiLXQxUm5oT2FPc29aTFJQZnRnVURoTWxyMTJQLTcyVndUQ2J4TUlhNk5Xak94ZFdTT3ZUUWd0QmtreG9WUl9lNFZWcFhXRWUyU1V1TEJWOEkwbzU2QmJud2ZRb3JieWdBZUp1UkJSdGhjbG9UMndGQzk1dHVPRDVKOHVEOWxKcjNaWjg5c21JOFB0Sm5VTmNSZVVXMjJwTkZyVGhwa09ERmgwd1VrX0lXclZsRHhkSy02N3hROV96UnJkVV8tVkZaNHpyaFpqWXU5ZGFESmJ4MmFmQnVteG5XUjFLR3drNEFr?oc=5",
+      "source": "Ministero degli Esteri",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "La famiglia Panini - L'avventura delle figurine, una grande storia di imprenditorialità tutta italiana",
       "category": "Cinema și seriale",
       "published": "2026-11-22T09:46:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUE1sc01LVWhwZTlqbDlUQTI0WlMtNGhteWRLWFotbmtxa3h5YVFfUmRBVGdQTFVlSGhnSDN6Zk5hT19Lc21BWHZ2VG5ySDROTTJVWWE2bkFLTXY0MVU5eG5xZ1luNTlfb3B4ekFPV2htRWpKTC1pNzZOTm14YnN4OFNrRG1pUzhrT1p3amVuUGl0U0VNems3Y05BS1Q5T0HSAWBBVV95cUxNdjE4NEh4NTJlcEp5SUw5OVE0dzNuVExPcUtQS0l4cE52TlVjSXhydl9mM0FNWkthZkRsZGdUUk0tdF9ybjVSU0s5RG1VaEh0Ql9BbVBWQktBdUhyVmNlQ1Y?oc=5",
       "source": "MYmovies",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Tajani in missione a Baku. Incontri con il Presidente Aliyev e i Ministri degli Esteri e dell’Economia. Business Forum Italia-Azerbaigian - Ministero degli Affari Esteri e della Cooperazione Internazionale",
-      "category": "Istituzioni",
-      "published": "2026-11-22T09:43:48+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxPVnNqeURYaUMyRUJ1VjZDZVFhb3RDUzNmbW9KRTJoam5OTnJiUWZvZWdvbTl0UDYwRE52QWMzTlhqdkpvTTFFLUZ3VnoyVWRiLXQxUm5oT2FPc29aTFJQZnRnVURoTWxyMTJQLTcyVndUQ2J4TUlhNk5Xak94ZFdTT3ZUUWd0QmtreG9WUl9lNFZWcFhXRWUyU1V1TEJWOEkwbzU2QmJud2ZRb3JieWdBZUp1UkJSdGhjbG9UMndGQzk1dHVPRDVKOHVEOWxKcjNaWjg5c21JOFB0Sm5VTmNSZVVXMjJwTkZyVGhwa09ERmgwd1VrX0lXclZsRHhkSy02N3hROV96UnJkVV8tVkZaNHpyaFpqWXU5ZGFESmJ4MmFmQnVteG5XUjFLR3drNEFr?oc=5",
-      "source": "Ministero degli Esteri",
-      "status": "galben",
       "words": 0
     },
     {
@@ -1198,15 +1207,6 @@
       "category": "Sport",
       "published": "2026-11-22T01:56:28+00:00",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE12R25DZ1VxdmV5akZxdkV2M1ZFdU5SSzlEX1BmTnB1akZvN2xFQlVNOVhGWWxxX1ZlNV9wSnhrYUxHWEFzbGZfMjEzS0JaS2ZqX1RPQkwwanhHMGlBQTRMUzNhNURHeURENngyU0g5Q0VMWGp2NXo3QU5SdkFsQQ?oc=5",
-      "source": "www.eurosport.it",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Marcelo Arévalo/Mate Pavic - Théo Arribage/Albano Olivetti Riassunto della partita",
-      "category": "Sport",
-      "published": "2026-11-21T23:17:22+00:00",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQdmNIbUZ1LUZremMza2RuZjhUQXBYbHZfNUlxcENjSnZVdmxFb0NWN19YZkFybHJuU1NNWDlXeFhMT01tQmF6ZWliS295b000UFJUY2JfQ2M1Q05paVZ6RnQtdkJwMHl4czl1WGJsaDFhb3BwMUtjZTV0c2tZMC1temNJVkIxUFI2cWRQVlNsZkwxLThhNHpvRVhCSjU5d0wwc1lJT0c3d3lGWEFXQ3dtWHo3ZTdCMUJ6V0RreGJVWjJFM3BMZWUwNVNkTTc?oc=5",
       "source": "www.eurosport.it",
       "status": "roșu",
       "words": 0
@@ -1392,6 +1392,15 @@
       "words": 0
     },
     {
+      "title": "6770 - Gara 6770 del 20/11/2026 | Dettaglio Bando di Gara - INPS",
+      "category": "Istituzioni",
+      "published": "2026-11-21T13:10:59+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNbThQaWQ1XzNfb2FnS05zMFpRVmU2TEtZeml2ZklJTGQ5NGtpZTJtaHVkSFFBNEs1N3NaTW5iSllkZ2xxMHlWaUo0cGUxakZSd1lWME52UW5zeVgyUFlzQVRBOUFiem1WcXNKOTJqYVhjVXN3SzhqMHZORzJMM3BDOTliNVJZb1ZXRmlkNUdkbG1QeW5sWExyX3cwUUR1WXZzQ2hVak8yWllLb3h0VEk4dmhtSVBNbFdCckNnSjFZUVhUQWNHcHhxZVR3ajBjVzNxOXhtSGlZZm96NFE0U1VnYmttUnZ0M1VpWC1jRl92eTVFbVpzOHlSY0NRcjhKNlppQ1FuVUo0a3M?oc=5",
+      "source": "INPS",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Melanoma. Prevenire. Diagnosticare. Curare. Ricercare la scienza al servizio della persona",
       "category": "Sănătate",
       "published": "2026-11-21T12:44:34+00:00",
@@ -1505,15 +1514,6 @@
       "published": "2026-11-21T09:01:16+00:00",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2556",
       "source": "Commissione europea",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Posizioni Organizzative - INPS",
-      "category": "Istituzioni",
-      "published": "2026-11-21T08:38:04+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPY3poVm1qZFFlYThoVnJHWlJCZEJUUUJ1UlNULU0xelBaMDk1ellQTzVIamZfbE83d0lBLVBSY2phRm1XZ0w4a09FOUw0NlBQbFNyLUluUWV2c1AwTHRLOGhwOU5HVlZ2RXktZUJ3MVNFaGxOQ3B2ejF0LUg2SzByVVpWR0huZw?oc=5",
-      "source": "INPS",
       "status": "roșu",
       "words": 0
     }
