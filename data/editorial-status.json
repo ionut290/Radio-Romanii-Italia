@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-22T20:59:37.903770+00:00",
+  "news_updated_at": "2026-11-22T21:56:43.529242+00:00",
   "editorial_updated_at": "2026-11-22T20:28:34.497453+01:00",
-  "translations_updated_at": "2026-11-22T17:03:53.755949+00:00",
+  "translations_updated_at": "2026-11-22T21:17:53.746177+00:00",
   "feed_total": 120,
-  "feed_extended_400": 1,
-  "feed_missing_body": 119,
+  "feed_extended_400": 2,
+  "feed_missing_body": 118,
   "feed_short_body": 0,
   "editorial_total": 16,
   "archived_editorials": 357,
-  "translation_records": 21,
+  "translation_records": 20,
   "pending_total": 125,
   "pending_filtered_out": 113,
-  "editorial_verde": 3,
-  "editorial_galben": 23,
-  "editorial_rosu": 48,
+  "editorial_verde": 4,
+  "editorial_galben": 25,
+  "editorial_rosu": 45,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,11 +618,191 @@
   ],
   "recent_news": [
     {
-      "title": "Incendiu puternic la un hotel din Poiana Braşov. Intervin pompieri din patru județe",
+      "title": "Incendiu puternic la un hotel din Poiana Braşov. La intervenție au fost aduși în sprijin pompieri din alte trei județe",
       "category": "România",
-      "published": "2026-11-22T20:58:43+00:00",
+      "published": "2026-11-22T21:53:07+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/incendiu-puternic-la-un-hotel-din-poiana-brasov-intervin-pompieri-din-patru-judete-4048199",
       "source": "Digi24",
+      "status": "verde",
+      "words": 439
+    },
+    {
+      "title": "Cătălin Drulă: „Nodul dintre A0-A3 a fost umflat de la 82 la 208 hectare”. Ce nereguli reclamă fostul ministru al Transporturilor",
+      "category": "România",
+      "published": "2026-11-22T21:46:04+00:00",
+      "url": "https://www.digi24.ro/stiri/economie/transporturi/catalin-drula-nodul-dintre-a0-a3-a-fost-umflat-de-la-82-la-208-hectare-ce-nereguli-reclama-fostul-ministru-al-transporturilor-4048263",
+      "source": "Digi24",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "România, în Cartea Recordurilor. Locul 1 în Europa și locul 2 în lume în „Guinness World Records 2027\". Ultimul record, anunțat la Profit.ro TV",
+      "category": "România",
+      "published": "2026-11-22T21:45:00+00:00",
+      "url": "https://www.profit.ro/povesti-cu-profit/romania-in-cartea-recordurilor-locul-1-in-europa-si-locul-2-in-lume-in-guinness-world-records-2027-ultimul-record-anuntat-la-profit-ro-tv-23004763?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
+      "category": "Mondo",
+      "published": "2026-11-22T21:33:44+00:00",
+      "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya",
+      "source": "The Guardian",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Turkey: Thousands protest closure of critical media outlets",
+      "category": "Mondo",
+      "published": "2026-11-22T21:31:00+00:00",
+      "url": "https://www.dw.com/en/turkey-thousands-protest-closure-of-critical-media-outlets/a-80015347?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "FOTO&VIDEO Imagini spectaculoase. Incendiul de la Hotelul Alpin, din Poiana Brașov, s-a extins. Mesajul hotelului",
+      "category": "România",
+      "published": "2026-11-22T21:30:00+00:00",
+      "url": "https://www.profit.ro/stiri/social/foto-video-imagini-spectaculoase-incendiul-de-la-hotelul-alpin-din-poiana-brasov-s-a-extins-mesajul-hotelului-23004746?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
+      "source": "Profit.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Midterms: US Democrats secure biggest House majority in decades",
+      "category": "Mondo",
+      "published": "2026-11-22T21:29:39+00:00",
+      "url": "https://www.euronews.com/2026/11/22/midterms-us-democrats-secure-biggest-house-majority-in-decades",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Israel’s Eisenkot slams ‘Jewish terrorism’ after attacks by settlers in West Bank",
+      "category": "Mondo",
+      "published": "2026-11-22T21:29:16+00:00",
+      "url": "https://www.france24.com/en/middle-east/20261122-israel-s-eisenkot-slams-jewish-terrorism-after-attacks-by-settlers-in-west-bank",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Guvernul plătește datoriile primăriilor, dar firmele care au lucrat pentru acestea și și-au plătit taxele rămân cu buza umflată",
+      "category": "România",
+      "published": "2026-11-22T21:28:25+00:00",
+      "url": "https://adevarul.ro/stiri-interne/societate/guvernul-plateste-datoriile-primariilor-dar-2573137.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Heartbreak in US capital as Washington Spirit lose women’s football final",
+      "category": "Mondo",
+      "published": "2026-11-22T21:26:12+00:00",
+      "url": "https://www.aljazeera.com/sports/2026/11/22/heartbreak-in-us-capital-as-washington-spirit-lose-womens-football-final?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Serie A, in campo Atalanta-Inter DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-22T21:22:18+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/serie-a-in-campo-atalanta-inter-diretta_33021a11-0a66-40a8-a1e9-6b52d22307f0.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Pregătirea profesorilor, prioritatea ministrului Educației pentru anul 2027: „Altfel nu se mai poate”",
+      "category": "România",
+      "published": "2026-11-22T21:21:13+00:00",
+      "url": "https://www.libertatea.ro/stiri/pregatirea-profesorilor-prioritatea-ministrului-educatiei-pentru-anul-2027-altfel-nu-se-mai-poate-mhb02rf",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "„Litoralul Vestului” se transformă cu 4,8 milioane de euro: Cum va arăta Plaja Ghioroc până în 2029",
+      "category": "România",
+      "published": "2026-11-22T21:18:53+00:00",
+      "url": "https://www.libertatea.ro/stiri/litoralul-vestului-se-transforma-48-milioane-euro-facilitati-noi-plaja-ghioroc-arad-l75prpv",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "La Virtus batte la Bc Roma in una gara folle e si gode il primato",
+      "category": "Italia",
+      "published": "2026-11-22T21:16:30+00:00",
+      "url": "https://www.ilrestodelcarlino.it/bologna/sport/virtus/virtus-batte-bc-roma-be298d4c",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Noua Avertizare Meteorologica Emisa de ANM pentru Vreme Severa in Romania pe 22 Noiembrie 2026 - iDevice.ro",
+      "category": "România",
+      "published": "2026-11-22T21:15:46+00:00",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNbDI1NTloQzBEVXJkY3hmWGl2aG1uVWMxQUpjYmw2bFZGM3ZYN3V0cHRDczNZLWhQV3Q3VkhaN2RjaHhqNHpwV3VETWNqUXprUEhGNTBJdkdBdFBGUEpFNEt0UEdjOTkzRFpyMU1paVVuNG1IejhKTjRucVBwYl9nUi1kNUFuZlhiWWwxMFRiQzk0b2Utcktidk9lNjlEbl85UFdvR3hvOWstd2pqenQ3SjZEY3RicVgyTnhCeg?oc=5",
+      "source": "iDevice.ro",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Triunghiul divergențelor. De ce Kievul, SUA și UE nu se pot înțelege în privința garanțiilor de securitate promise Ucrainei",
+      "category": "România",
+      "published": "2026-11-22T21:12:25+00:00",
+      "url": "https://adevarul.ro/stiri-interne/evenimente/triunghiul-divergentelor-de-ce-kievul-sua-si-ue-2573221.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Șeful Pentagonul a impus restricții asupra cooperării militare cu aliatul tradițional Canada. Reacția Ottawei",
+      "category": "România",
+      "published": "2026-11-22T21:06:28+00:00",
+      "url": "https://www.libertatea.ro/stiri/seful-pentagonul-a-impus-restrictii-asupra-cooperarii-militare-cu-aliatul-traditional-canada-reactia-ottawei-7njcvnl",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Incendiu puternic la un important hotel din Poiana Brașov: Flăcările au cuprins acoperișul, mansarda și ultimele trei etaje",
+      "category": "România",
+      "published": "2026-11-22T21:04:03+00:00",
+      "url": "https://www.libertatea.ro/stiri/incendiu-mansarda-fatada-hotel-alpin-poiana-brasov-au-intervenit-pompierii-l7d39jz",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Robert Pattinson ar putea încasa o sumă uriașă doar pentru a da o audiție pentru celebrul rol James Bond",
+      "category": "România",
+      "published": "2026-11-22T21:01:57+00:00",
+      "url": "https://www.libertatea.ro/entertainment/negocieri-la-hollywood-un-milion-de-dolari-suma-colosala-care-i-s-ar-pregati-lui-robert-pattinson-pentru-o-simpla-auditie-la-james-bond-r9kp1gt",
+      "source": "Libertatea",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Alessandro Baricco: “Bisogna riempire il vuoto lasciato da Augias”",
+      "category": "Italia",
+      "published": "2026-11-22T21:01:00+00:00",
+      "url": "https://www.repubblica.it/cultura/2026/11/23/news/alessandro_baricco_corrado_augias_auditorium_roma_ricordo_funerali-425742682/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Emirates, pe primul loc în topul revistei TIME al celor mai bune companii aeriene din lume pentru 2027 / Nicio companie europeană nu intră în primele zece",
+      "category": "România",
+      "published": "2026-11-22T21:00:31+00:00",
+      "url": "https://www.g4media.ro/emirates-pe-primul-loc-in-topul-revistei-time-al-celor-mai-bune-companii-aeriene-din-lume-pentru-2027-nicio-companie-europeana-nu-intra-in-primele-zece.html",
+      "source": "G4Media",
       "status": "galben",
       "words": 0
     },
@@ -633,6 +813,24 @@
       "url": "https://www.digi24.ro/stiri/actualitate/evenimente/un-autovehicul-al-stb-a-fost-implicat-intr-un-accident-rutier-trei-pasageri-au-fost-raniti-4048233",
       "source": "Digi24",
       "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Grillo show, e avvisa: 'Se il giudice dice che il Movimento è mio me lo riprendo'",
+      "category": "Italia",
+      "published": "2026-11-22T20:54:01+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-show-e-avvisa-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-riprendo_d85903d4-9afa-4b58-b602-96ed3ea730be.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Telefonate respinte e una lettera cestinata. Tutti i rifiuti di Kim-Jong a Trump",
+      "category": "Italia",
+      "published": "2026-11-22T20:53:48+00:00",
+      "url": "https://www.repubblica.it/esteri/2026/11/22/news/trump_kim_i_tentativi_del_presidente_usa_di_incontrare_il_leader_nordcoreano-425742784/",
+      "source": "la Repubblica",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -654,39 +852,21 @@
       "words": 0
     },
     {
-      "title": "„Nodul dintre A0 și A3 a fost umflat la 208 hectare”, susține un fost ministru al Transporturilor. Acuzații la adresa șefului CNAIR",
-      "category": "România",
-      "published": "2026-11-22T20:46:00+00:00",
-      "url": "https://hotnews.ro/nodul-dintre-a0-si-a3-a-fost-umflat-la-208-hectare-sustine-un-fost-ministru-al-transporturilor-acuzatii-la-adresa-sefului-cnair-2411164",
-      "source": "HotNews",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Superliga: FC Argeș - FCSB 0-0",
-      "category": "România",
-      "published": "2026-11-22T20:39:01+00:00",
-      "url": "https://www.romania-actualitati.ro/stiri/sport/superliga-fc-arges-fcsb-0-0-id237912.html",
-      "source": "Radio România Actualități",
+      "title": "Grillo da Fazio: “Se mi ridanno il simbolo 5S, lo dò a minori di 25 anni. Pronto ad aiutare Dibba”",
+      "category": "Italia",
+      "published": "2026-11-22T20:47:54+00:00",
+      "url": "https://www.repubblica.it/politica/2026/11/22/news/beppe_grillo_fazio_m5s_conte_di_battista_di_maio-425742775/",
+      "source": "la Repubblica",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Se teme AUR de Nicușor Dan? Dungaciu: „Vor fi diverse presiuni de un tip sau de altul”",
-      "category": "România",
-      "published": "2026-11-22T20:35:40+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/politica/se-teme-aur-de-nicusor-dan-dungaciu-vor-fi-diverse-presiuni-de-un-tip-sau-de-altul-4048219",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "O teorie despre originea vieții pe Pământ, pusă sub semnul întrebării de simulări / Ce rol au avut cometele",
-      "category": "România",
-      "published": "2026-11-22T20:30:50+00:00",
-      "url": "https://www.g4media.ro/o-teorie-despre-originea-vietii-pe-pamant-pusa-sub-semnul-intrebarii-de-simulari-ce-rol-au-avut-cometele.html",
-      "source": "G4Media",
-      "status": "galben",
+      "title": "Trump apre ai democratici, pronto a collaborare col nuovo Congresso",
+      "category": "Italia",
+      "published": "2026-11-22T20:36:19+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/trump-apre-ai-democratici-pronto-a-collaborare-col-nuovo-congresso_a7791188-3388-4e6f-bf39-202dd6c2e6a9.html",
+      "source": "ANSA",
+      "status": "roșu",
       "words": 0
     },
     {
@@ -695,6 +875,15 @@
       "published": "2026-11-22T20:29:46+00:00",
       "url": "https://www.ansa.it/sito/notizie/sport/tennis/speciali/atp_finals_2026/2026/11/22/atp-finals-alcaraz-batte-zverev-e-conquista-il-suo-primo-titolo-del_edfb3ff5-f27f-4b0d-9e7e-6c8409ae4446.html",
       "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Fire breaks out at popular tourist hotspot in Zanzibar",
+      "category": "Mondo",
+      "published": "2026-11-22T20:29:01+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/22/fire-breaks-out-at-popular-tourist-hotspot-in-zanzibar?traffic_source=rss",
+      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -713,51 +902,6 @@
       "published": "2026-11-22T20:27:28+00:00",
       "url": "https://www.ilrestodelcarlino.it/bologna/sport/fortitudo/fortitudo-vince-derby-cento-85a447d7",
       "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Comisia Europeană regândește Directiva privind practicile comerciale. Ce impact ar putea avea în sectorul alimentar wkd",
-      "category": "România",
-      "published": "2026-11-22T20:26:34+00:00",
-      "url": "https://www.economica.net/comisia-europeana-regandeste-directiva-privind-practicile-comerciale-ce-impact-ar-putea-avea-in-sectorul-alimentar997709_997709.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Noul Lexus NX, dezvăluit la Torino și pregătit pentru livrări în 2027",
-      "category": "România",
-      "published": "2026-11-22T20:26:12+00:00",
-      "url": "https://www.economica.net/noul-lexus-nx-debuteaza-europa-2027_998058.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Vor ajunge agenții AI să ne administreze banii? Ce spune șeful Revolut despre viitorul sistemului bancar – INTERVIU",
-      "category": "România",
-      "published": "2026-11-22T20:25:52+00:00",
-      "url": "https://www.economica.net/vor-ajunge-agentii-ai-sa-ne-administreze-banii-ce-spune-seful-revolut-despre-viitorul-sistemului-bancar-interviu_996211.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Începe construcția unui nou parc fotovoltaic mare în România, 220 MW la Vișina în Dâmbovița. Este al danezilor de la Eurowind, cel mai mare proiect din lume al grupului",
-      "category": "România",
-      "published": "2026-11-22T20:25:06+00:00",
-      "url": "https://www.economica.net/incepe-constructia-unui-nou-parc-fotovoltaic-mare-in-romania-220-mw-la-visina-in-dambovita-este-al-danezilor-de-la-eurowind-cel-mai-mare-proiect-din-lume-al-grupului_998004.html",
-      "source": "Economica.net",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Vacanțe cu inteligența artificială. Cea mai importantă schimbare adusă platformei Google Maps în ultimul deceniu. Google a decis să extindă funcția Ask Maps în peste 30 de țări europene",
-      "category": "România",
-      "published": "2026-11-22T20:23:00+00:00",
-      "url": "https://www.profit.ro/romania-conectata/vacante-cu-inteligenta-artificiala-cea-mai-importanta-schimbare-adusa-platformei-google-maps-in-ultimul-deceniu-google-a-decis-sa-extinda-functia-ask-maps-in-peste-30-de-tari-europene-23004604?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
       "status": "roșu",
       "words": 0
     },
@@ -789,29 +933,11 @@
       "words": 0
     },
     {
-      "title": "Incendiu puternic la hotelul Alpin din Poiana Brașov. Intervin pompieri din patru județe",
-      "category": "România",
-      "published": "2026-11-22T20:14:13+00:00",
-      "url": "https://hotnews.ro/incendiu-la-un-hotel-din-poiana-brasov-intervin-pompieri-din-patru-judete-2411165",
-      "source": "HotNews",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Alcaraz, primo trionfo alle Finals: Zverev battuto in due set",
       "category": "Italia",
       "published": "2026-11-22T20:13:28+00:00",
       "url": "https://www.repubblica.it/sport/tennis/2026/11/22/news/alcaraz_zverev_finals_risultato-425742717/",
       "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "„Un permis de a ucide”. Legea controversată prin care Franța schimbă regulile folosirii armelor de către polițiști",
-      "category": "România",
-      "published": "2026-11-22T20:12:25+00:00",
-      "url": "https://adevarul.ro/stiri-interne/evenimente/un-permis-de-a-ucide-legea-controversata-prin-2573374.html",
-      "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
@@ -825,15 +951,6 @@
       "words": 0
     },
     {
-      "title": "VIDEO Mii de turci au ieșit în stradă la Istanbul",
-      "category": "România",
-      "published": "2026-11-22T20:11:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/vecini/video-mii-de-turci-au-iesit-in-strada-la-istanbul-23004563?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Liverpool 4-0 Manchester United: Five key takeaways for Pochettino",
       "category": "Mondo",
       "published": "2026-11-22T20:04:12+00:00",
@@ -843,11 +960,11 @@
       "words": 0
     },
     {
-      "title": "Serie A, in campo Atalanta-Inter DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-22T20:01:38+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/22/serie-a-in-campo-atalanta-inter-diretta_33021a11-0a66-40a8-a1e9-6b52d22307f0.html",
-      "source": "ANSA",
+      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
+      "category": "Inteligență artificială",
+      "published": "2026-11-22T20:00:05+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
+      "source": "Il Messaggero",
       "status": "roșu",
       "words": 0
     },
@@ -897,65 +1014,11 @@
       "words": 0
     },
     {
-      "title": "Tornano i blitz dell'Ice, agenti mascherati seminano il terrore",
-      "category": "Italia",
-      "published": "2026-11-22T19:40:21+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/tornano-i-blitz-dellice-agenti-mascherati-seminano-il-terrore-_4aac05d0-a3a8-408a-93bb-81adedbdda99.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Cockroaches, dissent and a paradigm shift in India",
       "category": "Mondo",
       "published": "2026-11-22T19:40:12+00:00",
       "url": "https://www.aljazeera.com/video/the-listening-post/2026/11/22/cockroaches-dissent-and-a-paradigm-shift-in-india?traffic_source=rss",
       "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Al via il Torino Film Industry, focus su talenti emergenti e partnership internazionali",
-      "category": "Italia",
-      "published": "2026-11-22T19:39:53+00:00",
-      "url": "https://www.ilsole24ore.com/art/al-via-torino-film-industry-focus-talenti-emergenti-e-partnership-internazionali-AJDq7nFC",
-      "source": "Il Sole 24 Ore Economia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Burnham, 'Brejoin' & the Ghosts of Brexit",
-      "category": "Mondo",
-      "published": "2026-11-22T19:37:13+00:00",
-      "url": "https://www.france24.com/en/tv-shows/spotlight/20261122-burnham-brejoin-the-ghosts-of-brexit",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Woltemade non basta a Spalletti: “Mi manca un centravanti. Inutile dire: via l’allenatore”",
-      "category": "Italia",
-      "published": "2026-11-22T19:33:24+00:00",
-      "url": "https://www.repubblica.it/sport/calcio/serie-a/juventus/2026/11/22/news/woltemade_spalletti_chiede_centravanti-425742632/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "On China, is Trump bucking the US national security establishment?",
-      "category": "Mondo",
-      "published": "2026-11-22T19:30:00+00:00",
-      "url": "https://www.aljazeera.com/video/the-bottom-line/2026/11/22/on-china-is-trump-bucking-the-us-national-security-establishment?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Atp Finals 2026, Alcaraz batte Zverev in finale e diventa Maestro per la prima volta: guadagna più di 5 milioni di dollari",
-      "category": "Italia",
-      "published": "2026-11-22T19:26:31+00:00",
-      "url": "https://www.today.it/sport/atp-tennis/alcaraz-vince-atp-finals-2026-finale-zverev-risultato-montepremi.html",
-      "source": "Today",
       "status": "roșu",
       "words": 0
     },
@@ -969,74 +1032,11 @@
       "words": 0
     },
     {
-      "title": "Pensioni, Quota 64 e Opzione Donna: le nuove anticipate del 2027: requisiti e chi potrebbe beneficiarne - Il Messaggero",
-      "category": "Italia",
-      "published": "2026-11-22T19:25:51+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQcXFUVWIzeXpzRHJSdFZRbXdMbDFXRldGREoxYWpjck9GVk9MeE85a1htcG9KaVNLTG02Uy1WMTJralhiSVVmb3dYZkZ3emhnQXJEWkcxemVQYmY4SWxTZDFxTWlMZE9hSlIySDhXYWVPcFREandVQVhSbGJxRHA3Zmlsa2ZUZ3BLS1dfUm9JYUhWbDF0c1lxVTd5X0VBVXBhZUh0cVhxWFZsMXJITTN6T21B0gGwAUFVX3lxTE5SZlljeUk0V3JDUDk3LURna2YzNG9Pa3paV0diaVJzMVA4Rk5HNXpRM1pPd2JRX2M0Q0FHTGVaaUluaG4zTUpTTk1qcUVHRjA0QUhUME1od2oycGRKQzN4TzE5SVRnbnYtTjdBVU43Qlp3MnJYWDlZeXdqUGNYSVR4UUMxN0NLSFF4VEg3aHBJN0xQdVpPcEV5SHRuMWlISWN",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Sudan: Drones hit UN building, residential area in Khartoum",
-      "category": "Mondo",
-      "published": "2026-11-22T19:25:00+00:00",
-      "url": "https://www.dw.com/en/sudan-drones-hit-un-building-residential-area-in-khartoum/a-80015122?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Scoppia un incendio in un casolare a Ozzano: fiamme domate dopo 20 ore",
-      "category": "Italia",
-      "published": "2026-11-22T19:21:36+00:00",
-      "url": "https://www.ilrestodelcarlino.it/bologna/cronaca/incendio-ozzano-e-via-gorky-rwoky7wd",
-      "source": "Il Resto del Carlino",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Aber Kawas becomes first Palestinian in New York state Senate history",
-      "category": "Mondo",
-      "published": "2026-11-22T19:18:29+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/22/aber-kawas-becomes-first-palestinian-in-new-york-state-senate-history?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "‘Horrific’ and ‘chilling’: Officials condemn ICE arrests at Seattle airport",
-      "category": "Mondo",
-      "published": "2026-11-22T19:10:00+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/22/horrific-and-chilling-officials-condemn-ice-arrests-at-seattle-airport?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Badantă din Italia, îl acuză de viol pe pensionarul asistat. Bărbatul neagă că ar fi constrâns-o - Rotalianul – Revista românului din Italia",
       "category": "Diaspora",
       "published": "2026-11-22T19:09:48+00:00",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRk8zVE5PeVNhYi1xU3ZNdlJLeFlzd1BGRG5EN0lrdkNRNkROVENXQlQ1dloxa2pPYUFtS0tQSTJsOXBnMzduVnZGb0lQTWdKMzRMRk1mT1ptZWpZNmRwQnhiVHpMU3AyWXNBbnFtYnNtMFUtXzl6Y09LRWdOV1g2T2lUOVk3RlAteGNNQ1Yxb2UxRXpoQl93bU1Da1R1eGpjSzVGMS1UM3FfR1VIOF9uLTdRazlLa3NERXc?oc=5",
       "source": "Rotalianul – Revista românului din Italia",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
-      "category": "Inteligență artificială",
-      "published": "2026-11-22T19:00:07+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "What's next after no deal at COP31 climate talks?",
-      "category": "Mondo",
-      "published": "2026-11-22T18:57:24+00:00",
-      "url": "https://www.bbc.co.uk/news/videos/cr1ewge81q4qo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News",
       "status": "roșu",
       "words": 0
     },
@@ -1500,20 +1500,20 @@
       "words": 0
     },
     {
+      "title": "6769 - Gara 6769 del 20/11/2026 | Dettaglio Bando di Gara - INPS",
+      "category": "Istituzioni",
+      "published": "2026-11-21T13:40:09+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQMkVvWWZKVEE0a1o5REx6bG9wTDdxLUIwc2xMeU1tRFB6NW1sRlBhWjMwcHUyNGZfTURKZjUxZzlOOE10cm5HQ25Sclh5VjZLR00zRF9uMmdhRW42dlZrS3E1NGt0d2NtWS1sUWVQV2VIa2VhSmpEdnpGaGR0WEdUV2FQQkFlek5vTmZVV2VBZ3FBMXFaLUJ3bm5ONUhHbVcyb0F2LUhaeUFtRTdZWDBKcmdBNFJTcmJBNE11bExHX2RoQWN6XzJzMmM3QXQ4RnJuVXhvY0o5YThfbUducnFLbWU1UE1QSjBuTzNtZmI4MUhlUGh4Z3REY003Sm1xUnlEX2JKdXl1UDV3dw?oc=5",
+      "source": "INPS",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Elevii postează confesiuni: Ar trebui școala să le interzică sau să se angajeze într-un dialog?",
       "category": "Educație",
       "published": "2026-11-21T13:21:21+00:00",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOR19KdTNHcGdmNmlObVcxRFQ0a3RDU1FCYnlKYkRTQk1WMVlzbm14WHdwOW5ydzM2UlN2NW5sSVZXaFNtdkhnNkxuWklnbTRCaTVmZHJYQzJhRHhubGxjcEF6bU1HMFUzdU94UHQtaGFjN0RHeUVlR1B5eWpHbmtNeDZpdVVLRngzOUJ2cA?oc=5",
       "source": "Vietnam.vn",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "6770 - Gara 6770 del 20/11/2026 | Dettaglio Bando di Gara - INPS",
-      "category": "Istituzioni",
-      "published": "2026-11-21T13:10:59+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNbThQaWQ1XzNfb2FnS05zMFpRVmU2TEtZeml2ZklJTGQ5NGtpZTJtaHVkSFFBNEs1N3NaTW5iSllkZ2xxMHlWaUo0cGUxakZSd1lWME52UW5zeVgyUFlzQVRBOUFiem1WcXNKOTJqYVhjVXN3SzhqMHZORzJMM3BDOTliNVJZb1ZXRmlkNUdkbG1QeW5sWExyX3cwUUR1WXZzQ2hVak8yWllLb3h0VEk4dmhtSVBNbFdCckNnSjFZUVhUQWNHcHhxZVR3ajBjVzNxOXhtSGlZZm96NFE0U1VnYmttUnZ0M1VpWC1jRl92eTVFbVpzOHlSY0NRcjhKNlppQ1FuVUo0a3M?oc=5",
-      "source": "INPS",
       "status": "roșu",
       "words": 0
     }
@@ -1553,6 +1553,17 @@
       "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     },
     {
+      "title": "Incendiu puternic la un hotel din Poiana Braşov. La intervenție au fost aduși în sprijin pompieri din alte trei județe",
+      "category": "România",
+      "published": "2026-11-22T21:53:07+00:00",
+      "url": "https://www.digi24.ro/stiri/actualitate/incendiu-puternic-la-un-hotel-din-poiana-brasov-intervin-pompieri-din-patru-judete-4048199",
+      "source": "Digi24",
+      "status": "verde",
+      "words": 439,
+      "intro": "Un incendiu a izbucnit, duminică seara, la Hotelul Alpin din Poiana Braşov, pompierii intervenind cu mai multe autospeciale pentru a preveni extinderea focului.",
+      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
+    },
+    {
       "title": "Grevă generală în Italia. Protestatarii l-au evocat și pe muncitorul român Octav Stroici, decedat anul trecut pe un șantier - tvrinfo.ro",
       "category": "Diaspora",
       "published": "2026-11-20T22:07:44+00:00",
@@ -1562,17 +1573,6 @@
       "words": 20,
       "intro": "Grevă generală în Italia.",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
-    },
-    {
-      "title": "L’affondo di Forza Italia: \"Nuova organizzazione. Siamo qui per i cittadini\" - Il Resto del Carlino",
-      "category": "Italia",
-      "published": "2026-11-21T05:30:44+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQT1htTVM3ZS1EYVV3LVAtLVM5WlBPb1JLNnE1UkZVUVpuZEJiV0MwSGFVYUp0aTdWYU8xUkVfRkxhYTRiNU42THNqUzlyRmZtT3JDWDV2S19pY3pLbVIzMmlRMExUbWxHdEZBdE9xMDY4VWs2amVZSmxiQVViNEEyZkVaTXpndE9WY2M0bVc4Qkk?oc=5",
-      "source": "Il Resto del Carlino",
-      "status": "galben",
-      "words": 15,
-      "intro": "L’affondo di Forza Italia: \"Nuova organizzazione.",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
     }
   ]
 }
