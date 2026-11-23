@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-23T18:01:15.141907+00:00",
+  "news_updated_at": "2026-11-23T18:02:33.010300+00:00",
   "editorial_updated_at": "2026-11-23T09:55:36.893043+01:00",
-  "translations_updated_at": "2026-11-23T10:49:45.572579+00:00",
+  "translations_updated_at": "2026-11-23T18:01:12.713077+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
   "feed_missing_body": 120,
   "feed_short_body": 0,
   "editorial_total": 17,
   "archived_editorials": 360,
-  "translation_records": 18,
+  "translation_records": 17,
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 2,
-  "editorial_galben": 30,
-  "editorial_rosu": 38,
+  "editorial_galben": 27,
+  "editorial_rosu": 36,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,9 +618,18 @@
   ],
   "recent_news": [
     {
+      "title": "Cercetătorii au obținut în premieră cartofi crescuți în sol precum cel de pe Lună și spun că sunt comestibili",
+      "category": "România",
+      "published": "2026-11-23T18:02:07+00:00",
+      "url": "https://hotnews.ro/cercetatorii-au-obtinut-in-premiera-cartofi-crescuti-in-sol-precum-cel-de-pe-luna-si-spun-ca-sunt-comestibili-2408688",
+      "source": "HotNews",
+      "status": "galben",
+      "words": 0
+    },
+    {
       "title": "Alertă într-o comună din Argeș: patru copii au ajuns la spital, după o posibilă intoxicare cu monoxid de carbon de la un generator",
       "category": "România",
-      "published": "2026-11-23T18:00:33+00:00",
+      "published": "2026-11-23T18:01:15+00:00",
       "url": "https://www.digi24.ro/stiri/actualitate/alerta-intr-o-comuna-din-arges-patru-copii-au-ajuns-la-spital-dupa-o-posibila-intoxicare-cu-monoxid-de-carbon-de-la-un-generator-4049767",
       "source": "Digi24",
       "status": "galben",
@@ -641,6 +650,15 @@
       "published": "2026-11-23T18:00:00+00:00",
       "url": "https://www.ilsole24ore.com/art/healthcare-summit-2026-AJC25GQC",
       "source": "Il Sole 24 Ore",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Dezastrul de la Hotelul Alpin din Poiana Brașov, după 24 de ore de incendiu. Cine deține resortul afectat",
+      "category": "România",
+      "published": "2026-11-23T17:59:22+00:00",
+      "url": "https://adevarul.ro/stiri-interne/evenimente/dezastrul-de-la-hotelul-alpin-din-poiana-brasov-2573824.html",
+      "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
@@ -762,29 +780,20 @@
       "words": 0
     },
     {
-      "title": "Războiul se extinde pe harta lumii. Ce ne arată atacurile din ultimele 48 de ore",
-      "category": "România",
-      "published": "2026-11-23T17:44:29+00:00",
-      "url": "https://hotnews.ro/razboiul-din-ucraina-se-extinde-pe-harta-lumii-ce-ne-arata-atacurile-din-ultimele-48-de-ore-2411549",
-      "source": "HotNews",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Ce pedeapsă a primit hackerul care a furat imagini din GTA 6. A spart sistemele cu poliția la ușă, folosind un televizor",
-      "category": "România",
-      "published": "2026-11-23T17:44:16+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/ce-pedeapsa-a-primit-hackerul-care-a-furat-imagini-din-gta-6-a-spart-sistemele-cu-politia-la-usa-folosind-un-televizor-4049737",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "A Tor Vergata l’evento per avvicinare i giovani alla previdenza - INPS",
       "category": "Istituzioni",
       "published": "2026-11-23T17:41:49+00:00",
       "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNR3lVSUhYOUdNYmx2eTlQcXo3TDhqTmE1dnpCdXFtMUZJbW9sTV9LWWlrUUR2SlZsUjRiQTdkamhLd1FkZTlCQkVmcHhOMjB5ZlZKdXdBa1lFeGVYay1OOE8tNVpNWHcwbzR4M2xNSnlEZ2Q5WHN3NXVRLTEzZ3NqZ2NyXzktWHYzSFJ3d2t4T1JValN5T0VzOG56eFFmTS0zdUNnQXR3Ujl0WWFJcVlNOEg3aXJSNXZ5MkhQbDhwaUg3eHFicnVBWjM4a1k4c3dyVUozWmtxMjhlZDZNejVQSHJFTQ?oc=5",
       "source": "INPS",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Il Vice Ministro Cirielli ad Atene per la riunione degli Amici dei Balcani Occidentali - Ministero degli Affari Esteri e della Cooperazione Internazionale",
+      "category": "Istituzioni",
+      "published": "2026-11-23T17:40:45+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPUWpfZWh3MkJxV1dXeGNSVXhrUklEUS1zZ0FPYmFBZjZ4TklNZ0tpUGFoeEU4ckN5TWVUMmRzdUVJRl9MNFN2OURSUDZXVWgza0ZqbFpCdk05MF9KRklmUWcwdWVxNzFWRzZ4Q2xjeXNHT1dlRjc1b1ZlWlo2RlJXZnQzdWJWaW5velFNbHdXQ0VEdUlVYk5nRmtNVmxDTHlUbktOREtVbklPZVg0QVF6TjFkMXZUMzZiaXpuSXBqbXhWakE3Y05UcW5YMVg3bEUwNTNPZ3RtajAwZmxsdDBzaXBIQVhjRkdzOHFOVE5QSWk?oc=5",
+      "source": "Ministero degli Esteri",
       "status": "roșu",
       "words": 0
     },
@@ -960,6 +969,15 @@
       "words": 0
     },
     {
+      "title": "Una mostra e un libro alla Gallery Morphè al Pigneto",
+      "category": "Cultură și cărți",
+      "published": "2026-11-23T16:44:51+00:00",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMUU2UkxUQzhHZ0RDS3RxRzBvUUhYbVJScHE0OFVDVGU1clpKVGc0Umo4VkNaVnRNRDI1RHRLQ1I4a2t1TnlDdjZGSFQ2Qnp6SGNHd0R5dW16bWlCVXgtTUdFbDdtRDEzd1M0VTJ6VTc1RE8xNzVTZjRzNXZ6emUtT1NYNA?oc=5",
+      "source": "Abitare A Roma",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Lucy Powell to visit China to promote UK education weeks after MI5 warning",
       "category": "Mondo",
       "published": "2026-11-23T16:42:09+00:00",
@@ -1014,6 +1032,15 @@
       "words": 0
     },
     {
+      "title": "In Puglia 8 famiglie su 10 preferiscono prezzi fissi per l’energia, timori per le microimprese",
+      "category": "Economie și consumatori",
+      "published": "2026-11-23T16:06:30+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOckZyZ1ZqZTlWd1lxbmtSRmVEbE83OEwwYlA5aG5KOXZ5OWtqWXR4LWZFV3dBcC1jSmhQSk0zZXRSVGJBNzBwandPaGNzLUhtX0F5WHd1eGE5SFBYMkszMnBBTGNGYkMwT2xQU2dDemxBbXZiWXF4ZUcyNV93RkU2SnF5ckxqRGdXbU5McUVPLWFaT1NEbDVDSnJQUHR3MUY1YjZYVlQzejd3a0h2WTNqTVRldDdtejZXNm5tQjI3Nkx4am5vZGJNcWRFUQ?oc=5",
+      "source": "ilQuaderno",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "My trusty 27-inch Alienware QD-OLED gaming monitor is just $280",
       "category": "Tehnologie",
       "published": "2026-11-23T16:00:00+00:00",
@@ -1023,11 +1050,47 @@
       "words": 0
     },
     {
+      "title": "Fondul de prevenire a bolilor se concentrează pe prevenirea timpurie a riscurilor de îmbolnăvire.",
+      "category": "Sănătate",
+      "published": "2026-11-23T15:48:07+00:00",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQeXl0S3h0QmdWN056NFZLUy02NUUtZW40YXdDNjFhb2xZMVNRNEN0VXhkZ2JoYTJaM1pJT0JRbVVuQlp2bGhYenZSVkxUVk8wa1lERE81WmNIbl9oMkkxWjgyZ0xBckt2MWZxWlpIRmNad2pVeHJHVGl1eTI3Qno5bGh1SzRacndyM2h6dg?oc=5",
+      "source": "Vietnam.vn",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Orașele Alba Iulia, Bistrița și Brașov se alătură campaniei globale #WeLoveCities!",
+      "category": "Mediu și climă",
+      "published": "2026-11-23T15:47:39+00:00",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTzFGU1BaaWh2dkdSenZwanRrTjExS0JiUFVwcS1lZ0xjRUMwMWp2SGxXNjFTa3dBSGNWRGxhTUpJX1pJMHBwTl9wRnZqcnRSdDFxUGx2Ul9pVnlORURFNDdHSV8tMXNIWTNocXJhbmZEdjhCZVVHMmM1UWtzMVptMC1tWmV3bHIyS1JjMFRaMXdsOWRGbjdBOExfSmllYjdMVUlkSg?oc=5",
+      "source": "TimpOnline",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Român din Italia, ocupă abuziv un imobil și a deschis chiar și un atelier auto ilegal acolo - Rotalianul – Revista românului din Italia",
+      "category": "Diaspora",
+      "published": "2026-11-23T15:30:24+00:00",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPelV3WHd3aHlDTXNySWhlM05qN3dDVktXdkcwSHh4dmNycGZqYTZCOVZkY3FfY1Zqb2dIczF4YXYtWndhTVNMaksyUVRNZjVKblozWk5tSkxweDZKcG5XbHRONTNpei1zM0I4eWZtWk0taDRvbDdRWi1FUkhxWE1MQ3lhR0otT1hzZnFRd3ZrRFhnSDhpSmlQajEtZlR6bnA5QXNuZFhSeEEwMFVMcU5uUEhVUHc?oc=5",
+      "source": "Rotalianul – Revista românului din Italia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Maxon Plus aduce generarea de modele 3D cu ajutorul IA în Cinema 4D și ZBrush",
       "category": "Inteligență artificială",
       "published": "2026-11-23T15:00:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA1WmVNYjF3ZXJkeVM5YVdGVF9wOWtKZEEwem8xSjRma2Q3akVlWEZpa0UzeFpZTlJEX1FnNW5fS3JleFg4ZlMyX3llLXpGZ2UtenlGajhLc0FVSzFDQlQyRm54dmZTWVFDaG9sVHJJd1BrbnY1eUE?oc=5",
       "source": "Unite.AI",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "NOTA DI ACCREDITAMENTO STAMPA – ASSEMBLEA PLENARIA CGIE (Farnesina, 25 novembre 2026) - Ministero degli Affari Esteri e della Cooperazione Internazionale",
+      "category": "Istituzioni",
+      "published": "2026-11-23T14:53:46+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPV05pM255cVY0VnRBMHhnNkxITkJSRkdIWDdyY2V1VEYxdHpVWm53NDFwaEpweExRVnd3T2l5UWZKeE5zVEV0c2dyNDlNVTBJQ2JaU18yWDdkOFpIbE5YVERpdnE2bVQ4bUN5eW5JWVEwZXpSRXJJMlR2SGlCZG14bS1KU0ZZRXkwVUVnOXFiTlFCYWVHbnhhRkoxTUsyZjRmUWo5YlpPLXh3bnBzbXhxVEw1TVB6X2dONTNkcmZEcjRfX2p0UzhUcFQwak55VUprc2J0S09rNU9YeGI3ODRBQmg0Z2lnU2hE?oc=5",
+      "source": "Ministero degli Esteri",
       "status": "roșu",
       "words": 0
     },
@@ -1113,6 +1176,15 @@
       "words": 0
     },
     {
+      "title": "Astana, Presentata la prima traduzione di “Pinocchio” in kazako - Ministero degli Affari Esteri e della Cooperazione Internazionale",
+      "category": "Istituzioni",
+      "published": "2026-11-23T13:06:44+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPY1QxV3dvYURFRnRjWnJDUHROU2NPUlRNRWdGdno0WWNjWXJsa3JUdXB6VHo2X043MjU0aTBBcEZPaG5TMUVXaXBMcVE2WVF0bE8tSDRiQjBtZU9Wb0U1WDFPaTJ6MUd4bGZ5YkFndTdLMXhUMnF2SllBd3hqOC1ySGJmclhXak5oNDVvUUVpMUR3bkZwR2tGX0tWZllHcXNVTkl0Ui1kc0dhYnY5bVZqaGZfZnlVQ1VpU3NsUzFtcDBESERVMk00XzF0ZzktUlZ5MlM4TWVkTGVnTXM?oc=5",
+      "source": "Ministero degli Esteri",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Lezione 1: Sfruttare i passeggeri del trasporto pubblico - Sbloccare nuove potenzialità per il turismo nella capitale.",
       "category": "Călătorii",
       "published": "2026-11-23T12:46:48+00:00",
@@ -1131,11 +1203,29 @@
       "words": 0
     },
     {
+      "title": "Fondul de prevenire a bolilor se va concentra pe sprijinirea prevenirii timpurii a bolilor și pe controlul factorilor de risc pentru sănătate.",
+      "category": "Sănătate",
+      "published": "2026-11-23T12:09:20+00:00",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQY08zOVY3XzYzci1ERHlJam1KSUxEZDlfbVRkOEk0UHgxa29GOHQ5RXl4aF8xMGM2c19vcWhwT19iT0NnNHFpejV6T0dpN0tfSVNMbEZNUS14bS0xYlp1QVRtQnlHNF9fSE4zNGdjRFhsUjhqdlZZbjAwdldrRXdqMXlsdFVYSnJUVDJadXhCOGNBUWNjTTB3Q3lGbjA4UVF0bV9TMzEwWFhvWTZ6STNaUDBSWk82QnBkMWIwWjh2TlQxNGZ3cGc?oc=5",
+      "source": "Vietnam.vn",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Scuola pubblica, il PSI rilancia da Roma le sue proposte",
       "category": "Educație",
       "published": "2026-11-23T12:05:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQUlRqaGxCaGlLQkZiNV8xZFZJLVFaN2FkT0ozenVuVXEtNTlaeFpMQWVGZFI5WnNGY1VmR0wyQ0R3NENQckhrQ1o3eTNObFBwS2pjMDBUQVhqQmo1c1JHQ0hyaS1qbDU4SHhrUjJZRFliN29OZUo5SUNCVGhpLU1pNW5yTFhwcFI0eUFKeEQ1Yw?oc=5",
       "source": "Voce della Scuola",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Le imprese chiedono all’Europa di accelerare sull’AI: servono scelte, investimenti e tempi certi",
+      "category": "Inteligență artificială",
+      "published": "2026-11-23T12:00:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTjRmNkN6SkF4Z24waXQ1Mk9Gd0xxcEFILTRQLWMxLXhNdlZ0TWh1SFU0VXQ1cGlNZHpVbzU1UUY4UGpCMmpEZ0R3bk5fczRNSVlfV1d2YzRQNDRBajdEcFdSOTd1dGRudTlWVG45eXV6dWlyLTJ6TFNGRlRBWkJHM01xZEFyR3pGajJ2UDc1ZGtSTlpsel9yY2FNU3dOaDdfUHdvak9xU1M3R0ZZYjhlOVQ2V2x5d2lKRFdCMlRSdFNQM2dHUVVGbjJxWUJVTTktUTNkcU82U205ekZoOU40OU9HTU9JNDQ?oc=5",
+      "source": "Assolombarda.it",
       "status": "roșu",
       "words": 0
     },
@@ -1163,15 +1253,6 @@
       "published": "2026-11-23T12:00:00+00:00",
       "url": "https://news.un.org/feed/view/en/story/2026/11/1168857",
       "source": "ONU",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Le imprese chiedono all’Europa di accelerare sull’AI: servono scelte, investimenti e tempi certi",
-      "category": "Inteligență artificială",
-      "published": "2026-11-23T12:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTjRmNkN6SkF4Z24waXQ1Mk9Gd0xxcEFILTRQLWMxLXhNdlZ0TWh1SFU0VXQ1cGlNZHpVbzU1UUY4UGpCMmpEZ0R3bk5fczRNSVlfV1d2YzRQNDRBajdEcFdSOTd1dGRudTlWVG45eXV6dWlyLTJ6TFNGRlRBWkJHM01xZEFyR3pGajJ2UDc1ZGtSTlpsel9yY2FNU3dOaDdfUHdvak9xU1M3R0ZZYjhlOVQ2V2x5d2lKRFdCMlRSdFNQM2dHUVVGbjJxWUJVTTktUTNkcU82U205ekZoOU40OU9HTU9JNDQ?oc=5",
-      "source": "Assolombarda.it",
       "status": "roșu",
       "words": 0
     },
@@ -1241,7 +1322,7 @@
     {
       "title": "L’Italia dopo dieci anni torna nella Commissione internazionale umanitaria di accertamento dei fatti - Ministero degli Affari Esteri e della Cooperazione Internazionale",
       "category": "Istituzioni",
-      "published": "2026-11-23T11:19:06+00:00",
+      "published": "2026-11-23T11:21:19+00:00",
       "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQT3hRNVNzb3E0bDNQT3EyZlVRaDYtaUVwRUVDdjBWT0dacnpsd2JQa3BjZkJPRmhyM1lRcDJUX2xDdmtKcW9xRzhKQkpwd042ZUthd2lhLWRXVHU5cFhGdENub3J5RnMwNWdEV1Q1V2c3TGU4eDRiTUhfR3JIaUdlRVRvSVdhcUprd1dMX1RWNXRKNUZzNGItX0pWaW82ODVFUTU1Y2gtODlnYVozallqWGxjd1lTT1lETEFYNkhROWp0YVI4V09UQ29LaTFfRXF0V1FlRG9zTUdOQ1JoUEQ5cWRIOUpuNGdJRF9QVmdUYTJxNzcxZ2t4YXh6bjlGR0dvVnc?oc=5",
       "source": "Ministero degli Esteri",
       "status": "galben",
@@ -1302,7 +1383,7 @@
       "words": 0
     },
     {
-      "title": "Nasturii și cuțitul. Despre siguranța în școli-opinie de Mircea Bertea",
+      "title": "Nasturii și cuțitul. Siguranța în școli - opinie de Mircea Bertea",
       "category": "Educație",
       "published": "2026-11-23T10:37:24+00:00",
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOSDJyVl9kMjlkOWw1TjZMSXVZVmtlWXFoRW9EMnlyWW1HRE1xTjNXR1pvR2pyeWJRY3ZlVlZWWVRkRkdnQXZNZWlxbExMQ1lqRUtoNUVrV0JmU0R0c1pDYUtpSWFndXZ0YXF2b19ZM2x4WGt0Wm9oenVualFheWg4Zmx2ZHFSbFp5SGUyMnZDeWx0bEhPbGxuUFVMaXFIdVJobzl5NS1WMHZEQ2dpRzVBcEpLNUNZLU5QNUNRUGFUMUdSTXFVcFZxbzNFeVZQS3FNNHg5YndVam00b2ZnNUlQSWM1bE9SZDktTkJRNU1LalNSZXBk?oc=5",
@@ -1356,24 +1437,6 @@
       "words": 0
     },
     {
-      "title": "Tajani: “L’Italia e l’Azerbaigian firmeranno un Protocollo d’intesa sulle materie prime critiche” (trend news agency) - Ministero degli Affari Esteri e della Cooperazione Internazionale",
-      "category": "Istituzioni",
-      "published": "2026-11-23T09:39:13+00:00",
-      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxQeVA4X1pOWnB5Qms0OGNmVElXaHRiWWZOZF9TR3ZDNWFMaGVCT2V2TnJQVVFqUVJaZ2JIOFlYa3N1Y2ZRVk5vcGsxMXM2b0dOYXJVai1mNXZYZ0xQY0xGUFR0NGt5RU1YclFraGpHVEViODZHcG91MGlnb25XSFNwdWtyZXdDX0g1OWlvM1FtRks0VGdEdHV0QTFpV1dvREQzNXU5b1FIT1VwVFMydWNidnBFaHN6QmhIRDVHLTlPWXNfNkVxbzllbEphTjBTSVNXLVlJSUdtRTNUeVpPSU9oTkpITDN4X3dBeC1WS2ozdF85UFctQXRraDg1aWw1bmIxR1JrMklEVU9KZzBuY0lJ?oc=5",
-      "source": "Ministero degli Esteri",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Prevenzione: agli Stati Generali di Roma spazio anche al ruolo della farmacia",
-      "category": "Sănătate",
-      "published": "2026-11-23T09:30:03+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTjhDeDZQNXpvNkRxWUxQSk85Smo0UjJMWE9CV2thbUFrR3BiaUdBOGJfVWF5cXk0SWQzTTlyYjhtWnNkenFWaG1EYUFISk1WeVZ3bzd0QzZwQXF1SXJXazBUZXA2OE82a2dXTkZZamhycXVWczd5X2EtaWU3NEQzUFNNNjRVRG80dmtrMFNYQjlvOXRIQVpXMkZKZHE2bzBqUWp5REFTbEM?oc=5",
-      "source": "Farmacia News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Promovarea responsabilității intersectoriale în prevenirea și combaterea violenței în școli.",
       "category": "Educație",
       "published": "2026-11-23T09:25:21+00:00",
@@ -1410,29 +1473,11 @@
       "words": 0
     },
     {
-      "title": "NOTA DI ACCREDITAMENTO STAMPA ASSEMBLEA PLENARIA CGIE (Farnesina, 25 novembre 2026) - Ministero degli Affari Esteri e della Cooperazione Internazionale",
-      "category": "Istituzioni",
-      "published": "2026-11-23T08:53:46+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPV05pM255cVY0VnRBMHhnNkxITkJSRkdIWDdyY2V1VEYxdHpVWm53NDFwaEpweExRVnd3T2l5UWZKeE5zVEV0c2dyNDlNVTBJQ2JaU18yWDdkOFpIbE5YVERpdnE2bVQ4bUN5eW5JWVEwZXpSRXJJMlR2SGlCZG14bS1KU0ZZRXkwVUVnOXFiTlFCYWVHbnhhRkoxTUsyZjRmUWo5YlpPLXh3bnBzbXhxVEw1TVB6X2dONTNkcmZEcjRfX2p0UzhUcFQwak55VUprc2J0S09rNU9YeGI3ODRBQmg0Z2lnU2hE?oc=5",
-      "source": "Ministero degli Esteri",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Keynote speech by Commissioner Albuquerque at the launch of the 6th European Retirement Week at the European Fund and Asset Management Association",
       "category": "Unione europea",
       "published": "2026-11-23T08:50:45+00:00",
       "url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2558",
       "source": "Commissione europea",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Manovra. La maggioranza prova a riscrivere il capitolo sanità: al centro nuove risorse per assunzioni, farmaci e prevenzione",
-      "category": "Sănătate",
-      "published": "2026-11-23T08:28:41+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQOGo0WTdQY3hwQTFYMDhmaG5VM3pNSTcyZk8xUGQ3QmI0ZTBCSTMwckJiaHZ6ZmpGWTBjdEJjb09jcVl4NktoVEc1eGhVV0ZIUWNldTd2WEZrY0prdm91MUc4aE9yWmxZM0draERQbFk2MUN6cWJNV2g0OEluc0k5SlJLaGQzb0NEZ0hvcDA3elo4NDlZS28xN2xjY1ZraVRkemhYekVKWDFxcEdXeXJ1YmQwV3VfTzBnZFBmYWhyZ1dzWjRyeXFoXy01d0VGRkJYa3RSYmd4aDZoa3Z6QU05cGlmdDc3OGZXTVBsVzVUM0Z2NzJtQUZBdHJPUFlkekctcHdobQ?oc=5",
-      "source": "Quotidiano Sanità",
       "status": "roșu",
       "words": 0
     },
@@ -1469,51 +1514,6 @@
       "published": "2026-11-23T05:07:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOaVptZGE1VDBSU0lPY2NNa181b0pBN19HLWMyZDREUGhFVTA0aXZSd1NPUlhBTGw4cWN2RGwxcEZNcVZoTTRKQlRzVEkzZVgyRE94bmtNNnVVSUZMVWJVS25pY19zN2tIR2s3RmhWdXlaMlJQTVBlMWwtVTNDMUQxQm85QThMVW01cW1rMW1RSlU2Mk4tczZodVNQeWk?oc=5",
       "source": "SportPress24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Foreign information manipulation and interference Archives - NATO Science and Technology Organization",
-      "category": "NATO e sicurezza",
-      "published": "2026-11-23T01:58:01+00:00",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOUVVDeXpxZzVWcmdEZlBnekJzTjZjSkcwTUxMbzVZUVFHWmNXWWdKV3E3VTBxUmRLNkloeFJ1eWFkbUxVT0pXMUdmLWlwR2FhZ0ZjSkdNZ2Nwd29vcTd6S2JzQndpa3ZNbEU5d2g1Y1RCbE1obzB3bVoxOGlTaDRHWnBMMEloclRJeC1Pa0VHX0NXUQ?oc=5",
-      "source": "NATO",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "La Commissione accoglie con favore le raccomandazioni del panel europeo di cittadini sulla resilienza democratica",
-      "category": "Unione europea",
-      "published": "2026-11-22T23:00:00+00:00",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/it/ip_26_2552",
-      "source": "Commissione europea",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Cât va plăti o familie la curent în această iarnă și cum poate alege o ofertă mai ieftină. Facturile la curent ar putea ajunge la 600-800 de lei pe lună",
-      "category": "Economie și consumatori",
-      "published": "2026-11-22T21:14:31+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPSndJODAwMXVzQnA2aEVUQ0tTVmV0WE9sSXh4ZWo5TENLM0J5cVB1XzNKV09ybjhHaUZCaHFfUWVjMTZIT0xQSVFXSnBXV0k3Vk1TZHZ3X1JHS1VqM0l1amZaallmd3FLTEtFQno1M2ptc3c1RmppMmR6enRPakJtdVdEdjh5V3ZfcHFhbFZQWklkaEpnYlFFS3NMYldOZmhFT3V0MndRMU51WTc3MGZOeklPMHVhTEhYSExPTjl0d2ZEZnU1QzNYaHg5dkxKWDVCdHE2bjdYMjdlbFdfY0Vfc0JpMFA4UjhyTXRTMGVDdmlvM2l6ZUl0TUkwZ2stX2hrazFKOVd4Z9IBjAJBVV95cUxOb28wZFQyVXN3dVBadkZsNjJOV0c2bVFacFQ4X3Y3LWd4SXU2eWNkcms3aDVSNWF3OE1XVkJ1eDFlSmpSV2QzN3BrQVJ",
-      "source": "Aktual24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Moarte suspectă în cazul lui Dudu Georgescu. Ce spun anchetatorii din Canada - StiriDiaspora",
-      "category": "Diaspora",
-      "published": "2026-11-22T20:09:28+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPS3BITW80aDRQRjdQekJJSEMtMFAwTmc2MUxzelYtZlRBX1J6Q3hadkpwYW10SVEzWXpDSk9iSC1TQVotUUR3R1N6QXJTaGlEMkRUNFg5TWN3aDRKREJjTl9ZTXBsdVRmc0FjTU92NjgtZHFCNElBeWtvVVVXRGJqR2kyQmRtY1REX0NkRFhGdVI5Y1puakItOUFhYWNfQzQ0cmVBekMxN05iUUxNSC1zaFp0Ym1NUmphNDkyd9IBvAFBVV95cUxPS3BITW80aDRQRjdQekJJSEMtMFAwTmc2MUxzelYtZlRBX1J6Q3hadkpwYW10SVEzWXpDSk9iSC1TQVotUUR3R1N6QXJTaGlEMkRUNFg5TWN3aDRKREJjTl9ZTXBsdVRmc0FjTU92NjgtZHFCNElBeWtvVVVXRGJqR2kyQmRtY1REX0NkRFhGdVI5Y1puakI",
-      "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Badantă din Italia, îl acuză de viol pe pensionarul asistat. Bărbatul neagă că ar fi constrâns-o - Rotalianul – Revista românului din Italia",
-      "category": "Diaspora",
-      "published": "2026-11-22T19:09:48+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPRk8zVE5PeVNhYi1xU3ZNdlJLeFlzd1BGRG5EN0lrdkNRNkROVENXQlQ1dloxa2pPYUFtS0tQSTJsOXBnMzduVnZGb0lQTWdKMzRMRk1mT1ptZWpZNmRwQnhiVHpMU3AyWXNBbnFtYnNtMFUtXzl6Y09LRWdOV1g2T2lUOVk3RlAteGNNQ1Yxb2UxRXpoQl93bU1Da1R1eGpjSzVGMS1UM3FfR1VIOF9uLTdRazlLa3NERXc?oc=5",
-      "source": "Rotalianul – Revista românului din Italia",
       "status": "roșu",
       "words": 0
     }
