@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-23T08:20:47.931109Z",
+  "updated_at": "2026-11-23T09:30:20.537169Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,13 +8,68 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
+      "id": "geo-8d23d37022a33750",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "North Korean Leader Kim Jong Un Vows to Expand Foreign Relations Based on Sovereignty and Security",
+      "summary": "",
+      "source": "Ratopati",
+      "published": "2026-11-23T09:16:05Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZWpfTVFtZTFMR1Y0X2FncU5BdHhZcXZ1LVpMTFk1YW96ZTl5TFVtU1Q3MTVwb2ZrbWVkVFI2VkNhdFdSX1UwRExjTUxJdHI2QjBEWHI4X0V0cDBuQjJ5czdTM3lXSWNJNGNVTk4wVFZQVGV6NllsSy1UVk9hRnAwQU10MlJybHNxMEU2a092VHhFWFRBbTh3RExWaGlNUEU4UUE?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-8536e78e7c010ea7",
+      "category": "europa",
+      "region": "europa",
+      "title": "Tensiuni majore în UE din cauza Ucrainei. Robert Fico refuză împrumutul de 45 de miliarde de euro, iar Merz amenință cu blocarea bugetului",
+      "summary": "",
+      "source": "Realitatea.NET",
+      "published": "2026-11-23T08:28:00Z",
+      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNMmxPem91LTFmQzFsU1F5RGYxb3Zma0tzVkFjMFYxM3lFaHFab29UdDZhWjZBbDg5VkRXYXYweG9WZHJsY29Nd0lLSW9yd2tocjE0ZFRkcUc4VFFPakdocDBuWEhDTWc0UHJOcGVNQ1c5bjkyMk1EXy1XVU1Kemtybl9qWEJTZjB4NWhhdThQZGgtZ25TWUVaNUk4Ym43T3BnVnNWRHRkVlJ0WV9keXgzcGEwSFZqYmdDWnQxUjdncW9kR2JGcTRuX21FcmdkTy0zRFRmcGhuZVJJMTM0Szd0bUJyNDllQ1lScDlXLWdFTjRLWFJvMlZVTjcwZW9CUDg0VE5jNFlORk9hY2t4WDNzRQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-0b56a9ae147c7988",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Dismay as chaotic UN climate talks collapse without a deal",
+      "summary": "",
+      "source": "Yahoo",
+      "published": "2026-11-23T08:08:34Z",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNbUdaUzExWWkxTmRUdkQxV3NRY085VG1ETTN6LUswLXFEM1d3WThlQmdDZU4wVG5JRi02dmZDUjA0SUFwTUJoZUZhR0VQeU9TYjlKR0E5TUgxRVA3N2xWT1o5M3ZzRFY0THBUblVfLVV0cTZ6RjhJYi1rWnJVbDdfaUpfTkg1WTlXZVRHQkRYQXNJWGxZbkF4UGIxeWc?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-c058d53b37f28501",
+      "category": "securitate",
+      "region": "asia",
+      "title": "Is the QUAD Truly Effective",
+      "summary": "",
+      "source": "MyIndMakers",
+      "published": "2026-11-23T07:58:28Z",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5YaEdORVJ4Zm1BdHBpcDdlNXl1Q2FKbjNhMHlJWWgtYl9MYjhJWThyYkdtNDNqcTNTYUhFUWVXZWc4bGg4ZkJSekJYb2YxZlU1bC10LUNXbEV1TjdhY3ZwRG9CSmhRN1ZvVnpwTmVBaw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-073cc18ea238ec1b",
+      "category": "europa",
+      "region": "europa",
+      "title": "Firmele din sectorul tehnologiilor curate avertizează liderii UE în privința reducerii fondurilor pentru competitivitate",
+      "summary": "",
+      "source": "Agerpres",
+      "published": "2026-11-23T07:33:13Z",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPclhoVkdoMkNKTEhCUVlCeXVPWDNubndVanpZQlEzd2s2Rnc4N3JKWFRFd3hobXl4dU5aak5NS3Vmc0w2Nm1zNElsMjFjaGJTM2xadUxhdENSVkNjVjNDT2t1ZHhobUllUVV4djZIWVMwQU1CTjhmRWpabzlxdDB5bUp5MHFVWF9ZVTA2dXJnOWtWVmxfTjRJUm9ERVZmcDYxRGlTUzN3UUoxcEt4NWNJTzRWX3JaT1hOQkoyMEQ1eEpnTFNpeHc0OXAzQlZ4VXppRTFlN2NoQ1R0TklEckp0WlRYT0ZGSVBPU0lxNw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-15e75d6e27afb733",
       "category": "clima",
       "region": "global",
       "title": "Thousands travel to COP. One Ghanaian journalist follows the negotiations from home",
       "summary": "",
       "source": "MyJoyOnline",
-      "published": "2026-11-23T07:32:28Z",
+      "published": "2026-11-23T07:33:06Z",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPOUNDa3lXaFZiYzV4MmZ5YnNxa3JRSE9HS3lsMGEyTXExeUZMRDF0cWh4bnB4QXYtRGpMMzk0WUI5UkpoOGdGVUJ3VUZYZ25DWUVqak5fZHQ2ZnFLZ19kUE9lcVJfSll6VDk0QXFRQXBKV002T3dVTVp5dzNJdFNzazhyWC1oYXA5NTRkSnN1ZnVsS0hCN1RRc2xOLV94RDR6Vk5lbHlLVG9OVWFDSnBYaw?oc=5",
       "review_status": "external_headline_unverified"
     },
@@ -24,20 +79,20 @@
       "region": "global",
       "title": "How to stop the war in Ukraine, part 22 – and a climate summit fiasco",
       "summary": "",
-      "source": "Euronews",
+      "source": "Euronews.com",
       "published": "2026-11-23T07:26:44Z",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQS0l4dFJCelk5Vlhoc2J2bGpURWtreEVsWURaNUtkUnlHdnFOYi1lc0RIb1pRMXY1RENQSkdJTTNZaWVoRm85SktwbWpzSmZUTkk4TEJjNThteGhTLW5ucGlJNlo2VGN0UDRJdm8xLTRyZ3R5cXhBZ3NwSTJZc1JxVHpwVGN5UTBaenhVcVlVVGE5eDdXUTYwQWJBUDJPVFpUTU5yZDhSTnEwNXpYdGc?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-1cd2e650699b0f19",
+      "id": "geo-5a8568c20ecfa410",
       "category": "diplomatie",
       "region": "global",
-      "title": "Climate talks collapse in chaotic end to COP31",
+      "title": "COP31 Update 13: The Worst COP ever?",
       "summary": "",
-      "source": "Algoa FM",
-      "published": "2026-11-23T07:02:00Z",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQeGk1Z3c5RDJDSWthaE1SX2Nsd3ZYYVJ1VjFpM0xRaG5heTlmS1pIWmpLTURQNDQtN3VHNE1XLXRCZGFVUVg4OHNEU3VwVGFuRTY4dkR6MnFEZ2QzbmE3UWM1TnBTeDl2RjI0S3A5UDR6eFItSi0xUG1MRFN2bTJPbGlVRmVFMDA?oc=5",
+      "source": "commonspace.eu",
+      "published": "2026-11-23T07:06:16Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1hN3BidW5faHZ5N01jRm9HQ0MzUktfLUFub3JGNHk5OGt1S18yM3BMRjktcWw3UW5GaGhlY0hON3RDZlEyUHVHQk16c05QaXA5TkFWUkZkWHJTc1V6QldpTnRmYjg2NWtJdXJGekJIS1ZLc2JlUnRWNHg5UFY?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -49,17 +104,6 @@
       "source": "The Journal",
       "published": "2026-11-23T07:01:00Z",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5DeVRUVnJpa1BHUlFUbnI5TlctSWU4aXMzRjk4dEhqLXlIQWtrdnQ2VGszTEprbnhmb2NqeThtZmtnX3UydVZacVhMeUVSNllZeDV1YmZUU1lMQjAzRjdoWHpOVHJUUmlIVmZvOFVNaUY?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-5a8568c20ecfa410",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "COP31 Update 13: The Worst COP ever?",
-      "summary": "",
-      "source": "commonspace.eu",
-      "published": "2026-11-23T06:56:15Z",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1hN3BidW5faHZ5N01jRm9HQ0MzUktfLUFub3JGNHk5OGt1S18yM3BMRjktcWw3UW5GaGhlY0hON3RDZlEyUHVHQk16c05QaXA5TkFWUkZkWHJTc1V6QldpTnRmYjg2NWtJdXJGekJIS1ZLc2JlUnRWNHg5UFY?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -118,6 +162,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-00963d3b32bca190",
+      "category": "europa",
+      "region": "europa",
+      "title": "Iulian Chifu // Lista Studenților din Serbia și modelul guvernului de profesori al lui Emil Constantinescu",
+      "summary": "",
+      "source": "Deschide.md",
+      "published": "2026-11-23T05:55:35Z",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNaUxGTU8wbXhjb0ZoTE5pZlVoR240a3JrZlZKM2F4MmpGTklydko2amdCYlRmZzFMVkhCcWU3V0dfRThFOGhGNkRWbFQ0ZDhOVFNvTGZ6dFdybFZyZnJubzYyTkF5U1RzRGhHY2x1T0lmeXR6blRqRjB1eE45N2RER1EyUnVPQy1odUdBM2c0azd5NVJMRi02UjE2aElFYmd3cjBlUEIxc01BNW85OHVtRFRmeU5XVG1WcHcyMUlqUGdLMnVHYlE?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-7c341e1a9bd80aa2",
       "category": "diplomatie",
       "region": "global",
@@ -151,14 +206,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-532af78822b998b0",
+      "id": "geo-aef548780fe03778",
       "category": "clima",
       "region": "global",
       "title": "'Unbridgeable red lines': Fossil fuel, strained diplomacy & what else led to failed climate talks at COP31",
       "summary": "",
       "source": "Deccan Herald",
       "published": "2026-11-23T04:50:14Z",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxObGhpTUEzMXRqODJxOU5LYUMwVG9tWTI4YnNEazNlbmd4SFBiMzhwTEpmamJ3YVRoSnBLY3BSY2FjdS16ckRIWG4zdXlmQTNrS004TXZuam5NSjdpTVY2bWtCVmxGT3JTWWtVQWU0ZDF3YURORjdHNGxnT25RVmliUnEwdFhpN1Buai1VbmpQN05fMkVUdUQ4bkdOOWxlNHBJX2dNY1g4cDFLRmNYLUl0Q3h0c0I0bDdUSDVMMC1KZkxqdzBMTEl2Zm1McHp2SlpwcTNKZ3VxTWpJYndwbktPeEpERU13RkEzVDN5RGk2aVLSAfABQVVfeXFMTmxoaU1BMzF0ajgycTlOS2FDMFRvbVkyOGJzRGszZW5neEhQYjM4cExKZmpid2FUaEpwS2NwUmNhY3UtenJESFhuM3V5ZkEza0tNOE12bmpuTUo3aU1WNm1rQlZsRk9yU1lrVUFlNGQxd2FETkY3RzRsZ09uUVZpYlJxMHRYaTdQbmotVW5qUDdOXzJFVHVEOG5HTjlsZTRwSV9nTWNYOHAxS0ZjWC1JdEN4dHNCNGw3VEg1TDAtSmZMancwTExJdmZtTHB6dkpacHEzSmd1cU1qSWJ3cG5LT3hKREVNd0ZBM1QzeURpNmlS?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQTVd6N3hnMWxKMzNyekVyd0tXQVFhVS10bkZHWjAwM1pTRDlKVGJlR0VTTkFSOEotUHNfWi1ONUx5VWpHOFJQSlJjZTRiM0haVFNTNGx0ZkF1aDB3U3M2Nkt3VTRacUI0Mm92SGg0b0ZqMXZkVUNWZDYyYUdNVUE5Q1BlVVh0bWZBcENKdlhKc2dyVjgxZkZpRW1PVmhUVkZfc0V5dFExYkNzNXZSbDBTejc4NElSd1FqTEpuUDkyLXlLUTJtY0czdUVVSGJPQjBRc1IyNW92eU41WmFWdlFYSmFsY9IB8AFBVV95cUxObGhpTUEzMXRqODJxOU5LYUMwVG9tWTI4YnNEazNlbmd4SFBiMzhwTEpmamJ3YVRoSnBLY3BSY2FjdS16ckRIWG4zdXlmQTNrS004TXZuam5NSjdpTVY2bWtCVmxGT3JTWWtVQWU0ZDF3YURORjdHNGxnT25RVmliUnEwdFhpN1Buai1VbmpQN05fMkVUdUQ4bkdOOWxlNHBJX2dNY1g4cDFLRmNYLUl0Q3h0c0I0bDdUSDVMMC1KZkxqdzBMTEl2Zm1McHp2SlpwcTNKZ3VxTWpJYndwbktPeEpERU13RkEzVDN5RGk2aVI?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -173,6 +228,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-2e235d578d5ee59d",
+      "category": "clima",
+      "region": "global",
+      "title": "Climate talks collapse in chaotic end to COP31",
+      "summary": "",
+      "source": "eNCA",
+      "published": "2026-11-23T04:06:31Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRnNSNk9MbVRTMjNnQXZQMF9qRFZ4QnBDbURGdlhoMWN2QzZ5NWl1d2NIcl85YmpRYVExV3Q2UzVxNlRMTk4tRHU4UkpCVjJCbXZIVmdHLURVNkZFOEdXRmp1LW1qcmdFZklMR3dIejBRX29LVVpKVDdwRVFwT2c4Y2JEaUU?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-67d7a53d87c61d46",
       "category": "diplomatie",
       "region": "asia",
@@ -184,14 +250,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-9793d9d68d4e54f4",
+      "id": "geo-d8b932bbb7df1bdf",
       "category": "diplomatie",
       "region": "global",
       "title": "Four summits, five months of Turkish diplomacy",
       "summary": "",
       "source": "Hürriyet Daily News",
       "published": "2026-11-23T03:37:38Z",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQelAzcWkxVkIxbEw3ZDFiWFhERnpSa1JHLUVGTEx0emJHTWF5U3FlQW5UWHVneUxIRzhkVEl2YTRjZFR3bVlvWFdmMktpVDlGOTk4WDNvRWpaSk8xR3pXTEJQcHBTTW5LSHJhaXd2ZnZtelNCYWg4RFhrOEE3cmxYT285bU1fSFZhWUIwX0tOWHBiZ0Jp?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNE5aYWVvTnVFOVRudjJSSUZPODZkTlZEUU9hdzBfNFNXRnlfTFVSMkZpRFVQT1FQczFULXhQRWtNcmtYaU5mdzQ4V0NKanh3Qjd2UlRqM0xNZkxFNGVZQm1uREJYc0VnWlJxV2JIcG11TUhvNWw4NmlsVjlPU0d5Y3NLczFzeVZaZ0hzV2w1UQ?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -223,7 +289,7 @@
       "title": "Mongolia’s Foreign Policy Doctrine and the ‘Third Neighbor’",
       "summary": "",
       "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
-      "published": "2026-11-23T02:37:30Z",
+      "published": "2026-11-23T02:45:31Z",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNYXNmUXNkbEVSSWt4em0xS01oVmdiNTJ3VDB5UXphT0Q4Uzc1NEdlbVIzb3VOODFsTmd3ZDZGRDNteHJxMTEwUldwaFFTODh0aW5iT0JMZndfSzRwVWpSVENWdWVDTkdVMzBQWW9TNjh4aDhnQkFXZHFyanI0dWNySi00bzMxNnFqOENfZWRKQ3BqNW8?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Doctrina de politică externă a Mongoliei și „al treilea vecin”",
