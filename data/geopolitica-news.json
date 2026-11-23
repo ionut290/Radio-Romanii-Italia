@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-23T14:26:25.680561Z",
+  "updated_at": "2026-11-23T15:30:48.762449Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,17 +8,73 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
-      "id": "geo-4b64ffbe6517245e",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Egypt & Iraq Reject Threats To Navigation In Red Sea And Arabian Gulf",
+      "id": "geo-ff84ba7e303e0760",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Japan’s Shenzhen Snub: Why a Thaw Looks Unlikely Under Takaichi and Xi",
       "summary": "",
-      "source": "Sada Elbalad English",
-      "published": "2026-11-23T14:15:15Z",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUFVENTdiVXZjS3BnTlNwVC1LVlhLYWUzdV9FR29tVmJsNGQtVjBOeGRlTTFHb0ZXN0Z1RFh0LTNiY2RrTUV1OWxWZ1luSzJrNkJVcEpXSFNpOFE3NmRHbVdCUHB1R0djckhDY1NWaS1OU2VVX2FBazl3WXRoLWxyZXR6MGlmdlBRcHRWTQ?oc=5",
+      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "published": "2026-11-23T15:19:29Z",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMnVwcFlEa29BWTNIX1RXX1FwenlxNEdKOER5UDc4OGVfTFVCc0J4UFBGV3UyNmhuNjZlQUx0UWF4TWg1cUw1ZTlGb1FFTFAzX1U3cU1zbGF5dTZ5a1FwRW1UY0ZJd0lRTzd6YmNvUDliRXRGZXZ1WUt1SURDc3VKRFJyQkJjVHNrU1VBTDRWTFpyZ1NHMlRpZThxbUlBZUlKVHVv?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Egiptul și Irakul resping amenințările la adresa navigației în Marea Roșie și Golful Arabic",
-      "title_it": "Egitto e Iraq respingono le minacce alla navigazione nel Mar Rosso e nel Golfo Persico",
+      "title_ro": "Snub Shenzhen din Japonia: De ce pare puțin probabilă o dezgheț sub Takaichi și Xi",
+      "title_it": "L’affronto del Giappone a Shenzhen: perché un disgelo sembra improbabile sotto Takaichi e Xi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-e43650d955148470",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Azerbaijan's contribution to Europe's energy security highlighted at NATO Parliamentary Assembly",
+      "summary": "",
+      "source": "Azərtac",
+      "published": "2026-11-23T15:16:00Z",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVDNwNDhBamM5NnhEcTdEOXc3TUdVb185SElmeVppeXVwRnhUWFZxMWFSWkxBME9vU0ZDVmNYWko2YXZMZUtwU2FlSFF0WERjSjNMY0lpekhJcWxuUlFRczRBMjdpV1VBQkFIbGRUWjBRMmtfWk81UEZIVFlaUjFfV2FacjluR2xjSmxkZHFsSE1PeTJaY0FDYVpFQ2JNQ0FsYkZab3QtMnJhMFkwdmw2YWpaOTRUOEo1TDNJXy1Bb0RRMDRPLUwyYV9PN0lfMWhKd1Ywag?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Contribuția Azerbaidjanului la securitatea energetică a Europei a fost evidențiată la Adunarea Parlamentară a NATO",
+      "title_it": "Il contributo dell'Azerbaigian alla sicurezza energetica dell'Europa è stato evidenziato all'Assemblea parlamentare della NATO",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-12faf1c742fba200",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Kim’s price rises as Trump summit hopes fade",
+      "summary": "",
+      "source": "Korea JoongAng Daily",
+      "published": "2026-11-23T15:03:17Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQdUItMXpRU2RlVWFvdW9nNzFuQjdKb2JpSjd0WjgtRnEzTXJaNkl6azV0TFhRUF9Db2ZmYnIxYnVQeVdSVDVrX01iZ0MyMU1EYnRGc1NuWjc5UUhUcmgxSTd4dnRFOVpuMlAxQkx5T0hDVFlIN2ljT3lZR3h1dHFyX2RfWDJadEIyWW5ZNXdjUDc2R3kwZmUxejViQ2hNMmFkb3c?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Prețul lui Kim crește pe măsură ce speranțele summit-ului lui Trump se estompează",
+      "title_it": "Il prezzo di Kim aumenta mentre le speranze di vertice di Trump svaniscono",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b0011062aa9184b3",
+      "category": "clima",
+      "region": "global",
+      "title": "Failure of Cop31 prompts calls for urgent reform of UN climate summits",
+      "summary": "",
+      "source": "The Guardian",
+      "published": "2026-11-23T14:35:00Z",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQy12LVpnTUFERk5qZVVBOHZ3UUpheWJST1o0UWxVaTdRaTJWVERPNVJhMGY0eE5iQy1tTlVKQVh3Z2JVTjF2ZFRpVlZ2RFQ4ODFzaHNFUTYzUTd0eFpjU3dicUVUUWtwTDhDVnJOZ2hQUk0xTFBVVHIxVldtaUZUbDJYckIzeEZ5VVUzajcyOGV0aTNRX25PZEZjaUFiSXA0OEpKM3VBcw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Eșecul Cop31 determină solicitări de reformă urgentă a summit-urilor ONU privind schimbările climatice",
+      "title_it": "Il fallimento della Cop31 spinge a chiedere una riforma urgente dei vertici delle Nazioni Unite sul clima",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-5fd669ac85554a28",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "China-Russia Military Cooperation: Strategic Implications for Global Stability, the Middle East and Pakistan",
+      "summary": "",
+      "source": "Российский совет по международным делам",
+      "published": "2026-11-23T14:30:12Z",
+      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOby1ZMkgwQnllMjFDOVE5cTRnbnRrWGJ5b2pEM0lxRGl1Wi1lNlI5V0RKYklDS2ZzVnQ3d005THRQa05PdnJnMEg5UERQUWNDNGlsa1lrcG45UWIyczlGdmVkTkdKYnV6WHRLdG12NU9xVXBSZG9saTdOb2dOY0Y2TGt4cHRNS0F6bTVWRVJ0dHphV1NUX1ZtRTVWVVk1UUk2XzFxSXNxeWl3S0x0aU5zVWZBcVN0WkFRdF9Lb2s5QmpnUUlPMXBKV1dIZWowVE9qZFVLSU9lYm5PbXlSSmQzU1VCMDVpakk0UEhmRm9zeHhMLTVXa2IzWHpqREVUNFNYV2Y4aS1SVl9RcVZzaUhwWQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cooperarea militară China-Rusia: Implicații strategice pentru stabilitatea globală, Orientul Mijlociu și Pakistan",
+      "title_it": "Cooperazione militare Cina-Russia: implicazioni strategiche per la stabilità globale, Medio Oriente e Pakistan",
       "translation_status": "machine_translation"
     },
     {
@@ -33,6 +89,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Testul Oleshky: Când acțiunea umanitară întâlnește geopolitica",
       "title_it": "Il test di Oleshky: quando l’azione umanitaria incontra la geopolitica",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-65c950f9c2082733",
+      "category": "securitate",
+      "region": "asia",
+      "title": "After Japan's APEC snub, what's next for its increasingly strained ties with China?",
+      "summary": "",
+      "source": "DW.com",
+      "published": "2026-11-23T14:05:23Z",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTXdjWWNuQkFVck82T081OGFmaElKalZFRmRxd1FuVFctaXdaQUQ0UktBcGJfdy1aMFJqZFR5dnlWR1VmVzc1VV96Y2NPbEpMV29OaGVIdHBGQ2RxbjBkaTNLNFZadHNzNHE5MkdWb3lTajhHV25vWHU0R3puOXNIcW1PVGRiN1RKcXFmT3pB0gGOAUFVX3lxTFAtVnNoVlc4emRKR3VRdk0xUXJ1UG5QbmJQUUwwMXJhSjUwdE9udU9OVEU1UnZzN2V4Q2NQQ3N3TjdkZGJPbW03VVcxUy03bFlXMlVOT3E2QUg3alJ6VkxtaDVxSHdPVzBLQlFYMm1uemw0WTNkcHZ3OU10WU9NUWhtZWFHcndZV3ZYa2pPakE?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "După reproșul Japoniei la APEC, ce urmează pentru legăturile sale din ce în ce mai tensionate cu China?",
+      "title_it": "Dopo l’affronto dell’APEC da parte del Giappone, quale sarà il futuro dei suoi legami sempre più tesi con la Cina?",
       "translation_status": "machine_translation"
     },
     {
@@ -92,45 +162,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-d805d15f812efb06",
-      "category": "securitate",
-      "region": "asia",
-      "title": "After Japan's APEC snub, what's ahead for China ties?",
+      "id": "geo-0e5521ae96fb7598",
+      "category": "clima",
+      "region": "global",
+      "title": "Scramble to save climate fight after COP collapse",
       "summary": "",
-      "source": "DW.com",
-      "published": "2026-11-23T13:55:37Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPV2pSZWFWWFY1ZWwwcFhwYjJFdkdNNzNqM3dCSTZjY0JDellVNExzZ2xIdUVuQ0FBRHdzUnk3bTB5a3c0MW9XS1RMTjBGR3JsSEQtdXppS1g3U3l2MG9UMlBHMDJFQ3liLUlQaUtocWt6cGhrbW5NZ2xPWjJrYzJ3d1pJbnBhYjhfU3fSAYoBQVVfeXFMTlZ5QzhoQTNLSlktOXlHRXltU1pFRXk0R2EyMEFVWlRsWnJVOHQyOUZRYXhFN3lraUE2TkFWMFRnWHhZell5U3hCOEJ1NjVVSnpTNWxENkE3cG13ekJqOXRmNXBReFkwRi1LTG5qdmxKQjBwaFNVdndodU5kY3pQWVdDUkVTdmtaNWpR?oc=5",
+      "source": "Bangkok Post",
+      "published": "2026-11-23T13:50:00Z",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdmtTYTFCNldBaUNJUGdzQkx3ZGZsRzhaUmM0dFYxVERuMENCU2NTSUgwRXM2OXJlaWROTWZiV3Yya180UkIyMkZsRWZFWXVKZVh4MHpqcXZkSUtfNks3MDhYbHg0cU1WYjFXRU5yc0E2TTY0a2JIdm1pNExscHJvOVJPLThJc3N2aUdZN3JKcUtTU0l1SUE?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "După reproșul japonez la APEC, ce urmează pentru legăturile cu China?",
-      "title_it": "Dopo l’affronto del Giappone da parte dell’APEC, cosa ci aspetta per i legami con la Cina?",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-5472d6de7d2d4261",
-      "category": "securitate",
-      "region": "europa",
-      "title": "NATO recognizes Azerbaijan's icreasing importance to Europe's energy security",
-      "summary": "",
-      "source": "Latest news from Azerbaijan",
-      "published": "2026-11-23T13:53:52Z",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbzJUYXNDWTVkQ2ZQZ0tfWElsTTd3aTE1dVN5elhKcDc1UlVTOW1jU2RGbkEteEVjZnBxVHFXTHNfeXZyUjZUQ3AxcjlNRDl4eC10QU5pR0lEN3h4eW5FVFZ0VS1NTnc2T0N0M1ItUzgwU3hMQWZYa19vSndIRy0zQzl2NkVzUk8zblR0cVZmRkQ2aGFJVWpKeEpLTzdMczA?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "NATO recunoaște importanța tot mai mare a Azerbaidjanului pentru securitatea energetică a Europei",
-      "title_it": "La NATO riconosce la crescente importanza dell'Azerbaigian per la sicurezza energetica dell'Europa",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-5e020528ab219260",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Zelenskyy Calls for Four-Party Peace Talks",
-      "summary": "",
-      "source": "Wisevoter",
-      "published": "2026-11-23T13:50:46Z",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZVpPakhrNURuTlZkbjc3RkFETXU0ajFnQy0zR2hURVVuaVpxeVd1MDRDRFJQeXNaLVpUZG1xU1ItWEZFazBhN0tGQjNUQWItU3BoSzh4TWlFeXM1T29kZHpkUjlMaDljM3h1RmhqMlNOZ01yQTNMZXM5cjZEa0FKS3VGbw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Zelenskyy face apel la discuții de pace cu patru părți",
-      "title_it": "Zelenskyj chiede colloqui di pace a quattro",
+      "title_ro": "Luptați pentru a salva lupta împotriva schimbărilor climatice după prăbușirea COP",
+      "title_it": "Affrettarsi per salvare la lotta al clima dopo il collasso della COP",
       "translation_status": "machine_translation"
     },
     {
@@ -162,34 +204,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-56f1d170a5ada1da",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Why is Tarique Rahman Blaming India For His Domestic Troubles?",
-      "summary": "",
-      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
-      "published": "2026-11-23T13:29:29Z",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeTVmcEJkZFQ5S2NSaTFOZDlaeFVSZFk2ZjJlbU9MaFZTMW52bHdUUmtGcnZvODhPSUtOUDZha1ZlTlBnMWVwNDc0UXlXN2hQeWszZFRORmJHZjh4MGxvRmY4LXNzOWNycG4tS3c5M1pqNDBLdmlfY2taNlJudW9KQXFEVTBzeHJwNXZHUkN4Ym9uLUxBSVU4UkZn?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De ce Tarique Rahman dă vina pe India pentru problemele sale domestice?",
-      "title_it": "Perché Tarique Rahman incolpa l’India per i suoi problemi domestici?",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-09b8af726daf60c2",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "At least 4 security personnel wounded in armed attack in Syria",
-      "summary": "",
-      "source": "Latest news from Azerbaijan",
-      "published": "2026-11-23T13:23:27Z",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQZTFQMlhPSkJaZzJ6d05MWXdBTnlaWnAyUy1IWHFJQkdRTmVDU3Y4TjhINVBaQVZhV2MwUXZZUUxmUnMzcTZJSU51dlo0TGE0VjMyX3F4ZWx4LUFFb3o0cEZHMHFXZy1oczRvWEYtclNhUnplbUMxczE1TUJ4eGgyV3dKemREeTNyT0Fz?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Cel puțin 4 personal de securitate au fost răniți într-un atac armat din Siria",
-      "title_it": "Almeno 4 membri del personale di sicurezza feriti in un attacco armato in Siria",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-35f35f2f20adbeee",
       "category": "diplomatie",
       "region": "global",
@@ -204,20 +218,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-81c472ae7ffcfd0e",
-      "category": "clima",
-      "region": "global",
-      "title": "Scramble to save climate fight after COP collapse",
-      "summary": "",
-      "source": "France 24",
-      "published": "2026-11-23T13:16:17Z",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOODdOeWlqdHE2MzNjX2tZX3NjLWF3M3Y3bzJhWDQybXVZd21ya1ZGbXlIbGZmUVVZV3RSem81eEoxczN3MXR6SHZhdElpYk9IbnpVSFNjNFh2cEZLanNHcEhPQnRub3loMlU2Q1FlWkgyZ2F5Q0JtSFNrMl9OUVg4bGp1aUdpQ2lRMEdMMFVSVVJ2SW1aNVE1VUFDbTg?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Luptați pentru a salva lupta împotriva schimbărilor climatice după prăbușirea COP",
-      "title_it": "Affrettarsi per salvare la lotta al clima dopo il collasso della COP",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-c0b9ef51b3227496",
       "category": "diplomatie",
       "region": "asia",
@@ -229,6 +229,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "De ce Kazahstanul și Pakistanul se uită unul la altul?",
       "title_it": "Perché Kazakistan e Pakistan si guardano a vicenda?",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-524b2bd53d497dfc",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Turkish official calls for removal of defense barriers with EU | Daily Sabah",
+      "summary": "",
+      "source": "Daily Sabah",
+      "published": "2026-11-23T13:10:00Z",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPODdWeThCblBjY0pHQ080SGdaUU5rQzRLTGN4RW1ZLVc1eVdTaG9nTERaS2FIMkNVMlMwYmY4RlN5ZmoxMERzemYtVTJOZ0dMNTZIcVpWS1FpYk5DMkhxVzZHVUU0UUdlR2lvUkpOZ2R5SWFldC1ZcThlTlNHQUpPYTZVQVF0aGZUTUNmbHJnUDhMc3dmZUVyMVpRQmE5OFByMGE4Z0JtcjYwSm02TWFFejR30gGyAUFVX3lxTE84N1Z5OEJuUGNjSkdDTzRIZ1pRTmtDNEtMY3hFbVktVzV5V1Nob2dMRFpLYUgyQ1UyUzBiZjhGU3lmajEwRHN6Zi1VMk5nR0w1NkhxWlZLUWliTkMySHFXNkdVRTRRR2VHaW9SSk5nZHlJYWV0LVlxOGVOU0dBSk9hNlVBUXRoZlRNQ2ZscmdQOExzd2ZlRXIxWlFCYTk4UHIwYThnQm1yNjBKbTZNYUV6NHc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Oficialul turc cere eliminarea barierelor de apărare cu UE | Sabah zilnic",
+      "title_it": "Funzionario turco chiede l'eliminazione delle barriere di difesa con l'UE | Sabato quotidiano",
       "translation_status": "machine_translation"
     },
     {
@@ -302,17 +316,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-b0011062aa9184b3",
-      "category": "clima",
-      "region": "global",
-      "title": "Failure of Cop31 prompts calls for urgent reform of UN climate summits",
+      "id": "geo-bb43a4a83b07aab5",
+      "category": "europa",
+      "region": "europa",
+      "title": "Prioritățile agriculturii și pescuitului european pe agenda reuniunii Consiliului AgriFish",
       "summary": "",
-      "source": "The Guardian",
-      "published": "2026-11-23T12:28:00Z",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQy12LVpnTUFERk5qZVVBOHZ3UUpheWJST1o0UWxVaTdRaTJWVERPNVJhMGY0eE5iQy1tTlVKQVh3Z2JVTjF2ZFRpVlZ2RFQ4ODFzaHNFUTYzUTd0eFpjU3dicUVUUWtwTDhDVnJOZ2hQUk0xTFBVVHIxVldtaUZUbDJYckIzeEZ5VVUzajcyOGV0aTNRX25PZEZjaUFiSXA0OEpKM3VBcw?oc=5",
+      "source": "AgroInfo",
+      "published": "2026-11-23T12:30:45Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOWc5RU44VEgxekxKQVdoWU1lX0VTQ1RTN1lUUVJ4Qm8xM0R3ZjZUVnpJMkNpc0o2clg1dm1fSmFtbGJLNFZwZjFkTjJ6OW9QN0twOUluTzV1Ykl1Z1BGOTFzaXExMFhETGFIbVNhempwV1RNMU9qeGl4SG1OWmZRcDNLNHZUQWI2LXpvaHREYU00TWhEbmFjdG5rb1lCMWozdHNyX0lqVUo4UzV3TjlpQQ?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Eșecul Cop31 determină solicitări de reformă urgentă a summit-urilor ONU privind schimbările climatice",
-      "title_it": "Il fallimento della Cop31 spinge a chiedere una riforma urgente dei vertici delle Nazioni Unite sul clima",
+      "title_ro": "Prioritățile agriculturii și pescuitului european pe agenda reuniunii Consiliului AgriFish",
+      "title_it": "Le priorità dell'agricoltura e della pesca europee all'ordine del giorno del Consiglio AgriFish",
       "translation_status": "machine_translation"
     },
     {
@@ -327,20 +341,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Gestionarea de către premierul Modi a presiunilor marilor puteri cheie pentru clasamentul Asia Power Index, spune Hunter Marston de la Lowy Institute",
       "title_it": "La gestione da parte del Primo Ministro Modi delle pressioni delle grandi potenze è fondamentale per la classifica dell’Asia Power Index, afferma Hunter Marston del Lowy Institute",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-22faf58013432158",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Israeli attacks have turned Gaza into 'toxic wasteland', Oxfam says",
-      "summary": "",
-      "source": "BBC",
-      "published": "2026-11-23T11:57:33Z",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9DSW1vTUphY2tRcXJHWTJvV2pISHRJUG4zeXZTcVBMQmJ6OTJxMWZ5M0pwTGVkTWExZHFlUHNWWktWeHpIQ1dBSk5lUlVkVzl0blA3UWtXc3lPNmc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Atacurile israeliene au transformat Gaza într-un „deșert toxic”, spune Oxfam",
-      "title_it": "Gli attacchi israeliani hanno trasformato Gaza in una “terra desolata tossica”, afferma Oxfam",
       "translation_status": "machine_translation"
     },
     {
@@ -400,20 +400,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-5176d39b4952753b",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Israeli Army Kills a Palestinian, Injures Others in Gaza",
-      "summary": "",
-      "source": "- IMEMC News",
-      "published": "2026-11-23T11:01:28Z",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQX1ZsbGJXTVBPS3h2c1pPQWxXRjdXSlh6N3ZXUVc4TTVtR0VTTWVwWXBtX3ZHdVRZY0VhOV9JSThoc0QyeUUxUmNMYXE5SUQxODAyZUFib0NWV040WTk3TkdSakpCdDJiUnlLbXBEc3dQNVdNNzRtWTRxaWxJb28zOWRwM1Z2Y01hZVE?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Armata israeliană ucide un palestinian și rănește pe alții în Gaza",
-      "title_it": "L'esercito israeliano uccide un palestinese e ne ferisce altri a Gaza",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-f44c818f1f25512e",
       "category": "diplomatie",
       "region": "global",
@@ -425,6 +411,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Impingerea pentru pace în Ucraina după summitul de la Shenzhen: cine presează pentru discuții",
       "title_it": "Ucraina: spinta alla pace dopo il vertice di Shenzhen: chi preme per i colloqui",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-f07206f857fbab05",
+      "category": "europa",
+      "region": "europa",
+      "title": "Consiliul AgriFish din 23 noiembrie: piețele agricole și cotele de pescuit în Marea Neagră pentru 2027",
+      "summary": "",
+      "source": "Revista AGRIMEDIA",
+      "published": "2026-11-23T10:52:19Z",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOTEtJNm1XdTBLOUg4Z0lQd0hUcDhzbWVVS25jTExJRzJCelNnS3VwMHBXQWdvem9hOTN0NzlLdGVadHB5OGtBeDFzQ3ByTUZoOXVFZ1YyTnliYXR4ZzN1RlV4Y29xTGhFUjk4ZVhtU010ZmQxSGtaLTczdm40UzZfdkZuY0VvY3dqbHh4aVZ0WnJwa3Zyam5zNlQzV2drZ3V4Nmdtb0NRTHdKR1QzTXNCV2Yza25vdi1wM09tVzNOb2ZuWk1TOGY0clhldlk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Consiliul AgriFish din 23 noiembrie: piețele agricole și cotele de pescuit în Marea Neagră pentru 2027",
+      "title_it": "Consiglio AgriFish del 23 novembre: mercati agricoli e quote di pesca nel Mar Nero per il 2027",
       "translation_status": "machine_translation"
     },
     {
@@ -456,14 +456,28 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-ae6401bc15892570",
+      "id": "geo-557835eb6b0f12a4",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Erdogan to Visit Libya for Türkiye-Africa Summit",
+      "summary": "",
+      "source": "Wisevoter",
+      "published": "2026-11-23T10:19:15Z",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQS2Znc1YyR0xKNllPNXBfZmVRSEFrTVZzalQ3UzRWLTNiMU9aaTQyTmdMbmdfeUd1Y19jb0pOU2I3N2Z3aEoxd0lGOXFtZ3NDOVVPbHNXVkdnRGk0TTJVYnA3dzZvRWU3OGV3WkZNZFdHWmtKcWlISU5nTmFXZHc3ZGJMbmJRMmM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Erdogan va vizita Libia pentru summit-ul Turcia-Africa",
+      "title_it": "Erdogan visiterà la Libia per il vertice Turchia-Africa",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-26f418f0505046c1",
       "category": "conflicte",
       "region": "europa",
       "title": "Melania Trump involved in Russia-Ukraine talks via her longtime agent — NYT",
       "summary": "",
       "source": "The New Voice of Ukraine",
       "published": "2026-11-23T09:56:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNby1QU0ZKaU1paTJiOUFwWXFDc2tfb1RjVl92SnpTaDlHaXdZVEVoWDBZb053TmlyRWYxc3ZuVWlsSDNJbEhWWWI2RGhHZzg0MFM1U1VrcVl5RzZPTTBtVkwyeG9feWl5Q1ZtdEdEbGFtcmJCTmdZazFULUFSazUzRjdaa0RxODJ6Tk45bExsekd4QTVOVWZZdVVhNnJ3WGRyVnVuQ0xxY3BSNDloQ1l5Yk1hXzBlWjlMbGow0gG7AUFVX3lxTE1vLVBTRkppTWlpMmI5QXBZcUNza19vVGNWX3ZKelNoOUdpd1lURWhYMFlvTndOaXJFZjFzdm5VaWxIM0lsSFZZYjZEaEdnODQwUzVTVWtxWXlHNk9NMG1WTDJ4b195aXlDVm10R0RsYW1yYkJOZ1lrMVQtQVJrNTNGN1prRHE4MnpOTjlsTGx6R3hBNU5VZll1VWE2cndYZHJWdW5DTHFjcFI0OWhDWXliTWFfMGVaOUxsajA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOd1Z0eEtmbVA3U1l6c0h5OHcxX0VfRWZ2RVd6ejkxM3VCR2E3ckhHRlYyNUl3bkVOTzlWb2NTSGNBTzlfXzFYZlNGMm9CdlZlSnFITDI2by1UQ1p2RDctNTNfT3NyQXRKNDA5ZTBrMmFRX3dheDkwLTFVZ0hnTkRHdWVpamxHYVRvU1pFeHZCQ0p6Qy16LXdzNnVSMzBrdHdCLUNESmdGMFpVODJQR0FCaHM2bS1Gb0RSTGxmTnNWUdIBuwFBVV95cUxNby1QU0ZKaU1paTJiOUFwWXFDc2tfb1RjVl92SnpTaDlHaXdZVEVoWDBZb053TmlyRWYxc3ZuVWlsSDNJbEhWWWI2RGhHZzg0MFM1U1VrcVl5RzZPTTBtVkwyeG9feWl5Q1ZtdEdEbGFtcmJCTmdZazFULUFSazUzRjdaa0RxODJ6Tk45bExsekd4QTVOVWZZdVVhNnJ3WGRyVnVuQ0xxY3BSNDloQ1l5Yk1hXzBlWjlMbGow?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "Melania Trump implicată în discuțiile Rusia-Ucraina prin intermediul agentului ei de mult timp — NYT",
       "title_it": "Melania Trump coinvolta nei colloqui Russia-Ucraina tramite il suo agente di lunga data, il NYT",
@@ -526,6 +540,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-e6f6941dd2e3899b",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "US Backs Sovereign AI Cloud Deals in Southeast Asia",
+      "summary": "",
+      "source": "Wisevoter",
+      "published": "2026-11-23T09:04:39Z",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPREJMVjhDdlE2MHRHSUlMT1J0ajh4cVFDNTh2ajI5ektiUVg1SlRHRUdMYThVUTJFUVhKR1IzMHE4NHMwb2NsOWM3U0h6dmJRVWVXRS1sSlFnOHdQNDNTREJ4VWkyaEVCTzJ1eXhJYW45dmc4TWVqNU1Lck40bkFaQms5bElyWU1VblRuSi1jTGw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "SUA sprijină ofertele de cloud AI suverane în Asia de Sud-Est",
+      "title_it": "Gli Stati Uniti sostengono gli accordi sovrani sul cloud AI nel sud-est asiatico",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-079c9d0fe295a803",
       "category": "tehnologie",
       "region": "global",
@@ -568,20 +596,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2861a6817b368d87",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Russian strikes kill 14 in Ukraine as Moscow signals new talks",
-      "summary": "",
-      "source": "سانا",
-      "published": "2026-11-23T08:25:22Z",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBxUjlqZ3VrQ0w2VEVwMzBEcFFGTlAtdnJ2X3RRQWVRRnlwOU8td1B6NUVoXzZHeUR5NmRWaU1sRDVsNFNlSnNtd1Y5bFVrOHpQTXVR?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Grevele rusești au ucis 14 în Ucraina, în timp ce Moscova semnalează noi discuții",
-      "title_it": "Attacchi russi uccidono 14 persone in Ucraina mentre Mosca segnala nuovi colloqui",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-f6ac3dd0abe8298a",
       "category": "europa",
       "region": "europa",
@@ -610,20 +624,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-c058d53b37f28501",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Is the QUAD Truly Effective",
-      "summary": "",
-      "source": "MyIndMakers",
-      "published": "2026-11-23T07:58:28Z",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5YaEdORVJ4Zm1BdHBpcDdlNXl1Q2FKbjNhMHlJWWgtYl9MYjhJWThyYkdtNDNqcTNTYUhFUWVXZWc4bGg4ZkJSekJYb2YxZlU1bC10LUNXbEV1TjdhY3ZwRG9CSmhRN1ZvVnpwTmVBaw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Este QUAD-ul cu adevărat eficient",
-      "title_it": "Il QUAD è veramente efficace",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-15e75d6e27afb733",
       "category": "clima",
       "region": "global",
@@ -649,6 +649,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Actualizarea COP31 13: Cel mai rău COP vreodată?",
       "title_it": "COP31 Aggiornamento 13: Il peggior COP di sempre?",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-438b62a2d703f191",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31: Climate talks collapse over fossil fuels in chaotic end to summit",
+      "summary": "",
+      "source": "TAG24 NEWS USA INC",
+      "published": "2026-11-23T06:56:23Z",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQN2poMkJZaDFwcC1rUmxRQnBpOWJHN3hlVnJwQnJBdDV2RlJHb055a1ZodFY2ZWVJYWZmZEh2WGJWQ0l6elNpSjZSZlRaMDE5YjRHbDJmVXJpOVhjZ1JmeW9BNEl4cjVhQWh6WURWTG9JdW9Ra1JxQXNDbGxVSC1GSlZhUG5GcDhXcEFYWmo2M0JnQXcwVFhoTHpQSTlubzVZM0QxaHZBM3hiOGNfNk1RRDctUWt2U2dWaTJJMHIwMNIBxAFBVV95cUxQUG1pUDdrdE5wUkp2Ui1JSkFsVHIyQnhIb0JVRWVDMGl3YTU1cXBpMnIyNGNSZlB2NUwtQVVRUUxSUmVMVnZrbk01NXJ4N0hHVWZyWnBscFVOczh5OE4zT3ZTOUhROVdKSWFGclBBXzVrQjlhQXc0cFZ4ekFkTmJieGxidzNnYU9Sd3Izd2hBZHdPbnoxb3pmdDQzT0prR2Z5NldXZGhfSGNIRllIN2Jpb1FXQzJoa3dySlFjWWhmcUlmUk5f?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31: Discuțiile despre climă se prăbușesc din cauza combustibililor fosili într-un summit haotic",
+      "title_it": "COP31: i colloqui sul clima crollano sui combustibili fossili nella caotica conclusione del vertice",
       "translation_status": "machine_translation"
     },
     {
@@ -719,20 +733,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Discuțiile COP31 se prăbușesc în Antalya pentru omisiunea combustibililor fosili",
       "title_it": "I colloqui COP31 crollano ad Antalya per l'omissione dei combustibili fossili",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-6e65381fe32eb3d6",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Can Seoul avoid being sidelined in Trump's great-power diplomacy?",
-      "summary": "",
-      "source": "The Korea Herald",
-      "published": "2026-11-23T06:16:27Z",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1SY0IycW1XWkUyNXVfRHotQWZxeS16YkZ5LV9USjc2TFRjMUFJbEIyR055TE9Jc2dqaVRVdzNkVkNQQUNaeG1iRlJPU1Utd0VvUnAwOTZzMA?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Poate Seulul să evite să fie exclus din diplomația marii puteri a lui Trump?",
-      "title_it": "Riuscirà Seoul a evitare di essere messa da parte nella diplomazia delle grandi potenze di Trump?",
       "translation_status": "machine_translation"
     },
     {
@@ -820,20 +820,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2e235d578d5ee59d",
-      "category": "clima",
-      "region": "global",
-      "title": "Climate talks collapse in chaotic end to COP31",
-      "summary": "",
-      "source": "eNCA",
-      "published": "2026-11-23T04:06:31Z",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRnNSNk9MbVRTMjNnQXZQMF9qRFZ4QnBDbURGdlhoMWN2QzZ5NWl1d2NIcl85YmpRYVExV3Q2UzVxNlRMTk4tRHU4UkpCVjJCbXZIVmdHLURVNkZFOEdXRmp1LW1qcmdFZklMR3dIejBRX29LVVpKVDdwRVFwT2c4Y2JEaUU?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Discuțiile despre climă se prăbușesc în finalul haotic al COP31",
-      "title_it": "I negoziati sul clima falliscono nel caotico finale della COP31",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-67d7a53d87c61d46",
       "category": "diplomatie",
       "region": "asia",
@@ -842,7 +828,24 @@
       "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
       "published": "2026-11-23T03:53:07Z",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObWVLRm1MU1ZUZkZYSE1qYmlMSm1xTVY4T21ndmllOG9IdjVHN2ZxU2VXT0xLejBOOFhzRFRNMHBNZE94TC1NYUt2VVB6ZWN4LWtYUWdFZl9Ic1lDTjRubHlIVUhUWVdad2x0UWh5MzJfamRqYy1BdnBhVzJScUtTc0hlWS1fTVJGT1NKLXFYZW5fLW1Wd3F1WUNoaXdqeHJWZXh4REJIdGxDaFVuZnBNd2pWSlRjVjdfdm9Pek1Cdms?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diplomație sau transparență? Oficialii filipinezi iau în considerare abordarea pe fondul creșterii tensiunii din China",
+      "title_it": "Diplomazia o trasparenza? I funzionari filippini valutano un approccio nel contesto della crescente tensione in Cina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d8b932bbb7df1bdf",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Four summits, five months of Turkish diplomacy",
+      "summary": "",
+      "source": "Hürriyet Daily News",
+      "published": "2026-11-23T03:37:38Z",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNE5aYWVvTnVFOVRudjJSSUZPODZkTlZEUU9hdzBfNFNXRnlfTFVSMkZpRFVQT1FQczFULXhQRWtNcmtYaU5mdzQ4V0NKanh3Qjd2UlRqM0xNZkxFNGVZQm1uREJYc0VnWlJxV2JIcG11TUhvNWw4NmlsVjlPU0d5Y3NLczFzeVZaZ0hzV2w1UQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Patru summit-uri, cinci luni de diplomație turcă",
+      "title_it": "Quattro vertici, cinque mesi di diplomazia turca",
+      "translation_status": "machine_translation"
     }
   ]
 }
