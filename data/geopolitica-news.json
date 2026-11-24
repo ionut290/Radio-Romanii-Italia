@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-23T23:40:48.348080Z",
+  "updated_at": "2026-11-24T00:50:22.862872Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,46 +8,70 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
-      "id": "geo-18543dcc224dd71b",
-      "category": "tehnologie",
+      "id": "geo-6636564c16372029",
+      "category": "securitate",
+      "region": "asia",
+      "title": "China Sends Spy Balloons Over Taiwan Ahead of Local Elections",
+      "summary": "",
+      "source": "Peradaban.id",
+      "published": "2026-11-24T00:43:22Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5fZkZiSWVCRjVMWkV2WnpneUVYT29QTGxmNmE4a0IyTm9uaGJ3WjA3SHljTHpwVmkzN1dtdlJsaEJETFhOM1JMLW9BWHNWaUdZeWd0UkpERUhsdHk2dzVjMFVCbWFkbWhsM0Zv?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-808bd568b475586c",
+      "category": "securitate",
+      "region": "asia",
+      "title": "China Expands Military Pressure on Taiwan Before Local Elections",
+      "summary": "",
+      "source": "Demokratis.co.id",
+      "published": "2026-11-24T00:40:53Z",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4xMHFuYUFJUkQ3UDVlUnhGcFFHVlcyYmlnSkRiaXd0aTc5OTV6c0tNYnk4SEpKb1hWZ1FySVlYbnh4RzlyQjRGeEktRHRUcFVzVWlubW5lM2xUR2FuMnh5Uk92TEszaW9NTGxYeENTYm02R0xpU19j?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-744b1058017bbb8b",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "The Art (and the Risk) of the Deal: Prospects for Renewed Diplomacy with North Korea",
+      "summary": "",
+      "source": "Asia Society",
+      "published": "2026-11-24T00:08:51Z",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMzE0TVpxdUVDc3dheFhkYUdUYXU1RmhPOFItQnNRcTE1TnNTSWhSSHU1QkJqQ094OU50WEhYSUk1dFNIUWRqWjU2ZDBmQVdfUm5qeTZuWXozTUtnOWtPT2thUk9mUTR0OHZoeEszb3JkaGxwRnRiQ09YQ1VnZjdLOEF6RVY5RU5sOE9RajNpQ3RYRjNlcDBkRlJZUmpnczViOGxSaVYyUDc?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-5f39b375f1edb8fb",
+      "category": "economie",
       "region": "global",
-      "title": "The death of logic and sanity in Silicon Valley",
+      "title": "Beyond stabilisation: A critical evaluation of ‘National Balance Sheet’ thesis for Sri Lanka’s post-IMF era – II",
       "summary": "",
-      "source": "Washington Times",
-      "published": "2026-11-23T23:23:33Z",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbmVySVlJa2xmZ3hqdmE1Q25KOVlVdFkxSWpYZG45a2ctUmJxLU5BcEVKdkNOYTJLWDRfMWdoU05LTC0wRjBpc21lMGVkT2RuUlJiNVhubHptWlpVU2VzVEpMamxoY2ZTOXY0QW1hZzVIVnZpc0tJdWtRZHhJNnlyTXZvOXBNYlRHcFkw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Moartea logicii și a sanității în Silicon Valley",
-      "title_it": "La morte della logica e della sanità mentale nella Silicon Valley",
-      "translation_status": "machine_translation"
+      "source": "Island.lk",
+      "published": "2026-11-24T00:04:54Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTm5qYzFQamlhcEJkbHpXenZYYWRwN3kzbk5HQ2hJcHFaczB0OURzQnd0ck9aS0s0TXFmT1R0VkpnUWhuanVTbzQyVEczczFUTTlXQi14b1RVbGEwU3NHLTdHMUk1aFJhYjVqMkxjUUxsR2pJQkFEOEZINGQ4MEZfRThxNXZsQzhRVHNMZFBwNUo2Mjh1VEhJOVJlRTJhVVN1X0lpUExxRTZpdUQwcjFLUGFXdUpNTHh2akpFazhHRDBsTU0?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-14cc3ac12fb57e44",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "EU Demands Russia Accept Ceasefire, Warns of Black Sea Crisis",
+      "id": "geo-7dc0fa2cb13980b7",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Nikol Pashinyan Unveils Draft Armenian Constitution for Peace With Azerbaijan: 13 outlets compared",
       "summary": "",
-      "source": "Kyiv Post",
-      "published": "2026-11-23T23:00:13Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBwYWRROENueEpSZ3NwdmI0TzZ6d3poaS1rWWdFUnp4NmxKem5CRG9SUzhLRmtNc3RFb0wyVTJ6RHBsNjhjQmsyYU9hUQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE cere Rusiei să accepte încetarea focului și avertizează asupra crizei Mării Negre",
-      "title_it": "L’UE chiede alla Russia di accettare il cessate il fuoco e avverte della crisi del Mar Nero",
-      "translation_status": "machine_translation"
+      "source": "NewsCord",
+      "published": "2026-11-23T23:19:55Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQZFk0S0FaMGxWUWF3UmJSeVNWSWJNODBtMElEMFVNSEdaSEY2NmpUX25hRE5KeHc2QnRKb09yd0pCLThLcjBGOFJUbXZ6Tl9DU2Y3Vi1hbkw0MlJMeHVRNTRwYzRZRnkxNkNVUVRuSG85VjR3VzhQN0g3dFlEenVMa0dMVXJYQTA4bmxxalQzdGR1N0poZXZKNk5QbWh6blJSeE1DMjA2ZWNKd3dwMjlyM25IYWRMbmhsQlY2Zk85NkI1RklCNnNoVnNlSW5ycmRtaXEydTA1Y0pPbkNwWnE5TGt0WVV2QQ?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-0a70e6ddc6acf455",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "What does Putin really mean by dangling a “compromise” over Ukraine?",
+      "id": "geo-32ecf81982ce2db9",
+      "category": "clima",
+      "region": "global",
+      "title": "Fallout from no-deal climate talks spans the Pacific",
       "summary": "",
-      "source": "Lowy Institute",
-      "published": "2026-11-23T23:00:00Z",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNS1M4NjllVUJkWE5TcmV6S1F2V3FJVDY4Ny1DNDJUYjVMOWNmWWdCREEtaE1IY3I5VG1NNUgzTkc2NkxWUm5aTFNJVFd2YkFFRGZyRHhSb0R3M0R1Um9lT0o3NTdvNjg1ZmdGelZWd3p2YjFnbE1QVVN6QW1lM3J6OTU1UzJqMUo5aFBCYTdhTjRGT0EtdjJlcGZ5eEI2aUFQRS03M3Q0VDY2aXdod3d2UA?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ce vrea să spună Putin cu adevărat prin a pune un „compromis” asupra Ucrainei?",
-      "title_it": "Cosa intende veramente Putin quando propone un “compromesso” sull’Ucraina?",
-      "translation_status": "machine_translation"
+      "source": "https://aapnews.aap.com.au/",
+      "published": "2026-11-23T23:01:39Z",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM2JMUkVLcHlzSWpsTXduVUNaeENCRGt4VWgwNXZhRFZMY3U0alFaUXpNcUVKZW95VnlKUkJMRXRZX1d0LVNrUDBSM2F4VVFRWDNCV3g1WTVsYnZDWW9ZeXBETXJvQzJrajFfQnA5bldVRFhZNUFYUzJUc3F6NTdLZlJfQUhGQUtTWmV3dmRB?oc=5",
+      "review_status": "external_headline_unverified"
     }
   ]
 }
