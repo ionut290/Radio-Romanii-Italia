@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-24T01:51:25.923920Z",
+  "updated_at": "2026-11-24T03:00:45.382189Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -14,20 +14,12 @@
       "title": "Collapse of U.N. summit intensifies calls for new approach to climate talks",
       "summary": "",
       "source": "The Washington Post",
-      "published": "2026-11-24T01:24:45Z",
+      "published": "2026-11-24T02:54:45Z",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYmJ0Ny1yMW50TC1mNTE1eDIzYkQyOXdIenBrenYxdTloQnc5bmRxbnhmdjhtZDlHTEZPaWZzdzdwZGlUS2x5WnRiVVdDckpZYkRTM1Y0aHBCdmRpcVprZDh5X3JsYzh2cnV6UzFYdjdic3M4ajJUamgtUms4M0lPZUZseFJUdWF4aG9YSlVLRjRNS2Fab05USVFtTHV3X2xMTFZJWG1Fb3VhQmJJTlpiS1RB?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-196ca9937c456b8c",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "UKRAINERUSSIAWAR. The EU Commission rejects the Kremlin 's invitation to Moscow for bilateral consultations on EU security. The European Peace Facility was used to finance the war.",
-      "summary": "",
-      "source": "agc communication news",
-      "published": "2026-11-24T01:16:49Z",
-      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQUkpRYl9YMFhBU1ZRSlFWQ1RtVHZudmhzY3RlZ1VLTnBQdkRhRlEwTk8yV0w0Q3JTcm96SkhPeUZRdjlCb09YTzI5am5vSnRQOHA1S29jbnhORWVuSUU5RmM1WTJjRzJKTVZIX0JvUy12VWxNSnY0TE1NQThVUFNBZE93TzhIb2h2R2x2QTdyMFpiMTFHRGkzX0tkSGhGY050dy1fS0kwVzByRE5rQnlxMW1JTmJET2txWjVvaXFjM2EyLU1UMDVqUVZZQjdGdzZ3M1RDWWM4cEY5TkRRa3hmTzhNOTN4T2lZSkQ0d2ZRWURqdUtxZW90STFDZVdsX3k4am5Cc3BudHNhNGNVeTJ0UXhtaEh6c3hJWk16bjV4RHlUb0I1Rlpn?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Prăbușirea summitului ONU intensifică apelurile pentru o nouă abordare a discuțiilor privind clima",
+      "title_it": "Il crollo del vertice delle Nazioni Unite intensifica le richieste per un nuovo approccio ai colloqui sul clima",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-b5a19925c3cf4c39",
@@ -36,9 +28,40 @@
       "title": "The Never-Ending China-US Story",
       "summary": "",
       "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
-      "published": "2026-11-24T01:05:21Z",
+      "published": "2026-11-24T02:11:07Z",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5ud1RGdlVLVjZLdmE3TDFkelNYQzZ4cy1KbFl0Q011eXk3MVY3ODZDQUxvclFNX2hFNmRqeG1WTWd2TDNyVzF1TUVoeTlKQTNCS3RvcnU5Q0xPOHZ6OXV1eXNTWmFmTERyUVNmVk05RzF1Zw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Povestea nesfârșită China-SUA",
+      "title_it": "La storia infinita tra Cina e Stati Uniti",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-359711ff0f427638",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "The Big Three: Why Shenzhen Is No Yalta",
+      "summary": "",
+      "source": "Khabarhub",
+      "published": "2026-11-24T01:19:10Z",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFB4RjFFbFpmR1NLamI0V01iZXQzQU1SVlJGaXhFbDFXd09FXzZlc2NiTzFXTHdCVmdXSEpGel9tLXlPOHl4ZnFROFVfMFk4bmcwQW9hNW5Bbnk?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cei trei mari: de ce Shenzhen nu este Yalta",
+      "title_it": "I Tre Grandi: Perché Shenzhen non è Yalta",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-bff38a2229c16799",
+      "category": "europa",
+      "region": "europa",
+      "title": "Dal Consiglio Ue più forza alla futura Pac. Budget da 294 miliardi €",
+      "summary": "",
+      "source": "ItaliaOggi",
+      "published": "2026-11-24T01:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNeklwNm4zVWJ0dF95N3VSa2IwdXRHcWVHZG43SFVBWm8zTWRjcHBkVWVOeGdnV0FkdVBvLVZZX01QTHphY09LXzlxcFhFNDRLSVZ6SGlxWks2VVVwck1vZjd0cUlwX0Fxa1RzVXp5dm9GUm5Xd04wUUVlbXNwM2d2X2ZpXzhmbHk2dWlfWHRDU2xTRGJodmdSZ2pjZVZTNjhrdndZMktCVUlCSndObjRUZUFPdzl1dmZuX3FtLTl4Y2JYaHVHSkNvdHJWR0tCbWc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Mai multă putere de la Consiliul UE la viitoarea PAC. Buget de 294 de miliarde de euro",
+      "title_it": "Dal Consiglio Ue più forza alla futura Pac. Budget da 294 miliardi €",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6636564c16372029",
@@ -49,7 +72,10 @@
       "source": "Peradaban.id",
       "published": "2026-11-24T00:43:22Z",
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5fZkZiSWVCRjVMWkV2WnpneUVYT29QTGxmNmE4a0IyTm9uaGJ3WjA3SHljTHpwVmkzN1dtdlJsaEJETFhOM1JMLW9BWHNWaUdZeWd0UkpERUhsdHk2dzVjMFVCbWFkbWhsM0Zv?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "China trimite baloane spion peste Taiwan înaintea alegerilor locale",
+      "title_it": "La Cina invia palloncini spia su Taiwan in vista delle elezioni locali",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6bc28ef6dbf11a41",
@@ -60,7 +86,10 @@
       "source": "SuaraGarut.ID",
       "published": "2026-11-24T00:41:37Z",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5YbVpWTE5pTUZkWFN3QjdfZ0ExWjFEc1YwWXdGaWh1NDBIRmFZSEZTODZWb3ZpZGRRZFE4R3gzYzNjMzFRUlNsbDJTb3JKODdka2R0MFZWQnB5WjFET2NsTS1JRDBxMUNkWnkzV25kLXdtTW8?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "China extinde presiunea militară asupra Taiwanului înainte de alegeri",
+      "title_it": "La Cina aumenta la pressione militare su Taiwan prima delle elezioni",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-808bd568b475586c",
@@ -71,7 +100,38 @@
       "source": "Demokratis.co.id",
       "published": "2026-11-24T00:40:53Z",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4xMHFuYUFJUkQ3UDVlUnhGcFFHVlcyYmlnSkRiaXd0aTc5OTV6c0tNYnk4SEpKb1hWZ1FySVlYbnh4RzlyQjRGeEktRHRUcFVzVWlubW5lM2xUR2FuMnh5Uk92TEszaW9NTGxYeENTYm02R0xpU19j?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "China extinde presiunea militară asupra Taiwanului înainte de alegerile locale",
+      "title_it": "La Cina aumenta la pressione militare su Taiwan prima delle elezioni locali",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-f02fc0a10282765b",
+      "category": "diplomatie",
+      "region": "global",
+      "title": "Russian Vessel Explosion Raises Mediterranean Fears",
+      "summary": "",
+      "source": "Wisevoter",
+      "published": "2026-11-24T00:25:52Z",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaE9OazFsWm8wcUdSc0E2eGU1cmZCdzdNNWlLMUN5VThjX2Y1VHJ6UWROWTB4Zy01UWthY0xLbkdDbnF0Y3FMWnpsSDQyWXFEMHQwcmN5UGZpbm0yaHI1emhVZ3ZvNzF1WUx5c200MjMtcXZIeC1COEJRbE5uVXRHc25RLXlpNV9DdUZjdEFZNA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Explozia unei nave rusești ridică temeri mediteraneene",
+      "title_it": "L’esplosione di una nave russa solleva timori nel Mediterraneo",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-744b1058017bbb8b",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "The Art (and the Risk) of the Deal: Prospects for Renewed Diplomacy with North Korea",
+      "summary": "",
+      "source": "Asia Society",
+      "published": "2026-11-24T00:08:51Z",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMzE0TVpxdUVDc3dheFhkYUdUYXU1RmhPOFItQnNRcTE1TnNTSWhSSHU1QkJqQ094OU50WEhYSUk1dFNIUWRqWjU2ZDBmQVdfUm5qeTZuWXozTUtnOWtPT2thUk9mUTR0OHZoeEszb3JkaGxwRnRiQ09YQ1VnZjdLOEF6RVY5RU5sOE9RajNpQ3RYRjNlcDBkRlJZUmpnczViOGxSaVYyUDc?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Arta (și riscul) acordului: perspective pentru o diplomație reînnoită cu Coreea de Nord",
+      "title_it": "L’arte (e il rischio) dell’accordo: prospettive per una rinnovata diplomazia con la Corea del Nord",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5f39b375f1edb8fb",
@@ -82,7 +142,24 @@
       "source": "Island.lk",
       "published": "2026-11-24T00:04:54Z",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQTm5qYzFQamlhcEJkbHpXenZYYWRwN3kzbk5HQ2hJcHFaczB0OURzQnd0ck9aS0s0TXFmT1R0VkpnUWhuanVTbzQyVEczczFUTTlXQi14b1RVbGEwU3NHLTdHMUk1aFJhYjVqMkxjUUxsR2pJQkFEOEZINGQ4MEZfRThxNXZsQzhRVHNMZFBwNUo2Mjh1VEhJOVJlRTJhVVN1X0lpUExxRTZpdUQwcjFLUGFXdUpNTHh2akpFazhHRDBsTU0?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Dincolo de stabilizare: O evaluare critică a tezei „Banțului național” pentru epoca post-FMI a Sri Lanka – II",
+      "title_it": "Oltre la stabilizzazione: una valutazione critica della tesi del “Bilancio nazionale” per l’era post-FMI dello Sri Lanka – II",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d11a6988a6e9b7f8",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Public Diplomacy in the News: Putin's Return, Fried Chicken Diplomacy, & American Diplomacy After the Midterms",
+      "summary": "",
+      "source": "USC Center on Public Diplomacy |",
+      "published": "2026-11-23T23:52:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQbU1RaUQ5OV9mU1pZcElNWlhfcTdwX1huVFlPbnFoV0JQQjRhQl9fVkM0akRaX1FuTDAzaGtPZG5LWUlIRlhkVUExaldSak9NV3N1R2NvSU9fQUZUMFVmWGJ0UGpSZWJfWXNSWnNBMjZtem41VHJDcDNrM05mS1RCRWZCV2J0WVpMUkYwOURjS3k5YWFwN3J2UTFnMXB1d3lKaWs1ZTRQYUpOYXJtRW0zTWsxUXpFSjMyRXJsTU9Lel82SWctNm12ZA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diplomația publică în știri: revenirea lui Putin, diplomația de pui prăjit și diplomația americană după mandatul intermediar",
+      "title_it": "La diplomazia pubblica nelle notizie: il ritorno di Putin, la diplomazia del pollo fritto e la diplomazia americana dopo le elezioni di medio termine",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-28793b37b8c114fa",
@@ -93,7 +170,10 @@
       "source": "The Kyiv Independent",
       "published": "2026-11-23T23:50:31Z",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWUNsc1B6a05fQkNBT3hhR2d3aEpaVTNPM0hKV1ltdk5xUTJ5OUNQU3hmOUZpbkdKVDdUUElidFFDYTloUmxJenlLYnBuY3d0aVg5OWJaTFpQWGhackNlVFFOTFpSY18yeGw5T3BDR2ZvNDN0RnBKRENSVDFMQXNDUjFqQ2F4dlRhNmwxNkhja1ptWWFQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Zelensky cere NATO să admită Ucraina la adunarea alianței",
+      "title_it": "Zelenskyj chiede alla NATO di ammettere l'Ucraina all'assemblea dell'Alleanza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-b0f1739647aa8c38",
@@ -104,7 +184,10 @@
       "source": "upi",
       "published": "2026-11-23T23:30:00Z",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbnh6UENOMDV0QnFRdFVJc3BJb3prY2RNYzR5OHh0UzNwTUg2bGg1NEtMbmUwbDZ5MTNaSGlvR29Pd0pfNzd6emtlaWIwcnBwWHVqQXpsdHFfT05aa1N1NUMtSzduOW5WZ3RSTTAxNUxqRzRJNnd3THVaYlJjWWFRSVBuSjJnVHJPOTk4T3UyYTl5VWpNSlB6TVJ2TTRFc3ctbXVld2dQNFpKanlPTkRDam12UTB4S0NCVjdZOEJscUtRd9IBwgFBVV95cUxNbnh6UENOMDV0QnFRdFVJc3BJb3prY2RNYzR5OHh0UzNwTUg2bGg1NEtMbmUwbDZ5MTNaSGlvR29Pd0pfNzd6emtlaWIwcnBwWHVqQXpsdHFfT05aa1N1NUMtSzduOW5WZ3RSTTAxNUxqRzRJNnd3THVaYlJjWWFRSVBuSjJnVHJPOTk4T3UyYTl5VWpNSlB6TVJ2TTRFc3ctbXVld2dQNFpKanlPTkRDam12UTB4S0NCVjdZOEJscUtRdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diferența de putere dintre SUA și China a atins un nivel record, deoarece Asia cântărește submarinele nucleare",
+      "title_it": "Il divario di potere tra Stati Uniti e Cina tocca il minimo storico mentre l’Asia pesa sui sottomarini nucleari",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-18543dcc224dd71b",
@@ -115,18 +198,24 @@
       "source": "Washington Times",
       "published": "2026-11-23T23:23:33Z",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbmVySVlJa2xmZ3hqdmE1Q25KOVlVdFkxSWpYZG45a2ctUmJxLU5BcEVKdkNOYTJLWDRfMWdoU05LTC0wRjBpc21lMGVkT2RuUlJiNVhubHptWlpVU2VzVEpMamxoY2ZTOXY0QW1hZzVIVnZpc0tJdWtRZHhJNnlyTXZvOXBNYlRHcFkw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Moartea logicii și a sanității în Silicon Valley",
+      "title_it": "La morte della logica e della sanità mentale nella Silicon Valley",
+      "translation_status": "machine_translation"
     },
     {
-      "id": "geo-32ecf81982ce2db9",
-      "category": "clima",
+      "id": "geo-7dc0fa2cb13980b7",
+      "category": "diplomatie",
       "region": "global",
-      "title": "Fallout from no-deal climate talks spans the Pacific",
+      "title": "Nikol Pashinyan Unveils Draft Armenian Constitution for Peace With Azerbaijan: 13 outlets compared",
       "summary": "",
-      "source": "https://aapnews.aap.com.au/",
-      "published": "2026-11-23T23:01:39Z",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQM2JMUkVLcHlzSWpsTXduVUNaeENCRGt4VWgwNXZhRFZMY3U0alFaUXpNcUVKZW95VnlKUkJMRXRZX1d0LVNrUDBSM2F4VVFRWDNCV3g1WTVsYnZDWW9ZeXBETXJvQzJrajFfQnA5bldVRFhZNUFYUzJUc3F6NTdLZlJfQUhGQUtTWmV3dmRB?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "NewsCord",
+      "published": "2026-11-23T23:19:55Z",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQZFk0S0FaMGxWUWF3UmJSeVNWSWJNODBtMElEMFVNSEdaSEY2NmpUX25hRE5KeHc2QnRKb09yd0pCLThLcjBGOFJUbXZ6Tl9DU2Y3Vi1hbkw0MlJMeHVRNTRwYzRZRnkxNkNVUVRuSG85VjR3VzhQN0g3dFlEenVMa0dMVXJYQTA4bmxxalQzdGR1N0poZXZKNk5QbWh6blJSeE1DMjA2ZWNKd3dwMjlyM25IYWRMbmhsQlY2Zk85NkI1RklCNnNoVnNlSW5ycmRtaXEydTA1Y0pPbkNwWnE5TGt0WVV2QQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Nikol Pashinyan dezvăluie proiectul de Constituție armeană pentru pace cu Azerbaidjanul: 13 puncte de vânzare comparate",
+      "title_it": "Nikol Pashinyan presenta il progetto di Costituzione armena per la pace con l'Azerbaigian: 13 punti di vista a confronto",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-14cc3ac12fb57e44",
@@ -137,7 +226,10 @@
       "source": "Kyiv Post",
       "published": "2026-11-23T23:00:13Z",
       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBwYWRROENueEpSZ3NwdmI0TzZ6d3poaS1rWWdFUnp4NmxKem5CRG9SUzhLRmtNc3RFb0wyVTJ6RHBsNjhjQmsyYU9hUQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE cere Rusiei să accepte încetarea focului și avertizează asupra crizei Mării Negre",
+      "title_it": "L’UE chiede alla Russia di accettare il cessate il fuoco e avverte della crisi del Mar Nero",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-0a70e6ddc6acf455",
@@ -148,7 +240,10 @@
       "source": "Lowy Institute",
       "published": "2026-11-23T23:00:00Z",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNS1M4NjllVUJkWE5TcmV6S1F2V3FJVDY4Ny1DNDJUYjVMOWNmWWdCREEtaE1IY3I5VG1NNUgzTkc2NkxWUm5aTFNJVFd2YkFFRGZyRHhSb0R3M0R1Um9lT0o3NTdvNjg1ZmdGelZWd3p2YjFnbE1QVVN6QW1lM3J6OTU1UzJqMUo5aFBCYTdhTjRGT0EtdjJlcGZ5eEI2aUFQRS03M3Q0VDY2aXdod3d2UA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ce vrea să spună Putin cu adevărat prin a pune un „compromis” asupra Ucrainei?",
+      "title_it": "Cosa intende realmente Putin lanciando un “compromesso” sull’Ucraina?",
+      "translation_status": "machine_translation"
     }
   ]
 }
