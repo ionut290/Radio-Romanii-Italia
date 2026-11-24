@@ -1,12 +1,26 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-24T12:00:40.436261Z",
+  "updated_at": "2026-11-24T12:19:51.088286Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-55b57f57f0b3dfc7",
+      "category": "clima",
+      "region": "global",
+      "title": "The “Petroleum Mafia” Takes On COP31",
+      "summary": "",
+      "source": "The Nation",
+      "published": "2026-11-24T12:03:54Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWDM5b3QyMXFhS2NjR0lJTHBPMFo5amhBS3gtVWNEYXBEbUFJalhxZFpMcUJPQmZOTVNNdXJCb01wOUtTN245My16M1dGUGpFZ3AxdTFkdDJKdzdYQVNMeGhYR1hsUnZEOGVyNFdTUEVVQk9VRXZ3TW82MzhxakVBX1g3UW5IZDNy?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Mafia petrolieră” ia la COP31",
+      "title_it": "La “mafia del petrolio” affronta la COP31",
+      "translation_status": "machine_translation"
+    },
     {
       "id": "geo-1ad5d8881942bfe3",
       "category": "conflicte",
@@ -16,7 +30,10 @@
       "source": "The Times of India",
       "published": "2026-11-24T11:44:00Z",
       "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxQN3RHNDY5ZDhSek9pcFBJbnVhelFmc2x3YmRFTnF5X212N2ZOQ3JvLWluVG1LVVVMbXRGV0pJV09lR3YxTmt6RVVZNWV0dlVkS3l3NXlqbWVaazZYXzNxYVhfdDJRdHJjUHlDN08wSk55QTVZRWQ2ZlJUd1pkZV84akxtRmVyd1hnVHcxRXA2NlVSTGtnOFhIV2dwcF9wd2daSVVUem03RVRjNzhMSm9SN05xZzliZGM5T3JUdzVOckdnQUtlRm5xR2x4S0QtRGEtaEx2NVpqY3Q5UEZUVWNISHFmNzhuNzlVZDZvVlUtc3RtZE53UWJpcVZBdDdiNjBsNjRRakV5UThScnVzY1I0TjZwVEd4Qmg4VE11R3V4UTRqR2tUMWpxR1RzOHBJRHNHWjFn0gHoAUFVX3lxTFBSZHRSZ25vc0kyd252R25CazBwSnFRQmdWT2t3cEUtZTBZOHVrWjJwZUl0anhSczdMTlg1Z0toLU9DX1pzS1UwMWtaSkZBRXl1VVQ0eGRvOVFtOERELWJDcXlYNEtuTldxYTlYZ2ZFNnZ0Q0dkRzRSV2ZLYzdRSHhmVUxvbjZBM2VnRGJYRVFJOWcxNG10VDFILVhzQTExVWRXWlVIRVFSY0xWa3FNc2YyaTU2VEktRWxGcXdsalpFblNfNkRLVk90ZmtIUlRvU21GcXlHNTVQRE9qaWt3eGlVbHBYYjZyRVA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Israelul ucide un înalt oficial al securității Hamas în Gaza, în ciuda încetării focului",
+      "title_it": "Israele uccide un alto funzionario della sicurezza di Hamas a Gaza nonostante il cessate il fuoco",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-b8b6c3580bf70dae",
@@ -27,7 +44,10 @@
       "source": "jiji press",
       "published": "2026-11-24T11:25:52Z",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOOWFaakRYajE4OHNwaHNOdGh4YWJtaVVreThRSlQ5VnhOejYwR0RHenNob2NwWWVvMmdoQnlTOUl2ZWxSUmlZY1N5eXF2VUJIMHhXcGUwdzN4RXJFN25WT1ZldkFXLUNJUmstUzBZTmZ1aUpOekg4aWxhOXRHR1Awbi1leXluQWxUOUh1di02MA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ucraina, Germania împărțite: jumătate dintre cetățeni spun nu armelor pentru Kiev",
+      "title_it": "Ucraina, Germania divise: metà dei cittadini dice no alle armi per Kiev",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-054ccb48abc09a86",
@@ -38,18 +58,10 @@
       "source": "alanews",
       "published": "2026-11-24T11:20:00Z",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBEQnhLbnp4UnQwTVZPT1F4NzBQQWVhaEtZTmdRajBRYmpaTjJVeE4zdC1xR0syUm9wbHJIWWJob2NuRjdhWmJzSDV3ZlBQcGpuaG5YM0pMSmZKNG1fMXVQekVoQ1diZ3NMU2EyQUh3SlpPZHNsZjY5SFhEM0k?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-86c370d636d37efc",
-      "category": "europa",
-      "region": "europa",
-      "title": "Vertice UE-Balcani occidentali, 25 novembre 2026",
-      "summary": "",
-      "source": "Council, European Union",
-      "published": "2026-11-24T11:07:41Z",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOclpUN0NIbElGSEtuWnF1V1BLdHVKUHFiX0lyS0xPdDVMQi1ibnRJczItMkZVaUNmVDNWUDhyNWE1RFMxeGloVGVBaldNLXNMZnZNVE5vNmtqV1I3Mmw0ZDdXZlh0R0ZEeXFZOEJLVi1lUk9LLTdYMUItZlQzcEZ2aXlB?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Balcanii de Vest, UE găsește un acord: de la valorile europene la roaming",
+      "title_it": "Balcani occidentali, l’Ue trova l’accordo: dai valori europei al roaming",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d14572415b4da563",
@@ -60,7 +72,10 @@
       "source": "Middle East Eye",
       "published": "2026-11-24T11:03:00Z",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOa0kxYll2eXRtSy1ZYjJUODlGY1FrcmxHelE0NXVyUmVoNGdSUll1STVZRExqM3d5MWc2MXBHMlYzV20waDZkZHBOVThqbTBfYWt0VFVQUmE2b1RoQ1BDcXdkWTVmd1AyMklFQTlLeVVmVm94LTc2bHh2cDJwVWM0QkpRWnB6NEFUbG5ocjBKVmZXWC14UFVycloyaV9wS0J3N2x4RG9n?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Israelul ucide un lucrător al ONU și alți doi în Gaza, în timp ce atacurile asupra palestinienilor continuă",
+      "title_it": "Israele uccide un operatore delle Nazioni Unite e altri due in tutta Gaza mentre continuano gli attacchi contro i palestinesi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-75b6a9e0cf112105",
@@ -71,7 +86,10 @@
       "source": "Hindustan Times",
       "published": "2026-11-24T10:51:09Z",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPdXpnQ3JtLWNfeUM4enlVcjBnTGJpQktfcnM1SUUwV21JYm85a1BnWV9YZm9kWXF5NXdvdDJYVmlWN0lLVmI4ZDFBczQwN05sNDJ2NG9jUGJmY2R1dWVQa1JFektQb3IwVTBqZk5RNTBtSWRleE5PZ1ZMczZJT3VjVDhEMTNLY1hzaHNMbDNYTFZ0QnlhUEVBVUxNaDJfMFFDcW1nM0x5YnNUZjQzTjBUTlVHSkFFaEV0MkVKeHNjb2xWQjRuUjJobkYxNlJua01RaHYwNmowbjLSAd4BQVVfeXFMTmhJd2RaQUxvZGlaUmJYRWFXOWF0Vng2SThmNmx3dkhkX0g2a3BUcHoxNTdXNjhxUjlqY05QdEpYNTVocUt4QTRFbFVTTU4waUpMWVE2ZGlPLXlBeW84Y2NidEMyNUV3eFVZUGJsVWFjeVFrTzdSQmpJYVl6dHBNbVdJUUpDOG5PSmcyc2E2QVVhUktxM3JnY3VpbFBCT1FudGtNV1hFT1E4X1E2UnNTLU1yZk5ha1lieVhXZFlSMEVwMEV2cy15WDFjaGY3cGlIa0dnM2U2SDRQd0FEYThB?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "APEC 2026: Optica maschează o diviziune geo-economică neiertătoare | Hindustan Times",
+      "title_it": "APEC 2026: le prospettive mascherano un divario geoeconomico spietato | Tempi dell'Hindustan",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-fa4dc1a59cfa7ba9",
@@ -88,6 +106,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-eccb146790767fff",
+      "category": "europa",
+      "region": "europa",
+      "title": "UE limitează importurile de automobile hibride chineze, așa cum a convenit cu Beijingul",
+      "summary": "",
+      "source": "Agerpres",
+      "published": "2026-11-24T10:11:53Z",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQcTBWdDVXRjBIWGRZaGZjUDFralpxWEgweGJnQXZMZVZSTjRMRWZocTJnVUk4NXFBb2VWTV9Yb21tSzh3X3p6TjQ2b0FxZ2VYb2hYdi0wQUJqYnVLWTV6YTBMR0cydkVNbGJoUlJxVnpKT3FaV1B5cHIyeUZmV1FiRUlRQUFHRlRFVl95QkVwLUJxb3dOTzByT2swcmxSSGNxVXdFV3NqUVFrN1pWZVB1MlAyanAyN09LVU1xQnlDSmFQdVB5VHlScjZWS2dTZl9YVmxSRlhJdXpNUQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE limitează importurile de automobile hibride chineze, așa cum a convenit cu Beijingul",
+      "title_it": "L’UE sta limitando le importazioni di auto ibride cinesi come concordato con Pechino",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-b0a71a5716b6a0de",
       "category": "europa",
       "region": "europa",
@@ -96,7 +128,10 @@
       "source": "Eunews",
       "published": "2026-11-24T10:06:17Z",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBObUd6WXVicmJIOTR2RU01Nk9sUGZZSUNpcE14a0tMMVEyTHl5UjFFNzhxZmJ5d2dsZTVRbXJVbEo1X0lFckh2ZFJoZFdMUFgtRmFPaUQ5OWZjbG1QdmhwbXl5Z09ZZEFTM2NNOWFJQ1FiM2ZTdW42cGREZw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Costa: este timpul să ajungem la un acord asupra bugetului UE",
+      "title_it": "Costa: è il momento di raggiungere accordo sul bilancio UE",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-807fa794f4c26dd6",
@@ -127,17 +162,17 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-660146fc4353618c",
+      "id": "geo-a3076288e6b9df8a",
       "category": "securitate",
       "region": "asia",
-      "title": "Blow for China as Solomon Islands scraps security pact with Beijing",
+      "title": "The German-Japanese “Premium” Partnership",
       "summary": "",
-      "source": "The Times",
-      "published": "2026-11-24T09:55:59Z",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQRWpVanBqVDFzY1I5WHNlRkdNN0NKd0FPOGdhNWxuMTlXNUw3d1I4TmdTaF9sQzFaQjc3R0l2ck5Ua0RoYnRabkVlZk56cWV3c1M1bFdVMzByY2FDR1M0eXV0Sk5oVVB6cThSNjQ2dVlEbWJQUGNpUHVLeWNoVjI4TXFlMnN1Vy0xYjhIM19pS0ladEZ2SlN0aEJ0MGdnSGtsbEV4Y18yRjRDbm5qcnd6N01vN3B5ZDI2cXRvTWVnR2VQeU1uS3JN?oc=5",
+      "source": "Stiftung Wissenschaft und Politik",
+      "published": "2026-11-24T09:52:41Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbTVESEdFRmY2TGNDVzVSejdoQy1oNnFRcUxqdWdwcFhWdzJHc0ZUVUR4dmhhbktxUGFaLVFEck1ocEdyX05kZ0dONDktT2JHNll6TUxGQ0FJZGJlNW94S0hOMTNiLXBMRkhXV1V1V0VwSTdULTRWZkRmNE05OFZKeDEzYzNEczhi?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Lovitură pentru China, în timp ce Insulele Solomon anulează pactul de securitate cu Beijingul",
-      "title_it": "Colpo per la Cina mentre le Isole Salomone rompono il patto di sicurezza con Pechino",
+      "title_ro": "Parteneriatul germano-japonez „Premium”.",
+      "title_it": "La partnership “Premium” tedesco-giapponese",
       "translation_status": "machine_translation"
     },
     {
@@ -155,42 +190,31 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-10b412c3dc78bbd3",
-      "category": "securitate",
+      "id": "geo-21c158eb4b4e9355",
+      "category": "diplomatie",
       "region": "asia",
-      "title": "Why Xi’s brief APEC handshake with Takaichi reflects a frozen China-Japan relationship",
+      "title": "Quad in Manila: India's Indo-Pacific moment and the road aead | Hindustan Times",
       "summary": "",
-      "source": "Fortune",
-      "published": "2026-11-24T09:28:00Z",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZE1NSjA2RXNSZWVKN0ZpSHYxY28zdjVBX3NZSjR0dy04T3MtN1BzdW5YdW5HUG5JcDhIVGZMak1TQ0VxblJ3SmhpSGllcmZCR0xudnJMSk5Mbm5MTU1Bd2F1SlZtMlhBaDlRaF90Mm9CTnB1WndNR2VBOGZJS29WN2thZ3c?oc=5",
+      "source": "Hindustan Times",
+      "published": "2026-11-24T09:39:58Z",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNN3dIa2F4aUtlVHoxUm9QdzJqNmt5TXk5SUpYc2NINVVLSWVZQUlKU3h5RGFPNGJaR0xZNjVQV0ZQVzVKSnE4RTY0VVY1UVZ0UVVsUEU1Y0loUHE3N0JZalg1TG1PQ1p1Y2U5UmgtWF9YRjZ3S0dKYW5YN1pHVHdZaTJmc1Yxak5XclI4cF93Zm9zcnhVWnQwMnEyb2pzNTdiYXlmaUFjUGxsOVBWaEdTTW1zZU85b0s5UzIzVmZRMWRLT2djRDBBZVNBdlFZT0dZWWRwdnBlZkVQV3d2TDY5MVJR0gHiAUFVX3lxTE03d0hrYXhpS2VUejFSb1B3Mmo2a3lNeTlJSlhzY0g1VUtJZVlBSUpTeHlEYU80YlpHTFk2NVBXRlBXNUpKcThFNjRVVjVRVnRRVWxQRTVjSWhQcTc3QllqWDVMbU9DWnVjZTlSaC1YX1hGNndLR0phblg3WkdUd1lpMmZzVjFqTldyUjhwX3dmb3NyeFVadDAycTJvanM1N2JheWZpQWNQbGw5UFZoR1NNbXNlTzlvSzlTMjNWZlExZEtPZ2NEMEFlU0F2UVlPR1lZZHB2cGVmRVBXd3ZMNjkxUlE?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "De ce scurta strângere de mână a lui Xi APEC cu Takaichi reflectă o relație înghețată China-Japonia",
-      "title_it": "Perché la breve stretta di mano dell’APEC di Xi con Takaichi riflette una relazione Cina-Giappone congelata",
+      "title_ro": "Quad în Manila: momentul indo-pacific al Indiei și drumul înainte | Hindustan Times",
+      "title_it": "Quad a Manila: il momento indo-pacifico dell'India e la strada da percorrere | Tempi dell'Hindustan",
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-2db539407c118431",
+      "id": "geo-d93b9ddf3c3cc82b",
       "category": "securitate",
       "region": "europa",
-      "title": "NATO Strengthens Deterrence Strategy And Revisits Europe’s Security Architecture — Results Of Alliance Council Meeting",
+      "title": "NATO Strengthens Deterrence Strategy And Revisits Europe's Security Architecture — Results Of Alliance Council Meeting",
       "summary": "",
       "source": "uatv.ua",
       "published": "2026-11-24T09:27:00Z",
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOc0s2QWNySTZ3eVdybXQtcExOeS1LVC1WeEkwSTJpbk5yUVBlVkVvOHRnX2hfM0JHdkZWU19PMURnZk9RYTBVcEFzYkZrMXY1WlZiN0hBTlVBVzVDZUgxcXRUQ3pUVHJZR2VlNm5MT0FiMXhuYm9fSTItalRIbjNadnlReE5tYmxic0NkOEJUUUhkM2RhY0lSYkpMVUFtclo1d0RCYWNybFctOU5CS1p5ZFFDelZYSnJ3MEhzRElfajRtRnVYWV9mOWJTUGg4anJwb1Jnc2lRYUNaZw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-2c621fa8f44487a3",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Australia warns US-China rivalry is straining safeguards against conflict",
-      "summary": "",
-      "source": "Anadolu Ajansı",
-      "published": "2026-11-24T09:26:09Z",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPVzNyLXNPVldzMW1nZVgtQW9Uckw4OGhzZVNKSnVvVUY1T3NHN0RVNmVOeW9FNHZ5WVNXV2RSVFlPX1ZuaVBpMDRJZEtjNkZLX28xSEpoRzY1Z1czMnNVUS15VUVSNEdkQklLNF9wdjdoaDZLY1YzWktVU254MldCSUxIZGk0UDR3aWllRUJpNnRHSkJjQm1ONms0RzcwYnhKSC1EYk5ud0Z4QzRqMXBxc2NrbzdXUVJnbFpr?oc=5",
       "review_status": "external_headline_unverified",
-      "title_ro": "Australia avertizează că rivalitatea SUA-China încordează măsurile de protecție împotriva conflictului",
-      "title_it": "L’Australia avverte che la rivalità tra Stati Uniti e Cina sta mettendo a dura prova le misure di salvaguardia contro il conflitto",
+      "title_ro": "NATO consolidează strategia de descurajare și revizuiește arhitectura de securitate a Europei – Rezultatele reuniunii Consiliului Alianței",
+      "title_it": "La NATO rafforza la strategia di deterrenza e rivisita l'architettura di sicurezza europea: risultati della riunione del Consiglio dell'Alleanza",
       "translation_status": "machine_translation"
     },
     {
@@ -216,7 +240,10 @@
       "source": "The New Voice of Ukraine",
       "published": "2026-11-24T09:15:00Z",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNS2xkakREWHJMYzhBQ1QyNGxsbmplQjM2ekl0UFRGYUlVNzB3dnJFR0xheE5SYy1BVTVTNnU2YVh4eWhybTNjUzRxYWF5WjNIRFJxdEN5WWpYQzZnTGZMYlFvNmpCa1dtLVFweE9XejVrUTZLbHVFSWpwVE93R3c3UGItQzJuVUF5MlVEMGViT2dwbWNSYkRyUWpKME5BU2k4SzV4azlpTldKb1R5N1NqSmp1RVJQTDZRZXJXOWZXZ9IBuwFBVV95cUxORWNzekZjVzAxQzJhQUwxR1ZSR2c2ajRFbGJfc29fQl9zc3RzcGFRRzBNcGh3N2JJTVQ4VXFJd05FbURqbUV2endQNU9WNXF4aVByaDdqMmZ1aUpmWm1FOTBucTdPcy10YnN5NU8xWHg2cUthX2VwM3dLeHlGbmJaWTBQZzNWQkNneUhxRzhseGctRjhwUTJ4NHNhcFZyYV96NllkTG9UMHQ5NmYzT3k2S2hjU1lNb1c1N2ZJ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "„Marele premiu” nu este o încetare a focului, ci „resetarea relațiilor” dintre Rusia și Europa – Kushner",
+      "title_it": "Il “grande premio” non è un cessate il fuoco, ma il “ripristino delle relazioni” tra Russia ed Europa – Kushner",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5b21e0e32989ae7d",
@@ -261,15 +288,18 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-e06c8a9bd4298458",
-      "category": "securitate",
-      "region": "asia",
-      "title": "Lai Ching-te | Biography, Education, & Facts",
+      "id": "geo-f7c5a9c506f4a93a",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Oxfam: Israeli attacks have turned Gaza into a toxic waste zone",
       "summary": "",
-      "source": "Britannica",
-      "published": "2026-11-24T08:58:28Z",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBxbzdPcmJzQmFVR19yaXFIdTF2Q1BiX055T1ZHUElhRFB6ZmhmOHl1aTZZTmp2VVFLZnVVLU5OVGtLNmdSU2Z1UzdtM2U2aGVUX1VfQkhJMTFJSk1Bemc?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "سانا",
+      "published": "2026-11-24T08:42:49Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtck9IZ29hUEFKX0Q5VGE3a1hfUktuMTlHelVXTUF3X2FBZFVKQTBmOEgtTXFOaEVFOV9oLWNYaTJvNDFaRzMwWW9lc3E0Q2tq?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Oxfam: Atacurile israeliene au transformat Gaza într-o zonă de deșeuri toxice",
+      "title_it": "Oxfam: Gli attacchi israeliani hanno trasformato Gaza in una zona di rifiuti tossici",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-bc45f4edb03107e2",
@@ -294,7 +324,10 @@
       "source": "Цензор.НЕТ",
       "published": "2026-11-24T08:37:00Z",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQcDlMemt0NzdzSkdwdHB6a0doTHJKLUx2QTdSMFlVZUl6T0pHa2VnUUFnY3MxVHhnWmduREVHOE9DaFAtQnJwVzNhck55MUNUUkEwRS1VTXBzM2pOV3VLNlRuZkpvWFI1dEF6Nkx1OXRFM3JyTmN1N19HX085NEItX08wN0VyZDBkT1d6MGR1eDZBTHNTUEdDeTNXX0lwSUhzRUxqc0tOM191NENwS0RKaVZiWllsQ0cwTVNOTWVfTGNJdi0w?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Wadephul către Putin: Întoarce Crimeea și Donbasul dacă cereți revenirea la situația din 1997",
+      "title_it": "Wadephul a Putin: restituite la Crimea e il Donbass se chiedete il ritorno alla situazione del 1997",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e1f3c7113b9fb9c1",
@@ -305,7 +338,24 @@
       "source": "The China-Global South Project",
       "published": "2026-11-24T08:31:36Z",
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSUF1eFM0eXV1SzFGcUl0Rno1a1lHaVR1eklpUDBZYXZ2UUtWUjNEOVhydmJBdGxqbFVsUEJnc1l5Mi1RTHF5VXVLT3BkR0FkZEM5cnI2VkZwaDBlNXEzYksxZ0xTVVlGTUU5YlpFQ2tfMXpDSVJRQWhFTlVZc2tBV2ZBNHNIazJIMXV6MUc1cGVQRHhpRTZoNDFyUklzVlVxR1JQaWNOdW05RjNOcDVZVlVWTjExVm8?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Snobed de Beijing, nesigur despre Washington, Japonia se uită spre Asia de Sud-Est",
+      "title_it": "Snobbato da Pechino, incerto su Washington, il Giappone guarda al Sud-Est asiatico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2b9d166d24e8fd64",
+      "category": "securitate",
+      "region": "europa",
+      "title": "NATO lacks consensus on Ukraine membership, Rutte says",
+      "summary": "",
+      "source": "Moldova 1",
+      "published": "2026-11-24T08:20:49Z",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZG1FUmY0NzZjMVZobzlYYjBhTlVsLXh3OUlKT0h1QzlwbjZNeWxIb3V0T2FoMHZLdEgyRHEzSGRVaWt4NUYyd0R0cmk5S3ZLNi1URGVSczRwWlZISE9zY2I2dDBMU0VDeHpVeUR5MzByVnppc3lSLW1EVzlWem1Va2VLSEJRSWNH?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "NATO nu are un consens cu privire la apartenența Ucrainei, spune Rutte",
+      "title_it": "Alla NATO manca il consenso sull’adesione dell’Ucraina, dice Rutte",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-bb0a223c04463dd3",
@@ -358,7 +408,10 @@
       "source": "The New Voice of Ukraine",
       "published": "2026-11-24T07:41:00Z",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNck4xSHYwU2FkNzdNZHU4cTRwSVpKSVZNS3VLRksyVTlnSkRQTEpHbUNLdWEzakpnZ2x5SXFSNWVHM0sxeUV1UU5ST1ZnWDAzYk83QUhMZnIzZWI2QWxON1pXazJsTWdGRm9iX01HQ19CRUM2blpVb2stS09CMUNHdHk1d1NxN2hJUWs5ZVR0QkJiTktaUGh4c3Ywb1NubmdCSHg4VVhvRUUxUdIBpgFBVV95cUxOT0JEYVlrbjF2YmVDMnlpeVpsUWJ5dzFYOGtJS0wwTWY1YXNVc1F5TVBYU2JQSXFRNXNVc2NoNDZTRFBqQzlKQWdSYmhvdkw0cmZQQ0tqU0UxUFE5MEhKMnllcmNrQWc2dTc4SzQ2OW54bnNGSUZnSTlOSUdGejcyMHVRYzlWODFiMWpwVVdReFBDX3I4SVRvUGtnVVhLLVdqWUFVYTdR?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cerințele de securitate ale Rusiei din 1997 ar însemna returnarea Crimeei în Ucraina - FM german",
+      "title_it": "Le richieste di sicurezza della Russia nel 1997 significherebbero la restituzione della Crimea all’Ucraina – FM tedesco",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-89494b74bf9e2817",
@@ -369,7 +422,10 @@
       "source": "European External Action Service (EEAS)",
       "published": "2026-11-24T07:32:36Z",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQbFkxRmtxZkhQa1M4dmZBVWhFNEthQUFXU1N0OGJJaTR0aWhsSEpMdUpIQ2JJbWozeUNzLXBqRm41VlhPLXAyc2FaYjc2ckN0dTRFLTBrWW1iUGhsLUtsQjNRcXZFVk1VZjUtYTBkWWZ5bXJWWktPSVlFYmdyeXc4RWVtRkxKdlgtanppajhtMXZUdGxjNE1Xd01VT0Uycl9ZdW1XWElmTlFlVktXWUVTOFh1S1pjUjBBcU9CdUJzekNuTjhGQlNmekhHaw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Consiliul Afaceri Externe: Comentariile de presă ale Înaltului Reprezentant/vicepreședintelui Kaja Kallas la sosire",
+      "title_it": "Consiglio \"Affari esteri\": discorso alla stampa dell'Alto Rappresentante/Vicepresidente Kaja Kallas all'arrivo",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-25a0d0dcf610940d",
@@ -433,7 +489,10 @@
       "source": "ISNA News Agency",
       "published": "2026-11-24T07:11:05Z",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdnk1c1daLTl2SGF2NUMzTzZ6UG9JWUlZSG9WdS00OThKQ3NLUlFMWjJLbDkwWTQ5VEFmWDc1LUM1M3F0SElPZnVvTnZKVHZ6YUo4QklxVS12MU4wd1BUSUJkSG93ZUtrZGNFdlI1Z2FhSExrV3NMcmplcklqbjNvYTF6ZjRhRVBWVmc1MWpnRzJwdDVvbXA1eEVtdVoydUY4aGtwZDJ5WENDTWZo0gFOQVVfeXFMTUN5Qi1UT01QbU10aVJETFQxLVNuZF9GZHp2WXlzLXNJN1haN05jNmg3Rjk4UEF6S0pRMkVzY3dlOTNtUXh2WElDY3k2VGt3?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Beheshtipour: Iranul trebuie să-și folosească forța defensivă în negocieri",
+      "title_it": "Beheshtipour: l’Iran deve sfruttare la sua forza difensiva nei negoziati",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-57f84e70b90bea89",
@@ -450,6 +509,28 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-bed8410b8a62686e",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Trump's portrayal of NATO in crisis carries risks for alliance",
+      "summary": "",
+      "source": "Yeni Safak English",
+      "published": "2026-11-24T06:49:28Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOTV9KVmg1cGdOYmN2X0poUXJKLTBBR1RtUlp1N2FOX0lXU0RUQ2lGNDlQTE44THlQaUg3b3FXd3Z1S3hQb1JCWHdYZUtlVm94MVJTQkgyQkhMZVNnUzA2UGNzbkRaQjNmcmdJNHE0aG5fVkNPaThhdzdQVWczR1dpWnY1c3hHU0pxQUNxUGFQRnh5R2pmMVRWTU95S2FZVnNobU5BUg?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-d04727e7c0d17ee5",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Moroccan King Reaffirms His Country’s Firm Support for Palestinian Rights",
+      "summary": "",
+      "source": "شبكة يافا الإخبارية",
+      "published": "2026-11-24T06:48:40Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5CLVdVU21UaWdtMGcyVmlmdG4wbmt0NGp3ZDh2bUMyOVpfYnlCSFBJX0Rja2E3ZnBuZGlpOUQzamZfeXFxSWpaeFlBeGxXMThu?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-dabeafbd5d29d9cc",
       "category": "conflicte",
       "region": "europa",
@@ -461,28 +542,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-e7cc30ef01cbf93d",
-      "category": "europa",
-      "region": "europa",
-      "title": "UE propune interzicerea sportivilor ruși la competițiile organizate în Europa",
-      "summary": "",
-      "source": "Realitatea.NET",
-      "published": "2026-11-24T06:19:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUWdSSmtmeGVzNW1OSWpJU3d1NTRwZ1NnYXlGX1dUVTZ2b0VJaXRFTk9KOHpyR1lLdnZKZ1JabTZ5bzlOcHdvQkhtODQ4alFQSmszdk1ud3o0Q08zM2l4NHFGV3lILThrQVl4WjVPd0FmY2d3STFkS0ctWjFXMmNfSFZxWnBCUlRRQXc0Y1BJTGt5UGhWV1RRMUc1VmdaYl9FeGZiZk11RXFVVEZ1NXVFaUhISmdsMks2aERpSmtmN18?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE propune interzicerea sportivilor ruși la competițiile organizate în Europa",
-      "title_it": "L'UE propone di bandire gli atleti russi dalle competizioni organizzate in Europa",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-98dd05cd0aa24fa9",
+      "id": "geo-739a915c7b300cd9",
       "category": "clima",
       "region": "global",
       "title": "COP31 and the climate crisis: Why the focus must shift to solutions",
       "summary": "",
       "source": "Frontline Magazine",
       "published": "2026-11-24T06:00:12Z",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSUhxdVNCZHVTQlJ0YnlXZmd5b3NvRmlPOWJFa2d2aVhYcXRobTVTakIzNG41Nndmb2I2ZUdNWVRVYWk5UUlfTk8xMG5Ib2s5YXB3MEkwUjlvcnV5WUkzeUNPVERwTUVjZ3NKLV90dGZKaF9uWkVPSUJ2NDVHQ0d4UE53cEhjM3B1Y2MzaXRLVEZjV2QyNW9TeXUwMkJvSXJ6LUc3MHlGRU9jS2VoY3Zv0gG2AUFVX3lxTE96ejdLd1NuXzlGRzA1NkhYQVhPOHJna1NxUEYtbFhyY0JjeGNLQXRCUUttY240NFpNVkQ1VjVKYkIwNDNNY2dFM2NHdHJtOWw1cEhVQmxXd1JDY2ZZTmRIUEwyUnJNMXdmbkdTOTNQZWEzZURPSHZQTU56QUI3cXh5eDhfZTJ3QXU5Qm9yRy1Ed01jY3Z4TGZRczJYdTR1anNNNE9ybDdaQWNYd19JeW9lVUJjQ3pR?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPeno3S3dTbl85RkcwNTZIWEFYTzhyZ2tTcVBGLWxYcmNCY3hjS0F0QlFLbWNuNDRaTVZENVY1SmJCMDQzTWNnRTNjR3RybTlsNXBIVUJsV3dSQ2NmWU5kSFBMMlJyTTF3Zm5HUzkzUGVhM2VET0h2UE1OekFCN3F4eXg4X2Uyd0F1OUJvckctRHdNY2N2eExmUXMyWHU0dWpzTTRPcmw3WkFjWHdfSXlvZVVCY0N6UdIBtgFBVV95cUxPeno3S3dTbl85RkcwNTZIWEFYTzhyZ2tTcVBGLWxYcmNCY3hjS0F0QlFLbWNuNDRaTVZENVY1SmJCMDQzTWNnRTNjR3RybTlsNXBIVUJsV3dSQ2NmWU5kSFBMMlJyTTF3Zm5HUzkzUGVhM2VET0h2UE1OekFCN3F4eXg4X2Uyd0F1OUJvckctRHdNY2N2eExmUXMyWHU0dWpzTTRPcmw3WkFjWHdfSXlvZVVCY0N6UQ?oc=5",
       "review_status": "external_headline_unverified",
       "title_ro": "COP31 și criza climatică: de ce trebuie să se îndrepte atenția către soluții",
       "title_it": "COP31 e la crisi climatica: perché l’attenzione deve spostarsi sulle soluzioni",
@@ -511,25 +578,25 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-5595add87d0dd8a9",
-      "category": "securitate",
-      "region": "europa",
-      "title": "Trump Schedules Florida Meeting With NATO Chief Mark Rutte",
+      "id": "geo-2ee16307151b244f",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "UN deputy chief says there’s 'no excuse for inaction' as Gaza suffering continues",
       "summary": "",
-      "source": "bsinews.id",
-      "published": "2026-11-24T05:36:12Z",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE80MmZuN3RtbGpyRkxtekctZEJIbjVCcURVeWNXYnJ5cF96eGRweTRGOUphdE5DcDVXVU9CTEp3U3JNWXdVazlwa2ZyQmk2M0hEWGhWT1R5ZVhDaGJvVmd3bWRoeFY?oc=5",
+      "source": "A News",
+      "published": "2026-11-24T05:40:59Z",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPcENQTEh5SEZRcVlRWDZkdDJyT0ZGWjkzSEpJeXg0OWJueUJaOTdEZ2VBRUg3dVkza3F4VHluMDVaQXBJdWZNU3pFTHZPZ21YOEk4NWItdlZyNzk3MWJYeDFqV1FWNWswMENValQwbnNLQzl3Mnp3eXdPMTlZaGV3UmJuU2ZYdzVTU0VLajRpYUNfeVNVV0tCMm9CbGdmVkhzUEp5YVpaeGYzeHhVRHNLcTd0VTUtZ1BaQWJhSNIBwgFBVV95cUxOTkl2SDVJYVAzdXp5YmV0aUVKcTRVdFFsV2dLSjMtdGtkVnJ4SXlJdDFUS25xV1R3VmNxcm1YSHg2YUU0ZjZMTWpGWW5NdjVWMWZIMWpYNmJrSExoSkRZV1RtSVo1MG44akFfM0VTQ2E0VWF4T3dGVXBaWWRKbnpQeW5tSkJGLVIzSWFhRlhXcWI3ZU03Z2FVd20ya3BqX3lDRXRFWWZRc21hRHpTQzM0RV9IeXEtTWFWRS1sS2RGNGd5UQ?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-d869ea771d6b5c61",
+      "id": "geo-b758993c78801bac",
       "category": "securitate",
-      "region": "asia",
-      "title": "Tibet Representative Urges Japan to Back Dalai Lama's Succession Process",
+      "region": "europa",
+      "title": "Zelensky Urges NATO to Admit Ukraine as Merz Regrets 2008 Decision",
       "summary": "",
-      "source": "JAPAN Forward",
-      "published": "2026-11-24T04:59:09Z",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObmtKMzJQV3VWc01EUE84YUJUV2Fya0hJYlRyWHhab1N1cjZhRW5ScW1mVlpIMTE2R0JhUU55MGlLM0NoY1NzZlRrQTBieHZTbVpPTVU5THhGdlVPNFdnUG1ULVA4VjYtSTNIZTBmajhoT2ttOGx4ZmJWdUxnT1VGazVXWkg?oc=5",
+      "source": "Demokratis.co.id",
+      "published": "2026-11-24T05:33:11Z",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8xU214bVEyTGk0VWM1aGFXeGM2LWV4R0JNTTZxMkgwWGxMbnVhZ1NFaHRrWUh0RnhNcGpBZkxacFpXaUo2ZThuODUyQUZLQS1QajIwdzY1QXpSQmM0UjZ0UTJ3cDBhNTRtVXBZeURWWEE3cDE2?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -547,19 +614,8 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-65c950f9c2082733",
-      "category": "securitate",
-      "region": "asia",
-      "title": "After Japan's APEC snub, what's next for its increasingly strained ties with China?",
-      "summary": "",
-      "source": "DW.com",
-      "published": "2026-11-24T03:11:23Z",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPTXdjWWNuQkFVck82T081OGFmaElKalZFRmRxd1FuVFctaXdaQUQ0UktBcGJfdy1aMFJqZFR5dnlWR1VmVzc1VV96Y2NPbEpMV29OaGVIdHBGQ2RxbjBkaTNLNFZadHNzNHE5MkdWb3lTajhHV25vWHU0R3puOXNIcW1PVGRiN1RKcXFmT3pB0gGOAUFVX3lxTFAtVnNoVlc4emRKR3VRdk0xUXJ1UG5QbmJQUUwwMXJhSjUwdE9udU9OVEU1UnZzN2V4Q2NQQ3N3TjdkZGJPbW03VVcxUy03bFlXMlVOT3E2QUg3alJ6VkxtaDVxSHdPVzBLQlFYMm1uemw0WTNkcHZ3OU10WU9NUWhtZWFHcndZV3ZYa2pPakE?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-fbe2c6a11977efc6",
-      "category": "diplomatie",
+      "category": "securitate",
       "region": "asia",
       "title": "India Retains No. 3 Spot In Asia Power Rankings, China Gap Shrinks To 8 Year Low",
       "summary": "",
@@ -588,7 +644,10 @@
       "source": "The Guardian",
       "published": "2026-11-24T02:30:00Z",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQy12LVpnTUFERk5qZVVBOHZ3UUpheWJST1o0UWxVaTdRaTJWVERPNVJhMGY0eE5iQy1tTlVKQVh3Z2JVTjF2ZFRpVlZ2RFQ4ODFzaHNFUTYzUTd0eFpjU3dicUVUUWtwTDhDVnJOZ2hQUk0xTFBVVHIxVldtaUZUbDJYckIzeEZ5VVUzajcyOGV0aTNRX25PZEZjaUFiSXA0OEpKM3VBcw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Eșecul Cop31 determină solicitări de reformă urgentă a summit-urilor ONU privind schimbările climatice",
+      "title_it": "Il fallimento della Cop31 spinge a chiedere una riforma urgente dei vertici delle Nazioni Unite sul clima",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-b5a19925c3cf4c39",
@@ -613,7 +672,10 @@
       "source": "The National Interest",
       "published": "2026-11-24T02:06:13Z",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQUkdEWFhhRHF6UmdjbHM5cmk1a29aNEJtM0ZmRzlja0lObGdYTXM2N2JZZkdHUE5sSFcwOW9QeG9wUTIyclNuQ3RQck5mV0VNZjBNSjV0blRSaUZFcHdOTzdJRnlBQVlpT3p5N1AzWEdvQndHcjdRUW9kZ05EY21BNFlPMm5SVjBtUV9Jb3lDaGhtN1E?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ce ar fi trebuit să discute Trump, Putin și Xi la Summit-ul de la Shenzhen",
+      "title_it": "Ciò che Trump, Putin e Xi avrebbero dovuto discutere al vertice di Shenzhen",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d9ecf79b8a4983b1",
@@ -644,6 +706,39 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-6636564c16372029",
+      "category": "securitate",
+      "region": "asia",
+      "title": "China Sends Spy Balloons Over Taiwan Ahead of Local Elections",
+      "summary": "",
+      "source": "Peradaban.id",
+      "published": "2026-11-24T00:43:22Z",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5fZkZiSWVCRjVMWkV2WnpneUVYT29QTGxmNmE4a0IyTm9uaGJ3WjA3SHljTHpwVmkzN1dtdlJsaEJETFhOM1JMLW9BWHNWaUdZeWd0UkpERUhsdHk2dzVjMFVCbWFkbWhsM0Zv?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-6bc28ef6dbf11a41",
+      "category": "securitate",
+      "region": "asia",
+      "title": "China Expands Military Pressure on Taiwan Before Elections",
+      "summary": "",
+      "source": "SuaraGarut.ID",
+      "published": "2026-11-24T00:41:37Z",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5YbVpWTE5pTUZkWFN3QjdfZ0ExWjFEc1YwWXdGaWh1NDBIRmFZSEZTODZWb3ZpZGRRZFE4R3gzYzNjMzFRUlNsbDJTb3JKODdka2R0MFZWQnB5WjFET2NsTS1JRDBxMUNkWnkzV25kLXdtTW8?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-808bd568b475586c",
+      "category": "securitate",
+      "region": "asia",
+      "title": "China Expands Military Pressure on Taiwan Before Local Elections",
+      "summary": "",
+      "source": "Demokratis.co.id",
+      "published": "2026-11-24T00:40:53Z",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4xMHFuYUFJUkQ3UDVlUnhGcFFHVlcyYmlnSkRiaXd0aTc5OTV6c0tNYnk4SEpKb1hWZ1FySVlYbnh4RzlyQjRGeEktRHRUcFVzVWlubW5lM2xUR2FuMnh5Uk92TEszaW9NTGxYeENTYm02R0xpU19j?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-f02fc0a10282765b",
       "category": "diplomatie",
       "region": "global",
@@ -652,7 +747,10 @@
       "source": "Wisevoter",
       "published": "2026-11-24T00:25:52Z",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOaE9OazFsWm8wcUdSc0E2eGU1cmZCdzdNNWlLMUN5VThjX2Y1VHJ6UWROWTB4Zy01UWthY0xLbkdDbnF0Y3FMWnpsSDQyWXFEMHQwcmN5UGZpbm0yaHI1emhVZ3ZvNzF1WUx5c200MjMtcXZIeC1COEJRbE5uVXRHc25RLXlpNV9DdUZjdEFZNA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Explozia unei nave rusești ridică temeri mediteraneene",
+      "title_it": "L’esplosione di una nave russa suscita timori nel Mediterraneo",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-744b1058017bbb8b",
@@ -663,7 +761,10 @@
       "source": "Asia Society",
       "published": "2026-11-24T00:08:51Z",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOMzE0TVpxdUVDc3dheFhkYUdUYXU1RmhPOFItQnNRcTE1TnNTSWhSSHU1QkJqQ094OU50WEhYSUk1dFNIUWRqWjU2ZDBmQVdfUm5qeTZuWXozTUtnOWtPT2thUk9mUTR0OHZoeEszb3JkaGxwRnRiQ09YQ1VnZjdLOEF6RVY5RU5sOE9RajNpQ3RYRjNlcDBkRlJZUmpnczViOGxSaVYyUDc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Arta (și riscul) acordului: perspective pentru o diplomație reînnoită cu Coreea de Nord",
+      "title_it": "L’arte (e il rischio) dell’accordo: prospettive per una rinnovata diplomazia con la Corea del Nord",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5f39b375f1edb8fb",
@@ -702,59 +803,6 @@
       "source": "The Kyiv Independent",
       "published": "2026-11-23T23:50:31Z",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWUNsc1B6a05fQkNBT3hhR2d3aEpaVTNPM0hKV1ltdk5xUTJ5OUNQU3hmOUZpbkdKVDdUUElidFFDYTloUmxJenlLYnBuY3d0aVg5OWJaTFpQWGhackNlVFFOTFpSY18yeGw5T3BDR2ZvNDN0RnBKRENSVDFMQXNDUjFqQ2F4dlRhNmwxNkhja1ptWWFQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-b0f1739647aa8c38",
-      "category": "securitate",
-      "region": "asia",
-      "title": "U.S.-China power gap hits record low as Asia weighs nuclear subs",
-      "summary": "",
-      "source": "upi",
-      "published": "2026-11-23T23:30:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbnh6UENOMDV0QnFRdFVJc3BJb3prY2RNYzR5OHh0UzNwTUg2bGg1NEtMbmUwbDZ5MTNaSGlvR29Pd0pfNzd6emtlaWIwcnBwWHVqQXpsdHFfT05aa1N1NUMtSzduOW5WZ3RSTTAxNUxqRzRJNnd3THVaYlJjWWFRSVBuSjJnVHJPOTk4T3UyYTl5VWpNSlB6TVJ2TTRFc3ctbXVld2dQNFpKanlPTkRDam12UTB4S0NCVjdZOEJscUtRd9IBwgFBVV95cUxNbnh6UENOMDV0QnFRdFVJc3BJb3prY2RNYzR5OHh0UzNwTUg2bGg1NEtMbmUwbDZ5MTNaSGlvR29Pd0pfNzd6emtlaWIwcnBwWHVqQXpsdHFfT05aa1N1NUMtSzduOW5WZ3RSTTAxNUxqRzRJNnd3THVaYlJjWWFRSVBuSjJnVHJPOTk4T3UyYTl5VWpNSlB6TVJ2TTRFc3ctbXVld2dQNFpKanlPTkRDam12UTB4S0NCVjdZOEJscUtRdw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Diferența de putere dintre SUA și China a atins un nivel record, deoarece Asia cântărește submarinele nucleare",
-      "title_it": "Il divario di potere tra Stati Uniti e Cina tocca il minimo storico mentre l’Asia pesa sui sottomarini nucleari",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-18543dcc224dd71b",
-      "category": "tehnologie",
-      "region": "global",
-      "title": "The death of logic and sanity in Silicon Valley",
-      "summary": "",
-      "source": "Washington Times",
-      "published": "2026-11-23T23:23:33Z",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbmVySVlJa2xmZ3hqdmE1Q25KOVlVdFkxSWpYZG45a2ctUmJxLU5BcEVKdkNOYTJLWDRfMWdoU05LTC0wRjBpc21lMGVkT2RuUlJiNVhubHptWlpVU2VzVEpMamxoY2ZTOXY0QW1hZzVIVnZpc0tJdWtRZHhJNnlyTXZvOXBNYlRHcFkw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Moartea logicii și a sanității în Silicon Valley",
-      "title_it": "La morte della logica e della sanità mentale nella Silicon Valley",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-14cc3ac12fb57e44",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "EU Demands Russia Accept Ceasefire, Warns of Black Sea Crisis",
-      "summary": "",
-      "source": "Kyiv Post",
-      "published": "2026-11-23T23:00:13Z",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBwYWRROENueEpSZ3NwdmI0TzZ6d3poaS1rWWdFUnp4NmxKem5CRG9SUzhLRmtNc3RFb0wyVTJ6RHBsNjhjQmsyYU9hUQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "UE cere Rusiei să accepte încetarea focului și avertizează asupra crizei Mării Negre",
-      "title_it": "L’UE chiede alla Russia di accettare il cessate il fuoco e avverte della crisi del Mar Nero",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-0a70e6ddc6acf455",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "What does Putin really mean by dangling a “compromise” over Ukraine?",
-      "summary": "",
-      "source": "Lowy Institute",
-      "published": "2026-11-23T23:00:00Z",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNS1M4NjllVUJkWE5TcmV6S1F2V3FJVDY4Ny1DNDJUYjVMOWNmWWdCREEtaE1IY3I5VG1NNUgzTkc2NkxWUm5aTFNJVFd2YkFFRGZyRHhSb0R3M0R1Um9lT0o3NTdvNjg1ZmdGelZWd3p2YjFnbE1QVVN6QW1lM3J6OTU1UzJqMUo5aFBCYTdhTjRGT0EtdjJlcGZ5eEI2aUFQRS03M3Q0VDY2aXdod3d2UA?oc=5",
       "review_status": "external_headline_unverified"
     }
   ]
