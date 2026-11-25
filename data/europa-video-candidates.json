@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T14:18:27.278454+00:00",
+  "updated_at": "2026-11-25T23:16:48.408758+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -11,7 +11,7 @@
     {
       "source": "commissione_europea",
       "status": "ok",
-      "found": 42
+      "found": 41
     }
   ],
   "items": [
@@ -196,7 +196,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "69175efa59524a6b87",
@@ -211,7 +217,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "4b90648d74b66ce708",
@@ -226,7 +238,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "44ba71a818e6cf1bb9",
@@ -241,7 +259,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "312a3ef511d5f6abd6",
@@ -256,7 +280,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "2ca80ca9f296795797",
@@ -271,7 +301,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "1ec232cb56ab8a766b",
@@ -286,7 +322,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "f0378ea6bd04dc43d2",
@@ -1225,7 +1267,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "English",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-25T23:16:48.408758+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "e5b3ace7806f7d4f75",
