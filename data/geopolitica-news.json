@@ -1,12 +1,34 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-25T04:20:41.493069Z",
+  "updated_at": "2026-11-25T05:21:43.204855Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
   "note_ro": "Flux automat de titluri. Verificați întotdeauna articolul și data la publicația citată.",
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
+    {
+      "id": "geo-5122964f0622f501",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "Alibaba Weighs Offshore Bond Sale, Hong Kong Chip Spinoff",
+      "summary": "",
+      "source": "Wisevoter",
+      "published": "2026-11-25T05:13:03Z",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOS0tXeWhQUkRjMWVsTEhpNWlMRGtlak9ZU3BpbTBXTjh5MnpMVXQwMWstMmtfZmdlNUwtTko3clRHS1NHYnZ5cEQ5cGxhRnpZZVItZ3ZXVjZYdElSQU8tRi15ZUN3eXVsMk9zVWpxRF95M04zRFMtLXlSTDB3OHJxVDVRbkNPa2JGS2NWelRrZw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-c03f07fccee6fdd4",
+      "category": "clima",
+      "region": "global",
+      "title": "Can climate diplomacy build on the collapse of COP31?",
+      "summary": "",
+      "source": "Rappler",
+      "published": "2026-11-25T03:20:36Z",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdjZiVWdiX2dmcGh0STFScFhlNmxLWVRVQlVDX3VpT3VkSkRPUWlNU1ZpSFlaclAtQ3R0aVNzenIydDd4dzdUcmdlWVRMVm1xOGtwa2wtaEJvZHFsMzRBVllNTkIwdTVpYm5uWTJLQWplNmpUQ2lJTEV5Q3EzaUxtUENKVkgzRksxQkpMQThHVDhBZw?oc=5",
+      "review_status": "external_headline_unverified"
+    },
     {
       "id": "geo-3a5b0e2f64a157da",
       "category": "tehnologie",
@@ -19,34 +41,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Uzina din Texas a TSMC vizează cipurile Tesla AI",
       "title_it": "Lo stabilimento di TSMC in Texas prende di mira i chip AI di Tesla",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-ecace84312835107",
-      "category": "clima",
-      "region": "global",
-      "title": "COP 31 the Planet Can Wait",
-      "summary": "",
-      "source": "Big News Network.com",
-      "published": "2026-11-25T02:57:00Z",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9oRlF2M1JzUExPUFFHWXUtY19Ca19FV2xIVnpONlVtVjRzQmFDd1RHdklLYzVSQ2gyc0l5cktqT21hM2VGeEFPQnhmSmstdml5X1JmWmwwVFFMeFZVOXJzbXhXUkVMbVlpS18taVhPdHh6MkxWQk51Slh0ak0?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "COP 31 Planeta poate aștepta",
-      "title_it": "COP 31 il Pianeta può attendere",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-c1f6ee1feb85f7ee",
-      "category": "securitate",
-      "region": "europa",
-      "title": "US promotes \"NATO 3.0\", Germany chosen as military pillar",
-      "summary": "",
-      "source": "Laodong.vn",
-      "published": "2026-11-25T02:56:50Z",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSXpJV3pGUWo3LThyWGtFNy1Db1B1c1ZvRS1qUVdQdnNkR1R6ODhlVmJ1OWpweTR3SmlHdXVlb3RyR0dQT082ZktpY3dNRWt1SDZRYmt5VzlubFlRa0pkblVMMDBUTEt4c0VVY0VvM2NnbFBFd0dPd04ta1ZiM3JpX0lhRFh5V2pyTVFQSDlkUHNfVUtYYTJ1Q3FycG1sOXc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "SUA promovează „NATO 3.0”, Germania aleasă ca pilon militar",
-      "title_it": "Gli Usa promuovono la “NATO 3.0”, la Germania scelta come pilastro militare",
       "translation_status": "machine_translation"
     },
     {
@@ -64,6 +58,31 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-d46642f214d8213c",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Donald Trump Defends Putin, Calls Him a Friend",
+      "summary": "",
+      "source": "https://dailyasianage.com/",
+      "published": "2026-11-25T02:01:55Z",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOYUZUaG5mdTRfb2RNanpVSDRIRWtLX0VTakVGNjRyVE5yMFZXUEF3dUdxUTNWZTIyNGN6aURGWkhGRmw1TnJLZktxSk9kRHoyMUp5cFBvNkNNVFE0OVVjN1h0eU80ZElHMWR3Z2hDRFhGXzJlMjFhbm5XREsyd0hxRmhXbzVIQklXbVJZ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Donald Trump îl apără pe Putin, îl numește prieten",
+      "title_it": "Donald Trump difende Putin, lo definisce amico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-2a6987cf396a9cec",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "How Russia used a Melania Trump-brokered ceasefire for political mileage",
+      "summary": "",
+      "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+      "published": "2026-11-25T01:55:19Z",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOVzRPMV9QdnhGcUxyM0Z5TW1vWDJpLXFSbHNlODRkeG0yR2twdGlyU0NhMGNHWVVpZ0J2ZEhRNUhpZjBITTNvTi1SUmx0SE1TSFZWanY5WXEzNU1EZlVQanRWbzVjaFBDOUljQnJQTXdXYjhIVmpmVXA3ZlJGdDVMSlhHeE45V2pJLXhsXy0wQS1QOEl6QnBZ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-9083e4b2643ea65d",
       "category": "securitate",
       "region": "asia",
@@ -78,18 +97,15 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-22dd5d3de15418b6",
-      "category": "clima",
-      "region": "global",
-      "title": "China courts Global South with climate cooperation push at COP31",
+      "id": "geo-f80d772871c6bc24",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "The Ukrainian president responded to a proposal to travel to Moscow to negotiate with the Russian president.",
       "summary": "",
-      "source": "Eco-Business",
-      "published": "2026-11-25T01:22:00Z",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNMjR2b3I3NklfbHZMcG55Y2o3QkhvRm9OWXZIY1RXMGx2bURzV0ZIZk1McHM3d053T0VRU3JGWTJGUWhpZ09CNzBrWk9VYkFKTVBNU19lT2FKZThEd25hRUVabGFLZ1dVd29jajNTX3pXZjRMTXN6Y212QUdnQVNQWUVQdEJab1BqR0JXMW1Yby0tQmFOTWNmMm9vYURkbVBG?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "China judecă Sudul Global cu eforturi de cooperare în domeniul climatic la COP31",
-      "title_it": "La Cina corteggia il Sud del mondo spingendo per la cooperazione sul clima alla COP31",
-      "translation_status": "machine_translation"
+      "source": "Vietnam.vn",
+      "published": "2026-11-25T01:28:10Z",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNb2Q0ZWJXX3J4SlZXcVpKNkZ5YnF2SUJOdVd6dnZrZGktcm9heHNkZkxwcEV5WjJiYng2NmI1b3VicmxfNlNIUlRNM084dUs0S0F3MGVGRHpsNlJraUhxRUZ2a1htSjhoTkJuT1dMalQ2UlFmU3U4X0tXMzY4VjMzaS1Ja1h0bEhrbXppYUJqa2xTRmFUT2cxdjZmdW1mSEpJS1E?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-d6cdaa7dea01bf9a",
@@ -103,20 +119,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Liderul nord-coreean Kim Jong Un a primit personal acreditările ambasadorilor străini, inclusiv ambasadorului filipinez Jaime FlorCruz, marcând pentru prima dată în peste trei decenii. https://tinyurl.com/vhdjvv6c",
       "title_it": "Il leader nordcoreano Kim Jong Un ha ricevuto personalmente le credenziali degli ambasciatori stranieri, tra cui l'ambasciatore filippino Jaime FlorCruz, per la prima volta in oltre tre decenni. https://tinyurl.com/vhdjvv6c",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-d46642f214d8213c",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Donald Trump Defends Putin, Calls Him a Friend",
-      "summary": "",
-      "source": "https://dailyasianage.com/",
-      "published": "2026-11-25T00:56:25Z",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOYUZUaG5mdTRfb2RNanpVSDRIRWtLX0VTakVGNjRyVE5yMFZXUEF3dUdxUTNWZTIyNGN6aURGWkhGRmw1TnJLZktxSk9kRHoyMUp5cFBvNkNNVFE0OVVjN1h0eU80ZElHMWR3Z2hDRFhGXzJlMjFhbm5XREsyd0hxRmhXbzVIQklXbVJZ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Donald Trump îl apără pe Putin, îl numește prieten",
-      "title_it": "Donald Trump difende Putin, lo definisce amico",
       "translation_status": "machine_translation"
     },
     {
@@ -134,20 +136,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-554f69c8a3902074",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "From Act East to IMEC: Linking ASEAN with India’s Emerging East-West Connectivity Strategy",
-      "summary": "",
-      "source": "India Narrative",
-      "published": "2026-11-25T00:30:00Z",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcXM0VGc2QUNNeHdfUnRmY29mYjQ1RkR3QzE3Mk11UmgtcGp3dmlyclBLRTU3U2txMTcxa2thcnNmWG5WdGlxaDFlQmdaZWNtNWNLU3Z6SUVQbzB1d1NoZGZfSk5yRC12ZnpnUWxXei1zUTFub0hjamh1dXFRdi1KRVNxQ3c1ZUh6aXFWMklfS1owTFZTXzRFT1lpYXdiaHBPU2FzZk5NY3ByOTdvLUw1MzlJSmtocElNM3hjQk95eTg1WEdTTDVn?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De la Act East la IMEC: Conectarea ASEAN cu Strategia emergentă de conectivitate Est-Vest a Indiei",
-      "title_it": "Dall’Act East all’IMEC: collegare l’ASEAN con la strategia emergente di connettività est-ovest dell’India",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-c8840948e8bebe1b",
       "category": "tehnologie",
       "region": "global",
@@ -162,18 +150,15 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-846ba6aa8237e492",
-      "category": "securitate",
-      "region": "asia",
-      "title": "To help themselves and US, Australia and Japan should service missiles together",
+      "id": "geo-fb577d2bd29da6a6",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "‘Am I a Suitcase?’ Zelensky Ridicules Lukashenko’s Offer to Personally Escort Him to Moscow",
       "summary": "",
-      "source": "The Strategist | ASPI's analysis and commentary site",
-      "published": "2026-11-25T00:04:53Z",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcFdJamxZNFdLcFhPRnk4TFZXVk9QcVVsODFLQTFFQjBMaGJ0QkpqR1kzc21JQUlvSWlJSmpuNjdxdVlYSUFpU3c2Yjl1VG92dkV4MGdMeU56TktrVVM4aGsxQ1NrYndYMXF0aTBXQldhamp5bnByWFpFRzYyVmk4OWFTVUJCaWIxRzZiM1FoZnp5MXRyRVNPb1d5eEJDSDRDelJzUXNoYzAySXF6bG9HM3hSSQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Pentru a se ajuta pe ei înșiși și SUA, Australia și Japonia ar trebui să deservească împreună rachetele",
-      "title_it": "Per aiutare se stessi e gli Stati Uniti, l’Australia e il Giappone dovrebbero fornire assistenza missilistica insieme",
-      "translation_status": "machine_translation"
+      "source": "Kyiv Post",
+      "published": "2026-11-24T23:50:28Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE41UjI5bkFCaDVjOURoNDZZMDVQdmc3aUoxcTZkeXJHdWxDbGJaTkJBbTBoYWcyWk1mVlJ0dExnVlRrbS1vX3RFTzNpTQ?oc=5",
+      "review_status": "external_headline_unverified"
     },
     {
       "id": "geo-3b2fe784dfe71685",
