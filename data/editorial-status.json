@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-25T01:23:58.343300+00:00",
-  "editorial_updated_at": "2026-11-24T18:31:56.010510+01:00",
+  "news_updated_at": "2026-11-25T02:20:30.708488+00:00",
+  "editorial_updated_at": "2026-11-25T03:19:02.222913+01:00",
   "translations_updated_at": "2026-11-24T18:21:56.725960+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
   "feed_missing_body": 120,
   "feed_short_body": 0,
-  "editorial_total": 11,
-  "archived_editorials": 369,
+  "editorial_total": 13,
+  "archived_editorials": 372,
   "translation_records": 15,
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 0,
-  "editorial_galben": 18,
-  "editorial_rosu": 43,
+  "editorial_galben": 19,
+  "editorial_rosu": 44,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,11 +618,101 @@
   ],
   "recent_news": [
     {
+      "title": "Fa la pizza con un braccio solo. La rivincita di Omar: “Sono fiero, qui ho trovato una famiglia”",
+      "category": "Italia",
+      "published": "2026-11-25T02:15:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/pesaro/cronaca/omar-pizzaiolo-un-braccio-solo-eehyccyj",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Bere, vin și whisky pe bani publici. Ce instituții au cumpărat băuturi alcoolice de sute de mii de lei în 2026",
+      "category": "România",
+      "published": "2026-11-25T02:10:25+00:00",
+      "url": "https://adevarul.ro/economie/bere-vin-si-whisky-pe-bani-publici-ce-institutii-2574047.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "US jury convicts Huawei of violating sanctions, stealing trade secrets",
+      "category": "Mondo",
+      "published": "2026-11-25T02:01:00+00:00",
+      "url": "https://www.dw.com/en/us-jury-convicts-huawei-of-violating-sanctions-stealing-trade-secrets/a-80042172?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "De Gennaro indagato per le dichiarazioni di un poliziotto: la nuova pista sull’agenda rossa che scagiona i carabinieri",
       "category": "Italia",
       "published": "2026-11-25T02:01:00+00:00",
       "url": "https://www.today.it/dossier/potere/gianni-de-gennaro-agenda-rossa-paolo-borsellino-depistaggio-stragi.html",
       "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Francesca disabile con grave forma di scoliosi: “Esame impossibile nelle Marche”",
+      "category": "Italia",
+      "published": "2026-11-25T02:00:00+00:00",
+      "url": "https://www.ilrestodelcarlino.it/ancona/cronaca/francesca-disabile-scoliosi-niente-esami-mtrv72ea",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Senegal fans celebrate AFCON legal victory over Morocco",
+      "category": "Mondo",
+      "published": "2026-11-25T01:39:53+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/25/senegal-fans-celebrate-afcon-legal-victory-over-morocco?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Există o grupă de sânge mai bună decât celelalte? Ce riscuri și avantaje sunt asociate grupelor A, B, AB și O",
+      "category": "România",
+      "published": "2026-11-25T01:34:25+00:00",
+      "url": "https://adevarul.ro/stiri-interne/sanatate/exista-o-grupa-de-sange-mai-buna-decat-celelalte-2574171.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Israel’s Eisenkot secures first coalition partner in bid to form government",
+      "category": "Mondo",
+      "published": "2026-11-25T01:30:44+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/25/israels-eisenkot-secures-first-coalition-partner-in-bid-to-form-government?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Iran whips singer Parastoo Ahmadi 74 times over YouTube concert",
+      "category": "Mondo",
+      "published": "2026-11-25T01:21:02+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/25/iran-whips-singer-parastoo-ahmadi-74-times-over-youtube-concert?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Ukraine seeks €115 billion in foreign aid for 2027, Zelensky says",
+      "category": "Mondo",
+      "published": "2026-11-25T01:19:31+00:00",
+      "url": "https://www.france24.com/en/europe/20261125-ukraine-seeks-%E2%82%AC115-billion-in-foreign-aid-for-2027-zelensky-says",
+      "source": "France 24",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Poll finds US voters want government to end Iran war regardless of terms",
+      "category": "Mondo",
+      "published": "2026-11-25T01:14:22+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/25/poll-finds-us-voters-want-government-to-end-iran-war-regardless-of-terms?traffic_source=rss",
+      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -762,6 +852,15 @@
       "words": 0
     },
     {
+      "title": "L’ultimo sfogo di De Gennaro: “Colpite un uomo dello Stato”. Suicidio pianificato da giorni",
+      "category": "Italia",
+      "published": "2026-11-25T00:00:00+00:00",
+      "url": "https://www.repubblica.it/cronaca/2026/11/25/news/ultimo_sfogo_de_gennaro_colpite_un_uomo_dello_stato_io_sempre_per_la_giustizia-425747816/",
+      "source": "la Repubblica",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Iran war live: Houthis threaten Saudi ports over coalition’s Hodeidah order",
       "category": "Mondo",
       "published": "2026-11-25T00:00:00+00:00",
@@ -771,37 +870,10 @@
       "words": 0
     },
     {
-      "title": "Manovra, da rifare la flat tax per i giovani. Accordo lontano sul condono - la Repubblica",
+      "title": "Manovra, da rifare la flat tax ai giovani. Sanità e previdenza al palo, accordo lontano sul condono",
       "category": "Italia",
       "published": "2026-11-25T00:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPekE1ZWNLcEttc0pZV1lQTlljU1BxMERiUkJVTElqek9XS0FIcXEzbnl1NEJqZ2pxaThHdkZoLUZUSHpWcUtBWGJrdVpHdkRXQkxhZmtCdWU1OU1aMGpKRVhyOVZxQmJvMGU1eHIwUWFVR3QzMEFFc1VTaFB4b2NHTUFTQWo1U296WWVEMzN2TWQyS1JMclVmRTV1N3JIcHBiVUtKUlRXOE4wRjFjc1FSZTdn?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Quote Ue sulle auto ibride: un freno non solo per la Cina - la Repubblica",
-      "category": "Italia",
-      "published": "2026-11-25T00:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOMl8xT1VfWWxNR0dMcDVKR3p4aHJYM3ZuRmd6cmlZZ19QU1ZKVjl0SWxyUFk2LWdPdWprRjhTOVVQSzJMSzN3SWR0cHpSLUh0cFNqaTJtX3hnV1ozTWozTUpDU3g1MDBBcmpESEY3WktVR3E2d2FzZjdvcTRuLVJSeHllb3g2XzRoWmtuRjMwSnRQVTNvVmZF?oc=5",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Putin signore della guerra in Africa, il traffico d’armi nel mirino di Kiev",
-      "category": "Italia",
-      "published": "2026-11-25T00:00:00+00:00",
-      "url": "https://www.repubblica.it/esteri/2026/11/25/news/putin_signore_della_guerra_in_africa_traffico_armi_mirino_kiev-425747787/",
-      "source": "la Repubblica",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "I timori di Palazzo Chigi: uno scenario da Mar Nero in mezzo al Mediterraneo",
-      "category": "Italia",
-      "published": "2026-11-25T00:00:00+00:00",
-      "url": "https://www.repubblica.it/esteri/2026/11/25/news/timori_palazzo_chigi_scenario_mar_nero_in_mezzo_al_mediterraneo-425747510/",
+      "url": "https://www.repubblica.it/economia/2026/11/25/news/manovra_flat_tax_giovani_modifiche_emendamenti-425747707/",
       "source": "la Repubblica",
       "status": "roșu",
       "words": 0
@@ -816,29 +888,11 @@
       "words": 0
     },
     {
-      "title": "Kilmar Ábrego García, man at center of Trump deportation battle, leaving US",
-      "category": "Mondo",
-      "published": "2026-11-24T23:50:31+00:00",
-      "url": "https://www.theguardian.com/us-news/2026/nov/24/kilmar-abrego-garcia-leaves-us",
-      "source": "The Guardian",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "VIDEO Moș Crăciuni și urși polari, eșuați din drumul spre România pe o plajă din Bulgaria după un atac cu drone. Figurinele au căzut dintr-o navă scufundată",
       "category": "România",
       "published": "2026-11-24T23:46:00+00:00",
       "url": "https://www.profit.ro/stiri/life/video-mos-craciuni-si-ursi-polari-esuati-din-drumul-spre-romania-pe-o-plaja-din-bulgaria-dupa-un-atac-cu-drone-figurinele-au-cazut-dintr-o-nava-scufundata-23008883?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
       "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Rebel group retreats in DR Congo after heavy clashes with government forces",
-      "category": "Mondo",
-      "published": "2026-11-24T23:39:13+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/24/rebel-group-retreats-in-dr-congo-after-heavy-clashes-with-government-forces?traffic_source=rss",
-      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -870,24 +924,6 @@
       "words": 0
     },
     {
-      "title": "New York jury convicts Huawei of stealing trade secrets",
-      "category": "Mondo",
-      "published": "2026-11-24T23:31:22+00:00",
-      "url": "https://www.france24.com/en/americas/20261124-new-york-jury-convicts-huawei-of-stealing-trade-secrets",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "South Africa convicts Zimbabwean who tried to fight Ukraine for Russia",
-      "category": "Mondo",
-      "published": "2026-11-24T23:29:40+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/24/south-africa-convicts-zimbabwean-who-tried-to-fight-ukraine-for-russia?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Why the US Army is about to blow up nearly 10,000 pounds of unstable explosives in Iowa",
       "category": "Tehnologie",
       "published": "2026-11-24T23:25:46+00:00",
@@ -906,15 +942,6 @@
       "words": 0
     },
     {
-      "title": "Champions League: Real Madrid thrash PSV 5-1 in comeback win as Manchester City held by Napoli",
-      "category": "Mondo",
-      "published": "2026-11-24T22:59:39+00:00",
-      "url": "https://www.france24.com/en/sport/20261124-champions-league-real-madrid-thrash-psv-5-1-in-comeback-win-as-manchester-city-held-by-napoli",
-      "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Compania chineză Huawei a fost condamnată în SUA din cauza afacerilor sale cu Iranul şi a furtului de secrete comerciale",
       "category": "România",
       "published": "2026-11-24T22:55:21+00:00",
@@ -924,38 +951,20 @@
       "words": 0
     },
     {
-      "title": "Arsenal and Dortmund draw 1-1 as Gyokeres goes from hero to villain",
-      "category": "Mondo",
-      "published": "2026-11-24T22:50:16+00:00",
-      "url": "https://www.aljazeera.com/sports/2026/11/24/arsenal-and-dortmund-draw-1-1-as-gyokeres-goes-from-hero-to-villain?traffic_source=rss",
-      "source": "Al Jazeera English",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "DECIZIE Căldură și apă caldă pentru bucureșteni: Poate începe construirea noului CET în cogenerare din cartierul Titan",
-      "category": "România",
-      "published": "2026-11-24T22:46:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/energie/decizie-caldura-si-apa-calda-pentru-bucuresteni-poate-incepe-construirea-noului-cet-in-cogenerare-din-cartierul-titan-23008088?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Decizia luată de Luca Niculescu după ce a promis că „Guvernul nu va lăsa industria auto de izbeliște”",
-      "category": "România",
-      "published": "2026-11-24T22:45:52+00:00",
-      "url": "https://www.libertatea.ro/stiri/luca-niculescu-ceo-dacia-katrin-adt-uzina-mioveni-zppkhph",
-      "source": "Libertatea",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Microsoft's historic cloud outage exposed an engineering “fog of war”",
       "category": "Tehnologie",
       "published": "2026-11-24T22:36:28+00:00",
       "url": "https://arstechnica.com/gadgets/2026/11/microsofts-historic-cloud-outage-exposed-an-engineering-fog-of-war/",
       "source": "Ars Technica Gadgets",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Becky G vine pentru prima data in Romania. Solista va canta in iulie 2027 la NIBIRU, in cadrul festivalului latino de la Costinesti.",
+      "category": "Muzică",
+      "published": "2026-11-24T22:22:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5yUTVRaTlvbEZNNWJKM1RHUF9aQ3ZWbmVCMFg5TDZvTVlRaTFoRHBzdHJVZjJpM2VvYTZCNUhHRlNFWWd4MDNoRXQ3emNoeHItTHBmMDh4NA?oc=5",
+      "source": "Urban.ro",
       "status": "roșu",
       "words": 0
     },
@@ -1136,6 +1145,15 @@
       "published": "2026-11-24T16:45:04+00:00",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE01Z0hLMGU0U0NLYUlVZ05KWVBJUEZRQzV6RGMzZGtkOEtTSjFvdGNVRUNCRFRlcHdScjNjMktVRkRXcjM2bEZLMFFPekRQS3F0US1GSEFOaFV1N084OW1UUmdud3E5SFdPdFJBelU1dkswRmhYbDl5d3NjSQ?oc=5",
       "source": "Lombardia Notizie Online",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Live Bosnia-Erzegovina - Danimarca - UEFA Nations League: Punteggi & Highlights Calcio - 25/03/2027",
+      "category": "Sport",
+      "published": "2026-11-24T16:18:17+00:00",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRWJXaXczYXVLVHNRbVRDdlJRUGRKZWlMQml1QkpqcGRyamVQaVJXdVZxWWk5LXN6SlJrbnZza090NVJ5UWpLdUc1SHJ4bUNaanNDNFFPLVRBV1lPNnVES3FmQXNBdG9ZMVpjQUp0b3JmM3EtaldJZ0haN0tvUzlQTmhJVjk1aTFkWUpFNjdyNEpTNVlTS09lSWxNOUJNQ3JvOGpJSGhZS3hhUzNuTUxnUjV3?oc=5",
+      "source": "www.eurosport.it",
       "status": "roșu",
       "words": 0
     },
@@ -1482,15 +1500,6 @@
       "words": 0
     },
     {
-      "title": "Becky G vine pentru prima dată în România. Artista va cânta la festivalul GALAXIA, în iulie 2027 - News",
-      "category": "Muzică",
-      "published": "2026-11-24T10:23:36+00:00",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZHlHQTYzOE5vOXpxNlEzUVFLTncwZF9sLW5lZGpWcTVlUXZzdmMzMGpHejNVeWZ3QW1EVWF3Z1dUSEJYajQ2VUZYN21naEl3UXk5WmJJZkwyNFhrSm8yWjJGSU96QWhrMnZRbGs5bGJjQ0g4TTY3S2FNN0xCdlE0enhILXpNSmp2eUtXYmJJbzhPMmo2NndVZGxlM0RraENPeHFBYnhrbkJUeTlocDlPdTRkM1lVdFV4QjFpYtIBwgFBVV95cUxOTkVnYjc3S0VpeHVNaG5MTHg2TVJBc1kwQloyT2ZsREdTSGFKU3ZadFdxQVlhNkdlZUdFUHh1Q1lBWXpvZzhiQUE1azhwSjRIR1JNa1NDQWd1NHJxTkVtM0FOMl83OFVRdE02cXFYWEp5a0NkQTBkWXRHVVliNDZybkc5cWJqR2xvV2N3Z3pvam1IMXZzTTB",
-      "source": "News Bucuresti",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Un Talento per il Crimine, il trailer ufficiale del film [HD]",
       "category": "Cinema și seriale",
       "published": "2026-11-24T10:20:00+00:00",
@@ -1507,29 +1516,9 @@
       "source": "NATO",
       "status": "roșu",
       "words": 0
-    },
-    {
-      "title": "«La destra globale ha boicottato la Cop31 Così l’energia in Italia è la più cara d’europa»",
-      "category": "Mediu și climă",
-      "published": "2026-11-24T09:04:17+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQRVFwNzJsdVgxNWF2MjYxZEpieG9jSnZNTHBBRk1CLUdzVXN1ZHdhLVJvQmhKTnhKZEg4ekRSc3ZiTU1NUDloYVhRbVBqckMxdlI3emltcjFsV0Joa1lqRXNoaDVtb1U3SUg1cmcwdDFrUHlqbF9OY1FxWlhhZzJ1RHgyRW4?oc=5",
-      "source": "PressReader",
-      "status": "roșu",
-      "words": 0
     }
   ],
   "radio_briefs": [
-    {
-      "title": "Skipass fino a 89 euro: \"Non è speculazione, anche un operaio può sciare\". Ecco come risparmiare - Today",
-      "category": "Italia",
-      "published": "2026-11-22T19:00:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOelE1RUluUlZDMXFyZktaUUJWNHZBNnBZSmo5TEx4U3JWdkpaM2RyaUJzQVI4SUc3TzBuajR4M1hVamJUR0h5MlBQZ3Z0QmtXY0h4ZldWbXlWZHJlaGd4UDBmTWJmSE1wT0NLZThqV0o0V1BmOXQyd0tTUjM3MkVLY3ZjdV9ReXlfZ1HSAYoBQVVfeXFMT0dOXzhSd2pWTmp1d215cWRNZ041dU1GRzFCMGpZeDhQR3F0VWNKNmVtLV9FZEtDY01vRzdMWUtpb09kVTVQeHZfMDd6dTcydm5mRl9rREVLVk5ZVUV5OS1ENWQyRWxRT2Q2aDZyRzlqQ0JrVks5Zmt0ZmlObFU5ZVNkZGRCVk1qelJ3?oc=5",
-      "source": "Today",
-      "status": "galben",
-      "words": 17,
-      "intro": "Skipass fino a 89 euro: \"Non è speculazione, anche un operaio può sciare\".",
-      "question": "De ce poate fi utilă această informație pentru românii din Italia?"
-    },
     {
       "title": "Pedeapsă redusă pentru românul care a jefuit o bijuterie din Italia, după ce a spus în instanță... - StiriDiaspora",
       "category": "Diaspora",
@@ -1550,6 +1539,17 @@
       "status": "galben",
       "words": 19,
       "intro": "Hoț român de mașini de lux, arestat la Milano.",
+      "question": "Cum schimbă această informație viața comunității românești din Italia?"
+    },
+    {
+      "title": "O româncă de 24 de ani din Italia a escrocat un italian de 59 de ani păcălindu-l că a lăsat-o gravidă - Antena 3",
+      "category": "Diaspora",
+      "published": "2026-11-23T10:20:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxORXdEQWVXdll5dWtUVVJrSGxkUXhPLWd4bXY4a2s0NE1pazlIRzR2N1podnZFbUxZUWs5T0NaYmxTZzNVT2V1Z0k2SlhPaHVsQlJGTWhNalVUYS1OYUZpNkp4bnR4ZTlIMlRDUXhWRG1hT0xQaHIyUlZSTFU1Zm94RldSVTRNdDlSZDBnejV3dDg5Q3dNSjdTZW04STJkQzRqX09uTEl2NVQ1Mi10S1pHV2ZkalMzY3p6bkg2YjF6c3VMVkREdE56TUxEbDktcmRva2dYQ0MxeXJnSVZnd2FjQzdUb20zcXh50gHXAUFVX3lxTFBIS0ZqZEJsZC1IMU9aYTJMUmZzMHV0cV9fWnd6ZDJiRW5PYWV5WjE0Q0lqdkhFQmZwVGRPU2RvWHlNcnNnRW42anpkTGs5VE9OajAtRzMzTElCQjNqZnBLUVkzY1hnS244Yy1",
+      "source": "Antena 3",
+      "status": "galben",
+      "words": 23,
+      "intro": "O româncă de 24 de ani din Italia a escrocat un italian de 59 de ani păcălindu-l că a lăsat-o gravidă Antena 3",
       "question": "Cum schimbă această informație viața comunității românești din Italia?"
     },
     {
