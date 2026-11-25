@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-25T15:58:23.148586Z",
+  "updated_at": "2026-11-25T17:00:44.030056Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,15 +8,74 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
-      "id": "geo-e113aa2a2355f532",
-      "category": "europa",
-      "region": "europa",
-      "title": "Lista studenti: la Serbia ha bisogno di tempo per definire la rotta",
+      "id": "geo-56358b47c9d6b59a",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Amnesty details Gaza’s deepening humanitarian and reproductive crisis",
       "summary": "",
-      "source": "Euronews.com",
-      "published": "2026-11-25T15:12:28Z",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZHRFUUxWSUd3VlA4bWJjTmROaDMwSzI1S2dpcnZ5bEJqNVhTdVRzaHRfaDNHaTh5QzFKSzBGakZkUnRuOTRhcC1Rb3VYQV9tY0pxVVJvTnp5N1VMaF9WS2ZjOTNHT0M5U0ZjQ2xUaFZFQnhrSkpVdDd6OFBoajJlcExBenJ2MkZ3aUxWN09TaHFXLVAtM2VTTlk0bnRNWEY4NldJ?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "Muslim Network TV",
+      "published": "2026-11-25T16:53:58Z",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQjZMeXAxcTBHYzNqT216cXNxWlF1QnBjaFVrX1E5bTZFZDJBNjFUYmlxZk1MTmpmR3ZTT0FCZDJsQzMtVXp0OFhGUDFPbW5mMjlpSjQzQ2xVOWFDelpGcm9rREE5d3RjYV9GOFJsYkNPbXFXSWhJbWpmVXllWDF1Q3dOWldYbXo3OFAtR2MxajVabEhxQzNLTFZTUnlvYzg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Amnesty detaliază adâncirea crizei umanitare și de reproducere din Gaza",
+      "title_it": "Amnesty descrive nel dettaglio la crescente crisi umanitaria e riproduttiva di Gaza",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d4a99b4e38747857",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "US President Trump considers pardon for Nvidia chief executive Jensen Huang over export control allegations",
+      "summary": "",
+      "source": "Dimsum Daily",
+      "published": "2026-11-25T16:51:56Z",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWnVTY0RvTlFmTkZ2QmVTUnY4UlEwRFRuUGFQNkVPaGtxRlFNRjM1RUswRlBiOEdUSm1ka3F4dHNEZ1ZYU1FHX252TURaT3VaQnFaUlNFTXVLVDFwdGFnTkt6YnltVUhnWVBxTVFCWFpzTXhhRngxUjVzUnF3eGxiVHlSUEZRUDZhVVBEVWw4MHlGYUFsc2FCYi1ISUlFM1I3Y3BFTnMwRHNGV29HV2ZjT2h0UWhpczlNZlhRU2xaMEpCR3BnM05XVkMtbXFnbm1T?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Președintele american Trump ia în considerare grațierea directorului executiv al Nvidia, Jensen Huang, din cauza acuzațiilor de control al exporturilor",
+      "title_it": "Il presidente degli Stati Uniti Trump considera la grazia per l'amministratore delegato di Nvidia Jensen Huang per le accuse di controllo delle esportazioni",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-b43932d1e320cd62",
+      "category": "clima",
+      "region": "global",
+      "title": "Climate diplomacy is stuck – these three big changes would get it moving again",
+      "summary": "",
+      "source": "The Conversation",
+      "published": "2026-11-25T16:31:23Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNc1VqcHVJMFlYVHRJaUtTR29XT1UtUFhjb2ZteEMxSzJwVHNkM3ZWNmxJN2VoRjRNUkdQMTN0R3hzRk1VUGNucFhvVmtGTC00Mm1ZN1J3eU1kOFBwQkhEZXFwS2FfR3BuNGowdG5OT2xEMTkxNkdQVC1WbDhVbUlTcENLTE1qaVpJMjJpVmlycnN3ajQxV1Q3dFRXaThUcVNMUjdNVGJJSEJfVEZ5Q1M4aQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diplomația climatică este blocată – aceste trei mari schimbări ar face să se miște din nou",
+      "title_it": "La diplomazia climatica è bloccata: questi tre grandi cambiamenti la rimetterebbero in moto",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-edab17131f44ee17",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Media reaction: Who is to blame for COP31 ‘failure’?",
+      "summary": "",
+      "source": "Carbon Brief",
+      "published": "2026-11-25T16:20:07Z",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQMDBDck8xS1RjQlROdE9UdFVrMWpPQ051bFZPdmMyRE90VHFGMjZFbjNwM2RVRDBJWFZaN2ZHbFQyb19HdXFTSVVTbldQeWpzMWtnWlg0Z3U4b0dmek91MlVyNUFLc0c4eGFnc2l1REVlUlJ4SXFkWTJfZGlXekZLd053?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Reacția presei: Cine este de vină pentru „eșecul” COP31?",
+      "title_it": "Reazione dei media: di chi è la colpa del “fallimento” della COP31?",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ca32ac87c902e734",
+      "category": "diplomatie",
+      "region": "asia",
+      "title": "Is the North Korean Economy Really ‘Booming’?",
+      "summary": "",
+      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "published": "2026-11-25T15:09:35Z",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNeVZXZ1JTY1BfeDlhMkN0Y2NDQ015dHA4cWR0R3YzUEZaVUpvOVhTSV9TVE5MLUlMQmpiRDh0TEFEaWNsZlBVcm9UU1cyWE03NURTQ1c0VzRhUUY1SHlKRUNmNm9DaVJ2M3EzSkpFMTZ2SFoxR3VnYU01VV9rcUNwcQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Este economia nord-coreeană într-adevăr „în plină expansiune”?",
+      "title_it": "L’economia nordcoreana è davvero in “boom”?",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-1dd22b285d09afd0",
@@ -27,7 +86,10 @@
       "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
       "published": "2026-11-25T15:07:52Z",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPckpGMHcwQ3lXZl84Ri1BNm9QZ3ByeDhDUDFFWGl2TDBXUk45c2N2djlvZHE0QmZWMDBoT0dTYmVabTlrLTRqekJ6MmczVmI4RFF0NDRkVlMzRzNsYmN4M0E5TmRodmd3RUpZaVlzX0JQMjlqQTNWUmxfc0pXM2NMS0lRcUY4VXlkTjZoTmdNYlFHMXhJdDJPRlF3dWlkdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Prim-ministrul Nepalului s-a întors din India. Acum vine partea grea.",
+      "title_it": "Il primo ministro del Nepal è tornato dall’India. Ora arriva la parte difficile.",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-fd48c346683a8c95",
@@ -38,7 +100,10 @@
       "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
       "published": "2026-11-25T15:04:35Z",
       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE40dXlLRHlHTXhBbFdTNTl4bkVZQW5HeTZRd3owdC0tUTlJeEZlTDk2OThKVEV0Vm5TeWQyckxPU1FmX1Fya2FQQzlua0V2LW5ucWlSQ2I1VjdUbVlZOV9vQ2ZNOW1vbFVXcW1ocjJBVXozMW9qM19V?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Cum își poate asigura Australia viitorul?",
+      "title_it": "Come può l’Australia garantire il proprio futuro?",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-114f4293c412bdd9",
@@ -49,7 +114,10 @@
       "source": "Atlantic Council",
       "published": "2026-11-25T15:04:00Z",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdlM2OURFb1lELVZxWTNzdzdFc2tLNHhQbklpUWNyVmwtd2pva0tqbGVOSVhmLXJIUXRTaXpxSUphc21BTVhZZmg0RDJnMUt0NkUwck5hZDdjVU1ETkI1X0l6TmpzZE5FbDNmaDBES2JGRDFRbWV3amFNTW0wajlLMFhuYnBsTzZ2d0xidjBjb08xZXNsc3NGODY2T19YcG1Lc3d2ZENMdVIzSGpDM3c?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Absența evidentă a Chinei în planurile asiatice de securitate energetică",
+      "title_it": "La vistosa assenza della Cina nei piani di sicurezza energetica asiatici",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-08fcc2da8206f74e",
@@ -60,7 +128,10 @@
       "source": "Eunews",
       "published": "2026-11-25T15:03:15Z",
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQNlgwQkxTRFk2OVNxaUN5WlN5dDg2TFRQbF9KYzRPQjF3V2VvNnIwb09WWTRuYXZ0WTYxY0I1cWFHM1hwS3ZMa01wYnVGX2NOMjBTclBpenc4ZTVWRGdzeDVTTW42bzYwZE5McWNoYU5yQUZoRVR3blY2ek9vSWdPSW54eGtxVXNKdXhfRHJNSVBFUFoxUWh4Y2I1SXZDbnlyaHlUUEN3ZVpmS0JFRWY3SFFzZEM0d3pNQzVxaXg5ZUJZc2c2QWdCbWNXS09PS2VvdDBIT3UzdTMzbFpLNVMySlFkekxNeDhzSGhXbElLMjU?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Spania pentru a vota, Sanchez abandonează summitul extraordinar al liderilor UE",
+      "title_it": "Spagna al voto, Sanchez diserta il vertice straordinario dei leader UE",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2059463258fa0413",
@@ -71,7 +142,38 @@
       "source": ": Europa FM",
       "published": "2026-11-25T15:02:48Z",
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZG0tNENIcnRaSkpOU2hIME91ZnBzMmhyQkVTVkVNeGZId29fM3RwODVBdC1uRlBQS2E1YmxfU1RkaEFRbTZlcTFNTXJLSlV5V1NGc1o1UTd4clZ2Y3luZUlCcm8tZEZKY053ZFZvMjVHZ0xlZGNRSzlubnp2anJWOVVRMmg4b2FodFU1bUlUQ0J3dFpSNkZR?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "România scapă, deocamdată, de avansarea procedurii de deficit excesiv | AUDIO",
+      "title_it": "La Romania sfugge per il momento all'avanzamento della procedura per i disavanzi eccessivi | AUDIO",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-55f9061b806a38c3",
+      "category": "tehnologie",
+      "region": "global",
+      "title": "ASML stock falls 6% as Dutch lawmakers oppose US chip export curbs",
+      "summary": "",
+      "source": "TradingView",
+      "published": "2026-11-25T14:57:53Z",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPLVFLdGZycW5fUm1fcjI1U0JvcGZxV2g4NXNWQ3l5ZUV5cjgwLUtJWXpoLXNVUXVEZWRSYjBqc1B1S2J6Tk9nc2N5WV9VMDN0bVgxQzNWTldOR0NIdS1wcE1kZ0puU2p0U1F6Z0lmTWNpQzVXYWhmSW5DZ19PcXVCNUJCZGU4bHZ0OUJSS2J6MFlONmlPSlBhRTQ1V3lfRW0zbW93ZFoxR0RIblg5dUl6OHM3V2tHdjRJOTJoQUhCSQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Acțiunile ASML scad cu 6%, deoarece parlamentarii olandezi se opun limitării exporturilor de cipuri din SUA",
+      "title_it": "Le azioni ASML crollano del 6% poiché i legislatori olandesi si oppongono ai limiti alle esportazioni di chip statunitensi",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-c843e2ca3cb43e07",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Meningitis outbreak shows deadly toll of Israel’s genocide",
+      "summary": "",
+      "source": "Muslim Network TV",
+      "published": "2026-11-25T14:49:16Z",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMjdyS0FpcndVZENhSWtXcEt0VkRzcDZoMjB4dUVpUk1tMnF5b3ZKdWZ6NlF0Z19VNWF5NWNIVG9OSlpqd2w2azZmTWRKY0JEZGxFcG5MX0IzMUdFYThwZkNrOERsZzF3UGp2YmJlMDFfbzRtZFJTMjZjWEFKeFNPYzZVRWU4Vlo3SnliQlc5LXM?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Focarul de meningită arată bilanțul mortal al genocidului Israelului",
+      "title_it": "L’epidemia di meningite mostra il bilancio mortale del genocidio di Israele",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6cc3edafdd483618",
@@ -82,7 +184,10 @@
       "source": "Armenpress",
       "published": "2026-11-25T14:47:00Z",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9fZEhCeUs3RlFDZThYUVZVMDQtSkR4MklxMF9yLXYxVllqSk42dWlTa2NORjdRWFUzS0RrbmtFNDBMY0lHNFk5bm90ckkzY3pIQlHSAVdBVV95cUxQWWNDMVRVQm04bnBuTGM1WXl4cTVzZ1VlZmJNVXVxMEpiRkRTTXhXRVdsUWxKUmNIMy1Cbnhuc0pvSU1MRm8zN1l5ZjNUT0I5c3hwdDJzbjg?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Articolul ambasadorului Tigran Mkrtchyan publicat în cel mai mare cotidian online al Greciei, ProtoThema",
+      "title_it": "Articolo dell’ambasciatore Tigran Mkrtchyan pubblicato sul più grande quotidiano online greco, ProtoThema",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-b12155603ce9a3a8",
@@ -127,6 +232,34 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-1efde543307f55a2",
+      "category": "europa",
+      "region": "europa",
+      "title": "Summitul UE-Balcanii de Vest, 25 noiembrie 2026",
+      "summary": "",
+      "source": "Council, European Union",
+      "published": "2026-11-25T14:15:21Z",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbkVqTW1qdHVtV0lON013M3owbmhmUWpMMy1WX0VqLW1xZVNwV1BWcmxLUzI0MzBMcU02S1JuSnN4cUNKZEZjVVN0Z1ZYLS1NeC1iVGhtR2s5LXZWbmtPclRtd1pzNGZpLTlsTmFsa2dLY21JYmEwbnNpeWdwdzRhSXZn?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Summitul UE-Balcanii de Vest, 25 noiembrie 2026",
+      "title_it": "Vertice UE-Balcani occidentali, 25 novembre 2026",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-c0c7f4cc41b04b51",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "What Happened to the China-US AI Talks?",
+      "summary": "",
+      "source": "The Diplomat – Asia-Pacific Current Affairs Magazine",
+      "published": "2026-11-25T14:14:35Z",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9DQk9ITTlETzl1ZW4tR0N3NXE0Y05pOWc4ZjF1ZXd2ZjJfRUNzSGtzQUtFM2ZtYXdWdUVJSDFHZVlvR2drMERkNlJ2MnVPQ1k0R29WRm1fbVlHcGRGWURMbU55R01KMkxXc3ZZSzRsWks5SUtYOTY2V1RLYw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ce s-a întâmplat cu discuțiile IA dintre China și SUA?",
+      "title_it": "Cosa è successo ai colloqui sull’IA tra Cina e Stati Uniti?",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-f85a848af153436d",
       "category": "europa",
       "region": "europa",
@@ -141,14 +274,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-7fa548d7c98a1016",
+      "id": "geo-4fabd5a16d295f5a",
       "category": "diplomatie",
-      "region": "americi",
-      "title": "US proposes new tariffs on China a week after Trump-Xi summit",
+      "region": "asia",
+      "title": "🌏 FPCI Conference on Indonesia Foreign Policy 2026: Navigating a world off course and the call for \"Bandung 2.0\"",
       "summary": "",
-      "source": "South China Morning Post",
-      "published": "2026-11-25T14:03:18Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMHhfX1lsd1JsMkpaOEJWWEVYSUdxTHpCWnhMSGplM19wUTRNV01hMHR1UEcwcU15WTgtekNKMGpxelFpcGU5eTQwdDNWUG14d25pUHpzUU96bU9jTVdPQ0JNZTV5SEMwVjZFNzVyNHB3a1A2dEVhNUlIdkgwN19YM3o1RE8yTDZYc3RVQWFqZU9XQUhwS2JvQkhHdXB1a01LNjVwcUhFdnNnVEtXRlZfX1NaOUlOd0lk0gG4AUFVX3lxTFBfVG5NMnlCYS0xZ05wcVlkUFFaV25nREs4bjZrZGFnVkdpVFVqX3p2aHBIcGlEQkNJNHZSM25YNm5wZjBTOUxHbkRPd29ZLXhTNUJET21lOUkwM21lZ0c1QzRkSnA3WmpJSkNHcDVrM3BfVzc3SnZ3ODlNSHI2Tno5cFk5NXlDN2hOZlhFaHZ5dnVhWUZIY1RnUlZJN1RqTkJPbDlwT1RWSFVuQ2JXMzJzT2VIVk4zNlQ?oc=5",
+      "source": "The Southeast Asia Desk",
+      "published": "2026-11-25T14:04:49Z",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPRjF3RlRwNmx3bzNUVHE0dFNhUGlQdGdnLUhPWWdqaUpvVzVYbmRqcUY0aXJpR2RsWFQyUWtUSVNoZDdLdWV6SE8tc1FxZ09JSGhhZmh5cFAtX2FYRzNfVW9XLU52dmJzOURpU2pWVnh4VkVhZGdhVFVTZDlHbU5QaHhuZzFHOWRmZ09TREhUV2MyZHpwNk8zUG9R?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -163,6 +296,20 @@
       "review_status": "external_headline_unverified",
       "title_ro": "COP 31 și tragedia greacă a diplomației climatice",
       "title_it": "La COP 31 e la tragedia greca della diplomazia climatica",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-dfc569bb04079c5e",
+      "category": "clima",
+      "region": "global",
+      "title": "COP31: A testament to Africa’s leadership, unity, resolve in fight for climate justice",
+      "summary": "",
+      "source": "EnviroNews Nigeria",
+      "published": "2026-11-25T13:56:14Z",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNXlOVHJHSXA0RmxVbUR1UmYwcVFERE9wZFdEMnJQNGo1dGpnVEpiWFNCdHZLOXlGQXJTZUY1SkpNdHl1SmdNbFQzR1FDWU5wc0JpdGd1d1VsZ29IQmxFU3ZEaG1QY3Y5VUF6aFJ4VjRMZGtxam9oQXZoN2k1UmsxVU9DSndReVh0S3dGSGtoYllzaE1nSFFYVkd0QUR2dFVLV1NVVzljLV9HUXRGS2l2SE9ROUxtNG5Q?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31: O dovadă a conducerii, unității și hotărârii Africii în lupta pentru justiția climatică",
+      "title_it": "COP31: una testimonianza della leadership, dell’unità e della determinazione dell’Africa nella lotta per la giustizia climatica",
       "translation_status": "machine_translation"
     },
     {
@@ -222,17 +369,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-09456dfe211a8fee",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "Shenzhen and the Limits of Summit Diplomacy",
-      "summary": "",
-      "source": "Geopolitical Monitor",
-      "published": "2026-11-25T13:34:12Z",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMVJUbXVUZk1sVktjMEJmOENVNWRNX1k4SFJYREJkamJwbnA4QXBHcFVCYTlJODFsY0R2bl90S0JQNDMzUWhLTzg2RWhkZmdYLTJyekt4NktZZjdQX2VXc01mazZGcjlXQkVsN1dHczZ4Nm5UUUxNLXlYZFBaOGJmcVlRdlhRRXM?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-51ddf57ac181a8e2",
       "category": "diplomatie",
       "region": "asia",
@@ -269,7 +405,10 @@
       "source": "Hromadske",
       "published": "2026-11-25T13:12:00Z",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPY2FIUS1ONGtKUUhOT0lSdWx4cUhFXzlRdzJBNUdoemxkWWhuVG94ajRudWRZa0tSczdJZkVpeTRGb05PQW1saFc4aFNfSWFkcG1ibG81R2VJTVByU3BNSDFHQ1F3alZPZjV5NnJWeFE1MTBpZENGdW1XZWFHWjBCTFpQOEhJVGt2dkdGZklkQS1SWk5KVjNDTFFmaW5mNGhaUGxESHB1bkhxT01zOG9Ld1BsLTFfTHNvcWpaMmxKUGxtUdIBwgFBVV95cUxPY2FIUS1ONGtKUUhOT0lSdWx4cUhFXzlRdzJBNUdoemxkWWhuVG94ajRudWRZa0tSczdJZkVpeTRGb05PQW1saFc4aFNfSWFkcG1ibG81R2VJTVByU3BNSDFHQ1F3alZPZjV5NnJWeFE1MTBpZENGdW1XZWFHWjBCTFpQOEhJVGt2dkdGZklkQS1SWk5KVjNDTFFmaW5mNGhaUGxESHB1bkhxT01zOG9Ld1BsLTFfTHNvcWpaMmxKUGxtUQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE înăsprește restricțiile la export pentru 15 entități rusești legate de industria militară",
+      "title_it": "L’UE inasprisce le restrizioni all’esportazione di 15 entità russe legate all’industria militare",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e023e8a192b7e828",
@@ -280,7 +419,10 @@
       "source": "www.daily-sun.com",
       "published": "2026-11-25T12:45:34Z",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeHl4Tmw0ZzhxWE1UdnZvSXloNEZNSThmMFByZmVXT1ZsWURkQnJXeG54US0zcjRpeUVPOVNUd2I2ZkRBbE8tcm5WR3phUFhlTkhfREQ1eWxuNkVjYkhScHFzNE5IYVNaT3hwZmVnUzJOY1BLWHZWSU8xOUoybEl5R1U0WWlOdkEyWk5Jdzh3aTM0N3Rzd1JwMGltYUx3eXBQVFAzYWc2RFFES0hOa1hpZDUyd2hwSFhBRUZLc19wRDRxY3E2QkJKbkphTzE3UmZHSXc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Nu o alianță, ci o rețea strategică: cum India și Japonia strâng rețeaua pe China",
+      "title_it": "Non un’alleanza, ma una rete strategica: come India e Giappone stanno stringendo la rete sulla Cina",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-a50e63025ff43389",
@@ -299,55 +441,13 @@
     {
       "id": "geo-c28227e804368ac5",
       "category": "diplomatie",
-      "region": "global",
+      "region": "americi",
       "title": "Xi Jinping’s ‘Head-of-State’ Diplomacy and the China–US–Russia Trilateral Summit",
       "summary": "",
       "source": "MP-IDSA",
       "published": "2026-11-25T12:41:04Z",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZ0RWVEZ0dVNoNXEtNGNlZVQwUGxkWDV5c1gzdzY5dXJMY3dnNHRiMTd5aW1pSUNucFVVeTU2OHZGTE1BNkJGdjc2ZVo5bE5BYWoyajhMaTFlSDk5R2p5NjFkbXNGdWNRc3JMQ0Q0MFJ6R2s0a3d1UVVzY1NEdV9UbnZpa0JHSjhSVGEyVzYtY0l5NXhxQkxwNkhJd3l4dnhIVmotQVN0WlFIOGl6dGRsenB3?oc=5",
       "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-ce43f221735fb6f2",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "U.S. Ambassador Sergio Gor Meets New Mexican Envoy To India Pedro Blanco",
-      "summary": "",
-      "source": "indica News",
-      "published": "2026-11-25T12:22:44Z",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOb0phSVhFQ0REdFlkQTF3aDg2TTBhal9BVVpmc0dFRV9RcEZBQU5ORmljc3Z4NDR6c0JQUTM5aUtzeXp3UGZMTlJ2d1NjeDdPSDNOSGRMbFlLSzViSXYtb0o5RUhrWU9pN29jMkp5dmxFekZxUWdhZGpQRWRCWVJUTVRLaXo3RGJkcXFzUFJRSjUyV19GcXhWcmt6Zw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Ambasadorul SUA Sergio Gor se întâlnește cu noul trimis mexican în India, Pedro Blanco",
-      "title_it": "L'ambasciatore statunitense Sergio Gor incontra il nuovo inviato messicano in India Pedro Blanco",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-75fa2fa237aa36c0",
-      "category": "clima",
-      "region": "global",
-      "title": "Climate talks collapse in chaotic end to COP31",
-      "summary": "",
-      "source": "The Daily Star",
-      "published": "2026-11-25T12:22:27Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNWo2THQtVEtpY1pVeENaUm5aY0VKbmhuMGFob2dLMlVpNnpDWl9Rd3ppNUg4eWVNZ284S2V6M1hFTDBSVlNMaklWb0RDeVkwVE84WHFWdHVFRlI5OHlfNGN2VDc1OWlZdWxzeThBUWhnRDJ2V1lVcGZCdkE2TTVVMU1BMlB5SHN3WVJ4WjN6Q3k2OVo0Vmp5YQ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Discuțiile despre climă se prăbușesc în finalul haotic al COP31",
-      "title_it": "I negoziati sul clima falliscono nel caotico finale della COP31",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-4266f63f69c6d3a9",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "\"Looking forward to working together\": US envoy Sergio Gor meets new Mexican Ambassador Pedro Blanco",
-      "summary": "",
-      "source": "Big News Network.com",
-      "published": "2026-11-25T12:16:00Z",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNR0JxbGM5Z181YlFNY2k2akczN3RYa1VKcmFUVDZ2clhFMkpUbl9xS1RZNlFFQjZ1YjFpazNVTHUzTVpJMXRiR3d5SXVQSl9fdG1yS2l2cklQRC1FN1R4ekdJZkgxSm1JUlZHVjVnSS1mNlpjMXNqdmtCTnhvYTVQNEZEWUpqczZkTTNlb3FXX18xVUlEN09aSmpQTE5QS1lITEdwVUpwUXdwZ3U2dThBU0tSMlVrbHY5VUxkRVluVVlFSktBUjl6WmgtYTgxajVOYk03bEZBdzAweXc?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "„Așteptăm cu nerăbdare să lucrăm împreună”: trimisul american Sergio Gor se întâlnește cu noul ambasador mexican Pedro Blanco",
-      "title_it": "\"Non vedo l'ora di lavorare insieme\": l'inviato americano Sergio Gor incontra il nuovo ambasciatore messicano Pedro Blanco",
-      "translation_status": "machine_translation"
     },
     {
       "id": "geo-ff48cd19b8f6676b",
@@ -364,17 +464,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-43f9dc336dc2114f",
-      "category": "europa",
-      "region": "europa",
-      "title": "Bilaterali III, approvato il pacchetto di accordi tra Svizzera e UE",
-      "summary": "",
-      "source": "Corriere del Ticino",
-      "published": "2026-11-25T12:06:00Z",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPSngwQ0NLZzN3S0xUd20zSkctZG1pbGRnVGNnYTBBR1lGbGczdUs3TGpMNl8xUEVPNXdWNElfalAtbXBwcFc0eHc4VFl1aDNOcnVnTlhlUWN5dzhmUlBPNU5NMnFYcDNIYXZzMjhBWjItZHFsNlBIT0dldTRZanZWX0lBbHJuZ2VZbFFTajNIQlRCU0hJ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-260bc161da183e58",
       "category": "europa",
       "region": "europa",
@@ -383,7 +472,10 @@
       "source": "Antena 3",
       "published": "2026-11-25T11:59:38Z",
       "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOcXB1RFZxNmNZbXBQbE1lZWFBOF9mQk80dG5ubXZXTTlOX1laMGN3RXYzakJTTzh1Rk91X0V1Sk9Kb3hvUkQySGZ2Ny1sTHdQb0F0NXo0VDY1T3o0WWN0SEtJUFhKVkg3dWFLQU1la2FTc21SN1gyUndwbDJQRGs0ZU1yaXVQQk1VSFBBQVFaLUFtZmFnWDN2YnIwTTIwRVR0R3lUeEhTZWpxc2xON0pfY1NNZW83MHBEbnNSc0NYMWtaVmw3Y0NEWGM0RnRnYnZKMjhtU0hrOEFFTGI3bzgtc0t2dGh6b3N0NHF6ZXJ3ak9BdUh0WWJ5VjRGWXpfckJDY0RzWlJsU3NIMTZHcUFHR2dpU3hrV0tMX2fSAfwBQVVfeXFMTmZUTXRjbTlEYzhqR2d2UGdtMEc3YmVfZndEZ3dWdDBTblRiMFdscndzTFp2aGFXNVlnWC1fRkNYUlZlWWxBVXQ2N3RrTks0eFRnUGR2bFNnTjVqdFducWRBeGpWVkhMVGZVRXFERGpaSnpyLXRMWlNBQTRRLTJsMWo1b2xFX250aUp5U2hGck9IUDMyQXlhc0NfMDVPbGk0c25wSTJVWG9KM0YtZVZKdDludkpDVndVMHdEMHlDblNPVnd0TEN2S3JidEc4LUVfc2U0eDFYR2Jibk9YNFRseHdVVVlWd2NucS1rOThUWUhkdE5oUldGSnlkRzA4?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Politico: Bunul, răul și francezul. Care sunt țările cărora Comisia Europeană le-a fluturat „stegulețul roșu” pentru deficitul bugetar",
+      "title_it": "Politico: Il buono, il cattivo e il francese. Quali sono i paesi verso i quali la Commissione europea ha sventolato la “bandiera rossa” per il deficit di bilancio",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-97405fd67a3c603c",
@@ -411,20 +503,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Lukașenko despre posibilele compromisuri în timpul discuțiilor: Susțin orice decizie atâta timp cât aduce pace",
       "title_it": "Lukashenko sui possibili compromessi durante i colloqui: appoggio qualsiasi decisione purché porti la pace",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-c44a49bbf9257218",
-      "category": "tehnologie",
-      "region": "global",
-      "title": "Why Huawei Patent Teams Matter In The Nvidia Ai Race",
-      "summary": "",
-      "source": "ИФЗ РАН",
-      "published": "2026-11-25T11:38:41Z",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1XaXRfaDJ6R3VfZWhIdlJvQ0FLZ0lEN3VBZHJ6cUJ1eW1PZnBsVjVBdTJaT3BJUDlRQ001MU1MTFpUdXRDUldnN2lmQ0ZBbE1WWkdidmhuR1pPOXEwdUlrVTZubmpJN0M2WTFaeXJfcVJfVTRZ?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "De ce contează echipele de brevete Huawei în cursa Nvidia Ai",
-      "title_it": "Perché i team di brevetti Huawei sono importanti nella corsa ai brevetti Nvidia",
       "translation_status": "machine_translation"
     },
     {
@@ -456,15 +534,18 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-76997b1684dcd995",
+      "id": "geo-469cf8f916160687",
       "category": "conflicte",
       "region": "europa",
-      "title": "Erdoğan to chair top security meeting focused on regional tensions | Daily Sabah",
+      "title": "Boris Johnson urges Europe to send troops to Ukraine ahead of any peace agreement",
       "summary": "",
-      "source": "Daily Sabah",
-      "published": "2026-11-25T11:06:00Z",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRFlRMWpQaVZqYXFKNm1kdUFyb0FxOTU4X1o5d2xjOWVlUndwY2xzOXM2M0dCOGRCVEd5bS1fVlNvVG5UZUNQbXIyOVF6RzYzTHl1NmhKWXpLT3pUb2VvSksxZkhuVTlpNzUyOUJxTFdpM3Q2aDVmZk5CanlRSm1xcFRtRU1YczBWTWEwSDctNV9BNVlvZklIdkZFbUROQlJRV052Wm1fQ0k0ZmNoR3o4N9IBsAFBVV95cUxPRFlRMWpQaVZqYXFKNm1kdUFyb0FxOTU4X1o5d2xjOWVlUndwY2xzOXM2M0dCOGRCVEd5bS1fVlNvVG5UZUNQbXIyOVF6RzYzTHl1NmhKWXpLT3pUb2VvSksxZkhuVTlpNzUyOUJxTFdpM3Q2aDVmZk5CanlRSm1xcFRtRU1YczBWTWEwSDctNV9BNVlvZklIdkZFbUROQlJRV052Wm1fQ0k0ZmNoR3o4Nw?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "The New Voice of Ukraine",
+      "published": "2026-11-25T11:30:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPZ3UzRnJVRmlnQWVQM2lFQkxBM1E3WTRiOWRGRHRYTGhtT1hVZVl2RUlsWTFoczJaVXhCVU9qQmJGNS1ubmV5QWpSYWt1TDJWRTVjY0dWTmIxczE3aGd6eUJFZm1qTmw4NUVfZkV0SzdCYU1CRHRVbmRwbVdjbWtCX2YwSHg0UE9QekFtQUo5WGJVSjdVaUJ4U0NuZVpVdmF4VXloV1JMTEJWQUlmelNnb2c1d2VHQVhpUVZDSDJ3QklyS2PSAb8BQVVfeXFMTUZxNlFzVmE0RWpScUYzM0sxR1FWU1RQWHUtTkFtNWxuQnQ2aGo3TmNPd3M4RlFVdjB6cEszcV9JeTJPOHFBQXZnNjFwZ2w2UWlzbnZJLXZtd3lFVUFoVldzTnVnU0dJbWZJQjhZYTVoTUlETktmMzhxVUR1NjBnYUU3RC1ZSjh5MlBnbkFEZ2Z2OGtoV3BVS2d4YVNjZzA3R1h0X0I2ZGltTy1lQ2dFTHNPNUQ3TkRSMFBtUms0azg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Boris Johnson îndeamnă Europa să trimită trupe în Ucraina înainte de orice acord de pace",
+      "title_it": "Boris Johnson esorta l’Europa a inviare truppe in Ucraina prima di qualsiasi accordo di pace",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-c82f995fc2afaf76",
@@ -509,6 +590,34 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-29bd04a7ec43139d",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Paris Ready to Send Envoy to Moscow – Only if Europe Gets a Full Seat at Ukraine Talks",
+      "summary": "",
+      "source": "Kyiv Post",
+      "published": "2026-11-25T10:34:29Z",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBqLVJ1ZE9fdTdacFRKNU9qeW03S2h1YVg1U2lIVFlveFdiQmVBR2ZLWVllT01oSWpBMFpacnRFcm9WbjYtdEtvZjJTNA?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Parisul este gata să trimită un reprezentant la Moscova – numai dacă Europa va primi un loc complet la discuțiile cu Ucraina",
+      "title_it": "Parigi è pronta a inviare un inviato a Mosca – Solo se l’Europa otterrà un posto pieno nei colloqui con l’Ucraina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-23d8972d33a615cc",
+      "category": "clima",
+      "region": "global",
+      "title": "Heat and drought – All Content on this topic – Page 1 of 175",
+      "summary": "",
+      "source": "dw.com",
+      "published": "2026-11-25T10:33:01Z",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4xME1yN2NBYVNSNHZSb091clB2a2lnal9pZV9NbXh4Nk04aFgtVHVSV29XSkR6RXVuVDVSd2JvX0V5NGRHUDkyUVdxWE5aZUtDZ2huV0NXeUhfY2VYQ0RSRS0xN0s3N1U?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Căldura și seceta – Tot conținutul pe acest subiect – Pagina 1 din 175",
+      "title_it": "Calore e siccità – Tutti i contenuti su questo argomento – Pagina 1 di 175",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-e4f700d43d0d36f6",
       "category": "conflicte",
       "region": "europa",
@@ -531,7 +640,10 @@
       "source": "Middle East Monitor",
       "published": "2026-11-25T10:19:00Z",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOeEVDSGJMMFFmU3A3d2lBRFMwVTlnejlQZDJ4V21TN1dwX21GUEl5RG9HV2FnY3dHLWVZb0NNTVBHMmpjbGlNdWJ3bjBiVzBtMTdSU0NrZFBGS3FVb1Y4MFZJM0RDMXliNEl4WU5oLTAwZ1JKWFdtX0dnMGVIT21xMVNNZTI2akloTnlHVm1CRlVxQlRFd01aOEdPNzZKQkxUQ2hET1liVWdWRVFlcUhld2hLWWxrZnMzdjJZ0gHAAUFVX3lxTE9oTnhJYS1XMWwxRWhmREFxVU1CWFVPTmp4ZnV4OEh1Y3lXOWRYMkM0UzNvQ1hrTnpCdUZjTzU3UTliblVqR0hnWi1ab2ZfLXlyRUMtYTBiTFFKU25JcGJIVVItSHdZdDhlZ2lYUEVUS1ljMlRIMWpJZ1BOZTJ5NUFyMWlrem5rWkQwMDJRYy1GQk40a2t6NjhGbmF3WmZnTERKUElKYXZMVlA5SDNEMmsyOHBzUUxaUktZYzBBc05Sdw?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Barghouti: Poluarea israeliană din Gaza amenință viețile palestinienilor de zeci de ani",
+      "title_it": "Barghouti: L’inquinamento israeliano a Gaza minaccia la vita dei palestinesi da decenni",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-177e3d08bf5d81f7",
@@ -556,6 +668,20 @@
       "source": "Demócrata",
       "published": "2026-11-25T10:16:00Z",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcG85SFZMeG1QSjdhR3kwcGtMSnotR3RwSS12RUxwdm84NkxIWVJvSkEyMG1iZnEzOWU4ZDBjQ28zREpvcXpDbWllTkg2aUtLWFJaaDZSWkhWV185U0tzajZKZzQycjIwTjhLWmJRY1ZBNm84SWlLazZVZEdiUHF4V2tTNnJGeTVVeGlDZm5GT0RmMVpUbWdERkZ3QdIBoAFBVV95cUxQUWwyZTcxdVMxeVpYLWxWTmJBOURTVEdKV0NnYU9WRThreDQ0MlNUdDRKYUJsX2xCdUQ1S3pjS0dTMExLUjgyMmVIVDB3bWhNZTQ2a3BMMWMxQS0zbm5Rd0IxRFB6TlhaUFZjNkZWcmtIWmd1eGRLVjN5VnNtRjNjZ0ZZLW1pZTZYZldmdzVmbThQcHJCbTBxLWNkenY1X01W?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "UE reunește Balcanii de Vest cu Muntenegru, pe punctul de a încheia negocierile de aderare",
+      "title_it": "L’UE riunisce i Balcani occidentali con il Montenegro alle porte di chiudere i negoziati di adesione",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-8e2e37f1636139d7",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "OPINION | Great power trilateral: Can three powers dictate a new world order?",
+      "summary": "",
+      "source": "The Week",
+      "published": "2026-11-25T10:14:00Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNUYwcXBVR21LX2hqaHY2d19aNkN6TERRQkJ1cXYxQ21xNmZOUWdmdExoYnFSU25rLW9KOHUyU0hLX0ZOa0ZhdWRrOHZzZkp3TzViNGhIWXZpMDR4Um4xOXlPMS00aDFnQ3FCUDRrSUFoUFh4SkdZakRjUWJZWlA1QUx5YVlhcTlkWXBqV0JROTdubTZ6RmdScG1xYUNCRDhmNktGLUt3MXpnSVdCWjhFU2ZHRGRuclNESmFyT0tLUEhOZknSAcgBQVVfeXFMTkZ3cDF0T0ZIdVNXd2xnZ3FaZFQ4OVdvZE5CcmwtTVc1Z1E0NExSakxiQ0s3U3ZGdkhwQ1FZV1NMV21UTG5mOGNBVTBRLTFXdGlzUjNYRGRIQkIyNXFHWEg0YU5jTWxrR1R3cWhicFQ4ejZCMXJQdTAyd3ZnN1k2VHNDajVpbmFLZnl4S2pldXU2SFNxY0pLOFF6ODZKSS1fdUZxa1NmdEszam9YOXZQeHptTElkc2E2MXRoQ0tpWlhJRkh5cmFiQlM?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -567,7 +693,10 @@
       "source": "Council, European Union",
       "published": "2026-11-25T10:13:36Z",
       "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNTnU1ZVFyZUlfUnFTX01zLVcyWEdLcjMyVmJJSllqQ1pNRVpsMmJvb1gtZ1pSSmtWd1pXYTVGTXJPenNRUXFUMndnc2pQb0pkMWRxZWxOVU1xdWxodktpamFwYnBpSU44ajFUTkFqVmxjOW1SZHZ1eFZicXhGcGREVEtGcnV2dVdnem5OQUFFOF9ReXJBYzJCRW5QUGtuU1Fqb1dON1BKZ1NhQW1rY2tHWF90RHV1ZnFrN2lWTE9SRElkMnhLZGtfcWwwUGFXRXNVSFkxczJDSWE4eXBxV1dnaDg3WFE5N3JNanhUU2RobUIzUFliVnZUNF9zTm1zUGU3TjNDa0Vwd3E0ZUlvRllpLWM3M2MyZG42U1duZXUzUkVhZVU?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Războiul de agresiune al Rusiei împotriva Ucrainei: UE restricționează comerțul cu 15 entități legate de complexul militar și industrial al Rusiei",
+      "title_it": "Guerra di aggressione della Russia contro l’Ucraina: l’UE limita il commercio con 15 entità legate al complesso militare e industriale russo",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-4b0364f63bff0015",
@@ -584,14 +713,14 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-7a95021ec6f01e94",
-      "category": "conflicte",
-      "region": "orient",
-      "title": "Rubio condemns Houthi attacks on Saudi Arabia",
+      "id": "geo-d54a16bd0d7b0d49",
+      "category": "diplomatie",
+      "region": "americi",
+      "title": "Canada and China deepen economic ties as Ottawa seeks to reduce US dependence",
       "summary": "",
-      "source": "World Israel News",
-      "published": "2026-11-25T09:55:35Z",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQRDVuN3JVMjlQTWJ4OTJ3LXBLZUsxNjFfeUwxTnBjQXZaTGE4TnhKc211WXUzNl9qdmJBMFpUYmtZelkwODZEMEdYV2hmTFBRX09DcHVwZFc4dXhmeDZzVElNQWNEY3Zsb0M1ZHJ4Rl9JNWRrYUpaTDFCQS1adUMzSm5TV3jSAYQBQVVfeXFMUEQ1bjdyVTI5UE1ieDkydy1wS2VLMTYxX3lMMU5wY0F2WkxhOE54SnNtdVl1MzZfanZiQTBaVGJrWXpZMDg2RDBHWFdoZkxQUV9PQ3B1cGRXOHV4Zng2c1RJTUFjRGN2bG9DNWRyeEZfSTVka2FKWkwxQkEtWnVDM0puU1d4?oc=5",
+      "source": "internationalfinance.com",
+      "published": "2026-11-25T09:55:26Z",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNSFgwSFptLWliLUFKNDk1NUZzRUp1TVktRXBrN0hpYXdyU19OdTc5aEl4VnRFQTBjZjlMSS1kWVhqajd1ZDBvWi01UGZmaTBCeE9qMWhHU1hJREoyZ2NxOUVQc09jVUJLa1VYTFhlendFWlZCRmtwNzg0SVpnTHZreHlWRFZ1YjA5b3ZpcHdPd1AtN0JKeDNfbGNRaE1hMnFDU0haQ0hMUTRYR28teTdiZkdqeVd3aVJ5S2cw?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -606,17 +735,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-d54c69430ca6acb9",
-      "category": "europa",
-      "region": "europa",
-      "title": "Comisia Europeană finanţează canale de mass-media din UE cu 16,6 milioane de euro, pentru a promova prezentarea paneuropeană a ştirilor",
-      "summary": "",
-      "source": "News.ro",
-      "published": "2026-11-25T08:53:21Z",
-      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxQcjlpTkJYUFlRODZYYXh3VS1rZFdMTW5mbDdTQTVMWGhJaUlPRXFFS0c1Z0pZamIwVHRsbDhNM2tfVG9WR0hSRzlyckFUdzFCaF84ZXdGUy15dlpJX3BDczNGS0JTZzVENFB0cS1Fb0Z1QlhuX1NERkI2VDN3Z0xjekJ4OUNHbmRVcDYzSTRmR1NuUkllQkpxQ25kNERpZkJWT2xrd2dzMTBNZVZQbGdQd0M5RzZqcnctaVNhMnpGaEhaU2QzeDhaSnF6RzNlZjR4TG4wdkVJUVVKTER3elphMmxXNUJJRHI3S2ozTkZEQWFfa25ZT0k2aV9wdDZLME82UXlmdm1Ub2daTjZ2SUc3S3ludlJzY01sMEthSEU5RlAybjA?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-9a4de5696606d281",
       "category": "conflicte",
       "region": "europa",
@@ -628,14 +746,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-2822741a224b8597",
-      "category": "diplomatie",
-      "region": "global",
-      "title": "The Art of Agreement – Lana Nusseibeh and the Future of Global Diplomacy",
+      "id": "geo-e4b22075e6df69b5",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Israeli strike kills family of 4 in fresh test of Gaza's fragile truce | Daily Sabah",
       "summary": "",
-      "source": "Georgia Today",
-      "published": "2026-11-25T08:49:42Z",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWWJ2cTdaT1dCV3BMWExTeEZ4OGR3cDJLcU13enhaLWVFOUZ6eGY1TjRURHhNOF9MLUlhODQ5S1pGdEgtLUQ5UC1QT0hKQ2tWNHNlOHI1TlBwT0dnMUFDZmF1QUV5cktCRThYVGFKRXpnTGZnQ3lDam1XNmtGRkVOMWU1SlQ4WFRtU1hIbmNEc1hoYXRPVDhael9ZQQ?oc=5",
+      "source": "Daily Sabah",
+      "published": "2026-11-25T08:28:00Z",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOV3lmTTFxMjNkM29VREdCc3NCLU9xeWtYNEpzdFhHQVB6REZuRHpzOWVFNHRlNEVRX1ZqM0t2YXo5UGhNMGVlZWljY2xORjVLYXdCSzdsbUc2a3hnWE8tY0Z0US1yRzNSYUpQMFdYTnZJRGpFd3dMRXk0dWNCd1FKVmtUOUhLeEJlRGd5anU1TTJfUW1BT3JDel9aNndfVEtlYnVvYnBCbVJmR1pfd2RLVdIBtgFBVV95cUxNSGp4Tmd3UDZTZ3BwUURhN3dEaHpCaDgtUUl5UVh3Mlg2T1ZYdWQ1ZmJ0ZncxdEk5NjNabFVzY1pMbEJjdWc1NmpaSzBDdHVPeVZVNF9xaGl5OWlaVnBFQmlwcy1ueE1Ec0g5dnhGTkVnUDhwMThjT1dqQk5Kbk5PZXNXeTdRckllVnFKVGgyNUtXd0ZFc2JmRzlZc2JFYWQ1M0ZXWXFwcGlGcDdkQ2NweVcyR3kwQQ?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -647,17 +765,6 @@
       "source": "The New Voice of Ukraine",
       "published": "2026-11-25T08:25:00Z",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPM3ZoSE1YNjI5Y0hLRURFTERWWHprS3NkaVV0MTJwX0lSVXNscGpBV2Ffa0t2SFpoSUVuaE14Uld6ejRLVk1BdE1ZdWxQLXhJVWI0LTlRcU5sTHV0RTlveE5VZ0o2YVRjcWw4ZnZYSzlTdG1sM3hfTHVMUDZGR2xxTGlwVXRfeVNnVzJKaEF3aFUwVjVBNFAxMUM3cnotalJsUEYtV9IBoAFBVV95cUxPRHhYVXlPZjV2a3J0Y3hGdS05Zkt6SEVhMDI3UW5EbXI2aWxFcjRXajZ3Mi1icTBaOFhYTldUU2szNG5HQ0V3a2F5aFlUY0h3a2ZCMEExbmUwUEtYWG8tR1FyanMtbHNQTkozZ0c5S3dOUWRMMXBmOXVXZWFBRVN4RUViR2NrM19uSng1REZ5YnVoRWZzUjctUTE3MDNDSWcx?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-e066ee9847630d14",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31 failed to deliver. How climate negotiations can move forward from here",
-      "summary": "",
-      "source": "The Indian Express",
-      "published": "2026-11-25T08:17:20Z",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxONjNBRWhoYmlwRllyUjNkNkRiWkJiZFptbzR6MlhOYVRaeno1SGhvazMwUUxkekVHS2JBcTNxdWxVcUxVZzlic2VJXzIxWWhxNm1yaTdQY19FWmhQT1hxOElEQkdRdWNvOGZxWUlHaXFPRUdMcmw5c3V2V1VuZ2F0dnhWYXM5SElGZmZqRGlUd25DX2FCM1RGc1E3SXFDVS13MW0waHh3T0ZCUGFyTVVNRTNpVUtYOFJKTGdKR1lCb2l1TWt2NVl2Zm02U3hLdWRMQ0HSAdgBQVVfeXFMTWY5VXo3c2RxRk9FSVIzWTB4cVQ0X29VcGtqaFczQ1pVZ1ZtcXZ4YlRQVUFvX1RZMEF5SUJxNTBJZEV1QW5CMWtYZWNwZjNIanZ6LTZsUVRzTUFEdnlNWC1xRFk2RDlITTMxWHNKRllOMnVRdzlpSldJVTBvRTJ3X2VmR1R1bjhSbVFvSVJNcXhXX0FiVHBVQ05CQW91SUZ4bnRqdlFsVzBVbkc4Q3NaNmZxWUVPVGdzb0lWVUl3RlFjbGdYT0M5RU82U3lCZzUyNllOdTNXZmU5?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -712,56 +819,6 @@
       "title_ro": "Raza extinsă a rachetelor marine americane se confruntă cu verificarea realității în Taiwan",
       "title_it": "Il potenziamento della portata dei missili della Marina statunitense deve affrontare il confronto con la realtà a Taiwan",
       "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-23d8972d33a615cc",
-      "category": "clima",
-      "region": "global",
-      "title": "Heat and drought – All Content on this topic – Page 1 of 175",
-      "summary": "",
-      "source": "DW.com",
-      "published": "2026-11-25T07:33:32Z",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4xME1yN2NBYVNSNHZSb091clB2a2lnal9pZV9NbXh4Nk04aFgtVHVSV29XSkR6RXVuVDVSd2JvX0V5NGRHUDkyUVdxWE5aZUtDZ2huV0NXeUhfY2VYQ0RSRS0xN0s3N1U?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Căldura și seceta – Tot conținutul pe acest subiect – Pagina 1 din 175",
-      "title_it": "Calore e siccità – Tutti i contenuti su questo argomento – Pagina 1 di 175",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-c023d0a16840a26b",
-      "category": "tehnologie",
-      "region": "global",
-      "title": "Politicians Call for Tighter AI Regulation",
-      "summary": "",
-      "source": "Wisevoter",
-      "published": "2026-11-25T07:18:20Z",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOQ2hpXzhZd05aQ3JuTGRGWDAzVEkyR0RMejBMZ2RyZjVjaldGX256VFBTRU52c0tBNWNHMlF3LVVVd21IRnptOHZGR2RDdWVQWG9uN1RiU0xIRXA4SnR3OXctQmdPaS0wcjF1TGhRUzJTTjVlR1N0dVRmak5IS3JkZFNsZ1BMVk8ycS1OZkNB?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Politicienii solicită o reglementare mai strictă a IA",
-      "title_it": "I politici chiedono una regolamentazione più severa dell’IA",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-bf77d9d8d7d95b18",
-      "category": "europa",
-      "region": "europa",
-      "title": "Vertice UE-Balcani occidentali a Bruxelles, incentrato su riforme e mercato unico europeo.",
-      "summary": "",
-      "source": "Слободен печат",
-      "published": "2026-11-25T07:17:49Z",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWmpCR0RFRjhkQndCWUFRUTN5bnRuYW0zQXRENUhiUnBjQU5ZMldJcTFUODNYS004WFR2b2pmZzRqQkJPem5sbXFnNXIwNzV2Wk1pblloczVKdWZnOHBxMWdzNnpjeU1Mdnd0SzBMeFk3dHEzX3Byazhpc0lBbkdmS2tib0M3a3l4UXFUN2QxSlhkVXA5S2NIbE1tYVFfaXkxRzlubzhxRFp0aUxyY1dDQ0ttRXB0dw?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-b3e0df150f34f006",
-      "category": "europa",
-      "region": "europa",
-      "title": "Birocratic, Republica Moldova a intrat în linie dreaptă către Uniunea Europeană",
-      "summary": "",
-      "source": "Veridica.md",
-      "published": "2026-11-25T07:10:42Z",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQeEYyRWwyRXdsdnNzMVBaRGxCMWpGMER6dC1oeXVISjBtb2RlX0tIOWRqdFBLYmtIN0tieURCME1Rb1ZIZFVEZ0NubGhxemxMT1hFeGpCVUVieFhpSWxsd3BMTG1WbWpfNHNxd1k1a2cxTTFXSE9rVnVBOGs0TW5aLWdMaE45ZlpPN1JxRDByNWMyeUdQbzI3YUp4MDUtdkdvUUlMcy1jLVhEbzJSWXc?oc=5",
-      "review_status": "external_headline_unverified"
     }
   ]
 }
