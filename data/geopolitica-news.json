@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-26T12:10:25.610226Z",
+  "updated_at": "2026-11-26T13:10:43.211384Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -8,15 +8,102 @@
   "note_it": "Flusso automatico di titoli. Verificare sempre il pezzo e la data presso la fonte citata.",
   "items": [
     {
-      "id": "geo-d42f79f8a910f0ee",
+      "id": "geo-0d04815cbe0d16a9",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Romania urges EU, NATO to prioritise Black Sea security, seeks sustained German defence presence",
+      "summary": "",
+      "source": "Business Upturn",
+      "published": "2026-11-26T13:05:07Z",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQdDFaQnRYTEVYSFhzeUx2UGNwVEJnQ2FkRzFVeXZqVjlwSHRNaEhuOXRrZEM3cXhLRDFzZXdhaXp5aHo5VFJhd0h6OWdKSnVtVWY1STJyS1NpZHBPQUFiMEdxZzgzZ0NLR292QjVhQ2xld04zOU12bG5Uem9VdGQ0UVE1di0wc2ZSNmFQTUhNeV95TWVmVHE4M3ZBZS1KNmp5MzlHZEhTSy1FYm5NNk1ZXzZHb1g5ckhobzFPZUl4VnhrZnVVM19r?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "România îndeamnă UE, NATO să acorde prioritate securității Mării Negre, caută prezența susținută a apărării germane",
+      "title_it": "La Romania sollecita l’UE e la NATO a dare priorità alla sicurezza del Mar Nero e cerca una presenza di difesa tedesca sostenuta",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-d33c860dc7be4db5",
       "category": "conflicte",
       "region": "europa",
-      "title": "Russia: London calls on 100,000 reservists to stand by in the event of war",
+      "title": "Russia: London calls on 100,000 reservists to stand by in the event of war. Nuclear: Kushner: ‘Putin has shown restraint’",
       "summary": "",
       "source": "Il Sole 24 ORE",
-      "published": "2026-11-26T12:01:35Z",
+      "published": "2026-11-26T13:02:33Z",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNem1HQ0M5YVJCUGpKbXB4VXRKWjhiS2xzQUd3cEVUdEFDZ2JySjB6MVhISTgtd2FvQVR4ckdEdW5sdGZFcVI1V3FuWFFBeHp5WkRNTGJlXzhKYnRuTEV2SGVkVV9XUF9rWXV1ZXZrYTZyUTZkdGIzeHZYVkNsQ0h4UVptTUhWWG1tOHFfcWYtaGxiNDY3TER5NDlGbFJYUWVsbmg5Z2NjdkhCWnc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia: Londra cheamă 100.000 de rezerviști să stea alături în caz de război. Nuclear: Kushner: „Putin a dat dovadă de reținere”",
+      "title_it": "Russia: Londra invita 100.000 riservisti a restare a disposizione in caso di guerra. Nucleare: Kushner: “Putin ha mostrato moderazione”",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-885380c999348ce7",
+      "category": "europa",
+      "region": "europa",
+      "title": "Merz pune o condiție pentru bugetul UE. Germania vrea ca toate cele 27 de state să susțină Ucraina",
+      "summary": "",
+      "source": "TRUmedia.ro",
+      "published": "2026-11-26T12:35:31Z",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPVGNQLVFyOWUxbWFHX2F6dTlHRjcyc2lERzVpUno5ZndkOVV2YVdVbjNkbG1jeEd1VFVzc0VIRkdISktYUGVSbDRINnJxeWtrQjVxTDY4V2tJRlEzbGRLaUVIYTFxU0w5QUdOUm1nbTVUZnVzOFlxT2R3U1FJNVZJak9hU2tBcTZZbFU5TTZOWXgyYUlDcklWMjhXMzhaOVQ1TmozUVVmcVBUb1c0dnBsVjdoRWlKdTVmNnhDQUhzZ0FhdzM4NEZ6NDhCYl8?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Merz pune o condiție pentru bugetul UE. Germania vrea ca toate cele 27 de state să susțină Ucraina",
+      "title_it": "Merz pone una condizione al bilancio Ue. La Germania vuole che tutti i 27 stati sostengano l’Ucraina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-23e8aef98938ac64",
+      "category": "securitate",
+      "region": "asia",
+      "title": "AUKUS in the Indian Ocean: What It Means for India",
+      "summary": "",
+      "source": "orfonline.org",
+      "published": "2026-11-26T12:31:00Z",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOR2FMYkRhQXhhcmVoRFlkLTNpQkNjQW82UlNVeEdPLTNWYUFiR0phOE5vUDlhRWx5VFd4WFlQNDExTlZaOUxDMGMxUXhBOEsyS0VYU2JWcXFucldsS0htdzRlSkpQWGZZczFPN3ZFSkpVTjhuQ3dRTnRJaDBVdHVWb05SSHhBLTdUdnpyTWVucXcxQQ?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "AUKUS în Oceanul Indian: Ce înseamnă pentru India",
+      "title_it": "AUKUS nell'Oceano Indiano: cosa significa per l'India",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-4f8526914fbbf494",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Putin bombs Ukraine into darkness whilst Trump’s envoy has the temerity to call it restraint",
+      "summary": "",
+      "source": "London Business News",
+      "published": "2026-11-26T12:20:37Z",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQMHN6RGN2M1A0RmVYTllLNHlOQUMyTExPUWFhTXphTWZLWHI0QlZtSnBObWNNWmlxd0xnUU1oLUV2bkNsRUlqUTd5dUJSTFZzN01uYUhZUTJ5N2ZVSU8ybUZvMjA1dlNtUXEyWG1ia1Z1cl9XZ2l6bWNpUHA5WWVkNHV1UjQxSFZtcThYZDI2OGtvblF0LTItUjBrcFZsOC1YVmJNSFVxVzVnNFB0ZVJUS1hRcTN2ZlVSbFVIQTh3ZDRJdw?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Putin bombardează Ucraina în întuneric, în timp ce trimisul lui Trump are temeritatea să o numească reținere",
+      "title_it": "Putin bombarda l’Ucraina portandola al buio, mentre l’inviato di Trump ha l’ardire di chiamarla moderazione",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-ba10cb550f1327cd",
+      "category": "europa",
+      "region": "europa",
+      "title": "Rusia respinge propunerea UE pentru un armistițiu de iarnă în Ucraina",
+      "summary": "",
+      "source": "CAPITAL",
+      "published": "2026-11-26T12:12:48Z",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQUlY3cXBhSU91aW1KOTVIYjR3eDB5YlhnNlNVMlZYY1JRNEpCT1U1LU9XWWlHMU5Lay1yNllfamNvMUxBdUVZZDI4bVNCSHU2SzdjalVGYmNwRkJXc0prNDVyeXcwX3pPZ3NlaVBIWnlwVkozbXdCeXZEb0ViTjhKZUdGZlNReDRQa2xuajBjZFhlaDVaVTJITWphUGF4VF9aMlp4YTR1cTA3eEtyaERRN1lVeEZXamJlYWR1VnkydFB5eGtFbERlOXcyel9Mb1JLWHd3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rusia respinge propunerea UE pentru un armistițiu de iarnă în Ucraina",
+      "title_it": "La Russia respinge la proposta dell’UE per una tregua invernale in Ucraina",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-1429ab22f222fbe4",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Washington Expects Largest Russia–Ukraine Prisoner Exchange Before Christmas",
+      "summary": "",
+      "source": "EU Today",
+      "published": "2026-11-26T12:11:59Z",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5YbkZKajg0eTYyakU0WFlEd2lWSm9xQ3JscW1Zcy1WaHphMDJBYWo2d3FSWElBREk0OFpYNlFtLXVmSTQ3a2FlVGZlVDVEZnByQVRUOGFmeXNOdXdMbldpckxOT3BWM2hDRFA0VkZycUZHRW9TZUMzbk5nNmY?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Washingtonul se așteaptă la cel mai mare schimb de prizonieri Rusia-Ucraina înainte de Crăciun",
+      "title_it": "Washington prevede il più grande scambio di prigionieri tra Russia e Ucraina prima di Natale",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e301684bfaa6b4d2",
@@ -27,7 +114,10 @@
       "source": "Modern Diplomacy",
       "published": "2026-11-26T11:49:48Z",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPMC1LU3lycGdfbmdrV0dISzVCbmFTU1NVNWt5cFJWT3FmZ1FNTW9HTzRmNXItNXhmYmY4VnQ5ak5hOHFGbEpHX21FLXJ1bWxCS1hENHEzTDFFMGk1VGQ1OUkzNWtuM1NzMVozdmFhcl9KVzVTeHNlM09mRHB0Tm9NcV9GNEdtTXRQelk4UERnazhCY0xIUDUtQUtPWDE2WUJyeGwxX1NtSDBvN0JrNDZwMld3eGZMUTA3Yk5kYTlFVWd1dXhwZm5Oal94LUFXWkxxNk9xVDlYcS1QVFk?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "China avertizează Japonia împotriva intensificării disputelor din Marea Chinei de Sud, în timp ce Tokyo întărește legăturile militare cu Filipine",
+      "title_it": "La Cina mette in guardia il Giappone dall’escalation delle controversie nel Mar Cinese Meridionale mentre Tokyo approfondisce i legami militari con le Filippine",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-fb08ff1f3235028b",
@@ -38,7 +128,10 @@
       "source": "FarodiRoma",
       "published": "2026-11-26T11:28:55Z",
       "url": "https://news.google.com/rss/articles/CBMiwAJBVV95cUxPLWhkNVpidGhDVlYyTGFweTdWR2lST0RicExvTklxai11cXN4cmpiQVRWblRHVmdfaUJENkRwcmVoQmg2M0JHX0NGNzVXUGhBZmx1MGpJZXVFS3dCREFCb2sxV1E5NUxaSWFzVVpkSjRRYlRBeEtSNlJ5dE5EU2Z6SnpncUpFaUNoc2lxRWNqTHYwcGN1aWNUd3VadEcxcm54V25OZk04ZHFsZmlwQUdtNGRqOERvSDZJRkFsQVh6TDFYN2s2bjhCeXNSOFRIMDJ6aG1iMXNKbC1ZVTZnQ1lpenVERzAzQkwwWll3UTZaaHZlc2t1NTFoemZNNzV1OTZkT29vUXBQWTBXZGNfR1pndjR4cG5yVGhlNE9BdHZlWXdhSG8tSFFzdWpUWVZ1YndKXzJRN1RjRTVUMERvY2g1cA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Viitorul UE. Întâlniri internaționale la cel mai înalt nivel. Genova în primul rând FMA (Asociația foștilor membri) de Josep Borrell, în prezența lui António Costa, președintele Consiliului European (A. Martinengo, AGW)",
+      "title_it": "Futuro UE. Incontri internazionali ad altissimo livello. Genova in prima fila FMA (Former Members Association) di Josep Borrell, alla presenza di António Costa, Presidente Consiglio europeo (A. Martinengo, AGW)",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-fd157136e1fd8d5a",
@@ -49,7 +142,10 @@
       "source": "Blasting News",
       "published": "2026-11-26T11:19:51Z",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOak1zNzNzN3k5NzFEZ3pRYnNjUkNMR3FOMDBRaFF4dlR2LWtHazAyZ3RwanFiTkZrQkFQOFpQQVA5Qm1JS3JOQ3RLUXByd1M4RWFGLTRtZ045R29TaDhMSkFKWGIza2RCOHU1MXBmQnN4MHZrakZtMlA4b282NU8xQ09KbUJLa1o5a0lXOUpOcTlsNEJSNG9pNmRWcTR3aDVFWVB1MUJWVkFQekhpMDVsQ1pDQ21Cbjg4V3ZV?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Kremlin: fonduri de război ale UE furate de la servicii și cetățeni",
+      "title_it": "Cremlino: fondi Ue alla guerra sottratti a servizi e cittadini",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-dbb9e21f15b35f47",
@@ -60,7 +156,10 @@
       "source": "联合早报",
       "published": "2026-11-26T11:16:37Z",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS29KbWRKQU44Ynk3ekx1RzJsVTd2enZDWEpnbHB2SGZjREZvOERBbEUzbGJGczlqMkR1RDJWSlpibndybWdkWTg1aXVGUTB6QmU1UkhGdnVpZ1V3cFp4U0hzYk93SjNSYVQtcndnR0lIRGVUZ1RMLVlYUTdZdlppOHU3akR2cDhuX1F5U1g0TW4wV01UX0tYaTZ4UDhlclptcGV6Ql9HT05Gd1d3SWZ4aXpGeHA2UGxtNUE?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Ministerul Apărării al Chinei îndeamnă Japonia să nu mai aviveze tensiunile din Marea Chinei de Sud",
+      "title_it": "Il Ministero della Difesa cinese esorta il Giappone a smettere di alimentare le tensioni sul Mar Cinese Meridionale",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e62679a395d66f1e",
@@ -71,7 +170,10 @@
       "source": "EU Today",
       "published": "2026-11-26T11:15:44Z",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBTRXlTbkk3aEgzQnBudHF0VlFWa0RTTXJ5NC05WjRHMTRfNWNPYTQ1SU9tV1p2YnVxdFhwc09MMmRValNvbDFoMkhNRWpRS0dmbmUwQVpMQmJPNTZTLWJScW51d05JVDNuTVl0X05Tcl92LWJqMUotR2R2Sk4?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Trump și Rutte avertizează Moscova împotriva unui război mai amplu, în timp ce Europa caută asigurări de securitate",
+      "title_it": "Trump e Rutte mettono in guardia Mosca da una guerra più ampia mentre l’Europa cerca garanzie di sicurezza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-42f5b5d32a1e57e4",
@@ -93,18 +195,10 @@
       "source": "Middle East Monitor",
       "published": "2026-11-26T10:55:00Z",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQY1pfbWRUckZtdzR6UldCX2ZORXFxa0dtQmw2Z2FGLVVIQXBGSVJKRFFTWnVINmk1RkFxb2hjQXhCZmFTSGo1THBYSlRaTGJ5VDlVangxMTFwSGNGNEVVV2Z4V1NVSzd6M3hGb21TclV0WmpsNURzN1ltam5Hb2d0azU2MVNmSVFUQjl2dzhWVXo0cW9hWW1fOVJHV1FTbGprbnRyYmR1VFh5QXFsaVJMcTE5ZkFMajBXdl9JZkJCY0VmczQ2eVNaSUpUenlZbzhOV04xQmU1a2d3UknSAeABQVVfeXFMTkN3bUQxN2c4M0RiYzVEd3ZnUjVJUEFTV3FxWU9yVzdfUGhmN0l0aHVJOFlvM0tWV08zMVJNRGZJYjlhS2NOYjE2ZTZDWk1TVm5PRWVoY01wa2xLT3BHeXVMZE9BbC1ITVpDVkw2UTVpR2ZocGZpTkViaWh1TnM2MFhOcWloTEJzTDQ2N0ZJV3daSVFVUG5fanZpNXNXcFl1WWQ3Vzk5NUlDeWVYdzA2djR4Q1UtT1dWRzdncjE0Nk1rQ0J5ZmV2NXZZbkhTQ0NabzZDb3FpTVp3WUx5REdFb0I?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-81bcbe995b237623",
-      "category": "securitate",
-      "region": "asia",
-      "title": "China warns Japan against \"stirring up trouble\" in the South China Sea amid Philippine defence deal",
-      "summary": "",
-      "source": "Baird Maritime",
-      "published": "2026-11-26T10:46:47Z",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNN3N6cDV5RUlhOFp5TmlnNUpuNEgyUnFqUkN1WU50dGJPdzdZc05ORXYzNUZLSC1OZS1fOGJhVlVvUHhHWHNhTkppemdaQ1BFaVRZV1NiZ0hEY1NmbDhqSE5CR1RHQ2JUX1BJN1ZoSVJNWjhCV1pBRDEySkNMelBnLWFiV2Y3STB1RnFvQXVPMjNKY2hWRDNSbkZITG1xMWhaU2VKZDNsdmhxdUVlazVvcGV5a0NFalRyOFRJazg4VExBNm5mUUVvSmlhSzZkNXFiMUHSAd8BQVVfeXFMT0I3X0JweEVfU2NzVG1xUmhiTGdUVmhiN3JHT00xT25Tb0d0c2lDcGpLVTZWQWhSbGc4Y1NGTFJuZ2FtaUdTV2pMcmttNml3QnN5UlBsS2dxMzhHbU1KMWR3NUFnNzI0Z2NIWkQ5SDZQT25kMnZHbVpkcGZscnM0aDFuS2RjZFBPamlManFndHFJdmNOY1ZQNjdXYm9MOUhja3JWaUxpMmV0eGU3eDlCdjlEY0JtaDNZc0xOR1lSS1QzSV9HRG5SZWJJM2UyTmt5Z2tQLVJiS25pZ1RrNFQxRQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Șeful ONU pentru drepturile omului cere măsuri imediate pentru a preveni noi atrocități împotriva palestinienilor",
+      "title_it": "Il capo delle Nazioni Unite per i diritti umani chiede un’azione immediata per prevenire ulteriori atrocità contro i palestinesi",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-6c4d92b8bc979a56",
@@ -140,15 +234,18 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-75fa2fa237aa36c0",
-      "category": "clima",
-      "region": "global",
-      "title": "Climate talks collapse in chaotic end to COP31",
+      "id": "geo-3d13e840912687a5",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Israeli strikes kill Palestinian couple in Deir al-Balah, several wounded",
       "summary": "",
-      "source": "The Daily Star",
-      "published": "2026-11-26T10:30:20Z",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPNWo2THQtVEtpY1pVeENaUm5aY0VKbmhuMGFob2dLMlVpNnpDWl9Rd3ppNUg4eWVNZ284S2V6M1hFTDBSVlNMaklWb0RDeVkwVE84WHFWdHVFRlI5OHlfNGN2VDc1OWlZdWxzeThBUWhnRDJ2V1lVcGZCdkE2TTVVMU1BMlB5SHN3WVJ4WjN6Q3k2OVo0Vmp5YQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "source": "سانا",
+      "published": "2026-11-26T10:28:42Z",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0xZDFfNGJENGhLejEtNnRjTTRmUGd4N0ltbUtKbzJmUUZXbmlZQm5BRGpER2dLWDF3WGoxSFMwazVHbzlibXdRclY3SmtlX3pN?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Loviturile israeliene ucid un cuplu palestinian în Deir al-Balah, mai mulți răniți",
+      "title_it": "Attacchi israeliani uccidono una coppia palestinese a Deir al-Balah, diversi feriti",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-3d2a184f07d74740",
@@ -181,7 +278,10 @@
       "source": "Impakter",
       "published": "2026-11-26T10:02:20Z",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9ha1U4RmdCci1QSzNCbVh0UlNCMnAzaXVtNWJpWW1rQ0dmdzlnQmcwa2VtOWRVWUY4MXBoS0ljUFNnaW4zeHh6Q2NLS2FabFdkYlJHZlpfWnZMcGRSVVFFSHRFU25raHlrY1JwTVdCVmJLVC1aNWUxUkl3?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "După Antalya: Criza de încredere a diplomației climatice",
+      "title_it": "Dopo Antalya: la crisi di fiducia della diplomazia climatica",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-5e7a83df7dc5d614",
@@ -203,7 +303,10 @@
       "source": "https://dominotheory.com/",
       "published": "2026-11-26T09:31:20Z",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNd19jLXJ0alg2MEpGakI5Q1F1ZVVRbUFZelBWdUxDSFB3d0RhMVZIcjBGcm1rdVVLY2NhYUNtbHE3MktFZzdtQ3UwT0EwTXVlVG9rTThWUkFUS3BQVTV0eE9HS29vWVpHeEtqSUdzczRZc0ZpUTBwNzFqbXZJZEZ6SVk0SE9qWExSVzNoMA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Congresul îl va investiga pe Jensen Huang, înăspriți controalele cipurilor",
+      "title_it": "Il Congresso indagherà su Jensen Huang e rafforzerà i controlli sui chip",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-49fbd9aa5cdfa0bf",
@@ -214,7 +317,10 @@
       "source": "Khmer Times",
       "published": "2026-11-26T09:08:42Z",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRC1kNmhLYXJabzRLX1BQbHVPUUxVaHFSaEFSRlhyWDY0Q003VUZHWEgxUHZ2TVBraThyLXFFOENoWEFfdE42UlQyMTBCV1ZHZm92UkVRYk54ZDJnZHBudTJ2YlkzWjhJbjk2UVY5MGxySnBQWkVQcXJxOG9nTDg0OGFlMFpnbmJmdDBoOHhXc3htN1F5MlM0Z0hmVmtSYm9zUGQyaFZwaFJVVHp3ZTU4?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Reprezentantul cambodgian îndeamnă utilizarea responsabilă a IA pentru a sprijini pacea și securitatea",
+      "title_it": "L’inviato cambogiano sollecita un uso responsabile dell’intelligenza artificiale per sostenere la pace e la sicurezza",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2323786446cde9d0",
@@ -225,7 +331,10 @@
       "source": "BusinessToday Malaysia",
       "published": "2026-11-26T09:07:05Z",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9rOVA2SWxkVFlfdWFicHNfbjRuUGhjbHBzaHJaMUdYQjJzNTAxS3VyMDZ2RTlVOURTeTI3cFo4R0h5QXBtT2VraDBqdzhvbk1yVGNHWUtIWUVTcS04akZ1STlKRGtOS0Fld29Ob2ZfcDJPSUZqQ2ZFRWRFUkc?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "COP31: Când consensul a eșuat",
+      "title_it": "COP31: Quando il consenso fallisce",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-d84f8f7a083a4b68",
@@ -250,15 +359,40 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-b65e4c0ec2f98131",
+      "id": "geo-3bb90bf234a802b7",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "Gaza’s baby boom and new businesses undercut genocide and starvation claims",
+      "summary": "",
+      "source": "World Israel News",
+      "published": "2026-11-26T08:39:57Z",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQRHhYd1k4b2xGVW9LcjYtdDJCYWV1aEt3Rkg4dFRIRV9oR3V0cjRSR09qOVNSQ19QbTZnUXE1Y2VjMnp5M3ZXYkVOSjVuZkFDejU4ZHhqVkxybWdDZUZRY2xtdlVHQ1pIRGlaYWlOQWEwRkRuNmZzcTk4U3RRSWpGdWVHZFBPRXBSX2V3YzIxOVFXb0ZPMldtZnE2U1dGck9WUmFhNFh4eFpOc1nSAasBQVVfeXFMUER4WHdZOG9sRlVvS3I2LXQyQmFldWhLd0ZIOHRUSEVfaEd1dHI0UkdPajlTUkNfUG02Z1FxNWNlYzJ6eTN2V2JFTko1bmZBQ3o1OGR4alZMcm1nQ2VGUWNsbXZVR0NaSERpWmFpTkFhMEZEbjZmc3E5OFN0UUlqRnVlR2RQT0VwUl9ld2MyMTlRV29GTzJXbWZxNlNXRnJPVlJhYTRYeHhaTnNZ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-c451fea3d39c4028",
       "category": "conflicte",
       "region": "orient",
       "title": "Rights centre: Israeli attacks kill more than 38,000 women and girls in Gaza",
       "summary": "",
       "source": "Middle East Monitor",
       "published": "2026-11-26T08:39:00Z",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTW9xcVk2T2R3YXozR1N1QlpoeWhpQW1Wd1EtbllBU0tfRDNvVFpZTU5SRHZQQjhEcm11dy16QlY0a3FGcXU0OFRydEJDUWFkQTBLU2NXaGVvNE10NG5RSWJrZHc4X3doekdVWDY2NG9BVVRla0RGcnJ2X0JnOGJ2ck80dUFwdDJUcTRuZHdDWmlKcUhoV09UUjVnaEtZV2laTDQ5QVFoZDBabWxDZnpkUjNWWkVtMnhYOWFQV3BEc9IBvwFBVV95cUxOTW9xcVk2T2R3YXozR1N1QlpoeWhpQW1Wd1EtbllBU0tfRDNvVFpZTU5SRHZQQjhEcm11dy16QlY0a3FGcXU0OFRydEJDUWFkQTBLU2NXaGVvNE10NG5RSWJrZHc4X3doekdVWDY2NG9BVVRla0RGcnJ2X0JnOGJ2ck80dUFwdDJUcTRuZHdDWmlKcUhoV09UUjVnaEtZV2laTDQ5QVFoZDBabWxDZnpkUjNWWkVtMnhYOWFQV3BEcw?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZmhlOWE3Q0ktdGxmeGNYQnp0VXFpbFNFZENQR3MwcnFlX3dlWXZBOU1jbHNYZmZLRlpzczVicExBaV9UN3RUUEM5YTZJUFFOYTYyUjVGUGo3SnA2NXI0UHB0amFhMGVrSnpoZlp0YXBKMlBfdkkzX2ZCX0lTTm93TVdJMndNRm1CWUFOMy10VHExSXdrUXZxV2V6cmVyX3Q1R1huUHg2ZUxmRlluTmh4aHloMnZtWmtrbFHSAb8BQVVfeXFMTk1vcXFZNk9kd2F6M0dTdUJaaHloaUFtVndRLW5ZQVNLX0Qzb1RaWU1OUkR2UEI4RHJtdXctekJWNGtxRnF1NDhUcnRCQ1FhZEEwS1NjV2hlbzRNdDRuUUlia2R3OF93aHpHVVg2NjRvQVVUZWtERnJydl9CZzhidnJPNHVBcHQyVHE0bmR3Q1ppSnFIaFdPVFI1Z2hLWVdpWkw0OUFRaGQwWm1sQ2Z6ZFIzVlpFbTJ4WDlhUFdwRHM?oc=5",
       "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-2eeafe1a8854f9ec",
+      "category": "energie",
+      "region": "global",
+      "title": "Alternative Routes for Middle East Oil and Gas Due to Hormuz Disruption",
+      "summary": "",
+      "source": "EnergyNow.com",
+      "published": "2026-11-26T08:28:55Z",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNE1fMzFiSjhrOFpJV21kajdMYkJEd20zcGM4Sm0yREpWU09IZnBwX0VyUk9LTWlHYWhDYXZCOS04eng0d1lPdVlKX2pZUjFwYzAwZkM4NWlDazVaSUFfRHlLaTczenpiZTdrb0lXd09XZTRiWHpNVGYxcDRjaHhoZ3JvcVFtb1VZM29raVc4RE9kUXBZWVdkbmktRU5FbV9hb1Fweg?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rute alternative pentru petrol și gaze din Orientul Mijlociu din cauza perturbării ormuzului",
+      "title_it": "Rotte alternative per il petrolio e il gas del Medio Oriente a causa dell'interruzione di Hormuz",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-e47e9184cb46ab94",
@@ -269,6 +403,20 @@
       "source": "China-US Focus",
       "published": "2026-11-26T08:26:34Z",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUU5vUEJXMktWVk95TC1uVnhmRWxRdTNhX1RaX2J4Y1lNN3F3Y216bDhrUjRtNGRGeDV1VmxrQTVSZDhObEV3VGFDYU5CZ0N1YTdhcm9KY0RUQmxWU3Q4cHhSTWlLY3p4dEFjLWljalhiNXozcm9WbzZxeDVBbkVxYnJHVDJYUEF0cGxN?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "De ce China a pariat pe un trial istoric",
+      "title_it": "Perché la Cina ha scommesso sul trilogo storico",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-c1ab0f8fdaca0230",
+      "category": "securitate",
+      "region": "europa",
+      "title": "What will make or break the EU in 2027? Analysts weigh in",
+      "summary": "",
+      "source": "The Parliament Magazine",
+      "published": "2026-11-26T08:08:19Z",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNWjM0aUFlOWVrWkhnR05PdktPY3FVTHltcGpjTmxrSmtaRTgyZkV1aVlRcnhfaGpBY0Q1RFBxellIck15S3oyR2lRcTFjdVJhbjJuczJJS3puX2RBQlBLTE44SlJCcGMwQWFJQVhUcHhuYlFrUHJLYnR4WVphX1AtY3hhanRTVjlzNTUwVW9Sb2ZWUQ?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -291,7 +439,10 @@
       "source": "Centre for Public Policy Research (CPPR)",
       "published": "2026-11-26T07:58:09Z",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBQOVprSVczNi00QWxvTEhnY3BCMVVhNkQtY0hJdGNkRzBpQnlvS2U2NDdIZG5XRHJMUVRRQmtnakFpTWQwWWtXMnNHMzV6QUtZWnV5Tl9zd2FlaHNreWNDVmlxbzl2SmRJWWstaFBRY0NUdVBjNUFSeQ?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "OPINIE | Summit-ul trilateral și viitorul relațiilor între strâmtoare",
+      "title_it": "OPINIONE | Il vertice trilaterale e il futuro delle relazioni tra le due sponde dello Stretto",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-2147f87520b956ca",
@@ -346,6 +497,20 @@
       "source": "China-US Focus",
       "published": "2026-11-26T07:27:37Z",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE96SWpCSGdkYU5sZXA4NVpWZkFNRzUwSWNzM0poMk5sSGpnSkdqSndjWlJJMjBjZUpxSThXUHF5UFlab3ljQ2xmNm9kQW01S3R6eVR5Y1dpbk5ncjViYW5vQUJRZ0FpVVROOWhVNk9RcnNNTzN2dDJrOHV3?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Rezultate mixte în Shenzhen",
+      "title_it": "Risultati contrastanti a Shenzhen",
+      "translation_status": "machine_translation"
+    },
+    {
+      "id": "geo-bd9150fff5312a31",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Europe is at war with Russia: US envoy Kushner claims Ukraine is fighting proxy war and Europe's fears of Russia are unfounded",
+      "summary": "",
+      "source": "Українська правда",
+      "published": "2026-11-26T07:18:00Z",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9Na2EzaGg4TGFSRHUyc09xVGZWcDJhOTN0TUlyT21ScGdsWlpicTdTaXhSVU5LLVVEcGFEQmthbjJGVFJmUTRndkV2bkdPR2JVNW5hTzg5Z19HN2ZvWV9MS19OcHpmaVVIZExMbkZwOU3SAXBBVV95cUxPTWthM2hoOExhUkR1MnNPcVRmVnAyYTkzdE1Jck9tUnBnbFpaYnE3U2l4UlVOSy1VRHBhREJrYW4yRlRSZlE0Z3ZFdm5HT0diVTVuYU84OWdfRzdmb1lfTEtfTnB6ZmlVSGRMTG5GcDlN?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -393,14 +558,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-bfb35d4e2ddc044c",
+      "id": "geo-88ddae364c701f94",
       "category": "conflicte",
-      "region": "europa",
-      "title": "Issue of territories in negotiations on Ukraine is currently at \"impasse\", - Kushner",
+      "region": "orient",
+      "title": "Israeli Airstrikes Kill 11 Palestinians, Including Two Girls, Across Gaza: who 11 outlets blamed",
       "summary": "",
-      "source": "Цензор.НЕТ",
-      "published": "2026-11-26T06:02:00Z",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZGl3Y2hOeTh0cnlIWUN4YnlQbml3M0xHRVRfOFJwQ1dVb0JfLWMxaEZ2ZkJsQmg2TlRDZ0R0bTBYcU5LeVRfeHVFeldJSk9iWE1uZ1ZkaVVUSm1MeEY0NVh4TWx1WXdsRDJFaXcxZWtzSXVMYXZsTmgweVdpZTVhZHJLSGhRbHAtWDhPRXVMbms0dWFWZjBhUnlCNmFuOTJVYmNHdzVSanE4bXVLVnVsbkRVeF8?oc=5",
+      "source": "NewsCord",
+      "published": "2026-11-26T05:21:45Z",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNckVFLUNLb1NwZXg0RDhnYl9lQ2l5SE56cnQ4LXkwYXcwQUphUWliR1dMN0JIRmg5XzJEMWVEUWZZdE9nZ0FRT09ZVE5vUjUybWFqZm9OT1hUMXpOdWNGcTJPWjg3MGNxYU50b0tfb0tzZnJuc3EtVDhtSjY3T2hmcFRNZ0VQRU1iRTQtUm8yZTJwZjZqRXluVUVNRHJhUmdXcEV0SFFiS3I4bjE1aG9GTmQ5Q0h1V2NxTVJCOWo4RndualE?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -426,6 +591,17 @@
       "review_status": "external_headline_unverified"
     },
     {
+      "id": "geo-61194c6a3972be93",
+      "category": "conflicte",
+      "region": "europa",
+      "title": "Who Can Speak for Europe in Peace Talks with Russia?",
+      "summary": "",
+      "source": "Countercurrents",
+      "published": "2026-11-26T04:08:06Z",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQN2tHQ2ZYemFCYlpuRUxieEVLcUFDekxRb0xuNkk5bFdMZzJCVmdTZk1kWm1xZmwzUjFqNUdBcWxxNDc2dVdLdktuWlppbmFFa2dBaHRoTmdRcUlTbjE4U0VXT1FUSVkxR21wOUphWTZ5OUNrZlhsR2pXTENPVTQ0Q3BTT1JESmhJa1FLWGxrVm9OUQ?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
       "id": "geo-0c94c700ade26afe",
       "category": "clima",
       "region": "global",
@@ -434,7 +610,10 @@
       "source": "Table.Briefings",
       "published": "2026-11-26T04:00:59Z",
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNX29FLUlpZG9QZi0wQ0dtWHkyclpkYWdQZVBaR05Eb0IzSWRQUDJYNmhGb3I1cWV0dUFNMjZBbFBEVXVDOHBkMGZRRmFVQ2MyLUlveUhEZmc5N2JZb05mRGhFY0ktN0tUZ0ozQk96NnpCbjVUQkFWN3l2Z0ZnbjZ3WWFBbjBMM0NtMGpvQnJSaEpPMmRMcTdzQ0NKSjk5bm1jMnB5TFJfYks2eTUyRm1BSE5PV2tFMjlDamhveVNUbFNHVldLdllmTUhrZ041Ym9vTDV6Q2w1aXgzcGF1TmUta2JzOGpJY01LTWlORVlIOA?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Sinergii între convențiile ONU + inițiativa COP împotriva dezinformarii + Este posibil un impozit pe profit în exces?",
+      "title_it": "Sinergie tra le convenzioni delle Nazioni Unite + Iniziativa della COP contro la disinformazione + È possibile una tassa sugli utili in eccesso?",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-9b0f638e7892a4ba",
@@ -459,14 +638,14 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-06dd6e458812390e",
-      "category": "tehnologie",
-      "region": "global",
-      "title": "Congress Moves to Tighten Chip Export Controls",
+      "id": "geo-d46fd26e61889e66",
+      "category": "conflicte",
+      "region": "orient",
+      "title": "UN Tribunal Challenges UNRWA Dismissals as Gaza Strikes Continue",
       "summary": "",
-      "source": "Wisevoter",
-      "published": "2026-11-26T02:23:01Z",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNM2xtTktsZWtfQzlOWmVsUV9mWFp0YkNxV0I4U0dWWTFwUFV3dWtXUm53YUhXNG1BYUpDQnpvSDhZVVVSQjdzaVJKOVR1QkctSGFnQkNCZnM4NXJqYzdKQXRrNDN6VnY3dXJpTUFMaHZ5ckhHOHdVV3o4bDN2c0lWalVoOTBfWDNzbG5Ldk1laDVQQQ?oc=5",
+      "source": "cwibc.co.id",
+      "published": "2026-11-26T02:38:22Z",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBIeEpicGZnblo0V1VyMV9mbFdmdTJKdWpFeF9ONG0xU19FRlZUWm5HYlpRcHZZeDA4eWVvOGt6dHNGbTN1RldjSndVZ25tQnhBaUdRX0w4YmtnMDNzeUhtdkNn?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -478,6 +657,17 @@
       "source": "Newsweek",
       "published": "2026-11-26T02:10:00Z",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUGQ3ZE9aMk16ZWRTMWxNS0xNcXJtMFotVUJrVG1WRnNNY1N1bTR5MkhaOUxrSXg5TDJsWGFzRkdBdGk3V1gycmNUUFlOdVhmeHRiRVlBVXpESGhuRklMZFc0YlR5ZU5USTFiemFzUjBBN2JEc0VyaklYaGg3Yi1ZQndIQzd2VDFFV0o2SzAtUS1ad2dwNkUtSi1ubUxDSS1rMGg0RmY2QUl3U2M?oc=5",
+      "review_status": "external_headline_unverified"
+    },
+    {
+      "id": "geo-e343da8da6411f00",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Latvia Calls Real Casualties NATO Red Line",
+      "summary": "",
+      "source": "Wisevoter",
+      "published": "2026-11-26T02:01:43Z",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUjlsN2U5OE9ZN3BaOW91azZlSkd4dS00UHZFR1RXZUN3clFabno4MW13Rl90cnBUQ3N3R21LN0RGLW1hQ3NvU2N3MC1HMFZPTGxmeURnMlZCV2RQbXhSRThyNjBrLUJWOXFDZ3NwM3c0cFFEQ0FIOU0tTU9qYXRPS19WQW5iYThCMGE4?oc=5",
       "review_status": "external_headline_unverified"
     },
     {
@@ -506,17 +696,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-0efd4184088ab9e6",
-      "category": "clima",
-      "region": "global",
-      "title": "COP31 Becomes Longest Climate Summit In History Before Collapsing Without A Deal",
-      "summary": "",
-      "source": "Foreign Policy Journal",
-      "published": "2026-11-26T01:35:00Z",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNLTZBMVh0bXEtVW1KUTFoX2poRlVmS3dVT0tTSXR2dnFFQVItY1NFZ1poWktnWVJKS2wzT09IS19Qa0NBcXZTU0hzN2EyVERlZ2VTY0w5Rk1iMFN4Yjh1OHJxc3JRSkIwdEx4QnJnREN1VFc4OXh1MndEcXhBR2V0N2J6WVM5d2J5amotaTYtS2NvMjhsbHh2RVdOU0M3NkxBcjN5bS1Xa1BENjlaekdhVXpoTVlTUTdHUWhxLVZSYkFWSUlSTzNNYQ?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-56358b47c9d6b59a",
       "category": "conflicte",
       "region": "orient",
@@ -539,17 +718,6 @@
       "review_status": "external_headline_unverified"
     },
     {
-      "id": "geo-74561c4e0d89452e",
-      "category": "conflicte",
-      "region": "europa",
-      "title": "Is the Russia-Ukraine War Going Global? How Close Are We to World War III?",
-      "summary": "",
-      "source": "Sherafy.com",
-      "published": "2026-11-26T00:59:53Z",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9STVBDNjRVcTFZWjRvOTNOQjZaQkFvejlkd3QwTlZMa1FNVExGOGo4WjRlOWxNOE5nbVRoQUtDRTJNTExEanlqWFNtNjF0bm5lblN6WGxMMEVaQXkzcWp0OGhtOHd5bGh2?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
       "id": "geo-d4a99b4e38747857",
       "category": "tehnologie",
       "region": "global",
@@ -558,7 +726,10 @@
       "source": "Dimsum Daily",
       "published": "2026-11-26T00:37:54Z",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWnVTY0RvTlFmTkZ2QmVTUnY4UlEwRFRuUGFQNkVPaGtxRlFNRjM1RUswRlBiOEdUSm1ka3F4dHNEZ1ZYU1FHX252TURaT3VaQnFaUlNFTXVLVDFwdGFnTkt6YnltVUhnWVBxTVFCWFpzTXhhRngxUjVzUnF3eGxiVHlSUEZRUDZhVVBEVWw4MHlGYUFsc2FCYi1ISUlFM1I3Y3BFTnMwRHNGV29HV2ZjT2h0UWhpczlNZlhRU2xaMEpCR3BnM05XVkMtbXFnbm1T?oc=5",
-      "review_status": "external_headline_unverified"
+      "review_status": "external_headline_unverified",
+      "title_ro": "Președintele american Trump ia în considerare grațierea directorului executiv al Nvidia, Jensen Huang, din cauza acuzațiilor de control al exporturilor",
+      "title_it": "Il presidente degli Stati Uniti Trump considera la grazia per l'amministratore delegato di Nvidia Jensen Huang per le accuse di controllo delle esportazioni",
+      "translation_status": "machine_translation"
     },
     {
       "id": "geo-48d2564bcb1ea56e",
@@ -570,56 +741,6 @@
       "published": "2026-11-25T23:20:00Z",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWndnS0xQRnU5OGl6UnBnVFlNYTc4dl82WnJaWWZ2cXAtNFllcWpaeXpuUUtBYkN4blRRNWVXVTRyNWE0a0twMmNmdGFPVlBpVzBDQzIzX0F3aHBJbTdWNU5zVFR5UVpIMzUyakFCdVdUUGxNM0ZmbmdmNndmaUI2Zkh4dmVkYm5X0gGOAUFVX3lxTFB1a1BKWlNCS1EwaWNwM0szNUU0VWtxdjBUZ1NBREo0RDlDVERGX0lNeWVOX2h0MDh2dlljamtHS0sxRU5MbXlmRlByOURWM21SU09reUFkeWUzNHhWdDY0dTF0b05mNjNLRDhjU1NtM3FTUE56VjdoUHdqVmF2d2JMWEZkeDFnWXFSUXQ2b1E?oc=5",
       "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-5010d738ea979d82",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Mexico announces diplomatic protest after US denies extradition of former TV host",
-      "summary": "",
-      "source": "MySA",
-      "published": "2026-11-25T23:16:59Z",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPQjQwTWpoaXdCV0U2NjhZTFUwcU1RU3dEXzZzSlBBX0oyc3JXQ0g0RFpVZ1hzNW9CNzNkM2hTX3V1ci1FcmlBTzZrQV9PNHZtVmM0TnlZUU5Oazk5ZEx0VWJHOUlhRE4yLWM0dy1SNExOcFdrRE5jS3BsbTNQN0xMVmFRdFZra21sY1JZZkxmaGwzNkYxTF9SWnNjaGVVNnRreUNZbG1QOUM?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-2eeafe1a8854f9ec",
-      "category": "energie",
-      "region": "global",
-      "title": "Alternative Routes for Middle East Oil and Gas Due to Hormuz Disruption",
-      "summary": "",
-      "source": "EnergyNow.com",
-      "published": "2026-11-25T23:16:15Z",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNE1fMzFiSjhrOFpJV21kajdMYkJEd20zcGM4Sm0yREpWU09IZnBwX0VyUk9LTWlHYWhDYXZCOS04eng0d1lPdVlKX2pZUjFwYzAwZkM4NWlDazVaSUFfRHlLaTczenpiZTdrb0lXd09XZTRiWHpNVGYxcDRjaHhoZ3JvcVFtb1VZM29raVc4RE9kUXBZWVdkbmktRU5FbV9hb1Fweg?oc=5",
-      "review_status": "external_headline_unverified"
-    },
-    {
-      "id": "geo-58015171cdfbbd6f",
-      "category": "diplomatie",
-      "region": "americi",
-      "title": "Rubio condemns Houthi attacks after a third strike hits Riyadh's financial district in under three weeks",
-      "summary": "",
-      "source": "Latin Times",
-      "published": "2026-11-25T23:08:17Z",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPZ3IwdGxRRjN6Y2VsdjZnRVRfOGJCVzQ0M2pxdV9WdGVnX1JVNHk1TVdXelh0UnF2a090ZEJMU2ZFdW1OcjFELWcwS3ktQ1JsclFDSnUtNDJvVlV4RlpfbTRWcURhYVRkQUNwMUxhUnJYcTNmTW1CdWdYSlpoc284WTN3?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Rubio condamnă atacurile Houthi după ce o a treia lovitură a lovit districtul financiar din Riad în mai puțin de trei săptămâni",
-      "title_it": "Rubio condanna gli attacchi degli Houthi dopo che un terzo attacco ha colpito il distretto finanziario di Riyadh in meno di tre settimane",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-cadce71fe3dffbc7",
-      "category": "securitate",
-      "region": "asia",
-      "title": "At APEC, Prime Minister Takaichi Honorably Snubbed",
-      "summary": "",
-      "source": "JAPAN Forward",
-      "published": "2026-11-25T23:07:11Z",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNWXBhWXhDMGZqeGhpRW1HbFVOZGJkUzk3NC1ZT3BUOFpNWlhNQXBqemQteXJ1UmVPODRFRFBaNTdzUHNidXA3eHlaWFhNQzBCR1Y1T3JrZjh2bWJoOWxlTDhyTkZBVFk5dWpJY3BPQ2c5azhKQmgtUXFXZXZWRDhNX1l3?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "La APEC, prim-ministrul Takaichi s-a îndoit cu onoare",
-      "title_it": "All'APEC, il primo ministro Takaichi snobbato con onore",
-      "translation_status": "machine_translation"
     }
   ]
 }
