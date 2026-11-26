@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-25T18:00:43.119204+00:00",
+  "updated_at": "2026-11-26T17:46:29.362543+00:00",
   "state": "leads_pending_manual_verification",
   "notice": "Not verified. Publication/observation date is NOT incident date for press aggregators. NEVER auto-publish to attack-monitor.json or editorial.json.",
   "sources": {
@@ -15,12 +15,13 @@
       "new_leads": 80
     },
     "google_news": {
-      "status": "ok",
-      "new_leads": 140
+      "status": "rate_limited",
+      "error_type": "HTTPError",
+      "http_status": 429
     },
     "bbc_world": {
       "status": "ok",
-      "new_leads": 0
+      "new_leads": 1
     },
     "gdelt": {
       "status": "rate_limited",
@@ -898,6 +899,22 @@
       "monitor_id": "rdi-colombia-la-sierra-peaje-20261031",
       "reviewed_at": "2026-11-01T01:00:20+01:00",
       "review_note": "Corroborato con fonti giornalistiche indipendenti e collegato a un unico episodio della mappa; le piste duplicate non sono nuovi attacchi."
+    },
+    {
+      "id": "lead-515e7dfa127ffd326a",
+      "date": "2026-11-26",
+      "date_kind": "article_publication_date_NOT_event_date",
+      "country": "",
+      "place": "",
+      "description_en": "Nine injured, three critically, after Bangkok oil refinery explosion",
+      "kind_hint": "unclassified_news_lead",
+      "review_state": "pending",
+      "attribution": "News headline to verify; no incident facts inferred.",
+      "source_id": "bbc_world",
+      "source_name": "BBC World RSS",
+      "publisher": "BBC News",
+      "source_url": "https://www.bbc.co.uk/news/articles/crx209kwk4kzo?at_medium=RSS&at_campaign=rss",
+      "event_date_confirmed": false
     },
     {
       "id": "lead-fe0c5114aa80d1c982",
@@ -3985,22 +4002,6 @@
       "source_name": "Google News search / es",
       "publisher": "El Debate",
       "source_url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPeDBfYTZlWGpnM2tlMHdzS1RkZndfLW5XdTNOZno4T2JZa0dVUFUtUU9PSFM5ZHY2VkRsTFZWOU1lUlkycm1QcWdpT0hTTHJta1VVdElyZGRZX0VDWExGTl9mMWh4dkNtRTlWemdERC14dzAtTkNaWlRrc19NUDVic0J2MGttNWRzZUdOUVpUNEdzNUxPZW03aGZpakpRN2hLNDNCZWZPQUd1MkNGM1F5NU5EQnlmM3V0dHFxdmkxZF9ER050c2Y2ZTJEZjFpUHVGOEFmQlpCZ0ZRVUNy0gHiAUFVX3lxTE1WR2I4ZGwwRGxsTTFINHVvNmowZG1BeGhkNVZFTzVtZ3pJZV85U1ZjWXhjVm5lYmRpYlhCNDVXT0V2TFN3ZDVjX21NeTRncFlvMURMUFg0N3A0QVo2M1ctYzkzQkptcmRzTGRMQVpXMGxYa2owZzN2aU1TdTlzS2llRmVWYTBia0dMTXljVEVmemRJcE56cDUzelUtZ2d1S2d0Nnk5VWEwZzM1UzZ1SjA0RDgtem43UHQ2RHA2NC0zZXBHNE9Va2kyOWNiemlvYTdGWmtZaV9vRF9kd2NKallCZFE?oc=5",
-      "event_date_confirmed": false
-    },
-    {
-      "id": "lead-d8bfe9fcee937de023",
-      "date": "2026-11-23",
-      "date_kind": "article_publication_date_NOT_event_date",
-      "country": "",
-      "place": "",
-      "description_en": "Un mois après l’attentat, une marche de Marseille à Trappes pour le « vivre-ensemble » s’est élancée ce lundi - Le HuffPost",
-      "kind_hint": "unclassified_news_lead",
-      "review_state": "pending",
-      "attribution": "Search discovery only. Incident, date, actors and motives unverified.",
-      "source_id": "google_news_fr",
-      "source_name": "Google News search / fr",
-      "publisher": "Le HuffPost",
-      "source_url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxNUW1QeW1JUGUzQmM3bXhDUnlBOXdaMklQSTYtSFI0VXM2UXBaRk94c0djS3FERDhFcHAwOF84QnQ5azdLejc0SHdXWHhLYU1GMmZ0SDkxR0dJeVdpcWJyS01KNHcxZlduU3FkaVg5WVIzQjlkSVBJa1VxQWNGRDAtNmpmUWk2VWFIVWtQLVBMa1lXX3dtNEVuYzlHcVJfcWJJakR6QmoySXZBR29vZVpXaDNQSHZubHo1OGxEVzktZHd4YzBqZEotN2hDbi1fbTFfMjZjSTVGTE5waVhYVnZRNzN4eHY0YWtOd3FhSHVDcEE5T295SFE?oc=5",
       "event_date_confirmed": false
     }
   ]
