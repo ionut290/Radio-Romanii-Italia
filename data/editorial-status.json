@@ -1,19 +1,19 @@
 {
-  "news_updated_at": "2026-11-26T19:21:33.010785+00:00",
-  "editorial_updated_at": "2026-11-26T16:01:27.317483+01:00",
+  "news_updated_at": "2026-11-26T20:31:40.128314+00:00",
+  "editorial_updated_at": "2026-11-26T20:46:02.283630+01:00",
   "translations_updated_at": "2026-11-26T14:30:24.235743+00:00",
   "feed_total": 120,
   "feed_extended_400": 0,
   "feed_missing_body": 120,
   "feed_short_body": 0,
-  "editorial_total": 15,
-  "archived_editorials": 386,
+  "editorial_total": 18,
+  "archived_editorials": 389,
   "translation_records": 17,
   "pending_total": 125,
   "pending_filtered_out": 113,
   "editorial_verde": 0,
-  "editorial_galben": 27,
-  "editorial_rosu": 38,
+  "editorial_galben": 28,
+  "editorial_rosu": 42,
   "pending": [
     {
       "title": "66.000 de tone de petrol adus cu acte false în România. Fost director Oil Terminal, reținut de DIICOT - StiriDiaspora",
@@ -618,101 +618,281 @@
   ],
   "recent_news": [
     {
-      "title": "„Wildwood” intră în Cartea Recordurilor, cu 130 de minute de animație stop-motion",
+      "title": "Disputa dintre Brad Pitt și Angelina Jolie pentru podgoria de la castelul Miraval, principalul dezacord din divorț, la final",
       "category": "România",
-      "published": "2026-11-26T19:20:45+00:00",
-      "url": "https://www.g4media.ro/wildwood-intra-in-cartea-recordurilor-cu-130-de-minute-de-animatie-stop-motion.html",
-      "source": "G4Media",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Președintele Cehiei cere NATO să doboare aeronavele rusești care încalcă spațiul aerian al Alianței: „Rusia ar face același lucru”",
-      "category": "România",
-      "published": "2026-11-26T19:19:51+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/presedintele-cehiei-cere-nato-sa-doboare-aeronavele-rusesti-care-incalca-spatiul-aerian-al-aliantei-rusia-ar-face-acelasi-lucru-4054857",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Primarul PSD din Suceava va candida din partea PNL la alegerile din 2028, anunță Bolojan. „Am constatat că avem aceeaşi viziune de dezvoltare a unui oraș”",
-      "category": "România",
-      "published": "2026-11-26T19:19:21+00:00",
-      "url": "https://hotnews.ro/primarul-psd-din-suceava-va-candida-din-partea-pnl-la-alegerile-din-2028-anunta-bolojan-am-constatat-ca-avem-aceeasi-viziune-de-dezvoltare-a-unui-oras-2415118",
+      "published": "2026-11-26T20:29:56+00:00",
+      "url": "https://hotnews.ro/disputa-dintre-brad-pitt-si-angelina-jolie-pentru-podgoria-de-la-castelul-miraval-principalul-dezacord-din-divort-la-final-2415173",
       "source": "HotNews",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Dosarul Cămătarilor: Dobândă de 10.000 de euro cerută pentru 40.000 de euro împrumutați. „O să dau foc la X6-le ăsta!”",
+      "title": "La Berlin a început procesul Ilonei W, acuzată de spionaj în favoarea Rusiei. Ce pedeapsă riscă femeia",
       "category": "România",
-      "published": "2026-11-26T19:18:18+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/evenimente/dosarul-camatarilor-dobanda-de-10-000-de-euro-ceruta-pentru-40-000-de-euro-imprumutati-o-sa-dau-foc-la-x6-le-asta-4054835",
+      "published": "2026-11-26T20:29:24+00:00",
+      "url": "https://www.digi24.ro/stiri/externe/ue/la-berlin-a-inceput-procesul-ilonei-w-acuzata-de-spionaj-in-favoarea-rusiei-ce-pedeapsa-risca-femeia-4054957",
       "source": "Digi24",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "Simion afirmă că PSD nu va face nicio reformă administrativ-teritorială: Toată forța lor e reprezentantă de oameni care sunt angajați în fals, care stau degeaba la stat",
+      "title": "Il vertice Ue sul bilancio, Macron contro i tagli: 'Non ci sarà accordo stavolta'",
+      "category": "Italia",
+      "published": "2026-11-26T20:26:03+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/al-via-il-vertice-ue-dedicato-al-bilancio.-meloni-niente-tagli-al-bilancio_d61f8cab-2589-48ec-a6bb-ff3094591418.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Accordo per De Cos alla Bce, ma è muro contro muro sul bilancio Ue",
+      "category": "Italia",
+      "published": "2026-11-26T20:25:51+00:00",
+      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/26/confronto-tra-i-leader-sulla-bce-oggi-verso-lavvio-iter-formale_b89e1430-4300-482f-9508-c475065af9d8.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Nuțu și Sile Cămătaru au fost arestaţi preventiv",
       "category": "România",
-      "published": "2026-11-26T19:18:09+00:00",
-      "url": "https://www.g4media.ro/simion-afirma-ca-psd-nu-va-face-nicio-reformatoata-forta-lor-e-reprezentanta-de-oameni-care-sunt-angajati-in-fals-care-stau-degeaba-la-stat.html",
+      "published": "2026-11-26T20:22:07+00:00",
+      "url": "https://www.romania-actualitati.ro/stiri/romania/nutu-si-sile-camataru-au-fost-arestati-preventiv-id238193.html",
+      "source": "Radio România Actualități",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Universitatea Craiova a fost surclasată de Brighton. Oltenii au jucat o repriză cu un om mai puțin",
+      "category": "România",
+      "published": "2026-11-26T20:21:37+00:00",
+      "url": "https://adevarul.ro/sport/universitatea-craiova-a-fost-surclasata-de-2574832.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Datoria României va continua să crească și cu un deficit bugetar mai mic. Unde se va ajunge povara conform analiștilor BCR",
+      "category": "România",
+      "published": "2026-11-26T20:21:22+00:00",
+      "url": "https://www.economica.net/datoria-romaniei-va-continua-sa-creasca-si-cu-un-deficit-bugetar-mai-mic-unde-se-va-ajunge-povara-conform-analistilor-bcr_998756.html",
+      "source": "Economica.net",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Decathlon se extinde în România și la anul. Va deschide un magazin în nordul Bucureștiului și vizează alte trei orașe",
+      "category": "România",
+      "published": "2026-11-26T20:20:25+00:00",
+      "url": "https://www.economica.net/decathlon-continua-investitiile-in-expansiune-si-anul-viitor-va-deschide-un-magazin-in-nordul-bucurestiului-si-vizeaza-alte-trei-orase-care-sunt-acestea_999527.html",
+      "source": "Economica.net",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Șeful Anthropic neagă că ar susține renunțarea oamenilor la liberul arbitru în favoarea AI",
+      "category": "România",
+      "published": "2026-11-26T20:20:20+00:00",
+      "url": "https://www.g4media.ro/seful-anthropic-neaga-ca-ar-sustine-renuntarea-oamenilor-la-liberul-arbitru-in-favoarea-ai.html",
       "source": "G4Media",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "NATO cere pregătirea întregii societăți pentru război. „România nu reușește să-și pregătească nici măcar rezerviștii”, avertizează doi generali",
+      "title": "Când se aprind luminițele de Crăciun în București în 2026. Programul primelor cinci zile de concerte care deschid Târgul de Crăciun",
       "category": "România",
-      "published": "2026-11-26T19:16:02+00:00",
-      "url": "https://adevarul.ro/securitate-si-aparare/nato-cere-pregatirea-intregii-societati-pentru-2574746.html",
+      "published": "2026-11-26T20:19:13+00:00",
+      "url": "https://adevarul.ro/stiri-locale/bucuresti/cand-se-aprind-luminitele-de-craciun-in-bucuresti-2574821.html",
       "source": "Adevărul",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Veruschka a murit la vârsta de 87 de ani: supermodelul a jucat în filme celebre precum „Blow-Up” și „Casino Royale”",
+      "title": "Revoltă împotriva modernizării parcurilor Pantelimon și IOR: „Nu transformați spațiile verzi în bâlciuri pe bani publici”",
       "category": "România",
-      "published": "2026-11-26T19:15:56+00:00",
-      "url": "https://www.digi24.ro/stiri/externe/mapamond/veruschka-a-murit-la-varsta-de-87-de-ani-supermodelul-a-jucat-in-filme-celebre-precum-blow-up-si-casino-royale-4054827",
-      "source": "Digi24",
+      "published": "2026-11-26T20:17:12+00:00",
+      "url": "https://adevarul.ro/stiri-locale/bucuresti/revolta-impotriva-modernizarii-parcurilor-2574824.html",
+      "source": "Adevărul",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Europa League, in campo Juventus-Omonia DIRETTA",
+      "category": "Italia",
+      "published": "2026-11-26T20:17:03+00:00",
+      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/26/europa-league-in-campo-juventus-omonia-diretta_cb9c81b7-a2f3-4183-98e9-a3d1491cbfaa.html",
+      "source": "ANSA",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Simion îl compară pe Nicușor Dan cu regele Carol al II-lea: Urmăriți discursul locatarului de la Cotroceni. E o figură care se repetă în Istoria Românilor. Carol al II-lea a comis asasinate politice",
+      "category": "România",
+      "published": "2026-11-26T20:16:26+00:00",
+      "url": "https://www.g4media.ro/simion-il-compara-pe-nicusor-dan-cu-carol-al-ii-lea-urmariti-discursul-locatarului-de-la-cotrocen-e-o-figura-care-se-repeta-in-istoria-romanilor-carol-al-ii-lea-a-comis-asasinate-politice.html",
+      "source": "G4Media",
       "status": "galben",
       "words": 0
     },
     {
-      "title": "George Simion, declarație controversată în ziua în care a devenit inculpat: „Să-i las fără piele de șinșila și să-i jupoi”. Mesaj pentru Nicușor Dan",
+      "title": "Cutremur în România. Pagube mari produse de seismul de 5,7 Richter din 18 noiembrie, ultimele date. Dauna medie merge spre 2.000 de euro, dosare în plus pe polița facultativă",
       "category": "România",
-      "published": "2026-11-26T19:15:36+00:00",
-      "url": "https://adevarul.ro/politica/george-simion-declaratie-controversata-in-ziua-in-2574816.html",
-      "source": "Adevărul",
+      "published": "2026-11-26T20:15:39+00:00",
+      "url": "https://www.economica.net/cutremur-in-romania-pagube-mari-produse-de-seismul-de-57-richter-din-18-noiembrie-ultimele-date-dauna-medie-merge-spre-2000-de-euro-dosare-in-plus-pe-polita-facultativa_999590.html",
+      "source": "Economica.net",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "A fost lansat „Mersul interjudețean al autobuzelor”, platforma oficială unde vezi toate traseele și orele de plecare",
+      "title": "SURPRIZĂ: Țiriac vinde terenul unei fabrici foste glorii comuniste din estul Capitalei. Miza, un posibil cartier uriaș",
       "category": "România",
-      "published": "2026-11-26T19:14:49+00:00",
-      "url": "https://adevarul.ro/stiri-interne/evenimente/a-fost-lansat-mersul-interjudetean-al-2574814.html",
-      "source": "Adevărul",
+      "published": "2026-11-26T20:14:55+00:00",
+      "url": "https://www.economica.net/tiriac-teren-sucu_999646.html",
+      "source": "Economica.net",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Nvidia, acuzată că și-a antrenat AI-ul cu cărți piratate",
-      "category": "România",
-      "published": "2026-11-26T19:14:00+00:00",
-      "url": "https://www.profit.ro/povesti-cu-profit/it-c/nvidia-acuzata-ca-si-a-antrenat-ai-ul-cu-carti-piratate-23011778?utm_source=Rss&utm_medium=Referral&utm_campaign=Cross",
-      "source": "Profit.ro",
+      "title": "La maggioranza blinda il condono, ma niente sanatoria per le zone sismiche",
+      "category": "Italia",
+      "published": "2026-11-26T20:11:11+00:00",
+      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/salvini-in-manovra-una-norma-sul-condono-la-stiamo-costruendo-con-i-comuni_6c4a993a-9e13-463d-b930-9be3df31a000.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Belgium: Farmers and tractors descend on Brussels to defend EU subsidies",
+      "category": "Mondo",
+      "published": "2026-11-26T20:10:25+00:00",
+      "url": "https://www.euronews.com/video/2026/11/26/belgium-farmers-and-tractors-descend-on-brussels-to-defend-eu-subsidies",
+      "source": "Euronews English",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Magazinele avertizează că un ordin dat de ministrul Agriculturii, Florin Barbu, poate duce la o criză a cărnii de porc fix de Sărbători",
-      "category": "România",
-      "published": "2026-11-26T19:11:26+00:00",
-      "url": "https://economedia.ro/magazinele-avertizeaza-ca-un-ordin-dat-de-ministrul-agriculturii-florin-barbu-poate-duce-la-o-criza-a-carnii-de-porc-fix-de-sarbatori.html",
-      "source": "Economedia",
+      "title": "Guinea-Bissau junta delays presidential vote for 2 years",
+      "category": "Mondo",
+      "published": "2026-11-26T20:09:00+00:00",
+      "url": "https://www.dw.com/en/guinea-bissau-junta-delays-presidential-vote-for-2-years/a-80068910?maca=en-rss-en-all-1573-xml-mrss",
+      "source": "Deutsche Welle",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "De Gennaro: 'Non ho tradito, un condannato a morte non mente'",
+      "category": "Italia",
+      "published": "2026-11-26T20:08:44+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-lettera-di-de-gennaro-sul-corriere-io-condannato-a-morte_8d506c3b-6d62-4d78-a4a7-2c6bed64af4a.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Il telefonista di Emanuela Orlandi sarebbe un ex 007",
+      "category": "Italia",
+      "published": "2026-11-26T20:05:19+00:00",
+      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/chi-lha-visto-e-di-un-ex-007-la-voce-del-telefonista-di-emanuela-orlandi_a12a4e85-6eb9-4eac-bada-c410e3a9955c.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "ANSA Newsroom | Fallisce la Cop31, niente accordo sul clima",
+      "category": "Italia",
+      "published": "2026-11-26T20:04:46+00:00",
+      "url": "https://www.ansa.it/sito/notizie/speciali/ansa-newsroom/2026/11/25/ansa-newsroom-fallisce-la-cop31-il-clima-non-riscalda-gli-animi_d1956a1b-054a-4396-99af-f3f1507114d8.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Is Alice Huang a spy or not?",
+      "category": "Tehnologie",
+      "published": "2026-11-26T20:00:00+00:00",
+      "url": "https://techcrunch.com/2026/11/26/is-alice-huang-a-spy-or-not/",
+      "source": "TechCrunch Hardware",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Attacco con droni in Kuwait, morti due tecnici italiani",
+      "category": "Italia",
+      "published": "2026-11-26T19:59:44+00:00",
+      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html",
+      "source": "ANSA",
+      "status": "galben",
+      "words": 0
+    },
+    {
+      "title": "Montecarotto (Ancona) casolare assediato dai lupi: il video",
+      "category": "Italia",
+      "published": "2026-11-26T19:54:02+00:00",
+      "url": "https://www.ilrestodelcarlino.it/video/montecarotto-ancona-casolare-assediato-dai-lupi-il-video-hcgcuuxq",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Peru burns more than 10 tonnes of seized drugs",
+      "category": "Mondo",
+      "published": "2026-11-26T19:44:05+00:00",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/11/26/peru-burns-more-than-10-tonnes-of-seized-drugs?traffic_source=rss",
+      "source": "Al Jazeera English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Son of Myanmar's Suu Kyi 'relieved' by first call in five years, questions military's motives",
+      "category": "Mondo",
+      "published": "2026-11-26T19:43:33+00:00",
+      "url": "https://www.euronews.com/2026/11/26/son-of-myanmars-suu-kyi-relieved-by-first-call-in-five-years-questions-militarys-motives",
+      "source": "Euronews English",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Legami apre in piazza San Babila a Milano il negozio più grande al mondo",
+      "category": "Italia",
+      "published": "2026-11-26T19:34:23+00:00",
+      "url": "https://www.ilsole24ore.com/art/legami-apre-piazza-san-babila-milano-negozio-piu-grande-mondo-AJx7A3TC",
+      "source": "Il Sole 24 Ore Economia",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "“Il parcheggio diventa una piazza per bambini e famiglie”. Reggio Emilia vince il premio per la mobilità sostenibile",
+      "category": "Italia",
+      "published": "2026-11-26T19:31:48+00:00",
+      "url": "https://www.ilrestodelcarlino.it/reggio-emilia/cronaca/urban-award-reggio-emilia-podio-mbdggdyo",
+      "source": "Il Resto del Carlino",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "La notte delle fragole, Ficarra e Picone: \"Stavolta parliamo di relazioni\"",
+      "category": "Italia",
+      "published": "2026-11-26T19:30:00+00:00",
+      "url": "https://www.today.it/vision/cinema/la-notte-delle-fragole-intervista-ficarra-picone.html",
+      "source": "Today",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Watch: Roofs torn off and streets under water as severe weather hits US",
+      "category": "Mondo",
+      "published": "2026-11-26T19:26:16+00:00",
+      "url": "https://www.bbc.co.uk/news/videos/cq808d704m22o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC News",
+      "status": "roșu",
+      "words": 0
+    },
+    {
+      "title": "Why are winter rains forcing Palestinians in Gaza to flee again?",
+      "category": "Mondo",
+      "published": "2026-11-26T19:19:12+00:00",
+      "url": "https://www.aljazeera.com/news/2026/11/26/why-are-winter-rains-forcing-palestinians-in-gaza-to-flee-again?traffic_source=rss",
+      "source": "Al Jazeera English",
       "status": "roșu",
       "words": 0
     },
@@ -726,15 +906,6 @@
       "words": 0
     },
     {
-      "title": "S-a câștigat premiul de categoria I la Loto 6/49. Unde a fost jucat biletul norocos și cât a costat",
-      "category": "România",
-      "published": "2026-11-26T19:09:28+00:00",
-      "url": "https://www.digi24.ro/stiri/actualitate/social/s-a-castigat-premiul-de-categoria-i-la-loto-6-49-unde-a-fost-jucat-biletul-norocos-si-cat-a-costat-4054831",
-      "source": "Digi24",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Psychiatric care under scrutiny after abuse scandals in Croatia and Bosnia",
       "category": "Mondo",
       "published": "2026-11-26T19:07:44+00:00",
@@ -744,57 +915,12 @@
       "words": 0
     },
     {
-      "title": "Estrazioni Lotto e SuperEnalotto di oggi giovedì 26 novembre 2026: tutti i numeri vincenti e le quote",
-      "category": "Italia",
+      "title": "The Garmin Forerunner 265S is down to $300, its best price of the year",
+      "category": "Tehnologie",
       "published": "2026-11-26T19:00:00+00:00",
-      "url": "https://www.today.it/lotto-superenalotto/estrazioni-oggi-26-novembre-2026-numeri-vincenti.html",
-      "source": "Today",
+      "url": "https://www.theverge.com/gadgets/1042483/garmin-forerunner-265s-fitness-tracker-wearable-deal-sale-black-friday",
+      "source": "The Verge",
       "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Quanto si guadagna con le canzoni di Natale: da Mariah Carey a Michael Bublé (e Sal Da Vinci?)",
-      "category": "Italia",
-      "published": "2026-11-26T18:59:00+00:00",
-      "url": "https://www.today.it/dossier/societa/guadagni-canzoni-natale-mariah-carey-buble-sal-da-vinci.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "\"L'arbitro era ubriaco\": sostituito all'intervallo in Al Jazira-Gol Gohar, spunta l'ipotesi glicemia",
-      "category": "Italia",
-      "published": "2026-11-26T18:57:13+00:00",
-      "url": "https://www.today.it/sport/calcio/arbitro-ubriaco-sostituito-intervallo-al-jazira-gol-gohar-ipotesi-glicemia.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Europa League, in campo Olympiacos-Milan DIRETTA",
-      "category": "Italia",
-      "published": "2026-11-26T18:56:46+00:00",
-      "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/26/europa-league-in-campo-olympiacos-milan-diretta_33d004e6-854b-4e78-b6b5-71c30d90edb2.html",
-      "source": "ANSA",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Chi sono i due tecnici italiani morti in Kuwait, Tajani: \"Droni costruiti in Iran\". Teheran: \"Nessuna operazione militare\"",
-      "category": "Italia",
-      "published": "2026-11-26T18:56:00+00:00",
-      "url": "https://www.today.it/attualita/antonio-saccoccio-emanuele-lo-russo-italiani-morti-kuwait-droni-iran-rheinmetall-tajani.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "New York, rinviata per maltempo la parata del Ringraziamento",
-      "category": "Italia",
-      "published": "2026-11-26T18:55:19+00:00",
-      "url": "https://www.ansa.it/sito/videogallery/mondo/2026/11/26/new-york-rinviata-per-maltempo-la-parata-del-ringraziamento_29cb46fc-3dfa-4498-91ad-59c59989b5a9.html",
-      "source": "ANSA",
-      "status": "galben",
       "words": 0
     },
     {
@@ -816,56 +942,11 @@
       "words": 0
     },
     {
-      "title": "ANSA Newsroom | Fallisce la Cop31, niente accordo sul clima",
-      "category": "Italia",
-      "published": "2026-11-26T18:49:59+00:00",
-      "url": "https://www.ansa.it/sito/notizie/speciali/ansa-newsroom/2026/11/25/ansa-newsroom-fallisce-la-cop31-il-clima-non-riscalda-gli-animi_d1956a1b-054a-4396-99af-f3f1507114d8.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
       "title": "Reporters Without Borders demands suspension of controversial French TV channel CNews",
       "category": "Mondo",
       "published": "2026-11-26T18:48:41+00:00",
       "url": "https://www.france24.com/en/france/20261126-reporters-without-borders-demands-suspension-controversial-french-tv-channel-cnews",
       "source": "France 24",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Recensione SwitchBot AI Art Frame 2 da 13,3”: innovativo quadro digitale con inchiostro elettronico",
-      "category": "Italia",
-      "published": "2026-11-26T18:44:00+00:00",
-      "url": "https://www.today.it/tech/recensioni/recensione-switchbot-ai-art-frame-2.html",
-      "source": "Today",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Due tecnici italiani della Rheinmetall morti in un attacco in Kuwait. L'Iran nega responsabilità",
-      "category": "Italia",
-      "published": "2026-11-26T18:40:47+00:00",
-      "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Salvini: 'In manovra una norma sul condono, la stiamo costruendo con i comuni'",
-      "category": "Italia",
-      "published": "2026-11-26T18:36:50+00:00",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/salvini-in-manovra-una-norma-sul-condono-la-stiamo-costruendo-con-i-comuni_6c4a993a-9e13-463d-b930-9be3df31a000.html",
-      "source": "ANSA",
-      "status": "galben",
-      "words": 0
-    },
-    {
-      "title": "Le mostre del weekend, da Guttuso e Vedova a Frida e Marilyn",
-      "category": "Italia",
-      "published": "2026-11-26T18:36:16+00:00",
-      "url": "https://www.ansa.it/canale_viaggi/notizie/arte/2026/11/25/le-mostre-del-weekend-da-guttuso-e-vedova-a-frida-e-marilyn_25293a56-0f0e-4351-a882-39903747c433.html",
-      "source": "ANSA",
       "status": "roșu",
       "words": 0
     },
@@ -888,56 +969,20 @@
       "words": 0
     },
     {
-      "title": "Guinea-Bissau presidential election delayed by two years",
-      "category": "Mondo",
-      "published": "2026-11-26T18:07:18+00:00",
-      "url": "https://www.aljazeera.com/news/2026/11/26/guinea-bissau-presidential-election-delayed-by-two-years?traffic_source=rss",
-      "source": "Al Jazeera English",
+      "title": "Premio Storie di alternanza scuola - lavoro, cinque nuove menzioni al Job&Orienta",
+      "category": "Educație",
+      "published": "2026-11-26T18:12:10+00:00",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPeXFFZGE3UFNibm1mZVo2bExrS2hDMThMdTRJZUxLRXJiZHFiaDlMcUVMR3pobHhKVzYtYXMxNHUzRVlYVGl4WWYtT1MydGk3Z0xJSE1JM2gzY3RoVWJudWZENVhhaHlkT19hemlLbWw3UERqTEd3TWhZTXFXREdtUXhERDM4TVRudEZJbWdEY1hRWXY0ZEdFcnZnQ2zSAaIBQVVfeXFMTm9vMlVhWEhndHhpMkNzYWNmWF9vVXRDZV81YW1pc0wwTjlLcnljOTQtYWNlRHlyald5WWJzYzJ4MmgyRTRIWWo3UUoySU8yaW1JcWZtbGJDNnN3WXo5RGpuY3NnMmxIN255OUwyVUZ6VzZ3bkFwYXRaSjY1Mi1lTjdrdjVHN1hjbHBDdGhVSGNQQjZ6VnRUSWVMVjduZ0RYZDBB?oc=5",
+      "source": "EduNews24",
       "status": "roșu",
       "words": 0
     },
     {
-      "title": "Trial of Berlin woman accused of spying for Russia begins after delay",
-      "category": "Mondo",
-      "published": "2026-11-26T17:44:00+00:00",
-      "url": "https://www.dw.com/en/trial-of-berlin-woman-accused-of-spying-for-russia-begins-after-delay/a-80057677?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Mélenchon va-t-il réussir son OPA sur la gauche ?",
-      "category": "Mondo",
-      "published": "2026-11-26T17:42:20+00:00",
-      "url": "https://www.politico.eu/podcast/playbook-paris-podcast/melenchon-va-t-il-reussir-son-opa-sur-la-gauche/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "source": "POLITICO Europe",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "More than 1,000 flights cancelled or delayed in US as weather disrupts Thanksgiving travel",
-      "category": "Mondo",
-      "published": "2026-11-26T17:38:56+00:00",
-      "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
-      "source": "BBC News",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Saudi pop music is thriving — but for the right reasons?",
-      "category": "Mondo",
-      "published": "2026-11-26T17:37:00+00:00",
-      "url": "https://www.dw.com/en/saudi-pop-music-is-thriving-but-for-the-right-reasons/a-80036013?maca=en-rss-en-all-1573-xml-mrss",
-      "source": "Deutsche Welle",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "NATO deploys AWACS airborne radar to monitor Polish airspace",
-      "category": "Mondo",
-      "published": "2026-11-26T17:35:10+00:00",
-      "url": "https://www.euronews.com/2026/11/26/nato-deploys-awacs-airborne-radar-to-monitor-polish-airspace",
-      "source": "Euronews English",
+      "title": "TFI, progettare il futuro: il cinema italiano tra nuove sfide e sostenibilità della filiera",
+      "category": "Cinema și seriale",
+      "published": "2026-11-26T17:40:23+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPNERFWEVFNmZQcEZ5ZUxpZkthRUM4dXlFR1lwaGVWUFVmZXpuQ1J1MHVEOHRzZkdYOC1fZF9PTFRhZ25PMXAyRWZPeDNIYldtdW5yU2hGeE5lcTQwM3NmMml1a1lzeDV1c1BmQlN0WlljLWpBTXF2VjRKbGdwcjlsd1NGV0wzY3FOcTdPTEl5bEhCaHVDT2kyTjAwMHlkSVRPRDQxQ0Y0MjZFNFQ4d1Y1bUVhQm0yQlp4bnlaNVBKTE9Eb3A4WWdCeTB5Q2tqd21Fbmc?oc=5",
+      "source": "Italy for Movies",
       "status": "roșu",
       "words": 0
     },
@@ -969,11 +1014,11 @@
       "words": 0
     },
     {
-      "title": "A month with the iPhone Duo has changed how I use my phone",
-      "category": "Tehnologie",
+      "title": "È il momento della cybersecurity: il caso Corma, startup diventata unicorno in tre mesi",
+      "category": "Inteligență artificială",
       "published": "2026-11-26T17:00:00+00:00",
-      "url": "https://techcrunch.com/2026/11/26/a-month-with-the-iphone-duo-has-changed-how-i-use-my-phone/",
-      "source": "TechCrunch Hardware",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxObTNubzRPRGFHN0tYR0VwODFKUjdYYmRFQmlfT3hmVHdqZ0RycTZaOVdNM0N3MWNqbmdoWjd5YUgyU3RPQlUyZXZKYVhqeEVTRlJHQVowV2JuV0xodWh4RHNmUDFMYkNrcldzalg2MWZBTndhMlhacU1jdGljNmdwckJqTTlXWTZIN2c?oc=5",
+      "source": "Borsa&Finanza",
       "status": "roșu",
       "words": 0
     },
@@ -989,8 +1034,8 @@
     {
       "title": "Supercinema. I film in uscita nel weekend in Italia: 27 novembre 2026",
       "category": "Cinema și seriale",
-      "published": "2026-11-26T16:34:03+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNeDlOX3dFQm12UnZaaUM5UjNNTjNjRHlhbWpsRnpuMkF3VnNheW9xeHBmNFBlME5nQlZwNnItSXd5Z2kyZ1NjU2VWMXk4UEc0TmhJWFEwY1h3OEtISHF5Xy1IbmYzckZoaWpVNzBPdlhKWkhKT3hvbGR1ckQ4LWhveDJwQXpTNlN6emRHWWNXSXdDNkl0S0M5SEl2c1RTSFppOEY2ZS1SSXFRN21yVW9PalhDREREMUFFYUNQSmViUlB0LWlJY0tybDNGb0lQSTZGcDRhbEdDSHdsdnd0LVBfTHBLY3nSAeQBQVVfeXFMTXg5Tl93RUJtdlJ2WmlDOVIzTU4zY0R5YW1qbEZ6bjJBd1ZzYXlvcXhwZjRQZTBOZ0JWcDZyLUl3eWdpMmdTY1NlVjF5OFBHNE5oSVhRMGNYdzhLSEhxeV8tSG5mM3JGaGlqVTcwT3Z",
+      "published": "2026-11-26T16:49:00+00:00",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQdmVLVzE0eEhhMTZ4cWFodE5GSzdKbG5RV0lOQTlFWkxyelY3emFGNVJ4OF9NTzZmSWsyRnRhTVBsd2R2ZVJlZkczd3FuM0FNMTlERDY3S1dEa09kQkNSVzl1dTQ1Vy1IVlVFQXpmX2NtTVlOYV9PMXEyVXF3b1RUcDFhQmZUZU1tTjdyVkZ0eTNiX2NBSkVpMW1fU1hfWDNXdExkQVdLNDhvOWp1bjlpZnBwWlZwbENDX2VnUThwNG5DeFVwYmY0UlZyT20xVmRBeVdzQThSRFV3bmlOVmFB?oc=5",
       "source": "RaiNews",
       "status": "roșu",
       "words": 0
@@ -1077,20 +1122,20 @@
       "words": 0
     },
     {
+      "title": "Inteligența artificială dezvoltată de Universitatea din Tokyo prezice cu precizie proprietățile materialelor necunoscute.",
+      "category": "Inteligență artificială",
+      "published": "2026-11-26T15:11:01+00:00",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNR01MYUVmMkZ1ZVVILU12emR0SFpiUXNybnpBMHBEM0JaQURJYmxkdFVTZXdfaHd3ZE1YMlF4eEJPcE4zZkVRbnNUcGF5LS1GRDZzaXg3aFBtT2hpd0lvQnM5RVpKNnhOX2Q1cDQxRGQxY0UtZzZwcHlKblRkWWFqWXhiSk1BRWFzYjYtczAyT1dtM1JBaG44UQ?oc=5",
+      "source": "Vietnam.vn",
+      "status": "roșu",
+      "words": 0
+    },
+    {
       "title": "Weekend a Milano: dal 27 al 29 novembre",
       "category": "Cultură și cărți",
       "published": "2026-11-26T15:10:26+00:00",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE53akNCZ3dxM2RiOHMzU0NPVHlJcEozWkFMVjFnOUQ0b0NDRU1IWlpPbDRTeVFBQlJfN3JNcjJYb2pQUGV1UXlWUS1vT1o5MmEyQkxnUGtzTVNwbEJ4Z0NJaW92eDdERzZrUmxoNnctaXg?oc=5",
       "source": "YesMilano.it",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Why GTA VI’s version of Florida feels so real",
-      "category": "Tehnologie",
-      "published": "2026-11-26T15:00:00+00:00",
-      "url": "https://www.theverge.com/entertainment/1042629/gta-6-city-design",
-      "source": "The Verge",
       "status": "roșu",
       "words": 0
     },
@@ -1149,15 +1194,6 @@
       "words": 0
     },
     {
-      "title": "AI enterprise: oltre i modelli tradizionali, alle aziende servono sistemi che migliorano nel tempo. Le novità di indigo.ai",
-      "category": "Inteligență artificială",
-      "published": "2026-11-26T13:57:23+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNcWY1aDFoWTZCaDBJUlhpT0d6NEJQaVkwbGxBWEdlR3ptWWItNVk1NzBvdnRkR1lLSUxPX0podEJRZUVObU5DOEhKbXgtRk5JZEoxYmxsT0k4ejJ2Z1RhSl8xbldQZ0pDVmd1MFF3ejNYMWJxWTVLdmQ3SXBGdkJIb3JheDZ2UHA3MndscC1xNTRwUmloeVc2OTN5OV9rdjFqWmsyUWdXZXBEMVFPbmpUSmpacWN1VnhvSVY1ZEFEc01GQl9yWjhzRzhISHNObHBXTWpTMmxLXzhTVW1U?oc=5",
-      "source": "Media Key",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Le fantastiche esposizioni di dicembre 2026 a Parigi e nella regione dell'Île-de-France",
       "category": "Cultură și cărți",
       "published": "2026-11-26T13:57:00+00:00",
@@ -1203,15 +1239,6 @@
       "words": 0
     },
     {
-      "title": "Head hunting, dove sbaglia l’intelligenza artificiale. E perché servono ancora le persone",
-      "category": "Inteligență artificială",
-      "published": "2026-11-26T13:00:08+00:00",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOV1NDb1FLcVdnQjFMQU5taGM0OWdFNi1WRndndTE1OXJYMjJkU2g0TFNpZkEzNUluSGo0UXZGVHNLOFd5U2V3b3dzYjJPLXhTY2trRG9TOGJLd3YzTlJEaUtWa1BXQmZpa0R1Q25WNDdtdXppYXNOTExNRXUzOFFpTkN1QWU2WHg3WldYSDBucmtRd2hQekNTdWlGa1pabzZsZjNGQ1BsQ1pXc1XSAaYBQVVfeXFMTU9rbU1haS14RU9MZ1ZGQjhhRUg1RHJsMHlyeXAwanBxb1g3ZEg5X3drX2N0NXZPcHlJcXd5SkxtWXBVd0FHRHBVaGduOVFJb1N6aGxQRzZZcEFZY2pZRHhGNTE1UGRCVTI4ZXhqVHE1bHFxU3NpRHJSTFRLZG5tbS01ZmZGaUlxc1IyVzkyeXZVNHRNTVp6M0FJYk92QjdRYnowYno3UQ?",
-      "source": "Il Messaggero",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "“Il Natale è di tutt*. Pistoia Città del Natale 2026”: oltre un mese di festa, cultura e divertimento all’insegna della solidarietà",
       "category": "Cultură și cărți",
       "published": "2026-11-26T12:52:00+00:00",
@@ -1243,15 +1270,6 @@
       "category": "Educație",
       "published": "2026-11-26T12:16:22+00:00",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNm9tTElzLS0wYmFlS3VZX2VPWXBFdFdLRktDSDRmUzk4S3E2ZDEyR1dRV2JfSmtPMUxUN25qdU1VTGhJUlg1MGFKVGlPVmhubWxCRC16Ri0zd0ZhVXBzVUFvZjlHclRjRjllLTBnTkF2X3VuWHdQSF9uMjBDSkhnU2FfS19jUQ?oc=5",
-      "source": "Vietnam.vn",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Integrare l'apprendimento attraverso il gioco nella formazione degli insegnanti della scuola primaria.",
-      "category": "Educație",
-      "published": "2026-11-26T12:16:20+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNemdIODNBU19OLTBnSUZqdGx4ZGt6UUJncHA2b2xXa3EtaXYwd1htcmt0MnU4VVVBRnkyanJfNVdsaUpPMXpMS05JVlpOVG9xZ0Fia0hLME82MnpabERRYmhZX0FEdUp0M2wyVE1jdzlSZi1valFaQkxHSUk1dXpGLVNNdGR0dw?oc=5",
       "source": "Vietnam.vn",
       "status": "roșu",
       "words": 0
@@ -1419,15 +1437,6 @@
       "words": 0
     },
     {
-      "title": "Salute!, il trailer ufficiale del film [HD]",
-      "category": "Cinema și seriale",
-      "published": "2026-11-26T09:35:00+00:00",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQV1NQSXZQOGh0cXRtNGJqbHVtRm5ZTkNxZ0l1M1U3VWtJVk0tRm5wcGYwUUxxNjdBY2VweHE3b0lOWW0yUHlPMGxYblBvSGlmQ0g5eGdiTEtjZWE1Vk16UmdMU0RVZ2k2LWFuUDVicGJxT3p3UHRvT2dNNGJpOTdONHpOYXBfd9IBYEFVX3lxTE9OenRFT0dwRERjWnk4N0t3YXFIbTdNZ254LVZnc1NiRUJDd19XT0VUTkpybVF3V2F1bzZMcXpLTnE3cVZNcWstSzV1cm1pUUxzVXdEWUtqVW5uSmx3ZjFHMg?oc=5",
-      "source": "MYmovies",
-      "status": "roșu",
-      "words": 0
-    },
-    {
       "title": "Prima ediţie Romanian Youth Jazz Festival, cu participarea artiştilor Luiza Zan, Adi Nour şi Oana Sîrbu, la Sala Radio/ Şalgărul „Ani de liceu”, reorchestrat în premieră",
       "category": "Muzică",
       "published": "2026-11-26T08:56:08+00:00",
@@ -1505,15 +1514,6 @@
       "published": "2026-11-26T07:56:00+00:00",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOZFh4Ulhtci0yY3pZVFBPZTZvelVLWHAwYUV1MmM1ZmlVeHRSbkticWRvNDhveWF6bm9kTmpWYzNkV2ZZcHhUeG8yT0RIRlhlSEF5aEd2Z0p4YU8tbEpUZEVjcGVQUWs0XzZDWHVhVHQ1aUZ4TW16T2x2Nms3U1U0UnNEdFZCdWdrYVgyUm5lc3JiOF9DWmZ2eE5DVXlwNWxMZ20tSjA2UVo0anJucG1rUTdlT1N2X21XUDBOb05CeEp4UdIBxwFBVV95cUxPMGpHNUFXaHZ2dE9lUTBuc3ZjR0l4SUlRNkNqRVRRWWZMUVZ6MnVqSmpNSnVrQ0RTN2xkZHVNb0VPdV9OZ2VrQjU3bFdvaUxNeXBmNlptSWNUbkw3UXk0Rm93VEZXdWI1NWc4QnRlZGQwdUtLRlVHWmFxNHJxV2dOandJel9lbkx3b2dIeVI0UkJ",
       "source": "StiriDiaspora",
-      "status": "roșu",
-      "words": 0
-    },
-    {
-      "title": "Joint statement - North Atlantic Treaty Organization | NATO",
-      "category": "NATO e sicurezza",
-      "published": "2026-11-26T06:45:25+00:00",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNY3dQckM4ZGpyZUVHVVBTekliYXlKQUFmUWhVUW5ndGZkc1pVN2ZCZ2lnUzJyaXVBb0hKLTdkTUZFU3h0TFlDaUhzSVN1bGEtcmxvcTltZ3VzbTdoTGNYNXFkQzY5d2NGR01hWmQ1aW5SZFBNRmtiU05fWjlmMG9TVFZkR2g0WnRFcXZaRnlCOEdHTDNUWUFFR3VfNXdOMDlZNzBJeGNreU4zNTZISFJkTTNUWlpQdU05RG9TUV96dHR1S1k5TlhHX3lFZlJkZEoxelFnNXFtdXNPNmpjY1RqRXdQY1JRTGpkS081X1FOWDlKUQ?oc=5",
-      "source": "NATO",
       "status": "roșu",
       "words": 0
     }
