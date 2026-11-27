@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-27T00:32:16.070993+00:00",
+  "updated_at": "2026-11-27T09:02:04.723555+00:00",
   "success_sources": 1,
   "sources": [
     {
@@ -184,6 +184,27 @@
       "language_probe_version": 3
     },
     {
+      "id": "44316036a63d4a5dcf",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "Special European Council",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-298719",
+      "published_at": "2026-11-27",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
+    },
+    {
       "id": "39cbe54045ea729888",
       "source_id": "commissione_europea",
       "source": "Commissione europea",
@@ -196,7 +217,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "1dcd978a7c78d63d25",
@@ -211,7 +238,34 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original English français",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
+    },
+    {
+      "id": "1833b22cad83405713",
+      "source_id": "commissione_europea",
+      "source": "Commissione europea",
+      "title": "European Commissioner Marta KOS in Tirana, Albania",
+      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-298725",
+      "published_at": "2026-11-27",
+      "language_hint": "und",
+      "italian_audio_in_player_verified": false,
+      "italian_audio_download_option_verified": false,
+      "audio_evidence": "",
+      "audio_italiano_verificato": false,
+      "diritti_verificati": false,
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "e18c2ec8caafda6e82",
@@ -394,7 +448,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "69a32e14eafab60fdf",
@@ -409,7 +469,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "659674a9bae453c52f",
@@ -424,7 +490,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "08d26e7a4a34a4a08b",
@@ -439,7 +511,13 @@
       "audio_evidence": "",
       "audio_italiano_verificato": false,
       "diritti_verificati": false,
-      "status": "DA_VERIFICARE"
+      "status": "DA_VERIFICARE",
+      "languages_declared": "Original",
+      "italian_version_available": false,
+      "italian_audio_candidate": false,
+      "language_status": "ITALIANO_NON_LISTATO",
+      "language_checked_at": "2026-11-27T09:02:04.723555+00:00",
+      "language_probe_version": 3
     },
     {
       "id": "d6a35b97642b3a36c1",
@@ -3086,48 +3164,6 @@
       "italian_audio_candidate": false,
       "language_status": "ITALIANO_NON_LISTATO",
       "language_checked_at": "2026-11-17T10:38:36.323988+00:00",
-      "language_probe_version": 3
-    },
-    {
-      "id": "7a8958b2e3c30bb6b0",
-      "source_id": "commissione_europea",
-      "source": "Commissione europea",
-      "title": "European Commissioner Wopke HOEKSTRA and the Minister for Transport of Ireland Darragh O'BRIEN in Antalya, Türkiye for the COP31",
-      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297977",
-      "published_at": "2026-11-17",
-      "language_hint": "und",
-      "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
-      "audio_evidence": "",
-      "audio_italiano_verificato": false,
-      "diritti_verificati": false,
-      "status": "DA_VERIFICARE",
-      "languages_declared": "Original",
-      "italian_version_available": false,
-      "italian_audio_candidate": false,
-      "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-11-17T10:38:36.323988+00:00",
-      "language_probe_version": 3
-    },
-    {
-      "id": "754a256aa3ba226afc",
-      "source_id": "commissione_europea",
-      "source": "Commissione europea",
-      "title": "Foreign Affairs Council (Defence)",
-      "source_url": "https://audiovisual.ec.europa.eu/en/media/video/I-297471",
-      "published_at": "2026-11-17",
-      "language_hint": "und",
-      "italian_audio_in_player_verified": false,
-      "italian_audio_download_option_verified": false,
-      "audio_evidence": "",
-      "audio_italiano_verificato": false,
-      "diritti_verificati": false,
-      "status": "DA_VERIFICARE",
-      "languages_declared": "Original",
-      "italian_version_available": false,
-      "italian_audio_candidate": false,
-      "language_status": "ITALIANO_NON_LISTATO",
-      "language_checked_at": "2026-11-17T19:47:44.078067+00:00",
       "language_probe_version": 3
     }
   ],
