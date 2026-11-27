@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-11-27T02:40:39.771060Z",
+  "updated_at": "2026-11-27T03:50:48.006473Z",
   "origin": "Google News RSS / publisher headlines",
   "verification": "external_headlines_not_independently_verified",
   "translation_policy": "Display only records translated into the selected Romanian or Italian language; translations may be automatic.",
@@ -64,20 +64,6 @@
       "translation_status": "machine_translation"
     },
     {
-      "id": "geo-fffa436e6f59a417",
-      "category": "diplomatie",
-      "region": "asia",
-      "title": "Nepal PM Shah, Indian counterpart Modi interaction suggests a shift in Nepal-India relations",
-      "summary": "",
-      "source": "Asia News Network",
-      "published": "2026-11-27T01:18:45Z",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNTVsQ2ZNTnlmMEgyUVVfNl9YOTBERkN2Mk9zY003T2gyNHJ2T3F0MzVtX1VhUGx3V1didE5UQkhLSjR2cVo3dHloc001cy0wUG1nZDExbmFlU1BaSF9zelpzSGhkNjdLUC0wc0NBVFA4M3JKbWNSaG51WlB0WldSM0Z3X2JmNUlxZEduYnFEZU41SG90bTFsM01JNk1HeEFFRVB6em8wVkVJNVBYemZ1ZGtLRm43TmxM?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Interacțiunea premierului Nepal Shah, omologul indian Modi sugerează o schimbare în relațiile Nepal-India",
-      "title_it": "L'interazione tra il primo ministro nepalese Shah e la controparte indiana Modi suggerisce un cambiamento nelle relazioni Nepal-India",
-      "translation_status": "machine_translation"
-    },
-    {
       "id": "geo-e677a96856656fc9",
       "category": "europa",
       "region": "europa",
@@ -89,20 +75,6 @@
       "review_status": "external_headline_unverified",
       "title_ro": "Summit-ul european al bugetului: Costa insistă asupra unui acord până în decembrie",
       "title_it": "Vertice europeo sul bilancio: Costa insiste per un accordo entro dicembre",
-      "translation_status": "machine_translation"
-    },
-    {
-      "id": "geo-7f3c176e88cdcb10",
-      "category": "europa",
-      "region": "europa",
-      "title": "Rusia respinge armistiţiul energetic şi maritim în Ucraina cerut de Von der Leyen",
-      "summary": "",
-      "source": "Ecopolitic",
-      "published": "2026-11-27T01:00:35Z",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxONjNDczBSSTlIcWdGaXFWQThfSlk3NWNLLUljTk9yOTZma1FQbGtNUUJGaVZNWDZ0R2NUSmdoUWU3Um5uVnlSSHc2bVEtWkc1MmZRZmFpeFlETWswOHctZENhWklrbExGdmlQR0lGSDdUM0VBeC1LOTQ2UG4xeTYzanRtbFdJWUVfd21mOFBuSnJybTI4UXRqRW0xcUdyZTEyZ1pIRWZxZw?oc=5",
-      "review_status": "external_headline_unverified",
-      "title_ro": "Rusia respinge armistiţiul energetic şi maritim în Ucraina cerut de Von der Leyen",
-      "title_it": "La Russia rifiuta la tregua energetica e marittima in Ucraina richiesta da Von der Leyen",
       "translation_status": "machine_translation"
     },
     {
@@ -190,6 +162,20 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-a64e553645035440",
+      "category": "securitate",
+      "region": "europa",
+      "title": "Russian Diplomat Warns Nuclear War ‘Inching Closer’ With NATO",
+      "summary": "",
+      "source": "Newsweek",
+      "published": "2026-11-27T00:00:00Z",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdGl3LTZRNnRWRkM1aWYxN3l5aEU0OGVidUxrWE9DcGJBakpXdmU1bGZZeElxR0J3YjBLS0Y1NTBDLXZCcmoxNkFma2NoekRwNExiajhYTFFPcUVhMmhIQ0lzdlZXQVp6ZWhhSVZCeUZYS1JIYWl6VXBmenRzZzZwbTdKN18?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Diplomatul rus avertizează că războiul nuclear „se apropie” de NATO",
+      "title_it": "Diplomatico russo avverte che la guerra nucleare si sta “avvicinando” con la NATO",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-b1d3eec45a524248",
       "category": "conflicte",
       "region": "europa",
@@ -218,8 +204,22 @@
       "translation_status": "machine_translation"
     },
     {
+      "id": "geo-ffb1d0e16c2fedda",
+      "category": "energie",
+      "region": "global",
+      "title": "Oil Supply Shortfall Worsens Despite Hit to Demand From Iran War, Says IEA",
+      "summary": "",
+      "source": "EnergyNow",
+      "published": "2026-11-26T23:08:07Z",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPLXRDM0RjR1piU0dlZjQ0Z1pvbGFxNWp6ZGVtZS1ickIxc0tWWHNvQWhja01OMXZaM1FMRTl1LUVPYUlMM1U2d0Q3MzNQbXctMXNKTGxFVlF4WGJ6c3RyeVF3Vk5jQjY2Y0g0a1MySzFZWGprcHFWblJEb1htNWZZZ1djTFNxOVkzZHQ2SUs1bWMzWW9HTm13VmZrdGY0WkVUaEFqWndB?oc=5",
+      "review_status": "external_headline_unverified",
+      "title_ro": "Deficitul aprovizionării cu petrol se înrăutățește în ciuda faptului că războiul din Iran este afectat de cerere, spune AIE",
+      "title_it": "La carenza di offerta di petrolio peggiora nonostante il colpo sulla domanda causato dalla guerra con l’Iran, afferma l’IEA",
+      "translation_status": "machine_translation"
+    },
+    {
       "id": "geo-ad9e773a76d326b6",
-      "category": "securitate",
+      "category": "diplomatie",
       "region": "asia",
       "title": "Watch: Launch of the 2026 Asia Power Index",
       "summary": "",
